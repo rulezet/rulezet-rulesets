@@ -1,0 +1,21 @@
+{
+  "uuid": "17efa50e-3b5e-4003-92b5-d58042d9af40",
+  "title": "Trojan_BAT_Formbook_SKI_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:BAT/Formbook.SKI!MTB,SIGNATURE_TYPE_PEHSTR,01 00 01 00 01 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:stealer=\"FormBook\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/296686"
+}
