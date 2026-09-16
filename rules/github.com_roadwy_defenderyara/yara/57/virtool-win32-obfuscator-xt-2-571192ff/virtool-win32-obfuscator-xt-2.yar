@@ -1,0 +1,9 @@
+rule VirTool_Win32_Obfuscator_XT_2{
+	meta:
+		description = "VirTool:Win32/Obfuscator.XT,SIGNATURE_TYPE_PEHSTR_EXT,03 00 02 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {d1 c0 50 8f 85 ?? ?? ff ff e2 ef 3b c3 59 8b 85 ?? ?? ff ff 05 ?? ?? ?? ?? 05 ?? ?? ?? ?? 50 50 8f 85 ?? ?? ff ff 5b ac 32 c3 aa f7 c1 01 00 00 00 74 0b 90 09 06 00 8b 85 ?? ?? ff ff } 		$a_03_1 = {85 c0 60 6a 01 e8 ?? ?? ?? ?? 61 e2 ae 8b 85 ?? ?? ff ff 05 ca 01 00 00 50 e8 ?? ?? ?? ?? c9 c3 } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1) >=2
+ 
+}

@@ -1,0 +1,9 @@
+rule VirTool_Win32_Obfuscator_KC_2{
+	meta:
+		description = "VirTool:Win32/Obfuscator.KC,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 02 00 02 00 00 "
+		
+	strings :
+		$a_01_0 = {8d 5c 18 ff 89 1c 28 8b 7c 28 04 8b 74 28 08 8b 4c 28 0c 8b 54 28 10 c1 e9 02 41 ad 03 c2 ab e2 fa } 		$a_01_1 = {03 ea 01 2c 24 68 } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1) >=2
+ 
+}
