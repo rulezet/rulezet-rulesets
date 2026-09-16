@@ -1,0 +1,22 @@
+rule _20160921_53ea150fd63a4ef657412c858a71a13e_20160921_7ffe38e0972c_5195 {
+  meta:
+    description = "datamaliciousorder - from files 20160921_53ea150fd63a4ef657412c858a71a13e.js, 20160921_7ffe38e0972c323071684bfa98cafbdf.js, 20160921_8c33029db61426a234eddfae1623641b.js, 20160921_93e612a2f44e1198dfe3c296cb4f7b79.js"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "16ac7affa46e10764a6e40de21c545ac275939c77c4acf142df8e3f848362242"
+    hash2       = "4bc751383d4c72f88b3f59d9fde1f38f09a81b77ee4df0498bec1df7cd088bc7"
+    hash3       = "8a7c2a5271a5dc64c200145fa7252ff19d736174b3556eb436f9ac8941daec71"
+    hash4       = "e88aa94cf06df033312260c4a58f453654133758e66e1d2df4f11f9de9bfec7c"
+
+  strings:
+    $s1 = "n f000(){return \"MDb\";})(),(function f000(){return \"GGn\";})(),(function f000(){return \"KXg\";})(),(function f000(){return " ascii
+    $s2 = "),(function f000(){return \"RPt\";})(),(function f000(){return \"Yi\";})(),(function f000(){return \"ZFe\";})(),(function f000()" ascii
+    $s3 = ",(function f000(){return \"Mu\";})(),(function f000(){return \"GGn\";})(),(function f000(){return \"Vj\";})(),(function f000(){r" ascii
+    $s4 = "urn \"Qz\";})(),(function f000(){return \"TRc\";})(),(function f000(){return \"WIj\";})(),(function f000(){return \"Vu\";})(),(f" ascii
+    $s5 = " f000(){return \"KDh\";})(),(function f000(){return \"EZu\";})(),(function f000(){return \"Iq\";})(),(function f000(){return \"K" ascii
+
+  condition:
+    (uint16(0) == 0x2f0a and (all of them)
+    ) or (all of them)
+}

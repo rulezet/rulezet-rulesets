@@ -1,0 +1,21 @@
+rule _20160921_78345276f684d53628bbcac810994182_20160921_7dec24f022af_5413 {
+  meta:
+    description = "datamaliciousorder - from files 20160921_78345276f684d53628bbcac810994182.js, 20160921_7dec24f022af3c1ffe46748172dd6cad.js, 20160921_bfdb187f27d136f64e05f0dcf2ee4914.js"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "17b203684b4f2284de883c81e8fef63ea03c36bd0599ccb85d3175be35d9ac6d"
+    hash2       = "402e919998fdba69cb3992879db4f947916245c38915db643643952fa450e947"
+    hash3       = "cbf2173e7b067de6ce6bf189ba38c78f3f0d97a7e6685c0191e08885badfeb3e"
+
+  strings:
+    $s1 = "tion fuck(){return \"IKv\";})(),(function fuck(){return \"Hs\";})(),(function fuck(){return \"RAi\";})(),(function fuck(){return" ascii
+    $s2 = "turn \"IPu\";})(),(function fuck(){return \"Hs\";})(),(function fuck(){return \"UOe\";})(),(function fuck(){return \"UOe\";})()," ascii
+    $s3 = "{return \"UOe\";})(),(function fuck(){return \"Hs\";})(),(function fuck(){return \"IRn\";})(),(function fuck(){return \"MBg\";})" ascii
+    $s4 = "n \"Vb\";})(),(function fuck(){return \"RAi\";})(),(function fuck(){return \"Jo\";})(),(function fuck(){return \"NKq\";})(),(fun" ascii
+    $s5 = "nction fuck(){return \"USf\";})(),(function fuck(){return \"Jo\";})(),(function fuck(){return \"IPu\";})(),(function fuck(){retu" ascii
+
+  condition:
+    (uint16(0) == 0x2f0a and (all of them)
+    ) or (all of them)
+}
