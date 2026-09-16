@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"WebNMS User Impersonation Attempt"; flow:established,to_server; content:"UserName"; http_header; nocase; sid:1001482; rev:1; reference:cve,CVE-2016-6601; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2016-6601;)

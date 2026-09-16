@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"SEH utnserver Pro DoS attempt"; content:"/info/file?/application"; http_uri; threshold: type both, track by_src, count 10, seconds 1; sid:1002693; rev:1; reference:cve,CVE-2024-5421; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-5421;)

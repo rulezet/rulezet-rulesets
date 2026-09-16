@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"SEH utnserver Pro file disclosure attempt"; content:"/info/dir?/"; http_uri; sid:1002692; rev:1; reference:cve,CVE-2024-5421; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-5421;)
