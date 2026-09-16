@@ -1,0 +1,1 @@
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"ET JA3 Hash - [Abuse.ch] Possible Gozi"; ja3_hash; content:"57f3642b4e37e28f5cbe3020c9331b4c"; reference:url,sslbl.abuse.ch/ja3-fingerprints/; classtype:unknown; sid:2028811; rev:2; metadata:created_at 2019_10_14, confidence Low, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_10_29;)
