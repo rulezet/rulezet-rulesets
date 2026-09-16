@@ -1,0 +1,9 @@
+rule Win_Trojan_Trident_2
+{
+strings:
+	$a0 = { e800005d81ed0301b430cd2181fb43427411b42acd21e42181f9c907770880fe047703e974000c0250b81c35cd212e899ea9022e8c86ab0258e621b82135cd21 }
+
+
+condition:
+	$a0
+}

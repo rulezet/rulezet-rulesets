@@ -1,0 +1,9 @@
+rule Win_Trojan_TME_1
+{
+strings:
+	$a0 = { e800005e81ee0301bf000103f7b98302bb1701fce96802c70683030001ba4501b8023dcd2193b44033c9cd21b98302e81b00b43ecd21cd20cd21c3b8024233c933d2cd }
+
+
+condition:
+	$a0
+}

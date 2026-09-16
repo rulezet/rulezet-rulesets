@@ -1,0 +1,9 @@
+rule Win_Trojan_Tormentor_2
+{
+strings:
+	$a0 = { ff4390cd218cd82d11008ed8803e00015a754fa103012d40007247a30301832e1201508e0612010e1fb9dc01bf0001578bf7f3a4061fb81c35cd21891ed702 }
+
+
+condition:
+	$a0
+}

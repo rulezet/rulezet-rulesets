@@ -1,0 +1,9 @@
+rule Win_Trojan_Tower_1
+{
+strings:
+	$a0 = { cd20000000000000000000000000000000000000000000005d1e062bc08ec08ed8bf4002397d2574198d76fdb9 }
+
+
+condition:
+	$a0
+}

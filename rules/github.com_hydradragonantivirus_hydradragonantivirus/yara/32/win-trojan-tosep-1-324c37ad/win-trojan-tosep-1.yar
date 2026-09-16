@@ -1,0 +1,9 @@
+rule Win_Trojan_Tosep_1
+{
+strings:
+	$a0 = { 5b57696e33322e53746570325d002056697275732077617320737461727465642e2e2e00ff254c30 }
+
+
+condition:
+	$a0
+}
