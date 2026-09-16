@@ -1,0 +1,27 @@
+{
+  "uuid": "ffda632d-be0d-406b-a627-e18d8871702a",
+  "title": "Azure Storage Account Keys Accessed by Privileged User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies unusual high-privileged access to Azure Storage Account keys by users with Owner, Contributor, or Storage\nAccount Contributor roles. This technique was observed in STORM-0501 ransomware campaigns where compromised identities\nwith high-privilege Azure RBAC roles retrieved access keys to perform unauthorized operations on Storage Accounts.\nMicrosoft recommends using Shared Access Signature (SAS) models instead of direct key access for improved security.\nThis rule detects when a user principal with high-privilege roles accesses storage keys for the first time in 7 days.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1555",
+    "T1555.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349063"
+}

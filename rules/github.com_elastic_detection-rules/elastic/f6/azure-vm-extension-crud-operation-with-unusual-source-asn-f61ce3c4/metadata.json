@@ -1,0 +1,26 @@
+{
+  "uuid": "f61ce3c4-e0cf-4c79-8019-97e2e945d03e",
+  "title": "Azure VM Extension CRUD Operation with Unusual Source ASN",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies create, read, update, or delete (CRUD) operations against Azure VM or VM scale set extensions\n(\"MICROSOFT.COMPUTE/VIRTUALMACHINES/EXTENSIONS/*\" or the scale set equivalent) where the combination of the targeted\nextension resource name and the source autonomous system (AS) number has not been observed recently. VM extensions such\nas CustomScript and DSC run with high privilege on the guest (SYSTEM on Windows, root on Linux), so writing, modifying,\nor removing them is a common code-execution and persistence primitive. By keying a new terms approach on the extension\nresource name and the source AS number, this rule surfaces extension operations originating from networks that have not\nhistorically managed that extension, while routine first-party Microsoft automation (which originates from well-known\nMicrosoft AS numbers) is excluded.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1651"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349163"
+}

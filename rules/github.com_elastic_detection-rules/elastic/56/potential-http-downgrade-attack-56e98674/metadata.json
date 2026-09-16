@@ -1,0 +1,22 @@
+{
+  "uuid": "56e98674-5f98-4ba4-a32b-dd9228551375",
+  "title": "Potential HTTP Downgrade Attack",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Through the new_terms rule type, this rule detects potential HTTP downgrade attacks by identifying\nHTTP traffic that uses a different HTTP version than the one typically used in the environment. An\nHTTP downgrade attack occurs when an attacker forces a connection via an older HTTP version, \nresulting in potentially less secure communication. For example, an attacker might downgrade a\nconnection from HTTP/2 to HTTP/1.1 or HTTP/1.0 to exploit known vulnerabilities or weaknesses in\nthe older protocol versions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.010"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349240"
+}

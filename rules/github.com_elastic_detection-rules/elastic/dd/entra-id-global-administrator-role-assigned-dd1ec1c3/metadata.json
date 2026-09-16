@@ -1,0 +1,25 @@
+{
+  "uuid": "dd1ec1c3-a1ae-40e2-9f27-1fd32378154d",
+  "title": "Entra ID Global Administrator Role Assigned",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "In Microsoft Entra ID, permissions to manage resources are assigned using roles. The Global Administrator\nis a role that enables users to have access to all administrative features in Microsoft Entra ID and services that use Microsoft Entra ID\nidentities like the Microsoft 365 Defender portal, the Microsoft 365 compliance center, Exchange, SharePoint Online, and\nSkype for Business Online. Attackers can add users as Global Administrators to maintain access and manage all\nsubscriptions and their settings and resources. They can also elevate privilege to User Access Administrator to pivot into Azure resources.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349056"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "99208b74-ad6c-40ec-99ce-adba560feb77",
+  "title": "AWS SNS Topic Message Publish by Rare User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when an SNS topic message is published by a rare user in AWS. Adversaries may publish messages to SNS topics\nfor phishing campaigns, data exfiltration, or lateral movement within the AWS environment. SNS topics are used to send\nnotifications and messages to subscribed endpoints such as applications, mobile devices or email addresses, making them a\nvaluable target for adversaries to distribute malicious content or exfiltrate sensitive data. This is a New Terms rule that only flags\nwhen this behavior is observed for the first time by a user or role.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1102",
+    "T1496",
+    "T1496.004",
+    "T1534",
+    "T1567"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349005"
+}

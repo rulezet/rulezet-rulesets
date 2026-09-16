@@ -1,0 +1,23 @@
+{
+  "uuid": "500ca516-f196-4a63-9301-eb79c137fb47",
+  "title": "Azure Automation Webhook Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when an Azure Automation webhook is created. Azure Automation runbooks can be configured to execute via a\nwebhook. A webhook uses a custom URL passed to Azure Automation along with a data payload specific to the runbook. An\nadversary may create a webhook in order to trigger a runbook that contains malicious code.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1546",
+    "T1608"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349097"
+}

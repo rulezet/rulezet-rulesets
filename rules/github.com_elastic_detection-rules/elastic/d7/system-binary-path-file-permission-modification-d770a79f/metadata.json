@@ -1,0 +1,27 @@
+{
+  "uuid": "d770a79f-5b1c-4cf5-887c-3dcc78f1a6c2",
+  "title": "System Binary Path File Permission Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies file permission modification events on files located in common system binary paths. Adversaries may attempt to\nhide their payloads in the default Linux system directories, and modify the file permissions of these payloads prior to execution.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1222",
+    "T1222.002",
+    "T1548",
+    "T1548.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349369"
+}

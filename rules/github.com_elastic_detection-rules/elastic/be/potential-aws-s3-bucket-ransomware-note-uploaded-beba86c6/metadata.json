@@ -1,0 +1,27 @@
+{
+  "uuid": "beba86c6-9f4e-413d-a051-cc666e3d387f",
+  "title": "Potential AWS S3 Bucket Ransomware Note Uploaded",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies potential ransomware note being uploaded to an AWS S3 bucket. This rule detects the PutObject S3 API call\nwith an object name commonly associated with ransomware notes. The keywords detected here rarely overlap with common file names and have been attributed to ransomware notes with high-confidence. Adversaries with access to a misconfigured\nS3 bucket may retrieve, delete, and replace objects with ransom notes to extort victims.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1486",
+    "T1565",
+    "T1565.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349004"
+}

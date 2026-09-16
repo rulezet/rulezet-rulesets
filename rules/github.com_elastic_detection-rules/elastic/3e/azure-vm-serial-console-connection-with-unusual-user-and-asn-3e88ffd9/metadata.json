@@ -1,0 +1,28 @@
+{
+  "uuid": "3e88ffd9-d526-4f98-b71c-6c7ca1d886cf",
+  "title": "Azure VM Serial Console Connection with Unusual User and ASN",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a connection to the Azure Serial Console of a virtual machine (VM) by an identity and source network\ncombination that has not been observed recently. The Serial Console provides text-based console access to a VM through\nthe boot diagnostics serial port, independent of the VM's network state. Because it does not traverse the VM's network\ninterface, a Serial Console session bypasses Network Security Groups (NSGs), Just-in-Time (JIT) access policies, and\nother network controls. An adversary with a privileged Azure RBAC role (for example Virtual Machine Contributor) and\nboot diagnostics enabled on the target can use the Serial Console to obtain an interactive session as SYSTEM (Windows)\nor root (Linux).\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.008",
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349076"
+}

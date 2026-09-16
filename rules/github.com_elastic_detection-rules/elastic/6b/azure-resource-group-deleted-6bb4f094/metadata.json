@@ -1,0 +1,28 @@
+{
+  "uuid": "6bb4f094-fba9-4159-b55f-310bab1e3f62",
+  "title": "Azure Resource Group Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the deletion of a resource group in Azure, which includes all resources within the group. Deletion is\npermanent and irreversible. An adversary may delete a resource group in an attempt to evade defenses or intentionally\ndestroy data.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1489",
+    "T1490",
+    "T1529",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349150"
+}

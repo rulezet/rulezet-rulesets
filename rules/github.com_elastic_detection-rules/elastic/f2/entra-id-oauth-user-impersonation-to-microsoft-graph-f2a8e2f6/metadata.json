@@ -1,0 +1,27 @@
+{
+  "uuid": "f2a8e2f6-8113-4916-a54a-a48721289224",
+  "title": "Entra ID OAuth User Impersonation to Microsoft Graph",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies potential session hijacking or token replay in Microsoft Entra ID. This rule detects cases where a user signs\nin and subsequently accesses Microsoft Graph from a different IP address using the same session ID. This may indicate a\nsuccessful OAuth phishing attack, session hijacking, or token replay attack, where an adversary has stolen a session\ncookie or refresh/access token and is impersonating the user from an alternate host or location.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1550",
+    "T1550.001",
+    "T1550.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349162"
+}

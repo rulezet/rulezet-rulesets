@@ -1,0 +1,27 @@
+{
+  "uuid": "37265bd2-f8ee-47c5-bf36-92298990810b",
+  "title": "Entra ID Actor Token User Impersonation Abuse",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies potential abuse of actor tokens in Microsoft Entra ID audit logs. Actor tokens are undocumented backend\nmechanisms used by Microsoft for service-to-service (S2S) operations, allowing services to perform actions on behalf\nof users. These tokens appear in logs with the service's display name but the impersonated user's UPN. While some\nlegitimate Microsoft operations use actor tokens, unexpected usage may indicate exploitation of CVE-2025-55241, which\nallowed unauthorized access to Azure AD Graph API across tenants before being patched by Microsoft.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1548",
+    "T1550",
+    "T1550.001"
+  ],
+  "cve": [
+    "CVE-2025-55241"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349036"
+}

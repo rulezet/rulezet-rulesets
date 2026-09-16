@@ -1,0 +1,21 @@
+{
+  "uuid": "639952c8-01b5-44df-a7b4-0062c6a3e38d",
+  "title": "AWS SES Account Email Sending Enabled",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when account-level email sending is explicitly enabled in Amazon SES, via the v1\nUpdateAccountSendingEnabled API with Enabled: true or the v2 PutAccountSendingAttributes API with\nSendingEnabled: true. Account-level sending is commonly paused by an administrator, or by automation\nwired to CloudWatch reputation alarms when bounce or complaint rates rise. An attacker who\ncompromises an AWS account may re-enable sending to restore a paused capability as part of phishing\ninfrastructure setup, allowing bulk email under the victim organization's trusted sending domain.\nNeither API can resume sending that AWS itself has paused.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1608"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349013"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "700b82b3-780e-4636-a017-b72601580438",
+  "title": "Potential Port Scanning Activity from Compromised Host",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects potential port scanning activity from a compromised host. Port scanning is a common reconnaissance\ntechnique used by attackers to identify open ports and services on a target system. A compromised host may exhibit port\nscanning behavior when an attacker is attempting to map out the network topology, identify vulnerable services, or\nprepare for further exploitation. This rule identifies potential port scanning activity by monitoring network connection\nattempts from a single host to a large number of ports within a short time frame. ESQL rules have limited fields\navailable in its alert documents. Make sure to review the original documents to aid in the investigation of this alert.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1046"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349337"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "8e37b40f-af40-4a5e-86af-03c45ffea012",
+  "title": "Entra ID Protection Alerts for User Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies more than two Microsoft Entra ID Protection alerts associated to the user principal in a short time period.\nMicrosoft Entra ID Protection alerts are triggered by suspicious sign-in activity, such as anomalous IP addresses, risky\nsign-ins, or other risk detections. Multiple alerts in a short time frame may indicate an ongoing attack or compromised\naccount.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349100"
+}

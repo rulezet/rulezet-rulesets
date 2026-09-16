@@ -1,0 +1,26 @@
+{
+  "uuid": "90d18c6f-d8be-4496-b237-c64ef41f0a29",
+  "title": "Entra ID OAuth Device Code Phishing via AiTM",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful Microsoft Entra ID sign-ins that use the OAuth device code authentication protocol with the\nMicrosoft Authentication Broker client requesting first-party Office API resources (Exchange Online, Microsoft Graph,\nor SharePoint) while flagged as interactive. This pattern is associated with adversary-in-the-middle (AiTM) phishing kits\nsuch as Tycoon 2FA, where victims complete device code flows that ultimately broker tokens for mail and collaboration\nAPIs.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1550",
+    "T1550.001",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349098"
+}

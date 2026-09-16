@@ -1,0 +1,26 @@
+{
+  "uuid": "5860d6f8-8a4e-40ec-8c07-f8ba88f978ab",
+  "title": "Kubectl Permission Discovery",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the use of the \"kubectl auth --can-i\" command, which is used to check permissions in Kubernetes clusters.\nAttackers may use this command to enumerate permissions and discover potential misconfigurations in the cluster, allowing\nthem to gain unauthorized access or escalate privileges.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1069",
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349202"
+}

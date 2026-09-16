@@ -1,0 +1,22 @@
+{
+  "uuid": "19211874-3b20-4b24-940b-3fcb10ba600a",
+  "title": "AWS CloudTrail Log Evasion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the evasion of cloudtrail logging for IAM actions involving policy creation, modification or attachment. When making certain policy-related API calls, an adversary may pad the associated policy document with whitespaces to trigger CloudTrail’s logging size constraints, resulting in incomplete logging where critical details about the policy are omitted. By exploiting this gap, threat actors can bypass monitoring performed through CloudTrail and can effectively obscure unauthorized changes. This rule looks for IAM API calls with the requestParameters property containing reason:”requestParameters too large” and omitted:true.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348960"
+}

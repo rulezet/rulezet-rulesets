@@ -1,0 +1,21 @@
+{
+  "uuid": "900f32b3-a71d-458e-bc78-0f7a55f6b86a",
+  "title": "AWS Lambda Function Invoked by an Unusual Principal",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the first time within the prior 14 days that a principal directly invokes an AWS Lambda function in an\naccount, excluding invocations made on behalf of AWS services (normal event-source triggers). Adversaries who compromise\ncredentials or move laterally may directly invoke functions to execute code, retrieve data returned by a function, or\nabuse an over-permissioned execution role. Direct, ad hoc invocation by a principal that does not normally call Lambda\ndeviates from the usual event-driven invocation pattern and is worth reviewing. This rule relies on AWS Lambda data\nevent logging, which is not enabled by default.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1648"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348978"
+}

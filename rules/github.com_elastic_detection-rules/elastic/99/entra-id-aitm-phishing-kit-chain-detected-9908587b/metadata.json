@@ -1,0 +1,29 @@
+{
+  "uuid": "9908587b-0138-493d-b9a1-5ae3d6182036",
+  "title": "Entra ID AiTM Phishing-Kit Chain Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a Microsoft Entra ID identity-compromise chain in which a single user, within a 10-minute window,\nauthenticates to the Device Registration Service through the Microsoft Authentication Broker (MAB) client, registers a\ndevice, and then uses the resulting Primary Refresh Token (PRT) to access a resource other than the Device Registration\nService. This sequence is the core post-adversary-in-the-middle (AiTM) persistence pattern used by phishing kits such as\nTycoon2FA and Kali365: after capturing a victim session, the kit registers an Azure AD-joined device to obtain a\ndevice-bound PRT, which survives user-level session revocation and password resets and grants trusted, MFA-free access.\nCorrelating the broker sign-in, the device-registration audit event, and the follow-on PRT sign-in for the same user\nwithin a short window is a high-fidelity indicator of active account takeover.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1098",
+    "T1098.005",
+    "T1528",
+    "T1550",
+    "T1550.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349114"
+}

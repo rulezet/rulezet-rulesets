@@ -1,0 +1,22 @@
+{
+  "uuid": "4d66c7b6-c43f-443f-b350-a60f332536e0",
+  "title": "AWS EKS Control Plane Logging Disabled",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful Amazon EKS UpdateClusterConfig requests that disable control plane logging. Disabling EKS API server\nand control plane logs can reduce visibility into cluster activity and may indicate defense evasion following\ncompromised AWS credentials or unauthorized administrative access. EKS control plane logging changes are typically rare\nand should align with approved maintenance or cost optimization workflows.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349011"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "284b2f48-431b-4d95-902c-6ce22dbdad8b",
+  "title": "AWS Cognito Unauthenticated Identity Pool Credentials Issued",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies AWS CloudTrail data events where an unauthenticated identity successfully retrieves temporary AWS credentials\nfrom a Cognito Identity Pool via GetCredentialsForIdentity. Cognito Identity Pools can be configured to allow\nunauthenticated (guest) access, intended for scenarios like anonymous app analytics, but a pool that grants those\nanonymous identities meaningful IAM permissions becomes a public, unauthenticated path to real AWS credentials.\nAdversaries who discover an identity pool ID (often embedded in mobile app binaries, web app JavaScript, or public\nsource repositories) can call GetId followed by GetCredentialsForIdentity with no login token at all to obtain\ntemporary credentials, then use them to access whatever the pool's unauthenticated role permits. This is a New Terms\nrule that limits alerting to identity pools that have not been observed issuing credentials to an unauthenticated caller\nbefore, since some applications intentionally and continuously use guest access as part of normal operation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1552"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348934"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "ce932c2b-7042-4ce3-bd91-252a91155201",
+  "title": "Potential Execution of rc.local Script",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the potential execution of the \"/etc/rc.local\" script through the \"already_running\" event action\ncreated by the \"rc-local.service\" systemd service. The \"/etc/rc.local\" script is a legacy initialization script that is\nexecuted at the end of the boot process. The \"/etc/rc.local\" script is not enabled by default on most Linux\ndistributions. The \"/etc/rc.local\" script can be used by attackers to persistently execute malicious commands or scripts\non a compromised system at reboot. As the rc.local file is executed prior to the initialization of Elastic Defend, the\nexecution event is not ingested, and therefore the \"already_running\" event is leveraged to provide insight into the\npotential execution of \"rc.local\".\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1037.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349380"
+}

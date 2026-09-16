@@ -1,0 +1,25 @@
+{
+  "uuid": "27d9c903-ad46-4f86-9882-fbd200791fdf",
+  "title": "Entra ID Service Principal with Unusual Source ASN",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies Entra ID service principal sign-ins where the workload identity and source autonomous system number (ASN)\ntogether have not appeared in recent history. Attackers who obtain application secrets or tokens often authenticate\nfrom unfamiliar hosting providers, residential or VPN egress, or networks outside normal automation footprints, which\ncan precede data access, lateral movement, or ransomware activity in the tenant. The detection emphasizes first-seen\nnetwork context for non-interactive workload identities.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349094"
+}

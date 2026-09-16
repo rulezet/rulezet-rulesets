@@ -1,0 +1,22 @@
+{
+  "uuid": "8a00a91b-23b1-42ff-ab5c-0507d1489b94",
+  "title": "AWS Detective Graph Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the deletion of an Amazon Detective behavior graph via the DeleteGraph API. Amazon\nDetective automatically collects log data from AWS services and uses machine learning, statistical\nanalysis, and graph theory to build an interactive model of resource behaviors and interactions.\nDeleting a behavior graph destroys its historical analysis data and removes the ability to\ninvestigate security incidents using Detective's relationship mapping. An attacker with sufficient\nIAM permissions may delete the Detective graph to impair forensic investigation of a compromise.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348994"
+}

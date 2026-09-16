@@ -1,0 +1,19 @@
+{
+  "uuid": "362aa745-c961-4c0b-86d3-bc36564e106a",
+  "title": "Correlated Alerts on Similar User Identities",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule correlates alerts from multiple integrations and event categories that involve different user.name values which\nmay represent the same real-world identity. It uses an LLM-based similarity analysis to evaluate whether multiple user identifiers\n(e.g. naming variations, formats, aliases, or domain differences) likely belong to the same person.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349227"
+}

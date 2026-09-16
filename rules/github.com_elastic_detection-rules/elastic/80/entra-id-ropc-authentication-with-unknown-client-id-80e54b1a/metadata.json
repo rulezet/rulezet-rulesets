@@ -1,0 +1,24 @@
+{
+  "uuid": "80e54b1a-466c-4b85-98b4-f21c19a4e556",
+  "title": "Entra ID ROPC Authentication with Unknown Client ID",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies potential OAuth client ID spoofing in Microsoft Entra ID sign-in logs. Adversaries submit fabricated or\nnon-existent application identifiers (client IDs) in Resource Owner Password Credentials (ROPC) authentication requests\nto the token endpoint. Because Entra ID validates the submitted credential before rejecting the request on application\nresolution, the resulting error code acts as a credential- and account-validity oracle while never producing a\nsuccessful sign-in. By fragmenting attempts across many fictional application identifiers, adversaries evade\nper-application detections, rate limiting, and application-scoped Conditional Access. This rule detects a ROPC\nauthentication that fails with error code 700016 (application not found in the directory) where no application display\nname resolves, which is characteristic of a spoofed client ID used for stealthy user enumeration and password spraying.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1087",
+    "T1087.004",
+    "T1110",
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349083"
+}

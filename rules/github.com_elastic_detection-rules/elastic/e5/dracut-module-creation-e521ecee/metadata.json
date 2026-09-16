@@ -1,0 +1,29 @@
+{
+  "uuid": "e521ecee-b1bb-4e83-86df-deb727a87954",
+  "title": "Dracut Module Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation of Dracut module files on Linux systems. Dracut is a tool used to generate an initramfs\nimage that is used to boot the system. Dracut modules are scripts that are executed during the initramfs image\ngeneration process. Attackers may create malicious Dracut modules to execute arbitrary code at boot time, which can be\nleveraged to maintain persistence on a Linux system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1542",
+    "T1543",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349366"
+}

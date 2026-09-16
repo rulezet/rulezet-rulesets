@@ -1,0 +1,33 @@
+{
+  "uuid": "2262263d-eebb-49e4-bd29-02ddee873e7f",
+  "title": "Entra ID Sign-in TeamFiltration User-Agent Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies potential enumeration or password spraying activity using TeamFiltration tool. TeamFiltration is an\nopen-source enumeration, password spraying and exfiltration tool designed for Entra ID and Microsoft 365. Adversaries\nare known to use TeamFiltration in-the-wild to enumerate users, groups, and roles, as well as to perform password\nspraying attacks against Microsoft Entra ID and Microsoft 365 accounts. This rule detects the use of TeamFiltration by\nmonitoring for specific user-agent strings associated with the tool in Azure and Microsoft 365 logs.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069",
+    "T1069.003",
+    "T1082",
+    "T1087",
+    "T1087.004",
+    "T1110",
+    "T1110.003",
+    "T1201",
+    "T1526",
+    "T1580",
+    "T1673"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349123"
+}

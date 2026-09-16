@@ -1,0 +1,21 @@
+{
+  "uuid": "9bbb57b7-8cec-4d46-9d3f-b5948835315f",
+  "title": "AWS Bedrock Resource-Based Policy Modified or Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects modification or deletion of resource-based access policies on AWS Bedrock resources via the PutResourcePolicy\nand DeleteResourcePolicy API calls. Resource-based policies govern which principals (including external accounts) may\naccess Bedrock resources such as agents, knowledge bases, and custom models. An adversary may attach a resource policy\ngranting an external or unexpected principal access to a Bedrock resource to establish persistence or enable\ncross-account access, or may delete an existing policy to weaken access controls. These changes should be validated for\nprincipal ownership and least-privilege intent.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348993"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "9996d6fe-8b9b-42fc-9ac8-cc83d6b26fdf",
+  "title": "AWS SES Full Access Policy Attached to IAM Entity by Unusual User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the first occurrence in 7 days of an AWS identity attaching the managed policy\nAmazonSESFullAccess to an IAM user, role, or group. AmazonSESFullAccess grants unrestricted\npermission to send email, manage identities and templates, manage suppression lists, and access\nSES account-level settings. Granting this policy to an unexpected IAM entity, particularly a newly\ncreated user or a role not previously associated with email operations, is a documented technique\nused by threat actors to establish phishing infrastructure on compromised AWS accounts, enabling\nthem to send email on behalf of the victim organization's trusted sending domain. Using new terms\non the calling identity suppresses recurring attachments by known email automation while\nsurfacing identities performing this action for the first time.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003",
+    "T1608"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348957"
+}

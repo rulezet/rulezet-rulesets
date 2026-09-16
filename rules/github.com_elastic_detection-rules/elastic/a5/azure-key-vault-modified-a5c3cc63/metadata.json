@@ -1,0 +1,24 @@
+{
+  "uuid": "a5c3cc63-600d-4d60-b8ed-a570b49541e1",
+  "title": "Azure Key Vault Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies modifications to a Key Vault in Azure. The Key Vault is a service that safeguards encryption keys and secrets\nlike certificates, connection strings, and passwords. Because this data is sensitive and business critical, access to\nkey vaults should be secured to allow only authorized applications and users. This is a New Terms rule that detects when this activity hasn't been seen by the user in a specified time frame.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1578",
+    "T1578.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349119"
+}

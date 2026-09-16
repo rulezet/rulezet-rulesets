@@ -1,0 +1,27 @@
+{
+  "uuid": "81478f76-038d-48a4-943f-35472dae2bd2",
+  "title": "Suspicious File Made Executable via Chmod Inside A Container",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when chmod or chown are used to add the execute permission to a file in a world-writeable directory,\nand inside of a container. Modifying file permissions to make a file executable could indicate malicious activity, as\nan attacker may attempt to run unauthorized or malicious code inside the container.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1222",
+    "T1222.002",
+    "T1548",
+    "T1548.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349323"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "cfe9ef70-d769-4264-98c4-d80486cbb69f",
+  "title": "Azure Diagnostic Settings Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the deletion of diagnostic settings in Azure, which send platform logs and metrics to different destinations.\nAn adversary may delete diagnostic settings in an attempt to evade defenses.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349128"
+}

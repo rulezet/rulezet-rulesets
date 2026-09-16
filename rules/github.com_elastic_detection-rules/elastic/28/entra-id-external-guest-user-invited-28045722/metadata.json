@@ -1,0 +1,23 @@
+{
+  "uuid": "28045722-d164-4b88-afdc-4604ac246ba5",
+  "title": "Entra ID External Guest User Invited",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an invitation to an external user in Azure Active Directory (AD). Azure AD is extended to include\ncollaboration, allowing you to invite people from outside your organization to be guest users in your cloud account.\nUnless there is a business need to provision guest access, it is best practice avoid creating guest users. Guest users\ncould potentially be overlooked indefinitely leading to a potential vulnerability.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1136",
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349070"
+}

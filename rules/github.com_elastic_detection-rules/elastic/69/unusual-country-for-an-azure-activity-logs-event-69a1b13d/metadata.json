@@ -1,0 +1,24 @@
+{
+  "uuid": "69a1b13d-6323-42e0-b621-c0f76ad4b4d3",
+  "title": "Unusual Country for an Azure Activity Logs Event",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected Azure Activity Logs activity that, while not inherently suspicious or abnormal, is sourcing from\na geolocation (country) that is unusual for the event action. This can be the result of compromised credentials or keys being\nused by a threat actor in a different geography than the authorized user(s).\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349066"
+}

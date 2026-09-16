@@ -1,0 +1,28 @@
+{
+  "uuid": "7b77bc1b-8d50-47e3-b26c-da14866234ec",
+  "title": "Network Connection Followed by File Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects network connections originating from a binary located in a potentially suspicious location, followed by a file\ncreation event. This behavior is consistent with C2 agents such as Poseidon and Athena, connecting to a C2 framework\nsuch as Mythic. The agent polls the C2 for commands through a web request, after which the command gets executed.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1071",
+    "T1071.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349381"
+}

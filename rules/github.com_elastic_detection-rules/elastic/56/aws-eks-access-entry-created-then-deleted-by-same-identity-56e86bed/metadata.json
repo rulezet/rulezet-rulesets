@@ -1,0 +1,23 @@
+{
+  "uuid": "56e86bed-abd1-43d2-a571-f1fa629da40c",
+  "title": "AWS EKS Access Entry Created Then Deleted by Same Identity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the creation of an Amazon EKS access entry followed by its deletion by the same\nidentity within a short time window. EKS access entries define Kubernetes RBAC-level\npermissions for IAM principals in an EKS cluster. An adversary with EKS administrative\naccess may temporarily grant themselves cluster access, use those permissions to create\nKubernetes RBAC resources (ClusterRoleBindings, ServiceAccounts with privileged roles),\nand then delete the access entry to hide the evidence of the initial grant while retaining\naccess through the Kubernetes-level backdoor.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349015"
+}

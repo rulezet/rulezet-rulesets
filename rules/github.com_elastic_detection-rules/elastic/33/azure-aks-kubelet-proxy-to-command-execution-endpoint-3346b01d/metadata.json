@@ -1,0 +1,22 @@
+{
+  "uuid": "3346b01d-5de9-4500-a6ec-a453be9bd35c",
+  "title": "Azure AKS Kubelet Proxy to Command Execution Endpoint",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects use of the AKS (Azure Kubernetes Service) API server nodes/proxy subresource to reach a node's Kubelet\ncommand-execution endpoints (run, exec, attach, portforward, cri). Unlike benign monitoring that scrapes /metrics and\n/stats, a request to these endpoints executes commands inside a pod on the node, the core of the kubeletctl and Peirates\nlateral-movement technique. Even a GET to /exec is command execution because the Kubelet maps the WebSocket upgrade\nhandshake to the RBAC get verb, so nodes/proxy GET is sufficient for remote code execution.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1210",
+    "T1609"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349051"
+}

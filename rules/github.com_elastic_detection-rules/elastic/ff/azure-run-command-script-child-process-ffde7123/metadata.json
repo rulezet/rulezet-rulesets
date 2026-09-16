@@ -1,0 +1,30 @@
+{
+  "uuid": "ffde7123-3f4d-46eb-96b1-373407036ef7",
+  "title": "Azure Run Command Script Child Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies process start events whose parent matches Azure Virtual Machine Run Command execution patterns on Windows\nor Linux. On Windows, Run Command often launches PowerShell with `-ExecutionPolicy Unrestricted` and a `script?.ps1`\nfile; on Linux, the Azure Linux Agent (waagent) runs downloaded script.sh under \"/var/lib/waagent/run-command/\".\nChild process telemetry exposes the on-guest payload that cloud activity logs do not fully describe.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1059.004",
+    "T1651"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349229"
+}

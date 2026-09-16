@@ -1,0 +1,22 @@
+{
+  "uuid": "721d72bd-b415-4a99-b2bd-f8b4abe9f538",
+  "title": "Entra ID MFA TOTP Brute Force Attempted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies brute force attempts against Azure Entra multi-factor authentication (MFA) Time-based One-Time Password\n(TOTP) verification codes. This rule detects high frequency failed TOTP code attempts for a single user in a short\ntime-span with a high number of distinct session IDs. Adversaries may programmatically attemopt to brute-force TOTP\ncodes by generating several sessions and attempt to guess the correct code.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1110",
+    "T1110.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349124"
+}

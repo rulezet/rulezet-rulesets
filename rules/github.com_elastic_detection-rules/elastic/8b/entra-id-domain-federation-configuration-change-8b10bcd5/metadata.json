@@ -1,0 +1,27 @@
+{
+  "uuid": "8b10bcd5-26f1-475e-b62a-59121767bb58",
+  "title": "Entra ID Domain Federation Configuration Change",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when domain federation settings are configured or modified in an Entra ID tenant via the Microsoft Graph API.\nAdversaries with Global Administrator or Domain Administrator privileges may add a custom domain, verify ownership, and\nconfigure it to federate authentication with an attacker-controlled identity provider. Once federated, the adversary can\nforge SAML or WS-Federation tokens to authenticate as any user under that domain, bypassing MFA and conditional access\npolicies. This technique, commonly known as Golden SAML, was used by UNC2452 (APT29) during the SolarWinds campaign for\npersistent, stealthy access to victim tenants.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.001",
+    "T1484",
+    "T1484.002",
+    "T1556",
+    "T1556.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349113"
+}

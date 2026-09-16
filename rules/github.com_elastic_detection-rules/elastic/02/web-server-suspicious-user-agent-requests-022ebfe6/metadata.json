@@ -1,0 +1,27 @@
+{
+  "uuid": "022ebfe6-4317-4264-b4f3-48d16128e1ac",
+  "title": "Web Server Suspicious User Agent Requests",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects unusual spikes in web server requests with uncommon or suspicious user-agent strings. Such activity may\nindicate reconnaissance attempts by attackers trying to identify vulnerabilities in web applications or servers. These\nuser-agents are often associated with automated tools used for scanning, vulnerability assessment, or brute-force attacks.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1110",
+    "T1595",
+    "T1595.001",
+    "T1595.002",
+    "T1595.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349293"
+}

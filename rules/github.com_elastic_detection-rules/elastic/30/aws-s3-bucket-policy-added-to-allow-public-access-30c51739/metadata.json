@@ -1,0 +1,24 @@
+{
+  "uuid": "30c51739-52fb-4e17-b1ce-72c50cd966c8",
+  "title": "AWS S3 Bucket Policy Added to Allow Public Access",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an Amazon S3 bucket policy is modified to grant public access using a wildcard (Principal:\"*\") statement.\nThis rule analyzes PutBucketPolicy events that include both Effect=Allow and Principal:\"*\" in the request parameters,\nindicating that permissions were extended to all identities, potentially making the bucket or its contents publicly\naccessible. Publicly exposing an S3 bucket is one of the most common causes of sensitive data leaks in AWS environments.\nAdversaries or misconfigurations can leverage this exposure to exfiltrate data, host malicious content, or collect\ncredentials and logs left in open storage.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1530",
+    "T1537"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348987"
+}

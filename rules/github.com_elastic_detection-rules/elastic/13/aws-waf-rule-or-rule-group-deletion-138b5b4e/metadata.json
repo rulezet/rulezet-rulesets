@@ -1,0 +1,22 @@
+{
+  "uuid": "138b5b4e-efa2-4f8f-ace5-1112c45c33b6",
+  "title": "AWS WAF Rule or Rule Group Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the deletion of an AWS Web Application Firewall (WAF) rule or rule group. WAF rules and rule groups enforce\ncritical protections for web applications by filtering malicious HTTP requests, blocking known attack patterns, and\nenforcing access controls. Deleting these rules—even briefly—can expose applications to SQL injection, cross-site\nscripting, credential-stuffing bots, or targeted exploitation. Adversaries who have gained sufficient permissions may\nremove WAF protections as part of a broader defense evasion or impact strategy, often preceding data theft or direct\napplication compromise.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348927"
+}

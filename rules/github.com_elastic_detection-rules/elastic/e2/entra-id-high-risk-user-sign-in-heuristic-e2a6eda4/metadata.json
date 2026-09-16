@@ -1,0 +1,22 @@
+{
+  "uuid": "e2a6eda4-2bbf-41a0-bc3c-ca808d97e035",
+  "title": "Entra ID High Risk User Sign-in Heuristic",
+  "format": "elastic",
+  "author": "Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies high risk Azure Active Directory (AD) sign-ins by leveraging Microsoft Identity Protection machine learning\nand heuristics.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349064"
+}

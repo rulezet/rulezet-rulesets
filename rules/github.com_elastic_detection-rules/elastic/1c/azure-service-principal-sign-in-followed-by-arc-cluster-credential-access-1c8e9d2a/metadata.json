@@ -1,0 +1,28 @@
+{
+  "uuid": "1c8e9d2a-e742-404b-bf13-14f7c26ba9da",
+  "title": "Azure Service Principal Sign-In Followed by Arc Cluster Credential Access",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a service principal authenticates to Microsoft Entra ID and then lists credentials for an Azure\nArc-connected Kubernetes cluster within a short time window. The `listClusterUserCredential` action retrieves tokens\nthat enable kubectl access through the Arc Cluster Connect proxy. This sequence (service principal sign-in followed by\nArc credential retrieval), represents the exact attack chain used by adversaries with stolen service principal secrets\nto establish a proxy tunnel into Kubernetes clusters. Service principals that authenticate externally (as opposed to\nmanaged identities) and immediately access Arc cluster credentials warrant investigation, particularly when the sign-in\noriginates from an unexpected location or ASN.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1528",
+    "T1552",
+    "T1552.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349031"
+}

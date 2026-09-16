@@ -1,0 +1,25 @@
+{
+  "uuid": "2d9b6ee9-e4a2-460b-b30a-59cd3eda9c84",
+  "title": "AWS RDS Snapshot Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the deletion of an AWS RDS DB snapshot or configuration changes that effectively remove backup coverage for a\nDB instance. RDS snapshots contain full backups of database instances, and disabling automated backups by setting\n\"backupRetentionPeriod=0\" has a similar impact by preventing future restore points. Adversaries with the appropriate\npermissions may delete snapshots or disable backups to inhibit recovery, destroy forensic evidence, or prepare for\nfollow-on destructive actions such as instance or cluster deletion.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348982"
+}

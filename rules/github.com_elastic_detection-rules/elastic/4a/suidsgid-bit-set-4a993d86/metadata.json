@@ -1,0 +1,28 @@
+{
+  "uuid": "4a993d86-52c8-42d6-8c1a-6703367ce83d",
+  "title": "SUID/SGID Bit Set",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "An adversary may add the setuid or setgid bit to a file or directory in order to run a file with the privileges of the\nowning user or group. An adversary can take advantage of this to either do a shell escape or exploit a vulnerability in\nan application with the setuid or setgid bit to get code running in a different user’s context. Additionally,\nadversaries can use this mechanism on their own malware to make sure they're able to execute in elevated contexts in the\nfuture.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1548",
+    "T1548.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349291"
+}

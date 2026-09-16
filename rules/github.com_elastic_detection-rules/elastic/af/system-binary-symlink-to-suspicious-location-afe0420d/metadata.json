@@ -1,0 +1,25 @@
+{
+  "uuid": "afe0420d-6c17-44d0-9976-11a6686768e3",
+  "title": "System Binary Symlink to Suspicious Location",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation of a symbolic link from a system binary to a suspicious and writable location. This\nactivity may indicate an attacker's attempt to evade detection by behavioral rules that depend on predefined process\nparent/child relationships. By executing the symlinked variant of a binary instead of the original, the attacker aims to\nbypass these rules. Through the new_terms rule type, this rule can identify uncommon parent processes that may indicate the\npresence of a malicious symlink.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1202",
+    "T1564",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349302"
+}

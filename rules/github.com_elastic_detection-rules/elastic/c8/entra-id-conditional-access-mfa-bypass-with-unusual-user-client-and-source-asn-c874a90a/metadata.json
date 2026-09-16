@@ -1,0 +1,26 @@
+{
+  "uuid": "c874a90a-0fed-40ea-ba52-8959d94f3f1e",
+  "title": "Entra ID Conditional Access MFA Bypass with Unusual User, Client and Source ASN",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the first observed instance of a Microsoft first-party public client application acquiring a Microsoft Graph\ntoken using single-factor (password-only) authentication while an MFA Conditional Access grant control went unenforced,\nfor a given user, application, and source autonomous system (ASN). This pattern is associated with the Conditional\nAccess \"resource exclusion\" bypass: when a tenant's \"all resources\" Conditional Access policy contains at least one\napplication exclusion, Entra ID issues tokens for low-privilege baseline scopes (User.Read, openid, profile, email) to\nany resource, including Microsoft Graph, without enforcing the policy's grant controls (such as MFA). An adversary\nholding only a stolen password can therefore obtain a Graph token through a trusted first-party public client (for\nexample, Microsoft Bing Search) and enumerate directory objects, even though the tenant requires MFA. Critically, the\noverall conditional_access_status is never \"failure\" for this technique (the sign-in is not blocked); it is reported as\n\"success\" or \"notApplied\" depending on what other policies exist in the tenant, so detections that key on Conditional\nAccess failures will not observe it. The reliable fingerprint is in the per-policy results: a policy whose enforced\ngrant control is MFA reports a result of \"notApplied\" for this sign-in, meaning the MFA requirement was silently not\nenforced while the single-factor, password-only sign-in still succeeded.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1556",
+    "T1556.009"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349148"
+}

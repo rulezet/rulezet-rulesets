@@ -1,0 +1,25 @@
+{
+  "uuid": "eccdff2f-36b6-47a5-a993-69ab3706f6d4",
+  "title": "Azure Compute VM Command Executed",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies synchronous command execution on a virtual machine (VM) or virtual machine scale set (VMSS) in Azure via the\naction-based Run Command (\"runCommand/action\"). A Virtual Machine Contributor role lets you manage virtual machines, but\nnot access them, nor access the virtual network or storage account they’re connected to. However, commands can be run on\nthe VM via the Run Command feature, which execute as System (Windows) or root (Linux). Other roles, such as certain\nAdministrator roles, may be able to execute commands on a VM as well.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1651"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349138"
+}

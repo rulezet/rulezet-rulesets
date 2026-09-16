@@ -1,0 +1,19 @@
+{
+  "uuid": "0babcacd-4411-40b4-beb2-ee5c80e162df",
+  "title": "Unusual High Confidence Content Filter Blocks Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects repeated high-confidence 'BLOCKED' actions coupled with specific 'Content Filter' policy violation having codes\nsuch as 'MISCONDUCT', 'HATE', 'SEXUAL', INSULTS', 'PROMPT_ATTACK', 'VIOLENCE' indicating persistent misuse or attempts\nto probe the model's ethical boundaries.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349026"
+}

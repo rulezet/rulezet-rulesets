@@ -1,0 +1,22 @@
+{
+  "uuid": "dc541c97-1d42-45e1-8862-a7554b7604e4",
+  "title": "AWS IAM Credentials Added to a Bedrock API Key Phantom User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies standard IAM credentials being added to an Amazon Bedrock API key phantom user, whose user name starts with\n\"BedrockAPIKey-\": either a long-term access key (CreateAccessKey) or a console password / login profile\n(CreateLoginProfile, UpdateLoginProfile). When a long-term Bedrock API key is generated through the AWS Console, AWS\nsilently provisions a \"BedrockAPIKey-<id>\" IAM user with the AmazonBedrockLimitedAccess managed policy. That user is\nintended only to back a Bedrock bearer token and should never hold standard programmatic keys or interactive console\naccess. Adding either converts a Bedrock-scoped identity into general-purpose IAM credentials that inherit the policy's\nBedrock control-plane and IAM, VPC, and KMS reconnaissance permissions and that persist after the Bedrock API key is\nrevoked. This is the privilege-escalation and persistence pivot documented for Bedrock API key phantom users, and there\nis no legitimate workflow that produces it.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348988"
+}

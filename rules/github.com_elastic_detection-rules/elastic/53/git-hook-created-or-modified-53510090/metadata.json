@@ -1,0 +1,29 @@
+{
+  "uuid": "53510090-dd48-454e-9a24-e225800082a7",
+  "title": "Git Hook Created or Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation or modification of a Git hook file on a Linux system. Git hooks are scripts that Git\nexecutes before or after events such as commit, push, and receive. They are used to automate tasks, enforce policies,\nand customize Git's behavior. Attackers can abuse Git hooks to maintain persistence on a system by executing malicious\ncode whenever a specific Git event occurs.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1543",
+    "T1546",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349417"
+}

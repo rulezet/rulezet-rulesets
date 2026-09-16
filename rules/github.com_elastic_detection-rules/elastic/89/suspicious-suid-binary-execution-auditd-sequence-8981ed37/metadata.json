@@ -1,0 +1,25 @@
+{
+  "uuid": "8981ed37-e2bb-4a57-a090-572d5d8ccbca",
+  "title": "Suspicious SUID Binary Execution (Auditd Sequence)",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects suspicious sequences where a non-root user launches a high-risk parent process (interpreter, shell one-liner, or\nexecution from user-writable paths) and then quickly executes a common privilege elevation helper (su, sudo, pkexec,\npasswd, chsh, newgrp) that gains an effective UID of 0 while the real UID remains non-root. This can indicate misuse of\nSUID/SGID helpers, polkit/sudo abuse, or interactive privilege escalation attempts captured via Auditd Manager telemetry.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1548",
+    "T1548.001",
+    "T1548.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349306"
+}

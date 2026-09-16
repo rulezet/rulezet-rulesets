@@ -1,0 +1,21 @@
+{
+  "uuid": "9fe3b394-6cf1-47ef-bf30-415a35adcc6f",
+  "title": "Azure AKS Certificate Signing Request Created or Approved",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects an identity creating a client-authentication CertificateSigningRequest (signer\nkubernetes.io/kube-apiserver-client) or approving a CSR on AKS (Azure Kubernetes Service), excluding node bootstrap and\nplatform controllers. Adversaries submit and self-approve a CSR against the kube-apiserver-client signer to mint a\nlong-lived client certificate for an arbitrary subject (for example a Common Name in system:masters), giving durable\nauthenticated access that survives token revocation. Coverage includes workload service accounts\n(system:serviceaccount:*), so a compromised in-cluster token forging a certificate is not excluded.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1649"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349166"
+}

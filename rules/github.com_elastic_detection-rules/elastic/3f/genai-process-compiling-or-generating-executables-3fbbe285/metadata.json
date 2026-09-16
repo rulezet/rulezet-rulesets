@@ -1,0 +1,30 @@
+{
+  "uuid": "3fbbe285-7a50-458d-9ab8-70cf28cb3f27",
+  "title": "GenAI Process Compiling or Generating Executables",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when GenAI tools spawn compilers or packaging tools to generate executables. Attackers leverage local LLMs to\nautonomously generate and compile malware, droppers, or implants. Python packaging tools (pyinstaller, nuitka, pyarmor)\nare particularly high-risk as they create standalone executables that can be deployed without dependencies. This rule\nfocuses on compilation activity that produces output binaries, filtering out inspection-only operations.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1027.004",
+    "T1587",
+    "T1587.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349201"
+}

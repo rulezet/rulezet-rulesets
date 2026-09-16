@@ -1,0 +1,31 @@
+{
+  "uuid": "57718a38-8a17-440c-9040-6501d06a82a7",
+  "title": "Potential Kubectl Masquerading via Unexpected Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects potential kubectl masquerading activity by monitoring for process events where the process name\nis not \"kubectl\" but the command line arguments include kubectl-related commands. This could indicate an adversary\nattempting to masquerade as legitimate kubectl activity to evade detection. This rule covers evasion gaps\nintroduced by renaming the kubectl binary, or placing it in an unusual directory.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.003",
+    "T1564",
+    "T1564.001",
+    "T1609",
+    "T1610",
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349266"
+}

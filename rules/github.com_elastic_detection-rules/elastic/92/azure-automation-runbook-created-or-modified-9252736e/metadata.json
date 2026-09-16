@@ -1,0 +1,25 @@
+{
+  "uuid": "9252736e-f7b0-4c8c-b613-321595fa866c",
+  "title": "Azure Automation Runbook Created or Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when an Azure Automation runbook is created or modified. An adversary may create or modify an Azure\nAutomation runbook to execute malicious code and maintain persistence in their target's environment.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053",
+    "T1648"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349149"
+}

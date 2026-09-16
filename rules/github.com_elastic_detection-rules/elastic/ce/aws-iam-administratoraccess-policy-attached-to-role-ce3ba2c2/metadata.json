@@ -1,0 +1,22 @@
+{
+  "uuid": "ce3ba2c2-4930-458e-9f1e-68a01ab5a585",
+  "title": "AWS IAM AdministratorAccess Policy Attached to Role",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "An adversary with access to a set of compromised credentials may attempt to persist or escalate privileges by attaching\nadditional permissions to compromised IAM roles. This rule looks for use of the IAM AttachRolePolicy API operation to\nattach the highly permissive AdministratorAccess AWS managed policy to an existing IAM role.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348979"
+}

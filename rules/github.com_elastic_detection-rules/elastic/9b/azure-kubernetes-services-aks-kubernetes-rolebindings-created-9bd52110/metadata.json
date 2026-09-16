@@ -1,0 +1,24 @@
+{
+  "uuid": "9bd52110-8e05-486a-a98a-6d6bd319940a",
+  "title": "Azure Kubernetes Services (AKS) Kubernetes Rolebindings Created",
+  "format": "elastic",
+  "author": "Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation of role binding or cluster role bindings. You can assign these roles to Kubernetes subjects\n(users, groups, or service accounts) with role bindings and cluster role bindings. An adversary who has permissions to\ncreate bindings and cluster-bindings in the cluster can create a binding to the cluster-admin ClusterRole or to other\nhigh privileges roles.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1098",
+    "T1098.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349118"
+}

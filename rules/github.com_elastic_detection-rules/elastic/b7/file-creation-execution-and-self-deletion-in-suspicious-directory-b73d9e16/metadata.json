@@ -1,0 +1,29 @@
+{
+  "uuid": "b73d9e16-78a6-4161-8d49-b1a4dc7d0056",
+  "title": "File Creation, Execution and Self-Deletion in Suspicious Directory",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the creation of a file, followed by its execution and self-deletion in a short timespan within a\ndirectory often used for malicious purposes by threat actors. This behavior is often used by malware to execute\nmalicious code and delete itself to hide its tracks.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1070",
+    "T1070.004",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349385"
+}

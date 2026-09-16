@@ -1,0 +1,21 @@
+{
+  "uuid": "21cda03d-d4b4-4c3c-bdb9-85fa700fb03d",
+  "title": "AWS SES Enumeration via Long-Term Access Key",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects enumeration of Amazon Simple Email Service (SES) resources using long-term IAM access\nkeys (AKIA* prefix). Long-term access keys are associated with IAM users and are the credential\ntype most commonly exfiltrated from repositories, configuration files, and environment variables.\nAn adversary who obtains a long-term key may enumerate SES to discover verified email identities,\nsending quotas, and DKIM/MAIL FROM domain configurations as a precursor to phishing or spam\ncampaigns launched from the compromised account's verified domains.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1526"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349009"
+}

@@ -1,0 +1,37 @@
+{
+  "uuid": "8d5515f3-05dd-44ae-bd3f-b1db7e24e9b2",
+  "title": "Potential Suspicious File Edit",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the potential edit of a suspicious file. In Linux, when editing a file through an editor, a\ntemporary .swp file is created. By monitoring for the creation of this .swp file, we can detect potential file edits of\nsuspicious files. The execution of this rule is not a clear sign of the file being edited, as just opening the file\nthrough an editor will trigger this event. Attackers may alter any of the files added in this rule to establish\npersistence, escalate privileges or perform reconnaisance on the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1003.008",
+    "T1037",
+    "T1037.004",
+    "T1098",
+    "T1543",
+    "T1543.002",
+    "T1546",
+    "T1546.004",
+    "T1548",
+    "T1548.003",
+    "T1574",
+    "T1574.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349330"
+}

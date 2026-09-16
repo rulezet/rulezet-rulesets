@@ -1,0 +1,28 @@
+{
+  "uuid": "ee2c9d7e-ae1d-41e0-93f9-07e0a7b41882",
+  "title": "Potential Reverse Shell via Suspicious Binary",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This detection rule detects the creation of a shell through a chain consisting of the execution of a suspicious binary\n(located in a commonly abused location or executed manually) followed by a network event and ending with a shell being\nspawned. Stageless reverse tcp shells display this behaviour. Attackers may spawn reverse shells to establish\npersistence onto a target system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1071",
+    "T1095"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349354"
+}

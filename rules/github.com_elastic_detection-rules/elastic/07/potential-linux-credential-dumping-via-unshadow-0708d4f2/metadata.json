@@ -1,0 +1,29 @@
+{
+  "uuid": "0708d4f2-35bb-4e02-813c-93409d7fc2b5",
+  "title": "Potential Linux Credential Dumping via Unshadow",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of the unshadow utility which is part of John the Ripper, a password-cracking tool on the host\nmachine. Malicious actors can use the utility to retrieve the combined contents of the '/etc/shadow' and '/etc/password'\nfiles. Using the combined file generated from the utility, the malicious threat actors can use them as input for\npassword-cracking utilities or prepare themselves for future operations by gathering credential information of the\nvictim.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1003.008",
+    "T1005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349411"
+}

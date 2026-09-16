@@ -1,0 +1,23 @@
+{
+  "uuid": "ca66825d-8b37-4ec5-8fe4-7ffeb8ddb086",
+  "title": "Potential Docker Escape via Nsenter",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies a UID change event via \"nsenter\". The \"nsenter\" command is used to enter a namespace, which is a\nway to isolate processes and resources. Attackers can use \"nsenter\" to escape from a container to the host, which can\nlead to privilege escalation and lateral movement.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349339"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "0674392f-4cb9-4221-b4d3-a4c1e0c9fc2b",
+  "title": "Azure Compute Restore Point Collections Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies multiple Azure Restore Point Collections being deleted by a single user within a short time period. Restore\nPoint Collections contain recovery points for virtual machines, enabling point-in-time recovery capabilities. Mass\ndeletion of these collections is a common tactic used by adversaries during ransomware attacks to prevent victim\nrecovery or to maximize impact during destructive operations. Multiple deletions in rapid succession may indicate\nmalicious intent.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349057"
+}

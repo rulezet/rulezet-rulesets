@@ -1,0 +1,22 @@
+{
+  "uuid": "3a6c8656-b9db-40db-bd85-7ab1a2d3d4da",
+  "title": "AWS SageMaker Execution Role Passed by Unusual Principal",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the first time an IAM principal passes a given execution role (`roleArn`) to an Amazon SageMaker resource,\nvia `CreateNotebookInstance`, `CreateTrainingJob`, `CreateProcessingJob`, `CreateAutoMLJob`, or `CreatePipeline`. These\nactions require `iam:PassRole` and attach an IAM role that the created resource then runs as. An adversary holding both\nSageMaker create permissions and a broad `iam:PassRole` grant can pass a more privileged role to a resource they control\nand execute code as that role, escalating privileges. The rule keys on the combination of the calling principal and the\npassed `roleArn`, so it surfaces a principal using an execution role it has not used before in the last 7 days; a role\nwhose account differs from the caller's, or that is more privileged than the caller, is especially suspicious.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348924"
+}

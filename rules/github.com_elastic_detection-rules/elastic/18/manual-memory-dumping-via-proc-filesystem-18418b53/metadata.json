@@ -1,0 +1,26 @@
+{
+  "uuid": "18418b53-99d5-433a-bb14-0c1d6b43b402",
+  "title": "Manual Memory Dumping via Proc Filesystem",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for manual memory dumping via the proc filesystem. The proc filesystem in Linux provides a virtual filesystem\nthat contains information about system processes and their memory mappings. Attackers may use this technique to dump the memory\nof a process, potentially extracting sensitive information such as credentials or encryption keys.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1003.007",
+    "T1005",
+    "T1212"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349324"
+}

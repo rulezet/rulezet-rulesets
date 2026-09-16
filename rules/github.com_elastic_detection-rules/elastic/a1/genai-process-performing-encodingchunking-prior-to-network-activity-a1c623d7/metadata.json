@@ -1,0 +1,31 @@
+{
+  "uuid": "a1c623d7-c61f-4180-bf27-e53ae3638bb2",
+  "title": "GenAI Process Performing Encoding/Chunking Prior to Network Activity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when GenAI processes perform encoding or chunking (base64, gzip, tar, zip) followed by outbound network\nactivity. This sequence indicates data preparation for exfiltration. Attackers encode or compress sensitive data before\ntransmission to obfuscate contents and evade detection. Legitimate GenAI workflows rarely encode data before network\ncommunications.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1030",
+    "T1560",
+    "T1560.001",
+    "T1560.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349192"
+}

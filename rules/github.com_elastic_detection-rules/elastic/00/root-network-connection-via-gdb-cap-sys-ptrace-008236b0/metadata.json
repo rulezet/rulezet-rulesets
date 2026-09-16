@@ -1,0 +1,30 @@
+{
+  "uuid": "008236b0-9fff-406a-b75e-f16df9a13a50",
+  "title": "Root Network Connection via GDB CAP_SYS_PTRACE",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies instances where GDB (granted the CAP_SYS_PTRACE capability) is executed, after which an outbound network\nconnection is initiated by UID/GID 0 (root). In Linux, the CAP_SYS_PTRACE capability grants a process the ability to use\nthe ptrace system call, which is typically used for debugging and allows the process to trace and control other\nprocesses. Attackers may leverage this capability to hook and inject into a process that is running with root\npermissions in order to execute shell code and gain a reverse shell with root privileges.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1055.008",
+    "T1059",
+    "T1059.004",
+    "T1068",
+    "T1071"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349334"
+}

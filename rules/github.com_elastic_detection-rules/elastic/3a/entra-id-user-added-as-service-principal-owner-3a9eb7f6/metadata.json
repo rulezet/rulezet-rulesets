@@ -1,0 +1,23 @@
+{
+  "uuid": "3a9eb7f6-fa72-43c9-94ce-9aff043721cc",
+  "title": "Entra ID User Added as Service Principal Owner",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a user is added as an owner for an Azure service principal. The service principal object defines what\nthe application can do in the specific tenant, who can access the application, and what resources the app can access. A\nservice principal object is created when an application is given permission to access resources in a tenant. An\nadversary may add a user account as an owner for a service principal and use that account in order to define what an\napplication can do in the Azure AD tenant.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349050"
+}

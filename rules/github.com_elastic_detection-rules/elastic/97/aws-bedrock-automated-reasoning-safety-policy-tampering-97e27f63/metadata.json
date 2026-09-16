@@ -1,0 +1,22 @@
+{
+  "uuid": "97e27f63-7430-4403-b4a8-4be293dfe29e",
+  "title": "AWS Bedrock Automated Reasoning Safety Policy Tampering",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects deletion or modification of AWS Bedrock Automated Reasoning policies via the DeleteAutomatedReasoningPolicy,\nUpdateAutomatedReasoningPolicy, or UpdateAutomatedReasoningPolicyAnnotations CloudTrail actions. Automated Reasoning\npolicies are a Bedrock safety and validation control that constrains model outputs against formal rules. An adversary\nwho deletes a policy or alters the policy definition or its annotations weakens an enforced output-validation defense,\npotentially allowing unsafe or non-compliant model responses to pass unchecked. Benign build, test-workflow, and\ntest-case CRUD operations are intentionally excluded as they have no coherent abuse path.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348944"
+}

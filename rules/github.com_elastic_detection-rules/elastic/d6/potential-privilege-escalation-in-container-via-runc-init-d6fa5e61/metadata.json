@@ -1,0 +1,23 @@
+{
+  "uuid": "d6fa5e61-280e-4507-a53b-cfa7bd4cd072",
+  "title": "Potential Privilege Escalation in Container via Runc Init",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies audit events for runc init child processes where the effective user is root and the login user ID is not root. \nThis pattern can indicate privilege escalation or credential separation abuse inside container runtimes, where a process executes \nwith elevated effective privileges while retaining a non-root audit identity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349305"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "65bb90ca-fdf2-425d-81cc-447bbba7227d",
+  "title": "Potential Container Escape via Kernel core_pattern Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "The Linux kernel invokes the program named in \"/proc/sys/kernel/core_pattern\" whenever a process core-dumps. When\nthat value begins with a pipe (|), the kernel runs the handler from the host's initial namespace as root, regardless\nof where the crashing process lived. Because the core-dump up-call is not namespaced, a process inside a container\nthat can write core_pattern can register an attacker-controlled handler and then deliberately crash a process to have\nit execute on the host as root, resulting in a full container-to-host escape.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349423"
+}

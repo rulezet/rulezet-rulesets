@@ -1,0 +1,22 @@
+{
+  "uuid": "2856ba0d-c29f-4456-b565-bb7712066e1f",
+  "title": "Entra ID OAuth Application Redirect URI Modified",
+  "format": "elastic",
+  "author": "Elastic, descambiado",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies modifications to OAuth application redirect URIs (ReplyUrls) in Entra ID. Adding an\nattacker-controlled redirect URI to an existing trusted application allows interception of OAuth\nauthorization codes when users authenticate through that application's normal login flow, enabling\ntoken theft without requiring a new application registration or consent event.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1528",
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349047"
+}

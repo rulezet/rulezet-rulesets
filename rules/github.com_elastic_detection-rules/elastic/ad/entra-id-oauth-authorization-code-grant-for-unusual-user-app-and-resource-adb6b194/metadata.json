@@ -1,0 +1,30 @@
+{
+  "uuid": "adb6b194-2b4a-42c9-a32d-7a7cd1289fd5",
+  "title": "Entra ID OAuth Authorization Code Grant for Unusual User, App, and Resource",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the first occurrence of an OAuth 2.0 authorization code grant flow for a specific combination of client\napplication, target resource, and user principal in Microsoft Entra ID. Developer tools like Azure CLI, Visual Studio\nCode, and Azure PowerShell accessing Microsoft Graph or legacy Azure AD are flagged for infrequent or first time usage by a user.\nAdditionally, any FOCI (Family of Client IDs) application accessing the deprecated Windows Azure Active Directory for\nthe first time is flagged since this resource is rarely accessed legitimately. This pattern is indicative of OAuth\nphishing attacks like ConsentFix, where attackers steal authorization codes and exchange them for tokens from attacker\ncontrolled infrastructure.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1199",
+    "T1528",
+    "T1550",
+    "T1550.001",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349052"
+}

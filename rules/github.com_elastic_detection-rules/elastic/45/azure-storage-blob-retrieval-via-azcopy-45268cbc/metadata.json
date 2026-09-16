@@ -1,0 +1,24 @@
+{
+  "uuid": "45268cbc-a595-4815-a55b-a4f58aa609d8",
+  "title": "Azure Storage Blob Retrieval via AzCopy",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies successful GetBlob operations on Azure Storage Accounts using AzCopy user agent with SAS token\nauthentication. AzCopy is a command-line utility for copying data to and from Azure Storage. While legitimate for data\nmigration, adversaries may abuse AzCopy with compromised SAS tokens to exfiltrate data from Azure Storage Accounts. This\nrule detects the first occurrence of GetBlob operations from a specific storage account using this pattern.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1530",
+    "T1567",
+    "T1567.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349058"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "50246a5b-dda9-4627-b63a-e96aa4889f80",
+  "title": "Kernel Module Loaded with Tainting Flags",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the loading of tainted kernel modules on Linux systems. A tainted kernel module indicates that\nthe module is not officially supported or may have been modified. Attackers may load tainted kernel modules to\nmaintain persistence or evade detection on the system. This may be a sign of malicious activity involving kernel\nmodules.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1014",
+    "T1547",
+    "T1547.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349321"
+}

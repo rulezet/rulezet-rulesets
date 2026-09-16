@@ -1,0 +1,22 @@
+{
+  "uuid": "40c4ed55-1b77-48f7-8b23-6b1e639017fb",
+  "title": "AWS Access Token Used from Multiple Addresses",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies potentially suspicious activity by detecting instances where a single IAM user's temporary session\ntoken is accessed from multiple IP addresses within a short time frame. Such behavior may suggest that an adversary has\ncompromised temporary credentials and is utilizing them from various locations. To enhance detection accuracy and\nminimize false positives, the rule incorporates criteria that evaluate unique IP addresses, user agents, cities, and\nnetworks. These additional checks help distinguish between legitimate distributed access patterns and potential\ncredential misuse. Detected activities are classified into different types based on the combination of unique\nindicators, with each classification assigned a fidelity score reflecting the likelihood of malicious behavior. High\nfidelity scores are given to patterns most indicative of threats, such as multiple unique IPs, networks, cities, and\nuser agents. Medium and low fidelity scores correspond to less severe patterns, enabling security teams to effectively\nprioritize alerts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348935"
+}

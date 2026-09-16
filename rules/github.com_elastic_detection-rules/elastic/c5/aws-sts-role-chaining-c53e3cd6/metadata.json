@@ -1,0 +1,25 @@
+{
+  "uuid": "c53e3cd6-2e60-46b2-af64-f618e8c107b6",
+  "title": "AWS STS Role Chaining",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies role chaining activity. Role chaining is when you use one assumed role to assume a second role through the\nAWS CLI or API. While this a recognized functionality in AWS, role chaining can be abused for privilege escalation if\nthe subsequent assumed role provides additional privileges. Role chaining can also be used as a persistence mechanism as\neach AssumeRole action results in a refreshed session token with a 1 hour maximum duration. This is a new terms rule that looks for the first occurance of one role (aws.cloudtrail.user_identity.session_context.session_issuer.arn) assuming another (aws.cloudtrail.resources.arn).\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1548",
+    "T1550",
+    "T1550.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348969"
+}

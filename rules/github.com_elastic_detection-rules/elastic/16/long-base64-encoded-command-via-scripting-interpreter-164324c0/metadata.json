@@ -1,0 +1,32 @@
+{
+  "uuid": "164324c0-b50a-46ce-8a91-7b633591fcd4",
+  "title": "Long Base64 Encoded Command via Scripting Interpreter",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies oversized command lines used by Python, PowerShell, Node.js, or Deno that contain base64 decoding or\nencoded-command patterns. Adversaries may embed long inline encoded payloads in scripting interpreters to evade\ninspection and execute malicious content across Windows, macOS, and Linux systems.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059",
+    "T1059.001",
+    "T1059.006",
+    "T1059.007",
+    "T1140"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349194"
+}

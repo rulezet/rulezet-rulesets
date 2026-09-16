@@ -1,0 +1,25 @@
+{
+  "uuid": "595f7cbf-688f-477b-9e1d-63d962d8788f",
+  "title": "AWS RDS DB Instance Restored",
+  "format": "elastic",
+  "author": "Austin Songer, Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the restoration of an AWS RDS database instance from a snapshot or S3 backup. Adversaries with access to\nvalid credentials may restore copies of existing databases to bypass logging and monitoring controls or to exfiltrate\nsensitive data from a duplicated environment. This rule detects successful restoration operations using\n\"RestoreDBInstanceFromDBSnapshot\" or \"RestoreDBInstanceFromS3\", which may indicate unauthorized data access or\npost-compromise defense evasion.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1074",
+    "T1074.002",
+    "T1578",
+    "T1578.002",
+    "T1578.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348956"
+}

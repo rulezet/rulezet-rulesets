@@ -1,0 +1,26 @@
+{
+  "uuid": "91bf6b06-3cbc-482f-ba05-c4e856996011",
+  "title": "Linux Process Hooking via GDB",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for potential memory dumping through gdb. Attackers may leverage memory dumping techniques to attempt\nsecret extraction from privileged processes. Tools that display this behavior include \"truffleproc\" and\n\"bash-memory-dump\". This behavior should not happen by default, and should be investigated thoroughly.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1003.007",
+    "T1055",
+    "T1055.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349345"
+}

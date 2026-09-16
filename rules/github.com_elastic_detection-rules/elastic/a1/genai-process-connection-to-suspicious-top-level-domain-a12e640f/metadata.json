@@ -1,0 +1,28 @@
+{
+  "uuid": "a12e640f-e9ae-4a80-b60c-ad3cbb796947",
+  "title": "GenAI Process Connection to Suspicious Top Level Domain",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when GenAI tools connect to domains using suspicious TLDs commonly abused for malware C2 infrastructure. TLDs\nlike .top, .xyz, .ml, .cf, .onion are frequently used in phishing and malware campaigns. Legitimate GenAI services use\nwell-established domains (.com, .ai, .io), so connections to suspicious TLDs may indicate compromised tools, malicious\nplugins, or AI-generated code connecting to attacker infrastructure.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1071.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349231"
+}

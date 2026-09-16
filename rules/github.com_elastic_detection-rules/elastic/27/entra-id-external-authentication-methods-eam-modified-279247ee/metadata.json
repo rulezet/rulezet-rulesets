@@ -1,0 +1,23 @@
+{
+  "uuid": "279247ee-c4ad-4fc6-8927-c2a9ef9081a3",
+  "title": "Entra ID External Authentication Methods (EAM) Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when an external authentication method (EAM) is added or modified in Entra ID. EAM may allow adversaries to\nbypass multi-factor authentication (MFA) requirements, potentially leading to unauthorized access to user accounts and\nsensitive resources by using bring-your-own IdP (BYOIDP) methods.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1556",
+    "T1556.009"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349125"
+}

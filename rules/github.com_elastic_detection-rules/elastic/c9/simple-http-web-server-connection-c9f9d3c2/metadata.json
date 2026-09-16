@@ -1,0 +1,32 @@
+{
+  "uuid": "c9f9d3c2-3731-4815-8129-445125610ace",
+  "title": "Simple HTTP Web Server Connection",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects connections accepted by a simple HTTP web server in Python and PHP built-in modules. Adversaries may\ncreate simple HTTP web servers to establish persistence on a compromised system by uploading a reverse or command shell\npayload to the server web root, allowing them to regain remote access to the system if lost. This event may occur when\nan attacker requests the server to execute a command or script via a potential backdoor.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1059.006",
+    "T1071",
+    "T1071.001",
+    "T1505",
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349404"
+}

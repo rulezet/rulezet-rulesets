@@ -1,0 +1,23 @@
+{
+  "uuid": "6c9a2cc4-275c-47cb-9a1d-f21df5da248b",
+  "title": "AWS KMS Imported Key Material Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies deletion of imported key material from an AWS KMS customer managed key via DeleteImportedKeyMaterial. Keys\ncreated with an external key material origin (BYOK) rely on key material that the customer imports. Deleting that\nmaterial immediately makes the key unusable and renders all data encrypted under it inaccessible, with no recovery\nwindow. Unlike ScheduleKeyDeletion, which enforces a pending deletion period of 7 to 30 days, this action takes effect\ninstantly, making it an attractive primitive for cloud ransomware and data-destruction attacks. Because this operation\nonly applies to external-origin keys and is rare in normal operations, its use by an unexpected principal warrants\nprompt review.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1485.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349008"
+}

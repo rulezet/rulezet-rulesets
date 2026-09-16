@@ -1,0 +1,23 @@
+{
+  "uuid": "38a3ab9d-fad8-4830-a3e1-a9f934fd29d6",
+  "title": "Web Server Cloud Metadata SSRF Request",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects HTTP requests to web servers whose URL or query string references cloud instance metadata endpoints or\nequivalent encoded variants. Attackers exploit server-side request forgery (SSRF) vulnerabilities in web applications\nto reach link-local metadata services on AWS, GCP, Azure, and similar cloud providers and harvest temporary\ncredentials, tokens, or instance details.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1552",
+    "T1552.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349184"
+}

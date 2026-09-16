@@ -1,0 +1,21 @@
+{
+  "uuid": "57f4ce9c-cbcd-453a-8ef5-e1fa415f2909",
+  "title": "Azure AKS CoreDNS or Kube-DNS Configuration Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects an identity creating or modifying the CoreDNS or kube-dns ConfigMap in the kube-system namespace on AKS (Azure\nKubernetes Service), excluding known AKS control-plane and platform identities. Rewriting cluster DNS (by editing\ncoredns/kube-dns or creating and editing coredns-custom) enables cluster-wide adversary-in-the-middle by redirecting\ninternal service resolution to attacker-controlled IPs, allowing credential capture and traffic interception. Coverage\nincludes workload service accounts (system:serviceaccount:*), so a compromised in-cluster token is not excluded.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1557"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349041"
+}

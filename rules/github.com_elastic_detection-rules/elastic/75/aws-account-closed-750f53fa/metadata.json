@@ -1,0 +1,22 @@
+{
+  "uuid": "750f53fa-4c9b-4293-b299-02f0c0395179",
+  "title": "AWS Account Closed",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the closure of an AWS account via the CloseAccount API. This can be called either by the account itself\n(account.amazonaws.com, self-service closure) or by an AWS Organizations management account against one of its member\naccounts (organizations.amazonaws.com). Account closure triggers a 90-day grace period during which the account is\nsuspended before permanent termination, and is one of the most destructive and disruptive actions available in AWS. It\nremoves access to all resources and data in the account for the duration of the suspension. An adversary with root-level\naccess in a member account, or management-level access to an organization, may close accounts to destroy evidence,\ndisrupt business operations, or eliminate compute and data resources. A malicious insider could use the same action for\nsabotage.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1531"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348973"
+}

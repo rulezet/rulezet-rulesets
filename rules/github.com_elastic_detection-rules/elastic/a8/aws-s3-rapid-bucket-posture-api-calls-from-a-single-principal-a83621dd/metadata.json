@@ -1,0 +1,24 @@
+{
+  "uuid": "a83621dd-5467-46ae-ae13-1739ff459e00",
+  "title": "AWS S3 Rapid Bucket Posture API Calls from a Single Principal",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when the same AWS principal, from the same source IP, successfully invokes read-only S3 control-plane APIs\nthat reveal bucket posture across many buckets in a short period. This pattern can indicate automated reconnaissance or\nsecurity scanning, similar to CSPM tools and post-compromise enumeration. The rule excludes AWS service principals,\nrequires programmatic-style sessions (not Management Console credentials), and requires populated resource and identity\nfields so nulls do not skew cardinality.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1526",
+    "T1530",
+    "T1580",
+    "T1619"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348948"
+}

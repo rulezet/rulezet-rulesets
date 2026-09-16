@@ -1,0 +1,23 @@
+{
+  "uuid": "a950b7af-c76e-4a62-9afe-40001ec8c16b",
+  "title": "Entra ID Elevated Access to User Access Administrator",
+  "format": "elastic",
+  "author": "Elastic, Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a user has elevated their access to User Access Administrator for their Azure Resources. The User Access\nAdministrator role allows users to manage user access to Azure resources, including the ability to assign roles and\npermissions. Adversaries may target an Entra ID Global Administrator or other privileged role to elevate their access to\nUser Access Administrator, which can lead to further privilege escalation and unauthorized access to sensitive\nresources. This is a New Terms rule that only signals if the user principal name has not been seen doing this activity\nin the last 14 days.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349077"
+}

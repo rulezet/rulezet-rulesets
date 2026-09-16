@@ -1,0 +1,19 @@
+{
+  "uuid": "dcda0310-f276-4e94-af50-0bb75aae3f46",
+  "title": "Elastic Defend and Email Alerts Correlation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule correlates any Elastic Defend alert with an email security related alert by target user name. This may indicate\nthe successful execution of a phishing attack.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349236"
+}

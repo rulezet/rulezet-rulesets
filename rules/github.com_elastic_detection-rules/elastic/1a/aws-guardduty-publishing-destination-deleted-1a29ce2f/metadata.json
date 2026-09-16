@@ -1,0 +1,22 @@
+{
+  "uuid": "1a29ce2f-e981-46f3-b097-07203bcacb53",
+  "title": "AWS GuardDuty Publishing Destination Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the deletion of an Amazon GuardDuty publishing destination. Publishing destinations\nexport GuardDuty findings to S3, Security Lake, or EventBridge for long-term retention and\nSIEM ingestion. An adversary with GuardDuty administrative access may delete a publishing\ndestination to prevent findings from reaching external storage or a security operations center,\nreducing the visibility of their activity while leaving the GuardDuty detector active.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348936"
+}

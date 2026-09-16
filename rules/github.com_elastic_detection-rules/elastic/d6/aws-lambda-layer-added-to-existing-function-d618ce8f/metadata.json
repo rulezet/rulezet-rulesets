@@ -1,0 +1,25 @@
+{
+  "uuid": "d618ce8f-63e7-4f01-8c53-b69caa5e5ad2",
+  "title": "AWS Lambda Layer Added to Existing Function",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a Lambda layer is added to an existing AWS Lambda function. Lambda layers allow shared code,\ndependencies, or runtime modifications to be injected into a function’s execution environment. Adversaries with the\nability to update function configurations may add a malicious layer to establish persistence, run unauthorized code, or\nintercept data handled by the function. This activity should be reviewed to ensure the modification is expected and\nauthorized.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1578",
+    "T1578.005",
+    "T1648"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348940"
+}

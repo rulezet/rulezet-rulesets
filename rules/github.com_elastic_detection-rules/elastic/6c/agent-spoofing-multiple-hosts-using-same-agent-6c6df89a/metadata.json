@@ -1,0 +1,23 @@
+{
+  "uuid": "6c6df89a-04e7-4458-9269-59ff8120cdb2",
+  "title": "Agent Spoofing - Multiple Hosts Using Same Agent",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when multiple hosts are using the same agent ID. This could occur in the event of an agent being taken over and\nused to inject illegitimate documents into an instance as an attempt to spoof events in order to masquerade actual\nactivity to evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1565",
+    "T1565.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349185"
+}

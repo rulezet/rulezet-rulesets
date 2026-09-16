@@ -1,0 +1,19 @@
+{
+  "uuid": "ea648aba-a943-415e-80fc-34df59ea5701",
+  "title": "AWS Bedrock Invocations without Guardrails Detected by a Single User Over a Session",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies multiple AWS Bedrock executions in a one minute time window without guardrails by the same user in the same\naccount over a session. Multiple consecutive executions implies that a user may be intentionally attempting to bypass\nsecurity controls, by not routing the requests with the desired guardrail configuration in order to access sensitive\ninformation, or possibly exploit a vulnerability in the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349032"
+}

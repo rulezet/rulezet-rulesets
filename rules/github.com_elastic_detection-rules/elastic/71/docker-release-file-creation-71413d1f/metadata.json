@@ -1,0 +1,26 @@
+{
+  "uuid": "71413d1f-2725-411c-8f0e-e08e7152ea03",
+  "title": "Docker Release File Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation of files named release_agent or notify_on_release, which are\ncommonly associated with the abuse of Linux cgroup release mechanisms. In Docker or containerized\nenvironments, this behavior may indicate an attempt to exploit privilege escalation vulnerabilities\nsuch as CVE-2022-0492, where attackers use the release_agent feature to execute code on the host\nfrom within a container.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1546",
+    "T1611"
+  ],
+  "cve": [
+    "CVE-2022-0492"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349406"
+}

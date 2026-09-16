@@ -1,0 +1,24 @@
+{
+  "uuid": "a54bef1c-9fa0-403c-b110-9b8285aa9db2",
+  "title": "Elastic Defend Alert Followed by Telemetry Loss",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an Elastic Defend endpoint alert is generated on a host and is not followed by any subsequent endpoint\ntelemetry (process, network, registry, library, or DNS events) within a short time window. This behavior may indicate\nendpoint security evasion, agent tampering, sensor disablement, service termination, system crash, or malicious\ninterference with telemetry collection following detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204",
+    "T1204.002",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349178"
+}

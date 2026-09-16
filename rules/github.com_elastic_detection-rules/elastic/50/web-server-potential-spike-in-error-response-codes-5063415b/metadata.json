@@ -1,0 +1,23 @@
+{
+  "uuid": "5063415b-a141-496b-a4c6-4b8410ca2eae",
+  "title": "Web Server Potential Spike in Error Response Codes",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects unusual spikes in error response codes (500, 502, 503, 504) from web servers, which may indicate\nreconnaissance activities such as vulnerability scanning or fuzzing attempts by adversaries. These activities often\ngenerate a high volume of error responses as they probe for weaknesses in web applications. Error response codes\nmay potentially indicate server-side issues that could be exploited.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1595",
+    "T1595.002",
+    "T1595.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349232"
+}

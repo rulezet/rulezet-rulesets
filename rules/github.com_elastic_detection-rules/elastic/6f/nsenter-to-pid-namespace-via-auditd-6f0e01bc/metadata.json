@@ -1,0 +1,23 @@
+{
+  "uuid": "6f0e01bc-82bd-4dd4-8ad8-c2ec01e858e0",
+  "title": "Nsenter to PID Namespace via Auditd",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects nsenter executions that target PID with a namespace target flag, a pattern commonly used to attach to the\nhost init namespace from a container or session and run with host context.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349401"
+}

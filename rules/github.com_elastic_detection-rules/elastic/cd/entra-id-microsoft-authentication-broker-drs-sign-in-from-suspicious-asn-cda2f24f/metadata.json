@@ -1,0 +1,28 @@
+{
+  "uuid": "cda2f24f-3835-4f38-90af-cd886756d338",
+  "title": "Entra ID Microsoft Authentication Broker DRS Sign-In from Suspicious ASN",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects Microsoft Entra ID sign-in activity where the Microsoft Authentication Broker requests the Device Registration\nService from a source autonomous system number (ASN) associated with VPN, residential proxy, or hosting egress commonly\nobserved in OAuth phishing and adversary-in-the-middle device registration flows. This pattern can indicate device join\nor primary refresh token acquisition staged from attacker-controlled infrastructure after a user completes\nauthentication.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.005",
+    "T1550",
+    "T1550.001",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349104"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "00e7ebd4-6338-45ff-abc8-e3222251a093",
+  "title": "AWS S3 Bucket Policy Added to Share with External Account",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an Amazon S3 bucket policy is modified to share access with an external AWS account. This rule analyzes\nPutBucketPolicy events and compares the S3 bucket’s account ID to any account IDs referenced in the policy’s\nEffect=Allow statements. If the policy includes principals from accounts other than the bucket owner’s, the rule\ntriggers an alert. This behavior may indicate an adversary backdooring a bucket for data exfiltration or cross-account\npersistence. For example, an attacker who compromises credentials could attach a policy allowing access from an external\nAWS account they control, enabling continued access even after credentials are rotated. Note: This rule will not alert\nif the account ID is part of the bucket’s name or appears in the resource ARN. Such cases are common in standardized\nnaming conventions (e.g., “mybucket-123456789012”). To ensure full coverage, use complementary rules to monitor for\nsuspicious PutBucketPolicy API requests targeting buckets with account IDs embedded in their names or resources.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1530",
+    "T1537"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348943"
+}

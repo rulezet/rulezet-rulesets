@@ -1,0 +1,24 @@
+{
+  "uuid": "8a9ccd55-1db5-4bbf-a502-12078cf4b4e1",
+  "title": "AWS First Occurrence of STS GetFederationToken Request by User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the first occurrence of an AWS Security Token Service (STS) GetFederationToken request made by a user. The GetFederationToken API call allows users to request temporary security credentials to\naccess AWS resources. The maximum expiration period for these tokens is 36 hours and they can be used to create a console signin token even for identities that don't already have one. Adversaries may use this API to obtain temporary credentials for persistence and to bypass IAM API call limitations by gaining console access.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.001",
+    "T1550",
+    "T1550.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348968"
+}

@@ -1,0 +1,29 @@
+{
+  "uuid": "d08fd3d1-870e-4a71-9717-c942ca16ca97",
+  "title": "Uncommon DNS Request via Bun or Node.js",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects uncommon DNS requests via Bun or Node.js. Adversaries may leverage these tools\nvia a supply chain attack of a compromised developer's package to execute malicious code and\nsteal/exfiltrate data.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1071.004",
+    "T1102"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349186"
+}

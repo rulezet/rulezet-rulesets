@@ -1,0 +1,24 @@
+{
+  "uuid": "596db8f3-932e-40ef-abdd-2c843790c7ca",
+  "title": "Azure Storage Account Blob Public Access Enabled",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when Azure Storage Account Blob public access is enabled, allowing external access to blob containers. This\ntechnique was observed in cloud ransom-based campaigns where threat actors modified storage accounts to expose\nnon-remotely accessible accounts to the internet for data exfiltration. Adversaries abuse the\nMicrosoft.Storage/storageAccounts/write operation to modify public access settings.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1530"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349145"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "9c53a0c4-9adf-4b9f-8cfe-7b3579e13ef2",
+  "title": "Azure Storage Account Deletions by User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a single user or service principal deletes multiple Azure Storage Accounts within a short time period.\nThis behavior may indicate an adversary attempting to cause widespread service disruption, destroy evidence, or execute\na destructive attack such as ransomware. Mass deletion of storage accounts can have severe business impact and is rarely\nperformed by legitimate administrators except during controlled decommissioning activities.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1489"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349112"
+}

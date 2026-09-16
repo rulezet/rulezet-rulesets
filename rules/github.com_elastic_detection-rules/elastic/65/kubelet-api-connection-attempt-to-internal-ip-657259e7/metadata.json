@@ -1,0 +1,25 @@
+{
+  "uuid": "657259e7-50cb-410c-90a6-f9dcc73b0d87",
+  "title": "Kubelet API Connection Attempt to Internal IP",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects network connection attempts to the Kubernetes Kubelet API port (10250/10255) on internal IP ranges from Linux hosts.\nThis rule focuses on common request and scripting utilities (curl, wget, python, node, etc.) and executions from\nworld-writable or ephemeral paths (/tmp, /var/tmp, /dev/shm, /var/run), which are frequently abused during container and\ncluster lateral movement.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349395"
+}

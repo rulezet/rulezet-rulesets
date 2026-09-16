@@ -1,0 +1,23 @@
+{
+  "uuid": "ce76a33d-0ab7-445a-ba7e-262d7c7cd9d9",
+  "title": "AWS IAM Customer Managed Policy Version Created or Default Version Set",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies successful IAM API calls that create a new customer managed policy version or set the default version for an\nexisting customer managed policy. Attackers with `iam:CreatePolicyVersion` or `iam:SetDefaultPolicyVersion` on a\nprivileged policy can introduce a permissive policy document and activate it, escalating effective permissions without\nattaching a new policy. These APIs are high impact when the target policy is attached to powerful roles or users.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1548",
+    "T1548.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349014"
+}

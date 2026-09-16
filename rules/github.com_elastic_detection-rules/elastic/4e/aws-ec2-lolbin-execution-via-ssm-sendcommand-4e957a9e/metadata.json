@@ -1,0 +1,31 @@
+{
+  "uuid": "4e957a9e-9b2f-4e64-b166-89c48c3efa90",
+  "title": "AWS EC2 LOLBin Execution via SSM SendCommand",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of Living Off the Land Binaries (LOLBins) or GTFOBins on EC2 instances via AWS Systems Manager\n(SSM) `SendCommand` API. This detection correlates AWS CloudTrail `SendCommand` events with endpoint process execution\nby matching SSM command IDs. While AWS redacts command parameters in CloudTrail logs, this correlation technique reveals\nthe actual commands executed on EC2 instances. Adversaries may abuse SSM to execute malicious commands remotely without\nrequiring SSH or RDP access, using legitimate system utilities for data exfiltration, establishing reverse shells, or\nlateral movement.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1105",
+    "T1651"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349183"
+}

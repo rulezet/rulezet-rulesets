@@ -1,0 +1,25 @@
+{
+  "uuid": "759ca6b1-7403-45d3-af63-73e2fec582a6",
+  "title": "BPF Program or Map Load via bpftool",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects execution of bpftool commands used to load, attach, run, or pin eBPF programs, as well as create or update\neBPF maps and links. These operations interact directly with the Linux eBPF subsystem and can modify kernel-level\nbehavior. While commonly used by legitimate networking or observability tooling, unexpected or interactive usage\nmay indicate eBPF-based rootkit activity, policy tampering, or unauthorized kernel instrumentation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1014",
+    "T1547",
+    "T1547.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349316"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "0bf2192f-e741-4b79-a76b-e59045b91762",
+  "title": "Potential Suspicious DebugFS Root Device Access",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the usage of the built-in Linux DebugFS utility to access a disk device without root permissions.\nLinux users that are part of the \"disk\" group have sufficient privileges to access all data inside of the machine\nthrough DebugFS. Attackers may leverage DebugFS in conjunction with \"disk\" permissions to read sensitive files owned by\nroot, such as the shadow file, root ssh private keys or other sensitive files that may allow them to further escalate\nprivileges.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1006",
+    "T1078",
+    "T1078.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349320"
+}

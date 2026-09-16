@@ -1,0 +1,33 @@
+{
+  "uuid": "89d92420-96e6-4797-8f61-f758343539d1",
+  "title": "AWS SSM Session Manager Child Process Execution",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies process start events where the parent process is the AWS Systems Manager (SSM) Session Manager worker. \nSession Manager provides interactive shell access to EC2 instances and hybrid nodes without bastion hosts or open inbound ports.\nAdversaries abuse it for remote execution and lateral movement using legitimate AWS credentials and IAM permissions.\nThis rule surfaces endpoint execution occurring under that worker for visibility and hunting. Expect noise from authorized\nadministrative sessions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1059.004",
+    "T1651"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349191"
+}

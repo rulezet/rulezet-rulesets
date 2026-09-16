@@ -1,0 +1,32 @@
+{
+  "uuid": "373e468e-7e33-4929-b8e9-544bdac67e54",
+  "title": "Command Line Obfuscation via Whitespace Padding",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies process execution events where the command line value contains a long sequence of whitespace characters or\nmultiple occurrences of contiguous whitespace. Attackers may attempt to evade signature-based detections by padding\ntheir malicious command with unnecessary whitespace characters. These observations should be investigated for malicious\nbehavior.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1027.010",
+    "T1059",
+    "T1059.001",
+    "T1140"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349254"
+}

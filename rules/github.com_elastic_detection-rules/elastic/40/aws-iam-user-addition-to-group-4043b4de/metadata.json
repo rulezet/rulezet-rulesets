@@ -1,0 +1,22 @@
+{
+  "uuid": "4043b4de-a384-4488-93b6-f759220499a2",
+  "title": "AWS IAM User Addition to Group",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the addition of a user to a specified group in AWS Identity and Access Management (IAM). Any user added to a\ngroup automatically gains the permissions that are assigned to the group. If the target group carries elevated or admin\nprivileges, this action can instantly grant high-risk permissions useful for credential misuse, lateral movement, or\nprivilege escalation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348958"
+}

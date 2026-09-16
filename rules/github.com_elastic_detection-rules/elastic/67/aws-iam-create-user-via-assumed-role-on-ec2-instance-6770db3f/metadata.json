@@ -1,0 +1,22 @@
+{
+  "uuid": "6770db3f-b385-4430-8741-8cec01375bae",
+  "title": "AWS IAM Create User via Assumed Role on EC2 Instance",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the creation of an AWS Identity and Access Management (IAM) user initiated by an assumed role on an EC2\ninstance. Assumed roles allow users or services to temporarily adopt different AWS permissions, but the creation of IAM\nusers through these roles, particularly from within EC2 instances, may indicate a compromised instance. Adversaries might\nexploit such permissions to establish persistence by creating new IAM users under unauthorized conditions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1136",
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348972"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "2242f519-e14a-4fa4-88d9-654357fb3c6a",
+  "title": "AWS Bedrock High-Frequency Single-Model Inference API Probing",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an AWS principal performing a high volume of Amazon Bedrock inference API calls against a single model within\na short window. Membership inference attacks require hundreds to thousands of statistically similar queries whose\nprompts and responses are intentionally content-benign, making guardrail- and content-based rules ineffective. This rule\ndetects the high-frequency single-model probing pattern that precedes membership inference and related exfiltration via\nthe inference API. It is a behavioral / volumetric precursor: it does not observe model confidence scores and a fixed\ncall-count threshold only catches the loud variant, so paced, low-and-slow, or credential-distributed probing will evade\nit. Definitive membership inference detection requires ML anomaly analysis over per-entity inference-rate and\nresponse-distribution baselines.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348946"
+}

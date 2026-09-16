@@ -1,0 +1,27 @@
+{
+  "uuid": "35d0cbfa-4a65-46c5-b2ca-cd54724ab5b6",
+  "title": "Entra ID Multiple Device Registrations by a Single User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects multiple Microsoft Entra ID device registrations by a single user, where three or more distinct devices are\nregistered within a 15-minute window. A legitimate user enrolling a device produces a single \"Register device\" event;\nregistering multiple distinct devices in quick succession is uncommon and is the fingerprint behavior of\nadversary-in-the-middle (AiTM) phishing kits and stolen-token replay tooling (for example Kali365), which mint a new\nAzure AD-joined device, and therefore a new Primary Refresh Token (PRT), per relay or replay attempt. Each registered\ndevice is a separate certificate-bound principal whose PRT survives user-level session revocation and password resets,\nso multiple registrations on a single low-privilege identity establish device-bound persistence at scale.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1098",
+    "T1098.005",
+    "T1557"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349067"
+}

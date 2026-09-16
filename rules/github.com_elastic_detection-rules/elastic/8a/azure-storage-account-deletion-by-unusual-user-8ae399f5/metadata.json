@@ -1,0 +1,25 @@
+{
+  "uuid": "8ae399f5-94c4-4cc0-8233-246b26cbb89a",
+  "title": "Azure Storage Account Deletion by Unusual User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when an Azure Storage Account is deleted. Adversaries may delete storage accounts to disrupt operations,\ndestroy evidence, or cause denial of service. This activity could indicate an attacker attempting to cover their tracks\nafter data exfiltration or as part of a destructive attack. Monitoring storage account deletions is critical for\ndetecting potential impact on business operations and data availability.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1489"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349141"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "24a81a27-750c-406c-ad1c-b157dca82bfd",
+  "title": "AWS EC2 Instance Console Login via Assumed Role",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful AWS Management Console or federation login activity performed using an EC2 instance’s assumed role\ncredentials. EC2 instances typically use temporary credentials to make API calls, not to authenticate interactively via\nthe console. A successful \"ConsoleLogin\" or \"GetSigninToken\" event using a session pattern that includes \"i-\" (the EC2\ninstance ID) is highly anomalous and may indicate that an adversary obtained the instance’s temporary credentials from\nthe instance metadata service (IMDS) and used them to access the console. Such activity can enable lateral movement,\nprivilege escalation, or persistence within the AWS account.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.007",
+    "T1078",
+    "T1078.004",
+    "T1550",
+    "T1550.001",
+    "T1552",
+    "T1552.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348964"
+}

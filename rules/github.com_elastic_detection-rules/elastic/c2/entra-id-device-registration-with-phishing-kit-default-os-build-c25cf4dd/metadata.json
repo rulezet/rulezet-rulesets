@@ -1,0 +1,24 @@
+{
+  "uuid": "c25cf4dd-4356-4883-93f9-ac90e64bd103",
+  "title": "Entra ID Device Registration with Phishing Kit Default OS Build",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a Microsoft Entra ID device registration where the recorded cloud device operating system build is\n\"10.0.19045.2006\" and the device display name follows the default \"DESKTOP-\" pattern. This is the frozen default device\nprofile observed when adversary-in-the-middle (AiTM) phishing kits such as Tycoon2FA and Kali365 register Azure\nAD-joined devices after capturing a victim session, in order to acquire a Primary Refresh Token (PRT) and establish\npersistence. The build is hardcoded by the tooling and it is uncommon for the OS build to match this exact value across\nan environment of otherwise patched hosts, where a current Windows 10 22H2 device reports a far higher\n\"10.0.19045.<revision>\" value.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349089"
+}

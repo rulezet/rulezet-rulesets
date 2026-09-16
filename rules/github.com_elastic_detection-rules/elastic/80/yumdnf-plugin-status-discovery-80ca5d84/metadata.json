@@ -1,0 +1,26 @@
+{
+  "uuid": "80ca5d84-37aa-4365-8773-34a2327c9228",
+  "title": "Yum/DNF Plugin Status Discovery",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the execution of the `grep` command with the `plugins` argument on Linux systems. This command is used\nto search for YUM/DNF configurations and/or plugins with an enabled state. This behavior may indicate an attacker is\nattempting to establish persistence in a YUM or DNF plugin.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1082",
+    "T1083",
+    "T1518"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349392"
+}

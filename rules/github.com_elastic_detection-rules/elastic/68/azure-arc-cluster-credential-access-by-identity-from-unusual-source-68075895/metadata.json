@@ -1,0 +1,24 @@
+{
+  "uuid": "68075895-cab8-4c33-92eb-773d58b528b9",
+  "title": "Azure Arc Cluster Credential Access by Identity from Unusual Source",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a service principal or user performs an Azure Arc cluster credential listing operation from a source IP not\npreviously associated with that identity. The `listClusterUserCredential` action retrieves credentials for the Arc\nCluster Connect proxy, enabling kubectl access through the Azure ARM API. An adversary using stolen service principal\ncredentials will typically call this operation from infrastructure not previously seen for that SP. By tracking the\ncombination of caller identity and source IP, this rule avoids false positives from backend services and CI/CD pipelines\nthat rotate IPs but maintain consistent identity-to-IP patterns over time.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1552",
+    "T1552.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349142"
+}

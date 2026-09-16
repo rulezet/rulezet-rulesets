@@ -1,0 +1,26 @@
+{
+  "uuid": "c70ba5fb-bf21-4b26-a44e-d82f3544633d",
+  "title": "Azure AD Graph Access with Unusual Client and User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies Azure AD Graph (graph.windows.net) requests where the combination of calling OAuth client\n(\"azure.aadgraphactivitylogs.properties.app_id\") and signed-in user (\"user.id\") has not been observed in the tenant in\na historical window. A user appearing against AAD Graph under an OAuth client that has not previously authenticated\nthat user is a sign of a FOCI swap, a phished refresh token being redeemed for a new client, or an adversary running\ntooling under a client identity the user does not normally use.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1087",
+    "T1087.004",
+    "T1550",
+    "T1550.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349147"
+}

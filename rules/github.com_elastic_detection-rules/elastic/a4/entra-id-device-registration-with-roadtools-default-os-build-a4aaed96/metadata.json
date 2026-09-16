@@ -1,0 +1,24 @@
+{
+  "uuid": "a4aaed96-8f70-4759-893a-1f40cefb97bf",
+  "title": "Entra ID Device Registration with ROADtools Default OS Build",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a Microsoft Entra ID device registration where the recorded cloud device operating system build is\n\"10.0.19041.928\" and the device display name follows the default \"DESKTOP-\" pattern. This combination is the default\ndevice profile that ROADtools (roadtx) uses when registering a device, and it is uncommon for the OS build to match the\nhardcoded value across an environment of otherwise patched hosts. Adversaries register rogue devices in Entra ID to\nacquire a Primary Refresh Token (PRT), establish persistence, and obtain trusted, programmatic access to the tenant.\nBecause the OS build is a tool default, this is a high-fidelity but evadable indicator; baseline approved provisioning\ntooling and device naming conventions before relying on it.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349054"
+}

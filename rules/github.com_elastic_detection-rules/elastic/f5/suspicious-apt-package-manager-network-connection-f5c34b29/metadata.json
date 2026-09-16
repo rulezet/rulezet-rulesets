@@ -1,0 +1,31 @@
+{
+  "uuid": "f5c34b29-853b-4566-abf8-4f6c5162fa91",
+  "title": "Suspicious APT Package Manager Network Connection",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects suspicious network events executed by the APT package manager, potentially indicating persistence through an APT\nbackdoor. In Linux, APT (Advanced Package Tool) is a command-line utility used for handling packages on Debian-based\nsystems, providing functions for installing, updating, upgrading, and removing software along with managing package\nrepositories. Attackers can backdoor APT to gain persistence by injecting malicious code into scripts that APT runs,\nthereby ensuring continued unauthorized access or control each time APT is used for package management.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1543",
+    "T1546",
+    "T1546.016",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349336"
+}

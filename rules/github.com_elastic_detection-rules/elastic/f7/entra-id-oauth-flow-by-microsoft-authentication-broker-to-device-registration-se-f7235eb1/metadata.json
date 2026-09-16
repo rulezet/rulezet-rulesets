@@ -1,0 +1,31 @@
+{
+  "uuid": "f7235eb1-50e1-479c-a0a2-83ff9b82dbd1",
+  "title": "Entra ID OAuth Flow by Microsoft Authentication Broker to Device Registration Service (DRS)",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies separate OAuth authorization flows in Microsoft Entra ID where the same user principal and session ID are\nobserved across multiple IP addresses within a 5-minute window. These flows involve the Microsoft Authentication Broker\n(MAB) as the client application and the Device Registration Service (DRS) as the target resource. This pattern is highly\nindicative of OAuth phishing activity, where an adversary crafts a legitimate Microsoft login URL to trick a user into\ncompleting authentication and sharing the resulting authorization code, which is then exchanged for an access and\nrefresh token by the attacker.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1528",
+    "T1550",
+    "T1550.001",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349140"
+}

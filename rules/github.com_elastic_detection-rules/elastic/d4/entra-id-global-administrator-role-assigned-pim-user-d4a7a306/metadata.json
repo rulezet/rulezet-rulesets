@@ -1,0 +1,24 @@
+{
+  "uuid": "d4a7a306-9f18-4278-a55d-88f2360ed683",
+  "title": "Entra ID Global Administrator Role Assigned (PIM User)",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an Azure Active Directory (AD) Global Administrator role addition to a Privileged Identity Management (PIM)\nuser account. PIM is a service that enables you to manage, control, and monitor access to important resources in an\norganization. Users who are assigned to the Global administrator role can read and modify any administrative setting in\nyour Azure AD organization.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349082"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "4b8abf75-9b2f-44e6-894b-32e25680e4ca",
+  "title": "AWS EFS File System Deleted",
+  "format": "elastic",
+  "author": "Austin Songer, Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the deletion of an Amazon EFS file system using the \"DeleteFileSystem\" API operation. Deleting an EFS file\nsystem permanently removes all stored data and cannot be reversed. This action is rare in most environments and\ntypically limited to controlled teardown workflows. Adversaries with sufficient permissions may delete a file system to\ndestroy evidence, disrupt workloads, or impede recovery efforts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348983"
+}

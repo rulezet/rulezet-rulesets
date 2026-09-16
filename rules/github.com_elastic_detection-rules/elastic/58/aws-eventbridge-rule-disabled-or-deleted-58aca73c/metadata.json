@@ -1,0 +1,23 @@
+{
+  "uuid": "58aca73c-4e5e-47ae-a425-1f4433577cf8",
+  "title": "AWS EventBridge Rule Disabled or Deleted",
+  "format": "elastic",
+  "author": "Austin Songer, Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when an Amazon EventBridge rule is disabled or deleted. EventBridge rules are commonly used to automate\noperational workflows and security-relevant routing (for example, forwarding events to Lambda, SNS/SQS, or security\ntooling). Disabling or deleting a rule can break critical integrations, suppress detections, and reduce visibility.\nAdversaries may intentionally impair EventBridge rules to disrupt monitoring, delay response, or hide follow-on actions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1489",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348929"
+}

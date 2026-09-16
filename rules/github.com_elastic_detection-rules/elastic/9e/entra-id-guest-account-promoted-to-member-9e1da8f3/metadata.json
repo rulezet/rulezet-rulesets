@@ -1,0 +1,21 @@
+{
+  "uuid": "9e1da8f3-8323-42e5-8694-7ff847369ea8",
+  "title": "Entra ID Guest Account Promoted to Member",
+  "format": "elastic",
+  "author": "Elastic, descambiado",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies Entra ID user accounts converted from Guest to Member type via an Update user operation.\nA Guest-to-Member conversion grants the account full directory read access, removes external-identity\nConditional Access restrictions, and makes the account indistinguishable from an internal employee.\nAn attacker who compromises a guest account and promotes it to Member type gains persistent tenant\naccess without triggering role assignment alerts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349091"
+}

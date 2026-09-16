@@ -1,0 +1,23 @@
+{
+  "uuid": "4ab0ba04-cde9-4939-91f7-eb67313afeec",
+  "title": "Linux External IP Address Discovery via Curl",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects applications making a curl request to a known public IP address lookup web service. Malware tends to perform this \naction to assess potential targets.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1016"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349364"
+}

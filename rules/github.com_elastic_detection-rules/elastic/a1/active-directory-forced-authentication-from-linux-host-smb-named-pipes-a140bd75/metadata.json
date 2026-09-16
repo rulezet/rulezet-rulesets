@@ -1,0 +1,25 @@
+{
+  "uuid": "a140bd75-467b-4a0c-9ab3-5df967456708",
+  "title": "Active Directory Forced Authentication from Linux Host - SMB Named Pipes",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a potential forced authentication using related SMB named pipes. Attackers may attempt to force targets to\nauthenticate to a host controlled by them to capture hashes or enable relay attacks.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1187"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349219"
+}

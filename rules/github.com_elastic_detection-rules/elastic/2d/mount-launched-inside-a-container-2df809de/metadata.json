@@ -1,0 +1,23 @@
+{
+  "uuid": "2df809de-c736-4769-aef4-8b4272645672",
+  "title": "Mount Launched Inside a Container",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the use of the mount utility from inside a container. The mount command is used to make a\ndevice or file system accessible to the system, and then to connect its root directory to a specified mount point on the\nlocal file system. When launched inside a privileged container--a container deployed with all the capabilities of the\nhost machine-- an attacker can access sensitive host level files which could be used for further privilege escalation\nand container escapes to the host machine. Any usage of mount inside a running privileged container should be further\ninvestigated.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349342"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "a03f7c4a-adbc-4a2b-ad20-74f07ee1b1bb",
+  "title": "AWS IAM User Console Login Without MFA",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the first observed occurrence, within the configured New Terms history window, of a regular IAM user \nsuccessfully signing in to the AWS Management Console without multi-factor authentication. A password alone is a \nweaker control than password-plus-MFA, and an adversary who has phished, guessed, or otherwise obtained a user's \npassword can sign in directly if MFA is not enforced for that user. This rule is scoped to standard IAM users \nonly; it excludes the AWS root user (covered by a dedicated rule) and federated/SSO sign-ins (covered by a dedicated \nrule that also accounts for IdP-side MFA), since MFAUsed: No is expected in both of those cases for reasons unrelated \nto this gap.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348962"
+}

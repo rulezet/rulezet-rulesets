@@ -1,0 +1,22 @@
+{
+  "uuid": "11d3f61a-e446-48f4-b503-20e37fc692b9",
+  "title": "Microsoft Graph Multi-Category Reconnaissance Burst",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects Microsoft Graph activity from delegated user tokens (public client, client_auth_method 0) where a single user\nsession and source IP rapidly touches multiple high-value Graph paths indicative of reconnaissance. The query classifies\nrequests into categories such as role discovery, cross-tenant relationship queries, mailbox paths, contact harvesting,\nand organization or licensing metadata. When three or more distinct categories appear within a short burst window, it\nsuggests a broad enumeration playbook rather than normal application traffic.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1087",
+    "T1526"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349034"
+}

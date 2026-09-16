@@ -1,0 +1,25 @@
+{
+  "uuid": "b203c95f-b1f7-4846-b079-5a81f40b067d",
+  "title": "AWS CloudTrail Log Updated",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects updates to an existing CloudTrail trail via UpdateTrail API which may reduce visibility, change destinations, or\nweaken integrity (e.g., removing global events, moving the S3 destination, or disabling validation). Adversaries can\nmodify trails to evade detection while maintaining a semblance of logging. Validate any configuration change against\napproved baselines.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1530",
+    "T1562",
+    "T1562.008",
+    "T1565",
+    "T1565.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349012"
+}

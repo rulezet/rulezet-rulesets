@@ -1,0 +1,22 @@
+{
+  "uuid": "7f7698e5-6def-46c4-81dd-989998dcf453",
+  "title": "AWS IAM Inline Policy Added to a Group",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an inline policy added to an IAM group via PutGroupPolicy. An inline policy attached to a group grants its\npermissions to every current and future member of that group. Adversaries can abuse this to escalate privileges (grant\nelevated permissions to a group they belong to, or will add themselves to) and to establish persistence through a\ndurable, membership-based grant that is easy to overlook. Group inline policies are uncommon compared to managed-policy\nattachments, so their creation by an unexpected principal warrants review.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348995"
+}

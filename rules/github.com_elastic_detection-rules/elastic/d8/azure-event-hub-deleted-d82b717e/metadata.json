@@ -1,0 +1,23 @@
+{
+  "uuid": "d82b717e-0638-4413-9c40-2ca77e6f8b7b",
+  "title": "Azure Event Hub Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an Event Hub deletion in Azure. An Event Hub is an event processing service that ingests and processes large\nvolumes of events and data. An adversary may delete an Event Hub in an attempt to evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1562",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349164"
+}

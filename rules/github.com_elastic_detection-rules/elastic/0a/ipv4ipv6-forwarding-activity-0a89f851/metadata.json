@@ -1,0 +1,27 @@
+{
+  "uuid": "0a89f851-f13f-41c8-83de-99d9cd9231b9",
+  "title": "IPv4/IPv6 Forwarding Activity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the execution of commands that enable IPv4 and IPv6 forwarding on Linux systems. Enabling IP\nforwarding can be used to route network traffic between different network interfaces, potentially allowing attackers to\npivot between networks, exfiltrate data, or establish command and control channels.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1090",
+    "T1090.001",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349338"
+}

@@ -1,0 +1,29 @@
+{
+  "uuid": "14b28225-4ab7-4c02-bd64-db14d3c6cecc",
+  "title": "Entra ID OAuth user_impersonation Scope for Unusual User and Client",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies rare occurrences of OAuth workflow for a user principal that is single factor authenticated, with an OAuth\nscope containing user_impersonation for a token issued by Entra ID. Adversaries may use this scope to gain unauthorized\naccess to user accounts, particularly when the sign-in session status is unbound, indicating that the session is not\nassociated with a specific device or session. This behavior is indicative of potential account compromise or\nunauthorized access attempts. This rule flags when this pattern is detected for a user principal that has not been seen\nin the last 10 days, indicating potential abuse or unusual activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Android\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1550",
+    "T1550.001",
+    "T1656"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349105"
+}

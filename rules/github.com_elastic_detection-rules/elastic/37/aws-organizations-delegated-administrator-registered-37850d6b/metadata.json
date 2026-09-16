@@ -1,0 +1,23 @@
+{
+  "uuid": "37850d6b-69ff-4bf3-bdc4-abacacdc5575",
+  "title": "AWS Organizations Delegated Administrator Registered",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an AWS member account is registered as a delegated administrator for an AWS\nservice via the RegisterDelegatedAdministrator API. Delegated administrators receive\nservice-level administrative access across the entire organization without being the\nmanagement account. An attacker who compromises a principal with organizations permissions\ncan abuse overly permissive managed policies to register a member account they control as\na delegated administrator, then use that privileged access to escalate privileges\norganization-wide and compromise all member accounts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003",
+    "T1484"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348950"
+}

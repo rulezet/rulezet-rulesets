@@ -1,0 +1,23 @@
+{
+  "uuid": "a3c09259-f375-4ed5-b6e1-29c0883118a8",
+  "title": "AWS EC2 User Data Retrieval for EC2 Instance",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies discovery request DescribeInstanceAttribute with the attribute userData and instanceId in AWS CloudTrail\nlogs. This may indicate an attempt to retrieve user data from an EC2 instance. Adversaries may use this information to\ngather sensitive data from the instance such as hardcoded credentials or to identify potential vulnerabilities. This is\na New Terms rule that identifies the first time an IAM user or role requests the user data for a specific EC2 instance.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.005",
+    "T1580"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348932"
+}

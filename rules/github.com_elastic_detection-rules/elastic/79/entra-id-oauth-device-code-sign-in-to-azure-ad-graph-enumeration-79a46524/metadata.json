@@ -1,0 +1,30 @@
+{
+  "uuid": "79a46524-1be8-4c60-8bf7-3eecd85ba80a",
+  "title": "Entra ID OAuth Device Code Sign-in to Azure AD Graph Enumeration",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Correlates a successful Entra ID device-code sign-in to the legacy Azure AD Graph audience\n(00000002-0000-0000-c000-000000000000) from an unmanaged device with directory enumeration against graph.windows.net by\nthe same user within a short window. Device-code phishing is the dominant OAuth phishing variant against Microsoft\ntenants: the adversary initiates the flow, relays the user-facing code to the victim, and on redemption walks away with\nan access or refresh token bound to the targeted resource without ever handling the user's password or MFA factor. When\nthe redeemed audience is AAD Graph and the redeeming device is unmanaged, the follow-on Graph traffic is the compromised\ncloud account being used by the attacker, not by the user. This rule fires when that token is immediately turned around\nagainst the directory under the same identity to read user, group, service principal, application, role assignment,\ndirectory object, policy, OAuth permission grant, or tenant detail collections.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069",
+    "T1069.003",
+    "T1078",
+    "T1078.004",
+    "T1087",
+    "T1087.004",
+    "T1526",
+    "T1528"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349132"
+}

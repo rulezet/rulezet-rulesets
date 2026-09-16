@@ -1,0 +1,41 @@
+{
+  "uuid": "7b87e8d6-9a61-4ead-9946-3b27dc1718a8",
+  "title": "Execution via GitHub Actions Runner",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects potentially dangerous commands spawned by the GitHub Actions Runner.Worker process or by shell\ninterpreters launched via a runner entrypoint script on self-hosted runner machines. Adversaries who gain the ability\nto modify or trigger workflows in a linked GitHub repository can execute arbitrary commands on the runner host. This\nbehavior may indicate malicious or unexpected workflow activity, including code execution, reconnaissance, credential\nharvesting, or network exfiltration initiated through a compromised repository or unauthorized workflow.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1059.002",
+    "T1059.003",
+    "T1059.004",
+    "T1059.006",
+    "T1059.007",
+    "T1195",
+    "T1195.002",
+    "T1218",
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349260"
+}

@@ -1,0 +1,30 @@
+{
+  "uuid": "0fc18776-9ee4-40c7-9b16-354e34c137e6",
+  "title": "Entra ID OAuth Phishing via First-Party Microsoft Application",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects potentially suspicious OAuth authorization activity in Microsoft Entra ID where first-party Microsoft\napplications from the FOCI (Family of Client IDs) group request access to Microsoft Graph or legacy Azure AD resources.\nDeveloper tools like Azure CLI, Visual Studio Code, and Azure PowerShell accessing these resources are flagged, as they\nare commonly abused in phishing campaigns like ConsentFix. Additionally, any FOCI family application accessing the\ndeprecated Windows Azure Active Directory resource is flagged since this API is rarely used legitimately and attackers\ntarget it for stealth. First-party apps are trusted by default in all tenants and cannot be blocked, making them ideal\nfor OAuth phishing attacks.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1199",
+    "T1528",
+    "T1550",
+    "T1550.001",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349061"
+}

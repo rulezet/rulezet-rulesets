@@ -1,0 +1,22 @@
+{
+  "uuid": "5851dfcd-0c6d-4a9b-938a-201552750af5",
+  "title": "AWS Sign-In Console Login with Federated User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a federated user logs into the AWS Management Console. Federated users are typically given temporary\ncredentials to access AWS services. If a federated user logs into the AWS Management Console without using MFA, it may\nindicate a security risk, as MFA adds an additional layer of security to the authentication process. However, CloudTrail\ndoes not record whether a Federated User utilized MFA as part of authentication — that MFA decision often occurs at a\nthird-party IdP (e.g., Okta, Azure AD, Google). As a result, CloudTrail fields such as MFAUsed / mfaAuthenticated appear\nas “No/false” for federated console logins even if IdP MFA was required. This alert should be correlated with IdP\nauthentication logs to verify whether MFA was enforced for the session. Increase priority if you find a related\n\"GetSigninToken\" event whose source IP / ASN / geo or user-agent differs from the subsequent \"ConsoleLogin\" (possible\ntoken relay/abuse). Same-IP/UA pairs within a short window are more consistent with expected operator behavior and can\nbe triaged with lower severity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349000"
+}

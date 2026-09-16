@@ -1,0 +1,26 @@
+{
+  "uuid": "8a5e6eb0-fcc9-4bad-a779-e418f5b11650",
+  "title": "Entra ID Register Device with Unusual User Agent (Azure AD Join)",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful Microsoft Entra ID audit events for Register device where additional details indicate an Azure AD join\nand the recorded user agent is not one of the common native registration clients (Dsreg, DeviceRegistrationClient, or\nDalvik-based Android enrollment). Legitimate Windows and standard mobile enrollment flows often present predictable\nuser-agent strings; unexpected clients may reflect scripted registration, third-party tooling, or adversary-driven device\nregistration used for persistence or token abuse. Baseline approved provisioning tools and MDM integrations before tuning.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Android\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349158"
+}

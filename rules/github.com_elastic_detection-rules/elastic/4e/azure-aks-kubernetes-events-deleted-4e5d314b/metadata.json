@@ -1,0 +1,21 @@
+{
+  "uuid": "4e5d314b-24fd-45ed-aac0-5768be0b457e",
+  "title": "Azure AKS Kubernetes Events Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects an identity deleting Kubernetes events on AKS (Azure Kubernetes Service), excluding known AKS control-plane and\nplatform identities. Adversaries delete events (individually or in bulk via deletecollection) to remove evidence of pod\ncreation, exec, or scheduling activity and impair incident response after operating in the cluster. Coverage includes\nworkload service accounts (system:serviceaccount:*), so a compromised in-cluster token wiping events is not excluded.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1070"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349046"
+}

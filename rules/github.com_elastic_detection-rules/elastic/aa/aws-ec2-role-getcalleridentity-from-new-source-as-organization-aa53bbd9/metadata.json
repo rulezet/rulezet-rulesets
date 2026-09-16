@@ -1,0 +1,22 @@
+{
+  "uuid": "aa53bbd9-703b-45ce-8d73-1e050aa5d1c2",
+  "title": "AWS EC2 Role GetCallerIdentity from New Source AS Organization",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the first time an EC2 instance role session calls AWS STS GetCallerIdentity from a given source autonomous\nsystem (AS) organization name within the lookback window. Adversaries who steal instance role credentials often verify\nthem with GetCallerIdentity from infrastructure outside your normal egress paths. Baseline learning on the pairing of\nidentity and source network reduces noise from stable NAT or AWS-classified egress compared to alerting on every call\nfrom a non-Amazon ASN.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1087",
+    "T1087.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348938"
+}

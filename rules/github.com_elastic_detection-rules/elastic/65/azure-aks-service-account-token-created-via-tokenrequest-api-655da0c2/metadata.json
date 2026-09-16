@@ -1,0 +1,21 @@
+{
+  "uuid": "655da0c2-e186-44c7-be2c-39570d6f4a11",
+  "title": "Azure AKS Service Account Token Created via TokenRequest API",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects an identity minting a service account token via the AKS (Azure Kubernetes Service) TokenRequest API\n(serviceaccounts/token), excluding known AKS control-plane and platform identities. Adversaries request service account\ntokens from a compromised identity to impersonate a workload, move laterally, or escalate privileges within the cluster.\nCoverage includes workload service accounts (system:serviceaccount:*), so a compromised in-cluster token minting a token\nfor another service account is not excluded.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1528"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349039"
+}

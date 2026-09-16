@@ -1,0 +1,19 @@
+{
+  "uuid": "1b6b26b5-d160-4575-81fa-b1d431ce1503",
+  "title": "AWS Bedrock Guardrails Detected Multiple Violations by a Single User Over a Session",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies multiple violations of AWS Bedrock guardrails by the same user in the same account over a session. Multiple\nviolations implies that a user may be intentionally attempting to cirvumvent security controls, access sensitive\ninformation, or possibly exploit a vulnerability in the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349020"
+}

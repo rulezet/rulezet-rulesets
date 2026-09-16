@@ -1,0 +1,23 @@
+{
+  "uuid": "f21b7db8-7f33-4933-87aa-4092fac31f4b",
+  "title": "Entra ID ADRS Token Request by Microsoft Authentication Broker",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects suspicious OAuth 2.0 token requests where the Microsoft Authentication Broker\n(29d9ed98-a469-4536-ade2-f981bc1d605e) requests access to the Device Registration Service\n(01cb2876-7ebd-4aa4-9cc9-d28bd4d359a9) on behalf of a user principal. The presence of the adrs_access scope in the\nauthentication processing details suggests an attempt to access ADRS, which is atypical for standard user sign-ins. This\nbehavior may reflect an effort to abuse device registration for unauthorized persistence, such as acquiring a Primary\nRefresh Token (PRT) or establishing a trusted session.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.005",
+    "T1550"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349044"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "881ffef6-83bf-4fe1-b11e-292adb8e9070",
+  "title": "Unusual High Denied Sensitive Information Policy Blocks Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects repeated compliance violation 'BLOCKED' actions coupled with specific policy name such as\n'sensitive_information_policy', indicating persistent misuse or attempts to probe the model's denied topics.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349024"
+}

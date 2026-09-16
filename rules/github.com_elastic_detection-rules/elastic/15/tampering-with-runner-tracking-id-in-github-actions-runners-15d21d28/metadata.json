@@ -1,0 +1,33 @@
+{
+  "uuid": "15d21d28-9d8b-4bd9-9192-8937dae9d4bc",
+  "title": "Tampering with RUNNER_TRACKING_ID in GitHub Actions Runners",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects processes spawned by GitHub Actions runners where \"RUNNER_TRACKING_ID\" is overridden from its\ndefault \"github_*\" value. Such tampering has been associated with attempts to evade runner tracking/cleanup on\nself-hosted runners, including behavior observed in the Shai-Hulud 2.0 npm worm campaign.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.009",
+    "T1059",
+    "T1195",
+    "T1195.001",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349172"
+}

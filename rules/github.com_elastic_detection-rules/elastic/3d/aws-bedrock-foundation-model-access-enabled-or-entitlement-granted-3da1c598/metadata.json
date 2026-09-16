@@ -1,0 +1,21 @@
+{
+  "uuid": "3da1c598-496a-4e81-8167-f0f5723935e9",
+  "title": "AWS Bedrock Foundation Model Access Enabled or Entitlement Granted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when access to an Amazon Bedrock foundation model is enabled at the account level, either by granting a\nfoundation-model entitlement, submitting a use case for model access, or creating a foundation-model agreement\n(accepting the EULA). These account-level \"model access\" actions unlock a foundation model so that it can subsequently\nbe invoked. Adversaries or a compromised principal may enable model access to abuse expensive models (LLMjacking), to\nestablish a durable ability to invoke models within the account, or to bypass organizational controls. This activity is\ndistinct from changes to a resource-based model invocation policy and is identified by the Bedrock control-plane API\ncalls that grant model entitlements and agreements.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348984"
+}

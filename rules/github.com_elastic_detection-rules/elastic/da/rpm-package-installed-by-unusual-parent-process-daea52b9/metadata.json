@@ -1,0 +1,29 @@
+{
+  "uuid": "daea52b9-fe0c-4772-b83d-6d1a13db5e4d",
+  "title": "RPM Package Installed by Unusual Parent Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule leverages the new_terms rule type to identify the installation of RPM packages by an unusual parent process.\nRPM is a package management system used in Linux systems such as Red Hat, CentOS and Fedora. Attacks may backdoor RPM\npackages to gain initial access or install malicious RPM packages to maintain persistence.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1195",
+    "T1195.002",
+    "T1543",
+    "T1546",
+    "T1546.016",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349308"
+}

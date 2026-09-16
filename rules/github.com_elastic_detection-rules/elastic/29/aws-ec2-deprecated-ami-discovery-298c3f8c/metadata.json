@@ -1,0 +1,21 @@
+{
+  "uuid": "298c3f8c-b2b8-4ab9-a99b-91b8dde3e539",
+  "title": "AWS EC2 Deprecated AMI Discovery",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a user has queried for deprecated Amazon Machine Images (AMIs) in AWS. This may indicate an adversary looking for outdated AMIs that may be vulnerable to exploitation. While deprecated AMIs are not inherently malicious or indicative of a breach, they may be more susceptible to vulnerabilities and should be investigated for potential security risks.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1580"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348954"
+}

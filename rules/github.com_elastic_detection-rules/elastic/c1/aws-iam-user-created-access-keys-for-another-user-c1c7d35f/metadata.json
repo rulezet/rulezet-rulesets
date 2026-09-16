@@ -1,0 +1,22 @@
+{
+  "uuid": "c1c7d35f-6a05-41ca-96bb-6f81df6daf8d",
+  "title": "AWS IAM User Created Access Keys For Another User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "An adversary with access to a set of compromised credentials may attempt to persist or escalate privileges by creating a\nnew set of credentials for an existing user. This rule looks for use of the IAM `CreateAccessKey` API operation to\ncreate new programmatic access keys for another IAM user.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348966"
+}

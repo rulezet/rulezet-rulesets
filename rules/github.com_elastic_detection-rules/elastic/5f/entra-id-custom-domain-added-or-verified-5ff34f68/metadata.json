@@ -1,0 +1,23 @@
+{
+  "uuid": "5ff34f68-2c22-4eca-a7f3-ee9f77bd6e6f",
+  "title": "Entra ID Custom Domain Added or Verified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a custom domain is added or verified in an Entra ID tenant. Adding and verifying a custom domain are\nprecursor steps to configuring domain federation, which can be abused by adversaries to route authentication through an\nattacker-controlled identity provider (Golden SAML). In most organizations, custom domains are added infrequently and\nthese events should be investigated to ensure they are part of a legitimate administrative workflow.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\""
+  ],
+  "attack_techniques": [
+    "T1584",
+    "T1584.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349152"
+}

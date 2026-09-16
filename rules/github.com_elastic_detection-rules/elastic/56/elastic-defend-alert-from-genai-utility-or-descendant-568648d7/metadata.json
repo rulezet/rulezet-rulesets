@@ -1,0 +1,23 @@
+{
+  "uuid": "568648d7-c922-44e4-a0fe-43d3f0fd56e8",
+  "title": "Elastic Defend Alert from GenAI Utility or Descendant",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects Elastic Defend alerts (behavior, malicious file, memory signature, shellcode) where the alerted process or its\ndirect parent is a GenAI coding or assistant utility (e.g. Cursor, Claude, Windsurf, Cody, Continue, Aider, OpenClaw,\nMoltbot, Clawdbot, Codeium, Tabnine, GitHub Copilot). Activity from these tools can indicate prompt injection,\nmalicious skills, or supply-chain abuse; this Higher-Order rule helps prioritize such alerts for triage.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1195",
+    "T1195.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349216"
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "69ca2cc5-773b-483c-8de0-59f4ff7ee12a",
+  "title": "Suspicious System Commands Executed by Previously Unknown Executable",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the execution of several commonly used system commands executed by a previously unknown\nexecutable located in commonly abused directories. An alert from this rule can indicate the presence of potentially\nmalicious activity, such as the execution of unauthorized or suspicious processes attempting to run malicious code.\nDetecting and investigating such behavior can help identify and mitigate potential security threats, protecting the\nsystem and its data from potential compromise.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1016",
+    "T1033",
+    "T1049",
+    "T1057",
+    "T1059",
+    "T1059.004",
+    "T1082",
+    "T1083"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349304"
+}

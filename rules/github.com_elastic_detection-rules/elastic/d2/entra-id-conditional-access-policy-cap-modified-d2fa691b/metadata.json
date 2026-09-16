@@ -1,0 +1,22 @@
+{
+  "uuid": "d2fa691b-11e2-4af0-9ece-6d3d4e93db3a",
+  "title": "Entra ID Conditional Access Policy (CAP) Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a modification to a conditional access policy (CAP) in Microsoft Entra ID. Adversaries may modify existing CAPs to loosen access controls and maintain persistence in the environment with a compromised identity or entity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556",
+    "T1556.009"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349165"
+}

@@ -1,0 +1,35 @@
+{
+  "uuid": "ab261c50-42ab-4df1-b2a7-4468cb410143",
+  "title": "Suspicious Process Execution by Zoom",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious process execution associated with the Zoom desktop client on macOS and Linux. The rule detects\nshells, script interpreters, downloaders, and network utilities spawned by Zoom on either platform. On Linux, it also\ndetects Zoom replacing its own process image with an executable outside the Zoom installation directory. These behaviors\nmay indicate successful exploitation of a Zoom client vulnerability, including CVE-2026-53413.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDownloader\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.002",
+    "T1059.004",
+    "T1059.006",
+    "T1203"
+  ],
+  "cve": [
+    "CVE-2026-53413"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349261"
+}

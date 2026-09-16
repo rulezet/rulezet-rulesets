@@ -1,0 +1,23 @@
+{
+  "uuid": "a7ba8f2f-9911-4925-bd2c-1da15f2d06ba",
+  "title": "AWS Security Hub Disabled",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when AWS Security Hub is disabled in a region. Security Hub aggregates security findings from\nAWS services (GuardDuty, Inspector, Macie, IAM Access Analyzer) and third-party tools into a single\npane of glass. Disabling it suppresses centralized finding aggregation and compliance checks, removing\nvisibility into threats across the account. This action is a documented pre-ransomware and\npre-exfiltration defense evasion technique.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349007"
+}

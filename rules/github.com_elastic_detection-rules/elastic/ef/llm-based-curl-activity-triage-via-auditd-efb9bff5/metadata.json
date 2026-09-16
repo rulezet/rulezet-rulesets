@@ -1,0 +1,29 @@
+{
+  "uuid": "efb9bff5-55f0-4a19-bdf8-088415391eeb",
+  "title": "LLM-Based Curl Activity Triage via Auditd",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects non-allowlisted curl activity on Linux hosts via Auditd Manager or Auditbeat and uses an LLM to assess whether\nthe activity is malicious, benign, or requires investigation. The rule parses and normalizes the destination, redacts\nsensitive command-line values, and aggregates activity by host and destination before invoking the ES|QL COMPLETION\ncommand. Only true positive or suspicious verdicts with confidence above 0.7 generate alerts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1048",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349235"
+}

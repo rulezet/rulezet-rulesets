@@ -1,0 +1,29 @@
+{
+  "uuid": "a8e48107-1ecc-4621-a24b-8847eedc8090",
+  "title": "Direct Interactive Kubernetes API Request by Common Utilities",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule leverages a combination of Defend for Containers and Kubernetes audit logs to detect the execution of direct\ninteractive Kubernetes API requests. An adversary may need to execute direct interactive Kubernetes API requests to gain\naccess to the Kubernetes API server or other resources within the cluster. These requests are often used to enumerate\nthe Kubernetes API server or other resources within the cluster, and may indicate an attempt to move laterally within\nthe cluster. Note that this rule may not trigger if the authorization token of the request is expanded within the process\nargument list, as the length of the \"process.args\" field may lead to the field being ignored.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1609",
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349276"
+}

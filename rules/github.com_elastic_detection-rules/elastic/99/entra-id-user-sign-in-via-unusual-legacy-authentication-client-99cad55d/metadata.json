@@ -1,0 +1,22 @@
+{
+  "uuid": "99cad55d-05f0-4d58-a853-3e82e85c31fb",
+  "title": "Entra ID User Sign-In via Unusual Legacy Authentication Client",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects a successful sign-in by a Member user principal through a legacy authentication client (such as Authenticated\nSMTP, IMAP4, POP3, Exchange ActiveSync, Exchange Web Services, or other basic-authentication clients) in Microsoft Entra\nID, where the user principal has not been seen using a legacy client in the last 7 days. Legacy authentication clients\nrely on basic authentication, do not support modern authentication or interactive multi-factor authentication, and are\nfrequently abused by adversaries for password spraying and account takeover because they translate into single-factor\nResource Owner Password Credentials (ROPC) grants. This is a New Terms rule that surfaces the first occurrence of legacy\nclient authentication for a given user, which is unusual in most modern environments.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349159"
+}

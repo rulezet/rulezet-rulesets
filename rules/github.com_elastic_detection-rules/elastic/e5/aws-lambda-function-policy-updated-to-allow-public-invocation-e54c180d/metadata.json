@@ -1,0 +1,24 @@
+{
+  "uuid": "e54c180d-4794-4088-a139-1a676fc11d06",
+  "title": "AWS Lambda Function Policy Updated to Allow Public Invocation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when an AWS Lambda function policy is updated to allow public invocation. This rule detects use of the\nAddPermission API where the Principal is set to \"*\", enabling any AWS account to invoke the function. Adversaries may\nabuse this configuration to establish persistence, create a covert execution path, or operate a function as an\nunauthenticated backdoor. Public invocation is rarely required outside very specific workloads and should be considered\nhigh-risk when performed unexpectedly.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1546",
+    "T1578",
+    "T1578.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348975"
+}

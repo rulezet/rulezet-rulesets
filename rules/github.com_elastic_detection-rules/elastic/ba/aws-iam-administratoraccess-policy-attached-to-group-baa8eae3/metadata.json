@@ -1,0 +1,22 @@
+{
+  "uuid": "baa8eae3-9a29-48d1-b33a-d144e5ac0217",
+  "title": "AWS IAM AdministratorAccess Policy Attached to Group",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "An adversary with access to a set of compromised credentials may attempt to persist or escalate privileges by attaching\nadditional permissions to user groups the compromised user account belongs to. This rule looks for use of the IAM\nAttachGroupPolicy API operation to attach the highly permissive AdministratorAccess AWS managed policy to an existing\nIAM user group.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348959"
+}

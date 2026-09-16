@@ -1,0 +1,22 @@
+{
+  "uuid": "6ff8ca1a-c50e-4f21-acd2-8e18e464501b",
+  "title": "AWS KMS Customer Managed Key Disabled or Scheduled for Deletion",
+  "format": "elastic",
+  "author": "Xavier Pich",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies attempts to disable or schedule the deletion of an AWS customer managed KMS Key. Disabling or scheduling a\nKMS key for deletion removes the ability to decrypt data encrypted under that key and can permanently destroy access to\ncritical resources. Adversaries may use these operations to cause irreversible data loss, disrupt business operations,\nimpede incident response, or hide evidence of prior activity. Because KMS keys often protect sensitive or regulated\ndata, any modification to their lifecycle should be considered highly sensitive and investigated promptly.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1485.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349017"
+}

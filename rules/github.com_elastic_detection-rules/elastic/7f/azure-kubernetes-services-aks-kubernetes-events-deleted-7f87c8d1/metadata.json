@@ -1,0 +1,25 @@
+{
+  "uuid": "7f87c8d1-52f3-4382-8790-87c2d2ee6a74",
+  "title": "Azure Kubernetes Services (AKS) Kubernetes Events Deleted",
+  "format": "elastic",
+  "author": "Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when events are deleted in Azure Kubernetes. Kubernetes events are objects that log any state changes.\nExample events are a container creation, an image pull, or a pod scheduling on a node. An adversary may delete events in\nAzure Kubernetes in an attempt to evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349096"
+}

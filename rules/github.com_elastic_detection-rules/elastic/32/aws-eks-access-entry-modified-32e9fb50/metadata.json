@@ -1,0 +1,24 @@
+{
+  "uuid": "32e9fb50-149c-4055-ab91-d99f63874f80",
+  "title": "AWS EKS Access Entry Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful Amazon EKS Access Entries API operations that create, update, attach, detach, or delete authentication\nmappings between IAM principals and the cluster. Changes to access entries alter who can authenticate to Kubernetes and\nwhat Kubernetes-level permissions they receive, without requiring edits to in-cluster RBAC objects. Unexpected callers\nor timing may indicate persistence or privilege abuse. Common automation identities (service-linked roles, eksctl,\nTerraform, CloudFormation role patterns) are excluded to reduce noise; tune further for your deployment pipelines.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348990"
+}

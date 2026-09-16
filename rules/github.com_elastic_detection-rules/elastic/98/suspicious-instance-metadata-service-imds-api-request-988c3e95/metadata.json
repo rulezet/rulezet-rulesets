@@ -1,0 +1,31 @@
+{
+  "uuid": "988c3e95-ad86-44f2-99e5-abf182917426",
+  "title": "Suspicious Instance Metadata Service (IMDS) API Request",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies various tools/scripts performing network activities attempting to access the cloud service provider's\ninstance metadata service (IMDS) API endpoint, which can be used to retrieve sensitive instance-specific information such\nas instance ID, public IP address, and even temporary security credentials if roles are assumed by that instance.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1016",
+    "T1082",
+    "T1552",
+    "T1552.005",
+    "T1580"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349278"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "67918a34-a40a-409a-9c82-83657c5d8db6",
+  "title": "Entra ID Excessive Account Lockouts Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a high count of failed Microsoft Entra ID sign-in attempts as the result of the target user account being\nlocked out. Adversaries may attempt to brute-force user accounts by repeatedly trying to authenticate with incorrect\ncredentials, leading to account lockouts by Entra ID Smart Lockout policies.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1110",
+    "T1110.001",
+    "T1110.003",
+    "T1110.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349139"
+}

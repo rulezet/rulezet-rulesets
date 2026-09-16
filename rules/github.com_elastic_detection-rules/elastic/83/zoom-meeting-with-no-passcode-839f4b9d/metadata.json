@@ -1,0 +1,22 @@
+{
+  "uuid": "839f4b9d-b330-486c-b433-fb1fbd46a3a9",
+  "title": "Zoom Meeting with no Passcode",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies Zoom meetings that are created without a passcode. Meetings without a passcode are susceptible to\nZoombombing. Zoombombing is carried out by taking advantage of Zoom sessions that are not protected with a passcode.\nZoombombing refers to the unwanted, disruptive intrusion, generally by Internet trolls and hackers, into a video\nconference call. In a typical Zoombombing incident, a teleconferencing session is hijacked by the insertion of material\nthat is lewd, obscene, racist, or antisemitic in nature, typically resulting of the shutdown of the session.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349295"
+}
