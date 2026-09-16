@@ -1,0 +1,20 @@
+{
+  "uuid": "82a718f5-3dd2-453d-84e7-d89acc590bc0",
+  "title": "Suspicious_Python_PyArmor_Dropper",
+  "format": "yara",
+  "author": "k3rnelcallz",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects packed Python malware utilizing PyInstaller and PyArmor with specific embedded payload paths",
+  "source": "https://github.com/k3rnelcallz/yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-25",
+  "last_modified": "2026-07-25",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241888"
+}

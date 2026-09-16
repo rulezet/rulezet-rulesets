@@ -1,0 +1,21 @@
+{
+  "uuid": "1cd16699-ea80-46a0-a412-7108dc91ad18",
+  "title": "Windows_VulnDriver_Avast_804c74f8",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Subject: AVG Technologies USA, Inc., Version: <= 19.7.4246.0",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-25",
+  "last_modified": "2026-07-25",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241548"
+}

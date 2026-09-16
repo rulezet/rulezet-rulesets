@@ -1,0 +1,21 @@
+{
+  "uuid": "c285ac07-6e07-467b-a01d-ae5d84b76374",
+  "title": "Windows_VulnDriver_MsIo64_18f8f0d1",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Subject: Microsoft Windows Hardware Compatibility Publisher, Version: <= 1.3.23.406",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-25",
+  "last_modified": "2026-07-25",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241448"
+}
