@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MS-DEFENDER] Platform Will Soon Be Out Of Date"; event_id: 2007; classtype: system-event; reference: url,docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/troubleshoot-microsoft-defender-antivirus; sid:5005263; rev: 1;)

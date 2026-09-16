@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MS-DEFENDER] Real-Time Protection Recovered From A Failure"; event_id: 3007; classtype: system-error; reference: url,docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/troubleshoot-microsoft-defender-antivirus; sid:5005276; rev: 1;)

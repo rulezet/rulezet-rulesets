@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MS-DEFENDER] Security Intelligence Update Failed"; event_id: 2001; classtype: system-error; reference: url,docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/troubleshoot-microsoft-defender-antivirus; sid:5005257; rev: 1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MS-DEFENDER] All Dynamic Definitions Deleted"; event_id: 2013; classtype: system-event; reference: url,docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/troubleshoot-microsoft-defender-antivirus; sid:5005267; rev: 1;)

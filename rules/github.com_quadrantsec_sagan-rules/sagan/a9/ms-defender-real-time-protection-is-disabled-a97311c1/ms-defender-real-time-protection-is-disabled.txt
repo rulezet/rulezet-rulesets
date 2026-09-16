@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MS-DEFENDER] Real-Time Protection Is Disabled"; event_id: 5001; classtype: system-event; reference: url,docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/troubleshoot-microsoft-defender-antivirus; sid:5005278; rev: 1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MS-DEFENDER] Microsoft Defender Antivirus Has Deduced The Hashes For A Threat Resource"; event_id: 1120; classtype: system-event; reference: url,docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/troubleshoot-microsoft-defender-antivirus; sid:5005253; rev: 1;)
