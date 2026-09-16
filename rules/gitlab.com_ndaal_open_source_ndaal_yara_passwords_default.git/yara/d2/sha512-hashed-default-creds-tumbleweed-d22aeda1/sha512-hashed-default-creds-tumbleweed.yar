@@ -1,0 +1,19 @@
+rule sha512_hashed_default_creds_tumbleweed
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for tumbleweed."
+        category = "INFO"
+        info = "SHA512"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="1645716bc10e46cf158e5e435ff7211d230029604d119b2817c2e56591dd71aeae82129dd4e24872000b280f8a485c5d6ae4dd06d5d14a7f2da1bb29585c125e"
+    $a1="887375daec62a9f02d32a63c9e14c7641a9a8a42e4fa8f6590eb928d9744b57bb5057a1d227e4d40ef911ac030590bbce2bfdb78103ff0b79094cee8425601f5"
+condition:
+    ($a0 and $a1)
+}
