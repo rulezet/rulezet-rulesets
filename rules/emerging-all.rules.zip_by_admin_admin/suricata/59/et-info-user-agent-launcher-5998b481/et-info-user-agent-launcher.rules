@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO User-Agent (Launcher)"; flow:established,to_server; http.user_agent; content:"Launcher"; nocase; content:!"EpicGamesLauncher"; depth:17; content:!"7Launcher"; classtype:policy-violation; sid:2010645; rev:12; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2022_05_03;)

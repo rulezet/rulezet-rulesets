@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED SEO/Malvertising Executable Landing exe2.php"; flow:established,to_server; content:"/exe2.php?wm_id=acc"; http_uri; classtype:trojan-activity; sid:2011916; rev:5; metadata:created_at 2010_11_10, signature_severity Unknown, updated_at 2022_05_19;)

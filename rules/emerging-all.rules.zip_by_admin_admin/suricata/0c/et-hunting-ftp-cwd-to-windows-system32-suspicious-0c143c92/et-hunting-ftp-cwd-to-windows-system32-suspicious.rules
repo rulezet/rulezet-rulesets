@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 21 (msg:"ET HUNTING FTP CWD to windows system32 - Suspicious"; flow:established,to_server; content:"CWD C|3a 5c|WINDOWS|5c|system32|5c|"; nocase; classtype:trojan-activity; sid:2008556; rev:7; metadata:created_at 2010_07_30, confidence Medium, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2022_04_13;)
