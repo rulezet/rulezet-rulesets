@@ -1,0 +1,21 @@
+{
+  "uuid": "850c310d-dd72-4bfd-acef-661edf8452a4",
+  "title": "ASL AWS Password Policy Changes",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This search looks for AWS CloudTrail events from Amazon Security Lake where a user is making successful API calls to view/update/delete the existing password policy in an AWS organization. It is unlikely for a regular user to conduct this operation. These events may potentially be malicious, adversaries often use this information to gain more understanding of the password defenses in place and exploit them to increase their attack surface when a user account is compromised.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1201"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352100"
+}

@@ -1,0 +1,9 @@
+rule _MinGW_GCC_DLL_v2xx_
+{
+	meta:
+		description = "MinGW GCC DLL v2xx"
+	strings:
+		$0 = {55 89 E5 83 EC 18 89 75 FC 8B 75 0C 89 5D F8 83 FE 01 74 5C 89 74 24 04 8B 55 10 89 54 24 08 8B 55 08 89 14 24 E8 96 01 ?? ?? 83 EC 0C 83 FE 01 89 C3 74 2C 85 F6 75 0C 8B 0D ?? 30 ?? 10 85}
+	condition:
+		$0 at entrypoint
+}

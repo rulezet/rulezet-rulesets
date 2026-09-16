@@ -1,0 +1,21 @@
+{
+  "uuid": "b80c2c5e-7960-414c-9783-a073e7526857",
+  "title": "Web Fraud - Anomalous User Clickspeed",
+  "format": "splunk",
+  "author": "Jim Apger, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This search is used to examine web sessions to identify those where the clicks are occurring too quickly for a human or are occurring with a near-perfect cadence (high periodicity or low standard deviation), resembling a script driven session.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352199"
+}

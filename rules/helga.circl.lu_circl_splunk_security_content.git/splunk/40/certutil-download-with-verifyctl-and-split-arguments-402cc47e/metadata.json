@@ -1,0 +1,25 @@
+{
+  "uuid": "402cc47e-267f-47f5-bf6c-67b97e7d7749",
+  "title": "CertUtil Download With VerifyCtl and Split Arguments",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic has been deprecated in favor of \"Windows CertUtil Download\". The following analytic detects the use of `certutil.exe` to download files using the `-VerifyCtl` and `-f` arguments. This behavior is identified by monitoring command-line executions for these specific arguments via Endpoint Detection and Response (EDR) telemetry. This activity is significant because `certutil.exe` is a legitimate tool often abused by attackers to download and execute malicious payloads. If confirmed malicious, this could allow an attacker to download and execute arbitrary files, potentially leading to code execution, data exfiltration, or further compromise of the system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352085"
+}

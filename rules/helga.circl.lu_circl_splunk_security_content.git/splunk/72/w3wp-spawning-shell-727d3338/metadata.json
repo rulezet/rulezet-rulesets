@@ -1,0 +1,25 @@
+{
+  "uuid": "727d3338-1fa0-4cf1-9eee-8d6e05bd3773",
+  "title": "W3WP Spawning Shell",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where a shell (PowerShell.exe or Cmd.exe) is spawned from W3WP.exe, the IIS worker process. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process creation events where the parent process is W3WP.exe. This activity is significant as it may indicate webshell activity, often associated with exploitation attempts like those by the HAFNIUM Group on Exchange servers. If confirmed malicious, this behavior could allow attackers to execute arbitrary commands, potentially leading to system compromise, data exfiltration, or further lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352180"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "fe763376-37a6-4bd0-95b1-091a02d902b4",
+  "title": "aws detect sts assume role abuse",
+  "format": "splunk",
+  "author": "Rod Soto, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies suspicious use of the AWS STS AssumeRole action. It leverages AWS CloudTrail logs to detect instances where roles are assumed, focusing on specific fields like source IP address, user ARN, and role names. This activity is significant because attackers can use assumed roles to move laterally within the AWS environment and escalate privileges. If confirmed malicious, this could allow attackers to gain unauthorized access to sensitive resources, execute code, or further entrench themselves within the environment, leading to potential data breaches or service disruptions.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352186"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "376ee7ec-9c64-4635-abb6-ea61d40236a2",
+  "title": "Splunk User Enumeration Attempt",
+  "format": "splunk",
+  "author": "Lou Stella, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies attempts to enumerate usernames in Splunk by detecting multiple failed authentication attempts from the same source. It leverages data from the `_audit` index, specifically focusing on failed authentication events. This activity is significant for a SOC because it can indicate an attacker trying to discover valid usernames, which is a precursor to more targeted attacks like password spraying or brute force attempts. If confirmed malicious, this activity could lead to unauthorized access, compromising the security of the Splunk environment and potentially exposing sensitive data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [
+    "CVE-2021-33845"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351965"
+}

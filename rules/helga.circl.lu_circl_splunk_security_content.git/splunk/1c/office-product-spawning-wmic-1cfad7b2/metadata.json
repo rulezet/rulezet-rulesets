@@ -1,0 +1,26 @@
+{
+  "uuid": "1cfad7b2-4fd4-4cc1-b3c3-6d5dcb3483f0",
+  "title": "Office Product Spawning Wmic",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated in favour of a more generic approach in \"Windows Office Product Spawned Uncommon Process\". The following analytic detects any Windows Office Product spawning `wmic.exe`, specifically when the command-line of `wmic.exe` contains `wmic process call create`. This behavior is identified using data from Endpoint Detection and Response (EDR) agents, focusing on process and parent process relationships. This activity is significant as it is commonly associated with the Ursnif malware family, indicating potential malicious activity. If confirmed malicious, this could allow an attacker to execute arbitrary commands, leading to further system compromise, data exfiltration, or lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"FormBook\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352243"
+}

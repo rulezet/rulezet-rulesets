@@ -1,0 +1,23 @@
+{
+  "uuid": "cc0f1e80-0579-4fb9-98b9-ddeb8a8130fa",
+  "title": "Suspicious writes to System Volume Information",
+  "format": "splunk",
+  "author": "Rico Valdez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This search detects writes to the 'System Volume Information' folder by something other than the System process.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351997"
+}

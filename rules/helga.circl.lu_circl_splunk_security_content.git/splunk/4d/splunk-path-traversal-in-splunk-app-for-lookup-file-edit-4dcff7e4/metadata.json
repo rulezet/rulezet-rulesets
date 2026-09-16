@@ -1,0 +1,21 @@
+{
+  "uuid": "4dcff7e4-c03e-4558-9cfb-d22cd37c45b4",
+  "title": "Splunk Path Traversal In Splunk App For Lookup File Edit",
+  "format": "splunk",
+  "author": "Rod Soto, Eric McGinnis",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies path traversal attempts in the Splunk App for Lookup File Editing. It detects specially crafted web requests targeting lookup files by analyzing the `uri_query` field in the `_internal` index. This activity is significant because it allows low-privilege users to read and write to restricted areas of the Splunk installation directory, potentially accessing sensitive files like password hashes. If confirmed malicious, this could lead to unauthorized access, data breaches, and further exploitation of the Splunk environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1083"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352068"
+}

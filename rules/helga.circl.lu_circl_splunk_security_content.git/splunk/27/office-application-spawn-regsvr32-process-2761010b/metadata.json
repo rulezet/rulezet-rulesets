@@ -1,0 +1,26 @@
+{
+  "uuid": "2761010b-b684-4382-846e-95dec4dc846c",
+  "title": "Office Application Spawn Regsvr32 process",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated in favour of a more generic approach in \"Windows Office Product Spawned Uncommon Process\". The following analytic identifies instances where an Office application spawns a Regsvr32 process, which is often indicative of macro execution or malicious code. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process creation events where the parent process is a known Office application. This activity is significant because it is a common technique used by malware, such as IcedID, to initiate infections. If confirmed malicious, this behavior could lead to code execution, allowing attackers to gain control over the affected system and potentially escalate privileges.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"FormBook\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352138"
+}

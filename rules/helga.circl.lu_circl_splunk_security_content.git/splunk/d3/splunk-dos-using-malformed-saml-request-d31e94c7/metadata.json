@@ -1,0 +1,21 @@
+{
+  "uuid": "d31e94c7-a86c-4fe3-b413-7e17e7b32d7b",
+  "title": "Splunk DoS Using Malformed SAML Request",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a denial of service (DoS) attempt using a malformed SAML request targeting the /saml/acs REST endpoint in Splunk Enterprise versions lower than 9.0.6 and 8.2.12. It leverages `splunkd` logs, specifically looking for error messages containing \"xpointer\" in the `expr` field. This activity is significant because it can cause the Splunk daemon to crash or hang, disrupting service availability. If confirmed malicious, this attack could lead to prolonged downtime, impacting the organization's ability to monitor and respond to security events.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1498"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352182"
+}

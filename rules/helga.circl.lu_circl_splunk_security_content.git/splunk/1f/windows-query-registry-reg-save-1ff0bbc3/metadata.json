@@ -1,0 +1,24 @@
+{
+  "uuid": "1ff0bbc3-e608-4ade-bd2f-813314b0fa8d",
+  "title": "Windows Query Registry Reg Save",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated. The following analytic detects the execution of the reg.exe process with the \"save\" parameter. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs and command-line arguments. This activity is significant because threat actors often use the \"reg save\" command to dump credentials or test registry modification capabilities on compromised hosts. If confirmed malicious, this behavior could allow attackers to escalate privileges, persist in the environment, or access sensitive information stored in the registry.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1012"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352069"
+}

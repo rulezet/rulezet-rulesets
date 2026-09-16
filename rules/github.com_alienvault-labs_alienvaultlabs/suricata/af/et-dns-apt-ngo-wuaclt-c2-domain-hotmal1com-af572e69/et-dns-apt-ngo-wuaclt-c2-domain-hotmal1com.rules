@@ -1,0 +1,1 @@
+alert udp $HOME_NET any -> any 53 (msg:"ET DNS APT_NGO_wuaclt C2 Domain hotmal1.com"; content:"|07|hotmal1|03|com|00|"; nocase; classtype:bad-unknown; sid:1111111114; rev:1; threshold: type limit, track by_src, count 1, seconds 300; reference:url,http://labs.alienvault.com; )

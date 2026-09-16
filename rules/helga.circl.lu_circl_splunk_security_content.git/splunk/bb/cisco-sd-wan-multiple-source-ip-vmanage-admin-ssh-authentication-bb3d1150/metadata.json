@@ -1,0 +1,23 @@
+{
+  "uuid": "bb3d1150-b21e-4cb9-ab1a-b014d95efa2d",
+  "title": "Cisco SD-WAN Multiple Source IP vManage Admin SSH Authentication",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic identifies multiple unique source IP addresses successfully authenticating as `vmanage-admin` via SSH publickey on Cisco Catalyst SD-WAN control components within a short time window.\nThis aligns with IoC guidance for CVE-2026-20127 (cisco-sa-sdwan-rpa-EHchtZk), which warns that compromised systems may show `Accepted publickey for vmanage-admin` entries from unauthorized IPs.\nValidate flagged source IPs against known System IPs in SD-WAN Manager and investigate unexpected or concurrent sources.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1595"
+  ],
+  "cve": [
+    "CVE-2026-20127"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351959"
+}

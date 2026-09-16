@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"AV TROJAN OSX/OceanLotus sigstore checkin"; flow:established,to_server; content:"GET"; http_method; content:"/sigstore.db?k="; http_uri; pcre:"/[0-9A-F]{32}$/UR"; reference:md5,a8a3d82ae821f15bc2a2223a65af75e1; classtype:trojan-activity; sid:9000012; rev:1;)

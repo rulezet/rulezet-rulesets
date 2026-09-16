@@ -1,0 +1,19 @@
+{
+  "uuid": "43e6d123-3d8d-48ef-80e1-dc13174e90e2",
+  "title": "Kubernetes AWS detect sensitive role access",
+  "format": "splunk",
+  "author": "Rod Soto, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This search provides information on Kubernetes accounts accessing sensitve objects such as configmpas or secrets",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351979"
+}

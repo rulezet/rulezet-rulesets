@@ -1,0 +1,24 @@
+{
+  "uuid": "ec9cb22e-f80b-4257-9c05-a5ad0e6c7041",
+  "title": "Ivanti VTM New Account Creation",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects potential exploitation of the Ivanti Virtual Traffic Manager (vTM) authentication bypass vulnerability (CVE-2024-7593) to create new administrator accounts. The vulnerability allows unauthenticated remote attackers to bypass authentication on the admin panel and create new admin users. This detection looks for suspicious new account creation events in the Ivanti vTM audit logs that lack expected authentication details, which may indicate exploitation attempts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2024-7593"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351956"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "1058f18e-7a62-4403-b1bc-4a86a46d9297",
+  "title": "Cisco SD-WAN Multiple SSH key Authentication from Same Source",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This hunting analytic identifies multiple distinct SSH publickey fingerprints used to authenticate the same user from the same source IP against a Cisco Catalyst SD-WAN control component.\nAfter legitimate vManage key rotation or reboot, a new key may appear but the old key should no longer be used; continued use of more than one key from the same source may indicate unauthorized key injection or persistence related to CVE-2026-20127 (cisco-sa-sdwan-rpa-EHchtZk).\nValidate flagged keys and source IPs against known System IPs in SD-WAN Manager and investigate unexpected combinations.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1595"
+  ],
+  "cve": [
+    "CVE-2026-20127"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351966"
+}

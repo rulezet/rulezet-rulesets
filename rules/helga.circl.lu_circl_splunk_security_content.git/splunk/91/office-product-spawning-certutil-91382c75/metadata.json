@@ -1,0 +1,27 @@
+{
+  "uuid": "91382c75-fbf6-40de-9b51-a2e950d81dd4",
+  "title": "Office Product Spawning CertUtil",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated in favour of a more generic approach in \"Windows Office Product Spawned Uncommon Process\". The following analytic detects any Windows Office Product spawning `certutil.exe`, a behavior often associated with malware families like TA551 and IcedID. This detection leverages Endpoint Detection and Response (EDR) data, focusing on process relationships and command-line executions. The significance lies in the fact that `certutil.exe` is frequently used for downloading malicious payloads from remote URLs. If confirmed malicious, this activity could lead to unauthorized code execution, data exfiltration, or further system compromise. Immediate investigation and containment are crucial to prevent potential damage.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"FormBook\"",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352146"
+}

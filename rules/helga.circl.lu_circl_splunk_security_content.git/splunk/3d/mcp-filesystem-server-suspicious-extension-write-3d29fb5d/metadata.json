@@ -1,0 +1,23 @@
+{
+  "uuid": "3d29fb5d-7596-4eab-a614-97d6be4ce624",
+  "title": "MCP Filesystem Server Suspicious Extension Write",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies attempts to create executable or script files through MCP filesystem server connections. Threat actors leveraging LLM-based tools may attempt to write malicious executables, scripts, or batch files to disk for persistence or code execution. The detection prioritizes files written to system directories or startup locations which indicate higher likelihood of malicious intent.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351934"
+}

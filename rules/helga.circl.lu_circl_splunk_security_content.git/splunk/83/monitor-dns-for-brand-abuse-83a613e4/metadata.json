@@ -1,0 +1,19 @@
+{
+  "uuid": "83a613e4-f6a3-4ad3-a54f-f5a36a1e99d4",
+  "title": "Monitor DNS For Brand Abuse",
+  "format": "splunk",
+  "author": "David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This search looks for DNS requests for faux domains similar to the domains that you want to have monitored for abuse.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352168"
+}

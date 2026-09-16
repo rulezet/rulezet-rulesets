@@ -1,0 +1,23 @@
+{
+  "uuid": "f6cd782e-0a0f-4df3-bf6e-d9a6cdd9f012",
+  "title": "ESXi Shared or Stolen Root Account",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection monitors for signs of a shared or potentially compromised root account on ESXi hosts by tracking the number of unique IP addresses logging in as root within a short time window. Multiple logins from different IPs in a brief period may indicate credential misuse, lateral movement, or account compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351930"
+}

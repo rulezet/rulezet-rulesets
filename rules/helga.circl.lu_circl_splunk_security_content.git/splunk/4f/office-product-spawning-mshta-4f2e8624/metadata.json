@@ -1,0 +1,25 @@
+{
+  "uuid": "4f2e8624-a03a-4eb4-9d5d-be7df735f8b7",
+  "title": "Office Product Spawning MSHTA",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated in favour of a more generic approach in \"Windows Office Product Spawned Uncommon Process\". The following analytic identifies instances where a Microsoft Office product spawns `mshta.exe`. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process creation events where the parent process is an Office application. This activity is significant because it is a common technique used by malware families like TA551 and IcedID to execute malicious scripts or payloads. If confirmed malicious, this behavior could allow attackers to execute arbitrary code, potentially leading to data exfiltration, system compromise, or further malware deployment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352090"
+}

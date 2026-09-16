@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 443 -> $HOME_NET any (msg:"AV TROJAN OSX/OceanLotus empty encrypted response"; flow:established,from_server; content:"|75 7A 76 7E 1A 1B 1B 1B 1B 1B 11 1B 1B 1B|"; within:14; reference:md5,a8a3d82ae821f15bc2a2223a65af75e1; classtype:trojan-activity; sid:9000013; rev:1;)

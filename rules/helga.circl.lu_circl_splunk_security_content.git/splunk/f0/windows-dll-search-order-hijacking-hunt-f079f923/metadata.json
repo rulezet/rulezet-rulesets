@@ -1,0 +1,23 @@
+{
+  "uuid": "f079f923-79b6-4d8c-9cd9-e195fb53ca07",
+  "title": "Windows DLL Search Order Hijacking Hunt",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following hunting analytic is an experimental query built against a accidental feature using the latest Sysmon TA 3.0 (https://splunkbase.splunk.com/app/5709/) which maps the module load (ImageLoaded) to process_name. This analytic will deprecate once this is fixed. This hunting analytic identifies known libraries in Windows that may be used in a DLL search order hijack or DLL Sideloading setting. This may require recompiling the DLL, moving the DLL or moving the vulnerable process. The query looks for any running out of system32 or syswow64. Some libraries natively run out of other application paths and will need to be added to the exclusion as needed. The lookup is comprised of Microsoft native libraries identified within the Hijacklibs.net project.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352012"
+}

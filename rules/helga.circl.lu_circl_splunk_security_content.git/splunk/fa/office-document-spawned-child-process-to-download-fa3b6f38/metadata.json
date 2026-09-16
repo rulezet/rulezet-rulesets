@@ -1,0 +1,24 @@
+{
+  "uuid": "fa3b6f38-bed9-48ea-b438-a60de0e4afa3",
+  "title": "Office Document Spawned Child Process To Download",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated. The following analytic identifies Office applications spawning child processes to download content via HTTP/HTTPS. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process creation events where Office applications like Word or Excel initiate network connections, excluding common browsers. This activity is significant as it often indicates the use of malicious documents to execute living-off-the-land binaries (LOLBins) for payload delivery. If confirmed malicious, this behavior could lead to unauthorized code execution, data exfiltration, or further malware deployment, posing a severe threat to the organization's security.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"FormBook\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351999"
+}

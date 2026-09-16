@@ -1,0 +1,19 @@
+{
+  "uuid": "4df87221-bbbf-4721-a45e-e3577c96daea",
+  "title": "AWS Cross Account Activity From Previously Unseen Account",
+  "format": "splunk",
+  "author": "Rico Valdez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies AssumeRole events where an IAM role in a different AWS account is accessed for the first time. It detects this activity by analyzing authentication logs and comparing the requesting and requested account IDs, flagging new cross-account activities. This behavior is significant because unauthorized cross-account access can indicate potential lateral movement or privilege escalation attempts. If confirmed malicious, an attacker could gain unauthorized access to resources in another account, potentially leading to data exfiltration, service disruption, or further compromise of the AWS environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352145"
+}

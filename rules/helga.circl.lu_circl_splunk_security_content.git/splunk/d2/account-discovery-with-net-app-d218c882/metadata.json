@@ -1,0 +1,26 @@
+{
+  "uuid": "d218c882-a3d5-448a-b94a-890ecba50f97",
+  "title": "Account Discovery With Net App",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, TheLawsOfChaos, Github Community",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated in favour of the more generic \"45e52536-ae42-11eb-b5c6-acde48001122\". The following analytic detects potential account discovery activities using the 'net' command, commonly employed by malware like Trickbot for reconnaissance. It leverages Endpoint Detection and Response (EDR) data, focusing on specific command-line patterns and process relationships. This activity is significant as it often precedes further malicious actions, such as lateral movement or privilege escalation. If confirmed malicious, attackers could gain valuable information about user accounts, enabling them to escalate privileges or move laterally within the network, posing a significant security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:ransomware=\"Ryuk ransomware\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1087.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352112"
+}

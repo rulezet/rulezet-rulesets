@@ -1,0 +1,23 @@
+{
+  "uuid": "f016e27b-0881-48b6-9bca-3bd1cfe4ae6d",
+  "title": "Windows MSIExec With Network Connections",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated. The following analytic detects MSIExec making network connections over ports 443 or 80. This behavior is identified by correlating process creation events from Endpoint Detection and Response (EDR) agents with network traffic logs. Typically, MSIExec does not perform network communication to the internet, making this activity unusual and potentially indicative of malicious behavior. If confirmed malicious, an attacker could be using MSIExec to download or communicate with external servers, potentially leading to data exfiltration, command and control (C2) communication, or further malware deployment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352019"
+}

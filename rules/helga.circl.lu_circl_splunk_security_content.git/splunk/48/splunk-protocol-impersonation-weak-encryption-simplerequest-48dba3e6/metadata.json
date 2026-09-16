@@ -1,0 +1,22 @@
+{
+  "uuid": "48dba3e6-e406-4a41-9c77-4fda68748a9f",
+  "title": "Splunk protocol impersonation weak encryption simplerequest",
+  "format": "splunk",
+  "author": "Rod Soto, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where Splunk's Python3 client libraries fail to validate SSL certificates properly. It leverages logs from `splunk_python` to detect when \"simpleRequest SSL certificate validation is enabled without hostname verification.\" This activity is significant because improper SSL certificate validation can expose the system to man-in-the-middle attacks, allowing attackers to intercept or alter data. If confirmed malicious, this vulnerability could lead to unauthorized access, data breaches, and potential system compromise. Upgrading to Splunk version 9 and configuring TLS hostname validation is recommended to mitigate this risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1558.004",
+    "T1588.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352055"
+}

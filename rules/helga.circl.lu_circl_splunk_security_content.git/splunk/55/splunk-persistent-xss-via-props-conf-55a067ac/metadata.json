@@ -1,0 +1,21 @@
+{
+  "uuid": "55a067ac-b4cb-42b2-b883-3b474afc9c4e",
+  "title": "Splunk Persistent XSS via Props Conf",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "In Splunk Enterprise versions below 9.2.3 and 9.1.6 and Splunk Cloud Platform versions below 9.2.2403.108 and 9.1.2312.205, a low-privileged user that does not hold the “admin” or “power” Splunk roles could craft a malicious payload through entity.details in props.conf that could result in execution of unauthorized JavaScript code in the browser of a user.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1189"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352048"
+}

@@ -1,0 +1,9 @@
+rule _Symantec_Visual_Cafe_v30_
+{
+	meta:
+		description = "Symantec Visual Cafe v3.0"
+	strings:
+		$0 = {E8 ?? ?? ?? ?? 5D 8B C5 2D ?? 50 81 ED 05 ?? ?? ?? 8B C5 2B 85 03 0F ?? ?? 89 85 03 0F ?? ?? 8B F0 03 B5 0B 0F ?? ?? 8B F8 03 BD 07 0F ?? ?? 83 7F 0C ?? 74 2B 56 57 8B 7F 10 03 F8}
+	condition:
+		$0 at entrypoint
+}

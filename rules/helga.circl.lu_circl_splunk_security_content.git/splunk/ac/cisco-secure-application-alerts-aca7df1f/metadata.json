@@ -1,0 +1,19 @@
+{
+  "uuid": "aca7df1f-ff0c-48e1-a01f-d27eff676f6a",
+  "title": "Cisco Secure Application Alerts",
+  "format": "splunk",
+  "author": "Ryan Long, Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic is to leverage alerts from Cisco SecureApp, which identifies and monitors exploit attempts targeting business applications. The primary attack observed involves exploiting vulnerabilities in web applications, including injection attacks (SQL, API abuse), deserialization vulnerabilities, remote code execution attempts, LOG4J and zero day attacks. These attacks are typically aimed at gaining unauthorized access, exfiltrating sensitive data, or disrupting application functionality.\n\nCisco SecureApp provides real-time detection of these threats by analyzing application-layer events and correlating attack behavior with known vulnerability signatures. This detection methodology helps the Security Operations Center (SOC) by:\n\n* Identifying active exploitation attempts in real-time, allowing for quicker incident response.\n* Categorizing attack severity to prioritize remediation efforts based on risk level.\n* Providing visibility into attacker tactics, including source IP, attack techniques, and affected applications.\n* Generating risk-based scoring and contextual alerts to enhance decision-making within SOC workflows.\n* Helping analysts determine whether an attack was merely an attempt or if it successfully exploited a vulnerability.\n\nBy leveraging this information, SOC teams can proactively mitigate security threats, patch vulnerable applications, and enforce security controls to prevent further exploitation.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352029"
+}

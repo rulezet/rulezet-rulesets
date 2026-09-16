@@ -1,0 +1,22 @@
+{
+  "uuid": "f24d5726-b838-467d-975b-7685a5652b44",
+  "title": "Splunk Digital Certificates Infrastructure Version",
+  "format": "splunk",
+  "author": "Lou Stella, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies improper TLS validation configuration on Splunk search heads and peers post version 9. It leverages REST API calls to retrieve server information and SSL configuration settings, checking fields like `sslVerifyServerCert` and `sslVerifyServerName`. This activity is significant for a SOC as improper TLS settings can expose the infrastructure to man-in-the-middle attacks and data breaches. If confirmed malicious, attackers could intercept or manipulate data, compromising the integrity and confidentiality of communications within the Splunk environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1213",
+    "T1587.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352123"
+}

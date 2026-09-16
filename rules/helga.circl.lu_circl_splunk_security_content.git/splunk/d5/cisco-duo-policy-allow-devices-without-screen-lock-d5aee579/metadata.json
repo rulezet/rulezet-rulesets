@@ -1,0 +1,21 @@
+{
+  "uuid": "d5aee579-c02c-4be9-94f8-8807cd40c15f",
+  "title": "Cisco Duo Policy Allow Devices Without Screen Lock",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when a Duo policy is created or updated to allow devices without a screen lock requirement. It identifies this behavior\nby searching Duo administrator activity logs for policy creation or update events where the 'require_lock' setting is set to false. This action may indicate\na weakening of device security controls, potentially exposing the organization to unauthorized access if devices are lost or stolen. For a Security Operations\nCenter (SOC), identifying such policy changes is critical, as attackers or malicious insiders may attempt to lower authentication standards to facilitate\nunauthorized access. The impact of this attack could include increased risk of credential compromise, data breaches, or lateral movement within the\nenvironment due to reduced device security requirements.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351929"
+}

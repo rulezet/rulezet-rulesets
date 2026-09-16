@@ -1,0 +1,22 @@
+{
+  "uuid": "a41a3b6b-48b7-4950-bf97-ae4e2114a6d4",
+  "title": "Splunk Command and Scripting Interpreter Delete Usage",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the 'delete' command in Splunk, which can be used to remove queried data. This detection leverages the Splunk Audit data model, specifically monitoring ad-hoc searches containing the 'delete' command by non-system users. This activity is significant because the 'delete' command is rarely used and can indicate potential data tampering or unauthorized data removal. If confirmed malicious, this activity could lead to the loss of critical log data, hindering incident investigations and compromising the integrity of the monitoring environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1213"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352017"
+}

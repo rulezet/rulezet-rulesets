@@ -1,0 +1,22 @@
+{
+  "uuid": "911c3eb5-517a-411d-8b79-52000b4ef2c0",
+  "title": "Detect Risky SPL using Pretrained ML Model",
+  "format": "splunk",
+  "author": "Abhinav Mishra, Kumar Sharad, Namratha Sreekanta and Xiao Lin, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies potentially risky SPL commands executed by users. It leverages a pretrained machine learning text classifier that analyzes command text, user, and search type to assign a risk score between 0 and 1. This detection is significant as it helps identify suspicious or unauthorized search activities that could indicate malicious intent or misuse of the Splunk environment. If confirmed malicious, such activity could lead to unauthorized data access, data exfiltration, or further exploitation of the system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1203"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352216"
+}

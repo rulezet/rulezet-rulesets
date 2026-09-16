@@ -1,0 +1,21 @@
+{
+  "uuid": "afdd22b5-cd5c-4858-a05c-d225bfd6b45f",
+  "title": "Detection of DNS Tunnels",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This search is used to detect DNS tunneling, by calculating the sum of the length of DNS queries and DNS answers. The search also filters out potential false positives by filtering out queries made to internal systems and the queries originating from internal DNS, Web, and Email servers. Endpoints using DNS as a method of transmission for data exfiltration, Command And Control, or evasion of security controls can often be detected by noting an unusually large volume of DNS traffic.\nNOTE:Deprecated because existing detection is doing the same. This detection is replaced with two other variations, if you are using MLTK then you can use this search `ESCU - DNS Query Length Outliers - MLTK - Rule` or use the standard deviation version `ESCU - DNS Query Length With High Standard Deviation - Rule`, as an alternantive.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1048.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352152"
+}

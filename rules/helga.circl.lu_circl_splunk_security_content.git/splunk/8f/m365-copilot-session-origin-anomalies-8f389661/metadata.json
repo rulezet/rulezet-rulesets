@@ -1,0 +1,21 @@
+{
+  "uuid": "8f389661-75ae-4f7c-ae2d-64d6b8d6ba30",
+  "title": "M365 Copilot Session Origin Anomalies",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects M365 Copilot users accessing from multiple geographic locations to identify potential account compromise, credential sharing, or impossible travel patterns. The detection aggregates M365 Copilot Graph API events per user, calculating distinct cities and countries accessed, unique IP addresses, and the observation timeframe to compute a locations-per-day metric that measures geographic mobility. Users accessing Copilot from more than one city (cities_count > 1) are flagged and sorted by country and city diversity, surfacing accounts exhibiting anomalous geographic patterns that suggest compromised credentials being used from distributed locations or simultaneous access from impossible travel distances.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351963"
+}

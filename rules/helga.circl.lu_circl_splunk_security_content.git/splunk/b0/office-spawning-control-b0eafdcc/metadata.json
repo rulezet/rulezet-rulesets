@@ -1,0 +1,28 @@
+{
+  "uuid": "b0eafdcc-eb32-44b9-a5fb-fddc1750bd7c",
+  "title": "Office Spawning Control",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated. The following analytic identifies instances where `control.exe` is spawned by a Microsoft Office product. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process and parent process relationships. This activity is significant because it can indicate exploitation attempts related to CVE-2021-40444, where `control.exe` is used to execute malicious .cpl or .inf files. If confirmed malicious, this behavior could allow an attacker to execute arbitrary code, potentially leading to system compromise, data exfiltration, or further lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"FormBook\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.002",
+    "T1218.011",
+    "T1566.001"
+  ],
+  "cve": [
+    "CVE-2021-40444"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352162"
+}

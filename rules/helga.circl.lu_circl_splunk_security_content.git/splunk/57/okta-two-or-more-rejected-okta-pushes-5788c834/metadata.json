@@ -1,0 +1,21 @@
+{
+  "uuid": "5788c834-aea1-4b0c-9ad7-9fb3af15e57e",
+  "title": "Okta Two or More Rejected Okta Pushes",
+  "format": "splunk",
+  "author": "Michael Haag, Marissa Bower, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "**DEPRECATION NOTE** - This search has been deprecated and replaced with `Okta Multiple Failed MFA Requests For User`. The following analytic identifies an account that has rejected more than 2 Push notifications in a 10 minute window. Modify this query for your environment by upping the count or time window.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1110"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352096"
+}

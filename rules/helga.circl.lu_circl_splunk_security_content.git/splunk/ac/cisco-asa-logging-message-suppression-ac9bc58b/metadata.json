@@ -1,0 +1,22 @@
+{
+  "uuid": "ac9bc58b-86f8-4758-99fa-073beddc3e07",
+  "title": "Cisco ASA - Logging Message Suppression",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects suppression of specific logging messages on Cisco ASA devices using the \"no logging message\" command.\nAdversaries may suppress specific log message IDs to selectively disable logging of security-critical events such as authentication failures, configuration changes, or suspicious network activity. This targeted approach allows attackers to evade detection while maintaining normal logging operations that might otherwise alert administrators to complete logging disablement.\nThe detection monitors for command execution events (message ID 111008 or 111010) containing the \"no logging message\" command, which is used to suppress specific message IDs from being logged regardless of the configured severity level.\nInvestigate unauthorized message suppression, especially suppression of security-critical message IDs (authentication, authorization, configuration changes), suppression performed by non-administrative accounts, during unusual hours, or without documented justification.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1685.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351967"
+}

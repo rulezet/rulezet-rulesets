@@ -1,0 +1,25 @@
+{
+  "uuid": "fd305609-f1e6-4b38-a421-75a6e2a6d9e5",
+  "title": "Remote System Discovery with Net",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated in favour of two dedicated analytics \"4dc3951f-b3f8-4f46-b412-76a483f72277\" and \"a23a0e20-0b1b-4a07-82e5-ec5f70811e7a\" .The following analytic identifies the execution of `net.exe` or `net1.exe` with command-line arguments used to discover remote systems, such as `domain computers /domain`. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line arguments. This activity is significant as it indicates potential reconnaissance efforts by adversaries or Red Teams to map out networked systems and Active Directory structures. If confirmed malicious, this behavior could lead to further network exploitation, privilege escalation, or lateral movement within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1018"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352037"
+}

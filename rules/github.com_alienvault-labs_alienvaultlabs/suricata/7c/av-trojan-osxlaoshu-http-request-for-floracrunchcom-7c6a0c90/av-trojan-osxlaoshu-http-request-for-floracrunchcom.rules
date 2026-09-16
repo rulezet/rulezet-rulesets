@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"AV TROJAN OSX/LaoShu HTTP Request for floracrunch.com"; flow:established,to_server; content:"POST"; http_method; content:".php?yin="; http_uri; nocase; content:"Host|3a 20|floracrunch.com"; http_header; classtype:trojan-activity; sid:9000003; rev:1;)

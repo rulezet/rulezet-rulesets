@@ -1,0 +1,25 @@
+{
+  "uuid": "04ca320e-000e-48f2-b056-351e2db73d74",
+  "title": "Office Product Spawning Windows Script Host",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated in favour of a more generic approach in \"Windows Office Product Spawned Uncommon Process\". The following analytic detects an Office product spawning WScript.exe or CScript.exe. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process creation events where Office applications are the parent processes. This activity is significant because it may indicate the execution of potentially malicious scripts through Office products, a common tactic in phishing attacks and malware delivery. If confirmed malicious, this behavior could lead to unauthorized code execution, data exfiltration, or further system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"FormBook\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.001",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352158"
+}

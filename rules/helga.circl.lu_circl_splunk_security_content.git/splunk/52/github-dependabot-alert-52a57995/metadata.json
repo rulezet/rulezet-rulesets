@@ -1,0 +1,21 @@
+{
+  "uuid": "52a57995-f721-4dbf-be17-9d90fb77ea66",
+  "title": "GitHub Dependabot Alert",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the creation of GitHub Dependabot alerts, which indicate potential vulnerabilities in the codebase. It detects this activity by searching for logs with the \"create\" action and analyzing fields such as affected package, severity, and fixed version. This detection is significant for a SOC because it helps identify and address security risks in the codebase proactively. If confirmed malicious, these vulnerabilities could be exploited by attackers to gain unauthorized access or cause breaches, leading to potential data loss or system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352134"
+}

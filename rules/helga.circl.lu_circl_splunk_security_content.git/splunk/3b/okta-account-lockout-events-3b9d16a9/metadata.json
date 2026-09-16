@@ -1,0 +1,22 @@
+{
+  "uuid": "3b9d16a9-f886-45a1-94c4-7d1f54826e04",
+  "title": "Okta Account Lockout Events",
+  "format": "splunk",
+  "author": "Michael Haag, Rico Valdez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "**DEPRECATION NOTE** - This search has been deprecated and replaced with `Okta Multiple Accounts Locked Out`. The following anomaly will generate based on account lockout events utilizing Okta eventTypes of user.account.lock.limit or user.account.lock. Per the Okta docs site, this event is fired when a user account has reached the lockout limit. The account will not auto-unlock and a user or client cannot gain access to the account. This event indicates an account that will not be able to log in until remedial action is taken by the account admin. This event can be used to understand the specifics of an account lockout. Often this indicates a client application that is repeatedly attempting to authenticate with invalid credentials such as an old password.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.001",
+    "T1110"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352137"
+}

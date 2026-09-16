@@ -1,0 +1,21 @@
+{
+  "uuid": "9109d330-6447-410a-b788-881c7545c90b",
+  "title": "Okta New API Token Created",
+  "format": "splunk",
+  "author": "Michael Haag, Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of a new API token within an Okta tenant. It uses OktaIm2 logs ingested via the Splunk Add-on for Okta Identity Cloud to identify events where the `system.api_token.create` command is executed. This activity is significant because creating a new API token can indicate potential account takeover attempts or unauthorized access, allowing an adversary to maintain persistence. If confirmed malicious, this could enable attackers to execute API calls, access sensitive data, and perform administrative actions within the Okta environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351950"
+}

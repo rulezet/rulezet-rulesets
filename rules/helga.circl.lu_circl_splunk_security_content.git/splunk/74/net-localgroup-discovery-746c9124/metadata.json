@@ -1,0 +1,26 @@
+{
+  "uuid": "746c9124-1759-43b0-8451-7b5fe01c8065",
+  "title": "Net Localgroup Discovery",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This search has been deprecated in favour of the more generic analytic \"c5c8e0f3-147a-43da-bf04-4cfaec27dc44\". The following analytic detects the execution of the `net localgroup` command, which is used to enumerate local group memberships on a system. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs that include command-line details. This activity is significant because it can indicate an attacker is gathering information about local group memberships, potentially to identify privileged accounts. If confirmed malicious, this behavior could lead to further privilege escalation or lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352171"
+}

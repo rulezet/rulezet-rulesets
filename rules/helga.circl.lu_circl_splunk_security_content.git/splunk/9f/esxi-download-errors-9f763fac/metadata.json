@@ -1,0 +1,24 @@
+{
+  "uuid": "9f763fac-4de7-4191-86cd-c3eaf8e92896",
+  "title": "ESXi Download Errors",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies failed file download attempts on ESXi hosts by looking for specific error messages in the system logs. These failures may indicate unauthorized or malicious attempts to install or update components—such as VIBs or scripts",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1601.001",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351940"
+}

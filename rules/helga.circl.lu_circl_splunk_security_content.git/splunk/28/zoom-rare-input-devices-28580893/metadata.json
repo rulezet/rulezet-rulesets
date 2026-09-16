@@ -1,0 +1,21 @@
+{
+  "uuid": "28580893-96e5-4c15-a2bc-5d18fcb675e8",
+  "title": "Zoom Rare Input Devices",
+  "format": "splunk",
+  "author": "Marissa Bower, Raven Tait",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects rare input devices from Zoom logs. Actors performing Remote Employment Fraud (REF) typically use unusual device information compared to a majority of employees. Detecting this activity requires careful analysis, regular review, and a thorough understanding of the audio and video devices commonly used within your environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1123"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351957"
+}

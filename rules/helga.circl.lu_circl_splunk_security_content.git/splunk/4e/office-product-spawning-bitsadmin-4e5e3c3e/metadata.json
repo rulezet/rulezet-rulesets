@@ -1,0 +1,26 @@
+{
+  "uuid": "4e5e3c3e-a93c-416a-91c2-170f7cdca9d8",
+  "title": "Office Product Spawning BITSAdmin",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated in favour of a more generic approach in \"Windows Office Product Spawned Uncommon Process\". The following analytic detects any Windows Office Product spawning `bitsadmin.exe`, a behavior often associated with malware families like TA551 and IcedID. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process and parent process relationships. This activity is significant because `bitsadmin.exe` is commonly used for malicious file transfers, potentially indicating a malware infection. If confirmed malicious, this activity could allow attackers to download additional payloads, escalate privileges, or establish persistence, leading to further compromise of the affected system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"FormBook\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1197",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352023"
+}

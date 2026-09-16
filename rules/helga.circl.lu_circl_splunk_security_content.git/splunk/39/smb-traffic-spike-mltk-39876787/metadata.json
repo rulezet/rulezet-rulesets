@@ -1,0 +1,24 @@
+{
+  "uuid": "39876787-5a45-4aec-b9d8-0f4f9bf78373",
+  "title": "SMB Traffic Spike - MLTK",
+  "format": "splunk",
+  "author": "Rico Valdez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies spikes in the number of Server Message Block (SMB) connections using the Machine Learning Toolkit (MLTK). It leverages the Network_Traffic data model to monitor SMB traffic on ports 139 and 445, applying a machine learning model to detect anomalies. This activity is significant because sudden increases in SMB traffic can indicate lateral movement or data exfiltration attempts by attackers. If confirmed malicious, this behavior could lead to unauthorized access, data theft, or further compromise of the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1021.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352256"
+}

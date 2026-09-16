@@ -1,0 +1,21 @@
+{
+  "uuid": "f0b1e9fa-d5a0-41cd-834d-81b033f65284",
+  "title": "Suspicious Java Classes",
+  "format": "splunk",
+  "author": "Jose Hernandez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies suspicious Java classes often used for remote command execution exploits in Java frameworks like Apache Struts.\nIt detects this activity by analyzing HTTP POST requests with specific content patterns using Splunk's `stream_http` data source.\nThis behavior is significant because it may indicate an attempt to exploit vulnerabilities in web applications, potentially leading to unauthorized remote code execution.\nIf confirmed malicious, this activity could allow attackers to execute arbitrary commands on the server, leading to data breaches, system compromise, and further network infiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351953"
+}

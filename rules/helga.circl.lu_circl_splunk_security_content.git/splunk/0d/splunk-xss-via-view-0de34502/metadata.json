@@ -1,0 +1,21 @@
+{
+  "uuid": "0de34502-3654-4c70-892d-f33728d43317",
+  "title": "Splunk XSS via View",
+  "format": "splunk",
+  "author": "Rod Soto, Eric McGinnis, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies potential Cross-Site Scripting (XSS) attempts via the 'layoutPanel' attribute in the 'module' tag within XML Views in Splunk Enterprise versions below 8.1.13, 8.2.10, and 9.0.4. It leverages internal logs from \"splunk_web_service\" and \"splunk_python\" sourcetypes, focusing on messages containing \"loadParams.\" This activity is significant as it can lead to unauthorized script execution within the Splunk Web interface, potentially compromising the security of the instance. If confirmed malicious, attackers could execute arbitrary scripts, leading to data theft, session hijacking, or further exploitation of the Splunk environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1189"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352252"
+}

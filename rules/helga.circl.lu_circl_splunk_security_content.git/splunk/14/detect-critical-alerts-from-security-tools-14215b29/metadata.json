@@ -1,0 +1,21 @@
+{
+  "uuid": "14215b29-16ec-4ad4-bdb0-9aa90890dda0",
+  "title": "Detect Critical Alerts from Security Tools",
+  "format": "splunk",
+  "author": "Gowthamaraj Rajendran, Patrick Bareiss, Bhavin Patel, Bryan Pluta, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated in favour of specific and dedicated product analytics such as \"Microsoft Defender ATP Alerts\". The following analytic is to detect high and critical alerts from endpoint security tools such as Microsoft Defender, Carbon Black, and Crowdstrike. This query aggregates and summarizes critical severity alerts from the Alerts data model, providing details such as the alert signature, application, description, source, destination, and timestamps, while applying custom filters and formatting for enhanced analysis in a SIEM environment.This capability allows security teams to efficiently allocate resources and maintain a strong security posture, while also supporting compliance with regulatory requirements by providing a clear record of critical security events. We tested these detections with logs from Microsoft Defender, however this detection should work for any security alerts that are ingested into the alerts data model. **Note** - We are dynamically creating the risk_score field based on the severity of the alert in the SPL and that supersedes the risk score set in the detection.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352008"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "871f9a04-d2a9-4e4d-920e-a9e26813a7cf",
+  "title": "Detect Rundll32 Application Control Bypass - syssetup",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of rundll32.exe loading syssetup.dll via the LaunchINFSection function. This method is identified through Endpoint Detection and Response (EDR) telemetry, focusing on command-line executions and process details. This activity is significant as it indicates a potential application control bypass, allowing script code execution from a file. If confirmed malicious, an attacker could execute arbitrary code, potentially leading to privilege escalation, persistence, or further network compromise. Investigate the script content, network connections, and any spawned child processes for further context.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352021"
+}

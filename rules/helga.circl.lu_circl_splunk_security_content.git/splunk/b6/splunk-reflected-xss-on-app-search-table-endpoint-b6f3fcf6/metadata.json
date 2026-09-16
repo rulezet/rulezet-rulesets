@@ -1,0 +1,21 @@
+{
+  "uuid": "b6f3fcf6-a70a-4ff0-a285-3fd260a24631",
+  "title": "Splunk Reflected XSS on App Search Table Endpoint",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies attempts to exploit a reflected cross-site scripting (XSS) vulnerability on the app search table endpoint in Splunk Enterprise versions below 9.1.1, 9.0.6, and 8.2.12. It detects this activity by analyzing web request logs for specific dataset commands (`makeresults`, `count`, `eval`, `baseSPL`) within the `splunkd_web` index. This activity is significant because successful exploitation can lead to the execution of arbitrary commands on the Splunk platform, potentially compromising the entire instance. If confirmed malicious, attackers could gain unauthorized access, execute arbitrary code, and manipulate data within the Splunk environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1189"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352030"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "5f58a30b-f024-46da-ab43-ae861d47ded8",
+  "title": "Detect DGA domains using pretrained model in DSDL",
+  "format": "splunk",
+  "author": "Abhinav Mishra, Kumar Sharad and Namratha Sreekanta, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies Domain Generation Algorithm (DGA) generated domains using a pre-trained deep learning model. It leverages the Network Resolution data model to analyze domain names and detect unusual character sequences indicative of DGA activity. This behavior is significant as adversaries often use DGAs to generate numerous domain names for command-and-control servers, making it harder to block malicious traffic. If confirmed malicious, this activity could enable attackers to maintain persistent communication with compromised systems, evade detection, and execute further malicious actions.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1568.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352237"
+}

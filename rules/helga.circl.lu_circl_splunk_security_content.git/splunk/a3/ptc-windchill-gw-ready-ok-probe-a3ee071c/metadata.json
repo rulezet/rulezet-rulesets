@@ -1,0 +1,24 @@
+{
+  "uuid": "a3ee071c-5540-43de-af7f-22dd4b04abaf",
+  "title": "PTC Windchill GW READY OK Probe",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects Windchill MethodServer log4j events that contain the CVE-2026-4681 exploitation probe `run?c=echo%20GW_READY_OK`.\nPTC identifies `GW_READY_OK` and related `run?c=` activity as log indicators associated with Windchill and FlexPLM exploitation.\nThis behavior is significant because attackers use the probe to confirm that a staged gateway component is reachable before sending operating system commands through the same `c=` parameter.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-4681"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351971"
+}

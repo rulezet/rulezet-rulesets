@@ -1,0 +1,23 @@
+{
+  "uuid": "4d66a680-9f35-4794-bf94-75055c90b5f2",
+  "title": "Cisco Duo Admin Login Unusual Os",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies Duo admin login attempts from operating systems that are unusual for your environment, excluding commonly used OS such as Mac OS X. Please adjust to your environment. It works by analyzing Duo activity logs for admin login actions and filtering out logins from expected operating systems. The analytic then aggregates events by browser, version, source IP, location, and OS details to highlight anomalies. Detecting admin logins from unexpected operating systems is critical for a SOC, as it may indicate credential compromise, unauthorized access, or attacker activity using unfamiliar devices. Such behavior can precede privilege escalation, policy changes, or other malicious actions within the Duo environment. Early detection enables rapid investigation and response, reducing the risk of account takeover and minimizing potential damage to organizational security controls.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351969"
+}

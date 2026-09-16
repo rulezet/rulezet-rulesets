@@ -1,0 +1,21 @@
+{
+  "uuid": "124541e0-c383-4a37-a949-7418ba0cd90d",
+  "title": "GitHub Actions Disable Security Workflow",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the disabling of a security workflow in GitHub Actions. It leverages GitHub logs to identify when a workflow, excluding those named *security-testing*, is disabled following a push or pull request event. This activity is significant as it may indicate an attempt by an attacker to conceal malicious code by disabling security checks. If confirmed malicious, this could allow the attacker to introduce and persist undetected malicious code within the repository, potentially compromising the integrity and security of the codebase.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352229"
+}

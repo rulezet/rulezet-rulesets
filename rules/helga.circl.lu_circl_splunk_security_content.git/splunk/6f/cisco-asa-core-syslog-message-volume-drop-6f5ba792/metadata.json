@@ -1,0 +1,24 @@
+{
+  "uuid": "6f5ba792-5971-4209-ae99-340c3d2df995",
+  "title": "Cisco ASA - Core Syslog Message Volume Drop",
+  "format": "splunk",
+  "author": "Bhavin Patel, Micheal Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Adversaries may intentionally suppress or reduce the volume of core Cisco ASA syslog messages to evade detection or cover their tracks. This hunting search is recommended to proactively identify suspicious downward shifts or absences in key syslog message IDs, which may indicate tampering or malicious activity. Visualizing this data in Splunk dashboards enables security teams to quickly spot anomalies and investigate potential compromise.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [
+    "CVE-2025-20333",
+    "CVE-2025-20362"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351964"
+}

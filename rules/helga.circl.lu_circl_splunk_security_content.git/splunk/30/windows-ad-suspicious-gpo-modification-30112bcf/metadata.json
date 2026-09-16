@@ -1,0 +1,24 @@
+{
+  "uuid": "30112bcf-a8d9-4e4f-bbc3-174b5d236cde",
+  "title": "Windows AD Suspicious GPO Modification",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic looks for a the creation of potentially harmful GPO which could lead to persistence or code execution on remote hosts. Note, this analyic is looking for the absence of the corresponding 5136 events which is evidence of the GPOs being manually edited (using a tool like PowerView) or potentially missing logs.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1222.001",
+    "T1484.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352054"
+}

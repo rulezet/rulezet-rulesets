@@ -1,0 +1,21 @@
+{
+  "uuid": "bdda5b00-69e8-4fe3-a5a6-38acd221dc48",
+  "title": "Splunk Unauthorized Notification Input by User",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This hunting search provides information to track possible exploitation of a lower privilege user able to push notifications that may include malicious code as notifications for all users in Splunk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352002"
+}

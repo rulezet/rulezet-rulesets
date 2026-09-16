@@ -1,0 +1,24 @@
+{
+  "uuid": "f5595094-9347-4311-9918-cd633574d98c",
+  "title": "Elevated Group Discovery With Net",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated. The following analytic detects the execution of `net.exe` or `net1.exe` with command-line arguments used to query elevated domain groups. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line executions. This activity is significant as it indicates potential reconnaissance efforts by adversaries to identify high-privileged users within Active Directory. If confirmed malicious, this behavior could lead to further attacks aimed at compromising privileged accounts, escalating privileges, or gaining unauthorized access to sensitive systems and data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352001"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "e85687d3-5471-45f2-9535-1427764ce1d3",
+  "title": "Cmdline Tool Not Executed In CMD Shell",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where `ipconfig.exe`, `systeminfo.exe`, or similar tools are executed by a non-standard parent process, excluding CMD, PowerShell, or Explorer. This detection leverages Endpoint Detection and Response (EDR) telemetry to monitor process creation events. Such behavior is significant as it may indicate adversaries using injected processes to perform system discovery, a tactic observed in FIN7's JSSLoader. If confirmed malicious, this activity could allow attackers to gather critical host information, aiding in further exploitation or lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:banker=\"Gozi\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351978"
+}

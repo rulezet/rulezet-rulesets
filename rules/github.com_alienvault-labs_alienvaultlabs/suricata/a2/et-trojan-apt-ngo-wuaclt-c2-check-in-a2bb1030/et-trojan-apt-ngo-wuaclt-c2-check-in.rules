@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET TROJAN APT_NGO_wuaclt C2 Check-in"; flow:to_server,established; content:"/news/show.asp?id1="; http_uri; fast_pattern:only; content:"User-Agent|3a| Mozilla/4.0 |28|compatible|3b| MSIE 6.0|3b| Windows NT 5.1|3b| SV1"; http_header; reference:url,labs.alienvault.com; sid:1111111115; rev:1;)

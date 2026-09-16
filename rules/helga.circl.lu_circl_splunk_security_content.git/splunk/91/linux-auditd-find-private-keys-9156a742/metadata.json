@@ -1,0 +1,25 @@
+{
+  "uuid": "9156a742-f158-42b8-b17e-e0b1ee44e95f",
+  "title": "Linux Auditd Find Private Keys",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated. The following analytic detects suspicious attempts to find private keys, which may indicate an attacker's effort to access sensitive cryptographic information. Private keys are crucial for securing encrypted communications and data, and unauthorized access to them can lead to severe security breaches, including data decryption and identity theft. By monitoring for unusual or unauthorized searches for private keys, this analytic helps identify potential threats to cryptographic security, enabling security teams to take swift action to protect the integrity and confidentiality of encrypted information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1552.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352161"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "6f2d264f-5301-44ef-adbf-1a2968e84fe9",
+  "title": "Splunk Code Injection via custom dashboard leading to RCE",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies attempts to exploit a vulnerability in Splunk Enterprise versions below 8.2.9, 8.1.12, and 9.0.2, where an authenticated user can execute arbitrary code via the dashboard PDF generation component. It detects this activity by analyzing events in the _internal index with the file=export parameter. This behavior is significant because it indicates a potential code injection attack, which could lead to remote code execution (RCE). If confirmed malicious, an attacker could gain unauthorized access, execute arbitrary commands, and potentially compromise the entire Splunk environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1210"
+  ],
+  "cve": [
+    "CVE-2022-43571"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352067"
+}

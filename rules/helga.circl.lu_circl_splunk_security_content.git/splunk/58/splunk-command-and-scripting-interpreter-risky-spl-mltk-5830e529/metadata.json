@@ -1,0 +1,22 @@
+{
+  "uuid": "5830e529-a279-423e-83c9-7630b5f673a5",
+  "title": "Splunk Command and Scripting Interpreter Risky SPL MLTK",
+  "format": "splunk",
+  "author": "Abhinav Mishra, Kumar Sharad and Xiao Lin, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of risky SPL commands with abnormally long run times by leveraging a machine learning model named \"risky_command_abuse.\" It uses the Splunk Audit data model to compare current search activities against a baseline of the past seven days. This activity is significant for a SOC as it can indicate potential misuse or abuse of powerful SPL commands, which could lead to unauthorized data access or system manipulation. If confirmed malicious, this activity could allow an attacker to execute arbitrary scripts, delete data, or exfiltrate sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1203"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352025"
+}

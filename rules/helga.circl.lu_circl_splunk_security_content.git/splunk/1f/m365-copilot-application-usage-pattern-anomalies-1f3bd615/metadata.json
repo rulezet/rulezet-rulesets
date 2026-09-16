@@ -1,0 +1,21 @@
+{
+  "uuid": "1f3bd615-e2b2-4ba3-8887-006e88f84b2f",
+  "title": "M365 Copilot Application Usage Pattern Anomalies",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects M365 Copilot users exhibiting suspicious application usage patterns including multi-location access, abnormally high activity volumes, or access to multiple Copilot applications that may indicate account compromise or automated abuse. The detection aggregates M365 Copilot Graph API events per user, calculating metrics like distinct cities/countries accessed, unique IP addresses, number of different Copilot apps used, and average events per day over the observation period. Users are flagged when they access Copilot from multiple cities (cities_count > 1), generate excessive daily activity (events_per_day > 100), or use more than two different Copilot applications (app_count > 2), which are anomalous patterns suggesting credential compromise or bot-driven abuse.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351945"
+}

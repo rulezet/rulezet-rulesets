@@ -1,0 +1,25 @@
+{
+  "uuid": "d55a28f8-60b5-47a1-aaae-9d33b609585b",
+  "title": "Processes launching netsh",
+  "format": "splunk",
+  "author": "Michael Haag, Josef Kuepker, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies processes launching netsh.exe, a command-line utility used to modify network configurations. It detects this activity by analyzing data from Endpoint Detection and Response (EDR) agents, focusing on process GUIDs, names, parent processes, and command-line executions. This behavior is significant because netsh.exe can be exploited to execute malicious helper DLLs, serving as a persistence mechanism. If confirmed malicious, an attacker could gain persistent access, modify network settings, and potentially escalate privileges, posing a severe threat to the network's integrity and security.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1686"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351984"
+}

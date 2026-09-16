@@ -1,0 +1,24 @@
+{
+  "uuid": "ddf4c31a-f254-472f-a317-dd74b8a658a8",
+  "title": "Change Default File Association",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic has been deprecated. The following analytic detects suspicious registry modifications that change the default file association to execute a malicious payload. It leverages data from the Endpoint data model, specifically monitoring registry paths under \"*\\\\shell\\\\open\\\\command\\\\*\" and \"*HKCR\\\\*\". This activity is significant because altering default file associations can allow attackers to execute arbitrary scripts or payloads when a user opens a file, leading to potential code execution. If confirmed malicious, this technique can enable attackers to persist on the compromised host and execute further malicious commands, posing a severe threat to the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/352022"
+}
