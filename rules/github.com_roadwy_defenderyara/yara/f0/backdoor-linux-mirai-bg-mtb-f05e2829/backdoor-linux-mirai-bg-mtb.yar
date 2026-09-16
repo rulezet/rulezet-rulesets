@@ -1,0 +1,9 @@
+rule Backdoor_Linux_Mirai_BG_MTB{
+	meta:
+		description = "Backdoor:Linux/Mirai.BG!MTB,SIGNATURE_TYPE_ELFHSTR_EXT,03 00 03 00 05 00 00 "
+		
+	strings :
+		$a_01_0 = {7a 77 6e 61 6d 73 6d 71 66 68 64 } 		$a_01_1 = {69 6b 6c 6d 68 6f 6a 64 } 		$a_01_2 = {63 6d 6e 76 6d 72 4f 61 59 6d 6e 76 68 64 65 } 		$a_00_3 = {63 68 6d 6f 64 20 2b 78 20 73 68 61 6b 65 72 } 		$a_01_4 = {6e 70 78 58 6f 75 64 69 66 46 65 45 67 47 61 41 43 53 63 73 } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1+(#a_01_2  & 1)*1+(#a_00_3  & 1)*1+(#a_01_4  & 1)*1) >=3
+ 
+}
