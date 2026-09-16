@@ -1,0 +1,32 @@
+{
+  "uuid": "68413bff-052e-4d61-8721-7729ea31e725",
+  "title": "Potential Process Injection via PowerShell",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects PowerShell scripts that combine Win32 APIs for allocation, protection, process access, or dynamic resolution with\ninjection or execution APIs. Attackers use these API chains for potential process injection or in-memory payload execution.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:tool=\"Empire\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1055.001",
+    "T1055.002",
+    "T1055.003",
+    "T1055.004",
+    "T1059",
+    "T1059.001",
+    "T1106"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348271"
+}

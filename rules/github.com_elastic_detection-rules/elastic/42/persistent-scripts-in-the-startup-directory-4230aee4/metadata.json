@@ -1,0 +1,26 @@
+{
+  "uuid": "4230aee4-6011-472d-87f0-4fa5acdd6fa1",
+  "title": "Persistent Scripts in the Startup Directory",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies script engines creating files in the Startup folder, or the creation of script files in the Startup folder.\nAdversaries may abuse this technique to maintain persistence in an environment.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1547",
+    "T1547.001",
+    "T1547.009"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347938"
+}

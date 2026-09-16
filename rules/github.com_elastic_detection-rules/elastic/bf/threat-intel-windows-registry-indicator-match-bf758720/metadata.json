@@ -1,0 +1,22 @@
+{
+  "uuid": "bf758720-3d1c-492e-a48b-92c5cc653cea",
+  "title": "Threat Intel Windows Registry Indicator Match",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule is triggered when a Windows registry indicator from the Threat Intel Filebeat module or integrations has a\nmatch against an event that contains registry data.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348421"
+}

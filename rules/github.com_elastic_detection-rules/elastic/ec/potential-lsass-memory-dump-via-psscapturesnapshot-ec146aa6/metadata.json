@@ -1,0 +1,24 @@
+{
+  "uuid": "ec146aa6-7778-44d6-855c-77d055a9dc7e",
+  "title": "Potential LSASS Memory Dump via PssCaptureSnapShot",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious access to an LSASS handle via PssCaptureSnapShot where two successive process accesses are\nperformed by the same process and target two different instances of LSASS. This may indicate an attempt to evade\ndetection and dump LSASS memory for credential access.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348218"
+}

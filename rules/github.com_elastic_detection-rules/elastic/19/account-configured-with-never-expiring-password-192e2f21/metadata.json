@@ -1,0 +1,23 @@
+{
+  "uuid": "192e2f21-3184-4633-89b1-d3eff104eef3",
+  "title": "Account Configured with Never-Expiring Password",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the creation and modification of an account with the \"Don't Expire Password\" option Enabled. Attackers can abuse\nthis misconfiguration to persist in the domain and maintain long-term access using compromised accounts with this\nproperty.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348285"
+}

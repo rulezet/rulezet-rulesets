@@ -1,0 +1,28 @@
+{
+  "uuid": "3e1328e3-680e-4822-89f2-0d05fb74b129",
+  "title": "Execution of File Written or Modified by Microsoft Office",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an executable created by a Microsoft Office application and subsequently executed. These processes are often\nlaunched via scripts inside documents or during exploitation of Microsoft Office applications.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1203",
+    "T1204",
+    "T1204.002",
+    "T1566",
+    "T1566.001",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348088"
+}

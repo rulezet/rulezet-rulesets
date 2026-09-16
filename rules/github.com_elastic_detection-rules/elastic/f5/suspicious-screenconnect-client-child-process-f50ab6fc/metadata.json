@@ -1,0 +1,37 @@
+{
+  "uuid": "f50ab6fc-736f-4e39-a63d-c2d44d6a9b06",
+  "title": "Suspicious ScreenConnect Client Child Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious processes being spawned by the ScreenConnect client processes. This activity may indicate\nexecution abusing unauthorized access to the ScreenConnect remote access software.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1053",
+    "T1053.005",
+    "T1059",
+    "T1059.001",
+    "T1059.003",
+    "T1059.005",
+    "T1105",
+    "T1218",
+    "T1218.005",
+    "T1218.007",
+    "T1218.011",
+    "T1219",
+    "T1543",
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348341"
+}

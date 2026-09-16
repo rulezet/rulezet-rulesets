@@ -1,0 +1,26 @@
+{
+  "uuid": "54ad8cf5-036e-40b9-aefa-4969b08d95d9",
+  "title": "Renamed Automation Script Interpreter",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies renamed automation script interpreter processes, including AutoIt, AutoHotkey, and KIX32. Malware operators\nmay rename these executables to avoid detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.003",
+    "T1059",
+    "T1059.010"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347996"
+}

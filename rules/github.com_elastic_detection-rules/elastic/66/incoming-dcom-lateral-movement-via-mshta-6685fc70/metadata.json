@@ -1,0 +1,28 @@
+{
+  "uuid": "6685fc70-ad42-4f13-b86f-feec2b15351c",
+  "title": "Incoming DCOM Lateral Movement via MSHTA",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the use of Distributed Component Object Model (DCOM) to execute commands from a remote host, which are\nlaunched via the HTA Application COM Object. This behavior may indicate an attacker abusing a DCOM application to move\nlaterally while attempting to evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.003",
+    "T1218",
+    "T1218.005",
+    "T1559",
+    "T1559.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348299"
+}

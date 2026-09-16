@@ -1,0 +1,28 @@
+{
+  "uuid": "697a5aec-fe9c-40d0-9f0f-07394c9fefd1",
+  "title": "Potential Masquerading as Business App Installer",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies executables with names resembling legitimate business applications but lacking signatures from the original\ndeveloper. Attackers may trick users into downloading malicious executables that masquerade as legitimate applications\nvia malicious ads, forum posts, and tutorials, effectively gaining initial access.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.001",
+    "T1036.005",
+    "T1189",
+    "T1204",
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348275"
+}

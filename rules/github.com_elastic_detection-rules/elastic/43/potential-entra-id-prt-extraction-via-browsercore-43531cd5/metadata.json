@@ -1,0 +1,24 @@
+{
+  "uuid": "43531cd5-6ab0-4477-870d-910a5e470c45",
+  "title": "Potential Entra ID PRT Extraction via BrowserCore",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies anomalous execution of BrowserCore.exe, the Windows component used by Chromium-based browsers for native\nmessaging with the Web Account Manager (WAM). Adversaries abuse BrowserCore to extract Entra ID Primary Refresh Tokens\n(PRTs) without interactive browser context, enabling session hijacking. Legitimate BrowserCore launches carry a\nchrome-extension:// argument from the browser native-messaging host.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1528",
+    "T1539"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348045"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "da7b29b5-8449-4add-88ae-3e34e3dc706f",
+  "title": "Untrusted Driver Loaded",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an untrusted driver loaded by the Windows kernel. Adversaries may modify code signing policies to\nenable execution of unsigned or self-signed kernel code.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348209"
+}

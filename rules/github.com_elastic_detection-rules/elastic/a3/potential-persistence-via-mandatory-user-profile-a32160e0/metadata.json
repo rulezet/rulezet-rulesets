@@ -1,0 +1,25 @@
+{
+  "uuid": "a32160e0-ba9c-46b2-9850-10aa4485dc87",
+  "title": "Potential Persistence via Mandatory User Profile",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the creation or modification of a mandatory user profile hive (NTUSER.MAN) by an unusual process.\nAdversaries may abuse Windows mandatory profiles by dropping a malicious NTUSER.MAN file containing\npre-populated persistence-related registry keys. On the next user logon, Windows loads the registry hive\nfrom NTUSER.MAN, causing embedded persistence mechanisms to activate without directly modifying the live\nregistry. This technique can evade traditional registry-based monitoring and indicate a stealthy\npersistence attempt.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1547",
+    "T1547.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348286"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "007699cd-1e5e-42a9-ad6c-64e145ce7015",
+  "title": "Local Account TokenFilter Policy Disabled",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies registry modification to the LocalAccountTokenFilterPolicy policy. If this value exists (which doesn't by\ndefault) and is set to 1, then remote connections from all local members of Administrators are granted full\nhigh-integrity tokens during negotiation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1548",
+    "T1548.002",
+    "T1550",
+    "T1550.002",
+    "T1562"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348054"
+}

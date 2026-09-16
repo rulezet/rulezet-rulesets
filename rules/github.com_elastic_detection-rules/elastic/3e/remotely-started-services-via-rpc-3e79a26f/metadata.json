@@ -1,0 +1,27 @@
+{
+  "uuid": "3e79a26f-e00e-4be0-a9c3-38d2966efdd0",
+  "title": "Remotely Started Services via RPC",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies remote execution of Windows services over remote procedure call (RPC). This could be indicative of lateral\nmovement, but will be noisy if commonly done by administrators.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"HermeticWiper\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1569",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348077"
+}

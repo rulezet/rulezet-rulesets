@@ -1,0 +1,24 @@
+{
+  "uuid": "a3122096-9eed-452c-9278-38349b81845c",
+  "title": "Unusual File Creation - Alternate Data Stream",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious creation of Alternate Data Streams on highly targeted files using a script or command interpreter.\nThis is uncommon for legitimate files and sometimes done by adversaries to hide malware.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1564",
+    "T1564.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347966"
+}

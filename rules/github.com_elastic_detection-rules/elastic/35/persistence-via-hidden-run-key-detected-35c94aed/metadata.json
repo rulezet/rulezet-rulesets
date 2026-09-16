@@ -1,0 +1,27 @@
+{
+  "uuid": "35c94aed-1999-48b9-b659-faef36efa081",
+  "title": "Persistence via Hidden Run Key Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a persistence mechanism that utilizes the NtSetValueKey native API to create a hidden (null terminated)\nregistry key. An adversary may use this method to hide from system utilities such as the Registry Editor (regedit).\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1106",
+    "T1112",
+    "T1547",
+    "T1547.001",
+    "T1564"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348007"
+}

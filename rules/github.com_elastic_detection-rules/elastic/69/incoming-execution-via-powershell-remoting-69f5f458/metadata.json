@@ -1,0 +1,26 @@
+{
+  "uuid": "69f5f458-c836-4ddb-b13e-7660f85f00f8",
+  "title": "Incoming Execution via PowerShell Remoting",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies remote execution via Windows PowerShell remoting. Windows PowerShell remoting allows a user to run any\nWindows PowerShell command on one or more remote computers. This could be an indication of lateral movement.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.006",
+    "T1059",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348351"
+}

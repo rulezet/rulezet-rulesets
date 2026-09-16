@@ -1,0 +1,24 @@
+{
+  "uuid": "48c8a82b-1b32-471a-8667-34fed05b01ce",
+  "title": "First Time Seen NewCredentials Logon Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a new credentials logon type performed by an unusual process. This may indicate the existence of an access\ntoken forging capability that are often abused to bypass access control restrictions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1134",
+    "T1134.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348034"
+}

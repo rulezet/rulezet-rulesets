@@ -1,0 +1,25 @@
+{
+  "uuid": "8fbc4b79-6ba6-497f-9627-a5f018afb8c6",
+  "title": "Potential NetNTLMv1 Downgrade Attack",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies registry modification to force the system to fall back to NTLMv1 for authentication. This modification is\npossible with local administrator privileges and is commonly referred to as a `NetNTLMv1 downgrade attack`.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1562",
+    "T1562.010"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348187"
+}

@@ -1,0 +1,33 @@
+{
+  "uuid": "597f24f4-a7ef-4f21-99e1-0ad843e4d159",
+  "title": "Suspicious SolarWinds Web Help Desk Java Module Load or Child Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the SolarWinds Web Help Desk Java process loading an untrusted or remote native module (DLL) or spawning a\nsuspicious child process such as cmd, PowerShell, or rundll32. This behavior is uncommon for the Web Help Desk server\nand may indicate successful exploitation of deserialization vulnerabilities (CVE-2025-40536, CVE-2025-40551), which\nallow attackers to load malicious SQLite extensions and achieve remote code execution.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1059.003",
+    "T1129",
+    "T1190",
+    "T1218",
+    "T1218.011"
+  ],
+  "cve": [
+    "CVE-2025-40536",
+    "CVE-2025-40551"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348268"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "68db9f2b-9fac-44c3-8b59-25ceb5d03e0d",
+  "title": "Suspicious Access to LDAP Attributes",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identify read access to a high number of Active Directory object attributes. The knowledge of objects properties can\nhelp adversaries find vulnerabilities, elevate privileges or collect sensitive information.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069",
+    "T1069.002",
+    "T1087",
+    "T1087.002",
+    "T1482"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348345"
+}

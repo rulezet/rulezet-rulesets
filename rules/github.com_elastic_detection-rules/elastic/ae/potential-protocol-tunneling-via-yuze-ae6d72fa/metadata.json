@@ -1,0 +1,26 @@
+{
+  "uuid": "ae6d72fa-5e96-483f-a1b7-38168dab1ba9",
+  "title": "Potential Protocol Tunneling via Yuze",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies execution of Yuze, a lightweight open-source tunneling tool used for intranet penetration. Yuze supports\nforward and reverse SOCKS5 proxy tunneling and is typically executed via rundll32 loading yuze.dll with the RunYuze\nexport. Threat actors may use it to proxy C2 or pivot traffic.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1090",
+    "T1218",
+    "T1218.011",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348056"
+}

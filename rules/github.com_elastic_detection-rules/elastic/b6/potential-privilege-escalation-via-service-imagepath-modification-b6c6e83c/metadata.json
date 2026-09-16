@@ -1,0 +1,29 @@
+{
+  "uuid": "b6c6e83c-7cdb-4c6f-901f-2f5e06a7f287",
+  "title": "Potential Privilege Escalation via Service ImagePath Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies registry modifications to default services that could enable privilege escalation to SYSTEM. Attackers with\nprivileges from groups like Server Operators may change the ImagePath of services to executables under their control or\nto execute commands.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1543",
+    "T1543.003",
+    "T1569",
+    "T1569.002",
+    "T1574",
+    "T1574.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348074"
+}

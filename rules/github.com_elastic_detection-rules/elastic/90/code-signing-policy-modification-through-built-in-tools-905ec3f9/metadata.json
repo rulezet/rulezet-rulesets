@@ -1,0 +1,24 @@
+{
+  "uuid": "905ec3f9-a126-43ce-9faf-f0068aec7d5c",
+  "title": "Code Signing Policy Modification Through Built-in tools",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies attempts to disable/modify the code signing policy through system native utilities. Code signing provides\nauthenticity on a program, and grants the user with the ability to check whether the program has been tampered with. By\nallowing the execution of unsigned or self-signed code, threat actors can craft and execute malicious code.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1553",
+    "T1553.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348095"
+}

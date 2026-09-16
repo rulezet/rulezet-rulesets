@@ -1,0 +1,29 @@
+{
+  "uuid": "355b5ae3-b777-48fb-9dd9-d4bb82de265a",
+  "title": "Suspicious Zoom Child Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A suspicious Zoom child process was detected, which may indicate an attempt to run unnoticed. Verify process details\nsuch as command line, network connections, file writes and associated file signature details as well.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1055",
+    "T1059",
+    "T1059.001",
+    "T1059.003",
+    "T1203"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347997"
+}

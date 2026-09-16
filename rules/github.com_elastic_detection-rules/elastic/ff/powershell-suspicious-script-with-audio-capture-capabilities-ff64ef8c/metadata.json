@@ -1,0 +1,27 @@
+{
+  "uuid": "ff64ef8c-bf31-4bd1-9d03-dda79b9574fe",
+  "title": "PowerShell Suspicious Script with Audio Capture Capabilities",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects PowerShell script block content that invokes microphone capture routines or WinMM audio APIs.\nAdversaries may use audio recording to surveil users or capture sensitive conversations for theft or extortion.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1106",
+    "T1120",
+    "T1123"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347991"
+}

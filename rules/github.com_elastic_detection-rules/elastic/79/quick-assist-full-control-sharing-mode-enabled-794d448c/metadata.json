@@ -1,0 +1,25 @@
+{
+  "uuid": "794d448c-0919-4e82-aa13-6b475c07ec3d",
+  "title": "Quick Assist Full Control Sharing Mode Enabled",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when Microsoft Quick Assist sharing mode is set to FullControl on a Windows host. This grants the remote\nhelper full interactive control of the target device and may indicate IT help desk fraud, unauthorized remote access,\nor lateral movement preparation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348364"
+}

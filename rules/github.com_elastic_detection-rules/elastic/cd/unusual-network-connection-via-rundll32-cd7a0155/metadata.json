@@ -1,0 +1,26 @@
+{
+  "uuid": "cd7a0155-0c26-4548-a367-a5121be0122f",
+  "title": "Unusual Network Connection via RunDLL32",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies unusual instances of rundll32.exe making outbound network connections. This may indicate adversarial Command\nand Control activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1071.001",
+    "T1218",
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348157"
+}

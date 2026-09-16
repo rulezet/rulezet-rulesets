@@ -1,0 +1,26 @@
+{
+  "uuid": "53b07e4c-7f88-4463-a736-c42736dfab67",
+  "title": "Network Connection via Registration Utility",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the native Windows tools regsvr32.exe, regsvr64.exe, RegSvcs.exe, or RegAsm.exe making a network connection.\nThis may be indicative of an attacker bypassing allowlists or running arbitrary scripts via a signed Microsoft binary.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218",
+    "T1218.009",
+    "T1218.010"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348072"
+}

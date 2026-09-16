@@ -1,0 +1,26 @@
+{
+  "uuid": "bd726043-4814-43a6-8e7f-fc2b2d357cf3",
+  "title": "Potential Remote Desktop Tunneling Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies potential use of an SSH utility to establish RDP over an SSH Tunnel. This can be used by attackers to enable\nrouting of network packets that would otherwise not reach their intended destination.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.001",
+    "T1021.004",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348203"
+}

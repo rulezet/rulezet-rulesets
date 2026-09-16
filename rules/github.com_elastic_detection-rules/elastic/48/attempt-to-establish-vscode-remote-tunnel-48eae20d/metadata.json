@@ -1,0 +1,23 @@
+{
+  "uuid": "48eae20d-0a39-47ee-8f9c-241149baeda3",
+  "title": "Attempt to Establish VScode Remote Tunnel",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the execution of the VScode portable binary with the tunnel command line option indicating an attempt to\nestablish a remote tunnel session to Github or a remote VScode instance.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348175"
+}

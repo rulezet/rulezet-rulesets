@@ -1,0 +1,29 @@
+{
+  "uuid": "066e2ae7-fa57-4690-a09b-f76ab35d5761",
+  "title": "Unusual Execution via Microsoft Common Console File",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of a child process from a Microsoft Common Console file. Adversaries may embed a malicious\ncommand in an MSC file in order to trick victims into executing malicious commands.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204",
+    "T1204.002",
+    "T1218",
+    "T1218.014",
+    "T1566",
+    "T1566.001",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348229"
+}

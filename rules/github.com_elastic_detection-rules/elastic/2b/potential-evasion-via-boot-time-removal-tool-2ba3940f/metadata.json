@@ -1,0 +1,29 @@
+{
+  "uuid": "2ba3940f-8da8-4153-b205-2b9c2308ae39",
+  "title": "Potential Evasion via Boot Time Removal Tool",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies creation of a \":changelist\" NTFS alternate data stream or a Windows service Args registry value pointing to\na \":changelist\" path. Microsoft Defender's Boot-Time Removal (BTR.sys) driver reads an RC4-encrypted transaction blob\nfrom a driver ADS named \":changelist\", referenced by HKLM\\SYSTEM\\*ControlSet*\\Services\\*\\Args. Adversaries can\nreproduce this staging outside Defender to abuse BTR.sys as a signed kernel primitive for arbitrary file and registry\noperations. This rule focuses on non-System writers and excludes Microsoft-signed MRT.exe running as SYSTEM, which may\nperform related remediation staging.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1543",
+    "T1543.003",
+    "T1562",
+    "T1562.001",
+    "T1564",
+    "T1564.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348303"
+}

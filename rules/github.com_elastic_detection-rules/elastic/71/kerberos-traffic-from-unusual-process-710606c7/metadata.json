@@ -1,0 +1,27 @@
+{
+  "uuid": "710606c7-005f-4495-9108-f17d578e8a63",
+  "title": "Kerberos Traffic from Unusual Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies network connections to the standard Kerberos port from an unusual process. On Windows, the only process that\nnormally performs Kerberos traffic from a domain joined host is lsass.exe.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1550",
+    "T1550.003",
+    "T1558",
+    "T1558.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348052"
+}

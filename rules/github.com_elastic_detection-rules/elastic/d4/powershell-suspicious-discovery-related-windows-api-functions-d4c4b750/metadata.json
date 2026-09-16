@@ -1,0 +1,40 @@
+{
+  "uuid": "d4c4b750-d3de-4ff3-8456-7e120a8b2f1b",
+  "title": "PowerShell Suspicious Discovery Related Windows API Functions",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects PowerShell scripts that references native Windows API functions commonly used for discovery of users, groups,\nshares, sessions, domain trusts, and service security. Attackers use these APIs for situational awareness and targeting\nprior to lateral movement or collection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Empire\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1007",
+    "T1016",
+    "T1033",
+    "T1039",
+    "T1059",
+    "T1059.001",
+    "T1069",
+    "T1069.001",
+    "T1069.002",
+    "T1082",
+    "T1087",
+    "T1087.001",
+    "T1087.002",
+    "T1106",
+    "T1135",
+    "T1201",
+    "T1482"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348078"
+}

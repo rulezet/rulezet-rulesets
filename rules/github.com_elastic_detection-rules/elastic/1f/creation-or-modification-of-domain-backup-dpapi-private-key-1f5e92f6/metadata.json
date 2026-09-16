@@ -1,0 +1,27 @@
+{
+  "uuid": "1f5e92f6-8a78-4b9a-a6c9-c40271376250",
+  "title": "Creation or Modification of Domain Backup DPAPI private key",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation or modification of Domain Backup private keys. Adversaries may extract the Data Protection API\n(DPAPI) domain backup key from a Domain Controller (DC) to be able to decrypt any domain user master key file.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1003.003",
+    "T1552",
+    "T1552.004",
+    "T1555"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348169"
+}

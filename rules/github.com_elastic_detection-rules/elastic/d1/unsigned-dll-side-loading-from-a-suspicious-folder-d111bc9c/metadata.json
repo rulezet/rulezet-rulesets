@@ -1,0 +1,26 @@
+{
+  "uuid": "d111bc9c-6feb-40ca-8a22-639f9055dc08",
+  "title": "Unsigned DLL Side-Loading from a Suspicious Folder",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a Windows trusted program running from locations often abused by adversaries to masquerade as a trusted\nprogram and loading a recently dropped DLL. This behavior may indicate an attempt to evade defenses via side-loading a\nmalicious DLL within the memory space of a signed processes.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.001",
+    "T1574",
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348244"
+}

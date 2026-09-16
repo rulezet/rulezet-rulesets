@@ -1,0 +1,24 @@
+{
+  "uuid": "3806bc04-2b3b-40ef-bf3b-b509671a8a2d",
+  "title": "Sensitive Privilege SeEnableDelegationPrivilege assigned to a Principal",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the assignment of the SeEnableDelegationPrivilege sensitive \"user right\" to a security principal. This\nright enables computer and user accounts to be trusted for delegation. Attackers can abuse it to compromise Active\nDirectory accounts and elevate their privileges.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1558"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347930"
+}

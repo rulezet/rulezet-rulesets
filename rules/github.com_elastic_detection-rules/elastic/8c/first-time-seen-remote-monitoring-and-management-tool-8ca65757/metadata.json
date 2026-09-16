@@ -1,0 +1,25 @@
+{
+  "uuid": "8ca65757-3b7b-4344-bf03-7e1fa1054762",
+  "title": "First Time Seen Remote Monitoring and Management Tool",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Adversaries may install legitimate remote monitoring and management (RMM) tools or remote access software on compromised endpoints for command-and-control (C2), persistence, and execution of native commands. This rule detects when a process is started whose name or code signature matches commonly abused RMM or remote access tools. New Terms type: the host.id and process.name pair has not been seen before within the configured 7-day history window.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219",
+    "T1219.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348301"
+}

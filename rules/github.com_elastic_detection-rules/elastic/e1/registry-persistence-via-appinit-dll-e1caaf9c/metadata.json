@@ -1,0 +1,26 @@
+{
+  "uuid": "e1caaf9c-b91e-4c3f-a4a3-55a156cead09",
+  "title": "Registry Persistence via AppInit DLL",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "AppInit DLLs are dynamic-link libraries (DLLs) that are loaded into every process that creates a user interface (loads\nuser32.dll) on Microsoft Windows operating systems. The AppInit DLL mechanism is used to load custom code into user-mode\nprocesses, allowing for the customization of the user interface and the behavior of Windows-based applications.\nAttackers who add those DLLs to the registry locations can execute code with elevated privileges, similar to process\ninjection, and provide a solid and constant persistence on the machine.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1546",
+    "T1546.010"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347976"
+}

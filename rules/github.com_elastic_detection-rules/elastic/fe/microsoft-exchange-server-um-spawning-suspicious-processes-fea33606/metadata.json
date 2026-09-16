@@ -1,0 +1,26 @@
+{
+  "uuid": "fea33606-81dd-4ffb-99a3-f78baf968192",
+  "title": "Microsoft Exchange Server UM Spawning Suspicious Processes",
+  "format": "elastic",
+  "author": "Elastic, Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious processes being spawned by the Microsoft Exchange Server Unified Messaging (UM) service. This\nactivity has been observed exploiting CVE-2021-26857.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1210"
+  ],
+  "cve": [
+    "CVE-2021-26857"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348161"
+}

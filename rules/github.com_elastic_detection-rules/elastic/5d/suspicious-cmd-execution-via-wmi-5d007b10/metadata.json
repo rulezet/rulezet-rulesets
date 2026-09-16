@@ -1,0 +1,29 @@
+{
+  "uuid": "5d007b10-bd64-45eb-8da3-79238621bdd9",
+  "title": "Suspicious Cmd Execution via WMI",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious command execution (cmd) via Windows Management Instrumentation (WMI) on a remote host. This could\nbe indicative of adversary lateral movement.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"HermeticWiper\"",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.003",
+    "T1047",
+    "T1059",
+    "T1059.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348174"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "ebc7f119-b0db-4eab-a327-d4a3016ebd30",
+  "title": "Potential Masquerading as Communication Apps",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious instances of communications apps, both unsigned and renamed ones, that can indicate an attempt to\nconceal malicious activity, bypass security features such as allowlists, or trick users into executing malware.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.001",
+    "T1036.005",
+    "T1554"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347953"
+}

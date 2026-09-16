@@ -1,0 +1,35 @@
+{
+  "uuid": "237abfba-1c29-410e-88e9-1701123bcf6e",
+  "title": "Service Control Spawned via Script Interpreter",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies Service Control (sc.exe) spawning from script interpreter processes to create, modify, or start services.\nThis can potentially indicate an attempt to elevate privileges or maintain persistence.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1059",
+    "T1059.001",
+    "T1059.003",
+    "T1059.005",
+    "T1218",
+    "T1218.005",
+    "T1218.010",
+    "T1218.011",
+    "T1543",
+    "T1543.003",
+    "T1569",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347927"
+}

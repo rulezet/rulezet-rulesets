@@ -1,0 +1,27 @@
+{
+  "uuid": "be8f4dc4-c3d2-4ca1-8564-5f65699a53d4",
+  "title": "Suspicious Child Process via Azure VM CustomScript Extension",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a suspicious process executing as a descendant of the Azure VM CustomScript extension handler\n(CustomScriptHandler.exe) on a Windows host. The Azure CustomScript extension runs an attacker-supplied script with high\nprivilege (SYSTEM) via the guest agent, and is a common cloud-to-host code-execution and persistence primitive. Because\nthe extension's resource name is attacker-controlled and absent from on-host telemetry, this rule anchors on the\ntype-bearing handler binary ('Microsoft.Compute.CustomScriptExtension\\...\\CustomScriptHandler.exe') rather than the\nspoofable extension name, making it resistant to renaming. CustomScript legitimately launches PowerShell and cmd, so the\nrule fires only when the descendant is an execution-proxy, download, or discovery LOLBin, or PowerShell exhibiting\nsuspicious tradecraft.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1059.003",
+    "T1218",
+    "T1651"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348110"
+}

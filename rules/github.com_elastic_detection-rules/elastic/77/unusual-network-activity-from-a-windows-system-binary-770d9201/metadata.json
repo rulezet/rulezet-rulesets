@@ -1,0 +1,35 @@
+{
+  "uuid": "770d9201-8f63-4b55-8c22-bb17c514a0df",
+  "title": "Unusual Network Activity from a Windows System Binary",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies network activity from unexpected system applications. This may indicate adversarial activity as these\napplications are often leveraged by adversaries to execute code and evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.005",
+    "T1127",
+    "T1127.001",
+    "T1218",
+    "T1218.002",
+    "T1218.003",
+    "T1218.004",
+    "T1218.005",
+    "T1218.007",
+    "T1218.008",
+    "T1218.010"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348348"
+}

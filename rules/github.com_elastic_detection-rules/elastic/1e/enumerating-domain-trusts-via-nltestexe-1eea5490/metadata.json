@@ -1,0 +1,26 @@
+{
+  "uuid": "1eea5490-8df0-417b-9756-0257041fa2b7",
+  "title": "Enumerating Domain Trusts via NLTEST.EXE",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the use of nltest.exe for domain trust discovery purposes. Adversaries may use this command-line utility to\nenumerate domain trusts and gain insight into trust relationships, as well as the state of Domain Controller (DC)\nreplication in a Microsoft Windows NT Domain.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Ryuk ransomware\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1018",
+    "T1482"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348211"
+}

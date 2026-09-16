@@ -1,0 +1,26 @@
+{
+  "uuid": "e8d1afc7-e5c5-4889-9c98-68a3760f0a69",
+  "title": "Potential AMSI Bypass via RPC Runtime Hooking",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies PowerShell script block content associated with an Antimalware Scan Interface (AMSI) bypass that hooks the\nRPC runtime marshaling stub NdrClientCall3 (or NdrClientCall2) in rpcrt4.dll. Unlike bypasses that patch AmsiScanBuffer\nor set amsiInitFailed, this technique operates at the RPC layer used by AMSI to delegate scan requests to the\nantivirus provider, tampering with the request before it reaches the engine and leaving AMSI itself unmodified. The\nloader allocates an executable trampoline and marshals a delegate to the native stub; these primitives appear in\nPowerShell Script Block Logging before the hook takes effect.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348055"
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "af003330-a35f-478e-bb90-871b67f3d306",
+  "title": "Execution of a Downloaded Windows Script",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation of a Windows script downloaded from the internet followed by the execution of a scripting utility.\nAdversaries may use Windows script files for initial access and execution.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1059.003",
+    "T1059.005",
+    "T1059.007",
+    "T1204",
+    "T1204.002",
+    "T1218",
+    "T1218.005",
+    "T1218.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348154"
+}

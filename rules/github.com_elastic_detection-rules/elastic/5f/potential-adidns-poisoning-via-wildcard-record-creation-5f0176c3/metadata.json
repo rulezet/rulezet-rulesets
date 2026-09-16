@@ -1,0 +1,23 @@
+{
+  "uuid": "5f0176c3-9f50-4824-aec8-bbd1b6c6bbed",
+  "title": "Potential ADIDNS Poisoning via Wildcard Record Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Active Directory Integrated DNS (ADIDNS) is one of the core components of AD DS, leveraging AD's access control and\nreplication to maintain domain consistency. It stores DNS zones as AD objects, a feature that, while robust, introduces\nsome security issues, such as wildcard records, mainly because of the default permission (Any authenticated users) to\ncreate DNS-named records. Attackers can create wildcard records to redirect traffic for names that do not explicitly\nmatch records in the zone, positioning themselves as an adversary-in-the-middle and enabling credential interception or\nrelay through ADIDNS manipulation similar in outcome to LLMNR/NBNS spoofing.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1557"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347928"
+}

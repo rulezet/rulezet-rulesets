@@ -1,0 +1,25 @@
+{
+  "uuid": "09c0d7a2-edff-4847-b7c1-e5fa1cc19026",
+  "title": "Process Injection by the Microsoft Build Engine",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "An instance of MSBuild, the Microsoft Build Engine, created a thread in another process. This technique is sometimes\nused to evade detection or elevate privileges.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1127",
+    "T1127.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348019"
+}

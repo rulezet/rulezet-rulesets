@@ -1,0 +1,26 @@
+{
+  "uuid": "c9145532-b97b-4c97-a1f3-40acc91e221c",
+  "title": "Execution via MSSQL xp_cmdshell Stored Procedure",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies execution via MSSQL xp_cmdshell stored procedure. Malicious users may attempt to elevate their privileges by\nusing xp_cmdshell, which is disabled by default, thus, it's important to review the context of it's use.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.003",
+    "T1505",
+    "T1505.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348057"
+}

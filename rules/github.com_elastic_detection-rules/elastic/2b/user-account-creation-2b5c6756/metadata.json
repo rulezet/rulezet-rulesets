@@ -1,0 +1,25 @@
+{
+  "uuid": "2b5c6756-5aff-4fe4-ae8e-4e60018a9071",
+  "title": "User Account Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies attempts to create new users. This is sometimes done by attackers to increase access or establish persistence\non a system or domain.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1136",
+    "T1136.001",
+    "T1136.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348195"
+}

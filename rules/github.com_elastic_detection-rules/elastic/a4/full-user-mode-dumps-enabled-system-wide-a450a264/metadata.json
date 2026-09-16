@@ -1,0 +1,25 @@
+{
+  "uuid": "a450a264-7820-4d06-8006-adbcaaab7882",
+  "title": "Full User-Mode Dumps Enabled System-Wide",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the enable of the full user-mode dumps feature system-wide. This feature allows Windows Error Reporting (WER)\nto collect data after an application crashes. This setting is a requirement for the LSASS Shtinkering attack, which\nfakes the communication of a crash on LSASS, generating a dump of the process memory, which gives the attacker access to\nthe credentials present on the system without having to bring malware to the system. This setting is not enabled by\ndefault, and applications must create their registry subkeys to hold settings that enable them to collect dumps.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1003.001",
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348251"
+}

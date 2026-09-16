@@ -1,0 +1,23 @@
+{
+  "uuid": "013298c5-d8c9-42c0-89bb-179a660db043",
+  "title": "PKINIT Followed by Same-Principal U2U Service Ticket",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a successful PKINIT ticket-granting ticket request followed within five seconds on the same domain controller\nand source address by a successful user-to-user service-ticket request whose service SID matches the PKINIT principal\nSID. This sequence is consistent with the KDC-visible ticket requests used in an UnPAC-the-Hash attack, before\nclient-side PAC credential decryption and NT hash recovery. The certificate used for PKINIT may have been obtained\nthrough CertiGhost or another certificate-abuse path.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1558"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348004"
+}

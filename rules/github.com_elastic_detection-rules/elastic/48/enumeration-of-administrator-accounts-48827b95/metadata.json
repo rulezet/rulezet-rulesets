@@ -1,0 +1,28 @@
+{
+  "uuid": "48827b95-3819-4e72-ba81-562718a6b366",
+  "title": "Enumeration of Administrator Accounts",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies instances of lower privilege accounts enumerating Administrator accounts or groups using built-in Windows\ntools.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069",
+    "T1069.001",
+    "T1069.002",
+    "T1087",
+    "T1087.001",
+    "T1087.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348377"
+}

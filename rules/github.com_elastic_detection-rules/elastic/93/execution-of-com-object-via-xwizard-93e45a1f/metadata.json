@@ -1,0 +1,25 @@
+{
+  "uuid": "93e45a1f-aff4-40bc-b38b-2e060c913b19",
+  "title": "Execution of COM object via Xwizard",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Windows Component Object Model (COM) is an inter-process communication (IPC) component of the native Windows application\nprogramming interface (API) that enables interaction between software objects or executable code. Xwizard can be used to\nrun a COM object created in registry to evade defensive counter measures.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218",
+    "T1559",
+    "T1559.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348234"
+}

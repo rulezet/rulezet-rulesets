@@ -1,0 +1,25 @@
+{
+  "uuid": "2907ea5d-578b-4be7-bd9e-7ae32e277228",
+  "title": "PowerShell Suspicious Script with Screenshot Capabilities",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects PowerShell script block content that uses CopyFromScreen with .NET bitmap classes to capture screenshots.\nAttackers use screen capture to collect on-screen information and credentials.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1113"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348166"
+}

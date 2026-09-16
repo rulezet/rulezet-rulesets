@@ -1,0 +1,25 @@
+{
+  "uuid": "35657c99-26de-4fdb-ad0f-bedfc477033f",
+  "title": "Modification of AmsiEnable Registry Key",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies modifications of the AmsiEnable registry key to 0, which disables Windows Script AMSI scanning for the\naffected user. Adversaries can modify this key to bypass AMSI protections for Windows Script Host or JScript execution.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348343"
+}

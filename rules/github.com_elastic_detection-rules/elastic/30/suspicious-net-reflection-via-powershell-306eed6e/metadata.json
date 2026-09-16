@@ -1,0 +1,29 @@
+{
+  "uuid": "306eed6e-b36b-45f3-a795-df6321bc84fa",
+  "title": "Suspicious .NET Reflection via PowerShell",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects PowerShell scripts that invoke Reflection.Assembly or Assembly.Load to load .NET assemblies. Attackers use this\nmethod to load executables and DLLs without writing to the disk, bypassing security solutions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1055.001",
+    "T1055.002",
+    "T1059",
+    "T1059.001",
+    "T1140",
+    "T1620"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348226"
+}

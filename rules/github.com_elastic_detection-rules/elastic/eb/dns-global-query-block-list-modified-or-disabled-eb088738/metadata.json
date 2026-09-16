@@ -1,0 +1,26 @@
+{
+  "uuid": "eb088738-0f60-44b5-ada3-b40630b1c8d4",
+  "title": "DNS Global Query Block List Modified or Disabled",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies changes to the DNS Global Query Block List (GQBL), a security feature that prevents the resolution of certain\nDNS names often exploited in attacks like WPAD spoofing. Attackers with certain privileges, such as DNSAdmins, can\nmodify or disable the GQBL, allowing exploitation of hosts running WPAD with default settings for privilege escalation\nand lateral movement.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1557",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347987"
+}

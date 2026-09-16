@@ -1,0 +1,32 @@
+{
+  "uuid": "3639e3b8-09f6-41c8-a9d8-c24447252cc7",
+  "title": "Potential Masquerading as System32 DLL",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious instances of default system32 DLLs either unsigned or signed with non-MS certificates. This can\npotentially indicate the attempt to masquerade as system DLLs, perform DLL Search Order Hijacking or backdoor and resign\nlegitimate DLLs.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.001",
+    "T1036.005",
+    "T1553",
+    "T1553.002",
+    "T1554",
+    "T1574",
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348139"
+}

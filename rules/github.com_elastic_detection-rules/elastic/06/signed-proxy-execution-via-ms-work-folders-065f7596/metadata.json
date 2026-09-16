@@ -1,0 +1,27 @@
+{
+  "uuid": "065f7596-ea0a-4bae-beda-1e098d72b9fd",
+  "title": "Signed Proxy Execution via MS Work Folders",
+  "format": "elastic",
+  "author": "Elastic, Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the use of Windows Work Folders to execute a potentially masqueraded control.exe file in the current working\ndirectory. Misuse of Windows Work Folders could indicate malicious activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.005",
+    "T1218",
+    "T1574",
+    "T1574.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348212"
+}

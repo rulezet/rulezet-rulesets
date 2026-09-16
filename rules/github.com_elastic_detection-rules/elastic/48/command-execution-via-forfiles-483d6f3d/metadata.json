@@ -1,0 +1,23 @@
+{
+  "uuid": "483d6f3d-7a39-46ae-9e80-affc7207a617",
+  "title": "Command Execution via ForFiles",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects attempts to execute a command via the forfiles Windows utility. Adversaries may use this utility to proxy\nexecution via a trusted parent process.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348264"
+}

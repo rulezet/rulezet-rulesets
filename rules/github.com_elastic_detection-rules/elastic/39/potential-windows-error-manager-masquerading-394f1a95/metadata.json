@@ -1,0 +1,25 @@
+{
+  "uuid": "394f1a95-f779-4dd3-a9f3-23bf741b76b5",
+  "title": "Potential Windows Error Manager Masquerading",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious instances of the Windows Error Reporting process (WerFault.exe or Wermgr.exe) with matching\ncommand-line and process executable values performing outgoing network connections. This may be indicative of a\nmasquerading attempt to evade suspicious child process behavior detections.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347989"
+}

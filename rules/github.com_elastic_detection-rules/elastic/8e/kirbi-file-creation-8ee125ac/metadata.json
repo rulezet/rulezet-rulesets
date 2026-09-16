@@ -1,0 +1,25 @@
+{
+  "uuid": "8ee125ac-19f0-43be-b0ce-d6eaa4fb24dd",
+  "title": "Kirbi File Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation of .kirbi files, a suspicious Kerberos ticket artifact often produced by ticket export or\ndumping tools such as Rubeus or Mimikatz. This can indicate preparation for Kerberos ticket theft or later abuse,\nincluding Pass-The-Ticket (PTT), and should be validated with writer process and follow-on activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1558"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348210"
+}

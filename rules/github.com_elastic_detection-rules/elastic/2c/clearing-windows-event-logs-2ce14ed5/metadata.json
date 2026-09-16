@@ -1,0 +1,26 @@
+{
+  "uuid": "2ce14ed5-a548-4b99-83c8-851ad05ac2d3",
+  "title": "Clearing Windows Event Logs",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies attempts to clear or disable Windows event log stores using Windows wevetutil command. This is often done by\nattackers in an attempt to evade detection or destroy forensic evidence on a system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1070.001",
+    "T1562",
+    "T1562.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348128"
+}

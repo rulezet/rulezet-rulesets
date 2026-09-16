@@ -1,0 +1,30 @@
+{
+  "uuid": "fff9d744-000a-4191-9fdc-058eea540e67",
+  "title": "Unsigned DLL Loaded by Svchost",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an unsigned library created in the last 5 minutes and subsequently loaded by a shared windows service\n(svchost). Adversaries may use this technique to maintain persistence or run with System privileges.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.001",
+    "T1543",
+    "T1543.003",
+    "T1569",
+    "T1569.002",
+    "T1574",
+    "T1574.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348002"
+}

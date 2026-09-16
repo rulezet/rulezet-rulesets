@@ -1,0 +1,29 @@
+{
+  "uuid": "7b7f1d9f-5a40-4986-8ced-de0b4be952d9",
+  "title": "First Time Seen Driver Loaded",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the load of a driver with an original file name and signature values that were observed for the first time\nduring the last 30 days. This rule type can help baseline drivers installation within your environment.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1543",
+    "T1543.003",
+    "T1547",
+    "T1547.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348204"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "a58bb962-04fd-4f47-ae4e-9297893ebe9b",
+  "title": "Remote Management Access Launch After MSI Install",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects an MSI installer execution followed by the execution of commonly abused Remote Management Software like ScreenConnect.\nThis behavior may indicate abuse where an attacker triggers an MSI install then connects via a guest link with a known session key.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219",
+    "T1219.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348179"
+}

@@ -1,0 +1,29 @@
+{
+  "uuid": "aaf8a76f-a8d7-432a-8d2c-af19b878d2d0",
+  "title": "System Shells via Services",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Windows services typically run as SYSTEM and can be used as a privilege escalation opportunity. Malware or penetration\ntesters may run a shell as a service to gain SYSTEM permissions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1059.003",
+    "T1543",
+    "T1543.003",
+    "T1569",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348228"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "5f2bafed-838f-4141-b685-f41e12ec40eb",
+  "title": "Potential Credential Access via DuplicateHandle in LSASS",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious access to an LSASS handle via DuplicateHandle from an unknown call trace module. This may indicate\nan attempt to bypass the NtOpenProcess API to evade detection and dump LSASS memory for credential access.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347942"
+}

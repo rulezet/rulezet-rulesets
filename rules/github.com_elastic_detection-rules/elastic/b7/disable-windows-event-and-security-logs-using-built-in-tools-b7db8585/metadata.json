@@ -1,0 +1,27 @@
+{
+  "uuid": "b7db8585-bd45-45a6-a560-e235343fecd9",
+  "title": "Disable Windows Event and Security Logs Using Built-in Tools",
+  "format": "elastic",
+  "author": "Elastic, Ivan Ninichuck, Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies attempts to disable EventLog via the logman Windows utility, PowerShell, or auditpol. This is often done by\nattackers in an attempt to evade detection on a system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1070.001",
+    "T1562",
+    "T1562.002",
+    "T1562.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347943"
+}

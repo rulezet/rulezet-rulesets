@@ -1,0 +1,25 @@
+{
+  "uuid": "036efca2-93cb-4074-8d81-bf44c051887b",
+  "title": "Modification of the msPKIAccountCredentials",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identify the modification of the msPKIAccountCredentials attribute in an Active Directory User Object. Attackers can\nabuse the credentials roaming feature to overwrite an arbitrary file for privilege escalation. ms-PKI-AccountCredentials\ncontains binary large objects (BLOBs) of encrypted credential objects from the credential manager store, private keys,\ncertificates, and certificate requests.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348290"
+}

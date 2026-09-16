@@ -1,0 +1,27 @@
+{
+  "uuid": "5d46d1d0-41aa-41eb-8eb1-dd486d413e46",
+  "title": "Outlook Home Page Registry Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies modifications in registry keys associated with abuse of the Outlook Home Page functionality for command and\ncontrol or persistence.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1071.001",
+    "T1112",
+    "T1137",
+    "T1137.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348370"
+}

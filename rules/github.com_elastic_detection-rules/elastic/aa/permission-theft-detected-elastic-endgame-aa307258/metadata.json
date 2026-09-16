@@ -1,0 +1,22 @@
+{
+  "uuid": "aa307258-f4d6-4e56-8345-fbb60a9163f9",
+  "title": "Permission Theft - Detected - Elastic Endgame",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Elastic Endgame detected Permission Theft. Click the Elastic Endgame icon in the event.module column or the link in the\nrule.reference column for additional information.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1134",
+    "T1134.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348396"
+}

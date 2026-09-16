@@ -1,0 +1,23 @@
+{
+  "uuid": "f44e5e86-c489-4c30-a66b-b96524c19989",
+  "title": "Active Directory Group Modification by SYSTEM",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a user being added to an active directory group by the SYSTEM (S-1-5-18) user. This behavior can indicate\nthat the attacker has achieved SYSTEM privileges in a domain controller, which attackers can obtain by exploiting\nvulnerabilities or abusing default group privileges (e.g., Server Operators), and is attempting to pivot to a domain\naccount.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348297"
+}

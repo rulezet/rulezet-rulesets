@@ -1,0 +1,24 @@
+{
+  "uuid": "fcd9a305-cb87-4c93-99c7-7617130fc384",
+  "title": "Network Connection via MsXsl",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies msxsl.exe making a network connection. This may indicate adversarial activity as msxsl.exe is often leveraged\nby adversaries to execute malicious scripts and evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1220"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348050"
+}

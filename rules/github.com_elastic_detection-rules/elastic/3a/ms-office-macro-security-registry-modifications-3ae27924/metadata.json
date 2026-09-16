@@ -1,0 +1,25 @@
+{
+  "uuid": "3ae27924-6313-40d1-8fa3-2418cc6daaa1",
+  "title": "MS Office Macro Security Registry Modifications",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Microsoft Office Products offer options for users and developers to control the security settings for running and using\nMacros. Adversaries may abuse these security settings to modify the default behavior of the Office Application to trust\nfuture macros and/or disable security warnings, which could increase their chances of establishing persistence.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1204",
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348237"
+}

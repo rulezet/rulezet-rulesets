@@ -1,0 +1,25 @@
+{
+  "uuid": "e5f68c77-ae8b-4464-b295-ddf72dfe1de6",
+  "title": "Potential Computer Account NTLM Relay Activity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies potential relay activities against a Computer account by identifying authentication events using the computer\naccount coming from from hosts other than the server that owns the account. Attackers may relay the computer account\nhash after capturing it using forced authentication.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1187",
+    "T1557",
+    "T1557.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348009"
+}

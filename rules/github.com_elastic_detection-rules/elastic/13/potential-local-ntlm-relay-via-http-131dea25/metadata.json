@@ -1,0 +1,27 @@
+{
+  "uuid": "131dea25-383c-4dfd-8ae8-805a7df2d7c2",
+  "title": "Potential Local NTLM Relay via HTTP",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies attempts to coerce local NTLM authentication over HTTP through WebDAV named-pipe paths such as\nPrint Spooler or SRVSVC. Adversaries can combine this primitive with relay tooling to elevate privileges.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1187",
+    "T1212",
+    "T1218",
+    "T1218.011",
+    "T1557"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348371"
+}

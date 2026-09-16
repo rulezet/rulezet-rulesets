@@ -1,0 +1,25 @@
+{
+  "uuid": "f6f6cb2d-6174-4f85-91f7-79f8a602f2c1",
+  "title": "PowerShell Script Block Logging Disabled",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects registry changes that disable PowerShell Script Block Logging. Attackers may disable this logging to conceal\ntheir activities in the host and evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1562",
+    "T1562.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348036"
+}

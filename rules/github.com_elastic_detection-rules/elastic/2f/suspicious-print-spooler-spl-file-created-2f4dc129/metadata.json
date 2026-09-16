@@ -1,0 +1,27 @@
+{
+  "uuid": "2f4dc129-a303-44cb-afbf-d93c3c0943f5",
+  "title": "Suspicious Print Spooler SPL File Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects attempts to exploit privilege escalation vulnerabilities related to the Print Spooler service including\nCVE-2020-1048 and CVE-2020-1337.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2020-1048",
+    "CVE-2020-1337"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348324"
+}

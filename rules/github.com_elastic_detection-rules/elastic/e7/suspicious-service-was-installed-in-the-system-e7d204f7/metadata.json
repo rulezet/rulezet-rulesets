@@ -1,0 +1,26 @@
+{
+  "uuid": "e7d204f7-a174-465b-b3f2-8fb21c7b0d83",
+  "title": "Suspicious Service was Installed in the System",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation of a new Windows service with a suspicious service name or command value. Windows services\ntypically run as SYSTEM and can be used for privilege escalation and persistence.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543",
+    "T1543.003",
+    "T1569",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348256"
+}

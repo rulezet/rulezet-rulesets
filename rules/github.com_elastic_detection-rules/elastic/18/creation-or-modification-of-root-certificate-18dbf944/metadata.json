@@ -1,0 +1,27 @@
+{
+  "uuid": "18dbf944-6f16-4256-bb34-ac3b2abad936",
+  "title": "Creation or Modification of Root Certificate",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation or modification of a local trusted root certificate in Windows. The install of a malicious root\ncertificate would allow an attacker the ability to masquerade malicious files as valid signed components from any entity\n(for example, Microsoft). It could also allow an attacker to decrypt SSL traffic.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1130",
+    "T1553",
+    "T1553.004",
+    "T1557"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348069"
+}

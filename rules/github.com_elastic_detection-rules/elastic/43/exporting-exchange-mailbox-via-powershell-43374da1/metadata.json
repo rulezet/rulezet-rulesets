@@ -1,0 +1,28 @@
+{
+  "uuid": "43374da1-579e-4d16-ad76-fb8338fb3dbf",
+  "title": "Exporting Exchange Mailbox via PowerShell",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the use of the Exchange PowerShell cmdlet, New-MailBoxExportRequest, to export the contents of a primary\nmailbox or archive to a .pst file. Adversaries may target user email to collect sensitive information.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1059",
+    "T1059.001",
+    "T1114",
+    "T1114.001",
+    "T1114.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348001"
+}

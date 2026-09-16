@@ -1,0 +1,24 @@
+{
+  "uuid": "25978dc9-c4f3-4e59-a00d-4b555cc7a48d",
+  "title": "SIP Provider Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies modifications to the registered Subject Interface Package (SIP) providers. SIP providers are used by the\nWindows cryptographic system to validate file signatures on the system. This may be an attempt to bypass signature\nvalidation checks or inject code into critical processes.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1553",
+    "T1553.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348365"
+}

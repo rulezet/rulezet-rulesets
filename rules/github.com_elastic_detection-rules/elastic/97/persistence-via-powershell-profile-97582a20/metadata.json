@@ -1,0 +1,26 @@
+{
+  "uuid": "97582a20-e9cc-4839-8b29-acf2bd851d5b",
+  "title": "Persistence via PowerShell profile",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation or modification of a PowerShell profile. PowerShell profile is a script that is executed when\nPowerShell starts to customize the user environment, which can be abused by attackers to persist in a environment where\nPowerShell is common.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Turla - G0010\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546",
+    "T1546.013"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348044"
+}

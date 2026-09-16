@@ -1,0 +1,24 @@
+{
+  "uuid": "1834562d-d63c-452a-8097-c7d4afb238da",
+  "title": "First Time Seen DNS Query to RMM Domain",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects DNS queries to commonly abused remote monitoring and management (RMM) or remote access software domains from processes that are not browsers. \nIntended to surface RMM clients, scripts, or other non-browser activity contacting these services.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219",
+    "T1219.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348043"
+}

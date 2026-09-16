@@ -1,0 +1,31 @@
+{
+  "uuid": "7bbf5b4b-1f6b-45ba-a5d9-a4018fd75139",
+  "title": "Uncommon Registry Persistence Change",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects changes to registry persistence keys that are not commonly used or modified by legitimate programs. This could\nbe an indication of an adversary's attempt to persist in a stealthy manner.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1112",
+    "T1176",
+    "T1546",
+    "T1546.002",
+    "T1546.012",
+    "T1547",
+    "T1547.001",
+    "T1547.014"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347993"
+}

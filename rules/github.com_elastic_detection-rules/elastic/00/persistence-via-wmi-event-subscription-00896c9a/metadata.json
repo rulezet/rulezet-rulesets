@@ -1,0 +1,25 @@
+{
+  "uuid": "00896c9a-a10e-44c1-8386-2767887b3a56",
+  "title": "Persistence via WMI Event Subscription",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "An adversary can use Windows Management Instrumentation (WMI) to install event filters, providers, consumers, and\nbindings that execute code when a defined event occurs. Adversaries may use the capabilities of WMI to subscribe to an\nevent and execute arbitrary code when that event occurs, providing persistence on a system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1546",
+    "T1546.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348173"
+}

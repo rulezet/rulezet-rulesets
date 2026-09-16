@@ -1,0 +1,25 @@
+{
+  "uuid": "7a9620a6-e83a-4000-8353-c9ea859e244d",
+  "title": "Microsoft IIS Connection Strings Decryption",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies use of aspnet_regiis to decrypt Microsoft IIS connection strings. An attacker with Microsoft IIS web server\naccess via a webshell or similar access can decrypt and dump any hardcoded connection strings, such as the MSSQL service\naccount password using the aspnet_regiis command.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1552",
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348249"
+}

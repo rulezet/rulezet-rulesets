@@ -1,0 +1,24 @@
+{
+  "uuid": "b4e26325-83b7-4ed0-8b87-90ff3bdcac93",
+  "title": "Potential EDR-Freeze via WerFaultSecure Abuse",
+  "format": "elastic",
+  "author": "Aryu Zaw",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the Windows Error Reporting Protected Process Light (PPL) binary WerFaultSecure.exe being started by a\nprocess other than the Windows Error Reporting service, with command-line arguments used to take a secure memory dump of\na target process. Because MiniDumpWriteDump suspends all threads of the target while the dump is produced, an attacker\ncan suspend WerFaultSecure.exe mid-dump to leave the targeted EDR or antivirus suspended (\"frozen\") without ever\nterminating it, a defense-evasion technique publicly known as EDR-Freeze.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347968"
+}

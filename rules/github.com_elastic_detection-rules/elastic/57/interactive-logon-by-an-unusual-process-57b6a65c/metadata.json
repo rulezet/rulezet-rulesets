@@ -1,0 +1,25 @@
+{
+  "uuid": "57b6a65c-9176-4518-981a-f6fe7a2b772d",
+  "title": "Interactive Logon by an Unusual Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies interactive logon attempt with alternate credentials and by an unusual process. Adversaries may create a new\ntoken to escalate privileges and bypass access controls.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1134",
+    "T1134.002",
+    "T1134.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348284"
+}

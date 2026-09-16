@@ -1,0 +1,25 @@
+{
+  "uuid": "4b067d3d-6b70-4505-9c95-1de49563f72b",
+  "title": "Execution via local SxS Shared Module",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation, change, or deletion of a DLL module within a Windows SxS local folder. Adversaries may abuse\nshared modules to execute malicious payloads by instructing the Windows module loader to load DLLs from arbitrary local\npaths.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1129",
+    "T1574",
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348138"
+}

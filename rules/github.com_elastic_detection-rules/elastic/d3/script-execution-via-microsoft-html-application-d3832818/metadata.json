@@ -1,0 +1,28 @@
+{
+  "uuid": "d3832818-b851-4a8b-bb03-9c82a363cf5a",
+  "title": "Script Execution via Microsoft HTML Application",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of scripts via HTML applications using Windows utilities rundll32.exe or mshta.exe. Adversaries\nmay bypass process and/or signature-based defenses by proxying execution of malicious content with signed binaries.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.005",
+    "T1059.007",
+    "T1218",
+    "T1218.005",
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348354"
+}

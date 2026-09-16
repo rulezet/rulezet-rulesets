@@ -1,0 +1,25 @@
+{
+  "uuid": "4909344c-f7f3-439d-93dc-b41e64be3edc",
+  "title": "Multiple Logon Failure Followed by Logon Success",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies multiple logon failures followed by a successful one from the same source address. Adversaries will often\nbrute force login attempts across multiple users with a common or known password, in an attempt to gain access to\naccounts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1110",
+    "T1110.001",
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347925"
+}

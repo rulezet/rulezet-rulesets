@@ -1,0 +1,24 @@
+{
+  "uuid": "f0dc124c-daba-4074-a68c-e1869a08120a",
+  "title": "User Added to Privileged Group in Active Directory",
+  "format": "elastic",
+  "author": "Elastic, Skoetting",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a user being added to a privileged group in Active Directory. Privileged accounts and groups in Active\nDirectory are those to which powerful rights, privileges, and permissions are granted that allow them to perform nearly\nany action in Active Directory and on domain-joined systems.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348118"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "92b26be9-b880-4d8b-92c3-27f6c27926d0",
+  "title": "Potential DNS Exfiltration via Excessive Chunked Queries",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies potential DNS exfiltration on Windows hosts by detecting a high volume of DNS queries whose subdomain labels\nfollow a chunked encoding pattern (index-payload.base_domain). Attackers split stolen data across many DNS queries to\nevade volume-based detection; this rule aggregates queries per process, base domain, and five-minute window and flags\nsessions with many distinct chunk indices and sufficiently long encoded payloads.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1048",
+    "T1048.003",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348112"
+}

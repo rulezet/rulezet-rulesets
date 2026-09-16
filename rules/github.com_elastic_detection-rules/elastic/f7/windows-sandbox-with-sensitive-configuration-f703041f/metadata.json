@@ -1,0 +1,24 @@
+{
+  "uuid": "f703041f-9b64-4739-bfb4-99876c72f6d5",
+  "title": "Windows Sandbox with Sensitive Configuration",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies Windows sanfbox processes indicating the start of a new container with sensitive configurations like write\naccess to the host file system, network connection and automatic execution via logon command. Malware may abuse the\nsandbox feature to evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1564",
+    "T1564.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348254"
+}

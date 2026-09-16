@@ -1,0 +1,30 @@
+{
+  "uuid": "febce7c1-de5e-41ad-83ff-3f0a2ea7807d",
+  "title": "Remote XSL Script Execution via COM",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of a hosted XSL script using the Microsoft.XMLDOM COM interface via Microsoft Office processes.\nThis behavior may indicate adversarial activity to execute malicious JScript or VBScript on the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.005",
+    "T1059.007",
+    "T1220",
+    "T1559",
+    "T1559.001",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348227"
+}

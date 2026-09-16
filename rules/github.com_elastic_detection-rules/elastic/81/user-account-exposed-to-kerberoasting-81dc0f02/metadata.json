@@ -1,0 +1,25 @@
+{
+  "uuid": "81dc0f02-deb6-475b-b945-2817e735696c",
+  "title": "User account exposed to Kerberoasting",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a user account has the servicePrincipalName attribute modified. Attackers can abuse write privileges over a\nuser to configure Service Principle Names (SPNs) so that they can perform Kerberoasting. Administrators can also\nconfigure this for legitimate purposes, exposing the account to Kerberoasting.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1558",
+    "T1558.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348178"
+}

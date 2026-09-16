@@ -1,0 +1,24 @@
+{
+  "uuid": "ac7b45c1-2a9e-4f83-aaae-25ed000c12cc",
+  "title": "Enumeration of Privileged Local Groups Membership",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies instances of an unusual process enumerating built-in Windows privileged local groups membership like\nAdministrators or Remote Desktop users.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069",
+    "T1069.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348090"
+}

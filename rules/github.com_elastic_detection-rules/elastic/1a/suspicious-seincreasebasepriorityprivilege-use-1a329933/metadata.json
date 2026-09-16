@@ -1,0 +1,23 @@
+{
+  "uuid": "1a329933-300f-4e9b-be82-a102d4f10bd6",
+  "title": "Suspicious SeIncreaseBasePriorityPrivilege Use",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies attempts to use the SeIncreaseBasePriorityPrivilege privilege by an unusual process. This could be related to\nhijack execution flow of a process via threats priority manipulation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1134"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347941"
+}

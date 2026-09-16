@@ -1,0 +1,27 @@
+{
+  "uuid": "f5e51289-dfde-4681-948a-e723c7252ae5",
+  "title": "Suspicious Print Spooler Point and Print DLL",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects attempts to exploit a privilege escalation vulnerability (CVE-2020-1030) related to the print spooler service.\nExploitation involves chaining multiple primitives to load an arbitrary DLL into the print spooler process running as\nSYSTEM.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1112",
+    "T1574"
+  ],
+  "cve": [
+    "CVE-2020-1030"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348298"
+}

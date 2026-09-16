@@ -1,0 +1,24 @@
+{
+  "uuid": "e53e9ba3-9d08-43ee-bbd9-690d669bf8d8",
+  "title": "Rare SMB Connection to the Internet",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects rare internet network connections via the SMB protocol. SMB is commonly used to leak NTLM credentials\nvia rogue UNC path injection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1048",
+    "T1187"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347978"
+}
