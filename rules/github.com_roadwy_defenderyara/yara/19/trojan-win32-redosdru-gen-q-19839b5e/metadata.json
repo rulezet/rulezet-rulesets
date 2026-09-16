@@ -1,0 +1,22 @@
+{
+  "uuid": "19839b5e-efc7-47d9-b3f4-3816cc9f945e",
+  "title": "Trojan_Win32_Redosdru_gen_Q",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Redosdru.gen!Q,SIGNATURE_TYPE_PEHSTR_EXT,09 00 08 00 0c 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/280633"
+}

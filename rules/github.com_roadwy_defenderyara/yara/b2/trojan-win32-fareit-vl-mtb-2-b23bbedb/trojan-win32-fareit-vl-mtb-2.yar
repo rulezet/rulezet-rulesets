@@ -1,0 +1,9 @@
+rule Trojan_Win32_Fareit_VL_MTB_2{
+	meta:
+		description = "Trojan:Win32/Fareit.VL!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_02_0 = {8b 04 0f 66 81 f9 ?? ?? e8 ?? ?? ?? ?? 50 58 89 04 0f 81 fd ?? ?? ?? ?? 66 83 e9 ?? 81 fc ?? ?? ?? ?? 81 f9 ?? ?? ?? ?? 75 90 09 03 00 80 fe } 		$a_02_1 = {50 58 31 f0 66 81 fb ?? ?? c3 } 	condition:
+		((#a_02_0  & 1)*1+(#a_02_1  & 1)*1) >=2
+ 
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "4f95b814-18d0-468c-9c44-5a25581b7a0b",
+  "title": "Trojan_Win32_BirRat_MK_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/BirRat.MK!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0d 00 0d 00 10 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/280636"
+}
