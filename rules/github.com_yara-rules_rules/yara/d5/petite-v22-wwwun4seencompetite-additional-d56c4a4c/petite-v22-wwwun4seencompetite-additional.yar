@@ -1,0 +1,9 @@
+import "pe"
+rule Petite_v22_wwwun4seencompetite_additional: PEiD
+{
+    strings:
+        $a = { B8 00 ?? ?? 00 ?? 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}

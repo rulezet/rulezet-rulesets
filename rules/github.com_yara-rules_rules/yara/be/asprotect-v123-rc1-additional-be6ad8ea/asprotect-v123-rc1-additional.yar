@@ -1,0 +1,9 @@
+import "pe"
+rule ASProtect_v123_RC1_additional: PEiD
+{
+    strings:
+        $a = { 53 60 BD ?? ?? ?? ?? 8D 45 ?? 8D 5D ?? E8 ?? ?? ?? ?? 8D }
+    condition:
+        $a at pe.entry_point
+
+}

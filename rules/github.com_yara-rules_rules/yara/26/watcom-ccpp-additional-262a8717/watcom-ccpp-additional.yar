@@ -1,0 +1,9 @@
+import "pe"
+rule WATCOM_CCpp_additional: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? ?? ?? ?? ?? ?? 57 41 }
+    condition:
+        $a at pe.entry_point
+
+}
