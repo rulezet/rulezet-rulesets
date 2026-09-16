@@ -1,0 +1,9 @@
+rule Win_Trojan_MIPhT_1
+{
+strings:
+	$a0 = { 01023c3c3c20546f20736572766520616e642070726f746563742e203e3e3e00aefef0204d495068542032352e }
+
+
+condition:
+	$a0
+}

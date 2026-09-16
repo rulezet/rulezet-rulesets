@@ -1,0 +1,9 @@
+rule Win_Trojan_Mpc_1
+{
+strings:
+	$a0 = { 5d81ed0301eb1b90b82435cd21899e5c038c865e03b4258d962803cd210e07e935018db63503bf000157a5a4c6862f0304b41a8d96a103cd21b447b200 }
+
+
+condition:
+	$a0
+}
