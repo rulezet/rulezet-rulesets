@@ -1,0 +1,19 @@
+{
+  "uuid": "8592ed71-74b2-4490-b1dc-e8f04e217cc3",
+  "title": "SUSP_Obfuscated_Powershell_stackpush_b64",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "look for obfsucated powershell strings obfuscated via stackpush_b64",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713446"
+}

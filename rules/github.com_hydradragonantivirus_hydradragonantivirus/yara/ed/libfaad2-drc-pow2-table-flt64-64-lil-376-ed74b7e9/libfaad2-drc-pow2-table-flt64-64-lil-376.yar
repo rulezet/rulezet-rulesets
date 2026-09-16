@@ -1,0 +1,7 @@
+rule libfaad2_drc_pow2_table__flt64___64_lil_376_ {
+  strings:
+    $a0 = { b2 58 3e 9f 05 78 e0 3f 79 45 dc 92 8f f3 e0 3f 74 d5 78 3c b8 72 e1 3f 14 11 ce c3 9a f5 e1 3f 5a 9f 01 1c 53 7c e2 3f 37 87 31 0a fe 06 e3 3f 6f 4b 17 2b b9 95 e3 3f 84 ed 86 f9 a2 28 e4 3f c8 a8 32 d5 da bf e4 3f 87 fb f2 08 81 5b e5 3f be d8 dc d1 b6 fb e5 3f 1e 15 81 66 9e a0 e6 3f e4 1b e7 fd 5a 4a e7 3f b1 8a 63 d7 10 f9 e7 3f 29 15 2a 42 e5 ac e8 3f ad 9d 3f a5 fe 65 e9 3f af c4 be 87 84 24 ea 3f 34 30 61 99 9f e8 ea 3f 09 98 df ba 79 b2 eb 3f d9 35 49 07 3e 82 ec 3f 2c 00 fb dc 18 58 ed 3f 5e 97 12 e7 37 34 ee 3f 0d 26 4f 27 ca 16 ef 3f 00 00 00 00 00 00 f0 3f b2 58 3e 9f 05 78 f0 3f 79 45 dc 92 8f f3 f0 3f ac b4 7f 3c b8 72 f1 3f dc 31 c7 c3 9a f5 f1 3f 92 7e 08 1c 53 7c f2 3f 37 87 31 0a fe 06 f3 3f 37 6c 10 2b b9 95 f3 3f bc cc 8d f9 a2 28 f4 3f 00 88 39 d5 da bf f4 3f 87 fb f2 08 81 5b f5 3f f6 b7 e3 d1 b6 fb f5 3f 1e 15 81 66 9e a0 f6 3f e4 1b e7 fd 5a 4a f7 3f e9 69 6a d7 10 f9 f7 3f 29 15 2a 42 e5 ac f8 3f ad 9d 3f a5 fe 65 f9 3f af c4 be 87 84 24 fa 3f fc 50 5a 99 9f e8 fa 3f 09 98 df ba 79 b2 fb 3f 11 15 50 07 3e 82 fc 3f 2c 00 fb dc 18 58 fd 3f 5e 97 12 e7 37 34 fe 3f d5 46 48 27 ca 16 ff 3f }
+
+  condition:
+    $a0
+}

@@ -1,0 +1,7 @@
+rule G_723_40__dqlntab__16_lil_64_ {
+  strings:
+    $a0 = { 00 F8 BE FF 1C 00 68 00 A9 00 E0 00 12 01 3E 01 66 01 8B 01 AD 01 CB 01 E8 01 02 02 1B 02 36 02 36 02 1B 02 02 02 E8 01 CB 01 AD 01 8B 01 66 01 3E 01 12 01 E0 00 A9 00 68 00 1C 00 BE FF 00 F8 }
+
+  condition:
+    $a0
+}

@@ -1,0 +1,7 @@
+rule SHA256_Hash_constant_words_K__0x428a2f98___32_big_256_ {
+  strings:
+    $a0 = { 42 8a 2f 98 71 37 44 91 b5 c0 fb cf e9 b5 db a5 39 56 c2 5b 59 f1 11 f1 92 3f 82 a4 ab 1c 5e d5 d8 07 aa 98 12 83 5b 01 24 31 85 be 55 0c 7d c3 72 be 5d 74 80 de b1 fe 9b dc 06 a7 c1 9b f1 74 e4 9b 69 c1 ef be 47 86 0f c1 9d c6 24 0c a1 cc 2d e9 2c 6f 4a 74 84 aa 5c b0 a9 dc 76 f9 88 da 98 3e 51 52 a8 31 c6 6d b0 03 27 c8 bf 59 7f c7 c6 e0 0b f3 d5 a7 91 47 06 ca 63 51 14 29 29 67 27 b7 0a 85 2e 1b 21 38 4d 2c 6d fc 53 38 0d 13 65 0a 73 54 76 6a 0a bb 81 c2 c9 2e 92 72 2c 85 a2 bf e8 a1 a8 1a 66 4b c2 4b 8b 70 c7 6c 51 a3 d1 92 e8 19 d6 99 06 24 f4 0e 35 85 10 6a a0 70 19 a4 c1 16 1e 37 6c 08 27 48 77 4c 34 b0 bc b5 39 1c 0c b3 4e d8 aa 4a 5b 9c ca 4f 68 2e 6f f3 74 8f 82 ee 78 a5 63 6f 84 c8 78 14 8c c7 02 08 90 be ff fa a4 50 6c eb be f9 a3 f7 c6 71 78 f2 }
+
+  condition:
+    $a0
+}

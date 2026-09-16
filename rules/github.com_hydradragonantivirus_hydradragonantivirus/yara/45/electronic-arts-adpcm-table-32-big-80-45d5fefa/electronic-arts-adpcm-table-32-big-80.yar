@@ -1,0 +1,7 @@
+rule Electronic_Arts_ADPCM_table__32_big_80_ {
+  strings:
+    $a0 = { 00 00 00 00 00 00 00 F0 00 00 01 CC 00 00 01 88 00 00 00 00 00 00 00 00 FF FF FF 30 FF FF FF 24 00 00 00 00 00 00 00 01 00 00 00 03 00 00 00 04 00 00 00 07 00 00 00 08 00 00 00 0A 00 00 00 0B 00 00 00 00 FF FF FF FF FF FF FF FD FF FF FF FC }
+
+  condition:
+    $a0
+}

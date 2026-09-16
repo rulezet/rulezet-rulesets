@@ -1,0 +1,19 @@
+{
+  "uuid": "80f1732c-5308-421f-b12f-390f73f45fd4",
+  "title": "SUSP_Obfuscated_Powershell_double_hex_enc_str_b64",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "look for obfsucated powershell strings obfuscated via double_hex_enc_str_b64",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713429"
+}

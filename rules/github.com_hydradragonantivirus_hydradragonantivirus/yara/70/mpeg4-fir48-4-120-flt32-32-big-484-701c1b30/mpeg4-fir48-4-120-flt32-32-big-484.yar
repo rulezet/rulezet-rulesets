@@ -1,0 +1,7 @@
+rule MPEG4_fir48_4_120__flt32___32_big_484_ {
+  strings:
+    $a0 = { 80 00 00 00 b9 d4 f4 1d ba 2b cf a5 ba 12 e4 50 00 00 00 00 3a 87 6c ae 3b 1d ba 3d 3b 7c 63 32 3b a3 c0 27 3b b2 69 00 3b 9e f0 69 3b 46 1d fd 80 00 00 00 bb 80 17 54 bc 05 33 b8 bc 42 cc 54 bc 6a d8 7b bc 70 9e 7c bc 4b 73 a2 bb f2 72 4c 00 00 00 00 3c 11 a1 17 3c 92 e5 74 3c d1 14 59 3c f6 07 5c 3c f6 a8 f7 3c cc 87 77 3c 6f 7e 23 80 00 00 00 bc 8b 9e f8 bd 0b 12 5c bd 43 bd dc bd 64 14 c9 bd 62 b9 ca bd 3a a4 5a bc d9 3e 58 00 00 00 00 3c fb 3e b8 3d 79 bb 97 3d af 9f eb 3d cc cc cd 3d cc 10 e1 3d a8 ad dd 3d 45 85 5a 80 00 00 00 bd 68 c2 cc bd ea 7a 94 be 27 aa 83 be 47 92 30 be 4b eb e5 be 2d d6 f3 bd d3 70 01 00 00 00 00 3e 0a 84 21 3e 96 72 6a 3e ed 69 07 3f 21 74 d5 3f 47 b4 7a 3f 65 f1 5b 3f 79 53 39 3f 80 00 00 3f 79 53 39 3f 65 f1 5b 3f 47 b4 7a 3f 21 74 d5 3e ed 69 07 3e 96 72 6a 3e 0a 84 21 00 00 00 00 bd d3 70 01 be 2d d6 f3 be 4b eb e5 be 47 92 30 be 27 aa 83 bd ea 7a 94 bd 68 c2 cc 80 00 00 00 3d 45 85 5a 3d a8 ad dd 3d cc 10 e1 3d cc cc cd 3d af 9f eb 3d 79 bb 97 3c fb 3e b8 00 00 00 00 bc d9 3e 58 bd 3a a4 5a bd 62 b9 ca bd 64 14 c9 bd 43 bd dc bd 0b 12 5c bc 8b 9e f8 80 00 00 00 3c 6f 7e 23 3c cc 87 77 3c f6 a8 f7 3c f6 07 5c 3c d1 14 59 3c 92 e5 74 3c 11 a1 17 00 00 00 00 bb f2 72 4c bc 4b 73 a2 bc 70 9e 7c bc 6a d8 7b bc 42 cc 54 bc 05 33 b8 bb 80 17 54 80 00 00 00 3b 46 1d fd 3b 9e f0 69 3b b2 69 00 3b a3 c0 27 3b 7c 63 32 3b 1d ba 3d 3a 87 6c ae 00 00 00 00 ba 12 e4 50 ba 2b cf a5 b9 d4 f4 1d 80 00 00 00 }
+
+  condition:
+    $a0
+}
