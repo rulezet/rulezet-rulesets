@@ -1,0 +1,9 @@
+rule Trojan_Win32_Formbook_MK_MTB_5{
+	meta:
+		description = "Trojan:Win32/Formbook.MK!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {c1 cf 10 c1 cb ?? 33 fb 8b da 81 e3 ?? ?? ?? ?? 0f b6 1c 9d ?? ?? ?? ?? 8b 1c 9d ?? ?? ?? ?? c1 ea ?? 0f b6 14 95 90 1b 02 c1 c3 90 1b 00 33 fb 33 3c 95 90 1b 03 89 79 ?? 4e 0f 85 } 		$a_03_1 = {33 cf 81 e2 ?? ?? ?? ?? 33 ca 33 48 ?? 89 48 ?? 8b 50 ?? 33 d1 8b 48 ?? 33 ca 89 50 ?? 8b 50 ?? 33 d1 89 48 ?? 89 50 ?? 83 c6 ?? 83 c0 90 1b 08 83 fe ?? 0f 8c } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1) >=2
+ 
+}
