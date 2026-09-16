@@ -1,0 +1,82 @@
+import "pe"
+rule _Trojan_Autorun_Dump_Generic_Dacic_BC58E3CC_A_00D7D229_612_1_Tro_550 {
+  meta:
+    description = "datamaliciousorder - from files Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_612_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_61_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_632_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_651_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_65_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_664_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_685_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_743_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_772_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_775_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_791_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_793_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_820_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_83_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_85_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_92_1.vir, Trojan.Autorun_Dump.Generic.Mira.575DCBBE_11_1.vir, Trojan.Autorun_Dump.Generic.Mira.575DCBBE_6_1.vir, Trojan.Autorun_Dump.Trojan.GenericKDZ.95048_27_1.vir, Trojan.Autorun_Dump.Trojan.GenericKDZ.95048_31_1.vir, Virus.Hijack_Backdoor.Hangup.B_104.vir, Virus.Hijack_Backdoor.Hangup.B_11.vir, Virus.Hijack_Backdoor.Hangup.B_161.vir, Virus.Hijack_Backdoor.Hangup.B_213.vir, Virus.Hijack_Backdoor.Hangup.B_269.vir, Virus.Hijack_Backdoor.Hangup.B_271.vir, Virus.Hijack_Backdoor.Hangup.B_279.vir, Virus.Hijack_Backdoor.Hangup.B_51.vir, Virus.Hijack_Backdoor.Hangup.B_82.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_112.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_115.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_118.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_130.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_16.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_18.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_189.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_190.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_197.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_202.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_207.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_244.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_251.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_252.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_257.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_279.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_283.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_293.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_308.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_327.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_331.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_333.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_334.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_35.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_351.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_413.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_416.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_419.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_433.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_447.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_474.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_87.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_89.vir"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "5cf65312dd95d22b64e41d621f4f7e38efac6b7241347c29e615dc589b9c3cd1"
+    hash2       = "c7b02f01edf0407f106787a300e8b6c6ebc515c5d87fad98a7753f3fab6ef7db"
+    hash3       = "fe40cdd3feaed6b0cb0c60b8b705b089b9c23b647b18e294a6231e8cd5134d97"
+    hash4       = "9ae69ac20bd00d7e2c766934ae06594583a6f6ef89a6e32d329545f514ef68a3"
+    hash5       = "fd5beb676c0143987d6fc69bc3cc099e00a5faeb93586baf2731b92a9f6af8e2"
+    hash6       = "0764c1247a53d94046e354756e9e0e74fc79ea3572ce777e2bae4c608ebf4a4d"
+    hash7       = "5f733ca0826f3a41ad8d57b6bb93cba1d567b9bd6d5663940084767f09068e48"
+    hash8       = "bcf28bc0136d480633725e709a524659eb6d5f3ade1866a87aa23cb8d109c98f"
+    hash9       = "b698172721a71e6454cc86c34dce7cc35c1719fe9e7a5b4f4fd1247856c18c9b"
+    hash10      = "a59808c842fb251466c75a8803cc038edeb453de9505a8c09903a15f26776088"
+    hash11      = "b40c1999a440929ed0c262c314ac147fe663491f4703fec839ebcca0c14fb9e5"
+    hash12      = "5fa5f8ac254e56ef2cd063fec493e628739adf109598d612ffe3aa7b961f0115"
+    hash13      = "19d73e07cf0eda9e5199e16f8d012a2b8aeb3e6a1b942c6ebe0048e45c454cdf"
+    hash14      = "143cc0f2b17109ae4a38071a422cbb91adb60761ee9e8ea6c09751d8bfd6191e"
+    hash15      = "b48a3c65970d6f31983cdc2843dc51cc4e0dc8b31a7e72e8ec60ceb5e2c1f926"
+    hash16      = "106c01b2067ef92a2d400b438abc40ae5f18d10fc46339d3dd4e8a4ede68f732"
+    hash17      = "df5576f1221f5fa0ce9a4d28686038b9ceb3a5fff5e741e83f26fa8b79811789"
+    hash18      = "f57180a720aedf4265bd05a2ca48c8f354fa7d45a16d2a49b99c52284b9e0af5"
+    hash19      = "0f5d9361e07dea43e68d4b50e88db3ab23e3dfeb7a8eeaa4c6d82df8ac4330c7"
+    hash20      = "38bffd8378cda1b7fd408aa7a0edc56ff2af4d1e163aa9e91e646cb4200bf37c"
+    hash21      = "217ac012812c60d0fd6cc1764cf9b27f5c2259aa903adb59f8e2a7599b220723"
+    hash22      = "4410a2dd27327fabcddfda4590e2b82032823deb1dc436df0e6ea8a5be0d28ad"
+    hash23      = "308ef3563c7fcc14d383e1b40eacef6402a3716ba427201e1eca1b0bd752647f"
+    hash24      = "3961be1253f450d8153ac46a06c823fcdb709361d9d21ede57faaf8286c2a2cd"
+    hash25      = "0fe42e765e92fb03d5fccf6690763cd6c7ebd2b51975ead4e5377385e5408e62"
+    hash26      = "90994a2ae37b93208925ef6a499b5064d80fbb4fec4e2c334d79053daf73e862"
+    hash27      = "668b1ac5b297e00fa5c1b3ed26f15c0c7a6b4709fe6617b7438817a51d43656d"
+    hash28      = "5d708575207251778a6f9e9b49e7cc6613858c10bafe5fd9b91b8fcf6114aa95"
+    hash29      = "4d4bf9041b452e0a9543675f3ea190f92e73dd4385f821736a2f9f627e36fd79"
+    hash30      = "d071c2117d42ae30d363313774c24e2cbb9c324044e4cd2066920198e669f40e"
+    hash31      = "e3e9f9e70731610c42a5b32af3cf90276185d142b707381c9ff88208c5e11906"
+    hash32      = "54fc811e3c9910584aade0ec7ff36076ff7902f65e0d572ca512486aa1787ae9"
+    hash33      = "924acacac563db1ef217f5501d4e598b58098783bc08ff25536e31943148e888"
+    hash34      = "ebd6ab585aca4b829aedd756e7ccded61697d1bac796c15620a8b2c54f0eb2fe"
+    hash35      = "babdb0d94d0dd74af6b176877823c34cf3e179291e62bb75cd83449837ab29fd"
+    hash36      = "b28732569ca844a235f90717ae85371a71cebdaede6725ac0f8bf5eb931dfadd"
+    hash37      = "e7f0dcd194f8e1cc1f55e3e3af0e7b7e427b2012e2a07fa7a03c7fc2fa6e9a9b"
+    hash38      = "7e7f86f8acc5fee92c163c29684eb24a9f115d61592633d42c47a2aa4a44b11c"
+    hash39      = "79d7086c11b70d21b4a981c639fddcdb55847df126ec680ed995bffd632d0e7e"
+    hash40      = "e832ba661601c77fe3d4cc1a82f966e164060a2cc532f531a4849011550cbe75"
+    hash41      = "ce09ca7b81bbb1ab661130a60db7309b8870d5f237112df15381d5d894542ce8"
+    hash42      = "f7bd1b03ddbe8f6be6938a00c87a4c8c58054f679c36e1d6164bf0e2d4b837ec"
+    hash43      = "693a2cd956b236abc7fd14c2a5a0cfe1834d1a3db0fc6e2507c1bd15097f4b94"
+    hash44      = "852d4ab34c26fb36605bb82a30e3e87b3c3192863740d56b21e30f38fc84547f"
+    hash45      = "89df8839780c0ce4450dd1121840eccd2498d67348f0ca0d9f2ce28f4b4bd17b"
+    hash46      = "260614029305478793ae77edbf1e47e729e11e0ae99bf4eaefa91377a4bd9b81"
+    hash47      = "cdcc2ca17c8ff435406d0e2c467bce837915e0a0a2ef59ef3159b31d6cb5d80d"
+    hash48      = "07983fa1cdce9debd266a300af9618cf30f6a182876fcda83204796122132dcb"
+    hash49      = "04746e0b626d61c02c5a221793cce10056857c8c9b1d31d374aa6e9563ff3b92"
+    hash50      = "e6f5099290d4134b9cdc5028133136bf94d725c83d33737b528f81a958ac2cc9"
+    hash51      = "ed759bbf4b7ebcbc7cc90ed2c4912fcf5f4d7eec2cf5a3f2bc965ea85c1363ce"
+    hash52      = "6ddd42789d0582fc8683015c8f7940f0b907e5bd6c55a24651311d31c7756afa"
+    hash53      = "69e713ced3ac5df2afceb2590fbe25a876182982c02b3906b588e0a49666525a"
+    hash54      = "f1bf916be1a6a588f32ca8e311a2e68c06ffd0a5761244db08b101a959fa0ea7"
+    hash55      = "b60648e1ef6f11f5e375a4f352b2135373990f3e378d2bf79a81230c7246b7f1"
+    hash56      = "b93784daf178e631f537680fa0138e44953d4894868cbc5b8b3aa068675a3ae3"
+    hash57      = "dc8e6b70c23e23f834c4723b0e897b513f54775b9ee68fdbf1f70478c087c4f7"
+    hash58      = "277c286e74dc8259588a296c8407c9b2dc6286d50a3619e36fe8669de2765dbd"
+    hash59      = "71b90d88a919ac9fb7114cf962fae1046f323c5143ec22045c0eb09a1cb4255a"
+    hash60      = "2ca942ea61c45c442b47d6ceb02ad19916e94e1fcd0834a6753324b950ecb365"
+    hash61      = "566331df3efbc3ba9dfa2bc0f2fc40b8bde4cb876cebce9b4442abaa614144e2"
+    hash62      = "93782765873b48b7f0d8b727c6989c5cad470288c952fc5f4bce6ab7cf71929c"
+
+  strings:
+    $s1 = "Purchase Line: is defined as the total number of purchase line items processed by the application during a 12 month period.1. Ap" ascii
+    $s2 = "Purchase Line: is defined as the total number of purchase line items processed by the application during a 12 month period.1. Ap" ascii
+    $s3 = "Professional Users 2003 are allowed to manually enter orders directly into the programs but any orders entered electronically]" fullword ascii
+    $s4 = "party, licenses to you under this agreement. Notices, if any, for the third party program are included for1" fullword ascii
+    $s5 = "plication. This Section B applies to any dispute EXCEPT IT DOES NOT INCLUDE A DISPUTE" fullword ascii
+    $s6 = "software manually by Internet or telephone. In either case, Internet and te" fullword ascii
+
+  condition:
+    (uint16(0) == 0x5a4d and pe.imphash() == "b3b10b24a9e1cd0ddc13824d5cb20e6f" and (all of them)
+    ) or (all of them)
+}

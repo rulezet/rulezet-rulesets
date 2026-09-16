@@ -1,0 +1,1 @@
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"ET JA3 Hash - [Abuse.ch] Possible Adware"; ja3_hash; content:"b13d01846ad7a14a70bf030a16775c78"; reference:url,sslbl.abuse.ch/ja3-fingerprints/; classtype:unknown; sid:2028782; rev:2; metadata:created_at 2019_10_14, confidence Low, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_10_29;)

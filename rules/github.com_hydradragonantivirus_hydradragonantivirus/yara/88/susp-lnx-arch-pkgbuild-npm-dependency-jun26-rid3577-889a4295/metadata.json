@@ -1,0 +1,21 @@
+{
+  "uuid": "889a4295-84c9-469d-b325-1cdb652b8b63",
+  "title": "SUSP_LNX_ARCH_PKGBUILD_NPM_Dependency_Jun26_RID3577",
+  "format": "yara",
+  "author": "Marius Benthin",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects suspicious PKGBUILD with NPM dependency and install script",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/480098"
+}

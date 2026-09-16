@@ -1,0 +1,21 @@
+{
+  "uuid": "01d4fd00-f91c-4da7-b702-f0e7ee2365c3",
+  "title": "SUSP_LNX_ARCH_SRCINFO_NPM_Dependency_Jun26_RID3539",
+  "format": "yara",
+  "author": "Marius Benthin",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects suspicious .SRCINFO with NPM dependency and install script",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/480099"
+}

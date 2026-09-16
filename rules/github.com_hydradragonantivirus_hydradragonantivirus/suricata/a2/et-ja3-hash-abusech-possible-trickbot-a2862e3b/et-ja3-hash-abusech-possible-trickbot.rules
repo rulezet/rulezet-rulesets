@@ -1,0 +1,1 @@
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"ET JA3 Hash - [Abuse.ch] Possible Trickbot"; ja3_hash; content:"fb00055a1196aeea8d1bc609885ba953"; reference:url,sslbl.abuse.ch/ja3-fingerprints/; classtype:unknown; sid:2028792; rev:2; metadata:created_at 2019_10_14, confidence Low, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_10_29;)

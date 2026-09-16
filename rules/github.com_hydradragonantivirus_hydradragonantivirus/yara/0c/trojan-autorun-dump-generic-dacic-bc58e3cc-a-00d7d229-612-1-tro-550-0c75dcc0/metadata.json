@@ -1,0 +1,22 @@
+{
+  "uuid": "0c75dcc0-3188-4a8f-a342-8c3cd7b468cd",
+  "title": "_Trojan_Autorun_Dump_Generic_Dacic_BC58E3CC_A_00D7D229_612_1_Tro_550",
+  "format": "yara",
+  "author": "HydraDragonAntivirus",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "datamaliciousorder - from files Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_612_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_61_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_632_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_651_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_65_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_664_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_685_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_743_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_772_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_775_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_791_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_793_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_820_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_83_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_85_1.vir, Trojan.Autorun_Dump.Generic.Dacic.BC58E3CC.A.00D7D229_92_1.vir, Trojan.Autorun_Dump.Generic.Mira.575DCBBE_11_1.vir, Trojan.Autorun_Dump.Generic.Mira.575DCBBE_6_1.vir, Trojan.Autorun_Dump.Trojan.GenericKDZ.95048_27_1.vir, Trojan.Autorun_Dump.Trojan.GenericKDZ.95048_31_1.vir, Virus.Hijack_Backdoor.Hangup.B_104.vir, Virus.Hijack_Backdoor.Hangup.B_11.vir, Virus.Hijack_Backdoor.Hangup.B_161.vir, Virus.Hijack_Backdoor.Hangup.B_213.vir, Virus.Hijack_Backdoor.Hangup.B_269.vir, Virus.Hijack_Backdoor.Hangup.B_271.vir, Virus.Hijack_Backdoor.Hangup.B_279.vir, Virus.Hijack_Backdoor.Hangup.B_51.vir, Virus.Hijack_Backdoor.Hangup.B_82.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_112.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_115.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_118.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_130.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_16.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_18.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_189.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_190.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_197.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_202.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_207.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_244.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_251.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_252.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_257.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_279.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_283.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_293.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_308.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_327.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_331.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_333.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_334.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_35.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_351.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_413.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_416.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_419.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_433.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_447.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_474.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_87.vir, Virus.Hijack_GenPack.Backdoor.Hangup.B_89.vir",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/480081"
+}
