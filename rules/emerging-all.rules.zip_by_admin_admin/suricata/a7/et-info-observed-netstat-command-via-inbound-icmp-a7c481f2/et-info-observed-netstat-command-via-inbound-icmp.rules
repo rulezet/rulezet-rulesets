@@ -1,0 +1,1 @@
+alert icmp any any -> [$HOME_NET,$HTTP_SERVERS] any (msg:"ET INFO Observed netstat Command via Inbound ICMP"; content:"netstat|20|"; nocase; classtype:misc-activity; sid:2062641; rev:1; metadata:created_at 2025_05_30, signature_severity Unknown, updated_at 2025_05_30;)

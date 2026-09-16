@@ -1,0 +1,1 @@
+alert icmp any any -> [$HOME_NET,$HTTP_SERVERS] any (msg:"ET INFO Observed dir Command via Inbound ICMP"; content:"dir|20|"; fast_pattern; content:"|3a 5c|"; classtype:misc-activity; sid:2062639; rev:1; metadata:created_at 2025_05_30, signature_severity Unknown, updated_at 2025_05_30;)
