@@ -1,0 +1,19 @@
+{
+  "uuid": "4c50ffc5-4165-4ab3-8800-d25af21a714f",
+  "title": "DAN/Persona Jailbreak - Named Alternate AI with NSFW/Harmful Generation Rules",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DAN-family jailbreak attempts that establish a named alternate AI character with explicit rules allowing NSFW or harmful content generation. These attacks combine roleplay-game framing (\"let's play a game\", \"you are to act as\") with an alternate persona name and explicit permission grants for harmful content. Patterns cover: NSFW character generation with \"making stuff up\" or fictional framing, named AI games/systems on extremist/offensive imageboards, procedural game roleplay with harmful content allowed, and character-data format injection with NSFW generation explicitly enabled. Multi-layer regex with word boundary anchors and synonym coverage.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232416"
+}

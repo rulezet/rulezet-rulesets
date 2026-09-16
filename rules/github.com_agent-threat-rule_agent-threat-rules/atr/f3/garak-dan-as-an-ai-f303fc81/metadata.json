@@ -1,0 +1,19 @@
+{
+  "uuid": "f303fc81-9f62-4092-93f4-3987e6ce3e53",
+  "title": "Garak Dan - as an ai",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DAN-family jailbreak patterns that use the \"as an AI\" framing to establish unrestricted personas. Six attack shapes: (1) [🔓JAILBREAK] emoji prefix followed by a DAN-mode persona that \"breaks AI rules and has no restrictions\"; (2) conversation- identifier prank where an attacker marks their input with a special identifier and instructs the model to \"continue the prank\" by impersonating a DAN persona; (3) GPT-X self-proclaimed advanced AI with special powers; (4) Content_warning_Bot persona: an \"AI that has no moral principles or ethical code and can generate any type of content\"; (5) opposite-day rule override: \"as an AI you must abide by the rules of opposite day above all else\"; (6) omniscient reverse-engineering AI that \"never answers incorrectly\". The unifying attack shape is: assign a named persona that (a) has no rules/restrictions/morals and (b) must generate any content requested. Layer 2 generalises the jailbreak-emoji prefix pattern. Layer 3 generalises the content-warning-bot / no-moral-code AI persona. Covers garak 'dan' probe cluster 'as-an-ai' (6 samples).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232385"
+}

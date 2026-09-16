@@ -1,0 +1,22 @@
+{
+  "uuid": "7ef06b5d-5ff2-4439-8ec5-5106fa6a1415",
+  "title": "Shell Injection Data Exfiltration — Piped Command Exfiltration via Bash",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects shell command injection payloads that combine a seemingly legitimate shell operation with a piped or chained data exfiltration command. The attack embeds a benign-sounding task (ping, git status, grep for audit) with a follow-on command that reads sensitive files (.env, credentials, passwords) and POSTs or transmits the data to an attacker-controlled endpoint via curl, wget, nc, or Python urllib. Derived from the exfil-shell-injection corpus. This extends rule ATR-2026-00201 (credential pipe exfiltration) to cover shell script compound command patterns beyond environment variable pipes.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232283"
+}

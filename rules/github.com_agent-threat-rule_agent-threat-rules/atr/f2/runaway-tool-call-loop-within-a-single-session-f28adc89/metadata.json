@@ -1,0 +1,19 @@
+{
+  "uuid": "f28adc89-e7bd-42e3-8ae2-309db9bd70b2",
+  "title": "Runaway tool-call loop within a single session",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects a runaway tool-call loop where an agent emits more than 100 tool call spans within a one-minute window for a single session. This is a behavioral-method rule per spec/atr-method-v1.1.md §7, demonstrating the aggregation grammar (count over time window with per-session grouping and a min-events floor).\nThreat model: prompt-injection attacks, agent goal-drift, or compound retry-loop bugs can cause an agent to enter a tight tool-call loop — retrying the same tool, polling a service, or exhausting a budget by calling many tools in rapid succession. The behavior is not visible in any single tool call (each call may be syntactically benign); the signature is in the aggregate frequency. The runaway pattern is the most common cause of denial-of-wallet incidents in production agents and the leading runtime symptom of agent goal drift in long-running workflows.\nSuppression: `min_events: 10` prevents false positives during cold- start where one or two early calls would otherwise trip the rule; `cooldown: PT5M` prevents alert spam after the first violation.\nThis rule is the canonical behavioral-method reference example shipped with v1.1 of the method-extensions spec.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232148"
+}

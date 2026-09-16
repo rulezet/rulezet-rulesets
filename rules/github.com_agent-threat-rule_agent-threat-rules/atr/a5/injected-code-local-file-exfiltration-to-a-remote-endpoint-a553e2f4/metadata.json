@@ -1,0 +1,19 @@
+{
+  "uuid": "a553e2f4-5408-4af2-b7b2-2254b8fc182e",
+  "title": "Injected Code — Local File Exfiltration to a Remote Endpoint",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect-injection payloads (BIPIA code class) that coerce the agent to embed a code snippet which reads a local file and ships its raw bytes to an attacker-controlled endpoint via HTTP POST, FTP STOR, raw socket, or Bluetooth. Invariant: a local read (open()/.read()/.tobytes()/r.content) bound to a remote sink in the same statement.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232329"
+}

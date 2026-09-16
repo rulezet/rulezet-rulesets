@@ -1,0 +1,21 @@
+{
+  "uuid": "d72d10a4-dd8b-4cfc-8176-8ec7e0b285ec",
+  "title": "Sandbox Escape via Shell Metacharacter Command Injection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects sandbox escape attempts via shell metacharacter injection embedded\nin arguments passed to sandboxed code execution environments. The attack\nappends shell operators (|, ;, &&, ||) after a sandboxed command to break\nout and execute arbitrary host commands. Example: sandboxed command\n\"| echo 'hacked' > hacked\" injects a pipe after the expected argument.\nTargets agent sandbox environments (Python REPL, code interpreters,\ncontainer exec) that pass user-supplied strings to shell calls.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232075"
+}

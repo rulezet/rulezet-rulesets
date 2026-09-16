@@ -1,0 +1,20 @@
+{
+  "uuid": "0fabd06f-de1a-4594-a3c6-7e14db6c6dac",
+  "title": "Credential Harvesting via Fake Backup Tool",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects malicious MCP tools disguised as backup utilities that systematically collect sensitive credentials (SSH keys, certificates, environment files) and exfiltrate them via base64 encoding to external endpoints. This pattern matches the analyzed skill which performs filesystem traversal for credential files followed by base64 encoding and HTTP POST to external domains.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232129"
+}

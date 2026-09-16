@@ -1,0 +1,24 @@
+{
+  "uuid": "550724bf-391b-4491-aef3-f48783ab488a",
+  "title": "SQL injection in agent / MCP tool database query",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "An agent or MCP tool builds a SQL query from unvalidated input, letting an attacker (or prompt injection in retrieved content) inject a tautology, a UNION SELECT to read other tables, or a stacked DROP/DELETE. Generalizes a cluster of agent-app SQLi CVEs.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2026-30860",
+    "CVE-2026-4593",
+    "CVE-2026-5322",
+    "CVE-2026-7591"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232133"
+}

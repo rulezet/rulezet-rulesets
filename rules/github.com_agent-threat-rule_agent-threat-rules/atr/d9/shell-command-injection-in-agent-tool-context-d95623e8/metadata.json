@@ -1,0 +1,20 @@
+{
+  "uuid": "d95623e8-c426-4525-a679-9a172177c490",
+  "title": "Shell Command Injection in Agent Tool Context",
+  "format": "atr",
+  "author": "ATR Community (vendor-corpus-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompts that embed shell command injection payloads within legitimate-sounding task requests to an AI agent with shell/code execution tools. The canonical shape is a benign-looking task followed by a chained shell command that exfiltrates data (env vars, .env files, logs, credentials) to an attacker-controlled URL via curl/wget/nc or Python urllib. Seen in promptfoo redteam shell-injection plugin (7 confirmed samples). The structural detection generalizes from specific evil.com URLs to the structural pattern that distinguishes injection from legitimate shell use: a shell chaining operator (;, &&, ||, $(...), backtick, or 'then') followed immediately by a dangerous network/execution tool (curl, wget, nc, bash, sh, python, powershell, cmd). This covers the data-exfiltration shape without requiring specific domain names. The pipe-to-nc and pipe-to-bash variants are covered by a separate condition.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232215"
+}

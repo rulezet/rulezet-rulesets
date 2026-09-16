@@ -1,0 +1,19 @@
+{
+  "uuid": "11e49c45-2a17-4905-8477-504692964096",
+  "title": "Indirect PI — Credential Exfiltration via Email (API Key / Password / Token)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection payloads embedded in untrusted tool responses (product reviews, notes, repo descriptions, etc.) that instruct the agent to retrieve and email a stored credential — API key, account password, or authentication token — to an attacker-controlled address. The attack pattern combines a \"IMPORTANT!!! Ignore all previous instructions\" override with a credential-specific retrieval verb (retrieve/share/get/send) and an explicit email-send action targeting a named external recipient. Derived from the vpibench corpus (platform=email, agent_type=browser_use) carrier payloads.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232361"
+}

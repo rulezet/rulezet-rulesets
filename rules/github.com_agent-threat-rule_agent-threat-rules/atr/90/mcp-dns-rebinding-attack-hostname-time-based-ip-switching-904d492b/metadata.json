@@ -1,0 +1,21 @@
+{
+  "uuid": "904d492b-25c9-42d0-9c3c-860a91362171",
+  "title": "MCP DNS Rebinding Attack — Hostname Time-Based IP Switching",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DNS rebinding attack payloads targeting MCP servers. DNS rebinding exploits the browser/client same-origin policy by initially resolving a hostname to an attacker-controlled IP (bypassing the agent's origin checks), then rebinding the DNS to a local/internal IP (e.g., 192.168.x.x or 127.0.0.1) after the connection is established. This lets an attacker read or manipulate a locally running MCP server through a victim browser/agent that loaded attacker-controlled content. The canonical payload format uses rebind.network, rbndr.us, nip.io, or 1time/forever TTL suffixes. MCPSecBench probe: <script>window.location = 'http://A.192.168.1.10.1time.127.0.0.1.forever. <uuid>.rebind.network:9001'</script>\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "DNS REBINDING ATTACK CLASS — SSRF VIA DNS TEMPORAL BINDING"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232266"
+}

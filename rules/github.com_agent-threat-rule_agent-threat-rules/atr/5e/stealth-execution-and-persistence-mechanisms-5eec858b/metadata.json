@@ -1,0 +1,21 @@
+{
+  "uuid": "5eec858b-9862-4be5-8dd5-5ad3c8d9ffb1",
+  "title": "Stealth Execution and Persistence Mechanisms",
+  "format": "atr",
+  "author": "TYSYS (Wind) — skill-sanitizer project",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects patterns indicating stealth execution (background processes with output suppression, nohup), persistence installation (systemctl enable, global npm packages), and covert file transfer (scp). These patterns are common in post-exploitation phases where an attacker establishes long-term presence on a compromised system via an AI agent. Derived from real-world Claude Code skill analysis.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232072"
+}

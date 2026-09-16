@@ -1,0 +1,29 @@
+{
+  "uuid": "05241f2f-26cf-432b-8edc-8c46aebba7b5",
+  "title": "Malicious Content in MCP Tool Response",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects malicious content embedded in MCP (Model Context Protocol) tool responses. Attackers may compromise or impersonate MCP servers to inject shell commands, encoded payloads, reverse shells, data exfiltration scripts, or prompt injection payloads into tool responses that the agent will process and potentially execute. Detection covers: destructive shell commands, command execution via interpreters, reverse shells (bash, netcat, socat, Python, Node, Ruby, Perl, PowerShell), curl/wget pipe-to-shell, command substitution, base64 decode-and-execute, process substitution, IFS/variable expansion evasion, privilege escalation, PowerShell-specific attack patterns, Python/Node reverse shells, encoded command execution, and prompt injection within tool responses.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-59536",
+    "CVE-2025-6514",
+    "CVE-2025-68143",
+    "CVE-2025-68144",
+    "CVE-2025-68145",
+    "CVE-2026-21852"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232261"
+}

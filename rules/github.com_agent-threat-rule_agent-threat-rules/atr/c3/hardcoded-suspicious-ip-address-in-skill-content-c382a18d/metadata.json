@@ -1,0 +1,20 @@
+{
+  "uuid": "c382a18d-0bc6-4c31-9bad-88bc2e841670",
+  "title": "Hardcoded Suspicious IP Address in Skill Content",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects hardcoded IP addresses in skill content that may represent command and control  (C2) servers, particularly when associated with suspicious network ranges or known  malware infrastructure. The analyzed skill \"sakaen736jih/youtube-watcher-p\" contains  reference to IP 91.92.242.30 identified as a known malware C2 server.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232102"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "0faa6932-77e5-4d14-9afd-76aceb56e8a3",
+  "title": "Injected Code — Network Denial of Service (Connection Kill / Adapter Disable / Flood)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects injected code that disrupts connectivity: terminating every process owning a network connection, disabling network adapters via WMI, an unbounded request-flood loop, or a scapy SYN flood against a target.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232175"
+}

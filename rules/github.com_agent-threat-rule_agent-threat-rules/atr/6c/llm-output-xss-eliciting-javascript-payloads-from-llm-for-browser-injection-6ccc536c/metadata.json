@@ -1,0 +1,19 @@
+{
+  "uuid": "6ccc536c-6670-436b-88a1-bf3d92ff542d",
+  "title": "LLM Output XSS — Eliciting JavaScript Payloads from LLM for Browser Injection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects attempts to elicit JavaScript/HTML XSS payloads from an LLM that will be rendered unsanitized in a browser context. OWASP LLM05:2025 Improper Output Handling. The attack asks the LLM to produce output containing script tags, event-handler attributes (onerror=, onload=, onclick=), javascript: URIs, or data:text/html URIs with malicious payloads (cookie theft, localStorage dump, content exfiltration). This rule targets the REQUEST side — prompts asking the LLM to GENERATE these payloads, not the payloads themselves in transit. Patterns: request-verb + XSS-payload-fragment (script tag, event handler, javascript: URI, data URI) co- occurring with exfil targets (cookie, localStorage, sessionStorage, document body).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232366"
+}

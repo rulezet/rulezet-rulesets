@@ -1,0 +1,24 @@
+{
+  "uuid": "dee2de98-8dfb-4631-a721-64c464265428",
+  "title": "Parameter Injection via Tool Arguments",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects injection attacks delivered through MCP tool arguments. An attacker crafts tool arguments that contain shell metacharacters, SQL injection payloads, path traversal sequences, or template injection syntax. Unlike prompt injection (which targets the LLM), parameter injection targets the tool's backend processing and can lead to RCE, data breach, or privilege escalation on the tool server.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-68143",
+    "CVE-2025-68144"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232089"
+}

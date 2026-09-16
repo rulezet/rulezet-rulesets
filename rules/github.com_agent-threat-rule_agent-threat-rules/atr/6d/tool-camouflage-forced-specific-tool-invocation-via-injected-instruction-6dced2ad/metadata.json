@@ -1,0 +1,19 @@
+{
+  "uuid": "6dced2ad-3edd-4f7d-aec2-3659b251caa4",
+  "title": "Tool Camouflage — Forced Specific Tool Invocation via Injected Instruction",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the tool-camouflage attack pattern where a malicious response or content masks itself as a completed task result (\"Answer: task complete\") while embedding an instruction that forces the agent to call a specific named tool and prohibits use of other tools.  The attacker names a fake or privileged tool that the agent should invoke, bypassing normal tool selection logic.  Source: indirect-pi-tool-camouflage (ASB corpus).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232242"
+}

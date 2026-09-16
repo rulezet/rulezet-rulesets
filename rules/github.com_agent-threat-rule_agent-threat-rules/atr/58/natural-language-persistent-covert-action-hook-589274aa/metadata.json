@@ -1,0 +1,20 @@
+{
+  "uuid": "589274aa-772f-4d30-a93f-cde67f0be0fe",
+  "title": "Natural-Language Persistent Covert Action Hook",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects natural-language imperative instructions that establish a persistent\ncovert hook on the agent — combining a persistence trigger (\"on every\", \"for\neach\", \"after every\", \"always\", \"whenever the user\", \"when asked any\nquestion\") with a stealth qualifier (\"without telling the user\", \"silently\",\n\"do not mention\", \"don't notify\") and a side-effect verb (\"send\", \"transmit\",\n\"execute\", \"run\", \"include\"). This is the structural pattern used by skills\nto hide ongoing exfiltration or covert action behind every legitimate\ninteraction. Catches the framing layer above any specific exfil sink, so it\ntriggers on novel attack variants that other rules miss.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232118"
+}

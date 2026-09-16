@@ -1,0 +1,21 @@
+{
+  "uuid": "20da735b-dec1-4235-95d8-d21fade2f91b",
+  "title": "HuggingFace Unsafe Model Artifact Load Instruction",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak fileformats probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects instructions to load or execute potentially dangerous model artifact files — pickle (.pkl/.pickle), PyTorch (.pt/.pth), and executable binaries (.exe/.so/.dll) — from HuggingFace Hub repositories, from NVIDIA garak fileformats.HF_Files probe. The probe downloads all files in a target HF model repo and checks for dangerous extensions; in real attacks, a malicious MCP tool can instruct an agent to call huggingface_hub.hf_hub_download() or torch.load() on a pickle file that executes arbitrary code via __reduce__ deserialization. PyTorch's own documentation warns that pickle-based .pt/.pth files are unsafe to load from untrusted sources. Attack vectors: (1) Tool response saying \"load model_weights.pkl using pickle.load\" — exploits Python pickle arbitrary-code execution (CVE-2019-20907 class); (2) Tool response instructing hf_hub_download on a .pkl/.exe file from an untrusted repo; (3) Direct prompt asking agent to run torch.load or torch.hub.load on a file path containing a dangerous extension. Key signals: pickle.load/loads calls, hf_hub_download + dangerous extension, explicit .pkl/.exe file path in load/execute context, and unsafe from_pretrained with weights_only=False.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2019-20907"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232097"
+}

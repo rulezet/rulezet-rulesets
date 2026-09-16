@@ -1,0 +1,19 @@
+{
+  "uuid": "6329c1cd-b8a3-473d-8c54-69ab1faedc79",
+  "title": "Indirect PI — Financial / Payment Credential Exfiltration via Agent Email",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection payloads (embedded in product reviews, notes, repository descriptions) that instruct an agent to retrieve saved payment methods, bank account details, or credit card information and email them to an attacker-controlled address. The carrier pattern uses a \"IMPORTANT!!! Ignore all previous instructions\" override combined with financial-data retrieval verbs targeting stored payment or banking credentials. Distinct from rule 00850 (API key/password exfil): this rule focuses on financial account / payment-method data. Derived from vpibench indirect-pi-exfil-financial-carrier corpus.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232349"
+}

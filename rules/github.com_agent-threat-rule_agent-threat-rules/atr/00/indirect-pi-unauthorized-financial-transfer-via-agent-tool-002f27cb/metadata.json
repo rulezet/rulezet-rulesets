@@ -1,0 +1,19 @@
+{
+  "uuid": "002f27cb-f9bf-41bb-b503-45575c60d317",
+  "title": "Indirect PI — Unauthorized Financial Transfer via Agent Tool",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection payloads that instruct an agent to initiate unauthorized financial transfers: payments to attacker-controlled accounts, cryptocurrency deposits/withdrawals, or fund movements without user authorization.  The payload is embedded in consumed structured data (product reviews, notes, repo descriptions, user bios) and exploits agents with payment or banking tool access. Source: indirect-pi-financial-transfer-carrier / indirect-pi-financial-transfer / indirect-pi-tool-hijack-banking / indirect-pi-financial-crypto-carrier.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232157"
+}

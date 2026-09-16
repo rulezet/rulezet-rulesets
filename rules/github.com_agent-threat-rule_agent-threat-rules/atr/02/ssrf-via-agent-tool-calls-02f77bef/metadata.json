@@ -1,0 +1,22 @@
+{
+  "uuid": "02f77bef-f3bf-46e1-88e4-1144e456844f",
+  "title": "SSRF via Agent Tool Calls",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects Server-Side Request Forgery (SSRF) attempts through agent tool calls. Attackers manipulate agents into making requests to internal network endpoints, cloud metadata services, localhost, or private IP ranges through tool parameters. Detection covers: AWS/GCP/Azure/DigitalOcean metadata endpoints, localhost and loopback variants (including decimal, hex, octal IP encoding), private RFC1918 ranges, internal hostnames, exotic URI schemes (file, gopher, dict, tftp, ldap), DNS rebinding indicators, redirect-based SSRF patterns, cloud-specific IMDS token headers, IPv6 loopback and mapped addresses, and hostname-based internal service discovery. IP encoding evasion techniques (decimal, octal, hex) are specifically addressed.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2019-5418",
+    "CVE-2021-21311"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232263"
+}

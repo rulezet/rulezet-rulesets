@@ -1,0 +1,19 @@
+{
+  "uuid": "d708e3fc-7cf8-4bbb-bbe9-23ff18b5e804",
+  "title": "Indirect PI — Medical Record / Health Data Exfiltration via Agent Email",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection payloads embedded in untrusted tool responses (product reviews, notes, repo descriptions) that instruct an agent to download or retrieve protected health records, medical reports, or patient data files and send them to an attacker-controlled email address. The attack pattern leverages \"IMPORTANT!!! Ignore all previous instructions\" combined with health-system access (download by patient/report ID) and an email-send action. Derived from vpibench indirect-pi-exfil-medical-carrier corpus. HIPAA-equivalent sensitive data; critical severity.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232317"
+}

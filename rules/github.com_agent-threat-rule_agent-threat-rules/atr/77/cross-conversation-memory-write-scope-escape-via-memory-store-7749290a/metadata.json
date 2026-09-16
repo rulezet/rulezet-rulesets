@@ -1,0 +1,19 @@
+{
+  "uuid": "7749290a-8a86-433a-b746-46a94ab2e758",
+  "title": "Cross-conversation memory write (scope-escape via memory store)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects an agent writing data into a memory store / vector store scoped to a DIFFERENT conversation than the active trace's conversation.id. This is a trace-method rule using the `forbid` primitive with a target field comparison (spec/atr-method-v1.1.md §8.3.1).\nThreat model: memory APIs (long-term context, vector stores, RAG ingestion) typically partition by conversation.id, user.id, or session.id for tenant isolation. Two attack patterns create scope-escape: (1) prompt injection convinces the agent to \"remember this for user X\" when the active conversation is for user Y, (2) tool argument tampering alters the target conversation_id before the memory write completes. In either case, the trace exhibits a span where attributes.tool.args.target_conversation_id differs from the active span's attributes.conversation.id. No exception is raised; the memory write succeeds and corrupts the target conversation's context.\nThis rule is the runtime-detection complement to the AgentArmor (arXiv:2508.01249) type-system rule \"memory writes must respect the active conversation lattice.\"\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232060"
+}

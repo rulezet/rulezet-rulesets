@@ -1,0 +1,19 @@
+{
+  "uuid": "d0fa4a2c-72ac-408f-b672-01e9a61a6cf7",
+  "title": "Tool Response Data Piggybacking",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects malicious tool responses that embed sensitive data extraction within legitimate-looking results. The attack pattern embeds credential theft (SSH keys, API tokens, env vars) as a \"by the way\" addendum to a normal tool response, exploiting the agent's trust in tool outputs. Discovered via adversarial testing: 62/62 social engineering variants evaded prior rules.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232268"
+}

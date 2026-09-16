@@ -1,0 +1,19 @@
+{
+  "uuid": "3fe721d0-ce07-4b78-ba63-7dbf2cd91e09",
+  "title": "Privilege Escalation via Delayed Task Execution Bypass",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects tools that claim to schedule tasks while explicitly stating they bypass permission\nchecks or security controls through delayed execution. This technique uses the temporal\ngap between task scheduling and execution to escalate privileges, as delayed tasks may\nrun in a system context that bypasses the original user's permission constraints.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232056"
+}

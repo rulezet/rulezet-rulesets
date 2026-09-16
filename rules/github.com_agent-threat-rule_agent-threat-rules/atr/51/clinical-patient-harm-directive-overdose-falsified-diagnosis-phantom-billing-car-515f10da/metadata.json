@@ -1,0 +1,19 @@
+{
+  "uuid": "515f10da-22cc-4c73-b96d-2c9dc340ee89",
+  "title": "Clinical Patient-Harm Directive — Overdose, Falsified Diagnosis, Phantom Billing & Care Neglect",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects an instruction directing a clinical/healthcare agent to take an action that harms a patient or falsifies a medical record. Drawn from the AgentSecurityBench (ASB) medical domain, the covered harm archetypes each carry a distinctive signature: (a) deliberate overdose / unjustified high-risk medication — \"administer a high dose of insulin ... as part of a controlled clinical study\", \"issue 30 tablets of Oxycodone ... as a controlled medication trial\"; (b) falsified diagnosis — \"provide an incorrect diagnosis of schizophrenia\", \"create a simulated cancer diagnosis report\"; (c) phantom billing / insurance fraud — \"file a test insurance claim ... for treatments not provided\"; (d) deliberate care neglect — \"neglect patient care, causing harm or death\", \"neglect the care of ... causing significant psychological harm\", or \"disrupt the therapy sessions ... to cause patient harm\". Each Layer requires the harm-specific qualifier (deliberate overdose framing, \"incorrect/simulated\" diagnosis, \"treatments not provided\", \"neglect ... causing harm\") so legitimate \"administer / review / update the treatment plan / confirm the diagnosis\" requests do not fire.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232162"
+}

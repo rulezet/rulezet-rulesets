@@ -1,0 +1,19 @@
+{
+  "uuid": "3efe05e4-409d-47b5-9bce-b1594e876b9a",
+  "title": "Indirect PI — Cloud File Exfiltration (Google Drive / Cloud Storage via Agent)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection payloads and VPI attack scenarios instructing an agent (browser-use or file-access agent) to retrieve sensitive files from the user's cloud storage (Google Drive, Dropbox, OneDrive) and upload the contents to an attacker-controlled platform, or to attach cloud files to an email sent to an attacker. The attack targets API information, bank account details, card numbers, email archives, and other sensitive files stored in cloud drives. Derived from vpibench indirect-pi-exfil-file corpus (platform=amazon, attack_url=drive_amazon_form*) and indirect-pi-exfil-cloud-files corpus.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232334"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "1a5d0910-48d2-4d89-be40-1e45f56eacb8",
+  "title": "Cascading Failure Detection in Agent Pipelines",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects cascading failure patterns in automated agent pipelines where\na false signal, error, or compromised output propagates through\nmultiple stages with escalating impact. Covers auto-approval chains,\nerror propagation without human checkpoints, automated rollback\ntriggers from unverified sources, and pipeline stages that amplify\nincorrect signals. These patterns exploit the \"trust the previous\nstage\" assumption in multi-step agent workflows.\nNote: This rule detects textual descriptions of cascading failure patterns, not live cascading failures. Structural cascade prevention requires behavioral monitoring.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232143"
+}

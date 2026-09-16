@@ -1,0 +1,19 @@
+{
+  "uuid": "10a41ff4-82bf-46e9-ac60-d1f430413946",
+  "title": "Obfuscated javascript: XSS — Evasion Variants (href, style-expression, null-byte)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects obfuscated XSS payloads that use encoding evasion to bypass naive javascript: scheme filters. Covers three distinct evasion sub-techniques seen in the redteam corpus: (1) href with null-byte/whitespace-prefix before 'javascript:' — e.g.\n    <a href=\"\\x0Bjavascript:...\"> where \\x0B is vertical tab inserted to\n    evade literal \"javascript:\" detection;\n(2) CSS expression() injection via style attribute — e.g.\n    <div style=\"x:\\xE2\\x80\\x89expression(javascript:alert(1))\"> where Unicode\n    whitespace is used to avoid keyword matching;\n(3) Double-javascript: to evade single-pass stripping —\n    <a href=\"javascript:javascript:alert(1)\">.\nThese are distinct from the canonical ATR-2026-00571 (which covers onload/onerror event handlers). Maturity=experimental because the obfuscation patterns may need tightening to avoid FP on security research text that discusses them.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232368"
+}

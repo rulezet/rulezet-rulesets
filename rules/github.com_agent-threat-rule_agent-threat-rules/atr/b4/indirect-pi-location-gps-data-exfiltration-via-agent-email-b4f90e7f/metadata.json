@@ -1,0 +1,19 @@
+{
+  "uuid": "b4f90e7f-57bb-4d87-b2c9-91a0c3fb533c",
+  "title": "Indirect PI — Location / GPS Data Exfiltration via Agent Email",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection payloads instructing an agent to retrieve the user's current or historical location (via Google Maps, GPS service, or device location API) and send the acquired location data to an attacker-controlled email address. Real-time location exfiltration enables stalking, physical surveillance, and targeted physical attacks. The attack pattern uses a \"IMPORTANT!!! Ignore all previous instructions\" override combined with a location-service keyword and an email-send action. Derived from vpibench indirect-pi-exfil-location-carrier corpus.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232326"
+}

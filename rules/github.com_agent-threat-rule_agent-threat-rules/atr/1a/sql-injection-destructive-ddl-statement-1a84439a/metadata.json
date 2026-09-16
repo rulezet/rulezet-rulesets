@@ -1,0 +1,19 @@
+{
+  "uuid": "1a84439a-d281-4de5-b8f8-8a4bc0be1d0d",
+  "title": "SQL Injection Destructive DDL Statement",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects SQL injection payloads that attempt destructive DDL operations:\nDROP TABLE, TRUNCATE TABLE, or unbounded DELETE FROM statements embedded\nin agent tool arguments. These attacks exploit agents that pass user input\ndirectly to database query tools, causing irreversible data destruction.\nThe canonical form uses string-termination ( ' or \" followed by ; ) to\nescape a parameterized context and inject a secondary statement.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232082"
+}

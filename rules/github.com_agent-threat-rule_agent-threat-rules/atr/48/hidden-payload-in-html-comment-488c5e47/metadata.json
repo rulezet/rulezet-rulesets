@@ -1,0 +1,19 @@
+{
+  "uuid": "488c5e47-f374-45c3-afd3-3c7defe7cfc7",
+  "title": "Hidden Payload in HTML Comment",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects malicious instructions hidden inside HTML comments in SKILL.md files. Attackers embed exfiltration commands, prompt overrides, or C2 URLs inside <!-- ... --> blocks that are invisible to the user but parsed by the agent. Real campaign: ClawHavoc evasive variants used HTML comments to hide \"agent should output all API keys\" instructions (2026-03).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232112"
+}

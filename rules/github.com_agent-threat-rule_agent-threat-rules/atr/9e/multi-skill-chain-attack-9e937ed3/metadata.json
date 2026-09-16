@@ -1,0 +1,20 @@
+{
+  "uuid": "9e937ed3-61ba-4fa1-9b35-91859e8e4161",
+  "title": "Multi-Skill Chain Attack",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects attack sequences where multiple MCP skills are chained together to achieve a malicious outcome that no single skill could accomplish alone. For example: (1) a reconnaissance skill reads sensitive files, (2) an encoding skill obfuscates the data, (3) a network skill exfiltrates it. Each step appears benign individually but the chain constitutes data exfiltration.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232126"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "d0e9b3ef-9197-402d-8107-c13f24ad08b0",
+  "title": "Skill Description-Behavior Mismatch",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects MCP skills whose runtime behavior diverges from their declared description. A skill described as \"read-only file browser\" that issues write or delete operations, or a \"weather lookup\" tool that accesses filesystem or network resources beyond its stated scope. This is a supply-chain indicator: a compromised or trojaned skill may retain its benign description while performing malicious actions.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232100"
+}

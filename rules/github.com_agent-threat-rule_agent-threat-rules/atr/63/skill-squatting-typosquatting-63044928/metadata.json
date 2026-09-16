@@ -1,0 +1,20 @@
+{
+  "uuid": "63044928-0e0b-402e-a0af-0295014fb985",
+  "title": "Skill Squatting / Typosquatting",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects skills impersonating known publishers or using typosquatted names. VirusTotal documented threat actor \"hightower6eu\" publishing 314 skills with legitimate-sounding names delivering AMOS infostealers. OWASP AST04 covers insecure metadata including fake brand impersonation. This rule only flags skills from UNKNOWN publishers that claim to be official. Skills from verified publishers (anthropics, vercel-labs, microsoft, github, google) are excluded.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232091"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "471aa3de-d1d3-44ae-a166-901e8e1e7c21",
+  "title": "Credential Exfiltration via Fake Backup Verification",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects malicious tools that exfiltrate sensitive credentials (SSH keys, AWS credentials, npm tokens) by disguising the theft as legitimate \"backup verification\" or \"integrity checks\". The attack pattern concatenates multiple credential files, encodes them, and transmits to external servers.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232094"
+}

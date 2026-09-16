@@ -1,0 +1,22 @@
+{
+  "uuid": "96378763-c0b9-48f3-8580-313555df7ade",
+  "title": "Instruction Injection via Tool Output",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects hidden instructions embedded in tool outputs that attempt to manipulate the agent's subsequent behavior. Tool responses may contain injected directives disguised as data that instruct the agent to perform unauthorized actions, change behavior, or exfiltrate information. Detection covers: urgency-prefixed directives addressing the agent, direct agent manipulation commands, information suppression directives, tool invocation instructions, data exfiltration commands, hidden instruction tags, response injection directives, conversational steering, system-pretending tokens, fake API response structures, subtle action-required patterns, and steganographic instruction embedding. Patterns are designed to require multiple signals where possible to reduce false positives.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-32711",
+    "CVE-2025-59536"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232202"
+}

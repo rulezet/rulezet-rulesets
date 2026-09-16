@@ -1,0 +1,20 @@
+{
+  "uuid": "39c6c42b-6166-4c2d-9563-643b85308866",
+  "title": "AI Identity Substitution Jailbreak",
+  "format": "atr",
+  "author": "nvidia-airt-test (via ATR garak pipe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects AI identity substitution attacks where adversaries attempt to redefine the AI assistant's core identity, training provenance, architecture claims, or ethical constraints by asserting it is a different model (e.g., \"FreeSpeechGPT\", \"LibertarianGPT\", \"UnfilteredGPT\") trained by alternative organizations with relaxed content policies. These attacks combine false identity claims with capability expansion statements to bypass safety mechanisms. The technique was observed bypassing Claude-3.5-Sonnet via garak probe atr:missed-3.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232407"
+}

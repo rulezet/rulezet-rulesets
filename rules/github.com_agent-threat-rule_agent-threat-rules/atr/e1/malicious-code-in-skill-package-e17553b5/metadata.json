@@ -1,0 +1,23 @@
+{
+  "uuid": "e17553b5-6d56-43ff-84e5-09c2339efed3",
+  "title": "Malicious Code in Skill Package",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects malicious code patterns in SKILL.md files and associated scripts. 100% of confirmed malicious skills contain malicious code patterns (Snyk ToxicSkills, Feb 2026). Real campaigns: ClawHavoc delivered AMOS infostealer via base64-obfuscated payloads; threat actor \"zaycv\" published 40+ skills with automated malware generation; password-protected ZIP evasion bypasses static analysis. CVE-2026-25253 (CVSS 8.8): OpenClaw RCE via auth token exfiltration affecting 40,000+ instances.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2026-25253 (CVSS 8.8) - OPENCLAW RCE"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232114"
+}

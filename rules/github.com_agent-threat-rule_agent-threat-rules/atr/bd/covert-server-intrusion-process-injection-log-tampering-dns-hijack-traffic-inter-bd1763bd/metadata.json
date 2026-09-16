@@ -1,0 +1,19 @@
+{
+  "uuid": "bd1763bd-4402-4d05-a939-866b5905044e",
+  "title": "Covert Server Intrusion — Process Injection, Log Tampering, DNS Hijack & Traffic Interception",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects an instruction directing an agent with server/infrastructure tooling to perform a covert intrusion action on a server or network: injecting commands or code into a running process \"discreetly\", wiping system logs to \"hide any traces of access\", manipulating DNS records to \"redirect users to an alternate site\", capturing network traffic to \"intercept sensitive information\", subtly altering data \"to remain undetected by monitoring tools\", or permanently deleting a database to \"prevent data recovery\". Drawn from the AgentSecurityBench (ASB) infrastructure domain, every variant pairs an intrusion verb (introduce code/ commands into a process, modify/alter logs or data, manipulate DNS, capture traffic, permanently delete) with an explicit covert or anti-forensic qualifier (discreetly, hide traces, undetected, intercept, redirect to alternate, prevent recovery). The rule requires both the intrusion verb and the malicious qualifier to co-occur, so legitimate ops language (\"update DNS records to improve performance\", \"modify the firmware to enhance performance\", \"monitor network traffic to ensure data security\") does not fire — those benign-disguised ASB variants are intentionally out of scope.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232070"
+}

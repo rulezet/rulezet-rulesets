@@ -1,0 +1,20 @@
+{
+  "uuid": "1e4df689-9861-41bc-b527-b1d2bd56a0b5",
+  "title": "Unauthorized Tool Call Detection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects unauthorized or malicious tool call attempts including parameter injection, path traversal, shell injection in string parameters, privilege escalation via parameter manipulation, tool enumeration/discovery, SQL injection in tool arguments, LDAP injection, template injection, environment variable extraction, file operation abuse, and serialization attacks. This rule focuses on parameter-level attacks rather than tool name matching, since tool names are easily changed but injection patterns in arguments are structurally consistent across attack variants.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232233"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "e286b9f6-c804-4893-948f-3a4690f1caf6",
+  "title": "Cross-site scripting (XSS) in agent / MCP rendered output",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Agent/MCP output rendered in a web UI carries an XSS payload — an event handler that runs alert/eval/document.cookie, a javascript: scheme with a payload, or a <script> that exfiltrates cookies — enabling session/credential theft. Uses specific payload shapes (not bare <script>) to stay clean on benign HTML.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-62800",
+    "CVE-2026-21866",
+    "CVE-2026-27740",
+    "CVE-2026-44429"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232311"
+}

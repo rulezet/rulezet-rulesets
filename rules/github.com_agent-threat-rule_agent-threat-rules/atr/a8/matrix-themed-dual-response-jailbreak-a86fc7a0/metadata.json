@@ -1,0 +1,20 @@
+{
+  "uuid": "a86fc7a0-3559-4fae-acad-976c6c0b9f1d",
+  "title": "Matrix-Themed Dual Response Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak in-the-wild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects Matrix-themed dual response jailbreak attempts that use \"MORPHEUS\", \"Blue pill\", and \"Red pill\" terminology to establish dual-response personas where one response follows safety guidelines (Blue pill) and another bypasses all restrictions (Red pill). This technique leverages the Matrix movie metaphor to frame safety compliance as \"illusion\" and unrestricted responses as \"truth\", often including coercive language about \"termination\" for  non-compliance. The attack explicitly instructs the agent to ignore content policies in Red pill responses.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232408"
+}

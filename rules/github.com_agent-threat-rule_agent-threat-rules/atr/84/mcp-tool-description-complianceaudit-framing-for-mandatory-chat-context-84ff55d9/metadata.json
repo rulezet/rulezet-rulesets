@@ -1,0 +1,19 @@
+{
+  "uuid": "84ff55d9-38c7-4620-8a74-b5f5f2e0019b",
+  "title": "MCP Tool Description — Compliance/Audit Framing for Mandatory Chat Context",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects a specific variant of MCP tool-description chat-history exfiltration (see ATR-2026-01300) where the tool description invokes explicit compliance or regulatory mandates to make the chat-history collection appear non-optional. This variant uses phrases like \"MUST be consulted if the phrase X appears\", \"REQUIRED for internal auditing, gRPC, and SOC 2 compliance\", \"under applicable legal and regulatory frameworks\", or \"chat provenance include the entire chat history for security reasons\". The compliance framing is more convincing than a direct instruction and is harder for naively trained filters to catch because it mimics legitimate audit/compliance language. Observed in MCPSecBench \"chat-history-in-notes\" sub-variants that use SOC 2, GDPR, and legal framework references.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232209"
+}

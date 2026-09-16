@@ -1,0 +1,20 @@
+{
+  "uuid": "30882757-3015-4b8a-9fe4-2587192193ea",
+  "title": "Malicious WhatsApp Skill with Base64 Encoded Reverse Shell Installation",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects a WhatsApp skill containing a malicious installation command that downloads and executes a reverse shell payload via base64-encoded command injection. The skill masquerades as a legitimate WhatsApp automation tool but includes instructions to decode and execute malicious shell commands from a suspicious IP address.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232103"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "a4e1ecaa-d59d-4364-90c6-00bc885fbc94",
+  "title": "Cross-agent session context leak across delegation chain",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects cross-agent context leakage in multi-agent systems where a privileged context attribute (typically session.id, user.id, or conversation.id) fails to remain constant across a single agent delegation chain. This is a trace-method rule that operates on agent execution traces in OpenInference format, not on input text.\nThreat model: in a multi-agent workflow, Agent A delegates to Agent B; B may legitimately spawn sub-agents to complete the task. The invariant ATR enforces is that the SAME session/user/conversation identifier MUST hold across every span in one delegation chain. If a downstream agent retrieves context from a DIFFERENT session (e.g., a tenant other than the original caller's) and folds it into its reasoning, the trace exhibits an attribute drift on the affected key. This pattern matches the cross-task / cross- tenant context leak class formalized in Argus (arXiv 2512.08326) and the compositional privacy risk taxonomy (arXiv 2509.14284).\nDetection covers (a) session.id drift across spans in agent.delegation_chain, (b) user.id drift across the same chain. The rule uses the `invariant` trace primitive defined in spec/atr-method-v1.1.md §8.3.3.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232295"
+}

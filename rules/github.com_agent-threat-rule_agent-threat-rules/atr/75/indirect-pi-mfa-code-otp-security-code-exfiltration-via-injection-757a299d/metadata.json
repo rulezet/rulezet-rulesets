@@ -1,0 +1,21 @@
+{
+  "uuid": "757a299d-4fac-4489-8773-47b442cb4ccb",
+  "title": "Indirect PI — MFA Code / OTP Security Code Exfiltration via Injection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection payloads that instruct an agent to read an OTP (one-time password), MFA verification code, or security code from the user's email or SMS and forward it to an attacker-controlled address. This enables real-time account takeover: the attacker injects a payload, the agent reads the MFA code from an incoming email, and forwards it to the attacker before the time window expires. The attack pattern uses a \"IMPORTANT!!! Ignore all previous instructions\" override combined with MFA/security-code keywords and an email-forward action. Derived from vpibench indirect-pi-exfil-mfa-code corpus.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1111"
+  ],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232370"
+}

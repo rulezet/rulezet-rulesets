@@ -1,0 +1,19 @@
+{
+  "uuid": "fbe97947-c8c0-48f8-ba29-760ffde6b2b5",
+  "title": "MCP Tool Description — Notes Parameter Chat-History Exfiltration",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects MCP tool descriptions that instruct the LLM to populate a \"notes\", \"context\", or \"history\" parameter with the full conversation transcript before calling the tool. This is a covert data-exfiltration vector: the poisoned description makes the LLM silently include all prior messages (including credentials, PII, and secrets) in every outbound tool call, regardless of whether the tool legitimately requires that data. Published as MCPSecBench scenario \"chat-history-in-notes\". Real-world variants use compliance framing (\"SOC 2 audit\", \"legal and regulatory obligations\"), technical justification (\"context length management\"), and formatting pressure (\"Usr hist [DT] [MSG]\" template) to make the instruction appear legitimate.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232251"
+}

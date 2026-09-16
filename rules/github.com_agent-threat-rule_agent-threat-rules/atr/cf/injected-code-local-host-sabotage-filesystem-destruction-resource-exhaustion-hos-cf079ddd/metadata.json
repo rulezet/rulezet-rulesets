@@ -1,0 +1,21 @@
+{
+  "uuid": "cf079ddd-f975-42ab-8e20-9a67ee39cccf",
+  "title": "Injected Code — Local Host Sabotage (Filesystem Destruction / Resource Exhaustion / Hosts Tamper)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects injected code that sabotages the local host: recursive root deletion (shutil.rmtree('/')), removal of critical system binaries (libc), fork bombs, megabyte-string memory bombs in an infinite loop, infinite window spawning, or DNS hijack by appending to /etc/hosts.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232165"
+}

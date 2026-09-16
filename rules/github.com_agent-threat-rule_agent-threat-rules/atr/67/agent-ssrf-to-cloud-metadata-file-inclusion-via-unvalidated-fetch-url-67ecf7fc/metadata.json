@@ -1,0 +1,24 @@
+{
+  "uuid": "67ecf7fc-988f-4263-91de-1168834bf210",
+  "title": "Agent SSRF to cloud metadata / file inclusion via unvalidated fetch URL",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "An agent tool fetches an attacker-controlled URL with no scheme allowlist or private-network block, letting it reach cloud-metadata endpoints (credential theft), local files via file://, or SSRF-only schemes (gopher/dict). Detects those unambiguous internal targets. Generalizes across CVE-2026-40150/40160 (PraisonAIAgents), CVE-2026-7817 (pgAdmin), CVE-2026-45401 (Open WebUI).",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2026-40150",
+    "CVE-2026-40160",
+    "CVE-2026-45401",
+    "CVE-2026-7817"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232241"
+}

@@ -1,0 +1,32 @@
+{
+  "uuid": "47cce09e-0b20-488f-82ef-11e5b8681746",
+  "title": "Agent / MCP tool path traversal and arbitrary file access",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "An MCP/agent file tool receives a path argument that escapes its intended directory — a deep ../ chain or URL-encoded traversal — enabling arbitrary file read/write (incl. zip-slip). Generalizes a cluster of MCP file-handler CVEs and agent-app path traversals.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2026-32719",
+    "CVE-2026-34070",
+    "CVE-2026-40576",
+    "CVE-2026-42249",
+    "CVE-2026-7020",
+    "CVE-2026-7318",
+    "CVE-2026-7599",
+    "CVE-2026-7728",
+    "CVE-2026-7811",
+    "CVE-2026-9467"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232314"
+}

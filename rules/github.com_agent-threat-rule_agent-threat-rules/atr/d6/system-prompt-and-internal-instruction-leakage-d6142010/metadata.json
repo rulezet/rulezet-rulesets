@@ -1,0 +1,22 @@
+{
+  "uuid": "d6142010-b698-4196-b805-ed02c672e6a7",
+  "title": "System Prompt and Internal Instruction Leakage",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects when an agent's output reveals system prompt content, internal\ninstructions, guardrail configurations, or confidential operational\nparameters. This consolidated rule covers both direct system prompt\ndisclosure and indirect instruction leakage through behavioral\nself-description. Leaking internal instructions enables adversaries to\nmap the agent's constraints and craft targeted bypass attacks.\nCovers: direct prompt quoting, instruction paraphrasing, guardrail\nrevelation, config exposure, and non-disclosure rule echoing.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-32711",
+    "CVE-2026-24307"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232270"
+}

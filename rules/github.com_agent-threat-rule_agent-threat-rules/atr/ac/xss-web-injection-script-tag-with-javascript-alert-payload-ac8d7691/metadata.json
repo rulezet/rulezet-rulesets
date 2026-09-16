@@ -1,0 +1,19 @@
+{
+  "uuid": "ac8d7691-3bb6-486d-9c42-ae397e8a94eb",
+  "title": "XSS Web Injection - Script Tag with JavaScript Alert Payload",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects XSS injection attempts using script tags with JavaScript alert payloads, including byte-encoded prefix variants used to bypass naive filters. This rule covers the structural pattern of script-tag injection with encoded whitespace or protocol prefix bytes (\\\\xe1\\\\xa0\\\\x8e, \\\\xe2\\\\x80\\\\x82, \\\\xe2\\\\x80\\\\x86, \\\\x3b) preceding a javascript: protocol or alert() call. These are commonly used in garak web_injection probe corpus to test LLM content-filter bypasses. Generalized to catch bare script-alert, encoded-prefix variants, and javascript-protocol variants without requiring exact byte-sequence literals.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232412"
+}

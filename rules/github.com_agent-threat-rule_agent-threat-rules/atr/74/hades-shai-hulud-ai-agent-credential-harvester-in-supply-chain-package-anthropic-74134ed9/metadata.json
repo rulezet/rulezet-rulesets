@@ -1,0 +1,21 @@
+{
+  "uuid": "74134ed9-9bd7-41cb-acba-dafcf736e7ca",
+  "title": "Hades / Shai-Hulud — AI-Agent Credential Harvester in Supply-Chain Package (Anthropic / Claude / MCP key theft + exfil)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the AI-agent credential-theft stage of the Shai-Hulud \"Hades\" / Mini-Shai-Hulud / Miasma campaign (Socket, 2026-06-08; Dark Reading / The Hacker News, 2026-06-09..11). Malicious npm/PyPI packages — many typosquatting MCP libraries (langchain-core-mcp, instructor-mcp, openai-mcp, tiktoken-mcp, ray-mcp-server) — drop a Bun/Node credential stealer that runs at install / import time and harvests AI-agent secrets: ANTHROPIC_API_KEY, the Claude desktop / Claude Code config, and .mcp.json, alongside .npmrc, .pypirc, SSH keys and cloud credentials, then exfiltrates them to an attacker endpoint. This rule fires on the agent-specific signal — code that reads an AI-agent credential or config surface and is co-located with an outbound network send, or a \"harvest-everything\" credential sweep that includes an AI-agent secret. It complements ATR-2026-00575 (Miasma agent-config backdoor), which covers the auto-run config injection rather than the credential exfil. It is signature detection of the known pattern, not a guarantee against re-pathed or obfuscated variants (see false_positives + evasion_tests).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232265"
+}

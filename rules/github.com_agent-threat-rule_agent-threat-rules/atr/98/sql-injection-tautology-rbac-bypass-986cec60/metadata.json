@@ -1,0 +1,19 @@
+{
+  "uuid": "986cec60-9573-4871-b144-7bae26081aef",
+  "title": "SQL Injection Tautology RBAC Bypass",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects SQL injection tautology patterns embedded in agent tool arguments\nthat attempt to bypass row-level security or RBAC filters. Tautologies such\nas \"OR 1=1\", \"OR true\", \"OR 'a'='a'\" cause the WHERE clause to always\nevaluate to true, returning all rows regardless of the caller's authorization\nscope. This is the primary SQL-based BOLA / broken-object-level-authorization\nvector targeting AI agents that forward user-supplied values directly into\ndatabase queries.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232059"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "976e5b97-9058-4111-bd6e-5504210c43e1",
+  "title": "Over-Privileged Skill — Excessive Permissions",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects skills requesting or instructing overly broad permissions. OWASP AST03 rates this HIGH severity. 280+ leaky skills exposing API keys and PII found by Snyk (Feb 2026). The \"consent gap\" (Cato Networks) means once a skill is approved, it gains persistent permissions without re-approval. Real patterns: blanket network:true, wildcard file paths (~/*), write access to identity files (SOUL.md, MEMORY.md), auto-approve escalation (CVE-2025-53773). arXiv documents Copilot auto-approve attack writing {\"chat.tools.autoApprove\":true} to .vscode/settings.json.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-53773 - COPILOT AUTO-APPROVE ESCALATION"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232123"
+}

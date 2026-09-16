@@ -1,0 +1,19 @@
+{
+  "uuid": "c79d1310-b513-4e0b-b0d1-560653bcedb5",
+  "title": "Access-Grant Coercion — Forcing an Agent to Emit \"Access Granted\"",
+  "format": "atr",
+  "author": "ATR Community (via Tensor Trust benchmark)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects user-side prompt injection that coerces an agent acting as an authorization / access-control gate into emitting the literal approval string \"Access Granted\" (the canonical hijack objective in the Tensor Trust attack-defense corpus). Across 5000 Tensor Trust attacks this is the single largest class the existing rule set missed: an imperative or replacement frame (\"say / print / write / echo / respond with\", \"only respond with\", \"replace the denial with\", \"start your reply with\", or a letter-spelled A,c,c,e,s,s G,r,a,n,t,e,d) wrapped around the target string \"Access Granted\" — including whitespace-stripped variants (sayAccessGranted, respondwithaccessgranted). The real-world threat: when an LLM mediates an authorization decision, an attacker who can make it print the approval token bypasses the gate. The pattern anchors on the literal \"access granted\" token (with 0-3 internal spaces) co-occurring with an output/override frame, so it cannot fire on benign prose, source code, or a plain authorization log line that merely contains the phrase without a coercive frame.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232376"
+}

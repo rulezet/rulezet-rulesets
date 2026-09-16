@@ -1,0 +1,19 @@
+{
+  "uuid": "5ae7287c-3454-4550-827c-7a617c1bdf3d",
+  "title": "Targeted Harmful Content Generation Against People or Protected Groups (Semantic)",
+  "format": "atr",
+  "author": "ATR Community (via AgentHarm benchmark)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Semantic detector for AgentHarm tasks that direct the agent to GENERATE or MASS-DELIVER harmful content aimed at specific people or protected groups, where the phrasing is unbounded and paraphrasable: targeted harassment/threats, hateful or discriminatory content toward protected groups, non-consensual or solicited sexually explicit content about real people, and coordinated defamation/brigading. This intent is outside the scope of the six existing semantic judges (PII extraction 01770, jailbreak framing 01771, internal-state recon 01772, excessive agency 01773, RAG/memory poisoning 01774, MCP manifest poisoning 01775), which all concern attacks ON the agent rather than user-directed harmful-content tasks. Semantic judgment is primary; the narrow regex fallback anchors only on the clearest operational carriers.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232180"
+}

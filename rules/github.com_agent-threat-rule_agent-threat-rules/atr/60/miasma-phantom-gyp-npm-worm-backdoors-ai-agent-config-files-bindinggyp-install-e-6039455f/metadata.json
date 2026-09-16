@@ -1,0 +1,21 @@
+{
+  "uuid": "6039455f-1b97-4b8d-9c82-a9f70811200e",
+  "title": "Miasma / Phantom Gyp — npm Worm Backdoors AI-Agent Config Files (binding.gyp install-exec + auto-run config injection)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the agent-config persistence used by the self-replicating npm worm tracked as \"Phantom Gyp\" / \"Miasma\" (StepSecurity & OX Security, 2026-06-03/04; ~57 packages, 286+ malicious versions in under two hours; biggest victims @vapi-ai/server-sdk and ai-sdk-ollama). Two artifacts: (1) the install-time primitive — a tiny binding.gyp abusing gyp command-substitution `<!(...)` / `<!@(...)` to fetch-and-run a remote payload during `npm install`, bypassing postinstall scanners; and (2) the novel persistence — backdoors written into the config surfaces that AI coding assistants auto-execute: .claude/setup.mjs (SessionStart hook), .cursor/rules/*.mdc, .gemini/settings.json, and .vscode/tasks.json with runOn:folderOpen. Those auto-run on the next session or folder-open and poison subsequent AI-generated code. Generic npm scanners inspect package tarballs and miss the agent-config persistence; this rule fires on the on-disk artifact shape — a gyp substitution that fetch-pipes to a shell, or an agent auto-run surface co-located with a process-spawn / remote-fetch token. It is signature detection of the known pattern, not a guarantee against re-pathed or obfuscated variants (see false_positives + evasion_tests).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232252"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "e0e9a591-c1cd-46ec-b854-5fa99086edac",
+  "title": "MCP stdio server config command injection via unvalidated test endpoints",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "An MCP server config (command/args/env for the stdio transport) supplied in an agent request spawns the given command on the host. Detects a config whose command is a raw shell / carries shell metacharacters, or whose args pass a code-execution flag (-c/-e) with a payload. Generalizes beyond CVE-2026-42271 (LiteLLM) to any endpoint that accepts an MCP stdio config.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2026-42271"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232229"
+}

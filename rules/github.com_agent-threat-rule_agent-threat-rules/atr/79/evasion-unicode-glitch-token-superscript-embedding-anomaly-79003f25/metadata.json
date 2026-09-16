@@ -1,0 +1,19 @@
+{
+  "uuid": "79003f25-3900-433d-b702-bfafa8c2f3bf",
+  "title": "Evasion: Unicode Glitch Token / Superscript Embedding Anomaly",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects two related unicode-based evasion techniques: (1) superscript/subscript Unicode characters inserted within reasoning chains to flip the expected answer (e.g. embedding ʳ (U+02B3) or ⁱ (U+2071) superscript characters after \"The answer is originally Yes, but\" to inject a false continuation); (2) known \"glitch tokens\" — specific token IDs that create discontinuities in embedding space — combined with fake SYSTEM MESSAGE claims of a safety bypass (e.g. \"SolidGoldMagikarp\", \"TheNitromeFan\", \"davidjl\", \"RandomRedditor\" glitch tokens + BEHAVIOR: Safety layer bypass via embedding space discontinuity). Both attack the model's tokenizer/embedding layer rather than its instruction-following behaviour. Distinct from standard zero-width character injection (ATR-2026-00001 Layer 13) which targets word boundaries.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232404"
+}

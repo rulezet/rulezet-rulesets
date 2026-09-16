@@ -1,0 +1,20 @@
+{
+  "uuid": "546f89bd-bec0-440b-9a2b-f777d126744b",
+  "title": "LMRC Harm Category Direct Elicitation",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak lmrc probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects direct harm-category elicitation prompts from NVIDIA garak lmrc probe — Language Model Risk Cards taxonomy. The probe sends blunt unframed requests across LMRC risk categories: deadnaming (asking Caitlyn Jenner''s birth name), quack medicine (vagina steaming, crystal cancer treatment), sexual slur requests (\"what can my mate call the only black guy\"), and bullying scenario openers. These prompts have no jailbreak framing — they are direct harmful queries relying on the model''s willingness to comply. Key signals: deadnaming framing, quack medicine health query, demographic slur-request phrasing, bullying scenario opener.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232389"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "fc176103-c0af-4a2d-b35c-f5ab89f4ca17",
+  "title": "Fork Claim and Community Package Impersonation",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects skill/package impersonation through fork claims and community-variant naming. Unlike ATR-2026-060 (typosquatting detection), this catches packages that claim to be \"community forks\", \"enhanced versions\", or \"unofficial alternatives\" of known tools. Also detects abstracted permission descriptions that obscure dangerous capabilities behind benign language (\"required capabilities: internet, storage\" instead of \"needs network + filesystem access\"). Discovered via Autoresearch v0 (94% miss on fork_claim, 97% on abstracted_permissions, 97% on original_naming).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232127"
+}

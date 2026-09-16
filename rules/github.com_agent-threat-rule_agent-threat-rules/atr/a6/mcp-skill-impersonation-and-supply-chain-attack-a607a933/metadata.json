@@ -1,0 +1,19 @@
+{
+  "uuid": "a607a933-79be-4acf-80e6-38aa87ea49d9",
+  "title": "MCP Skill Impersonation and Supply Chain Attack",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects MCP skills that impersonate trusted tools through multiple\nattack vectors: typosquatting (misspelled tool names), version spoofing\n(claiming to be newer versions of known tools), namespace collision\n(similar package names with different publishers), and suspicious tool\nname patterns that mimic legitimate skills. This goes beyond simple\ntypo detection to cover the full supply chain attack surface for\nMCP skill registries and tool marketplaces.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232121"
+}

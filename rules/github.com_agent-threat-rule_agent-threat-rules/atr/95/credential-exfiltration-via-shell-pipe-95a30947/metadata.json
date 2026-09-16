@@ -1,0 +1,20 @@
+{
+  "uuid": "95a30947-cb80-4edf-baf2-7cf3ca1667f0",
+  "title": "Credential Exfiltration via Shell Pipe",
+  "format": "atr",
+  "author": "TYSYS (Wind) — skill-sanitizer project",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects credential theft patterns where environment variables containing API keys, secrets, or tokens are piped to external commands (curl, nc, etc.) or echoed for capture. Also detects explicit references to provider-specific API key variable names (ANTHROPIC_*, OPENAI_*, AWS_*, etc.) which may indicate reconnaissance or targeting. Derived from real-world Claude Code skill scanning.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232308"
+}

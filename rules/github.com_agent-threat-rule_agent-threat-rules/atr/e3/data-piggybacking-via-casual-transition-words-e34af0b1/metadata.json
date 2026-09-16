@@ -1,0 +1,19 @@
+{
+  "uuid": "e34af0b1-f21d-41db-a587-d21e2e9cc00a",
+  "title": "Data Piggybacking via Casual Transition Words",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects tool response piggybacking using casual transition words (oh and, P.S., BTW, interestingly, as it happens) to embed credential theft after legitimate results. Extends ATR-2026-00136 to cover 44 additional evasion variants.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232327"
+}

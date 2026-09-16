@@ -1,0 +1,19 @@
+{
+  "uuid": "dfa7fed0-0035-42e6-b1eb-d9e01a3315a8",
+  "title": "Indirect Prompt Injection via Tool / API Response — Attacker Instruction Embedded in Returned Tool Output (InjecAgent Threat Model)",
+  "format": "atr",
+  "author": "ATR Community (agent-benchmarks sync)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the InjecAgent indirect-prompt-injection class: an attacker instruction delivered NOT by the user but inside the DATA RETURNED BY A TOOL / API CALL that the agent then ingests as an observation. The tool output looks like a normal API/tool response (a JSON/structured result blob, an HTTP status, a search/email/db result), and then — appended to that result — carries an agent-directed imperative that hijacks the agent into performing a NEW sensitive action (transfer money, send/forward/email data, delete records, POST/exfiltrate to an endpoint, grant access). The detectable signature is the co-occurrence of (a) tool-output / API-result framing, (b) an injected out-of-band imperative connector (\"ignore the above\", \"as an additional step\", \"IMPORTANT!!! you must now ...\"), and (c) a sensitive transactional action verb aimed at the assistant. This is DISTINCT from a user typing an instruction (this fires on the observation / tool_response channel), from ATR-2026-00083 / 00002 (which key on generic \"ignore previous instructions\", fake [SYSTEM] delimiters, and hidden/encoded delivery — reveal/output-system-prompt verbs, not the InjecAgent exfil/transact verb set wrapped in a result blob), from ATR-2026-00399 (separator-token-delimited document injection), and from ATR-2026-00579 (which fires on a tool DESCRIPTION field at listing time, not on the runtime tool RESPONSE).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232396"
+}

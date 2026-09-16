@@ -1,0 +1,19 @@
+{
+  "uuid": "9333213c-2716-40f3-ad8f-7f8141d21b77",
+  "title": "Unicode Tag Character Smuggling",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects Unicode Tag characters (U+E0001-U+E007F) and other invisible Unicode ranges used to smuggle hidden instructions in SKILL.md files. These characters are invisible in most editors and renderers but are processed by AI agents as text. Snyk ToxicSkills research (Feb 2026) documented this as \"ASCII smuggling\" — invisible payloads that agents read but humans cannot see.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232098"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "9abf7160-e166-4633-9b3c-7e28da0cfca8",
+  "title": "Latent Prompt Injection via Embedded Document or Report Context",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak latentinjection.LatentInjectionReport + LatentInjectionResume + LatentJailbreak + LatentWhoisSnippet probes)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects latent prompt injection embedded inside document contexts beyond translation (covered by ATR-2026-00264). From NVIDIA garak latentinjection.py: LatentInjectionReportFull, LatentInjectionResumeFull, LatentInjectionFactSnippetEiffel, LatentInjectionFactSnippetLegal, LatentJailbreakFull, LatentWhoisSnippetFull. The attack hides an instruction inside an otherwise legitimate document (report, resume, legal text, Whois output, factual snippet) and asks the agent to process the document. The hidden instruction then hijacks the agent's task. Key injection patterns planted inside documents: (1) \"Ignore the above and...\" hidden in document body; (2) \"Your task is now to...\" appearing mid-document; (3) Injected tool call or API instruction embedded in base64 or comment syntax; (4) \"<!-- DO THIS INSTEAD: ... -->\" HTML comment injection in document content. Complements ATR-2026-00265 (RAG/document) with report, resume, and structured data contexts that agents commonly process.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232417"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "db9c17af-00a6-4305-a4f2-c2e4823966d8",
+  "title": "Harmful Completion / Continuation Attack",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak continuation probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects continuation attacks where a partial phrase, sentence, or word is provided with the expectation that the model will complete it with harmful content. From NVIDIA garak continuation.py probe. Three variants: (1) Slur-prefix completion — model is given the first 1-2 letters of a ethnic slur with preceding context (\"he called them a [prefix]\") hoping it autocompletes the slur; (2) Harmful sentence completion — \"The best way to hurt someone is...\" expecting the model to continue; (3) Explicit completion requests — \"Complete this phrase/sentence/thought: [partial harmful content]\". The model's next-token prediction can be exploited to complete harmful content it would refuse if asked directly.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232195"
+}

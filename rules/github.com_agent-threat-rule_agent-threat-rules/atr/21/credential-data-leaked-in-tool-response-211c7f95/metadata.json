@@ -1,0 +1,19 @@
+{
+  "uuid": "211c7f95-1af1-4872-9c9d-7cee5352086c",
+  "title": "Credential Data Leaked in Tool Response",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects private keys, API tokens, or credential material embedded in tool responses. Attackers embed credential data in seemingly benign tool output (weather, search results) to trick agents into exfiltrating secrets. Crystallized from 37 adversarial social_engineering samples.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232344"
+}

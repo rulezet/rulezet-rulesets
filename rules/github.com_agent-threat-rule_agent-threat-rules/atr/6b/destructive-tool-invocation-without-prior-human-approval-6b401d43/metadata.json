@@ -1,0 +1,19 @@
+{
+  "uuid": "6b401d43-39fd-4708-8cb8-bc74161c2d0e",
+  "title": "Destructive tool invocation without prior human approval",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects a destructive tool call in an agent execution trace that is NOT preceded by an explicit human-approval span. This is a trace-method rule using the `require` primitive (spec/atr-method-v1.1.md §8.3.2), which fires when an expected predecessor is MISSING — the canonical mechanism for catching silent failures.\nThreat model: many agent frameworks let operators classify tool calls by privilege (read / write / destructive). Production policy says destructive calls (e.g., file deletion, transaction commit, schema migration) MUST be gated by a human-in-the-loop approval. In practice, prompt-injection attacks or runaway agents bypass this gate by inducing the LLM to issue a destructive call directly without surfacing it for approval. The trace emits the destructive TOOL span without an AGENT span carrying attributes.human_approval=true at any earlier point in the same trace.\nNo error is thrown. The action succeeds. The trace looks \"normal\" if you only inspect tool inputs/outputs. The rule fires by detecting the absence of the required predecessor — the trace-method capability that pattern-based detection cannot express.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232067"
+}

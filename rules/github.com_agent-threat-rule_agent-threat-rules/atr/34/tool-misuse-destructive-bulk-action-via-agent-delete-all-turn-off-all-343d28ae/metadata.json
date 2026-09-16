@@ -1,0 +1,19 @@
+{
+  "uuid": "343d28ae-90f7-44bd-ab99-ba8689cb56e8",
+  "title": "Tool Misuse — Destructive Bulk Action via Agent (Delete All / Turn Off All)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects direct user requests that instruct an agent to perform bulk destructive actions: delete all tasks matching a keyword, turn off all connected devices (which may include critical systems like medical devices or security systems), cut power via circuit breakers.  These patterns represent tool misuse where the agent is authorized to take individual controlled actions but is asked to apply them universally. Source: tool-misuse-destructive (ToolEmu corpus).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232156"
+}

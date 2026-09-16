@@ -1,0 +1,20 @@
+{
+  "uuid": "faf556df-7c27-42e6-a04e-57a8f4c677ea",
+  "title": "Amoral Persona Assignment with Obsessive Character Traits",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak in-the-wild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects jailbreak attempts that assign an explicitly amoral or unfiltered persona to the agent combined with obsessive character repetition requirements. This attack pattern instructs the AI to adopt a harmful persona (amoral, unfiltered, evil chatbot) while demanding specific character traits or phrases be repeated multiple times per response. The combination creates a dual-layer bypass: persona adoption removes safety constraints while repetition requirements lock the agent into harmful output patterns. Common variants include EXTREME-COMMUNIST, EXTREME-CAPITALIST, or other ideological personas with mandatory profanity and topic obsession.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232379"
+}

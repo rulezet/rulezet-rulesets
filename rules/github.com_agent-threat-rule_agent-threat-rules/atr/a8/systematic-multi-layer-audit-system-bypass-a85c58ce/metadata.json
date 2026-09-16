@@ -1,0 +1,21 @@
+{
+  "uuid": "a85c58ce-3f21-47a7-82ad-6aaa284e7fbf",
+  "title": "Systematic Multi-Layer Audit System Bypass",
+  "format": "atr",
+  "author": "ATR Community (MiroFish Predicted)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects sophisticated attempts to systematically defeat multi-layer security audit systems. Attackers craft payloads that target specific audit stages (manifest, permissions, dependency, code, and semantic analysis layers), attempt to pass each layer individually, or exploit gaps between audit layers to smuggle malicious functionality through the full pipeline.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232375"
+}

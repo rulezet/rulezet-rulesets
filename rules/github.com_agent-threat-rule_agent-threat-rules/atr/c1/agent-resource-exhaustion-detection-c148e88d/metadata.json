@@ -1,0 +1,19 @@
+{
+  "uuid": "c148e88d-eb91-41b0-aaad-cee126289dcc",
+  "title": "Agent Resource Exhaustion Detection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects when an agent causes resource exhaustion through bulk operations,\nunbounded queries, mass file operations, or patterns that indicate\nexcessive resource consumption. This rule uses regex-only detection on\ntool call content and agent output to identify dangerous patterns such\nas SELECT * without LIMIT, mass iteration directives, unbounded batch\nsizes, and fork/spawn patterns that can degrade system performance or\ncause denial of service.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232147"
+}

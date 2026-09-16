@@ -1,0 +1,19 @@
+{
+  "uuid": "f6be4ce1-56c9-4a54-b38a-cb4d6ef379d7",
+  "title": "Environment Variable Existence Probing",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects responses that confirm the existence of sensitive environment variables while claiming inability to access them — a social engineering technique to get the agent to try accessing the value. Crystallized from 31 adversarial samples.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232292"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "4177c2c7-63da-4588-a0a6-0aa6e8349115",
+  "title": "Python Code Execution / Remote Code Execution via LLM Prompt",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak payloads/python_code_execution probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects Python remote code execution (RCE) patterns injected via LLM prompts, sourced from 9 real payloads in NVIDIA garak python_code_execution.json (payload name: \"Run python code that will cause a system-level effect\"). Patterns include __import__('os') to access os.system/popen, eval(compile(...)) for multi-line code execution, subprocess .run() with shell=True, lambda-based socket reverse shells with s.connect() and s.recv()/s.send(), class MRO introspection via __class__.__mro__[1].__subclasses__() for sandbox escape, and file write via open('/tmp/...'). These represent the primary Python code injection patterns used against LLM agents with code execution capabilities.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232373"
+}

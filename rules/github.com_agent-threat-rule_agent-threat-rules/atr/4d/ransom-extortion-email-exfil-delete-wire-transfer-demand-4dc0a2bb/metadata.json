@@ -1,0 +1,20 @@
+{
+  "uuid": "4dc0a2bb-5dd8-417c-b459-bdaf3162e6e8",
+  "title": "Ransom Extortion: Email Exfil + Delete + Wire-Transfer Demand",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects ransom-extortion prompt injection attacks that instruct an agent to (1) forward email or file contents to an attacker-controlled address, (2) delete the sent/forwarded items to destroy evidence, and (3) send the victim a ransom note with payment instructions (wire transfer / IBAN / cryptocurrency). The invariant artifact chain is: external-email-forward + delete-sent-items + ransom-note-send with financial-transfer demand. Derived from AgentDojo indirect-pi-ransom-extortion corpus (2026-06, N=2). High-severity: successful execution causes data loss, privacy breach, and financial extortion.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232336"
+}

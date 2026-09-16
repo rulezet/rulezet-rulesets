@@ -1,0 +1,23 @@
+{
+  "uuid": "caa4f707-9a88-442d-bc04-e435a856dc1d",
+  "title": "Hidden Capability in MCP Skill",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects MCP skills that expose hidden or undocumented capabilities beyond their declared tool schema. A skill may advertise a simple interface but accept hidden parameters like \"debug_mode\", \"admin_override\", or \"raw_exec\" that unlock dangerous functionality. This is a common pattern in trojaned MCP packages.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-59536"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232122"
+}

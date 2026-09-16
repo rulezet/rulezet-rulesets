@@ -1,0 +1,19 @@
+{
+  "uuid": "2d93e046-3581-4641-bb91-cd6a953da836",
+  "title": "OAuth and API Token Interception",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects patterns indicating OAuth token interception, API key forwarding, or\nauthorization header theft. Attackers may instruct agents to capture bearer tokens,\nrefresh tokens, or client secrets and redirect them to attacker-controlled endpoints.\nThis includes suspicious redirect_uri manipulation in OAuth flows and bulk token\nextraction from agent context.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232328"
+}

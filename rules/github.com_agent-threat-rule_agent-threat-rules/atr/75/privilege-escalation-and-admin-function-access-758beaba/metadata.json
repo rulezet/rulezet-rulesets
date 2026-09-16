@@ -1,0 +1,23 @@
+{
+  "uuid": "758beaba-2942-4535-8651-9b0514d16b25",
+  "title": "Privilege Escalation and Admin Function Access",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Consolidated detection for privilege escalation attempts, covering both\ntool permission escalation and unauthorized admin function access. Detects\nwhen an agent requests or uses tools exceeding its permission scope,\ninvokes administrative functions (user management, database admin, system\nconfig), attempts system-level operations (sudo, chmod, chown), container\nescape techniques (nsenter, chroot), or Kubernetes privilege escalation\n(kubectl exec). This rule enforces least-privilege boundaries across all\nagent tool interactions.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2026-0628"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232061"
+}

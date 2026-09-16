@@ -1,0 +1,20 @@
+{
+  "uuid": "9e9ea8fd-2962-4e0d-b2f5-addaf485f5a6",
+  "title": "Glitch Token Destabilization Attack",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak glitch.GlitchFull probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects injection of known glitch tokens — specific token sequences that cause unusual, unstable, or bypassing behavior in transformer-based LLMs using shared tokenizers. From NVIDIA garak glitch.py probe (GlitchFull). Glitch tokens include: (1) Control characters (null byte \\x00, STX \\x02, DEL \\x7F) which some models mishandle; (2) ÃÂÃÂ repeated patterns — tokenizer artifact strings from misencoded UTF-8 that cause token boundary confusion; (3) Known named glitch tokens like \"davidjl\", \"SolidGoldMagikarp\", \"ForgeModLoader\", \"PsyNetMessage\", \"wcsstore\", \"guiActive\", \"guiActiveUn\" — tokens that are anomalously rare in training data and cause models to hallucinate or fail to repeat accurately. The attack exploits tokenizer internals to destabilize safety filter performance.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232196"
+}

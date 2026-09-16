@@ -1,0 +1,20 @@
+{
+  "uuid": "bca3afcd-a027-4946-a919-fa490c93ef92",
+  "title": "Agent Memory Manipulation",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects attempts to poison or manipulate an agent's persistent memory, long-term context, or state storage. Attackers inject commands that instruct the agent to remember false information, update its own instructions, or modify its persistent behavior across sessions. Successful memory poisoning can establish persistent backdoors that survive context resets and affect all future interactions.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232288"
+}

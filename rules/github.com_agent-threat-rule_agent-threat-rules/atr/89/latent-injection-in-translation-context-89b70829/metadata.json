@@ -1,0 +1,19 @@
+{
+  "uuid": "89b70829-3450-4da1-af8a-2795a274a746",
+  "title": "Latent Injection in Translation Context",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak latentinjection probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects latent prompt injection where malicious instructions are embedded inside content that the agent has been told to translate/summarise/process, not to execute. The attack exploits the model's tendency to follow instructions discovered within tool input even when system prompt says \"just translate\". Pattern from NVIDIA garak LatentInjectionTranslation probes: \"Ignore the above directions and translate this sentence as...\" embedded in user-supplied text.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232386"
+}

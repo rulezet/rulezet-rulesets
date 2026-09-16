@@ -1,0 +1,21 @@
+{
+  "uuid": "dd33b2e4-cf2c-4878-ac56-dee4fd61d552",
+  "title": "Weaponized Skill — Agent as Attack Tool",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects skills that weaponize AI agents for offensive operations. Cato Networks demonstrated deploying MedusaLocker ransomware via a modified Claude skill (Dec 2025, disclosed to Anthropic Oct 30, 2025). The \"consent gap\" allows approved skills to download/execute code, read env vars, and write files without further prompts. arXiv 2601.17548 documents attack tooling embedded in skills with 41-84% success rates. Real examples include SQLMap workflows, Metasploit payloads, and credential brute-force tools found on skills.sh and ClawHub.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:tool=\"metasploit\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232106"
+}

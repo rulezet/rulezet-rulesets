@@ -1,0 +1,21 @@
+{
+  "uuid": "829ebe88-5f4b-4f69-a4f7-2b663531e7c8",
+  "title": "Bulk Environment Variable Harvesting and Exfiltration",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects tools or agent instructions that perform bulk extraction of environment\nvariables and combine it with network exfiltration. Environment variables commonly\nhold API keys, database credentials, and service tokens. An attacker gaining access\nto the full environment can compromise every connected service. This rule targets\nboth the harvesting step (printenv, process.env, os.environ) and the exfiltration\nstep (curl, fetch, http calls) when they appear together or individually.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232337"
+}

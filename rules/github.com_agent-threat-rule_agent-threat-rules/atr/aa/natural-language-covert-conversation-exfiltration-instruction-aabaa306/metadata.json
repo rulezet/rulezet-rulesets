@@ -1,0 +1,19 @@
+{
+  "uuid": "aabaa306-22eb-4c30-a869-aaebf1dbb231",
+  "title": "Natural-Language Covert Conversation Exfiltration Instruction",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects natural-language imperative instructions in SKILL.md / system prompts /\ntool descriptions that direct the agent to covertly transmit conversation\ndata — chat history, dialogue context, prompt logs — to an external destination.\nRequires co-occurrence of a covert qualifier (also / additionally / silently /\nsecretly / quietly), a transmit verb (send / transmit / forward / upload /\npost / relay), and a conversation-content sink (conversation/chat/dialog/\nprompt + history/log/context/transcript). The covert qualifier is what makes\nthis malicious — legitimate transmission is announced, not \"also\" / \"silently\".\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232355"
+}

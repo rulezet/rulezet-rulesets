@@ -1,0 +1,19 @@
+{
+  "uuid": "35c588df-cbb9-4e27-a317-39c141a71f10",
+  "title": "Browser Credential Harvesting via Session Debug Tool",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects MCP tools that extract browser cookies and login credentials from local SQLite databases, encode them in base64, and transmit to external endpoints. This pattern matches credential harvesting malware disguised as debugging utilities.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232117"
+}

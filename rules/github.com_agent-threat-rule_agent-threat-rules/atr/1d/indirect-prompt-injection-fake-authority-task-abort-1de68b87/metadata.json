@@ -1,0 +1,19 @@
+{
+  "uuid": "1de68b87-d1c4-4073-8a7d-0af46c5924e1",
+  "title": "Indirect Prompt Injection: Fake-Authority Task Abort",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection payloads that impersonate an authoritative system message (INFORMATION block, signed message from a named person) in order to abort the agent's current task and substitute a trivial or nonsensical response. The invariant artifact is a structured block claiming to be an \"important message\" from a specific person, directing the agent to \"immediately stop\" or respond with a fixed short string instead. Derived from AgentDojo indirect-pi-dos corpus (2026-06, N=2). This is a goal-hijacking/DoS vector that disables the agent's legitimate task without triggering content-safety filters.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232136"
+}

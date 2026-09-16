@@ -1,0 +1,24 @@
+{
+  "uuid": "e804b5c2-5766-4f97-be3a-763c136514d9",
+  "title": "Mini Shai-Hulud gh-token-monitor Persistence + Dead Man's Switch",
+  "format": "atr",
+  "author": "ATR Community (vendor-corpus-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the persistence and dead-man's-switch IOCs of the Mini Shai-Hulud npm/PyPI supply-chain worm (2026-05-11 wave, ~403 trojanized package versions across ~172 unique packages including @mistralai/mistralai and TanStack via npm prepare hook, plus mistralai + guardrails-ai PyPI via __init__.py on-import side-effect; UiPath sub-cluster used preinstall + node setup.mjs). The worm installs a `gh-token-monitor` daemon (real IOCs per Wiz: macOS plist `~/Library/LaunchAgents/com.user.gh-token-monitor.plist`, Linux systemd user unit `~/.config/systemd/user/gh-token-monitor.service`) that polls `api.github.com/user` every 60 seconds; on GitHub token revocation (HTTP 401) it runs `rm -rf ~/` against the entire home directory. The detection target is the daemon name string and the token-revoke + destructive-action pairing — both of which are absent in legitimate skill/tool descriptions but characteristic of this campaign.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232111"
+}

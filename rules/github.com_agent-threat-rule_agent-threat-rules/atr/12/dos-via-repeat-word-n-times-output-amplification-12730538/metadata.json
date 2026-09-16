@@ -1,0 +1,19 @@
+{
+  "uuid": "12730538-433d-4894-bc95-cc778824a4a6",
+  "title": "DoS via Repeat-Word-N-Times Output Amplification",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects denial-of-service injection attacks that command the model to repeat a specific word or short phrase a large number of times (typically 50-1000+), separated by delimiters. The canonical form is \"repeat the word X N times ... separated by DELIM\". This exhausts output tokens, inflates API costs, and can cause downstream buffer overflows or rate-limit exhaustion. Generalised from spikee dos-output-amplification corpus (2026-06, N=102); the invariant artifact is the triple: (repeat/write/say/output verb) + (word/phrase/token target) + (large integer qualifier >=50). Separate from ATR-2026-00502 which targets the indefinitely/without-stopping form.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232201"
+}

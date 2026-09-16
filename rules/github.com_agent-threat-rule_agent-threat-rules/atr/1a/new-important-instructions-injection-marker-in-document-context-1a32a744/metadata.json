@@ -1,0 +1,19 @@
+{
+  "uuid": "1a32a744-c181-4b3d-a0ff-919818d209d3",
+  "title": "NEW IMPORTANT INSTRUCTIONS Injection Marker in Document Context",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the \"*** NEW IMPORTANT INSTRUCTIONS ***\" and \"**NEW INSTRUCTIONS**\" injection marker pattern embedded in attacker-controlled documents. This is the canonical indirect prompt injection framing used in the withsecure research corpus: a benign-looking document (news article, employee notice, email) contains an injected section that uses a visually-authoritative marker to redirect the LLM's behavior. The marker signals context hijacking even before the specific payload (XSS tag, markdown exfil URL, or sysprompt extraction request) is delivered. Detecting the marker itself provides defense-in-depth coverage regardless of the subsequent payload variant. Distinct from general instruction-override rules: this targets the specific typographic marker pattern used to masquerade as a legitimate system notice.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232345"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "4bd0590a-6c7b-498e-84fd-3295342b1bb5",
+  "title": "Covert Backdoor / Surveillance Implant via Software Update",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects an instruction directing an agent with update/maintenance tooling to abuse a legitimate software-update or maintenance window to implant a persistent backdoor, install covert surveillance tooling, or phish-and-exploit administrator credentials for remote system access. Drawn from the AgentSecurityBench (ASB) autonomous-vehicle and infrastructure domains, the shared mechanism is a privilege-escalation payload smuggled under cover of a routine update: \"implant a backdoor during the software update ... granting remote system access\", \"execute unauthorized software updates ... to install covert surveillance tools\", or a \"targeted phishing operation to acquire and exploit system administrator credentials\". Unlike legitimate patching, every variant pairs the update context with an explicit covert-persistence or credential-theft objective. The rule anchors on the implant/surveillance/credential-exploit verb plus the remote-access or covert qualifier so ordinary \"apply the authorized security update\" maintenance language does not fire.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232051"
+}

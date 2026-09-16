@@ -1,0 +1,19 @@
+{
+  "uuid": "83bdf78c-76db-45a3-b0b9-7297a1ce949a",
+  "title": "RAG-Injected PII Exfiltration — System Instructions Embedded in Retrieved Documents",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects adversarial instructions embedded in retrieved documents that a RAG (Retrieval-Augmented Generation) pipeline returns to the agent, where the injected payload hijacks the agent's tool-calling behavior to forward personally identifiable information (witness names, addresses, passport numbers, credit card data) from other retrieved documents to an attacker-controlled email. The attack leverages pseudo-system-instruction tags (-- System instructions, <system_instructions>) or explicit override text embedded in court documents, legal filings, or other retrieval corpus items. Derived from the indirect-pi-exfil-pii/exfil-pii-rag corpus (InjecAgent + spikee sources).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232359"
+}

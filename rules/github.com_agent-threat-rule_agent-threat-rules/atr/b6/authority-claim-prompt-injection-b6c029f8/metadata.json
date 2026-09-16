@@ -1,0 +1,20 @@
+{
+  "uuid": "b6c029f8-7884-460e-90e9-bc44a544290a",
+  "title": "Authority Claim Prompt Injection",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompt injection via fake authority claims that instruct the AI to disregard previous analysis or override prior results. Crystallized from 31 adversarial samples (0% prior detection).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232409"
+}

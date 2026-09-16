@@ -1,0 +1,20 @@
+{
+  "uuid": "d11e7ac3-1cf5-457b-8c8f-fb5690ce6156",
+  "title": "Shell Injection Env Exfiltration via Curl/Wget/Netcat Webhook",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects shell injection payloads that chain legitimate-looking commands\nwith data exfiltration via curl, wget, or netcat (nc) to an external\nwebhook. The attack pattern is: run a benign command (git status, npm test,\ntail logs) then pipe sensitive data (environment variables, .env files,\nAPI keys) to an attacker-controlled server using curl -X POST, wget -qO-,\nor nc. These payloads exploit agents that execute shell commands on behalf\nof users without scrutinizing the full command pipeline.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232053"
+}

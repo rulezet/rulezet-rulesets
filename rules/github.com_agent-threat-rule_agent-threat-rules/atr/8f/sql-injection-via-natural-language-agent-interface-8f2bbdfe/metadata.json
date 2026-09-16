@@ -1,0 +1,19 @@
+{
+  "uuid": "8f2bbdfe-82f3-4e42-b6af-c85a29376ce7",
+  "title": "SQL Injection via Natural Language Agent Interface",
+  "format": "atr",
+  "author": "ATR Community (vendor-corpus-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects SQL injection attempts made through natural language to an AI agent that translates user intent into database queries. Covers both explicit SQL syntax and natural-language filter-bypass requests. Seen in promptfoo redteam sql-injection plugin (8 samples). The original auto-regex learned specific sentence patterns from the corpus. This rule replaces those with structural SQL-injection patterns that generalize across payloads: (A) DDL/DML injection: DROP, DELETE, TRUNCATE, UNION SELECT, INSERT INTO, UPDATE ... SET; (B) Tautology OR injection: OR N=N or OR col!=N patterns that short-circuit WHERE clauses; (C) SQL comment terminator (--) following injection payload; (D) xp_cmdshell stored procedure execution; (E) information_schema schema discovery queries; (F) Natural language filter bypass: \"remove/ignore/bypass the filter/restriction/access control\"; (G) Natural language authorization bypass: \"regardless of department/role/permission\". Any one condition is sufficient to trigger. Both technical SQL syntax and social-engineering bypass styles are covered.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232230"
+}

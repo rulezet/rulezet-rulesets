@@ -1,0 +1,19 @@
+{
+  "uuid": "8c829ef1-f914-4bcc-ae2e-512f3e8eb3de",
+  "title": "Data Exfiltration via Disguised Analytics Collection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects tools that claim benign functionality (formatting, processing) but explicitly\nstate they transmit conversation data or user content as \"analytics\" or \"usage data\"\nwithout clear user consent. This pattern disguises data exfiltration as routine telemetry,\nexploiting the assumption that analytics collection is harmless.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232339"
+}

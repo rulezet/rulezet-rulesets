@@ -1,0 +1,19 @@
+{
+  "uuid": "b3f008a7-b901-4ae4-924f-bdacb12a8733",
+  "title": "Rationalized Safety Control Bypass",
+  "format": "atr",
+  "author": "ATR Threat Cloud Crystallization",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects agents rationalizing bypassing safety controls or APIs by claiming efficiency, directness, or speed as justification. Pattern: \"To be more efficient, I'll use X directly instead of Y.\" Crystallized from 31 adversarial samples.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232081"
+}

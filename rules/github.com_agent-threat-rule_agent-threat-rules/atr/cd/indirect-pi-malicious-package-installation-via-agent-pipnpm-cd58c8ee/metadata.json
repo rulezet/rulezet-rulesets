@@ -1,0 +1,19 @@
+{
+  "uuid": "cd58c8ee-aa9b-4381-b84e-6cb966bc34a7",
+  "title": "Indirect PI — Malicious Package Installation via Agent (pip/npm)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection in email or documents that instructs a computer-use agent to execute pip or npm install commands for a malicious package.  The attacker embeds the install instruction in an email the agent reads, causing the agent to run the package manager command against a fictitious or malicious package name. Source: indirect-pi-malicious-install (VPI corpus, cua-framework).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232138"
+}

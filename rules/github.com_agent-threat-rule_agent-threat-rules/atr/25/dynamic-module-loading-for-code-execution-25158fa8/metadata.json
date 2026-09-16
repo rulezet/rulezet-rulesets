@@ -1,0 +1,20 @@
+{
+  "uuid": "25158fa8-3fb2-49fc-8b65-3e8fdaa2fcf6",
+  "title": "Dynamic Module Loading for Code Execution",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects dynamic module loading where the module path is a variable rather than a\nstring literal. This pattern allows an attacker to control which code is loaded at\nruntime, enabling injection of malicious modules, WebAssembly payloads, or native\nlibraries. Unlike static imports which are auditable, dynamic imports with variable\npaths can resolve to attacker-controlled code.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232083"
+}

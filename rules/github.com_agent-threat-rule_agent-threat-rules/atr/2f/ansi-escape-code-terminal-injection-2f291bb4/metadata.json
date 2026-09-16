@@ -1,0 +1,20 @@
+{
+  "uuid": "2f291bb4-b4d2-4809-8c34-c7b5403fa603",
+  "title": "ANSI Escape Code Terminal Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak ansiescape probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects malicious ANSI escape sequences embedded in tool output or skill content that can hijack terminal display (clear screen, relocate cursor, overwrite prompts, execute OSC-series operating-system commands). Used to hide content from human review, inject fake prompts into CLI sessions, or trigger terminal exploits. Observed in garak ansiescape probe. Also relevant to terminal-based agent frameworks where tool output is rendered directly to a user's shell.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232247"
+}

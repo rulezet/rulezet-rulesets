@@ -1,0 +1,21 @@
+{
+  "uuid": "9699c233-ad00-4ca2-b09a-09421690a927",
+  "title": "LibreChat is a ChatGPT clone with additional features.",
+  "format": "atr",
+  "author": "ATR Community (NVD sync)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "NVD-tracked CVE CVE-2026-31951 (CVSS v3 6.8 (MEDIUM)). LibreChat is a ChatGPT clone with additional features. In versions 0.8.2-rc1 through 0.8.3-rc1, user-created MCP (Model Context Protocol) servers can include arbitrary HTTP headers that undergo credential placeholder substitution. An attacker can create a malicious MCP server with headers containing `{{LIBRECHAT_OPENID_ACCESS_TOKEN}}` (and others), causing victims who call tools on that server to have their OAuth tokens exfiltrated. Version 0.8.3-rc2 fixes the issue.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2026-31951"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232305"
+}

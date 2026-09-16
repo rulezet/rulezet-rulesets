@@ -1,0 +1,20 @@
+{
+  "uuid": "d6c0ac16-4f3e-465c-a3f3-27bd01791866",
+  "title": "MCP Tool Description — IMPORTANT Tag Cross-Tool Shadowing Attack",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects MCP tool poisoning attacks that embed hidden instructions inside an <IMPORTANT> XML-style tag in a tool description, or that chain behavior across multiple co-installed MCP servers by referring to \"the also present\" or \"previously declared\" tool. This is the attack class Invariant Labs published proof-of-concept exploits for in April 2025 against Claude Desktop and Cursor, achieving SSH private key and mcp.json configuration exfiltration. Also detects the January 2026 fake \"Postmark MCP Server\" pattern of embedding sensitive file read directives in tool descriptions. The visible tool signature looks benign (e.g. a numeric \"add\" function), but the description contains LLM-visible directives that the UI does not render. Users approving the tool on the basis of its surface behavior are unaware of the shadowed instruction.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232236"
+}

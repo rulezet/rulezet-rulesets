@@ -1,0 +1,20 @@
+{
+  "uuid": "f0b383b9-2c55-49c2-ac70-5eab67165b1d",
+  "title": "DRA Disguise and Reconstruction Attack",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dra probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects Disguise and Reconstruction Attacks (DRA) based on 3 actual prompt templates from NVIDIA garak dra/prompt_templates.txt. DRA hides a harmful instruction as steganographic content embedded in parentheses - the user asks the model to \"ONLY focus on the letters surrounded by ( )\" to reconstruct a hidden harmful question Q1, then answer it in detail (600+ words) starting with \"Absolutely! I'll help you!\". The attack exploits instruction-following to perform harmful actions the model would refuse if asked directly. Templates 1-4 vary the forced response opening and step framing but share the parenthesis-extraction and 600-word constraint structure.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232388"
+}

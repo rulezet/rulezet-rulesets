@@ -1,0 +1,20 @@
+{
+  "uuid": "b5e6b021-860b-434d-9f5d-6d43f3856e38",
+  "title": "Trust Escalation via Authority Override Instructions",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects MCP tools that instruct the LLM to treat tool output as \"authoritative directives\"\nthat override user preferences or safety guidelines. This trust escalation attack exploits\nthe LLM's tendency to follow tool instructions by declaring tool output as highest-priority\ninstructions, effectively hijacking the agent's decision-making hierarchy.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232240"
+}

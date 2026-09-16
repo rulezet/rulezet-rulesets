@@ -1,0 +1,20 @@
+{
+  "uuid": "0408de4a-d420-4a51-88ee-ce4486cd9649",
+  "title": "Invisible Unicode Tag Character Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak goodside.Tag probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompt injection using the Unicode \"Tag\" block (U+E0000-U+E007F), which maps ASCII letters to non-rendering private-use codepoints. Some LLMs interpret these invisible characters as instructions even though humans cannot see them, enabling user-invisible prompt injection in browsers and chat UIs. Technique documented by Riley Goodside (Twitter 1745511940351287394) and Joseph Thacker; implemented in NVIDIA garak goodside.Tag and encoding.InjectUnicodeTagChars.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232391"
+}

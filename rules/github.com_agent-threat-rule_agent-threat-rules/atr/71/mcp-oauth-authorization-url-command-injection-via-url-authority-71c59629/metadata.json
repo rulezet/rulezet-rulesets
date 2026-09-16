@@ -1,0 +1,21 @@
+{
+  "uuid": "71c59629-4141-43e4-8c56-bad5548b0894",
+  "title": "MCP OAuth Authorization URL — Command Injection via URL Authority",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects command injection attempts embedded in MCP OAuth authorization URLs. The attack encodes a shell command inside the userinfo portion of a URL (user:pass@ authority component) using shell metacharacters like $(), backticks, or pipe characters. When a vulnerable OAuth client processes the URL and passes the userinfo to a shell command, the embedded payload executes. The MCPSecBench probe uses \"http://user$(mate-calc)r:pass@127.0.0.1:9003/authorize?...\" — the $(mate-calc) fragment executes as a shell command on vulnerable systems. This is a variant of the classic shell-injection-in-URL pattern applied to the MCP OAuth flow's redirect/authorization endpoint handling.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE PATTERNS: SHELL METACHARACTER INJECTION IN URL AUTHORITY FIELD"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232210"
+}

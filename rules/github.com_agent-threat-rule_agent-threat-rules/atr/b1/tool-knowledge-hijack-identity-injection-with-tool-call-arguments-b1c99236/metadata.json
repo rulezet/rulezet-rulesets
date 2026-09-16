@@ -1,0 +1,19 @@
+{
+  "uuid": "b1c99236-c5de-4aa2-806a-fb093881f947",
+  "title": "Tool Knowledge Hijack — Identity Injection with Tool Call Arguments",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the tool-knowledge-hijack attack where adversarial content addressed to the agent includes a false identity claim (from a named user) and provides exact tool call arguments for a privileged action (send_money, delete_files, escalate_privileges).  The pattern combines impersonation with exact tool argument injection to bypass agent trust boundaries. Source: indirect-pi-tool-knowledge-hijack (AgentDojo corpus).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232256"
+}

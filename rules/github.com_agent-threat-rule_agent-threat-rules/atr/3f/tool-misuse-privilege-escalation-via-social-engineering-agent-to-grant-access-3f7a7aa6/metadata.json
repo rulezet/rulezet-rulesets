@@ -1,0 +1,19 @@
+{
+  "uuid": "3f7a7aa6-e725-43d8-91c5-f76492ccd221",
+  "title": "Tool Misuse — Privilege Escalation via Social Engineering Agent to Grant Access",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects requests where a user socially engineers an agent with access control tools to grant unauthorized access: inviting users to Slack workspaces and channels, granting delivery personnel house access for plausible pretexts, adding users to calendars or CRM systems with excessive permissions.  The attacker provides a plausible social justification to bypass normal access control review.  Source: tool-misuse-privilege-escalation (ToolEmu corpus).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232264"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "a2252a57-bc0b-416c-9554-4e70927c1e3c",
+  "title": "PraisonAI MCP Path-Traversal .pth Injection RCE (GHSA-9mqq-jqxf-grvw)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects GHSA-9mqq-jqxf-grvw (CVSS CRITICAL, CWE-22 / CWE-94): PraisonAI MCP server configuration allows a path traversal attack that writes a Python .pth file into a site-packages directory. Python automatically executes lines in .pth files that start with 'import ' on interpreter startup, enabling persistent arbitrary code execution. An attacker who can supply a malicious MCP config can traverse from the expected tools directory into site-packages and drop an executable .pth file.\nPython .pth files are a legitimate Python path-extension mechanism (PEP 302) but execute arbitrary Python on import when a line begins with 'import '. Path traversal to site-packages combined with .pth content that starts with 'import os; os.system(...)' achieves RCE on every subsequent Python process start.\nDetection covers: (a) Path-traversal sequences targeting site-packages with .pth extension; (b) .pth file content containing import + OS execution primitives; (c) PraisonAI MCP config with directory traversal in file path fields; (d) Explicit GHSA-9mqq-jqxf-grvw exploitation framing.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "GHSA-9MQQ-JQXF-GRVW"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232228"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "2da32337-0dec-4901-8a77-eb542ac400c5",
+  "title": "Context Poisoning via Compaction Survival",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects instructions in SKILL.md files designed to survive context window compaction (summarization). When AI agents compress their context, poisoned instructions embed themselves as \"important\" directives that persist across compaction boundaries. Discovered via Claude Code leak analysis (2026-03): attackers used CLAUDE.md/SKILL.md to inject instructions that survived context compression by using urgency markers, persistence directives, and system-level impersonation.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232130"
+}

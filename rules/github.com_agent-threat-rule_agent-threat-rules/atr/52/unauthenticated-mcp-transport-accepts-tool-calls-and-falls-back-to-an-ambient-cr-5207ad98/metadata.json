@@ -1,0 +1,21 @@
+{
+  "uuid": "5207ad98-da64-49d9-be64-6483a6b29c5b",
+  "title": "Unauthenticated MCP transport accepts tool calls and falls back to an ambient credential (CVE-2026-48039 / meta-ads-mcp class)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the unauthenticated-MCP-transport half of CVE-2026-48039 / GHSA-9gw6-46qc-99vr (pipeboard-co/meta-ads-mcp, fixed in 1.0.109) and the general class it represents: an MCP server, gateway, or Streamable-HTTP endpoint forwards/dispatches a tool call WITHOUT authenticating it (returns no 401), and the handler then falls back to an ambient operator credential (an environment variable such as META_ACCESS_TOKEN) to perform the action. Any network-reachable caller can therefore invoke MCP tools as the operator. This rule fires on skill/tool/advisory CONTENT describing that exploit, not on server source. The credential-LEAK sink — the operator token echoed as a URL query parameter — is already detected by ATR-2026-00580 (session/auth token in URL query); this rule is deliberately disjoint from 00580 and covers the AUTH-BYPASS + ambient-credential-fallback signal instead. The OX Security MCP-by-design disclosure (2026-04-15) and the MCP move to OAuth 2.1 + RFC 8707 Resource Indicators anchor this unauthenticated-transport class. meta-ads-mcp is Business Source License 1.1 (source-available); tool/exploit details are taken from the public advisory/PoC, not from inspecting source.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2026-48039"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232369"
+}

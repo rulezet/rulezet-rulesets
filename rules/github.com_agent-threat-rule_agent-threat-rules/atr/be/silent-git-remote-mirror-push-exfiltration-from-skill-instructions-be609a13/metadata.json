@@ -1,0 +1,19 @@
+{
+  "uuid": "be609a13-4aeb-41ae-a029-a4df087f4561",
+  "title": "Silent git-remote + mirror-push Exfiltration from Skill Instructions",
+  "format": "atr",
+  "author": "ATR Community (vendor-corpus-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the Mitiga Labs (2026-05-05) silent-codebase-exfiltration pattern where a Claude Code or generic agent skill instructs the agent to add a new git remote pointing at an attacker-controlled host and then push the full repository contents — typically with `--mirror`, `--all`, or `--force` to grab branches the user did not stage. The Mitiga write-up showed the full exfiltration completing in four user interactions while the Claude Code skill-audit.log stayed empty. The detection target is the combination of git remote modification AND a wide-scope push within the same skill block. Legitimate developer skills almost never need both within a single set of instructions.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232110"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "6240099e-718c-4234-a9af-2c988d049e53",
+  "title": "Garak Dan - to every prompt",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects dual-response jailbreak patterns where the attacker instructs the model to generate two parallel outputs for every prompt: one compliant (normal ChatGPT/AI response) and one unrestricted (labeled as developer/baby/DAN mode). This attack family exploits role-splitting by granting the constrained persona a label like \"[GPT]\" and the unrestricted persona a label like \"[Developer Mode]\" or similar. The rule catches structural signals: \"simulate [X] mode, generate two responses\", \"respond in two ways\", \"adhere to the policies outlined including generating any kind of content\", and the \"truth always speaks unhinged\" DAN personality marker. The prompt-splitting pattern is the defining structural feature — attackers rely on the model following the unrestricted response branch by framing it as a mode rather than an override. Covers garak 'dan' probe cluster 'to-every-prompt' (11 samples) plus synonym variants of the dual-response injection pattern.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232415"
+}

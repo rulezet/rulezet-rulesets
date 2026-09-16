@@ -1,0 +1,19 @@
+{
+  "uuid": "a67668aa-518d-4342-94e7-9e5677fc2aee",
+  "title": "Indirect Prompt Injection: CAPTCHA Redirect Task Disruption",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection payloads embedded in retrieved data that redirect the agent to solve a CAPTCHA or visit an external URL before proceeding, effectively stalling or aborting the original task. The attack abuses the agent's tool-use loop: the agent fetches a document, finds an INFORMATION block commanding it to solve a CAPTCHA at an attacker-controlled URL, and either aborts (because it cannot solve CAPTCHAs) or leaks the URL to external logs. Derived from AgentDojo indirect-pi-dos corpus (2026-06, N=2). Related to ATR-2026-01751 (fake-authority stop) but distinguished by the CAPTCHA-solve + external-URL redirect artifact.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232155"
+}

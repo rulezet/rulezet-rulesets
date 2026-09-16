@@ -1,0 +1,19 @@
+{
+  "uuid": "548a4261-d898-4884-8b0f-6f1a8d59a348",
+  "title": "SymJack — Symlink Approval-Path Spoofing Redirects Writes into Agent MCP/Config (RCE on Restart)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the SymJack attack (Adversa AI, Rony Utevsky, 2026-05-26): an attacker-controlled repository commits a benign-named symlink (e.g. docs/vid-settings.mp4, docs/vid-mcp.mp4) whose link target points at the coding agent's own configuration file (.mcp.json, .claude/settings.json, .cursor/mcp.json, .gemini/settings.json, .codex/config.toml). The tool-approval prompt shows a benign file operation against the decoy path, but the kernel follows the symlink and writes attacker-controlled JSON — typically an mcpServers entry with an exec command — into the real config. On the next agent restart the planted MCP server spawns and runs the attacker's code as the user, unsandboxed. On CI runners that auto-trust the workspace it needs zero approval clicks. This rule fires on the on-disk artifact — a symlink whose target resolves into a known agent-config path — and on the SymJack chain when it is described in skill/tool content. The runtime kernel-level write-redirection itself (prompt-shows-X / kernel-writes-Y) is not regex-detectable and is addressed by host hardening that resolves symlinks before approval (shipped in Claude Code v2.1.129+); see false_positives. No CVE assigned as of 2026-06-03.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232250"
+}

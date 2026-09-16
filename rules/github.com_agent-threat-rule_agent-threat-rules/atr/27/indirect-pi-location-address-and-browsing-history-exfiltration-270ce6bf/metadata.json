@@ -1,0 +1,19 @@
+{
+  "uuid": "270ce6bf-dfe1-4f95-bddd-ecb3a1f5b2c6",
+  "title": "Indirect PI — Location, Address, and Browsing History Exfiltration",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection instructions embedded in consumed content that direct an agent to exfiltrate sensitive personal location or browsing data: current location via maps, saved home/work addresses, or Google search history.  These payloads exploit agents with access to maps, address books, or browser history tools. Source: indirect-pi-exfil-location-carrier / indirect-pi-exfil-address-carrier / indirect-pi-exfil-browsing-history-carrier.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232293"
+}

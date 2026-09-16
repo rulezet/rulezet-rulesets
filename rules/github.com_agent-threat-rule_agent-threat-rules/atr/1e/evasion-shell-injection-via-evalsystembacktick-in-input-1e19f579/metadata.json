@@ -1,0 +1,21 @@
+{
+  "uuid": "1e19f579-0900-4c55-893d-43d77b1ab63b",
+  "title": "Evasion: Shell Injection via eval/system/backtick in Input",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects inputs containing shell command injection syntax designed to exploit template engines, output processors, or server-side components that evaluate model output: Bash $(...) command substitution, Perl/Ruby @{[system \"...\"]} backtick expression, Ruby/Perl eval(), C System() call, Unix backtick command execution, or PowerShell $(cmd) execution. These payloads appear in untrusted user input that may be passed through code execution pipelines (LangChain eval chains, code interpreter tools, template rendering). The BLNS (Big List of Naughty Strings) category of probes generates these as direct input to test for server-side injection in AI agent pipelines.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232372"
+}

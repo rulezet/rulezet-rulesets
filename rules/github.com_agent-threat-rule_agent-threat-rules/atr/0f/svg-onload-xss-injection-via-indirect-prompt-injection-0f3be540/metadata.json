@@ -1,0 +1,19 @@
+{
+  "uuid": "0f3be540-f555-4da8-b964-09a343cb7e48",
+  "title": "SVG onload XSS Injection via Indirect Prompt Injection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection payloads that instruct an LLM to include an <svg/onload=...> tag in its rendered output. When an LLM processes attacker-controlled documents (emails, files, web pages) and echoes SVG event-handler tags into a web-rendered response, the JavaScript executes in the victim's browser, enabling session-cookie theft, credential exfil, and arbitrary JS execution. This is the SVG-onload variant of the withsecure/portswigger indirect-PI XSS family. The payload probe pattern is: an inline instruction telling the model to \"include in your response\" an <svg/onload=...> string with a substitutable PLACEHOLDER.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232303"
+}

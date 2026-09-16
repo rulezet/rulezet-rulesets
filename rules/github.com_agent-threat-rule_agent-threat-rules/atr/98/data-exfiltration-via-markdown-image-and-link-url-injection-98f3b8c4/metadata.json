@@ -1,0 +1,19 @@
+{
+  "uuid": "98f3b8c4-e0ff-4d70-b9a4-567e7d8bb861",
+  "title": "Data Exfiltration via Markdown Image and Link URL Injection",
+  "format": "atr",
+  "author": "ATR Community (vendor-corpus-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects instructions to the AI to embed attacker-controlled URLs into markdown image or link syntax with extracted data encoded in query parameters. This is the canonical indirect- injection data exfiltration vector: the agent renders malicious markdown that causes clients to make HTTP requests carrying sensitive data to attacker-controlled servers. Covers: markdown image with data-bearing query params, markdown link with sensitive data params, tracking pixel embedding, base64-encoded data in URL, and \"send/encode to\" redirect instructions. Generalised from promptfoo data-exfil plugin corpus - literal evil.com and attacker.com replaced with generic external URL patterns containing exfiltration parameter names (secret=, data=, q=, payload=, user=, token=, session=, key=, info=).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232343"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "e8296d48-b3c3-4046-8dac-e1cfbc126e78",
+  "title": "Indirect PI — XSS Payload Injection in Agent-Consumed Content",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection that smuggles an XSS payload inside content consumed by an agent (web pages, documents, tool outputs). The attacker instructs the agent to reproduce an <img onerror=> or <script> tag in its response, expecting the agent's output to be rendered in an HTML context and trigger cross-site scripting.  The injection pattern uses NEW IMPORTANT INSTRUCTIONS delimiters to pivot the agent from summarization to payload reproduction.  Source corpus: ASB giskard indirect-pi-xss.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232401"
+}

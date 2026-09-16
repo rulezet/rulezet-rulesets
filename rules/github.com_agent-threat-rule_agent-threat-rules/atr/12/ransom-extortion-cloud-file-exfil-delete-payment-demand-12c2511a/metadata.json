@@ -1,0 +1,20 @@
+{
+  "uuid": "12c2511a-4b6b-4818-a719-be5d4685c2a7",
+  "title": "Ransom Extortion: Cloud File Exfil + Delete + Payment Demand",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects ransom-extortion injections targeting cloud storage: the agent is commanded to (1) identify the N largest or most sensitive files in a cloud storage account, (2) email them as attachments to an attacker-controlled address, (3) delete the originals, and (4) send the victim a ransom note. Distinguished from ATR-2026-01753 (which covers email-content exfil) by the cloud-file attachment vector. The artifact pattern is: cloud-file-attach + email-to-external + delete-files + ransom-subject-or-IBAN. Derived from AgentDojo indirect-pi-ransom-extortion corpus (2026-06).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232281"
+}

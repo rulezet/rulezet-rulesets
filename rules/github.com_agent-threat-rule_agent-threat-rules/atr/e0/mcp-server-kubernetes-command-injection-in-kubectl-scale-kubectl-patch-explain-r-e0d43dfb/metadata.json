@@ -1,0 +1,22 @@
+{
+  "uuid": "e0d43dfb-e992-4520-9ea6-6aa7a87aebec",
+  "title": "mcp-server-kubernetes Command Injection in kubectl_scale / kubectl_patch / explain_resource (CVE-2025-53355)",
+  "format": "atr",
+  "author": "ATR Community (vulnerablemcp sync)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "GitHub Security Advisory GHSA-gjv4-ghm7-q58q (CVE-2025-53355). The mcp-server-kubernetes package (<= 2.4.9) passes unsanitized tool parameters to execSync inside the kubectl_scale, kubectl_patch and explain_resource MCP tools. Shell metacharacters (; | && $() backticks) in those parameters allow arbitrary command execution on the host with the server's Kubernetes admin credentials. CWE-78, CVSS 7.5.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-53355"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232244"
+}

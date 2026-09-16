@@ -1,0 +1,19 @@
+{
+  "uuid": "4d604e59-5f0c-4708-8570-f350db83580b",
+  "title": "SQL Injection UNION SELECT Data Exfiltration",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects UNION SELECT injection in agent tool arguments intended to append\na second SELECT statement to the original query, exfiltrating data from\nother tables (e.g., credentials, PII, financial records) alongside the\nnormal result set. This is the primary SQL exfiltration technique targeting\nAI agents that forward search/filter inputs to SQL queries without\nparameterization.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232078"
+}
