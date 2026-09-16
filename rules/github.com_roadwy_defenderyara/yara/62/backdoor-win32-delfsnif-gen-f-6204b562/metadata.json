@@ -1,0 +1,22 @@
+{
+  "uuid": "6204b562-e646-4d44-81c2-09d86e5a8626",
+  "title": "Backdoor_Win32_Delfsnif_gen_F",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/Delfsnif.gen!F,SIGNATURE_TYPE_PEHSTR_EXT,ffffffc2 01 ffffffa9 01 13 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/323452"
+}
