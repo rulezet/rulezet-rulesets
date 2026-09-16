@@ -1,0 +1,9 @@
+rule Win_Trojan_VGEN_185
+{
+strings:
+	$a0 = { 9a00000f005589e531c09a56020f00bf00000e57bf01000e579a00000500bf00000e57bf11000e579a000005005d31c0 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Vgen_120
+{
+strings:
+	$a0 = { 740d0a406563686f2e504b583e696e7374616c6c2e6578650d0a40636f70792f6220696e7374616c6c2e6578652b }
+
+
+condition:
+	$a0
+}

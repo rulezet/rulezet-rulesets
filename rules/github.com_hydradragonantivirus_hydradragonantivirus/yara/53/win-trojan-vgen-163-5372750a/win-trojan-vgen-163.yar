@@ -1,0 +1,9 @@
+rule Win_Trojan_VGEN_163
+{
+strings:
+	$a0 = { b001a102002d20068ccb81c300023bc377530500063bc3774cb409ba5401cd21cd2090000120202020202020202020 }
+
+
+condition:
+	$a0
+}
