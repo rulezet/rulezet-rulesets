@@ -1,0 +1,9 @@
+rule PWS_Win32_Fareit_A_MTB{
+	meta:
+		description = "PWS:Win32/Fareit.A!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0f 00 0f 00 02 00 00 "
+		
+	strings :
+		$a_00_0 = {ff 34 0e 81 34 24 0f ba b9 7a 8f 04 08 c3 } 		$a_02_1 = {6a 40 ff d0 e8 ?? ?? ?? ?? 5e 81 c6 ?? ?? ?? ?? 68 ?? ?? ?? ?? 59 83 e9 04 e8 ?? ?? ?? ?? 83 e9 03 e0 f6 e8 ?? ?? ?? ?? ff e0 } 	condition:
+		((#a_00_0  & 1)*5+(#a_02_1  & 1)*10) >=15
+ 
+}

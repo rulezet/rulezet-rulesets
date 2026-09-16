@@ -1,0 +1,9 @@
+rule PWS_BAT_Dcstl_PDC_MTB{
+	meta:
+		description = "PWS:BAT/Dcstl.PDC!MTB,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {0a 26 07 28 ?? ?? ?? 0a 07 28 ?? ?? ?? 0a 0c 0d 16 13 } 		$a_03_1 = {0a 26 08 7e ?? ?? ?? 04 72 ?? ?? ?? 70 08 6f ?? ?? ?? 0a 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 26 07 17 58 0b 07 06 8e 69 32 bd } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*2) >=3
+ 
+}
