@@ -1,0 +1,144 @@
+rule rule_panix_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'panix' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "panix"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_panix_offensive_tool_keyword = " --backdoor-user "
+                        $string2_panix_offensive_tool_keyword = " --malicious-package "
+                        $string3_panix_offensive_tool_keyword = /\spanix\.sh\s\-\-/
+                        $string4_panix_offensive_tool_keyword = /\spanix\.sh\s\-\-generator/
+                        $string5_panix_offensive_tool_keyword = /\spanix\.sh\s\-\-generator/
+                        $string6_panix_offensive_tool_keyword = /\spanix\.sh\s\-\-systemd/
+                        $string7_panix_offensive_tool_keyword = " --sudoers-backdoor"
+                        $string8_panix_offensive_tool_keyword = /\#\!\/bin\/bash\\n\/bin\/bash\s\-c\s\'sh\s\-i\s\>\&\s\/dev\/tcp\/.{0,100}\/.{0,100}\s0\>\&1/
+                        $string9_panix_offensive_tool_keyword = /\.sh\s\-\-at\s\-\-custom\s\-\-command\s.{0,100}\s\-\-time\s/
+                        $string10_panix_offensive_tool_keyword = /\.sh\s\-\-authorized\-keys\s\-\-custom\s\-\-key\s.{0,100}\.ssh\/authorized_keys/
+                        $string11_panix_offensive_tool_keyword = /\.sh\s\-\-backdoor\-user\s\-\-username\s/
+                        $string12_panix_offensive_tool_keyword = /\.sh\s\-\-cron\s\-\-custom\s\-\-command\s.{0,100}\s\-\-crond\s\-\-name\s/
+                        $string13_panix_offensive_tool_keyword = /\.sh\s\-\-cron\s\-\-custom\s\-\-command\s.{0,100}\s\-\-crontab/
+                        $string14_panix_offensive_tool_keyword = /\.sh\s\-\-cron\s\-\-custom\s\-\-command\s.{0,100}\s\-\-daily\s\-\-name\s/
+                        $string15_panix_offensive_tool_keyword = /\.sh\s\-\-passwd\-user\s\-\-custom\s\-\-passwd\-string\s/
+                        $string16_panix_offensive_tool_keyword = /\.sh\s\-\-shell\-profile\s\-\-custom\s\-\-command\s.{0,100}\s\-\-path\s.{0,100}\/\.bash_profile/
+                        $string17_panix_offensive_tool_keyword = /\.sh\s\-\-systemd\s\-\-custom\s\-\-command\s/
+                        $string18_panix_offensive_tool_keyword = /\.sh\s\-\-systemd\s\-\-default\s\-\-ip\s.{0,100}\s\-\-port\s/
+                        $string19_panix_offensive_tool_keyword = /\.sh\s\-\-udev\s\-\-custom\s\-\-command\s/
+                        $string20_panix_offensive_tool_keyword = /\.sh\s\-\-xdg\s\-\-custom\s\-\-command\s.{0,100}\s\-\-path\s.{0,100}\/etc\/xdg\/autostart\//
+                        $string21_panix_offensive_tool_keyword = /\/etc\/xdg\/autostart\/evilxdg\.desktop/
+                        $string22_panix_offensive_tool_keyword = /\/lib\/systemd\/system\/evil\.service/
+                        $string23_panix_offensive_tool_keyword = /\/PANIX\.git/
+                        $string24_panix_offensive_tool_keyword = /\/panix\.sh\s\-\-/
+                        $string25_panix_offensive_tool_keyword = /\/releases\/download\/panix\-v.{0,100}\/panix\.sh/
+                        $string26_panix_offensive_tool_keyword = "/usr/bin/at -M -f /tmp/payload"
+                        $string27_panix_offensive_tool_keyword = "/usr/bin/at -M -f /usr/bin/atest"
+                        $string28_panix_offensive_tool_keyword = /\/usr\/bin\/bash\s\-c\s\'bash\s\-i\s\>\&\s\/dev\/tcp\/\$ip\/\$port\s0\>\&1/
+                        $string29_panix_offensive_tool_keyword = /\/usr\/local\/bin\/escape\.sh/
+                        $string30_panix_offensive_tool_keyword = ":0:0:root:/root:/bin/bash\" >> /etc/passwd"
+                        $string31_panix_offensive_tool_keyword = /\[\-\]\sFailed\sto\screate\ssudoers\sbackdoor\sfor\suser\s/
+                        $string32_panix_offensive_tool_keyword = /\[\+\]\s\$bin\sbackdoored\ssuccessful/
+                        $string33_panix_offensive_tool_keyword = /\[\+\]\s\$binary\sbackdoored\ssuccessful/
+                        $string34_panix_offensive_tool_keyword = /\[\+\]\s\/etc\/passwd\spersistence\sestablished\!/
+                        $string35_panix_offensive_tool_keyword = /\[\+\]\sAPT\spersistence\sestablis/
+                        $string36_panix_offensive_tool_keyword = /\[\+\]\sAt\sjob\spersistence\sestablish/
+                        $string37_panix_offensive_tool_keyword = /\[\+\]\sAuthorized_keys\spersistence\sestablish/
+                        $string38_panix_offensive_tool_keyword = /\[\+\]\sBackdoor\suser\spersistence\sestablish/
+                        $string39_panix_offensive_tool_keyword = /\[\+\]\sBackdoor\suser\spersistence\sestablished\!/
+                        $string40_panix_offensive_tool_keyword = /\[\+\]\sBind\sshell\spersistence\sestablish/
+                        $string41_panix_offensive_tool_keyword = /\[\+\]\sCapabilities\sbackdoor\spersistence\sestablish/
+                        $string42_panix_offensive_tool_keyword = /\[\+\]\sCreated\smalicious\spre\-commit\shook\sin\s/
+                        $string43_panix_offensive_tool_keyword = /\[\+\]\sCron\spersistence\sestablished/
+                        $string44_panix_offensive_tool_keyword = /\[\+\]\sDocker\scontainer\spersistence\sestablish/
+                        $string45_panix_offensive_tool_keyword = /\[\+\]\sGit\spersistence\sestablish/
+                        $string46_panix_offensive_tool_keyword = /\[\+\]\sinit\.d\sbackdoor\sestablish/
+                        $string47_panix_offensive_tool_keyword = /\[\+\]\sMOTD\sbackdoor\spersistence\sestablish/
+                        $string48_panix_offensive_tool_keyword = /\[\+\]\sRemoved\smalicious\sentry\sfrom\spre\-commit\shook\sin\s/
+                        $string49_panix_offensive_tool_keyword = /\[\+\]\sSSH\skey\spersistence\sestablished\!/
+                        $string50_panix_offensive_tool_keyword = /\[\+\]\sSystemd\sGenerator\spersistence\sestablished\!/
+                        $string51_panix_offensive_tool_keyword = /\[\+\]\sUser\s.{0,100}\sadded\sto\s\/etc\/passwd\swith\sroot\sprivileges\./
+                        $string52_panix_offensive_tool_keyword = /\[\+\]\sUser\s.{0,100}\shas\sbeen\smodified\sto\shave\sUID\s0\s\(root\sprivileges\)\./
+                        $string53_panix_offensive_tool_keyword = /\[\+\]\sUser\spersistence\sthrough\sthe\snew\s.{0,100}\suser\sestablished\!/
+                        $string54_panix_offensive_tool_keyword = /\[\+\]\sXDG\spersistence\sestablished\!/
+                        $string55_panix_offensive_tool_keyword = /\]\sCleaning\sAt\spersistence\smethods/
+                        $string56_panix_offensive_tool_keyword = /\]\sCleaning\sBackdoor\sbinaries\spersistence\smethods/
+                        $string57_panix_offensive_tool_keyword = /\]\sCleaning\sBind\sshell\spersistence\smethods/
+                        $string58_panix_offensive_tool_keyword = /\]\sCleaning\sCron\spersistence\smethods/
+                        $string59_panix_offensive_tool_keyword = /\]\sCleaning\sDocker\spersistence\smethods/
+                        $string60_panix_offensive_tool_keyword = /\]\sCleaning\sGit\spersistence\smethods/
+                        $string61_panix_offensive_tool_keyword = /\]\sCleaning\sinitd\spersistence\smethods/
+                        $string62_panix_offensive_tool_keyword = /\]\sCleaning\sMalicious\spackage\spersistence\smethods/
+                        $string63_panix_offensive_tool_keyword = /\]\sCleaning\sMOTD\spersistence\smethods/
+                        $string64_panix_offensive_tool_keyword = /\]\sCleaning\sPackage\sManagers\spersistence\smethods/
+                        $string65_panix_offensive_tool_keyword = /\]\sCleaning\src\.local\spersistence\smethods/
+                        $string66_panix_offensive_tool_keyword = /\]\sCleaning\ssetcap\spersistence\smethods/
+                        $string67_panix_offensive_tool_keyword = /\]\sCleaning\sSetuid\spersistence\smethods/
+                        $string68_panix_offensive_tool_keyword = /\]\sCleaning\sShell\sprofile\spersistence\smethods/
+                        $string69_panix_offensive_tool_keyword = /\]\sCleaning\sSSH\spersistence\smethods/
+                        $string70_panix_offensive_tool_keyword = /\]\sCleaning\sSudoers\spersistence\smethods/
+                        $string71_panix_offensive_tool_keyword = /\]\sCleaning\sSystemd\sGenerator\spersistence\smethods/
+                        $string72_panix_offensive_tool_keyword = /\]\sCleaning\sSystemd\spersistence\smethods/
+                        $string73_panix_offensive_tool_keyword = /\]\sCleaning\sudev\spersistence\smethods/
+                        $string74_panix_offensive_tool_keyword = /\]\sCleaning\sXDG\spersistence\smethods/
+                        $string75_panix_offensive_tool_keyword = "7cd720218d9cf22a1143274f4904f30bcef18bfc00ebb54de45bedfeb12d1535"
+                        $string76_panix_offensive_tool_keyword = "8c842d7dfb5c081a394e645377db303da5228ee78ff9467c4f00534ba8e0c389"
+                        $string77_panix_offensive_tool_keyword = "974cf826367e6b3bd96006f325a549d892da924bf76afc7df546e31ede536696"
+                        $string78_panix_offensive_tool_keyword = "add_malicious_pager"
+                        $string79_panix_offensive_tool_keyword = "add_malicious_pre_commit"
+                        $string80_panix_offensive_tool_keyword = "Aegrah/PANIX"
+                        $string81_panix_offensive_tool_keyword = "c3663dba552ca6aa8d2c0f36fccc553d728b37464944080398f72f487430710f"
+                        $string82_panix_offensive_tool_keyword = /cat\s.{0,100}\.pub\s\>\>\s.{0,100}\/authorized_keys/
+                        $string83_panix_offensive_tool_keyword = "cat <<-EOF > /usr/lib/systemd/system-generators/generator"
+                        $string84_panix_offensive_tool_keyword = /chmod\s\+x\s\/usr\/lib\/systemd\/system\-generators\/makecon/
+                        $string85_panix_offensive_tool_keyword = "echo \"@RFGroenewoud\""
+                        $string86_panix_offensive_tool_keyword = "f0VMRgEBAQAAAAAAAAAAAAIAAwABAAAAVIAECDQAAAAAAAAAAAAAADQAIAABAAAAAAAAAAEAAAAAAAAAAIAECACABAiiAAAA8AAAAAcAAAAAEAAAMdv341NDU2oCieGwZs2AW15SaAIAIylqEFFQieFqZljNgIlBBLMEsGbNgEOwZs2Ak1lqP1jNgEl5"
+                        $string87_panix_offensive_tool_keyword = "f0VMRgIBAQAAAAAAAAAAAAIAPgABAAAAeABAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAOAABAAAAAAAAAAEAAAAHAAAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAzgAAAAAAAAAkAQAAAAAAAAAQAAAAAAAAailYmWoCX2oBXg8FSJdSxwQkAgAjKUiJ5moQWmoxWA8FajJYDwVIMfZqK1gPBUiXagNeSP"
+                        $string88_panix_offensive_tool_keyword = /ln\s\-s\s\/run\/systemd\/system\/generator\.service\s\/run\/systemd\/system\/multi\-user\.target\.wants\/generator\.service/
+                        $string89_panix_offensive_tool_keyword = /nohup\sbash\s\-c\s\\"while\s\:\;\sdo\sbash\s\-i\s\>\&\s\/dev\/tcp\/.{0,100}\/.{0,100}\s0\>\&1\;\ssleep\s10\;\sdone/
+                        $string90_panix_offensive_tool_keyword = /panix\.sh\s\-\-ssh\-key\s/
+                        $string91_panix_offensive_tool_keyword = "setup_backdoor_user"
+                        $string92_panix_offensive_tool_keyword = "setup_cap_backdoor"
+                        $string93_panix_offensive_tool_keyword = "setup_generator_persistence"
+                        $string94_panix_offensive_tool_keyword = "setup_git_persistence"
+                        $string95_panix_offensive_tool_keyword = "setup_initd_backdoor"
+                        $string96_panix_offensive_tool_keyword = "setup_malicious_docker_container"
+                        $string97_panix_offensive_tool_keyword = "setup_malicious_package"
+                        $string98_panix_offensive_tool_keyword = "setup_motd_backdoor"
+                        $string99_panix_offensive_tool_keyword = "setup_rc_local_backdoor"
+                        $string100_panix_offensive_tool_keyword = "setup_sudoers_backdoor"
+                        $string101_panix_offensive_tool_keyword = "setup_suid_backdoor"
+                        $string102_panix_offensive_tool_keyword = "setup_system_binary_backdoor"
+                        $string103_panix_offensive_tool_keyword = /sh\s\-i\s\>\&\s\/dev\/tcp\/.{0,100}\/1337\s0\>\&1/
+                        $string104_panix_offensive_tool_keyword = "sudo nsenter -t 1 -m -u -i -n -p -- su -"
+                        $string105_panix_offensive_tool_keyword = "usage_backdoor_user"
+                        $string106_panix_offensive_tool_keyword = "usage_initd_backdoor"
+                        $string107_panix_offensive_tool_keyword = "usage_malicious_docker_container"
+                        $string108_panix_offensive_tool_keyword = "usage_malicious_package"
+                        $string109_panix_offensive_tool_keyword = "usage_motd_backdoor"
+                        $string110_panix_offensive_tool_keyword = "usage_package_manager_persistence"
+                        $string111_panix_offensive_tool_keyword = "usage_rc_local_backdoor"
+                        $string112_panix_offensive_tool_keyword = "usage_sudoers_backdoor"
+                        $string113_panix_offensive_tool_keyword = "usage_suid_backdoor"
+                        $string114_panix_offensive_tool_keyword = "usage_system_binary_backdoor"
+                        $string115_panix_offensive_tool_keyword = "usermod -u 0 -o "
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

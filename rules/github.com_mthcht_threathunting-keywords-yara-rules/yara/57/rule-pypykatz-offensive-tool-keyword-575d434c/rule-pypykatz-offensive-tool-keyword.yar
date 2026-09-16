@@ -1,0 +1,126 @@
+rule rule_pypykatz_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'pypykatz' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "pypykatz"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_pypykatz_offensive_tool_keyword = /\sdpapi\sblob\s.{0,100}\.json\s.{0,100}\.dat/ nocase ascii wide
+                        $string2_pypykatz_offensive_tool_keyword = /\sdpapi\scredential\s.{0,100}\.json\scred/ nocase ascii wide
+                        $string3_pypykatz_offensive_tool_keyword = " dpapi masterkey /root/" nocase ascii wide
+                        $string4_pypykatz_offensive_tool_keyword = /\sdpapi\sminidump\s.{0,100}\.dmp/ nocase ascii wide
+                        $string5_pypykatz_offensive_tool_keyword = /\sdpapi\sprekey\snt\s.{0,100}S\-1\-5\-21/ nocase ascii wide
+                        $string6_pypykatz_offensive_tool_keyword = " dpapi prekey password " nocase ascii wide
+                        $string7_pypykatz_offensive_tool_keyword = /\sdpapi\sprekey\sregistry\s.{0,100}\.reg/ nocase ascii wide
+                        $string8_pypykatz_offensive_tool_keyword = /\sdpapi\ssecurestring\s.{0,100}\.dat/ nocase ascii wide
+                        $string9_pypykatz_offensive_tool_keyword = " kerberos asreproast " nocase ascii wide
+                        $string10_pypykatz_offensive_tool_keyword = /\skerberos\sbrute\s.{0,100}\s\-d\s/ nocase ascii wide
+                        $string11_pypykatz_offensive_tool_keyword = /\skerberos\sbrute\s.{0,100}\.txt/ nocase ascii wide
+                        $string12_pypykatz_offensive_tool_keyword = /\skerberos\sccache\sdel\s.{0,100}\.ccache/ nocase ascii wide
+                        $string13_pypykatz_offensive_tool_keyword = " kerberos ccache exportkirbi " nocase ascii wide
+                        $string14_pypykatz_offensive_tool_keyword = /\skerberos\sccache\slist\s.{0,100}\.ccache/ nocase ascii wide
+                        $string15_pypykatz_offensive_tool_keyword = " kerberos ccache loadkirbi " nocase ascii wide
+                        $string16_pypykatz_offensive_tool_keyword = " kerberos ccache roast " nocase ascii wide
+                        $string17_pypykatz_offensive_tool_keyword = /\skerberos\skeytab\s.{0,100}\.keytab/ nocase ascii wide
+                        $string18_pypykatz_offensive_tool_keyword = " kerberos kirbi parse " nocase ascii wide
+                        $string19_pypykatz_offensive_tool_keyword = " kerberos spnroast " nocase ascii wide
+                        $string20_pypykatz_offensive_tool_keyword = /\slive\sdpapi\sblobfile\s.{0,100}\.blob/ nocase ascii wide
+                        $string21_pypykatz_offensive_tool_keyword = " live dpapi cred " nocase ascii wide
+                        $string22_pypykatz_offensive_tool_keyword = " live dpapi keys -o " nocase ascii wide
+                        $string23_pypykatz_offensive_tool_keyword = " live dpapi securestring " nocase ascii wide
+                        $string24_pypykatz_offensive_tool_keyword = " live dpapi vcred " nocase ascii wide
+                        $string25_pypykatz_offensive_tool_keyword = " live dpapi vpol " nocase ascii wide
+                        $string26_pypykatz_offensive_tool_keyword = " live dpapi wifi" nocase ascii wide
+                        $string27_pypykatz_offensive_tool_keyword = " live kerberos apreq " nocase ascii wide
+                        $string28_pypykatz_offensive_tool_keyword = " live kerberos dump" nocase ascii wide
+                        $string29_pypykatz_offensive_tool_keyword = " live kerberos purge" nocase ascii wide
+                        $string30_pypykatz_offensive_tool_keyword = " live kerberos roast" nocase ascii wide
+                        $string31_pypykatz_offensive_tool_keyword = " live kerberos sessions" nocase ascii wide
+                        $string32_pypykatz_offensive_tool_keyword = " live kerberos tgt" nocase ascii wide
+                        $string33_pypykatz_offensive_tool_keyword = " live kerberos triage" nocase ascii wide
+                        $string34_pypykatz_offensive_tool_keyword = " live lsa -o " nocase ascii wide
+                        $string35_pypykatz_offensive_tool_keyword = " live lsa -o " nocase ascii wide
+                        $string36_pypykatz_offensive_tool_keyword = " live process create -c regedit" nocase ascii wide
+                        $string37_pypykatz_offensive_tool_keyword = " live smb client " nocase ascii wide
+                        $string38_pypykatz_offensive_tool_keyword = " live smb dcsync " nocase ascii wide
+                        $string39_pypykatz_offensive_tool_keyword = " live smb lsassdump " nocase ascii wide
+                        $string40_pypykatz_offensive_tool_keyword = " live smb regdump " nocase ascii wide
+                        $string41_pypykatz_offensive_tool_keyword = " live smb secretsdump " nocase ascii wide
+                        $string42_pypykatz_offensive_tool_keyword = " live smbapi localgroup enum -t" nocase ascii wide
+                        $string43_pypykatz_offensive_tool_keyword = " live smbapi session enum " nocase ascii wide
+                        $string44_pypykatz_offensive_tool_keyword = " live smbapi share enum" nocase ascii wide
+                        $string45_pypykatz_offensive_tool_keyword = " live users whoami" nocase ascii wide
+                        $string46_pypykatz_offensive_tool_keyword = /\slsa\sminidump\s.{0,100}\s\-o\s/ nocase ascii wide
+                        $string47_pypykatz_offensive_tool_keyword = /\slsa\sminidump\s.{0,100}\.dmp/ nocase ascii wide
+                        $string48_pypykatz_offensive_tool_keyword = " lsa minidump /" nocase ascii wide
+                        $string49_pypykatz_offensive_tool_keyword = /\ssmb\sclient\s.{0,100}\sshares\s.{0,100}use\sc\$/ nocase ascii wide
+                        $string50_pypykatz_offensive_tool_keyword = /\ssmb\sshareenum\s.{0,100}smb2\+ntlm\-password/ nocase ascii wide
+                        $string51_pypykatz_offensive_tool_keyword = /\.py\s\srekall\s.{0,100}\.dmp.{0,100}\s\-t\s0/ nocase ascii wide
+                        $string52_pypykatz_offensive_tool_keyword = /\/kerberosticket\.py/ nocase ascii wide
+                        $string53_pypykatz_offensive_tool_keyword = /\/lsass\.DMP/ nocase ascii wide
+                        $string54_pypykatz_offensive_tool_keyword = "/pypykatz" nocase ascii wide
+                        $string55_pypykatz_offensive_tool_keyword = /\/ssp\/decryptor\.py/ nocase ascii wide
+                        $string56_pypykatz_offensive_tool_keyword = /\\\\c\$\\Windows\\Temp\\.{0,100}\.dmp/ nocase ascii wide
+                        $string57_pypykatz_offensive_tool_keyword = /\\lsass\.DMP/ nocase ascii wide
+                        $string58_pypykatz_offensive_tool_keyword = /\\x44\\x8b\\x01\\x44\\x39\\x42/ nocase ascii wide
+                        $string59_pypykatz_offensive_tool_keyword = /\\x83\\x64\\x24\\x30\\x00\\x48\\x8d\\x45\\xe0\\x44\\x8b\\x4d\\xd8\\x48\\x8d\\x15/ nocase ascii wide
+                        $string60_pypykatz_offensive_tool_keyword = /\\x8b\\x31\\x39\\x72\\x10\\x75/ nocase ascii wide
+                        $string61_pypykatz_offensive_tool_keyword = /_dcsync\.txt/ nocase ascii wide
+                        $string62_pypykatz_offensive_tool_keyword = /_lsass\.txt/ nocase ascii wide
+                        $string63_pypykatz_offensive_tool_keyword = /_lsassdecrypt\.py/ nocase ascii wide
+                        $string64_pypykatz_offensive_tool_keyword = /apypykatz\.py/ nocase ascii wide
+                        $string65_pypykatz_offensive_tool_keyword = /asreproast_.{0,100}\.txt/ nocase ascii wide
+                        $string66_pypykatz_offensive_tool_keyword = /dcsync\.py/ nocase ascii wide
+                        $string67_pypykatz_offensive_tool_keyword = /dpapi\/decryptor\.py/ nocase ascii wide
+                        $string68_pypykatz_offensive_tool_keyword = "get_masterkeys_from_lsass" nocase ascii wide
+                        $string69_pypykatz_offensive_tool_keyword = /gppassword\.py/ nocase ascii wide
+                        $string70_pypykatz_offensive_tool_keyword = "import apypykatz" nocase ascii wide
+                        $string71_pypykatz_offensive_tool_keyword = "import pypykatz" nocase ascii wide
+                        $string72_pypykatz_offensive_tool_keyword = /info\@skelsecprojects\.com/ nocase ascii wide
+                        $string73_pypykatz_offensive_tool_keyword = "install pypykatz" nocase ascii wide
+                        $string74_pypykatz_offensive_tool_keyword = "KatzSystemArchitecture" nocase ascii wide
+                        $string75_pypykatz_offensive_tool_keyword = /kerberos\/decryptor\.py/ nocase ascii wide
+                        $string76_pypykatz_offensive_tool_keyword = "KIWI_CLOUDAP_LOGON_LIST_ENTRY_21H2" nocase ascii wide
+                        $string77_pypykatz_offensive_tool_keyword = /lsa_decryptor\.py/ nocase ascii wide
+                        $string78_pypykatz_offensive_tool_keyword = /lsa_decryptor_nt.{0,100}\.py/ nocase ascii wide
+                        $string79_pypykatz_offensive_tool_keyword = "LSASecretDefaultPassword" nocase ascii wide
+                        $string80_pypykatz_offensive_tool_keyword = /minidump.{0,100}minikerberos/ nocase ascii wide
+                        $string81_pypykatz_offensive_tool_keyword = "pypykatz " nocase ascii wide
+                        $string82_pypykatz_offensive_tool_keyword = /pypykatz\.commons/ nocase ascii wide
+                        $string83_pypykatz_offensive_tool_keyword = /pypykatz\.dpapi/ nocase ascii wide
+                        $string84_pypykatz_offensive_tool_keyword = /pypykatz\.exe/ nocase ascii wide
+                        $string85_pypykatz_offensive_tool_keyword = /pypykatz\.git/ nocase ascii wide
+                        $string86_pypykatz_offensive_tool_keyword = /pypykatz\.kerberos/ nocase ascii wide
+                        $string87_pypykatz_offensive_tool_keyword = /pypykatz\.lsadecryptor/ nocase ascii wide
+                        $string88_pypykatz_offensive_tool_keyword = /pypykatz\.py/ nocase ascii wide
+                        $string89_pypykatz_offensive_tool_keyword = /pypykatz\.registry/ nocase ascii wide
+                        $string90_pypykatz_offensive_tool_keyword = /pypykatz_rekall\.py/ nocase ascii wide
+                        $string91_pypykatz_offensive_tool_keyword = /pypykatz\-master\.zip/ nocase ascii wide
+                        $string92_pypykatz_offensive_tool_keyword = /rekallreader\.py/ nocase ascii wide
+                        $string93_pypykatz_offensive_tool_keyword = /shareenum\.py/ nocase ascii wide
+                        $string94_pypykatz_offensive_tool_keyword = /spnroast_.{0,100}\.txt/ nocase ascii wide
+                        $string95_pypykatz_offensive_tool_keyword = /tasklist\s\/fi\s.{0,100}Imagename\seq\slsass\.exe/ nocase ascii wide
+                        $string96_pypykatz_offensive_tool_keyword = /tspkg\/decryptor\.py/ nocase ascii wide
+                        $string97_pypykatz_offensive_tool_keyword = /wdigest\/decryptor\.py/ nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

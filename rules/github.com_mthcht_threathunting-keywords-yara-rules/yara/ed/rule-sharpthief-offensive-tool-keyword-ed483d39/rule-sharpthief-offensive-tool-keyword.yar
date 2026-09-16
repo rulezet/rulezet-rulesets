@@ -1,0 +1,52 @@
+rule rule_SharpThief_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'SharpThief' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "SharpThief"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_SharpThief_offensive_tool_keyword = /\/SharpThief\.git/ nocase ascii wide
+                        $string2_SharpThief_offensive_tool_keyword = "/SharpThief/tarball" nocase ascii wide
+                        $string3_SharpThief_offensive_tool_keyword = "/SharpThief/zipball" nocase ascii wide
+                        $string4_SharpThief_offensive_tool_keyword = /\\SharpThief\\/ nocase ascii wide
+                        $string5_SharpThief_offensive_tool_keyword = /\\SharpThief\-main/ nocase ascii wide
+                        $string6_SharpThief_offensive_tool_keyword = ">SharpThief<" nocase ascii wide
+                        $string7_SharpThief_offensive_tool_keyword = "025280A3-24F7-4C55-9B5E-D08124A52546" nocase ascii wide
+                        $string8_SharpThief_offensive_tool_keyword = "2759a95c63a2af0eed9d3202d961ddb72d4da05ea44653d400f9003e0a492064" nocase ascii wide
+                        $string9_SharpThief_offensive_tool_keyword = "2990d1f4243fdfc99c3da1be020ee516ef530be55e2769d2526e4672e32b40f5" nocase ascii wide
+                        $string10_SharpThief_offensive_tool_keyword = "5374b615af370b5b03281366c6561f4ebb4f0f2716e8005f07cc4572d865b80a" nocase ascii wide
+                        $string11_SharpThief_offensive_tool_keyword = "84074bcee24f8ee02ce2011e88471d900bc85cace4967b1273c634a7dba5496b" nocase ascii wide
+                        $string12_SharpThief_offensive_tool_keyword = "aa659878813ee6b5ecb42d5d069fc48255b10337a357eb70fb5c002996c77239" nocase ascii wide
+                        $string13_SharpThief_offensive_tool_keyword = "d06d9e05ba5582691f8d5939cbbc37e171260c088a60770e2d45c27c9f1ac2ed" nocase ascii wide
+                        $string14_SharpThief_offensive_tool_keyword = "e7c9a0a34bad12057b3c39fb42106b7e095d8b64e9b68010ca8cf516a908c262" nocase ascii wide
+                        $string15_SharpThief_offensive_tool_keyword = "fa1b7e541e359317e69e48d0f089cfe83a6c8acf04d4c0ed44d76b38cc97e40f" nocase ascii wide
+                        $string16_SharpThief_offensive_tool_keyword = "INotGreen/SharpThief" nocase ascii wide
+                        $string17_SharpThief_offensive_tool_keyword = /SharpThief\.csproj/ nocase ascii wide
+                        $string18_SharpThief_offensive_tool_keyword = /SharpThief\.exe/ nocase ascii wide
+                        $string19_SharpThief_offensive_tool_keyword = /SharpThief\.pdb/ nocase ascii wide
+                        $string20_SharpThief_offensive_tool_keyword = /SharpThief\.Properties/ nocase ascii wide
+                        $string21_SharpThief_offensive_tool_keyword = /SharpThief\.resources\.dll/ nocase ascii wide
+                        $string22_SharpThief_offensive_tool_keyword = /SharpThief\.resources\.exe/ nocase ascii wide
+                        $string23_SharpThief_offensive_tool_keyword = /SharpThief\.sln/ nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}
