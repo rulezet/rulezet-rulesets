@@ -1,0 +1,9 @@
+rule Trojan_Win32_Babar_GPA_MTB{
+	meta:
+		description = "Trojan:Win32/Babar.GPA!MTB,SIGNATURE_TYPE_PEHSTR_EXT,04 00 04 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {89 f7 89 f0 31 db 83 c7 5c 81 2e ?? ?? ?? ?? 83 c6 04 66 ba ?? ?? 39 fe 7c ef } 	condition:
+		((#a_03_0  & 1)*4) >=4
+ 
+}
