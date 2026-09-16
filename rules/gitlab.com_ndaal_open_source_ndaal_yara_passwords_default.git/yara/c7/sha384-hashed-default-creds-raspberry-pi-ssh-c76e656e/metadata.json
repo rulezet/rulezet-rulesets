@@ -1,0 +1,19 @@
+{
+  "uuid": "c76e656e-75b9-4f1c-be57-fdd6d95ea65c",
+  "title": "sha384_hashed_default_creds_raspberry_pi_ssh",
+  "format": "yara",
+  "author": "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Hashed values of default credentials for raspberry_pi_ssh.",
+  "source": "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/738146"
+}
