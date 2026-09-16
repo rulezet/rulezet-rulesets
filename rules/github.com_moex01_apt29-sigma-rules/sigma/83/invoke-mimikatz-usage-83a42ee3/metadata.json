@@ -1,0 +1,24 @@
+{
+  "uuid": "83a42ee3-d81c-4b30-87c8-8187ba864970",
+  "title": "Invoke-Mimikatz Usage",
+  "format": "sigma",
+  "author": "Momen Mahmoud",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects execution of the Invoke-Mimikatz command in PowerShell. Invoke-Mimikatz is the PowerShell version of the \nknown Mimikatz tool, which is a credential dumping tool capable of extracting credentials from Windows LSASS memory.\n",
+  "source": "https://github.com/moex01/apt29-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232886"
+}

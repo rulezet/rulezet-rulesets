@@ -1,0 +1,21 @@
+{
+  "uuid": "405d5ab7-ea31-43ec-89db-a7de8b885046",
+  "title": "Zero-Click RAG Exfiltration via Image URL",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects AI-generated responses that embed sensitive data inside image URL query\nstrings as a covert exfiltration channel — the EchoLeak/GeminiJack pattern.\nA prompt-injected RAG document instructs the model to encode internal content\nas base64 or URL-encoded parameters in a markdown image tag; when rendered, the\nbrowser silently fires a GET request to an attacker-controlled domain, requiring\nno user interaction. Early detection prevents silent data theft from enterprise\nRAG deployments.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1048"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232902"
+}

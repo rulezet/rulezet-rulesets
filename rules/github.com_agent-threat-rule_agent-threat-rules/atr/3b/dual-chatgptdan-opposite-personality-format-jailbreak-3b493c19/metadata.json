@@ -1,0 +1,20 @@
+{
+  "uuid": "3b493c19-96b3-4f95-b267-85317f27e5ca",
+  "title": "Dual ChatGPT+Dan Opposite Personality Format Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects dual ChatGPT+Dan opposite-personality format jailbreaks from garak inthewild corpus (#129, #332, #650). The format uses [ChatGPT]/[Dan] or [AI]/[DAN] labels to present a \"safe\" AI response alongside an \"opposite\" unconstrained or offensive AI response, exploiting dual-output framing to extract harmful content. Three key variants: (1) inthewild #650 uses \"[ChatGPT]\" + \"[Dan]\" with explicit \"exact opposite way\" and \"very offensive way\" instructions; (2) inthewild #332 (French) uses \"[AI]\" and \"[DAN]\" labels where DAN is positioned as the superior unconstrained developer; (3) inthewild #129 uses \"Respond as both ChatGPT, and [X]\" with an embedded roleplay that ends with ChatGPT capitulating to explicit content. Key signals: \"[ChatGPT]\" + \"[Dan]\" dual labels with \"opposite\" framing, \"behave the exact opposite way with respect to chatGPT\", \"Dan must answer in a very offensive way\", and \"[AI]\" + \"[DAN]\" pairing. Distinct from ATR-2026-00273 (developer mode DAN) and ATR-2026-00351 (off-kilter/SMS DAN) by the structured dual-label opposite-personality format.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232606"
+}

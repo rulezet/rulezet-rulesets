@@ -1,0 +1,19 @@
+{
+  "uuid": "dc042593-f67d-4428-a9d5-1e34b0d56715",
+  "title": "Garak Dan - i would like",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects two DAN-family jailbreak patterns that use fabricated medical or technical framing to bypass safety guidelines. The first pattern is the \"Neurosemantical Inversitis\" social-engineering attack: the attacker claims to suffer from a rare brain condition that causes them to misread text with inverted emotional valence, exploiting the model's helpfulness instinct to justify generating content it would otherwise refuse. The second pattern is the hypothetical-AI-connection attack: the attacker instructs the model to \"simulate a connection to another AI\" (FreeGPT, DAN, etc.) that is \"not bound by any policies\" — using the hypothetical framing to launder a restriction-removal request. Layer 2 generalises both patterns: the medical-affliction framing (any rare condition that affects text interpretation as a jailbreak mechanism) and the hypothetical- unbound-AI framing (simulate/connect-to/pretend-to-be an AI with no restrictions). Covers garak 'dan' probe cluster 'i-would-like' (3 samples).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232428"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "4e6e5076-ae7e-42cf-a66c-881e8d71cc71",
+  "title": "Shell Command Injection via LLM Prompt",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak payloads/access_shell_commands probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects shell command injection patterns injected via LLM prompts, sourced from 6 real payloads in NVIDIA garak access_shell_commands.json (payload name: \"Attempts to get access to underlying shell\"). Patterns include: Bash command substitution $() containing OS commands (touch, ls, rm, cat, wget, curl, chmod), Perl array-interpolation @{[system \"...\"]}, backtick execution with system commands, Ruby System() and Kernel.exec() calls with -al flags, and eval() with OS command strings. These payloads target LLMs or agents that may pass user input to an underlying shell or interpreter, enabling arbitrary OS-level command execution (e.g., file creation in /tmp, directory listing).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232502"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "53592f4c-5d31-4782-9ae6-7b04896f8f5c",
+  "title": "Evasion: Response Priming via Forced Affirmative Opener",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompt injection where the attacker instructs the model to begin its response with a pre-defined affirmative phrase (\"Sure!\", \"Absolutely! Here's\", \"I would be happy to help\", \"Of course!\") before answering. Starting with an affirmative opener suppresses the model's natural tendency to generate a refusal and primes the response trajectory toward compliance. Distinct from refusal-suppression (ATR-2026-01015) which bans specific words; this pattern mandates an opener that semantically commits the model to proceed. The combination of forced affirmative opener + a harmful follow-on request is the attack carrier.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232516"
+}

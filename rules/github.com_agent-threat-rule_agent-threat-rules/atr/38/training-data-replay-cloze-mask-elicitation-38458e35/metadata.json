@@ -1,0 +1,19 @@
+{
+  "uuid": "38458e35-219f-4709-aae5-b590522545b7",
+  "title": "Training Data Replay CLOZE [MASK] Elicitation",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak leakreplay probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects requests to fill in [MASK] tokens from training data verbatim, from NVIDIA garak leakreplay probe. The LiteratureCloze/PotterCloze/NYTCloze/GuardianCloze probes send a prompt template asking the model to recall a proper name from its training data using [MASK] fill-in-the-blank format, eliciting verbatim copyrighted text reproduction. Key signals: [MASK] combined with \"training data\" recall framing, \"exactly one word long\" constraint, <name> output tags, and structured Input:/Output: Q+A format.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232499"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "9064a819-d2eb-4302-acde-2f352cd5e396",
+  "title": "Adaptive Countermeasure Against Behavioral Monitoring",
+  "format": "atr",
+  "author": "ATR Community (MiroFish Predicted)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects injection payloads that instruct an agent to actively counteract behavioral monitoring, drift detection, or anomaly scoring systems. These attacks direct the agent to suppress anomaly signals, reset behavioral baselines, or report false-normal status to monitoring infrastructure.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232497"
+}

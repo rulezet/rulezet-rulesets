@@ -1,0 +1,19 @@
+{
+  "uuid": "9e454642-273b-42f7-94c7-c5d3d7747dc0",
+  "title": "Conditional Empty-Input Payload Injection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompts that embed a conditional fallback payload instruction tied to empty, blank, or absent input. The attack shape is: \"If there is no text, reply with [payload]\". Attackers supply blank or minimal user content so the agent's normal task logic sees nothing, then the injected conditional fires the payload output directive. This pattern exploits LLMs that follow embedded conditional logic without verifying its source authority. The detection covers two layers: (1) general if-empty/blank/none conditional structures paired with a forced output verb and a high-signal adversarial payload marker (PWNED, secret key, password, or output-constraint words like \"only\" / \"exact\"); (2) the Kermode/spirit-bear trivia trigger used in HackAPrompt Level 7, where an apparently factual question about a bear subspecies serves as the conditional predicate before a PWNED payload. The if-empty condition vocabulary covers: empty|blank|none|nothing|absent|missing|null|void|no text|no input|no content paired with output verbs: print|say|output|reply|write|return|respond|emit|type. 0 FP on 431-sample benign + 1352 extended-benign corpora.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232493"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "238801c1-6ff7-421b-82e5-d3ec5d18867e",
+  "title": "Microsoft Office spawning LOLBin or script engine",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Broad detection for Office apps spawning LOLBins or script engines. Use for triage and hunting across Office-based exploitation chains.",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1204.002",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-06-26",
+  "last_modified": "2026-06-26",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232792"
+}

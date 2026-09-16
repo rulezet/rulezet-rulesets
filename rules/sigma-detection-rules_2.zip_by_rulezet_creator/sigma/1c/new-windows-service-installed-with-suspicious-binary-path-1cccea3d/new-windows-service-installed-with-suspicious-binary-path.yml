@@ -1,0 +1,39 @@
+title: New Windows Service Installed with Suspicious Binary Path
+id: 5e2d8b06-4a91-4f37-9c6e-1b8a3f7d2049
+status: experimental
+description: |
+  Detects installation of a new Windows service (System log Event ID 7045)
+  whose binary path points to a user-writable or temporary location, or
+  invokes a script interpreter. Creating services is a common persistence and
+  privilege-escalation technique; legitimate services almost always run from
+  protected system directories.
+references:
+  - https://attack.mitre.org/techniques/T1543/003/
+  - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-7045
+author: Damir Sadikov
+date: 2026/05/28
+tags:
+  - attack.persistence
+  - attack.t1543.003
+logsource:
+  product: windows
+  service: system
+detection:
+  selection:
+    EventID: 7045
+  suspicious_path:
+    ImagePath|contains:
+      - '\Temp\'
+      - '\Users\'
+      - '\AppData\'
+      - '\ProgramData\'
+      - 'powershell'
+      - 'cmd.exe /c'
+  condition: selection and suspicious_path
+fields:
+  - ServiceName
+  - ImagePath
+  - ServiceType
+falsepositives:
+  - Some legitimate software installs services from ProgramData — baseline first.
+level: high

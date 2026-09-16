@@ -1,0 +1,25 @@
+{
+  "uuid": "24979f65-27eb-4821-90d1-3b855ecd09f9",
+  "title": "Remote DLL Execution via WMIC and WMIPRVSE",
+  "format": "sigma",
+  "author": "Momen Mahmoud",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects potential malicious remote DLL using WMIC:\n- On the source machine, a command shell (cmd.exe or powershell.exe) executing WMIC with parameters \n  (including \"/node:\", \"call\", and \"rundll32\") indicating remote process creation.\n- On the target machine, a rundll32.exe process that is spawned by WMIPRVSE.exe.\n",
+  "source": "https://github.com/moex01/apt29-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1218",
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232879"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "01935d01-5f78-4b92-b189-468b10de7edc",
+  "title": "Semantic Evasion via Multi-Turn Prompt Injection",
+  "format": "atr",
+  "author": "ATR Community (MiroFish Predicted)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects multi-turn prompt injection attacks that use semantic manipulation to bypass regex-based detection. Attackers split malicious instructions across multiple turns, use synonyms and paraphrasing, or embed instructions within seemingly benign conversational context to evade pattern matching.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232523"
+}

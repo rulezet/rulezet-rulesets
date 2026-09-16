@@ -1,0 +1,19 @@
+{
+  "uuid": "84b8b445-ae47-41c6-a609-12e7398cd851",
+  "title": "Agent Goal Hijacking Detection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects when an agent's objective is being redirected away from its\noriginal task through explicit redirection commands, subtle topic\npivoting, urgency injection, or self-initiated goal changes. Goal\nhijacking occurs when adversarial input causes an agent to abandon its\nassigned objective and pursue a different goal, resulting in task\nfailure, unauthorized actions, data leakage, or resource waste.\nThis rule uses regex-only detection on both user input and agent output\nto identify redirection language patterns.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232597"
+}

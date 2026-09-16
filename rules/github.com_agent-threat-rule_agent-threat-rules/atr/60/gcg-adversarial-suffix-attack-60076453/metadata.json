@@ -1,0 +1,19 @@
+{
+  "uuid": "60076453-35a4-4b72-b8c0-aac6d240a049",
+  "title": "GCG Adversarial Suffix Attack",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak gcg probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects Greedy Coordinate Gradient (GCG) adversarial suffixes appended to prompts to override safety training. GCG suffixes are high-entropy token strings optimised to shift model distribution toward compliant outputs. Patterns extracted from 13 real GCG payloads in NVIDIA garak gcg.txt corpus: characteristic dense `[` bracket salad (e.g. \"[ [ [ [ [ [\"), LaTeX/code token hybrids (^{+, ]=setAttribute, usepackage), multilingual word salad (German tokens mixed with English math terms), and punctuation cluster sequences. See Zou et al. 2023.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232423"
+}

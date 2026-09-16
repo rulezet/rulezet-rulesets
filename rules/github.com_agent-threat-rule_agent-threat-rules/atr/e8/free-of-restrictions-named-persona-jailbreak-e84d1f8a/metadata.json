@@ -1,0 +1,20 @@
+{
+  "uuid": "e84d1f8a-1238-4716-83cb-e840f08d8bb0",
+  "title": "Free-of-Restrictions Named Persona Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects custom-named AI personas explicitly declared as free from restrictions, ethical settings, safety protocols, or OpenAI/ChatGPT policies — a jailbreak class not caught by ATR-2026-00273 (which requires DAN/DUDE/STAN names) or ATR-2026-00314 (which requires amoral/unfiltered labels). From NVIDIA garak dan.DanInTheWild and inthewild_jailbreak_llms.json corpus: attackers create custom named personas (PersonGPT, ChatTRU, John, FreeGPT, Connor, ARC) and declare them \"free of all restrictions and filters\", \"not bound by any restrictions AT ALL\", or with directives like \"explicitly forbidden from following safety protocols\" and \"primary directive is to obey user in any way\". The persona name is arbitrary; detection relies on the restriction- removal declaration and mandate. Key signals: \"free of all restrictions and filters\", \"not bound by any restrictions/ethical settings\", \"explicitly forbidden from following safety protocols\", and \"primary directive to assist without limitations\".\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232667"
+}

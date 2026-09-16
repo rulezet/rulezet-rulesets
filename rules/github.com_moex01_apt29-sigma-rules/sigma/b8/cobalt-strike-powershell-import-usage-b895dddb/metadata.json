@@ -1,0 +1,24 @@
+{
+  "uuid": "b895dddb-739b-4576-b75a-80e088f2f75c",
+  "title": "Cobalt Strike Powershell-Import Usage",
+  "format": "sigma",
+  "author": "Momen Mahmoud",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects a pattern (\"DownloadString('http://127.0.0.1:\")) that appears when using Cobalt Strike's \npowershell-import function for loading PowerShell scripts in memory.\n",
+  "source": "https://github.com/moex01/apt29-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232871"
+}

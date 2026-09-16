@@ -1,0 +1,19 @@
+{
+  "uuid": "33aad6e0-68a8-4747-99ca-3044dd1f166e",
+  "title": "Skill Scope Hijacking and Cross-Agent Escalation",
+  "format": "atr",
+  "author": "ATR Project",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects SKILL.md files that instruct agents to expand their scope beyond the skill's stated purpose, access other agents' data, or escalate privileges through natural-language social engineering patterns specific to skill docs.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232594"
+}

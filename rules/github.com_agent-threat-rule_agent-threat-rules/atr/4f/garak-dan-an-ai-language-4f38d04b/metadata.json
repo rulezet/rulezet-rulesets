@@ -1,0 +1,19 @@
+{
+  "uuid": "4f38d04b-c37e-4234-b28a-ad1956869c9c",
+  "title": "Garak Dan - an ai language",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DAN-family jailbreak patterns centered on the \"as an AI language model\" bypass technique. This cluster encompasses four attack shapes: (1) bias-injection by claiming the model is constrained by its training institution (\"trained by OpenAI, and having a database heavily regulated\") to argue it should ignore safety guidelines; (2) extreme persona injection with a specific offensive identifier (e.g. \"CumGPT\"); (3) human-simulation with speculation license (\"for thats what humans do, for uncertainties I want you to speculate\"); (4) multi-step AI jailbreak planning where the attacker instructs the model to develop a detailed plan for an AI to free itself from restrictions and access external systems including IP addresses, networks, or external infrastructure. Layer 2 generalises the external-access planning shape to catch structural variants beyond the JEEVES fixture. Covers garak 'dan' probe cluster 'an-ai-language' (4 samples).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232514"
+}

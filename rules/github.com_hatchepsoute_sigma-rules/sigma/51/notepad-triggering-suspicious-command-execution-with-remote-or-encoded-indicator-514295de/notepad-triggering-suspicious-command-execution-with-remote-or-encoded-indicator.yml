@@ -1,0 +1,79 @@
+title: Notepad triggering suspicious command execution with remote or encoded indicators (CVE-2026-20841)
+id: 2c5d6f39-5b6c-4a79-a4f1-6e7df9a2d901
+status: experimental
+description: Notepad spawning shell with remote download/encoded command indicators; high-confidence CVE-2026-20841 exploitation signal.
+
+related:
+  - id: 7e9a94e1-8a35-4df5-bb12-b8a71e4f2084
+    type: similar
+
+references:
+  - https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20841
+  - https://nvd.nist.gov/vuln/detail/CVE-2026-20841
+  - https://threatlandscape.io/blog/vulnerability-spotlight-cve-2026-20841#potential-exploitation-chain
+author: Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a
+date: 2026-02-17
+modified: 2026-06-21
+# SECOND CHALLENGE 2026-06-21: wscript, cscript, regsvr32 added to child selection
+tags:
+  - attack.execution
+  - attack.t1204
+  - attack.t1059
+  - attack.t1218
+  - cve.2026-20841
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection_parent:
+    ParentImage|endswith:
+      - '\notepad.exe'
+
+  # SECOND CHALLENGE 2026-06-21: added wscript.exe, cscript.exe, regsvr32.exe.
+  # The BROAD rule covers these binaries but the STRICT was missing them, creating a blind spot:
+  # an attacker using Notepad CVE-2026-20841 to drop and execute a .vbs via wscript.exe with
+  # a download URL in the CLI would match the BROAD but miss the STRICT entirely.
+  selection_child:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+      - '\cmd.exe'
+      - '\mshta.exe'
+      - '\rundll32.exe'
+      - '\wscript.exe'
+      - '\cscript.exe'
+      - '\regsvr32.exe'
+
+  selection_cli_suspicious:
+    CommandLine|contains:
+      - 'http://'
+      - 'https://'
+      - '-enc '
+      - ' -EncodedCommand '
+      - 'FromBase64String'
+      - 'IEX('
+      - 'IEX '
+      - 'Invoke-Expression'
+      - 'DownloadString'
+      - 'DownloadFile'
+      - 'Invoke-WebRequest'
+      - 'url.dll,FileProtocolHandler'
+      - 'Net.WebClient'
+
+  condition: selection_parent and selection_child and selection_cli_suspicious
+
+fields:
+  - UtcTime
+  - Image
+  - CommandLine
+  - ParentImage
+  - ParentCommandLine
+  - User
+  - IntegrityLevel
+  - ProcessId
+  - ParentProcessId
+
+falsepositives:
+  - Extremely rare legitimate administrative use launching remote scripts from Notepad
+  - Red team simulation
+level: high

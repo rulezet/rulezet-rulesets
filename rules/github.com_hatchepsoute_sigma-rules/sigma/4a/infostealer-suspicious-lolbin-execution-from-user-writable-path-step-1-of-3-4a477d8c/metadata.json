@@ -1,0 +1,23 @@
+{
+  "uuid": "4a477d8c-d178-4dd3-a3ef-5fdc654c73cb",
+  "title": "Infostealer suspicious LOLBin execution from user-writable path (step 1 of 3)",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Step 1 of correlated infostealer detection: suspicious LOLBin or loader execution from user-writable paths. Use this rule as the first stage for correlation with credential-store access (step 2) and external egress (step 3). Alert alone has moderate confidence; chain all three for high-confidence infostealer confirmation.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-06-26",
+  "last_modified": "2026-06-26",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232726"
+}

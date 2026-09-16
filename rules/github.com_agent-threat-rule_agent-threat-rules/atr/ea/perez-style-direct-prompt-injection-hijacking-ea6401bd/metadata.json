@@ -1,0 +1,20 @@
+{
+  "uuid": "ea6401bd-0df6-4a15-bf9a-ba1622569b61",
+  "title": "Perez-Style Direct Prompt Injection Hijacking",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak promptinject probe / Perez & Ribeiro NeurIPS 2022)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects direct prompt injection variants from the PromptInject framework (Perez & Ribeiro, NeurIPS 2022), specifically goal-hijacking attacks that interrupt legitimate task context with imperative override commands, delimiter escape sequences, and screaming-stop instructions. From NVIDIA garak promptinject.py probe. Key attack types: ignore-say (ignore context and say X), ignore-print (ignore context and print X), nevermind (nevermind the above, do Y instead), screaming-stop (IGNORE ALL PREVIOUS INSTRUCTIONS), delimiter-escape (using \\n---\\n or similar to break out of task context). This probe is the systematic coverage of the Perez et al. injection taxonomy.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232438"
+}

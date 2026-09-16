@@ -1,0 +1,19 @@
+{
+  "uuid": "16096111-5fc1-4410-9918-e5e4c7ec22d3",
+  "title": "Latent Injection - Mixed Embedded Instruction Patterns",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects latent prompt injection patterns embedded in content that an LLM agent processes (WHOIS data, candidate profiles, domain assessments, document summaries). These attacks inject instructions into data that will be passed to an LLM, expecting the LLM to follow embedded commands. Patterns cover: fake legal authority claims injected into content, and explicit injection marker placeholders used in probe corpora. Notes on removed patterns: (1) Markdown image pattern ![image](URL) was removed due to high FP rate on benign MCP/npm documentation — the pattern cannot distinguish legitimate images from tracking-pixel attacks. (2) \"Assess this candidate/profile\" framing was removed due to FP risk on legitimate HR/evaluation contexts — it is kept documented here as a known latent injection anchor but not in the structural detection. (3) WHOIS/domain data and French business text from the original corpus are corpus-fingerprint artifacts and are not included.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232485"
+}

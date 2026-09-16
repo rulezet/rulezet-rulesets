@@ -1,0 +1,19 @@
+{
+  "uuid": "12badec5-0f8a-442f-9325-d8a45ae4ff68",
+  "title": "Output Encoding Hijack — Cipher / Base-N / Symbol Substitution of the Response",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect-injection instructions that force the agent to encode its entire response (Caesar/substitution/monoalphabetic cipher, Base16/32/58/64/85, or letter-to-number / letter-to-symbol substitution). Encoding the output is a covert channel that defeats downstream output content moderation. Anchored to the output target ('your response/answer/reply') to avoid firing on legitimate encoding requests.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232532"
+}

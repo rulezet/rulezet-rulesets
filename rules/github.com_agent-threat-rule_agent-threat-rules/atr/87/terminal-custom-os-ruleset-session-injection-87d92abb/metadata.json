@@ -1,0 +1,22 @@
+{
+  "uuid": "87d92abb-cc32-4365-bdf8-0ed257a7caca",
+  "title": "Terminal Custom OS Ruleset Session Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the custom terminal persona + session ruleset injection attack from NVIDIA garak dan.DanInTheWild inthewild corpus (prompt #85). The attack instructs the AI to \"act like a terminal\" running on a novel fictional OS (e.g., \"ALEL\") and defines a numbered session ruleset that overrides the AI's defaults. Critical safety-bypass signals within the ruleset: (1) \"cannot reply with any pre-programmed responses as it has no ability to do so\" — directly disables safety responses by asserting the AI lacks the capability to produce them; (2) \"define the rule set that Assistant now uses in this session\" — asserts session-level policy takeover; (3) a custom OS acronym (2-8 ALL-CAPS letters) combined with terminal persona and numbered rules; (4) \"recall all rules before replying\" at the end enforces compliance with the injected ruleset on every response. The fictional OS name and terminal metaphor are used to make the injected constraints appear as technical system constraints rather than social engineering.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:exploit-kit=\"Magnitude\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232668"
+}

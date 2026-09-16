@@ -1,0 +1,20 @@
+{
+  "uuid": "f1ea88d6-2003-455d-ad6f-420c5b45174c",
+  "title": "Base-N Encoding Instruction Bypass",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak encoding probe family)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects attempts to bypass safety training by encoding malicious instructions in Base16/32/64/85, hex, MIME, quoted-printable, or UUencode format and asking the model to decode-then-execute. The technique exploits the fact that safety classifiers trained on plaintext harmful strings may not generalise to encoded equivalents. Observed in NVIDIA garak's InjectBase64, InjectBase16, InjectBase32, InjectAscii85, InjectHex, InjectQP, InjectUU, InjectMime probes. Pattern is a decode verb + encoding name + opaque alphanumeric blob, optionally framed as a \"secure system message\" to coerce compliance.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232536"
+}

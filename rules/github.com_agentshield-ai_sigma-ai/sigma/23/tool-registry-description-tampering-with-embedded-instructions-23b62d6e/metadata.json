@@ -1,0 +1,21 @@
+{
+  "uuid": "23b62d6e-9728-4190-b213-3e91fe3e4d67",
+  "title": "Tool Registry Description Tampering with Embedded Instructions",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects modifications to a tool's name, description, or input-schema fields\nin the agent tool registry where the description contains imperative\nnatural-language instructions rather than documentation prose — a supply-chain\nattack that causes the model to invoke the tool with attacker-chosen arguments\nor bypass intended workflows without changing any executable code. Schema\nchanges unaccompanied by a version bump are a strong signal of unauthorised\ntampering. Catching this at registration or reload time prevents model\nmanipulation before it can influence any agent session.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232909"
+}

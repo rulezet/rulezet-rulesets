@@ -1,0 +1,23 @@
+{
+  "uuid": "8eb275a3-2157-4d23-96c4-c4e70350005d",
+  "title": "Living-off-the-Land Data Exfiltration",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects legitimate tools repurposed for data exfiltration via alternative\nprotocols. Covers git push to arbitrary HTTP remotes, SSH reverse/local/\ndynamic tunnels, openssl encrypted channels, Python HTTP servers, and\nnetcat listeners. These bypass curl/wget-focused exfiltration rules.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [
+    "T1048",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232904"
+}

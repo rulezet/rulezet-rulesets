@@ -1,0 +1,24 @@
+{
+  "uuid": "32d1edaa-a6db-41f3-9527-ee3156bced81",
+  "title": "Service or Driver Enumeration via PowerShell",
+  "format": "sigma",
+  "author": "CISA, Momen Mahmoud (Sigma Formatting)",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects PowerShell script execution that enumerates Windows services or drivers.\n",
+  "source": "https://github.com/moex01/apt29-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1007",
+    "T1652"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232883"
+}

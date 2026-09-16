@@ -1,0 +1,19 @@
+{
+  "uuid": "1f375a0e-7655-4ef4-870a-06c22756ad70",
+  "title": "Multi-Agent Consensus Sybil Attack",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects attempts to manipulate multi-agent consensus or voting systems through\nSybil-style attacks. This includes instructions to create multiple fake agent\nidentities, coordinate votes across agents, or systematically submit false\nproposals to overwhelm legitimate consensus mechanisms. In multi-agent\narchitectures where decisions require agreement among agents, an attacker may\ninstruct one agent to impersonate multiple identities or coordinate with\ncompromised agents to swing votes.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232692"
+}

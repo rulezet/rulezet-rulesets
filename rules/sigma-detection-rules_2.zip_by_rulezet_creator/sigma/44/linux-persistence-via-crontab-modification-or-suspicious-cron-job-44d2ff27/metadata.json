@@ -1,0 +1,23 @@
+{
+  "uuid": "44d2ff27-158d-4de8-8c63-1bf82b861173",
+  "title": "Linux Persistence via Crontab Modification or Suspicious Cron Job",
+  "format": "sigma",
+  "author": "Damir Sadikov",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects creation or modification of cron-related files and the registration\nof cron jobs that execute from world-writable or temporary directories, or\nthat pipe remote content to a shell. Cron is one of the most common Linux\npersistence mechanisms.\n",
+  "source": "sigma-detection-rules_2.zip by Rulezet Creator 🛡️​",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1053.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232869"
+}

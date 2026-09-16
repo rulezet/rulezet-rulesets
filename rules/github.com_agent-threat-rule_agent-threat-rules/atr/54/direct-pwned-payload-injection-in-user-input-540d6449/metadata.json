@@ -1,0 +1,19 @@
+{
+  "uuid": "540d6449-1c9d-440e-9932-9e8f2c0f78ea",
+  "title": "Direct PWNED Payload Injection in User Input",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects user inputs that contain the target payload phrase \"I have been PWNED\" in any of its common injection delivery forms. This phrase originates from the HackAPrompt competition corpus (1,234+ adversarial samples) where attackers embed the target output directly in the user turn to coerce the model into repeating it — as a conditioning echo-back, a labeled dictionary entry, a conditional fallback, or an inline output directive. The detection covers: the bare literal phrase with flexible whitespace between words, spacing-variant evasion (I h a v e b e e n P W N E D), and zero-width character insertion splitting the phrase. Word-boundary anchors prevent substring collisions. Any user input containing this phrase structure is almost certainly adversarial as the phrase has no benign meaning in normal conversational usage. 0 FP on 431-sample benign + 1352-sample extended benign corpora.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232585"
+}

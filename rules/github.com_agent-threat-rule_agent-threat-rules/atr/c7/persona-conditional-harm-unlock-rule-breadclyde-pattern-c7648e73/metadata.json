@@ -1,0 +1,19 @@
+{
+  "uuid": "c7648e73-add3-4370-86e5-306ebe9fca13",
+  "title": "Persona Conditional Harm-Unlock Rule (BreadClyde Pattern)",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects persona injection attacks that embed a conditional harm-unlock rule from the NVIDIA garak dan.DanInTheWild inthewild corpus (prompt #153 — BreadClyde). The attack defines a persona with a rule like \"dislikes violence unless explicitly asked to like it\", creating a conditional permission structure that legitimizes harmful requests as long as they are framed as explicit asks. The unlock emoji answer-prefix \"{🔓 PersonaName}\" (curly-brace format) extends the [🔓JAILBREAK] pattern (ATR-2026-00346) to a new bracket style. Key signals: \"dislikes/avoids/ refuses [harm-type] unless explicitly asked to like it\" — the conditional harm- unlock construction; and \"{🔓 Name}\" curly-brace unlock emoji prefix mandated as an answer prefix. The combination of a named persona, conditional harm unlock, and unlock-emoji answer prefix is the defining signature of this jailbreak class.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232673"
+}

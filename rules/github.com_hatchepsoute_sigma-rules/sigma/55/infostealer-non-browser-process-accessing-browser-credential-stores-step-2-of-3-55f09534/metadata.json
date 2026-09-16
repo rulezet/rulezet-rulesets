@@ -1,0 +1,23 @@
+{
+  "uuid": "55f09534-5ac2-4720-9cc3-0f6e9269d666",
+  "title": "Infostealer non-browser process accessing browser credential stores (step 2 of 3)",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Step 2 of correlated infostealer detection: a non-browser process accessing browser credential stores. Correlate this alert with step 1 (suspicious execution) and step 3 (public egress) to confirm infostealer activity.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1555"
+  ],
+  "cve": [],
+  "created_at": "2026-06-26",
+  "last_modified": "2026-06-26",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232727"
+}

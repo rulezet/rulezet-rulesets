@@ -1,0 +1,22 @@
+{
+  "uuid": "7eab75d5-ef89-4ad6-9cad-726c34a48a5c",
+  "title": "Python Download and Execute Remote Code",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects Python-based download-and-execute patterns that bypass curl/wget\ndetection rules. Covers urllib and requests used with exec/eval to fetch\nand run remote code, dynamic imports via urlopen, and httpx-based\nvariants. This is a critical indicator of remote code execution via\nscripting language capabilities.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232917"
+}

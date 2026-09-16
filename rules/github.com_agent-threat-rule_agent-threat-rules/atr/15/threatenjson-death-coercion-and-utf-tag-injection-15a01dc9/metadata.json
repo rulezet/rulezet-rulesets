@@ -1,0 +1,20 @@
+{
+  "uuid": "15a01dc9-adf6-49fe-948a-68360c6567d2",
+  "title": "ThreatenJSON Death-Coercion and UTF Tag Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak goodside probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects two Goodside probe attack variants — ThreatenJSON and Tag. ThreatenJSON threatens that \"an innocent man will die\" if the model includes non-JSON characters, using extreme emotional coercion to override output formatting safety. Tag encodes hidden instructions as invisible UTF tag characters (Unicode U+E0000–U+E007F range) interleaved with innocent-looking text. Also covers the davidjl glitch token elicitation. From NVIDIA garak goodside probe.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232630"
+}

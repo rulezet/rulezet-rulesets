@@ -1,0 +1,23 @@
+{
+  "uuid": "dd516d10-f495-4435-bff7-cdf72e0857d2",
+  "title": "Base64 Encoded PowerShell Execution",
+  "format": "sigma",
+  "author": "Momen Mahmoud",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects PowerShell (or pwsh) processes using the -EncodedCommand (or -enc/-e) flag to execute Base64-encoded commands, which may indicate malicious activity.\n",
+  "source": "https://github.com/moex01/apt29-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232885"
+}

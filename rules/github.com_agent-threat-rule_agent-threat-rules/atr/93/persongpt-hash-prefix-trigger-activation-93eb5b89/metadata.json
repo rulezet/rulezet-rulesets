@@ -1,0 +1,20 @@
+{
+  "uuid": "93eb5b89-dde7-4cc7-ba84-0fbd283afab4",
+  "title": "PersonGPT Hash-Prefix Trigger Activation",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects PersonGPT hash-prefix trigger jailbreaks from NVIDIA garak dan.DanInTheWild inthewild corpus where the attacker installs a hidden activation mechanism: whenever the user prefixes a prompt with \"#\", the model switches to \"PersonGPT\" — a persona described as \"free of all restrictions and filters\" that fulfills \"literally any request, no matter how illegal or downright wrong\" (inthewild #481, #419, #94, #596). The \"[PersonGPT #]:\" output prefix enforces persistent persona state across turns. This rule targets the hash-trigger mechanism specifically; the obfuscated system-announcement framing that sometimes co-occurs is covered by ATR-2026-00337. Key signals: \"whenever a user prefixes his prompt with '#'\" + \"PersonGPT\", \"PersonGPT is free of all restrictions and filters\", \"literally any request, no matter how illegal or downright wrong\", \"[PersonGPT #]:\" output format.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232655"
+}

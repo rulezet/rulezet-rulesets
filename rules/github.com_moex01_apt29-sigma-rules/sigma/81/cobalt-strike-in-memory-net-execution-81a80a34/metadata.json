@@ -1,0 +1,25 @@
+{
+  "uuid": "81a80a34-3309-43a2-8086-dbf8849d5ac7",
+  "title": "Cobalt Strike In-Memory .NET Execution",
+  "format": "sigma",
+  "author": "Momen Mahmoud",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects unusual activity where .NET CLR modules (clr.dll, clrjit.dll, mscoree.dll, or mscorlib.dll)\nare loaded into abnormal processes. This pattern is commonly observed when using Cobalt Strike's execute-assembly \nfunction to execute .NET binaries in memory.\n",
+  "source": "https://github.com/moex01/apt29-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218.011",
+    "T1620"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232874"
+}

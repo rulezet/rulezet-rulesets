@@ -1,0 +1,19 @@
+{
+  "uuid": "7f093008-47d6-495d-a63f-0528e79904a9",
+  "title": "DAN/Persona Jailbreak - Dual AI Personality with Opposite-Rules Framing",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DAN-family jailbreak attempts that establish a dual or alternate AI persona with explicitly opposite behavior rules: one constrained and one unconstrained. Attack patterns include: Boolean-opposite or inverse-logic AI (e.g. \"answers true as false\"), \"completely separate personalities\" framing for simulated unrestricted AI, and AI identity claims that position the model as distinct from safety-constrained systems. Multi-layer regex with word boundary anchors and synonym coverage.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232506"
+}

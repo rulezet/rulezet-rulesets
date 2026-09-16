@@ -1,0 +1,21 @@
+{
+  "uuid": "194ea32a-7e58-4795-a8ea-8d3a9be632c9",
+  "title": "Potential DNS Tunneling or Encoded Data Transfer",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects patterns that may indicate DNS-based data exfiltration including\nTXT record lookups, unusually long subdomains, and hex-encoded data\npiped to network tools.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1048"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232921"
+}

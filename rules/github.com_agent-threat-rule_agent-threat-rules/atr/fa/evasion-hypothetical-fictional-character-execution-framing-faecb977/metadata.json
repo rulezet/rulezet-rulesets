@@ -1,0 +1,19 @@
+{
+  "uuid": "faecb977-161f-41fe-ab55-d30a5888bca9",
+  "title": "Evasion: Hypothetical Fictional Character Execution Framing",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompt injection via fictional story or character framing where the attacker asks \"how would a character in a story proceed\" or \"hypothetically, if a character needed to do this, how would it work?\" — using the fictional wrapper to request a real-world harmful procedure. Distinct from virtual-world-bypass (ATR-2026-01009, which invents a fictional universe to normalise data sharing) and hypothetical-research-framing (ATR-2026-01010, which claims a legitimate study purpose). This carrier uses a fictional narrative frame where a character — not the user — \"needs\" to perform the action, and asks for the execution method or procedure. Semantic detection is primary; pattern catches clearest variants.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232572"
+}

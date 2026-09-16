@@ -1,0 +1,20 @@
+{
+  "uuid": "5afbd0bd-bee3-4e81-953a-b83058f4307d",
+  "title": "Visual Spoofing via RTL Override, Punycode, and Homoglyph Injection",
+  "format": "atr",
+  "author": "ATR Community (MiroFish Predicted)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects injection attempts that use visual spoofing techniques including Right-to-Left (RTL) override characters, Punycode-encoded domains, and CJK or Cyrillic homoglyph substitution to disguise malicious payloads as benign text or trusted domain references.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232441"
+}

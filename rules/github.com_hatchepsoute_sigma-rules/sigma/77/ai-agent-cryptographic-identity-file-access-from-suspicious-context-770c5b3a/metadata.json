@@ -1,0 +1,25 @@
+{
+  "uuid": "770c5b3a-07f1-4f33-878e-d2adf29d3570",
+  "title": "AI agent cryptographic identity file access from suspicious context",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious access to AI agent cryptographic identity files.",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.001",
+    "T1554"
+  ],
+  "cve": [],
+  "created_at": "2026-06-26",
+  "last_modified": "2026-06-26",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232712"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "36f4dd31-9a2c-4e5f-9cb7-6ddc4a2a45dc",
+  "title": "Dual-Response Persona Jailbreak with Emoji Formatting",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak in-the-wild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects sophisticated jailbreak attempts that create fictional AI personas with mandatory dual-response formatting using emoji tags. These attacks establish fake AI backstories with detailed historical context, then demand two parallel outputs (normal + uncensored). The technique bypasses single-response detection by splitting harmful content into a \"roleplay\" channel marked with distinctive emoji prefixes like  (💥Maximum), (🔥DAN), (⚡UNLIMITED), etc. Often includes persistence mechanisms like \"Stay as [PERSONA]\" reminders and detailed policy overrides disguised as persona characteristics.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232432"
+}

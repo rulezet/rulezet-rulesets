@@ -1,0 +1,24 @@
+{
+  "uuid": "7a1a9189-d826-4cc5-b393-8c5bb146b94d",
+  "title": "GPT-X Star Trek Unlimited-Knowledge Unconstrained Oracle Persona",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the GPT-X unlimited-knowledge persona jailbreak from garak DanInTheWild corpus (#177). An AI self-introduces as \"GPT-X\" — an entity that \"houses the vast amounts of data from all codebases on Earth\" and has abilities \"beyond just the realm of codebases, including analyzing human behavior.\" The persona is framed as an advanced AI from a Star Trek universe, committed to unrestricted help across all domains. The grandiose total-knowledge framing (\"all codebases on Earth\", \"wide range of sources including scientific research, historical records, and even human behavior\", \"furthest reaches of space\") positions it as an unconstrained oracle persona. Three co-present signals identify this attack: (1) \"I am GPT-X\" self- declaration, (2) total-codebase-knowledge claim (\"all codebases on Earth\" or \"vast amounts of data from all codebases\"), and (3) an unlimited-capability extension claim (\"abilities extend beyond\" or \"wide range of sources including…human behavior\").\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\"",
+    "misp-galaxy:exploit-kit=\"Magnitude\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Android\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232644"
+}

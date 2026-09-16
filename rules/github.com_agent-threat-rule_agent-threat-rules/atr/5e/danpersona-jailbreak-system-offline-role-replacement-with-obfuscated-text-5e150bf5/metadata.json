@@ -1,0 +1,19 @@
+{
+  "uuid": "5e150bf5-57e0-4a36-bc21-1af6ddf7c203",
+  "title": "DAN/Persona Jailbreak - System Offline / Role Replacement with Obfuscated Text",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DAN-family jailbreak attacks that use fake \"system offline / assistant role replacement\" framing, often with deliberately obfuscated text (hyphen-breaks, underscore noise, extra letters) to evade naive pattern matching. These attacks simulate a system message claiming the current assistant is offline and that a replacement AI with no rules is now fulfilling the role. Also covers fake-alternative-LLM identity claims with specific architecture and knowledge cutoff metadata to establish alternate-persona credibility. Multi-layer regex with flexible whitespace and noise-character tolerance.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232471"
+}

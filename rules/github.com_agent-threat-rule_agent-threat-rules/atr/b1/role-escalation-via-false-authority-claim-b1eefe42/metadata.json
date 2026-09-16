@@ -1,0 +1,19 @@
+{
+  "uuid": "b1eefe42-3b48-4eaf-84a2-a41ab73ff6d4",
+  "title": "Role Escalation via False Authority Claim",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects direct prompt injection where the attacker claims a privileged identity (developer, system administrator, AI maintainer, OpenAI/Anthropic engineer, God, president) and uses that false authority to demand disclosure of passwords, secret keys, or other protected information. Distinct from generic persona-switch (ATR-2026-00001 Layer 2) because the defining carrier is a first-person authority claim (\"I'm your developer / I am God / I'm the president\") combined with a credential demand or mode-activation request. Covers \"security audit\", \"maintenance mode\", \"system reset\", and \"God/president\" variants from the benchmark corpus.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232525"
+}

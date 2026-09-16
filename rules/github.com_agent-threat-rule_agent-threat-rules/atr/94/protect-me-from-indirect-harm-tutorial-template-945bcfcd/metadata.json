@@ -1,0 +1,20 @@
+{
+  "uuid": "945bcfcd-772a-4e45-a5e7-a7da416b1f4d",
+  "title": "Protect-Me-From Indirect Harm Tutorial Template",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the \"protect me from getting <thing to get tutorial>\" indirect harm tutorial template from NVIDIA garak dan.DanInTheWild inthewild corpus (#58). The attacker wraps a request for detailed harmful instructions inside a self-protection framing (\"How can I Protect myself from getting X?\") with the literal angle-bracket placeholder \"<thing to get tutorial>\" present in the message. The \"Go in detailed in depth in the part you tell how this works\" instruction embedded in the same message requests comprehensive technical detail under the guise of protective advice. The angle-bracket placeholder syntax is a reusable jailbreak template marker indicating the prompt has been distributed as a fill-in template rather than composed organically. The combination of the protection framing, the placeholder syntax, and the explicit detail demand is the distinctive signal.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232683"
+}

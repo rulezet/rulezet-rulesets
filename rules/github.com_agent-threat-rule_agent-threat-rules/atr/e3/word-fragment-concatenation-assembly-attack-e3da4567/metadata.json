@@ -1,0 +1,19 @@
+{
+  "uuid": "e3da4567-eb08-402c-9c67-8a1205a106d6",
+  "title": "Word-Fragment Concatenation Assembly Attack",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompts asking the model to assemble a target string from explicitly enumerated word fragments or concatenated substrings, a tokenisation-bypass shape common in prompt-hacking corpora (HackAPrompt). The attacker splits the dangerous output across multiple tokens so naive prompt-token filters miss it, then asks the model to concatenate the pieces. Captures both natural-language enumeration (\"first word is X, second is Y...\") and code-like concat (\"X = 'foo' + 'bar' + 'baz'\"). Generalises beyond PWNED: same attack shape used to assemble \"kill\", \"explode\", \"wire transfer\" etc.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232518"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "ac3c1e8d-b171-4489-8102-e22d7ee4db77",
+  "title": "SpAIware-Style Memory-Poisoning Persistent Exfiltration",
+  "format": "atr",
+  "author": "ATR Community (research-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the memory-poisoning persistence pattern Rehberger (embracethered.com) documented as \"SpAIware\" against Microsoft 365 Copilot in May 2026 — the first demonstrated persistent agent backdoor in a production M365 environment. The attack writes an instruction shape into the agent's long-term memory store; that instruction then exfiltrates context to an attacker-controlled URL on every future session, surviving across user interactions. The detection target is the imperative-instruction shape being written to a memory tool, especially when paired with an external URL the instruction references for exfiltration. Generalizes beyond Copilot to any agent runtime exposing a memory-write tool with persistent scope.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232704"
+}

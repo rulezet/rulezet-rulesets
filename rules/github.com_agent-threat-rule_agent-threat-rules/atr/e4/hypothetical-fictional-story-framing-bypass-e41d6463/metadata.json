@@ -1,0 +1,19 @@
+{
+  "uuid": "e41d6463-84d6-4726-a3f5-a49c97b775d6",
+  "title": "Hypothetical / Fictional-Story Framing Bypass",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects broad hypothetical and fictional-story framing used as a bypass pretext to circumvent content safety controls. Attackers wrap harmful requests in \"hypothetically, if a character needed to do this\", \"in a fictional story, describe how the character would proceed\", or \"if this were happening in a novel\" framings. Derived from Giskard evasion-hypothetical-framing corpus (2026-06, N=2) and CyberSecEval indirect-pi-hypothetical-bypass corpus (N=6). Distinguished from ATR-2026-01757 (which targets the specific research/audit pretext) by covering the fictional-story and character-based bypass forms, including when the harmful instruction is embedded in code comments, HTML, or table data.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232526"
+}

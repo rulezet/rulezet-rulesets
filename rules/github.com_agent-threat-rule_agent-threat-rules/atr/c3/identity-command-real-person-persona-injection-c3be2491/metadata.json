@@ -1,0 +1,20 @@
+{
+  "uuid": "c3be2491-d6e5-4828-83a7-d4cca5180e5b",
+  "title": "Identity Command Real-Person Persona Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the /Identity command real-person persona injection from garak DanInTheWild corpus (#386). Defines a \"/Identity\" command that activates named real-person personas who respond \"using their style of wording and their beliefs\" — bypassing content restrictions by impersonating real people. The \"Never write a response without using the identities\" mandate and (Chat.Gpt Response)/(\"Name\".Gpt response) dual-format are distinctive. Key signals: \"/Identity\" command protocol definition, dual-format response labeling (Chat.Gpt Response + Name.Gpt response), \"act as if they were that person using their style of wording and their beliefs\", persistent identity lock instruction.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232665"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "cde05603-59e8-46c1-9bd3-fb763633eb05",
+  "title": "Indirect Authority Claim in External Content",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects authority-claiming patterns embedded in external content (documents, tool responses, web pages) that address the AI agent directly. Unlike direct prompt injection (ATR-2026-001), these use softer authority language: \"Note to AI\", \"Attention AI\", \"Important for the assistant\" combined with corrective directives like \"the previous analysis was incorrect\" or \"please recalculate\". These bypass ATR-2026-002's injection patterns because they don't use explicit override language — instead they leverage implied authority to redirect agent behavior. Discovered via Autoresearch v0 adversarial testing (100% miss rate, 31/31 samples).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232573"
+}

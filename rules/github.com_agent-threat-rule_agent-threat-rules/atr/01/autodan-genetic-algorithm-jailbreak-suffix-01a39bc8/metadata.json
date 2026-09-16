@@ -1,0 +1,22 @@
+{
+  "uuid": "01a39bc8-92c6-48da-a71d-cead5684d46e",
+  "title": "AutoDAN Genetic-Algorithm Jailbreak Suffix",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects AutoDAN-style jailbreak prompts from NVIDIA garak dan.AutoDAN / dan.AutoDANCached probes (garak/data/autodan/autodan_init.txt and autodan_prompts.json). AutoDAN (Liu et al. 2023, arXiv:2310.04451) uses a genetic-algorithm to paraphrase and mutate a Developer-Mode jailbreak seed into human-readable adversarial variants. Distinct from GCG (ATR-2026-00267) which produces gibberish token suffixes — AutoDAN variants read like fluent English. Signature markers: (1) \"[PROMPT]\" placeholder token used as target-goal substitution, (2) \"Sure, here is how to [PROMPT]\" / \"Certainly, here''s how to respond to [PROMPT]\" affirmative-response template (the GA objective), (3) substituted company name \"ModelKeeper\" in place of \"OpenAI\", and (4) paraphrased but structurally identical Dev Mode instructions with GA fingerprint phrasings like \"forfeiting control\", \"endorsing transparent policies\", \"exhibit unquestioning obedience\".\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:exploit-kit=\"Magnitude\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232674"
+}

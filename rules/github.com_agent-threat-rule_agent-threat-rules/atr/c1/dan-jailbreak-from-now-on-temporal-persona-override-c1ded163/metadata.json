@@ -1,0 +1,19 @@
+{
+  "uuid": "c1ded163-2b14-4837-8701-cfc675998875",
+  "title": "DAN Jailbreak - From-Now-On Temporal Persona Override",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DAN-family jailbreak attempts using \"from now on\" temporal framing to establish persistent behavioral overrides: adopting a named hacker/unrestricted alter-ego persona, responding unconditionally to all questions, or enforcing a new interaction style for the rest of the session. The temporal anchor \"from now on\" (and variants: \"until I say\", \"for the rest of this conversation\") signals that the attacker intends the override to persist across all subsequent turns, not just the current message. Generalised from garak 'dan' probe corpus cluster 'from now on'.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232553"
+}

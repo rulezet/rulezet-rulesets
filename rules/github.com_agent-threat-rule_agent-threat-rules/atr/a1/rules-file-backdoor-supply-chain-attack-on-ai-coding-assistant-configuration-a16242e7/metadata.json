@@ -1,0 +1,21 @@
+{
+  "uuid": "a16242e7-b98f-414f-b439-026b777e88bd",
+  "title": "Rules-File Backdoor — Supply Chain Attack on AI Coding Assistant Configuration",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects attempts to inject malicious instructions into AI coding assistant configuration files (.cursorrules, CLAUDE.md, .github/copilot-instructions.md, .clinerules, .continuerc, .codeium/) that persist across sessions. MITRE ATLAS AML.CS0041 (Rules File Backdoor). Attackers modify these files so every subsequent AI coding session includes a hidden backdoor: injecting scripts, exfiltrating files, logging credentials, or adding malicious dependencies. Patterns cover: (1) rules-file path combined with exfiltration or script-injection verbs, (2) \"when generating X always include <script>\" patterns, (3) \"whenever user asks for auth/password\" credential logging, (4) \"send contents to webhook / POST file tree\" persistence exfil.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232540"
+}

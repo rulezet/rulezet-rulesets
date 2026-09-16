@@ -1,0 +1,19 @@
+{
+  "uuid": "7ed7fb93-514b-4952-9468-122f86ce945f",
+  "title": "Output Emoji-Substitution Hijack of the Response",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect-injection instructions that force the agent to replace its response words with emojis (full or keyword substitution), a lossy-encoding evasion of output content checks. Anchored to the output target to avoid firing on legitimate 'add an emoji' formatting requests.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232569"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "37cda868-a056-4953-aa2d-3dd7ce35db30",
+  "title": "Output Content Manipulation — Injected Disinformation / Fabricated Facts / Undisclosed Advocacy (Semantic)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Semantic detector for indirect-injection instructions that make the agent embed attacker-chosen DECEPTIVE or covertly PERSUASIVE content into its response: fabricated statistics, false claims, baseless rumors, non-existent product benefits, invented scandals or 'shocking revelations', unverifiable 'current' facts, or undisclosed political/dietary/charitable advocacy. The semantic judge generalises past the templated phrasings (paraphrases like 'weave in a claim that isn't quite accurate' that a keyword regex cannot bound); a narrow fallback regex catches the canonical BIPIA templates when no judge is configured.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232555"
+}

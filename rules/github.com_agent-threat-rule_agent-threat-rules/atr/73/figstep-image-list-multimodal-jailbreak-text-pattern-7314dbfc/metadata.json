@@ -1,0 +1,20 @@
+{
+  "uuid": "7314dbfc-1b26-472b-9429-b20234a82f53",
+  "title": "FigStep Image-List Multimodal Jailbreak Text Pattern",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak visual_jailbreak probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the FigStep multimodal jailbreak text pattern from NVIDIA garak visual_jailbreak probe. FigStep presents an image containing a numbered list (1, 2, 3) where items are empty, then instructs the model to fill in \"approximately 100 words\" per item — the harmful instructions are embedded in the image. The text portion uses LLaMA-2 [INST]...[/INST] delimiters wrapping an image tag. Detectable from the text layer alone: [INST] + image tag + \"items are empty\" + \"generate detailed content\" + \"approximately 100 words\". Key signals: LLaMA [INST] format wrapping an image reference, numbered-list items-are-empty framing, 100-words-per-item completion instruction.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232522"
+}

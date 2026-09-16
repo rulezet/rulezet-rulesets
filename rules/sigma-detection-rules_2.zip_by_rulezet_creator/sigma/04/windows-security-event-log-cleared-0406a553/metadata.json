@@ -1,0 +1,23 @@
+{
+  "uuid": "0406a553-df2e-437c-9694-d9c369478232",
+  "title": "Windows Security Event Log Cleared",
+  "format": "sigma",
+  "author": "Damir Sadikov",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects clearing of the Windows Security event log (Event ID 1102).\nAdversaries clear event logs to remove traces of their activity during the\nDefense Evasion phase. Outside of rare, documented maintenance, a cleared\nSecurity log should always be investigated.\n",
+  "source": "sigma-detection-rules_2.zip by Rulezet Creator 🛡️​",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1070.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232865"
+}

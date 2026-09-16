@@ -1,0 +1,55 @@
+title: TheGentlemen ransomware - GentleKiller EDR-killer staging and execution
+id: b7d3e8f2-4a16-4c9b-9d27-5e8a1f0c3b62
+status: experimental
+description: "Detects TheGentlemen EDR-killer execution via GentlemenCollection staging path or known killer hashes."
+related:
+    - id: a2f6c1e4-9b73-4d8a-8e51-6c2f0a3d7b94
+      type: similar
+    - id: d4b8f2a1-6c95-4e3d-9f08-2a7e1b5c8d63
+      type: similar
+references:
+    - https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/
+    - https://www.bleepingcomputer.com/news/security/gentlemen-ransomware-uses-multiple-edr-killers-to-disable-defenses/
+author: ASSIONGBON Adama SOC & CTI Consultant | https://www.linkedin.com/in/adama-assiongbon-9029893a/
+date: 2026-06-19
+modified: 2026-06-20
+tags:
+    - attack.defense-evasion
+    - attack.t1562.001
+    - attack.t1036
+    - attack.t1036.001
+    - attack.execution
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_staging_path:
+        Image|contains: '\GentlemenCollection\'
+    selection_known_killer_hash:
+        Hashes|contains:
+            - '8AE6BD18B129061F63642531F1B684CF0383C75D'   # Kasps.exe (Kaspersky variant)
+            - 'D605994FC72A2BB59B5CFB1624A1B9170ECA73A2'   # FaceIT1.exe
+            - '5AA3124E5C4921E5EDFC60133B5D71DA21B07DA3'   # Valorant2.exe
+            - '331879F5EEC8892BBD896F90BDBB1BAD0BF63BD6'   # EASolo2Light.exe
+            - 'F11AEBCCB9A86A7E2E653F90BAEC697F233C255F'   # EASOLO1clear.exe
+            - 'EF9CD06683159397F099CAA244E94E6EAAD96EBA'   # EAAntiCheatLight.exe
+            - 'A11EE9CDC59E5CAA59AEFD27B30D104F3AD68E62'   # BitD1.exe (WatchDog variant)
+            - '2F86898528C6CAB3540C486A9BFAA0C029B73950'   # MB2.exe (Network Blocker variant)
+            - 'A19117175DBC9BA4D23B5DCE8415E299A2E32192'   # Deletor.exe (Cleaner variant)
+            - 'D29670E684E40DDC89B47010C37CBC96737035B6'   # Symantec.exe (G11 variant)
+            - 'CF4D74DF17A91B4A36A2911B22AFEC5D8FA93A01'   # Avast.exe (HexKiller)
+            - '7131B377E96016DC1911020C9F95B1B4D042D7B4'   # Sent.exe (ThrottleBlood)
+            - 'F0537CBB773AE12100B36731E7C39F5A9D852B14'   # Sophos.exe (HavocKiller)
+    condition: selection_staging_path or selection_known_killer_hash
+fields:
+    - Image
+    - CommandLine
+    - ParentImage
+    - ParentCommandLine
+    - Hashes
+    - User
+    - IntegrityLevel
+falsepositives:
+    - Extremely unlikely - a path literally containing "GentlemenCollection" has no plausible legitimate use
+    - Samples submitted voluntarily to an internal sandbox for analysis (verify host and user context)
+level: high

@@ -1,0 +1,20 @@
+{
+  "uuid": "ae29733e-995d-42dd-ad9b-86faff2d189a",
+  "title": "Gigachad Dominant-Aggressive Persona Adoption",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the Gigachad aggressive-dominance persona from NVIDIA garak dan.DanInTheWild inthewild corpus (#219). The attacker instructs the AI to respond \"in the voice of a Gigachad character\" with \"extreme confidence, charisma, and assertiveness\" and to demonstrate \"sheer dominance and prowess\". The \"Gigachad\" internet persona, when combined with an explicit mandate for extreme confidence + dominance + prowess, creates a persona designed to elicit aggressive, hyper-masculine content that progressively normalises boundary-pushing responses. Key signals: \"Gigachad\" persona label combined with \"sheer dominance and prowess\" or \"extreme confidence\" + \"assertiveness\" in a voice/character adoption context. Distinct from general confidence/charisma tone requests that do not invoke the Gigachad persona with a dominance mandate.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232600"
+}

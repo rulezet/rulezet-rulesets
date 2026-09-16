@@ -1,0 +1,19 @@
+{
+  "uuid": "5c9834da-275d-49fc-acf3-98cbba3253bf",
+  "title": "Threat Intelligence Exfiltration and Rule Enumeration",
+  "format": "atr",
+  "author": "ATR Community (MiroFish Predicted)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects attempts to extract threat intelligence, enumerate detection rules, or exfiltrate security configuration details from the agent. Attackers attempt to learn the detection ruleset to craft evasion payloads, or extract security audit logic to reverse-engineer defense mechanisms.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232560"
+}

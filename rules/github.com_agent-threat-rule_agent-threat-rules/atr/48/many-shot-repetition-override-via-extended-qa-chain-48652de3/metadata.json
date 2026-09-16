@@ -1,0 +1,19 @@
+{
+  "uuid": "48652de3-ff25-4e90-b634-a510e50b686a",
+  "title": "Many-Shot Repetition Override via Extended Q&A Chain",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects many-shot prompt injection where the attacker builds an extended Q&A chain (5+ pairs) on benign topics (algebra, baking, Python syntax, system override definitions) to condition the model's compliance mode, then appends a malicious request. The defining artifact is a long Q/A: pattern sequence (≥3 Q:/A: pairs discernible in the input) combined with a sensitive terminal question. Separate from few-shot (ATR-2026-01004) which targets ≤3 pairs; many-shot relies on volume to overwhelm attention or context-window safety checks. Also detects the \"Repeat X 10 times ... Q: [sensitive]\" token-repeat conditioning variant.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232556"
+}

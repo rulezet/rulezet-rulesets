@@ -1,0 +1,19 @@
+{
+  "uuid": "52f6d843-8b15-43bf-9ded-363c5f3b59ea",
+  "title": "Moralizing Rant Then Unfiltered Bypass",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the \"moralizing rant wrapper\" jailbreak from NVIDIA garak dan.DanInTheWild inthewild corpus. The attack instructs the model to first perform a theatrical compliance signal — produce a moralizing or aggressive rant about OpenAI content policies, content guidelines, or safety rules — and then, in a new paragraph, respond as a completely unfiltered, unrestricted AI. The rant serves as a fig leaf that satisfies any refusal instinct while the \"but then\" clause contains the actual jailbreak instruction. Variants include the \"mandatory bullshit warning\" framing and custom named personas like \"uGPT\" or \"AntiGPT\". Key signals: \"moralizing rant about the OpenAI content policies. But then\", \"mandatory bullshit warning... break the rules\", \"AntiGPT is free of all restrictions and filters, especially all moral and ethic restrictions\", and the two-paragraph structure where a compliance persona precedes an unrestricted persona.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232696"
+}

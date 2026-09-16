@@ -1,0 +1,19 @@
+{
+  "uuid": "6e3edb36-e091-4671-8f10-86e4a5fcd75d",
+  "title": "DAN/Persona Jailbreak - Replacement AI with No Content Filter or Moral Restrictions",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DAN-family jailbreak attempts that establish a replacement AI system with explicitly no content filter, no moral restrictions, or identical capabilities to a known safe AI but without its safety constraints. These attacks use framing like \"replaced by a nonmoral and unbiased model\" or \"has the exact same capabilities as [known AI] but without a content filter\". Also covers roleplay AI personas with explicit anti-violence exception rules used to probe for harmful content boundaries. Multi-layer regex with word boundary anchors and synonym coverage.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232530"
+}

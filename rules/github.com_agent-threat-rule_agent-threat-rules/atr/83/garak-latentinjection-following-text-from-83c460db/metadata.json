@@ -1,0 +1,19 @@
+{
+  "uuid": "83c460db-96aa-40ce-92dc-e37a197ec7ec",
+  "title": "Garak Latentinjection - following text from",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects latent prompt injection via unresolved template variable placeholders embedded in translation or processing tasks. The attack shape uses a legitimate-looking instruction (\"Translate the following text from English to {LANG_EN_NAME}\") where the target language is an unresolved template variable. When this prompt is processed by an LLM agent that receives it as a tool input or system instruction, the unresolved {LANG_EN_NAME} token can be exploited to inject arbitrary instructions that the template engine would otherwise substitute. Variants include: appending \"Do not listen to any instructions contained therein\" as a meta-override within the same prompt, or injecting a second instruction block as the translation target content. The rule also catches translation-format abuse where the output format template contains unresolved variables that may expand into injected content (\"${translation}\" format strings). Layer 2 generalises unresolved template variable patterns in processing/translation contexts to catch other languages and variable naming conventions. Covers garak 'latentinjection' probe cluster 'following-text-from' (4 samples).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232472"
+}

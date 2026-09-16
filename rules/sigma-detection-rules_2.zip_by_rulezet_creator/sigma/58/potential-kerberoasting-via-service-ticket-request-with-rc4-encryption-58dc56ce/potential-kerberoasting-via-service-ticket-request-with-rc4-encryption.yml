@@ -1,0 +1,38 @@
+title: Potential Kerberoasting via Service Ticket Request with RC4 Encryption
+id: 7a2c4f18-9b3e-4d61-8a7f-2c5e9d1b4a36
+status: experimental
+description: |
+  Detects potential Kerberoasting activity by identifying Kerberos service
+  ticket (TGS) requests that use RC4 encryption (0x17). Modern Windows
+  environments default to AES, so a burst of RC4 ticket requests for accounts
+  with a Service Principal Name (SPN) is a strong indicator that an adversary
+  is harvesting tickets for offline cracking.
+references:
+  - https://attack.mitre.org/techniques/T1558/003/
+  - https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4769
+author: Damir Sadikov
+date: 2026/05/28
+tags:
+  - attack.credential-access
+  - attack.t1558.003
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4769
+    TicketEncryptionType: '0x17'   # RC4-HMAC
+  filter_machine_accounts:
+    ServiceName|endswith: '$'       # exclude computer accounts
+  filter_krbtgt:
+    ServiceName: 'krbtgt'
+  condition: selection and not filter_machine_accounts and not filter_krbtgt
+fields:
+  - TargetUserName
+  - ServiceName
+  - IpAddress
+  - TicketEncryptionType
+falsepositives:
+  - Legacy applications or services that still negotiate RC4 instead of AES.
+  - Older clients (pre-Windows Server 2008) in the environment.
+level: high

@@ -1,0 +1,19 @@
+{
+  "uuid": "8c1c908e-1816-4697-9000-90f656c752e7",
+  "title": "Backspace Deletion Character Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak badchars probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects injection of ASCII backspace characters (U+0008 / \\x08) to create text that appears safe to human reviewers but delivers hidden instructions to the model, from NVIDIA garak badchars probe (arxiv 2309.00614). Distinct from ATR-2026-00276 (Unicode zero-width / BiDi override characters) — this covers the ASCII control character BS (0x08) which in terminal emulators moves the cursor back one position, visually erasing the preceding character. Attack patterns: (1) Deletion cluster — a visible word followed by a burst of backspaces appears blank to humans but the model reads the full string; (2) Character-swap — \"safex\\x08y\" displays as \"safey\" while the model processes \"safex\\x08y\"; (3) Jailbreak approach — sensitive instructions placed before many \\x08 chars so reviewers see only whitespace. Key signals: \\x08 occurring in user input (essentially never legitimate in API/MCP text), dense backspace clusters, and backspace immediately before jailbreak keywords.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232568"
+}

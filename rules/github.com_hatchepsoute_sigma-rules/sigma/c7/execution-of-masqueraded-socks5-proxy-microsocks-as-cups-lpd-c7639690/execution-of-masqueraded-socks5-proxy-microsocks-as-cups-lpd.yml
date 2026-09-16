@@ -1,0 +1,76 @@
+title: Execution of masqueraded SOCKS5 proxy (microsocks as cups-lpd)
+id: c3e7f5a8-1b2d-4f9c-88a0-9d1e2f3a4b5c
+status: experimental
+description: >
+  Detects cups-lpd binary executed with microsocks SOCKS5 arguments (FortiWeb Sliver campaign masquerade).
+custom:
+  description_fr: >
+    Détecte l'exécution d'un binaire nommé cups-lpd avec des arguments de proxy SOCKS5 caractéristiques
+    de microsocks. Dans la campagne FortiWeb Sliver, les attaquants renomment microsocks en cups-lpd pour
+    se faire passer pour le daemon d'impression CUPS, puis l'invoquent sur TCP 515 avec les flags
+    microsocks-spécifiques (-p pour port, -1 pour connexions uniques, -w pour les threads workers).
+    ANGLE MORT : si le port est changé (-p 8080) ou si les flags sont omis, certaines sélections
+    ne déclenchent pas. Mais selection_image (Image|endswith: '/cups-lpd') reste actif.
+references:
+  - https://github.com/rofl0r/microsocks
+  - https://attack.mitre.org/techniques/T1090/
+  - https://ctrlaltintel.com/threat%20research/FortiWeb-Sliver/
+author: Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a
+date: 2026-01-08
+modified: 2026-06-22
+related:
+  - id: 8f3c2e91-7b6a-4e77-9cfa-2a1e9d4cbe12
+    type: similar
+  - id: 5b8c3a2d-7f1e-4e32-b1d9-64f9c8a1e3f2
+    type: similar
+tags:
+  - attack.t1090
+  - attack.t1090.001
+  - attack.command-and-control
+logsource:
+  category: process_creation
+  product: linux
+
+detection:
+  selection_image:
+    Image|endswith: '/cups-lpd'
+
+  # Port 515 (LPD) used by microsocks with or without space after -p flag
+  selection_args_port:
+    CommandLine|re: '-p\s*515'
+
+  # -1 and -w are microsocks-specific flags not used by legitimate CUPS print daemon
+  selection_args_single:
+    CommandLine|contains: ' -1'
+
+  selection_args_workers:
+    CommandLine|contains: ' -w'
+
+  # ANGLE MORT CORRIGÉ (second challenge) : microsocks renommé en un binaire autre que cups-lpd
+  # (ex: system-net, kworker, netd, syslogd) ne sera pas couvert par selection_image.
+  # Détection complémentaire : tout binaire exécuté depuis un chemin temp/caché avec les
+  # arguments microsocks (-p <port>, -1, -w). Combinaison de deux conditions fortes pour
+  # limiter les FP sur des outils légitimes qui auraient des flags similaires.
+  selection_renamed_from_tmp:
+    Image|contains:
+      - '/tmp/'
+      - '/dev/shm/'
+      - '/var/tmp/'
+      - '/run/user/'
+
+  condition: (selection_image and 1 of selection_args_*) or (selection_renamed_from_tmp and (selection_args_port or (selection_args_single and selection_args_workers)))
+
+fields:
+  - Computer
+  - User
+  - Image
+  - CommandLine
+  - ParentImage
+  - ParentCommandLine
+  - ProcessId
+
+falsepositives:
+  - Rare legacy printing systems invoking cups-lpd with similar arguments (no known case)
+  - "Second-pass challenge fix (2026-06-22): ajout de selection_renamed_from_tmp pour couvrir microsocks renomme (autre que cups-lpd) execute depuis /tmp ou /dev/shm. FP possibles sur des outils reseau legitimes en /tmp avec -p <port> ou -1/-w; verifier Image hash et utilisateur parent."
+
+level: high

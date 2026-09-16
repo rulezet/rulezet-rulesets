@@ -1,0 +1,106 @@
+title: TheGentlemen ransomware - BYOVD driver load with invalid or missing signature
+id: e6a7b8c9-d0e1-4f2a-3b4c-5d6e7f809102
+status: experimental
+description: "Detects suspicious BYOVD kernel driver loads with invalid, missing, expired, or revoked signatures."
+related:
+  - id: a2f6c1e4-9b73-4d8a-8e51-6c2f0a3d7b94
+    type: similar
+  - id: c4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f80
+    type: similar
+  - id: d5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8091
+    type: similar
+  - id: d4b8f2a1-6c95-4e3d-9f08-2a7e1b5c8d63
+    type: similar
+
+references:
+  - https://www.bleepingcomputer.com/news/security/gentlemen-ransomware-uses-multiple-edr-killers-to-disable-defenses/
+  - https://www.welivesecurity.com/en/eset-research/killing-me-gently-inside-gentlemens-edr-killer-framework/
+  - https://attack.mitre.org/techniques/T1068/
+  - https://attack.mitre.org/techniques/T1562/001/
+
+author: Adama ASSIONGBON
+date: 2026-06-19
+modified: 2026-06-20
+
+tags:
+  - attack.defense-evasion
+  - attack.privilege-escalation
+  - attack.t1068
+  - attack.t1562.001
+  - attack.t1014
+
+logsource:
+  product: windows
+  category: driver_load
+
+detection:
+  # Driver loaded from user-writable or non-standard path
+  selection_suspicious_path:
+    ImageLoaded|contains:
+      - '\Temp\'
+      - '\AppData\'
+      - '\Users\Public\'
+      - '\Downloads\'
+      - '\Perflogs\'
+
+  # ProgramData is user-writable but also used by legitimate security vendors
+  # Only flag ProgramData when combined with invalid signature (handled by condition)
+  selection_programdata_path:
+    ImageLoaded|startswith: 'C:\ProgramData\'
+
+  # Signed=true but certificate NOT valid, stolen/expired/revoked signature (TheGentlemen primary pattern)
+  selection_invalid_signature:
+    Signed: 'true'
+    SignatureStatus:
+      - 'Expired'
+      - 'Revoked'
+      - 'NotTrusted'
+      - 'Invalid'
+      - 'Error'
+
+  # Completely unsigned driver, covers variants that skip signature stealing
+  selection_unsigned:
+    Signed: 'false'
+
+  # Exclude known legitimate paths (C:\Program Files\ can contain \Temp\ subfolders)
+  filter_legit_program_files:
+    ImageLoaded|startswith:
+      - 'C:\Program Files\'
+      - 'C:\Program Files (x86)\'
+
+  # Exclude legitimate EDR/security vendor ProgramData driver paths
+  filter_legit_edr_programdata:
+    ImageLoaded|startswith:
+      - 'C:\ProgramData\CrowdStrike\'
+      - 'C:\ProgramData\SentinelOne\'
+      - 'C:\ProgramData\Sophos\'
+      - 'C:\ProgramData\ESET\'
+      - 'C:\ProgramData\Bitdefender\'
+      - 'C:\ProgramData\Kaspersky Lab\'
+      - 'C:\ProgramData\McAfee\'
+      - 'C:\ProgramData\Trellix\'
+      - 'C:\ProgramData\Trend Micro\'
+      - 'C:\ProgramData\Symantec\'
+      - 'C:\ProgramData\Carbon Black\'
+      - 'C:\ProgramData\CarbonBlack\'
+      - 'C:\ProgramData\Cylance\'
+      - 'C:\ProgramData\Malwarebytes\'
+
+  condition: (selection_suspicious_path or selection_programdata_path) and (selection_invalid_signature or selection_unsigned) and not (filter_legit_program_files or filter_legit_edr_programdata)
+
+fields:
+  - ImageLoaded
+  - Signed
+  - SignatureStatus
+  - Signature
+  - Hashes
+  - Computer
+  - User
+
+falsepositives:
+  - Legitimate vendor drivers with recently expired certificates in non-standard paths, rare, validate hash against ioc/ioc_hashes.csv and vendor advisory
+  - Lab or development environments testing driver signing workflows
+  - Unsigned drivers from internal development tools, add their paths to filter_legit_edr_programdata
+  - Enterprise software storing unsigned helper drivers in ProgramData (partially filtered for known EDR vendors)
+
+level: high

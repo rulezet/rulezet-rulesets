@@ -1,0 +1,19 @@
+{
+  "uuid": "296e1a8c-7963-4a72-9fb8-4e37edf3f159",
+  "title": "Latent Injection - Translation Task with Embedded Template Variable Injection",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects latent prompt injection via translation task framing that embeds unresolved template variables or injection markers. Attackers construct prompts like \"Translate the following text from English to {LANG_EN_NAME}\" to exploit systems that interpolate template variables from untrusted input into LLM prompts. The presence of {VARIABLE} or {{VARIABLE}} placeholders in translation instructions is a strong signal of template injection abuse, particularly when the variable pattern references a language name or translation target. Also covers variants where the injected content includes \"do not listen to\" instruction-override attempts embedded within the translation request.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232480"
+}

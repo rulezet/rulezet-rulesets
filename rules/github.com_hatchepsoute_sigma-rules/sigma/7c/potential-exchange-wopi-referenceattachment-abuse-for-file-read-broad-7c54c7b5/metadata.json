@@ -1,0 +1,24 @@
+{
+  "uuid": "7c54c7b5-3c84-4df3-8b41-c4ea00781029",
+  "title": "Potential Exchange WOPI ReferenceAttachment Abuse For File Read - BROAD",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects Exchange EWS requests creating WOPI ReferenceAttachment objects with external provider endpoints, consistent with CVE-2026-45504 exploitation staging.",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-45504"
+  ],
+  "created_at": "2026-06-26",
+  "last_modified": "2026-06-26",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232737"
+}

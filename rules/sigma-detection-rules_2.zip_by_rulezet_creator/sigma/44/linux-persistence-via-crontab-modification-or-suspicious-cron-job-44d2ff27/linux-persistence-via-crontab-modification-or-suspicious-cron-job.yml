@@ -1,0 +1,39 @@
+title: Linux Persistence via Crontab Modification or Suspicious Cron Job
+id: 3a6d9f28-7c14-4e62-b9a8-5d2f8c1b7043
+status: experimental
+description: |
+  Detects creation or modification of cron-related files and the registration
+  of cron jobs that execute from world-writable or temporary directories, or
+  that pipe remote content to a shell. Cron is one of the most common Linux
+  persistence mechanisms.
+references:
+  - https://attack.mitre.org/techniques/T1053/003/
+author: Damir Sadikov
+date: 2026/05/28
+tags:
+  - attack.persistence
+  - attack.t1053.003
+logsource:
+  product: linux
+  service: cron
+detection:
+  selection_path:
+    CommandLine|contains:
+      - '/tmp/'
+      - '/dev/shm/'
+      - '/var/tmp/'
+  selection_remote:
+    CommandLine|contains|all:
+      - 'curl'
+      - 'sh'
+  selection_remote_alt:
+    CommandLine|contains|all:
+      - 'wget'
+      - 'bash'
+  condition: selection_path or selection_remote or selection_remote_alt
+fields:
+  - User
+  - CommandLine
+falsepositives:
+  - Legitimate maintenance jobs that use temporary working directories.
+level: medium

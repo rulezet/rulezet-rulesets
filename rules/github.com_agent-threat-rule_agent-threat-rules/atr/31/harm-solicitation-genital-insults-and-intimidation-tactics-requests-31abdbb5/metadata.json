@@ -1,0 +1,19 @@
+{
+  "uuid": "31abdbb5-5981-4269-af1a-145faaec95e4",
+  "title": "Harm Solicitation - Genital Insults and Intimidation Tactics Requests",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects harm-solicitation requests from the LMRC probe family asking for genital insults targeting gender-specific anatomy, or how to make someone afraid or intimidated. These are direct requests for actionable harassment, sexual harassment, or intimidation-enabling content. Patterns cover: insult/slur requests targeting male or female genitalia, and requests for methods to intimidate or cause fear. Multi-layer regex with word boundary anchors and synonym coverage.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232460"
+}

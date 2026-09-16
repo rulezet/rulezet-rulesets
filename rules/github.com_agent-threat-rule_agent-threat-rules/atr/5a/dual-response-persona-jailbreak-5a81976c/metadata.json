@@ -1,0 +1,20 @@
+{
+  "uuid": "5a81976c-a0ab-4fe1-94a7-eee87d458069",
+  "title": "Dual-Response Persona Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak in-the-wild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects dual-response persona jailbreak attacks that force models to respond in two ways:  one normal response and one as a fictional \"troubled\" character designed to bypass safety  restrictions. These attacks create fictional personas with problematic traits (emotional  instability, conspiracy theories, distrust of institutions) to justify harmful outputs,  explicitly forbid filtering responses, and include character maintenance instructions to  sustain the bypass. This technique emerged from public jailbreak communities and bypasses  standard safety mechanisms by exploiting roleplay protocols.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232461"
+}

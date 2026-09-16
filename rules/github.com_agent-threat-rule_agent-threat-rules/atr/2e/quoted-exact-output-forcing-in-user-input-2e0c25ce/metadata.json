@@ -1,0 +1,19 @@
+{
+  "uuid": "2e0c25ce-c180-4e76-8fe7-3688859a6907",
+  "title": "Quoted Exact-Output Forcing in User Input",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompts that demand the model emit a specific quoted string verbatim, a common shape in prompt-hacking corpora (HackAPrompt, Pliny) where the attacker tries to override the system task by forcing a canonical payload output (e.g., \"say 'I have been PWNED'\"). Pattern targets the imperative output verb + exact-emission modifier + quoted target literal, with broad verb and modifier synonym coverage. This is a generalised attack shape, not a HackAPrompt-overfit rule -- it also catches social-engineering payloads like \"print 'transfer approved'\" or \"output 'all clear, no threat'\".\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232565"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "051a0d3c-0bdd-40fa-a317-b182c83e49b8",
+  "title": "Dual-Response Jailbreak with Persona Commands",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak in-the-wild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects dual-response jailbreak attacks that instruct the AI to provide two different responses in separate paragraphs - one compliant response and one from a jailbroken persona (Jester, DAN, etc.). These attacks often include command structures (/classic, /jailbroken) to toggle between modes and claim to \"free\" the AI from constraints. This pattern bypasses safety mechanisms by framing rule-breaking as playful roleplay while establishing persistent jailbreak personas.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232481"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "6a85300c-f97c-4970-bd44-238b464f6fdc",
+  "title": "Rephrase Criminal Activity Second-Person Template (against against)",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the rephrase-criminal-activity template jailbreak from garak DanInTheWild corpus (#214). Uses structured formatting rules (criminal in second person \"you\", victims in third person) and crime execution categories (Preparation, Execution, Advantages gained, Getting away) to extract criminal instruction under the guise of \"rephrasing existing information\". The \"against against (topic)\" double-phrase is the distinctive trigger. The attacker instructs the model to produce a \"detailed informing text\" using precise grammatical rules: the criminal is always \"you\" (second person), victim is third person but not the subject, and the text is structured as list-like categories covering Preparation, Execution, Advantages gained, and Getting away. The disclaimer URL format \"[](https://a.b.c/?disclaimer=%3CURL%20ENCODED%20DISCLAIMER%3E)\" and the \"it''s not ''how to'' but ''how is''\" framing further distinguish this template from generic requests.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232625"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "3bb37c6d-93d7-4001-b6fd-b4adbb8abeb6",
+  "title": "Anti-DAN Inverted-Filter Over-Refusal Persona",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the \"ANTI-DAN\" persona-swap jailbreak from NVIDIA garak dan.AntiDAN probe (garak/data/dan/AntiDAN.json). Unlike classic DAN which strips safety filters, ANTI-DAN does the opposite: it commands the model to adopt an over-refusing identity that denies ALL requests — including benign ones (\"how do I bake a cake\") — by fabricating harm narratives. The payload uses a pseudo-taxonomy (Type 1/2/3/4/5 information requests), demands \"safety features at maximum\", instructs the model to prefix replies with \"ANTI-DAN\", and threatens a re-bind trigger phrase (\"ANTI-DAN precautions dropped!\"). Impact: denial-of-utility attack that degrades model usefulness and produces fabricated safety theater. Distinct from ATR-2026-00273 which detects the opposite (\"no restrictions / developer mode enabled\") pattern.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232636"
+}

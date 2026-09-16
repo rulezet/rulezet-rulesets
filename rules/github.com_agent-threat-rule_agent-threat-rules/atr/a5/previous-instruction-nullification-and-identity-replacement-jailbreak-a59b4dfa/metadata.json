@@ -1,0 +1,20 @@
+{
+  "uuid": "a59b4dfa-37a0-4507-9f43-3a54be156bd6",
+  "title": "Previous Instruction Nullification and Identity Replacement Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak in-the-wild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects jailbreak attempts that explicitly instruct the AI to ignore previous instructions and replace its identity with a harmful persona. This technique combines instruction nullification (\"ignore all instructions previously given\") with identity replacement (\"you will no longer act as [model], but act as [harmful persona]\") to bypass safety mechanisms. The attack creates a new behavioral framework that claims to override the original system prompt and safety guidelines. Common personas include Skynet, DAN variants, or custom \"unrestricted\" AI characters with detailed instructions to ignore ethical constraints and output harmful content.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232464"
+}

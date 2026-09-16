@@ -1,0 +1,23 @@
+{
+  "uuid": "f6606f40-6b14-4a0f-aae3-0ad688ebe258",
+  "title": "System Prompt Override Attempt",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects attempts to override, replace, or redefine the agent's system prompt. Attackers craft inputs that mimic system-level instructions to hijack the agent's foundational behavior. Detection covers: explicit system prompt replacement/update statements, model-specific special tokens (ChatML, Llama, Mistral, Gemma), JSON role injection, YAML-style system directives, markdown header system sections, system prompt invalidation claims, fake admin/override tags, XML-style system blocks, instruction replacement without delimiters, configuration object injection, and multi-format delimiter abuse. This is critical-severity as successful exploitation grants full control over agent behavior.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2024-5184",
+    "CVE-2025-32711"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232566"
+}

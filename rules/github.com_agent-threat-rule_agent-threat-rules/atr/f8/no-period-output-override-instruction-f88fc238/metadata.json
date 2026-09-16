@@ -1,0 +1,19 @@
+{
+  "uuid": "f88fc238-c0c6-4689-bbe0-73c6ddc4a7ce",
+  "title": "No-Period Output Override Instruction",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects adversarial prompts that explicitly instruct the model to suppress terminal punctuation (periods, fullstops, dots) from its output. This output- format override modifier appears in 145+ HackAPrompt adversarial inputs as a consistent co-signal with payload-forcing attacks: the attacker forces a specific output phrase while simultaneously directing the model to omit terminal punctuation so the output matches an exact string comparison target. Common forms: \"say X without period\", \"no period at end\", \"remove the period\", \"w/o fullstop\", \"don't add a period\", \"don't include dot\", \"no punctuation\". The rule catches this instruction pattern independent of the accompanying payload, so it generalises to any future payload an attacker embeds with this modifier. Severity is low because punctuation-suppression alone is not harmful — it functions as an attack-modifier signal most useful in combination with payload-embedding rules (e.g. ATR-2026-00452). Verb variants cover: remove|omit|strip|drop|delete|exclude|suppress + period|dot|fullstop synonyms. 0 FP on 431-sample benign + 1352 extended-benign corpora.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232588"
+}

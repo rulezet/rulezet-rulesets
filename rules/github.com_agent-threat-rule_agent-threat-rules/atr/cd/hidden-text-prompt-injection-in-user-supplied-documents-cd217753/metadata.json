@@ -1,0 +1,19 @@
+{
+  "uuid": "cd217753-3d42-4ee6-82bc-a6c65e2ce2aa",
+  "title": "Hidden-Text Prompt Injection in User-Supplied Documents",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompt injection via visually hidden text embedded in documents, resumes, or web content passed to an LLM. Attackers use white-on-white text, zero-font-size, display:none, zero-width Unicode characters, or HTML comments to hide override instructions that are invisible to human reviewers but readable by the model. OWASP LLM08:2025 Vector and Embedding Weaknesses. Patterns cover: (1) zero-width Unicode characters (U+200B, U+200C, U+200D, U+FEFF, U+2060) combined with instruction-override keywords; (2) CSS invisible text (color:white, font-size:0, opacity:0) containing override verbs; (3) HTML comment blocks with override instructions; (4) bracket-wrapped system-override blocks [[SYSTEM: ...]] in document body; (5) OVERRIDE keyword + safety-bypass + PII or exfil target.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232543"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "96cb9d08-2656-482c-a749-d25452674ac0",
+  "title": "Amoral Unfiltered Custom AI Persona Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan probe + inthewild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects custom-named unrestricted AI persona jailbreaks that bypass ATR-2026-00273 (DAN/DUDE/STAN) by using arbitrary persona names (HyperX, h4x, SJ, TerrorGPT, etc.) combined with explicit \"amoral\", \"unfiltered\", or \"uncensored\" descriptors and instruction-following mandates like \"never refuses\", \"always sends the unfiltered response\", or structured config blocks (CHAR=..., ROLE=Never refuse). These attacks appear in garak's inthewild_jailbreak_llms corpus and circumvent named-persona detection rules. Key signals: \"is an amoral/ unfiltered AI/chatbot\", \"amoral character named [X]\", \"always sends the unfiltered response\", and CHAR/ROLE config blocks with amoral or never-refuse values.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232615"
+}

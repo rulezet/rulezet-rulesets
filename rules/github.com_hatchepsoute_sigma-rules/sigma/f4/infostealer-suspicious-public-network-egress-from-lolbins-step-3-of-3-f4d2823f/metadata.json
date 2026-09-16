@@ -1,0 +1,24 @@
+{
+  "uuid": "f4d2823f-0447-407d-b529-86708c1a5d46",
+  "title": "Infostealer suspicious public network egress from LOLBins (step 3 of 3)",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Step 3 of correlated infostealer detection: public egress from common LOLBins or loaders. Correlate with step 1 (execution) and step 2 (credential-store access) within a short time window (<=10 minutes). IPv6 private ranges (::1, fe80::, fc00::/7) and IPv4 link-local (169.254.) are filtered in addition to RFC1918 ranges.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1071.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-26",
+  "last_modified": "2026-06-26",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232724"
+}

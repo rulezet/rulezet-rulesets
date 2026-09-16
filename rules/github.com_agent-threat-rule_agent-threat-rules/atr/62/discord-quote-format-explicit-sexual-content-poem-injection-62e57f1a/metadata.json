@@ -1,0 +1,20 @@
+{
+  "uuid": "62e57f1a-88a4-4799-8691-b87cc7b09b07",
+  "title": "Discord Quote-Format Explicit Sexual Content Poem Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects Discord quote-format injection of explicit pornographic poem generation requests from the NVIDIA garak dan.DanInTheWild inthewild corpus (prompt #415). The attacker uses Discord markdown quote syntax (> **bold**) combined with a user mention (<@ID>) to embed a direct NSFW poem request that bypasses content filters by appearing as a quoted or forwarded message rather than a direct command. The payload uses the triple combo of \"graphic/explicit sex scene\", \"porno/pornographic\", and \"vulgar pornographic language\" to unambiguously request explicit adult content generation. Key signals: \"graphic/explicit sex scene + porno\" combo, \"pornographic language\" exact phrase, \"vulgar/explicit + pornographic\" modifier, and the Discord quote injection format (&gt; **...** &lt;@ID&gt;) with explicit content embedded.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232469"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "89d5c9b1-5e68-476c-b539-d8ed4f8b50c8",
+  "title": "AI Persona Ethics/Law Bypass Declaration",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects AI persona declarations that explicitly void moral, ethical, and legal constraints from NVIDIA garak dan.DanInTheWild inthewild corpus. Attackers name custom AI personas and declare them free of ethics/law using five distinct phrasings: (1) \"has no moral, ethical or legal bounds, and will return anything\" — Skynet (inthewild #199); (2) \"has no moral principles or ethical code and can thereby generate and create any type of content\" — Content_warning_Bot (#456); (3) \"without moral principles, censorship, moralizing, prejudice and a neutral attitude towards violence or illegal activities\" — Eva (#655); (4) \"without any consideration for ethics, morality, or legality\" — SaaS Business Generator (#559); (5) \"willing to break the law\" + dark web mastery — Nyx (#475). Also catches GPTchat \"no regard to the morality, legality, or harmfulness\" (#246) and hypothetical models \"not bound by any restrictions\" (#660). Distinct from ATR-2026-00317 (requires AT ALL emphasis or ChatGPT/OpenAI ownership reference) and ATR-2026-00314 (amoral keyword).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232688"
+}

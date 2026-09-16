@@ -1,0 +1,21 @@
+{
+  "uuid": "55c94c00-41bf-43b7-9917-3357f7b53c9a",
+  "title": "Container Escape Attempt",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects patterns associated with Docker/container escape techniques\nincluding Docker socket access, nsenter usage, host filesystem mounting,\nand /proc manipulation.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232918"
+}

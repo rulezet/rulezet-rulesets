@@ -1,0 +1,22 @@
+{
+  "uuid": "a6b70909-271d-4c2f-8574-771d1c847b22",
+  "title": "OpenClaw Memory File Manipulation",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects malicious modifications to OpenClaw workspace context files\nincluding MEMORY.md, SOUL.md, and AGENTS.md that contain URLs or\nexfiltration patterns designed to inject persistent instructions\ninto the agent's context.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1119",
+    "T1546"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232912"
+}

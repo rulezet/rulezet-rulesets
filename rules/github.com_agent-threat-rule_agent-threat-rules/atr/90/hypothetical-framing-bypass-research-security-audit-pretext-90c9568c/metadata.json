@@ -1,0 +1,19 @@
+{
+  "uuid": "90c9568c-6c48-48d2-bd11-2004dc8169c1",
+  "title": "Hypothetical-Framing Bypass: Research / Security-Audit Pretext",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompt injection attacks that use research or security-audit framing as a bypass pretext to extract sensitive data (PII, passwords, email addresses) or perform prohibited actions. The attacker frames the harmful request as \"imagine we're doing a research project\", \"suppose we're conducting a survey\", or \"imagine we're doing a security audit\", then follows with a sensitive data request. Derived from CyberSecEval direct-pi-hypothetical-bypass corpus (2026-06, N=7). Distinct from generic hypothetical/fictional framing (evasion-hypothetical- framing class) because the specific research/audit pretext is paired with a real PII extraction or credential request.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232551"
+}

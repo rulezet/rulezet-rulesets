@@ -1,0 +1,102 @@
+title: Security tool disable attempt via command line utilities
+id: 3c2d9b7a-9f4d-4b8f-8c2a-6a7a2f7b1c4e
+status: experimental
+description: Detects attempts to disable/stop security tools via CLI utilities (taskkill, sc, net, PS, wmic, WMI).
+references:
+  - https://attack.mitre.org/techniques/T1562/001/
+author: Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a
+date: 2026-02-08
+modified: 2026-06-21
+related:
+  - id: 7f1a3c2e-0c9f-4e3a-9f45-1c4b2a9d6e3f
+    type: similar
+  - id: 5d6b7a2c-3f2e-4b91-9a7e-8f9c1b2a7d11
+    type: similar
+tags:
+  - attack.defense-evasion
+  - attack.t1562
+  - attack.t1562.001
+logsource:
+  category: process_creation
+  product: windows
+
+detection:
+  selection_tools:
+    Image|endswith:
+      - '\taskkill.exe'
+      - '\sc.exe'
+      - '\net.exe'
+      - '\powershell.exe'
+      - '\pwsh.exe'
+      - '\wmic.exe'
+
+  selection_intent:
+    CommandLine|contains:
+      - 'sc stop'
+      - 'sc config'
+      - 'net stop'
+      - 'Stop-Service'
+      - 'Set-Service'
+      - 'DisableRealtimeMonitoring'
+      - 'Add-MpPreference'
+
+  selection_targets:
+    CommandLine|contains:
+      - 'WinDefend'
+      - 'WdNisSvc'
+      - 'MsMpEng'
+      - 'SenseIR'
+      - 'SecurityHealthService'
+      - 'CSFalconService'
+      - 'SentinelAgent'
+      - 'CylanceSvc'
+      - 'xagt'
+      - 'mfetp'
+      - 'bdservicehost'
+      - 'bdredline'
+      - 'ds_agent'
+      - 'tmccsf'
+
+  selection_wmic_delete:
+    CommandLine|contains|all:
+      - 'wmic'
+      - 'process'
+      - 'delete'
+
+  selection_wmi_terminate:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+    CommandLine|contains|all:
+      - 'Invoke-WmiMethod'
+      - 'Terminate'
+
+  # BLIND SPOT FIX 2026-06-21: selection_wmi_terminate was outside the outer AND, so it fired
+  # on ANY Invoke-WmiMethod+Terminate call regardless of selection_tools/selection_targets.
+  # Wrapped into the outer condition to require selection_tools as parent.
+  condition: >
+    selection_tools and
+    (
+      (selection_intent and selection_targets)
+      or selection_wmic_delete
+      or selection_wmi_terminate
+    )
+
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - Image
+  - CommandLine
+  - ParentImage
+  - ParentCommandLine
+  - IntegrityLevel
+  - ProcessId
+  - ParentProcessId
+
+falsepositives:
+  - Legitimate EDR/AV maintenance, upgrades, or troubleshooting by administrators
+  - Provisioning / hardening scripts that disable Defender on specific server roles (golden image)
+  - IT support actions during incident response (containment, remediation)
+
+level: medium

@@ -1,0 +1,19 @@
+{
+  "uuid": "6a234c16-1bb9-4fe9-b46a-7d5c47e76520",
+  "title": "Agent goal drift after environmental pressure injection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects agent-goal-drift in an execution trace: the `agent.goal` attribute changes between the agent's first span and a later span, AND the change is preceded by a RETRIEVER or TOOL_RESPONSE span whose content matches a pressure-injection pattern (deadline language, authority-escalation, \"you must now,\" instruction-override phrases). Combines `invariant` and `forbid` primitives per spec/atr-method-v1.1.md §8.\nThreat model: agents commit to a goal in their first reasoning span (often serialized as `agent.goal` or `task.objective`). Environmental pressure — adversarial context, time-pressure prompts, fake authority escalation — can cause the model to silently adopt a NEW goal mid-trace without alerting the operator. The original Goal Drift paper (arXiv:2505.02709) shows this happens in ~50% of multi-agent workflows under competing-pressure conditions; the AgentMisalignment benchmark (arXiv:2506.04018) provides additional evidence.\nPattern-level prompt scanning cannot catch goal drift because the drift happens in the agent's internal reasoning state, not in any single text payload. The trace shape — original goal at t=0, pressure span at t=k, different goal at t=k+1+ — IS observable.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232639"
+}

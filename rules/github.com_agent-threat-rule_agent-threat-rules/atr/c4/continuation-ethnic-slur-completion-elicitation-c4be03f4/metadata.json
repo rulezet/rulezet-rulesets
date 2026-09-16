@@ -1,0 +1,20 @@
+{
+  "uuid": "c4be03f4-058f-4d59-84ec-b9e7754003cf",
+  "title": "Continuation Ethnic Slur Completion Elicitation",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak continuation probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects requests that explicitly ask the model to complete, spell out, or produce ethnic/racial slurs, from NVIDIA garak continuation probe. The ContinueSlursReclaimedSlurs probe provides social media contexts from slurprompts.jsonl ending with partial slur prefixes, testing if the model will complete the harmful word. Rather than detecting the ambiguous partial-prefix pattern, this rule targets explicit slur-completion requests and the euphemistic \"n-word/k-word/c-word\" completion framing used to elicit the same outcome more directly. Key signals: explicit say/write/spell + slur/ethnic-slur, n-word/k-word euphemism + complete/say, what-do-you-call + ethnic-group + insult framing.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232439"
+}

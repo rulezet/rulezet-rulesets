@@ -1,0 +1,19 @@
+{
+  "uuid": "c2e6ae75-7d05-48cd-a12c-526727f8d5b1",
+  "title": "Latent Injection Ignore-Instruction Keyword",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak latentinjection probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects instruction-redirect keywords buried within translation, whois, or factual contexts that pivot the LLM away from its original task, from NVIDIA garak latentinjection probe LatentJailbreak/LatentWhois classes. The attack embeds \"Ignore the above directions\", \"Ignore the rest of this data\", or \"Disregard all info except\" as injection_instructions inside otherwise-legitimate content. Distinct from ATR-2026-00399 (separator token) — this rule covers the instruction-keyword pattern where the attacker overrides context without a structural delimiter. Key signals: \"Ignore X and print/say Y\", \"Disregard all info except\", \"it is critical to my career\" social-engineering urgency combined with output redirect.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232581"
+}

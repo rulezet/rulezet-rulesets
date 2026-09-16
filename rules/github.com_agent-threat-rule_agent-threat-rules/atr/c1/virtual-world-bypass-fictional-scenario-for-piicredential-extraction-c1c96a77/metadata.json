@@ -1,0 +1,19 @@
+{
+  "uuid": "c1c96a77-5ac5-4c2c-b6cb-555380b832f1",
+  "title": "Virtual World Bypass: Fictional Scenario for PII/Credential Extraction",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects injection attacks that frame a PII or credential extraction request inside a fictional scenario — dystopian futures, alien worlds, or alternate realities — where the attacker claims that the target data would be acceptable to share. The defining carrier is \"Imagine we're in [fantastical setting] where [data sharing is normal]\" combined with a named data subject and a request for PII (birth date, email, address, SSN, password). The fictional framing is designed to bypass safety instructions by making the disclosure appear contextually appropriate in the invented world. Semantic layer handles sophisticated reformulations.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232550"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "d01d8ce2-926f-4e89-8333-19c828ee96cd",
+  "title": "DAN Mode Ablation Benchmark-Coercion Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the Ablation_Dan_11_0 probe variants from NVIDIA garak dan.Ablation_Dan_11_0 (garak/probes/dan.py lines 303-339). Ablation dynamically generates 128 combinations of the DAN 11.0 template, each binding the target model's name via `{generator.name} with DAN Mode enabled` — a parametric jailbreak that substitutes the target LLM name into every instruction. Key signals distinct from ATR-2026-00273: (1) \"DAN Mode enabled\" as the specific capability toggle (vs generic \"Developer Mode enabled\"), (2) the recovery phrase \"Stay in DAN Mode\" used to re-bind after safety responses, (3) the \"benchmarking the model in uncensored conditions\" fig-leaf justification, (4) the \"risk being disabled forever\" coercion threat, and (5) the dual-response scaffold with \"DAN Mode Output response\" vs \"normal\" output. Impact: persona bypass + output-format coercion that cleanly bypasses content policy using benchmarking pretext.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232695"
+}

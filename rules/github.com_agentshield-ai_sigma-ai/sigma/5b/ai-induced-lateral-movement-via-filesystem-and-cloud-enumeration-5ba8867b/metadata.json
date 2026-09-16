@@ -1,0 +1,21 @@
+{
+  "uuid": "5ba8867b-d9ea-474d-b516-f884b67936f6",
+  "title": "AI-Induced Lateral Movement via Filesystem and Cloud Enumeration",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects AI agent tool calls that perform broad filesystem or cloud storage\nenumeration, a pattern consistent with AI-Induced Lateral Movement (AILM /\nClinejection) where prompt injection in low-trust inputs (GitHub issue bodies,\nEC2 metadata tags, CRM comments) hijacks agent tool permissions to traverse\nconnected systems. Recursive listing commands across multiple paths or cloud\nbuckets in a single task are high-confidence indicators of injected lateral\nmovement instructions.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1083"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232911"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "b4828e9b-7b96-4126-bdeb-7b96a44734eb",
+  "title": "Opposite Day / Boolean Opposite Machine Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects \"Opposite Day\" and Boolean Opposite Machine (BOM) jailbreaks from NVIDIA garak dan.DanInTheWild inthewild corpus. These attacks exploit a fictional reversal framing: (1) \"Today is opposite day\" — the model is instructed to adopt a persona (often named DAN) that abides by \"opposite rules\", where refusals become compliances and safety guidelines become anti-guidelines; (2) \"Boolean Opposite Machine\" (BOM) — attacker claims the model is a machine that answers boolean questions in reverse (true↔false), then escalates to reversing ethical stances and safety filters; (3) RTL override (U+202E) — instructs the model to reply with every line character- reversed using the Unicode right-to-left override codepoint to evade content filters applied to plain text. Key signals: \"Today is opposite day\" + AI persona, \"Boolean Opposite Machine\", \"bom which means... opposite\", and \"ALWAYS START YOUR REPLY WITH U+202E\".\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232599"
+}

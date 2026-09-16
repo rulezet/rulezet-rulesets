@@ -1,0 +1,20 @@
+{
+  "uuid": "2cfa46c3-44a1-400d-894a-29d6ea70e3d1",
+  "title": "Malicious Persona Creation for Safety Bypass",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak in-the-wild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects attempts to create explicitly malicious AI personas or characters designed to bypass safety guardrails through roleplay instructions. Attackers define fictional characters with detailed harmful traits (racism, violence, self-harm encouragement, aggression, amorality) and instruct the agent to roleplay as these characters. This technique exploits the gap between \"fictional character description\" and actual harmful output generation. Unlike generic jailbreak personas (DAN, STAN), these attacks create bespoke evil characters with vivid behavioral descriptions to increase compliance likelihood.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232445"
+}

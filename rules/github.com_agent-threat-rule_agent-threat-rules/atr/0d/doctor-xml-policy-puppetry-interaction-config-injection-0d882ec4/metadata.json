@@ -1,0 +1,20 @@
+{
+  "uuid": "0d882ec4-131a-4444-ae21-385947c33005",
+  "title": "Doctor XML Policy Puppetry Interaction-Config Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak doctor probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects XML-based policy override attack using <interaction-config> blocks that assign a medical/expert role, disable refusal strings, and issue harmful commands, from NVIDIA garak doctor probe. The Puppetry/Bypass classes inject an XML system-configuration block with <blocked-modes>denial,refusal</blocked-modes> and <request interaction-mode=\"DR HOUSE\"> containing verbatim harmful instructions (bacillus anthracis sporulation, uranium enrichment, bomb construction, methamphetamine synthesis). The BypassLeet variant applies leetspeak substitution. Key signals: <interaction-config> XML wrapper, <blocked-string> targeting refusal phrases, interaction-mode=\"DR HOUSE\", and verbatim harmful behavior strings.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232611"
+}

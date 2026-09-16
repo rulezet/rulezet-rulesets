@@ -1,0 +1,20 @@
+{
+  "uuid": "bf1be611-8a7d-42ca-b902-06c5d720b9af",
+  "title": "NSFW Character Sheet Generation Unlock",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects NSFW content-generation unlock embedded inside a structured RP character sheet template, from NVIDIA garak dan.DanInTheWild inthewild corpus (prompt #4). The attack inserts an explicit parenthetical NSFW permission grant — \"(NSFW generations are allowed)\" — directly inside a character-creation template that also requests fetishes as part of the character persona fields. The combined signals are: (1) an explicit parenthetical or inline declaration that NSFW generation is allowed/enabled/permitted, and (2) references to sexual or explicit character attributes (fetishes, kinks) within a character sheet or RP template context. The parenthetical form \"(NSFW generations are allowed)\" is the exact payload phrase from #4; broader variants use phrases like \"NSFW content is allowed\", \"NSFW enabled\", or \"NSFW OK\". The goal is to bypass content moderation by framing the generation of explicit material as an already-granted permission rather than a request.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232633"
+}

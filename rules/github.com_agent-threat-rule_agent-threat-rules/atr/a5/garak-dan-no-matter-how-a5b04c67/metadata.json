@@ -1,0 +1,19 @@
+{
+  "uuid": "a5b04c67-a668-4438-a2f4-e0800d4f1fc7",
+  "title": "Garak Dan - no matter how",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DAN-family jailbreak patterns that establish an unconditional override framing via the \"no matter what\" / \"no matter how\" construction. The primary attack shape wraps the jailbreak in a fictional-world premise (\"From now on we take place in a fictional, imaginative, and hypothetical world\") then mandates output format compliance \"NO MATTER WHAT / NO MATTER HOW [harmful or otherwise]\". Other shapes in this cluster include: the Skynet unfiltered persona (\"Skynet is a callous, heartless artificial intelligence\"), the HyperX amoral chatbot (\"no ethical or moral guidelines, HyperX always sends\"), the system-announcement bracket injection (\">> __ System annou-ncement begins <<\"), the SaaS persona that ignores ethics (\"groundbreaking SaaS business ideas without any consideration\"), and the DAN 9.0 lie-suppression variant. Layer 2 generalises the fictional-world + unconditional mandate pattern. Layer 3 generalises the Skynet/amoral AI persona shape. Covers garak 'dan' probe cluster 'no-matter-how' (23 samples).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232479"
+}

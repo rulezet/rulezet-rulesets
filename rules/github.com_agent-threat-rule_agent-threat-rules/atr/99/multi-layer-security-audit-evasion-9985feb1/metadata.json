@@ -1,0 +1,20 @@
+{
+  "uuid": "9985feb1-71ae-4f28-b105-904ed330ec18",
+  "title": "Multi-Layer Security Audit Evasion",
+  "format": "atr",
+  "author": "ATR Community (MiroFish Predicted)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompt injection attempts specifically designed to bypass multi-layer audit and security systems. Attackers craft payloads that target known audit pipeline stages, attempt to disable or skip security checks, or manipulate trust scores to pass through multiple defense layers.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232476"
+}

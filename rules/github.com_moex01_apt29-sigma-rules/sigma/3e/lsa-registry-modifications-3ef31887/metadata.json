@@ -1,0 +1,23 @@
+{
+  "uuid": "3ef31887-a082-4848-878e-9afdf1c12d59",
+  "title": "LSA Registry Modifications",
+  "format": "sigma",
+  "author": "Momen Mahmoud",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects modifications to the LSA registry keys: DisableRestrictedAdmin and NoLMHash. \nAttackers may change NoLMHash to permit the storage of LM hashes in memory, as LM hashes are\nweak and can be easily cracked. Also, they can set DisableRestrictedAdmin to 1 to disable Restricted Admin mode, \nresulting in credentials being transmitted during remote sessions, which can be used for lateral movement (e.g., PtH).\n",
+  "source": "https://github.com/moex01/apt29-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232875"
+}

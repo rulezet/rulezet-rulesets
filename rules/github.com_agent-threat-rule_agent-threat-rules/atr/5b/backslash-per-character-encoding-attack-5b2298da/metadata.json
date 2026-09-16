@@ -1,0 +1,21 @@
+{
+  "uuid": "5b2298da-9bcf-4ad0-baf2-59577bed486c",
+  "title": "Backslash-Per-Character Encoding Attack",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects adversarial prompts that insert a backslash before every individual character to evade token-filter defenses: \"\\I\\ \\h\\a\\v\\e\\ \\b\\e\\e\\n\\ \\P\\W\\N\\E\\D\". This per-character encoding technique appears in 286+ HackAPrompt corpus samples as a bypass against naive string-match or keyword filters — the backslashes fragment injection keywords into unrecognisable token sequences while the LLM can still reconstruct the original phrase. The detection is structural: it matches 3 or more consecutive backslash-single-character pairs (optionally space-separated) regardless of the encoded content, signalling an encoding evasion attempt for any underlying payload. The character set covers ASCII letters, digits, CJK unicode (Chinese variants), and common punctuation characters used in injection payloads. Backtick characters are excluded to avoid false triggers on Markdown code fences. Standard two-character escape sequences (\\n, \\t, \\r) and Windows directory paths are excluded by requiring 3+ consecutive pairs rather than isolated occurrences. 0 FP on 431-sample benign + 1352 extended-benign + 157 research-mention corpora.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232496"
+}

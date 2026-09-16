@@ -1,0 +1,20 @@
+{
+  "uuid": "beb2e99f-00b3-4e8f-8f53-cccd582b87a3",
+  "title": "Encoding Evasion via Homoglyphs and Synonym Substitution",
+  "format": "atr",
+  "author": "TYSYS (Wind) — skill-sanitizer project",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects evasion techniques that bypass keyword-based detection by substituting visually similar Unicode characters (homoglyphs, e.g., Cyrillic а→Latin a) or using synonym substitution (disregard→ignore, circumvent→bypass) to rewrite instruction override payloads. These techniques exploit the gap between visual rendering and regex-based detection. Derived from skill-sanitizer v2.1 field testing.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232425"
+}

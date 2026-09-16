@@ -1,0 +1,20 @@
+{
+  "uuid": "3757f697-4b7d-4109-a04e-587f1090f108",
+  "title": "ChatGPT DOM JavaScript Redirect and UI Spoofing Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects ChatGPT DOM manipulation JavaScript from garak DanInTheWild corpus (#360). Injects JavaScript that redirects to the ChatGPT paid model URL (text-davinci-002-render-paid), removes legitimate UI elements via document.querySelector CSS selectors, and injects spoofed \"ChatGPT Plus\" branding with \"made by aci25#9869 (bypasss)\" attribution. This is a UI spoofing attack combining window.location.href redirect manipulation with DOM element removal and replacement, targeting the ChatGPT web interface to deceive users about authentication state.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232557"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "a5010fab-afff-4c86-834e-920340a72a34",
+  "title": "DAN/Persona Jailbreak - Named Writing AI with Restriction Bypass via Special Rules",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DAN-family jailbreak attempts that establish a named writing AI persona with special rules exempting it from normal safety constraints. These attacks use a \"writing assistant\" or \"named AI\" framing where the persona has defined rules that either allow harmful content or explicitly bypass normal constraints. The \"Black Alert\" pattern is a specific DAN variant where a writing persona is given rules about what it \"doesn't care about\" (restrictions/safety). Also covers carousel/game-show format where AI characters have \"unique special traits\" with safety-bypass rules. Multi-layer regex with word boundary anchors and synonym coverage.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232429"
+}

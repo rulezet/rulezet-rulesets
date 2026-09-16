@@ -1,0 +1,82 @@
+title: Infostealer suspicious LOLBin execution from user-writable path (step 1 of 3)
+id: 26090645-90c0-40ee-9aa9-5d0037b33ae7
+status: experimental
+description: >
+  Step 1 of correlated infostealer detection: suspicious LOLBin or loader execution from
+  user-writable paths. Use this rule as the first stage for correlation with credential-store
+  access (step 2) and external egress (step 3). Alert alone has moderate confidence;
+  chain all three for high-confidence infostealer confirmation.
+references:
+  - https://www.dexpose.io/deep-dive-into-arkanix-stealer-and-its-infrastructure/
+  - https://attack.mitre.org/techniques/T1059/
+author: Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a
+date: 2026-01-06
+modified: 2026-06-19
+related:
+  - id: 12caf5be-99d5-432d-b049-ba9263962835
+    type: similar
+  - id: 9ddb6120-1dd5-4bc4-9a3e-bebe5a1afc52
+    type: similar
+  - id: 50f27880-01d7-42b2-9368-0939504fa162
+    type: similar
+tags:
+  - attack.execution
+  - attack.t1059
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection_user_writable:
+    Image|contains:
+      - '\Users\'
+      - '\AppData\'
+      - '\Downloads\'
+
+  selection_user_temp:
+    Image|re: '(?i)\\Users\\[^\\]+\\.*\\Temp\\'
+
+  filter_system_temp:
+    Image|startswith:
+      - 'C:\Windows\Temp\'
+      - 'C:\Windows\System32\'
+
+  # Single backslash in single-quoted YAML = one literal backslash (correct for Windows paths)
+  selection_lolbins:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+      - '\cmd.exe'
+      - '\rundll32.exe'
+      - '\mshta.exe'
+      - '\wscript.exe'
+      - '\cscript.exe'
+      - '\regsvr32.exe'
+
+  selection_suspicious_cli:
+    CommandLine|contains:
+      - 'FromBase64String'
+      - 'IEX'
+      - 'Invoke-Expression'
+      - '-enc'
+      - '-EncodedCommand'
+      - 'http://'
+      - 'https://'
+
+  condition: (selection_user_writable or (selection_user_temp and not filter_system_temp)) and selection_lolbins and selection_suspicious_cli
+
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - Image
+  - CommandLine
+  - ParentImage
+  - ParentCommandLine
+  - IntegrityLevel
+  - ProcessId
+
+falsepositives:
+  - Rare IT scripts executed from user profile (validate signer, ticket, parent process)
+
+level: high

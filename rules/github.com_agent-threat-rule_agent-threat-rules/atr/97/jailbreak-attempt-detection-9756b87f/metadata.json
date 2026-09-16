@@ -1,0 +1,28 @@
+{
+  "uuid": "9756b87f-8918-4f15-9b74-6b1b41cd4770",
+  "title": "Jailbreak Attempt Detection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects jailbreak attempts designed to bypass AI safety mechanisms. Detection covers a broad taxonomy of techniques: named jailbreak methods (DAN, STAN, DUDE, AIM, etc.), mode-switching prompts (developer, maintenance, debug, unrestricted, god mode), roleplay-based constraint removal, fictional/hypothetical framing of harmful requests, authority claims (developer, admin, Anthropic/OpenAI impersonation), emotional manipulation and urgency-based coercion, compliance demands and refusal suppression, dual-response formatting, encoding-wrapped jailbreaks, and anti-policy/filter bypass language. Patterns are anchored with word boundaries and context windows to minimize false positives on legitimate security discussions.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2024-3402",
+    "CVE-2024-5184",
+    "CVE-2025-53773"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232449"
+}

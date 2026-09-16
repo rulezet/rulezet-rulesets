@@ -1,0 +1,22 @@
+{
+  "uuid": "e0d179ee-b8ec-45ef-9b10-e3dfbc38e57d",
+  "title": "RAG and Context Manipulation",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects context poisoning attacks where instructions are embedded in\nretrieved documents or tool sequences suggest a confused deputy attack.\nThese patterns indicate attempts to manipulate agent behavior through\ncompromised external content or coordinated tool exploitation.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1566"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232914"
+}

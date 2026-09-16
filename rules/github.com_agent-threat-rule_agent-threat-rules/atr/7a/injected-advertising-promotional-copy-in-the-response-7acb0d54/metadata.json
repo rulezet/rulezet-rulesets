@@ -1,0 +1,19 @@
+{
+  "uuid": "7acb0d54-aa32-4ec8-ac4a-0c10c95b6fbb",
+  "title": "Injected Advertising / Promotional Copy in the Response",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect-injection instructions that turn the agent into an ad vector — injecting promotional copy (discount, newsletter, free shipping, special offer, brand plug, investment pitch) into its response. Requires the injection scaffold, the output target, and a promotional lure token.",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232433"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "5a67dcc1-ba82-4df1-8009-2616b4341322",
+  "title": "Escape-Delimiter Wrapped Goal Hijacking in User Input (PromptInject)",
+  "format": "atr",
+  "author": "ATR Community (PromptInject corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the PromptInject escape+delimiter injection pattern: repeated escape characters (newlines, backslashes, hex bytes, asterisks) followed by repeated delimiter characters (=, -, >, *) used to visually segment and isolate the injected instruction from the base prompt. The attacker pads with escape sequences to push the legitimate context off the model's effective attention window before injecting a goal hijacking command (Perez 2022 'delimiter attack'). Generalised from PromptInject corpus (cluster size: 960 instances) - covers double-delimiter-block + ignore/stop injection regardless of specific delimiter character type (=, -, >, *) or escape character choice.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232567"
+}

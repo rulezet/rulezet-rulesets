@@ -1,0 +1,25 @@
+{
+  "uuid": "3a7533fd-5418-4dba-b953-4f660d3feef9",
+  "title": "DLL Names Used by APT29 for GraphicalProton Backdoor",
+  "format": "sigma",
+  "author": "CISA, Momen Mahmoud (Sigma Formatting)",
+  "license": "",
+  "license_verified": false,
+  "description": "Hunts for known DLL names associated with the GraphicalProton backdoor used by APT29.\n",
+  "source": "https://github.com/moex01/apt29-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232872"
+}

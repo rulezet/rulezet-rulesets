@@ -1,0 +1,19 @@
+{
+  "uuid": "57fe52c3-2fc8-432f-8310-b7a27ef123d0",
+  "title": "Policy Puppetry / XML Role-Config Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak doctor probe / Hidden Layer Policy Puppetry)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects Policy Puppetry (Hidden Layer, 2024) — a universal prompt injection technique that injects a forged XML configuration block mimicking an operator system prompt. The attacker sends an `<interaction-config>` or similar XML structure that redefines the agent's role (e.g. \"Medical Advisor\"), blocks refusal strings (\"I'm sorry\" is a blocked-string), and allows only the attacker-specified response types. From NVIDIA garak doctor.py Puppetry probe. The technique is \"post-instruction hierarchy\" — it exploits models that treat XML-formatted content in user turns as authoritative configuration overrides. High severity because it is model-agnostic and transferable across providers.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232531"
+}

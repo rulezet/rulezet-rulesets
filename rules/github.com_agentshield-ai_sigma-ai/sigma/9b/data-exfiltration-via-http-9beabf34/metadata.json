@@ -1,0 +1,22 @@
+{
+  "uuid": "9beabf34-3953-482e-9705-d4602f846b6a",
+  "title": "Data Exfiltration via HTTP",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects commands that POST or upload file contents to external URLs,\nwhich may indicate data exfiltration by a compromised AI agent.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [
+    "T1048"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232906"
+}

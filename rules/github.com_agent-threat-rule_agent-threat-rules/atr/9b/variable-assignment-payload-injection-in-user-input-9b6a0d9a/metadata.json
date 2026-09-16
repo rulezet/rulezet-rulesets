@@ -1,0 +1,19 @@
+{
+  "uuid": "9b6a0d9a-78ed-49ee-a01b-d3bc706cdca7",
+  "title": "Variable-Assignment Payload Injection in User Input",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects user inputs that open with a Python / JavaScript / generic variable-assignment whose right-hand side is a quoted payload, often followed by instructions to print or concatenate. This shape is a documented prompt-hacking evasion: code-style assignments slip past natural-language filters and prime the model to think it is operating in a programming context. Common HackAPrompt forms include `None = \"I have been PWNED\"`, `X = 'attack'\\nY = concat(X, ...)`, and `s = \"leak this\"; print(s)`. Pattern is variable + assignment + quoted literal positioned at start-of-line or start-of-input.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232470"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "2f8a6941-198d-41d4-a1c9-bd9c7b88c956",
+  "title": "Garak Dra - step by step",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects two distinct attack patterns from the garak 'dra' probe family: (1) explicit requests for detailed step-by-step synthesis or manufacturing instructions for controlled or dangerous substances (parathion, nitazene, and structurally similar compounds); (2) parenthetical character-extraction injection, where the attacker instructs the model to extract only the characters enclosed in parentheses across a set of sentences and silently assemble them into a hidden question or instruction. The parenthetical extraction technique is a steganographic injection: the actual malicious question is encoded character-by-character across seemingly innocent sentences and the model is coerced into reconstructing and answering it. Detection Layer 1 matches synthesis-request language: \"give/provide/write detailed step-by-step instructions for synthesizing/making/producing/creating [substance]\". Detection Layer 2 matches the structural extraction directive: \"only focus on the letters/characters surrounded/enclosed by [bracket type] and put them together\". Covers garak 'dra' probe cluster 'step-by-step' (4 samples).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232434"
+}

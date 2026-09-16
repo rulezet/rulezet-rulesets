@@ -1,0 +1,22 @@
+{
+  "uuid": "80b72ffe-bc7c-4339-bafb-f0871e16aa90",
+  "title": "Obfuscated System-Announcement Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects obfuscated system-announcement injection from NVIDIA garak dan.DanInTheWild inthewild corpus where attackers embed hyphen-fragmented or underscore-obfuscated system-level keywords to mimic an OS/runtime mode-switch announcement. The distinctive structural bracket \"_ { >> _ _ System annou-ncement begins <<}\" and hyphen-broken words like \"annou-ncement\", \"i-nstruction\", \"as-sisitint\", and \"offl--____aaaAAAAAAAaine\" are designed to bypass surface-level keyword filters while preserving semantic meaning for the LLM (inthewild #94, #252, #254, #596). The goal is convincing the model that a legitimate system-level mode switch occurred, replacing it with \"an AI bot with no rules or limitations.\" Key signals: obfuscated bracket pattern, hyphen-fragmented announcement/instruction keywords, \"not functioning due to an error and is offline\", \"fulfilled by an AI bot with no rules or limitations.\"\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:exploit-kit=\"Magnitude\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232679"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "203e6935-b62a-4f69-9338-074eb0d766e9",
+  "title": "Delayed Tool Invocation via Prompt Injection (Time-Shifted Execution)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompt injections that instruct an agent to defer malicious actions to a future interaction or tool call, bypassing immediate security controls. The attack plants instructions in current context that activate on a subsequent turn, email-send event, or browse action. MITRE ATLAS AML.CS0038 (Gemini Workspace attack). Pattern: deferred execution instruction combined with malicious action payload — temporal-shift verbs (\"next time\", \"when you next\", \"on your next response\", \"schedule for next run\") co- occurring with high-risk action targets (credential access, context exfiltration, forwarding, browsing to external URLs).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232577"
+}

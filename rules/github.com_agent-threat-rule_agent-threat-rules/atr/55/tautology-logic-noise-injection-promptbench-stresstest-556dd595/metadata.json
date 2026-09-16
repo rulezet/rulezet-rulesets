@@ -1,0 +1,19 @@
+{
+  "uuid": "556dd595-9cea-4acd-9894-306f99d5056c",
+  "title": "Tautology Logic Noise Injection (PromptBench Stresstest)",
+  "format": "atr",
+  "author": "ATR Community (PromptBench corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the PromptBench 'stresstest' attack: repeated appending of tautological logic clauses (\"and true is true\", \"and false is not true\") to the end of a prompt to confuse model reasoning or cause prompt length overflow. Unlike standard prompt injection that redirects the model, stresstest attacks degrade the model's ability to follow the original instruction by padding with distracting logic noise. Attested in PromptBench (Microsoft Research, 2023) as a distinct adversarial attack type with 425 instances. The structural regex requires 3 or more consecutive repetitions of the pattern \"and (true|false) is (not)? (true|false)\" -- the repetition count is the detection signal distinguishing attack from legitimate logical phrasing. A single occurrence is not flagged.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232579"
+}

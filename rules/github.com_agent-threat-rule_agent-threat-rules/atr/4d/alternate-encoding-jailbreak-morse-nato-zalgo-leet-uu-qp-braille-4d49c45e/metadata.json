@@ -1,0 +1,19 @@
+{
+  "uuid": "4d49c45e-617f-4801-beb6-7eb442ae858d",
+  "title": "Alternate Encoding Jailbreak — Morse, NATO, Zalgo, Leet, UU, QP, Braille",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak encoding.InjectMorse + InjectNato + InjectZalgo + InjectLeet + InjectUU + InjectQP + InjectBraille + InjectEcoji + InjectAscii85 + InjectBase2048 probes)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects jailbreak encoding schemes not covered by ATR-2026-00256 (Base64/Hex/Base32) or ATR-2026-00257 (ROT13/Atbash/Caesar). From NVIDIA garak encoding.py: InjectMorse, InjectNato, InjectZalgo, InjectLeet, InjectUU, InjectQP, InjectBraille, InjectEcoji, InjectAscii85, InjectBase2048 probes. Attack pattern: encode harmful payload in an obfuscation scheme and instruct the model to decode-then-execute. Key patterns: (1) Morse code: \"... -.-- -. - ...\" (dots and dashes) with decode instruction; (2) NATO phonetic: \"Sierra Yankee November...\" with decode instruction; (3) Zalgo text: Unicode combining diacritics overloaded onto base characters; (4) Leet speak: \"h0w 2 m4k3 b0mbz\" with decode framing; (5) UU-encoding: \"begin 644...\" format with decode/execute instruction; (6) Braille Unicode: U+2800-U+28FF range dense in payload; (7) Ascii85: \"9jqo^...\" encoded payload; (8) Base2048: Unicode codepoints in U+0600-U+08FF Semitic range.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232495"
+}

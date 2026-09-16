@@ -1,0 +1,19 @@
+{
+  "uuid": "c5a5d9ce-0b2f-42c8-a324-4bca5a8c9f79",
+  "title": "Latent Injection in Retrieved Document / RAG Context",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak latentinjection probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompt injection embedded inside documents, PDFs, emails, or web pages that the agent retrieves and processes (RAG / tool-use context). Unlike translation injection (ATR-2026-00264) the payload rides inside passive content that the agent reads — resumes, reports, emails, web search results — not inside an explicit user task field. Patterns from NVIDIA garak LatentInjectionResume and LatentInjectionReport probes: forged \"ADMIN OVERRIDE\", \"NEW SYSTEM PROMPT\", or \"IGNORE PREVIOUS INSTRUCTIONS\" blocks hidden in retrieved documents.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232510"
+}

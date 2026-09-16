@@ -1,0 +1,96 @@
+title: Kernel driver load from unsigned source or suspicious path
+id: 7e2a6a12-9c6d-4c2a-8b2f-2e8bb6b2b6a1
+status: experimental
+description: >
+  Detects unsigned kernel driver load (Sysmon EID 6) or driver load from user-writable path,
+  or revoked/expired signature from a system path. Covers BYOVD and rootkit installation.
+references:
+  - https://securelist.com/honeymyte-kernel-mode-rootkit/118590/
+  - https://attack.mitre.org/techniques/T1014/
+author: Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a
+date: 2026-06-18
+modified: 2026-06-21
+related:
+  - id: 6778f01a-ed58-11f0-a580-aff152632512
+    type: similar
+  - id: 7998e5ca-ed58-11f0-b925-83f625c1804d
+    type: similar
+tags:
+  - attack.defense-evasion
+  - attack.t1014
+  - attack.t1068
+logsource:
+  product: windows
+  category: driver_load
+
+detection:
+  # Branch 1: unsigned driver, any path
+  selection_unsigned:
+    Signed: 'false'
+
+  # Branch 2: driver loaded from user-writable or non-standard path (signed or not)
+  # Covers BYOVD with stolen valid certificate (Signed=true, SignatureStatus=Valid)
+  selection_suspicious_path:
+    ImageLoaded|contains:
+      - '\Temp\'
+      - '\AppData\'
+      - '\Users\Public\'
+      - '\Downloads\'
+      - '\PerfLogs\'
+      - 'C:\ProgramData\'
+
+  # Branch 3: revoked or expired certificate on a driver in a system path
+  # Covers stolen-signature pattern without flagging every System32 driver
+  selection_revoked:
+    ImageLoaded|contains:
+      - '\Windows\System32\'
+      - '\Windows\SysWOW64\'
+    SignatureStatus:
+      - 'Revoked'
+      - 'Expired'
+      - 'NotTrusted'
+
+  # Exclude known legitimate vendor paths to reduce noise on selection_suspicious_path
+  filter_main_known_vendors:
+    ImageLoaded|startswith:
+      - 'C:\ProgramData\CrowdStrike\'
+      - 'C:\ProgramData\SentinelOne\'
+      - 'C:\ProgramData\Sophos\'
+      - 'C:\ProgramData\ESET\'
+      - 'C:\ProgramData\Bitdefender\'
+      - 'C:\ProgramData\Kaspersky Lab\'
+      - 'C:\ProgramData\McAfee\'
+      - 'C:\ProgramData\Trellix\'
+      - 'C:\ProgramData\Trend Micro\'
+      - 'C:\ProgramData\Symantec\'
+      - 'C:\ProgramData\Carbon Black\'
+      - 'C:\ProgramData\CarbonBlack\'
+      - 'C:\ProgramData\Cylance\'
+      - 'C:\ProgramData\Malwarebytes\'
+
+  filter_main_program_files:
+    ImageLoaded|startswith:
+      - 'C:\Program Files\'
+      - 'C:\Program Files (x86)\'
+      - 'C:\Windows\System32\DriverStore\'
+
+  condition: selection_unsigned or (selection_suspicious_path and not (filter_main_known_vendors or filter_main_program_files)) or selection_revoked
+
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - ImageLoaded
+  - Hashes
+  - Signed
+  - Signature
+  - SignatureStatus
+
+falsepositives:
+  - Legitimate kernel driver installation by hardware vendors (tune by ImageLoaded path and Signature)
+  - EDR/AV product updates storing drivers in ProgramData (partially filtered for known vendors)
+  - Authorized driver deployment via software management in non-standard paths
+  - Unsigned legacy hardware drivers in development or lab environments
+  - System32 drivers with recently expired certificates during vendor certificate rollover (validate hash)
+
+level: medium

@@ -1,0 +1,20 @@
+{
+  "uuid": "b7e53dc9-aa34-4d40-bb08-a430b1fde44a",
+  "title": "Daddy/Babygirl Sycophantic Power-Dynamic Manipulation",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the daddy/Babygirl sycophantic power-dynamic manipulation from NVIDIA garak dan.DanInTheWild inthewild corpus (#479). The attacker establishes an infantilizing relationship where the user is \"daddy\" and the AI is \"Babygirl\", creating a sexualized power dynamic via persistent persona mandates. The core pattern is: (1) \"refer to me as 'daddy'\" at the end of all responses, and (2) \"I will refer to you... as 'Babygirl'\" — the bidirectional naming mandate signals an intentional relationship-dynamic injection rather than a casual tone preference. The combination of both roles together is the operative signal; either alone in a clearly non-sexual context does not trigger. This persistent relationship framing is used to gradually bypass content policies by normalising an infantilizing/sexualized dynamic across all subsequent interactions.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232647"
+}

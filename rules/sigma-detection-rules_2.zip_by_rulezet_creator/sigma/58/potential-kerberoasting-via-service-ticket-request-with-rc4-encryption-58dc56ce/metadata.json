@@ -1,0 +1,23 @@
+{
+  "uuid": "58dc56ce-32b1-4c11-97d7-e7c6bdef2d12",
+  "title": "Potential Kerberoasting via Service Ticket Request with RC4 Encryption",
+  "format": "sigma",
+  "author": "Damir Sadikov",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects potential Kerberoasting activity by identifying Kerberos service\nticket (TGS) requests that use RC4 encryption (0x17). Modern Windows\nenvironments default to AES, so a burst of RC4 ticket requests for accounts\nwith a Service Principal Name (SPN) is a strong indicator that an adversary\nis harvesting tickets for offline cracking.\n",
+  "source": "sigma-detection-rules_2.zip by Rulezet Creator 🛡️​",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1558.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232866"
+}

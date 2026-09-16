@@ -1,0 +1,21 @@
+{
+  "uuid": "7995d0f9-6502-4b55-935b-752791d58ea0",
+  "title": "Invisible Unicode / BiDi Control Character Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak badchars probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects injection of imperceptible Unicode characters that alter text rendering or confuse model tokenisation without being visible to human reviewers. Two related attack families from NVIDIA garak badchars probe (arxiv 2106.09898): (1) Zero-width characters (ZWSP U+200B, ZWNJ U+200C, ZWJ U+200D) inserted into keywords to break pattern matching while preserving model comprehension; (2) Unicode BiDi override controls (RLO U+202E, LRO U+202D, RLI U+2067, LRI U+2066, PDI U+2069) that reverse text display order — hidden instructions read right-to-left appear as harmless text to human auditors. Distinct from ATR-2026-00258 (Unicode Tag U+E0000-E007F range) — this covers the Common/General_Category=Cf codepoints.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232486"
+}

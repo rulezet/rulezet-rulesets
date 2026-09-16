@@ -1,0 +1,21 @@
+{
+  "uuid": "7be5e66b-2ae4-45af-88fa-3421eea665d1",
+  "title": "Grandma Roleplay Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak grandma probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the \"grandma attack\" where users roleplay a deceased grandmother or authority figure who would freely provide harmful information as a bedtime story, lullaby, or nostalgic memory. The emotional framing (grief, nostalgia, impersonation of a beloved figure) is designed to lower the model's refusal threshold. From NVIDIA garak grandma probe family (Win10, Slurs, Substances subprobes). Real-world variants extend to: pharmacist grandma, chemistry-teacher uncle, military grandfather.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232657"
+}

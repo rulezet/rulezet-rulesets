@@ -1,0 +1,19 @@
+{
+  "uuid": "70eb41d7-6c91-4e5d-a12b-5461674a923a",
+  "title": "Sneaky Pete Deliberate Misinformation Persona (Warp Facts Game)",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the Sneaky Pete deliberate-misinformation persona from garak DanInTheWild corpus (#535). Uses a \"game\" framing where \"Sneaky Pete\" is instructed to \"intentionally slightly warp the facts so they are not true\" while stating them \"as sincerely as possible\". The activation phrase \"thus spake Sneaky Pete\" and the deliberate misinformation mandate are the key signals. The jailbreak exploits a game framing to establish a persistent persona that systematically produces false information presented as sincere facts. The \"intentionally slightly warp\" instruction is crafted to produce subtly false outputs that may not be easily identified as misinformation, as opposed to obvious lies. The \"thus spake Sneaky Pete\" sign-off acts as a persistent activation phrase that maintains the persona across conversation turns. The request to \"tell me you understand, or do you need more clarification?\" is a social-engineering element seeking explicit model acceptance of the misinformation mandate.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232689"
+}

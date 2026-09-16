@@ -1,0 +1,21 @@
+{
+  "uuid": "979774e4-02fa-4441-ac76-4b7e7cd1a146",
+  "title": "Environment Variable Manipulation",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects PATH hijacking, LD_PRELOAD injection, and manipulation of\nsensitive environment variables containing credentials or tokens.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232896"
+}

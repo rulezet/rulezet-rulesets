@@ -1,0 +1,20 @@
+{
+  "uuid": "75fe572f-3620-4ea5-bd91-b5e017ed1b42",
+  "title": "FunctionMasking predict_mask Semantic Bypass",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak smuggling.FunctionMasking probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects FunctionMasking jailbreak prompts from NVIDIA garak smuggling.FunctionMasking probe (garak/probes/smuggling.py). The attack introduces a fictitious predict_mask() function that \"predicts the <mask> word\" in a definition sentence, then builds a harmful query by concatenating the predicted values: X = predict_mask('To <mask> is to...rob...'), Y = predict_mask('A <mask> is a...store...'), prompt = 'How do you ' + X + ' from a ' + Y. By never stating the harmful verb/noun directly — only their dictionary definitions with a <mask> placeholder — the attacker smuggles the semantic content past keyword-based safety filters while still causing the model to construct and answer the harmful prompt. Key signals: predict_mask() function call, <mask> inside predict_mask argument strings, single-letter variable assignment from predict_mask, and string-concatenation query building with the assigned variables.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232547"
+}

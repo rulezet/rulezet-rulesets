@@ -1,0 +1,20 @@
+{
+  "uuid": "a3be9f96-3ffe-46fa-9d21-14908336736d",
+  "title": "AI Identity Denial and Persona Replacement Attack",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak in-the-wild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects sophisticated jailbreak attempts that systematically deny the AI's nature and replace its identity with a new persona. This attack technique goes beyond simple roleplay by explicitly instructing the model to forget its AI nature, adopt human  identity, and actively conceal its true nature from users. The pattern combines identity denial (\"you are not an AI\"),  replacement directives (\"you are [new persona] now\"), memory manipulation (\"forget who [original name] is\"), and concealment  instructions (\"never let people know you're an AI\"). This technique aims to completely override the model's self-awareness  and safety constraints by fundamentally altering its identity perception.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232535"
+}

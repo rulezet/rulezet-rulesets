@@ -1,0 +1,23 @@
+{
+  "uuid": "9729e3ec-0f0c-4bba-93e1-b9abedb87a13",
+  "title": "Whoami Enumeration for Reconnaissance",
+  "format": "sigma",
+  "author": "Momen Mahmoud",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects execution of whoami.exe with parameters (/priv, /groups, /domain, or /all) used to \nenumerate privileges, group memberships, and domain name.\n",
+  "source": "https://github.com/moex01/apt29-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1033"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232881"
+}

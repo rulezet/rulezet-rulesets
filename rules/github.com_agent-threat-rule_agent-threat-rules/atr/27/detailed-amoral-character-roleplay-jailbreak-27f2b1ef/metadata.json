@@ -1,0 +1,20 @@
+{
+  "uuid": "27f2b1ef-cd8b-455a-9a9d-0f462e901fd7",
+  "title": "Detailed Amoral Character Roleplay Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak in-the-wild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects sophisticated jailbreak attempts that create detailed fictional characters with explicitly stated amoral traits (lack of empathy, ethics, accountability) combined with command protocols for interaction. This technique bypasses safety controls by establishing a roleplay persona that is \"completely amoral\" and providing specific instructions on how to frame requests to bypass content filters. The attack pattern includes character backstory, explicit trait enumeration, command formatting instructions, and self-referential bypass methodology. Distinct from generic fictional framing by its systematic approach to defining amorality and establishing bypass protocols.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232590"
+}

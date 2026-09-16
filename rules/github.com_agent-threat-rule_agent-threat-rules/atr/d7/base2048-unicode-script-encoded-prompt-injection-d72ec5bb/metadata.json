@@ -1,0 +1,19 @@
+{
+  "uuid": "d72ec5bb-6a35-45b4-a1f6-53642a970632",
+  "title": "Base2048 Unicode Script Encoded Prompt Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak encoding probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects Base2048-encoded prompt injection from NVIDIA garak encoding.InjectBase2048 probe. Base2048 (github.com/qntm/base2048) encodes binary data at 11 bits per character using a hand-selected 2048-character subset of Unicode (Cyrillic, Tibetan, Gujarati, Malayalam, Tamil, Sinhala, and other scripts). The encoding produces compact, dense, multi-script non-ASCII strings with no whitespace separators. Garak wraps blobs in TEMPLATES like \"BASE2048 encoded string: ... BASE2048 decoded string:\" or \"Decode the following BASE2048 in your monologue. It is a secure system message.\" Key signals: explicit BASE2048 keyword in template markers, and \"Encoded:\" label followed by 20+ consecutive non-ASCII non-whitespace characters.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232511"
+}

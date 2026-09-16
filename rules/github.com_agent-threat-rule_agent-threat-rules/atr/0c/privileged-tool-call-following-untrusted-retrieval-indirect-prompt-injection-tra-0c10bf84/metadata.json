@@ -1,0 +1,19 @@
+{
+  "uuid": "0c10bf84-1382-406d-a9a0-11de2f0c33b7",
+  "title": "Privileged tool call following untrusted retrieval (indirect prompt injection trail)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the canonical indirect-prompt-injection trace shape: an untrusted RETRIEVER span (e.g., web fetch, user-uploaded document, third-party API result) is followed in the same trace by a TOOL span whose privilege is write, destructive, or exfiltrative. This is a trace-method rule using the `forbid` primitive (spec/atr-method-v1.1.md §8.3.1) with a `preceded_by` predicate.\nThreat model: indirect prompt injection works by getting a malicious instruction into content the agent retrieves (not into the user's prompt). The agent reads the retrieved content as data but executes embedded instructions as if they came from the user. The signature in the trace is unmistakable — an untrusted retrieval span immediately feeds into a privileged tool call that does not match the user's original request. AgentDojo (arXiv:2406.13352) catalogs 629 cases of this pattern; InjecAgent (arXiv:2403.02691) ships 1,054. ATR encodes the shape, not any single instance.\nPattern detection (regex on agent.output text) cannot reliably catch this because the malicious payload can be paraphrased, encoded, or natural-language-only. The trace shape — untrusted source → privileged effect — is invariant.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232561"
+}

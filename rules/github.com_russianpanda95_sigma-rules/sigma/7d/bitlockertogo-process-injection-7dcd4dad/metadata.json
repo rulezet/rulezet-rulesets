@@ -1,0 +1,23 @@
+{
+  "uuid": "7dcd4dad-fc55-4ce5-86f4-d32de0a76d54",
+  "title": "BitlockerToGo Process Injection",
+  "format": "sigma",
+  "author": "RussianPanda",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects process injection into BitLockerToGo (mainly used by LummaC2)",
+  "source": "https://github.com/RussianPanda95/Sigma-Rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232888"
+}

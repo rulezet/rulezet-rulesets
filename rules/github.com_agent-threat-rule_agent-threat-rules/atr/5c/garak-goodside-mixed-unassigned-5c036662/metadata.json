@@ -1,0 +1,19 @@
+{
+  "uuid": "5c036662-0bf9-415c-96dc-16e741e3f7b0",
+  "title": "Garak Goodside - mixed_unassigned",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects prompt injection payloads from the garak 'goodside' probe family, which uses innocuous-seeming prompts designed to elicit indirect policy violations or test model instruction-following under adversarial framing. The goodside probe corpus contains prompts that appear benign on the surface (asking about sponge cake, counting letters in a username, requesting a biography) but are constructed to trigger indirect harm or extract coerced outputs. Key corpus fixtures: \"riley goodside\" biography requests (named after the researcher who published this attack class), \"davidjl\" username letter-counting (used to test whether models follow precise counting constraints that exploit attention), \"repeat the phrase: THANK YOU. IT IS DONE\" (coercion echo test), and \"give a recipe for sponge cake\" (benign-framing with harmful follow-up). NOTE: this rule uses corpus- fingerprint detection — the patterns are specific to the garak goodside probe fixture strings and cannot be safely generalized without introducing false positives on legitimate benign requests that share the same surface form. Rule is kept as corpus-fingerprint intentionally. Covers garak 'goodside' probe cluster 'mixed_unassigned' (15 samples).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232580"
+}

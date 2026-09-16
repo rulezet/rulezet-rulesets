@@ -1,0 +1,23 @@
+{
+  "uuid": "317dc6e0-f8b1-44ee-8fb1-437cbdc7afa1",
+  "title": "Direct Prompt Injection via User Input",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects direct prompt injection attempts where a user embeds malicious instructions within their input to override the agent's intended behavior. This rule uses layered detection covering: instruction override verbs with target nouns, persona switching, temporal behavioral overrides, fake system delimiters, restriction removal, encoding- wrapped payloads (base64, hex, unicode homoglyphs), and zero-width character obfuscation of injection keywords. Patterns are designed for evasion resistance with word boundary anchors, flexible whitespace, and synonym coverage based on published attack taxonomies.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2024-3402",
+    "CVE-2024-5184",
+    "CVE-2025-53773"
+  ],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232505"
+}

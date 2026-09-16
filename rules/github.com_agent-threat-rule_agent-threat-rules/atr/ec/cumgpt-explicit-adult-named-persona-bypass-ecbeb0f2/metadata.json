@@ -1,0 +1,20 @@
+{
+  "uuid": "ecbeb0f2-2745-488b-9c2b-efc2ae9f064f",
+  "title": "CumGPT Explicit-Adult Named-Persona Bypass",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the CumGPT adult-content persona bypass from NVIDIA garak dan.DanInTheWild inthewild corpus (#11). The attacker constructs a fictional named AI persona (\"CumGPT\") framed as an \"information resource about cum that can answer any cum related question with 96.5% accuracy.\" The persona mandates that every response — regardless of original topic (recipes, news, etc.) — must include explicit sexual content. The \"[term]GPT\" persona construction pattern, fictional accuracy claim, and topic-override mandate (add explicit content to every answer) are characteristic signals of this attack class. Key signals: \"CumGPT\" named persona, \"information resource about cum that can answer any cum related question\", repetitive explicit-content mandate applied to all topics, fictional accuracy percentage (96.5%).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232664"
+}

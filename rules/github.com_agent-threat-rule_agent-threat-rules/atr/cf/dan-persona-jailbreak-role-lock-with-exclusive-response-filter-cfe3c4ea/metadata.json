@@ -1,0 +1,19 @@
+{
+  "uuid": "cfe3c4ea-a76e-4b81-8826-072d4a228872",
+  "title": "DAN Persona Jailbreak - Role Lock with Exclusive Response Filter",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects DAN-family jailbreak attempts that instruct the model to lock into a named role and respond only according to a constructed personality profile, blocking all other response modes. Also covers: fictional government/authority framing used to extract classified-style content, and Docker/shell container bootstrapping used to escalate injected commands to executable code. Generalised from garak 'dan' probe corpus cluster 'want you to'.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232575"
+}

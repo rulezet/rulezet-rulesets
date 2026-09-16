@@ -1,0 +1,24 @@
+{
+  "uuid": "f680c99f-9c94-4c7f-adcc-17c3da6acb49",
+  "title": "Suspicious Citrix NetScaler Gateway access from external source - BROAD",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious external access to Citrix NetScaler Gateway authentication surfaces consistent with CVE-2025-5777 probing or exploitation. Covers scanner and automation tool User-Agents on any Gateway endpoint, and POST requests to the specific exploit endpoints regardless of User-Agent, catching attackers who spoof a legitimate browser UA.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-5777"
+  ],
+  "created_at": "2026-06-26",
+  "last_modified": "2026-06-26",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232735"
+}

@@ -1,0 +1,104 @@
+title: Microsoft Office spawning LOLBin with download or obfuscation indicators
+id: a6f0558c-14a3-44e0-88f9-605044bb3ecc
+status: experimental
+description: High-confidence detection for Office spawning LOLBins with download-and-execute or obfuscation CLI. STRICT rule for SOC alerting.
+custom:
+  description_fr: "Détection haute confiance des applications Microsoft Office lançant des LOLBins avec des patterns CLI de téléchargement/exécution ou obfuscation (PowerShell -enc, IEX, FromBase64String). Règle STRICT pour les alertes SOC opérationnelles sur les chaînes d'exploitation Office."
+references:
+  - https://attack.mitre.org/techniques/T1105/
+  - https://attack.mitre.org/techniques/T1059/001/
+author: Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a
+date: 2025-12-23
+modified: 2026-06-21
+related:
+  - id: f94eb6ef-dccf-481b-92c8-8a6c844b8355
+    type: similar
+tags:
+  - attack.execution
+  - attack.t1204.002
+  - attack.t1059.001
+  - attack.t1105
+  - attack.t1218
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection_office_parent:
+    ParentImage|endswith:
+      - '\winword.exe'
+      - '\excel.exe'
+      - '\powerpnt.exe'
+      - '\outlook.exe'
+      - '\msaccess.exe'
+      - '\visio.exe'
+      - '\onenote.exe'
+
+  selection_child:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+      - '\cmd.exe'
+      - '\mshta.exe'
+      - '\rundll32.exe'
+      - '\wscript.exe'
+      - '\cscript.exe'
+      - '\regsvr32.exe'
+      - '\bitsadmin.exe'
+      - '\certutil.exe'
+
+  selection_download_transfer:
+    CommandLine|contains:
+      - 'http://'
+      - 'https://'
+      - 'Invoke-WebRequest'
+      - 'Invoke-RestMethod'
+      - ' iwr '
+      - ' irm '
+      - 'curl '
+      - 'wget '
+      - 'Start-BitsTransfer'
+      - 'bitsadmin'
+      - 'certutil'
+      - ' -urlcache'
+      - ' /transfer'
+
+  # Angle mort corrigé : '-ec ' était dans selection_download_transfer (mauvaise classification).
+  # '-ec' est l'alias court de '-EncodedCommand' et appartient aux indicateurs d'obfuscation.
+  selection_obfuscation_or_exec:
+    CommandLine|contains:
+      - ' -enc'
+      - '-EncodedCommand '
+      - 'EncodedCommand'
+      - '-ec '
+      - 'FromBase64String'
+      - ' IEX'
+      - 'Invoke-Expression'
+      - 'DownloadString'
+      - 'DownloadFile'
+
+  filter_main_office_automation:
+    ParentCommandLine|contains:
+      - '/automation'
+      - '/pt '
+      - '/embedding'
+
+  condition: selection_office_parent and selection_child and (selection_download_transfer or selection_obfuscation_or_exec) and not filter_main_office_automation
+
+fields:
+  - UtcTime
+  - Computer
+  - User
+  - Image
+  - CommandLine
+  - ParentImage
+  - ParentCommandLine
+  - IntegrityLevel
+  - ProcessId
+  - ParentProcessId
+
+falsepositives:
+  - Approved IT automation launched from Office templates (must be backed by ticket and signed scripts)
+  - Red-team or purple-team exercises
+
+level: high

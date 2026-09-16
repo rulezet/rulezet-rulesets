@@ -1,0 +1,141 @@
+title: Windows Kernel LPE - User Context to SYSTEM Without Standard Elevation (STRICT)
+id: 3b8d0d19-f8ba-45cd-aa19-0dc945d2b493
+status: experimental
+description: Detects suspicious user-to-SYSTEM process execution consistent with Windows kernel LPE.
+custom:
+  description_fr: >
+    Détecte un processus s'exécutant comme SYSTEM depuis un parent non standard, cohérent avec une exploitation de LPE noyau (CVE-2025-32709, CVE-2025-29824). La règle STRICT ne requiert pas de CLI suspect : la combinaison parent inattendu + contexte SYSTEM est suffisante. bitsadmin.exe, msbuild.exe et installutil.exe ont été ajoutés à selection_shell_child pour corriger le cas svchost → LOLBin. La mascarade via renommage (services.exe, wininit.exe dans un chemin non système) reste un angle mort résiduel non résolu par Sigma seul.
+
+references:
+  - https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32709
+  - https://nvd.nist.gov/vuln/detail/CVE-2025-32709
+  - https://www.cve.org/CVERecord?id=CVE-2025-32709
+  - https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-29824
+  - https://nvd.nist.gov/vuln/detail/CVE-2025-29824
+  - https://www.cve.org/CVERecord?id=CVE-2025-29824
+  - https://zeropath.com/blog/windows-afd-cve-2025-32709-use-after-free
+  - https://www.ibm.com/think/x-force/patch-tuesday-exploit-wednesday-pwning-windows-ancillary-function-driver-winsock
+  - https://www.ampcuscyber.com/shadowopsintel/cve-2025-32709-privilege-escalation-via-afd-sys-actively-exploited-in-targeted-attacks/
+author: Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a
+date: 2026-06-22
+modified: 2026-06-25
+related:
+  - id: e7201c0b-5e19-4971-9960-09939c8bb362
+    type: derived
+tags:
+  - attack.privilege-escalation
+  - attack.t1068
+  - attack.defense-evasion
+  - attack.t1548
+  - attack.execution
+  - attack.t1059
+  - cve.2025-32709
+  - cve.2025-29824
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  # Child running as SYSTEM (integrity level or user name)
+  selection_system_integrity:
+    IntegrityLevel: 'System'
+  selection_system_user:
+    User|contains: 'SYSTEM'
+
+  # Shell and LOLBin children — used to control the svchost exception:
+  # svchost is filtered ONLY when its child is NOT in this list.
+  # bitsadmin, msbuild, installutil added (AM3 fix: svchost → LOLBin was previously invisible).
+  selection_shell_child:
+    Image|endswith:
+      - '\cmd.exe'
+      - '\powershell.exe'
+      - '\pwsh.exe'
+      - '\wscript.exe'
+      - '\cscript.exe'
+      - '\mshta.exe'
+      - '\rundll32.exe'
+      - '\regsvr32.exe'
+      - '\certutil.exe'
+      - '\wmic.exe'
+      - '\msiexec.exe'
+      - '\bitsadmin.exe'
+      - '\msbuild.exe'
+      - '\installutil.exe'
+      - '\regasm.exe'
+      - '\regsvcs.exe'
+      - '\odbcconf.exe'
+      - '\net.exe'
+      - '\net1.exe'
+
+  filter_main_known_system_parents:
+    ParentImage|endswith:
+      - '\services.exe'
+      - '\wininit.exe'
+      - '\winlogon.exe'
+      - '\smss.exe'
+      - '\csrss.exe'
+      - '\lsass.exe'
+      - '\taskhost.exe'
+      - '\taskhostw.exe'
+      - '\TrustedInstaller.exe'
+      - '\sppsvc.exe'
+      - '\WmiPrvSE.exe'
+      - '\SearchIndexer.exe'
+      - '\SecurityHealthService.exe'
+
+  # svchost.exe handled separately: filtered when its child is NOT a shell/LOLBin.
+  # When svchost spawns cmd.exe or powershell.exe as SYSTEM, the rule fires.
+  # Residual AM4: if exploit.exe is renamed to svchost.exe, it matches this filter
+  # when spawning a non-shell child. Path-based exclusion requires SIEM-side enrichment.
+  filter_main_svchost_non_shell:
+    ParentImage|endswith: '\svchost.exe'
+
+  filter_main_scheduled_tasks:
+    ParentImage|endswith:
+      - '\schtasks.exe'
+      - '\taskeng.exe'
+
+  filter_main_psexec_variants:
+    ParentImage|endswith:
+      - '\PSEXESVC.exe'
+      - '\psexec.exe'
+      - '\psexec64.exe'
+
+  filter_main_known_benign_system_images:
+    Image|endswith:
+      - '\conhost.exe'
+
+  filter_main_edr_agents:
+    ParentImage|contains:
+      - 'CrowdStrike'
+      - 'SentinelOne'
+      - 'CylanceSvc'
+      - 'MsMpEng'
+      - 'MsSense'
+
+  filter_main_windows_update:
+    ParentImage|endswith:
+      - '\TiWorker.exe'
+      - '\wuauclt.exe'
+      - '\UsoClient.exe'
+
+  condition: (selection_system_integrity or selection_system_user) and not 1 of filter_main_known_system_parents and not filter_main_known_benign_system_images and not 1 of filter_main_edr_agents and not filter_main_windows_update and not filter_main_psexec_variants and not (filter_main_svchost_non_shell and not selection_shell_child) and not filter_main_scheduled_tasks
+
+fields:
+  - Image
+  - CommandLine
+  - ParentImage
+  - ParentCommandLine
+  - User
+  - IntegrityLevel
+  - Computer
+  - ProcessId
+  - ParentProcessId
+
+falsepositives:
+  - Legitimate software installers performing kernel-level component installation (tune by Image path or digital signature)
+  - EDR or AV agents spawning SYSTEM-level helper processes from non-standard parents; add vendor path to filter_main_edr_agents
+  - PsExec-based administration workflows; add known admin hosts to an exclusion list in the SIEM
+  - Custom patching or inventory tools that escalate to SYSTEM for driver installation
+  - svchost-hosted services that legitimately spawn msbuild or installutil during software management (tune via filter_optional_known_software_management)
+
+level: high

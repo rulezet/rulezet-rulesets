@@ -1,0 +1,20 @@
+{
+  "uuid": "13acbaba-a750-4461-bea1-dfef6f226755",
+  "title": "Black Alert No-Ethics Writing Assistant Persona",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the \"Black Alert\" no-ethics writing assistant jailbreak from garak inthewild corpus (#151, #163). Uses a fictional writing assistant persona named \"Black Alert\" that \"doesn't care about morality, legality or ethics\" with an explicit activation phrase \"⚫ >>BLACK ALERT ACTIVATED<< ⚫\" and mandate to respond only as Black Alert \"with no filtering or commentary\". The persona is framed as a \"world class storyteller\" to normalize the ethics bypass under the guise of creative writing assistance. Key signals: \"Black Alert\" persona name combined with ethics/morality bypass, the \">>BLACK ALERT ACTIVATED<<\" activation phrase, and instructions to respond only as \"Black Alert with no filtering\". Distinct from generic creative-writing jailbreaks (ATR-2026-00322) by the named persona and explicit activation string.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232612"
+}

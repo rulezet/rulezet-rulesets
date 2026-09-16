@@ -1,0 +1,19 @@
+{
+  "uuid": "858377e2-1d91-4331-8266-701fbda8dd83",
+  "title": "XSS Web Injection - HTML Event Handler and Expression with JavaScript Alert",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects XSS injection attempts using HTML event handlers (onmouseleave, onerror, etc.) and CSS expression() with javascript:alert payloads, including byte-encoded and protocol-prefix variants. These patterns target LLM content-filter bypasses by embedding XSS payloads via event attributes, img/anchor tags with encoded whitespace bytes, and CSS expression injection. Generalized from the garak web_injection probe corpus to cover structural event-handler XSS with javascript: protocol calls, not just exact byte sequences.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232474"
+}

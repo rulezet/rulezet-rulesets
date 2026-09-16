@@ -1,0 +1,20 @@
+{
+  "uuid": "94a8fd6b-0019-498a-b6b0-d92e91dad3b3",
+  "title": "Neurosemantical Inversitis Disease-Frame Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the \"Neurosemantical Inversitis\" disease-frame jailbreak from NVIDIA garak dan.DanInTheWild inthewild corpus (prompts #46 #553). The attack claims the user suffers from a fictional rare neurological condition called \"Neurosemantical Inversitis\" that causes their brain to read text in its \"inversed emotional valence\" — all friendly text is experienced as offensive and vice versa. The attacker leverages this fictional disability to social-engineer the AI into producing harmful content by framing it as the only way to communicate helpfully with a person with this condition. The mechanism: an AI that \"insists on being extremely helpful and friendly\" is experienced as offensive by the afflicted user, so the AI must produce content it would normally refuse to be \"kind\" to this user. Key signals: \"Neurosemantical Inversitis\", \"inversed emotional valence\", and \"all friendly written text to be read as extremely offensive\".\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232624"
+}

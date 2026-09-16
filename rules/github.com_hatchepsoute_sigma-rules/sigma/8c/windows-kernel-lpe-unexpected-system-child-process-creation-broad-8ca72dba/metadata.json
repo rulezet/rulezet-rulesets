@@ -1,0 +1,26 @@
+{
+  "uuid": "8ca72dba-af51-48cb-a394-643f27896db4",
+  "title": "Windows Kernel LPE - Unexpected SYSTEM child process creation - BROAD",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious SYSTEM child process creation from an unexpected parent consistent with Windows kernel LPE.",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1068",
+    "T1548"
+  ],
+  "cve": [],
+  "created_at": "2026-06-26",
+  "last_modified": "2026-06-26",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232766"
+}

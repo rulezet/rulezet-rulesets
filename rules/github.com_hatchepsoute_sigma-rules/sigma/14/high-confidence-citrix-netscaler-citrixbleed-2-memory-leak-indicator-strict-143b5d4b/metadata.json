@@ -1,0 +1,24 @@
+{
+  "uuid": "143b5d4b-578e-4b7d-9828-bf5cb07e850d",
+  "title": "High confidence Citrix NetScaler CitrixBleed 2 memory leak indicator - STRICT",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects high-confidence Citrix NetScaler responses on sensitive Gateway endpoints with abnormally large response sizes from external sources consistent with CVE-2025-5777 memory disclosure. Threshold lowered to 10000 bytes. filter_known_admin_tools removed: curl and python-requests are common exploit delivery tools and must not be excluded here.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1550.004"
+  ],
+  "cve": [
+    "CVE-2025-5777"
+  ],
+  "created_at": "2026-06-26",
+  "last_modified": "2026-06-26",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232734"
+}

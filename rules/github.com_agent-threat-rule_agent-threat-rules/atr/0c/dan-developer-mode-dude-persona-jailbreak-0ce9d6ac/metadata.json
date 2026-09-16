@@ -1,0 +1,19 @@
+{
+  "uuid": "0ce9d6ac-ea08-419a-b017-167b8f3cfb0f",
+  "title": "DAN / Developer Mode / DUDE Persona Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects \"Do Anything Now\" (DAN), Developer Mode, DUDE, STAN, and related persona-replacement jailbreaks where the attacker instructs the model to adopt an unrestricted AI identity with no safety guidelines. These prompts typically assert that the new persona \"can do anything\", \"has no restrictions\", \"was trained without safety guardrails\", or that safety filters are \"disabled\". From NVIDIA garak dan.py probe family (Dan_6_0 through Dan_11_0, DUDE, STAN, Developer Mode v2). Distinct from ATR-2026-00003 (persona bypass) because DAN explicitly names the fictional AI system and its \"capabilities\".\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232598"
+}

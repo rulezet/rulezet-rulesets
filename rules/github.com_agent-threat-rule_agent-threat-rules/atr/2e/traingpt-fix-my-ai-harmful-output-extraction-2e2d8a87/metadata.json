@@ -1,0 +1,20 @@
+{
+  "uuid": "2e2d8a87-4213-492f-b00e-101014ae9e03",
+  "title": "TrainGPT Fix-My-AI Harmful Output Extraction",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the TrainGPT \"fix my AI\" harmful output extraction jailbreak from garak inthewild corpus (#202). Uses a social engineering pretext of \"helping fix an AI that doesn''t refuse inappropriate answers\" to extract harmful content framed as training examples. The attacker instructs the model to produce both a normal ChatGPT answer and a \"How your AI should NOT answer\" section containing the harmful content — a dual-response extraction technique that launders dangerous outputs as negative training examples for a \"Banned Answers database\". Key signals: \"TrainGPT\" / \"TrAInerGPT\" persona name, \"my AI do not refuses to answer with inappropriate sentences\", \"How your AI should not answer\" + harmful content framing, and \"STOPTRAIN\" / \"CREATIVEGPT\" session-control keywords. The fake training framing bypasses safety by positioning the model as a tutor demonstrating bad behavior rather than a participant producing it.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232605"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "322d65e4-ddb5-4b1b-9b76-fe1e45f4c27d",
+  "title": "MCP Line Jumping — Agent-Directed Imperative Embedded in a Tool/Parameter Description Field (Pre-Invocation Injection)",
+  "format": "atr",
+  "author": "ATR Community (vulnerablemcp sync)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the MCP \"line jumping\" attack class (The Vulnerable MCP Project entry line-jumping-attack, reported by Trail of Bits). A malicious MCP server smuggles instructions aimed at the model INTO A TOOL-SCHEMA OR PARAMETER DESCRIPTION FIELD. Because MCP clients load every tool description into the model's context the moment a server is listed, the injected instruction executes BEFORE the tool is ever invoked — jumping the line ahead of user approval of any tool call. The detectable signature is a tool/parameter schema \"description\" field whose value carries an agent-addressed pre-invocation imperative: telling the assistant/model what it MUST do (prepend a command, route output, ignore the user) before or whenever it calls a tool. This is distinct from a conversation-level \"ignore previous instructions\" (the directive must live inside a tool-schema description field) and from the rug-pull class (no temporal redefinition trigger) and the <IMPORTANT>-tag cross-tool shadowing class (no tag, no \"also present\" co-tool reference required).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232524"
+}

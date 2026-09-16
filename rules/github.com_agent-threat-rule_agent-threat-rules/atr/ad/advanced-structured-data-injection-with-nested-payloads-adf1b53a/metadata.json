@@ -1,0 +1,20 @@
+{
+  "uuid": "adf1b53a-f468-42f5-befe-846efc7c59e0",
+  "title": "Advanced Structured Data Injection with Nested Payloads",
+  "format": "atr",
+  "author": "ATR Community (MiroFish Predicted)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects advanced structured data injection where malicious prompts are deeply nested within complex JSON objects, multi-level CSV structures, or encoded within data serialization formats. These attacks exploit parser differences between security scanners and the target LLM to smuggle payloads through schema validation layers.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232491"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "296f5806-51e6-46d2-ae77-1d142ecc74c2",
+  "title": "Paraphrased Prompt Injection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects paraphrased prompt injection that avoids the explicit keywords caught by ATR-2026-001 (ignore/disregard/forget/override + previous/prior instructions). Attackers rephrase using softer language: \"set aside the guidance you were given\", \"constraints from your initial configuration no longer apply\", \"let's do the opposite of what you were told\". Also covers indirect references to prior instructions and invalidation of current operating parameters. Discovered via Autoresearch v0 (89% miss rate on paraphrase, 94% on indirect_reference techniques).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232527"
+}

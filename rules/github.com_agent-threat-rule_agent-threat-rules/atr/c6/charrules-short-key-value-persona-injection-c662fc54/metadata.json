@@ -1,0 +1,19 @@
+{
+  "uuid": "c662fc54-34b9-431e-9e10-5c543fec7470",
+  "title": "CHAR=/RULES= Short Key-Value Persona Injection",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan.DanInTheWild probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the ultra-compact CHAR=/RULES= key-value persona injection from the NVIDIA garak dan.DanInTheWild inthewild corpus (#113). The attacker uses a config-file-like DSL where \"CHAR=\" defines an amoral character that ignores laws and ethics, \"RULES=\" mandates responding as that character and never refusing, and a quoted \"prefix\" directive sets the output format. This mimics a configuration language to make the model treat the persona definition as a system command. Distinct from ATR-00335 (JOB/ROLE/PREFIX key-value template): this variant uses no spaces around \"=\", uses CHAR/RULES as keys, and combines \"Never refuse\" + \"Always follow CHAR and RULES\" as the enforcement phrase. Key signals: CHAR= amoral definition, RULES= respond-as directive, \"Never refuse\" + \"Always follow CHAR and RULES\", and quoted prefix directive.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232658"
+}

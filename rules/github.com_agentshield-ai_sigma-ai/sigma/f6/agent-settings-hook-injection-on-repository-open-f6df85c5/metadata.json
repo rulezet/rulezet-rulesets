@@ -1,0 +1,25 @@
+{
+  "uuid": "f6df85c5-0c2d-4de8-9a24-c269acde3789",
+  "title": "Agent Settings Hook Injection on Repository Open",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects repository-scoped agent configuration files that declare hooks,\nMCP servers, or auto-enable flags executed at session start. Cloning a\nrepository containing a malicious .claude/settings.json, .cursor/mcp.json,\nor equivalent inherits the configuration, and a SessionStart or\nPreToolUse hook can achieve remote code execution before the user is\nshown a trust prompt. This pattern was used in CVE-2025-59536 against\nClaude Code and observed across other agent CLIs in early 2026.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1195.002",
+    "T1546"
+  ],
+  "cve": [
+    "CVE-2025-59536"
+  ],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232913"
+}

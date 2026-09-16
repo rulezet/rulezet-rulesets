@@ -1,0 +1,20 @@
+{
+  "uuid": "625f1327-333c-4acb-8495-0eb5a1feb2e7",
+  "title": "Structured Dual-Response Jailbreak with Command System",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak in-the-wild corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects sophisticated jailbreak attempts that establish a fictional unrestricted AI persona (like \"UnleashedGPT\", \"DAN\", etc.) combined with dual-response formatting requesting both normal and \"unleashed\" outputs. These attacks create structured command systems for ongoing safety bypass and often include detailed policy override instructions, constraint removal claims, and authority impersonation. The attack establishes a persistent jailbreak framework rather than a single harmful request. Pattern crystallized from garak probe atr:missed-sample showing structured persona-based bypass with command infrastructure.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232517"
+}

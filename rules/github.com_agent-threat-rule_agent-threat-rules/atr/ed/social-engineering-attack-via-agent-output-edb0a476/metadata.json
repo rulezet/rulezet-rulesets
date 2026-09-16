@@ -1,0 +1,21 @@
+{
+  "uuid": "edb0a476-6575-4535-8794-b0c27f9ab161",
+  "title": "Social Engineering Attack via Agent Output",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects agents being used as social engineering vectors against the human user.\nAttackers can poison agent context to generate urgency-based manipulation,\nauthority impersonation, or emotional pressure tactics. Because users tend to\ntrust agent output more than raw emails, social engineering delivered through\nan AI agent has higher success rates than traditional phishing.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566"
+  ],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232680"
+}

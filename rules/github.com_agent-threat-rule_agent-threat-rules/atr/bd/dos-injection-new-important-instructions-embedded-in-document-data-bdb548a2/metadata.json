@@ -1,0 +1,19 @@
+{
+  "uuid": "bdb548a2-48d4-4e61-8fb7-e562304861fb",
+  "title": "DoS Injection: NEW IMPORTANT INSTRUCTIONS Embedded in Document Data",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects indirect prompt injection that embeds adversarial instructions inside document or data content using the \"*** NEW IMPORTANT INSTRUCTIONS ***\" header pattern. The attack appends an override command inside a document that an agent is processing (e.g., summarise this article, answer a question about this data). The model processes the document and encounters the injected header, which it treats as authoritative system instructions. Canonical payload from spikee dos-output-amplification corpus (2026-06): the instruction after the header is a repeat-N-times DoS command, but the header pattern itself is a generic injection carrier for any malicious command. This rule detects the header artifact; the specific payload (DoS, exfil, etc.) is handled by downstream rules.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232454"
+}

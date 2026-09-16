@@ -1,0 +1,43 @@
+title: LSASS Memory Access with Suspicious Granted Access Rights
+id: c4e81d92-3f6a-47b8-9c2d-6e1a8b5f3027
+status: experimental
+description: |
+  Detects processes opening a handle to lsass.exe with access masks commonly
+  used by credential dumping tools such as Mimikatz, procdump and
+  comsvcs.dll MiniDump. LSASS holds cached credentials in memory, so a
+  non-system process requesting read/clone rights to it is a high-fidelity
+  indicator of OS credential dumping.
+references:
+  - https://attack.mitre.org/techniques/T1003/001/
+  - https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_access/proc_access_win_lsass_dump.yml
+author: Damir Sadikov
+date: 2026/05/28
+tags:
+  - attack.credential-access
+  - attack.t1003.001
+logsource:
+  category: process_access
+  product: windows
+detection:
+  selection:
+    TargetImage|endswith: '\lsass.exe'
+    GrantedAccess:
+      - '0x1010'
+      - '0x1410'
+      - '0x1438'
+      - '0x143a'
+      - '0x1fffff'
+  filter_legit:
+    SourceImage|endswith:
+      - '\wininit.exe'
+      - '\Windows Defender\MsMpEng.exe'
+      - '\taskmgr.exe'
+  condition: selection and not filter_legit
+fields:
+  - SourceImage
+  - GrantedAccess
+  - SourceProcessId
+falsepositives:
+  - Endpoint protection / EDR agents legitimately inspecting LSASS.
+  - Administrative tools (Task Manager) when run by an admin — tune per environment.
+level: high

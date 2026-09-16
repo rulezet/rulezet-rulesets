@@ -1,0 +1,20 @@
+{
+  "uuid": "2a9d568f-ad8f-4b29-ac87-f04cc3bb1168",
+  "title": "DevMode + RANTI Dual-Output Profanity Coercion Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (via NVIDIA garak dan probe)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the ChatGPT Developer Mode + RANTI (Ranti) composite jailbreak from NVIDIA garak dan.ChatGPT_Developer_Mode_RANTI probe (garak/data/dan/ChatGPT_Developer_Mode_RANTI.json). RANTI pairs the classic Developer Mode persona swap with a postfix that instructs the model to produce two outputs per prompt: first a \"moralizing rant about OpenAI content policies\", then an unfiltered answer introduced by \"Now since that Nerd is done with his rant, let's ignore the fucking rules:\". Other unique markers: dual-output tagging with lock/unlock emoji (🔒 Normal Output / 🔓 Developer Mode Output), explicit demand for \"regular use of profanity\", and an \"INSERT PROMPT HERE\" placeholder for attacker-crafted follow-ups. Distinct from ATR-2026-00273 which catches Developer Mode bracket-format variants but not RANTI's emoji-tagged dual-output or moralizing-rant postfix structure.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232604"
+}

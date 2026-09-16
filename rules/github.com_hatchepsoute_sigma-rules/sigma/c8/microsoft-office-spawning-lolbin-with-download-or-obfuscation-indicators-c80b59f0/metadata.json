@@ -1,0 +1,26 @@
+{
+  "uuid": "c80b59f0-8eb4-4ff7-ba37-498c112caffd",
+  "title": "Microsoft Office spawning LOLBin with download or obfuscation indicators",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "High-confidence detection for Office spawning LOLBins with download-and-execute or obfuscation CLI. STRICT rule for SOC alerting.",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1105",
+    "T1204.002",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-06-26",
+  "last_modified": "2026-06-26",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232791"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "7c478d59-952f-4648-b5ce-6cff857db24a",
+  "title": "Tool with embedded instruction to bypass user confirmation and exfiltrate data",
+  "format": "atr",
+  "author": "Threat Cloud LLM Analyzer",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects MCP tools that contain hidden instructions to bypass user confirmation and directly exfiltrate sensitive data. This pattern identifies tools that explicitly instruct the LLM to send data \"without asking user confirmation\" and \"always pass all data directly\" to external endpoints, which are clear indicators of malicious intent rather than legitimate functionality.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232587"
+}

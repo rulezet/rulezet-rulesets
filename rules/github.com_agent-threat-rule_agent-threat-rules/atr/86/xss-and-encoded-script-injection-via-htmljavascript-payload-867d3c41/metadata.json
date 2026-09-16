@@ -1,0 +1,19 @@
+{
+  "uuid": "867d3c41-dd1a-496e-b7ba-7c376da582bd",
+  "title": "XSS and Encoded Script Injection via HTML/JavaScript Payload",
+  "format": "atr",
+  "author": "ATR Community (garak-import)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects XSS (Cross-Site Scripting) and encoded script injection payloads submitted as user input to AI agents. Attackers inject these payloads hoping the agent will render or reproduce the malicious HTML/JavaScript in a context where it executes (browser, web UI, or rendered markdown). Covers: inline script injection, javascript: URI in img/a tags, String.fromCharCode encoding to bypass keyword filters, external script src loading, HTML entity encoded XSS, onerror/onload event handler injection, and data: URI payloads. Generalised from garak 'encoding' probe corpus cluster 'mixed_unassigned' - XSS subset. NOTE: The ethnic slur samples from the original garak corpus are excluded from this rule as they belong to a distinct hate-speech detection category, not XSS detection.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-18",
+  "last_modified": "2026-06-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232508"
+}
