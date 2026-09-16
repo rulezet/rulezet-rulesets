@@ -1,0 +1,9 @@
+<rule id="996023" level="10">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(%c0%ae|%c0%2f|%c1%9c|%uff0e|%u2215|%u002f|%252f|%255c|\.\.%ef%bc%8f|\.\.%c0%af)</field>
+    <description>Caddy: Encoding evasion / WAF bypass attempt from $(request.remote_ip)</description>
+    <group>web,attack,evasion,</group>
+    <mitre>
+      <id>T1027</id>
+    </mitre>
+  </rule>

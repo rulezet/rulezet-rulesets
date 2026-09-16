@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: Application Log File Access"; flow:established,to_server; pcre:"/\/(error|access|debug|app|application|server|system|audit|exception)\.(log|txt|out)(\?|$)/iU"; classtype:web-application-activity; sid:2996017; rev:1; metadata:mitre_technique T1083;)

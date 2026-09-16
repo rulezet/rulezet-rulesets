@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 15144 (msg:"KARSTORAT - File Download Request"; flow:to_server,established; content:"/client-download"; http_uri; nocase; content:"user=admin"; http_uri; nocase; sid:1000008; rev:1; reference:url,github.com/cyberthint/Detection-Rules; classtype:trojan-activity; priority:1;   metadata:ruleset "KarstoRat";)

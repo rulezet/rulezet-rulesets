@@ -1,0 +1,9 @@
+<rule id="996016" level="10">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(\/\.git(\/|$)|\/\.svn\/|\/\.hg\/|\/\.gitignore|\/\.gitattributes|\/\.gitmodules)</field>
+    <description>Caddy: Source control artifact access from $(request.remote_ip) - $(request.uri)</description>
+    <group>web,recon,</group>
+    <mitre>
+      <id>T1213</id>
+    </mitre>
+  </rule>

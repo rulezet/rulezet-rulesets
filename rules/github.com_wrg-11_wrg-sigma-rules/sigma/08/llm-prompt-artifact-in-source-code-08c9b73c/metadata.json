@@ -1,0 +1,22 @@
+{
+  "uuid": "08c9b73c-4d39-4e0a-ad78-64360c8678c0",
+  "title": "LLM prompt artifact in source code",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin ai-fingerprint observed rules",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects hardcoded prompt-engineering literals in source code (persona prompts, anti-hallucination annotations, system instruction fragments such as 'Core Judgment Rules:'). These literals are typical of LLM-augmented codebases.\n\nAggregated from 1 fingerprint hit(s) across 1 file(s). Sample paths: apps/foo/bar.py.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027.005",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233019"
+}

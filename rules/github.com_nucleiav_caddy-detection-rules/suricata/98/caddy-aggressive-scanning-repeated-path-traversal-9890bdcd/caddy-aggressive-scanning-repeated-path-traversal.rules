@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: Aggressive Scanning Repeated Path Traversal"; flow:established,to_server; http.uri.raw; pcre:"/(\.\.\x2f|\.\.\\\\|%2e%2e|%252e%252e)/i"; threshold:type threshold, track by_src, count 8, seconds 60; classtype:web-application-attack; sid:996019; rev:1; metadata:mitre_technique T1110;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 3072 (msg:"KARSTORAT - Backup C2 Panel Access (3072)"; flow:to_server,established; sid:1000010; rev:1; reference:url,github.com/cyberthint/Detection-Rules; reference:url,shodan.io/host/212.227.65.132; classtype:trojan-activity; priority:2;   metadata:ruleset "KarstoRat", c2_port "3072";)

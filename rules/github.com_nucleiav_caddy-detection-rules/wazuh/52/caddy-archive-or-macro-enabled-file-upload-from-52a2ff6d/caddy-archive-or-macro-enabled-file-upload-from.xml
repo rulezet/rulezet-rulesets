@@ -1,0 +1,9 @@
+<rule id="996032" level="8">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(\/upload|\/uploads|\/files|\/media|\/assets|\/static)[^?]*\.(zip|rar|7z|tar|gz|tgz|iso|img|docm|xlsm|pptm|xlam|svg)(\?|$)</field>
+    <description>Caddy: Archive or macro-enabled file upload from $(request.remote_ip) - $(request.uri)</description>
+    <group>web,recon,upload,</group>
+    <mitre>
+      <id>T1566.001</id>
+    </mitre>
+  </rule>

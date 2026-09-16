@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: Suspicious User-Agent Empty or Oversized"; flow:established,to_server; http.user_agent; pcre:"/^(\[\]|''|-)$|^.{500,}/"; classtype:web-application-activity; sid:996028; rev:1; metadata:mitre_technique T1036;)

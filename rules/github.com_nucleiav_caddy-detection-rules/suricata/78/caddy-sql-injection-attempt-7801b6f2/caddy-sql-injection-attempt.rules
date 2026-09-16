@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: SQL Injection Attempt"; flow:established,to_server; http.uri.raw; pcre:"/(union.+select|select.+from|insert.+into|drop.+table|(%27|')(\s|%20)*(or)(\s|%20)+|(\s|%20)(or)(\s|%20)+1(\s|%20)*(%3D|=)(\s|%20)*1)/i"; classtype:web-application-attack; sid:996004; rev:1; metadata:mitre_technique T1190;)

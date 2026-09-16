@@ -1,0 +1,21 @@
+{
+  "uuid": "dafbd347-48ff-43fe-97b7-b5c72edd6d31",
+  "title": "mirai_sora_packed_arm",
+  "format": "yara",
+  "author": "Andras Gemes",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Mirai SORA packed (ARM)",
+  "source": "https://github.com/gemesa/threat-detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "runtime-packer:pe=\"upx\"",
+    "misp-galaxy:botnet=\"Mirai\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-03",
+  "last_modified": "2026-07-03",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233417"
+}

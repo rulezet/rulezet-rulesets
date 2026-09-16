@@ -1,0 +1,19 @@
+{
+  "uuid": "38a5f6cb-90f8-4046-ac90-1e0afa98517a",
+  "title": "SUSP_VCRuntime_Sideloading_Indicators_Aug23",
+  "format": "yara",
+  "author": "Jonathan Peters",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects indicators of .NET based malware sideloading as VCRUNTIME140",
+  "source": "https://github.com/cod3nym/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233075"
+}

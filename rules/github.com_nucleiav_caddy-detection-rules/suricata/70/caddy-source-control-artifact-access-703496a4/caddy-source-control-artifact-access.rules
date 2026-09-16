@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: Source Control Artifact Access"; flow:established,to_server; http_uri; pcre:"/(\/\.git(\/|$)|\/\.svn\/|\/\.hg\/|\/\.gitignore|\/\.gitattributes|\/\.gitmodules)/i"; classtype:web-application-activity; sid:3996016; rev:1; metadata:mitre_technique T1213;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: GraphQL Introspection or API Schema Probe"; flow:established,to_server; http_uri; pcre:"/(\/graphql|\/graphiql|\/gql|__schema|__type|__typename|introspectionquery)/i"; classtype:web-application-activity; sid:3996026; rev:1; metadata:mitre_technique T1595.002;)

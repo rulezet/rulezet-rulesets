@@ -1,0 +1,20 @@
+{
+  "uuid": "4f9326fa-4b51-40ae-8dce-29cc2b87cc76",
+  "title": "MAL_LNX_PLAGUE_BACKDOOR_Jul25",
+  "format": "yara",
+  "author": "Pezier Pierre-Henri",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Plague backdoor ELF binaries, related to PAM authentication alteration.",
+  "source": "https://github.com/CpanelInc/tech-CSI",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233225"
+}

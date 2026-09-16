@@ -1,0 +1,23 @@
+{
+  "uuid": "d1b2104a-7957-4d04-92ee-265ffd0cd7d8",
+  "title": "Secret Scanner Crash as Deliberate Defense Evasion Vector -- T1027",
+  "format": "sigma",
+  "author": "WRG-11",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects malicious PR pattern designed to crash or fast-fail a CI-stage secret scanner (Bandit, devguard, gitleaks, trufflehog) so the scan reports PASS without actually scanning content that contains a credential.\nAttack chain:\n(1) Attacker crafts a PR containing (a) a large binary or pathologically-structured input file designed to trigger scanner timeout / OOM / parser exception, AND (b) a credential (gho_/ghu_/ghs_ PAT variant; sister to template_gh_pat_token_type_confusion_t1552.yml).\n(2) CI invokes scanner against changed files. Scanner crashes early (parser exception, timeout, OOM) and the wrapping check_run completes with `success` status because the wrapper script does not differentiate scanner-clean-exit from scanner-crash-exit (the wrapper does not propagate TimeoutExpired as a failure signal).\n(3) PR merges. Credential exposed in repo or downstream CI logs.\n(4) Distinguishing signature of crash-as-evasion vs legitimate scanner pass: - Scanner runtime extremely short (< 5 seconds) on a meaningfully- sized changeset (size_kb > 50) - check_run conclusion == success - Scanner process exit code anomaly OR scanner stderr non-empty with crash trace (parser exception, timeout)\nDetection logic targets github.audit / CI pipeline events with the composite (short-runtime + success-conclusion + size-mismatch) profile. Sister to template_gh_pat_token_type_confusion_t1552.yml (the credential surface that survives the evasion).\nThreat intel context: T1027 (Obfuscated Files / Information) typically covers payload obfuscation; this rule extends T1027 to cover scanner-evasion-via-crash as a defense-evasion sub-pattern. Sister alphv T1027 obfuscation rule in same category (observed_alphv_t1027_obfuscation.yml) covers payload-encoding form; this rule covers control-flow-disruption form.\nCross-link: template_gh_pat_token_type_confusion_t1552 (this rule covers the evasion mechanism; the PAT-confusion rule covers the credential vector enabled by the evasion).",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackCat\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232989"
+}

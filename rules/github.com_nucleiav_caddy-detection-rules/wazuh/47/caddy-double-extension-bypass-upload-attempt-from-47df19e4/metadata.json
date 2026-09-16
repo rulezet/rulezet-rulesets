@@ -1,0 +1,21 @@
+{
+  "uuid": "47df19e4-9cb3-463a-8159-c29939ce26c1",
+  "title": "Caddy: Double extension bypass upload attempt from",
+  "format": "wazuh",
+  "author": "NucleiAv",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Caddy: Double extension bypass upload attempt from $(request.remote_ip) - $(request.uri)",
+  "source": "https://github.com/NucleiAv/caddy-detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-03",
+  "last_modified": "2026-07-03",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233363"
+}

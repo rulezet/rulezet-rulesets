@@ -1,0 +1,20 @@
+{
+  "uuid": "f4bfebe3-a43e-470d-a2e1-d99013cd9a41",
+  "title": "Modified_UPX_ELF",
+  "format": "yara",
+  "author": "@_lubiedo",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect possibly modified UPX magic on ELF binaries",
+  "source": "https://github.com/CpanelInc/tech-CSI",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "runtime-packer:pe=\"upx\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233160"
+}

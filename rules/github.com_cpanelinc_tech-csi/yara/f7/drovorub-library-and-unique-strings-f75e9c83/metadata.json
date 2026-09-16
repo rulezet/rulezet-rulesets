@@ -1,0 +1,19 @@
+{
+  "uuid": "f75e9c83-8a3b-4456-9ea9-800157f002b5",
+  "title": "drovorub_library_and_unique_strings",
+  "format": "yara",
+  "author": "CpanelInc",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Rule to detect Drovorub-server, Drovorub-agent, and Drovorub-client binaries based on unique        strings and strings indicating statically linked libraries.",
+  "source": "https://github.com/CpanelInc/tech-CSI",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233115"
+}

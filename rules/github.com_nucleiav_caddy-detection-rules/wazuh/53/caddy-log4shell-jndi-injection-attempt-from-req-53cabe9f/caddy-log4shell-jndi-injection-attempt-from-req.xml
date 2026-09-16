@@ -1,0 +1,9 @@
+<rule id="996012" level="15">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(\$\{jndi:|%24%7Bjndi%3A|%24%7Bjndi:)</field>
+    <description>Caddy: Log4Shell JNDI injection attempt from $(request.remote_ip)</description>
+    <group>web,attack,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+  </rule>

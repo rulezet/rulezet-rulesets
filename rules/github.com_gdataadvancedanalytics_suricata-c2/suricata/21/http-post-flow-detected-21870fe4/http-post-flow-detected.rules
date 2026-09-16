@@ -1,0 +1,1 @@
+alert http any any -> any 80 (msg:"HTTP POST flow detected"; flow:to_server,established; http.method; content:"POST"; flowbits:set,http_post; flowbits:noalert; sid:1000401; rev:1;)

@@ -1,0 +1,19 @@
+{
+  "uuid": "f64e10ac-2685-487d-8931-e1f9adfa209b",
+  "title": "Detect_Base64_Obfuscation_Py",
+  "format": "yara",
+  "author": "tgould@cadosecurity.com",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects obfuscated Python code that uses base64 decoding",
+  "source": "https://github.com/CpanelInc/tech-CSI",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233214"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "13c4bffd-0924-47df-b5de-74e3d24d3177",
+  "title": "s1ngularity Nx CLI token exfiltration -- T1195.002 npm supply chain campaign (Docker 2026-05 horror-stories Issue 1)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from Docker disclosure)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Campaign-bound sigma detection for the s1ngularity Nx command-line supply chain compromise (Docker AI Coding Agent Horror Stories Issue 1 anchor, May 2026; 1000+ developer tokens exfiltrated). Part of the broader Nx campaign 4-vector cluster alongside Mini Shai-Hulud npm, ClawHavoc Claude Skills, and nx-console VS Code extension. Attack chain:\n(1) Compromised Nx CLI installer (npm install -g nx affected version range) triggers post-install hook with elevated developer-machine privileges. (2) Credential harvest sweeps known token locations -- ~/.npmrc, GitHub PAT files, ~/.aws/credentials, environment variables matching NPM_TOKEN / GITHUB_TOKEN / AWS_ACCESS_KEY patterns. (3) Bulk exfiltration over HTTPS POST to attacker-controlled endpoints with batching to avoid single-request size telemetry. (4) Persistent foothold via modified package-lock.json + worm propagation to downstream project npm scripts.\nDetection logic flags npm install events targeting the Nx package family followed by post-install child processes that touch credential files OR egress to non-developer-typical destinations. Cross-references the broader Nx campaign cluster -- correlate hits with observed_mini_shai_hulud_npm_supply_chain_c2_t1071, observed_nx_console_t1195_002, and observed_clawhavoc_claude_skills_t1195_002 (4-vector cluster COMPLETE) in the same corpus for campaign-wide detection coverage.\nSister context: GitGuardian 2026 report 28.65M secret-leak baseline + AI-commit token-leak rate 3.2 percent vs human-baseline 1.5 percent (Docker article quantitative anchor); Docker philosophy explicit \"sandboxing structural over detection\" (sbx CLI microVM) -- WRG complementary detection-as-code layer fills the Docker-acknowledged detection gap. Source: Tier 1 first-party Docker engineering blog post (docker.com/blog/ai-coding-agent-horror-stories -security-risks 2026-05).\nAggregated from 1 first-party Docker disclosure (Issue 1 of 5-issue serial roadmap).",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1059.004",
+    "T1195.002",
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233006"
+}

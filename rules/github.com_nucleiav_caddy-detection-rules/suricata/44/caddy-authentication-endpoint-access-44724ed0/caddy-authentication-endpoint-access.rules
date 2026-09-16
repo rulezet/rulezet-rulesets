@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: Authentication Endpoint Access"; flow:established,to_server; http.uri; pcre:"/\/(login|signin|sign-in|logon|auth|authenticate|wp-login\.php|admin\/login|account\/login|session\/new|user\/login|api\/login|api\/auth|oauth\/token|token)(\/|\?|$)/i"; classtype:web-application-activity; sid:996021; rev:1; metadata:mitre_technique T1110;)

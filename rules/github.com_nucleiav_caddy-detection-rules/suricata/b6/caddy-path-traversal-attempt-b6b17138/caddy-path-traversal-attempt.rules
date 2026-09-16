@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: Path Traversal Attempt"; flow:established,to_server; http.uri.raw; pcre:"/(\.\.\x2f|\.\.\\\\|%2e%2e|%252e%252e)/i"; classtype:web-application-attack; sid:996003; rev:1; metadata:mitre_technique T1083;)

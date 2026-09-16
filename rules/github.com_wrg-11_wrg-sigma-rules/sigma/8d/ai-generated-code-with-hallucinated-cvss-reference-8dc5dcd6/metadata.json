@@ -1,0 +1,22 @@
+{
+  "uuid": "8dc5dcd6-01ff-40dd-9048-aa5c14b71c83",
+  "title": "AI-generated code with hallucinated CVSS reference",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin ai-fingerprint observed rules",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects source-code comments or docstrings that cite a CVSS score / CVE identifier in a free-text context typical of LLM output (no surrounding security review or threat-model framing). Hallucinated CVSS references are a known signature of LLM-generated security tooling.\n\nAggregated from 1 fingerprint hit(s) across 1 file(s). Sample paths: apps/foo/bar.py.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233018"
+}

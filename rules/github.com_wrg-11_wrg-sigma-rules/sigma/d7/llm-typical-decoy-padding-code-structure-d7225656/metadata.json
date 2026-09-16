@@ -1,0 +1,22 @@
+{
+  "uuid": "d7225656-0b97-4fe8-83f0-70c232783f17",
+  "title": "LLM-typical decoy / padding code structure",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin ai-fingerprint observed rules",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects code blocks that serve no functional purpose -- unused helper functions, sentinel constants, demonstration scaffolding -- that LLM output emits to pad the file towards a target length. Often appears alongside hallucinated CVSS or prompt-artifact signals.\n\nAggregated from 1 fingerprint hit(s) across 1 file(s). Sample paths: apps/foo/qux.py.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027.005",
+    "T1622"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233015"
+}

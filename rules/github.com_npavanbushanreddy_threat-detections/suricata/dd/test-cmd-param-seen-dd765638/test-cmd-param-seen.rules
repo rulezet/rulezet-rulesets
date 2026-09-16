@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TEST CMD PARAM SEEN"; flow:to_server,established; http.uri; content:"cmd="; sid:1000002; rev:1;)

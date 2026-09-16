@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Hancitor beacon"; flow:established,to_server; http.request_body; content:"GUID="; content:"&BUILD="; content:"&INFO="; content:"&EXT="; content:"&IP="; content:"&TYPE=1"; content:"&WIN="; sid:1000001; rev:2;)

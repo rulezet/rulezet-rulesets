@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: Known Scanner or Attack Tool User-Agent"; flow:established,to_server; http.user_agent; pcre:"/(sqlmap|nikto|nmap|masscan|nuclei|gobuster|dirbuster|wfuzz|acunetix|nessus|openvas|zgrab|whatweb)/i"; classtype:web-application-activity; sid:996010; rev:1; metadata:mitre_technique T1595;)

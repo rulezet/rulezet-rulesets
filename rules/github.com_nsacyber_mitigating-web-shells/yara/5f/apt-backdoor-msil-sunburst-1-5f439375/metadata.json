@@ -1,0 +1,21 @@
+{
+  "uuid": "5f439375-6901-4cf8-a4c9-2307d82131e2",
+  "title": "APT_Backdoor_MSIL_SUNBURST_1",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This rule is looking for portions of the SUNBURST backdoor that are vital to how it functions. The first signature fnv_xor matches a magic byte xor that the sample performs on process, service, and driver names/paths. SUNBURST is a backdoor that has the ability to spawn and kill processes, write and delete files, set and create registry keys, gather system information, and disable a set of forensic analysis tools and services.",
+  "source": "https://github.com/nsacyber/Mitigating-Web-Shells",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:backdoor=\"SUNBURST\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233142"
+}

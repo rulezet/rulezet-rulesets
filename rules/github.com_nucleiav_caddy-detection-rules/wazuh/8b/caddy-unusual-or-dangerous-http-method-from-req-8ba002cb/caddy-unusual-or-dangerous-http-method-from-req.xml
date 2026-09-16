@@ -1,0 +1,9 @@
+<rule id="996027" level="8">
+    <if_sid>996000</if_sid>
+    <field name="request.method" type="pcre2">^(CONNECT|DEBUG|MOVE|COPY|PROPFIND|PROPPATCH|MKCOL|LOCK|UNLOCK|BREW|TEST|FUZZ|SEARCH|PURGE)$</field>
+    <description>Caddy: Unusual or dangerous HTTP method from $(request.remote_ip) - $(request.method)</description>
+    <group>web,attack,protocol_abuse,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+  </rule>

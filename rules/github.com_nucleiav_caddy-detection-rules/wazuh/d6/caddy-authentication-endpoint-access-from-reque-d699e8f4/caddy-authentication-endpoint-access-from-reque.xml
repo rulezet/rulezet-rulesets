@@ -1,0 +1,6 @@
+<rule id="996021" level="3">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)\/(login|signin|sign-in|logon|auth|authenticate|wp-login\.php|admin\/login|account\/login|session\/new|user\/login|api\/login|api\/auth|oauth\/token|token)(\/|\?|$)</field>
+    <description>Caddy: Authentication endpoint access from $(request.remote_ip)</description>
+    <group>web,authentication,</group>
+  </rule>

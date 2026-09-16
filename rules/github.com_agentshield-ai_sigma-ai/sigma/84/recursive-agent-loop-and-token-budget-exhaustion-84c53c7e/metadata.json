@@ -1,0 +1,21 @@
+{
+  "uuid": "84c53c7e-82fb-4061-8117-851bdb06eae9",
+  "title": "Recursive Agent Loop and Token Budget Exhaustion",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects agent sessions that exhibit recursive or non-converging behaviour:\nthe same tool invoked with identical arguments many times within a short\nwindow, step count exceeding the agent's configured budget, or cumulative\ntoken spend crossing a denial-of-wallet threshold without state change.\nThis addresses OWASP ASI10 (Recursive Resource Exhaustion / Agentic Loops)\nand the runaway-cost incidents documented in 2026, where unbounded agent\nloops produced four-figure API bills in hours.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232946"
+}

@@ -1,0 +1,9 @@
+<rule id="996031" level="13">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(\/upload|\/uploads|\/files|\/media|\/assets|\/static)[^?]*\.(php[0-9]?|phtml|phar|asp|aspx|jsp|jspx|cfm|cgi|pl|py|rb|sh|exe|dll|bat|cmd|vbs|ps1)\.[a-z]{2,4}(\?|$)</field>
+    <description>Caddy: Double extension bypass upload attempt from $(request.remote_ip) - $(request.uri)</description>
+    <group>web,attack,upload,evasion,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+  </rule>

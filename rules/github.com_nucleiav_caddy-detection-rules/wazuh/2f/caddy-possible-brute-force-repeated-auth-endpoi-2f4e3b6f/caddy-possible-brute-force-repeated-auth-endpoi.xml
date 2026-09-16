@@ -1,0 +1,9 @@
+<rule id="996022" level="10" frequency="10" timeframe="60">
+    <if_matched_sid>996021</if_matched_sid>
+    <same_field>request.remote_ip</same_field>
+    <description>Caddy: Possible brute force - repeated auth endpoint hits from $(request.remote_ip)</description>
+    <group>web,attack,brute_force,</group>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+  </rule>

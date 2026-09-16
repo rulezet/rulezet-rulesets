@@ -1,0 +1,23 @@
+{
+  "uuid": "ad97c860-08eb-457a-847f-d201efd2493a",
+  "title": "MCP Server Command Injection via Shell Metacharacters",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects shell metacharacters in MCP (Model Context Protocol) tool call input\nparameters, indicative of command injection attempts against MCP servers that pass\nuser-supplied input unsanitised to system commands (e.g. CVE-2026-4192 in\nquip-mcp-server 1.0.0). A successful injection allows a low-privilege remote\nattacker to execute arbitrary OS commands within the agent's execution environment.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.004"
+  ],
+  "cve": [
+    "CVE-2026-4192"
+  ],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232931"
+}

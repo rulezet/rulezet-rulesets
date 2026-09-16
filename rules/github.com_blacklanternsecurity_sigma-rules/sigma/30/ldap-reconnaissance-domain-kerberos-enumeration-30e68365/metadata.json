@@ -1,0 +1,23 @@
+{
+  "uuid": "30e68365-80d0-4fc7-8903-7c5d244c2d1a",
+  "title": "LDAP Reconnaissance / Domain Kerberos Enumeration",
+  "format": "sigma",
+  "author": "Adeem Mawani",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects possible Active Directory Kerberos enumeration via LDAP",
+  "source": "https://github.com/blacklanternsecurity/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1558.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233029"
+}

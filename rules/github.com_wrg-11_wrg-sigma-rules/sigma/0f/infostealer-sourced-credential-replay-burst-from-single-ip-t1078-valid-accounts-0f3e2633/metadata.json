@@ -1,0 +1,24 @@
+{
+  "uuid": "0f3e2633-9545-4286-aedc-29c24950547a",
+  "title": "Infostealer-Sourced Credential Replay Burst from Single IP -- T1078 Valid Accounts (Megalodon + TeamPCP)",
+  "format": "sigma",
+  "author": "WRG-11",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects credential-replay-burst pattern indicative of infostealer-sourced stolen credentials being used in rapid succession across multiple victim accounts from a single source IP.\nAttack chain (H Wave 8 + Megalodon + TeamPCP):\n(1) Initial compromise via infostealer malware (RedLine, Vidar, Lumma, StealC) deployed on victim endpoints. Infostealer harvests browser- saved credentials, session cookies, MFA bypass tokens, and SSH/VPN config from infected hosts. Per Hudson Rock threat intel: ~33% of Megalodon-affected orgs had infostealer-infected employee endpoints in the preceding 90 days.\n(2) Harvested credentials flow to underground marketplaces (Russian Market, Genesis Market predecessor, Telegram bot channels) where TeamPCP-affiliated brokers bulk-purchase.\n(3) TeamPCP operator uses single infrastructure node (residential proxy, low-cost VPS) to replay credentials against the originating enterprise auth surface (M365, Okta, Workday, Salesforce, internal SSO) in rapid succession to identify still-valid credentials before rotation.\n(4) Composite detection signature: >10 successful authentication events from a single source IP across >10 distinct user accounts within a 1-hour window. Legitimate enterprise auth (corporate VPN exit, gateway, shared library) typically produces high count per ONE account, not many accounts.\nOptional enrichment to lower FP rate:\n- source_ip matches known infostealer C2 / broker-reseller IP list - user_agent matches known automated replay tooling fingerprint - geo-impossible-travel flag (account base location vs replay IP geo) - MFA challenge skip or bypass cookie reuse pattern\nSource: Tier 0 H Wave 8 Front 4 Megalodon profile + TeamPCP UNC6780 actor profile (internal) + Hudson Rock threat intel cited in H Wave 8 cross-reference (internal). Sister cluster: observed_lapsus_t1078.yml (lapsus$ valid accounts pattern in initial_access; this rule extends T1078 to credential_access category from infostealer-fed replay angle).",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"Vidar\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1110.004",
+    "T1550.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233011"
+}

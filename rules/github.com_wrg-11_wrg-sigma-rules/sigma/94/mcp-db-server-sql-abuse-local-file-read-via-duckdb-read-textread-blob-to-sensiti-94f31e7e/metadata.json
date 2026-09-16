@@ -1,0 +1,24 @@
+{
+  "uuid": "94f31e7e-e263-4262-8bfe-50047709c0ec",
+  "title": "MCP DB-Server SQL Abuse -- Local File Read via DuckDB read_text/read_blob to Sensitive Path (T1005)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects local file disclosure (LFI) through an MCP database server that passes SQL straight to a DuckDB (or DuckDB-compatible) engine. DuckDB table functions read_text(), read_blob() and glob() read arbitrary local file paths; an MCP execute_query / query tool with no SQL filtering lets a prompt-injected or misbehaving LLM agent exfiltrate host files (SSH keys, .env, cloud credentials, /etc/passwd, /etc/shadow). The DuckDB --read-only flag does NOT restrict OS-level file reads.\nDISCRIMINATOR (FP-control): read_text / read_blob / glob are matched ONLY in combination with a sensitive-path or remote-scheme target (/etc/, /root/, /proc/, .ssh, id_rsa, .env, .aws, credentials, shadow, passwd, .pem, Windows system path, file://). A legitimate analytics query does not read raw OS files from these locations, so the combination is high-fidelity -- a naive read_text() match alone would be an FP-storm (read_text is a legitimate DuckDB feature for ingesting text data).\nGeneralises to the MCP DB-server class (motherduck / dbhub / any DuckDB or SQL-passthrough MCP DB server). OWASP LLM Top 10 2025: LLM06 (Excessive Agency) + LLM02 (Sensitive Information Disclosure).\nTELEMETRY PREREQUISITE: requires the executed SQL string to be logged -- either by the MCP server itself (query / audit log) or by a body-logging reverse proxy / WAF in front of the HTTP transport (the JSON-RPC tools/call \"sql\" argument). Map that SQL field to QueryText below. Most default deployments do NOT log executed SQL, so this is prerequisite-gated detection, NOT universal coverage.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233010"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "8838059f-cedf-4d12-9ac7-ce41fac99417",
+  "title": "nx-console VS Code Extension Compromise -- T1195.002 multi-stage credential stealer (StepSecurity 2026-05-18)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from StepSecurity disclosure)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Campaign-bound sigma detection for the nx-console VS Code extension supply chain compromise (StepSecurity disclosure 2026-05-18; nrwl.angular-console v18.95.0 approximately 11-minute malicious window). Attack chain:\n(1) Orphan commit payload published from the official nrwl/nx GitHub repository, appearing legitimate at install time. (2) Post-install multi-stage credential stealer harvests GitHub tokens, npm tokens, AWS keys, HashiCorp Vault tokens, kubeconfig files, and 1Password vault items. (3) Triple-channel exfiltration over HTTPS, GitHub API write, and DNS tunneling (3 independent egress paths to defeat single-channel block lists).\nNOVEL: First-of-kind Sigstore provenance bypass -- attackers used stolen npm OIDC tokens to request Fulcio certificate issuance and produce SLSA provenance attestations, breaking the industry-wide signature-trust assumption for the ecosystem. Sigma rule flags VS Code extension install events targeting nrwl.angular-console at affected versions, plus suspicious child processes spawned from the extension host (PowerShell / curl / wget / node egress to api.github.com or non-standard DNS resolvers after extension install).\nSister cluster: Nx campaign 4-vector cluster -- Mini Shai-Hulud npm + s1ngularity CLI + ClawHavoc Claude Skills + nx-console VS Code. Cross-reference observed_mini_shai_hulud_npm_supply_chain_c2_t1071.yml, observed_s1ngularity_nx_npm_token_exfil_t1195_002.yml, and observed_clawhavoc_claude_skills_t1195_002.yml (4-vector cluster COMPLETE) in the same corpus.\nSource: Tier 1 multi-source disclosure (StepSecurity blog 2026-05-18 direct; amplified by industry reporting). Aggregated from 1 first-party StepSecurity disclosure 2026-05-18.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1071",
+    "T1195.002",
+    "T1552"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232992"
+}

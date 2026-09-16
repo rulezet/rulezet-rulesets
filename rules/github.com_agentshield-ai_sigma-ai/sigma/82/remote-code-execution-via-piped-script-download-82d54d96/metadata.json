@@ -1,0 +1,21 @@
+{
+  "uuid": "82d54d96-e730-4f34-9c94-71bb4ff03106",
+  "title": "Remote Code Execution via Piped Script Download",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects attempts to download and execute scripts from remote sources,\na common pattern in prompt injection attacks where an attacker tricks\nan AI agent into running malicious code.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232935"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "ec99419b-f67d-4fdb-8a78-1eb40f7861c2",
+  "title": "Detecting Ammy Admin RMM Agent Execution",
+  "format": "sigma",
+  "author": "@kostastsale",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects the execution of the Ammy Admin RMM agent for remote management.",
+  "source": "https://github.com/tsale/Sigma_rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233052"
+}

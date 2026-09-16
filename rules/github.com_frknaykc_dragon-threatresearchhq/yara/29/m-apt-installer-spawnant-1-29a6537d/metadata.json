@@ -1,0 +1,19 @@
+{
+  "uuid": "29a6537d-e6cc-4517-b5ac-896a3afe107f",
+  "title": "M_APT_Installer_SPAWNANT_1",
+  "format": "yara",
+  "author": "Mandiant",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects SPAWNANT. SPAWNANT is an Installer targeting Ivanti devices. Its purpose is to persistently install other malware from the SPAWN family (SPAWNSNAIL, SPAWNMOLE) as well as drop additional webshells on the box.",
+  "source": "https://github.com/frknaykc/Dragon-ThreatResearchHQ",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-03",
+  "last_modified": "2026-07-03",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233404"
+}

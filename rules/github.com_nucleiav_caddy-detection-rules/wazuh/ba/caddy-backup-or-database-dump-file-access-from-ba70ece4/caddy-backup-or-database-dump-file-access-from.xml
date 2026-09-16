@@ -1,0 +1,9 @@
+<rule id="996015" level="10">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)\.(bak|backup|old|orig|save|swp|sql|dump|sqlite|db|mdb|tar\.gz|tar\.bz2|tgz|7z|rar)(\?|$)</field>
+    <description>Caddy: Backup or database dump file access from $(request.remote_ip) - $(request.uri)</description>
+    <group>web,recon,</group>
+    <mitre>
+      <id>T1530</id>
+    </mitre>
+  </rule>

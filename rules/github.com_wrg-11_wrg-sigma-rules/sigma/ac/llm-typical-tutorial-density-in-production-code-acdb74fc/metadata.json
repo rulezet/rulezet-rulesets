@@ -1,0 +1,21 @@
+{
+  "uuid": "acdb74fc-2691-4065-95ac-750f76a3e857",
+  "title": "LLM-typical tutorial density in production code",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin ai-fingerprint observed rules",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects abnormally high docstring + inline-comment density for a production-grade source file. LLM output tends to explain every line in tutorial-grade prose where human-authored code defers to identifiers.\n\nAggregated from 1 fingerprint hit(s) across 1 file(s). Sample paths: apps/foo/baz.py.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233017"
+}

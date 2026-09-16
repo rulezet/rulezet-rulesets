@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: Archive or Macro-Enabled File Upload"; flow:established,to_server; http.uri; pcre:"/(\/upload|\/uploads|\/files|\/media|\/assets|\/static)[^?]*\.(zip|rar|7z|tar|gz|tgz|iso|img|docm|xlsm|pptm|xlam|svg)(\?|$)/i"; classtype:web-application-activity; sid:996032; rev:1; metadata:mitre_technique T1566.001;)

@@ -1,0 +1,21 @@
+{
+  "uuid": "5ba85e25-6470-43ce-97ad-35d261eefeba",
+  "title": "Caddy: SSRF attempt targeting internal resource fr",
+  "format": "wazuh",
+  "author": "NucleiAv",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Caddy: SSRF attempt targeting internal resource from $(request.remote_ip) - $(request.uri)",
+  "source": "https://github.com/NucleiAv/caddy-detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1090"
+  ],
+  "cve": [],
+  "created_at": "2026-07-03",
+  "last_modified": "2026-07-03",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233340"
+}

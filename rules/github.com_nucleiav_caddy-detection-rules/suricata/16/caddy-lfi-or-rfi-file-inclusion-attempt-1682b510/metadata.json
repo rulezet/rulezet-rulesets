@@ -1,0 +1,21 @@
+{
+  "uuid": "1682b510-a4e3-430c-a74f-7a4c70a33840",
+  "title": "Caddy: LFI or RFI File Inclusion Attempt",
+  "format": "suricata",
+  "author": "NucleiAv",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Multi-engine detection ruleset for the Caddy web server with 29 attack-mapped rules for Wazuh, Suricata, Snort 3, and Zeek, covering everything from path traversal to Log4Shell, with pcap-tested proof for every signature.",
+  "source": "https://github.com/NucleiAv/caddy-detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-03",
+  "last_modified": "2026-07-03",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233345"
+}

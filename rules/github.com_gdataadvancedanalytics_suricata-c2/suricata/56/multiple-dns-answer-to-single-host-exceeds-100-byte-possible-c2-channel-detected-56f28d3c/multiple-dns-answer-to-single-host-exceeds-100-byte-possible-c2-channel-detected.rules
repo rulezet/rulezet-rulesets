@@ -1,0 +1,1 @@
+alert dns any 53 -> any any (msg:"Multiple DNS Answer to single Host exceeds 100 Byte, possible C2-Channel detected"; dsize:>=100; threshold:type both, track by_dst, count 10, seconds 60; sid:1000022; rev:1;)

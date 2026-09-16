@@ -1,0 +1,22 @@
+{
+  "uuid": "42c0370e-482e-4f9d-93e4-9319b524f2f4",
+  "title": "Environment Variable Enumeration for Secrets",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects commands that enumerate environment variables, which commonly\ncontain API keys, tokens, and credentials. Attackers use this to\nharvest secrets from the agent's runtime environment.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1082",
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232932"
+}

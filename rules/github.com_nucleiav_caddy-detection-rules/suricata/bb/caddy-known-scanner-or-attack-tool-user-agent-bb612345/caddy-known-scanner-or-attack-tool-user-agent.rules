@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: Known Scanner or Attack Tool User-Agent"; flow:established,to_server; pcre:"/(sqlmap|nikto|nmap|masscan|nuclei|gobuster|dirbuster|wfuzz|acunetix|nessus|openvas|zgrab|whatweb)/iH"; classtype:web-application-activity; sid:2996010; rev:1; metadata:mitre_technique T1595;)

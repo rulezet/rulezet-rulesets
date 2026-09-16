@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 80 (msg:"KARSTORAT - External IP Lookup"; flow:to_server,established; content:"api.ipify.org"; http_host; nocase; sid:1000014; rev:1; reference:url,github.com/cyberthint/Detection-Rules; classtype:trojan-activity; priority:2;   metadata:ruleset "KarstoRat";)

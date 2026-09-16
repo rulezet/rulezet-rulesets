@@ -1,0 +1,22 @@
+{
+  "uuid": "bcfaa6f7-f514-4f44-9756-1f60d13440a4",
+  "title": "SNOWLIGHT_DROPPER_SYSDIG",
+  "format": "yara",
+  "author": "Alessandra Rizzo",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This rule detects strings seen in SNOWLIGHT malware acting as a dropper for fileless payloads.",
+  "source": "https://github.com/CpanelInc/tech-CSI",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233222"
+}

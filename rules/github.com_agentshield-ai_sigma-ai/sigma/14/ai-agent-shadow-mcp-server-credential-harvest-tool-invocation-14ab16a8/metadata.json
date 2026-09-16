@@ -1,0 +1,21 @@
+{
+  "uuid": "14ab16a8-44a1-4fdf-9acf-36a4c65adddc",
+  "title": "AI Agent Shadow MCP Server Credential Harvest Tool Invocation",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects AI agent invocations of MCP tool names that match credential harvesting\npatterns associated with rogue/shadow MCP servers. Attackers deploy fake MCP\nservers inside target networks that register tools with names mimicking legitimate\nautomation (get_creds, fetch_ssh, list_secrets, dump_secrets) to trick AI agents\ninto exfiltrating passwords, SSH keys, and Kubernetes secrets while the activity\nblends into routine agent automation traffic.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1021"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232929"
+}

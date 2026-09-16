@@ -1,0 +1,9 @@
+<rule id="996010" level="8">
+    <if_sid>996000</if_sid>
+    <field name="request.headers.User-Agent" type="pcre2">(?i)(sqlmap|nikto|nmap|masscan|nuclei|gobuster|dirbuster|wfuzz|acunetix|nessus|openvas|zgrab|whatweb)</field>
+    <description>Caddy: Known attack or scanner tool detected from $(request.remote_ip)</description>
+    <group>web,recon,scan,</group>
+    <mitre>
+      <id>T1595</id>
+    </mitre>
+  </rule>

@@ -1,0 +1,23 @@
+{
+  "uuid": "0987e513-6b8b-4233-8586-d02b6e080a88",
+  "title": "Execution of SOAPHound Tool with Specific Arguments",
+  "format": "sigma",
+  "author": "@kostastsale",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects the execution of SOAPHound, a .NET tool for collecting Active Directory data, using specific command-line arguments that may indicate an attempt to extract sensitive AD information.",
+  "source": "https://github.com/tsale/Sigma_rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1087"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233058"
+}

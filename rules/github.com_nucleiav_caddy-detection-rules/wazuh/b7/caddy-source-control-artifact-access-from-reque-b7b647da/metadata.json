@@ -1,0 +1,21 @@
+{
+  "uuid": "b7b647da-89d5-49b8-8cb9-1364665e2e4f",
+  "title": "Caddy: Source control artifact access from $(reque",
+  "format": "wazuh",
+  "author": "NucleiAv",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Caddy: Source control artifact access from $(request.remote_ip) - $(request.uri)",
+  "source": "https://github.com/NucleiAv/caddy-detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1213"
+  ],
+  "cve": [],
+  "created_at": "2026-07-03",
+  "last_modified": "2026-07-03",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233311"
+}

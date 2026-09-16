@@ -1,0 +1,29 @@
+rule CISA_251155_02 : BRICKSTORM backdoor installs_other_components communicates_with_c2 exfiltrates_data {
+    meta:
+        author = "CISA Code & Media Analysis"
+        incident = "251155"
+        date = "2025-09-15"
+        last_modified = "20250916_1511"
+        actor = "n/a"
+        family = "BRICKSTORM"
+        capabilities = "installs-other-components communicates-with-c2 exfiltrates-data"
+        malware_type = "backdoor"
+        tool_type = "unknown"
+        description = "Detects Go-Based BRICKSTORM backdoor samples"
+        sha256_1 = "320a0b5d4900697e125cebb5ff03dee7368f8f087db1c1570b0b62f5a986d759"
+        sha256_1 = "dfac2542a0ee65c474b91d3b352540a24f4e223f1b808b741cfe680263f0ee44"
+        sha256_1 = "b91881cb1aa861138f2063ec130b2b01a8aaf0e3f04921e5cbfc61b09024bf12"
+        sha256_1 = "bfb3ffd46b21b2281374cd60bc756fe2dcc32486dcc156c9bd98f24101145454"
+    strings:
+        $s0 = { 04 30 0F B6 54 04 2C 31 D1 88 4C 04 34 48 FF C0 }
+        $s1 = { 48 83 F8 04 7C E7 48 C7 04 24 }
+        $s2 = { 48 8D 44 24 34 48 89 44 24 08 48 C7 44 24 10 04 }
+        $s3 = { 48 89 44 24 48 48 89 4C 24 50 48 8B 6C 24 38 48 }
+        $s4 = { 48 83 EC 40 48 89 6C 24 38 48 8D 6C 24 38 C7 44 24 }
+        $s5 = { 83 EC 38 48 89 6C 24 30 48 8D 6C 24 30 C6 44 24 }
+        $s6 = { 4C 24 20 48 89 44 24 40 48 89 4C 24 48 48 8B 6C }
+        $s7 = { 64 48 8B 0C 25 F8 FF FF FF 48 3B 61 10 0F 86 81 }
+        $s8 = { 64 48 8B 0C 25 F8 FF FF FF 48 3B 61 10 0F 86 91 }
+    condition:
+        all of them
+}

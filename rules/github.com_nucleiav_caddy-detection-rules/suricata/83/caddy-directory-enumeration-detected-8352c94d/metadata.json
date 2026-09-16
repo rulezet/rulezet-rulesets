@@ -1,0 +1,21 @@
+{
+  "uuid": "8352c94d-2e9b-49b1-a972-c1fc5d463fa2",
+  "title": "Caddy: Directory Enumeration Detected",
+  "format": "suricata",
+  "author": "NucleiAv",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Multi-engine detection ruleset for the Caddy web server with 29 attack-mapped rules for Wazuh, Suricata, Snort 3, and Zeek, covering everything from path traversal to Log4Shell, with pcap-tested proof for every signature.",
+  "source": "https://github.com/NucleiAv/caddy-detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1595.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-03",
+  "last_modified": "2026-07-03",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233319"
+}

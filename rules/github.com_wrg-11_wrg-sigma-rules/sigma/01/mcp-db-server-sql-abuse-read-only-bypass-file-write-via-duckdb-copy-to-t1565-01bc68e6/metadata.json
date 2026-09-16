@@ -1,0 +1,24 @@
+{
+  "uuid": "01bc68e6-7ae4-4803-9814-9b2807446e5e",
+  "title": "MCP DB-Server SQL Abuse -- Read-Only Bypass / File Write via DuckDB COPY TO (T1565)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects write operations through an MCP database server that advertises a read-only safety guarantee it cannot keep. DuckDB COPY (...) TO '<file>', INTO OUTFILE, EXPORT DATABASE write to the host filesystem, and in some configurations (e.g. :memory: databases) write-DML (CREATE TABLE / INSERT / UPDATE / DELETE / DROP / ATTACH / CREATE SECRET) succeeds despite a --read-only flag. A prompt-injected or misbehaving LLM agent can drop files (malware, cron / startup poisoning, authorized_keys), tamper with config, or persist state that breaks session isolation.\nDISCRIMINATOR (FP-control), two honest branches: (A) Any write operation WHEN the log signals the server is configured read-only (ServerReadOnlyMode field == true). This directly catches the read-only-bypass abuse, but requires the deployment to log its read-only configuration -- most do not, so branch A is prerequisite-gated. (B) A file-write (COPY TO / OUTFILE) whose TARGET PATH is a sensitive / system location (/etc/, /root/, /var/spool/cron, /usr/, /tmp/, authorized_keys, C:\\Windows, C:\\Users). This is malicious regardless of read-only signal and needs only the SQL string -- a legitimate data-export COPY writes to a normal data directory, not to system paths, so this is high-fidelity.\nGeneralises to the MCP DB-server class (motherduck / dbhub / any DuckDB or SQL-passthrough MCP DB server). OWASP LLM Top 10 2025: LLM06 (Excessive Agency).\nTELEMETRY PREREQUISITE: requires the executed SQL to be logged (MCP server query / audit log, or body-logging proxy / WAF) mapped to QueryText; branch A additionally requires the read-only configuration to be logged (ServerReadOnlyMode). Most default deployments log neither -> prerequisite- gated detection, NOT universal coverage.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1565"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232977"
+}

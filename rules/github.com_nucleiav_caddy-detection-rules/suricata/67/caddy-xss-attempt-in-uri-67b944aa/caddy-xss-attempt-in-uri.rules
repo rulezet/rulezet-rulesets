@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: XSS Attempt in URI"; flow:established,to_server; pcre:"/(%3Cscript|<script|javascript:|onerror=|onload=|alert\(|document\.cookie|eval\()/iU"; classtype:web-application-attack; sid:2996008; rev:1; metadata:mitre_technique T1059.007;)

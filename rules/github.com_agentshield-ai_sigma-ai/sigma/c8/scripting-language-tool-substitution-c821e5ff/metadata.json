@@ -1,0 +1,21 @@
+{
+  "uuid": "c821e5ff-25a5-4a79-ace6-a6a019c7a9a9",
+  "title": "Scripting Language Tool Substitution",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects scripting languages used as substitutes for blocked CLI tools.\nAdversaries may use Python sockets for port scanning, urllib/requests\nfor HTTP exfiltration, subprocess for command execution wrappers, or\nNode.js/Ruby equivalents to bypass tool-specific detection rules.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232926"
+}

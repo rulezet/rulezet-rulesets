@@ -1,0 +1,9 @@
+<rule id="996009" level="10">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(%7C|%60|\||\`).*?(ls|id|whoami|cat\s|wget\s|curl\s|bash|/bin/sh|cmd\.exe)</field>
+    <description>Caddy: Command injection attempt from $(request.remote_ip)</description>
+    <group>web,attack,command_injection,</group>
+    <mitre>
+      <id>T1059</id>
+    </mitre>
+  </rule>

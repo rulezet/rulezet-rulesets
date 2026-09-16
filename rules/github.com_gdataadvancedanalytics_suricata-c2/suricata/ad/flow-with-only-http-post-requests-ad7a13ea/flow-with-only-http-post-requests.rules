@@ -1,0 +1,1 @@
+alert ip any any -> any any (msg:"Flow with only HTTP POST requests"; flow:to_server,established; flowbits:isset,http_post; flowbits:isnotset,non_http_post; threshold:type both, track by_src, count 10, seconds 60; sid:1000403; rev:2;)

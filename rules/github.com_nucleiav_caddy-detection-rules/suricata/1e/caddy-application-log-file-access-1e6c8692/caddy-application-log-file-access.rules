@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: Application Log File Access"; flow:established,to_server; http.uri; pcre:"/\/(error|access|debug|app|application|server|system|audit|exception)\.(log|txt|out)(\?|$)/i"; classtype:web-application-activity; sid:996017; rev:1; metadata:mitre_technique T1083;)

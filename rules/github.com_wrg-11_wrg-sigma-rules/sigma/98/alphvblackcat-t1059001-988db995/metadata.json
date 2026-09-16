@@ -1,0 +1,25 @@
+{
+  "uuid": "988db995-a548-4009-8b19-e23a7c5d077f",
+  "title": "ALPHV/BlackCat -- T1059.001",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Breach intel signature for actor alphv, MITRE technique T1059.001. Derived from 1 observed incident(s) in the WRG breach catalog.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:ransomware=\"BlackCat\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232963"
+}

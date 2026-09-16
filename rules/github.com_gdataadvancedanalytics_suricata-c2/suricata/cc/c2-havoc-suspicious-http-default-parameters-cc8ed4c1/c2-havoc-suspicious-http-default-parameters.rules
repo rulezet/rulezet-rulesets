@@ -1,0 +1,1 @@
+alert http any any -> any 80 (msg:"C2-Havoc: Suspicious HTTP Default Parameters"; http.method; content:"POST"; http.uri; content:"/"; urilen:1; http.content_type; content:"*/*"; threshold:type both, track by_src, count 10, seconds 60; sid:1000404; rev:1;)

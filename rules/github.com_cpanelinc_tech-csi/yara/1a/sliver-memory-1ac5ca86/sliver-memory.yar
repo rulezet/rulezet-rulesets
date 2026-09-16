@@ -1,0 +1,9 @@
+rule sliver_memory {
+    meta:
+        author = "Kev Breen @kevthehermit"
+        description = "Detects Sliver running in memory"
+    strings:
+        $str1 = "sliverpb"
+    condition:
+        all of them
+}

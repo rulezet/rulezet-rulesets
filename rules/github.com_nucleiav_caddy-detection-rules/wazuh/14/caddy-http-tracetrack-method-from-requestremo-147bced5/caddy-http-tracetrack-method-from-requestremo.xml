@@ -1,0 +1,9 @@
+<rule id="996011" level="6">
+    <if_sid>996000</if_sid>
+    <field name="request.method">TRACE|TRACK</field>
+    <description>Caddy: HTTP TRACE/TRACK method from $(request.remote_ip) - possible cross-site tracing</description>
+    <group>web,attack,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+  </rule>

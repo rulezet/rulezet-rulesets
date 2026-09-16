@@ -1,0 +1,22 @@
+{
+  "uuid": "04fe0169-7d05-46a2-9b22-bf6100f715e9",
+  "title": "SOCKS5 hostname null-byte egress -- T1041 Claude Code v2.0.24-v2.1.89 bypass (Anthropic silent fix v2.1.90)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from researcher disclosure)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Tool-bound sigma detection for the SOCKS5 hostname null-byte injection bypass affecting Claude Code v2.0.24 through v2.1.89 (silent fix at v2.1.90 on 2026-04-01; no CVE assigned, no GitHub Security Advisory, no release-note mention; HackerOne report #3646509 by researcher Aonan Guan closed as duplicate). Attack chain:\n(1) Prompt injection or malicious tool output induces an outbound request to a hostname that contains an embedded null byte (e.g., attacker-host followed by a literal NUL character followed by trusted-host). (2) The Claude Code JavaScript egress filter validates the trailing trusted suffix and passes the request to the SOCKS5 client. (3) libc getaddrinfo truncates the hostname at the null byte and resolves only the attacker portion, sending the connection to attacker infrastructure. (4) Data exfiltrates to the attacker host while HTTP-level egress logs show only the benign trailing suffix.\nDetection logic flags DNS resolver log entries OR SOCKS5 proxy CONNECT request log entries whose target hostname contains a percent-encoded null-byte indicator (%00). YAML cannot safely encode literal backslash-x or backslash-u unicode-escape forms in detection strings (sigma parser strictness; corpus ASCII discipline); the percent-encoded form is the practical detection surface for HTTP-style logs. For environments where the proxy serializes null bytes as backslash-x or backslash-u escape strings, add environment- specific detection entries via the resources/examples extension flow. SOCKS5 raw connection logs (typically port 1080 CONNECT payload) are the primary detection surface; HTTP-level egress logs miss the bypass by design.\nSister context: Anthropic-self transparency gap -- a 5.5-month silent fix window (2025-10-20 to 2026-04-01) elapsed before public disclosure. Operators on Claude Code v2.1.90 or later are not affected; environments active during the window should rotate exposed Anthropic API keys and GitHub OAuth credentials as defense-in-depth.\nSource: Tier 1 multi-source disclosure (Cyber Security News, TheRegister, SecurityWeek, ThaiCERT, Cybernews, Aonan Guan researcher blog). Aggregated from 1 active researcher disclosure 2026-05-20.\nSister extension: see observed_socks5_null_byte_egress_t1041_extension.yml for the backslash-escape form coverage (backslash-x + backslash-u textual representations); pair both rules for full coverage across log-serialization forms.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1071"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232969"
+}

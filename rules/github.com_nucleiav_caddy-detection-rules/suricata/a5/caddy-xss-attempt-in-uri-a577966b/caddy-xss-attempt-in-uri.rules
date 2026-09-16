@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: XSS Attempt in URI"; flow:established,to_server; http.uri.raw; pcre:"/(%3Cscript|<script|javascript:|onerror=|onload=|alert\(|document\.cookie|eval\()/i"; classtype:web-application-attack; sid:996008; rev:1; metadata:mitre_technique T1059.007;)

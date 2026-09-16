@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: Encoding Evasion or WAF Bypass Attempt"; flow:established,to_server; pcre:"/(%c0%ae|%c0%2f|%c1%9c|%uff0e|%u2215|%u002f|%252f|%255c|\.\.%ef%bc%8f|\.\.%c0%af)/iU"; classtype:web-application-attack; sid:2996023; rev:1; metadata:mitre_technique T1027;)

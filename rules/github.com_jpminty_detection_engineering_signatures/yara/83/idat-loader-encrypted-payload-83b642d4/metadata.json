@@ -1,0 +1,19 @@
+{
+  "uuid": "83b642d4-10b9-4f59-862b-858ffea6d9a5",
+  "title": "IDAT_Loader_Encrypted_Payload",
+  "format": "yara",
+  "author": "Jai Minton (@CyberRaiju) - HuntressLabs",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects known XOR key offset bytes in IDAT streams used by IDAT / Hijack Loader",
+  "source": "https://github.com/JPMinty/Detection_Engineering_Signatures",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233245"
+}

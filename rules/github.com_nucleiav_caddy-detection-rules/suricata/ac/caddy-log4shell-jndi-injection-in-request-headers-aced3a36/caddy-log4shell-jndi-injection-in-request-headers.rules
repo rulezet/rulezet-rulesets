@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: Log4Shell JNDI Injection in Request Headers"; flow:established,to_server; http.header; pcre:"/(\$\{jndi:|%24%7Bjndi(?:%3A|:))/i"; classtype:attempted-admin; priority:1; sid:996033; rev:1; metadata:mitre_technique T1190;)

@@ -1,0 +1,21 @@
+{
+  "uuid": "188109ab-58dd-4cbf-9eb2-afaf931d7d0f",
+  "title": "Template -- Unsecured Credentials in Files (Kyocera kmaddrbook)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Canonical sigma detection template for MITRE ATT&CK T1552.001 (Unsecured Credentials in Files (Kyocera kmaddrbook)). Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233009"
+}

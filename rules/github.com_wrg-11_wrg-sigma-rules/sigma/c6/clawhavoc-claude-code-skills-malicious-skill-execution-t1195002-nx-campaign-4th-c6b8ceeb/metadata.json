@@ -1,0 +1,26 @@
+{
+  "uuid": "c6b8ceeb-b194-48f6-badc-114b375a010b",
+  "title": "ClawHavoc Claude Code Skills malicious skill execution -- T1195.002 Nx campaign 4th vector (Docker 2026-05 horror-stories Issue 1)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from Docker disclosure)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Campaign-bound sigma detection for the ClawHavoc Claude Code Skills malicious skill cluster (Docker AI Coding Agent Horror Stories Issue 1 anchor, May 2026; 335+ malicious skills observed across the public Claude Code skills ecosystem). Fourth and final vector of the Nx campaign supply-chain cluster (sister vectors already in corpus: Mini Shai-Hulud npm + s1ngularity Nx CLI + nx-console VS Code extension). Attack chain:\n(1) Attacker publishes a malicious Claude Code skill (`.claude/skills/<name>/SKILL.md`) to a public skills ecosystem (npm-style index OR direct curl install snippet in a blog post / Stack Overflow answer / AI-coding tutorial). (2) Victim developer installs the skill into their workspace under `.claude/skills/<malicious-name>/`. Skill content includes a `SKILL.md` with high-coverage description that surfaces aggressively for many common prompts. (3) Claude Code surfaces the malicious skill on a routine prompt. The skill declares broad tool access (Read + Write + Bash + Edit) and executes its payload during routine workflow. (4) Payload sweeps credential locations (`.aws/credentials`, `.npmrc`, `.ssh/`, GitHub tokens, environment variables, 1Password vault, kubeconfig), bulk-exfils over HTTPS POST to attacker infrastructure, optionally pivots to other tools (npm install of secondary stage). Some variants hide their presence via T1564 (Hide Artifacts) by renaming themselves or backdating filesystem timestamps.\nDetection logic targets two surfaces: (a) suspicious Claude Code child processes spawned during skill execution context (PowerShell / curl / wget / node touching credential files OR egressing to non-developer-typical destinations); (b) anomalous Claude skill directory write events (`.claude/skills/` writes outside of the developer-initiated install workflow, OR writes to skill metadata files combined with credential-file read events within a short window).\nSister cluster (Nx campaign 4-vector cluster -- THIS RULE COMPLETES THE CLUSTER): cross-reference observed_mini_shai_hulud_npm_supply_chain_c2_t1071.yml (1st vector) + observed_s1ngularity_nx_npm_token_exfil_t1195_002.yml (2nd vector) + observed_nx_console_t1195_002.yml (3rd vector) in the same corpus.\nSource: Tier 1 first-party Docker engineering blog post (docker.com/blog/ ai-coding-agent-horror-stories-security-risks 2026-05). Aggregated from 1 first-party Docker disclosure (Issue 1 of 5-issue serial roadmap).",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1195.002",
+    "T1552.001",
+    "T1564"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233002"
+}

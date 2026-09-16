@@ -1,0 +1,21 @@
+{
+  "uuid": "f15d08ca-8f24-4b74-80b7-3db9a84ef6ca",
+  "title": "Caddy: GraphQL Introspection or API Schema Probe",
+  "format": "suricata",
+  "author": "NucleiAv",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Multi-engine detection ruleset for the Caddy web server with 29 attack-mapped rules for Wazuh, Suricata, Snort 3, and Zeek, covering everything from path traversal to Log4Shell, with pcap-tested proof for every signature.",
+  "source": "https://github.com/NucleiAv/caddy-detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1595.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-03",
+  "last_modified": "2026-07-03",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233353"
+}

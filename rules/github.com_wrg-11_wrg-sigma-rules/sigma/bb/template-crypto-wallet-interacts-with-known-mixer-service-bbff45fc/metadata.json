@@ -1,0 +1,23 @@
+{
+  "uuid": "bbff45fc-9c72-4afa-8403-047fbe243db2",
+  "title": "Template -- Crypto wallet interacts with known mixer service",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin crypto-trace templates",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Template for detecting wallet interactions with known cryptocurrency mixer services (Tornado Cash, Blender.io, Sinbad, ChipMixer, etc.). Bind to your blockchain telemetry before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1027.013",
+    "T1657"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232983"
+}

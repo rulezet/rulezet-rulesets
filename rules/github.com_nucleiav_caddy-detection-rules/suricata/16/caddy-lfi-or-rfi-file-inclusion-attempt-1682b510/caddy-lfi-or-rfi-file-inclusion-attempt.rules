@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: LFI or RFI File Inclusion Attempt"; flow:established,to_server; pcre:"/(php:\/\/|phar:\/\/|data:\/\/|expect:\/\/|zip:\/\/|glob:\/\/|file:\/\/|gopher:\/\/|dict:\/\/|\.(php|phtml|phar)\b.*=)/iU"; classtype:web-application-attack; sid:2996024; rev:1; metadata:mitre_technique T1190;)

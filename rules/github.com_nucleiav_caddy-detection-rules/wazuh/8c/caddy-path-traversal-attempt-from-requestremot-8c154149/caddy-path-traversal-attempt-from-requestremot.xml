@@ -1,0 +1,9 @@
+<rule id="996003" level="10">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(\.\./|\.\.\\|%2e%2e|%252e%252e)</field>
+    <description>Caddy: Path traversal attempt from $(request.remote_ip)</description>
+    <group>web,attack,path_traversal,</group>
+    <mitre>
+      <id>T1083</id>
+    </mitre>
+  </rule>

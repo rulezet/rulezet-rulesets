@@ -1,0 +1,1 @@
+alert dns any any -> any 53 (msg:"Multiple DNS Query Length exceeds 25 characters, possible C2-Channel or exfiltration detected"; dns.opcode:0; dns.query; bsize:>25; threshold:type both, track by_src, count 10, seconds 60; sid:1000021; rev:1;)

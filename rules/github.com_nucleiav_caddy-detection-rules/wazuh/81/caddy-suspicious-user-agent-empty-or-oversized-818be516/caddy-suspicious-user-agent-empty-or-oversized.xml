@@ -1,0 +1,9 @@
+<rule id="996028" level="6">
+    <if_sid>996000</if_sid>
+    <field name="request.headers.User-Agent" type="pcre2">^(\[\]|''|-)$|^.{500,}</field>
+    <description>Caddy: Suspicious User-Agent (empty or oversized) from $(request.remote_ip)</description>
+    <group>web,recon,</group>
+    <mitre>
+      <id>T1036</id>
+    </mitre>
+  </rule>

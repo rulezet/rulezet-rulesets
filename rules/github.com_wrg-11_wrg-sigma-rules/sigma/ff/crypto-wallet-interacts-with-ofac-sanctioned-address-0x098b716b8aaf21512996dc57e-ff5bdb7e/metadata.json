@@ -1,0 +1,22 @@
+{
+  "uuid": "ff5bdb7e-711a-4bb3-a335-c9ea574c1096",
+  "title": "Crypto wallet interacts with OFAC-sanctioned address 0x098b716b8aaf21512996dc57eb0615e2383e2f96",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin crypto-trace observed rules",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Wallet interacted with OFAC-sanctioned address 0x098b716b8aaf21512996dc57eb0615e2383e2f96 (designation: Blender.io (Lazarus Group laundering), program DPRK, dated 2022-05-06).",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\""
+  ],
+  "attack_techniques": [
+    "T1657"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232975"
+}

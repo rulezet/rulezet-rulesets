@@ -1,0 +1,1 @@
+alert dns any any -> any 53 (msg:"Multiple Huge amount of DNS-Queries possibel C2-Channel or exfiltration detected"; dns.opcode:0; threshold:type both, track by_src, count 30, seconds 60; sid:1000020; rev:1;)

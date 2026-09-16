@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 15144 (msg:"KARSTORAT - Audio Exfiltration"; flow:to_server,established; content:"/upload-audio"; http_uri; nocase; sid:1000006; rev:1; reference:url,github.com/cyberthint/Detection-Rules; classtype:trojan-activity; priority:1;   metadata:ruleset "KarstoRat";)

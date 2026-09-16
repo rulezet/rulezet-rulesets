@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: Directory Enumeration Detected"; flow:established,to_server; http_uri; pcre:"/(\/\.env$|\/\.git|\/wp-admin|\/phpmyadmin|\/admin\.php|\/config\.php|\/backup)/i"; detection_filter:track by_src, count 10, seconds 60; classtype:web-application-attack; sid:3996018; rev:1; metadata:mitre_technique T1595.001;)

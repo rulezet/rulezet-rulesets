@@ -1,0 +1,9 @@
+<rule id="996008" level="10">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(%3Cscript|&lt;script|javascript:|onerror=|onload=|alert\(|document\.cookie|eval\()</field>
+    <description>Caddy: XSS attempt in URI from $(request.remote_ip)</description>
+    <group>web,attack,xss,</group>
+    <mitre>
+      <id>T1059.007</id>
+    </mitre>
+  </rule>

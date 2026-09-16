@@ -1,0 +1,19 @@
+{
+  "uuid": "01646097-13a5-4a91-80ff-6009f3f857df",
+  "title": "SUSP_OBF_NET_Reactor_Indicators_Jan24",
+  "format": "yara",
+  "author": "Jonathan Peters",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects indicators of .NET Reactors managed obfuscation. Reactor is a commercial obfuscation solution, pirated versions are often abused by threat actors.",
+  "source": "https://github.com/cod3nym/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233073"
+}

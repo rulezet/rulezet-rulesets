@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 15144 (msg:"KARSTORAT - System Info Exfiltration"; flow:to_server,established; content:"/upload-sysinfo"; http_uri; nocase; content:"user=admin"; http_uri; nocase; sid:1000002; rev:1; reference:url,github.com/cyberthint/Detection-Rules; classtype:trojan-activity; priority:1;   metadata:ruleset "KarstoRat";)

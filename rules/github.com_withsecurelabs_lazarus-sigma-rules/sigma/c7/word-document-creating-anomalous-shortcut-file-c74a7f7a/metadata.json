@@ -1,0 +1,22 @@
+{
+  "uuid": "c74a7f7a-b590-4a07-92e2-a1c3a19d4c66",
+  "title": "Word document creating anomalous shortcut file",
+  "format": "sigma",
+  "author": "F-Secure Countercept",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects the creation of anomalous shortcut file by Word document",
+  "source": "https://github.com/WithSecureLabs/lazarus-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232950"
+}

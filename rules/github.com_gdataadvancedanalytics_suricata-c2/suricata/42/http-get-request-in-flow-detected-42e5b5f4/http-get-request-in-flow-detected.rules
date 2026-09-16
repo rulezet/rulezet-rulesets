@@ -1,0 +1,1 @@
+alert http any any -> any 80 (msg:"HTTP GET request in flow detected"; flow:to_server,established; http.method; content:"GET"; flowbits:set,non_http_post; flowbits:unset,http_post; flowbits:noalert; sid:1000402; rev:1;)

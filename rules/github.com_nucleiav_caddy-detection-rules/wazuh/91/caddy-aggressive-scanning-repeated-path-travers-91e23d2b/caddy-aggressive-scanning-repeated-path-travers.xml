@@ -1,0 +1,9 @@
+<rule id="996019" level="14" frequency="8" timeframe="60">
+    <if_matched_sid>996003</if_matched_sid>
+    <same_field>request.remote_ip</same_field>
+    <description>Caddy: Aggressive scanning - repeated path traversal attempts from $(request.remote_ip)</description>
+    <group>web,attack,brute_force,</group>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+  </rule>

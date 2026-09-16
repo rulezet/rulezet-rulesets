@@ -1,0 +1,21 @@
+{
+  "uuid": "67f0d6fe-2ac3-419b-859c-4d403f26b3aa",
+  "title": "Template -- Impersonation Brand or Personnel (profile setup)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Canonical sigma detection template for MITRE ATT&CK T1656.002 (Impersonation Brand or Personnel (profile setup)). Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232986"
+}

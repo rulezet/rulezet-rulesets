@@ -1,0 +1,21 @@
+{
+  "uuid": "615dcf5c-a0ff-447a-ac15-088f37842b7b",
+  "title": "APT_Backdoor_MSIL_SUNBURST_4",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This rule is looking for specific methods used by the SUNBURST backdoor. SUNBURST is a backdoor that has the ability to spawn and kill processes, write and delete files, set and create registry keys, gather system information, and disable a set of forensic analysis tools and services.",
+  "source": "https://github.com/nsacyber/Mitigating-Web-Shells",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:backdoor=\"SUNBURST\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233151"
+}

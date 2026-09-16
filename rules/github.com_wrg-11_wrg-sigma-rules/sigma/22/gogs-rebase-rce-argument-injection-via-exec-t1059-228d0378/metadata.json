@@ -1,0 +1,25 @@
+{
+  "uuid": "228d0378-9457-4fa9-9bbc-de4fd12bed22",
+  "title": "Gogs Rebase RCE (argument injection via --exec) -- T1059",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the Gogs authenticated argument-injection RCE (CWE-88, CVSSv4 9.4, no CVE, unpatched as of disclosure) in which a pull request with a malicious base-branch name injects an --exec flag into the git rebase that Gogs runs during \"Rebase before merging\". Because the base branch name is passed to git rebase without a -- separator, a branch named like --exec=<cmd> is interpreted by git as a flag and the command runs via sh -c as the Gogs server user. Vector is T1190 (exploit public-facing application); the observed artifact is command execution (T1059). Public Metasploit module multi/http/gogs_rebase_rce. Linux-primary (most Gogs servers run on Linux).",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232967"
+}

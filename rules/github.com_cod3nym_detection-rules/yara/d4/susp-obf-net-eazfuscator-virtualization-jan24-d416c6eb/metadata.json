@@ -1,0 +1,19 @@
+{
+  "uuid": "d416c6eb-281a-4506-861c-cdd673d56880",
+  "title": "SUSP_OBF_NET_Eazfuscator_Virtualization_Jan24",
+  "format": "yara",
+  "author": "Jonathan Peters",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects .NET images obfuscated with Eazfuscator virtualization protection. Eazfuscator is a widely used commercial obfuscation solution used by both legitimate software and malware.",
+  "source": "https://github.com/cod3nym/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233067"
+}

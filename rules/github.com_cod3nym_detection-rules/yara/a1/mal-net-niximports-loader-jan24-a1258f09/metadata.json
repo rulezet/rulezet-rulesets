@@ -1,0 +1,19 @@
+{
+  "uuid": "a1258f09-7dbd-49c6-9075-f79063d69f17",
+  "title": "MAL_NET_NixImports_Loader_Jan24",
+  "format": "yara",
+  "author": "Jonathan Peters",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects open-source NixImports .NET malware loader. A stealthy loader using dynamic import resolving to evade static detection",
+  "source": "https://github.com/cod3nym/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/233072"
+}

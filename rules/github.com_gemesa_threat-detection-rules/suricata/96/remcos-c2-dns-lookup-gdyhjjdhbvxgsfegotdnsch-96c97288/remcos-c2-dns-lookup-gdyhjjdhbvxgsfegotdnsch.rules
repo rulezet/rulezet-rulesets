@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"Remcos C2 DNS lookup (gdyhjjdhbvxgsfe.gotdns.ch)"; dns.query; content:"gdyhjjdhbvxgsfe.gotdns.ch"; nocase; classtype:trojan-activity; sid:1000001; rev:1;)

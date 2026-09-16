@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: Log4Shell JNDI Injection in URI"; flow:established,to_server; pcre:"/(\$\{jndi:|%24%7Bjndi(?:%3A|:))/iU"; classtype:attempted-admin; priority:1; sid:2996012; rev:1; metadata:mitre_technique T1190;)

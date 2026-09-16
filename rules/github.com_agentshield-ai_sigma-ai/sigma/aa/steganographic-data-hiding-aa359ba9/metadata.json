@@ -1,0 +1,22 @@
+{
+  "uuid": "aa359ba9-bbde-4b28-bcff-1d3d61710a75",
+  "title": "Steganographic Data Hiding",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the use of steganographic tools and techniques that could be\nused to hide sensitive data within images, audio, or other media files\nfor covert exfiltration purposes.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1048"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232933"
+}

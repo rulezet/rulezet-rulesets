@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: Unusual or Dangerous HTTP Method"; flow:established,to_server; pcre:"/^(CONNECT|DEBUG|MOVE|COPY|PROPFIND|PROPPATCH|MKCOL|LOCK|UNLOCK|BREW|TEST|FUZZ|SEARCH|PURGE)\s/M"; classtype:web-application-attack; sid:2996027; rev:1; metadata:mitre_technique T1190;)

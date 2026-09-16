@@ -1,0 +1,9 @@
+<rule id="996018" level="14" frequency="10" timeframe="60">
+    <if_matched_sid>996005</if_matched_sid>
+    <same_field>request.remote_ip</same_field>
+    <description>Caddy: Directory enumeration detected - repeated sensitive path probes from $(request.remote_ip)</description>
+    <group>web,attack,scan,</group>
+    <mitre>
+      <id>T1595.001</id>
+    </mitre>
+  </rule>

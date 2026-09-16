@@ -1,0 +1,9 @@
+<rule id="996026" level="8">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(\/graphql|\/graphiql|\/gql|__schema|__type|__typename|introspectionquery)</field>
+    <description>Caddy: GraphQL introspection or API schema probe from $(request.remote_ip)</description>
+    <group>web,recon,api,</group>
+    <mitre>
+      <id>T1595.002</id>
+    </mitre>
+  </rule>

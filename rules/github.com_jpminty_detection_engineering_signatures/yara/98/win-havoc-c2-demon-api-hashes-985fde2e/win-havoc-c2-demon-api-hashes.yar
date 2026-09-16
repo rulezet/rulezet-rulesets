@@ -1,0 +1,17 @@
+rule win_havoc_c2_demon_API_hashes {
+	meta:
+		description = "Detects API hashes used in Havoc C2 to resolve Windows APIs"
+		license = "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
+		author = "Jai Minton (@CyberRaiju) - https://www.jaiminton.com/"
+		reference = "https://www.youtube.com/@cyberraiju/playlists"
+		date = "2024-03-18"
+		hash1 = "0bc017b4114310f023c4b965271b4d089b467dfd55c2cd32d0814afc08ff488a"
+		hash2 = "b953ef3b1dd6e08d2179ae23624e0051c15754656d97fb8ca2461416360b05bf"
+		hash3 = "068c44d322748e817b3609e263c9b276d5b12e8ff5e8ad66b296e21d5646011e"
+		hash4 = "35ef0c05bc16af0420825f12b812ca0df56172b3807480d39a2042f090174cb3"
+		hash5 = "a78a8dd4f4f4a99387e2f26b2b20d10d0647a3cfde19619bb250650998abd7f3"
+		hash6 = "f81af020d914b0c32c5a5e70735d1a3498be73328f82d77d63f2a20c05809017"
+	strings:
+		$ntdll_hash = {53 17 e6 70} 		$API_LdrGetProcedureAddress = {b6 6b e7 fc} 		$API_LdrLoadDll = {43 6a 45 9e} 		$API_RtlAllocateHeap = {5a 4c e9 3b} 		$API_RtlReAllocateHeap = {71 03 74 af} 		$API_RtlFreeHeap = {d7 e4 a9 73} 		$API_RtlExitUserThread = {e8 b5 6d 2f} 		$API_RtlExitUserProcess = {2f c7 57 00} 		$API_RtlRandomEx = {f5 24 12 7f} 		$API_RtlNtStatusToDosError = {90 c8 d7 39} 		$API_RtlGetVersion = {dd 5c de 0d} 		$API_RtlCreateTimerQueue = {31 3c ef 50} 		$API_RtlCreateTimer = {ec fa 77 18} 		$API_RtlQueueWorkItem = {8e 02 92 ae} 		$API_RtlRegisterWait = {91 e6 0f 60} 		$API_RtlDeleteTimerQueue = {b0 88 c1 ee} 		$API_RtlCaptureContext = {10 d9 a8 eb} 		$API_RtlAddVectoredExceptionHandler = {89 6c f0 2d} 		$API_RtlRemoveVectoredExceptionHandler = {8e 01 1b ad} 		$API_RtlCopyMappedMemory = {02 b3 56 5b} 		$API_NtClose = {9d e6 d6 40} 		$API_NtCreateEvent = {3d 23 d3 28} 		$API_NtSetEvent = {b5 d8 87 cb} 		$API_NtSetInformationThread = {f1 03 3c 0c} 		$API_NtSetInformationVirtualMemory = {39 c2 6a 94} 		$API_NtGetNextThread = {9e fb 10 a4} 		$API_NtOpenProcess = {18 f7 82 4b} 		$API_NtTerminateProcess = {4f dd d9 4e} 		$API_NtQueryInformationProcess = {c2 5d dc 8c} 		$API_NtQuerySystemInformation = {28 39 c2 7b} 		$API_NtAllocateVirtualMemory = {ec b8 83 f7} 		$API_NtQueueApcThread = {b8 64 66 0a} 		$API_NtOpenThread = {b1 0c 8e 96} 		$API_NtOpenThreadToken = {d2 47 33 80} 		$API_NtResumeThread = {d0 c3 4b 5a} 		$API_NtSuspendThread = {e1 93 3d e4} 		$API_NtDuplicateObject = {59 d8 41 44} 		$API_NtGetContextThread = {84 f8 22 6d} 		$API_NtSetContextThread = {10 bf a0 ff} 		$API_NtWaitForSingleObject = {3c 0c ac e8} 		$API_NtAlertResumeThread = {28 1e a1 5b} 		$API_NtSignalAndWaitForSingleObject = {ed 3a 98 78} 		$API_NtTestAlert = {df 32 8a 85} 		$API_NtCreateThreadEx = {b0 cf 18 af} 		$API_NtOpenProcessToken = {99 ca 0d 35} 		$API_NtDuplicateToken = {23 0b 16 8e} 		$API_NtProtectVirtualMemory = {88 28 e9 50} 		$API_NtTerminateThread = {08 88 f5 cc} 		$API_NtWriteVirtualMemory = {92 01 17 c3} 		$API_NtContinue = {2c 6c 3a fc} 		$API_NtReadVirtualMemory = {03 81 28 a3} 		$API_NtFreeVirtualMemory = {09 c6 02 28} 		$API_NtUnmapViewOfSection = {cd 12 a4 6a} 		$API_NtQueryVirtualMemory = {5d e8 c0 10} 		$API_NtQueryInformationToken = {e4 1f 37 0f} 		$API_NtQueryInformationThread = {1b 46 a0 f5} 		$API_NtQueryObject = {b4 c9 5d c8} 		$API_NtTraceEvent = {d8 5c c2 70} 	condition:
+		filesize < 1000KB and (uint16(0) == 0x5a4d) and (2 of them)
+}

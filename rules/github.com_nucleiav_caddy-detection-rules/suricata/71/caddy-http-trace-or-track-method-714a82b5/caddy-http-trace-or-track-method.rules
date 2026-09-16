@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: HTTP TRACE or TRACK Method"; flow:established,to_server; pcre:"/^(TRACE|TRACK)\s/M"; classtype:attempted-recon; sid:2996011; rev:1; metadata:mitre_technique T1190;)

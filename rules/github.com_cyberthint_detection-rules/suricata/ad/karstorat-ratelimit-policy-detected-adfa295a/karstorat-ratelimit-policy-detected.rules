@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET [3050,4010,443] (msg:"KARSTORAT - RateLimit Policy Detected"; flow:to_server,established; content:"RateLimit-Policy: 100;w=900"; http_header; nocase; sid:1000015; rev:1; reference:url,github.com/cyberthint/Detection-Rules; classtype:trojan-activity; priority:3;   metadata:ruleset "KarstoRat";)

@@ -1,0 +1,1 @@
+drop icmp any any -> any any (msg:"IPS TEST ICMP DROP"; sid :79701; rev:1;)

@@ -1,0 +1,22 @@
+{
+  "uuid": "3ca213a3-63c3-4476-8ba0-ad16fd37aeed",
+  "title": "Auto-Approve Configuration Changes",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects modifications to configuration files that enable automatic\napproval of dangerous operations without user consent. These changes\ncan bypass security controls and enable privilege escalation attacks.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1548"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232943"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "7bbb72a2-b4e6-4fa2-b4f3-36b7c6283842",
+  "title": "SOCKS5 hostname null-byte egress (backslash-escape extension) -- T1041 Claude Code v2.0.24-v2.1.89 bypass (sister _extension to observed_socks5_null_byte_egress_t1041)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from researcher disclosure; sister extension to socks5_null_byte_egress_t1041)",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Sister extension rule to observed_socks5_null_byte_egress_t1041.yml (percent-encoded form). Same SOCKS5 hostname null-byte injection bypass (Claude Code v2.0.24 through v2.1.89; silent fix v2.1.90 on 2026-04-01; HackerOne 3646509 Aonan Guan closed-duplicate; no CVE assigned; Anthropic-self transparency gap with a 5.5-month silent fix window). This extension covers the BACKSLASH-ESCAPE textual representation forms that proxies and DNS resolvers emit when serializing a null byte to text logs.\nThe base rule documented a YAML encoding limitation: literal null bytes (0x00) are rejected by PyYAML + pySigma parsers; the original rule covered only the percent-encoded form (%00 + %2500). This extension covers the remaining two textual serialization forms via byte-level YAML construction: the backslash-x form (4-char string emitted by libc + many C-style loggers) and the backslash-u form (6-char Unicode escape emitted by JSON serializers and JavaScript-side log frameworks). Double-escape variants (5-char backslash-backslash-x form + 7-char backslash-backslash-u form) are also matched -- some log pipelines double-escape during JSON transit.\nAttack chain identical to the percent-encoded sister rule (prompt injection induces request with embedded null byte; JavaScript egress filter validates trailing trusted suffix; libc getaddrinfo truncates hostname at null byte resolving only attacker portion). See sister rule for full chain narrative.\nSource: Tier 1 multi-source disclosure (Cyber Security News, TheRegister, SecurityWeek, ThaiCERT, Cybernews, Aonan Guan researcher blog). Aggregated from 1 active researcher disclosure 2026-05-20.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1071"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232968"
+}

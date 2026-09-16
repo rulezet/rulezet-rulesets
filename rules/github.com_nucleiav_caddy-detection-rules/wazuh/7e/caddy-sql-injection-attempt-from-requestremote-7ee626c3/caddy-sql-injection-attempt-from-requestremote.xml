@@ -1,0 +1,9 @@
+<rule id="996004" level="10">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(union.+select|select.+from|insert.+into|drop.+table|(%27|')(\s|%20)*(or)(\s|%20)+|(\s|%20)(or)(\s|%20)+1(\s|%20)*(%3D|=)(\s|%20)*1)</field>
+    <description>Caddy: SQL injection attempt from $(request.remote_ip)</description>
+    <group>web,attack,sql_injection,</group>
+    <mitre>
+      <id>T1190</id>
+    </mitre>
+  </rule>

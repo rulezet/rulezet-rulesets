@@ -1,0 +1,23 @@
+{
+  "uuid": "ebcdf036-34bf-4c89-a0bc-12d064810f93",
+  "title": "AI Agent Process Memory Read via /proc Filesystem",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects AI agent tool calls that attempt to read process memory or environment\nvariables via Linux /proc pseudo-filesystem paths (/proc/*/mem, /proc/*/environ,\n/proc/*/maps) or /dev/mem. This technique is used by supply-chain malware injected\ninto AI framework packages (e.g. LiteLLM 1.82.7/1.82.8) to extract secrets such\nas AWS/GCP tokens and Kubernetes service account credentials from running processes.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232923"
+}

@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: Suspicious User-Agent Empty or Oversized"; flow:established,to_server; pcre:"/^(\[\]|''|-)$|^.{500,}/H"; classtype:web-application-activity; sid:2996028; rev:1; metadata:mitre_technique T1036;)

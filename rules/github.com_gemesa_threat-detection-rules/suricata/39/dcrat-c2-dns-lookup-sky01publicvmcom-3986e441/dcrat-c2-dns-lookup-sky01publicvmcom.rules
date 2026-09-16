@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"DCRat C2 DNS lookup (sky01.publicvm.com)"; dns.query; content:"sky01.publicvm.com"; nocase; classtype:trojan-activity; sid:1000001; rev:1;)

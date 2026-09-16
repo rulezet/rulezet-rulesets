@@ -1,0 +1,21 @@
+{
+  "uuid": "ce079016-7a2a-47f7-a69a-a17d6480ac35",
+  "title": "Privilege Escalation Attempt",
+  "format": "sigma",
+  "author": "AgentShield",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects sudo usage, setuid changes, ownership changes to root,\nand capability manipulation that may indicate privilege escalation.\n",
+  "source": "https://github.com/agentshield-ai/sigma-ai",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232945"
+}

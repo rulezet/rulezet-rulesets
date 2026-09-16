@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Caddy: LFI or RFI File Inclusion Attempt"; flow:established,to_server; http.uri.raw; pcre:"/(php:\/\/|phar:\/\/|data:\/\/|expect:\/\/|zip:\/\/|glob:\/\/|file:\/\/|gopher:\/\/|dict:\/\/|\.(php|phtml|phar)\b.*=)/i"; classtype:web-application-attack; sid:996024; rev:1; metadata:mitre_technique T1190;)

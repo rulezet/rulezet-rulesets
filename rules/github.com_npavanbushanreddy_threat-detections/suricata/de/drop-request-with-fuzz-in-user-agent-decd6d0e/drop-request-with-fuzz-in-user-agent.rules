@@ -1,0 +1,1 @@
+drop http any any -> any any (msg:"Drop request with Fuzz in User-Agent"; http.user_agent; content:"fuzz"; nocase; sid:79702; rev:1;)

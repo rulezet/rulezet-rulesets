@@ -1,0 +1,9 @@
+<rule id="996013" level="8">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(\/xmlrpc\.php|\/\.htaccess|\/\.htpasswd|\/wp-config\.php|\/config\.php|\/backup|\/dump\.sql|\/proc\/self|\/etc\/shadow)</field>
+    <description>Caddy: Sensitive file access attempt from $(request.remote_ip) - $(request.uri)</description>
+    <group>web,recon,</group>
+    <mitre>
+      <id>T1083</id>
+    </mitre>
+  </rule>

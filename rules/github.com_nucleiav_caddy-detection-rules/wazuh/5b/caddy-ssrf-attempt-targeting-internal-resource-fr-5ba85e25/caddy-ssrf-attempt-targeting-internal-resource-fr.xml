@@ -1,0 +1,9 @@
+<rule id="996025" level="12">
+    <if_sid>996000</if_sid>
+    <field name="request.uri" type="pcre2">(?i)(169\.254\.169\.254|metadata\.google\.internal|metadata/instance|169\.254\.170\.2|100\.100\.100\.200|[?&amp;][^&amp;]*=https?://(127\.|10\.|172\.(1[6-9]|2[0-9]|3[01])\.|192\.168\.|localhost)|[?&amp;][^&amp;]*=https?://[^/]*\.(internal|local|corp|intranet))</field>
+    <description>Caddy: SSRF attempt targeting internal resource from $(request.remote_ip) - $(request.uri)</description>
+    <group>web,attack,ssrf,</group>
+    <mitre>
+      <id>T1090</id>
+    </mitre>
+  </rule>

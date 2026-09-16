@@ -1,0 +1,24 @@
+{
+  "uuid": "804bfc63-dc6e-49f8-bdd7-867d870c3d4e",
+  "title": "Template -- PowerShell Encoded Command Execution",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Canonical sigma detection template for MITRE ATT&CK T1059.001 (PowerShell Encoded Command Execution). Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-02",
+  "last_modified": "2026-07-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/232965"
+}

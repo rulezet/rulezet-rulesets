@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: Backup or Database Dump File Access"; flow:established,to_server; pcre:"/\.(bak|backup|old|orig|save|swp|sql|dump|sqlite|db|mdb|tar\.gz|tar\.bz2|tgz|7z|rar)(\?|$)/iU"; classtype:web-application-activity; sid:2996015; rev:1; metadata:mitre_technique T1530;)

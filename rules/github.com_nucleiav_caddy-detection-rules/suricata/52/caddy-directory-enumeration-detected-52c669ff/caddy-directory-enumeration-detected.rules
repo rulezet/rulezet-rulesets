@@ -1,0 +1,1 @@
+alert tcp any any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Caddy: Directory Enumeration Detected"; flow:established,to_server; pcre:"/(\/\.env$|\/\.git|\/wp-admin|\/phpmyadmin|\/admin\.php|\/config\.php|\/backup)/iU"; detection_filter:track by_src, count 10, seconds 60; classtype:web-application-attack; sid:2996018; rev:1; metadata:mitre_technique T1595.001;)
