@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET INFO Nagios HTTP Monitoring Connection"; flow:established,to_server; http.user_agent; content:"check_http/"; startswith; content:"(nagios-plugins|20|"; classtype:not-suspicious; sid:2006779; rev:8; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_02_06;)

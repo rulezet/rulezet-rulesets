@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO FOX,ABC On-demand UA"; flow:established,to_server; http.user_agent; content:"QSP"; startswith; nocase; classtype:policy-violation; sid:2007639; rev:6; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_02_05;)
