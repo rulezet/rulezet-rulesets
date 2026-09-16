@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"Kirona DRS Information Disclosure Attempt"; flow:established,to_server; uricontent:"/osm/REGISTER.cmd"; nocase; sid:1002500; rev:1; reference:cve,CVE-2019-17503; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-17503;)

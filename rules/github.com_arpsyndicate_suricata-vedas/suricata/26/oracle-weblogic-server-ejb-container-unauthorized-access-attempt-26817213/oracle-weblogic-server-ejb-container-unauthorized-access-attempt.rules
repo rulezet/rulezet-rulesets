@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Oracle WebLogic Server EJB Container Unauthorized Access Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/wls-wsat/CoherenceClusterService"; nocase; sid:1006653; rev:1; reference:cve,CVE-2019-2888; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2019-2888;)
