@@ -1,0 +1,11 @@
+rule Win_Trojan_Small_577
+{
+strings:
+	$a0 = { 78797a2131333030312f3630312f }
+
+	$a1 = { 56668911e4baa0cd71746418afdd0d3b7b52659124566649e310d5862a5a8d897e40b7d3185baedd00b25f455b412b8661cbdb3126cd426797 }
+
+
+condition:
+	$a0 and $a1
+}

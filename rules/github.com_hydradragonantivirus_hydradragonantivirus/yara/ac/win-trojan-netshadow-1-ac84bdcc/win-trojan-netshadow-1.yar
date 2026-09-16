@@ -1,0 +1,9 @@
+rule Win_Trojan_Netshadow_1
+{
+strings:
+	$a0 = { 6a006a0068f0ad40006a006a00e82c95ffffa3a83941006affa18c39410050e87a96ffff833da839410000740e8bc3ba60ba4000e87582ffffeb0c8bc3ba84ba4000e86782ffff5bc300ffffffff21000000494f6e6c696e65206b65796c6f }
+
+
+condition:
+	$a0
+}
