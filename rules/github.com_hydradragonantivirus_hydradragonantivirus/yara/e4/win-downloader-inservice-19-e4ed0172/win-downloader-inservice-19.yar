@@ -1,0 +1,11 @@
+rule Win_Downloader_INService_19
+{
+strings:
+	$a0 = { 5589e583ec1056538b450831db8b0031f68b003d910000c077163d8d0000c0 }
+
+	$a1 = { 7309310d0a6409766f6c756d650964646c2d68656c702e696e666f092f68656c }
+
+
+condition:
+	$a0 and $a1
+}
