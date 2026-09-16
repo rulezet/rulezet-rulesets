@@ -1,0 +1,9 @@
+rule Win_Spyware_Banker_3453
+{
+strings:
+	$a0 = { 408b70138ef7df1f14c6d914cc11762553f700f6e1d5d3e17be4b914c86d555cd1fe04141a05778106ec1f3664bb07fbcd34053aeb826efdef2a5cba3f21427b0562862d6b4ab5957b998292288bd83e }
+
+
+condition:
+	$a0
+}
