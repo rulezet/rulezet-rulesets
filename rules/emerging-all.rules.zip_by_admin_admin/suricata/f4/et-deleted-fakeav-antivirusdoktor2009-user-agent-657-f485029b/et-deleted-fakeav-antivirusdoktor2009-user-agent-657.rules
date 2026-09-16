@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED FakeAV AntivirusDoktor2009 User-Agent (657)"; flow:established,to_server; content:"|0d 0a|User-Agent|3a| 657"; classtype:trojan-activity; sid:2010683; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

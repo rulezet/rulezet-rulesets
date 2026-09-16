@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ET SHELLCODE x86 JmpCallAdditive Encoder"; flow:established; content:"|FC BB|"; content:"|EB 0C 5E 56 31 1E AD 01 C3 85 C0 75 F7 C3 E8 EF FF FF FF|"; distance: 4; within: 19; classtype:shellcode-detect; sid:2002908; rev:5; metadata:created_at 2010_07_30, confidence High, signature_severity Major, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert ip $HOME_NET any -> $EXTERNAL_NET any (msg:"GPL ATTACK_RESPONSE id check returned userid"; content:"uid="; byte_test:5,<,65537,0,relative,string; content:" gid="; within:15; byte_test:5,<,65537,0,relative,string; classtype:bad-unknown; sid:2101882; rev:11; metadata:created_at 2010_09_23, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)

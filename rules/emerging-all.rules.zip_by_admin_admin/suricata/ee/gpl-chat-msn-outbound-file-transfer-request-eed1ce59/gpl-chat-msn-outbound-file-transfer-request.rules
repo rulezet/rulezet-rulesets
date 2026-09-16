@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 1863 (msg:"GPL CHAT MSN outbound file transfer request"; flow:established; content:"MSG "; depth:4; content:"Content-Type|3A| application/x-msnmsgrp2p"; nocase; content:"INVITE"; distance:0; nocase; classtype:policy-violation; sid:2101986; rev:7; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert tcp any any -> 212.146.0.34 1963 (msg:"GPL DELETED TCPDUMP/PCAP trojan traffic"; flow:stateless; reference:url,hlug.fscker.com; classtype:trojan-activity; sid:2101929; rev:6; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2019_07_26;)

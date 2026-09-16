@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 1024: -> $HOME_NET any (msg:"ET DELETED Banker Trojan CnC Server Ping"; flow:established,from_server; dsize:<100; content:"PING|7c|"; classtype:command-and-control; sid:2009864; rev:5; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

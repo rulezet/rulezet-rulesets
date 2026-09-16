@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET $SHELLCODE_PORTS -> $HOME_NET any (msg:"ET SHELLCODE x86 Alpha2 GetEIPs Encoder"; flow:established; content:"|EB 03 59 EB 05 E8 F8 FF FF FF|"; classtype:shellcode-detect; sid:2002904; rev:5; metadata:created_at 2010_07_30, confidence High, signature_severity Major, updated_at 2019_07_26;)

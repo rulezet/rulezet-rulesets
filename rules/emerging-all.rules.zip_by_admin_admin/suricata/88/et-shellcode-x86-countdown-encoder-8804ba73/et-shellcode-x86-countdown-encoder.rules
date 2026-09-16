@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET $SHELLCODE_PORTS -> $HOME_NET any (msg:"ET SHELLCODE x86 Countdown Encoder"; flow:established; content:"|E8 FF FF FF FF C1 5E 30 4C 0E 07 E2 FA|"; classtype:shellcode-detect; sid:2002905; rev:5; metadata:created_at 2010_07_30, confidence High, signature_severity Major, updated_at 2019_07_26;)

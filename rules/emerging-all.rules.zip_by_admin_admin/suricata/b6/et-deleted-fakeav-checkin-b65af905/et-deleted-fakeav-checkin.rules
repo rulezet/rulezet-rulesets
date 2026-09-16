@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED FakeAV Checkin"; flow:established,to_server; content:"getfile.php?r="; http_uri; content:"&p="; http_uri; pcre:"/php\?r=\d+&p=/U"; classtype:trojan-activity; sid:2011474; rev:3; metadata:created_at 2010_09_29, signature_severity Unknown, updated_at 2019_07_26;)

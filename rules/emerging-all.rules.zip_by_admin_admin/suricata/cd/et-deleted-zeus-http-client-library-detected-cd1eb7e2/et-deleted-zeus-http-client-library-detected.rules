@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Zeus http client library detected"; flow:established,to_server; content:"Accept|3a| */*|0D 0A|Connection|3a| Close|0D 0A|User-Agent|3a| "; http_header; classtype:trojan-activity; sid:2011818; rev:4; metadata:created_at 2010_10_15, signature_severity Unknown, updated_at 2019_07_26;)

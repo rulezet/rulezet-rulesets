@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET $SHELLCODE_PORTS -> $HOME_NET any (msg:"ET SHELLCODE x86 PexFnstenvMov/Sub Encoder"; flow:established; content:"|D9 EE D9 74 24 F4 5B 81 73 13|"; content:"|83 EB FC E2 F4|"; distance: 4; within: 5; classtype:shellcode-detect; sid:2002903; rev:5; metadata:created_at 2010_07_30, confidence High, signature_severity Major, updated_at 2019_07_26;)

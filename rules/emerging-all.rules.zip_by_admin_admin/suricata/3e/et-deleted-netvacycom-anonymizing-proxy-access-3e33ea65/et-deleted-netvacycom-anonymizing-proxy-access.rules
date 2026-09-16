@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED Netvacy.com Anonymizing Proxy Access"; flow:established,to_server; content:"Host|3a| www.netvacy.com"; http_header; classtype:policy-violation; sid:2003453; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

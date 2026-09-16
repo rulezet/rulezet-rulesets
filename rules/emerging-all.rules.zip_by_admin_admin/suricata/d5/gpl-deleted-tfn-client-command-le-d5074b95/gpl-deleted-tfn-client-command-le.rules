@@ -1,0 +1,1 @@
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"GPL DELETED TFN client command LE"; icmp_id:51201; icmp_seq:0; itype:0; reference:arachnids,183; classtype:attempted-dos; sid:2100251; rev:6; metadata:created_at 2010_09_23, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

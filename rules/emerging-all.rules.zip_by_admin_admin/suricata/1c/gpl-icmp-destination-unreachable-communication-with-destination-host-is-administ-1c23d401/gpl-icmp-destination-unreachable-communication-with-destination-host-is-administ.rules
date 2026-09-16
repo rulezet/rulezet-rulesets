@@ -1,0 +1,1 @@
+alert icmp any any -> any any (msg:"GPL ICMP Destination Unreachable Communication with Destination Host is Administratively Prohibited"; icode:10; itype:3; classtype:misc-activity; sid:2100486; rev:5; metadata:created_at 2010_09_23, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)

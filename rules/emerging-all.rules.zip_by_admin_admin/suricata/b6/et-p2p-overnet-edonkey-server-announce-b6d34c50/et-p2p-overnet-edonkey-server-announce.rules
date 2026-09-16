@@ -1,0 +1,1 @@
+alert udp any any -> any any (msg:"ET P2P Overnet (Edonkey) Server Announce"; content:"|00 00 02 03 00 6c 6f 63|"; offset: 36; content:"|00 62 63 70 3a 2f 2f|"; distance: 1; reference:url,www.overnet.com; classtype:policy-violation; sid:2000335; rev:9; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)

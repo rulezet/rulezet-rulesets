@@ -1,0 +1,1 @@
+alert icmp $HOME_NET any -> $EXTERNAL_NET any (msg:"GPL ICMP Address Mask Reply"; icode:0; itype:18; classtype:misc-activity; sid:2100386; rev:6; metadata:created_at 2010_09_23, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)

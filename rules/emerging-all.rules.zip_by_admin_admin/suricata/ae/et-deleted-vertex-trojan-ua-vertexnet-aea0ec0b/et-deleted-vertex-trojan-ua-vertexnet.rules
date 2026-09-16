@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Vertex Trojan UA (VERTEXNET)"; flow:to_server,established; content:"User-Agent|3a| VERTEXNET"; http_header; classtype:trojan-activity; sid:2012752; rev:2; metadata:created_at 2011_04_29, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

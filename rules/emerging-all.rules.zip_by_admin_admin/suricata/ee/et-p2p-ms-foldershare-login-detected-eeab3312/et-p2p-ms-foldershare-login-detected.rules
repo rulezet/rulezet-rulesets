@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 443 -> $HOME_NET any (msg:"ET P2P MS Foldershare Login Detected"; flow:established,to_client; content:"|0b|FolderShare|30 81 9f 30|"; nocase; offset:392; depth:18; reference:url,www.foldershare.com; classtype:policy-violation; sid:2002673; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

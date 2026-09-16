@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET DELETED Base64 Encoded FTP Commands (21 > o&echo user 1 1 >> o &echo get)"; flow:established,from_server; content:"MjEgPiBvJmVjaG8gdXNlciAxIDEgPj4gbyAmZWNobyBnZXQgUm"; fast_pattern; classtype:attempted-user; sid:2012291; rev:2; metadata:created_at 2011_02_04, signature_severity Unknown, updated_at 2019_07_26;)

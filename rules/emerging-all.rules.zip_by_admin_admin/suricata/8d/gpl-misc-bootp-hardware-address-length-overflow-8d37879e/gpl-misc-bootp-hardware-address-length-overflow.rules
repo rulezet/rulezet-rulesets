@@ -1,0 +1,1 @@
+alert udp $EXTERNAL_NET any -> $HOME_NET 67 (msg:"GPL MISC bootp hardware address length overflow"; content:"|01|"; depth:1; byte_test:1,>,6,2; reference:cve,1999-0798; classtype:misc-activity; sid:2101939; rev:5; metadata:created_at 2010_09_23, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

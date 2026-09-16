@@ -1,0 +1,1 @@
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"GPL ICMP PING *NIX"; itype:8; content:"|10 11 12 13 14 15 16 17 18 19 1A 1B 1C 1D 1E 1F|"; depth:32; classtype:misc-activity; sid:2100366; rev:8; metadata:created_at 2010_09_23, confidence Medium, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

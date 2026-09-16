@@ -1,0 +1,1 @@
+alert icmp $EXTERNAL_NET any -> $HOME_NET any (msg:"GPL SCAN SolarWinds IP scan attempt"; icode:0; itype:8; content:"SolarWinds.Net"; nocase; classtype:network-scan; sid:2101918; rev:7; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2019_07_26;)
