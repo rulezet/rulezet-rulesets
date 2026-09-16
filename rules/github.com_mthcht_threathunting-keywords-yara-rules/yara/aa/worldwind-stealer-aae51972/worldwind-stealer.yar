@@ -1,0 +1,16 @@
+rule WorldWind_Stealer
+{
+    meta:
+        description = "Detection patterns for the tool 'WorldWind-Stealer' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "WorldWind-Stealer"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /WorldWind\sStealer\.zip/ nocase ascii wide
+                        $string2 = "WorldWind-Stealer" nocase ascii wide
+
+    condition:
+        any of them
+}

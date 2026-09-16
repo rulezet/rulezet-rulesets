@@ -1,0 +1,16 @@
+rule Get_RBCD_Threaded
+{
+    meta:
+        description = "Detection patterns for the tool 'Get-RBCD-Threaded' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Get-RBCD-Threaded"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /\.exe\s.{0,1000}\-searchforest.{0,1000}\-pwdlastset/ nocase ascii wide
+                        $string2 = "Get-RBCD-Threaded" nocase ascii wide
+
+    condition:
+        any of them
+}
