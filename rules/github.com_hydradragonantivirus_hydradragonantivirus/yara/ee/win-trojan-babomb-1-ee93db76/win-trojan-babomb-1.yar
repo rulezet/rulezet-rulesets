@@ -1,0 +1,9 @@
+rule Win_Trojan_Babomb_1
+{
+strings:
+	$a0 = { 72656d20426162796c6f6e2042415420426f6d6220284329204174482f2f4850472c384e6f763937 }
+
+
+condition:
+	$a0
+}

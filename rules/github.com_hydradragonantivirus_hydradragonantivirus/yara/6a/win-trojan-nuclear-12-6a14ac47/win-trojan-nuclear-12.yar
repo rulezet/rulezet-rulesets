@@ -1,0 +1,9 @@
+rule Win_Trojan_Nuclear_12
+{
+strings:
+	$a0 = { 92507e7544b93158c4d55eefdaf4f6ec0fd0e7622b0cab600fc12f86ba7d535a4541ebb87a048b2e8d469b6d8635f33244d0ca91f0cccaa4a1ad50cbf24af3092ee3081e6e4a6a7ce5f67a3377dcb2f071ffa9d590bfebead33cf40841e3153ff63f2d3ca426aec2c9f9cee70af2e6b470afee1ba4b10d197cf72d4e2df6768db5283e71c9432ef733de732430be077ba0cf2a5862b9 }
+
+
+condition:
+	$a0
+}

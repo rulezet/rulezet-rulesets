@@ -1,0 +1,9 @@
+rule Win_Trojan_Y3K_5
+{
+strings:
+	$a0 = { 106877754a008d45fce819002aa0c3e919002560ebf05b595dc300ffffffff1300000059334b2052617420736572766572206c69 }
+
+
+condition:
+	$a0
+}
