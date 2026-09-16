@@ -1,0 +1,11 @@
+rule PEiD_01064_Microsoft_Visual_C___5_0___7_1_ {
+  meta:
+    description = "[Microsoft Visual C++ 5.0 - 7.1]"
+    ep_only     = "false"
+
+  strings:
+    $a = { 55 8B EC 81 EC 04 01 00 00 68 04 01 00 00 8D 85 FC FE FF FF 50 6A 00 FF 15 ?? ?? ?? ?? E8 ?? ?? ?? ?? 8D 8D FC FE FF FF 51 E8 ?? ?? ?? ?? 83 C4 04 E8 ?? ?? ?? ?? 6A 00 FF 15 ?? ?? ?? ?? 8B E5 5D C2 10 00 }
+
+  condition:
+    $a
+}

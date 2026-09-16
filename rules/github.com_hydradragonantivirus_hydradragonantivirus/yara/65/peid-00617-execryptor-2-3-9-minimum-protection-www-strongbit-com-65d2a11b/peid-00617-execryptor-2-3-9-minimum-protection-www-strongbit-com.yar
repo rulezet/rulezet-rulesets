@@ -1,0 +1,11 @@
+rule PEiD_00617_EXECryptor_2_3_9__minimum_protection_____www_strongbit_com_ {
+  meta:
+    description = "[EXECryptor 2.3.9 (minimum protection) -> www.strongbit.com]"
+    ep_only     = "false"
+
+  strings:
+    $a = { 68 ?? ?? ?? ?? E9 ?? ?? ?? FF 50 C1 C8 18 89 05 ?? ?? ?? ?? C3 C1 C0 18 51 E9 ?? ?? ?? FF 84 C0 0F 84 6A F9 FF FF E9 ?? ?? ?? FF C3 E9 ?? ?? ?? FF E8 CF E9 FF FF B8 01 00 00 00 E9 ?? ?? ?? FF 2B D0 68 A0 36 80 D4 59 81 C9 64 98 FF 99 E9 ?? ?? ?? FF 84 C0 }
+
+  condition:
+    $a
+}

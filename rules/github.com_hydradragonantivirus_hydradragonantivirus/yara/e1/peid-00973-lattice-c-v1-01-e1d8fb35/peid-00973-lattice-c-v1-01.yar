@@ -1,0 +1,11 @@
+rule PEiD_00973_Lattice_C_v1_01_ {
+  meta:
+    description = "[Lattice C v1.01]"
+    ep_only     = "true"
+
+  strings:
+    $a = { FA B8 ?? ?? 05 ?? ?? B1 ?? D3 E8 8C CB 03 C3 8E D8 8E D0 26 ?? ?? ?? ?? 2B D8 F7 ?? ?? ?? 75 ?? B1 ?? D3 E3 EB }
+
+  condition:
+    $a
+}

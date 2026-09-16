@@ -1,0 +1,11 @@
+rule PEiD_01062_Microsoft_Visual_C____3_0_old_crap__ {
+  meta:
+    description = "[Microsoft Visual C++ (3.0 old crap)]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 64 A1 00 00 00 00 55 ?? ?? 6A FF 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 50 ?? ?? ?? ?? ?? 00 00 83 EC 10 }
+
+  condition:
+    $a
+}

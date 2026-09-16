@@ -1,0 +1,11 @@
+rule PEiD_00701_E___________________ {
+  meta:
+    description = "[Convert Base64 to ASCII RcOTw47CtcOYwrTDuCAtPiDDlMOCwrrDmsK3w6fCuMOf]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 55 8B EC B8 ?? ?? ?? ?? E8 ?? ?? ?? ?? 53 56 57 0F 31 8B D8 0F 31 8B D0 2B D3 C1 EA 10 B8 ?? ?? ?? ?? 0F 6E C0 B8 ?? ?? ?? ?? 0F 6E C8 0F F5 C1 0F 7E C0 0F 77 03 C2 ?? ?? ?? ?? ?? FF E0 }
+
+  condition:
+    $a
+}

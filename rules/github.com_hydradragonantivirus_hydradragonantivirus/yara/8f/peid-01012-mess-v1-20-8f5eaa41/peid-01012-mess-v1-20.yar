@@ -1,0 +1,11 @@
+rule PEiD_01012_MESS_v1_20_ {
+  meta:
+    description = "[MESS v1.20]"
+    ep_only     = "true"
+
+  strings:
+    $a = { ?? ?? ?? ?? FA B9 ?? ?? F3 ?? ?? E3 ?? EB ?? EB ?? B6 }
+
+  condition:
+    $a
+}

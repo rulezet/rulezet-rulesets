@@ -1,0 +1,11 @@
+rule PEiD_01160_Morphine_3_3____Holy_Father___Ratter_29A_ {
+  meta:
+    description = "[Morphine 3.3 -> Holy_Father & Ratter/29A]"
+    ep_only     = "false"
+
+  strings:
+    $a = { 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 4B 65 52 6E 45 6C 33 32 2E 64 4C 6C 00 00 47 65 74 50 72 6F 63 41 64 64 72 }
+
+  condition:
+    $a
+}

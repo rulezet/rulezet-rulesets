@@ -1,0 +1,11 @@
+rule PEiD_00643_ExeLock_v1_00_ {
+  meta:
+    description = "[ExeLock v1.00]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 06 8C C8 8E C0 BE ?? ?? 26 ?? ?? 34 ?? 26 ?? ?? 46 81 ?? ?? ?? 75 ?? 40 B3 ?? B3 ?? F3 }
+
+  condition:
+    $a
+}

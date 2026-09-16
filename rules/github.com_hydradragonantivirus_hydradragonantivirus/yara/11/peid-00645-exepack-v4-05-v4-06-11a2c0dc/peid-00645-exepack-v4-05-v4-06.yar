@@ -1,0 +1,11 @@
+rule PEiD_00645_EXEPACK_v4_05__v4_06_ {
+  meta:
+    description = "[EXEPACK v4.05, v4.06]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 8C C0 05 ?? ?? 0E 1F A3 ?? ?? 03 06 ?? ?? 8E C0 8B 0E ?? ?? 8B F9 4F 8B F7 FD F3 A4 }
+
+  condition:
+    $a
+}

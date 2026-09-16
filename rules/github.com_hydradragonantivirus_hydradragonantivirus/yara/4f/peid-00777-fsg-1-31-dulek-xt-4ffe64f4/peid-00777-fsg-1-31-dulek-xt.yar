@@ -1,0 +1,11 @@
+rule PEiD_00777_FSG_1_31____dulek_xt_ {
+  meta:
+    description = "[FSG 1.31 -> dulek/xt]"
+    ep_only     = "true"
+
+  strings:
+    $a = { BE ?? ?? ?? 00 BF ?? ?? ?? 00 BB ?? ?? ?? 00 53 BB ?? ?? ?? 00 B2 80 }
+
+  condition:
+    $a
+}
