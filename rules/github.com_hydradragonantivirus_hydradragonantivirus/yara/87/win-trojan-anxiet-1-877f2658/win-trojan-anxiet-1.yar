@@ -1,0 +1,9 @@
+rule Win_Trojan_ANXIET_1
+{
+strings:
+	$a0 = { 2032004000813e504500000f8547020000b9040000008b974a26400083c234b800d600008db74e }
+
+
+condition:
+	$a0
+}

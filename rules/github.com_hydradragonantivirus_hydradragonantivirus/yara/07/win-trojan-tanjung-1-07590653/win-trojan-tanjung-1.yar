@@ -1,0 +1,9 @@
+rule Win_Trojan_Tanjung_1
+{
+strings:
+	$a0 = { a9c48d81898ea4ecedd8e6a4a74341acc1c0d2acc0c0a4a797c0b317c1ccacc0c0d2b392c0ccaac0d2b3e7c3ccacc0c0a4a786c0a4efa9c3a4aca7f4a717c0a4fea9c3a4aca7a4a9c1b8ccffa9c3a4aca7a4dda9c1b8ccc8acc1c0dea717c0a9c3a4aca7a4a74341acc1c0d2acc1c0a4a797c0b317c1ccacc0c0d2b392c0ccaac0d2b3e7c3ccacc0c0a4dadb }
+
+
+condition:
+	$a0
+}

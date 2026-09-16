@@ -1,0 +1,9 @@
+rule Win_Trojan_X_6
+{
+strings:
+	$a0 = { 79184ac60a308810245a6108c218a873f99198e6e33c7ec41920abac7cd74441edd8bfd9534c98bea164ee1bc846f94430b745d7cb25680d16e22b0273622375a8b61b4e248a047ff3ff3a5aa04ab9 }
+
+
+condition:
+	$a0
+}

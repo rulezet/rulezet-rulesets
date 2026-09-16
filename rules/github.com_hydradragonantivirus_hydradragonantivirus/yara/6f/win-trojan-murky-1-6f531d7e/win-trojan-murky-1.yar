@@ -1,0 +1,9 @@
+rule Win_Trojan_Murky_1
+{
+strings:
+	$a0 = { 848f000000668b44353c9889859f06000003f08b443500663d504575778b4435283d000900007c }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Emperor_8
+{
+strings:
+	$a0 = { 020000a3000e00a30006002000ca012400d40101002500e00101002500ea0101004240e00200006b }
+
+
+condition:
+	$a0
+}

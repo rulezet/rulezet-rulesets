@@ -1,0 +1,9 @@
+rule Win_Trojan_Yohimbe_1
+{
+strings:
+	$a0 = { 0b002000f4004240c805010035002000b405bf004240ad000200413424007001010042404a000000ffff6b }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Anxiety_1
+{
+strings:
+	$a0 = { b9040000008b9780254000b800d600008db7c8254000cd2032004000813e504500000f8547020000 }
+
+
+condition:
+	$a0
+}

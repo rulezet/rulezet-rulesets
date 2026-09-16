@@ -1,0 +1,9 @@
+rule Win_Trojan_Witcode_1
+{
+strings:
+	$a0 = { cd21e800005e83ee03568b84fb02a300018a84fd02a202018c8c0603b430cd210ac0741880fc037213b8d5a1cd213d0d907409b44abb0010cd2173198b8406038ed8 }
+
+
+condition:
+	$a0
+}
