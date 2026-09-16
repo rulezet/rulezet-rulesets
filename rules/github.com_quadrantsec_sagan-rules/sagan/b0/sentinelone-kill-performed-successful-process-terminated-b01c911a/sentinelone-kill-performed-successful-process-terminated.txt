@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Kill performed successful (Process Terminated"; content:"SentinelOne"; content:"activityType=2001"; classtype:trojan-activity; sid:5006640; rev:1;)

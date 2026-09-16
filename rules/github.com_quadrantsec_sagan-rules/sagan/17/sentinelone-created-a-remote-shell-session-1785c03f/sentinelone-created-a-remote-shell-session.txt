@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Created a remote shell session"; content:"SentinelOne"; content:"eventID=3201"; classtype:system-event; sid:5006663; rev:1;)

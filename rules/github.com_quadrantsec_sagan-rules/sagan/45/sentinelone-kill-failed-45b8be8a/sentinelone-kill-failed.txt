@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Kill failed"; content:"SentinelOne"; content:"activityType=2006"; classtype:system-error; priority:1; sid:5006643; rev:3;)

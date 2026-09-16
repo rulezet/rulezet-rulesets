@@ -1,0 +1,26 @@
+name: fs_hidden_dir_suspicious.file_create.detection
+type: detection
+meta:
+  tags:
+  - fs_hidden_dir_suspicious
+  - type_detection
+  - event_file_create
+  - T1564.001
+  - hide_artifacts:_hidden_files_and_directories
+  attack:
+  - T1564.001
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  comments:
+  - detection rule - identify creation of hidden (dot-prefixed) files/dirs in /tmp,
+    /dev/shm, /var/tmp (attacker staging)
+match-on:
+  events:
+    kunai:
+    - file_create
+matches:
+  $hidden_tmp: .data.path ~= "^/tmp/\.[^/]+"
+  $hidden_shm: .data.path ~= "^/dev/shm/\.[^/]+"
+  $hidden_vtmp: .data.path ~= "^/var/tmp/\.[^/]+"
+condition: $hidden_tmp or $hidden_shm or $hidden_vtmp
+severity: 7

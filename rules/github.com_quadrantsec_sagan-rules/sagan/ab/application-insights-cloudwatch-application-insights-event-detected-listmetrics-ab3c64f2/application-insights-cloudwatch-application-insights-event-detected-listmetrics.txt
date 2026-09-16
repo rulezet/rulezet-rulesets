@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[APPLICATION-INSIGHTS] CloudWatch Application Insights event detected (ListMetrics) "; program:application-insights.amazonaws.com; content:"eventName|22 3a 20 22|ListMetrics"; classtype:system-event; reference:url,docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/Welcome.html; sid:5011744; rev:1;)

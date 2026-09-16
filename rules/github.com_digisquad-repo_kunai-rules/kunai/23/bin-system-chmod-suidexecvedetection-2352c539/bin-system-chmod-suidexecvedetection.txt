@@ -1,0 +1,29 @@
+name: bin_system_chmod_suid.execve.detection
+type: detection
+meta:
+  tags:
+  - bin_system_chmod_suid
+  - type_detection
+  - event_execve
+  - event_execve_script
+  - T1548.001
+  - abuse_elevation_control_mechanism:_setuid_and_setgid
+  attack:
+  - T1548.001
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  comments:
+  - detection rule - identify chmod +s (SUID/SGID) or chmod with octal 4xxx/2xxx mode
+    on executables
+match-on:
+  events:
+    kunai:
+    - execve
+    - execve_script
+matches:
+  $is_chmod: .data.exe.path ~= "/[^/]*/(chmod)(-[a-zA-Z0-9._]+)?$"
+  $suid_sym: .data.command_line ~= "(\s|^)\+s(\s|$)"
+  $suid_octal: .data.command_line ~= "(\s|^)[46][0-7]{3}(\s|$)"
+  $sgid_octal: .data.command_line ~= "(\s|^)2[0-7]{3}(\s|$)"
+condition: $is_chmod and ($suid_sym or $suid_octal or $sgid_octal)
+severity: 8

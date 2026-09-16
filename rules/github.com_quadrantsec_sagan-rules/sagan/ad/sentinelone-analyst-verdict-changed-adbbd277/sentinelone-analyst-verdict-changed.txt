@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Analyst verdict changed"; content:"SentinelOne"; content:"activityType=2030"; classtype:system-event; sid:5006647; rev:1;)

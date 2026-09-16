@@ -1,0 +1,15 @@
+name: dep.docker
+type: dependency
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  comments:
+  - tries to identify docker container
+matches:
+  $wl: .data.exe.path ~= '(/runc|/usr/bin/(runc|containerd-shim-runc-v2))'
+  $test_container: .info.host.container is some
+  $known_type: .info.host.container.type is some
+  $test_docker: .info.host.container.type == 'docker'
+condition: $wl or ($test_container and $known_type and $test_docker)

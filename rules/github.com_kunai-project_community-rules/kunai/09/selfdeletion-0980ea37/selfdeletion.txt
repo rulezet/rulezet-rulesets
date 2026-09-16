@@ -1,0 +1,19 @@
+name: self.deletion
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  attack:
+  - T1070
+  comments:
+  - detects a self deleting executable
+  - 713b699c04f21000fca981e698e1046d4595f423bd5741d712fd7e0bc358c771
+match-on:
+  events:
+    kunai:
+    - file_unlink
+matches:
+  $p: .data.path == @.data.exe.path
+condition: $p
+severity: 9

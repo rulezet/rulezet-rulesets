@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Exclusion was added/modified by user"; content:"SentinelOne"; content:"activityType=3001"; classtype:system-event; sid:5006650; rev:1;)

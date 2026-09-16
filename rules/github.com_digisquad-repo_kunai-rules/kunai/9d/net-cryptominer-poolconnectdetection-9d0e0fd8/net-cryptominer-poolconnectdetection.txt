@@ -1,0 +1,33 @@
+name: net_cryptominer_pool.connect.detection
+type: detection
+meta:
+  tags:
+  - net_cryptominer_pool
+  - type_detection
+  - event_connect
+  - T1496
+  - resource_hijacking
+  attack:
+  - T1496
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  comments:
+  - detection rule - identify connections to standard mining pool ports (3333/4444/5555/7777/9999/14444)
+    on public IPs
+match-on:
+  events:
+    kunai:
+    - connect
+matches:
+  $to_public: .data.dst.public == true
+  $port_01: .data.dst.port == 4444
+  $port_02: .data.dst.port == 5555
+  $port_03: .data.dst.port == 7777
+  $port_04: .data.dst.port == 9999
+  $port_05: .data.dst.port == 14444
+  $port_06: .data.dst.port == 14433
+  $port_07: .data.dst.port == 45700
+  $port_08: .data.dst.port == 3256
+  $port_09: .data.dst.port == 20535
+condition: $to_public and any of $port_
+severity: 9

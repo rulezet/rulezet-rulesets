@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Note added"; content:"SentinelOne"; content:"activityType=4020"; classtype:system-event; sid:5006660; rev:1;)

@@ -1,0 +1,21 @@
+name: disable.apparmor
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1489
+  authors:
+  - qjerome
+  comments:
+  - an attempt is made to disable apparmor
+  - seen in prctl malware https://www.aquasec.com/blog/perfctl-a-stealthy-malware-targeting-millions-of-linux-servers/
+match-on:
+  events:
+    kunai:
+    - execve
+    - execve_script
+matches:
+  $c0: .data.command_line ~= 'systemctl\s+disable\s+apparmor'
+  $c1: .data.command_line ~= 'systemd-sysv-install disable apparmor'
+condition: any of them
+severity: 8

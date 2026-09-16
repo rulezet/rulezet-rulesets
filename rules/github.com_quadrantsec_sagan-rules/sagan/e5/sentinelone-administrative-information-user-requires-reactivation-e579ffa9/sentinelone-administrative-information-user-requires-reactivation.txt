@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Administrative information - User Requires Reactivation"; content:"activityType=103"; content:"SentinelOne"; pcre:"/activityType=[\d]{3}\b/"; classtype:system-event; sid:5006635; rev:2;)

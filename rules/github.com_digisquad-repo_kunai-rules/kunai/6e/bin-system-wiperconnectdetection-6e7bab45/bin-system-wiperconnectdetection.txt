@@ -1,0 +1,26 @@
+name: bin_system_wiper.connect.detection
+type: detection
+meta:
+  tags:
+  - bin_system_wiper
+  - type_detection
+  - event_connect
+  - T1070.004
+  - indicator_removal:_file_deletion
+  - T1485
+  - data_destruction
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  attack:
+  - T1070.004
+  - T1485
+  comments:
+  - detection rule - identify CONNECT - apply on bin - bin_system_wiper_list.dependency
+match-on:
+  events:
+    kunai:
+    - connect
+matches:
+  $bin_dep_01: rule( bin_system_wiper_list.dependency)
+condition: $bin_dep_01
+severity: 10

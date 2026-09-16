@@ -1,0 +1,13 @@
+name: dep.webservers
+type: dependency
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  comments:
+  - common webservers binary paths
+matches:
+  $a: .data.ancestors ~= '\|(/usr/sbin/(apache2|nginx|lighttpd|php-fpm.*?))\|?'
+  $p: .data.parent_exe ~= '^(/usr/sbin/(apache2|nginx|lighttpd|php-fpm))'
+condition: $p or $a

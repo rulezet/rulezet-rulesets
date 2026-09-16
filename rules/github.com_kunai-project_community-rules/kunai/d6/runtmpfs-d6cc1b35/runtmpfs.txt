@@ -1,0 +1,14 @@
+name: run.tmpfs
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1027.011
+  authors:
+  - qjerome
+  comments:
+  - if something is running in tmpfs it is suspicious and we should stack up
+matches:
+  $t: rule(dep.run.tmpfs)
+condition: $t
+severity: 2

@@ -1,0 +1,21 @@
+{
+  "uuid": "919a8c9b-7044-4706-b927-476007062568",
+  "title": "so.tmpfs",
+  "format": "kunai",
+  "author": "qjerome",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "shared object in tmpfs loaded — seen in prctl malware https://www.aquasec.com/blog/perfctl-a-stealthy-malware-targeting-millions-of-linux-servers/",
+  "source": "https://github.com/kunai-project/community-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/740117"
+}

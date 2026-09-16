@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[KNOWBE4] clean category Level low"; program:knowbe4; content:"category|22 3a 22|clean|22|"; content:"priority|22 3a 22|low|22|"; classtype:system-event; reference:url,developer.knowbe4.com/graphql/phisher/query/phisherMessage; sid:5011355; rev:1;)

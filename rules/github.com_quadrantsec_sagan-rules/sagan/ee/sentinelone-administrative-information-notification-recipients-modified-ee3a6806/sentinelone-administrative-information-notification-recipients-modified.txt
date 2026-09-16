@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Administrative information - notification recipients modified"; content:"SentinelOne"; content:"activityType=60"; pcre:"/activityType=[\d]{2}\b/"; classtype:system-event; sid:5006629; rev:2;)

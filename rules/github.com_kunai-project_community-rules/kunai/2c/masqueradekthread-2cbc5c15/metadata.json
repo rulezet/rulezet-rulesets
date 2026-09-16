@@ -1,0 +1,21 @@
+{
+  "uuid": "2cbc5c15-22b6-4405-8266-757519721426",
+  "title": "masquerade.kthread",
+  "format": "kunai",
+  "author": "qjerome",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "tries to catch binaries masquerading kernel threads",
+  "source": "https://github.com/kunai-project/community-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1036.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/740107"
+}

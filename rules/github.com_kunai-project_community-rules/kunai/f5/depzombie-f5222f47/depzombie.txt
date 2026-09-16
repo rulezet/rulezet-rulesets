@@ -1,0 +1,13 @@
+name: dep.zombie
+type: dependency
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  comments:
+  - identifies zombie processes
+matches:
+  $z0: .info.task.zombie is true
+  $z1: .info.parent_task.zombie is true
+condition: any of $z

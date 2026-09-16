@@ -1,0 +1,22 @@
+name: dropper.oneliner
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1059.004
+  - T1222.002
+  - T1070.004
+  authors:
+  - qjerome
+  comments:
+  - one liner dropper command line
+  - BPFDoor sample fa0defdabd9fd43fe2ef1ec33574ea1af1290bd3d763fdb2bed443f2bd996d73
+match-on:
+  events:
+    kunai:
+    - execve
+    - execve_script
+matches:
+  $c: .data.command_line ~= 'cp.*?&&.*?chmod.*?&&.*?&&.*rm\s'
+condition: any of them
+severity: 8

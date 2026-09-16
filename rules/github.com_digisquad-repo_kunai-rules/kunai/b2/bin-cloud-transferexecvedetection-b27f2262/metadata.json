@@ -1,0 +1,21 @@
+{
+  "uuid": "b27f2262-5635-4a68-a652-2fd5ce4f5961",
+  "title": "bin_cloud_transfer.execve.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify EXECVE EXECVE_SCRIPT bin_cloud_transfer_list.dependency",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1567.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739979"
+}

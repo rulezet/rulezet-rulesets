@@ -1,0 +1,20 @@
+name: network.sniffing
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1040
+  authors:
+  - qjerome
+  comments:
+  - catch network sniffing
+match-on:
+  events:
+    kunai:
+    - bpf_socket_filter
+matches:
+  $d1: .data.socket.domain == 'AF_NETLINK'
+  $e1: .data.exe.path == '/usr/bin/wpa_supplicant'
+  $e2: .data.exe.path == '/usr/bin/NetworkManager'
+condition: none of $d and none of $e
+severity: 9

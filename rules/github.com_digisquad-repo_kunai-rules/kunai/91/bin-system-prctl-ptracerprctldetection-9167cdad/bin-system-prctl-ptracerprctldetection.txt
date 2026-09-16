@@ -1,0 +1,24 @@
+name: bin_system_prctl_ptracer.prctl.detection
+type: detection
+meta:
+  tags:
+  - bin_system_prctl_ptracer
+  - type_detection
+  - event_prctl
+  - T1055.008
+  - process_injection:_ptrace_system_calls
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  attack:
+  - T1055.008
+  comments:
+  - detection rule - identify PRCTL PR_SET_PTRACER (Yama ptrace scope bypass — grants
+    ptrace access to arbitrary process)
+match-on:
+  events:
+    kunai:
+    - prctl
+matches:
+  $is_ptracer: .data.option == "PR_SET_PTRACER"
+condition: $is_ptracer
+severity: 8

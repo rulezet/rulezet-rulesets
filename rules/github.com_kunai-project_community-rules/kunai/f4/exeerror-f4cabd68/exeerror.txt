@@ -1,0 +1,27 @@
+name: exe.error
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1070
+  authors:
+  - qjerome
+  comments:
+  - executable modified/deleted quickly
+match-on:
+  events:
+    kunai:
+    - execve
+    - execve_script
+matches:
+  $e: .data.exe.error is some
+  $msg: .data.exe.error == 'file not found'
+  $exe_wl: .data.exe.path == 'runc'
+  $e2: .data.interpreter.error is some
+  $msg2: .data.interpreter.error == 'file not found'
+  $int_wl: .data.interpreter.path == ''
+  $cloud_init1: .data.exe.path ~= '^/tmp/cloud-init.config'
+  $cloud_init2: .data.parent_exe == '/usr/sbin/dpkg-preconfigure'
+condition: not (all of $cloud_init) and ((none of $exe_wl and $e and $msg) or ($e2
+  and $msg2 and none of $int_wl))
+severity: 6

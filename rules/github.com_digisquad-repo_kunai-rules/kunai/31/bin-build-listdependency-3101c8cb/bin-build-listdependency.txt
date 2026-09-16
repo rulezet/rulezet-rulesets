@@ -1,0 +1,16 @@
+name: bin_build_list.dependency
+type: dependency
+meta:
+  tags:
+  - bin_build
+  - type_dependency
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  comments:
+  - dependency - bin_build_list.dependency
+matches:
+  $bin_dep_01: .data.exe.path ~= "/[^/]*/(make|cmake|ld|as|strip|readelf|xxd)(-[a-zA-Z0-9._]+)?$"
+  $bin_dep_02: .data.exe.path ~= "/[^/]*/(go|golang|rustc|cargo|javac|jar)(-[a-zA-Z0-9._]+)?$"
+  $bin_dep_04: .data.ancestors ~= "/[^/]*/(make|cmake|ld|as|strip|readelf|xxd)(-[a-zA-Z0-9._]+)?$"
+  $bin_dep_05: .data.ancestors ~= "/[^/]*/(go|golang|rustc|cargo|javac|jar)(-[a-zA-Z0-9._]+)?$"
+condition: any of $bin_dep_

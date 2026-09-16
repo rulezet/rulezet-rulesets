@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] 2FA recovery email added"; content:"SentinelOne"; content:"activityType=3626"; classtype:system-event; sid:5006657; rev:1;)

@@ -1,0 +1,21 @@
+name: disable.audit
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1489
+  authors:
+  - qjerome
+  comments:
+  - an attempt is made to disable auditd
+  - seen in prctl malware https://www.aquasec.com/blog/perfctl-a-stealthy-malware-targeting-millions-of-linux-servers/
+match-on:
+  events:
+    kunai:
+    - execve
+    - execve_script
+matches:
+  $c0: .data.command_line ~= 'systemctl\s+disable\s+auditd'
+  $c1: .data.command_line ~= 'auditctl.*?-e0'
+condition: any of them
+severity: 8

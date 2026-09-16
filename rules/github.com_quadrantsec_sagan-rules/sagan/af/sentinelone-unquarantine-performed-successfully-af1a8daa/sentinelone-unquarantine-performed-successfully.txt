@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Unquarantine performed successfully"; content:"SentinelOne"; content:"activityType=2026"; classtype:system-event; sid:5006645; rev:1;)

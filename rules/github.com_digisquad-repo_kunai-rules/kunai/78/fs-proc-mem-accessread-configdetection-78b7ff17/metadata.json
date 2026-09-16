@@ -1,0 +1,21 @@
+{
+  "uuid": "78b7ff17-2946-4394-95da-07a5a9cdb34c",
+  "title": "fs_proc_mem_access.read_config.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify read_config on /proc/[pid]/mem or /proc/kcore (process memory dumping for credential extraction)",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1003.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/740097"
+}

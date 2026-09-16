@@ -1,0 +1,21 @@
+{
+  "uuid": "68ff7d79-bfc7-4f72-85dc-7e769d448847",
+  "title": "config_credential_access.read_config.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify READ_CONFIG on sensitive credential files (/etc/shadow, /etc/sudoers, SSH host keys)",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1003.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/740009"
+}

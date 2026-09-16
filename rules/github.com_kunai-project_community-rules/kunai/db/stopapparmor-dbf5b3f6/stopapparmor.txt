@@ -1,0 +1,20 @@
+name: stop.apparmor
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1489
+  authors:
+  - qjerome
+  comments:
+  - an attempt is made to stop apparmor
+  - seen in prctl malware https://www.aquasec.com/blog/perfctl-a-stealthy-malware-targeting-millions-of-linux-servers/
+match-on:
+  events:
+    kunai:
+    - execve
+    - execve_script
+matches:
+  $c: .data.command_line ~= 'systemctl\s+stop\s+apparmor'
+condition: all of them
+severity: 8

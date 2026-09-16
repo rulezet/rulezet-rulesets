@@ -1,0 +1,17 @@
+name: dep.exe.dir
+type: dependency
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  comments:
+  - identify common linux directories containing executables
+match-on:
+  events:
+    kunai:
+    - write
+    - write_close
+matches:
+  $p: .data.path ~= '{{important-dir}}'
+condition: any of them

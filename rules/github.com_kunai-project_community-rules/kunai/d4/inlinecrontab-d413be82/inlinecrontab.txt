@@ -1,0 +1,19 @@
+name: inline.crontab
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1053.003
+  authors:
+  - qjerome
+  comments:
+  - crontab config is piped
+  - seen in prctl malware https://www.aquasec.com/blog/perfctl-a-stealthy-malware-targeting-millions-of-linux-servers/
+match-on:
+  events:
+    kunai:
+    - execve
+matches:
+  $c: .data.command_line ~= '\|\s*crontab\s+-'
+condition: $c
+severity: 8

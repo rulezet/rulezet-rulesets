@@ -1,0 +1,21 @@
+{
+  "uuid": "2352c539-4b23-4741-ba33-9b4de9822f7a",
+  "title": "bin_system_chmod_suid.execve.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify chmod +s (SUID/SGID) or chmod with octal 4xxx/2xxx mode on executables",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/740007"
+}

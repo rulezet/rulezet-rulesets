@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Black hash was deleted"; content:"SentinelOne"; content:"activityType=3020"; classtype:system-event; sid:5006652; rev:1;)

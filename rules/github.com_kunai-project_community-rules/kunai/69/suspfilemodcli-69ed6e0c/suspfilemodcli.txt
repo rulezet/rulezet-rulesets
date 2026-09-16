@@ -1,0 +1,20 @@
+name: susp.filemod.cli
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1059
+  authors:
+  - qjerome
+  comments:
+  - suspicious commands modifying files in sensitive directories
+match-on:
+  events:
+    kunai:
+    - execve
+    - execve_script
+matches:
+  $cmd: .data.exe.path ~= '/(chmod|chown)$'
+  $dep: rule(dep.susp.cli.file.target)
+condition: $cmd && $dep
+severity: 5

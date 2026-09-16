@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Subscribed and joined a group"; content:"SentinelOne"; content:"activityType=17"; classtype:system-event; sid:5006614; rev:2;)

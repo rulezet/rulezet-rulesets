@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Terminated session with agent"; content:"SentinelOne"; content:"eventID=3204"; classtype:system-event; sid:5006665; rev:1;)

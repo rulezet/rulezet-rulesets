@@ -1,0 +1,21 @@
+name: masquerade.kthread
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1036.004
+  authors:
+  - qjerome
+  comments:
+  - tries to catch binaries masquerading kernel threads
+match-on:
+  events:
+    kunai:
+    - execve
+    - execve_script
+    - prctl
+matches:
+  $task_is_kthread: .info.task.flags &= '0x200000'
+  $kthread_names: .info.task.name ~= '{{kthread-names}}'
+condition: not $task_is_kthread and $kthread_names
+severity: 9

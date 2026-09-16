@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Network quarantine performed successfully"; content:"SentinelOne"; content:"activityType=1001"; classtype:trojan-activity; sid:5006639; rev:1;)

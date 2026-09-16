@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] New Agent Package Available"; content:"SentinelOne"; content:"activityType=3100"; classtype:system-event; sid:5006654; rev:1;)

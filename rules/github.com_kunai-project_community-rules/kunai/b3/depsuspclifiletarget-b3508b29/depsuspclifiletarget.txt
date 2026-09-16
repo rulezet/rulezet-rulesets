@@ -1,0 +1,12 @@
+name: dep.susp.cli.file.target
+type: dependency
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  comments:
+  - suspicious commands touching sensitive directories
+matches:
+  $target: .data.command_line ~= '\s{{important-dir}}[^\s]*$'
+condition: all of them

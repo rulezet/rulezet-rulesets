@@ -1,0 +1,22 @@
+{
+  "uuid": "71f82539-1367-4c87-b1cf-b48229e8a362",
+  "title": "bin_browsers_sensitive_read.read_config.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify browser process (Firefox/Chrome/Chromium/Brave) reading sensitive credential paths (~/.ssh, ~/.aws, /etc/shadow)",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552.004",
+    "T1555"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/740101"
+}

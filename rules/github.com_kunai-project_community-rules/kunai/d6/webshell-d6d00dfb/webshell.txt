@@ -1,0 +1,21 @@
+name: webshell
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  attack:
+  - T1190
+  - T1059
+  comments:
+  - attempts at detecting webshells by catching specific command line patterns
+match-on:
+  events:
+    kunai:
+    - execve
+    - execve_script
+matches:
+  $d0: rule(dep.webservers)
+  $cmd: .data.command_line ~= '(^|\s)(ls|cp|chmod|chown|mv|whoami|id|touch|cat|curl|wget|ping|ps|top|kill|/dev/tcp.*|sudo|su)($|\s)'
+condition: $d0 and $cmd
+severity: 10

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Agent enabled"; content:"SentinelOne"; content:"activityType=120"; pcre:"/activityType=[\d]{3}\b/"; classtype:system-event; sid:5006636; rev:2;)

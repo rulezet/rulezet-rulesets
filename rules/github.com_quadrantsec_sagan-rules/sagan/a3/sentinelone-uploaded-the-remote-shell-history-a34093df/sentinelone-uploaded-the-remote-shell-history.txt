@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Uploaded the remote shell history"; content:"SentinelOne"; content:"eventID=3400"; classtype:system-event; sid:5006666; rev:1;)

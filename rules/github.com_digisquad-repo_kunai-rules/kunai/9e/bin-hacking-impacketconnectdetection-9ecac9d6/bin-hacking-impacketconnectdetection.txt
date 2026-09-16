@@ -1,0 +1,26 @@
+name: bin_hacking_impacket.connect.detection
+type: detection
+meta:
+  tags:
+  - bin_hacking_impacket
+  - type_detection
+  - event_connect
+  - T1003
+  - os_credential_dumping
+  - T1550
+  - use_alternate_authentication_material
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  attack:
+  - T1003
+  - T1550
+  comments:
+  - detection rule - identify CONNECT - apply on bin - bin_hacking_impacket_list.dependency
+match-on:
+  events:
+    kunai:
+    - connect
+matches:
+  $bin_dep_01: rule( bin_hacking_impacket_list.dependency)
+condition: $bin_dep_01
+severity: 9

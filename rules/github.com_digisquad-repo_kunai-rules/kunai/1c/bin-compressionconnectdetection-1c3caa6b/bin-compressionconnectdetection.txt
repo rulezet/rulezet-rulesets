@@ -1,0 +1,26 @@
+name: bin_compression.connect.detection
+type: detection
+meta:
+  tags:
+  - bin_compression
+  - type_detection
+  - event_connect
+  - T1560.001
+  - archive_collected_data:_archive_via_utility
+  - T1048
+  - exfiltration_over_alternative_protocol
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  attack:
+  - T1560.001
+  - T1048
+  comments:
+  - detection rule - identify CONNECT - apply on bin - bin_compression_list.dependency
+match-on:
+  events:
+    kunai:
+    - connect
+matches:
+  $bin_dep_01: rule( bin_compression_list.dependency)
+condition: $bin_dep_01
+severity: 9

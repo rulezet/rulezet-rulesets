@@ -1,0 +1,16 @@
+name: path_usb_attack_device_list.file_create.dependency
+type: dependency
+meta:
+  tags:
+  - path_usb_attack_device
+  - type_dependency
+  - event_file_create
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  comments:
+  - dependency rule - identify file_create path_usb_attack_device_list.file_create.dependency
+matches:
+  $r_01: .data.path ~= "^/dev/ttyACM[0-9]"
+  $r_02: .data.path ~= "^/dev/hidraw[0-9]"
+  $r_03: .data.path ~= "^/dev/input/event[0-9]"
+condition: any of $r_

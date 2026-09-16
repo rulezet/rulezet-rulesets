@@ -1,0 +1,22 @@
+name: run.tmpfs.write.exe.dir
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  attack:
+  - T1027.011
+  - T1070.010
+  comments:
+  - files are being written to standard directories used for storing executables by
+    an executable originating from a suspicious location
+match-on:
+  events:
+    kunai:
+    - write
+    - write_close
+matches:
+  $d0: rule(dep.exe.dir)
+  $d1: rule(dep.run.tmpfs)
+condition: $d0 and $d1
+severity: 9

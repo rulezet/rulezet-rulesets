@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] New active threat"; content:"SentinelOne"; content:"activityType=19"; pcre:"/activityType=[\d]{2}\b/"; normalize; classtype:suspicious-traffic; sid:5006615; rev:3;)

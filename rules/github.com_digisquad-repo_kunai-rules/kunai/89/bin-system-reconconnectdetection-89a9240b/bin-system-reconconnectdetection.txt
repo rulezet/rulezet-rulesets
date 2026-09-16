@@ -1,0 +1,26 @@
+name: bin_system_recon.connect.detection
+type: detection
+meta:
+  tags:
+  - bin_system_recon
+  - type_detection
+  - event_connect
+  - T1082
+  - system_information_discovery
+  - T1033
+  - system_owner/user_discovery
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  attack:
+  - T1082
+  - T1033
+  comments:
+  - detection rule - identify CONNECT - apply on bin - bin_system_recon_list.dependency
+match-on:
+  events:
+    kunai:
+    - connect
+matches:
+  $bin_dep_01: rule( bin_system_recon_list.dependency)
+condition: $bin_dep_01
+severity: 9

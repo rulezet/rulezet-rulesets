@@ -1,0 +1,13 @@
+name: dep.run.tmpfs
+type: dependency
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  comments:
+  - identifies exe located in tmpfs
+matches:
+  $a: .data.ancestors ~= '\|{{tmpfs-dir}}\|?'
+  $p: .data.exe.path ~= '^{{tmpfs-dir}}'
+condition: $p or $a

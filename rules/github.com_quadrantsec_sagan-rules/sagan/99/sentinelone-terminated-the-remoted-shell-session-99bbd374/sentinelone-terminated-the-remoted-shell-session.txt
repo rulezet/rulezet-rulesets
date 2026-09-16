@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] Terminated the remoted shell session"; content:"SentinelOne"; content:"eventID=3203"; classtype:system-event; sid:5006664; rev:1;)

@@ -1,0 +1,17 @@
+name: dep.config.dir
+type: dependency
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  comments:
+  - identify config directories
+match-on:
+  events:
+    kunai:
+    - write
+    - write_close
+matches:
+  $p: .data.path ~= '(/etc/|/sys/)'
+condition: any of them

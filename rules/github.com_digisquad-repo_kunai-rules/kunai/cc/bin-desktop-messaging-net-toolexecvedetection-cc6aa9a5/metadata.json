@@ -1,0 +1,21 @@
+{
+  "uuid": "cc6aa9a5-bc51-4162-8ad8-6efd584d055f",
+  "title": "bin_desktop_messaging_net_tool.execve.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify wget/curl/fetch spawned by a messaging app ancestor downloading to /tmp or /dev/shm (payload staging)",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739957"
+}

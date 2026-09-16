@@ -1,0 +1,19 @@
+name: so.tmpfs
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1574
+  authors:
+  - qjerome
+  comments:
+  - shared object in tmpfs loaded
+  - seen in prctl malware https://www.aquasec.com/blog/perfctl-a-stealthy-malware-targeting-millions-of-linux-servers/
+match-on:
+  events:
+    kunai:
+    - mmap_exec
+matches:
+  $so: .data.mapped.path ~= '^{{tmpfs-dir}}'
+condition: any of them
+severity: 6

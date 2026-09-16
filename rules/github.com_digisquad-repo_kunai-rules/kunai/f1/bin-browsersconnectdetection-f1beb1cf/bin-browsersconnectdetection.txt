@@ -1,0 +1,23 @@
+name: bin_browsers.connect.detection
+type: detection
+meta:
+  tags:
+  - bin_browsers
+  - type_detection
+  - event_connect
+  - T1071.001
+  - application_layer_protocol:_web_protocols
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  attack:
+  - T1071.001
+  comments:
+  - detection rule - identify CONNECT - apply on bin - bin_browsers_list.dependency
+match-on:
+  events:
+    kunai:
+    - connect
+matches:
+  $bin_dep_01: rule( bin_browsers_list.dependency)
+condition: $bin_dep_01
+severity: 5

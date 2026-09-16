@@ -1,0 +1,20 @@
+name: so.error
+meta:
+  tags:
+  - os:linux
+  attack:
+  - T1070
+  authors:
+  - qjerome
+  comments:
+  - shared object loaded and modified/deleted quickly
+  - seen in prctl malware https://www.aquasec.com/blog/perfctl-a-stealthy-malware-targeting-millions-of-linux-servers/
+match-on:
+  events:
+    kunai:
+    - mmap_exec
+matches:
+  $e: .data.mapped.error is some
+  $msg: .data.mapped.error == 'file not found'
+condition: $e and $msg
+severity: 8

@@ -1,0 +1,21 @@
+{
+  "uuid": "fb7baf67-e75e-4e1c-8491-f41af535555d",
+  "title": "fs_usb_attack_device.file_create.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify FILE_CREATE of USB HID/serial device node (Teensy/Rubber Ducky/O.MG attack device) — {'note': 'on desktop, /dev/input/event* fires for every USB keyboard/mouse hotplug — increase min_severity or restrict path list to ttyACM + hidraw only'}",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1200"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739986"
+}

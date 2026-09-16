@@ -1,0 +1,20 @@
+name: kill.systemd
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  attack:
+  - T1489
+  comments:
+  - detect kill attempt on systemd
+  - 713b699c04f21000fca981e698e1046d4595f423bd5741d712fd7e0bc358c771
+match-on:
+  events:
+    kunai:
+    - kill
+matches:
+  $wl1: .data.exe.path ~= '{{systemd-dir}}/systemd'
+  $p: .data.target.exe.path ~= '^/usr/lib/systemd/'
+condition: none of $wl and $p
+severity: 9

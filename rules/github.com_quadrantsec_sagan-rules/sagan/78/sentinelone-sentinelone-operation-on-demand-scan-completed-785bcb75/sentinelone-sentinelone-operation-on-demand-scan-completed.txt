@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SentinelOne] SentinelOne Operation - On-demand scan completed"; content:"SentinelOne"; content:"activityType=3617"; classtype:system-event; sid:5006656; rev:1;)

@@ -1,0 +1,20 @@
+name: run.memfd
+meta:
+  tags:
+  - os:linux
+  authors:
+  - qjerome
+  attack:
+  - T1027.011
+  comments:
+  - something is running in memfd
+match-on:
+  events:
+    kunai:
+    - execve
+    - execve_script
+matches:
+  $a: .data.ancestors ~= '\|memfd:'
+  $p: .data.exe.path ~= '^memfd:'
+condition: any of them
+severity: 9
