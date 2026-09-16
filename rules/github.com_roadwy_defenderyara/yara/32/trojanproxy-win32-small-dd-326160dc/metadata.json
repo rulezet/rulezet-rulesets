@@ -1,0 +1,21 @@
+{
+  "uuid": "326160dc-882d-4989-bb79-4ad740de29d4",
+  "title": "TrojanProxy_Win32_Small_DD",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanProxy:Win32/Small.DD,SIGNATURE_TYPE_PEHSTR_EXT,6b 00 6b 00 09 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/338660"
+}

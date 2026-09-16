@@ -1,0 +1,22 @@
+{
+  "uuid": "df7b5538-1c8b-49fb-b95a-fa618326e7d9",
+  "title": "DoS_Win32_FoxBlade_F_dha",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "DoS:Win32/FoxBlade.F!dha,SIGNATURE_TYPE_PEHSTR_EXT,64 00 64 00 01 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:wiper=\"FoxBlade\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/338501"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "eaa9c911-9734-45d5-999e-34db8b89b3fe",
+  "title": "TrojanProxy_Win32_Verind_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanProxy:Win32/Verind.A,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/338673"
+}

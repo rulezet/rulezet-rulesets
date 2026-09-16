@@ -1,0 +1,21 @@
+{
+  "uuid": "fbee0cb8-b9a9-4586-a436-8162659ea58f",
+  "title": "TrojanProxy_Win32_Wonknod_B_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanProxy:Win32/Wonknod.B,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/338584"
+}
