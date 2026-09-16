@@ -1,0 +1,21 @@
+{
+  "uuid": "2b2a8dc9-3ea1-441a-a7c8-beb77ae4f4aa",
+  "title": "TrojanDownloader_Win32_Trosup_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDownloader:Win32/Trosup.A,SIGNATURE_TYPE_PEHSTR_EXT,15 00 15 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/329089"
+}

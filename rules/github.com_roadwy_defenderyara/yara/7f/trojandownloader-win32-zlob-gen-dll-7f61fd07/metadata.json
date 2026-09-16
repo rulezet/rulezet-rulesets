@@ -1,0 +1,21 @@
+{
+  "uuid": "7f61fd07-52f2-4ad1-ae16-748b8e4dfac6",
+  "title": "TrojanDownloader_Win32_Zlob_gen_dll",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDownloader:Win32/Zlob.gen!dll,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 12 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/328945"
+}
