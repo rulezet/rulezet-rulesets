@@ -1,0 +1,21 @@
+{
+  "uuid": "4648d3f4-9b90-4bcb-bdcc-a861ecbe0e71",
+  "title": "broadcast-avahi-dos",
+  "format": "nse",
+  "author": "Djalal Harouni",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to discover hosts in the local network using the DNS Service\nDiscovery protocol and sends a NULL UDP packet to each host to test\nif it is vulnerable to the Avahi NULL UDP packet denial of service\n(CVE-2011-1002).\n\nThe <code>broadcast-avahi-dos.wait</code> script argument specifies how\nmany number of seconds to wait before a new attempt of host discovery.\nEach host who does not respond to this second attempt will be considered\nvulnerable.\n\nReference:\n* http://avahi.org/ticket/325\n* http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1002",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2011-1002"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223082"
+}

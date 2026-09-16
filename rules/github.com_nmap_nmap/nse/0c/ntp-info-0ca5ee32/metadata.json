@@ -1,0 +1,21 @@
+{
+  "uuid": "0ca5ee32-e632-46e4-8ad1-931a21d85dd8",
+  "title": "ntp-info",
+  "format": "nse",
+  "author": "Richard Sammet",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Gets the time and configuration variables from an NTP server. We send two\nrequests: a time request and a \"read variables\" (opcode 2) control message.\nWithout verbosity, the script shows the time and the value of the\n<code>version</code>, <code>processor</code>, <code>system</code>,\n<code>refid</code>, and <code>stratum</code> variables. With verbosity, all\nvariables are shown.\n\nSee RFC 1035 and the Network Time Protocol Version 4 Reference and\nImplementation Guide\n(http://www.eecis.udel.edu/~mills/database/reports/ntp4/ntp4.pdf) for\ndocumentation of the protocol.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223077"
+}

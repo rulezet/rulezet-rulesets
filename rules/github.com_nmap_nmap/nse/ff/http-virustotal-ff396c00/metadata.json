@@ -1,0 +1,20 @@
+{
+  "uuid": "ff396c00-b651-4d73-8ac8-876ad0b5e92d",
+  "title": "http-virustotal",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks whether a file has been determined as malware by Virustotal. Virustotal\nis a service that provides the capability to scan a file or check a checksum\nagainst a number of the major antivirus vendors. The script uses the public\nAPI which requires a valid API key and has a limit on 4 queries per minute.\nA key can be acquired by registering as a user on the virustotal web page:\n* http://www.virustotal.com\n\nThe scripts supports both sending a file to the server for analysis or\nchecking whether a checksum (supplied as an argument or calculated from a\nlocal file) was previously discovered as malware.\n\nAs uploaded files are queued for analysis, this mode simply returns a URL\nwhere status of the queued file may be checked.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Virus\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223168"
+}

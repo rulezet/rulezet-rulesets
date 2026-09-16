@@ -1,0 +1,19 @@
+{
+  "uuid": "d2a7b60f-fdea-4726-b93e-7891b4947916",
+  "title": "hostmap-bfk",
+  "format": "nse",
+  "author": "Ange Gutek",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Discovers hostnames that resolve to the target's IP address by querying the online database at http://www.bfk.de/bfk_dnslogger.html.\n\nThe script is in the \"external\" category because it sends target IPs to a third party in order to query their database.\n\nThis script was formerly (until April 2012) known as hostmap.nse.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223114"
+}

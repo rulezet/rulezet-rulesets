@@ -1,0 +1,20 @@
+{
+  "uuid": "5f5ac9b9-7624-4700-a668-5de07a7200df",
+  "title": "targets-ipv6-multicast-slaac",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Performs IPv6 host discovery by triggering stateless address auto-configuration\n(SLAAC).\n\nThis script works by sending an ICMPv6 Router Advertisement with a random\naddress prefix, which causes hosts to begin SLAAC and send a solicitation for\ntheir newly configured address, as part of duplicate address detection. The\nscript then guesses the remote addresses by combining the link-local prefix of\nthe interface with the interface identifier in each of the received\nsolicitations. This should be followed up with ordinary ND host discovery to\nverify that the guessed addresses are correct.\n\nThe router advertisement has a router lifetime of zero and a short prefix\nlifetime (a few seconds)\n\nSee also:\n* RFC 4862, IPv6 Stateless Address Autoconfiguration, especially section 5.5.3.\n* https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/discovery/ipv6_neighbor_router_advertisement.rb",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"metasploit\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223097"
+}

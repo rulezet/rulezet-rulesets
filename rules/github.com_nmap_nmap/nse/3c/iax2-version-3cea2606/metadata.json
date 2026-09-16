@@ -1,0 +1,19 @@
+{
+  "uuid": "3cea2606-b8b8-4228-8cc3-42d44bd66ee6",
+  "title": "iax2-version",
+  "format": "nse",
+  "author": "Ferdy Riphagen",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects the UDP IAX2 service.\n\nThe script sends an Inter-Asterisk eXchange (IAX) Revision 2 Control Frame POKE\nrequest and checks for a proper response.  This protocol is used to enable VoIP\nconnections between servers as well as client-server communication.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223099"
+}

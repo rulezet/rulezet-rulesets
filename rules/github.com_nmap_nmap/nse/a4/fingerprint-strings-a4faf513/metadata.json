@@ -1,0 +1,19 @@
+{
+  "uuid": "a4faf513-8a08-4caa-ba84-d460a14ae30a",
+  "title": "fingerprint-strings",
+  "format": "nse",
+  "author": "Daniel Miller",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Prints the readable strings from service fingerprints of unknown services.\n\nNmap's service and application version detection engine sends named probes to\ntarget services and tries to identify them based on the response. When there is\nno match, Nmap produces a service fingerprint for submission. Sometimes,\ninspecting this fingerprint can give clues as to the identity of the service.\nHowever, the fingerprint is encoded and wrapped to ensure it doesn't lose data,\nwhich can make it hard to read.\n\nThis script simply unwraps the fingerprint and prints the readable ASCII strings\nit finds below the name of the probe it responded to. The probe names are taken\nfrom the nmap-service-probes file, not from the response.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223264"
+}

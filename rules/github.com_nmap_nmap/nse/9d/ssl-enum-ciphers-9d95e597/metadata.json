@@ -1,0 +1,19 @@
+{
+  "uuid": "9d95e597-6cc4-4d4e-8bab-e0eef0d13be7",
+  "title": "ssl-enum-ciphers",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "This script repeatedly initiates SSLv3/TLS connections, each time trying a new\ncipher or compressor while recording whether a host accepts or rejects it. The\nend result is a list of all the ciphersuites and compressors that a server accepts.\n\nEach ciphersuite is shown with a letter grade (A through F) indicating the\nstrength of the connection. The grade is based on the cryptographic strength of\nthe key exchange and of the stream cipher. The message integrity (hash)\nalgorithm choice is not a factor.  The output line beginning with\n<code>Least strength</code> shows the strength of the weakest cipher offered.\nThe scoring is based on the Qualys SSL Labs SSL Server Rating Guide, but does\nnot take protocol support (TLS version) into account, which makes up 30% of the\nSSL Labs rating.\n\nSSLv3/TLSv1 requires more effort to determine which ciphers and compression\nmethods a server supports than SSLv2. A client lists the ciphers and compressors\nthat it is capable of supporting, and the server will respond with a single\ncipher and compressor chosen, or a rejection notice.\n\nSome servers use the client's ciphersuite ordering: they choose the first of\nthe client's offered suites that they also support. Other servers prefer their\nown ordering: they choose their most preferred suite from among those the\nclient offers. In the case of server ordering, the script makes extra probes to\ndiscover the server's sorted preference list. Otherwise, the list is sorted\nalphabetically.\n\nThe script will warn about certain SSL misconfigurations such as MD5-signed\ncertificates, low-quality ephemeral DH parameters, and the POODLE\nvulnerability.\n\nThis script is intrusive since it must initiate many connections to a server,\nand therefore is quite noisy.\n\nIt is recommended to use this script in conjunction with version detection\n(<code>-sV</code>) in order to discover SSL/TLS services running on unexpected\nports. For the most common SSL ports like 443, 25 (with STARTTLS), 3389, etc.\nthe script is smart enough to run on its own.\n\nReferences:\n* Qualys SSL Labs Rating Guide - https://www.ssllabs.com/projects/rating-guide/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223293"
+}

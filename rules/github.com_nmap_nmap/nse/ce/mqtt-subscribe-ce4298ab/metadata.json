@@ -1,0 +1,19 @@
+{
+  "uuid": "ce4298ab-6e91-4bf1-b731-321af853b8fe",
+  "title": "mqtt-subscribe",
+  "format": "nse",
+  "author": "Mak Kolybabi <mak@kolybabi.com>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Dumps message traffic from MQTT brokers.\n\nThis script establishes a connection to an MQTT broker and subscribes\nto the requested topics. The default topics have been chosen to\nreceive system information and all messages from other clients. This\nallows Nmap, to listen to all messages being published by clients to\nthe MQTT broker.\n\nFor additional information:\n* https://en.wikipedia.org/wiki/MQTT\n* https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223172"
+}

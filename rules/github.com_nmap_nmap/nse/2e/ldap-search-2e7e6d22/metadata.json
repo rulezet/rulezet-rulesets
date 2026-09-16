@@ -1,0 +1,21 @@
+{
+  "uuid": "2e7e6d22-fa80-4178-a93e-b8484e211080",
+  "title": "ldap-search",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to perform an LDAP search and returns all matches.\n\nIf no username and password is supplied to the script the Nmap registry\nis consulted. If the <code>ldap-brute</code> script has been selected\nand it found a valid account, this account will be used. If not\nanonymous bind will be used as a last attempt.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223201"
+}

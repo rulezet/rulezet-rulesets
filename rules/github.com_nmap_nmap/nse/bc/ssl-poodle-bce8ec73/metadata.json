@@ -1,0 +1,21 @@
+{
+  "uuid": "bce8ec73-95b9-473b-83db-bee5b502be88",
+  "title": "ssl-poodle",
+  "format": "nse",
+  "author": "Daniel Miller",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks whether SSLv3 CBC ciphers are allowed (POODLE)\n\nRun with -sV to use Nmap's service scan to detect SSL/TLS on non-standard\nports. Otherwise, ssl-poodle will only run on ports that are commonly used for\nSSL.\n\nPOODLE is CVE-2014-3566. All implementations of SSLv3 that accept CBC\nciphersuites are vulnerable. For speed of detection, this script will stop\nafter the first CBC ciphersuite is discovered. If you want to enumerate all CBC\nciphersuites, you can use Nmap's own ssl-enum-ciphers to do a full audit of\nyour TLS ciphersuites.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2014-3566"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223176"
+}

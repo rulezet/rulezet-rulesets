@@ -1,0 +1,21 @@
+{
+  "uuid": "422eb211-8d6e-4117-994e-79885b649ab6",
+  "title": "dns-random-srcport",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks a DNS server for the predictable-port recursion vulnerability.\nPredictable source ports can make a DNS server vulnerable to cache poisoning\nattacks (see CVE-2008-1447).\n\nThe script works by querying porttest.dns-oarc.net (see\nhttps://www.dns-oarc.net/oarc/services/porttest).  Be aware that any\ntargets against which this script is run will be sent to and\npotentially recorded by one or more DNS servers and the porttest\nserver. In addition your IP address will be sent along with the\nporttest query to the DNS server running on the target.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2008-1447"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223282"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "82659250-c596-40ba-9b3c-efa25e9d9ffe",
+  "title": "servicetags",
+  "format": "nse",
+  "author": "Matthew Flanagan",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to extract system information (OS, hardware, etc.) from the Sun Service Tags service agent (UDP port 6481).\n\nBased on protocol specs from\nhttp://arc.opensolaris.org/caselog/PSARC/2006/638/stdiscover_protocolv2.pdf\nhttp://arc.opensolaris.org/caselog/PSARC/2006/638/stlisten_protocolv2.pdf\nhttp://arc.opensolaris.org/caselog/PSARC/2006/638/ServiceTag_API_CLI_v07.pdf",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Solaris\"",
+    "misp-galaxy:operating-system=\"Oracle Solaris\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223246"
+}

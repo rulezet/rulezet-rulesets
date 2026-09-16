@@ -1,0 +1,19 @@
+{
+  "uuid": "67e5e96b-6c96-4e05-81bd-7971347b6584",
+  "title": "sshv1",
+  "format": "nse",
+  "author": "Brandon Enright",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks if an SSH server supports the obsolete and less secure SSH Protocol Version 1.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223335"
+}

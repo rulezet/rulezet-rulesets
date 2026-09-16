@@ -1,0 +1,21 @@
+{
+  "uuid": "2b2f6417-2446-4b69-aa4e-63125f818a6b",
+  "title": "ssl-dh-params",
+  "format": "nse",
+  "author": "Jacob Gajek",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Weak ephemeral Diffie-Hellman parameter detection for SSL/TLS services.\n\nThis script simulates SSL/TLS handshakes using ciphersuites that have ephemeral\nDiffie-Hellman as the key exchange algorithm.\n\nDiffie-Hellman MODP group parameters are extracted and analyzed for vulnerability\nto Logjam (CVE 2015-4000) and other weaknesses.\n\nOpportunistic STARTTLS sessions are established on services that support them.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2015-4000"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223344"
+}

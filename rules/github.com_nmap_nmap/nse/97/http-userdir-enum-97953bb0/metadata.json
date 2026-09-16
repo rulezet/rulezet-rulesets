@@ -1,0 +1,21 @@
+{
+  "uuid": "97953bb0-c8ca-4478-8683-973053276329",
+  "title": "http-userdir-enum",
+  "format": "nse",
+  "author": "jah",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to enumerate valid usernames on web servers running with the mod_userdir\nmodule or similar enabled.\n\nThe Apache mod_userdir module allows user-specific directories to be accessed\nusing the http://example.com/~user/ syntax.  This script makes http requests in\norder to discover valid user-specific directories and infer valid usernames.  By\ndefault, the script will use Nmap's\n<code>nselib/data/usernames.lst</code>.  An HTTP response\nstatus of 200 or 403 means the username is likely a valid one and the username\nwill be output in the script results along with the status code (in parentheses).\n\nThis script makes an attempt to avoid false positives by requesting a directory\nwhich is unlikely to exist.  If the server responds with 200 or 403 then the\nscript will not continue testing it.\n\nCVE-2001-1013: http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2001-1013.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2001-1013"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223013"
+}

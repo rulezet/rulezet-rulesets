@@ -1,0 +1,20 @@
+{
+  "uuid": "d4e3a568-8cb9-4ae4-81e1-71b7109ed53f",
+  "title": "http-webdav-scan",
+  "format": "nse",
+  "author": "Gyanendra Mishra",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "A script to detect WebDAV installations. Uses the OPTIONS and PROPFIND methods.\n\nThe script sends an OPTIONS request which lists the dav type, server type, date\nand allowed methods. It then sends a PROPFIND request and tries to fetch exposed\ndirectories and internal ip addresses by doing pattern matching in the response body.\n\nThis script takes inspiration from the various scripts listed here:\n* http://carnal0wnage.attackresearch.com/2010/05/more-with-metasploit-and-webdav.html\n* https://github.com/sussurro/Metasploit-Tools/blob/master/modules/auxiliary/scanner/http/webdav_test.rb\n* http://code.google.com/p/davtest/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"metasploit\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223040"
+}

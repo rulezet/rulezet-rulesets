@@ -1,0 +1,21 @@
+{
+  "uuid": "8be2a2ec-7c7b-4af4-ab37-213f1a993b43",
+  "title": "ms-sql-brute",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Performs password guessing against Microsoft SQL Server (ms-sql). Works best in\nconjunction with the <code>broadcast-ms-sql-discover</code> script.\n\nSQL Server credentials required: No  (will not benefit from <code>mssql.username</code> & <code>mssql.password</code>).\n\nRun criteria:\n* Host script: Will run if the <code>mssql.instance-all</code>, <code>mssql.instance-name</code> or <code>mssql.instance-port</code> script arguments are used (see mssql.lua).\n* Port script: Will run against any services identified as SQL Servers, but only if the <code>mssql.instance-all</code>, <code>mssql.instance-name</code> and <code>mssql.instance-port</code> script arguments are NOT used.\n\nWARNING: SQL Server 2005 and later versions include support for account lockout\npolicies (which are enforced on a per-user basis). If an account is locked out,\nthe script will stop running for that instance, unless the\n<code>ms-sql-brute.ignore-lockout</code> argument is used.\n\nNOTE: Communication with instances via named pipes depends on the <code>smb</code>\nlibrary. To communicate with (and possibly to discover) instances via named pipes,\nthe host must have at least one SMB port (e.g. TCP 445) that was scanned and\nfound to be open. Additionally, named pipe connections may require Windows\nauthentication to connect to the Windows host (via SMB) in addition to the\nauthentication required to connect to the SQL Server instances itself. See the\ndocumentation and arguments for the <code>smb</code> library for more information.\n\nNOTE: By default, the ms-sql-* scripts may attempt to connect to and communicate\nwith ports that were not included in the port list for the Nmap scan. This can\nbe disabled using the <code>mssql.scanned-ports-only</code> script argument.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223019"
+}

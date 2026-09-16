@@ -1,0 +1,19 @@
+{
+  "uuid": "497e4775-7b31-4ecf-8cce-8c8d29cb24e4",
+  "title": "http-huawei-hg5xx-vuln",
+  "format": "nse",
+  "author": "Paulino Calderon <calderon@websec.mx>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects Huawei modems models HG530x, HG520x, HG510x (and possibly others...)\nvulnerable to a remote credential and information disclosure vulnerability. It\nalso extracts the PPPoE credentials and other interesting configuration values.\n\nAttackers can query the URIs \"/Listadeparametros.html\" and \"/wanfun.js\" to\nextract sensitive information including PPPoE credentials, firmware version,\nmodel, gateway, dns servers and active connections among other values.\n\nThis script exploits two vulnerabilities. One was discovered and reported by\nAdiaz from Comunidad Underground de Mexico (http://underground.org.mx) and it\nallows attackers to extract the pppoe password. The configuration disclosure\nvulnerability was discovered by Pedro Joaquin (http://hakim.ws).\n\nReferences:\n* http://websec.ca/advisories/view/Huawei-HG520c-3.10.18.x-information-disclosure\n* http://routerpwn.com/#huawei",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223058"
+}

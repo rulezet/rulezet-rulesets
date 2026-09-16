@@ -1,0 +1,19 @@
+{
+  "uuid": "18098949-accb-476e-8b83-dcf4f1591036",
+  "title": "http-drupal-enum",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Enumerates the installed Drupal modules/themes by using a list of known modules and themes.\n\nThe script works by iterating over module/theme names and requesting\nMODULE_PATH/MODULE_NAME/LICENSE.txt for modules and THEME_PATH/THEME_NAME/LICENSE.txt.\nMODULE_PATH/THEME_PATH which is either provided by the user, grepped for in the html body\nor defaulting to sites/all/modules/.\n\nIf the response status code is 200, it means that the module/theme is installed. By\ndefault, the script checks for the top 100 modules/themes (by downloads), given the\nhuge number of existing modules (~18k) and themes(~1.4k).\n\nIf you want to update your themes or module list refer to the link below.\n\n* https://svn.nmap.org/nmap-exp/gyani/misc/drupal-update.py",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223250"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "568661bf-4d7c-410d-b6c3-d908cd77b1e4",
+  "title": "rdp-enum-encryption",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Determines which Security layer and Encryption level is supported by the\nRDP service. It does so by cycling through all existing protocols and ciphers.\nWhen run in debug mode, the script also returns the protocols and ciphers that\nfail and any errors that were reported.\n\nThe script was inspired by MWR's RDP Cipher Checker\nhttp://labs.mwrinfosecurity.com/tools/2009/01/12/rdp-cipher-checker/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223074"
+}

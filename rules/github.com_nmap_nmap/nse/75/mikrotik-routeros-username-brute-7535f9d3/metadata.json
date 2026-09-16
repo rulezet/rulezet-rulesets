@@ -1,0 +1,19 @@
+{
+  "uuid": "7535f9d3-569b-42d3-b30a-588a03cdd82b",
+  "title": "mikrotik-routeros-username-brute",
+  "format": "nse",
+  "author": "deauther890",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to enumerate valid usernames on MikroTik devices running the Winbox service on port 8291 in MikroTik-RouterOS.\n\nThis script takes a wordlist from the user and modifies a baseline payload by\nadding the username to it. If the server responds with 35 bytes, the username\nis invalid; if the response is 51 bytes, the username is valid.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223308"
+}

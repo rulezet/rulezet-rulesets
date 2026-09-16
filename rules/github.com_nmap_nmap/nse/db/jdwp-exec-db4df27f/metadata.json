@@ -1,0 +1,19 @@
+{
+  "uuid": "db4df27f-b3ad-4124-a4f8-c4f045cc09c3",
+  "title": "jdwp-exec",
+  "format": "nse",
+  "author": "Aleksandar Nikolic",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to exploit java's remote debugging port. When remote debugging\nport is left open, it is possible to inject java bytecode and achieve\nremote code execution.  This script abuses this to inject and execute\na Java class file that executes the supplied shell command and returns\nits output.\n\nThe script injects the JDWPSystemInfo class from\nnselib/jdwp-class/ and executes its run() method which\naccepts a shell command as its argument.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223347"
+}

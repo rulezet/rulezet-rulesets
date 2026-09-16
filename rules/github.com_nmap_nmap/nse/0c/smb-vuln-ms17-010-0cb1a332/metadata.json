@@ -1,0 +1,25 @@
+{
+  "uuid": "0cb1a332-edcc-4c05-94c6-24e73c45aee7",
+  "title": "smb-vuln-ms17-010",
+  "format": "nse",
+  "author": "Paulino Calderon <paulino()calderonpale.com>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to detect if a Microsoft SMBv1 server is vulnerable to a remote code\n execution vulnerability (ms17-010, a.k.a. EternalBlue).\n The vulnerability is actively exploited by WannaCry and Petya ransomware and other malware.\n\nThe script connects to the $IPC tree, executes a transaction on FID 0 and\n checks if the error \"STATUS_INSUFF_SERVER_RESOURCES\" is returned to\n determine if the target is not patched against ms17-010. Additionally it checks\n for known error codes returned by patched systems.\n\nTested on Windows XP, 2003, 7, 8, 8.1, 10, 2008, 2012 and 2016.\n\nReferences:\n* https://technet.microsoft.com/en-us/library/security/ms17-010.aspx\n* https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/\n* https://msdn.microsoft.com/en-us/library/ee441489.aspx\n* https://github.com/rapid7/metasploit-framework/blob/master/modules/auxiliary/scanner/smb/smb_ms17_010.rb\n* https://github.com/cldrn/nmap-nse-scripts/wiki/Notes-about-smb-vuln-ms17-010",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:ransomware=\"WannaCry\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223028"
+}

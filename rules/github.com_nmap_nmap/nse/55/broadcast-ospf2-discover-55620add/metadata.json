@@ -1,0 +1,19 @@
+{
+  "uuid": "55620add-778c-4b7f-b9cf-f4daf466e61e",
+  "title": "broadcast-ospf2-discover",
+  "format": "nse",
+  "author": "Emiliano Ticci",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Discover IPv4 networks using Open Shortest Path First version 2(OSPFv2) protocol.\n\nThe script works by listening for OSPF Hello packets from the 224.0.0.5\nmulticast address. The script then replies and attempts to create a neighbor\nrelationship, in order to discover network database.\n\nIf no interface was provided as a script argument or through the -e option,\nthe script will fail unless a single interface is present on the system.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223086"
+}

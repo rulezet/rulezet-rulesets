@@ -1,0 +1,21 @@
+{
+  "uuid": "5723ca47-75a9-49fa-aade-991f37b6cbbd",
+  "title": "smb-enum-services",
+  "format": "nse",
+  "author": "Rewanth Cool",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Retrieves the list of services running on a remote Windows system.\nEach service attribute contains service name, display name and service status of\neach service.\n\nNote: Modern Windows systems requires a privileged domain account in order to\nlist the services.\n\nReferences:\n* https://technet.microsoft.com/en-us/library/bb490995.aspx\n* https://en.wikipedia.org/wiki/Windows_service",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223050"
+}

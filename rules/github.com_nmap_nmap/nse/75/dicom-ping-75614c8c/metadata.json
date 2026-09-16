@@ -1,0 +1,19 @@
+{
+  "uuid": "75614c8c-654f-4eb9-92ad-b91748c6a519",
+  "title": "dicom-ping",
+  "format": "nse",
+  "author": "Paulino Calderon <calderon()calderonpale.com>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to discover DICOM servers (DICOM Service Provider) through a partial C-ECHO request.\n It also detects if the server allows any called Application Entity Title or not.\n\nThe script responds with the message \"Called AET check enabled\" when the association request\n is rejected due configuration. This value can be bruteforced.\n\nC-ECHO requests are commonly known as DICOM ping as they are used to test connectivity.\nNormally, a 'DICOM ping' is formed as follows:\n* Client -> A-ASSOCIATE request -> Server\n* Server -> A-ASSOCIATE ACCEPT/REJECT -> Client\n* Client -> C-ECHO request -> Server\n* Server -> C-ECHO response -> Client\n* Client -> A-RELEASE request -> Server\n* Server -> A-RELEASE response -> Client\n\nFor this script we only send the A-ASSOCIATE request and look for the success code\n in the response as it seems to be a reliable way of detecting DICOM servers.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223312"
+}

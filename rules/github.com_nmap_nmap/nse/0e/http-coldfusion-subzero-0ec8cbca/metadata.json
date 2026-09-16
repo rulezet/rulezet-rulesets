@@ -1,0 +1,19 @@
+{
+  "uuid": "0ec8cbca-c289-4375-b145-c106ae32d25b",
+  "title": "http-coldfusion-subzero",
+  "format": "nse",
+  "author": "Paulino Calderon <calderon@websec.mx>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to retrieve version, absolute path of administration panel and the\nfile 'password.properties' from vulnerable installations of ColdFusion 9 and\n10.\n\nThis was based on the exploit 'ColdSub-Zero.pyFusion v2'.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223261"
+}

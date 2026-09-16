@@ -1,0 +1,21 @@
+{
+  "uuid": "cfaab168-384b-4284-b805-dab7681c3187",
+  "title": "tls-ticketbleed",
+  "format": "nse",
+  "author": "Mak Kolybabi <mak@kolybabi.com>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects whether a server is vulnerable to the F5 Ticketbleed bug (CVE-2016-9244).\n\nFor additional information:\n* https://filippo.io/Ticketbleed/\n* https://blog.filippo.io/finding-ticketbleed/\n* https://support.f5.com/csp/article/K05121675",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2016-9244"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223189"
+}

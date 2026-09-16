@@ -1,0 +1,24 @@
+{
+  "uuid": "7f276b79-d839-4eac-ae35-a43a4c7559ad",
+  "title": "smb-vuln-ms10-061",
+  "format": "nse",
+  "author": "Aleksandar Nikolic",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tests whether target machines are vulnerable to ms10-061 Printer Spooler impersonation vulnerability.\n\nThis vulnerability was used in Stuxnet worm.  The script checks for\nthe vuln in a safe way without a possibility of crashing the remote\nsystem as this is not a memory corruption vulnerability.  In order for\nthe check to work it needs access to at least one shared printer on\nthe remote system.  By default it tries to enumerate printers by using\nLANMAN API which on some systems is not available by default. In that\ncase user should specify printer share name as printer script\nargument.  To find a printer share, smb-enum-shares can be used.\nAlso, on some systems, accessing shares requires valid credentials\nwhich can be specified with smb library arguments smbuser and\nsmbpassword.\n\nReferences:\n  - http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2729\n  - http://technet.microsoft.com/en-us/security/bulletin/MS10-061\n  - http://blogs.technet.com/b/srd/archive/2010/09/14/ms10-061-printer-spooler-vulnerability.aspx",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2010-2729"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223180"
+}

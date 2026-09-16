@@ -1,0 +1,19 @@
+{
+  "uuid": "28b852bc-4936-4761-9379-5a524e500676",
+  "title": "krb5-enum-users",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Discovers valid usernames by brute force querying likely usernames against a Kerberos service.\nWhen an invalid username is requested the server will respond using the\nKerberos error code KRB5KDC_ERR_C_PRINCIPAL_UNKNOWN, allowing us to determine\nthat the user name was invalid. Valid user names will illicit either the\nTGT in a AS-REP response or the error KRB5KDC_ERR_PREAUTH_REQUIRED, signaling\nthat the user is required to perform pre authentication.\n\nThe script should work against Active Directory and ?\nIt needs a valid Kerberos REALM in order to operate.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223151"
+}

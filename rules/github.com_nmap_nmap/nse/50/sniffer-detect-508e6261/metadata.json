@@ -1,0 +1,25 @@
+{
+  "uuid": "508e6261-8743-4c6e-bfa5-66a033d382b1",
+  "title": "sniffer-detect",
+  "format": "nse",
+  "author": "Marek Majkowski",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks if a target on a local Ethernet has its network card in promiscuous mode.\n\nThe techniques used are described at\nhttp://www.securityfriday.com/promiscuous_detection_01.pdf.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223241"
+}

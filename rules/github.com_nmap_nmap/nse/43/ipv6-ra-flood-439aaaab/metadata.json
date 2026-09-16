@@ -1,0 +1,25 @@
+{
+  "uuid": "439aaaab-ff36-4cbd-ad25-1a895202fdeb",
+  "title": "ipv6-ra-flood",
+  "format": "nse",
+  "author": "Adam Števko",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Generates a flood of Router Advertisements (RA) with random source MAC\naddresses and IPv6 prefixes. Computers, which have stateless autoconfiguration\nenabled by default (every major OS), will start to compute IPv6 suffix and\nupdate their routing table to reflect the accepted announcement. This will\ncause 100% CPU usage on Windows and platforms, preventing to process other\napplication requests.\n\nVulnerable platforms:\n* All Cisco IOS ASA with firmware < November 2010\n* All Netscreen versions supporting IPv6\n* Windows 2000/XP/2003/Vista/7/2008/8/2012\n* All FreeBSD versions\n* All NetBSD versions\n* All Solaris/Illumos versions\n\nSecurity advisory: http://www.mh-sec.de/downloads/mh-RA_flooding_CVE-2010-multiple.txt\n\nWARNING: This script is dangerous and is very likely to bring down a server or\nnetwork appliance.  It should not be run in a production environment unless you\n(and, more importantly, the business) understand the risks!\n\nAdditional documents: https://tools.ietf.org/rfc/rfc6104.txt",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"FreeBSD\"",
+    "ms-caro-malware-full:malware-platform=\"Solaris\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"FreeBSD\"",
+    "misp-galaxy:operating-system=\"Oracle Solaris\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223197"
+}

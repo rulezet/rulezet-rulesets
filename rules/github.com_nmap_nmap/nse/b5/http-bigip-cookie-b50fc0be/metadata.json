@@ -1,0 +1,19 @@
+{
+  "uuid": "b50fc0be-9c60-47d8-ad1f-d75da82e1617",
+  "title": "http-bigip-cookie",
+  "format": "nse",
+  "author": "Seth Jackson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Decodes any unencrypted F5 BIG-IP cookies in the HTTP response.\nBIG-IP cookies contain information on backend systems such as\ninternal IP addresses and port numbers.\nSee here for more info: https://support.f5.com/csp/article/K6917",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223256"
+}

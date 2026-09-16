@@ -1,0 +1,19 @@
+{
+  "uuid": "d3d16e6f-1578-479d-9013-f43bf503c2d2",
+  "title": "broadcast-dhcp-discover",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Sends a DHCP request to the broadcast address (255.255.255.255) and reports\nthe results. By default, the script uses a static MAC address\n(DE:AD:CO:DE:CA:FE) in order to prevent IP pool exhaustion.\n\nThe script reads the response using pcap by opening a listening pcap socket\non all available ethernet interfaces that are reported up. If no response\nhas been received before the timeout has been reached (default 10 seconds)\nthe script will abort execution.\n\nThe script needs to be run as a privileged user, typically root.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223389"
+}

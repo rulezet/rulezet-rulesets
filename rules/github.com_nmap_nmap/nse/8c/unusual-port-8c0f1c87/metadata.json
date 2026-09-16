@@ -1,0 +1,19 @@
+{
+  "uuid": "8c0f1c87-d5f3-4861-ae06-614ec2deb266",
+  "title": "unusual-port",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Compares the detected service on a port against the expected service for that\nport number (e.g. ssh on 22, http on 80) and reports deviations. The script\nrequires that a version scan has been run in order to be able to discover what\nservice is actually running on each port.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223229"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "2e3bfdff-2d78-4d1a-9480-2f724f53e3e3",
+  "title": "hadoop-secondary-namenode-info",
+  "format": "nse",
+  "author": "John R. Bond",
+  "license": "Simplified (2-clause) BSD license--See https://nmap.org/svn/docs/licenses/BSD-simplified",
+  "license_verified": true,
+  "description": "Retrieves information from an Apache Hadoop secondary NameNode HTTP status page.\n\nInformation gathered:\n* Date/time the service was started\n* Hadoop version\n* Hadoop compile date\n* Hostname or IP address and port of the master NameNode server\n* Last time a checkpoint was taken\n* How often checkpoints are taken (in seconds)\n* Log directory (relative to http://host:port/)\n* File size of current checkpoint",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223174"
+}

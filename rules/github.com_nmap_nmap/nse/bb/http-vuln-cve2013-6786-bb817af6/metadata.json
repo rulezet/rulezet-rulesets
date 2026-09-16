@@ -1,0 +1,23 @@
+{
+  "uuid": "bb817af6-cd50-4aa9-8e2a-0c97204184b7",
+  "title": "http-vuln-cve2013-6786",
+  "format": "nse",
+  "author": "Vlatko Kosturjak <kost@linux.hr>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects a URL redirection and reflected XSS vulnerability in Allegro RomPager\nWeb server. The vulnerability has been assigned CVE-2013-6786.\n\nThe check is general enough (script tag injection via Referer header) that some\nother software may be vulnerable in the same way.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2013-6786"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223382"
+}

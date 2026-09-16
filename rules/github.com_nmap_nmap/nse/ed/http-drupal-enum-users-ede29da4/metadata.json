@@ -1,0 +1,19 @@
+{
+  "uuid": "ede29da4-e935-4993-8dcf-fca2c5dc8a89",
+  "title": "http-drupal-enum-users",
+  "format": "nse",
+  "author": "Hani Benhabiles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Enumerates Drupal users by exploiting an information disclosure vulnerability\nin Views, Drupal's most popular module.\n\nRequests to admin/views/ajax/autocomplete/user/STRING return all usernames that\nbegin with STRING. The script works by iterating STRING over letters to extract\nall usernames.\n\nFor more information,see:\n* http://www.madirish.net/node/465",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223163"
+}

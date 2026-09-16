@@ -1,0 +1,19 @@
+{
+  "uuid": "2bdae905-0909-4dca-8d16-399bc7edcabf",
+  "title": "ssh-hostkey",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Shows SSH hostkeys.\n\nShows the target SSH server's key fingerprint and (with high enough\nverbosity level) the public key itself.  It records the discovered host keys\nin <code>nmap.registry</code> for use by other scripts.  Output can be\ncontrolled with the <code>ssh_hostkey</code> script argument.\n\nYou may also compare the retrieved key with the keys in your known-hosts\nfile using the <code>known-hosts</code> argument.\n\nThe script also includes a postrule that check for duplicate hosts using the\ngathered keys.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223324"
+}

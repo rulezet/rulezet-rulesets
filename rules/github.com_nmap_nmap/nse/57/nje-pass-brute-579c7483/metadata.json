@@ -1,0 +1,19 @@
+{
+  "uuid": "579c7483-97c5-4195-96b0-39d3b9b3932a",
+  "title": "nje-pass-brute",
+  "format": "nse",
+  "author": "Soldier of Fortran",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "z/OS JES Network Job Entry (NJE) 'I record' password brute forcer.\n\nAfter successfully negotiating an OPEN connection request, NJE requires sending,\nwhat IBM calls, an 'I record'. This initialization record may sometimes require\na password. This script, provided with a valid OHOST/RHOST for the NJE connection,\nbrute forces the password.\n\nMost systems only have one password, it is recommended to use the\n<code>brute.firstonly</code> script argument.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223393"
+}

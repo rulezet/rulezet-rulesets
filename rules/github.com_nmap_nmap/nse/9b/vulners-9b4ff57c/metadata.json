@@ -1,0 +1,19 @@
+{
+  "uuid": "9b4ff57c-250a-4f8a-8d02-f14356951e86",
+  "title": "vulners",
+  "format": "nse",
+  "author": "gmedian AT vulners DOT com",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "For each available CPE the script prints out known vulns (links to the correspondent info) and correspondent CVSS scores.\n\nIts work is pretty simple:\n* work only when some software version is identified for an open port\n* take all the known CPEs for that software (from the standard nmap -sV output)\n* make a request to a remote server (vulners.com API) to learn whether any known vulns exist for that CPE\n* if no info is found this way, try to get it using the software name alone\n* print the obtained info out\n\nNB:\nSince the size of the DB with all the vulns is more than 250GB there is no way to use a local db.\nSo we do make requests to a remote service. Still all the requests contain just two fields - the\nsoftware name and its version (or CPE), so one can still have the desired privacy.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223320"
+}

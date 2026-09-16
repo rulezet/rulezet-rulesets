@@ -1,0 +1,19 @@
+{
+  "uuid": "8474dd88-303d-4dfa-bd68-59c6609d2f43",
+  "title": "acarsd-info",
+  "format": "nse",
+  "author": "Brendan Coles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Retrieves information from a listening acarsd daemon. Acarsd decodes\nACARS (Aircraft Communication Addressing and Reporting System) data in\nreal time.  The information retrieved by this script includes the\ndaemon version, API version, administrator e-mail address and\nlistening frequency.\n\nFor more information about acarsd, see:\n* http://www.acarsd.org/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223254"
+}

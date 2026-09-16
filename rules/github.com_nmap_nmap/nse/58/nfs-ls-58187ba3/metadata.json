@@ -1,0 +1,19 @@
+{
+  "uuid": "58187ba3-d44c-477f-a458-e9c8121f20d5",
+  "title": "nfs-ls",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to get useful information about files from NFS exports.\nThe output is intended to resemble the output of <code>ls</code>.\n\nThe script starts by enumerating and mounting the remote NFS exports. After\nthat it performs an NFS GETATTR procedure call for each mounted point\nin order to get its ACLs.\nFor each mounted directory the script will try to list its file entries\nwith their attributes.\n\nSince the file attributes shown in the results are the result of\nGETATTR, READDIRPLUS, and similar procedures, the attributes\nare the attributes of the local filesystem.\n\nThese access permissions are shown only with NFSv3:\n* Read:     Read data from file or read a directory.\n* Lookup:   Look up a name in a directory\n            (no meaning for non-directory objects).\n* Modify:   Rewrite existing file data or modify existing\n            directory entries.\n* Extend:   Write new data or add directory entries.\n* Delete:   Delete an existing directory entry.\n* Execute:  Execute file (no meaning for a directory).\n\nRecursive listing is not implemented.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223374"
+}

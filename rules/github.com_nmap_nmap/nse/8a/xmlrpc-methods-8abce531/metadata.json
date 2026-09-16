@@ -1,0 +1,19 @@
+{
+  "uuid": "8abce531-bb6f-4406-a3e2-be952db6cc1e",
+  "title": "xmlrpc-methods",
+  "format": "nse",
+  "author": "Gyanendra Mishra",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Performs XMLRPC Introspection via the system.listMethods method.\n\nIf the verbosity is > 1 then the script fetches the response\nof system.methodHelp for each method returned by listMethods.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223043"
+}

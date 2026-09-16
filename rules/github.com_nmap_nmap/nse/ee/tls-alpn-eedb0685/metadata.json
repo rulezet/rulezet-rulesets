@@ -1,0 +1,19 @@
+{
+  "uuid": "eedb0685-0635-4d7c-95cd-a2ae1f4c64f1",
+  "title": "tls-alpn",
+  "format": "nse",
+  "author": "Daniel Miller",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Enumerates a TLS server's supported application-layer protocols using the ALPN protocol.\n\nRepeated queries are sent to determine which of the registered protocols are supported.\n\nFor more information, see:\n* https://tools.ietf.org/html/rfc7301",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223120"
+}

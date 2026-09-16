@@ -1,0 +1,19 @@
+{
+  "uuid": "997fef8c-44f7-49cd-8d6e-e57dc1ed6ee0",
+  "title": "resolveall",
+  "format": "nse",
+  "author": "Kris Katterjohn",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "NOTE: This script has been replaced by the <code>--resolve-all</code>\ncommand-line option in Nmap 7.70\n\nResolves hostnames and adds every address (IPv4 or IPv6, depending on\nNmap mode) to Nmap's target list.  This differs from Nmap's normal\nhost resolution process, which only scans the first address (A or AAAA\nrecord) returned for each host name.\n\nThe script will run on any target provided by hostname. It can also be fed\nhostnames via the <code>resolveall.hosts</code> argument. Because it adds new\ntargets by IP address it will not run recursively, since those new targets were\nnot provided by hostname. It will also not add the same IP that was initially\nchosen for scanning by Nmap.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223405"
+}

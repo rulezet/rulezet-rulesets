@@ -1,0 +1,21 @@
+{
+  "uuid": "77b89c32-6eec-4dcf-a0f2-17b96b95ca20",
+  "title": "http-majordomo2-dir-traversal",
+  "format": "nse",
+  "author": "Paulino Calderon <calderon@websec.mx>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Exploits a directory traversal vulnerability existing in Majordomo2 to retrieve remote files. (CVE-2011-0049).\n\nVulnerability originally discovered by Michael Brooks.\n\nFor more information about this vulnerability:\n* http://www.mj2.org/\n* http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0049\n* http://www.exploit-db.com/exploits/16103/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2011-0049"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223101"
+}

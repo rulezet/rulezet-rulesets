@@ -1,0 +1,21 @@
+{
+  "uuid": "8074a52a-7c39-4a13-ad86-827b313c5da2",
+  "title": "http-vuln-cve2014-2127",
+  "format": "nse",
+  "author": "Patrik Karlsson <patrik@cqure.net>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects whether the Cisco ASA appliance is vulnerable to the Cisco ASA SSL VPN\nPrivilege Escalation Vulnerability (CVE-2014-2127).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2014-2127"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223367"
+}

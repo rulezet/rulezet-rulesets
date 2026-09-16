@@ -1,0 +1,22 @@
+{
+  "uuid": "a233d23e-bd3e-4388-ad87-b004bd7fc31a",
+  "title": "http-shellshock",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to exploit the \"shellshock\" vulnerability (CVE-2014-6271 and\nCVE-2014-7169) in web applications.\n\nTo detect this vulnerability the script executes a command that prints a random\nstring and then attempts to find it inside the response body. Web apps that\ndon't print back information won't be detected with this method.\n\nBy default the script injects the payload in the HTTP headers User-Agent,\nCookie, and Referer.\n\nVulnerability originally discovered by Stephane Chazelas.\n\nReferences:\n* http://www.openwall.com/lists/oss-security/2014/09/24/10\n* http://seclists.org/oss-sec/2014/q3/685\n* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7169\n* http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2014-6271",
+    "CVE-2014-7169"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223104"
+}

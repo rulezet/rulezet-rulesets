@@ -1,0 +1,19 @@
+{
+  "uuid": "7ff83832-cb14-40b7-a3cb-26f3b029a926",
+  "title": "drda-info",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to extract information from database servers supporting the DRDA\nprotocol. The script sends a DRDA EXCSAT (exchange server attributes)\ncommand packet and parses the response.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223307"
+}

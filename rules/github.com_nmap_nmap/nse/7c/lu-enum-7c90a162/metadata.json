@@ -1,0 +1,19 @@
+{
+  "uuid": "7c90a162-da98-4cb9-990c-186be5edb540",
+  "title": "lu-enum",
+  "format": "nse",
+  "author": "Philip Young aka Soldier of Fortran",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to enumerate Logical Units (LU) of TN3270E servers.\n\nWhen connecting to a TN3270E server you are assigned a Logical Unit (LU) or you can tell\nthe TN3270E server which LU you'd like to use. Typically TN3270E servers are configured to \ngive you an LU from a pool of LUs. They can also have LUs set to take you to a specific\napplication. This script attempts to guess valid LUs that bypass the default LUs you are\nassigned. For example, if a TN3270E server sends you straight to TPX you could use this\nscript to find LUs that take you to TSO, CICS, etc.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223318"
+}

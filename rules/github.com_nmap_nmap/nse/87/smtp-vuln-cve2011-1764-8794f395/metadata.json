@@ -1,0 +1,21 @@
+{
+  "uuid": "8794f395-9f36-4695-b76a-49604d024353",
+  "title": "smtp-vuln-cve2011-1764",
+  "format": "nse",
+  "author": "Djalal Harouni",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks for a format string vulnerability in the Exim SMTP server\n(version 4.70 through 4.75) with DomainKeys Identified Mail (DKIM) support\n(CVE-2011-1764).  The DKIM logging mechanism did not use format string\nspecifiers when logging some parts of the DKIM-Signature header field.\nA remote attacker who is able to send emails, can exploit this vulnerability\nand execute arbitrary code with the privileges of the Exim daemon.\n\nReference:\n* http://bugs.exim.org/show_bug.cgi?id=1106\n* http://thread.gmane.org/gmane.mail.exim.devel/4946\n* https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2011-1764\n* http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2011-1764"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223402"
+}

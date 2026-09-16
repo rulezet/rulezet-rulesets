@@ -1,0 +1,19 @@
+{
+  "uuid": "f265ac4d-e0d9-4121-93d9-87afdcfd429f",
+  "title": "rmi-dumpregistry",
+  "format": "nse",
+  "author": "Martin Holst Swende",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Connects to a remote RMI registry and attempts to dump all of its\nobjects.\n\nFirst it tries to determine the names of all objects bound in the\nregistry, and then it tries to determine information about the\nobjects, such as the class names of the superclasses and\ninterfaces. This may, depending on what the registry is used for, give\nvaluable information about the service. E.g, if the app uses JMX (Java\nManagement eXtensions), you should see an object called \"jmxconnector\"\non it.\n\nIt also gives information about where the objects are located, (marked\nwith @<ip>:port in the output).\n\nSome apps give away the classpath, which this scripts catches in\nso-called \"Custom data\".",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223386"
+}

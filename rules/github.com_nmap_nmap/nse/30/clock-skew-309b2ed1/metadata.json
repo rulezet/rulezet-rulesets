@@ -1,0 +1,19 @@
+{
+  "uuid": "309b2ed1-8acb-4be0-b4ce-91dca6149ddc",
+  "title": "clock-skew",
+  "format": "nse",
+  "author": "Daniel Miller",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Analyzes the clock skew between the scanner and various services that report timestamps.\n\nAt the end of the scan, it will show groups of systems that have similar median\nclock skew among their services. This can be used to identify targets with\nsimilar configurations, such as those that share a common time server.\n\nYou must run at least 1 of the following scripts to collect clock data:\n*",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223326"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "a4ed42db-8e1d-46ed-bb09-1ae2184deabd",
+  "title": "targets-ipv6-multicast-mld",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to discover available IPv6 hosts on the LAN by sending an MLD\n(multicast listener discovery) query to the link-local multicast address\n(ff02::1) and listening for any responses.  The query's maximum response delay\nset to 1 to provoke hosts to respond immediately rather than waiting for other\nresponses from their multicast group.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223214"
+}

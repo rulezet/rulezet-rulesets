@@ -1,0 +1,19 @@
+{
+  "uuid": "c1fbf6f1-d767-45cd-8a97-3332fbf383e1",
+  "title": "http-wordpress-enum",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Enumerates themes and plugins of Wordpress installations. The script can also detect\n outdated plugins by comparing version numbers with information pulled from api.wordpress.org.\n\nThe script works with two separate databases for themes (wp-themes.lst) and plugins (wp-plugins.lst).\nThe databases are sorted by popularity and the script will search only the top 100 entries by default.\nThe theme database has around 32,000 entries while the plugin database has around 14,000 entries.\n\nThe script determines the version number of a plugin by looking at the readme.txt file inside the plugin\ndirectory and it uses the file style.css inside a theme directory to determine the theme version.\nIf the script argument check-latest is set to true, the script will query api.wordpress.org to obtain\nthe latest version number available. This check is disabled by default since it queries an external service.\n\nThis script is a combination of http-wordpress-plugins.nse and http-wordpress-themes.nse originally\nsubmited by Ange Gutek and Peter Hill.\n\nTODO:\n-Implement version checking for themes.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223330"
+}

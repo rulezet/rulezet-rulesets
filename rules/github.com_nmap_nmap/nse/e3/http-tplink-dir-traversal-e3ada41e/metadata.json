@@ -1,0 +1,19 @@
+{
+  "uuid": "e3ada41e-9ec1-4c37-9f42-ee5f1237081c",
+  "title": "http-tplink-dir-traversal",
+  "format": "nse",
+  "author": "Paulino Calderon <calderon@websec.mx>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Exploits a directory traversal vulnerability existing in several TP-Link\nwireless routers. Attackers may exploit this vulnerability to read any of the\nconfiguration and password files remotely and without authentication.\n\nThis vulnerability was confirmed in models WR740N, WR740ND and WR2543ND but\nthere are several models that use the same HTTP server so I believe they could\nbe vulnerable as well. I appreciate any help confirming the vulnerability in\nother models.\n\nAdvisory:\n* http://websec.ca/advisories/view/path-traversal-vulnerability-tplink-wdr740\n\nOther interesting files:\n* /tmp/topology.cnf (Wireless configuration)\n* /tmp/ath0.ap_bss (Wireless encryption key)",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223186"
+}

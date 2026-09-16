@@ -1,0 +1,19 @@
+{
+  "uuid": "d002db69-6140-4694-bc15-c37ed779b896",
+  "title": "http-enum",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Enumerates directories used by popular web applications and servers.\n\nThis parses a fingerprint file that's similar in format to the Nikto Web application\nscanner. This script, however, takes it one step further by building in advanced pattern matching as well\nas having the ability to identify specific versions of Web applications.\n\nYou can also parse a Nikto-formatted database using http-fingerprints.nikto-db-path. This will try to parse\nmost of the fingerprints defined in nikto's database in real time. More documentation about this in the\nnselib/data/http-fingerprints.lua file.\n\nCurrently, the database can be found under Nmap's directory in the nselib/data folder. The file is called\nhttp-fingerprints and has a long description of its functionality in the file header.\n\nMany of the finger prints were discovered by me (Ron Bowes), and a number of them are from the Yokoso\nproject, used with permission from Kevin Johnson (http://seclists.org/nmap-dev/2009/q3/0685.html).\n\nInitially, this script attempts to access two different random files in order to detect servers\nthat don't return a proper 404 Not Found status. In the event that they return 200 OK, the body\nhas any non-static-looking data removed (URI, time, etc), and saved. If the two random attempts\nreturn different results, the script aborts (since a 200-looking 404 cannot be distinguished from\nan actual 200). This will prevent most false positives.\n\nIn addition, if the root folder returns a 301 Moved Permanently or 401 Authentication Required,\nthis script will also abort. If the root folder has disappeared or requires authentication, there\nis little hope of finding anything inside it.\n\nBy default, only pages that return 200 OK or 401 Authentication Required are displayed. If the\n<code>http-enum.displayall</code> script argument is set, however, then all results will be displayed (except\nfor 404 Not Found and the status code returned by the random files). Entries in the http-fingerprints\ndatabase can specify their own criteria for accepting a page as valid.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223238"
+}

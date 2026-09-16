@@ -1,0 +1,19 @@
+{
+  "uuid": "22dd5678-45dd-4d03-8864-c67ed7180247",
+  "title": "tso-brute",
+  "format": "nse",
+  "author": "Soldier of Fortran",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "TSO account brute forcer.\n\nThis script relies on the NSE TN3270 library which emulates a\nTN3270 screen for NMAP.\n\nTSO user IDs have the following rules:\n - it cannot begin with a number\n - only contains alpha-numeric characters and @, #, $.\n - it cannot be longer than 7 chars",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223270"
+}

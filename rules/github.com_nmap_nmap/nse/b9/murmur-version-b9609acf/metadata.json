@@ -1,0 +1,19 @@
+{
+  "uuid": "b9609acf-f2e1-4fde-9be6-d2e34a076177",
+  "title": "murmur-version",
+  "format": "nse",
+  "author": "Marin Maržić",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects the Murmur service (server for the Mumble voice communication\nclient) versions 1.2.X.\n\nThe Murmur server listens on a TCP (control) and a UDP (voice) port\nwith the same port number. This script activates on both a TCP and UDP\nport version scan. In both cases probe data is sent only to the UDP\nport because it allows for a simple and informative ping command.\n\nThe single probe will report on the server version, current user\ncount, maximum users allowed on the server, and bandwidth used for\nvoice communication. It is used by the Mumble client to ping known\nMurmur servers.\n\nThe IP address from which service detection is being ran will most\nlikely be temporarily banned by the target Murmur server due to\nmultiple incorrect handshakes (Nmap service probes). This ban makes\nidentifying the service via TCP impossible in practice, but does not\naffect the UDP probe used by this script.\n\nIt is possible to get a corrupt user count (usually +1) when doing a\nTCP service scan due to previous service probe connections affecting\nthe server.\n\nSee http://mumble.sourceforge.net/Protocol.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223263"
+}

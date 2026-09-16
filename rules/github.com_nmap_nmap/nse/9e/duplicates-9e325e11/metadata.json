@@ -1,0 +1,19 @@
+{
+  "uuid": "9e325e11-9b23-4620-9780-71157ba12ce8",
+  "title": "duplicates",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to discover multihomed systems by analysing and comparing\ninformation collected by other scripts. The information analyzed\ncurrently includes, SSL certificates, SSH host keys, MAC addresses,\nand Netbios server names.\n\nIn order for the script to be able to analyze the data it has dependencies to\nthe following scripts: ssl-cert,ssh-hostkey,nbtstat.\n\nOne or more of these scripts have to be run in order to allow the duplicates\nscript to analyze the data.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223105"
+}

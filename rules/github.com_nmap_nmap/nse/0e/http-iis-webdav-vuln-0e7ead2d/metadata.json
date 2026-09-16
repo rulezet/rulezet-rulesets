@@ -1,0 +1,20 @@
+{
+  "uuid": "0e7ead2d-e3f9-4f93-b837-40fc99a3b875",
+  "title": "http-iis-webdav-vuln",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks for a vulnerability in IIS 5.1/6.0 that allows arbitrary users to access\nsecured WebDAV folders by searching for a password-protected folder and\nattempting to access it. This vulnerability was patched in Microsoft Security\nBulletin MS09-020, https://nmap.org/r/ms09-020.\n\nA list of well known folders (almost 900) is used by default. Each one is\nchecked, and if returns an authentication request (401), another attempt is\ntried with the malicious encoding. If that attempt returns a successful result\n(207), then the folder is marked as vulnerable.\n\nThis script is based on the Metasploit auxiliary module\nauxiliary/scanner/http/wmap_dir_webdav_unicode_bypass\n\nFor more information on this vulnerability and script, see:\n* http://blog.zoller.lu/2009/05/iis-6-webdac-auth-bypass-and-data.html\n* http://seclists.org/fulldisclosure/2009/May/att-134/IIS_Advisory_pdf.bin\n* http://www.skullsecurity.org/blog/?p=271\n* http://www.kb.cert.org/vuls/id/787932\n* http://www.microsoft.com/technet/security/advisory/971492.mspx",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"metasploit\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223272"
+}

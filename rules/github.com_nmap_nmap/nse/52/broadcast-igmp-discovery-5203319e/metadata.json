@@ -1,0 +1,19 @@
+{
+  "uuid": "5203319e-dd1d-4f8d-b673-01029fdd38d6",
+  "title": "broadcast-igmp-discovery",
+  "format": "nse",
+  "author": "Hani Benhabiles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Discovers targets that have IGMP Multicast memberships and grabs interesting information.\n\nThe scripts works by sending IGMP Membership Query message to the 224.0.0.1 All\nHosts multicast address and listening for IGMP Membership Report messages. The\nscript then extracts all the interesting information from the report messages\nsuch as the version, group, mode, source addresses (depending on the version).\n\nThe script defaults to sending an IGMPv2 Query but this could be changed to\nanother version (version 1 or 3) or to sending queries of all three version. If\nno interface was specified as a script argument or with the -e option, the\nscript will proceed to sending queries through all the valid ethernet\ninterfaces.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223349"
+}

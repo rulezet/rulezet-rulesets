@@ -1,0 +1,21 @@
+{
+  "uuid": "978a410a-8736-4ccb-84bf-503a18d41d5d",
+  "title": "http-vuln-cve2010-0738",
+  "format": "nse",
+  "author": "Hani Benhabiles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tests whether a JBoss target is vulnerable to jmx console authentication bypass (CVE-2010-0738).\n\nIt works by checking if the target paths require authentication or redirect to a login page that could be\nbypassed via a HEAD request. RFC 2616 specifies that the HEAD request should be treated exactly like GET but\nwith no returned response body. The script also detects if the URL does not require authentication at all.\n\nFor more information, see:\n* CVE-2010-0738 http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0738\n* http://www.imperva.com/resources/glossary/http_verb_tampering.html\n* https://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2010-0738"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223362"
+}

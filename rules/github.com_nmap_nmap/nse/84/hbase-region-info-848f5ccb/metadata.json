@@ -1,0 +1,19 @@
+{
+  "uuid": "848f5ccb-9928-40cc-87b8-8fc7ab59d0df",
+  "title": "hbase-region-info",
+  "format": "nse",
+  "author": "John R. Bond",
+  "license": "Simplified (2-clause) BSD license--See https://nmap.org/svn/docs/licenses/BSD-simplified",
+  "license_verified": true,
+  "description": "Retrieves information from an Apache HBase (Hadoop database) region server HTTP status page.\n\nInformation gathered:\n* HBase version\n* HBase compile date\n* A bunch of metrics about the state of the region server\n* Zookeeper quorum server",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223215"
+}

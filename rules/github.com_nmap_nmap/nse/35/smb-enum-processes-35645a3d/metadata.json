@@ -1,0 +1,22 @@
+{
+  "uuid": "35645a3d-9e51-46fa-af93-e5376992df42",
+  "title": "smb-enum-processes",
+  "format": "nse",
+  "author": "Ron Bowes",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Pulls a list of processes from the remote server over SMB. This will determine\nall running processes, their process IDs, and their parent processes. It is done\nby querying the remote registry service, which is disabled by default on Vista;\non all other Windows versions, it requires Administrator privileges.\n\nSince this requires administrator privileges, it isn't especially useful for a\npenetration tester, since they can effectively do the same thing with metasploit\nor other tools. It does, however, provide for a quick way to get process lists\nfor a bunch of systems at the same time.\n\nWARNING: I have experienced crashes in <code>regsvc.exe</code> while making registry calls\nagainst a fully patched Windows 2000 system; I've fixed the issue that caused\nit, but there's no guarantee that it (or a similar vulnerability in the same code) won't\nshow up again. Since the process automatically restarts, it doesn't negatively\nimpact the system, besides showing a message box to the user.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223384"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "315eab08-7613-4f66-ade5-c6cc36cf657c",
+  "title": "http-slowloris",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tests a web server for vulnerability to the Slowloris DoS attack by launching a Slowloris attack.\n\nSlowloris was described at Defcon 17 by RSnake\n(see http://ha.ckers.org/slowloris/).\n\nThis script opens and maintains numerous 'half-HTTP' connections until\nthe server runs out of resources, leading to a denial of service. When\na successful DoS is detected, the script stops the attack and returns\nthese pieces of information (which may be useful to tweak further\nfiltering rules):\n* Time taken until DoS\n* Number of sockets used\n* Number of queries sent\nBy default the script runs for 30 minutes if DoS is not achieved.\n\nPlease note that the number of concurrent connexions must be defined\nwith the <code>--max-parallelism</code> option (default is 20, suggested\nis 400 or more) Also, be advised that in some cases this attack can\nbring the web server down for good, not only while the attack is\nrunning.\n\nAlso, due to OS limitations, the script is unlikely to work\nwhen run from Windows.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223016"
+}

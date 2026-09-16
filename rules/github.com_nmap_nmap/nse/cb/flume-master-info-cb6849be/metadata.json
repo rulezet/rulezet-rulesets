@@ -1,0 +1,21 @@
+{
+  "uuid": "cb6849be-1405-4f4d-b71c-8fa9a9d957ec",
+  "title": "flume-master-info",
+  "format": "nse",
+  "author": "John R. Bond",
+  "license": "Simplified (2-clause) BSD license--See https://nmap.org/svn/docs/licenses/BSD-simplified",
+  "license_verified": true,
+  "description": "Retrieves information from Flume master HTTP pages.\n\nInformation gathered:\n* Flume version\n* Flume server id\n* Zookeeper/Hbase master servers present in configured flows\n* Java information\n* OS information\n* various other local configurations.\n\nIf this script is run wth -v, it will output lots more info.\n\nUse the <code>newtargets</code> script argument to add discovered hosts to\nthe Nmap scan queue.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223262"
+}

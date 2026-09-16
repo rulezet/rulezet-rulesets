@@ -1,0 +1,19 @@
+{
+  "uuid": "b99d9178-5063-4d7a-a39f-60fffb8aeeb4",
+  "title": "profinet-cm-lookup",
+  "format": "nse",
+  "author": "DINA-community",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Sends a DCERPC EPM Lookup Request to PROFINET devices. the DCE/RPC Endpoint Mapper (EPM) targeting Profinet Devices.\n\nProfinet Devices support the udp-based PNIO-CM protocol under port 34964.\nPNIO-CM uses DCE/RPC as its underlying protocol.\n\n\nProfinet Devices support a DCE/RPC UUID Entity under the UUID variant\n'dea00001-6c97-11d1-8271-00a02442df7d'. This script sends the Lookup Request for this UUID.\n\nReferences:\n* https://rt-labs.com/docs/p-net/profinet_details.html#dce-rpc-uuid-entities\n* https://wiki.wireshark.org/EPM",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223146"
+}

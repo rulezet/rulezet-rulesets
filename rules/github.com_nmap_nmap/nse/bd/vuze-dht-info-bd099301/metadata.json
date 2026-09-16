@@ -1,0 +1,19 @@
+{
+  "uuid": "bd099301-f424-4a12-ae47-b986dfadd8e9",
+  "title": "vuze-dht-info",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Retrieves some basic information, including protocol version from a Vuze filesharing node.\n\nAs Vuze doesn't have a default port for its DHT service, this script has\nsome difficulties in determining when to run. Most scripts are triggered by\neither a default port or a fingerprinted service. To get around this, there\nare two options:\n1. Always run a version scan, to identify the vuze-dht service in order to\n   trigger the script.\n2. Force the script to run against each port by setting the argument\n   vuze-dht-info.allports",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223142"
+}

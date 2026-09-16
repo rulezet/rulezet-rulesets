@@ -1,0 +1,27 @@
+{
+  "uuid": "e763a9a2-786a-41fb-869d-6662ea76d3cd",
+  "title": "smtp-vuln-cve2010-4344",
+  "format": "nse",
+  "author": "Djalal Harouni",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks for and/or exploits a heap overflow within versions of Exim\nprior to version 4.69 (CVE-2010-4344) and a privilege escalation\nvulnerability in Exim 4.72 and prior (CVE-2010-4345).\n\nThe heap overflow vulnerability allows remote attackers to execute\narbitrary code with the privileges of the Exim daemon\n(CVE-2010-4344). If the exploit fails then the Exim smtpd child will\nbe killed (heap corruption).\n\nThe script also checks for a privilege escalation vulnerability that\naffects Exim version 4.72 and prior. The vulnerability allows the exim\nuser to gain root privileges by specifying an alternate configuration\nfile using the -C option (CVE-2010-4345).\n\nThe <code>smtp-vuln-cve2010-4344.exploit</code> script argument will make\nthe script try to exploit the vulnerabilities, by sending more than 50MB of\ndata, it depends on the message size limit configuration option of the\nExim server. If the exploit succeed the <code>exploit.cmd</code> or\n<code>smtp-vuln-cve2010-4344.cmd</code> script arguments can be used to\nrun an arbitrary command on the remote system, under the\n<code>Exim</code> user privileges. If this script argument is set then it\nwill enable the <code>smtp-vuln-cve2010-4344.exploit</code> argument.\n\nTo get the appropriate debug messages for this script, please use -d2.\n\nSome of the logic of this script is based on the metasploit\nexim4_string_format exploit.\n* http://www.metasploit.com/modules/exploit/unix/smtp/exim4_string_format\n\nReference:\n* http://cve.mitre.org/cgi-bin/cvename.cgi?name=2010-4344\n* http://cve.mitre.org/cgi-bin/cvename.cgi?name=2010-4345",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2010-4344",
+    "CVE-2010-4345"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223056"
+}

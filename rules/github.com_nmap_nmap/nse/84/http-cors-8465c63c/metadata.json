@@ -1,0 +1,19 @@
+{
+  "uuid": "8465c63c-1623-421e-821c-c01e1cd9abe3",
+  "title": "http-cors",
+  "format": "nse",
+  "author": "Toni Ruottu",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tests an http server for Cross-Origin Resource Sharing (CORS), a way\nfor domains to explicitly opt in to having certain methods invoked by\nanother domain.\n\nThe script works by setting the Access-Control-Request-Method header\nfield for certain enumerated methods in OPTIONS requests, and checking\nthe responses.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223023"
+}

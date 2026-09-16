@@ -1,0 +1,21 @@
+{
+  "uuid": "465de395-3472-4514-90fa-11fe67d84292",
+  "title": "ldap-brute",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to brute-force LDAP authentication. By default\nit uses the built-in username and password lists. In order to use your\nown lists use the <code>userdb</code> and <code>passdb</code> script arguments.\n\nThis script does not make any attempt to prevent account lockout!\nIf the number of passwords in the dictionary exceed the amount of\nallowed tries, accounts will be locked out. This usually happens\nvery quickly.\n\nAuthenticating against Active Directory using LDAP does not use the\nWindows user name but the user accounts distinguished name. LDAP on Windows\n2003 allows authentication using a simple user name rather than using the\nfully distinguished name. E.g., \"Patrik Karlsson\" vs.\n\"cn=Patrik Karlsson,cn=Users,dc=cqure,dc=net\"\nThis type of authentication is not supported on e.g. OpenLDAP.\n\nThis script uses some AD-specific support and optimizations:\n* LDAP on Windows 2003/2008 reports different error messages depending on whether an account exists or not. If the script receives an error indicating that the username does not exist it simply stops guessing passwords for this account and moves on to the next.\n* The script attempts to authenticate with the username only if no LDAP base is specified. The benefit of authenticating this way is that the LDAP path of each account does not need to be known in advance as it's looked up by the server.  This technique will only find a match if the account Display Name matches the username being attempted.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223297"
+}

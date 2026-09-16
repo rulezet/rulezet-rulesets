@@ -1,0 +1,19 @@
+{
+  "uuid": "62cbfbdf-5b11-4e17-80a6-6e106aa7fabc",
+  "title": "nbd-info",
+  "format": "nse",
+  "author": "Mak Kolybabi <mak@kolybabi.com>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Displays protocol and block device information from NBD servers.\n\nThe Network Block Device protocol is used to publish block devices\nover TCP. This script connects to an NBD server and attempts to pull\ndown a list of exported block devices and their details\n\nFor additional information:\n* https://github.com/NetworkBlockDevice/nbd/blob/master/doc/proto.md",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223166"
+}

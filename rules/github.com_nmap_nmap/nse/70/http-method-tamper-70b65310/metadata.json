@@ -1,0 +1,19 @@
+{
+  "uuid": "70b65310-93e0-4075-8cc9-538f0467af92",
+  "title": "http-method-tamper",
+  "format": "nse",
+  "author": "Paulino Calderon <calderon@websec.mx>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to bypass password protected resources (HTTP 401 status) by performing HTTP verb tampering.\nIf an array of paths to check is not set, it will crawl the web server and perform the check against any\npassword protected resource that it finds.\n\nThe script determines if the protected URI is vulnerable by performing HTTP verb tampering and monitoring\n the status codes. First, it uses a HEAD request, then a POST request and finally a random generated string\n( This last one is useful when web servers treat unknown request methods as a GET request. This is the case\n for PHP servers ).\n\nIf the table <code>paths</code> is set, it will attempt to access the given URIs. Otherwise, a web crawler\nis initiated to try to find protected resources. Note that in a PHP environment with .htaccess files you need to specify a\npath to a file rather than a directory to find misconfigured .htaccess files.\n\nReferences:\n* http://www.imperva.com/resources/glossary/http_verb_tampering.html\n* https://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29\n* http://www.mkit.com.ar/labs/htexploit/\n* http://capec.mitre.org/data/definitions/274.html",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223054"
+}

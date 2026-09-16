@@ -1,0 +1,19 @@
+{
+  "uuid": "e88f58fc-c6f0-43c5-a71a-b145347cc5e9",
+  "title": "targets-asn",
+  "format": "nse",
+  "author": "John R. Bond",
+  "license": "Simplified (2-clause) BSD license--See https://nmap.org/svn/docs/licenses/BSD-simplified",
+  "license_verified": true,
+  "description": "Produces a list of IP prefixes for a given routing AS number (ASN).\n\nThis script uses a whois server database operated by the Shadowserver\nFoundation.  We thank them for granting us permission to use this in\nNmap.\n\nOutput is in CIDR notation.\n\nhttp://www.shadowserver.org/wiki/pmwiki.php/Services/IP-BGP",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223160"
+}

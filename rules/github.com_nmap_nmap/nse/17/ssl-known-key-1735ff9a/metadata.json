@@ -1,0 +1,22 @@
+{
+  "uuid": "1735ff9a-dc10-4bbb-8f98-da668c544548",
+  "title": "ssl-known-key",
+  "format": "nse",
+  "author": "Mak Kolybabi",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks whether the SSL certificate used by a host has a fingerprint\nthat matches an included database of problematic keys.\n\nThe only databases currently checked are the LittleBlackBox 0.1 database of\ncompromised keys from various devices, some keys reportedly used by the Chinese\nstate-sponsored hacking division APT1\n(https://www.fireeye.com/blog/threat-research/2013/03/md5-sha1.html),\nand the key used by CARBANAK malware\n(https://www.fireeye.com/blog/threat-research/2017/06/behind-the-carbanak-backdoor.html).\nHowever, any file of fingerprints will serve just as well. For example, this\ncould be used to find weak Debian OpenSSL keys using the widely available (but\ntoo large to include with Nmap) list.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT1 - G0006\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Carbanak - G0008\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223266"
+}

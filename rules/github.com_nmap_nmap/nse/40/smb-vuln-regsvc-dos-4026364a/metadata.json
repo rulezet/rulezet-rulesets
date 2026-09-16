@@ -1,0 +1,22 @@
+{
+  "uuid": "4026364a-2553-4057-8ef1-add8dc1440c2",
+  "title": "smb-vuln-regsvc-dos",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks if a Microsoft Windows 2000 system is vulnerable to a crash in regsvc caused by a null pointer\ndereference. This check will crash the service if it is vulnerable and requires a guest account or\nhigher to work.\n\nThe vulnerability was discovered by Ron Bowes while working on <code>smb-enum-sessions</code> and\nwas reported to Microsoft (Case #MSRC8742).\n\nThis check was previously part of smb-check-vulns.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223181"
+}

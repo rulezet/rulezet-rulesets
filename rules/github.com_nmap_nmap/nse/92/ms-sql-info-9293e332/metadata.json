@@ -1,0 +1,21 @@
+{
+  "uuid": "9293e332-06d3-4c38-8181-c65b3bd365a1",
+  "title": "ms-sql-info",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to determine configuration and version information for Microsoft SQL\nServer instances.\n\nSQL Server credentials required: No (will not benefit from\n<code>mssql.username</code> & <code>mssql.password</code>).\nRun criteria:\n* Host script: Will always run.\n* Port script: N/A\n\nNOTE: Unlike previous versions, this script will NOT attempt to log in to SQL\nServer instances. Blank passwords can be checked using the\n<code>ms-sql-empty-password</code> script. E.g.:\n<code>nmap -sn --script ms-sql-empty-password --script-args mssql.instance-all <host></code>\n\nThe script uses two means of getting version information for SQL Server instances:\n* Querying the SQL Server Browser service, which runs by default on UDP port\n1434 on servers that have SQL Server 2000 or later installed. However, this\nservice may be disabled without affecting the functionality of the instances.\nAdditionally, it provides imprecise version information.\n* Sending a probe to the instance, causing the instance to respond with\ninformation including the exact version number. This is the same method that\nNmap uses for service versioning; however, this script can also do the same for\ninstances accessible via Windows named pipes, and can target all of the\ninstances listed by the SQL Server Browser service.\n\nIn the event that the script can connect to the SQL Server Browser service\n(UDP 1434) but is unable to connect directly to the instance to obtain more\naccurate version information (because ports are blocked or the <code>mssql.scanned-ports-only</code>\nargument has been used), the script will rely only upon the version number\nprovided by the SQL Server Browser/Monitor, which has the following limitations:\n* For SQL Server 2000 and SQL Server 7.0 instances, the RTM version number is\nalways given, regardless of any service packs or patches installed.\n* For SQL Server 2005 and later, the version number will reflect the service\npack installed, but the script will not be able to tell whether patches have\nbeen installed.\n\nWhere possible, the script will determine major version numbers, service pack\nlevels and whether patches have been installed. However, in cases where\nparticular determinations can not be made, the script will report only what can\nbe confirmed.\n\nNOTE: Communication with instances via named pipes depends on the <code>smb</code>\nlibrary. To communicate with (and possibly to discover) instances via named pipes,\nthe host must have at least one SMB port (e.g. TCP 445) that was scanned and\nfound to be open. Additionally, named pipe connections may require Windows\nauthentication to connect to the Windows host (via SMB) in addition to the\nauthentication required to connect to the SQL Server instances itself. See the\ndocumentation and arguments for the <code>smb</code> library for more information.\n\nNOTE: By default, the ms-sql-* scripts may attempt to connect to and communicate\nwith ports that were not included in the port list for the Nmap scan. This can\nbe disabled using the <code>mssql.scanned-ports-only</code> script argument.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223337"
+}

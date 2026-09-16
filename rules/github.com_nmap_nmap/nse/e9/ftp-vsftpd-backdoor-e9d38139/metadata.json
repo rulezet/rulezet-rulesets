@@ -1,0 +1,25 @@
+{
+  "uuid": "e9d38139-0a11-41a3-a694-36d101f1c38b",
+  "title": "ftp-vsftpd-backdoor",
+  "format": "nse",
+  "author": "Daniel Miller",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tests for the presence of the vsFTPd 2.3.4 backdoor reported on 2011-07-04\n(CVE-2011-2523). This script attempts to exploit the backdoor using the\ninnocuous <code>id</code> command by default, but that can be changed with\nthe <code>exploit.cmd</code> or <code>ftp-vsftpd-backdoor.cmd</code> script\narguments.\n\nReferences:\n\n* http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html\n* https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb\n* http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2011-2523",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2011-2523"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223397"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "d88d1ab5-eed1-4bb4-b359-10e748abc0ea",
+  "title": "http-waf-fingerprint",
+  "format": "nse",
+  "author": "Hani Benhabiles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tries to detect the presence of a web application firewall and its type and\nversion.\n\nThis works by sending a number of requests and looking in the responses for\nknown behavior and fingerprints such as Server header, cookies and headers\nvalues. Intensive mode works by sending additional WAF specific requests to\ndetect certain behaviour.\n\nCredit to wafw00f and w3af for some fingerprints.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223188"
+}

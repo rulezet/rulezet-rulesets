@@ -1,0 +1,19 @@
+{
+  "uuid": "1036a890-7b0f-4df2-82fa-9f86a6c1e3b8",
+  "title": "http-aspnet-debug",
+  "format": "nse",
+  "author": "Josh Amishav-Zlatin",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Determines if a ASP.NET application has debugging enabled using a HTTP DEBUG request.\n\nThe HTTP DEBUG verb is used within ASP.NET applications to start/stop remote\ndebugging sessions. The script sends a 'stop-debug' command to determine the\napplication's current configuration state but access to RPC services is required\n to interact with the debugging session. The request does not change the\napplication debugging configuration.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223291"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "16443d6f-12b4-4569-b5ff-8fd7cddbfc60",
+  "title": "http-security-headers",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks for the HTTP response headers related to security given in OWASP Secure Headers Project\nand gives a brief description of the header and its configuration value.\n\nThe script requests the server for the header with http.head and parses it to list headers founds with their\nconfigurations. The script checks for HSTS(HTTP Strict Transport Security), HPKP(HTTP Public Key Pins),\nX-Frame-Options, X-XSS-Protection, X-Content-Type-Options, Content-Security-Policy,\nX-Permitted-Cross-Domain-Policies, Set-Cookie, Expect-CT, Cache-Control, Pragma and Expires.\n\nReferences: https://www.owasp.org/index.php/OWASP_Secure_Headers_Project\nhttps://developer.mozilla.org/en-US/docs/Web/HTTP/Headers",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223152"
+}

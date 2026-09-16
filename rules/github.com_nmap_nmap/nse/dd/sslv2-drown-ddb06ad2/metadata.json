@@ -1,0 +1,23 @@
+{
+  "uuid": "ddb06ad2-a3fd-44d6-a870-d37115748a2a",
+  "title": "sslv2-drown",
+  "format": "nse",
+  "author": "Bertrand Bonnefoy-Claudet <bertrand@cryptosense.com>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Determines whether the server supports SSLv2, what ciphers it supports and tests for\nCVE-2015-3197, CVE-2016-0703 and CVE-2016-0800 (DROWN)",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2015-3197",
+    "CVE-2016-0703",
+    "CVE-2016-0800"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223294"
+}

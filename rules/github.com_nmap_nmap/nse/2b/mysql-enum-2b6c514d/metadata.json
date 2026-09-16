@@ -1,0 +1,19 @@
+{
+  "uuid": "2b6c514d-b871-4e4d-86af-320939df8658",
+  "title": "mysql-enum",
+  "format": "nse",
+  "author": "Aleksandar Nikolic",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Performs valid-user enumeration against MySQL server using a bug\ndiscovered and published by Kingcope\n(http://seclists.org/fulldisclosure/2012/Dec/9).\n\nServer version 5.x are susceptible to an user enumeration\nattack due to different messages during login when using\nold authentication mechanism from versions 4.x and earlier.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223333"
+}

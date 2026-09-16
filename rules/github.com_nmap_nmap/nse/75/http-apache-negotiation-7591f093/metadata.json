@@ -1,0 +1,20 @@
+{
+  "uuid": "7591f093-304c-4a54-93d6-0c7e66533d4e",
+  "title": "http-apache-negotiation",
+  "format": "nse",
+  "author": "Hani Benhabiles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks if the target http server has mod_negotiation enabled.  This\nfeature can be leveraged to find hidden resources and spider a web\nsite using fewer requests.\n\nThe script works by sending requests for resources like index and home\nwithout specifying the extension. If mod_negotiate is enabled (default\nApache configuration), the target would reply with content-location header\ncontaining target resource (such as index.html) and vary header containing\n\"negotiate\" depending on the configuration.\n\nFor more information, see:\n* http://www.wisec.it/sectou.php?id=4698ebdc59d15\n* Metasploit auxiliary module\n    /modules/auxiliary/scanner/http/mod_negotiation_scanner.rb",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"metasploit\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223164"
+}

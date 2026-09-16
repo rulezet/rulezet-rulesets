@@ -1,0 +1,21 @@
+{
+  "uuid": "2e3303da-a98e-47f8-828a-64bff29a58ea",
+  "title": "dict-info",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Connects to a dictionary server using the DICT protocol, runs the SHOW\nSERVER command, and displays the result. The DICT protocol is defined in RFC\n2229 and is a protocol which allows a client to query a dictionary server for\ndefinitions from a set of natural language dictionary databases.\n\nThe SHOW server command must be implemented and depending on access will show\nserver information and accessible databases. If authentication is required, the\nlist of databases will not be shown.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223290"
+}

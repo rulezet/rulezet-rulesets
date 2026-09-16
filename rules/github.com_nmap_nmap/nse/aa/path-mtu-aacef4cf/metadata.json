@@ -1,0 +1,19 @@
+{
+  "uuid": "aacef4cf-88b1-4b36-be32-01337364fb2c",
+  "title": "path-mtu",
+  "format": "nse",
+  "author": "Kris Katterjohn",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Performs simple Path MTU Discovery to target hosts.\n\nTCP or UDP packets are sent to the host with the DF (don't fragment) bit set\nand with varying amounts of data.  If an ICMP Fragmentation Needed is received,\nor no reply is received after retransmissions, the amount of data is lowered\nand another packet is sent.  This continues until (assuming no errors occur) a\nreply from the final host is received, indicating the packet reached the host\nwithout being fragmented.\n\nNot all MTUs are attempted so as to not expend too much time or network\nresources.  Currently the relatively short list of MTUs to try contains\nthe plateau values from Table 7-1 in RFC 1191, \"Path MTU Discovery\".\nUsing these values significantly cuts down the MTU search space.  On top\nof that, this list is rarely traversed in whole because:\n* the MTU of the outgoing interface is used as a starting point, and\n* we can jump down the list when an intermediate router sending a \"can't fragment\" message includes its next hop MTU (as described in RFC 1191 and required by RFC 1812)",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223234"
+}

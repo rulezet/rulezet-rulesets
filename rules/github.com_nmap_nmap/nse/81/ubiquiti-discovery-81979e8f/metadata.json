@@ -1,0 +1,21 @@
+{
+  "uuid": "81979e8f-06a5-4170-911d-bd418504ac96",
+  "title": "ubiquiti-discovery",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Extracts information from Ubiquiti networking devices.\n\nThis script leverages Ubiquiti's Discovery Service which is enabled by default\non many products. It will attempt to leverage version 1 of the protocol first\nand, if that fails, attempt version 2.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223194"
+}

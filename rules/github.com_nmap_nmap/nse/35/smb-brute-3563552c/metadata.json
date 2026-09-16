@@ -1,0 +1,25 @@
+{
+  "uuid": "3563552c-f678-4fd7-9e57-a7b1f62ac2ec",
+  "title": "smb-brute",
+  "format": "nse",
+  "author": "Ron Bowes",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to guess username/password combinations over SMB, storing discovered combinations\nfor use in other scripts. Every attempt will be made to get a valid list of users and to\nverify each username before actually using them. When a username is discovered, besides\nbeing printed, it is also saved in the Nmap registry so other Nmap scripts can use it. That\nmeans that if you're going to run <code>smb-brute.nse</code>, you should run other <code>smb</code> scripts you want.\nThis checks passwords in a case-insensitive way, determining case after a password is found,\nfor Windows versions before Vista.\n\nThis script is specifically targeted towards security auditors or penetration testers.\nOne example of its use, suggested by Brandon Enright, was hooking up <code>smb-brute.nse</code> to the\ndatabase of usernames and passwords used by the Conficker worm (the password list can be\nfound at http://www.skullsecurity.org/wiki/index.php/Passwords, among other places.\nThen, the network is scanned and all systems that would be infected by Conficker are\ndiscovered.\n\nFrom the penetration tester perspective its use is pretty obvious. By discovering weak passwords\non SMB, a protocol that's well suited for bruteforcing, access to a system can be gained.\nFurther, passwords discovered against Windows with SMB might also be used on Linux or MySQL\nor custom Web applications. Discovering a password greatly beneficial for a pen-tester.\n\nThis script uses a lot of little tricks that I (Ron Bowes) describe in detail in a blog\nposting, http://www.skullsecurity.org/blog/?p=164. The tricks will be summarized here, but\nthat blog is the best place to learn more.\n\nUsernames and passwords are initially taken from the unpwdb library. If possible, the usernames\nare verified as existing by taking advantage of Windows' odd behaviour with invalid username\nand invalid password responses. As soon as it is able, this script will download a full list\nof usernames from the server and replace the unpw usernames with those. This enables the\nscript to restrict itself to actual accounts only.\n\nWhen an account is discovered, it's saved in the <code>smb</code> module (which uses the Nmap\nregistry). If an account is already saved, the account's privileges are checked; accounts\nwith administrator privileges are kept over accounts without. The specific method for checking\nis by calling <code>GetShareInfo(\"IPC$\")</code>, which requires administrative privileges. Once this script\nis finished (all other smb scripts depend on it, it'll run first), other scripts will use the saved account\nto perform their checks.\n\nThe blank password is always tried first, followed by \"special passwords\" (such as the username\nand the username reversed). Once those are exhausted, the unpwdb password list is used.\n\nOne major goal of this script is to avoid account lockouts. This is done in a few ways. First,\nwhen a lockout is detected, unless you user specifically overrides it with the <code>smblockout</code>\nargument, the scan stops. Second, all usernames are checked with the most common passwords first,\nso with not-too-strict lockouts (10 invalid attempts), the 10 most common passwords will still\nbe tried. Third, one account, called the canary, \"goes out ahead\"; that is, three invalid\nattempts are made (by default) to ensure that it's locked out before others are.\n\nIn addition to active accounts, this script will identify valid passwords for accounts that\nare disabled, guest-equivalent, and require password changes. Although these accounts can't\nbe used, it's good to know that the password is valid. In other cases, it's impossible to\ntell a valid password (if an account is locked out, for example). These are displayed, too.\nCertain accounts, such as guest or some guest-equivalent, will permit any password. This\nis also detected. When possible, the SMB protocol is used to its fullest to get maximum\ninformation.\n\nWhen possible, checks are done using a case-insensitive password, then proper case is\ndetermined with a fairly efficient bruteforce. For example, if the actual password is\n\"PassWord\", then \"password\" will work and \"PassWord\" will be found afterwards (on the\n14th attempt out of a possible 256 attempts, with the current algorithm).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:botnet=\"Conficker\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223110"
+}

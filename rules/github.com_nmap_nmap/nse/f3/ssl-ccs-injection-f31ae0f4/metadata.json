@@ -1,0 +1,21 @@
+{
+  "uuid": "f31ae0f4-5d7f-459b-869b-44481b1c029d",
+  "title": "ssl-ccs-injection",
+  "format": "nse",
+  "author": "Claudiu Perta <claudiu.perta@gmail.com>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects whether a server is vulnerable to the SSL/TLS \"CCS Injection\"\nvulnerability (CVE-2014-0224), first discovered by Masashi Kikuchi.\nThe script is based on the ccsinjection.c code authored by Ramon de C Valle\n(https://gist.github.com/rcvalle/71f4b027d61a78c42607)\n\nIn order to exploit the vulnerablity, a MITM attacker would effectively\ndo the following:\n\n    o Wait for a new TLS connection, followed by the ClientHello\n      ServerHello handshake messages.\n\n    o Issue a CCS packet in both the directions, which causes the OpenSSL\n      code to use a zero length pre master secret key. The packet is sent\n      to both ends of the connection. Session Keys are derived using a\n      zero length pre master secret key, and future session keys also\n      share this weakness.\n\n    o Renegotiate the handshake parameters.\n\n    o The attacker is now able to decrypt or even modify the packets\n      in transit.\n\nThe script works by sending a 'ChangeCipherSpec' message out of order and\nchecking whether the server returns an 'UNEXPECTED_MESSAGE' alert record\nor not. Since a non-patched server would simply accept this message, the\nCCS packet is sent twice, in order to force an alert from the server. If\nthe alert type is different than 'UNEXPECTED_MESSAGE', we can conclude\nthe server is vulnerable.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2014-0224"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223145"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "6fffc8b9-3ed5-45e2-9b4e-641aa1626cd9",
+  "title": "rdp-ntlm-info",
+  "format": "nse",
+  "author": "Tom Sellers",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "This script enumerates information from remote RDP services with CredSSP\n(NLA) authentication enabled.\n\nSending an incomplete CredSSP (NTLM) authentication request with null credentials\nwill cause the remote service to respond with a NTLMSSP message disclosing\ninformation to include NetBIOS, DNS, and OS build version.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223038"
+}

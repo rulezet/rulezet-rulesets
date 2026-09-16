@@ -1,0 +1,19 @@
+{
+  "uuid": "7b0c29a1-41cc-4a41-b1d1-b58b60194157",
+  "title": "http-trane-info",
+  "format": "nse",
+  "author": "Pedro Joaquin <pjoaquin()websec.mx>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to obtain information from Trane Tracer SC devices. Trane Tracer SC\n is an intelligent field panel for communicating with HVAC equipment controllers\n deployed across several sectors including commercial facilities and others.\n\nThe information is obtained from the web server that exposes sensitive content to\n unauthenticated users.\n\nTested on Trane Tracer SC version 4.40.1211 and below.\n\nReferences:\n* http://websec.mx/publicacion/blog/Scripts-de-Nmap-para-Trane-Tracer-SC-HVAC",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223157"
+}

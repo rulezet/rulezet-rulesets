@@ -1,0 +1,19 @@
+{
+  "uuid": "37a39103-bcb4-4acc-ad50-c96501ebe0d1",
+  "title": "http-slowloris-check",
+  "format": "nse",
+  "author": "Aleksandar Nikolic",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tests a web server for vulnerability to the Slowloris DoS attack without\nactually launching a DoS attack.\n\nSlowloris was described at Defcon 17 by RSnake\n(see http://ha.ckers.org/slowloris/).\n\nThis script opens two connections to the server, each without the final CRLF.\nAfter 10 seconds, second connection sends additional header. Both connections\nthen wait for server timeout.  If second connection gets a timeout 10 or more\nseconds after the first one, we can conclude that sending additional header\nprolonged its timeout and that the server is vulnerable to slowloris DoS\nattack.\n\nA \"LIKELY VULNERABLE\" result means a server is subject to timeout-extension\nattack, but depending on the http server's architecture and resource limits, a\nfull denial-of-service is not always possible. Complete testing requires\ntriggering the actual DoS condition and measuring server responsiveness.\n\nYou can specify custom http User-agent field with <code>http.useragent</code>\nscript argument.\n\nIdea from Qualys blogpost:\n* https://community.qualys.com/blogs/securitylabs/2011/07/07/identifying-slow-http-attack-vulnerabilities-on-web-applications",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223406"
+}

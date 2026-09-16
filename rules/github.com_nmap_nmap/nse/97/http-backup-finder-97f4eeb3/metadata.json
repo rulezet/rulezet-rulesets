@@ -1,0 +1,21 @@
+{
+  "uuid": "97f4eeb3-dda1-4e0a-afc7-9231647828ed",
+  "title": "http-backup-finder",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Spiders a website and attempts to identify backup copies of discovered files.\nIt does so by requesting a number of different combinations of the filename (eg. index.bak, index.html~, copy of index.html).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223319"
+}

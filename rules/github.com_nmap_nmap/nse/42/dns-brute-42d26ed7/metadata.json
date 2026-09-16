@@ -1,0 +1,19 @@
+{
+  "uuid": "42d26ed7-38da-432f-b2b4-be26b8d5f5d0",
+  "title": "dns-brute",
+  "format": "nse",
+  "author": "Cirrus",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to enumerate DNS hostnames by brute force guessing of common\nsubdomains. With the <code>dns-brute.srv</code> argument, dns-brute will also\ntry to enumerate common DNS SRV records.\n\nWildcard records are listed as \"*A\" and \"*AAAA\" for IPv4 and IPv6 respectively.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223279"
+}

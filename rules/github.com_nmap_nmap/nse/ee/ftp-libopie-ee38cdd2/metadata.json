@@ -1,0 +1,23 @@
+{
+  "uuid": "ee38cdd2-3fd2-4936-a06b-ca38a63ff245",
+  "title": "ftp-libopie",
+  "format": "nse",
+  "author": "Ange Gutek",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks if an FTPd is prone to CVE-2010-1938 (OPIE off-by-one stack overflow),\na vulnerability discovered by Maksymilian Arciemowicz and Adam \"pi3\" Zabrocki.\nSee the advisory at https://nmap.org/r/fbsd-sa-opie.\nBe advised that, if launched against a vulnerable host, this script will crash the FTPd.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"FreeBSD\"",
+    "misp-galaxy:operating-system=\"FreeBSD\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2010-1938"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223113"
+}

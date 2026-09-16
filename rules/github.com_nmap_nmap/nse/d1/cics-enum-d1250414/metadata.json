@@ -1,0 +1,19 @@
+{
+  "uuid": "d1250414-dc51-405b-8580-df4175f7f64d",
+  "title": "cics-enum",
+  "format": "nse",
+  "author": "Philip Young aka Soldier of Fortran",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "CICS transaction ID enumerator for IBM mainframes.\nThis script is based on mainframe_brute by Dominic White\n(https://github.com/sensepost/mainframe_brute). However, this script\ndoesn't rely on any third party libraries or tools and instead uses\nthe NSE TN3270 library which emulates a TN3270 screen in lua.\n\nCICS only allows for 4 byte transaction IDs, that is the only specific rule\nfound for CICS transaction IDs.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223332"
+}

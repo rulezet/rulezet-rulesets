@@ -1,0 +1,19 @@
+{
+  "uuid": "5b69fa75-7dc0-4355-b95c-45e2335f327e",
+  "title": "broadcast-bjnp-discover",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to discover Canon devices (Printers/Scanners) supporting the\nBJNP protocol by sending BJNP Discover requests to the network\nbroadcast address for both ports associated with the protocol.\n\nThe script then attempts to retrieve the model, version and some additional\ninformation for all discovered devices.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223274"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "2918dcfa-086a-4ef3-aab7-306f5f5e335e",
+  "title": "http-litespeed-sourcecode-download",
+  "format": "nse",
+  "author": "Paulino Calderon <calderon@websec.mx>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Exploits a null-byte poisoning vulnerability in Litespeed Web Servers 4.0.x\nbefore 4.0.15 to retrieve the target script's source code by sending a HTTP\nrequest with a null byte followed by a .txt file extension (CVE-2010-2333).\n\nIf the server is not vulnerable it returns an error 400. If index.php is not\nfound, you may try /phpinfo.php which is also shipped with LiteSpeed Web\nServer. The attack payload looks like this:\n* <code>/index.php\\00.txt</code>\n\nReferences:\n* http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2333\n* http://www.exploit-db.com/exploits/13850/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2010-2333"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223235"
+}

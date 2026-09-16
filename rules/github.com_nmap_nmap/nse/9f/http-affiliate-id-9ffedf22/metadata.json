@@ -1,0 +1,19 @@
+{
+  "uuid": "9ffedf22-183a-470f-90d8-e9aec97f11b8",
+  "title": "http-affiliate-id",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Grabs affiliate network IDs (e.g. Google AdSense or Analytics, Amazon\nAssociates, etc.) from a web page. These can be used to identify pages\nwith the same owner.\n\nIf there is more than one target using an ID, the postrule of this\nscript shows the ID along with a list of the targets using it.\n\nSupported IDs:\n* Google Analytics\n* Google AdSense\n* Amazon Associates",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223130"
+}

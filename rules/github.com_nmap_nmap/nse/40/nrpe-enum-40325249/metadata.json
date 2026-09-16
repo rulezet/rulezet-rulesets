@@ -1,0 +1,19 @@
+{
+  "uuid": "40325249-ec13-46d4-8e97-33c49c08a193",
+  "title": "nrpe-enum",
+  "format": "nse",
+  "author": "Mak Kolybabi",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Queries Nagios Remote Plugin Executor (NRPE) daemons to obtain information such\nas load averages, process counts, logged in user information, etc.\n\nThis script attempts to execute the stock list of commands that are\nenabled. User-supplied arguments are not supported.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223021"
+}

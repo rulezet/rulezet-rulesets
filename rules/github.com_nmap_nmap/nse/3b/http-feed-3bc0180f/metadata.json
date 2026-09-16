@@ -1,0 +1,19 @@
+{
+  "uuid": "3bc0180f-48f4-4be3-914c-8deae7cf250c",
+  "title": "http-feed",
+  "format": "nse",
+  "author": "George Chatzisofroniou",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "This script crawls through the website to find any rss or atom feeds.\n\nThe script, by default, spiders and searches within forty pages. For large web\napplications make sure to increase httpspider's <code>maxpagecount</code> value.\nPlease, note that the script will become more intrusive though.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223095"
+}

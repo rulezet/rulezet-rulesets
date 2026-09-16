@@ -1,0 +1,19 @@
+{
+  "uuid": "9979430c-8a07-4242-9ba8-bfe851555e38",
+  "title": "url-snarf",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Sniffs an interface for HTTP traffic and dumps any URLs, and their\noriginating IP address. Script output differs from other script as\nURLs are written to stdout directly. There is also an option to log\nthe results to file.\n\nThe script can be limited in time by using the timeout argument or run until a\nctrl+break is issued, by setting the timeout to 0.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223331"
+}

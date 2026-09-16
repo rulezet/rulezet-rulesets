@@ -1,0 +1,21 @@
+{
+  "uuid": "da50691c-53a0-462b-b011-9be8d44fd0a9",
+  "title": "oracle-brute-stealth",
+  "format": "nse",
+  "author": "Dhiru Kholia",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Exploits the CVE-2012-3137 vulnerability, a weakness in Oracle's\nO5LOGIN authentication scheme.  The vulnerability exists in Oracle 11g\nR1/R2 and allows linking the session key to a password hash.  When\ninitiating an authentication attempt as a valid user the server will\nrespond with a session key and salt.  Once received the script will\ndisconnect the connection thereby not recording the login attempt.\nThe session key and salt can then be used to brute force the users\npassword.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2012-3137"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223354"
+}

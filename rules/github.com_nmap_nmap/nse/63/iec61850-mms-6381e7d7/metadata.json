@@ -1,0 +1,19 @@
+{
+  "uuid": "6381e7d7-239e-4976-b3d1-dd049d180ea6",
+  "title": "iec61850-mms",
+  "format": "nse",
+  "author": "Dennis Rösch, Max Helbig",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Queries a IEC 61850-8-1 MMS server. Sends Initate-Request, Identify-Request and Read-Request to LN0 and LPHD.\n\nOutput contains following attributes:\n\n* modelName_identify:   Identify-Response attribute model_name\n* vendorName_identify:  Identify-Response attribute vendor_name\n* modelNumber_identify: Identify-Response attribute revision\n* productFamily:        Read-Response attribute 'LLN0$DC$NamPlt$d'\n* configuration:        Read-Response attribute 'LLN0$DC$NamPlt$configRev'\n* vendorName:           Read-Response attribute 'LPHD$DC$PhyNam$vendor' (old: 'LLN0$DC$NamPlt$vendor')\n* serialNumber:         Read-Response attribute 'LPHD$DC$PhyNam$serNum'\n* modelNumber:          Read-Response attribute 'LPHD$DC$PhyNam$model'\n* firmwareVersion:      Read-Response attribute 'LPHD$DC$PhyNam$swRev' (old: 'LLN0$DC$NamPlt$swRev')",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223334"
+}

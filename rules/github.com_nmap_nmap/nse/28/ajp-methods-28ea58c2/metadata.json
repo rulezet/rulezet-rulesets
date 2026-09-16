@@ -1,0 +1,19 @@
+{
+  "uuid": "28ea58c2-7ffe-4bdb-86db-087d92549384",
+  "title": "ajp-methods",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Discovers which options are supported by the AJP (Apache JServ\nProtocol) server by sending an OPTIONS request and lists potentially\nrisky methods.\n\nIn this script, \"potentially risky\" methods are anything except GET,\nHEAD, POST, and OPTIONS. If the script reports potentially risky\nmethods, they may not all be security risks, but you should check to\nmake sure. This page lists the dangers of some common methods:\n\nhttp://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223037"
+}

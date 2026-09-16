@@ -1,0 +1,19 @@
+{
+  "uuid": "b82286d1-d2e2-4a41-9914-a3cf9df7c35e",
+  "title": "dns-nsec-enum",
+  "format": "nse",
+  "author": "John R. Bond",
+  "license": "Simplified (2-clause) BSD license--See https://nmap.org/svn/docs/licenses/BSD-simplified",
+  "license_verified": true,
+  "description": "Enumerates DNS names using the DNSSEC NSEC-walking technique.\n\nOutput is arranged by domain. Within a domain, subzones are shown with\nincreased indentation.\n\nThe NSEC response record in DNSSEC is used to give negative answers to\nqueries, but it has the side effect of allowing enumeration of all\nnames, much like a zone transfer. This script doesn't work against\nservers that use NSEC3 rather than NSEC; for that, see\n<code>dns-nsec3-enum</code>.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223171"
+}

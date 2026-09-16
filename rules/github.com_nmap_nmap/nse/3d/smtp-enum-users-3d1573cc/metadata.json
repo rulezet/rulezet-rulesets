@@ -1,0 +1,19 @@
+{
+  "uuid": "3d1573cc-9b6d-4082-8540-b1421a40b301",
+  "title": "smtp-enum-users",
+  "format": "nse",
+  "author": "Duarte Silva <duarte.silva@serializing.me>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to enumerate the users on a SMTP server by issuing the VRFY, EXPN or RCPT TO\ncommands. The goal of this script is to discover all the user accounts in the remote\nsystem.\n\nThe script will output the list of user names that were found. The script will stop\nquerying the SMTP server if authentication is enforced. If an error occurs while testing\nthe target host, the error will be printed with the list of any combinations that were\nfound prior to the error.\n\nThe user can specify which methods to use and in which order. The script will ignore\nrepeated methods. If not specified the script will use the RCPT first, then VRFY and EXPN.\nAn example of how to specify the methods to use and the order is the following:\n\n<code>smtp-enum-users.methods={EXPN,RCPT,VRFY}</code>",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223407"
+}

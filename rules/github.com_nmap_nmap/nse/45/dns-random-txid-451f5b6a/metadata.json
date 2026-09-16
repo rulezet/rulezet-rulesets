@@ -1,0 +1,21 @@
+{
+  "uuid": "451f5b6a-e50b-4143-91c9-092c802e777b",
+  "title": "dns-random-txid",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks a DNS server for the predictable-TXID DNS recursion\nvulnerability.  Predictable TXID values can make a DNS server vulnerable to\ncache poisoning attacks (see CVE-2008-1447).\n\nThe script works by querying txidtest.dns-oarc.net (see\nhttps://www.dns-oarc.net/oarc/services/txidtest).  Be aware that any\ntargets against which this script is run will be sent to and\npotentially recorded by one or more DNS servers and the txidtest\nserver. In addition your IP address will be sent along with the\ntxidtest query to the DNS server running on the target.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2008-1447"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223208"
+}

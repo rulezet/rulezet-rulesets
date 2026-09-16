@@ -1,0 +1,21 @@
+{
+  "uuid": "afb6c67a-6eb7-48d5-9b40-e33e3345f0fc",
+  "title": "ntp-monlist",
+  "format": "nse",
+  "author": "jah",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Obtains and prints an NTP server's monitor data.\n\nMonitor data is a list of the most recently used (MRU) having NTP associations\nwith the target. Each record contains information about the most recent NTP\npacket sent by a host to the target including the source and destination\naddresses and the NTP version and mode of the packet. With this information it\nis possible to classify associated hosts as Servers, Peers, and Clients.\n\nA Peers command is also sent to the target and the peers list in the response\nallows differentiation between configured Mode 1 Peers and clients which act\nlike Peers (such as the Windows W32Time service).\n\nAssociated hosts are further classified as either public or private.\nPrivate hosts are those\nhaving IP addresses which are not routable on the public Internet and thus can\nhelp to form a picture about the topology of the private network on which the\ntarget resides.\n\nOther information revealed by the monlist and peers commands are the host with\nwhich the target clock is synchronized and hosts which send Control Mode (6)\nand Private Mode (7) commands to the target and which may be used by admins for\nthe NTP service.\n\nIt should be noted that the very nature of the NTP monitor data means that the\nMode 7 commands sent by this script are recorded by the target (and will often\nappear in these results). Since the monitor data is a MRU list, it is probable\nthat you can overwrite the record of the Mode 7 command by sending an innocuous\nlooking Client Mode request. This can be achieved easily using Nmap:\n<code>nmap -sU -pU:123 -Pn -n --max-retries=0 <target></code>\n\nNotes:\n* The monitor list in response to the monlist command is limited to 600 associations.\n* The monitor capability may not be enabled on the target in which case you may receive an error number 4 (No Data Available).\n* There may be a restriction on who can perform Mode 7 commands (e.g. \"restrict noquery\" in <code>ntp.conf</code>) in which case you may not receive a reply.\n* This script does not handle authenticating and targets expecting auth info may respond with error number 3 (Format Error).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223346"
+}

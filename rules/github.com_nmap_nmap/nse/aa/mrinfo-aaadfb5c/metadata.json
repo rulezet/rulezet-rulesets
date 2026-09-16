@@ -1,0 +1,21 @@
+{
+  "uuid": "aaadfb5c-aba6-44ce-8847-6ac080550b5e",
+  "title": "mrinfo",
+  "format": "nse",
+  "author": "Hani Benhabiles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Queries targets for multicast routing information.\n\nThis works by sending a DVMRP Ask Neighbors 2 request to the target and\nlistening for DVMRP Neighbors 2 responses that are sent back and which contain\nlocal addresses and the multicast neighbors on each interface of the target. If\nno specific target is specified, the request will be sent to the 224.0.0.1 All\nHosts multicast address.\n\nThis script is similar somehow to the mrinfo utility included with Windows and\nCisco IOS.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223118"
+}

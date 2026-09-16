@@ -1,0 +1,24 @@
+{
+  "uuid": "adae3137-0718-4c9a-bb46-d4662c4cc43c",
+  "title": "smb-vuln-cve2009-3103",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects Microsoft Windows systems vulnerable to denial of service (CVE-2009-3103).\nThis script will crash the service if it is vulnerable.\n\nThe script performs a denial-of-service against the vulnerability disclosed in\nCVE-2009-3103. This works against Windows Vista and some versions of Windows 7,\nand causes a bluescreen if successful. The proof-of-concept code at\nhttp://seclists.org/fulldisclosure/2009/Sep/39 was used, with one small change.\n\nThis check was previously part of smb-check-vulns.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2009-3103"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223401"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "3092f02b-99f2-4373-bce7-0c60b2b12f93",
+  "title": "dns-zone-transfer",
+  "format": "nse",
+  "author": "Eddie Bell",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Requests a zone transfer (AXFR) from a DNS server.\n\nThe script sends an AXFR query to a DNS server. The domain to query is\ndetermined by examining the name given on the command line, the DNS\nserver's hostname, or it can be specified with the\n<code>dns-zone-transfer.domain</code> script argument. If the query is\nsuccessful all domains and domain types are returned along with common\ntype specific data (SOA/MX/NS/PTR/A).\n\nThis script can run at different phases of an Nmap scan:\n* Script Pre-scanning: in this phase the script will run before any\nNmap scan and use the defined DNS server in the arguments. The script\narguments in this phase are: <code>dns-zone-transfer.server</code> the\nDNS server to use, can be a hostname or an IP address and must be\nspecified. The <code>dns-zone-transfer.port</code> argument is optional\nand can be used to specify the DNS server port.\n* Script scanning: in this phase the script will run after the other\nNmap phases and against an Nmap discovered DNS server. If we don't\nhave the \"true\" hostname for the DNS server we cannot determine a\nlikely zone to perform the transfer on.\n\nUseful resources\n* DNS for rocket scientists: http://www.zytrax.com/books/dns/\n* How the AXFR protocol works: http://cr.yp.to/djbdns/axfr-notes.html",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223273"
+}

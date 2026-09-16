@@ -1,0 +1,22 @@
+{
+  "uuid": "2b31374d-7f1c-44a9-8a13-5e7360aa088d",
+  "title": "smb-vuln-ms06-025",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects Microsoft Windows systems with Ras RPC service vulnerable to MS06-025.\n\nMS06-025 targets the <code>RasRpcSumbitRequest()</code> RPC method which is\na part of RASRPC interface that serves as a RPC service for configuring and\ngetting information from the Remote Access and Routing service. RASRPC can be\naccessed using either \"\\ROUTER\" SMB pipe or the \"\\SRVSVC\" SMB pipe (usually on Windows XP machines).\nThis is in RPC world known as \"ncan_np\" RPC transport. <code>RasRpcSumbitRequest()</code>\nmethod is a generic method which provides different functionalities according\nto the <code>RequestBuffer</code> structure and particularly the <code>RegType</code> field within that\nstructure. <code>RegType</code> field is of <code>enum ReqTypes</code> type. This enum type lists all\nthe different available operation that can be performed using the <code>RasRpcSubmitRequest()</code>\nRPC method. The one particular operation that this vuln targets is the <code>REQTYPE_GETDEVCONFIG</code>\nrequest to get device information on the RRAS.\n\nThis script was previously part of smb-check-vulns.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223132"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "f21e9d4f-f517-4093-9e1a-d2a25fc3435c",
+  "title": "http-methods",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Finds out what options are supported by an HTTP server by sending an\nOPTIONS request. Lists potentially risky methods. It tests those methods\nnot mentioned in the OPTIONS headers individually and sees if they are\nimplemented. Any output other than 501/405 suggests that the method is\nif not in the range 400 to 600. If the response falls under that range then\nit is compared to the response from a randomly generated method.\n\nIn this script, \"potentially risky\" methods are anything except GET,\nHEAD, POST, and OPTIONS. If the script reports potentially risky\nmethods, they may not all be security risks, but you should check to\nmake sure. This page lists the dangers of some common methods:\n\nhttp://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29\n\nThe list of supported methods comes from the contents of the Allow and\nPublic header fields. In verbose mode, a list of all methods is printed,\nfollowed by the list of potentially risky methods. Without verbose mode,\nonly the potentially risky methods are shown.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223355"
+}

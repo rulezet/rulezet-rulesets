@@ -1,0 +1,19 @@
+{
+  "uuid": "7cba37f5-ee45-4e73-a5f5-b988fc888504",
+  "title": "cccam-version",
+  "format": "nse",
+  "author": "David Fifield",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects the CCcam service (software for sharing subscription TV among\nmultiple receivers).\n\nThe service normally runs on port 12000. It distinguishes\nitself by printing 16 random-looking bytes upon receiving a\nconnection.\n\nBecause the script attempts to detect \"random-looking\" bytes, it has a small\nchance of failing to detect the service when the data do not seem random\nenough.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223089"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "ffd4a928-d17c-4e3d-a362-a69a3f78b441",
+  "title": "dns-client-subnet-scan",
+  "format": "nse",
+  "author": "John R. Bond",
+  "license": "Simplified (2-clause) BSD license--See https://nmap.org/svn/docs/licenses/BSD-simplified",
+  "license_verified": true,
+  "description": "Performs a domain lookup using the edns-client-subnet option which\nallows clients to specify the subnet that queries supposedly originate\nfrom.  The script uses this option to supply a number of\ngeographically distributed locations in an attempt to enumerate as\nmany different address records as possible. The script also supports\nrequests using a given subnet.\n\n* https://tools.ietf.org/html/rfc7871",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223343"
+}

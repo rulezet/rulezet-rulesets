@@ -1,0 +1,21 @@
+{
+  "uuid": "64522aa3-12a8-47a9-a8da-c5b9db774b51",
+  "title": "http-vuln-cve2012-1823",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects PHP-CGI installations that are vulnerable to CVE-2012-1823, This\ncritical vulnerability allows attackers to retrieve source code and execute\ncode remotely.\n\nThe script works by appending \"?-s\" to the uri to make vulnerable php-cgi\nhandlers return colour syntax highlighted source. We use the pattern \"<span\nstyle=.*>&lt;?\" to detect\nvulnerable installations.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2012-1823"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223211"
+}

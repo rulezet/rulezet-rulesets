@@ -1,0 +1,21 @@
+{
+  "uuid": "f0566b5f-7b81-485f-92c9-f0f4c5a4b8ee",
+  "title": "smb-vuln-ms10-054",
+  "format": "nse",
+  "author": "Aleksandar Nikolic",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tests whether target machines are vulnerable to the ms10-054 SMB remote memory\ncorruption vulnerability.\n\nThe vulnerable machine will crash with BSOD.\n\nThe script requires at least READ access right to a share on a remote machine.\nEither with guest credentials or with specified username/password.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223253"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "d6c0b9be-85b7-4681-aa33-044c19dcac46",
+  "title": "asn-query",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Maps IP addresses to autonomous system (AS) numbers.\n\nThe script works by sending DNS TXT queries to a DNS server which in\nturn queries a third-party service provided by Team Cymru\n(https://www.team-cymru.org/Services/ip-to-asn.html) using an in-addr.arpa\nstyle zone set up especially for\nuse by Nmap. The responses to these queries contain both Origin and Peer\nASNs and their descriptions, displayed along with the BGP Prefix and\nCountry Code. The script caches results to reduce the number of queries\nand should perform a single query for all scanned targets in a BGP\nPrefix present in Team Cymru's database.\n\nBe aware that any targets against which this script is run will be sent\nto and potentially recorded by one or more DNS servers and Team Cymru.\nIn addition your IP address will be sent along with the ASN to a DNS\nserver (your default DNS server, or whichever one you specified with the\n<code>dns</code> script argument).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223323"
+}
