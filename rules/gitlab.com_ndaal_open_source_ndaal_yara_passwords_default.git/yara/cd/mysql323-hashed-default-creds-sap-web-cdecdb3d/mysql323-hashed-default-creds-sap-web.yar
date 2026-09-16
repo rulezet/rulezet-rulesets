@@ -1,0 +1,47 @@
+rule mysql323_hashed_default_creds_sap_web
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for sap_web."
+        category = "INFO"
+        info = "MYSQL323"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="3ec714f57be5c2d3"
+    $a1="43e9a4ab75570f5b"
+    $a2="5784b14303c3e63c"
+    $a3="58f7ee435f925abe"
+    $a4="73e659fc2f230b2a"
+    $a5="4ca126c374254b6e"
+    $a6="4109703c26e985b1"
+    $a7="4edb90ea00879356"
+    $a8="7dbccee545a0745e"
+    $a9="621a75887d19b3da"
+    $a10="526141c72bc07a23"
+    $a11="33cf49b259752375"
+    $a12="77019a5e58ae67f9"
+    $a13="570a10bb4135fe43"
+    $a14="3b46cd3d25be79c6"
+    $a15="4ffd3927781268be"
+    $a16="66f835940739e396"
+    $a17="40ea27f80f2285ce"
+    $a18="4a1033a406e6e659"
+    $a19="40ea27f80f2285ce"
+    $a20="43e9a4ab75570f5b"
+    $a21="4f95a6b123bd1ddf"
+    $a22="45b07dcb6b0e20fb"
+    $a23="4f95a6b123bd1ddf"
+    $a24="0fcbac4511e5c7de"
+    $a25="40ea27f80f2285ce"
+    $a26="7f3fd5ca26a893d6"
+    $a27="292435071aae628d"
+    $a28="73e659fc2f230b2a"
+    $a29="3e427dd417466d46"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}
