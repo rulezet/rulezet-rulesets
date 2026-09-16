@@ -1,0 +1,9 @@
+rule Win_Trojan_NTPacker_1
+{
+strings:
+	$a0 = { ab397f585357962fc90b0488260e30c6c11f54a342c59a103b42c136fe08b5b4b501e4b788ce22cb30acf5a3ef093b231afbc8571eb7f9caf76d77d76f777677fc68779ddd7ef3f947774ae9741a0825e0d836a8edc681edd0d676b0a15d2a8e4689be3de7be97107f75fbedae9a77ee3df79c73cf39f7dc73eebd4aab }
+
+
+condition:
+	$a0
+}

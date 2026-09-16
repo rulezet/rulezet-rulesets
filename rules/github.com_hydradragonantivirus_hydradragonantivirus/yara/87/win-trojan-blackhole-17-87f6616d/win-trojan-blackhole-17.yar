@@ -1,0 +1,9 @@
+rule Win_Trojan_Blackhole_17
+{
+strings:
+	$a0 = { 843e40ca83efba1ce545675fff3cadbcb91f6fdaa37959292de201717a5ac4224810c09edd81da8b44891dc7b70e49dc22974cccade1426e3107ad50d577c6eaf664f71a24367bc5bb1975ead0545c68bd7eab0deb13377d175ecb7d93a6c46730f05f6d097902714b45c93cf33fdefc4fdc24cf9071904b2769cfda8d }
+
+
+condition:
+	$a0
+}
