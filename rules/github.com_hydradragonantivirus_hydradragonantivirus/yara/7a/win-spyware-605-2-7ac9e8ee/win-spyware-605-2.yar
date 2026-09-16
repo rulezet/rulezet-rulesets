@@ -1,0 +1,9 @@
+rule Win_Spyware_605_2
+{
+strings:
+	$a0 = { 68b010001050e82cfeffff59a38018001059c60560190010016a01585f5bc9c20c00ff74240cff74240cff74240cff1580180010c20c00 }
+
+
+condition:
+	$a0
+}

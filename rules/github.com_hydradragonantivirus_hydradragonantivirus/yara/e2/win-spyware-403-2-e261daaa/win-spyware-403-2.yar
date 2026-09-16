@@ -1,0 +1,9 @@
+rule Win_Spyware_403_2
+{
+strings:
+	$a0 = { 7ed8905facf753a756af275a50d02124578e2d9a0313144f706d19852250a70aef5c54ee0f9e3f423539e07914077aaffa8affbfe141ac9410b2c9ca2bcb9a47b08a0e66709d9d2230f964b1a416 }
+
+
+condition:
+	$a0
+}

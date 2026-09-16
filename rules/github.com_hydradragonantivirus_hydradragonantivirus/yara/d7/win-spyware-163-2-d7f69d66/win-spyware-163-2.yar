@@ -1,0 +1,9 @@
+rule Win_Spyware_163_2
+{
+strings:
+	$a0 = { 33c08945fc837dfc000f8f93010000837ddc010f85890100008d45f0e857f8ffff33c055687c5b400064ff306489208d55ecb8445e4000e898f9ffff6a008b45f0e8bed8ffff50e80ce2ffff }
+
+
+condition:
+	$a0
+}
