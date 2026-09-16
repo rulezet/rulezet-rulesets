@@ -1,0 +1,16 @@
+rule Trojan_Autorun_Dump_Generic_Dacic_19E38D3B_A_AAF775A0_257_2 {
+  meta:
+    description = "datamaliciousorder - file Trojan.Autorun_Dump.Generic.Dacic.19E38D3B.A.AAF775A0_257_2.vir"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "b6b45e5d45177bc9154ac4fadeb611b7b1cc8ec7937041949b911ffd467b831a"
+
+  strings:
+    $s1 = "huzz{." fullword ascii
+    $s2 = "YoGA$p" fullword ascii
+
+  condition:
+    uint16(0) == 0x5a4d and
+    all of them
+}
