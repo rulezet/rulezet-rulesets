@@ -1,0 +1,9 @@
+rule Trojan_Win64_Convagent_MK_MTB_2{
+	meta:
+		description = "Trojan:Win64/Convagent.MK!MTB,SIGNATURE_TYPE_PEHSTR_EXT,19 00 19 00 02 00 00 "
+		
+	strings :
+		$a_01_0 = {0f b6 43 40 83 63 44 fe 83 e0 f0 83 c8 05 88 43 40 f0 83 05 c9 bb 0b 00 01 48 8b 4b 30 48 85 c9 } 		$a_01_1 = {4c 8b 05 f9 13 0a 00 41 89 fa 4c 89 cd 41 c1 fa 05 4d 63 d2 4d 8b 18 41 89 f8 41 83 e0 1f 49 c1 e0 06 4f 03 04 d3 41 80 78 08 } 	condition:
+		((#a_01_0  & 1)*15+(#a_01_1  & 1)*10) >=25
+ 
+}
