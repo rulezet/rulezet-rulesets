@@ -1,0 +1,23 @@
+{
+  "uuid": "31541d5e-77b8-4c10-84f4-9f979184b9fc",
+  "title": "F5_BIGIP_c05d5254_SELinux_Disable_Indicator",
+  "format": "yara",
+  "author": "admin admin",
+  "license": "0BSD",
+  "license_verified": true,
+  "description": "Detects audit evidence of SELinux enforcement being disabled in context described by the article",
+  "source": "https://my.f5.com/manage/s/article/K000160486",
+  "tags": [
+    "vulnerability:origin=\"software\"",
+    "vulnerability:information=\"remediation\"",
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-53521"
+  ],
+  "created_at": "2026-03-30",
+  "last_modified": "2026-03-30",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/222594"
+}

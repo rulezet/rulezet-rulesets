@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Ignoring external medias"; meta_content: "%sagan%",/cdrom,/media,usb,/mount,floppy,dvd; meta_nocase; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000297; sid: 5000297; rev:2;)

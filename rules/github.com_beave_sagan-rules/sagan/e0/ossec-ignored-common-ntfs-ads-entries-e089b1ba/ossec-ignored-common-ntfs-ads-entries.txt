@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Ignored common NTFS ADS entries"; meta_content: "%sagan%",Zone.Identifier,Exchsrvrr/Mailroot,vsi,encryptable; meta_nocase; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000289; sid: 5000289; rev:2;)

@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] File size reduced"; content: "File size reduced"; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000300; sid: 5000300; rev:1;)

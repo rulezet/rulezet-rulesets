@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Log file rotated"; content: "File rotated"; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000299; sid: 5000299; rev:1;)

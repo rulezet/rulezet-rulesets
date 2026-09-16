@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Microsoft event log cleared"; content: "Event log cleared"; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000301; sid: 5000301; rev:1;)

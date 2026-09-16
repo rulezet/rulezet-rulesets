@@ -1,0 +1,23 @@
+{
+  "uuid": "8ed278c5-c7b4-4dbb-bece-b4af997e719c",
+  "title": "F5_BIGIP_c05d5254_Artifact_Paths",
+  "format": "yara",
+  "author": "admin admin",
+  "license": "0BSD",
+  "license_verified": true,
+  "description": "Detects core filesystem IOC strings associated with c05d5254 on F5 BIG-IP",
+  "source": "https://my.f5.com/manage/s/article/K000160486",
+  "tags": [
+    "vulnerability:information=\"remediation\"",
+    "vulnerability:origin=\"software\"",
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-53521"
+  ],
+  "created_at": "2026-03-30",
+  "last_modified": "2026-03-30",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/222592"
+}

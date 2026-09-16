@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Windows Adware/Spyware application found"; meta_content: "%sagan%",Adware,Spyware; meta_nocase; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000295; sid: 5000295; rev:2;)

@@ -1,0 +1,23 @@
+{
+  "uuid": "0349b7fa-d270-4b4f-9a67-817826df14fc",
+  "title": "F5_BIGIP_c05d5254_Webshell_Related_Paths",
+  "format": "yara",
+  "author": "admin admin",
+  "license": "0BSD",
+  "license_verified": true,
+  "description": "Detects PHP renderer paths the article says may be changed in potential compromise cases",
+  "source": "https://my.f5.com/manage/s/article/K000160486",
+  "tags": [
+    "vulnerability:origin=\"software\"",
+    "vulnerability:information=\"remediation\"",
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-53521"
+  ],
+  "created_at": "2026-03-30",
+  "last_modified": "2026-03-30",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/222596"
+}

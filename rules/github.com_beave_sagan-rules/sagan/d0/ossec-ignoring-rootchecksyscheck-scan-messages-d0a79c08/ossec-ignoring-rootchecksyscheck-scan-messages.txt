@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Ignoring rootcheck/syscheck scan messages"; pcre: "/^Starting rootcheck scan|^Ending rootcheck scan|^Starting syscheck scan|^Ending syscheck scan/i"; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000293; sid: 5000293; rev:1;)

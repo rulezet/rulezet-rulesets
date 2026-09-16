@@ -1,0 +1,23 @@
+{
+  "uuid": "54b00c75-0954-49b4-8edf-eeb0fe138803",
+  "title": "F5_BIGIP_c05d5254_Composite_High_Signal",
+  "format": "yara",
+  "author": "admin admin",
+  "license": "0BSD",
+  "license_verified": true,
+  "description": "Higher-signal composite rule requiring multiple independent indicators from the article",
+  "source": "https://my.f5.com/manage/s/article/K000160486",
+  "tags": [
+    "vulnerability:origin=\"software\"",
+    "vulnerability:information=\"remediation\"",
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-53521"
+  ],
+  "created_at": "2026-03-30",
+  "last_modified": "2026-04-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/222597"
+}

@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] System Audit"; content: "System Audit"; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000294; sid: 5000294; rev:1;)

@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Partition usage reached 100% [disk space monitor]"; content: "output"; content: "dh -h"; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000296; sid: 5000296; rev:1;)

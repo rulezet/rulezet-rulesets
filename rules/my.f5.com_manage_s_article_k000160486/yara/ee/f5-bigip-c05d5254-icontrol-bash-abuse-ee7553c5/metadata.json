@@ -1,0 +1,23 @@
+{
+  "uuid": "ee7553c5-8050-414e-81c1-75f1e3ea75d7",
+  "title": "F5_BIGIP_c05d5254_iControl_Bash_Abuse",
+  "format": "yara",
+  "author": "admin admin",
+  "license": "0BSD",
+  "license_verified": true,
+  "description": "Detects suspicious iControl REST bash execution patterns tied to article IOC examples",
+  "source": "https://my.f5.com/manage/s/article/K000160486",
+  "tags": [
+    "vulnerability:origin=\"software\"",
+    "vulnerability:information=\"remediation\"",
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-53521"
+  ],
+  "created_at": "2026-03-30",
+  "last_modified": "2026-03-30",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/222593"
+}

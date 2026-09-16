@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Ossec started"; content: "Ossec started"; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000287; sid: 5000287; rev:1;)

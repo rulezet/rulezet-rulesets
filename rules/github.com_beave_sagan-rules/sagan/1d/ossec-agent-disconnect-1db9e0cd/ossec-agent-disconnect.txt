@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[OSSEC] Agent disconnect"; content: "Agent disconnected"; classtype: system-event; program: ossec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000288; sid: 5000288; rev:1;)
