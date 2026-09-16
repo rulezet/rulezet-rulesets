@@ -1,0 +1,9 @@
+rule Trojan_Win32_Qakbot_GKM_MTB_12{
+	meta:
+		description = "Trojan:Win32/Qakbot.GKM!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {0f b6 db 03 fb 89 3d ?? ?? ?? ?? 8b 84 0e ?? ?? ?? ?? 05 4c 6a 06 01 a3 ?? ?? ?? ?? 89 84 0e ?? ?? ?? ?? 83 c6 04 0f b7 05 ?? ?? ?? ?? 05 da 9d 00 00 03 c7 81 fe 60 0b 00 00 73 } 	condition:
+		((#a_02_0  & 1)*1) >=1
+ 
+}
