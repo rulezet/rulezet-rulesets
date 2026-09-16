@@ -1,0 +1,15 @@
+rule Virus_Hijack_Gen_Trojan_ShellObject_iWZ_auBEZAc_5 {
+  meta:
+    description = "datamaliciousorder - file Virus.Hijack_Gen.Trojan.ShellObject.iWZ@auBEZAc_5.vir"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "3bec4e6b88176de02543f00085b5aabcdef5bfbceadbe305e1457fe56821ecc1"
+
+  strings:
+    $s1 = "hhautomatically sign you into the software using the same Microsoft account. This allows you to store and" fullword ascii
+
+  condition:
+    uint16(0) == 0x5a4d and
+    all of them
+}
