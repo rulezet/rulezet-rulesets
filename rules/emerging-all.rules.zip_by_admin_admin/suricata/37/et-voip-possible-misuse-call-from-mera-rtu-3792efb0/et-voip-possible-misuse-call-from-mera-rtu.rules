@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 1720 (msg:"ET VOIP Possible Misuse Call from MERA RTU"; flow:established,to_server; content:"|22 c0 09 00 7a b7 07|MERA RTU|08|"; classtype:misc-attack; sid:2022022; rev:2; metadata:created_at 2015_11_03, confidence Medium, signature_severity Informational, updated_at 2024_03_07;)

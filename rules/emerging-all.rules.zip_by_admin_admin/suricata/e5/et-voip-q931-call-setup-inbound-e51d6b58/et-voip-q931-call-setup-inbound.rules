@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 1720 (msg:"ET VOIP Q.931 Call Setup - Inbound"; flow:established,to_server; content:"|08|"; offset:4; depth:1; content:"|05 04|"; distance:3; within:2; classtype:misc-activity; sid:2022023; rev:2; metadata:created_at 2015_11_03, confidence Medium, signature_severity Informational, updated_at 2024_03_07;)

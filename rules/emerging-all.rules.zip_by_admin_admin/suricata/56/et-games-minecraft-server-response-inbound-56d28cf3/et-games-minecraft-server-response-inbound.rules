@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 25565 -> $HOME_NET any (msg:"ET GAMES MINECRAFT Server response inbound"; flow:established,to_client; content:"|7B 22|"; depth:10; classtype:policy-violation; sid:2021701; rev:2; metadata:created_at 2015_08_21, confidence High, signature_severity Informational, updated_at 2024_03_06;)
