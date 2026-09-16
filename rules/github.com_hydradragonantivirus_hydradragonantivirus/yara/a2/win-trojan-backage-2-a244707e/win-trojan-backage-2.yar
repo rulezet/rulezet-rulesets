@@ -1,0 +1,9 @@
+rule Win_Trojan_Backage_2
+{
+strings:
+	$a0 = { 61676520456469742053657276657220332e31206279205b2d4e652d4f2d536b382d5d00038080ff0004ffffff000578 }
+
+
+condition:
+	$a0
+}

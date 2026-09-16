@@ -1,0 +1,9 @@
+rule Win_Trojan_Delarm_4
+{
+strings:
+	$a0 = { 010200000002000000fffff0ff000000000001f0ff1c00000000000000be1101b91b032e8a0434ff2e880446e2f5cc2d4681fe44fe7f41d0fed174fb7c39fdfc2f1d09c42c8bfa4700b332de4bc3cc3645c7fe14f4998d9a9a959cd18d9a98ff32deafa77427af4bbf46f7ff45abfe14f7adbab8babbb6abcb32dea77427af4bbf46fdff4593fe14fdf2f532de }
+
+
+condition:
+	$a0
+}

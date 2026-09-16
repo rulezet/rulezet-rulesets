@@ -1,0 +1,9 @@
+rule Win_Trojan_BrownOrifice_8
+{
+strings:
+	$a0 = { 6f772072756e6e696e6720424f4854545044206f6e20706f72742024706f7274213c2f703e0a2020202020203c703e43 }
+
+
+condition:
+	$a0
+}

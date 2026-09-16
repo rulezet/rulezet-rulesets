@@ -1,0 +1,9 @@
+rule Win_Trojan_Casper_1
+{
+strings:
+	$a0 = { 2181fa0104750fb81505b500ba00008ec2bb0000cd13cd204869212049276d2043617370657220546865205669 }
+
+
+condition:
+	$a0
+}

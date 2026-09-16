@@ -1,0 +1,9 @@
+rule Win_Trojan_AVKillahDial_1
+{
+strings:
+	$a0 = { 0100008945fc8d85d4feffff50ff75fce81f0100008d85d4fdffff508d85f8feffff50e84f0000008d85d4fdffff50ff7508e80f01000083f8007519ffb5dcfeffff6a006a01e8e30000006a0050e8ed000000eb168d85d4feffff50ff75fce8d600000083f8007402ebaaff75fce88b000000c9c20400558bec578b }
+
+
+condition:
+	$a0
+}
