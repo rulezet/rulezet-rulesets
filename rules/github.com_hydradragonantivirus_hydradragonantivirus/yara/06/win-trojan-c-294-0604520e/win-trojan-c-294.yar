@@ -1,0 +1,9 @@
+rule Win_Trojan_C_294
+{
+strings:
+	$a0 = { 63616c6c25222b6b65792b[0-13]3b777269746528227365745f222b6e616d652b223d3e6e756c2e222b6b657929 }
+
+
+condition:
+	$a0
+}

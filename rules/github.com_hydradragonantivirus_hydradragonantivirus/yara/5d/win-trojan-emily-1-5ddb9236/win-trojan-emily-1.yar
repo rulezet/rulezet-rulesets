@@ -1,0 +1,9 @@
+rule Win_Trojan_Emily_1
+{
+strings:
+	$a0 = { 764f7074696f6e732e566972757350726f74656374696f6e203d2046616c73652027796c696d65 }
+
+
+condition:
+	$a0
+}

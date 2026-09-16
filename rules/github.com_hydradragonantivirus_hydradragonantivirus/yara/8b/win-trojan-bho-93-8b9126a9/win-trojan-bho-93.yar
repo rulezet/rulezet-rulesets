@@ -1,0 +1,9 @@
+rule Win_Trojan_BHO_93
+{
+strings:
+	$a0 = { c8029542122ea8abe0b3aadfdddc5c4da502aaabb78bce6efb9e891796890b15031a152c508a45ef286a8dceeced76c64440f72d0c437a65945075ee6316c1700f4f1caaa6b38bb8e8bc99cd53fdf3f52f107b6ad8da5bdcab9073cebefac9535106014a2b0dfd8095e12addccf7bf4cffdcb977da504454cd8e171e57e82105420d3e61658ba31e7b844b28 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Small_4612
+{
+strings:
+	$a0 = { 28272b636f6d6d612b2776697275732e6a73272b636f6d6d612b27292729[0-31]6d652e726561646c696e652829 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Peed_372
+{
+strings:
+	$a0 = { 81c78104000081ff81040000744881ff0dd000007f40cd2dab50525131c089c15151ff15????40000528d1030093595a5801df83ef0581ef27d10300e2dac3b95f3d12ff4881c10fd0ed00ba??????01c1ca0289d6c3e8e4ffffff52ad05????????eb03 }
+
+
+condition:
+	$a0
+}

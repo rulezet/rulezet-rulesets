@@ -1,0 +1,9 @@
+rule Win_Trojan_FormatC_91
+{
+strings:
+	$a0 = { 433a5c77696e646f77735c3233[0-3]433a5c6175746f657865632e626174[0-13]666f726d617420433a202f71202f43 }
+
+
+condition:
+	$a0
+}

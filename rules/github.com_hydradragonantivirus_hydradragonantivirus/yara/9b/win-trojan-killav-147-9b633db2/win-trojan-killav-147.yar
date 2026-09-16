@@ -1,0 +1,9 @@
+rule Win_Trojan_Killav_147
+{
+strings:
+	$a0 = { 6b696c6c202f66202f696d20617667756172642e657865[0-14]2f662f696d206176676374726c2e657865 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Crypt_171
+{
+strings:
+	$a0 = { eb02cd20eb02eb02908bf68bf6eb0e00?00000000c0000????????eb005553515756be????0?00e802000000ffe05fc1ef0cc1e70c66813f4d5a740d81ef0010000066813f4d5a75f35703f7568b4e1803cf8bc133c98bd8ffd35e5f595b5d5058ffe0c3 }
+
+
+condition:
+	$a0
+}

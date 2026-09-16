@@ -1,0 +1,9 @@
+rule Win_Trojan_Snake_6
+{
+strings:
+	$a0 = { 3d6b6c65696e[0-9]25736e616b656225202f66202f632025736e616b656361252025736e616b6563622520613a5c }
+
+
+condition:
+	$a0
+}

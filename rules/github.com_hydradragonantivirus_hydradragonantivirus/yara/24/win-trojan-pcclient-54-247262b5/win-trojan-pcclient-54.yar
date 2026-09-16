@@ -1,0 +1,9 @@
+rule Win_Trojan_PcClient_54
+{
+strings:
+	$a0 = { 9c60e8000000005d83ed078d85????ffff8338010f8447020000c700010000008bd52b95????ffff8995????ffff0195????ffff8db5????ffff011655566a40680010000068001000006a00ff95????ffff85c00f846b0300008985????ffffe8000000 }
+
+
+condition:
+	$a0
+}

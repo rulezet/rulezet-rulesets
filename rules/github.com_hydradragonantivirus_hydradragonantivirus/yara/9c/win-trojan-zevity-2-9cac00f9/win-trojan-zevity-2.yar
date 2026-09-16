@@ -1,0 +1,9 @@
+rule Win_Trojan_Zevity_2
+{
+strings:
+	$a0 = { 5c496e7465726e6574204578706c6f726572[0-219]53455455502e455845[0-71]5c636f6eabb866696733abb8322e6578 }
+
+
+condition:
+	$a0
+}
