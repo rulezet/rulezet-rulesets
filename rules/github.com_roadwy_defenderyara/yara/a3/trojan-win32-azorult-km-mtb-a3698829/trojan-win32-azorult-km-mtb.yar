@@ -1,0 +1,9 @@
+rule Trojan_Win32_Azorult_KM_MTB{
+	meta:
+		description = "Trojan:Win32/Azorult.KM!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_02_0 = {69 c0 fd 43 03 00 81 3d ?? ?? ?? ?? 9e 13 00 00 a3 ?? ?? ?? ?? 75 ?? 33 c0 50 50 50 ff 15 ?? ?? ?? ?? 81 05 ?? ?? ?? ?? c3 9e 26 00 0f b7 05 ?? ?? ?? ?? 25 } 		$a_00_1 = {30 04 37 83 fb 19 75 } 	condition:
+		((#a_02_0  & 1)*1+(#a_00_1  & 1)*1) >=2
+ 
+}

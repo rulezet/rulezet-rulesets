@@ -1,0 +1,9 @@
+rule Trojan_Win32_Azorult_NA_MTB_2{
+	meta:
+		description = "Trojan:Win32/Azorult.NA!MTB,SIGNATURE_TYPE_PEHSTR,0a 00 0a 00 01 00 00 "
+		
+	strings :
+		$a_01_0 = {83 7d ec 10 8d 4d d8 8b c3 8b b7 0c 01 00 00 0f 43 4d d8 33 d2 f7 75 e8 8a 04 0a 30 04 1e 43 8b 87 10 01 00 00 2b 87 0c 01 00 00 3b d8 75 d1 } 	condition:
+		((#a_01_0  & 1)*10) >=10
+ 
+}

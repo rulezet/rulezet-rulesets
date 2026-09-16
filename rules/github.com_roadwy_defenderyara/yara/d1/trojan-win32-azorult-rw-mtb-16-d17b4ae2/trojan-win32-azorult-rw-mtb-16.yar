@@ -1,0 +1,9 @@
+rule Trojan_Win32_Azorult_RW_MTB_16{
+	meta:
+		description = "Trojan:Win32/Azorult.RW!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {d3 ea 89 55 ?? 8b 45 ?? 03 45 ?? 89 ?? ?? c7 ?? ?? ?? ?? ?? 82 cd 10 fe 8b ?? ?? 33 ?? ?? 89 ?? ?? 81 } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}
