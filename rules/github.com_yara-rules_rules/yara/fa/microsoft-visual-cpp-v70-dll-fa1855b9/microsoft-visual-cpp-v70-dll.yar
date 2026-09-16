@@ -1,0 +1,10 @@
+import "pe"
+rule Microsoft_Visual_Cpp_v70_DLL: PEiD
+{
+    strings:
+        $a = { 55 8B EC 53 8B 5D 08 56 8B 75 0C 57 8B 7D 10 }
+        $b = { 55 8B EC 53 8B 5D 08 56 8B 75 0C 57 8B 7D 10 ?? ?? 83 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "1985448b-cd9a-46b1-ac10-d10e607f14e9",
+  "title": "ChickenDOS",
+  "format": "yara",
+  "author": "Jason Jones <jasonjones@arbor.net>",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Win32-variant of Chicken ident for both dropper and dropped file",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/200495"
+}
