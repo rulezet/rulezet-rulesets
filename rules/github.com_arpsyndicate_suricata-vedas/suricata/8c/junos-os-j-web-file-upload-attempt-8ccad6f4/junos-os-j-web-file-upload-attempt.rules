@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"Junos OS J-Web file upload attempt"; flow:established,to_server; content:"fileData"; http_uri; content:"fileName"; http_uri; sid:1000216; rev:1; reference:cve,CVE-2022-22242; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-22242;)

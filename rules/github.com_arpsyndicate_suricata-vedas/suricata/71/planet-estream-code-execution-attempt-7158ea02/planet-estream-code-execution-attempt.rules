@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Planet eStream Code Execution Attempt"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/Upload2.ashx|3f|"; nocase; distance:0; content:"|2e|progress|3a|100|2e|"; sid:1006393; rev:1; reference:cve,CVE-2022-45892; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-45892;)

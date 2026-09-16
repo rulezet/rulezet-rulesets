@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"Junos OS J-Web PHP file include attempt"; flow:established,to_server; content:"payload"; http_uri; content:"alol/lol/any"; http_uri; sid:1000217; rev:1; reference:cve,CVE-2022-22242; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2022-22242;)
