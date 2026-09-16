@@ -1,0 +1,9 @@
+rule Win_Trojan_Delf_1509
+{
+strings:
+	$a0 = { 5568????4a0064ff30648920b8????4a00ba????4a00e8??0037a0 }
+
+
+condition:
+	$a0
+}

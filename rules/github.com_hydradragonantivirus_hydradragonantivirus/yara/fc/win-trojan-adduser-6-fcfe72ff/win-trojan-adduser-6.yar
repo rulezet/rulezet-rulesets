@@ -1,0 +1,9 @@
+rule Win_Trojan_Adduser_6
+{
+strings:
+	$a0 = { 6830704000e80300000c59c390909090558bec83ec105668d8604000e80300060d5933f68b4d088945f03bce75183bc6750433c0eb6d }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Keylogger_58
+{
+strings:
+	$a0 = { 50726f6b65796c6f6767657200000000558bec83c4f8538955f88945fc8b45fce8fb93ffff8b45f8e8f393ffff33c0556891aa400064ff306489206a006a008b45f8e8e993ffff508b45fce8 }
+
+
+condition:
+	$a0
+}

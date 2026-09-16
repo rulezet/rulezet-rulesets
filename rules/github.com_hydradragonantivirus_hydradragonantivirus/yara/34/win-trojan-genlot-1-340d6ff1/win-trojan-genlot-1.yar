@@ -1,0 +1,9 @@
+rule Win_Trojan_Genlot_1
+{
+strings:
+	$a0 = { a0114047efda197cf33eeabcc890dfbccff309f0a49ee7b17cac01b47f96e77902bc03c43ccff33ccc05d406dc07c7f373f2e4055812163e7edcf8004f084fd3f33c7e1003181fee43bda0122c4fe1c3870f344f3c4f474f4f4f3c3f97c704575f063f27cff367076ffb9cd0720813cfcfcf8f848c949cafc9cfcfa4acb4f3f33ecf0560c8d0d7e4cff2d8e0 }
+
+
+condition:
+	$a0
+}

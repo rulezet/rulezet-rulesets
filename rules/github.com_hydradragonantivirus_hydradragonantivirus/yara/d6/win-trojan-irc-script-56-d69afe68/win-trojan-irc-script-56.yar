@@ -1,0 +1,9 @@
+rule Win_Trojan_IRC_Script_56
+{
+strings:
+	$a0 = { 6f6e202a3a544558543a214674707365617263683a233a207b200d0d0d0d0d0d0d0a207365742025666c6173686678 }
+
+
+condition:
+	$a0
+}

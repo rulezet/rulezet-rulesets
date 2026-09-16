@@ -1,0 +1,9 @@
+rule Win_Trojan_Packed_44
+{
+strings:
+	$a0 = { d0f6d090665066536658665b6693665066536658665b6693f6d0f6d0665066536658665b66931e16171feb }
+
+
+condition:
+	$a0
+}
