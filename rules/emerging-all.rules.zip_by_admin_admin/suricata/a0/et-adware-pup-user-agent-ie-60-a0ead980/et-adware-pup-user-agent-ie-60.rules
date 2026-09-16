@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP User-Agent (IE_6.0)"; flow:established,to_server; http.user_agent; content:"IE_6.0"; startswith; classtype:pup-activity; sid:2009021; rev:11; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

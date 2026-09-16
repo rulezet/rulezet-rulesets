@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP User-Agent (Mozilla/4.8 ru)"; flow:established,to_server; http.user_agent; bsize:36; content:"Mozilla/4.8 [ru] (Windows NT 6.0|3b| U)"; fast_pattern; classtype:pup-activity; sid:2009438; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

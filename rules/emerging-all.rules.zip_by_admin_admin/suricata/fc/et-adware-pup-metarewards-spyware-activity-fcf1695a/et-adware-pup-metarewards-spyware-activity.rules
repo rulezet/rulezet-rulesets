@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Metarewards Spyware Activity"; flow:established,to_server; http.host; content:"www.metareward.com"; startswith; classtype:pup-activity; sid:2001666; rev:9; metadata:created_at 2010_07_30, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_01;)

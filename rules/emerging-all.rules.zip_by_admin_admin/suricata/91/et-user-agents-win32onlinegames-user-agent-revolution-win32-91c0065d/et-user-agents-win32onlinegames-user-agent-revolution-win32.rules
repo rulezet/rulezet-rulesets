@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET USER_AGENTS Win32/OnLineGames User-Agent (Revolution Win32)"; flow:established,to_server; http.user_agent; content:"Revolution|20 28|Win32|29|"; startswith; classtype:trojan-activity; sid:2013725; rev:4; metadata:created_at 2011_10_01, confidence High, signature_severity Informational, updated_at 2024_03_01;)

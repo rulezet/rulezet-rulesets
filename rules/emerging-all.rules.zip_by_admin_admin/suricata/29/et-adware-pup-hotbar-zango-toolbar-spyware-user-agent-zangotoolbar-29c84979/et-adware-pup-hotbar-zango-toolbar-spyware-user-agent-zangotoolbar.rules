@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Hotbar Zango Toolbar Spyware User Agent (ZangoToolbar )"; flow:established,to_server; http.user_agent; content:"ZangoToolbar"; fast_pattern; classtype:pup-activity; sid:2003365; rev:12; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

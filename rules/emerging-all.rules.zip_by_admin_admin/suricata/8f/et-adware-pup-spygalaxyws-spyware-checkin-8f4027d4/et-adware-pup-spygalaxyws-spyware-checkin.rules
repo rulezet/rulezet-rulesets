@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Spygalaxy.ws Spyware Checkin"; flow:established,to_server; http.uri; content:"/install.php?id="; nocase; http.host; bsize:12; content:"spygalaxy.ws"; fast_pattern; classtype:pup-activity; sid:2001489; rev:11; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_01;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP FakeAV Windows Protection Suite/ReleaseXP.exe User-Agent (Releasexp)"; flow:established,to_server; http.user_agent; bsize:9; content:"Releasexp"; nocase; classtype:pup-activity; sid:2009796; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

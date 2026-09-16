@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP GlobalPhon.com Dialer (add_ocx)"; flow:established,to_server; http.uri; content:"/add_ocx.asp?"; nocase; content:"id="; nocase; http.host; content:"globalphon.com"; fast_pattern; classtype:pup-activity; sid:2001660; rev:10; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_01;)

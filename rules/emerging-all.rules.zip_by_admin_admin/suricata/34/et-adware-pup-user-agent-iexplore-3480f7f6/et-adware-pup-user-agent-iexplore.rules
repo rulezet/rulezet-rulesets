@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET ADWARE_PUP User-Agent (iexplore)"; flow:established,to_server; http.user_agent; bsize:8; content:"iexplore"; nocase; classtype:pup-activity; sid:2000466; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_01;)

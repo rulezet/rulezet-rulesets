@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP User-Agent (HelpSrvc)"; flow:established,to_server; http.user_agent; bsize:8; content:"HelpSrvc"; classtype:pup-activity; sid:2009439; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

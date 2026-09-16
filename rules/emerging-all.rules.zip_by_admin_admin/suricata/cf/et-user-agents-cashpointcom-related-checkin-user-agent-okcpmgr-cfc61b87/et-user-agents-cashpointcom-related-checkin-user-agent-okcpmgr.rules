@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET USER_AGENTS Cashpoint.com Related checkin User-Agent (okcpmgr)"; flow:established,to_server; http.user_agent; bsize:7; content:"okcpmgr"; classtype:trojan-activity; sid:2007810; rev:8; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_01;)

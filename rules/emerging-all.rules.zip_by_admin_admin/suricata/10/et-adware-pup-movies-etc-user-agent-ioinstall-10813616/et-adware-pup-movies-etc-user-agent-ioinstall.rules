@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Movies-etc User-Agent (IOInstall)"; flow:established,to_server; http.user_agent; content:"IOInstall"; startswith; nocase; reference:url,www.movies-etc.com; classtype:pup-activity; sid:2002404; rev:13; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

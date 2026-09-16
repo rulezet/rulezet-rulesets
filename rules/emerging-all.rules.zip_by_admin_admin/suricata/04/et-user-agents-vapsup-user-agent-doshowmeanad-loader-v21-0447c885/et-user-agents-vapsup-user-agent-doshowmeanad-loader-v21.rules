@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET USER_AGENTS Vapsup User-Agent (doshowmeanad loader v2.1)"; flow:established,to_server; http.user_agent; content:"doshowmeanad "; startswith; classtype:trojan-activity; sid:2008142; rev:7; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_01;)

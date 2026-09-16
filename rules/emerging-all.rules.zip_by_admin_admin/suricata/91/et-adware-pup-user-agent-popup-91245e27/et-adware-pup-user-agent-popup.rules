@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP User-Agent (popup)"; flow:established,to_server; http.user_agent; bsize:5; content:"popup"; classtype:pup-activity; sid:2007946; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_02;)

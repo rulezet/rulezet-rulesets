@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Spyaxe Spyware DB Version Check"; flow:established,to_server; http.uri; content:"/updates/database/dbver.dat"; fast_pattern; nocase; http.header; content:"spywareaxe"; nocase; classtype:pup-activity; sid:2002805; rev:8; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_02;)

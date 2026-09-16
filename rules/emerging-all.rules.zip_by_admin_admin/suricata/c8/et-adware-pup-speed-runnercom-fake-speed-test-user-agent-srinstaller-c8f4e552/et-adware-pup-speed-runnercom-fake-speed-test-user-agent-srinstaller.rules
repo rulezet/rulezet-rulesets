@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Speed-runner.com Fake Speed Test User-Agent (SRInstaller)"; flow:established,to_server; http.user_agent; bsize:11; content:"SRInstaller"; classtype:pup-activity; sid:2008145; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

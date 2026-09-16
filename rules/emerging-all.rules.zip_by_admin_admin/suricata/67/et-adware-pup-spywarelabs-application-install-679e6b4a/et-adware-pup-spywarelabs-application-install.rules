@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP SpywareLabs Application Install"; flow:established,to_server; http.uri; content:"/DistID/BaseInstalls/V"; fast_pattern; nocase; http.user_agent; content:"Wise"; nocase; classtype:pup-activity; sid:2001522; rev:16; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_01;)

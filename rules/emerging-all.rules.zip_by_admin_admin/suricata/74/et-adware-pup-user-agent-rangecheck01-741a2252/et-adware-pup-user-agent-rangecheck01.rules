@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET ADWARE_PUP User-Agent (RangeCheck/0.1)"; flow:established,to_server; http.user_agent; bsize:14; content:"RangeCheck/0.1"; nocase; classtype:pup-activity; sid:2011718; rev:7; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

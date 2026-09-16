@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Popupblockade.com Spyware Related User-Agent (PopupBlockade/1.63.0.2/Reg)"; flow:established,to_server; http.user_agent; content:"PopupBlockade"; startswith; classtype:pup-activity; sid:2008894; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

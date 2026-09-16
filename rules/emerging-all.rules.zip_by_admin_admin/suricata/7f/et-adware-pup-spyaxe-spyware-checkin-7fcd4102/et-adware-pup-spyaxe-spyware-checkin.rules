@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Spyaxe Spyware Checkin"; flow:established,to_server; http.uri; content:"/download.php?sid="; fast_pattern; nocase; http.header; content:"spyaxe"; nocase; classtype:pup-activity; sid:2002806; rev:8; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_02;)

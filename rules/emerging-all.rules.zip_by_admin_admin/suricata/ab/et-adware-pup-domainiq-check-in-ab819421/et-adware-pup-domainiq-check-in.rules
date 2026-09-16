@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> 54.218.7.114 any (msg:"ET ADWARE_PUP DomainIQ Check-in"; flow:established,to_server; http.user_agent; bsize:20; content:"NSISDL/1.2|20 28|Mozilla|29|"; reference:md5,00699af9bb10af100563adbb767bcee0; classtype:pup-activity; sid:2018458; rev:5; metadata:created_at 2014_05_09, signature_severity Minor, updated_at 2024_03_02;)

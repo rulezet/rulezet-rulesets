@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Geopia.com Fake Anti-Spyware/AV User-Agent (fian3manager)"; flow:established,to_server; http.user_agent; bsize:12; content:"fian3manager"; classtype:pup-activity; sid:2007938; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

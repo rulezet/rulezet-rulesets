@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Doctorvaccine.co.kr Related Spyware-User Agent (ers)"; flow:established,to_server; http.user_agent; bsize:3; content:"ers"; classtype:pup-activity; sid:2007809; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_02;)

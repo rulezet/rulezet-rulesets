@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Comet Systems Spyware Reporting"; flow:established,to_server; http.host; content:"log.cc.cometsystems.com"; startswith; classtype:pup-activity; sid:2001658; rev:10; metadata:created_at 2010_07_30, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_01;)
