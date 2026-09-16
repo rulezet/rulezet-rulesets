@@ -1,0 +1,9 @@
+rule Trojan_Win32_Ekstak_RC_MTB_15{
+	meta:
+		description = "Trojan:Win32/Ekstak.RC!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {83 c4 04 03 c8 89 0d ?? ?? ?? 00 e8 ?? ?? ?? 00 8b c8 b8 ?? ?? ?? ?? 33 d2 8b 1d ?? ?? ?? 00 f7 f1 33 d8 89 1d ?? ?? ?? 00 e8 90 09 0d 00 6a 32 e8 ?? ?? ?? 00 8b 0d } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}
