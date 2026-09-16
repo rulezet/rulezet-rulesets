@@ -1,0 +1,9 @@
+rule Win_Trojan_QQMusic_2
+{
+strings:
+	$a0 = { 158035220d4102db23c2ac504201039ce41e483775b46e6e675b73b99d3f40dfca12b7b912dddef20bb5845daf20ba9206ade48252107d364835c80b5ce02d720d6b9c80d3246eae72035c8155c9076dc01cb9906f77705ee6772d7bdcdfc3bfffffeff7e7a7f7dfbfdf7d3fbcf3efdccf39f9f3e7bfc3d43a8fbb5e080e2ff2f21a7a1a621a5a1a4a15b434 }
+
+
+condition:
+	$a0
+}

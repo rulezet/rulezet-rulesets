@@ -1,0 +1,9 @@
+rule Win_Trojan_Lmir_157
+{
+strings:
+	$a0 = { 500508b14441f091fa211209201139ce487d25bbbad4bf86e6dee66e6f5dccdfc25bf86e4876ddd8177b7bc0b6ed816f5bc836a417aaf2457a4825ae491f0c82dd7243b6dc82b6e722b5c9175dc922d7205f0c81db77217b6f7241bae3e173b8df1dccdfc37f3dcdffffff4f7d7f7af7ef33dfcf7f39efdfce7dff01ebcfd065cc849c96c625e77dbb6f8cda }
+
+
+condition:
+	$a0
+}

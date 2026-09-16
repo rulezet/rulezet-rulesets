@@ -1,0 +1,9 @@
+rule Win_Trojan_ICQ_19
+{
+strings:
+	$a0 = { a121150415247c15881434089be6c869079dbc6b797f0eb799dee71fc3bf80f7b99dc90b7bcc817b7b741b79902be920de2c17b6dd82b5905bc7202d7202f1c906ae41af5c905ae4038f324169920db7203c79902f7bcc83cedee42dbdb82bdce675ce6677ffffff6fbfefefef9f3cdfbf7e7dfbf3ef9f7cdfdffbdff832e682249cc16cb65aecf65df4805f }
+
+
+condition:
+	$a0
+}

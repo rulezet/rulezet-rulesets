@@ -1,0 +1,9 @@
+rule Win_Trojan_LdPinch_151
+{
+strings:
+	$a0 = { 44cd25918fb0df71ddff8ffe56a92b6ffdd6bff191dcebc876699c3c9407512d8260bbda60b34ad8b321d3ff4c074cdea2f24edfb78e67b1dd41c8748c219fb098c45a3d0747ce68fccc27c54133534f92f40cca9f55143f6c2527bfef1e5996de2350c9d2d5a7519be1c6d826653c66875f874ebe19272dcce9782b90dfea52ebff70edc7afcaa4c71fe52f }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Nilage_22
+{
+strings:
+	$a0 = { 52451a820a323e0844221a0466ec91d205ecad2dfcabdf8f39df90dfca42b7b205eb7b60dbcc8355d82e2c02abb22b492236f6c1f4c905b72052b9b1b6b9245a648bc39200b90179cd236dc839ddd900cbd80f77665ceceffffffe5eff7cf9fdfdf7dbcfefbe7dfdfcf3e7bfc3aabd4f00ba101c606c49fe98fbb1fe88fe0cfbc9fe78fe00fdf8fb89ff9e7c }
+
+
+condition:
+	$a0
+}

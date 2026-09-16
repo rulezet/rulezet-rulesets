@@ -1,0 +1,9 @@
+rule Win_Trojan_Gamec_5
+{
+strings:
+	$a0 = { 4985921f8a9004ac2af6b1b4bdec8e456285082c4cf7dc826037aa2ddef37ade6eeda7f2de05de737605bde7217bbcdd906f75917b6d906ed6416d7308d0902d5ee46a9c80d4e641abc88d5e641a9c90b6bcc83579223d792023c923abc9215387e2af20ad7816f77bceef7fffffd7df3cf3ef9f3e7bf3e7cfbefdf73dccfe19fcbcfdf8d80deca91320e6aa }
+
+
+condition:
+	$a0
+}

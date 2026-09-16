@@ -1,0 +1,9 @@
+rule Win_Trojan_Mosucker_87
+{
+strings:
+	$a0 = { b158b65acab38b1e3167bf4ddf6793d21ae9ea51938db51e5e7fc9ede7733aeb797bd76f33b8bb796e2c6af691fd28472f3811bfa08e71e99169660f578e438de191ed2b91e2e190adeb95a72b9c7a5a65297ae2235c522b8b4b5cedadae77b8f73999cee677bfdfffa9f7efe7cf37efbe7cf9e7be9ecd24f3d0c0dfbe7fbcfbe7e79275588b0320dcf9068d }
+
+
+condition:
+	$a0
+}

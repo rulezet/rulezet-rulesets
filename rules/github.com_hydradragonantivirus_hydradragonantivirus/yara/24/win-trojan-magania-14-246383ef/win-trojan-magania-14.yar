@@ -1,0 +1,9 @@
+rule Win_Trojan_Magania_14
+{
+strings:
+	$a0 = { 2411f4105191f0462821008999206106f37c69bbf2b79f1e1f0e7c25dfc39a816f37a817775cc0bbbcdc0e35720de2c179572456b0f4b6f2416ba80dddd406dba82bbbac836dd406b75202ba80db7501ddd6a0f2ddea41b6ea05d6f9a11b6eade7fffffbfcfefdfbaeb33befaefcebaefcd79f7fdeff842a5c2204976d36fb5701c0da6da8c17c939f26eaa5 }
+
+
+condition:
+	$a0
+}

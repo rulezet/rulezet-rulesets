@@ -1,0 +1,9 @@
+rule Win_Trojan_QQThief_1
+{
+strings:
+	$a0 = { c8cb8f15ce42efcf0f37b3cded14f4595ccb9afb2d7e3c0e6b9cd685ace685b33380b650b599037a20e5e80aca0cd3f41a4d0cd3ad8cc68565d0acba05a74ad4ea6b98eaf634b65969f4a74b64daab39cb5cbeeb9f8fde7e7f7fffffd0fbd77d75f3befbf9df9f3d3cf03cf435a5ebafeefaebaef6c5f16a7cf4d64ea75d6137535145772d2ebd9d07ca2bc1 }
+
+
+condition:
+	$a0
+}

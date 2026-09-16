@@ -1,0 +1,9 @@
+rule Win_Trojan_Mifeng_3
+{
+strings:
+	$a0 = { b28cdacf692acbb65db0b267b65d66ac520f3ce73b24ec4369c01db56efc374dcf7e2efc373025ddb80d6efb246b6482bac9015841a1202d200a9908a4c0159908eb3205598406982eb4c80acc82b5c06d5c05ab92458602e5b80d57176ebb9beefc2fc3dffffff3fdebaefbfcebaebf3bf3cef9ccc900cc3e1fbfdfe88233f0fb6739496a84121af79db79d }
+
+
+condition:
+	$a0
+}

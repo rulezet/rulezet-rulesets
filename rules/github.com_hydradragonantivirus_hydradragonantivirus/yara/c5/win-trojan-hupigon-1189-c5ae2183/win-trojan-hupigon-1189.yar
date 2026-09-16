@@ -1,0 +1,9 @@
+rule Win_Trojan_Hupigon_1189
+{
+strings:
+	$a0 = { 0052448a2245091fafa4404201139c907e1c1bdcb46dccddd7bb9b9b5fc37f02dfc37205edee44b76ef02bbb6076daf20de8c06d5e482d920ad76116b845bdb902b5c915b73907d320bd6e482d72237ae485b7b90b77bdc905ef705bbddc5b6ef72f7737f4dcdffffff4f7cf3cfef9f7e7a7de7f79f3ef99cfdbcf7f099630226a5b10b70ddedbbb32f5b7c9 }
+
+
+condition:
+	$a0
+}

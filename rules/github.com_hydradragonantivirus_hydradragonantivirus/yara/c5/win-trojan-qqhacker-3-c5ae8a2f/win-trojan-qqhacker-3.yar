@@ -1,0 +1,9 @@
+rule Win_Trojan_QQHacker_3
+{
+strings:
+	$a0 = { 0c0149022a0a3e923e3e91028402273c903841bb5dbdbdbf8ddddfc29f877f01dee677242ef7bd81b6f7780edee4256b7915d582f75bc905d21e975c845ae4077ae7216d720b75c815b7209adce4057209bdb924bdbdc82f72e41bbbb906dddcb56dee5ef7b997fbfff5beffbe7cfbf733ef9f7ffe7dfbe79cf39fb7cf7f811834409a7315c2e16fdf2d7c01 }
+
+
+condition:
+	$a0
+}

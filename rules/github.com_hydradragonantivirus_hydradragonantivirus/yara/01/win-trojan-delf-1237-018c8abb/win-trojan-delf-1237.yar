@@ -1,0 +1,9 @@
+rule Win_Trojan_Delf_1237
+{
+strings:
+	$a0 = { 149062a0828c8fa291010d01135ec90d3077bab4b779bcc6ef39ccafe1cfc077ccce640b79bc816ddf340de6f9036d5d45bc582f2aea41690e976e405ae412edc906d720d76e405b7340d5c920d32016b901c79906dbcc9077be641adb80bbde66edfc37fffffedf3fbe7cfbf75af3cfbe7bf7cf3cf75afdbe77f81152e388a42ed9ecfbf6f764dfc78efa1f }
+
+
+condition:
+	$a0
+}

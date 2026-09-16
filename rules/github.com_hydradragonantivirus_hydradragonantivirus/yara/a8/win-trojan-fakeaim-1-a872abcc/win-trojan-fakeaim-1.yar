@@ -1,0 +1,9 @@
+rule Win_Trojan_FakeAIM_1
+{
+strings:
+	$a0 = { dedb7366e664bdd9b51cf58ed6fa1972f6ea4c97574b725d46399b892ae4b925c93526dde5c6eee56ca6f377655e5deedd4b933254bcbad94dd5ed4accaddada9bebbf65d56d67be5eded5fa32ab6aaefd3b53736b73d1b9559e9dffffff3b7cf3cfbe7ef3cf3f79cf3ef2be81fbf1e9fef9e7f7cf9e7cf94fa2b691c18cac0ec6b4914d20ce4610eba56cd9 }
+
+
+condition:
+	$a0
+}

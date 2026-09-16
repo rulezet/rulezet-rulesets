@@ -1,0 +1,9 @@
+rule Win_Trojan_Servu_70
+{
+strings:
+	$a0 = { be2ddf1d6ef8b7c97c9f5f1d5f1fd7c97d69be84beffef9bf3ce8fd6b5ff5af7ddeda3a774c5c1f35859d4d4db1c9c9ba834a031614055b386ba380ab1ad03a3abab2ce70c0345c94bc9ca33867ea1bd9fcc0ed81bee27d6816c7561447c83c94d4c4706eac6e8159d237679aadf3810c3ef56ee6a9753ef2adb83bfdb002277875ced8db9329de100005e5a }
+
+
+condition:
+	$a0
+}

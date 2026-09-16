@@ -1,0 +1,9 @@
+rule Win_Trojan_WOW_59
+{
+strings:
+	$a0 = { 2085a857e08d1bdec5a2b0b0ad8d0a3058999ee490f416a2b7aebaf77bbcb5fe5bc4dbce6ec0b7bce037777922bde3236dedc83752416a66115242dabb915af241eaf32450e6035399140e406af24043920d5e4c914e482a727c01c3e2a70054e25dbdef16deedffffff4f7cf3cfcfbfcfdf7dcf89f19ce4e4f3efc0a944c00aa44c71f6500fd02dc385592f }
+
+
+condition:
+	$a0
+}

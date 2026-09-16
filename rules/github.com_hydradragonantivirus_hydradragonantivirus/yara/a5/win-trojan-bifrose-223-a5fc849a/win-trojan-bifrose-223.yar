@@ -1,0 +1,9 @@
+rule Win_Trojan_Bifrose_223
+{
+strings:
+	$a0 = { 068aea256c587361fc7364760b1a4a9a045ddf7466fa9d9cb96dfa3babf4f5b9df50bf5406fd1b0ececb21cd6c8daa4d8b49b05ab208a6c2970c83d6b915b9d802532265ae406bd908dae6c1e5c8b7b8c816f385bd9d981733ae0e777d1dffffff4f7e7ef9e7cf3e79e79f3df37ddfaf73373e7eff7fa17cfefc7efc7efc7fff4d5dc270462a80412540c8bf }
+
+
+condition:
+	$a0
+}
