@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] META-DATA Unexpected error in Next Card Code mode while not doing SDI"; append_program; content: "%ASA"; pcre: "/%ASA[-]+4-713247/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000488; sid: 5000488; rev: 4;)

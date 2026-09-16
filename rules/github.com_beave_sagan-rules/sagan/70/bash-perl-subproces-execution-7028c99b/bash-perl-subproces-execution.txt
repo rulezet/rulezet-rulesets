@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Perl subproces execution"; content:"HISTORY"; content:"perl"; content:"fork"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002312; rev:2;)

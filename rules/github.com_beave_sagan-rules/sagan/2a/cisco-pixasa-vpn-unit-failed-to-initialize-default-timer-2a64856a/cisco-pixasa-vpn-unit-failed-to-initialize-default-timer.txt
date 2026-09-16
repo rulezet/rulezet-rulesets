@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to initialize default timer"; append_program; content: "%ASA"; pcre: "/%ASA[-]+5-720016/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000525; sid: 5000525; rev: 4;)

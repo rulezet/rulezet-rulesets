@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Module in slot experienced a control channel communications failure"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-323001/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000462; sid: 5000462; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] IPS requested to drop ICMP packets"; append_program; content: "%ASA"; pcre: "/%ASA[-]+4-420002; default_proto: icmp; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000478; sid: 5000478; rev: 4;)

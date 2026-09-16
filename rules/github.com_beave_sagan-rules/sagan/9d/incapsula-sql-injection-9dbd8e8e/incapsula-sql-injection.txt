@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[INCAPSULA] SQL Injection"; program: Incapsula*|incapsula*; content: "|7c|SQL Injection|7c|"; parse_src_ip: 1; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5003921; sid:5003921; rev:3;)

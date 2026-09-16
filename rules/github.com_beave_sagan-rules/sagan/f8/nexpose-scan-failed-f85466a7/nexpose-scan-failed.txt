@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[NeXpose] Scan failed"; content: "SCAN FAILED|3a|"; classtype: not-suspicious; program: NeXpose; reference: url,wiki.quadrantsec.com/bin/view/Main/5002277; sid:5002277; rev:3;)

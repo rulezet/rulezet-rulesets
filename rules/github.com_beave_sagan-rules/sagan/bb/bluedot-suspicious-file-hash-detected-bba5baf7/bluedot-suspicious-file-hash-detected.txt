@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Suspicious file hash detected"; content: " files: "; bluedot: type: file_hash, Malicious; classtype: suspicious-traffic; normalize; parse_proto; reference: url,wiki.quadrantsec.com/bin/view/Main/5002940; sid:5002940; rev:3;)

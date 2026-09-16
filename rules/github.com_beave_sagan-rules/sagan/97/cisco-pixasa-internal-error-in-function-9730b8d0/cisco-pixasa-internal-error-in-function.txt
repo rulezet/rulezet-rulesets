@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Internal error in function"; append_program; content: "%ASA"; pcre: "/%ASA[-]+1-216001/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000419; sid: 5000419; rev: 4;)

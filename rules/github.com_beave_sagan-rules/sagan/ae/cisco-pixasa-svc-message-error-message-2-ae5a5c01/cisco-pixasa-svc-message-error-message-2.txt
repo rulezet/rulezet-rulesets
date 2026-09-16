@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] SVC Message ERROR message [2]"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+3-722008|%FWSM[-]+3-722008/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000473; sid: 5000473; rev: 5;)

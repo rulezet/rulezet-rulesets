@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[XINETD] Removing service"; content: "removing; classtype: system-event; program: xinetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000256; sid: 5000256; rev:2;)

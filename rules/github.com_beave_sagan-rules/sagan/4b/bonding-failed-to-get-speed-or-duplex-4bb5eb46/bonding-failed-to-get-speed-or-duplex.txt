@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BONDING] Failed to get speed or duplex"; content: "failed to get speed/duplex"; classtype: network-event; program: kernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001075; sid: 5001075; rev:3;)

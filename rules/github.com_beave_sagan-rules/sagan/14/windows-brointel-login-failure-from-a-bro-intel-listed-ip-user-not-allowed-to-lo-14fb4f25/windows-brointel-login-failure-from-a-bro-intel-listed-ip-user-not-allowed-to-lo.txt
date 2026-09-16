@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-BROINTEL] Login failure from a Bro Intel listed IP - User not allowed to login at this computer"; event_id: 533; classtype: unsuccessful-user; program: *Security*; bro-intel: by_src; normalize; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002229; sid: 5002229; rev:6;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[INCAPSULA] Visitor from blacklisted URLs"; program: Incapsula*|incapsula*; content: "|7c|Visitors from blacklisted URLs|7c|"; parse_src_ip: 1; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5003917; sid:5003917; rev:3;)

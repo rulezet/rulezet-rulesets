@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] TCP|UDP flow from interface  is skipped because application has failed"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+3-421007|%FWSM[-]+3-421007/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000469; sid: 5000469; rev: 5;)

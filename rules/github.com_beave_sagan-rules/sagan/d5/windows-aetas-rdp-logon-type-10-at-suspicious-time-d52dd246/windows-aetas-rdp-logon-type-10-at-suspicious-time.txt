@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-AETAS] RDP / Logon type 10 at suspicious time"; event_id: 4624,540,528; content: "Logon Type|3a| 10 ";  program: *Security*; parse_src_ip: 1; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; default_proto: tcp; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002056; sid: 5002056; rev:8;)

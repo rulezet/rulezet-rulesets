@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Integrity Firewall Server is not available. VPN Tunnel creation rejected for client"; append_program; content: "%ASA"; pcre: "/%ASA[-]+5-713252/"; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5000522; sid: 5000522; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] I2C_API_name error"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+3-219002|%FWSM[-]+3-219002/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000460; sid: 5000460; rev: 5;)

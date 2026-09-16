@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BONDING] Interface is up"; content: "is now up"; classtype: network-event; program: kernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001066; sid: 5001066; rev:3;)

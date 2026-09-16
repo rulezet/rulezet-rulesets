@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PROOFPOINT] - Spam click permitted"; content: "class|3d 22|spam"; content: "CLKPER"; classtype: misc-attack; program: PROOFPOINT; reference: url,wiki.quadrantsec.com/bin/view/Main/5004340; sid: 5004340; rev:1;)

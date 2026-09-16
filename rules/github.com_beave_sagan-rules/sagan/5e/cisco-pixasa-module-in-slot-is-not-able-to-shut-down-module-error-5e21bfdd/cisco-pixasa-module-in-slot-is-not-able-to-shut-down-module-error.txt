@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Module in slot is not able to shut down. Module Error"; append_program; content: "%ASA"; pcre: "/%ASA[-]+4-413001/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000475; sid: 5000475; rev: 4;)

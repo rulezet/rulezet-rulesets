@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] ksh shell execution"; content:"HISTORY"; pcre:"/\s+((\/usr)?\/s?bin\/)?ksh/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002320; rev:2;)

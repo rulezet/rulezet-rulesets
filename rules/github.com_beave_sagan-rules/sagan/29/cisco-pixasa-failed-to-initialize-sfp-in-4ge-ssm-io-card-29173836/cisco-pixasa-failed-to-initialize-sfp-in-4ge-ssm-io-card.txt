@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failed to initialize SFP in 4GE SSM I/O card"; append_program; content: "%ASA"; pcre: "/%ASA[-]+1-114002/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000417; sid: 5000417; rev: 4;)

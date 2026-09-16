@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SQUID] Directory traversal attempt"; content: "///"; default_proto: tcp; default_dst_port: $SQUID_PORT; classtype: web-application-attack; program: squid; reference: url,wiki.quadrantsec.com/bin/view/Main/5000050; sid: 5000050; rev:3;)

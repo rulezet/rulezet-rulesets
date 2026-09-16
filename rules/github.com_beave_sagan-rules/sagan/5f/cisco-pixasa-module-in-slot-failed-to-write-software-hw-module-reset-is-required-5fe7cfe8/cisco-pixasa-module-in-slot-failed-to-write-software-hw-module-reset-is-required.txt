@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Module in slot failed to write software. Hw-module reset is required before further use"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-323004/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000463; sid: 5000463; rev: 4;)

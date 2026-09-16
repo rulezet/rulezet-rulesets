@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] VPN Stateful failover can only be run in single/non-transparent mode"; append_program; content: "%ASA"; pcre: "/%ASA[-]+4-720055/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000504; sid: 5000504; rev: 5;)

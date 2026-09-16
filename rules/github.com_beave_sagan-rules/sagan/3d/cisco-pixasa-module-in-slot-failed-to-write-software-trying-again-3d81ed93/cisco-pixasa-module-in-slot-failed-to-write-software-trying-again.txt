@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Module in slot failed to write software. Trying again"; append_program; content: "%ASA"; pcre: "/%ASA[-]+4-413004/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000477; sid: 5000477; rev: 4;)

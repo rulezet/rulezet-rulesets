@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Error authenticating SVC connect request"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-722003|%FWSM[-]+4-722003/"; parse_src_ip: 1/"; classtype: unsuccessful-admin; reference: url, wiki.quadrantsec.com/bin/view/Main/5000515; sid: 5000515; rev: 6;)

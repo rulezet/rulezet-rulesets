@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] {Allowed | Dropped} NBDGM pkt"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-423005|%FWSM[-]+4-423005/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000483; sid: 5000483; rev: 5;)

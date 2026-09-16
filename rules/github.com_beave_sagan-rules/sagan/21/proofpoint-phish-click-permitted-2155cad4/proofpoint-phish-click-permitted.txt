@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PROOFPOINT] - Phish click permitted"; content: "class|3d 22|phish"; content: "CLKPER"; classtype: misc-attack; program: PROOFPOINT; reference: url,wiki.quadrantsec.com/bin/view/Main/5004341; sid: 5004341; rev:1;)

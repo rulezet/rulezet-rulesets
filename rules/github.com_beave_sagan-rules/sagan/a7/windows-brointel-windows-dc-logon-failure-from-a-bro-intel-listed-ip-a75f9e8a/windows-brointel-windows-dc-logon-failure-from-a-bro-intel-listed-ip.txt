@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-BROINTEL] Windows DC Logon Failure from a Bro Intel listed IP"; event_id: 4771,4768,675,676,681; classtype: unsuccessful-user; program: *Security*; bro-intel: by_src; normalize; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002231; sid: 5002231; rev:6;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to add cTCP IKE rule during bulk sync"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-720053|%FWSM[-]+4-720053/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000502; sid: 5000502; rev: 5;)

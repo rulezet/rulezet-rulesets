@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Internal error in function Fiber has joined fiber waited upon by someone else"; append_program; content: "%ASA"; pcre: "/%ASA[-]+2-716512/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000432; sid: 5000432; rev: 4;)

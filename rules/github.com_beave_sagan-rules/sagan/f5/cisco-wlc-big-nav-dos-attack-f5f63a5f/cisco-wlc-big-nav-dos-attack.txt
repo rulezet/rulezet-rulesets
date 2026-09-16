@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Big NAV Dos attack"; program: snmptrapd; content: "Big NAV Dos attack"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002121; sid:5002121; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Ruby subproces execution"; content:"HISTORY"; content:"ruby"; content:"exec"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002314; rev:2;)

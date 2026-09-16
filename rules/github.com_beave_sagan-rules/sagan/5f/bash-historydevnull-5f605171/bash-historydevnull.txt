@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] HISTORY=/dev/null"; content:"HISTORY=/dev/null"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000010; program: bash|-bash|sh|-sh; sid:5000010; rev:5;)

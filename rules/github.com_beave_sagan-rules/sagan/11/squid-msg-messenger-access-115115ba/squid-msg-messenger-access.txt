@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SQUID] MSG Messenger access"; content: "x-msn-messenger"; default_proto: tcp; default_dst_port: $SQUID_PORT; classtype: policy-violation; program: squid; reference: url,wiki.quadrantsec.com/bin/view/Main/5000387; sid: 5000387; rev:3;)

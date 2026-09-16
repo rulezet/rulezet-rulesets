@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BONDING] Enslaving interface"; content: "enslaving"; content: "with an up link"; classtype: network-event; program: kernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001073; sid: 5001073; rev:3;)

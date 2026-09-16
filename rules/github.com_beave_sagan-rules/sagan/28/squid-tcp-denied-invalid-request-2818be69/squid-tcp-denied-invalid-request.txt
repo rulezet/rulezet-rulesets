@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SQUID] TCP_DENIED invalid-request"; content: "TCP_DENIED"; content: "invalid-request"; default_proto: tcp; default_dst_port: $SQUID_PORT; classtype: suspicious-traffic; program: squid; reference: url,wiki.quadrantsec.com/bin/view/Main/5000045; sid: 5000045; rev:3;)

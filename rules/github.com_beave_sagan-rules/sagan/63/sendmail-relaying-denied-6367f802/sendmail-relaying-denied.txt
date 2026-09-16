@@ -1,0 +1,1 @@
+drop any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SENDMAIL] Relaying denied"; pcre: "/Relaying denied|reject=550 5.7.1/"; default_proto: tcp; default_dst_port: $SMTP_PORT; classtype: suspicious-traffic;program: sm-mta|sendmail; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000037; sid: 5000037; rev:10;)

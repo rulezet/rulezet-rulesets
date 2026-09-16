@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[INCAPSULA] Bot Access Control"; program: Incapsula*|incapsula*; content: "|7c|Bot Access Control|7c|"; parse_src_ip: 1; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5003918; sid:5003918; rev:3;)

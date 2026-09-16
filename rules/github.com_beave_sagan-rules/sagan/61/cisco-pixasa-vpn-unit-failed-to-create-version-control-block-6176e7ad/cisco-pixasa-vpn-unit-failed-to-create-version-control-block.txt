@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to create version control block"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-720009|%FWSM[-]+4-720009/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000493; sid: 5000493; rev: 5;)

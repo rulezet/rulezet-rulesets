@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] VPN Handle error protocol"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-316002/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000461; sid: 5000461; rev: 4;)

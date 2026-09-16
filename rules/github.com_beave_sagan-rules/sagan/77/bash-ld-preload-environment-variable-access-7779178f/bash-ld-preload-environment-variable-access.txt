@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] LD_PRELOAD environment variable access"; content:"HISTORY"; content:"LD_PRELOAD"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002333; rev:2;)

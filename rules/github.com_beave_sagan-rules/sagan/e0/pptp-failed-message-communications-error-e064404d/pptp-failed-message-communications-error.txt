@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PPTP] Failed message [communications error]"; pcre: "/GRE: \S+ from \S+ failed: status = -1/"; default_proto: tcp; default_dst_port: $PPTP_PORT; classtype: network-event; program: pptpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000134; sid: 5000134; rev:3;)

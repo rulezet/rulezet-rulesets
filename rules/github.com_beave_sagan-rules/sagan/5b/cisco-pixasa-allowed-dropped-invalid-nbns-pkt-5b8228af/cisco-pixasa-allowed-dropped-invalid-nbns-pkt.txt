@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] {Allowed | Dropped} invalid NBNS pkt"; append_program; content: "%ASA"; pcre: "/%ASA[-]+4-423001|%FWSM[-]+4-423001/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000479; sid: 5000479; rev: 5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Received DH key with bad length"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-713240|%FWSM[-]+4-713240/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000487; sid: 5000487; rev: 5;)

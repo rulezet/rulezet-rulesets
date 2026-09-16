@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH agent forwarding"; content:"HISTORY"; content:"ssh"; content:"-A "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002324; rev:2;)

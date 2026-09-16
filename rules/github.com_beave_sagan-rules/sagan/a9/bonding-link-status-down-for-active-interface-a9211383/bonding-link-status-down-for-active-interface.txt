@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BONDING] Link status down for active interface"; content: "link status down for"; classtype: network-event; program: kernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001069; sid: 5001069; rev:3;)

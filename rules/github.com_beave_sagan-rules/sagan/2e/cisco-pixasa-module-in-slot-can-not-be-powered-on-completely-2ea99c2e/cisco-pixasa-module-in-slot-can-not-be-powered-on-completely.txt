@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Module in slot can not be powered on completely"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-323005/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000464; sid: 5000464; rev: 4;)

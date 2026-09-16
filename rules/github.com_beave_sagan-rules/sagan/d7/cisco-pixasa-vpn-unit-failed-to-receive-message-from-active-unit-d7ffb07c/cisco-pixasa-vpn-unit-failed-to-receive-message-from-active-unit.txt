@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to receive message from active unit"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-720044|%FWSM[-]+4-720044/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000498; sid: 5000498; rev: 5;)

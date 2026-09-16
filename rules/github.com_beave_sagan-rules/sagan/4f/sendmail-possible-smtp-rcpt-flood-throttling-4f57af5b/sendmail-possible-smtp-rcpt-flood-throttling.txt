@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SENDMAIL] Possible SMTP RCPT flood, throttling"; content: "Possible SMTP RCPT flood, throttling"; default_proto: tcp; default_dst_port: $SMTP_PORT; classtype: spam; program: sm-mta|sendmail; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000142; sid: 5000142; rev:4;)

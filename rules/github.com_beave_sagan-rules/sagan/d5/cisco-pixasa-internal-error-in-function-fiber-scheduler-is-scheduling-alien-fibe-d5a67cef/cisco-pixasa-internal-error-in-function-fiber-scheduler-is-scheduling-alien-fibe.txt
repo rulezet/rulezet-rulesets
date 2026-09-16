@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Internal error in function Fiber scheduler is scheduling alien fiber. Cannot continue terminating"; append_program; content: "%ASA"; pcre: "/%ASA[-]+2-716509/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000430; sid: 5000430; rev: 4;)

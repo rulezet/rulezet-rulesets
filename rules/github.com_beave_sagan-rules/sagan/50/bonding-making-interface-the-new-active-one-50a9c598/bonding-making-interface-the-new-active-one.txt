@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BONDING] Making interface the new active one"; content: "making interface"; content: "the new active one"; classtype: network-event; program: kernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001070; sid: 5001070; rev:3;)

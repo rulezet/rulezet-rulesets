@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[INCAPSULA] Suspected Bots"; program: Incapsula*|incapsula*; content: "|7c|Suspected Bots|7c|"; parse_src_ip: 1; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5003919; sid:5003919; rev:3;)

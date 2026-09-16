@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PROOFPOINT] - Phish message delivered"; content: "classification|5c 22 3a 5c 22|phish"; content: "MSGDLV"; classtype: misc-attack; program: PROOFPOINT; reference: url,wiki.quadrantsec.com/bin/view/Main/5004337; sid: 5004337; rev:1;)

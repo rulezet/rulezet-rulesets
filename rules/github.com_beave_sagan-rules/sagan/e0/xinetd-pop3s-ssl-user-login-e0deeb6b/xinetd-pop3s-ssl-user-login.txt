@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[XINETD] POP3S [SSL] User login "; content: "USERID"; content: "pop3s"; default_proto: tcp; default_dst_port: 993; classtype: successful-user; program: xinetd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000255; sid: 5000255; rev:3;)

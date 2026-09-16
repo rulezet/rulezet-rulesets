@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] AAA Marking protocol server ip-addr in server group tag as FAILED"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+2-113022|%FWSM[-]+2-113022; parse_src_ip: 1/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000420; sid: 5000420; rev: 6;)

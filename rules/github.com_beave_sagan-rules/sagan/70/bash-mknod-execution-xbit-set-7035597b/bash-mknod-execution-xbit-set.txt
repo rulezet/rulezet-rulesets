@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] mknod execution [XBIT SET]"; content:"HISTORY"; content:"mknod"; xbits: set,mknod ,track ip_src, expire 60; xbits:nounified2; xbits:noeve; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002315; rev:7;)

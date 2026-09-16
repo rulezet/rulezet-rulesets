@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] LD_LIBRARY_PATH environment variable access"; content:"HISTORY"; content:"LD_LIBRARY_PATH"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002334; rev:2;)

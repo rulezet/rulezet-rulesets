@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to update cTCP statistics"; append_program; content: "%ASA"; pcre: "/%ASA[-]+5-720019/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000528; sid: 5000528; rev: 4;)

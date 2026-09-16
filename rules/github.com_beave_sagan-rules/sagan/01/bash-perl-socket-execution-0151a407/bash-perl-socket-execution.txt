@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] Perl socket execution"; content:"HISTORY"; content:"perl"; content:"ocket"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002311; rev:2;)

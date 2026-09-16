@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to activate cTCP database"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-720069/"; classtype|%FWSM[-]+4-720069: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000510; sid: 5000510; rev: 5;)

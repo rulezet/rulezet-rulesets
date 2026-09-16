@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SENDMAIL] Sendmail Spamassassin X-Spam-Score"; content: "X-Spam-Score"; default_proto: tcp; default_dst_port: $SMTP_PORT; classtype: spam; program: sm-mta|sendmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000141; sid: 5000141; rev:3;)

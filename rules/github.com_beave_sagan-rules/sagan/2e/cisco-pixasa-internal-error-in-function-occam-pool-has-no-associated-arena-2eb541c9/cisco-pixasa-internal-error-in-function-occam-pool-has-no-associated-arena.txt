@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Internal error in function OCCAM pool has no associated arena"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+2-716518|%FWSM[-]+2-716518/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000437; sid: 5000437; rev: 5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to register to High Availability Framework"; append_program; content: "%ASA"; pcre: "/%ASA[-]+4-720008/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000492; sid: 5000492; rev: 5;)

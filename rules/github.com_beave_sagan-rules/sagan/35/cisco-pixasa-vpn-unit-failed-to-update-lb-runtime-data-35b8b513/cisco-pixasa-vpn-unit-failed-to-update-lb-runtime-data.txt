@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to update LB runtime data"; append_program; content: "%ASA"; pcre: "/%ASA[-]+5-720017/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000526; sid: 5000526; rev: 4;)

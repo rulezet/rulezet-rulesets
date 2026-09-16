@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CENTRIFY] Successful dzdo to user ROOT executed"; content: "USER=root"; content: "COMMAND="; classtype: successful-admin; program: dzdo; sid:  5004304; rev:1;)

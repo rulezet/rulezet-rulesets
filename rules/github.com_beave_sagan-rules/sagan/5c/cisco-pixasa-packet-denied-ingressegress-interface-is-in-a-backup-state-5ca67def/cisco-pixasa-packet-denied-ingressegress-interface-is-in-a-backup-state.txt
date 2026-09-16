@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Packet denied. [Ingress|Egress] interface is in a backup state"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-424001|%FWSM[-]+4-424001/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000484; sid: 5000484; rev: 5;)

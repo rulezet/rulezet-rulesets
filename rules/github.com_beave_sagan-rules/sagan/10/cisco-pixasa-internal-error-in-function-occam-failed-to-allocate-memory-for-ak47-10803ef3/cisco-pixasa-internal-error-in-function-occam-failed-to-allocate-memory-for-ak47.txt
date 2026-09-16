@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Internal error in function OCCAM failed to allocate memory for AK47 instance"; append_program; content: "%ASA"; pcre: "/%ASA[-]+2-716515/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000434; sid: 5000434; rev: 4;)

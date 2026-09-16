@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Error consolidating SVC connect request."; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-722002|%FWSM[-]+4-722002/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000514; sid: 5000514; rev: 5;)

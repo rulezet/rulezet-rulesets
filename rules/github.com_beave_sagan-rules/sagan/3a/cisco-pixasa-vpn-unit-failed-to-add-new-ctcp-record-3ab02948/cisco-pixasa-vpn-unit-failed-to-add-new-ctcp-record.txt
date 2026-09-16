@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to add new cTCP record"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-720054|%FWSM[-]+4-720054/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000503; sid: 5000503; rev: 5;)

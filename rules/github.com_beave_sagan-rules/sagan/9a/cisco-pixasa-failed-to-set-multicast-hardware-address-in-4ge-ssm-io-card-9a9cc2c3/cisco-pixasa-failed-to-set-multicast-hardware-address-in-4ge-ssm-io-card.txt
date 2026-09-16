@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failed to set multicast hardware address in 4GE SSM I/O card"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-114010/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000449; sid: 5000449; rev: 4;)

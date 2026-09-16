@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SENDMAIL] Rejected by access list"; content: "reject="; pcre: "/reject=550 5.0.0|reject=553 5.3.0/"; default_proto: tcp; default_dst_port: $SMTP_PORT; classtype: suspicious-traffic; program: sm-mta|sendmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000137; sid: 5000137; rev:4;)

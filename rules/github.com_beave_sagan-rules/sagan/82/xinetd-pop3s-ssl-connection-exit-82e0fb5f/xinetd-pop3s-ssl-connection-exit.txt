@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[XINETD] POP3S [SSL] connection exit"; content: "EXIT"; content: "pop3s"; default_proto: tcp; default_dst_port: 993; classtype: not-suspicious; program: xinetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000254; sid: 5000254; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] zsh shell execution"; content:"HISTORY"; pcre:"/\s+((\/usr)?\/s?bin\/)?zsh/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002322; rev:2;)

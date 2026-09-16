@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] telnet reverse shell execution"; content:"HISTORY"; content:"telnet"; xbits: isset,mknod,track ip_src; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002316; rev:4;)

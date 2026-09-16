@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] suidperl access"; content:"suidperl"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000013; program: bash|-bash|sh|-sh; sid:5000013; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Internal error in function Fiber library cannot attach AK47 instance"; append_program; content: "%ASA"; pcre: "/%ASA[-]+2-716501/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000423; sid: 5000423; rev: 4;)

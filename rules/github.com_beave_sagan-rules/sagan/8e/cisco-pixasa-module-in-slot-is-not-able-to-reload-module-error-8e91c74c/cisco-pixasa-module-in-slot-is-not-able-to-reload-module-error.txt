@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Module in slot is not able to reload. Module Error"; append_program; content: "%ASA"; pcre: "/%ASA[-]+4-413002/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000476; sid: 5000476; rev: 4;)

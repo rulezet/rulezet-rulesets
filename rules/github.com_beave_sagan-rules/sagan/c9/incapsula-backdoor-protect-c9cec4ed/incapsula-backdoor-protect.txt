@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[INCAPSULA] Backdoor Protect"; program: Incapsula*|incapsula*; content: "|7c|Backdoor Protect|7c|"; parse_src_ip: 1; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5003925; sid:5003925; rev:3;)

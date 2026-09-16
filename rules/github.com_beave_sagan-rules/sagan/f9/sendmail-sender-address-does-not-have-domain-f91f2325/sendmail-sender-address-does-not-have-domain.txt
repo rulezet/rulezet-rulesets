@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SENDMAIL] Sender address does not have domain"; content:"reject=553 5.5.4 "; default_proto: tcp; default_dst_port: $SMTP_PORT; classtype: suspicious-traffic; program: sm-mta|sendmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000138; sid: 5000138; rev:2;)

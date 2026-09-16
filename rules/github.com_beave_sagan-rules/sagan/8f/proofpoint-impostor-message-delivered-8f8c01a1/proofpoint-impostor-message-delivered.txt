@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[PROOFPOINT] - Impostor message delivered"; content: "classification|5c 22 3a 5c 22|impostor"; content: "MSGDLV"; classtype: misc-attack; program: PROOFPOINT; reference: url,wiki.quadrantsec.com/bin/view/Main/5004342; sid: 5004342; rev:1;)

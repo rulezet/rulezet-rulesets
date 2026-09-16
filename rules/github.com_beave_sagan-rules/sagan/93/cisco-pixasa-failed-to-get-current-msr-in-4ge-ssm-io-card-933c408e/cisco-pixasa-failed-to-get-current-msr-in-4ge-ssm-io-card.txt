@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failed to get current msr in 4GE SSM I/O card"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-114007/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000446; sid: 5000446; rev: 4;)

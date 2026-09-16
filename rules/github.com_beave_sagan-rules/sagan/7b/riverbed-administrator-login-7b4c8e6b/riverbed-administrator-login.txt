@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[RIVERBED] Administrator Login"; content: "logged in"; content: "session count"; parse_src_ip: 1; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5002030; program: webasd; sid: 5002030; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] SSH X11 forwarding"; content:"HISTORY"; content:"ssh"; content:"-X "; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002331; rev:2;)

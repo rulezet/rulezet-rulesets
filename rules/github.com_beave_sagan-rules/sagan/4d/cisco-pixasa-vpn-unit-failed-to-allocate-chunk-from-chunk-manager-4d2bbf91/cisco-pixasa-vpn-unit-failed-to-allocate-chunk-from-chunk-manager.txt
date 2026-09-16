@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to allocate chunk from Chunk Manager"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+4-720007|%FWSM[-]+4-720007/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000491; sid: 5000491; rev: 5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failed to set mode in 4GE SSM I/O card"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-114015/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000454; sid: 5000454; rev: 4;)

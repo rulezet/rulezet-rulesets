@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SQUID] 'passwd' access attempt"; content: "passwd"; default_proto: tcp; default_dst_port: $SQUID_PORT; classtype: web-application-attack; program: squid; reference: url,wiki.quadrantsec.com/bin/view/Main/5000049; sid: 5000049; rev:3;)

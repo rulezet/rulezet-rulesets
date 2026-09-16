@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] /bin/sh command line call"; content:"/bin/sh"; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000008; program: bash|-bash|sh|-sh; sid:5000008; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] History hiding"; content:"HISTORY"; pcre:"/\s+history\s+(-\w+\s+)*-\w*(c|d|w)/"; classtype:suspicious-command; program:bash|-bash|sh|-sh; sid:5002304; rev:2;)

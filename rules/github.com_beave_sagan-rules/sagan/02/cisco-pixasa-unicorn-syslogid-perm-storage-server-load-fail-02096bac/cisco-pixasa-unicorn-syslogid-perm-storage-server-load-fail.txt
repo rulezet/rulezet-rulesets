@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] UNICORN_SYSLOGID_PERM_STORAGE_SERVER_LOAD_FAIL"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+2-716526|%FWSM[-]+2-716526/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000442; sid: 5000442; rev: 5;)

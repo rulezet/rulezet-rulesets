@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SENDMAIL] Domain of sender does not resolve"; content:"reject=451 4.1.8"; default_proto: tcp; default_dst_port: $SMTP_PORT; classtype: suspicious-traffic; program: sm-mta|sendmail; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000136; sid: 5000136; rev:5;)

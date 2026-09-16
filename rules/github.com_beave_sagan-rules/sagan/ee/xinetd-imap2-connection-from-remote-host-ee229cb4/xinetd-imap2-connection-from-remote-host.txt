@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[XINETD] IMAP2 connection from remote host"; content: "START"; content: "imap2"; default_proto: tcp; default_dst_port: $IMAP_PORT; classtype: not-suspicious; program: xinetd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000251; sid: 5000251; rev:3;)

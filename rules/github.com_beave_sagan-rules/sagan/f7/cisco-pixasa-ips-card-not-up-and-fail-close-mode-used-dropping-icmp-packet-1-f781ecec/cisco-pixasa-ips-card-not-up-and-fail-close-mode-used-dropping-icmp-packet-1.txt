@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] IPS card not up and fail-close mode used, dropping ICMP packet [1]"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-420001/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000466; sid: 5000466; rev: 4;)

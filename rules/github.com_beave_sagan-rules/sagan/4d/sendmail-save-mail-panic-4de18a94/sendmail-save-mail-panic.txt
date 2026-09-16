@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SENDMAIL] Save mail panic"; content: "savemail panic"; default_proto: tcp; default_dst_port: $SMTP_PORT; classtype: program-error; program: sm-mta|sendmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000140; sid: 5000140; rev:3;)

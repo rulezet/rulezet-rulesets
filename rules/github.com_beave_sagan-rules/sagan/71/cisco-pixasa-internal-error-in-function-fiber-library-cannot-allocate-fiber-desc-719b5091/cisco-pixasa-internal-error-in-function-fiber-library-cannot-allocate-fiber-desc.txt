@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Internal error in function Fiber library cannot allocate fiber descriptors pool"; append_program; content: "%ASA"; pcre: "/%ASA[-]+2-716503/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000425; sid: 5000425; rev: 4;)

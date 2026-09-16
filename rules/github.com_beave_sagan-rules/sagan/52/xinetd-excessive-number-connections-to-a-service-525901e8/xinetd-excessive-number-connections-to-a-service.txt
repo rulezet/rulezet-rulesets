@@ -1,0 +1,1 @@
+alert syslog $EXTERNAL_NET any -> $HOME_NET any (msg: "[XINETD] Excessive number connections to a service"; content: "deactivating service"; nocase; classtype: attempted-dos; program: xinetd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000379; sid: 5000379; rev:4;)

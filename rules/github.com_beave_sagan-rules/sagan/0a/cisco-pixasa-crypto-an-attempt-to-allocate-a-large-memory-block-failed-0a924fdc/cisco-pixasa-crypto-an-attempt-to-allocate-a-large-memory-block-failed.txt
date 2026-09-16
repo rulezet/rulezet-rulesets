@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] CRYPTO An attempt to allocate a large memory block failed"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+5-402128|%FWSM[-]+5-402128/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000520; sid: 5000520; rev: 5;)

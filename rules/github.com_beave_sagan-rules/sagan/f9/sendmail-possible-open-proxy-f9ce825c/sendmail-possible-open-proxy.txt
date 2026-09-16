@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SENDMAIL] Possible open proxy"; program: sm-mta|sendmail; content: "probable open proxy:"; parse_src_ip: 1; default_proto: tcp; default_dst_port: $SMTP_PORT; classtype: suspicious-traffic; xbits: set,recon,track ip_src, expire 86400; reference: url, wiki.quadrantsec.com/bin/view/Main/5001013; sid: 5001013; rev:8;)

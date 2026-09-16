@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Internal error in function Fiber scheduler has reached unreachable code. Cannot continue terminating"; append_program; content: "%ASA"; pcre: "/%ASA[-]+2-716507/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000428; sid: 5000428; rev: 4;)

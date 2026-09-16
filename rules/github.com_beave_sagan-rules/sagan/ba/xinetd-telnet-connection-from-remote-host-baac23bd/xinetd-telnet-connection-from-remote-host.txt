@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[XINETD] Telnet connection from remote host"; content: "START"; content: "telnet"; default_proto: tcp; default_dst_port: $TELNET_PORT; classtype: not-suspicious; program: xinetd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000247; sid: 5000247; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failed to enable port after link is up in 4GE SSM I/O card"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-114008/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000447; sid: 5000447; rev: 5;)

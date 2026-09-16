@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] SYN fragment"; program: Netscreen; content: "SYN fragment"; default_proto: tcp; classtype: suspicious-traffic; parse_src_ip: 1; reference: url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf; sid: 5001615; rev:3;)

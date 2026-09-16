@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SQUID] XSS attempt"; content: "<script>"; nocase; content: "alert"; nocase; content: "document.cookie"; nocase; content: "</script>"; default_proto: tcp; default_dst_port: $SQUID_PORT; classtype: suspicious-traffic; program: squid; reference: url,wiki.quadrantsec.com/bin/view/Main/5000048; sid: 5000048; rev:3;)

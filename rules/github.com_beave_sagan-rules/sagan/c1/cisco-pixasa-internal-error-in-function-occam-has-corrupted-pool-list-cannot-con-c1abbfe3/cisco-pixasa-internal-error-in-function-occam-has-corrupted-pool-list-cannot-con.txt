@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Internal error in function OCCAM has corrupted pool list. Cannot continue terminating"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+2-716519|%FWSM[-]+2-716519/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000438; sid: 5000438; rev: 5;)

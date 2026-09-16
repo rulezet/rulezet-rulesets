@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Internal error in function OCCAM pool has no block list"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+2-716520|%FWSM[-]+2-716520/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000439; sid: 5000439; rev: 5;)

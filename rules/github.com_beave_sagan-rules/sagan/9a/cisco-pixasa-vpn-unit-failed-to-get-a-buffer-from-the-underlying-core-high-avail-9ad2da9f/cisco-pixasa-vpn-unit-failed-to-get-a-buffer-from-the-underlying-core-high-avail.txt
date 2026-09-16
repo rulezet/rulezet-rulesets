@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to get a buffer from the underlying core high availability subsystem"; append_program; content: "%ASA"; pcre: "/%ASA[-]+5-720018/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000527; sid: 5000527; rev: 4;)
