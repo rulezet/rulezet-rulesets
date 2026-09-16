@@ -1,0 +1,9 @@
+rule Win_Trojan_Hlux_3
+{
+strings:
+	$a0 = { 68696e6f6465726d000b02000360ea000007781e000008c0120000ff0383000000020700796f72 }
+
+
+condition:
+	$a0
+}

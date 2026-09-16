@@ -1,0 +1,9 @@
+rule Win_Trojan_VB_1703
+{
+strings:
+	$a0 = { 61736f7269616c0001000900503b400000000000ffffffffffffffff00000000543d4000ac21410005000000601640 }
+
+
+condition:
+	$a0
+}

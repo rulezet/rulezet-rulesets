@@ -1,0 +1,9 @@
+rule Win_Trojan_Vobfus_78
+{
+strings:
+	$a0 = { 676c696572000b02000360ea000007781e000008c0120000ff0389000000020a00736f73746572 }
+
+
+condition:
+	$a0
+}
