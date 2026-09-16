@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"Roxy Fileman Unrestricted File Upload Attempt"; content:"Content-Type"; nocase; content:"multipart/form-data"; nocase; content:"boundary"; nocase; sid:1003656; rev:1; reference:cve,CVE-2018-20526; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-20526;)
