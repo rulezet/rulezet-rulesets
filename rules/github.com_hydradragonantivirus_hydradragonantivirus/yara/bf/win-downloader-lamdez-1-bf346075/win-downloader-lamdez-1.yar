@@ -1,0 +1,9 @@
+rule Win_Downloader_Lamdez_1
+{
+strings:
+	$a0 = { 2210e5274874703a2f572abced2f6163842e0403734dfd64af7b636f6d2f3f6e0e082e7068703ffabde1be883d32266105d43031275f3c2fdb8ff44ea03e0ab33c626f6479052ff153a46006cdd75c6469ee2f }
+
+
+condition:
+	$a0
+}

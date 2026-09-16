@@ -1,0 +1,9 @@
+rule Win_Downloader_Delf_124
+{
+strings:
+	$a0 = { 178bd04a85d27c104233c08b4b048b0c8189048e404a75f35e5bc300ffffffff24000000433a5c6d696c6c696f6e735c646c6c5c5f494542726f777365724865 }
+
+
+condition:
+	$a0
+}

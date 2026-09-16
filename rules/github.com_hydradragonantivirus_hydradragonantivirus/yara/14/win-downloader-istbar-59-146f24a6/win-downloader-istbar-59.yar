@@ -1,0 +1,11 @@
+rule Win_Downloader_Istbar_59
+{
+strings:
+	$a0 = { 66756e6374696f6e2075706f702829207b }
+
+	$a1 = { 703a2f2f7777772e787878746f6f6c6261722e636f6d2f6973742f736372697074732f646f776e6c6f }
+
+
+condition:
+	$a0 and $a1
+}

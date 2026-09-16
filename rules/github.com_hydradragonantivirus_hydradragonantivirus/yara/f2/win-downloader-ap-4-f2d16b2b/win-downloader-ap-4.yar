@@ -1,0 +1,9 @@
+rule Win_Downloader_AP_4
+{
+strings:
+	$a0 = { 885f114f6c08e001b80b7fec41ba6b51c91a24cec3cc3f5b768b4febb8b02f4326dfb8e083dc02203908cd003f40546500687474703affeffeff2f2f696566656164736c2e636f6d2f0a74322f73657276 }
+
+
+condition:
+	$a0
+}

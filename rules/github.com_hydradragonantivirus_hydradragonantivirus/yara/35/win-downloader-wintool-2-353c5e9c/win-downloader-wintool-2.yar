@@ -1,0 +1,9 @@
+rule Win_Downloader_WinTool_2
+{
+strings:
+	$a0 = { 6e546f6f6c735c6b79646d7a796c6b6900558becb90c0000006a006a004975f953565733c055684eae020064ff30648920e863dbfeff83c4f8dd1c249b8d55dcb864ae0200e837e7feff8d45d88b4ddcba78ae0200e8c791fe }
+
+
+condition:
+	$a0
+}

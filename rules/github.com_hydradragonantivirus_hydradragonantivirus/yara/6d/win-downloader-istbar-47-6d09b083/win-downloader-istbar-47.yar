@@ -1,0 +1,9 @@
+rule Win_Downloader_Istbar_47
+{
+strings:
+	$a0 = { 3a2f2f77ff0b37be002e736c6f51682ed66d2f6973742f736f66b77fff0b93617265732f76342e3012646f776e236164d7defe1e943f2573202575623a070bbf7019 }
+
+
+condition:
+	$a0
+}
