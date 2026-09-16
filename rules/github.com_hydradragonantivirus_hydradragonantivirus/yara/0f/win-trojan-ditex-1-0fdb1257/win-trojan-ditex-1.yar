@@ -1,0 +1,9 @@
+rule Win_Trojan_Ditex_1
+{
+strings:
+	$a0 = { 5060e8000000005deb01fdb9970200002e8a7d038d45198a1802df881840e2f784c8da0403039088d80303038e0b86c3078d1b05e28b }
+
+
+condition:
+	$a0
+}

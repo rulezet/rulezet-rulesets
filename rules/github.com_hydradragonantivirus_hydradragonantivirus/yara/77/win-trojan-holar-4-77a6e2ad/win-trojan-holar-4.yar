@@ -1,0 +1,9 @@
+rule Win_Trojan_Holar_4
+{
+strings:
+	$a0 = { 535b636b737b1bb73fa4242026003572062c9d08ffefdfce2f971f25174602ff0125177478746ddb2ffdff7367000204b80bb00427061d010b41427965 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Vkit_1
+{
+strings:
+	$a0 = { 8cca8eda8cca8ec26836005f6836005e685001598b0483c60235000026890583c7028b0483c60235000026890583c7 }
+
+
+condition:
+	$a0
+}

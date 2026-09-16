@@ -1,0 +1,9 @@
+rule Win_Trojan_Vriest_4
+{
+strings:
+	$a0 = { 023839b489cd213d23017432b82135cd218c062b02891e2902b82125ba6201cd21b82025ba8701cd21b82735cd218c062f02891e2d02b82725bab301cd21b9 }
+
+
+condition:
+	$a0
+}

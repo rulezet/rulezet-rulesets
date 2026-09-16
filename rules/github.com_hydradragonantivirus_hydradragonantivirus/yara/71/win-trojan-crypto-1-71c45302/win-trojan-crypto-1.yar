@@ -1,0 +1,9 @@
+rule Win_Trojan_Crypto_1
+{
+strings:
+	$a0 = { f2d1c681f6a38fd7ac3bf10f85edffffff0fb6e9e9060000006c896efd7cf98bd2666839810fb7db66590fbaf9a1661be981ea31a251bb668bde81c2fe6e66cf0fb6d9c1d19de80c00000021364f5471b0b98a9ba3ffd60fbfcab963399df258e81000000078e920050000da45a8a1 }
+
+
+condition:
+	$a0
+}

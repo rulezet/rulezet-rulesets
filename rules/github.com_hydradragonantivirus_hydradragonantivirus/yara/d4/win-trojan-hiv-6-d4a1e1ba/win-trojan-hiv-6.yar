@@ -1,0 +1,9 @@
+rule Win_Trojan_HIV_6
+{
+strings:
+	$a0 = { 400060e8090000008b642408e92701000033d264ff32648922e8000000005d8d75158bfeb92f060000d6ad35 }
+
+
+condition:
+	$a0
+}

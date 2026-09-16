@@ -1,0 +1,9 @@
+rule Win_Trojan_Spawn_3
+{
+strings:
+	$a0 = { 535041574e206c61756e63686564124e6f7420656e6f75676874206d656d6f72799a0000e3005589e5 }
+
+
+condition:
+	$a0
+}
