@@ -1,0 +1,50 @@
+rule rule_S_inject_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'S-inject' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "S-inject"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_S_inject_offensive_tool_keyword = /\/S\-inject\.exe/ nocase ascii wide
+                        $string2_S_inject_offensive_tool_keyword = /\/S\-inject\.git/ nocase ascii wide
+                        $string3_S_inject_offensive_tool_keyword = /\/S\-inject_x64\.exe/ nocase ascii wide
+                        $string4_S_inject_offensive_tool_keyword = /\/S\-inject_x86\.exe/ nocase ascii wide
+                        $string5_S_inject_offensive_tool_keyword = /\\S\-inject\.exe/ nocase ascii wide
+                        $string6_S_inject_offensive_tool_keyword = /\\S\-inject\.vcxproj/ nocase ascii wide
+                        $string7_S_inject_offensive_tool_keyword = /\\S\-inject_x64\.exe/ nocase ascii wide
+                        $string8_S_inject_offensive_tool_keyword = /\\S\-inject_x86\.exe/ nocase ascii wide
+                        $string9_S_inject_offensive_tool_keyword = "07bbfa80e6278158beec9685f17d0e305a03449433bd0485bcf492a57c480f80" nocase ascii wide
+                        $string10_S_inject_offensive_tool_keyword = "2E98B8D4-7A26-4F04-A95D-2051B0AB884C" nocase ascii wide
+                        $string11_S_inject_offensive_tool_keyword = "7d87848076e10ed06f0a178bfae29e07d10c2d8831c0b4a5c6865b950fb2635c" nocase ascii wide
+                        $string12_S_inject_offensive_tool_keyword = "9220fead7ddb2863404b1fa59bf2ece1de125be39db2661378a8ffd47057b85e" nocase ascii wide
+                        $string13_S_inject_offensive_tool_keyword = "b3fc8195cc5265fe46562d4063d259fe5e56835b06f598be324af18c0adb39b1" nocase ascii wide
+                        $string14_S_inject_offensive_tool_keyword = "c4fa40d25a8a4fc502e9cce4fa6d7ef7847141bda5f2fb7b90bd9f4b43ee5d13" nocase ascii wide
+                        $string15_S_inject_offensive_tool_keyword = "c4fa40d25a8a4fc502e9cce4fa6d7ef7847141bda5f2fb7b90bd9f4b43ee5d13" nocase ascii wide
+                        $string16_S_inject_offensive_tool_keyword = "cd46607d2b9a3046748fea6f99f34ea9342653b82af06e20858a447cc58f0f34" nocase ascii wide
+                        $string17_S_inject_offensive_tool_keyword = "cd46607d2b9a3046748fea6f99f34ea9342653b82af06e20858a447cc58f0f34" nocase ascii wide
+                        $string18_S_inject_offensive_tool_keyword = "d7018d7037ff228d9f8528846861639c1f7c139e7769c893ae350c20098e55e5" nocase ascii wide
+                        $string19_S_inject_offensive_tool_keyword = "Joe1sn/S-inject" nocase ascii wide
+                        $string20_S_inject_offensive_tool_keyword = /Release\/S\-inject\.exe/ nocase ascii wide
+                        $string21_S_inject_offensive_tool_keyword = /S\-inject\\S\-inject\.cpp/ nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

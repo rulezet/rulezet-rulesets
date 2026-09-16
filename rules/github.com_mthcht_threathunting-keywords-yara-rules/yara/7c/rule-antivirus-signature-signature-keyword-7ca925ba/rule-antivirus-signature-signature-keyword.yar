@@ -1,0 +1,151 @@
+rule rule_Antivirus_Signature_signature_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Antivirus Signature' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Antivirus Signature"
+        rule_category = "signature_keyword"
+
+    strings:
+                        $string1_Antivirus_Signature_signature_keyword = /Backdoor\.Linux/ nocase ascii wide
+                        $string2_Antivirus_Signature_signature_keyword = /Backdoor\.ASP/ nocase ascii wide
+                        $string3_Antivirus_Signature_signature_keyword = /Backdoor\.ASP\.FUZZSHELL\.A/ nocase ascii wide
+                        $string4_Antivirus_Signature_signature_keyword = /Backdoor\.ASP\.WEBSHELL\./ nocase ascii wide
+                        $string5_Antivirus_Signature_signature_keyword = /Backdoor\.Cobalt/ nocase ascii wide
+                        $string6_Antivirus_Signature_signature_keyword = /Backdoor\.JSP/ nocase ascii wide
+                        $string7_Antivirus_Signature_signature_keyword = /Backdoor\.PHP/ nocase ascii wide
+                        $string8_Antivirus_Signature_signature_keyword = /Backdoor\.PHP\.WebShell\./ nocase ascii wide
+                        $string9_Antivirus_Signature_signature_keyword = /Backdoor\/Win\./ nocase ascii wide
+                        $string10_Antivirus_Signature_signature_keyword = "Backdoor:JS/" nocase ascii wide
+                        $string11_Antivirus_Signature_signature_keyword = "Backdoor:Linux" nocase ascii wide
+                        $string12_Antivirus_Signature_signature_keyword = "Backdoor:MacOS" nocase ascii wide
+                        $string13_Antivirus_Signature_signature_keyword = "Backdoor:MSIL/AsyncRat" nocase ascii wide
+                        $string14_Antivirus_Signature_signature_keyword = "Backdoor:MSIL/Quasar" nocase ascii wide
+                        $string15_Antivirus_Signature_signature_keyword = "Backdoor:MSIL/SectopRAT" nocase ascii wide
+                        $string16_Antivirus_Signature_signature_keyword = "Backdoor:PHP/" nocase ascii wide
+                        $string17_Antivirus_Signature_signature_keyword = "Backdoor:Python" nocase ascii wide
+                        $string18_Antivirus_Signature_signature_keyword = "Backdoor:Python/" nocase ascii wide
+                        $string19_Antivirus_Signature_signature_keyword = "Backdoor:VBS/" nocase ascii wide
+                        $string20_Antivirus_Signature_signature_keyword = "Backdoor:Win32" nocase ascii wide
+                        $string21_Antivirus_Signature_signature_keyword = "Backdoor:Win64" nocase ascii wide
+                        $string22_Antivirus_Signature_signature_keyword = "Backdoor:Win64/CobaltStrike" nocase ascii wide
+                        $string23_Antivirus_Signature_signature_keyword = "Behavior:Win32/CobaltStrike" nocase ascii wide
+                        $string24_Antivirus_Signature_signature_keyword = /BKDR_JSPSHELL\./ nocase ascii wide
+                        $string25_Antivirus_Signature_signature_keyword = "Clearlogs" nocase ascii wide
+                        $string26_Antivirus_Signature_signature_keyword = /CobaltStrike\.LJ\!MTB/ nocase ascii wide
+                        $string27_Antivirus_Signature_signature_keyword = "Exploit:Python/" nocase ascii wide
+                        $string28_Antivirus_Signature_signature_keyword = "Exploit:Win32/CVE-" nocase ascii wide
+                        $string29_Antivirus_Signature_signature_keyword = "Exploit:Win64/CVE-" nocase ascii wide
+                        $string30_Antivirus_Signature_signature_keyword = "hacktool" nocase ascii wide
+                        $string31_Antivirus_Signature_signature_keyword = /HackTool\.ASP\..{0,100}\./ nocase ascii wide
+                        $string32_Antivirus_Signature_signature_keyword = /HackTool\.HTML\..{0,100}\./ nocase ascii wide
+                        $string33_Antivirus_Signature_signature_keyword = /HackTool\.Java\..{0,100}\./ nocase ascii wide
+                        $string34_Antivirus_Signature_signature_keyword = /Hacktool\.Linux/
+                        $string35_Antivirus_Signature_signature_keyword = /HackTool\.PHP\..{0,100}\./ nocase ascii wide
+                        $string36_Antivirus_Signature_signature_keyword = /Hacktool\.Windows/ nocase ascii wide
+                        $string37_Antivirus_Signature_signature_keyword = /Hacktool\/Win\./ nocase ascii wide
+                        $string38_Antivirus_Signature_signature_keyword = "HackTool:Linux" nocase ascii wide
+                        $string39_Antivirus_Signature_signature_keyword = "HackTool:MSIL" nocase ascii wide
+                        $string40_Antivirus_Signature_signature_keyword = "HackTool:PowerShell" nocase ascii wide
+                        $string41_Antivirus_Signature_signature_keyword = "HackTool:PowerShell/" nocase ascii wide
+                        $string42_Antivirus_Signature_signature_keyword = "HackTool:Python" nocase ascii wide
+                        $string43_Antivirus_Signature_signature_keyword = "HackTool:Python/" nocase ascii wide
+                        $string44_Antivirus_Signature_signature_keyword = "Hacktool:Script/" nocase ascii wide
+                        $string45_Antivirus_Signature_signature_keyword = "Hacktool:SH" nocase ascii wide
+                        $string46_Antivirus_Signature_signature_keyword = "Hacktool:VBA" nocase ascii wide
+                        $string47_Antivirus_Signature_signature_keyword = "HackTool:VBS" nocase ascii wide
+                        $string48_Antivirus_Signature_signature_keyword = "HackTool:Win32" nocase ascii wide
+                        $string49_Antivirus_Signature_signature_keyword = "HackTool:Win32" nocase ascii wide
+                        $string50_Antivirus_Signature_signature_keyword = "HackTool:Win64" nocase ascii wide
+                        $string51_Antivirus_Signature_signature_keyword = "HackTool:Win64" nocase ascii wide
+                        $string52_Antivirus_Signature_signature_keyword = "HackTool:Win64/CobaltStrike" nocase ascii wide
+                        $string53_Antivirus_Signature_signature_keyword = /Linux\.Backdoor/ nocase ascii wide
+                        $string54_Antivirus_Signature_signature_keyword = "HKTL" nocase ascii wide
+                        $string55_Antivirus_Signature_signature_keyword = "Lsass-Mdump" nocase ascii wide
+                        $string56_Antivirus_Signature_signature_keyword = "HKTL_NETCAT" nocase ascii wide
+                        $string57_Antivirus_Signature_signature_keyword = "HTool/WCE" nocase ascii wide
+                        $string58_Antivirus_Signature_signature_keyword = "impacket" nocase ascii wide
+                        $string59_Antivirus_Signature_signature_keyword = /Malware\.Htool/ nocase ascii wide
+                        $string60_Antivirus_Signature_signature_keyword = "MSFPsExeCommand" nocase ascii wide
+                        $string61_Antivirus_Signature_signature_keyword = /Ransom\.Win32\./ nocase ascii wide
+                        $string62_Antivirus_Signature_signature_keyword = "PowerShell/HackTool" nocase ascii wide
+                        $string63_Antivirus_Signature_signature_keyword = "PShlSpy" nocase ascii wide
+                        $string64_Antivirus_Signature_signature_keyword = "RemAdm" nocase ascii wide
+                        $string65_Antivirus_Signature_signature_keyword = "PSWtool" nocase ascii wide
+                        $string66_Antivirus_Signature_signature_keyword = /Rootkit\.Win64\./ nocase ascii wide
+                        $string67_Antivirus_Signature_signature_keyword = "PWDump " nocase ascii wide
+                        $string68_Antivirus_Signature_signature_keyword = "PWS:Win32/Mpass" nocase ascii wide
+                        $string69_Antivirus_Signature_signature_keyword = "Ransom:Linux/BlackBasta" nocase ascii wide
+                        $string70_Antivirus_Signature_signature_keyword = "Ransom:Win32" nocase ascii wide
+                        $string71_Antivirus_Signature_signature_keyword = "Ransom:Win32" nocase ascii wide
+                        $string72_Antivirus_Signature_signature_keyword = "Ransom:Win32/BlackBasta" nocase ascii wide
+                        $string73_Antivirus_Signature_signature_keyword = "Ransom:Win64" nocase ascii wide
+                        $string74_Antivirus_Signature_signature_keyword = "Ransom_Petya" nocase ascii wide
+                        $string75_Antivirus_Signature_signature_keyword = "Ransom_WCRY" nocase ascii wide
+                        $string76_Antivirus_Signature_signature_keyword = "SupportScam:Win32" nocase ascii wide
+                        $string77_Antivirus_Signature_signature_keyword = "Tojan:Win32/Goodkit" nocase ascii wide
+                        $string78_Antivirus_Signature_signature_keyword = /TROJ_ZIPBOMB\./ nocase ascii wide
+                        $string79_Antivirus_Signature_signature_keyword = /Trojan\.HTool/ nocase ascii wide
+                        $string80_Antivirus_Signature_signature_keyword = /Trojan\.Linux/ nocase ascii wide
+                        $string81_Antivirus_Signature_signature_keyword = /Trojan\.Win32\..{0,100}\./ nocase ascii wide
+                        $string82_Antivirus_Signature_signature_keyword = /Trojan\.Win64/ nocase ascii wide
+                        $string83_Antivirus_Signature_signature_keyword = /Trojan\.WinGo/ nocase ascii wide
+                        $string84_Antivirus_Signature_signature_keyword = "Trojan/Win32" nocase ascii wide
+                        $string85_Antivirus_Signature_signature_keyword = "Trojan/Win64" nocase ascii wide
+                        $string86_Antivirus_Signature_signature_keyword = "Trojan:MacOS" nocase ascii wide
+                        $string87_Antivirus_Signature_signature_keyword = /Trojan\:MSIL\/Dothetuk\./ nocase ascii wide
+                        $string88_Antivirus_Signature_signature_keyword = "Trojan:PowerShell" nocase ascii wide
+                        $string89_Antivirus_Signature_signature_keyword = "Trojan:PowerShell/BatLoader" nocase ascii wide
+                        $string90_Antivirus_Signature_signature_keyword = "Trojan:Python/BatLoader" nocase ascii wide
+                        $string91_Antivirus_Signature_signature_keyword = "Trojan:Win32" nocase ascii wide
+                        $string92_Antivirus_Signature_signature_keyword = "Trojan:Win32/Batloader" nocase ascii wide
+                        $string93_Antivirus_Signature_signature_keyword = "Trojan:Win32/EugenLoader" nocase ascii wide
+                        $string94_Antivirus_Signature_signature_keyword = "Trojan:Win32/Gozi" nocase ascii wide
+                        $string95_Antivirus_Signature_signature_keyword = "Trojan:Win32/IceId" nocase ascii wide
+                        $string96_Antivirus_Signature_signature_keyword = "Trojan:Win32/Smokeloader" nocase ascii wide
+                        $string97_Antivirus_Signature_signature_keyword = "Trojan:Win32/Trickbot" nocase ascii wide
+                        $string98_Antivirus_Signature_signature_keyword = "Trojan:Win64" nocase ascii wide
+                        $string99_Antivirus_Signature_signature_keyword = "Trojan:Win64/IcedID" nocase ascii wide
+                        $string100_Antivirus_Signature_signature_keyword = "Trojan:Win64/IceId" nocase ascii wide
+                        $string101_Antivirus_Signature_signature_keyword = "TrojanDownloader:PowerShell/EugenLoader" nocase ascii wide
+                        $string102_Antivirus_Signature_signature_keyword = "TrojanDownloader:PowerShell/Malgent" nocase ascii wide
+                        $string103_Antivirus_Signature_signature_keyword = "TrojanDropper:PowerShell/" nocase ascii wide
+                        $string104_Antivirus_Signature_signature_keyword = "TrojanDropper:Win32" nocase ascii wide
+                        $string105_Antivirus_Signature_signature_keyword = /TrojanSpy\.Win64/ nocase ascii wide
+                        $string106_Antivirus_Signature_signature_keyword = "TrojanSpy:MSIL/JSSLoader" nocase ascii wide
+                        $string107_Antivirus_Signature_signature_keyword = "TrojanSpy:MSIL/JSSLoader" nocase ascii wide
+                        $string108_Antivirus_Signature_signature_keyword = /VirTool.{0,100}RemoteExec/ nocase ascii wide
+                        $string109_Antivirus_Signature_signature_keyword = "VirTool:MSIL" nocase ascii wide
+                        $string110_Antivirus_Signature_signature_keyword = /VirTool\:PowerShell\/Dipadz\./ nocase ascii wide
+                        $string111_Antivirus_Signature_signature_keyword = "VirTool:Win32" nocase ascii wide
+                        $string112_Antivirus_Signature_signature_keyword = "VirTool:Win32/RemoteExec" nocase ascii wide
+                        $string113_Antivirus_Signature_signature_keyword = /Win32\.Trojan/ nocase ascii wide
+                        $string114_Antivirus_Signature_signature_keyword = "Win32/Goodkit" nocase ascii wide
+                        $string115_Antivirus_Signature_signature_keyword = "Win32/IceId" nocase ascii wide
+                        $string116_Antivirus_Signature_signature_keyword = "Win32/Mikatz" nocase ascii wide
+                        $string117_Antivirus_Signature_signature_keyword = "Win32/Trickbot" nocase ascii wide
+                        $string118_Antivirus_Signature_signature_keyword = "Win32/UACBypass" nocase ascii wide
+                        $string119_Antivirus_Signature_signature_keyword = "Win32:Trojan" nocase ascii wide
+                        $string120_Antivirus_Signature_signature_keyword = "Win64/IceId" nocase ascii wide
+                        $string121_Antivirus_Signature_signature_keyword = "Win64/Mikatz" nocase ascii wide
+                        $string122_Antivirus_Signature_signature_keyword = /Windows\.Hacktool\./ nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

@@ -1,0 +1,129 @@
+rule rule___offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool '_' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "_"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1___offensive_tool_keyword = /\.doc\.bat/ nocase ascii wide
+                        $string2___offensive_tool_keyword = /\.doc\.dll/ nocase ascii wide
+                        $string3___offensive_tool_keyword = /\.doc\.exe/ nocase ascii wide
+                        $string4___offensive_tool_keyword = /\.doc\.htm/ nocase ascii wide
+                        $string5___offensive_tool_keyword = /\.doc\.iso/ nocase ascii wide
+                        $string6___offensive_tool_keyword = /\.doc\.jar/ nocase ascii wide
+                        $string7___offensive_tool_keyword = /\.doc\.js/ nocase ascii wide
+                        $string8___offensive_tool_keyword = /\.doc\.sfx/ nocase ascii wide
+                        $string9___offensive_tool_keyword = /\.doc\.vbs/ nocase ascii wide
+                        $string10___offensive_tool_keyword = /\.docx\.bat/ nocase ascii wide
+                        $string11___offensive_tool_keyword = /\.docx\.exe/ nocase ascii wide
+                        $string12___offensive_tool_keyword = /\.docx\.htm/ nocase ascii wide
+                        $string13___offensive_tool_keyword = /\.docx\.iso/ nocase ascii wide
+                        $string14___offensive_tool_keyword = /\.docx\.jar/ nocase ascii wide
+                        $string15___offensive_tool_keyword = /\.docx\.js/ nocase ascii wide
+                        $string16___offensive_tool_keyword = /\.docx\.sfx/ nocase ascii wide
+                        $string17___offensive_tool_keyword = /\.docx\.vbs/ nocase ascii wide
+                        $string18___offensive_tool_keyword = /\.jpg\.exe/ nocase ascii wide
+                        $string19___offensive_tool_keyword = /\.jpg\.iso/ nocase ascii wide
+                        $string20___offensive_tool_keyword = /\.pdf\.bat/ nocase ascii wide
+                        $string21___offensive_tool_keyword = /\.pdf\.dll/ nocase ascii wide
+                        $string22___offensive_tool_keyword = /\.pdf\.exe/ nocase ascii wide
+                        $string23___offensive_tool_keyword = /\.pdf\.htm/ nocase ascii wide
+                        $string24___offensive_tool_keyword = /\.pdf\.iso/ nocase ascii wide
+                        $string25___offensive_tool_keyword = /\.pdf\.jar/ nocase ascii wide
+                        $string26___offensive_tool_keyword = /\.pdf\.js/ nocase ascii wide
+                        $string27___offensive_tool_keyword = /\.pdf\.sfx/ nocase ascii wide
+                        $string28___offensive_tool_keyword = /\.pdf\.vbs/ nocase ascii wide
+                        $string29___offensive_tool_keyword = /\.ppt\.bat/ nocase ascii wide
+                        $string30___offensive_tool_keyword = /\.ppt\.dll/ nocase ascii wide
+                        $string31___offensive_tool_keyword = /\.ppt\.exe/ nocase ascii wide
+                        $string32___offensive_tool_keyword = /\.ppt\.htm/ nocase ascii wide
+                        $string33___offensive_tool_keyword = /\.ppt\.iso/ nocase ascii wide
+                        $string34___offensive_tool_keyword = /\.ppt\.jar/ nocase ascii wide
+                        $string35___offensive_tool_keyword = /\.ppt\.js/ nocase ascii wide
+                        $string36___offensive_tool_keyword = /\.ppt\.sfx/ nocase ascii wide
+                        $string37___offensive_tool_keyword = /\.ppt\.vbs/ nocase ascii wide
+                        $string38___offensive_tool_keyword = /\.pptx\.bat/ nocase ascii wide
+                        $string39___offensive_tool_keyword = /\.pptx\.dll/ nocase ascii wide
+                        $string40___offensive_tool_keyword = /\.pptx\.exe/ nocase ascii wide
+                        $string41___offensive_tool_keyword = /\.pptx\.htm/ nocase ascii wide
+                        $string42___offensive_tool_keyword = /\.pptx\.iso/ nocase ascii wide
+                        $string43___offensive_tool_keyword = /\.pptx\.jar/ nocase ascii wide
+                        $string44___offensive_tool_keyword = /\.pptx\.js/ nocase ascii wide
+                        $string45___offensive_tool_keyword = /\.pptx\.sfx/ nocase ascii wide
+                        $string46___offensive_tool_keyword = /\.pptx\.vbs/ nocase ascii wide
+                        $string47___offensive_tool_keyword = /\.rar\.exe/ nocase ascii wide
+                        $string48___offensive_tool_keyword = /\.rar\.iso/ nocase ascii wide
+                        $string49___offensive_tool_keyword = /\.rtf\.bat/ nocase ascii wide
+                        $string50___offensive_tool_keyword = /\.rtf\.dll/ nocase ascii wide
+                        $string51___offensive_tool_keyword = /\.rtf\.exe/ nocase ascii wide
+                        $string52___offensive_tool_keyword = /\.rtf\.htm/ nocase ascii wide
+                        $string53___offensive_tool_keyword = /\.rtf\.jar/ nocase ascii wide
+                        $string54___offensive_tool_keyword = /\.rtf\.js/ nocase ascii wide
+                        $string55___offensive_tool_keyword = /\.rtf\.sfx/ nocase ascii wide
+                        $string56___offensive_tool_keyword = /\.rtf\.vbs/ nocase ascii wide
+                        $string57___offensive_tool_keyword = /\.txt\.bat/ nocase ascii wide
+                        $string58___offensive_tool_keyword = /\.txt\.dll/ nocase ascii wide
+                        $string59___offensive_tool_keyword = /\.txt\.exe/ nocase ascii wide
+                        $string60___offensive_tool_keyword = /\.txt\.htm/ nocase ascii wide
+                        $string61___offensive_tool_keyword = /\.txt\.iso/ nocase ascii wide
+                        $string62___offensive_tool_keyword = /\.txt\.jar/ nocase ascii wide
+                        $string63___offensive_tool_keyword = /\.txt\.js/ nocase ascii wide
+                        $string64___offensive_tool_keyword = /\.txt\.sfx/ nocase ascii wide
+                        $string65___offensive_tool_keyword = /\.txt\.vbs/ nocase ascii wide
+                        $string66___offensive_tool_keyword = /\.xls\.bat/ nocase ascii wide
+                        $string67___offensive_tool_keyword = /\.xls\.dll/ nocase ascii wide
+                        $string68___offensive_tool_keyword = /\.xls\.exe/ nocase ascii wide
+                        $string69___offensive_tool_keyword = /\.xls\.htm/ nocase ascii wide
+                        $string70___offensive_tool_keyword = /\.xls\.iso/ nocase ascii wide
+                        $string71___offensive_tool_keyword = /\.xls\.jar/ nocase ascii wide
+                        $string72___offensive_tool_keyword = /\.xls\.js/ nocase ascii wide
+                        $string73___offensive_tool_keyword = /\.xls\.sfx/ nocase ascii wide
+                        $string74___offensive_tool_keyword = /\.xls\.vbs/ nocase ascii wide
+                        $string75___offensive_tool_keyword = /\.xlsx\.bat/ nocase ascii wide
+                        $string76___offensive_tool_keyword = /\.xlsx\.dll/ nocase ascii wide
+                        $string77___offensive_tool_keyword = /\.xlsx\.exe/ nocase ascii wide
+                        $string78___offensive_tool_keyword = /\.xlsx\.htm/ nocase ascii wide
+                        $string79___offensive_tool_keyword = /\.xlsx\.iso/ nocase ascii wide
+                        $string80___offensive_tool_keyword = /\.xlsx\.jar/ nocase ascii wide
+                        $string81___offensive_tool_keyword = /\.xlsx\.js/ nocase ascii wide
+                        $string82___offensive_tool_keyword = /\.xlsx\.sfx/ nocase ascii wide
+                        $string83___offensive_tool_keyword = /\.xlsx\.vbs/ nocase ascii wide
+                        $string84___offensive_tool_keyword = /\.zip\.exe/ nocase ascii wide
+                        $string85___offensive_tool_keyword = /\.zip\.iso/ nocase ascii wide
+                        $string86___offensive_tool_keyword = "/BackDoor" nocase ascii wide
+                        $string87___offensive_tool_keyword = /\:\\users\\public\\.{0,100}\.bat/ nocase ascii wide
+                        $string88___offensive_tool_keyword = /\:\\users\\public\\.{0,100}\.hta/ nocase ascii wide
+                        $string89___offensive_tool_keyword = /\:\\users\\public\\.{0,100}\.ps1/ nocase ascii wide
+                        $string90___offensive_tool_keyword = /\:\\users\\public\\.{0,100}\.vbs/ nocase ascii wide
+                        $string91___offensive_tool_keyword = /\\Appdata\\.{0,100}\\aloy64\.exe/ nocase ascii wide
+                        $string92___offensive_tool_keyword = /\\Appdata\\.{0,100}\\Beacon\.exe/ nocase ascii wide
+                        $string93___offensive_tool_keyword = /\\Appdata\\.{0,100}\\Beacon01\.exe/ nocase ascii wide
+                        $string94___offensive_tool_keyword = /\\Appdata\\.{0,100}\\Beacon02\.exe/ nocase ascii wide
+                        $string95___offensive_tool_keyword = /\\Appdata\\.{0,100}\\kitty\.exe/ nocase ascii wide
+                        $string96___offensive_tool_keyword = /\\Start\sMenu\\Programs\\Startup\\svchost\.exe/ nocase ascii wide
+                        $string97___offensive_tool_keyword = /c\:\\users\\public\\.{0,100}\.dll/ nocase ascii wide
+                        $string98___offensive_tool_keyword = /C\:\\Windows\s\\System32/ nocase ascii wide
+                        $string99___offensive_tool_keyword = "/pentest" nocase ascii wide
+                        $string100___offensive_tool_keyword = "-pentest" nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "b781f610-10a4-40e1-b1fd-03c24fadf5af",
+  "title": "rule_Python_Rootkit_signature_keyword",
+  "format": "yara",
+  "author": "@mthcht",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detection patterns for the tool 'Python-Rootkit' taken from the ThreatHunting-Keywords github project",
+  "source": "https://github.com/mthcht/ThreatHunting-Keywords-yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:tool=\"Lazagne\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/249874"
+}
