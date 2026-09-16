@@ -1,0 +1,9 @@
+rule Win_Trojan_Nugache_2
+{
+strings:
+	$a0 = { e6036804c47ce0c65e68c4cc6ce6c6dc64d6c2ac65f64868f7ca0c6fd6766845cc5ceac6d96444c0fce1e6276876ca3c63d6736416cabc63f6ca6cb4cfec26e6356056cf3c22d6836887c40cecd6576475c6dc68e6816435cedc6ae60064b4ceec66e6056ca6cdaca6f65964d4c2ec65e64464c5 }
+
+
+condition:
+	$a0
+}
