@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET WEB_CLIENT Malicious Cookie Set By Flash Malvertising"; flow:established,to_server; http.cookie; content:"asg325we234=1"; reference:md5,cce9dcad030c4cba605a8ee65572136a; classtype:trojan-activity; sid:2017660; rev:3; metadata:created_at 2013_11_04, signature_severity Major, updated_at 2024_04_07;)

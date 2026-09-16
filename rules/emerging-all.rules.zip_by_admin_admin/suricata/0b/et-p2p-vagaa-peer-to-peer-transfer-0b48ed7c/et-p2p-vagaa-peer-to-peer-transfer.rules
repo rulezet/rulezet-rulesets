@@ -1,0 +1,1 @@
+alert http1 $HOME_NET any -> $EXTERNAL_NET any (msg:"ET P2P Vagaa peer-to-peer (Transfer)"; flow:established,to_server; http.header; content:"VAGAA-OPERATION|3a| Transfer|0d 0a|"; reference:url,en.wikipedia.org/wiki/Vagaa; classtype:policy-violation; sid:2018012; rev:5; metadata:created_at 2014_01_27, confidence High, signature_severity Informational, updated_at 2024_04_07;)
