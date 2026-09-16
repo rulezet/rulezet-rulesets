@@ -1,0 +1,148 @@
+rule sc
+{
+    meta:
+        description = "Detection patterns for the tool 'sc' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "sc"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+                        $string1 = " /c sc query WinDefend" nocase ascii wide
+                        $string2 = "dnefedniw  eteled cs" nocase ascii wide
+                        $string3 = /echo\sstart\s\>\s\\\\\.\\pipe\\winreg/ nocase ascii wide
+                        $string4 = "sc  sdset RemoteAccess " nocase ascii wide
+                        $string5 = /sc\sconfig\sKeyIso\sstart\=\sDisabled\s\|\ssc\sstop\sKeyIso/ nocase ascii wide
+                        $string6 = /sc\screate\s.{0,100}nc\.exe\s\-.{0,100}cmd\.exe/ nocase ascii wide
+                        $string7 = /sc\sdelete\s\\"AVP18\.0\.0\\"/ nocase ascii wide
+                        $string8 = "sc delete \"ekrn\"" nocase ascii wide
+                        $string9 = "sc delete \"FirebirdGuardianDefaultInstance\"" nocase ascii wide
+                        $string10 = "sc delete \"FirebirdServerDefaultInstance\"" nocase ascii wide
+                        $string11 = "sc delete \"hvdswvc\"" nocase ascii wide
+                        $string12 = "sc delete \"klbackupdisk\"" nocase ascii wide
+                        $string13 = "sc delete \"klbackupflt\"" nocase ascii wide
+                        $string14 = "sc delete \"klflt\"" nocase ascii wide
+                        $string15 = "sc delete \"klhk\"" nocase ascii wide
+                        $string16 = "sc delete \"KLIF\"" nocase ascii wide
+                        $string17 = "sc delete \"klim6\"" nocase ascii wide
+                        $string18 = "sc delete \"klkbdflt\"" nocase ascii wide
+                        $string19 = "sc delete \"klmouflt\"" nocase ascii wide
+                        $string20 = "sc delete \"klpd\"" nocase ascii wide
+                        $string21 = "sc delete \"kltap\"" nocase ascii wide
+                        $string22 = /sc\sdelete\s\\"KSDE1\.0\.0\\"/ nocase ascii wide
+                        $string23 = "sc delete \"ntrtscan\"" nocase ascii wide
+                        $string24 = "sc delete \"nvspwmi\"" nocase ascii wide
+                        $string25 = "sc delete \"ofcservice\"" nocase ascii wide
+                        $string26 = "sc delete \"storflt\"" nocase ascii wide
+                        $string27 = "sc delete \"sysmon\"" nocase ascii wide
+                        $string28 = "sc delete \"TmCCSF\"" nocase ascii wide
+                        $string29 = "sc delete \"TmFilter\"" nocase ascii wide
+                        $string30 = "sc delete \"TMiCRCScanService\"" nocase ascii wide
+                        $string31 = "sc delete \"tmlisten\"" nocase ascii wide
+                        $string32 = "sc delete \"TMLWCSService\"" nocase ascii wide
+                        $string33 = "sc delete \"TmPreFilter\"" nocase ascii wide
+                        $string34 = "sc delete \"TmProxy\"" nocase ascii wide
+                        $string35 = "sc delete \"TMSmartRelayService\"" nocase ascii wide
+                        $string36 = "sc delete \"tmusa\"" nocase ascii wide
+                        $string37 = "sc delete \"vmicguestinterface\"" nocase ascii wide
+                        $string38 = "sc delete \"vmicheartbeat\"" nocase ascii wide
+                        $string39 = "sc delete \"vmickvpexchange\"" nocase ascii wide
+                        $string40 = "sc delete \"vmicrdv\"" nocase ascii wide
+                        $string41 = "sc delete \"vmicshutdown\"" nocase ascii wide
+                        $string42 = "sc delete \"vmictimesync\"" nocase ascii wide
+                        $string43 = "sc delete \"vmicvss\"" nocase ascii wide
+                        $string44 = "sc delete \"VSApiNt\"" nocase ascii wide
+                        $string45 = "sc delete \"wmms\"" nocase ascii wide
+                        $string46 = "sc delete \"WRSVC\"" nocase ascii wide
+                        $string47 = /sc\sdelete\sAVP18\.0\.0/ nocase ascii wide
+                        $string48 = "sc delete ekrn" nocase ascii wide
+                        $string49 = "sc delete FirebirdGuardianDefaultInstance" nocase ascii wide
+                        $string50 = "sc delete FirebirdServerDefaultInstance" nocase ascii wide
+                        $string51 = "sc delete hvdswvc" nocase ascii wide
+                        $string52 = "sc delete klbackupdisk" nocase ascii wide
+                        $string53 = "sc delete klbackupflt" nocase ascii wide
+                        $string54 = "sc delete klflt" nocase ascii wide
+                        $string55 = "sc delete klhk" nocase ascii wide
+                        $string56 = "sc delete KLIF" nocase ascii wide
+                        $string57 = "sc delete klim6" nocase ascii wide
+                        $string58 = "sc delete klkbdflt" nocase ascii wide
+                        $string59 = "sc delete klmouflt" nocase ascii wide
+                        $string60 = "sc delete klpd" nocase ascii wide
+                        $string61 = "sc delete kltap" nocase ascii wide
+                        $string62 = /sc\sdelete\sKSDE1\.0\.0/ nocase ascii wide
+                        $string63 = "sc delete MBAMProtection" nocase ascii wide
+                        $string64 = "sc delete MBAMService" nocase ascii wide
+                        $string65 = "sc delete ntrtscan" nocase ascii wide
+                        $string66 = "sc delete nvspwmi" nocase ascii wide
+                        $string67 = "sc delete ofcservice" nocase ascii wide
+                        $string68 = "sc delete storflt" nocase ascii wide
+                        $string69 = "sc delete sysmon" nocase ascii wide
+                        $string70 = "sc delete TmCCSF" nocase ascii wide
+                        $string71 = "sc delete TmFilter" nocase ascii wide
+                        $string72 = "sc delete TMiCRCScanService" nocase ascii wide
+                        $string73 = "sc delete tmlisten" nocase ascii wide
+                        $string74 = "sc delete TMLWCSService" nocase ascii wide
+                        $string75 = "sc delete TmPreFilter" nocase ascii wide
+                        $string76 = "sc delete TmProxy" nocase ascii wide
+                        $string77 = "sc delete TMSmartRelayService" nocase ascii wide
+                        $string78 = "sc delete tmusa" nocase ascii wide
+                        $string79 = "sc delete vmicguestinterface" nocase ascii wide
+                        $string80 = "sc delete vmicheartbeat" nocase ascii wide
+                        $string81 = "sc delete vmickvpexchange" nocase ascii wide
+                        $string82 = "sc delete vmicrdv" nocase ascii wide
+                        $string83 = "sc delete vmicshutdown" nocase ascii wide
+                        $string84 = "sc delete vmictimesync" nocase ascii wide
+                        $string85 = "sc delete vmicvss" nocase ascii wide
+                        $string86 = "sc delete VSApiNt" nocase ascii wide
+                        $string87 = "sc delete VSS" nocase ascii wide
+                        $string88 = "sc delete wmms" nocase ascii wide
+                        $string89 = "sc delete WRSVC" nocase ascii wide
+                        $string90 = "sc qtriggerinfo RemoteRegistry" nocase ascii wide
+                        $string91 = /sc\ssdset\sscmanager\sD\:\(A\;\;KA\;\;\;WD\)/ nocase ascii wide
+                        $string92 = "sc start RemoteRegistry" nocase ascii wide
+                        $string93 = "sc stop eventlog" nocase ascii wide
+                        $string94 = "sc stop MBAMProtection" nocase ascii wide
+                        $string95 = "sc stop MBAMService" nocase ascii wide
+                        $string96 = "sc stop Sophos File Scanner Service" nocase ascii wide
+                        $string97 = /sc\.exe\s\ssdset\sRemoteAccess\s/ nocase ascii wide
+                        $string98 = /sc\.exe\sdelete\s\\"SAVAdminService\\"/ nocase ascii wide
+                        $string99 = /sc\.exe\sdelete\s\\"SAVAdminService\\"/ nocase ascii wide
+                        $string100 = /sc\.exe\sdelete\s\\"SAVService\\"/ nocase ascii wide
+                        $string101 = /sc\.exe\sdelete\s\\"SAVService\\"/ nocase ascii wide
+                        $string102 = /sc\.exe\sdelete\s\\"SntpService\\"/ nocase ascii wide
+                        $string103 = /sc\.exe\sdelete\s\\"Sophos\sAgent\\"/ nocase ascii wide
+                        $string104 = /sc\.exe\sdelete\s\\"Sophos\sAutoUpdate\sService\\"/ nocase ascii wide
+                        $string105 = /sc\.exe\sdelete\s\\"Sophos\sEndpoint\sDefense\sService\\"/ nocase ascii wide
+                        $string106 = /sc\.exe\sdelete\s\\"Sophos\sMessage\sRouter\\"/ nocase ascii wide
+                        $string107 = /sc\.exe\sdelete\s\\"Sophos\sSystem\sProtection\sService\\"/ nocase ascii wide
+                        $string108 = /sc\.exe\sdelete\s\\"Sophos\sWeb\sControl\sService\\"/ nocase ascii wide
+                        $string109 = /sc\.exe\sdelete\s\\"swi_service\\"/ nocase ascii wide
+                        $string110 = /sc\.exe\sdelete\s\\"swi_update\\"/ nocase ascii wide
+                        $string111 = /sc\.exe\sdelete\ssysmon/ nocase ascii wide
+                        $string112 = /sc\.exe\ssdset\sscmanager\sD\:\(A\;\;KA\;\;\;WD\)/ nocase ascii wide
+                        $string113 = /sc\.exe\sstop\s.{0,100}Sophos\sFile\sScanner\sService/ nocase ascii wide
+                        $string114 = /sc\.exe\sstop\sbits/ nocase ascii wide
+                        $string115 = /sc\.exe\sstop\seventlog/ nocase ascii wide
+                        $string116 = /sc\.exe\\"\s\ssdset\sRemoteAccess\s/ nocase ascii wide
+                        $string117 = /sc\.exe\\"\sdelete\s\\"sysmon\\"/ nocase ascii wide
+                        $string118 = /sc\.exe\\"\sdelete\ssysmon/ nocase ascii wide
+                        $string119 = /sc\.exe.{0,100}sdset\sscmanager\sD\:\(A\;\;KA\;\;\;WD\)/ nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}
