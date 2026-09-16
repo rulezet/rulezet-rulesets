@@ -1,0 +1,21 @@
+{
+  "uuid": "e66019ff-5c1e-421a-a327-536b556eaa79",
+  "title": "BrowserModifier_Win32_Favoriteman",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "BrowserModifier:Win32/Favoriteman,SIGNATURE_TYPE_PEHSTR,0c 00 0a 00 0b 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/308597"
+}

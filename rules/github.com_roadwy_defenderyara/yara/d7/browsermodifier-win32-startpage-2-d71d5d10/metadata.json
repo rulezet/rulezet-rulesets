@@ -1,0 +1,21 @@
+{
+  "uuid": "d71d5d10-5baa-4581-afbc-5f5ecfd60c85",
+  "title": "BrowserModifier_Win32_Startpage_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "BrowserModifier:Win32/Startpage,SIGNATURE_TYPE_PEHSTR_EXT,0b 00 0b 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/308441"
+}

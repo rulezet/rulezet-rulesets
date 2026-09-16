@@ -1,0 +1,22 @@
+{
+  "uuid": "e1b4175d-1177-4842-b49b-53ea7e9ec695",
+  "title": "DDoS_Linux_Mirai_PA_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "DDoS:Linux/Mirai.PA!MTB,SIGNATURE_TYPE_ELFHSTR_EXT,05 00 05 00 0a 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:botnet=\"Mirai\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/308772"
+}
