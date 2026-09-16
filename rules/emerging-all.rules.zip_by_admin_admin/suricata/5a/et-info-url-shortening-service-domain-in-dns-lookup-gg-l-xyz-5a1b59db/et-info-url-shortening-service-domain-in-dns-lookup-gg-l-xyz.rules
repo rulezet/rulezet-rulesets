@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO URL Shortening Service Domain in DNS Lookup (gg-l .xyz)"; dns.query; bsize:8; content:"gg-l.xyz"; nocase; classtype:misc-activity; sid:2036420; rev:3; metadata:created_at 2022_04_29, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_26;)
