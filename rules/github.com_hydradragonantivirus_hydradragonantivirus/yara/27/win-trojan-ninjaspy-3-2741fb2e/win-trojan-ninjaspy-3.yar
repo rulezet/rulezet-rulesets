@@ -1,0 +1,9 @@
+rule Win_Trojan_Ninjaspy_3
+{
+strings:
+	$a0 = { cbbf4ecc637f5da143de2afd3a61665a5031ab6b43d6bbd03cf422877659862d6ef9afae71645d387cd53afacfd79d107d894dbb122f38d271e1228f97f7680ac122bff1dead4de677af48a53beacd57417f95a9d7b8f375ffed5739641c5258afabfa8c2455086b03a371fcab13633936fafdd7e5ae2b00d02d79513a6142fbb9041adcbf668aba26d567ada33abb1ab9722ed26d24 }
+
+
+condition:
+	$a0
+}
