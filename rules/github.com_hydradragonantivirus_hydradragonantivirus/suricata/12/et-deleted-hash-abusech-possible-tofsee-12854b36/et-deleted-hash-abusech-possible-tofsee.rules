@@ -1,0 +1,1 @@
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Hash - [Abuse.ch] Possible Tofsee"; ja3_hash; content:"0cc1e84568e471aa1d62ad4158ade6b5"; reference:url,sslbl.abuse.ch/ja3-fingerprints/; classtype:unknown; sid:2028769; rev:4; metadata:created_at 2019_10_14, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2023_05_11;)
