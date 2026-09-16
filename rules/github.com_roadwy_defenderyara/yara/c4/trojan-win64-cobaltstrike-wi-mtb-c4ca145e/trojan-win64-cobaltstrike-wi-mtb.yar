@@ -1,0 +1,9 @@
+rule Trojan_Win64_CobaltStrike_WI_MTB{
+	meta:
+		description = "Trojan:Win64/CobaltStrike.WI!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {48 8b 1c 24 48 8d 64 24 ?? c6 83 ?? ?? ?? ?? ?? 1d ?? ?? ?? ?? 15 ?? ?? ?? ?? e0 ?? d0 0b c0 09 ?? 08 60 ?? 30 06 50 a0 } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}
