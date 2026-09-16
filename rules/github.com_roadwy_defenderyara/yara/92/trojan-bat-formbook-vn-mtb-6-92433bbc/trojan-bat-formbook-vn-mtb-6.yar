@@ -1,0 +1,9 @@
+rule Trojan_BAT_Formbook_VN_MTB_6{
+	meta:
+		description = "Trojan:BAT/Formbook.VN!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {0a 00 00 7e ?? ?? ?? 04 0a 06 16 7e ?? ?? ?? 04 a2 06 17 7e ?? ?? ?? 04 a2 06 73 ?? ?? ?? 06 0b 02 } 		$a_03_1 = {04 0b 07 16 7e ?? ?? ?? 04 a2 07 17 7e ?? ?? ?? 04 a2 06 6f ?? ?? ?? 0a 16 9a } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1) >=1
+ 
+}
