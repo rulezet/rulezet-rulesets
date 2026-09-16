@@ -1,0 +1,22 @@
+{
+  "uuid": "feb5f141-6d58-430d-884a-cad58a29c81c",
+  "title": "mal_truebot",
+  "format": "yara",
+  "author": "Maxime THIEBAUT (@0xThiebaut)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects strings commonly related to TrueBot functionality",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/712659"
+}

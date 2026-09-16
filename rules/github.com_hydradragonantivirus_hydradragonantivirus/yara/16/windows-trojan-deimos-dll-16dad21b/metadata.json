@@ -1,0 +1,22 @@
+{
+  "uuid": "16dad21b-daad-4e15-b4e2-bfca1dcc5f20",
+  "title": "Windows_Trojan_Deimos_DLL",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the presence of the Deimos trojan DLL file.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/712807"
+}

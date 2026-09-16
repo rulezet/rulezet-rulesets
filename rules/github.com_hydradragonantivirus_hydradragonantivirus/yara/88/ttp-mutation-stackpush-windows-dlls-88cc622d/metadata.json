@@ -1,0 +1,19 @@
+{
+  "uuid": "88cc622d-d90a-4eab-ad71-08004eae7706",
+  "title": "TTP_Mutation_StackPush_Windows_DLLs",
+  "format": "yara",
+  "author": "Stairwell",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Searching for PE files with mutations of odd, rare, or interesting string equities. Here we look for strings from common PE strings, DLLs and functions in pseudo stack strings form, where the string pushed onto the stack 4 bytes at a time using PUSH 0x68, appearing in reverse four byte chunk order, where the PUSH which shows up as an ASCII letter h.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/712818"
+}

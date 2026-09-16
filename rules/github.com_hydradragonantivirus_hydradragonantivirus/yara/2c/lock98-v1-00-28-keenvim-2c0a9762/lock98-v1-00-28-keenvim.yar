@@ -1,0 +1,8 @@
+import "pe"
+rule LOCK98_V1_00_28____keenvim {
+  strings:
+    $a0 = { 55 E8 00 00 00 00 5D 81 ?? ?? ?? ?? ?? EB 05 E9 ?? ?? ?? ?? EB 08 }
+
+  condition:
+    $a0 at pe.entry_point
+}

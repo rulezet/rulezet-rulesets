@@ -1,0 +1,20 @@
+{
+  "uuid": "1bcf7c86-4ce5-449d-a974-37d0f274ef3b",
+  "title": "Contains_UserForm_Object_3",
+  "format": "yara",
+  "author": "Martin Willing (https://evild3ad.com)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect UserForm object in MS Office document. Attackers use UserForm objects to obfuscate their scripts and malicious code.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Dridex\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/712849"
+}

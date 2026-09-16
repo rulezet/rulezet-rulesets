@@ -1,0 +1,10 @@
+rule wmv: WMV {
+  meta:
+    author = "Joan Bono"
+
+  strings:
+    $a = { 30 26 B2 75 8E 66 CF 11 A6 D9 00 AA 00 62 CE 6C }
+
+  condition:
+    $a at 0
+}

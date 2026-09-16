@@ -1,0 +1,21 @@
+{
+  "uuid": "eeccb426-d7a2-4325-97bc-35fa9c8234ce",
+  "title": "case_18364_msi_attacker_email",
+  "format": "yara",
+  "author": "The DFIR Report",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects potential MSI installers (such as Atera's) containing known attacker email addresses",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Hive\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/712602"
+}
