@@ -1,0 +1,23 @@
+{
+  "uuid": "9597345e-3354-4976-914a-3d484157a0e9",
+  "title": "Potential NateOn-desktop sharing RMM Tool Process Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects potential processes activity of NateOn-desktop sharing RMM tool",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209472"
+}

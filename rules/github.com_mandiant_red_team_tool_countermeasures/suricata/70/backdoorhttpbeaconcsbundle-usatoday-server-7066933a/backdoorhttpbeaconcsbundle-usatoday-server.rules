@@ -1,0 +1,1 @@
+alert tcp any $HTTP_PORTS -> any any (msg:"Backdoor.HTTP.BEACON.[CSBundle USAToday Server]"; flow:from_server,established; content:"{\"navgd\":\"<div class=gnt_n_dd_ls_w><div class=gnt_n_dd_nt>ONLY AT USA TODAY:</div><div class=gnt_n_dd_ls><a class=gnt_n_dd_ls_a href=https://supportlocal.usatoday.com/"; sid:25894; rev:1;)

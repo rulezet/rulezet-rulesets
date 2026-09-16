@@ -1,0 +1,23 @@
+{
+  "uuid": "024be29f-1007-4569-ab18-25a98cf9ecbf",
+  "title": "Potential ESET Remote Administrator RMM Tool Process Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects potential processes activity of ESET Remote Administrator RMM tool\n",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209535"
+}

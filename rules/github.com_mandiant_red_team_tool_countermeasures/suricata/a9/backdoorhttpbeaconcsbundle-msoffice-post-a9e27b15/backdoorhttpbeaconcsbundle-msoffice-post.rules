@@ -1,0 +1,1 @@
+alert tcp any any -> any $HTTP_PORTS (msg:"Backdoor.HTTP.BEACON.[CSBundle MSOffice POST]"; content:"POST /v1/push"; depth:13; content:"Accept: */*"; content:"Accept-Encoding: gzip, deflate, br"; content:"Accept-Language: en-US|0d 0a|"; content:"{\"locale\":\"en\",\"channel\":\"prod\",\"addon\":\""; content:"cli"; content:"l-"; sid:25891; rev:1;)

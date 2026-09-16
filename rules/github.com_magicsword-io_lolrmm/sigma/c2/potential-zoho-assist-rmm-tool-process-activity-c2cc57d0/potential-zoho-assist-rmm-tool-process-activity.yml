@@ -1,0 +1,45 @@
+title: Potential Zoho Assist RMM Tool Process Activity
+id: f57c281c-5d94-43d1-8ba2-d2c95d01e871
+status: experimental
+description: |
+    Detects potential processes activity of Zoho Assist RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+    - https://www.huntress.com/blog/active-exploitation-solarwinds-web-help-desk-cve-2025-26399
+author: LOLRMM Project
+date: 2025-12-01
+tags:
+    - attack.execution
+    - attack.t1219
+logsource:
+    product: windows
+    category: process_creation
+detection:
+    selection_parent:
+        ParentImage|endswith:
+            - toolsiq.exe
+            - zaservice.exe
+            - ZMAgent.exe
+            - ZA_Access.exe
+            - ZohoMeeting.exe
+            - Zohours.exe
+            - zohotray.exe
+            - ZohoURSService.exe
+            - za_connect.exe
+            - connect.exe
+    selection_image:
+        Image|endswith:
+            - toolsiq.exe
+            - zaservice.exe
+            - ZMAgent.exe
+            - ZA_Access.exe
+            - ZohoMeeting.exe
+            - Zohours.exe
+            - zohotray.exe
+            - ZohoURSService.exe
+            - za_connect.exe
+            - connect.exe
+    condition: 1 of selection_*
+falsepositives:
+    - Legitimate use of Zoho Assist
+level: medium

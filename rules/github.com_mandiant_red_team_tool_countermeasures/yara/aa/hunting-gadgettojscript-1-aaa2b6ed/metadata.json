@@ -1,0 +1,19 @@
+{
+  "uuid": "aaa2b6ed-4fc5-416c-8636-c669d4751256",
+  "title": "Hunting_GadgetToJScript_1",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "BSD-2-Clause",
+  "license_verified": true,
+  "description": "This rule is looking for B64 offsets of LazyNetToJscriptLoader which is a namespace specific to the internal version of the GadgetToJScript tooling.",
+  "source": "https://github.com/mandiant/red_team_tool_countermeasures",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209799"
+}

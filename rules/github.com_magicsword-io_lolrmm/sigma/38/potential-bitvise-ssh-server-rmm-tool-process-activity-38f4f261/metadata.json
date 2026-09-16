@@ -1,0 +1,23 @@
+{
+  "uuid": "38f4f261-1545-48d0-ba5c-31396f52cbce",
+  "title": "Potential Bitvise SSH Server RMM Tool Process Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects potential processes activity of Bitvise SSH Server RMM tool\n",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209464"
+}

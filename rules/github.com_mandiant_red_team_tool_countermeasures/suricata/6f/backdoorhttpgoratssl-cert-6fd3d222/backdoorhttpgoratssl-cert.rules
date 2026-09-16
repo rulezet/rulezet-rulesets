@@ -1,0 +1,1 @@
+alert tcp any 443 -> any any ( msg:"Backdoor.HTTP.GORAT.[SSL Cert]"; content:"|16 03 03|"; depth:3; content:"ACME Shell Co.0"; content:"Z"; distance:0; content:"ACME Shell Co.0"; distance:0; sid:77600822; rev:4; )

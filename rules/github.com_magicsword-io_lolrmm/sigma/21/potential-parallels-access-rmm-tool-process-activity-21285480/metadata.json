@@ -1,0 +1,23 @@
+{
+  "uuid": "21285480-0eb1-4360-90df-d3c2f0c037e4",
+  "title": "Potential Parallels Access RMM Tool Process Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects potential processes activity of Parallels Access RMM tool\n",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209410"
+}

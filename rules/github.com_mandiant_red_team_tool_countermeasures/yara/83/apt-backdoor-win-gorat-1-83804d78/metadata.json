@@ -1,0 +1,21 @@
+{
+  "uuid": "83804d78-60b2-43ef-9575-ba34994dd1ac",
+  "title": "APT_Backdoor_Win_GORAT_1",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "BSD-2-Clause",
+  "license_verified": true,
+  "description": "This detects if a sample is less than 50KB and has a number of strings found in the Gorat shellcode (stage0 loader). The loader contains an embedded DLL (stage0.dll) that contains a number of unique strings. The 'Cookie' string found in this loader is important as this cookie is needed by the C2 server to download the Gorat implant (stage1 payload).",
+  "source": "https://github.com/mandiant/red_team_tool_countermeasures",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209820"
+}
