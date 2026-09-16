@@ -1,0 +1,9 @@
+rule Trojan_Win32_FileFix_HHI_MTB{
+	meta:
+		description = "Trojan:Win32/FileFix.HHI!MTB,SIGNATURE_TYPE_CMDHSTR_EXT,03 00 03 00 03 00 00 "
+		
+	strings :
+		$a_00_0 = {6e 00 65 00 74 00 73 00 68 00 20 00 77 00 6c 00 61 00 6e 00 } 		$a_00_1 = {63 00 75 00 72 00 6c 00 } 		$a_00_2 = {74 00 65 00 6c 00 65 00 67 00 72 00 61 00 6d 00 } 	condition:
+		((#a_00_0  & 1)*1+(#a_00_1  & 1)*1+(#a_00_2  & 1)*1) >=3
+ 
+}
