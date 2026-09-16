@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET WEB_CLIENT Browlock Landing Page URI Struct"; flow:established,to_server; http.uri; content:"/?flow_id"; content:"/case_id="; fast_pattern; pcre:"/\/\?flow_id=\d+?&\d+?=\d+?\/case_id=\d+$/"; classtype:trojan-activity; sid:2017847; rev:4; metadata:created_at 2013_12_13, signature_severity Major, updated_at 2024_03_19;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP InstallCore PUA/Adware Activity M3"; flow:established,to_server; http.uri; content:"/event-report?"; http.user_agent; bsize:11; content:"WinHTTP/1.0"; fast_pattern; classtype:pup-activity; sid:2022823; rev:5; metadata:created_at 2016_05_18, confidence High, signature_severity Minor, updated_at 2024_03_24;)

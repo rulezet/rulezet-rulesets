@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Possible Spambot getting new exe"; flow:established,to_server; http.uri; content:"/traff/ppiigg.exe"; nocase; classtype:pup-activity; sid:2002991; rev:8; metadata:created_at 2010_07_30, confidence Medium, signature_severity Minor, updated_at 2024_03_19;)

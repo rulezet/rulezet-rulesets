@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP EZSearch Spyware Reporting Search Category"; flow:established,to_server; http.uri; content:"/partner/rt.php?cat="; nocase; classtype:pup-activity; sid:2002318; rev:7; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_19;)

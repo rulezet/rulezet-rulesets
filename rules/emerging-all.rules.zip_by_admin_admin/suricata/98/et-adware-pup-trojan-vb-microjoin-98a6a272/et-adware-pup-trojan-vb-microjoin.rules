@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP TROJAN_VB Microjoin"; flow:established,to_server; http.uri; content:"/bundle/loader.exe"; nocase; reference:url,de.trendmicro-europe.com/consumer/vinfo/encyclopedia.php?VName=TROJ_VB.AWW; classtype:pup-activity; sid:2003084; rev:7; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_19;)

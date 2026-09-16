@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP KMIP.net Spyware 2"; flow:established,to_server; http.uri; content:"/sp?c=N&i="; fast_pattern; nocase; content:"&v="; nocase; reference:url,www.kmip.net; classtype:pup-activity; sid:2003526; rev:7; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_19;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET SCAN Zmap User-Agent (Outbound)"; flow:established,to_server; http.user_agent; bsize:21; content:"Mozilla/5.0 zgrab/0.x"; fast_pattern; classtype:network-scan; sid:2030345; rev:5; metadata:created_at 2015_12_01, confidence High, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_24;)
