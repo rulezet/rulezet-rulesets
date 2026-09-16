@@ -1,0 +1,9 @@
+rule Win_Trojan_Havar_3
+{
+strings:
+	$a0 = { 50a1a05040008b00ffd0e895f2ffffe890f2ffff6a00ff35486b40008d4d98ba8c000000b828444000e80af1ffff8b4598e8e2e2ffff8bd08d459ce898e0ffffff759c8d559433c0e89bd6ffffff75948d4d8cba12000000b834444000e8d6f0ffff8b458ce8aee2ffff8bd08d4590e864e0ffffff75908d45a0ba04000000e85ce1ffff8b45a0e88ce2ffff50e8b2e6ffff }
+
+
+condition:
+	$a0
+}

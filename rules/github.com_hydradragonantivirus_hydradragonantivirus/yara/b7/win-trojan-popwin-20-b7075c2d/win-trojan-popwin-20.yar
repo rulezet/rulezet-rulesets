@@ -1,0 +1,9 @@
+rule Win_Trojan_Popwin_20
+{
+strings:
+	$a0 = { 62a84cf2e63e0e5a4248b52698555807e22a602e60e04429a7e86e455b44e8bccf8cbb6e149f649e96ec5ea551255d1cb0051c65f0cfe5ec2578a9b762fd26a948796c929c3bb4365da80fb3b4b02fc2af320b38e82bf7764b03cae6 }
+
+
+condition:
+	$a0
+}
