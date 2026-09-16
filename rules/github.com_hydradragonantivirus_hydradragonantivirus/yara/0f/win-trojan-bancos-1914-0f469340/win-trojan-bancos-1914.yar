@@ -1,0 +1,9 @@
+rule Win_Trojan_Bancos_1914
+{
+strings:
+	$a0 = { cc77729d484d11530624687cda9014641f0573b8590a0da210cd093e689139da8640dea56b490a143514dca0d6f4592e3ef239fdaa8dd51adf9ef82bfef6b8bb060473580b19b6e4d6b578a4f5575d01bcf3a1adbb70320335de }
+
+
+condition:
+	$a0
+}
