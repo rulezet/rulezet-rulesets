@@ -1,0 +1,1 @@
+alert ftp $EXTERNAL_NET any -> $HOME_NET any (msg:"GPL FTP large SYST command"; flow:established,to_server; dsize:10; content:"SYST"; nocase; classtype:protocol-command-decode; sid:2101625; rev:9; metadata:created_at 2010_09_23, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 8888 (msg:"GPL DELETED answerbook2 admin attempt"; flow:established,to_server; content:"/cgi-bin/admin/admin"; reference:bugtraq,5383; reference:cve,2000-0696; classtype:web-application-activity; sid:2101946; rev:7; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)

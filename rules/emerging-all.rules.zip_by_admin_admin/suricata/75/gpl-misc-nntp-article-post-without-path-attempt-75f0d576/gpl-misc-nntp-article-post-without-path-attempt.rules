@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 119 (msg:"GPL MISC NNTP article post without path attempt"; flow:established,to_server; content:"takethis"; nocase; pcre:!"/^takethis.*?Path\x3a.*?[\r]{0,1}?\n[\r]{0,1}\n/si"; classtype:attempted-admin; sid:2102432; rev:5; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_08;)

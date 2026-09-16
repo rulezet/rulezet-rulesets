@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER apache ?M=D directory list attempt"; flow:established,to_server; http.uri; content:"/?M=D"; reference:bugtraq,3009; reference:cve,2001-0731; classtype:web-application-activity; sid:2101519; rev:13; metadata:created_at 2010_09_23, cve CVE_2001_0731, signature_severity Unknown, updated_at 2024_03_08;)

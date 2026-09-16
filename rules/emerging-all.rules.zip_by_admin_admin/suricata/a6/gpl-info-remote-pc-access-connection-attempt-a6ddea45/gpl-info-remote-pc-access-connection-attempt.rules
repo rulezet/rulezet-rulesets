@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 34012 (msg:"GPL INFO Remote PC Access connection attempt"; flow:established,to_server; content:"|28 00 01 00 04 00 00 00 00 00 00 00|"; depth:12; reference:nessus,11673; classtype:trojan-activity; sid:2102124; rev:5; metadata:created_at 2010_09_23, confidence Medium, signature_severity Informational, updated_at 2024_03_08;)

@@ -1,0 +1,1 @@
+alert ftp $HOME_NET any -> $EXTERNAL_NET any (msg:"GPL FTP FTP Bad login"; flow:established,to_client; content:"530 "; depth:4; pcre:"/^530\s+(Login|User)/smi"; classtype:bad-unknown; sid:2100491; rev:11; metadata:created_at 2010_09_23, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

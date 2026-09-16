@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25 (msg:"GPL SMTP vrfy root"; flow:established,to_server; content:"vrfy"; nocase; content:"root"; distance:1; nocase; pcre:"/^vrfy\s+root/smi"; classtype:attempted-recon; sid:2101446; rev:8; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)

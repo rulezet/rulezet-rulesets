@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER viewcode access"; flow:established,to_server; http.uri; content:"/viewcode"; reference:cve,1999-0737; reference:nessus,10576; reference:nessus,12048; classtype:web-application-attack; sid:2101403; rev:13; metadata:created_at 2010_09_23, cve CVE_1999_0737, signature_severity Unknown, updated_at 2024_03_08;)

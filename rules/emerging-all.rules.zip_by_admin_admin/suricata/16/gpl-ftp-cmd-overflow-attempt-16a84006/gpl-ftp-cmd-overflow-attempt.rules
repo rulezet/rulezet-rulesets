@@ -1,0 +1,1 @@
+alert ftp $EXTERNAL_NET any -> $HOME_NET any (msg:"GPL FTP CMD overflow attempt"; flow:established,to_server; content:"CMD"; nocase; isdataat:100,relative; pcre:"/^CMD\s[^\n]{100}/smi"; classtype:attempted-admin; sid:2101621; rev:13; metadata:created_at 2010_09_23, confidence Medium, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

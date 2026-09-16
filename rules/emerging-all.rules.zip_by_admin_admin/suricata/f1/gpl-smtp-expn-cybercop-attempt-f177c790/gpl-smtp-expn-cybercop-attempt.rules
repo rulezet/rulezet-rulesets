@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25 (msg:"GPL SMTP expn cybercop attempt"; flow:established,to_server; content:"expn cybercop"; reference:arachnids,371; classtype:protocol-command-decode; sid:2100632; rev:7; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)

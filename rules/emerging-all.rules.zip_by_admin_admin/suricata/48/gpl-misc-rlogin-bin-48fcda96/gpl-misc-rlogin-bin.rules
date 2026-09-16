@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 513 (msg:"GPL MISC rlogin bin"; flow:established,to_server; content:"bin|00|bin|00|"; reference:arachnids,384; classtype:attempted-user; sid:2100602; rev:7; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_08;)

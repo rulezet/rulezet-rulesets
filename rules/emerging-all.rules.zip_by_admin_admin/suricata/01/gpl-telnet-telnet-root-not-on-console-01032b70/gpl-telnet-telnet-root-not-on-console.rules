@@ -1,0 +1,1 @@
+alert tcp $TELNET_SERVERS 23 -> $EXTERNAL_NET any (msg:"GPL TELNET Telnet Root not on console"; flow:established,to_client; content:"not on system console"; fast_pattern; nocase; reference:arachnids,365; classtype:bad-unknown; sid:2100717; rev:11; metadata:created_at 2010_09_23, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

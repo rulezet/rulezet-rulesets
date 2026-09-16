@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 2401 -> $EXTERNAL_NET any (msg:"GPL MISC CVS invalid user authentication response"; flow:established,to_client; content:"E Fatal error, aborting."; content:"|3A| no such user"; classtype:misc-attack; sid:2102008; rev:6; metadata:created_at 2010_09_23, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

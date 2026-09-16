@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER ls%20-l"; flow:established,to_server; content:"ls%20-l"; nocase; classtype:attempted-recon; sid:2101118; rev:8; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 4242 (msg:"GPL DELETED eDonkey transfer"; flow:established,to_server; content:"|E3|"; depth:1; reference:url,www.kom.e-technik.tu-darmstadt.de/publications/abstracts/HB02-1.html; classtype:policy-violation; sid:2102586; rev:5; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)

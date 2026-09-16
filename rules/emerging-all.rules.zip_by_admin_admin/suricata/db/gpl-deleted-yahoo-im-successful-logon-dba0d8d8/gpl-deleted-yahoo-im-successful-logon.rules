@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 5050 -> $HOME_NET any (msg:"GPL DELETED Yahoo IM successful logon"; flow:established,to_client; content:"YMSG"; nocase; content:"|00 01|"; distance:6; within:2; classtype:policy-violation; sid:2102450; rev:6; metadata:created_at 2010_09_23, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

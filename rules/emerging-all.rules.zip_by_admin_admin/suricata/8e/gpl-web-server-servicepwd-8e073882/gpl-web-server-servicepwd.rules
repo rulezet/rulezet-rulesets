@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER service.pwd"; flow:established,to_server; http.uri; content:"/service.pwd"; nocase; reference:bugtraq,1205; classtype:web-application-activity; sid:2100959; rev:11; metadata:created_at 2010_09_23, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

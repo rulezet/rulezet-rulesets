@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 513 (msg:"GPL RPC rlogin LinuxNIS"; flow:established,to_server; content:"|3A 3A 3A 3A 3A 3A 3A 3A 00 3A 3A 3A 3A 3A 3A 3A 3A|"; classtype:bad-unknown; sid:2100601; rev:8; metadata:created_at 2010_09_23, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

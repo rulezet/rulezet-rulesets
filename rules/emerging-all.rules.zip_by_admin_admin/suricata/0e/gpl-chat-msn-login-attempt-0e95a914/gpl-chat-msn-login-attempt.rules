@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 1863 (msg:"GPL CHAT MSN login attempt"; flow:established,to_server; content:"USR "; depth:4; nocase; content:" TWN "; distance:1; nocase; threshold:type limit, track by_src, count 1, seconds 60; classtype:policy-violation; sid:2101991; rev:4; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_08;)

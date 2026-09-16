@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER author.exe access"; flow:established,to_server; http.uri; content:"/_vti_bin/_vti_aut/author.exe"; nocase; classtype:web-application-activity; sid:2100952; rev:11; metadata:created_at 2010_09_23, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

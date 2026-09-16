@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 119 (msg:"GPL DELETED Cassandra Overflow"; dsize:>512; flow:established,to_server; content:"AUTHINFO USER"; depth:16; nocase; reference:arachnids,274; reference:bugtraq,1156; reference:cve,2000-0341; classtype:attempted-user; sid:2100291; rev:14; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)

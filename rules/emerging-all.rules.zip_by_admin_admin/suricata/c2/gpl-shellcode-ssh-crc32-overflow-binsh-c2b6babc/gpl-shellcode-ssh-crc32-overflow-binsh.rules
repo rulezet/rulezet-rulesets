@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"GPL SHELLCODE ssh CRC32 overflow /bin/sh"; flow:established,to_server; content:"/bin/sh"; reference:bugtraq,2347; reference:cve,2001-0144; reference:cve,2001-0572; classtype:shellcode-detect; sid:2101324; rev:8; metadata:created_at 2010_09_23, signature_severity Minor, updated_at 2024_03_08;)

@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 110 (msg:"GPL POP3 DELE negative argument attempt"; flow:established,to_server; content:"DELE"; nocase; pcre:"/^DELE\s+-\d/smi"; reference:bugtraq,6053; reference:bugtraq,7445; reference:cve,2002-1539; classtype:misc-attack; sid:2102121; rev:11; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)

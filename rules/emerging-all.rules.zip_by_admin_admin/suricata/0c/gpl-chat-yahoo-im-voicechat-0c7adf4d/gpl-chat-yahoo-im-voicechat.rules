@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 5050 -> $HOME_NET any (msg:"GPL CHAT Yahoo IM voicechat"; flow:established,to_client; content:"YMSG"; depth:4; nocase; content:"|00|J"; depth:2; offset:10; classtype:policy-violation; sid:2102451; rev:5; metadata:created_at 2010_09_23, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

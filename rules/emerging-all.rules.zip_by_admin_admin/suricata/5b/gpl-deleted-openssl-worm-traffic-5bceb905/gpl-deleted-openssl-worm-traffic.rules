@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS 443 (msg:"GPL DELETED OpenSSL Worm traffic"; flow:established,to_server; content:"TERM=xterm"; nocase; reference:url,www.cert.org/advisories/CA-2002-27.html; classtype:web-application-attack; sid:2101887; rev:5; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)

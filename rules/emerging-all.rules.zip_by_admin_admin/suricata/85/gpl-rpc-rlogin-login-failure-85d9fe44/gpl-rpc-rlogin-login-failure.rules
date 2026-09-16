@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 513 -> $EXTERNAL_NET any (msg:"GPL RPC rlogin login failure"; flow:established,to_client; content:"login incorrect"; reference:arachnids,393; classtype:unsuccessful-user; sid:2100605; rev:8; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_08;)

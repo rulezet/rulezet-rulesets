@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 80 -> $HOME_NET any (msg:"GPL MISC Connection Closed MSG from Port 80"; flow:established,to_client; content:"Connection closed by foreign host"; nocase; classtype:unknown; sid:2100488; rev:6; metadata:created_at 2010_09_23, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)

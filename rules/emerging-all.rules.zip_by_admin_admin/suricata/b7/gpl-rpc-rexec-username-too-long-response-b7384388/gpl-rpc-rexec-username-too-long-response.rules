@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 512 -> $EXTERNAL_NET any (msg:"GPL RPC rexec username too long response"; flow:established,to_client; content:"username too long"; depth:17; reference:bugtraq,7459; classtype:unsuccessful-user; sid:2102104; rev:7; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_08;)

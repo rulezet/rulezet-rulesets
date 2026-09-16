@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"GPL SCAN SSH Version map attempt"; flow:established,to_server; content:"Version_Mapper"; nocase; classtype:network-scan; sid:2101638; rev:7; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_08;)

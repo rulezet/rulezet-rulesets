@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 5631 -> $EXTERNAL_NET any (msg:"GPL MISC Invalid PCAnywhere Login"; flow:established,to_client; content:"Invalid login"; depth:13; offset:5; classtype:unsuccessful-user; sid:2100511; rev:7; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_08;)

@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"GPL SCAN whisker HEAD/./"; flow:established,to_server; content:"HEAD/./"; reference:url,www.wiretrip.net/rfp/pages/whitepapers/whiskerids.html; classtype:attempted-recon; sid:2101139; rev:9; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_08;)

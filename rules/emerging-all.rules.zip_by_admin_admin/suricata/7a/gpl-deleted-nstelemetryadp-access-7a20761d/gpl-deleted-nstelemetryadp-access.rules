@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 8000 (msg:"GPL DELETED nstelemetry.adp access"; flow:established,to_server; content:"/nstelemetry.adp"; reference:nessus,10753; classtype:web-application-activity; sid:2101518; rev:9; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)
