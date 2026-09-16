@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP User-Agent (ms)"; flow:established,to_server; threshold: type limit, count 3, seconds 300, track by_src; http.user_agent; content:"ms"; startswith; endswith; classtype:pup-activity; sid:2003497; rev:18; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_04_13;)

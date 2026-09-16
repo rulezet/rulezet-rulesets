@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET SCAN Grabber.py Web Scan Detected"; flow:established,to_server; http.user_agent; content:"Grabber"; startswith; reference:url,rgaucher.info/beta/grabber/; classtype:attempted-recon; sid:2009483; rev:9; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, updated_at 2024_04_13;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET SCAN Automated Injection Tool User-Agent (AutoGetColumn)"; flow:established,to_server; http.user_agent; content:"AutoGetColumn"; startswith; classtype:attempted-recon; sid:2009154; rev:11; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_04_13;)

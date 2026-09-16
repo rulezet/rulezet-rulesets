@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Trojan.Win32.InternetAntivirus User-Agent (General Antivirus)"; flow:established,to_server; http.user_agent; content:"General Antivirus"; nocase; startswith; classtype:pup-activity; sid:2010679; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_04_13;)

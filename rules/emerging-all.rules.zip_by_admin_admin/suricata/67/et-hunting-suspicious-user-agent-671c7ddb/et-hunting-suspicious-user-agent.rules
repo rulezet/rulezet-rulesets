@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET HUNTING Suspicious User Agent (_)"; flow:established,to_server; http.user_agent; content:"_"; startswith; endswith; classtype:trojan-activity; sid:2007942; rev:12; metadata:created_at 2010_07_30, confidence Medium, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_04_13;)
