@@ -1,0 +1,16 @@
+rule Virus_Infector_Win32_Expiro_Gen_7_92 {
+  meta:
+    description = "datamaliciousorder - file Virus.Infector_Win32.Expiro.Gen.7_92.vir"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "d460198901446efc21f51bdcf43b8dab52ad433ec54d6ec65127fb47b861d58c"
+
+  strings:
+    $s1 = "LEAM}<_" fullword ascii
+    $s2 = "VERd?>" fullword ascii
+
+  condition:
+    uint16(0) == 0x5a4d and
+    all of them
+}
