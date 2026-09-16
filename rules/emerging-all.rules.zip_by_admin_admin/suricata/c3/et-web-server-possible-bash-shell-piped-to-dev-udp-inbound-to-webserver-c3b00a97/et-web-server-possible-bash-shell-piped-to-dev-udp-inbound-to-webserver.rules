@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER Possible bash shell piped to dev udp Inbound to WebServer"; flow:established,to_server; content:"/dev/udp/"; fast_pattern; classtype:bad-unknown; sid:2019314; rev:4; metadata:created_at 2014_09_29, confidence Medium, signature_severity Minor, updated_at 2019_10_08;)

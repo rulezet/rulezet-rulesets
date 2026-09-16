@@ -1,0 +1,1 @@
+alert udp any any -> any 161 (msg:"ET SNMP Attempt to retrieve Cisco Config via TFTP (CISCO-CONFIG-COPY)"; content:"|2b 06 01 04 01 09 09 60 01 01 01 01|"; fast_pattern; classtype:policy-violation; sid:2015856; rev:6; metadata:created_at 2012_11_01, confidence Medium, signature_severity Minor, updated_at 2019_10_08;)

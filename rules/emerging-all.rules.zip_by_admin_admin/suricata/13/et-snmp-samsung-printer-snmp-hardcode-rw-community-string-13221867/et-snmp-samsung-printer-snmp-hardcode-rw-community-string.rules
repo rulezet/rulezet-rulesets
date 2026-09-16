@@ -1,0 +1,1 @@
+alert udp $EXTERNAL_NET any -> $HOME_NET 161 (msg:"ET SNMP Samsung Printer SNMP Hardcode RW Community String"; content:"s!a@m#n$p%c"; fast_pattern; reference:url,www.l8security.com/post/36715280176/vu-281284-samsung-printer-snmp-backdoor; classtype:attempted-admin; sid:2015959; rev:3; metadata:created_at 2012_11_29, signature_severity Minor, updated_at 2019_10_08;)
