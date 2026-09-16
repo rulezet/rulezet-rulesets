@@ -1,0 +1,22 @@
+{
+  "uuid": "aea2a404-2d4c-4b1c-8f48-2f016e9958dd",
+  "title": "PWS_Win32_Perfwo_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "PWS:Win32/Perfwo.A,SIGNATURE_TYPE_PEHSTR_EXT,0d 00 0c 00 07 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"PWS\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/336748"
+}

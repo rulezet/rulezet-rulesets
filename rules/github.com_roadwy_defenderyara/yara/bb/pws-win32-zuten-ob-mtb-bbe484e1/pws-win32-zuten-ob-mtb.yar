@@ -1,0 +1,9 @@
+rule PWS_Win32_Zuten_OB_MTB{
+	meta:
+		description = "PWS:Win32/Zuten.OB!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {8a 04 1f 33 d2 8a 14 37 03 c2 8b 55 ?? 83 c2 ?? 8b ca 33 d2 f7 f1 8a 04 17 88 45 ?? 8d 45 ?? 8b 55 ?? 8b 4d ?? 8a 54 ?? ?? 8a 4d ?? 32 d1 e8 ?? ?? ?? ?? 8b 55 ?? 8d 45 ?? e8 ?? ?? ?? ?? ff 45 ?? ff 4d ?? 0f 85 } 	condition:
+		((#a_02_0  & 1)*1) >=1
+ 
+}

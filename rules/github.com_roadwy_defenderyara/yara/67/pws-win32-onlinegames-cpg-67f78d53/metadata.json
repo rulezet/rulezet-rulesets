@@ -1,0 +1,22 @@
+{
+  "uuid": "67f78d53-bd6a-49ce-a1c3-2c1da94b3fc6",
+  "title": "PWS_Win32_OnLineGames_CPG",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "PWS:Win32/OnLineGames.CPG,SIGNATURE_TYPE_PEHSTR_EXT,20 00 20 00 05 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"PWS\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/336919"
+}
