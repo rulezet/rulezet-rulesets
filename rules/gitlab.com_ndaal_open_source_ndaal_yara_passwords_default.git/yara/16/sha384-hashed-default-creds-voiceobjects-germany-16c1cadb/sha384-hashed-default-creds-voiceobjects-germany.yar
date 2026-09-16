@@ -1,0 +1,19 @@
+rule sha384_hashed_default_creds_voiceobjects_germany
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for voiceobjects_germany."
+        category = "INFO"
+        info = "SHA384"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="0300f04de8446334e084d7cd0a728c1bd46f218eae5aca0989a3b31835e4cf39a7596a0f751fcfea11bfd3109a3ead62"
+    $a1="e749947998f6b117268d804585f3b4ad11be6e0d86f673419ae259caee667d78e27de63e86682d9faa1c7fb4aa98ab8e"
+condition:
+    ($a0 and $a1)
+}
