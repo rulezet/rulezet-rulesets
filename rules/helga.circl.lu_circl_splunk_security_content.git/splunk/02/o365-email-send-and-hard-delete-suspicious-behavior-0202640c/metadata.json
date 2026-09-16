@@ -1,0 +1,23 @@
+{
+  "uuid": "0202640c-85eb-45ca-acdd-189a453f1fd0",
+  "title": "O365 Email Send and Hard Delete Suspicious Behavior",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies when an O365 email account sends and then hard deletes email with within a short period (within 1 hour). This behavior may indicate a compromised account where the threat actor is attempting to remove forensic artifacts or evidence of activity. Threat actors often use this technique to prevent defenders and victims from knowing the account has been compromised. --- Some account owner legitimate behaviors can trigger this alert, however these actions may not be aligned with organizational expectations / best practice behaviors.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1070.008",
+    "T1114.001",
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351573"
+}

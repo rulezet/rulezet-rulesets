@@ -1,0 +1,21 @@
+{
+  "uuid": "407868f5-f376-45b7-892a-3a540f1d6557",
+  "title": "Azure Automation Runbook Created",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Brian Serocki, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of a new Azure Automation Runbook within an Azure tenant. It leverages Azure Audit events, specifically the Azure Activity log category, to identify when a new Runbook is created or updated. This activity is significant because adversaries with privileged access can use Runbooks to maintain persistence, escalate privileges, or execute malicious code. If confirmed malicious, this could lead to unauthorized actions such as creating Global Administrators, executing code on VMs, and compromising the entire Azure environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351579"
+}

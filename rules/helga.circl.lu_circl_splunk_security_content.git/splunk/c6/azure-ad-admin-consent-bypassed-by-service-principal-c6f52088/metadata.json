@@ -1,0 +1,21 @@
+{
+  "uuid": "c6f52088-e35a-4c87-99f0-d495311f8ade",
+  "title": "Azure AD Admin Consent Bypassed by Service Principal",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where a service principal in Azure Active Directory assigns app roles without standard admin consent. It uses Entra ID logs from the `azure_monitor_aad` data source, focusing on the \"Add app role assignment to service principal\" operation. This detection is significant as it highlights potential bypasses of critical administrative consent processes, which could lead to unauthorized privileges being granted. If confirmed malicious, this activity could allow attackers to exploit automation to assign sensitive permissions without proper oversight, potentially compromising the security of the Azure AD environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351607"
+}

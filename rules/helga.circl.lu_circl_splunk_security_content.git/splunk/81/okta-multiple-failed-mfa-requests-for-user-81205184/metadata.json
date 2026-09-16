@@ -1,0 +1,22 @@
+{
+  "uuid": "81205184-4985-4ac8-ba3a-287784136d00",
+  "title": "Okta Multiple Failed MFA Requests For User",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies multiple failed multi-factor authentication (MFA) requests for a single user within an Okta tenant. It triggers when more than 10 MFA attempts fail within 5 minutes, using Okta event logs to detect this pattern. This activity is significant as it may indicate an adversary attempting to bypass MFA by bombarding the user with repeated authentication requests, a technique used by threat actors like Lapsus and APT29. If confirmed malicious, this could lead to unauthorized access, potentially compromising sensitive information and systems.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\""
+  ],
+  "attack_techniques": [
+    "T1621"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351845"
+}

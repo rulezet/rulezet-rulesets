@@ -1,0 +1,21 @@
+{
+  "uuid": "5c4ce531-8e1d-4b0d-a079-3b045a970caa",
+  "title": "Azure AD Service Principal Owner Added",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Gowthamaraj Rajendran, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the addition of a new owner to a Service Principal within an Azure AD tenant. It leverages Azure Active Directory events from the AuditLog log category to identify this activity. This behavior is significant because Service Principals do not support multi-factor authentication or conditional access policies, making them a target for adversaries seeking persistence or privilege escalation. If confirmed malicious, this activity could allow attackers to maintain access to the Azure AD environment with single-factor authentication, potentially leading to unauthorized access and control over critical resources.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351576"
+}

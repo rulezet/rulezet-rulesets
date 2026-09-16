@@ -1,0 +1,22 @@
+{
+  "uuid": "4f9a9736-480b-4ac1-b5d9-c3347b0dc067",
+  "title": "Azure Active Directory High Risk Sign-in",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Gowthamaraj Rajendran, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects high-risk sign-in attempts against Azure Active Directory, identified by Azure Identity Protection. It leverages the RiskyUsers and UserRiskEvents log categories from Azure AD events ingested via EventHub. This activity is significant as it indicates potentially compromised accounts, flagged by heuristics and machine learning. If confirmed malicious, attackers could gain unauthorized access to sensitive resources, leading to data breaches or further exploitation within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1110.003",
+    "T1586.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351648"
+}

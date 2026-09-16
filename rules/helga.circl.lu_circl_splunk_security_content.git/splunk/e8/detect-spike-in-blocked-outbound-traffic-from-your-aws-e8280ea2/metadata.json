@@ -1,0 +1,19 @@
+{
+  "uuid": "e8280ea2-a31a-4398-9995-696592cd9dc5",
+  "title": "Detect Spike in blocked Outbound Traffic from your AWS",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies spikes in blocked outbound network connections originating from within your AWS environment. It leverages VPC Flow Logs data from CloudWatch, focusing on blocked actions from internal IP ranges to external destinations. This detection is significant as it can indicate potential exfiltration attempts or misconfigurations leading to data leakage. If confirmed malicious, such activity could allow attackers to bypass network defenses, leading to unauthorized data transfer or communication with malicious external entities.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351560"
+}

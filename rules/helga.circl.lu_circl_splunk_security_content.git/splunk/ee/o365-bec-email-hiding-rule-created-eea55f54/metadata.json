@@ -1,0 +1,21 @@
+{
+  "uuid": "eea55f54-3a0c-4c25-9b31-a9915d120b9a",
+  "title": "O365 BEC Email Hiding Rule Created",
+  "format": "splunk",
+  "author": "0xC0FFEEEE, Github Community",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects mailbox rule creation, a common technique used in Business Email Compromise. It uses a scoring mechanism to identify a combination of attributes often featured in mailbox rules created by attackers. This may indicate that an attacker has gained access to the account.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1564.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351558"
+}

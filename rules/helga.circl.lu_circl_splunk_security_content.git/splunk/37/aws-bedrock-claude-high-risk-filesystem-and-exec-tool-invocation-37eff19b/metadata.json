@@ -1,0 +1,21 @@
+{
+  "uuid": "37eff19b-273e-43f4-9b9f-3cd85e534468",
+  "title": "AWS Bedrock Claude High Risk Filesystem and Exec Tool Invocation",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects identities invoking high-risk filesystem and execution tools via AWS Bedrock Claude. For each identity, monitors the usage of potentially dangerous commands and flags any anomalous activity that deviates from their historical baseline. This may indicate attempts to escalate privileges, exfiltrate data, or execute unauthorized commands.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351844"
+}

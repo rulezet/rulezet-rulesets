@@ -1,0 +1,28 @@
+{
+  "uuid": "ff4910ae-2f43-45cc-bd57-2169a667bab7",
+  "title": "CrushFTP Server Side Template Injection",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic is designed to identify attempts to exploit a server-side template injection vulnerability in CrushFTP, designated as CVE-2024-4040. This severe vulnerability enables unauthenticated remote attackers to access and read files beyond the VFS Sandbox, circumvent authentication protocols, and execute arbitrary commands on the affected server. The issue impacts all versions of CrushFTP up to 10.7.1 and 11.1.0 on all supported platforms. It is highly recommended to apply patches immediately to prevent unauthorized access to the system and avoid potential data compromises. The search specifically looks for patterns in the raw log data that match the exploitation attempts, including READ or WRITE actions, and extracts relevant information such as the protocol, session ID, user, IP address, HTTP method, and the URI queried. It then evaluates these logs to confirm traces of exploitation based on the presence of specific keywords and the originating IP address, counting and sorting these events for further analysis.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2024-4040"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351836"
+}

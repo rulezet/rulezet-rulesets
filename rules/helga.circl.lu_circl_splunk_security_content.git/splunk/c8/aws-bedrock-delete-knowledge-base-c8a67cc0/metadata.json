@@ -1,0 +1,21 @@
+{
+  "uuid": "c8a67cc0-c2b9-4917-8b41-dcb5fc42ec6e",
+  "title": "AWS Bedrock Delete Knowledge Base",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies attempts to delete AWS Bedrock Knowledge Bases, which are resources that store and manage domain-specific information for AI models. It monitors AWS CloudTrail logs for DeleteKnowledgeBase API calls. This activity could indicate an adversary attempting to remove knowledge bases after compromising credentials, potentially to disrupt business operations or remove traces of data access. Deleting knowledge bases could impact model performance, remove critical business context, or be part of a larger attack to degrade AI capabilities. If confirmed malicious, this could represent a deliberate attempt to cause service disruption or data loss.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351674"
+}

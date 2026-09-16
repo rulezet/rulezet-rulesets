@@ -1,0 +1,21 @@
+{
+  "uuid": "e7b668af-3f6c-49b9-81da-740c8ce16ed2",
+  "title": "Azure AD Privileged Authentication Administrator Role Assigned",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Gowthamaraj Rajendran, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the assignment of the Privileged Authentication Administrator role to an Azure AD user. It leverages Azure Active Directory audit logs to identify when this specific role is assigned. This activity is significant because users in this role can set or reset authentication methods for any user, including those in privileged roles like Global Administrators. If confirmed malicious, an attacker could change credentials and assume the identity and permissions of high-privilege users, potentially leading to unauthorized access to sensitive information and critical configurations.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1003.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351771"
+}

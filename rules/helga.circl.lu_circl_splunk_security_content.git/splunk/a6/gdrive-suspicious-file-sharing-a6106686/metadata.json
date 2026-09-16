@@ -1,0 +1,21 @@
+{
+  "uuid": "a6106686-7d42-41da-8b90-218448a45654",
+  "title": "Gdrive suspicious file sharing",
+  "format": "splunk",
+  "author": "Rod Soto, Teoderick Contreras",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies suspicious file-sharing activity on Google Drive, where internal users share documents with more than 50 external recipients. It leverages GSuite Drive logs, focusing on changes in user access and filtering for emails outside the organization's domain. This activity is significant as it may indicate compromised accounts or intentional data exfiltration. If confirmed malicious, this behavior could lead to unauthorized access to sensitive information, data leaks, and potential compliance violations.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351688"
+}

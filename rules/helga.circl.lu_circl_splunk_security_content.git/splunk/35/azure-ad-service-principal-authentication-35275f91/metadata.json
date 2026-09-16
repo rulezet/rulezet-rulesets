@@ -1,0 +1,21 @@
+{
+  "uuid": "35275f91-7597-4e64-be57-58a543af97d1",
+  "title": "Azure AD Service Principal Authentication",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies authentication events of service principals in Azure Active Directory. It leverages the `azure_monitor_aad` data source, specifically targeting \"Sign-in activity\" within ServicePrincipalSignInLogs. This detection gathers details such as sign-in frequency, timing, source IPs, and accessed resources. Monitoring these events is significant for SOC teams to distinguish between normal application authentication and potential anomalies, which could indicate compromised credentials or malicious activities. If confirmed malicious, attackers could gain unauthorized access to resources, leading to data breaches or further exploitation within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351763"
+}

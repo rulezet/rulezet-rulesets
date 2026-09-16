@@ -1,0 +1,21 @@
+{
+  "uuid": "863ea7a2-9fdc-445b-b286-87010c03b3ba",
+  "title": "O365 Cross-Tenant Access Change",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies when cross-tenant access/synchronization policies are changed in an Azure tenant. Adversaries have been observed altering victim cross-tenant policies as a method of lateral movement or maintaining persistent access to compromised environments. These policies should be considered sensitive and monitored for changes and/or loose configuration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1484.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351687"
+}

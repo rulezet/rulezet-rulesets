@@ -1,0 +1,21 @@
+{
+  "uuid": "285a6947-f09a-4255-ae62-a4cc31868b05",
+  "title": "Okta Multi-Factor Authentication Disabled",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies an attempt to disable multi-factor authentication (MFA) for an Okta user. It leverages OktaIM2 logs to detect when the 'user.mfa.factor.deactivate' command is executed. This activity is significant because disabling MFA can allow an adversary to maintain persistence within the environment using a compromised valid account. If confirmed malicious, this action could enable attackers to bypass additional security layers, potentially leading to unauthorized access to sensitive information and prolonged undetected presence in the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351856"
+}

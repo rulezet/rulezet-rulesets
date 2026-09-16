@@ -1,0 +1,21 @@
+{
+  "uuid": "8d6d6b92-2bc1-4866-a171-2fef7c385e8b",
+  "title": "Ollama Abnormal Network Connectivity",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects abnormal network activity and connectivity issues in Ollama including non-localhost API access attempts and warning-level network errors such as DNS lookup failures, TCP connection issues, or host resolution problems that may indicate network-based attacks, unauthorized access attempts, or infrastructure reconnaissance activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1571"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351892"
+}

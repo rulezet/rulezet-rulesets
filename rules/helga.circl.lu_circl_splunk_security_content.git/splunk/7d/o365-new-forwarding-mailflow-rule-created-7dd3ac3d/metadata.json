@@ -1,0 +1,21 @@
+{
+  "uuid": "7dd3ac3d-b3a5-4714-ae91-b8ca3e2152e5",
+  "title": "O365 New Forwarding Mailflow Rule Created",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of new mail flow rules in Office 365 that may redirect or copy emails to unauthorized or external addresses. It leverages Office 365 Management Activity logs, specifically querying for the \"New-TransportRule\" operation and parameters like \"BlindCopyTo\", \"CopyTo\", and \"RedirectMessageTo\". This activity is significant as it can indicate potential data exfiltration or unauthorized access to sensitive information. If confirmed malicious, attackers could intercept or redirect email communications, leading to data breaches or information leakage.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1114"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351756"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "239a64fc-b514-43d9-89e6-464b41cff167",
+  "title": "ESXi Encryption Settings Modified",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the disabling of critical encryption enforcement settings on an ESXi host, such as secure boot or executable verification requirements, which may indicate an attempt to weaken hypervisor integrity or allow unauthorized code execution.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351877"
+}

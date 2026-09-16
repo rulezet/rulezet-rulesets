@@ -1,0 +1,21 @@
+{
+  "uuid": "71e7913f-3574-49fc-98c0-5dc7a1fcb850",
+  "title": "ASL AWS New MFA Method Registered For User",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the registration of a new Multi-Factor Authentication (MFA) method for an AWS account, as logged through Amazon Security Lake (ASL). It detects this activity by monitoring the `CreateVirtualMFADevice` API operation within ASL logs. This behavior is significant because adversaries who gain unauthorized access to an AWS account may register a new MFA method to maintain persistence. If confirmed malicious, this activity could allow attackers to secure their access, making it harder to detect and remove their presence from the compromised environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351549"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "9aac76c6-3a00-4abe-86b5-ef97583c0b65",
+  "title": "Azure AD Multiple AppIDs and UserAgents Authentication Spike",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects unusual authentication activity in Azure AD, specifically when a single user account has over 8 authentication attempts using 3+ unique application IDs and 5+ unique user agents within a short period. It leverages Azure AD audit logs, focusing on authentication events and using statistical thresholds. This behavior is significant as it may indicate an adversary probing for MFA requirements. If confirmed malicious, it suggests a compromised account, potentially leading to further exploitation, lateral movement, and data exfiltration. Early detection is crucial to prevent substantial harm.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351810"
+}

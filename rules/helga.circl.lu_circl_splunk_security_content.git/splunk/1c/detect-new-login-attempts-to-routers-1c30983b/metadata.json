@@ -1,0 +1,19 @@
+{
+  "uuid": "1c30983b-c82b-4eb1-99d2-d38dce9a940a",
+  "title": "Detect New Login Attempts to Routers",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies new login attempts to routers. It leverages authentication logs from the ES Assets and Identity Framework, focusing on assets categorized as routers. The detection flags connections that have not been observed in the past 30 days. This activity is significant because unauthorized access to routers can lead to network disruptions or data interception. If confirmed malicious, attackers could gain control over network traffic, potentially leading to data breaches or further network compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351881"
+}

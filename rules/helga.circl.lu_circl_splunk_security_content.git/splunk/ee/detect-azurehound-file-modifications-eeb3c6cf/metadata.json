@@ -1,0 +1,27 @@
+{
+  "uuid": "eeb3c6cf-7c7e-47a5-bfcc-c2f0966776f5",
+  "title": "Detect AzureHound File Modifications",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of specific AzureHound-related files, such as `*-azurecollection.zip` and various `.json` files, on disk. It leverages data from the Endpoint.Filesystem datamodel, focusing on file creation events with specific filenames. This activity is significant because AzureHound is a tool used to gather information about Azure environments, similar to SharpHound for on-premises Active Directory. If confirmed malicious, this activity could indicate an attacker is collecting sensitive Azure environment data, potentially leading to further exploitation or privilege escalation within the cloud infrastructure.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.001",
+    "T1069.002",
+    "T1087.001",
+    "T1087.002",
+    "T1482"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351450"
+}

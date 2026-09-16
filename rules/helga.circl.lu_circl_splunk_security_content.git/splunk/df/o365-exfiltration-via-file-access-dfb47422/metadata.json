@@ -1,0 +1,22 @@
+{
+  "uuid": "dfb47422-e23b-4396-9b18-03363520c7ac",
+  "title": "O365 Exfiltration via File Access",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when an excessive number of files are access from o365 by the same user over a short period of time. A malicious actor may abuse the \"open in app\" functionality of SharePoint through scripted or Graph API based access to evade triggering the FileDownloaded Event. This behavior may indicate an attacker staging data for exfiltration or an insider threat removing organizational data. Additional attention should be take with any Azure Guest (#EXT#) accounts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1530",
+    "T1567"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351736"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "b0a5db8b-6895-4e26-a8fa-f2e0d1efa57d",
+  "title": "GetLocalUser with PowerShell Script Block",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the `Get-LocalUser` PowerShell commandlet using PowerShell Script Block Logging (EventCode=4104). This commandlet lists all local users on a system. The detection leverages script block text from PowerShell logs to identify this activity. Monitoring this behavior is significant as adversaries and Red Teams may use it to enumerate local users for situational awareness and Active Directory discovery. If confirmed malicious, this activity could lead to further reconnaissance, enabling attackers to identify potential targets for privilege escalation or lateral movement.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1087.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351511"
+}

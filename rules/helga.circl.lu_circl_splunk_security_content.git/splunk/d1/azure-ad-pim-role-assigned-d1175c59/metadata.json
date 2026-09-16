@@ -1,0 +1,21 @@
+{
+  "uuid": "d1175c59-16e5-4412-9ff6-2f906c8c2ade",
+  "title": "Azure AD PIM Role Assigned",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the assignment of an Azure AD Privileged Identity Management (PIM) role. It leverages Azure Active Directory events to identify when a user is added as an eligible member to a PIM role. This activity is significant because PIM roles grant elevated privileges, and their assignment should be closely monitored to prevent unauthorized access. If confirmed malicious, an attacker could exploit this to gain privileged access, potentially leading to unauthorized actions, data breaches, or further compromise of the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351642"
+}

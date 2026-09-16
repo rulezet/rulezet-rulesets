@@ -1,0 +1,21 @@
+{
+  "uuid": "5b1c8d8d-799e-4c0b-ad78-b16561fe24ea",
+  "title": "O365 User Consent Blocked for Risky Application",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where Office 365 has blocked a user's attempt to grant consent to an application deemed risky or potentially malicious. This detection leverages O365 audit logs, specifically focusing on failed user consent actions due to system-driven blocks. Monitoring these blocked consent attempts is crucial as it highlights potential threats early on, indicating that a user might be targeted or that malicious applications are attempting to infiltrate the organization. If confirmed malicious, this activity suggests that O365's security measures successfully prevented a harmful application from accessing organizational data, warranting immediate investigation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1528"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351519"
+}

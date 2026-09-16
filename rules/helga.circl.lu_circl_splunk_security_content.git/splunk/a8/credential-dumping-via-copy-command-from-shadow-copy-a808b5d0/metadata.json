@@ -1,0 +1,23 @@
+{
+  "uuid": "a808b5d0-7882-401c-9642-1a40b9a09a95",
+  "title": "Credential Dumping via Copy Command from Shadow Copy",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the copy command to dump credentials from a shadow copy. It leverages Endpoint Detection and Response (EDR) data to identify processes with command lines referencing critical files like \"sam\", \"security\", \"system\", and \"ntds.dit\" in system directories. This activity is significant as it indicates an attempt to extract credentials, a common technique for unauthorized access and privilege escalation. If confirmed malicious, this could lead to attackers gaining sensitive login information, escalating privileges, moving laterally within the network, or accessing sensitive data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351430"
+}

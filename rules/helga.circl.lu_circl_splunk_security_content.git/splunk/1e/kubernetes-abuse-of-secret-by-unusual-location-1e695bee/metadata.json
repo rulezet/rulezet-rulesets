@@ -1,0 +1,21 @@
+{
+  "uuid": "1e695bee-a145-4e44-aaad-20635b11a444",
+  "title": "Kubernetes Abuse of Secret by Unusual Location",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects unauthorized access or misuse of Kubernetes Secrets from unusual locations. It leverages Kubernetes Audit logs to identify anomalies in access patterns by analyzing the source of requests by country. This activity is significant for a SOC as Kubernetes Secrets store sensitive information like passwords, OAuth tokens, and SSH keys, making them critical assets. If confirmed malicious, this behavior could indicate an attacker attempting to exfiltrate or misuse these secrets, potentially leading to unauthorized access to sensitive systems or data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351770"
+}

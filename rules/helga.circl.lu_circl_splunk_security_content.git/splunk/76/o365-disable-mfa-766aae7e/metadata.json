@@ -1,0 +1,21 @@
+{
+  "uuid": "766aae7e-5f47-4a4c-9ca4-b7c96e9dbd24",
+  "title": "O365 Disable MFA",
+  "format": "splunk",
+  "author": "Rod Soto, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where Multi-Factor Authentication (MFA) is disabled for a user within the Office 365 environment. It leverages O365 audit logs, specifically focusing on events related to MFA settings. Disabling MFA removes a critical security layer, making accounts more vulnerable to unauthorized access. If confirmed malicious, this activity could indicate an attacker attempting to maintain persistence or an insider threat, significantly increasing the risk of unauthorized access. Immediate investigation is required to validate the reason for disabling MFA, potentially re-enable it, and assess any other suspicious activities related to the affected account.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351829"
+}

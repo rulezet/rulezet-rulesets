@@ -1,0 +1,19 @@
+{
+  "uuid": "e97b4ed1-7e04-412b-8583-68b2d32dc43e",
+  "title": "Detect Spike in AWS Security Hub Alerts for User",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a spike in the number of AWS Security Hub alerts for an AWS IAM User within a 4-hour interval. It leverages AWS Security Hub findings data, calculating the average and standard deviation of alerts to detect significant deviations. This activity is significant as a sudden increase in alerts for a specific user may indicate suspicious behavior or a potential security incident. If confirmed malicious, this could signify an ongoing attack, unauthorized access, or misuse of IAM credentials, potentially leading to data breaches or further exploitation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351670"
+}

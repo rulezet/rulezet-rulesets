@@ -1,0 +1,21 @@
+{
+  "uuid": "836dfada-bc58-4ff2-b4ca-1f2adfe90325",
+  "title": "Geographic Improbable Location",
+  "format": "splunk",
+  "author": "Marissa Bower, Raven Tait",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Geolocation data can be inaccurate or easily spoofed by Remote Employment Fraud (REF) workers. REF actors sometimes slip up and reveal their true location, creating what we call 'improbable travel' scenarios — logins from opposite sides of the world within minutes. This identifies situations where these travel scenarios occur.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351673"
+}

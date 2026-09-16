@@ -1,0 +1,24 @@
+{
+  "uuid": "055224ef-aa09-4648-9dbf-ace1587f9c5f",
+  "title": "Dump LSASS via procdump",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of procdump.exe to dump the LSASS\nprocess, specifically looking for the -mm and -ma command-line arguments. It leverages\ndata from Endpoint Detection and Response (EDR) agents, focusing on process names,\ncommand-line executions, and parent processes. This activity is significant because\ndumping LSASS can expose sensitive credentials, posing a severe security risk. If\nconfirmed malicious, an attacker could obtain credentials, escalate privileges,\nand move laterally within the network, leading to potential data breaches and further\ncompromise of the environment.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"ProcDump\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351483"
+}

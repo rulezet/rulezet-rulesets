@@ -1,0 +1,21 @@
+{
+  "uuid": "f4a3a71f-e4ab-46d0-9d42-9c44507de3c8",
+  "title": "Cisco Duo Policy Allow Network Bypass 2FA",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when a Duo policy is created or updated to allow network-based bypass of two-factor authentication (2FA).\nIt identifies this behavior by searching Duo administrator logs for policy creation or update actions where the networks_allow field is present,\nindicating that specific networks have been permitted to bypass 2FA requirements. This is achieved by parsing the event description and\nfiltering for relevant policy changes, then aggregating the results by user and administrator details. Detecting this behavior is critical\nfor a Security Operations Center (SOC) because allowing network-based 2FA bypass can significantly weaken authentication controls, potentially\nenabling unauthorized access if a trusted network is compromised or misconfigured. Attackers or malicious insiders may exploit this policy\nchange to circumvent 2FA protections, increasing the risk of account takeover and lateral movement within the environment. Prompt detection\nenables SOC analysts to investigate and respond to potentially risky policy modifications before they can be leveraged for malicious purposes.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351843"
+}

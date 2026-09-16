@@ -1,0 +1,21 @@
+{
+  "uuid": "27bd0b94-8682-487f-a444-8d0e3649b885",
+  "title": "O365 Security And Compliance Alert Triggered",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies alerts triggered by the Office 365 Security and Compliance Center, indicating potential threats or policy violations. It leverages data from the `o365_management_activity` dataset, focusing on events where the workload is SecurityComplianceCenter and the operation is AlertTriggered. This activity is significant as it highlights security and compliance issues within the O365 environment, which are crucial for maintaining organizational security. If confirmed malicious, these alerts could indicate attempts to breach security policies, leading to unauthorized access, data exfiltration, or other malicious activities.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351601"
+}

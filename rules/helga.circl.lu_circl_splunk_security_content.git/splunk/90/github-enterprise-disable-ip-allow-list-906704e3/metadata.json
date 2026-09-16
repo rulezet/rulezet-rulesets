@@ -1,0 +1,22 @@
+{
+  "uuid": "906704e3-7126-4f14-a47c-73ae8188c523",
+  "title": "GitHub Enterprise Disable IP Allow List",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies when an IP allow list is disabled in GitHub Enterprise. The detection monitors GitHub Enterprise audit logs for actions related to disabling IP allow lists at the organization or enterprise level. This behavior is concerning because IP allow lists are a critical security control that restricts access to GitHub Enterprise resources to only trusted IP addresses. When disabled, it could indicate an attacker attempting to bypass access controls to gain unauthorized access from untrusted networks. The impact includes potential exposure of sensitive code repositories and GitHub Enterprise resources to access from any IP address. SOC teams should investigate such events, especially if they were not pre-approved changes, as they may indicate compromise of admin credentials or malicious insider activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351754"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "86fcadbb-11c0-4666-92fd-3c90acb8992a",
+  "title": "Okta Authentication Failed During MFA Challenge",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies failed authentication attempts during the Multi-Factor Authentication (MFA) challenge in an Okta tenant. It uses the Authentication datamodel to detect specific failed events where the authentication signature is `user.authentication.auth_via_mfa`. This activity is significant as it may indicate an adversary attempting to authenticate with compromised credentials on an account with MFA enabled. If confirmed malicious, this could suggest an ongoing attempt to bypass MFA protections, potentially leading to unauthorized access and further compromise of the affected account.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004",
+    "T1586.003",
+    "T1621"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351847"
+}

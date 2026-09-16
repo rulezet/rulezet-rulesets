@@ -1,0 +1,23 @@
+{
+  "uuid": "936af705-6420-4f83-999d-5121c1ca9dab",
+  "title": "Cisco IOS XE Remote Access Probe Burst",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects bursts of ping, SSH, and Telnet commands issued from Cisco IOS or NX-OS devices. The Salt Typhoon notes describe repeated SSH, Telnet-to-port-22, and ping activity across multiple IP addresses in a short time window.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1018",
+    "T1021.004",
+    "T1046"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351863"
+}

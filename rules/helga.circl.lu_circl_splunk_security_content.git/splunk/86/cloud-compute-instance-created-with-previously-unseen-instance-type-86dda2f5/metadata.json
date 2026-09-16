@@ -1,0 +1,21 @@
+{
+  "uuid": "86dda2f5-9336-4f67-9482-dc590a74fc0b",
+  "title": "Cloud Compute Instance Created With Previously Unseen Instance Type",
+  "format": "splunk",
+  "author": "David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of EC2 instances with previously unseen instance types.\nIt leverages Splunk's tstats command to analyze data from the Change data model, identifying instance types that have not been previously recorded.\nThis activity is significant for a SOC because it may indicate unauthorized or suspicious activity, such as an attacker attempting to create instances for malicious purposes.\nIf confirmed malicious, this could lead to unauthorized access, data exfiltration, system compromise, or service disruption. Immediate investigation is required to determine the legitimacy of the instance creation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1578.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351582"
+}

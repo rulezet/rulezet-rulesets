@@ -1,0 +1,21 @@
+{
+  "uuid": "132ce111-b687-42af-a91b-d959e5151da0",
+  "title": "Cloud Provisioning Activity From Previously Unseen IP Address",
+  "format": "splunk",
+  "author": "Rico Valdez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects cloud provisioning activities originating from previously unseen IP addresses. It leverages cloud infrastructure logs to identify events where resources are created or started, and cross-references these with a baseline of known IP addresses. This activity is significant as it may indicate unauthorized access or potential misuse of cloud resources. If confirmed malicious, an attacker could gain unauthorized control over cloud resources, leading to data breaches, service disruptions, or increased operational costs.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351820"
+}

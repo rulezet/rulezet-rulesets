@@ -1,0 +1,21 @@
+{
+  "uuid": "7bcb2853-6d7f-490b-908d-4660d6cfa468",
+  "title": "O365 Email Security Feature Changed",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies when specific O365 advanced security settings are altered within the Office 365 tenant. If an attacker successfully disables O365 security settings, they can operate within the tenant with reduced risk of detection. This can lead to unauthorized data access, data exfiltration, account compromise, or other malicious activities without leaving a detailed audit trail.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351821"
+}

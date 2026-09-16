@@ -1,0 +1,21 @@
+{
+  "uuid": "10c321ac-d4db-4e5e-9cd0-12d0a82fe970",
+  "title": "Kubernetes Anomalous Inbound to Outbound Network IO Ratio",
+  "format": "splunk",
+  "author": "Matthew Moore, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies significant changes in network communication behavior within Kubernetes containers by examining the inbound to outbound network IO ratios. It leverages process metrics from an OTEL collector and Kubelet Stats Receiver, along with data from Splunk Observability Cloud. Anomalies are detected using a lookup table containing average and standard deviation values for network IO, triggering an event if the anomaly persists for over an hour. This activity is significant as it may indicate data exfiltration, command and control communication, or compromised container behavior. If confirmed malicious, it could lead to data breaches, service outages, and unauthorized access within the Kubernetes cluster.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351651"
+}

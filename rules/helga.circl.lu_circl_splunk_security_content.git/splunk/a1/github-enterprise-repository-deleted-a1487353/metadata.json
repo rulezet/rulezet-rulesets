@@ -1,0 +1,22 @@
+{
+  "uuid": "a1487353-2e95-4dbe-836e-33b8a9263a21",
+  "title": "GitHub Enterprise Repository Deleted",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when a user deletes a repository in GitHub Enterprise. The detection monitors GitHub Enterprise audit logs for repository deletion events, which could indicate unauthorized removal of critical source code and project resources. For a SOC, identifying repository deletions is crucial as it may signal account compromise, insider threats, or malicious attempts to destroy intellectual property and disrupt development operations. The impact could be severe, potentially resulting in permanent loss of source code, documentation, project history, and other critical assets if proper backups are not maintained. Repository deletion could halt development workflows, cause significant business disruption, and require substantial effort to restore from backups if available. Additionally, unauthorized repository removal could be part of a larger attack campaign aimed at destroying or compromising enterprise assets.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195",
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351656"
+}

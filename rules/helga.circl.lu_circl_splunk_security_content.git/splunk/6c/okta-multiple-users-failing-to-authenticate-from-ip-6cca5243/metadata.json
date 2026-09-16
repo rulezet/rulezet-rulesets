@@ -1,0 +1,21 @@
+{
+  "uuid": "6cca5243-5d6c-4042-ac83-b33c0d15d2ed",
+  "title": "Okta Multiple Users Failing To Authenticate From Ip",
+  "format": "splunk",
+  "author": "Michael Haag, Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where more than 10 unique user accounts have failed to authenticate from a single IP address within a 5-minute window in an Okta tenant. This detection uses OktaIm2 logs ingested via the Splunk Add-on for Okta Identity Cloud. Such activity is significant as it may indicate brute-force attacks or password spraying attempts. If confirmed malicious, this behavior suggests an external entity is attempting to compromise multiple user accounts, potentially leading to unauthorized access to organizational resources and data breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351868"
+}

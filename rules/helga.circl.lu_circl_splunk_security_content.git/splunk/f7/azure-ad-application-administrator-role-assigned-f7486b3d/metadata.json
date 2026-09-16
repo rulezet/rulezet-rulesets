@@ -1,0 +1,21 @@
+{
+  "uuid": "f7486b3d-3c38-4e4d-94f5-bdff7f0016e8",
+  "title": "Azure AD Application Administrator Role Assigned",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Gowthamaraj Rajendran, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the assignment of the Application Administrator role to an Azure AD user. It leverages Azure Active Directory events, specifically monitoring the \"Add member to role\" operation. This activity is significant because users in this role can manage all aspects of enterprise applications, including credentials, which can be used to impersonate application identities. If confirmed malicious, an attacker could escalate privileges, manage application settings, and potentially access sensitive resources by impersonating application identities, posing a significant security risk to the Azure AD tenant.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351824"
+}

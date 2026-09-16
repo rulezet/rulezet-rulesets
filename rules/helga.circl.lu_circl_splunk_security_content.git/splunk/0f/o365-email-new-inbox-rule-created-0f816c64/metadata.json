@@ -1,0 +1,22 @@
+{
+  "uuid": "0f816c64-8510-4466-91ff-f32d225a07c8",
+  "title": "O365 Email New Inbox Rule Created",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the creation of new email inbox rules in an Office 365 environment. It detects events logged under New-InboxRule and Set-InboxRule operations within the o365_management_activity data source, focusing on parameters that may indicate mail forwarding, removal, or obfuscation. Inbox rule creation is a typical end-user activity however attackers also leverage this technique for multiple reasons.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1114.003",
+    "T1564.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351768"
+}

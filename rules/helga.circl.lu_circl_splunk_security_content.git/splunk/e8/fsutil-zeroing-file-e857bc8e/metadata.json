@@ -1,0 +1,26 @@
+{
+  "uuid": "e857bc8e-583f-4df4-a0e6-dd07188f0149",
+  "title": "Fsutil Zeroing File",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the 'fsutil' command with the 'setzerodata' parameter, which zeros out a target file. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line arguments. This activity is significant because it is a technique used by ransomware, such as LockBit, to evade detection by erasing its malware path after encrypting the host. If confirmed malicious, this action could hinder forensic investigations and allow attackers to cover their tracks, complicating incident response efforts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351432"
+}

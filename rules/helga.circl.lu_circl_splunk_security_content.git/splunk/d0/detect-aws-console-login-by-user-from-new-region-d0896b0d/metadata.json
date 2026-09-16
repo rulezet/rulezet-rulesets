@@ -1,0 +1,22 @@
+{
+  "uuid": "d0896b0d-43fe-48d0-8548-63e58be7e968",
+  "title": "Detect AWS Console Login by User from New Region",
+  "format": "splunk",
+  "author": "Bhavin Patel, Eric McGinnis Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies AWS console login attempts by users from a new region. It leverages AWS CloudTrail events and compares current login regions against a baseline of previously seen regions for each user. This activity is significant as it may indicate unauthorized access attempts or compromised credentials. If confirmed malicious, an attacker could gain unauthorized access to AWS resources, potentially leading to data breaches, resource manipulation, or further lateral movement within the cloud environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1535",
+    "T1586.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351533"
+}

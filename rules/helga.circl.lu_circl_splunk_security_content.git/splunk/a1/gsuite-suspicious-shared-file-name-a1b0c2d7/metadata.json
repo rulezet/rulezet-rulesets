@@ -1,0 +1,21 @@
+{
+  "uuid": "a1b0c2d7-78de-4088-ab3e-c5255e7fa205",
+  "title": "Gsuite Suspicious Shared File Name",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects shared files in Google Drive with suspicious filenames commonly used in spear phishing campaigns. It leverages GSuite Drive logs to identify documents with titles that include keywords like \"dhl,\" \"ups,\" \"invoice,\" and \"shipment.\" This activity is significant because such filenames are often used to lure users into opening malicious documents or clicking harmful links. If confirmed malicious, this activity could lead to unauthorized access, data theft, or further compromise of the user's system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351744"
+}

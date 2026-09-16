@@ -1,0 +1,23 @@
+{
+  "uuid": "9c7a5ad3-6fbf-4eb2-8876-b86a728cebed",
+  "title": "ESXi VIB Acceptance Level Tampering",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies changes to the VIB (vSphere Installation Bundle) acceptance level on an ESXi host. Modifying the acceptance level, such as setting it to CommunitySupported, lowers the system's integrity enforcement and may allow the installation of unsigned or unverified software.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351882"
+}

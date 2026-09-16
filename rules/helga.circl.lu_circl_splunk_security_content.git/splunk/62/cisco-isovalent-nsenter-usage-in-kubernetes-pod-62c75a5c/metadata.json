@@ -1,0 +1,23 @@
+{
+  "uuid": "62c75a5c-a686-4343-80f4-50b82401c24f",
+  "title": "Cisco Isovalent - Nsenter Usage in Kubernetes Pod",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects the execution of the nsenter utility from within a container, a technique often used for exploitation and container escape. Nsenter allows an attacker to enter the namespaces of another process—such as the host's init process (PID 1)—and execute a shell or other binaries with elevated privileges. For example, an attacker may use docker exec to gain a shell in a container, enumerate the PID of a target container or the host, and then use nsenter to access all namespaces (mount, UTS, IPC, net, pid) of the host or another container.  Example to escape to the host: `nsenter --target 1 --mount --uts --ipc --net --pid -- bash`. The WorkloadAncestorsBinary field is used to track the ancestry of the process, this is useful to understand the context of the nsenter usage.\n\nThe options -m -u -n -i -p correspond to the various Linux namespaces. Adversaries exploit nsenter when pods are misconfigured with excessive privileges (e.g., privileged, hostPID, or broad hostPath mounts), enabling them to interact with the underlying node filesystem and processes. This can be an indicator of a container escape attempt or privilege escalation. Security teams should pay close attention to any nsenter invocation from within containers, especially outside of normal maintenance activity or in workloads with elevated privileges.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1543"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351488"
+}

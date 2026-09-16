@@ -1,0 +1,22 @@
+{
+  "uuid": "c1512b3b-dc06-4e7b-bb52-779aff41baab",
+  "title": "Cisco IOS XE Log Clearing Sequence With Optional Loopback Removal",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects Cisco IOS-XE command sequences where show logging, clear logging, and exit occur within a short period.\nIt also detects the pattern where a loopback interface is removed before clearing logs and exiting.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1070.001",
+    "T1562"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351869"
+}

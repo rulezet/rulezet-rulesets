@@ -1,0 +1,21 @@
+{
+  "uuid": "2b1435f2-0b33-4126-b011-e2e726bf013e",
+  "title": "O365 External Identity Policy Changed",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies when changes are made to the external guest policies within Azure AD. With Azure AD B2B collaboration, users and administrators can invite external users to collaborate with internal users. This detection also attempts to highlight what may have changed. External guest account invitations should be monitored by security teams as they could potentially lead to unauthorized access. An example of this attack vector was described at BlackHat 2022 by security researcher Dirk-Jan during his tall `Backdooring and Hijacking Azure AD Accounts by Abusing External Identities`.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351778"
+}

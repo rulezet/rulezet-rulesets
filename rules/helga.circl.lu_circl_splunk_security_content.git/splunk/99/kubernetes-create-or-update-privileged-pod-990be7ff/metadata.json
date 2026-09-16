@@ -1,0 +1,21 @@
+{
+  "uuid": "990be7ff-2c7f-4bb1-a0b9-760885005d27",
+  "title": "Kubernetes Create or Update Privileged Pod",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation or update of privileged pods in Kubernetes. It identifies this activity by monitoring Kubernetes Audit logs for pod configurations that include root privileges. This behavior is significant for a SOC as it could indicate an attempt to escalate privileges, exploit the kernel, and gain full access to the host's namespace and devices. If confirmed malicious, this activity could lead to unauthorized access to sensitive information, data breaches, and service disruptions, posing a severe threat to the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351548"
+}

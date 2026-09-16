@@ -1,0 +1,22 @@
+{
+  "uuid": "f6dee41c-4559-4e06-96d3-a481c871d2f3",
+  "title": "GitHub Enterprise Disable Dependabot",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when a user disables Dependabot security features within a GitHub repository. Dependabot helps automatically identify and fix security vulnerabilities in dependencies. The detection monitors GitHub Enterprise logs for configuration changes that disable Dependabot functionality. This behavior could indicate an attacker attempting to prevent the automatic detection of vulnerable dependencies, which would allow them to exploit known vulnerabilities that would otherwise be patched. For a SOC, identifying the disabling of security features like Dependabot is critical as it may be a precursor to supply chain attacks where attackers exploit vulnerable dependencies. The impact could be severe if vulnerabilities remain unpatched, potentially leading to code execution, data theft, or other compromises through the software supply chain.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351686"
+}

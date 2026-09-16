@@ -1,0 +1,46 @@
+name: Detect New Login Attempts to Routers
+id: bce3ed7c-9b1f-42a0-abdf-d8b123a34836
+version: 9
+creation_date: '2020-04-29'
+modification_date: '2026-05-13'
+author: Bhavin Patel, Splunk
+status: experimental
+type: TTP
+description: The following analytic identifies new login attempts to routers. It leverages authentication logs from the ES Assets and Identity Framework, focusing on assets categorized as routers. The detection flags connections that have not been observed in the past 30 days. This activity is significant because unauthorized access to routers can lead to network disruptions or data interception. If confirmed malicious, attackers could gain control over network traffic, potentially leading to data breaches or further network compromise.
+data_source: []
+search: |-
+    | tstats `security_content_summariesonly` count earliest(_time) as earliest latest(_time) as latest FROM datamodel=Authentication
+      WHERE Authentication.dest_category=router
+      BY Authentication.dest Authentication.user
+    | eval isOutlier=if(earliest >= relative_time(now(), "-30d@d"), 1, 0)
+    | where isOutlier=1
+    | `security_content_ctime(earliest)`
+    | `security_content_ctime(latest)`
+    | `drop_dm_object_name("Authentication")`
+    | `detect_new_login_attempts_to_routers_filter`
+how_to_implement: To successfully implement this search, you must ensure the network router devices are categorized as "router" in the Assets and identity table. You must also populate the Authentication data model with logs related to users authenticating to routing infrastructure.
+known_false_positives: Legitimate router connections may appear as new connections
+references: []
+finding:
+    title: New login on $dest$ from $user$
+    entity:
+        field: user
+        type: user
+        score: 50
+intermediate_findings:
+    entities:
+        - field: dest
+          type: system
+          score: 50
+          message: New login on $dest$ from $user$
+analytic_story:
+    - Router and Infrastructure Security
+    - Scattered Lapsus$ Hunters
+asset_type: Endpoint
+mitre_attack_id: []
+product:
+    - Splunk Enterprise
+    - Splunk Enterprise Security
+    - Splunk Cloud
+category: application
+security_domain: network

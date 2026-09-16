@@ -1,0 +1,24 @@
+{
+  "uuid": "1bffa9f7-ccd2-4bb5-969d-4795c0bf0e4a",
+  "title": "Microsoft Intune Device Health Scripts",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Microsoft Intune device remediation scripts are a tool administrators can use to remotely manage devices, this functionality can also be abused for SYSTEM level code execution and lateral movement to intune managed devices. This detection identifies when a new device health script has been added, updated or deleted.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1021.007",
+    "T1072",
+    "T1105",
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351799"
+}

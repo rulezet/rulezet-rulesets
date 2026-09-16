@@ -1,0 +1,25 @@
+{
+  "uuid": "ba27d391-01a4-4ccc-832f-872df82f4be1",
+  "title": "Cisco ASA - Device File Copy to Remote Location",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects file copy operations to remote locations on Cisco ASA devices via CLI or ASDM.\nAdversaries may exfiltrate device files including configurations, logs, packet captures, or system data to remote servers using protocols like TFTP, FTP, HTTP, HTTPS, SMB, or SCP. While legitimate backups to centralized servers are common, copies to unexpected destinations may indicate data exfiltration to attacker-controlled infrastructure.\nThe detection monitors for command execution events (message ID 111008 or 111010) containing copy commands with remote protocol indicators (tftp:, ftp:, http:, https:, smb:, scp:).\nInvestigate copies to unexpected destinations, from non-administrative accounts, or outside approved maintenance windows.\nWe recommend adapting the detection filters to exclude known legitimate backup activities.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1041",
+    "T1048.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351852"
+}

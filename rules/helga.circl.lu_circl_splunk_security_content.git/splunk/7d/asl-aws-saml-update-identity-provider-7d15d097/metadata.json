@@ -1,0 +1,22 @@
+{
+  "uuid": "7d15d097-96f5-4eeb-9892-a0955fd9a815",
+  "title": "ASL AWS SAML Update identity provider",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects updates to the SAML provider in AWS. It leverages AWS CloudTrail logs to identify the `UpdateSAMLProvider` event, analyzing fields such as `sAMLProviderArn`, `sourceIPAddress`, and `userIdentity` details. Monitoring updates to the SAML provider is crucial as it may indicate a perimeter compromise of federated credentials or unauthorized backdoor access set by an attacker. If confirmed malicious, this activity could allow attackers to manipulate identity federation, potentially leading to unauthorized access to cloud resources and sensitive data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351551"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "88f12d8b-c175-4208-8c00-17bda8df1340",
+  "title": "Kubernetes newly seen TCP edge",
+  "format": "splunk",
+  "author": "Matthew Moore, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies newly seen TCP communication between source and destination workload pairs within a Kubernetes cluster. It leverages Network Performance Monitoring metrics collected via an OTEL collector and pulled from Splunk Observability Cloud. The detection compares network activity over the last hour with the past 30 days to spot new inter-workload communications. This is significant as new connections can indicate changes in application behavior or potential security threats. If malicious, unauthorized connections could lead to data breaches, privilege escalation, lateral movement, or disruption of critical services, compromising the application's integrity, availability, and confidentiality.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351626"
+}

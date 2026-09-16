@@ -1,0 +1,21 @@
+{
+  "uuid": "df50962c-9d65-445b-9405-4f04c54dc770",
+  "title": "Ollama Possible Memory Exhaustion Resource Abuse",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects abnormal memory allocation patterns and excessive runner operations in Ollama that may indicate resource exhaustion attacks, memory abuse through malicious model loading, or attempts to degrade system performance by overwhelming GPU/CPU resources. Adversaries may deliberately load multiple large models, trigger repeated model initialization cycles, or exploit memory allocation mechanisms to exhaust available system resources, causing denial of service conditions or degrading performance for legitimate users.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351860"
+}

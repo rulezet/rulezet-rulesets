@@ -1,0 +1,23 @@
+{
+  "uuid": "784e1290-421b-4178-bb94-b090e331a76a",
+  "title": "Windows SQL Server Configuration Option Hunt",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk, sidoyle from Splunk Community",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection helps hunt for changes to SQL Server configuration options that could indicate malicious activity. It monitors for modifications to any SQL Server configuration settings, allowing analysts to identify potentially suspicious changes that may be part of an attack, such as enabling dangerous features or modifying security-relevant settings.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1505.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351445"
+}

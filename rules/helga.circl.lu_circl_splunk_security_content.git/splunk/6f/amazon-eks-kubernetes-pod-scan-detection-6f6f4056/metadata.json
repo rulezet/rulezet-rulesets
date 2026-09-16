@@ -1,0 +1,21 @@
+{
+  "uuid": "6f6f4056-1250-42ae-946f-8e24bfde5357",
+  "title": "Amazon EKS Kubernetes Pod scan detection",
+  "format": "splunk",
+  "author": "Rod Soto, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects unauthenticated requests made against the Kubernetes Pods API, indicating potential unauthorized access attempts. It leverages the `aws_cloudwatchlogs_eks` data source, filtering for events where `user.username` is \"system:anonymous\", `verb` is \"list\", and `objectRef.resource` is \"pods\", with `requestURI` set to \"/api/v1/pods\". This activity is significant as it may signal attempts to access sensitive resources or execute unauthorized commands within the Kubernetes environment. If confirmed malicious, such access could lead to data compromise, unauthorized command execution, or lateral movement within the cluster.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1526"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351812"
+}

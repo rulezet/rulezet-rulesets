@@ -1,0 +1,24 @@
+{
+  "uuid": "b9c8914e-a15a-477c-b53d-cc6ed2553830",
+  "title": "Azure AD User ImmutableId Attribute Updated",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Gowthamaraj Rajendran, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the modification of the SourceAnchor (ImmutableId) attribute for an Azure Active Directory user. This detection leverages Azure AD audit logs, specifically monitoring the \"Update user\" operation and changes to the SourceAnchor attribute. This activity is significant as it is a step in setting up an Azure AD identity federation backdoor, allowing an adversary to establish persistence. If confirmed malicious, the attacker could impersonate any user, bypassing password and MFA requirements, leading to unauthorized access and potential data breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351563"
+}

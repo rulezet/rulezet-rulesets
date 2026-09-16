@@ -1,0 +1,21 @@
+{
+  "uuid": "907ff27b-6894-4743-8429-b725f420ae26",
+  "title": "Kubernetes Pod With Host Network Attachment",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation or update of a Kubernetes pod with host network attachment. It leverages Kubernetes Audit logs to identify pods configured with host network settings. This activity is significant for a SOC as it could allow an attacker to monitor all network traffic on the node, potentially capturing sensitive information and escalating privileges. If confirmed malicious, this could lead to unauthorized access, data breaches, and service disruptions, severely impacting the security and integrity of the Kubernetes environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351593"
+}

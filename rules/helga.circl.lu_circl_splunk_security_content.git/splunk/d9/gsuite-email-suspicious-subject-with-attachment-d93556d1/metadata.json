@@ -1,0 +1,21 @@
+{
+  "uuid": "d93556d1-551d-4d88-af93-a0bcf5986f30",
+  "title": "Gsuite Email Suspicious Subject With Attachment",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies Gsuite emails with suspicious subjects and attachments commonly used in spear phishing attacks. It leverages Gsuite email logs, focusing on specific keywords in the subject line and known malicious file types in attachments. This activity is significant for a SOC as spear phishing is a prevalent method for initial compromise, often leading to further malicious actions. If confirmed malicious, this activity could result in unauthorized access, data exfiltration, or further malware deployment, posing a significant risk to the organization's security.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351764"
+}

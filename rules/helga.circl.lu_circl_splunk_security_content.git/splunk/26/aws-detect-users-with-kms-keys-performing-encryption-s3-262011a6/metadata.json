@@ -1,0 +1,22 @@
+{
+  "uuid": "262011a6-dd19-4f02-9e0f-49adafc149d2",
+  "title": "AWS Detect Users with KMS keys performing encryption S3",
+  "format": "splunk",
+  "author": "Rod Soto, Patrick Bareiss Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies users with KMS keys performing encryption operations on S3 buckets. It leverages AWS CloudTrail logs to detect the `CopyObject` event where server-side encryption with AWS KMS is specified. This activity is significant as it may indicate unauthorized or suspicious encryption of data, potentially masking exfiltration or tampering efforts. If confirmed malicious, an attacker could be encrypting sensitive data to evade detection or preparing it for exfiltration, posing a significant risk to data integrity and confidentiality.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351727"
+}

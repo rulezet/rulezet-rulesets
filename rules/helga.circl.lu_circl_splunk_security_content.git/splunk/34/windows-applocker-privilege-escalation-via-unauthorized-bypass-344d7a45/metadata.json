@@ -1,0 +1,23 @@
+{
+  "uuid": "344d7a45-0eb1-4f32-9dc8-c738d6aec304",
+  "title": "Windows AppLocker Privilege Escalation via Unauthorized Bypass",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic utilizes Windows AppLocker event logs to identify attempts to bypass application restrictions. AppLocker is a feature that allows administrators to specify which applications are permitted to run on a system. This analytic is designed to identify attempts to bypass these restrictions, which could be indicative of an attacker attempting to escalate privileges. The analytic uses EventCodes 8007, 8004, 8022, 8025, 8029, and 8040 to identify these attempts. The analytic will identify the host, full file path, and target user associated with the bypass attempt. These EventCodes are related to block events and focus on 5 attempts or more.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351437"
+}

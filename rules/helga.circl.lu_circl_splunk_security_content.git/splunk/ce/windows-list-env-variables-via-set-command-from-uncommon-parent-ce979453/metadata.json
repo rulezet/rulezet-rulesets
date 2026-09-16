@@ -1,0 +1,24 @@
+{
+  "uuid": "ce979453-3bef-477b-b944-37757006b63c",
+  "title": "Windows List ENV Variables Via SET Command From Uncommon Parent",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a suspicious process command line fetching environment variables using the cmd.exe \"set\" command, with a non-shell parent process. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions and parent process names. This activity could be significant as it is commonly associated with malware like Qakbot, which uses this technique to gather system information. If confirmed malicious, this behavior could indicate that the parent process has been compromised, potentially allowing attackers to execute arbitrary commands, escalate privileges, or persist within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351496"
+}

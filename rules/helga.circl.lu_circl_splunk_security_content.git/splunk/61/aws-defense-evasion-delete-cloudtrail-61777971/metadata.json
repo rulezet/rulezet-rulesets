@@ -1,0 +1,21 @@
+{
+  "uuid": "61777971-4ad0-45ff-bf7d-d6277152ecd6",
+  "title": "AWS Defense Evasion Delete Cloudtrail",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the deletion of AWS CloudTrail logs by identifying `DeleteTrail` events within CloudTrail logs. This detection leverages CloudTrail data to monitor for successful `DeleteTrail` actions, excluding those initiated from the AWS console. This activity is significant because adversaries may delete CloudTrail logs to evade detection and operate stealthily within the compromised environment. If confirmed malicious, this action could allow attackers to cover their tracks, making it difficult to trace their activities and potentially leading to prolonged unauthorized access and further exploitation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351779"
+}

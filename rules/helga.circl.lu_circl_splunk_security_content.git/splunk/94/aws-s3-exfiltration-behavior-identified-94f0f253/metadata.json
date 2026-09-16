@@ -1,0 +1,21 @@
+{
+  "uuid": "94f0f253-26c5-4baf-a05c-a876254e17f0",
+  "title": "AWS S3 Exfiltration Behavior Identified",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies potential AWS S3 exfiltration behavior by correlating multiple risk events related to Collection and Exfiltration techniques. It leverages risk events from AWS sources, focusing on instances where two or more unique analytics and distinct MITRE ATT&CK IDs are triggered for a specific risk object. This activity is significant as it may indicate an ongoing data exfiltration attempt, which is critical for security teams to monitor. If confirmed malicious, this could lead to unauthorized access and theft of sensitive information, compromising the organization's data integrity and confidentiality.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1537"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351707"
+}

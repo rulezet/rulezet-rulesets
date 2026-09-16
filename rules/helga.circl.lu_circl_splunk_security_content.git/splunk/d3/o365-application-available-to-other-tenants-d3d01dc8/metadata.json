@@ -1,0 +1,21 @@
+{
+  "uuid": "d3d01dc8-5d8e-401b-abe1-e998873e0a87",
+  "title": "O365 Application Available To Other Tenants",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the configuration of Azure Active Directory Applications in a manner that allows authentication from external tenants or personal accounts. This configuration can lead to inappropriate or malicious access of any data or capabilities the application is allowed to access. This detection leverages the O365 Universal Audit Log data source.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351729"
+}

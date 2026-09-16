@@ -1,0 +1,22 @@
+{
+  "uuid": "a0c74201-5c38-4656-9a9d-59108297307e",
+  "title": "Email Attachments With Lots Of Spaces",
+  "format": "splunk",
+  "author": "David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects email attachments with an unusually high number of spaces in their file names, which is a common tactic used by attackers to obfuscate file extensions. It leverages the Email data model to identify attachments where the ratio of spaces to the total file name length exceeds 10%. This behavior is significant as it may indicate an attempt to bypass security filters and deliver malicious payloads. If confirmed malicious, this activity could lead to the execution of harmful code or unauthorized access to sensitive information within the recipient's environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1036.008",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351904"
+}

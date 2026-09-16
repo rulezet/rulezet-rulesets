@@ -1,0 +1,21 @@
+{
+  "uuid": "eb8a99ac-84be-4c20-a068-30fc03bbd490",
+  "title": "Circle CI Disable Security Job",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the disabling of security jobs in CircleCI pipelines. It leverages CircleCI log data, renaming and extracting fields such as job names, workflow IDs, user information, commit messages, URLs, and branches. The detection identifies mandatory jobs for each workflow and checks if they were executed. This activity is significant because disabling security jobs can allow malicious code to bypass security checks, leading to potential data breaches, system downtime, and reputational damage. If confirmed malicious, this could result in unauthorized code execution and compromised pipeline integrity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1554"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351537"
+}

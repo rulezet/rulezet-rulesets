@@ -1,0 +1,22 @@
+{
+  "uuid": "e3e5c4f3-4167-4040-9412-25e67418be02",
+  "title": "O365 Email Suspicious Search Behavior",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies when Office 365 users search for suspicious keywords or have an excessive number of queries to a mailbox within a limited timeframe. This behavior may indicate that a malicious actor has gained control of a mailbox and is conducting discovery or enumeration activities.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1114.002",
+    "T1552"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351600"
+}

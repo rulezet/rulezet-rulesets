@@ -1,0 +1,21 @@
+{
+  "uuid": "1731c369-b75e-4442-aa3a-4205fbd5f2a1",
+  "title": "AWS Defense Evasion Impair Security Services",
+  "format": "splunk",
+  "author": "Bhavin Patel, Gowthamaraj Rajendran, Splunk, PashFW, Github Community",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to impair or disable AWS security services by monitoring specific deletion operations across GuardDuty, AWS WAF (classic and v2), CloudWatch, Route 53, and CloudWatch Logs. These actions include deleting detectors, rule groups, IP sets, web ACLs, logging configurations, alarms, and log streams. Adversaries may perform such operations to evade detection or remove visibility from defenders. By explicitly pairing eventName values with their corresponding eventSource services, this detection reduces noise and ensures that only security-related deletions are flagged. It leverages CloudTrail logs to identify specific API calls like \"DeleteLogStream\" and \"DeleteDetector.\" This activity is significant because it indicates potential efforts to disable security monitoring and evade detection. If confirmed malicious, this could allow attackers to operate undetected, escalate privileges, or exfiltrate data without triggering security alerts, severely compromising the security posture of the AWS environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351678"
+}

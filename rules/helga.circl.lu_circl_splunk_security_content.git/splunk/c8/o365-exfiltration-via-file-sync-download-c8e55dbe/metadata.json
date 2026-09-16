@@ -1,0 +1,22 @@
+{
+  "uuid": "c8e55dbe-fbc9-4d20-b062-100758867fcb",
+  "title": "O365 Exfiltration via File Sync Download",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when an excessive number of files are sync from o365 by the same user over a short period of time. A malicious actor abuse the user-agent string through GUI or API access to evade triggering the FileDownloaded event. This behavior may indicate an attacker staging data for exfiltration or an insider threat removing organizational data. Additional attention should be taken with any Azure Guest (#EXT#) accounts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1530",
+    "T1567"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351683"
+}

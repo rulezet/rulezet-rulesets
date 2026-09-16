@@ -1,0 +1,23 @@
+{
+  "uuid": "1e56d4e7-7c99-42a1-976e-51115292153d",
+  "title": "Microsoft Intune Manual Device Management",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Microsoft Intune device management configuration policies, scripts & apps are a all tools administrators can use to remotely manage intune managed devices. Instead of waiting for the devices to poll for changes to polciies, the policies can be manually pushed to expidite delivery. This may be useful in a pinch, it may also be a sign of an impatient attacker trying to speed up the delivery of their payload. This detection identifies when a device management configuration policy sync events, on-demand remediation scripts are triggered or when devices are remotely restarted.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1021.007",
+    "T1072",
+    "T1529"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351613"
+}

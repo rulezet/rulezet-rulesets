@@ -1,0 +1,21 @@
+{
+  "uuid": "8608a8ba-704c-4880-8fea-413d90f4f74e",
+  "title": "O365 Email Suspicious Behavior Alert",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies when one of O365 the built-in security detections for suspicious email behaviors are triggered.  These alerts often indicate that an attacker may have compromised a mailbox within the environment. Any detections from built-in Office 365 capabilities should be monitored and responded to appropriately. Certain premium Office 365 capabilities further enhance these detection and response functions.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1114.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351679"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "8ea51039-95b1-4b01-be1a-d2badba4731e",
+  "title": "AWS IAM Delete Policy",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the deletion of an IAM policy in AWS. It leverages AWS CloudTrail logs to identify `DeletePolicy` events, excluding those from AWS internal services. This activity is significant as unauthorized policy deletions can disrupt access controls and weaken security postures. If confirmed malicious, an attacker could remove critical security policies, potentially leading to privilege escalation, unauthorized access, or data exfiltration. Monitoring this behavior helps ensure that only authorized changes are made to IAM policies, maintaining the integrity and security of the AWS environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351831"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "d2abe6ab-9e0b-40cc-8ce8-639aabe727f6",
+  "title": "Kubernetes Previously Unseen Process",
+  "format": "splunk",
+  "author": "Matthew Moore, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects previously unseen processes within the Kubernetes environment on master or worker nodes. It leverages process metrics collected via an OTEL collector and hostmetrics receiver, and data is pulled from Splunk Observability Cloud. This detection compares processes observed in the last hour against those seen in the previous 30 days. Identifying new processes is crucial as they may indicate unauthorized activity or attempts to compromise the node. If confirmed malicious, these processes could lead to data exfiltration, privilege escalation, denial-of-service attacks, or the introduction of malware, posing significant risks to the Kubernetes cluster.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351780"
+}

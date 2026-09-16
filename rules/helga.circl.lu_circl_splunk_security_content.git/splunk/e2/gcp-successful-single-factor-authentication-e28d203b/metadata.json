@@ -1,0 +1,22 @@
+{
+  "uuid": "e28d203b-ac10-4494-88c7-afebf727245b",
+  "title": "GCP Successful Single-Factor Authentication",
+  "format": "splunk",
+  "author": "Bhavin Patel, Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a successful single-factor authentication event against Google Cloud Platform (GCP) for an account without Multi-Factor Authentication (MFA) enabled. It uses Google Workspace login event data to detect instances where MFA is not utilized. This activity is significant as it may indicate a misconfiguration, policy violation, or potential account takeover attempt. If confirmed malicious, an attacker could gain unauthorized access to GCP resources, potentially leading to data breaches, service disruptions, or further exploitation within the cloud environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004",
+    "T1586.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351596"
+}

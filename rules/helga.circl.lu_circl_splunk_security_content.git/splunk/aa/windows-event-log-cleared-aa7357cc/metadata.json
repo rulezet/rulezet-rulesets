@@ -1,0 +1,25 @@
+{
+  "uuid": "aa7357cc-2b00-4b88-842f-f91f244c3533",
+  "title": "Windows Event Log Cleared",
+  "format": "splunk",
+  "author": "Rico Valdez, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the clearing of Windows event logs by identifying Windows Security Event ID 1102 or System log event 104. This detection leverages Windows event logs to monitor for log clearing activities. Such behavior is significant as it may indicate an attempt to cover tracks after malicious activities. If confirmed malicious, this action could hinder forensic investigations and allow attackers to persist undetected, making it crucial to investigate further and correlate with other alerts and data sources.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Clop\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351473"
+}

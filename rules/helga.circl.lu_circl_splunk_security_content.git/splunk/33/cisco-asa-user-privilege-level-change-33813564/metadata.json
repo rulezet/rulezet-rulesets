@@ -1,0 +1,24 @@
+{
+  "uuid": "33813564-106b-475b-a18c-3d04ef659b65",
+  "title": "Cisco ASA - User Privilege Level Change",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects privilege level changes for user accounts on Cisco ASA devices via CLI or ASDM.\nAdversaries may escalate account privileges to gain elevated access to network infrastructure, enable additional command execution capabilities, or establish higher-level persistent access. Privilege levels on Cisco ASA range from 0 (lowest) to 15 (full administrative access), with level 15 providing complete device control.\nThe detection monitors for ASA message ID 502103, which is generated whenever a user account's privilege level is modified, capturing both the old and new privilege levels along with the username and administrator who made the change.\nInvestigate unexpected privilege changes, especially escalations to level 15, substantial privilege increases (e.g., from level 1 to 15), changes performed outside business hours, changes by non-administrative users, or changes without corresponding change management tickets.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078.003",
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351848"
+}

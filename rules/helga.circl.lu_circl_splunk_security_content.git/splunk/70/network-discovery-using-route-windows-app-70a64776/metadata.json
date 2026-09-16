@@ -1,0 +1,25 @@
+{
+  "uuid": "70a64776-adb9-488a-8287-85d0da8ae1b7",
+  "title": "Network Discovery Using Route Windows App",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the `route.exe` Windows application, commonly used for network discovery. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process creation events. This activity is significant because adversaries often use `route.exe` to map network routes and identify potential targets within a network. If confirmed malicious, this behavior could allow attackers to gain insights into network topology, facilitating lateral movement and further exploitation. Note that false positives may occur due to legitimate administrative tasks or automated scripts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1016.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351494"
+}

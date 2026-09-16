@@ -1,0 +1,24 @@
+{
+  "uuid": "a4e6461c-9559-4aaa-9de1-4f2c04a13bff",
+  "title": "Powershell COM Hijacking InprocServer32 Modification",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to modify or add a Component Object Model (COM) entry to the InProcServer32 path within the registry using PowerShell. It leverages PowerShell ScriptBlock Logging (EventCode 4104) to identify suspicious script blocks that target the InProcServer32 registry path. This activity is significant because modifying COM objects can be used for persistence or privilege escalation by attackers. If confirmed malicious, this could allow an attacker to execute arbitrary code or maintain persistent access to the compromised system, posing a severe security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1546.015"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351503"
+}

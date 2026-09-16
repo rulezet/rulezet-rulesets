@@ -1,0 +1,21 @@
+{
+  "uuid": "50a306ee-d098-4d1b-8c43-bf0f565c315d",
+  "title": "Azure AD Privileged Role Assigned to Service Principal",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the assignment of privileged roles to service principals in Azure Active Directory (AD). It leverages the AuditLogs log category from ingested Azure AD events. This activity is significant because assigning elevated permissions to non-human entities can lead to unauthorized access or malicious activities. If confirmed malicious, attackers could exploit these service principals to gain elevated access to Azure resources, potentially compromising sensitive data and critical infrastructure. Monitoring this behavior helps prevent privilege escalation and ensures the security of Azure environments.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351631"
+}

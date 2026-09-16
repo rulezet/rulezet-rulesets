@@ -1,0 +1,22 @@
+{
+  "uuid": "c50a5f68-8e38-4794-99db-129ba05755f3",
+  "title": "Azure AD High Number Of Failed Authentications From Ip",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects an IP address with 20 or more failed authentication attempts to an Azure AD tenant within 10 minutes. It leverages Azure AD SignInLogs to identify repeated failed logins from the same IP. This behavior is significant as it may indicate a brute force attack aimed at gaining unauthorized access or escalating privileges. If confirmed malicious, the attacker could potentially compromise user accounts, leading to unauthorized access to sensitive information and resources within the Azure environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1110.001",
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351753"
+}

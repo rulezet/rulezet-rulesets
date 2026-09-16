@@ -1,0 +1,22 @@
+{
+  "uuid": "34dd3d79-00ef-43ea-a128-902bb24ae8fd",
+  "title": "O365 New Federated Domain Added",
+  "format": "splunk",
+  "author": "Rod Soto, Mauricio Velazco Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the addition of a new federated domain in an Office 365 environment. This behavior is detected by analyzing Office 365 management activity logs, specifically filtering for Workload=Exchange and Operation=\"Add-FederatedDomain\". The addition of a new federated domain is significant as it may indicate unauthorized changes or potential compromises. If confirmed malicious, attackers could establish a backdoor, bypass security measures, or exfiltrate data, leading to data breaches and unauthorized access to sensitive information. Immediate investigation is required to review the details of the added domain and any concurrent suspicious activities.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351795"
+}

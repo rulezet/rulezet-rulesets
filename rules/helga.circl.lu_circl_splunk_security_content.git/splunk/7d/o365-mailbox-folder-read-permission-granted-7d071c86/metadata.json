@@ -1,0 +1,21 @@
+{
+  "uuid": "7d071c86-f315-4cc2-87d9-738b0c3b1e67",
+  "title": "O365 Mailbox Folder Read Permission Granted",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where read permissions are granted to mailbox folders within an Office 365 environment. It detects this activity by monitoring the `o365_management_activity` data source for the `Set-MailboxFolderPermission` and `Add-MailboxFolderPermission` operations. This behavior is significant as it may indicate unauthorized access or changes to mailbox folder permissions, potentially exposing sensitive email content. If confirmed malicious, an attacker could gain unauthorized access to read email communications, leading to data breaches or information leakage.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351731"
+}

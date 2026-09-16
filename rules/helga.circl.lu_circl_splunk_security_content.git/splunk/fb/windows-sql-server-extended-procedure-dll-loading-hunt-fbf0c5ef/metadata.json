@@ -1,0 +1,24 @@
+{
+  "uuid": "fbf0c5ef-8c12-42d5-9c5a-0a7a9877cc6d",
+  "title": "Windows SQL Server Extended Procedure DLL Loading Hunt",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects when SQL Server loads DLLs to execute extended stored procedures. This is particularly important for security monitoring as it indicates the first-time use or version changes of potentially dangerous procedures like xp_cmdshell, sp_OACreate, and others. While this is a legitimate operation, adversaries may abuse these procedures for execution, discovery, or privilege escalation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.009",
+    "T1505.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351465"
+}

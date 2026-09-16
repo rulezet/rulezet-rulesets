@@ -1,0 +1,21 @@
+{
+  "uuid": "be1db2bc-59bc-4b29-b301-8cf89aea05a4",
+  "title": "Kubernetes Process Running From New Path",
+  "format": "splunk",
+  "author": "Matthew Moore, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies processes running from newly seen paths within a Kubernetes environment. It leverages process metrics collected via an OTEL collector and hostmetrics receiver, and data is pulled from Splunk Observability Cloud using the Splunk Infrastructure Monitoring Add-on. This detection compares processes observed in the last hour with those seen over the previous 30 days. This activity is significant as it may indicate unauthorized changes, compromised nodes, or the introduction of malicious software. If confirmed malicious, it could lead to unauthorized process execution, control over critical resources, data exfiltration, privilege escalation, or malware introduction within the Kubernetes cluster.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351630"
+}

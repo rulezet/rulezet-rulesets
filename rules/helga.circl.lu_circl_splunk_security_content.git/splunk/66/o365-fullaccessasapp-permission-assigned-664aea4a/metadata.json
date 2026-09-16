@@ -1,0 +1,22 @@
+{
+  "uuid": "664aea4a-b193-4666-b197-7e2c719d9108",
+  "title": "O365 FullAccessAsApp Permission Assigned",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the assignment of the 'full_access_as_app' permission to an application registration in Office 365 Exchange Online. This detection leverages Office 365 management activity logs and filters Azure Active Directory workload events to identify when the specific permission, identified by GUID 'dc890d15-9560-4a4c-9b7f-a736ec74ec40', is granted. This activity is significant because it provides extensive control over Office 365 operations, including access to all mailboxes and the ability to send mail as any user. If confirmed malicious, this could lead to unauthorized data access, exfiltration, or account compromise. Immediate investigation is required.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.002",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351708"
+}

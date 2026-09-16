@@ -1,0 +1,21 @@
+{
+  "uuid": "6338d1cd-d88e-491f-8aea-3b9a7bf3e14c",
+  "title": "Detect S3 access from a new IP",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies access to an S3 bucket from a new or previously unseen remote IP address. It leverages S3 bucket-access logs, specifically focusing on successful access events (http_status=200). This activity is significant because access from unfamiliar IP addresses could indicate unauthorized access or potential data exfiltration attempts. If confirmed malicious, this activity could lead to unauthorized data access, data theft, or further exploitation of the compromised S3 bucket, posing a significant risk to sensitive information stored within the bucket.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1530"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351572"
+}

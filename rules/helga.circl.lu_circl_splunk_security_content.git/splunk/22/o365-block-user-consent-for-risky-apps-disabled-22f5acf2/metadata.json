@@ -1,0 +1,21 @@
+{
+  "uuid": "22f5acf2-1c1e-468b-b873-e7f843bd78ca",
+  "title": "O365 Block User Consent For Risky Apps Disabled",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when the \"risk-based step-up consent\" security setting in Microsoft 365 is disabled. It monitors Azure Active Directory logs for the \"Update authorization policy\" operation, specifically changes to the \"AllowUserConsentForRiskyApps\" setting. This activity is significant because disabling this feature can expose the organization to OAuth phishing threats, allowing users to grant consent to malicious applications. If confirmed malicious, attackers could gain unauthorized access to user data and sensitive information, leading to data breaches and further compromise within the organization.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351514"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "e148f101-2ebc-47f5-9f6c-ecf95689e29e",
+  "title": "AWS Credential Access GetPasswordData",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies more than 10 GetPasswordData API calls within a 5-minute window in your AWS account. It leverages AWS CloudTrail logs to detect this activity by counting the distinct instance IDs accessed. This behavior is significant as it may indicate an attempt to retrieve encrypted administrator passwords for running Windows instances, which is a critical security concern. If confirmed malicious, attackers could gain unauthorized access to administrative credentials, potentially leading to full control over the affected instances and further compromise of the AWS environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1110.001",
+    "T1586.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351592"
+}

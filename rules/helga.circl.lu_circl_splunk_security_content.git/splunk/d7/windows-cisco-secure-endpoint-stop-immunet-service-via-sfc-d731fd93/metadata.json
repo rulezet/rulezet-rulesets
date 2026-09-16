@@ -1,0 +1,23 @@
+{
+  "uuid": "d731fd93-8bd1-4ca3-8dd8-c4e0e99d3a8c",
+  "title": "Windows Cisco Secure Endpoint Stop Immunet Service Via Sfc",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the `sfc.exe` utility, in order to stop the Immunet Protect service. The Sfc.exe utility is part of Cisco Secure Endpoint installation. This detection leverages telemetry from the endpoint, focusing on command-line executions involving the `-k` parameter. This activity is significant as it indicates potential tampering with defensive mechanisms. If confirmed malicious, attackers could partially blind the EDR, enabling further compromise and lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351452"
+}

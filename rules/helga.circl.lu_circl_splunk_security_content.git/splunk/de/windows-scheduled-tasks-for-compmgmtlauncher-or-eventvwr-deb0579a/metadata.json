@@ -1,0 +1,23 @@
+{
+  "uuid": "deb0579a-69af-402b-8c2d-19d4c56ab3e2",
+  "title": "Windows Scheduled Tasks for CompMgmtLauncher or Eventvwr",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation or modification of Windows Scheduled Tasks related to CompMgmtLauncher or Eventvwr. These legitimate system utilities, used for launching the Computer Management Console and Event Viewer, can be abused by attackers to execute malicious payloads under the guise of normal system processes. By leveraging these tasks, adversaries can establish persistence or elevate privileges without raising suspicion. This detection helps security analysts identify unusual or unauthorized scheduled tasks involving these executables, allowing for timely investigation and remediation of potential threats.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351426"
+}

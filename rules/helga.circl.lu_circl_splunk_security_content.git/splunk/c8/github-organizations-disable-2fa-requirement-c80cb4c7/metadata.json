@@ -1,0 +1,22 @@
+{
+  "uuid": "c80cb4c7-ab32-434e-b300-d8eb0ea80ca1",
+  "title": "GitHub Organizations Disable 2FA Requirement",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when two-factor authentication (2FA) requirements are disabled in GitHub Organizations. The detection monitors GitHub Organizations audit logs for 2FA requirement changes by tracking actor details, organization information, and associated metadata. For a SOC, identifying disabled 2FA requirements is critical as it could indicate attempts to weaken account security controls. Two-factor authentication is a fundamental security control that helps prevent unauthorized access even if passwords are compromised. Disabling 2FA requirements could allow attackers to more easily compromise accounts through password-based attacks. The impact of disabled 2FA includes increased risk of account takeover, potential access to sensitive code and intellectual property, and compromise of the software supply chain. This activity could be part of a larger attack chain where an adversary first disables security controls before attempting broader account compromises.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351557"
+}

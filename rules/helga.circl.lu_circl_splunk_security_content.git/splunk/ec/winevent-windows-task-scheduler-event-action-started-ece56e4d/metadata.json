@@ -1,0 +1,27 @@
+{
+  "uuid": "ece56e4d-3ed1-46ca-bbd1-ed4a3d0a63c3",
+  "title": "WinEvent Windows Task Scheduler Event Action Started",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of tasks registered in Windows Task Scheduler by monitoring EventID 200 (action run) and 201 (action completed) from the Task Scheduler logs. This detection leverages Task Scheduler logs to identify potentially suspicious or unauthorized task executions. Monitoring these events is significant for a SOC as it helps uncover evasive techniques used for persistence, unauthorized code execution, or other malicious activities. If confirmed malicious, this activity could lead to unauthorized access, data exfiltration, or the execution of harmful payloads, posing a significant threat to the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Sandworm Team - G0034\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351460"
+}

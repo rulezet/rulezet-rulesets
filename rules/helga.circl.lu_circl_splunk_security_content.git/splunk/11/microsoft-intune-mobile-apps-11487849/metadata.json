@@ -1,0 +1,24 @@
+{
+  "uuid": "11487849-96d7-4db1-b7c8-20ac3ab5fdf9",
+  "title": "Microsoft Intune Mobile Apps",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Microsoft Intune supports deploying packaged applications to support software deployment, this functionality can also be abused for deploying malicious payloads to intune managed devices.\nThis detection identifies when a new packaged application has been added, updated or deleted.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1021.007",
+    "T1072",
+    "T1105",
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351746"
+}

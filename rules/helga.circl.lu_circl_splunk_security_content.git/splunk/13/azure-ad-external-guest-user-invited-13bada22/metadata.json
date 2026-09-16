@@ -1,0 +1,21 @@
+{
+  "uuid": "13bada22-06ee-44e1-b241-9cc605d1d67e",
+  "title": "Azure AD External Guest User Invited",
+  "format": "splunk",
+  "author": "Gowthamaraj Rajendran, Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the invitation of an external guest user within Azure AD. It leverages Azure AD AuditLogs to identify events where an external user is invited, using fields such as operationName and initiatedBy. Monitoring these invitations is crucial as they can lead to unauthorized access if abused. If confirmed malicious, this activity could allow attackers to gain access to internal resources, potentially leading to data breaches or further exploitation of the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351615"
+}

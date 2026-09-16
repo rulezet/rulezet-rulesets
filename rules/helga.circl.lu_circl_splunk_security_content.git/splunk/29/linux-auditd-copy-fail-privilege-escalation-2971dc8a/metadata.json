@@ -1,0 +1,27 @@
+{
+  "uuid": "2971dc8a-1b8e-4dbc-b337-2e46d9d1b88f",
+  "title": "Linux Auditd Copy Fail Privilege Escalation",
+  "format": "splunk",
+  "author": "Raven Tait, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the exploitation pattern associated with Copy Fail.\nCopy Fail (CVE-2026-31431) is a logic bug in the Linux kernel's authentication cryptographic template.\nIt lets an unprivileged local user trigger a deterministic, controlled 4-byte write into the page cache of any readable file on the system.\nA single 732-byte Python script can edit a setuid binary and obtain root on essentially all Linux distributions shipped since 2017.\nThis search relies on the auditd configuration linked in the references section. If you are using a custom configuration, make sure the Key names are the same or adapt the search accordingly.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2026-31431"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351507"
+}

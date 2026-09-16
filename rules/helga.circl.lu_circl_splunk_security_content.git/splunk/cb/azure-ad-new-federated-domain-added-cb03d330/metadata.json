@@ -1,0 +1,24 @@
+{
+  "uuid": "cb03d330-3055-484e-8496-67d90a4785cf",
+  "title": "Azure AD New Federated Domain Added",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Gowthamaraj Rajendran, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the addition of a new federated domain within an Azure Active Directory tenant. It leverages Azure AD AuditLogs to identify successful \"Set domain authentication\" operations. This activity is significant as it may indicate the use of the Azure AD identity federation backdoor technique, allowing an adversary to establish persistence. If confirmed malicious, the attacker could impersonate any user, bypassing password and MFA requirements, potentially leading to unauthorized access and control over the Azure AD environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1484.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351619"
+}

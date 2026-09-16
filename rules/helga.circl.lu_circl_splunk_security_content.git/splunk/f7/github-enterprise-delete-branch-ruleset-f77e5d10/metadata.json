@@ -1,0 +1,23 @@
+{
+  "uuid": "f77e5d10-2600-4eb1-adbc-b7e2904445ee",
+  "title": "GitHub Enterprise Delete Branch Ruleset",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when branch rules are deleted in GitHub Enterprise. The detection monitors GitHub Enterprise audit logs for branch rule deletion events by tracking actor details, repository information, and associated metadata. For a SOC, identifying deleted branch rules is critical as it could indicate attempts to bypass code review requirements and security controls. Branch deletion rules are essential security controls that enforce code review, prevent force pushes, and maintain code quality. Disabling these protections could allow malicious actors to directly push unauthorized code changes or backdoors to protected branches. The impact of disabled branch protection includes potential code tampering, bypass of security reviews, introduction of vulnerabilities or malicious code, and compromise of software supply chain integrity. This activity could be part of a larger attack chain where an adversary first disables security controls before attempting to inject malicious code.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1195",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351524"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "67915a42-5dff-453d-8b3d-275879133ef3",
+  "title": "GitHub Enterprise Modify Audit Log Event Stream",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when a user modifies or disables audit log event streaming in GitHub Enterprise. The detection monitors GitHub Enterprise audit logs for configuration changes that affect the audit log streaming functionality, which is used to send audit events to security monitoring platforms. This behavior could indicate an attacker attempting to prevent their malicious activities from being logged and detected by tampering with the audit trail. For a SOC, identifying modifications to audit logging is critical as it may be a precursor to other attacks where adversaries want to operate undetected. The impact could be severe as organizations lose visibility into user actions, configuration changes, and security events within their GitHub Enterprise environment, potentially allowing attackers to perform malicious activities without detection. This creates a significant blind spot in security monitoring and incident response capabilities.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195",
+    "T1685.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351737"
+}

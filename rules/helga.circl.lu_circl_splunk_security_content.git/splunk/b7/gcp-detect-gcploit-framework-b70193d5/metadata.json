@@ -1,0 +1,21 @@
+{
+  "uuid": "b70193d5-a12d-4045-8461-efe296c4c2c4",
+  "title": "GCP Detect gcploit framework",
+  "format": "splunk",
+  "author": "Rod Soto, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the use of the GCPloit exploitation framework within Google Cloud Platform (GCP). It detects specific GCP Pub/Sub messages with a function timeout of 539 seconds, which is indicative of GCPloit activity. This detection is significant as GCPloit can be used to escalate privileges and facilitate lateral movement from compromised high-privilege accounts. If confirmed malicious, this activity could allow attackers to gain unauthorized access, escalate their privileges, and move laterally within the GCP environment, potentially compromising sensitive data and critical resources.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351556"
+}

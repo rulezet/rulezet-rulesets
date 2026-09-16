@@ -1,0 +1,21 @@
+{
+  "uuid": "83d3b418-a8a1-471c-990d-d69d5caf0ad4",
+  "title": "Kubernetes Unauthorized Access",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects unauthorized access attempts to Kubernetes by analyzing Kubernetes audit logs. It identifies anomalies in access patterns by examining the source of requests and their response statuses. This activity is significant for a SOC as it may indicate an attacker attempting to infiltrate the Kubernetes environment. If confirmed malicious, such access could lead to unauthorized control over Kubernetes resources, potentially compromising sensitive systems or data within the cluster.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351761"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "34b95a76-feba-44aa-9c43-d35b0b26b7b6",
+  "title": "AWS Exfiltration via Anomalous GetObject API Activity",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies anomalous GetObject API activity in AWS, indicating potential data exfiltration attempts. It leverages AWS CloudTrail logs and uses the `anomalydetection` command to detect unusual patterns in the frequency of GetObject API calls by analyzing fields such as \"count,\" \"user_type,\" and \"user_arn\" within a 10-minute window. This activity is significant as it may indicate unauthorized data access or exfiltration from S3 buckets. If confirmed malicious, attackers could exfiltrate sensitive data, leading to data breaches and compliance violations.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1119"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351574"
+}

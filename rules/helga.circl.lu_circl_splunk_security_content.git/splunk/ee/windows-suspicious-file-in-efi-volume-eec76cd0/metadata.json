@@ -1,0 +1,28 @@
+{
+  "uuid": "eec76cd0-c341-4840-8d3a-43ca7a2c56d7",
+  "title": "Windows Suspicious File in EFI Volume",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects data files in the EFI volume.\nThis is sometimes indicative of an actor attempting to bypass secure boot through vulnerabilities such as CVE-2024-7344.\nThese use vulnerable boot loaders to run malicious system firmware code.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Sandworm Team - G0034\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1490",
+    "T1542.001"
+  ],
+  "cve": [
+    "CVE-2024-7344"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351435"
+}

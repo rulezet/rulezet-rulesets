@@ -1,0 +1,21 @@
+{
+  "uuid": "c08ae6f0-27fe-41b2-86ee-4a76723cd1c6",
+  "title": "Kubernetes DaemonSet Deployed",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of a DaemonSet in a Kubernetes cluster. This behavior is identified by monitoring Kubernetes Audit logs for the creation event of a DaemonSet. DaemonSets ensure a specific pod runs on every node, making them a potential vector for persistent access. This activity is significant for a SOC as it could indicate an attempt to maintain persistent access to the Kubernetes infrastructure. If confirmed malicious, it could lead to persistent attacks, service disruptions, or unauthorized access to sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351609"
+}

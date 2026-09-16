@@ -1,0 +1,22 @@
+{
+  "uuid": "e0156f6d-0505-475c-a5b1-3053e9d33aaf",
+  "title": "O365 Email Reported By Admin Found Malicious",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when an email manually submitted to Microsoft through the Security & Compliance portal is found to be malicious. This capability is an enhanced protection feature that can be used within o365 tenants by administrative users to report potentially malicious emails. This correlation looks for any submission that returns a Phish or Malware verdict upon submission.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566.001",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351762"
+}

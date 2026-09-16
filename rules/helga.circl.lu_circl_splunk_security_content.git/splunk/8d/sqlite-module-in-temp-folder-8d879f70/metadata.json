@@ -1,0 +1,24 @@
+{
+  "uuid": "8d879f70-06d5-4d75-8195-a3c53b4918e4",
+  "title": "Sqlite Module In Temp Folder",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of sqlite3.dll files in the %temp% folder. It leverages Sysmon EventCode 11 to identify when these files are written to the temporary directory. This activity is significant because it is associated with IcedID malware, which uses the sqlite3 module to parse browser databases and steal sensitive information such as banking details, credit card information, and credentials. If confirmed malicious, this behavior could lead to significant data theft and compromise of user accounts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351440"
+}

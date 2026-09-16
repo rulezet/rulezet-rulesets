@@ -1,0 +1,21 @@
+{
+  "uuid": "40182038-4893-4ac5-80c8-531fe6fa584f",
+  "title": "O365 User Consent Denied for OAuth Application",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where a user has denied consent to an OAuth application seeking permissions within the Office 365 environment. This detection leverages O365 audit logs, focusing on events related to user consent actions. By filtering for denied consent actions associated with OAuth applications, it captures instances where users have actively rejected permission requests. This activity is significant as it may indicate users spotting potentially suspicious or unfamiliar applications. If confirmed malicious, it suggests an attempt by a potentially harmful application to gain unauthorized access, which was proactively blocked by the user.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1528"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351811"
+}

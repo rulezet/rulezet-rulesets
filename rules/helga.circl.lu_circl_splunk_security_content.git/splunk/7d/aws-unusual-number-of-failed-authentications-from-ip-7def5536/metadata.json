@@ -1,0 +1,23 @@
+{
+  "uuid": "7def5536-106d-44f0-870a-5d870ec21c01",
+  "title": "AWS Unusual Number of Failed Authentications From Ip",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a single source IP failing to authenticate into the AWS Console with multiple valid users. It uses CloudTrail logs and calculates the standard deviation for source IP, leveraging the 3-sigma rule to detect unusual numbers of failed authentication attempts. This behavior is significant as it may indicate a Password Spraying attack, where an adversary attempts to gain initial access or elevate privileges. If confirmed malicious, this activity could lead to unauthorized access, data breaches, or further exploitation within the AWS environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1110.003",
+    "T1110.004",
+    "T1586.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351740"
+}

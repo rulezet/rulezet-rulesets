@@ -1,0 +1,21 @@
+{
+  "uuid": "53b71c6a-6b62-4b70-bd86-f5f5e5e97f1d",
+  "title": "GCP Kubernetes cluster pod scan detection",
+  "format": "splunk",
+  "author": "Rod Soto, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies unauthenticated requests to Kubernetes cluster pods. It detects this activity by analyzing GCP Pub/Sub messages for audit logs where the response status code is 401, indicating unauthorized access attempts. This activity is significant for a SOC because it may indicate reconnaissance or scanning attempts by an attacker trying to identify vulnerable pods. If confirmed malicious, this activity could lead to unauthorized access, allowing the attacker to exploit vulnerabilities within the cluster, potentially compromising sensitive data or gaining control over the Kubernetes environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1526"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351725"
+}

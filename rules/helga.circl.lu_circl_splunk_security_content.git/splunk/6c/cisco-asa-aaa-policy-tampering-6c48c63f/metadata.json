@@ -1,0 +1,21 @@
+{
+  "uuid": "6c48c63f-0472-4eb9-9761-a78482b883f7",
+  "title": "Cisco ASA - AAA Policy Tampering",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects modifications to authentication and authorization (AAA) security policies on Cisco ASA devices via CLI or ASDM.\nAAA policies control critical security mechanisms including authentication attempts, lockout thresholds, password policies, and access control settings that protect administrative access to network infrastructure.\nAdversaries or malicious insiders may weaken authentication policies to facilitate brute force attacks, disable account lockouts to enable unlimited password attempts, reduce password complexity requirements, or modify authorization settings to elevate privileges and maintain persistent access.\nThe detection monitors for command execution events containing AAA-related commands such as `aaa authentication`, `aaa authorization`, or `aaa local authentication`, focusing on changes to authentication attempts, lockout policies, and access control configurations.\nInvestigate any unauthorized modifications to AAA policies, especially changes that weaken security posture (increasing max-fail attempts, disabling lockouts, reducing password requirements), and verify these changes against approved change management processes and security policies.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351867"
+}

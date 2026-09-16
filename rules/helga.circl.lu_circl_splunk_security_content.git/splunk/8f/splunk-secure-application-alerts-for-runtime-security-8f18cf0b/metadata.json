@@ -1,0 +1,19 @@
+{
+  "uuid": "8f18cf0b-99b5-4a6f-a5ad-474aeb7cd365",
+  "title": "Splunk Secure Application Alerts for Runtime Security",
+  "format": "splunk",
+  "author": "Ryan Long, Bhavin Patel, Bryan Pluta, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic leverages alerts from Splunk Secure Application, which identifies and monitors exploit attempts targeting business applications. Attacks observed include exploiting vulnerabilities in web applications, such as injection attacks (SQL, API abuse), deserialization vulnerabilities, remote code execution, LOG4J, and zero-day attacks. These events are typically aimed at gaining unauthorized access, exfiltrating sensitive data, or disrupting application functionality.\n\nSplunk Secure Application provides real-time detection of these threats by analyzing application-layer events and correlating attack behavior with known vulnerability signatures. This detection methodology helps the Security Operations Center (SOC) by:\n\n* Identifying active exploitation attempts in real-time, allowing for quicker incident response.\n* Categorizing attack severity to prioritize remediation efforts based on risk level.\n* Providing visibility into attacker tactics, including source IP, attack techniques, and affected applications.\n* Generating risk-based scoring and contextual alerts to enhance decision-making within SOC workflows.\n* Helping analysts determine whether an attack was merely an attempt or if it successfully exploited a vulnerability.\n\nBy leveraging this information, SOC teams can proactively mitigate security threats, patch vulnerable applications, and enforce security controls to prevent further exploitation.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351907"
+}

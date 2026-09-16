@@ -1,0 +1,22 @@
+{
+  "uuid": "eae1cf50-a3d4-4761-b646-4a76fb66ea97",
+  "title": "Azure AD Multi-Factor Authentication Disabled",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Gowthamaraj Rajendran, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to disable multi-factor authentication (MFA) for an Azure AD user. It leverages Azure Active Directory AuditLogs to identify the \"Disable Strong Authentication\" operation. This activity is significant because disabling MFA can allow adversaries to maintain persistence using compromised accounts without raising suspicion. If confirmed malicious, this action could enable attackers to bypass an essential security control, potentially leading to unauthorized access and prolonged undetected presence in the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556.006",
+    "T1586.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351515"
+}

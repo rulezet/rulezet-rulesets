@@ -1,0 +1,26 @@
+{
+  "uuid": "fb1e1f18-ee3a-47a3-b1aa-12413cdc4a0b",
+  "title": "Windows Uncommon Remote Thread Creation In Browser Process",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the creation of a remote thread by a process such as wermgr.exe or rundll32.exe into a browser process such as firefox.exe, chrome.exe, and others.\nThese processes do not typically create remote threads, in browser processes.\nIt leverages Sysmon EventID 8 to detect this behavior by monitoring SourceImage and TargetImage fields.\nThis activity is significant because it is commonly associated with malware like Qakbot and IcedID, which injects malicious code into legitimate processes to steal information.\nIf confirmed malicious, this activity could allow attackers to execute arbitrary code, escalate privileges, and exfiltrate sensitive data from the compromised host.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351502"
+}

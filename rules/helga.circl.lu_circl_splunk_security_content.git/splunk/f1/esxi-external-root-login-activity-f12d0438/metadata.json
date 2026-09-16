@@ -1,0 +1,23 @@
+{
+  "uuid": "f12d0438-7f64-48f8-81a0-e49471805cf0",
+  "title": "ESXi External Root Login Activity",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies instances where the ESXi UI is accessed using the root account instead of a delegated administrative user. Direct root access to the UI bypasses role-based access controls and auditing practices, and may indicate risky behavior, misconfiguration, or unauthorized activity by a malicious actor using compromised credentials.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351923"
+}

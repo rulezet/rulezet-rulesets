@@ -1,0 +1,26 @@
+{
+  "uuid": "32eecb2a-8171-4797-b26d-8e45479e3498",
+  "title": "Suspicious microsoft workflow compiler rename",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the renaming of microsoft.workflow.compiler.exe, a rarely used executable typically located in C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319. This detection leverages Endpoint Detection and Response (EDR) data, focusing on process names and original file names. This activity is significant because renaming this executable can indicate an attempt to evade security controls. If confirmed malicious, an attacker could use this renamed executable to execute arbitrary code, potentially leading to privilege escalation or persistent access within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.003",
+    "T1127"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351466"
+}

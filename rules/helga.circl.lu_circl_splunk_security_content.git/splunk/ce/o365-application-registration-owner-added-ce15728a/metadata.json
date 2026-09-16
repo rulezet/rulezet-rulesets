@@ -1,0 +1,21 @@
+{
+  "uuid": "ce15728a-c7a1-48f4-82c9-890d646cd919",
+  "title": "O365 Application Registration Owner Added",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where a new owner is assigned to an application registration within an Azure AD and Office 365 tenant. It leverages O365 audit logs, specifically events related to changes in owner assignments within the AzureActiveDirectory workload. This activity is significant because assigning a new owner to an application registration can grant significant control over the application's configuration, permissions, and behavior. If confirmed malicious, an attacker could modify the application's settings, permissions, and behavior, leading to unauthorized data access, privilege escalation, or the introduction of malicious behavior within the application's operations.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351748"
+}

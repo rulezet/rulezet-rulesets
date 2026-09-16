@@ -1,0 +1,21 @@
+{
+  "uuid": "9b34e595-2d3d-47fb-8f81-464c347fa80d",
+  "title": "O365 ApplicationImpersonation Role Assigned",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the assignment of the ApplicationImpersonation role in Office 365 to a user or application. It uses the Office 365 Management Activity API to monitor Azure Active Directory audit logs for role assignment events. This activity is significant because the ApplicationImpersonation role allows impersonation of any user, enabling access to and modification of their mailbox. If confirmed malicious, an attacker could gain unauthorized access to sensitive information, manipulate mailbox data, and perform actions as a legitimate user, posing a severe security risk to the organization.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351529"
+}

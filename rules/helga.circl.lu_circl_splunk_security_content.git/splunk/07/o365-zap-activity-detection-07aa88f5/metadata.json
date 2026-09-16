@@ -1,0 +1,22 @@
+{
+  "uuid": "07aa88f5-5a50-48f7-8567-0b14206855f2",
+  "title": "O365 ZAP Activity Detection",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when the Microsoft Zero-hour Automatic Purge (ZAP) capability takes action against a user's mailbox. This capability is an enhanced protection feature that retro-actively removes email with known malicious content for user inboxes. Since this is a retroactive capability, there is still a window in which the user may fall victim to the malicious content.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566.001",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351586"
+}

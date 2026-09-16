@@ -1,0 +1,22 @@
+{
+  "uuid": "3f03ce38-efa5-4c97-8fc3-1eb6fbf6408f",
+  "title": "Okta Risk Threshold Exceeded",
+  "format": "splunk",
+  "author": "Michael Haag, Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following correlation identifies when a user exceeds a risk threshold based on multiple suspicious Okta activities. It leverages the Risk Framework from Enterprise Security, aggregating risk events from \"Suspicious Okta Activity,\" \"Okta Account Takeover,\" and \"Okta MFA Exhaustion\" analytic stories. This detection is significant as it highlights potentially compromised user accounts exhibiting multiple tactics, techniques, and procedures (TTPs) within a 24-hour period. If confirmed malicious, this activity could indicate a serious security breach, allowing attackers to gain unauthorized access, escalate privileges, or persist within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1110"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351914"
+}

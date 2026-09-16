@@ -1,0 +1,21 @@
+{
+  "uuid": "39db36a8-5833-4f2c-923e-dac1fc81f028",
+  "title": "O365 Safe Links Detection",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when any Microsoft Safe Links alerting is triggered. This behavior may indicate when user has interacted with a phishing or otherwise malicious link within the Microsoft Office ecosystem.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351552"
+}

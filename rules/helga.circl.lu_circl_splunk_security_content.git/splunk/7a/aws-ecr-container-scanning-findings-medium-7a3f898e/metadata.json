@@ -1,0 +1,21 @@
+{
+  "uuid": "7a3f898e-16fb-401a-b9ae-1954501220c9",
+  "title": "AWS ECR Container Scanning Findings Medium",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies medium-severity findings from AWS Elastic Container Registry (ECR) image scans. It leverages AWS CloudTrail logs, specifically the DescribeImageScanFindings event, to detect vulnerabilities in container images. This activity is significant for a SOC as it highlights potential security risks in containerized applications, which could be exploited if not addressed. If confirmed malicious, these vulnerabilities could lead to unauthorized access, data breaches, or further exploitation within the container environment, compromising the overall security posture.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351602"
+}

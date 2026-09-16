@@ -1,0 +1,26 @@
+{
+  "uuid": "4c491da5-820e-491b-9482-2f1d68f7975a",
+  "title": "Linux Account Manipulation Of SSH Config and Keys",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the deletion of SSH keys on a Linux machine. It leverages filesystem event logs to identify when files within \"/etc/ssh/*\" or \"~/.ssh/*\" are deleted. This activity is significant because attackers may delete or modify SSH keys to evade security measures or as part of a destructive payload, similar to the AcidRain malware. If confirmed malicious, this behavior could lead to impaired security features, hindered forensic investigations, or further unauthorized access, necessitating immediate investigation to identify the responsible process and user.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"AcidRain\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1070.004",
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351490"
+}

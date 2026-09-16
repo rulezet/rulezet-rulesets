@@ -1,0 +1,21 @@
+{
+  "uuid": "5796de81-e999-48bc-b87c-670cad13a11e",
+  "title": "AWS Bedrock Claude Possible Prompt Injection",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This search surfaces AWS Bedrock Claude prompts containing phrases commonly associated with prompt injection or jailbreak attempts, such as instruction overrides, persona switching, or requests to ignore prior guidance. These strings are not inherently malicious on their own - many of them (for example \"act as\", \"you must\", or \"new persona\") appear routinely in legitimate system prompts, few-shot examples, and role-play or creative-writing use cases. This is a hunting search rather than an anomaly detection because the base rate of benign matches is high; use it to pivot into the surrounding conversation and look for corroborating signals such as the phrase appearing mid-conversation rather than in an expected system/few-shot prompt, the user attempting to override guardrails or safety instructions rather than set a benign persona, instructions that follow the injected phrase requesting privilege escalation, data exfiltration, or access to restricted tools/resources, repeated or iterative attempts from the same user/role after being refused, and injected phrases originating from untrusted input (e.g., retrieved documents or tool output) rather than the human user turn.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351884"
+}

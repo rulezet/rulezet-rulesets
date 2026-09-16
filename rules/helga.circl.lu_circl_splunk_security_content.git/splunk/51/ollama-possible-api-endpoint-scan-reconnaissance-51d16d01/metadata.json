@@ -1,0 +1,21 @@
+{
+  "uuid": "51d16d01-ca0b-49a2-8257-028312aad74e",
+  "title": "Ollama Possible API Endpoint Scan Reconnaissance",
+  "format": "splunk",
+  "author": "Rod Soto",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects API reconnaissance and endpoint scanning activity against Ollama servers by identifying sources probing multiple API endpoints within short timeframes, particularly when using HEAD requests or accessing diverse endpoint paths, which indicates systematic enumeration to map the API surface, discover hidden endpoints, or identify vulnerabilities before launching targeted attacks.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1595"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351851"
+}

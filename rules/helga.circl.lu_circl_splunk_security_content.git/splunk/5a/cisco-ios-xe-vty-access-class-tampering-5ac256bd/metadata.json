@@ -1,0 +1,24 @@
+{
+  "uuid": "5ac256bd-b451-45df-bb1d-b6e864075dfe",
+  "title": "Cisco IOS XE VTY Access Class Tampering",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects rapid modification of Cisco IOS-XE VTY access-class settings. The Salt Typhoon notes describe configure HTTP activity followed by line vty changes and removal/re-application of an access-class within 60 seconds.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1562"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351835"
+}

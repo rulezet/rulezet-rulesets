@@ -1,0 +1,21 @@
+{
+  "uuid": "bcd24a1e-54b8-4ec2-a602-41431b0ab7bd",
+  "title": "Cisco Duo Policy Allow Old Flash",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where a Duo administrator creates or updates a policy to allow the use of outdated Flash components, specifically by detecting policy changes with the flash_remediation=no remediation attribute. It leverages Duo activity logs ingested via the Cisco Security Cloud App, searching for policy_update or policy_create actions and parsing the policy description for indicators of weakened security controls. This behavior is significant for a SOC because permitting old Flash increases the attack surface, as Flash is widely known for its security vulnerabilities and is no longer supported. Attackers may exploit such policy changes to bypass security controls, introduce malware, or escalate privileges within the environment. Detecting and responding to these policy modifications helps prevent potential exploitation, reduces organizational risk, and ensures adherence to security best practices. Immediate investigation is recommended to determine if the change was authorized or indicative of malicious activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351908"
+}

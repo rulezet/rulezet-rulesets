@@ -1,0 +1,21 @@
+{
+  "uuid": "f1bc2019-f4d4-4dd8-9f53-b775369dc440",
+  "title": "Kubernetes newly seen UDP edge",
+  "format": "splunk",
+  "author": "Matthew Moore, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects UDP communication between a newly seen source and destination workload pair within a Kubernetes cluster. It leverages Network Performance Monitoring metrics collected via an OTEL collector and pulled from Splunk Observability Cloud. This detection compares network activity over the last hour with the past 30 days to identify new inter-workload communication. Such changes in network behavior can indicate potential security threats or anomalies. If confirmed malicious, unauthorized connections may enable attackers to infiltrate the application ecosystem, leading to data breaches, privilege escalation, lateral movement, or disruption of critical services.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351721"
+}

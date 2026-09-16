@@ -1,0 +1,24 @@
+{
+  "uuid": "6d289208-8412-4346-91e4-7729a16e3949",
+  "title": "Windows ConHost with Headless Argument",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the unusual invocation of the Windows Console Host process (conhost.exe) with the undocumented --headless parameter. This detection leverages Endpoint Detection and Response (EDR) telemetry, specifically monitoring for command-line executions where conhost.exe is executed with the --headless argument. This activity is significant for a SOC as it is not commonly used in legitimate operations and may indicate an attacker's attempt to execute commands stealthily. If confirmed malicious, this behavior could lead to persistence, lateral movement, or other malicious activities, potentially resulting in data exfiltration or system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1564.003",
+    "T1564.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351441"
+}

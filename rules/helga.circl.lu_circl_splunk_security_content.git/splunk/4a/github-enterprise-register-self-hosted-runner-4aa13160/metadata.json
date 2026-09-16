@@ -1,0 +1,22 @@
+{
+  "uuid": "4aa13160-cf7d-41b2-8ea3-d18f4635bcf0",
+  "title": "GitHub Enterprise Register Self Hosted Runner",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies when a self-hosted runner is created in GitHub Enterprise. The detection monitors GitHub Enterprise audit logs for actions related to creating new self-hosted runners at the organization or enterprise level. his behavior warrants monitoring because self-hosted runners execute workflow jobs on customer-controlled infrastructure, which could be exploited by attackers to execute malicious code, access sensitive data, or pivot to other systems. While self-hosted runners are a legitimate feature, their creation should be carefully controlled as compromised runners pose significant security risks. The impact includes potential remote code execution, data exfiltration, and lateral movement within the environment if a runner is compromised. SOC teams should investigate unexpected runner creation events to verify they are authorized and properly secured, especially if created by unfamiliar users or in unusual contexts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351583"
+}

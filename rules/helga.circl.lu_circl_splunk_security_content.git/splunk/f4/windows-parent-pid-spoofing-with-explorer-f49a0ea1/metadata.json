@@ -1,0 +1,23 @@
+{
+  "uuid": "f49a0ea1-1afc-47cb-a5cc-fd9beab592ce",
+  "title": "Windows Parent PID Spoofing with Explorer",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a suspicious `explorer.exe` process with the `/root` command-line parameter. This detection leverages Endpoint Detection and Response (EDR) telemetry, focusing on process and command-line data. The presence of `/root` in `explorer.exe` is significant as it may indicate parent process spoofing, a technique used by malware to evade detection. If confirmed malicious, this activity could allow an attacker to operate undetected, potentially leading to unauthorized access, privilege escalation, or persistent threats within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1134.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351481"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "bede4642-ce96-4ba9-ad4e-ebd5a2ca60dc",
+  "title": "O365 SharePoint Allowed Domains Policy Changed",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies when the allowed domain settings for O365 SharePoint have been changed. With Azure AD B2B collaboration, users and administrators can invite external users to collaborate with internal users. External guest account invitations may also need access to OneDrive/SharePoint resources. These changed should be monitored by security teams as they could potentially lead to unauthorized access.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351633"
+}

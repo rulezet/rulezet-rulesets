@@ -1,0 +1,24 @@
+{
+  "uuid": "7a0863b3-7080-4306-8318-1831182252d4",
+  "title": "Windows Modify Registry EnableLinkedConnections",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a suspicious modification to the Windows registry setting for EnableLinkedConnections. It leverages data from the Endpoint.Registry datamodel to identify changes where the registry path is \"*\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\EnableLinkedConnections\" and the value is set to \"0x00000001\". This activity is significant because enabling linked connections can allow network shares to be accessed with both standard and administrator-level privileges, a technique often abused by malware like BlackByte ransomware. If confirmed malicious, this could lead to unauthorized access to sensitive network resources, escalating the attacker's privileges.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351498"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "0f461e07-59e3-4d61-ad0d-c84fb9c85478",
+  "title": "ASL AWS Network Access Control List Deleted",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the deletion of AWS Network Access Control Lists (ACLs). It leverages AWS CloudTrail logs to identify events where a user deletes a network ACL entry. This activity is significant because deleting a network ACL can remove critical access restrictions, potentially allowing unauthorized access to cloud instances. If confirmed malicious, this action could enable attackers to bypass network security controls, leading to unauthorized access, data exfiltration, or further compromise of the cloud environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1686.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351578"
+}

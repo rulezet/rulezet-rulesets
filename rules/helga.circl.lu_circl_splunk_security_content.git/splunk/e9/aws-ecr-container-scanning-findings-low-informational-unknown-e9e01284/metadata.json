@@ -1,0 +1,21 @@
+{
+  "uuid": "e9e01284-8034-48ba-b4e6-f414c362b8a7",
+  "title": "AWS ECR Container Scanning Findings Low Informational Unknown",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Eric McGinnis Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies low, informational, or unknown severity findings from AWS Elastic Container Registry (ECR) image scans. It leverages AWS CloudTrail logs, specifically the DescribeImageScanFindings event, to detect these findings. This activity is significant for a SOC as it helps in early identification of potential vulnerabilities or misconfigurations in container images, which could be exploited if left unaddressed. If confirmed malicious, these findings could lead to unauthorized access, data breaches, or further exploitation within the containerized environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351627"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "c0bd977a-95a0-4129-9625-b9f525f2fb23",
+  "title": "Windows Identify PowerShell Web Access IIS Pool",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects and analyzes PowerShell Web Access (PSWA) usage in Windows environments. It tracks both connection attempts (EventID 4648) and successful logons (EventID 4624) associated with PSWA, providing a comprehensive view of access patterns. The analytic identifies PSWA's operational status, host servers, processes, and connection metrics. It highlights unique target accounts, domains accessed, and verifies logon types. This information is crucial for detecting potential misuse, such as lateral movement, brute force attempts, or unusual access patterns. By offering insights into PSWA activity, it enables security teams to quickly assess and investigate potential security incidents involving this powerful administrative tool.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351438"
+}

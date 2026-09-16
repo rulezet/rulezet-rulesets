@@ -1,0 +1,24 @@
+{
+  "uuid": "89d1ced9-c9aa-4f59-b26a-54fb2838cc6f",
+  "title": "Suspicious Image Creation In Appdata Folder",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of image files in the AppData folder by processes that also have a file reference in the same folder. It leverages data from the Endpoint.Processes and Endpoint.Filesystem datamodels to identify this behavior. This activity is significant because it is commonly associated with malware, such as the Remcos RAT, which captures screenshots and stores them in the AppData folder before exfiltrating them to a command-and-control server. If confirmed malicious, this activity could indicate unauthorized data capture and exfiltration, compromising sensitive information and user privacy.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1113"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351469"
+}

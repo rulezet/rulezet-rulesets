@@ -1,0 +1,21 @@
+{
+  "uuid": "d0e23dcc-5085-4f1e-a7ac-82c85e05825d",
+  "title": "O365 Multiple Service Principals Created by User",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where a single user creates more than three unique OAuth applications within a 10-minute window in the Office 365 environment. It leverages O365 logs from the Unified Audit Log, focusing on the 'Add service principal' operation in Azure Active Directory. This activity is significant as it may indicate a compromised user account or unauthorized actions, potentially leading to broader network infiltration or privilege escalation. If confirmed malicious, this behavior could allow attackers to gain persistent access, escalate privileges, or exfiltrate sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351672"
+}

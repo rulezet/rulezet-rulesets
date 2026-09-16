@@ -1,0 +1,22 @@
+{
+  "uuid": "09f7aded-3a34-4ac3-b2ba-af94e48db974",
+  "title": "Detect AWS Console Login by New User",
+  "format": "splunk",
+  "author": "Rico Valdez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects AWS console login events by new users. It leverages AWS CloudTrail events and compares them against a lookup file of previously seen users based on ARN values. This detection is significant because a new user logging into the AWS console could indicate the creation of new accounts or potential unauthorized access. If confirmed malicious, this activity could lead to unauthorized access to AWS resources, data exfiltration, or further exploitation within the cloud environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1586.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351792"
+}

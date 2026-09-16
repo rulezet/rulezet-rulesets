@@ -1,0 +1,21 @@
+{
+  "uuid": "bfa2b25d-93f7-42ff-b2e2-df163656f2fc",
+  "title": "O365 OAuth App Mailbox Access via Graph API",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when emails are accessed in Office 365 Exchange via the Microsoft Graph API using the client ID '00000003-0000-0000-c000-000000000000'. It leverages the 'MailItemsAccessed' operation within the Exchange workload, focusing on OAuth-authenticated applications. This activity is significant as unauthorized access to emails can lead to data breaches and information theft. If confirmed malicious, attackers could exfiltrate sensitive information, compromise user accounts, and further infiltrate the organization's network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1114.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351595"
+}

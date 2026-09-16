@@ -1,0 +1,23 @@
+{
+  "uuid": "2f512dd1-1cfe-4730-a12c-064e161f422b",
+  "title": "ASL AWS Multi-Factor Authentication Disabled",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to disable multi-factor authentication (MFA) for an AWS IAM user. It leverages Amazon Security Lake logs, specifically monitoring for `DeleteVirtualMFADevice` or `DeactivateMFADevice` API operations. This activity is significant as disabling MFA can indicate an adversary attempting to weaken account security to maintain persistence using a compromised account. If confirmed malicious, this action could allow attackers to retain access to the AWS environment without detection, potentially leading to unauthorized access to sensitive resources and prolonged compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556.006",
+    "T1586.003",
+    "T1621"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351646"
+}

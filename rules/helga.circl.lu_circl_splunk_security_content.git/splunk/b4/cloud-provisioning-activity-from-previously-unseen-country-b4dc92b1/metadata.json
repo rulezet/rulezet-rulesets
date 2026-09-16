@@ -1,0 +1,21 @@
+{
+  "uuid": "b4dc92b1-4f72-4a4d-afca-243d1d8d1fc5",
+  "title": "Cloud Provisioning Activity From Previously Unseen Country",
+  "format": "splunk",
+  "author": "Rico Valdez, Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects cloud provisioning activities originating from previously unseen countries. It leverages cloud infrastructure logs and compares the geographic location of the source IP address against a baseline of known locations. This activity is significant as it may indicate unauthorized access or potential compromise of cloud resources. If confirmed malicious, an attacker could gain control over cloud assets, leading to data breaches, service disruptions, or further infiltration into the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351536"
+}
