@@ -1,0 +1,21 @@
+{
+  "uuid": "b880ab4a-39b2-42a5-9467-748a7caa3e3b",
+  "title": "DITEKSHEN_INDICATOR_KB_ID_Ransomware_Blackcat",
+  "format": "yara",
+  "author": "ditekShen",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects files referencing identities associated with BlackCat ransomware",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackCat\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709648"
+}

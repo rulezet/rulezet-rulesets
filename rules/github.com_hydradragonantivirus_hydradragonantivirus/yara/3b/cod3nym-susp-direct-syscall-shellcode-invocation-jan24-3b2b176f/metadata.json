@@ -1,0 +1,19 @@
+{
+  "uuid": "3b2b176f-1cde-410e-9952-505cb3946a4e",
+  "title": "COD3NYM_SUSP_Direct_Syscall_Shellcode_Invocation_Jan24",
+  "format": "yara",
+  "author": "Jonathan Peters",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects direct syscall evasion technqiue using NtProtectVirtualMemory to invoke shellcode",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709567"
+}

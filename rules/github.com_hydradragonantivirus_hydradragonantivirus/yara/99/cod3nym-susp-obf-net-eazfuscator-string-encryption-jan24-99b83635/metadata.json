@@ -1,0 +1,19 @@
+{
+  "uuid": "99b83635-3ff3-49bc-b0d7-1761b38a5b14",
+  "title": "COD3NYM_SUSP_OBF_NET_Eazfuscator_String_Encryption_Jan24",
+  "format": "yara",
+  "author": "Jonathan Peters",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects .NET images obfuscated with Eazfuscator string encryption. Eazfuscator is a widely used commercial obfuscation solution used by both legitimate software and malware.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709556"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "35562396-ba13-4026-9570-ccd03820bbd4",
+  "title": "ELCEEF_Suspicious_Onenote",
+  "format": "yara",
+  "author": "marcin@ulikowski.pl",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects OneNote documents with FileDataStoreObject structure containing: PE32, shortcut files (*.lnk), encoded JS, Windows Help File (*.chm), or batch script",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709543"
+}

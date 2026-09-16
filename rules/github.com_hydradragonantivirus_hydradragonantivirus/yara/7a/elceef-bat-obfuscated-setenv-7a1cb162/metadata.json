@@ -1,0 +1,19 @@
+{
+  "uuid": "7a1cb162-0726-428c-b1ba-b897b5135d77",
+  "title": "ELCEEF_BAT_Obfuscated_Setenv",
+  "format": "yara",
+  "author": "marcin@ulikowski.pl",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects batch script with obfuscated SET command located directly after @echo off",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709549"
+}
