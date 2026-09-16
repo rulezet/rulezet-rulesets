@@ -1,0 +1,21 @@
+rule mysql41_hashed_default_creds_nai
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for nai."
+        category = "INFO"
+        info = "MYSQL41"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="*580545D7284D97F162EF9DAA870583D8CB67FED8"
+    $a1="*580545D7284D97F162EF9DAA870583D8CB67FED8"
+    $a2="*01A6717B58FF5C7EAFFF6CB7C96F7428EA65FE4C"
+    $a3="*4ACFE3202A5FF5CF467898FC58AAB1D615029441"
+condition:
+    ($a0 and $a1) or ($a2 and $a3)
+}
