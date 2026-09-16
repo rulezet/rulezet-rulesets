@@ -1,0 +1,23 @@
+{
+  "uuid": "6416f65f-d79e-4a36-adca-931e911f6628",
+  "title": "Windows Impair Defense Change Win Defender Throttle Rate",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the ThrottleDetectionEventsRate registry setting in Windows Defender. It leverages data from the Endpoint.Registry datamodel to identify changes in the registry path related to Windows Defender's event logging rate. This activity is significant because altering the ThrottleDetectionEventsRate can reduce the frequency of logged detection events, potentially masking malicious activities. If confirmed malicious, this could allow an attacker to evade detection by decreasing the visibility of security events, thereby hindering incident response and forensic investigations.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350016"
+}

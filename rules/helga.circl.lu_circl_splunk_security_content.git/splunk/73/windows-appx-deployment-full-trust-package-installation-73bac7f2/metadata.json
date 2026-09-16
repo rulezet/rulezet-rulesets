@@ -1,0 +1,24 @@
+{
+  "uuid": "73bac7f2-e28f-4ed1-a94c-052c7849c290",
+  "title": "Windows AppX Deployment Full Trust Package Installation",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the installation of MSIX/AppX packages with full trust privileges. This detection leverages Windows event logs from the AppXDeployment-Server, specifically focusing on EventCode 400 which indicates a package deployment operation. Full trust packages are significant as they run with elevated privileges outside the normal AppX container restrictions, allowing them to access system resources that regular AppX packages cannot. Adversaries have been observed leveraging full trust MSIX packages to deliver malware, as documented in recent threat intelligence reports. If confirmed malicious, these packages could allow attackers to execute arbitrary code with elevated privileges, establish persistence, or deliver malware while evading traditional detection mechanisms.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204.002",
+    "T1553.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350078"
+}

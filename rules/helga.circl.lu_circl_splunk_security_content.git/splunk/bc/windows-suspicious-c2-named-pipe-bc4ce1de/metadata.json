@@ -1,0 +1,32 @@
+{
+  "uuid": "bc4ce1de-b48e-4efa-b207-e7c80d0db774",
+  "title": "Windows Suspicious C2 Named Pipe",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation or connection to known suspicious C2 named pipes.\nIt leverages Sysmon EventCodes 17 and 18 to identify known default pipe names used by C2 tools.\nIf confirmed malicious, this could allow an attacker to abuse these to potentially gain persistence, command and control, or further system compromise.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "misp-galaxy:banker=\"Gozi\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.002",
+    "T1055",
+    "T1559"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350229"
+}

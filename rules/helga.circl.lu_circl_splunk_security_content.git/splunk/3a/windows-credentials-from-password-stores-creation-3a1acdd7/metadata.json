@@ -1,0 +1,23 @@
+{
+  "uuid": "3a1acdd7-d1fe-49be-a75c-d8012e83f8c7",
+  "title": "Windows Credentials from Password Stores Creation",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the Windows OS tool cmdkey.exe, which is used to create stored usernames, passwords, or credentials. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs and command-line arguments. This activity is significant because cmdkey.exe is often abused by post-exploitation tools and malware, such as Darkgate, to gain unauthorized access. If confirmed malicious, this behavior could allow attackers to escalate privileges and maintain persistence on the targeted host, facilitating further attacks and potential data breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1555"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350322"
+}

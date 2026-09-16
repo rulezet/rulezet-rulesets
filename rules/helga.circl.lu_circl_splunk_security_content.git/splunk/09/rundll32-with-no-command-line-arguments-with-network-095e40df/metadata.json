@@ -1,0 +1,27 @@
+{
+  "uuid": "095e40df-8ea4-45b0-8d93-cf649527d42f",
+  "title": "Rundll32 with no Command Line Arguments with Network",
+  "format": "splunk",
+  "author": "Steven Dick, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of rundll32.exe without command line arguments, followed by a network connection. This behavior is identified using Endpoint Detection and Response (EDR) telemetry and network traffic data. It is significant because rundll32.exe typically requires arguments to function, and its absence is often associated with malicious activity, such as Cobalt Strike. If confirmed malicious, this activity could indicate an attempt to establish unauthorized network connections, potentially leading to data exfiltration or further compromise of the system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [
+    "CVE-2021-34527"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350096"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "a62a125c-f7b0-4726-882c-9e2eb84e1a36",
+  "title": "Windows Impair Defense Delete Win Defender Profile Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the deletion of the Windows Defender main profile registry key. It leverages data from the Endpoint.Registry datamodel, specifically monitoring for deleted actions within the Windows Defender registry path. This activity is significant as it indicates potential tampering with security defenses, often associated with Remote Access Trojans (RATs) and other malware. If confirmed malicious, this action could allow an attacker to disable Windows Defender, reducing the system's ability to detect and respond to further malicious activities, thereby compromising endpoint security.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Empire\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350395"
+}

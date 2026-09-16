@@ -1,0 +1,23 @@
+{
+  "uuid": "942d699c-c21c-4662-a42a-63540920a6a9",
+  "title": "Windows RDP Cache File Deletion",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies the deletion of RDP bitmap cache files—specifically .bmc and .bin files—typically stored in the user profile under the Terminal Server Client\\Cache directory.\nThese files are created by the native Windows Remote Desktop Client (mstsc.exe) and store graphical elements from remote sessions to improve performance.\nDeleting these files may indicate an attempt to remove forensic evidence of RDP usage.\nWhile rare in legitimate user behavior, this action is commonly associated with defense evasion techniques used by attackers or red teamers who wish to hide traces of interactive remote access.\nWhen observed in conjunction with recent logon activity, RDP session indicators, or script execution, this behavior should be treated as potentially malicious. Monitoring for deletion of these files provides valuable visibility into anti-forensic actions that often follow lateral movement or hands-on-keyboard activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350007"
+}

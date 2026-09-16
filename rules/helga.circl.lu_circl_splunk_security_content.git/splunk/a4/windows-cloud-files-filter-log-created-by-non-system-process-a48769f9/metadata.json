@@ -1,0 +1,25 @@
+{
+  "uuid": "a48769f9-ad53-4a12-8b1a-f7a0f6e19958",
+  "title": "Windows Cloud Files Filter Log Created by Non-System Process",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects a non-system process causing creation of CldFlt0.etl under C:\\Windows\\System32\\LogFiles\\CloudFiles\\.\nThis path is initialised by the CldFlt driver when a process calls CfRegisterSyncRoot() or CfConnectSyncRoot().\nIn the RedSun exploit this is a side-effect of the DoCloudStuff() function that registers a fake sync provider to create the cloud-tagged bait file.\nLegitimate cloud providers (OneDrive etc.) register sync roots from SYSTEM-level service processes, not from user-context executables.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2026-33825"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350308"
+}

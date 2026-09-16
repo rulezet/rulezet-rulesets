@@ -1,0 +1,23 @@
+{
+  "uuid": "7814affe-dbdb-494a-8b45-98f8fa1ca299",
+  "title": "Windows Binary Proxy Execution Mavinject DLL Injection",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of mavinject.exe for DLL injection into running processes, identified by specific command-line parameters such as /INJECTRUNNING and /HMODULE. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line executions. This activity is significant because it indicates potential arbitrary code execution, a common tactic for malware deployment and persistence. If confirmed malicious, this could allow attackers to execute unauthorized code, escalate privileges, and maintain persistence within the environment, posing a severe security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.013"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350356"
+}

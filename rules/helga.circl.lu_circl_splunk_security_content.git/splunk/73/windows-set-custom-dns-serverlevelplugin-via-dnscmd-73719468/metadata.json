@@ -1,0 +1,23 @@
+{
+  "uuid": "73719468-d351-40f5-9a61-9900776ffc6b",
+  "title": "Windows Set Custom DNS ServerLevelPlugin Via Dnscmd",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects command-line usage of dnscmd.exe to configure the Microsoft DNS ServerLevelPluginDll setting.\nThis setting allows the DNS service to load an arbitrary DLL, which can be abused by attackers with DNS administrative privileges to execute code in the context of the DNS service.\nIf confirmed malicious, this activity could enable persistence, privilege escalation, or domain controller compromise through malicious DLL loading.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350021"
+}

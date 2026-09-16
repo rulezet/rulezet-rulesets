@@ -1,0 +1,23 @@
+{
+  "uuid": "929efa0e-db81-4588-8abd-ad1bc66355d0",
+  "title": "Windows Command and Scripting Interpreter Hunting Path Traversal",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies path traversal command-line executions,\nleveraging data from Endpoint Detection and Response (EDR) agents. It detects patterns\nin command-line arguments indicative of path traversal techniques, such as multiple\ninstances of \"/..\", \"\\..\", or \"\\\\..\". This activity is significant as it often indicates\nattempts to evade defenses by executing malicious code, such as through msdt.exe.\nIf confirmed malicious, this behavior could allow attackers to execute arbitrary\ncode, potentially leading to system compromise, data exfiltration, or further lateral\nmovement within the network.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350162"
+}

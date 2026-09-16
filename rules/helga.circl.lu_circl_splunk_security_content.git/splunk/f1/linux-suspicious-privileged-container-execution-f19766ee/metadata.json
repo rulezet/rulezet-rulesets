@@ -1,0 +1,24 @@
+{
+  "uuid": "f19766ee-92cb-4f56-b65d-a1035ee8e631",
+  "title": "Linux Suspicious Privileged Container Execution",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of a Docker container with the privileged flag set, or with the pid namespace set to the host.\nThis can indicate a container running with elevated permissions and access to the underlying system. Actors can hide containers such as this to enable persistent access.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059.004",
+    "T1610"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350091"
+}

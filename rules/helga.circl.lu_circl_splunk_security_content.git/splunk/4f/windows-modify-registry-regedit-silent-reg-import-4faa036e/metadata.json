@@ -1,0 +1,24 @@
+{
+  "uuid": "4faa036e-21fd-4115-b051-016378f565d1",
+  "title": "Windows Modify Registry Regedit Silent Reg Import",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the modification of the Windows registry using the regedit.exe application with the silent mode parameter. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line executions. This activity is significant because the silent mode allows registry changes without user confirmation, which can be exploited by adversaries to import malicious registry settings. If confirmed malicious, this could enable attackers to persist in the environment, escalate privileges, or manipulate system configurations, leading to potential system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350378"
+}

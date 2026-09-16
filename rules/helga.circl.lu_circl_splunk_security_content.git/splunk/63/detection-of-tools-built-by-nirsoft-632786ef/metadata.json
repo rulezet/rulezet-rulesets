@@ -1,0 +1,23 @@
+{
+  "uuid": "632786ef-78a9-4f60-b628-7be6b935f85f",
+  "title": "Detection of tools built by NirSoft",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of tools built by NirSoft by detecting specific command-line arguments such as \"/stext\" and \"/scomma\". It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names, parent processes, and command-line executions. This activity is significant because NirSoft tools, while legitimate, can be exploited by attackers for malicious purposes such as credential theft or system reconnaissance. If confirmed malicious, this activity could lead to unauthorized access, data exfiltration, or further compromise of the affected system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1072"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350107"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "dfed33bd-3923-430a-b68b-60804738ed1d",
+  "title": "Windows EDRSilencer Custom Outbound Filter Added",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the EDRSilencer-specific Windows Filtering Platform filter name \"Custom Outbound Filter\" when it is configured with a block action.\nEDRSilencer creates WFP filters to block outbound traffic from EDR and security agent processes, impairing endpoint telemetry without requiring the tool binary to keep its original process name.\nEventCode 5447 identifies creation of the runtime filter with ChangeType %%16384, while EventCode 5441 can show the same persistent filter when the Base Filtering Engine starts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350104"
+}

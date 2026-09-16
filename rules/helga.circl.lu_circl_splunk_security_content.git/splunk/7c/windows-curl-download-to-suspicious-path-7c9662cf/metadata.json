@@ -1,0 +1,28 @@
+{
+  "uuid": "7c9662cf-9a05-4d26-a8a6-fd0426db6a93",
+  "title": "Windows Curl Download to Suspicious Path",
+  "format": "splunk",
+  "author": "Michael Haag, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of Windows Curl.exe to download\na file to a suspicious location, such as AppData, ProgramData, or Public directories.\nIt leverages data from Endpoint Detection and Response (EDR) agents, focusing on\ncommand-line executions that include the -O or --output options. This activity is\nsignificant because downloading files to these locations can indicate an attempt\nto bypass security controls or establish persistence. If confirmed malicious, this\nbehavior could lead to unauthorized code execution, data exfiltration, or further\ncompromise of the system.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350374"
+}

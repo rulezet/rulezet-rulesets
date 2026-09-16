@@ -1,0 +1,23 @@
+{
+  "uuid": "7cc5cd64-01a7-437a-b5d1-b090812548be",
+  "title": "Windows AD AdminSDHolder ACL Modified",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Dean Luxton, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Access Control List (ACL) of the AdminSDHolder object in a Windows domain, specifically the addition of new rules. It leverages EventCode 5136 from the Security Event Log, focusing on changes to the nTSecurityDescriptor attribute. This activity is significant because the AdminSDHolder object secures privileged group members, and unauthorized changes can allow attackers to establish persistence and escalate privileges. If confirmed malicious, this could enable an attacker to control domain-level permissions, compromising the entire Active Directory environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350074"
+}

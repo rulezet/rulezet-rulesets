@@ -1,0 +1,23 @@
+{
+  "uuid": "7bf15152-03c8-4ce8-bad6-1b657ea4254f",
+  "title": "Detect Password Spray Attack Behavior On User",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies any user failing to authenticate from 10 or more unique sources. This behavior could represent an adversary performing a Password Spraying attack to obtain initial access or elevate privileges. This logic can be used for real time security monitoring as well as threat hunting exercises. Environments can be very different depending on the organization. Test and customize this detections thresholds as needed",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350256"
+}

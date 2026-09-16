@@ -1,0 +1,24 @@
+{
+  "uuid": "7f91352a-7047-4c00-90ed-85a159bd936e",
+  "title": "Web Spring4Shell HTTP Request Class Module",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects HTTP requests containing payloads related to the Spring4Shell vulnerability (CVE-2022-22965). It leverages Splunk Stream HTTP data to inspect the HTTP request body and form data for specific fields such as \"class.module.classLoader.resources.context.parent.pipeline.first\". This activity is significant as it indicates an attempt to exploit a critical vulnerability in Spring Framework, potentially leading to remote code execution. If confirmed malicious, this could allow attackers to gain unauthorized access, execute arbitrary code, and compromise the affected system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2022-22965"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349982"
+}

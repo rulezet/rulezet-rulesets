@@ -1,0 +1,21 @@
+{
+  "uuid": "e47a8382-79c3-4bf2-aed4-b1ba5be1f5d0",
+  "title": "Cisco NVM - Suspicious Network Connection Initiated via MsXsl",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic identifies the use of `msxsl.exe` initiating a network connection to a non-private IP address.\nAlthough `msxsl.exe` is a legitimate Microsoft utility used to apply XSLT transformations, adversaries can abuse it\nto execute arbitrary code or load external resources in an evasive manner.\nThis detection leverages Cisco NVM telemetry to identify potentially malicious use of `msxsl.exe` making network connections\nthat may indicate command and control (C2) or data exfiltration activity.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1220"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350029"
+}

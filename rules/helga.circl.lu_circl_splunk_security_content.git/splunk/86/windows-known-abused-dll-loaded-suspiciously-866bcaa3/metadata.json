@@ -1,0 +1,23 @@
+{
+  "uuid": "866bcaa3-89dd-44f6-bc83-4935166f29b6",
+  "title": "Windows Known Abused DLL Loaded Suspiciously",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when DLLs with known abuse history are loaded from an unusual location. This activity may represent an attacker performing a DLL search order or sideload hijacking technique. These techniques are used to gain persistence as well as elevate privileges on the target system. This detection relies on Sysmon EID7 and is compatible with all Officla Sysmon TA versions.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350279"
+}

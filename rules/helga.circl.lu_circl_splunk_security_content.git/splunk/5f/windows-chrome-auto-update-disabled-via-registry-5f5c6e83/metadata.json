@@ -1,0 +1,23 @@
+{
+  "uuid": "5f5c6e83-1ddb-450e-bf20-848f3f38466e",
+  "title": "Windows Chrome Auto-Update Disabled via Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to Windows registry values that disable Google Chrome auto-updates.\nChanges to values such as DisableAutoUpdateChecksCheckboxValue = 1, Update{8A69D345-D564-463C-AFF1-A69D9E530F96} = 0, UpdateDefault = 0, and AutoUpdateCheckPeriodMinutes = 0 can prevent Chrome from receiving security updates.\nThis behavior may indicate attempts to bypass update policies, maintain unauthorized extensions, or facilitate malware persistence.\nMonitoring these registry changes helps identify potential policy violations or malicious activity targeting browser security.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1185"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350037"
+}

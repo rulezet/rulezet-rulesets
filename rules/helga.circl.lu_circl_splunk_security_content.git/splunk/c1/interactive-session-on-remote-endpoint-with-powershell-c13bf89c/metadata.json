@@ -1,0 +1,23 @@
+{
+  "uuid": "c13bf89c-24d4-4b38-98c3-4c1d8501def5",
+  "title": "Interactive Session on Remote Endpoint with PowerShell",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the `Enter-PSSession` cmdlet to establish an interactive session on a remote endpoint via the WinRM protocol. It leverages PowerShell Script Block Logging (EventCode=4104) to identify this activity by searching for specific script block text patterns. This behavior is significant as it may indicate lateral movement or remote code execution attempts by adversaries. If confirmed malicious, this activity could allow attackers to execute commands remotely, potentially leading to further compromise of the network and unauthorized access to sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350296"
+}

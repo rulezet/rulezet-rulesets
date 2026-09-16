@@ -1,0 +1,25 @@
+{
+  "uuid": "e032b4eb-7983-4147-ac60-db20f3b91aa0",
+  "title": "System Processes Run From Unexpected Locations",
+  "format": "splunk",
+  "author": "David Dorsey, Michael Haag, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies system processes running from unexpected locations outside of paths such as `C:\\Windows\\System32\\` or `C:\\Windows\\SysWOW64`. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process paths, names, and hashes. This activity is significant as it may indicate a malicious process attempting to masquerade as a legitimate system process. If confirmed malicious, this behavior could allow an attacker to execute code, escalate privileges, or maintain persistence within the environment, posing a significant security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350271"
+}

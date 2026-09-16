@@ -1,0 +1,23 @@
+{
+  "uuid": "a1f6623b-a9ce-4726-9d96-7fe811670d10",
+  "title": "Windows Outlook WebView Registry Modification",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies modifications to specific Outlook registry values related to WebView and Today features. It detects when a URL is set in these registry locations, which could indicate attempts to manipulate Outlook's web-based components. The analytic focuses on changes to the \"URL\" value within Outlook's WebView and Today registry paths. This activity is significant as it may represent an attacker's effort to redirect Outlook's web content or inject malicious URLs. If successful, this technique could lead to phishing attempts, data theft, or serve as a stepping stone for further compromise of the user's email client and potentially sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350280"
+}

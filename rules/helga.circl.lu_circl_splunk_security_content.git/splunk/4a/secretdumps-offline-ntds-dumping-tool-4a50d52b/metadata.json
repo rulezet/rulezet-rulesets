@@ -1,0 +1,25 @@
+{
+  "uuid": "4a50d52b-1416-42a4-867e-ef1b2b5e1668",
+  "title": "SecretDumps Offline NTDS Dumping Tool",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the potential use of the secretsdump.py tool to dump NTLM hashes from a copy of ntds.dit and the SAM, SYSTEM, and SECURITY registry hives. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on specific command-line patterns and process names associated with secretsdump.py. This activity is significant because it indicates an attempt to extract sensitive credential information offline, which is a common post-exploitation technique. If confirmed malicious, this could allow an attacker to obtain NTLM hashes, facilitating further lateral movement and potential privilege escalation within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350410"
+}

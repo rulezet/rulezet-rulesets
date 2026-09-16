@@ -1,0 +1,25 @@
+{
+  "uuid": "6e365b40-260e-4ae6-bdf0-a1b9c7c2bb6b",
+  "title": "Powershell Using memory As Backing Store",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious PowerShell script execution using memory streams as a backing store, identified via EventCode 4104. It leverages PowerShell Script Block Logging to capture scripts that create new objects with memory streams, often used to decompress and execute payloads in memory. This activity is significant as it indicates potential in-memory execution of malicious code, bypassing traditional file-based detection. If confirmed malicious, this technique could allow attackers to execute arbitrary code, maintain persistence, or escalate privileges without leaving a trace on the disk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350086"
+}

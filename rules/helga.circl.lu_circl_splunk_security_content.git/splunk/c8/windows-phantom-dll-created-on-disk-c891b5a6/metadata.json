@@ -1,0 +1,25 @@
+{
+  "uuid": "c891b5a6-8f54-4c81-b9fc-06ac235db4dd",
+  "title": "Windows Phantom DLL Created on Disk",
+  "format": "splunk",
+  "author": "Onur Mustafa Erdogan, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects creation of DLL files with names associated with phantom DLL hijacking opportunities.\nThese DLLs are usually absent from standard Windows installations, but legitimate Windows components or services may attempt to load them when they are present in expected search paths such as System32.\nPhantom DLL hijacking involves placing a malicious DLL where a legitimate process will search for a non-existent dependency, allowing the attacker-controlled library to execute in that process context.\nShieldBreak is one example where the exploit redirects a privileged Defender-driven write into C:\\Windows\\System32\\phoneinfo.dll and then triggers Windows Error Reporting so wermgr.exe loads the planted DLL at SYSTEM integrity.\nIf confirmed malicious, this activity can indicate preparation for code execution, persistence, or local privilege escalation through DLL search order hijacking.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350116"
+}

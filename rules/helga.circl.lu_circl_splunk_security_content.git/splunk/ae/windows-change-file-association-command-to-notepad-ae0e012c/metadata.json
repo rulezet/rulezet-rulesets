@@ -1,0 +1,24 @@
+{
+  "uuid": "ae0e012c-b485-42cc-877c-6b365f18037e",
+  "title": "Windows Change File Association Command To Notepad",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to change the command value of a file association of an extension to open with Notepad.exe.\nIt leverages data from Endpoint Detection and Response (EDR) agents, focusing on specific command-line patterns and registry modifications.\nThis activity is significant as it can indicate an attempt to manipulate file handling behavior, a technique observed in APT and ransomware attacks like Prestige.\nAfter changing the extension of all encrypted files to a new one, Prestige ransomware modifies the file association for that extension to open with Notepad.exe in order to display a ransom note.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350363"
+}

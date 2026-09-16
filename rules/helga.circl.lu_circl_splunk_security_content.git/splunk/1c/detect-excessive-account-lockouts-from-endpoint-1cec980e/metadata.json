@@ -1,0 +1,23 @@
+{
+  "uuid": "1cec980e-0018-4a62-81f1-a63c12c0d165",
+  "title": "Detect Excessive Account Lockouts From Endpoint",
+  "format": "splunk",
+  "author": "David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects endpoints causing a high number of account lockouts within a short period. It leverages the Windows security event logs ingested into the `Change` datamodel, specifically under the `Account_Management` node, to identify and count lockout events. This activity is significant as it may indicate a brute-force attack or misconfigured system causing repeated authentication failures. If confirmed malicious, this behavior could lead to account lockouts, disrupting user access and potentially indicating an ongoing attack attempting to compromise user credentials.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350330"
+}

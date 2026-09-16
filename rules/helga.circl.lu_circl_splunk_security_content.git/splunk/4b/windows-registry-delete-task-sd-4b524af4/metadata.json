@@ -1,0 +1,24 @@
+{
+  "uuid": "4b524af4-155d-4b5b-b49e-7c74dae82781",
+  "title": "Windows Registry Delete Task SD",
+  "format": "splunk",
+  "author": "Michael Haag, Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a process attempting to delete a scheduled task's Security Descriptor (SD) from the registry path of that task.\nIt leverages the Endpoint.Registry data model to identify registry actions performed by the SYSTEM user, specifically targeting deletions of the SD value.\nThis activity is significant as it may indicate an attempt to remove evidence of a scheduled task for defense evasion.\nIf confirmed malicious, it suggests an attacker with privileged access trying to hide their tracks, potentially compromising system integrity and security.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350160"
+}

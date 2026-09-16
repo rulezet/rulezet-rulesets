@@ -1,0 +1,24 @@
+{
+  "uuid": "f2cc8c9c-34ea-44f7-acae-82cadd3560a3",
+  "title": "Cisco NVM - MSHTML or MSHTA Network Execution Without URL in CLI",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects suspicious use of 'mshta.exe' or 'rundll32.exe' invoking 'mshtml.dll'\nor the 'RunHTMLApplication' export without including a direct HTTP/HTTPS URL in the command line.\nThis pattern could be associated with obfuscated script execution used by threat actors during\ninitial access or payload staging. The absence of a visible URL may indicate attempts to evade static\ndetections by embedding the URL via string concatenation, encoding (e.g., hex), or indirect script loaders\nlike 'GetObject()'.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.005",
+    "T1218.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350321"
+}

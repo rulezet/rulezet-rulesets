@@ -1,0 +1,21 @@
+{
+  "uuid": "5ed2d927-afdf-49e7-8923-8ffd80022aff",
+  "title": "Zscaler Privacy Risk Destinations Threat Blocked",
+  "format": "splunk",
+  "author": "Gowthamaraj Rajendran, Rod Soto, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies blocked destinations within a network that are deemed privacy risks by Zscaler. It leverages web proxy logs, focusing on entries marked as \"Privacy Risk.\" Key data points such as device owner, user, URL category, destination URL, and IP are analyzed. This activity is significant for a SOC as it helps monitor and manage privacy risks, ensuring a secure network environment. If confirmed malicious, this activity could indicate attempts to access or exfiltrate sensitive information, posing a significant threat to data privacy and security.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349949"
+}

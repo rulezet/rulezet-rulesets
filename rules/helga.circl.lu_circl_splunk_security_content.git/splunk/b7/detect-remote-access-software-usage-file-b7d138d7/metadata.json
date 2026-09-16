@@ -1,0 +1,26 @@
+{
+  "uuid": "b7d138d7-069f-44da-87fe-7c906306fc9c",
+  "title": "Detect Remote Access Software Usage File",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the writing of files from known remote access software to disk within the environment.\nIt leverages data from Endpoint Detection and Response (EDR) agents, focusing on file path, file name, and user information.\nThis activity is significant as adversaries often use remote access tools like AnyDesk, GoToMyPC, LogMeIn, and TeamViewer to maintain unauthorized access.\nIf confirmed malicious, this could allow attackers to persist in the environment, potentially leading to data exfiltration, further compromise, or complete control over affected systems.\nIt is best to update both the remote_access_software_usage_exception.csv lookup and the remote_access_software lookup with any known or approved remote access software to reduce false positives and increase coverage.\nIn order to enhance performance, the detection filters for specific file names extensions / names that are used in the remote_access_software lookup.\nIf add additional entries, consider updating the search filters to include those file names / extensions as well, if not alread covered.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Gozi\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350375"
+}

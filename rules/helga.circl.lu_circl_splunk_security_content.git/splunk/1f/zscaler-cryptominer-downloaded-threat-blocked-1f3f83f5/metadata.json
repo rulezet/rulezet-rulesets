@@ -1,0 +1,21 @@
+{
+  "uuid": "1f3f83f5-a70e-4084-9702-5f117862b99b",
+  "title": "Zscaler CryptoMiner Downloaded Threat Blocked",
+  "format": "splunk",
+  "author": "Gowthamaraj Rajendran, Rod Soto, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies attempts to download cryptomining software that are blocked by Zscaler. It leverages web proxy logs to detect blocked actions associated with cryptominer threats, analyzing key data points such as device owner, user, URL category, destination URL, and IP. This activity is significant for a SOC as it helps in early identification and mitigation of cryptomining activities, which can compromise network integrity and resource availability. If confirmed malicious, this activity could lead to unauthorized use of network resources for cryptomining, potentially degrading system performance and increasing operational costs.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349972"
+}

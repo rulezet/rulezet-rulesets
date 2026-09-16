@@ -1,0 +1,24 @@
+{
+  "uuid": "7653a958-1b3e-424b-9ba9-16c0bcdc6d64",
+  "title": "Windows GrimResource - MMC Process Accessing APDS DLL",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "GrimResource is a code execution technique discovered by Elastic Security in 2024 that abuses a stored XSS vulnerability in apds.dll to achieve arbitrary code execution inside mmc.exe, a signed, trusted Windows binary.\nThe attack is delivered via a malicious .msc file (MMC Saved Console file).\nWhen the victim opens the .msc file, MMC processes an embedded transformNode operation that triggers the XSS in apds.dll, which is then leveraged to execute attacker-controlled script within the MMC process context.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.007",
+    "T1218.014"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350265"
+}

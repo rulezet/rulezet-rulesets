@@ -1,0 +1,23 @@
+{
+  "uuid": "31da2761-0f73-4859-b48d-da3adcf3efc3",
+  "title": "Windows Modify Registry Auto Minor Updates",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a suspicious modification to the Windows auto update configuration registry. It detects changes to the registry path \"*\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WindowsUpdate\\\\AU\\\\AutoInstallMinorUpdates\" with a value of \"0x00000000\". This activity is significant as it is commonly used by adversaries, including malware like RedLine Stealer, to bypass detection and deploy additional payloads. If confirmed malicious, this modification could allow attackers to evade defenses, potentially leading to further system compromise and exploitation of zero-day vulnerabilities.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350332"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "82ba0688-1fbe-4770-a5fd-d4ab08061cb3",
+  "title": "Windows Large Number of Computer Service Tickets Requested",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a high volume of Kerberos service ticket requests, specifically more than 30, from a single source within a 5-minute window.\nIt leverages Event ID 4769, which logs when a Kerberos service ticket is requested, focusing on requests with computer names as the Service Name. This behavior is significant as it may indicate malicious activities such as lateral movement, malware staging, or reconnaissance.\nIf confirmed malicious, an attacker could gain unauthorized access to multiple endpoints, potentially compromising the entire network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1135"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350264"
+}

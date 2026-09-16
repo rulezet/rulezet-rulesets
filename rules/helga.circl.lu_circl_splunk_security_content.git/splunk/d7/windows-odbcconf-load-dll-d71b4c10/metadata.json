@@ -1,0 +1,23 @@
+{
+  "uuid": "d71b4c10-16c1-4b4c-86d5-6ef7572907c4",
+  "title": "Windows Odbcconf Load DLL",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of odbcconf.exe with the regsvr action to load a DLL. This is identified by monitoring command-line arguments in process creation logs from Endpoint Detection and Response (EDR) agents. This activity is significant as it may indicate an attempt to execute arbitrary code via DLL loading, a common technique used in various attack vectors. If confirmed malicious, this could allow an attacker to execute code with the privileges of the odbcconf.exe process, potentially leading to system compromise or further lateral movement.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350191"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "bd9771e1-cec6-47d4-b0a3-524334bb3fe1",
+  "title": "Windows AI Platform DNS Query",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects DNS queries initiated by the Windows AI Platform to domains associated with Hugging Face, OpenAI, and other popular providers of machine learning models and services. Monitoring these DNS requests is important because it can reveal when systems are accessing external AI platforms, which may indicate the use of third-party AI resources or the transfer of sensitive data outside the organization’s environment. Detecting such activity enables organizations to enforce data governance policies, prevent unapproved use of external AI services, and maintain visibility into potential data exfiltration risks. Proactive monitoring provides better control over AI model usage and helps safeguard organizational data flows.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1071.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350303"
+}

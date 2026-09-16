@@ -1,0 +1,24 @@
+{
+  "uuid": "1d6552d1-509c-413d-a84e-1994de4b7fbf",
+  "title": "Windows Rundll32 Apply User Settings Changes",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of rundll32 with a call to the user32 DLL, specifically the UpdatePerUserSystemParameters function.\nThis function is responsible for updating system parameters, such as desktop backgrounds, display settings, and visual themes.\nIt leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions.\nThis activity can be significant as it is an uncommon way to apply settings. It was also observed as part of Rhysida Ransomware activity.\nIf confirmed malicious, this could allow an attacker to disguise activities or make unauthorized system changes, potentially leading to persistent unauthorized access.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350403"
+}

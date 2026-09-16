@@ -1,0 +1,23 @@
+{
+  "uuid": "7b80e04f-2655-4ed4-a2f8-b4d6f44f0f7b",
+  "title": "Citrix ADC and Gateway Unauthorized Data Disclosure",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to exploit the Citrix Bleed vulnerability (CVE-2023-4966), which can lead to the leaking of session tokens. It identifies HTTP requests with a 200 status code targeting the /oauth/idp/.well-known/openid-configuration URL endpoint. By parsing web traffic and filtering based on user agent details, HTTP method, source and destination IPs, and sourcetype, it aims to identify potentially malicious requests. This activity is significant for a SOC because successful exploitation can allow attackers to impersonate legitimate users, bypass authentication, and access sensitive data. If confirmed malicious, it could lead to unauthorized data access, network propagation, and critical information exfiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2023-4966"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349991"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "2ab01db6-356c-473e-9ef1-99cc126dc6b6",
+  "title": "Detect Outlook exe writing a zip file",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of `outlook.exe` writing a `.zip` file to the disk.\nIt leverages data from the Endpoint data model, specifically monitoring process and filesystem activities.\nThis behavior can be significant as it may indicate the use of Outlook to deliver malicious payloads or exfiltrate data via compressed files.\nIf confirmed malicious, this activity could lead to unauthorized data access, data exfiltration, or the delivery of malware, potentially compromising the security of the affected system and network.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350277"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "b1ba7a14-c9b6-42c4-b5e0-b5b8ab13afab",
+  "title": "Linux Curl Upload File",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the curl command with specific switches (-F, --form, --upload-file, -T, -d, --data, --data-raw, -I, --head) to upload AWS credentials or configuration files to a remote destination. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions and process details. This activity is significant as it may indicate an attempt to exfiltrate sensitive AWS credentials, a technique known to be used by the TeamTNT group. If confirmed malicious, this could lead to unauthorized access and potential compromise of AWS resources.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350036"
+}

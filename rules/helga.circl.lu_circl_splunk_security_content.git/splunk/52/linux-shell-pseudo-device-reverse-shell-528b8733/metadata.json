@@ -1,0 +1,25 @@
+{
+  "uuid": "528b8733-9a4b-42b6-968d-98ab9114bd2c",
+  "title": "Linux Shell Pseudo Device Reverse Shell",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of shell's /dev/tcp or /dev/udp pseudo-device feature to establish outbound network connections.\nThis special file system interface allows opening a network socket and sending or receiving data using simple shell commands.\nAttackers commonly abuse this native shell capability to create reverse shells without requiring external tools such as netcat, by redirecting shell I/O over a TCP or UDP connection to an attacker-controlled host and port.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1048.003",
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350420"
+}

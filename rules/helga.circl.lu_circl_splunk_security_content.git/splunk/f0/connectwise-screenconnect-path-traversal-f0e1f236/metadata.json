@@ -1,0 +1,26 @@
+{
+  "uuid": "f0e1f236-c1c1-4a53-9a97-269a2f448e48",
+  "title": "ConnectWise ScreenConnect Path Traversal",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to exploit the ConnectWise ScreenConnect CVE-2024-1708 vulnerability, which allows path traversal attacks by manipulating file_path and file_name parameters in the URL. It leverages the Endpoint datamodel Filesystem node to identify suspicious file system events, specifically targeting paths and filenames associated with ScreenConnect. This activity is significant as it can lead to unauthorized access to sensitive files and directories, potentially resulting in data exfiltration or arbitrary code execution. If confirmed malicious, attackers could gain unauthorized access and control over the host system, posing a severe security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2024-1708",
+    "CVE-2024-1709"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350251"
+}

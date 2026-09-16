@@ -1,0 +1,23 @@
+{
+  "uuid": "94a7d363-69c7-4597-b2a7-a95a3457a35b",
+  "title": "Windows Vulnerable Driver Installed",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the loading of known vulnerable Windows drivers, which may indicate potential persistence or privilege escalation attempts. It leverages Windows System service install EventCode 7045 to identify driver loading events and cross-references them with a list of vulnerable drivers. This activity is significant as attackers often exploit vulnerable drivers to gain elevated privileges or maintain persistence on a system. If confirmed malicious, this could allow attackers to execute arbitrary code with high privileges, leading to further system compromise and potential data exfiltration. This detection is a Windows Event Log adaptation of the Sysmon driver loaded detection written by Michael Haag.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350054"
+}

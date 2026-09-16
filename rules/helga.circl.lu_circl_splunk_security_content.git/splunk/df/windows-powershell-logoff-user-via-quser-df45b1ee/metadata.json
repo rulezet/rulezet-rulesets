@@ -1,0 +1,24 @@
+{
+  "uuid": "df45b1ee-b113-4dc0-9827-3adb8387a838",
+  "title": "Windows Powershell Logoff User via Quser",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the process of logging off a user through the use of the quser and logoff commands.\nBy monitoring for these commands, the analytic identifies actions where a user session is forcibly terminated, which could be part of an administrative task or a potentially unauthorized access attempt.\nThis detection helps identify potential misuse or malicious activity where a user's access is revoked without proper authorization, providing insight into potential security incidents involving account management or session manipulation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1531"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350349"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "6cf1cd85-7e82-4d2f-b325-82d6a5cb4c18",
+  "title": "Python Site Hooks Creation During Package Installation",
+  "format": "splunk",
+  "author": "Onur Mustafa Erdogan, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of a Python site hook file (`sitecustomize.py` or `usercustomize.py`) within a `site-packages`/`dist-packages` directory in conjunction with a package installation process.\nPython's `site` module loads these hooks from directories on `sys.path` before Python is executed.\nIf an adversary manipulates or plants one of these files, they can hijack the Python environment and execute their payload with every Python invocation, achieving persistence on the victim endpoint.\nThe VIPERTUNNEL backdoor was reported to abuse site hooks in order to import and trigger DLL execution.\nIf confirmed malicious, this could result in arbitrary code execution every time Python is invoked on the compromised host.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1195.002",
+    "T1546"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350361"
+}

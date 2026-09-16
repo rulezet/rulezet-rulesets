@@ -1,0 +1,23 @@
+{
+  "uuid": "035c2716-3d81-4e90-ad62-b2596f565e68",
+  "title": "Windows RDP Server Registry Entry Created",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies the creation of registry keys under HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal Server Client\\Servers\\, which occur when a user initiates a Remote Desktop Protocol (RDP) connection using the built-in Windows RDP client (mstsc.exe). These registry entries store information about previously connected remote hosts, including usernames and display settings. Their creation is a strong indicator that an outbound RDP session was initiated from the system. While the presence of these keys is normal during legitimate RDP use, their appearance can be used to track remote access activity, especially in environments where RDP is tightly controlled. In post-compromise scenarios, these artifacts may be created by threat actors using RDP for lateral movement or command-and-control. Monitoring the creation of these registry entries can help defenders detect initial use of RDP from a compromised host, particularly when correlated with unusual user behavior, logon patterns, or network activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350033"
+}

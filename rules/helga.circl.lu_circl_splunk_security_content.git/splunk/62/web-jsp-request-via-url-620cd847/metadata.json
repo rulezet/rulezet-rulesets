@@ -1,0 +1,25 @@
+{
+  "uuid": "620cd847-1c6b-4f7d-befc-cbc6e41d058b",
+  "title": "Web JSP Request via URL",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies URL requests associated with CVE-2022-22965 (Spring4Shell) exploitation attempts, specifically targeting webshell access on a remote webserver. It detects HTTP GET requests with URLs containing \".jsp?cmd=\" or \"j&cmd=\" patterns. This activity is significant as it indicates potential webshell deployment, which can lead to unauthorized remote command execution. If confirmed malicious, attackers could gain control over the webserver, execute arbitrary commands, and potentially escalate privileges, leading to severe data breaches and system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2022-22965"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349938"
+}

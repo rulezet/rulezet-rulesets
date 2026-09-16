@@ -1,0 +1,27 @@
+{
+  "uuid": "802c0857-c1ac-4d65-b1e2-9ed806846069",
+  "title": "Deleting Shadow Copies",
+  "format": "splunk",
+  "author": "David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the deletion of shadow copies using the vssadmin.exe or wmic.exe utilities. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line arguments. This activity is significant because deleting shadow copies is a common tactic used by attackers to prevent recovery and hide their tracks. If confirmed malicious, this action could hinder incident response efforts and allow attackers to maintain persistence and cover their activities, making it crucial for security teams to investigate promptly.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:ransomware=\"Clop\"",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350320"
+}

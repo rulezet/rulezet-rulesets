@@ -1,0 +1,24 @@
+{
+  "uuid": "4e166aee-bd18-4fb3-96e1-ee305d855086",
+  "title": "Powershell Windows Defender Exclusion Commands",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of PowerShell commands to add or set Windows Defender exclusions.\nIt leverages EventCode 4104 to identify suspicious `Add-MpPreference` or `Set-MpPreference` commands with exclusion parameters.\nThis activity is significant because adversaries often use it to bypass Windows Defender, allowing malicious code to execute without detection.\nIf confirmed malicious, this behavior could enable attackers to evade antivirus defenses, maintain persistence, and execute further malicious activities undetected.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"WhisperGate\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350241"
+}

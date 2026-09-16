@@ -1,0 +1,23 @@
+{
+  "uuid": "bf144155-0f49-4201-9ccf-71e4d6f19f65",
+  "title": "Windows Impair Defense Disable Win Defender Report Infection",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows registry that disable Windows Defender's infection reporting. It leverages data from the Endpoint.Registry datamodel, specifically monitoring changes to the \"DontReportInfectionInformation\" registry key. This activity is significant because it can prevent Windows Defender from reporting detailed threat information to Microsoft, potentially allowing malware to evade detection. If confirmed malicious, this action could enable attackers to bypass security measures, maintain persistence, and avoid detection, leading to prolonged unauthorized access and potential data breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350246"
+}

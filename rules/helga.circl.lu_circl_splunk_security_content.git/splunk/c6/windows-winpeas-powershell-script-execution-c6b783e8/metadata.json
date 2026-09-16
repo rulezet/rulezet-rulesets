@@ -1,0 +1,32 @@
+{
+  "uuid": "c6b783e8-b790-4ccf-8080-a349ac861620",
+  "title": "Windows WinPEAS PowerShell Script Execution",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of the WinPEAS PowerShell script via default function names used within the script.\nwinPEAS is a Windows tool that stands for Windows Privilege Escalation Awesome Script.\nSimilar to its Linux counterpart, linpeas.sh, winPEAS is designed to automate the process of identifying potential privilege escalation paths on Windows systems.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1007",
+    "T1016",
+    "T1033",
+    "T1082",
+    "T1590",
+    "T1592.002",
+    "T1592.004",
+    "T1615"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350334"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "fc883d6c-cc39-4a4a-92ef-96057666c019",
+  "title": "Cisco NVM - Suspicious Download From File Sharing Website",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects suspicious downloads from common file sharing and content delivery platforms using known living-off-the-land binaries (LOLBins)\nsuch as 'curl.exe', 'certutil.exe', 'msiexec.exe', 'powershell.exe', 'wmic.exe', and others.\nIt leverages Cisco Network Visibility Module logs to correlate network flow activity with process context, including command-line arguments, process path,\nand parent process information. These tools are often abused by adversaries and malware to retrieve payloads from public hosting platforms\nsuch as GitHub, Discord CDN, Transfer.sh, or Pastebin.\nThis detection helps identify potential initial access, payload staging, or command and control activity using legitimate services.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\""
+  ],
+  "attack_techniques": [
+    "T1197"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350367"
+}

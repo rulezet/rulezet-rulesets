@@ -1,0 +1,24 @@
+{
+  "uuid": "250e3519-11e9-4ab8-995b-3125c30459da",
+  "title": "Windows Indirect Command Execution Via Series Of Forfiles",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects excessive usage of the forfiles.exe process, which is often indicative of post-exploitation activities. The detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs that include process GUID, process name, and parent process. This activity is significant because forfiles.exe can be abused to execute commands on multiple files, a technique used by ransomware like Prestige. If confirmed malicious, this behavior could allow attackers to enumerate files, potentially leading to data exfiltration or further malicious actions.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350390"
+}

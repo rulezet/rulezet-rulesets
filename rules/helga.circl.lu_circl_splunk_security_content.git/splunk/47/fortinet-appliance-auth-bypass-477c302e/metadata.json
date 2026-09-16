@@ -1,0 +1,25 @@
+{
+  "uuid": "477c302e-7852-4af9-8e53-d0b1e66671a6",
+  "title": "Fortinet Appliance Auth bypass",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to exploit CVE-2022-40684, a Fortinet appliance authentication bypass vulnerability.\nIt identifies REST API requests to the /api/v2/ endpoint using various HTTP methods (GET, POST, PUT, DELETE) that may indicate unauthorized modifications, such as adding SSH keys or creating new users.\nThis detection leverages the Web datamodel to monitor specific URL patterns and HTTP methods.\nThis activity is significant as it can lead to unauthorized access and control over the appliance.\nIf confirmed malicious, attackers could gain persistent access, reroute network traffic, or capture sensitive information.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"metasploit\""
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2022-40684"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349976"
+}

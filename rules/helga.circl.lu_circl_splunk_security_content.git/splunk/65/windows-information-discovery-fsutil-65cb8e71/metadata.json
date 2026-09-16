@@ -1,0 +1,25 @@
+{
+  "uuid": "65cb8e71-2cba-4cf0-96f4-e63224667e07",
+  "title": "Windows Information Discovery Fsutil",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of the Windows built-in tool FSUTIL with the \"FSINFO\" or \"Volume\" parameters, in order to discover file system and disk information.\nThis detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs that include command-line details.\nMonitoring this activity is significant because FSUTIL can be abused by adversaries to gather detailed information about the file system, aiding in further exploitation.\nIf confirmed malicious, this activity could enable attackers to map the file system, identify valuable data, and plan subsequent actions such as privilege escalation or persistence.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:backdoor=\"SUNBURST\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350382"
+}

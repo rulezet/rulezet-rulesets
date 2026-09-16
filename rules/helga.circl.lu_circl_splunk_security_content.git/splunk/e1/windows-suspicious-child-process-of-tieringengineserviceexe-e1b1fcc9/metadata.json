@@ -1,0 +1,25 @@
+{
+  "uuid": "e1b1fcc9-0c32-4d16-bad2-aaaae48aa4ba",
+  "title": "Windows Suspicious Child Process of TieringEngineService.exe",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the RedSun privilege escalation exploit delivering a SYSTEM-level shell to the attacker's session.\nRedSun replaces the legitimate TieringEngineService.exe with a malicious binary, which launches a process as SYSTEM, usually some sort of shell or shell spawner (conhost.exe, cmd.exe, PowerShell, etc.) in the attacker's active session.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2026-33825"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350139"
+}

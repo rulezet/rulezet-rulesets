@@ -1,0 +1,21 @@
+{
+  "uuid": "0224d5bf-f8a1-429f-b6e8-16623972e50f",
+  "title": "Spike in File Writes",
+  "format": "splunk",
+  "author": "David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a sharp increase in the number of files written to a specific host. It leverages the Endpoint.Filesystem data model, focusing on 'created' actions and comparing current file write counts against historical averages and standard deviations. This activity is significant as a sudden spike in file writes can indicate malicious activities such as ransomware encryption or data exfiltration. If confirmed malicious, this behavior could lead to significant data loss, system compromise, or further propagation of malware within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Ryuk ransomware\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350312"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "10842824-f9ca-4260-802c-30e2fc0e4c3f",
+  "title": "LLM Model File Creation",
+  "format": "splunk",
+  "author": "Rod Soto, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the creation of Large Language Model (LLM) files on Windows endpoints by monitoring file creation events for specific model file formats and extensions commonly used by local AI frameworks.\nThis detection identifies potential shadow AI deployments, unauthorized model downloads, and rogue LLM infrastructure by detecting file creation patterns associated with quantized models (.gguf, .ggml), safetensors model format files, and Ollama Modelfiles.\nThese file types are characteristic of local inference frameworks such as Ollama, llama.cpp, GPT4All, LM Studio, and similar tools that enable running LLMs locally without cloud dependencies.\nOrganizations can use this detection to identify potential data exfiltration risks, policy violations related to unapproved AI usage, and security blind spots created by decentralized AI deployments that bypass enterprise governance and monitoring.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350095"
+}

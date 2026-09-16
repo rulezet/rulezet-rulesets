@@ -1,0 +1,21 @@
+{
+  "uuid": "120131dc-86a0-4956-bfec-cfd0a3271956",
+  "title": "Detect Web Access to Decommissioned S3 Bucket",
+  "format": "splunk",
+  "author": "Jose Hernandez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies web requests to domains that match previously decommissioned S3 buckets through web proxy logs. This activity is significant because attackers may attempt to access or recreate deleted S3 buckets that were previously public to hijack them for malicious purposes. If successful, this could allow attackers to host malicious content or exfiltrate data through compromised bucket names that may still be referenced by legitimate applications.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349975"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "3613b48a-c53c-4959-9eb1-b96dcbfa3ceb",
+  "title": "Conti Common Exec parameter",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of suspicious command-line arguments commonly associated with Conti ransomware, specifically targeting local drives and network shares for encryption. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs that include command-line details. This activity is significant because it indicates a potential ransomware attack, which can lead to widespread data encryption and operational disruption. If confirmed malicious, the impact could be severe, resulting in data loss, system downtime, and potential ransom demands.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Conti\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350209"
+}

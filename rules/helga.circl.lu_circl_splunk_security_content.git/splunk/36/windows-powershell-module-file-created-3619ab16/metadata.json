@@ -1,0 +1,25 @@
+{
+  "uuid": "3619ab16-15e2-4100-a94c-542a94100394",
+  "title": "Windows PowerShell Module File Created",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the creation of a DLL within the various PowerShell module directories.\nThis can indicate a new module being installed, attempts at ScriptBlock smuggling, or other malicious PowerShell activity utilizing modules.\nFalse positives could include installation of legitimate modules.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1129",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350056"
+}

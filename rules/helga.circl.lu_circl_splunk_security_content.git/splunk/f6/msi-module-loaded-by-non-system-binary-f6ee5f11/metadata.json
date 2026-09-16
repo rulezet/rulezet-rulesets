@@ -1,0 +1,25 @@
+{
+  "uuid": "f6ee5f11-d962-44ad-9a7b-6feee715fd8a",
+  "title": "MSI Module Loaded by Non-System Binary",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the loading of `msi.dll` by a binary not located in `system32`, `syswow64`, `winsxs`, or `windows` directories. This is identified using Sysmon EventCode 7, which logs DLL loads, and filters out legitimate system paths. This activity is significant as it may indicate exploitation of CVE-2021-41379 or DLL side-loading attacks, both of which can lead to unauthorized system modifications. If confirmed malicious, this could allow an attacker to execute arbitrary code, escalate privileges, or persist within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [
+    "CVE-2021-41379"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350269"
+}

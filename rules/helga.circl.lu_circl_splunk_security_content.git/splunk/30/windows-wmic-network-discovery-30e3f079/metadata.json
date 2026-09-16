@@ -1,0 +1,23 @@
+{
+  "uuid": "30e3f079-6dd3-4135-8e1a-4f794d931a81",
+  "title": "Windows Wmic Network Discovery",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of Windows Management Instrumentation Command-line (WMIC) commands used for network interface discovery on a Windows system. Specifically, it identifies commands such as “wmic nic” that retrieve detailed information about the network adapters installed on the device. While these commands are commonly used by IT administrators for legitimate network inventory and diagnostics, they can also be leveraged by malicious actors for reconnaissance, enabling them to map network configurations and identify potential targets. Monitoring WMIC network interface queries allows security teams to detect suspicious or unauthorized enumeration activities, supporting early threat identification and response.ß",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350305"
+}

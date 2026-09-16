@@ -1,0 +1,23 @@
+{
+  "uuid": "0202d7af-4de1-4013-b907-69a3f5df779a",
+  "title": "Windows File and Directory Permissions Enable Inheritance",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the enabling of permission inheritance using ICACLS. This analytic identifies instances where ICACLS commands are used to enable permission inheritance on files or directories. The /inheritance:e flag, which restores inherited permissions from a parent directory, is monitored to detect changes that might reapply broader access control settings. Enabling inheritance can indicate legitimate administrative actions but may also signal attempts to override restrictive custom permissions, potentially exposing sensitive files to unauthorized access.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1222.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350392"
+}

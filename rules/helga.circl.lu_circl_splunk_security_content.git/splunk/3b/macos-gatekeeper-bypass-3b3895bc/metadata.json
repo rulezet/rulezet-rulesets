@@ -1,0 +1,23 @@
+{
+  "uuid": "3b3895bc-544e-43a0-b0a4-8976d16a2cd8",
+  "title": "MacOS Gatekeeper Bypass",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects known MacOS security bypass techniques that may be used to enable malicious code execution.\nSpecifically monitors for attempts to remove the com.apple.quarantine attribute using xattr, or to disable Gatekeeper protections via spctl --master-disable, both of which can allow untrusted or malicious applications to execute without standard system safeguards.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1553.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350088"
+}

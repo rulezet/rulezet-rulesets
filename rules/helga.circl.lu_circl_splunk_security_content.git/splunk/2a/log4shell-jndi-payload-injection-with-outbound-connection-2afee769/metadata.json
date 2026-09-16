@@ -1,0 +1,24 @@
+{
+  "uuid": "2afee769-bd70-45a5-b878-c9df4666c8dc",
+  "title": "Log4Shell JNDI Payload Injection with Outbound Connection",
+  "format": "splunk",
+  "author": "Jose Hernandez",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects Log4Shell JNDI payload injections via outbound connections. It identifies suspicious LDAP lookup functions in web logs, such as `${jndi:ldap://PAYLOAD_INJECTED}`, and correlates them with network traffic to known malicious IP addresses. This detection leverages the Web and Network_Traffic data models in Splunk. Monitoring this activity is crucial as it targets vulnerabilities in Java web applications using log4j, potentially leading to remote code execution. If confirmed malicious, attackers could gain unauthorized access, execute arbitrary code, and compromise sensitive data within the affected environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2021-44228"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349979"
+}

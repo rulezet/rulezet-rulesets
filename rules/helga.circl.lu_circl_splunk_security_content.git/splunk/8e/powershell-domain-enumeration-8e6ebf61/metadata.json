@@ -1,0 +1,24 @@
+{
+  "uuid": "8e6ebf61-4f37-4db9-ae9c-edb961c446d8",
+  "title": "PowerShell Domain Enumeration",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of PowerShell commands used for domain enumeration, such as `get-netdomaintrust` and `get-adgroupmember`.\nIt leverages PowerShell Script Block Logging (EventCode=4104) to capture and analyze the full command sent to PowerShell.\nThis activity is significant as it often indicates reconnaissance efforts by an attacker to map out the domain structure and identify key users and groups.\nIf confirmed malicious, this behavior could lead to further targeted attacks, privilege escalation, and unauthorized access to sensitive information within the domain.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350183"
+}

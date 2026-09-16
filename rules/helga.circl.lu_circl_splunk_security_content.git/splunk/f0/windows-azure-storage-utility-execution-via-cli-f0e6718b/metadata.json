@@ -1,0 +1,24 @@
+{
+  "uuid": "f0e6718b-2323-445c-a131-c1dd359680cb",
+  "title": "Windows Azure Storage Utility Execution Via CLI",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects the execution of Azure Storage utilities such as AzCopy and Storage Explorer via the CLI.\nThese tools enable large-scale data transfers over trusted cloud channels, allowing malicious activity to blend with legitimate traffic and evade traditional network defenses.\nAdversaries may leverage them post-compromise to stage or extract sensitive data from endpoints.\nWhile legitimate administrative use is expected, anomalous execution patterns, unexpected users, or unusual parent processes should be treated as potential indicators of compromise and investigated promptly.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1567.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350295"
+}

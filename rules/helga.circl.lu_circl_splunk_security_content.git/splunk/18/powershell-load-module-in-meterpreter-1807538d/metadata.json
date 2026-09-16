@@ -1,0 +1,24 @@
+{
+  "uuid": "1807538d-74f6-4da1-bda4-7de4cc7ac688",
+  "title": "Powershell Load Module in Meterpreter",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of suspicious PowerShell commands associated with Meterpreter modules, such as \"MSF.Powershell\" and \"MSF.Powershell.Meterpreter\". It leverages PowerShell Script Block Logging (EventCode=4104) to capture and analyze the full command sent to PowerShell. This activity is significant as it indicates potential post-exploitation actions, including credential dumping and persistence mechanisms. If confirmed malicious, an attacker could gain extensive control over the compromised system, escalate privileges, and maintain long-term access, posing a severe threat to the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350219"
+}

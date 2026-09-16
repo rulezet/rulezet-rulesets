@@ -1,0 +1,22 @@
+{
+  "uuid": "34092ba7-9cf0-472c-ba64-caf5c566321e",
+  "title": "High Volume of Bytes Out to Url",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a high volume of outbound web traffic, specifically over 1GB of data sent to a URL within a 2-minute window. It leverages the Web data model to identify significant uploads by analyzing the sum of bytes out. This activity is significant as it may indicate potential data exfiltration by malware or malicious insiders. If confirmed as malicious, this behavior could lead to unauthorized data transfer, resulting in data breaches and loss of sensitive information. Immediate investigation is required to determine the legitimacy of the transfer and mitigate any potential threats.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1567"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349956"
+}

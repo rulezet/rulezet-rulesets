@@ -1,0 +1,23 @@
+{
+  "uuid": "4230c3d2-acdf-48e9-a836-e533f28700f0",
+  "title": "Suspicious PlistBuddy Usage via OSquery",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the PlistBuddy utility on macOS to create or modify property list (.plist) files. It leverages OSQuery to monitor process events, specifically looking for commands that interact with LaunchAgents and set properties like RunAtLoad. This activity is significant because PlistBuddy can be used to establish persistence mechanisms, as seen in malware like Silver Sparrow. If confirmed malicious, this could allow an attacker to maintain persistence, execute arbitrary commands, and potentially escalate privileges on the compromised system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1543.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350073"
+}

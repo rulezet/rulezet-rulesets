@@ -1,0 +1,25 @@
+{
+  "uuid": "941e9ae9-3ae9-49fa-bd3e-b21bfbf44c3b",
+  "title": "RunDLL Loading DLL By Ordinal",
+  "format": "splunk",
+  "author": "Michael Haag, David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects rundll32.exe loading a DLL export function by ordinal value. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process command-line executions. This behavior is significant because adversaries may use rundll32.exe to execute malicious code while evading security tools that do not monitor this process. If confirmed malicious, this activity could allow attackers to execute arbitrary code, potentially leading to system compromise, privilege escalation, or persistent access within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350357"
+}

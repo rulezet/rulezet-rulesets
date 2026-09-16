@@ -1,0 +1,23 @@
+{
+  "uuid": "602eafec-26da-4885-911b-bd14dc279598",
+  "title": "Windows PowerSploit GPP Discovery",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the Get-GPPPassword PowerShell cmdlet, which is used to search for unsecured credentials in Group Policy Preferences (GPP). This detection leverages PowerShell Script Block Logging to identify specific script block text associated with this cmdlet. Monitoring this activity is crucial as it can indicate an attempt to retrieve and decrypt stored credentials from SYSVOL, potentially leading to unauthorized access. If confirmed malicious, this activity could allow an attacker to escalate privileges or move laterally within the network by exploiting exposed credentials.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1552.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350262"
+}

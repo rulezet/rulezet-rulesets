@@ -1,0 +1,26 @@
+{
+  "uuid": "3a3de5a7-2430-4b9d-ae6c-530baad4af64",
+  "title": "Cisco Isovalent - Pods Running Offensive Tools",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects execution of known offensive tooling from within Kubernetes pods, including network scanners and post-exploitation frameworks (e.g., nmap, masscan, zmap, impacket-*, hashcat, john, SharpHound, kube-hunter, peirates). We have created a macro named `linux_offsec_tool_processes` that contains the list of known offensive tooling found on linux systems. Adversaries commonly introduce these tools into compromised workloads to conduct discovery, lateral movement, credential access, or cluster reconnaissance. This behavior may indicate a compromised container or supply-chain abuse. Extra scrutiny is warranted for namespaces that do not typically run diagnostic scanners and for pods that suddenly begin invoking these binaries outside of normal maintenance activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1204.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350071"
+}

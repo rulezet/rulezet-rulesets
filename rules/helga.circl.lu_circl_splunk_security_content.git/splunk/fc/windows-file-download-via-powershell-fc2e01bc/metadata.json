@@ -1,0 +1,29 @@
+{
+  "uuid": "fc2e01bc-c5f8-4804-8f4c-17f3795cf877",
+  "title": "Windows File Download Via PowerShell",
+  "format": "splunk",
+  "author": "Michael Haag, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of PowerShell's download methods such as\n\"DownloadString\" and \"DownloadData\" from the WebClient class or Invoke-WebRequest\nand it's aliases \"IWR\" or \"Curl\".\nIt leverages data from Endpoint Detection and Response (EDR) agents, focusing on\nprocess execution logs that include command-line details.\nThis activity can be significant such methods and functions are commonly used in malicious\nPowerShell scripts to fetch and execute remote code.\nIf confirmed malicious, this behavior could allow an attacker to download and run\narbitrary code, potentially leading to unauthorized access, data exfiltration,\nor further compromise of the affected system.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:tool=\"Empire\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350011"
+}

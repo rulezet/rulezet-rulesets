@@ -1,0 +1,24 @@
+{
+  "uuid": "a134d544-fc0f-4225-a7f3-469ef48682fc",
+  "title": "CrushFTP Max Simultaneous Users From IP",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where CrushFTP has blocked access due to exceeding the maximum number of simultaneous connections from a single IP address. This activity may indicate brute force attempts, credential stuffing, or automated attacks against the CrushFTP server. This detection is particularly relevant following the discovery of CVE-2025-31161, an authentication bypass vulnerability in CrushFTP versions 10.0.0 through 10.8.3 and 11.0.0 through 11.3.0.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1110.001",
+    "T1110.004"
+  ],
+  "cve": [
+    "CVE-2025-31161"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349961"
+}

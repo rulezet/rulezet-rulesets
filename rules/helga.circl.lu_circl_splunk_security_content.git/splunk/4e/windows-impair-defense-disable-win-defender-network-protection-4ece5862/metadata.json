@@ -1,0 +1,23 @@
+{
+  "uuid": "4ece5862-13b7-4c7c-b3d9-8508f16aa20e",
+  "title": "Windows Impair Defense Disable Win Defender Network Protection",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows registry that disable Windows Defender Network Protection. It leverages data from the Endpoint.Registry data model, specifically monitoring changes to the EnableNetworkProtection registry entry. This activity is significant because disabling Network Protection can leave the system vulnerable to network-based threats by preventing Windows Defender from analyzing and blocking malicious network activity. If confirmed malicious, this action could allow attackers to bypass security measures, potentially leading to unauthorized access, data exfiltration, or further compromise of the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350151"
+}

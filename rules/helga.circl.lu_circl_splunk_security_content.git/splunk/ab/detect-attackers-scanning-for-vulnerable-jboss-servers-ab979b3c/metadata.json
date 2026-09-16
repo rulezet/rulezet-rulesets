@@ -1,0 +1,23 @@
+{
+  "uuid": "ab979b3c-2f5c-4f57-aeb9-1db9c676ea1b",
+  "title": "Detect attackers scanning for vulnerable JBoss servers",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies specific GET or HEAD requests to web servers that indicate reconnaissance attempts to find vulnerable JBoss servers. It leverages data from the Web data model, focusing on HTTP methods and URLs associated with JBoss management interfaces. This activity is significant because it often precedes exploitation attempts using tools like JexBoss, which can compromise the server. If confirmed malicious, attackers could gain unauthorized access, execute arbitrary code, or escalate privileges, leading to potential data breaches and system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1082",
+    "T1133"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349933"
+}

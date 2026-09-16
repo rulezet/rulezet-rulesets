@@ -1,0 +1,25 @@
+{
+  "uuid": "904bb2f9-7cd2-4391-ac50-a9d9105e343c",
+  "title": "Detect Remote Access Software Usage FileInfo",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of processes with file or code signing attributes from known remote access software within the environment. It leverages Sysmon EventCode 1 data and cross-references a lookup table of remote access utilities such as AnyDesk, GoToMyPC, LogMeIn, and TeamViewer. This activity is significant as adversaries often use these tools to maintain unauthorized remote access. If confirmed malicious, this could allow attackers to persist in the environment, potentially leading to data exfiltration or further compromise of the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Gozi\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350025"
+}

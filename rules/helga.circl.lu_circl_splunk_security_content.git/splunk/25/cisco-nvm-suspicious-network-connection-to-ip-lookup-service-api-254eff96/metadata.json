@@ -1,0 +1,24 @@
+{
+  "uuid": "254eff96-0c67-4fc1-ac2c-b6f8c8fd644e",
+  "title": "Cisco NVM - Suspicious Network Connection to IP Lookup Service API",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk, Janantha Marasinghe",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic identifies non-browser processes reaching out to public IP lookup or geolocation services,\nsuch as `ipinfo.io`, `icanhazip.com`, `ip-api.com`, and others.\nThese domains are commonly used by legitimate tools, but their usage outside of browsers may indicate\nnetwork reconnaissance, virtual machine detection, or staging by malware.\nThis activity is observed in post-exploitation frameworks, stealer malware, and advanced threat actor campaigns.\nThe detection relies on Cisco Network Visibility Module (NVM) telemetry and excludes known browser\nprocesses to reduce noise.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1016",
+    "T1590.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350159"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "d6e52e63-f907-4f58-992e-47e62c8a786c",
+  "title": "Windows Modify Registry ValleyRat PWN Reg Entry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows Registry specifically targeting `.pwn` file associations related to the ValleyRAT malware. ValleyRAT may create or alter registry entries to associate `.pwn` files with malicious processes, allowing it to execute harmful scripts or commands when these files are opened. By monitoring for unusual changes in registry keys linked to `.pwn` extensions, this detection enables security analysts to identify potential ValleyRAT infection attempts. Early detection of these modifications helps mitigate unauthorized execution and prevents further exploitation of the system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350398"
+}

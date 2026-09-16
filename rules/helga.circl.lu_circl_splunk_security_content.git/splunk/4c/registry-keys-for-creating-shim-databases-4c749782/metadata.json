@@ -1,0 +1,23 @@
+{
+  "uuid": "4c749782-a03c-4f32-ab6c-c2e1c8cea095",
+  "title": "Registry Keys for Creating SHIM Databases",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Teoderick Contreras, Splunk, Steven Dick, Bhavin Patel",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects registry activity related to the creation of application compatibility shims. It leverages data from the Endpoint.Registry data model, specifically monitoring registry paths associated with AppCompatFlags. This activity is significant because attackers can use shims to bypass security controls, achieve persistence, or escalate privileges. If confirmed malicious, this could allow an attacker to maintain long-term access, execute arbitrary code, or manipulate application behavior, posing a severe risk to the integrity and security of the affected systems.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350032"
+}

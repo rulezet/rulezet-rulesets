@@ -1,0 +1,23 @@
+{
+  "uuid": "8498cfe5-c845-471b-98c8-3588f0440912",
+  "title": "Local Account Discovery With Wmic",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of `wmic.exe` with command-line arguments used to query local user accounts, specifically the `useraccount` argument. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs that include command-line details. This activity is significant as it indicates potential reconnaissance efforts by adversaries to enumerate local users, which is a common step in situational awareness and Active Directory discovery. If confirmed malicious, this behavior could lead to further targeted attacks, privilege escalation, or lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1087.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350082"
+}

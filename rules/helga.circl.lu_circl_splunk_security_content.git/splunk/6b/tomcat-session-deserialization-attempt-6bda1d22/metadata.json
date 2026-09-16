@@ -1,0 +1,24 @@
+{
+  "uuid": "6bda1d22-4046-4d4d-826f-b65abbc9315e",
+  "title": "Tomcat Session Deserialization Attempt",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies potential exploitation of CVE-2025-24813 in Apache Tomcat through the second stage of the attack. This phase occurs when an attacker attempts to trigger deserialization of a previously uploaded malicious session file by sending a GET request with a specially crafted JSESSIONID cookie. These requests typically have specific characteristics, including a JSESSIONID cookie with a leading dot that matches a previously uploaded filename, and typically result in a HTTP 500 error when the exploitation succeeds.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2025-24813"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349947"
+}

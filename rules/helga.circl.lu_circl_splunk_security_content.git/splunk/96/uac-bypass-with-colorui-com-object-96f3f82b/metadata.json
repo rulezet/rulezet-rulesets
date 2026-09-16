@@ -1,0 +1,26 @@
+{
+  "uuid": "96f3f82b-784c-4c55-9981-ea5f7d56ae7e",
+  "title": "UAC Bypass With Colorui COM Object",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a potential UAC bypass using the colorui.dll COM Object. It leverages Sysmon EventCode 7 to identify instances where colorui.dll is loaded by a process other than colorcpl.exe, excluding common system directories. This activity is significant because UAC bypass techniques are often used by malware, such as LockBit ransomware, to gain elevated privileges without user consent. If confirmed malicious, this could allow an attacker to execute code with higher privileges, leading to further system compromise and persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350034"
+}

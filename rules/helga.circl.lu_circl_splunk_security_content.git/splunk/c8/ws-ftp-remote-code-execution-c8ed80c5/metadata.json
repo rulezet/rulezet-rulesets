@@ -1,0 +1,24 @@
+{
+  "uuid": "c8ed80c5-4d0e-4cd1-9c44-ab3f941e7d6e",
+  "title": "WS FTP Remote Code Execution",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potential Remote Code Execution (RCE) attempts exploiting CVE-2023-40044 in WS_FTP software.\nIt identifies HTTP POST requests to the \"/AHT/AhtApiService.asmx/AuthUser\" URL with a status code of 200.\nThis detection leverages the Web datamodel to monitor specific URL patterns and HTTP status codes. This activity is significant as it may indicate an exploitation attempt, potentially allowing an attacker to execute arbitrary code on the server.\nIf confirmed malicious, this could lead to unauthorized access, data exfiltration, or further compromise of the affected system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"metasploit\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2023-40044"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349946"
+}

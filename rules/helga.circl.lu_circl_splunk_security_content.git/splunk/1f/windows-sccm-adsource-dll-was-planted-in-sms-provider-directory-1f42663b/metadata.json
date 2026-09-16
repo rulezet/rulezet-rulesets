@@ -1,0 +1,25 @@
+{
+  "uuid": "1f42663b-3ca1-4b4b-9abb-7eafa96fa53b",
+  "title": "Windows SCCM Adsource DLL Was Planted In SMS Provider Directory",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation or modification of adsource.dll or other staging files with the name adsource_*.dll within the SCCM SMS Provider bin directory, consistent with exploitation of CVE-2026-47301.\nThis abuses a DLL side-loading vulnerability in the Microsoft Configuration Manager SMS Provider component.\nAn attacker can plant a malicious adsource.dll in the SCCMProvider bin\\X64 path, causing the SMS Provider service to load the attacker-controlled library in a privileged context.\nThe presence of renamed dlls alongside adsource.dll is a strong indicator of the classic DLL hijacking pattern where the legitimate library has been renamed so the malicious replacement can proxy calls to it.\nIf confirmed malicious, this activity represents a privilege escalation vector that can result in SYSTEM-level code execution on any host running the SCCM SMS Provider role.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.002"
+  ],
+  "cve": [
+    "CVE-2026-47301"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350084"
+}

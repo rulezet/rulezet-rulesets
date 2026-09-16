@@ -1,0 +1,25 @@
+{
+  "uuid": "25d0cb08-c214-4e91-8096-acbbd60b7d96",
+  "title": "Windows CrowdStrike Agent Registry Key Removal",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects delete events on the CrowdStrike registry keys.\nThese keys are removed as part of the agent uninstallation process.\nThis activity should only occur during planned events and any instances outside that should be evaluated for malicious activity such as CVE-2022-44721.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [
+    "CVE-2022-44721"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350024"
+}

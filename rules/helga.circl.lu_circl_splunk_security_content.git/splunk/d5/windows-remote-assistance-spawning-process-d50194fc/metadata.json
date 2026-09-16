@@ -1,0 +1,24 @@
+{
+  "uuid": "d50194fc-87b4-4146-be65-14ec7ed15a8a",
+  "title": "Windows Remote Assistance Spawning Process",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects Microsoft Remote Assistance (msra.exe) spawning PowerShell.exe or cmd.exe as a child process. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process creation events where msra.exe is the parent process. This activity is significant because msra.exe typically does not spawn command-line interfaces, indicating potential process injection or misuse. If confirmed malicious, an attacker could use this technique to execute arbitrary commands, escalate privileges, or maintain persistence on the compromised system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350190"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "d91d2e87-2cd8-4749-895d-15d0e9c2d222",
+  "title": "Microsoft SharePoint Server Elevation of Privilege",
+  "format": "splunk",
+  "author": "Michael Haag, Gowthamaraj Rajendran, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potential exploitation attempts against Microsoft SharePoint Server vulnerability CVE-2023-29357.\nIt leverages the Web datamodel to monitor for specific API calls and HTTP methods indicative of privilege escalation attempts.\nThis activity is significant as it may indicate an attacker is trying to gain unauthorized privileged access to the SharePoint environment.\nIf confirmed malicious, the impact could include unauthorized access to sensitive data, potential data theft, and further compromise of the SharePoint server, leading to a broader security breach.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2023-29357"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349978"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "07b9bc28-34d3-4a8a-abef-a8069794a744",
+  "title": "Disabling Windows Local Security Authority Defences via Registry",
+  "format": "splunk",
+  "author": "Dean Luxton,Teoderick Contreras Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the deletion of registry keys that disable Local Security Authority (LSA) protection and Microsoft Defender Device Guard. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on registry actions and paths associated with LSA and Device Guard settings. This activity is significant because disabling these defenses can leave a system vulnerable to various attacks, including credential theft and unauthorized code execution. If confirmed malicious, this action could allow attackers to bypass critical security mechanisms, leading to potential system compromise and persistent access.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349994"
+}

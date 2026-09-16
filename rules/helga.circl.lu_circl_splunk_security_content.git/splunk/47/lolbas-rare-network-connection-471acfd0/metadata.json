@@ -1,0 +1,28 @@
+{
+  "uuid": "471acfd0-36be-4f43-97dd-daa10eccbf73",
+  "title": "LOLBAS Rare Network Connection",
+  "format": "splunk",
+  "author": "Steven Dick, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies public network connections initiated by Living Off the Land Binaries and Scripts (LOLBAS) that rarely require direct outbound network access.\nIt leverages the Network Traffic data model and focuses on native Windows binaries where any public destination should be investigated and explicitly approved.\nThis activity may indicate proxy execution, process injection, payload download, command-and-control, or other abuse of trusted binaries to evade security controls.\nKeep in mind that some of these binaries, such as Netsh.exe, Gpscript.exe, Wmic.exe, etc., will occasionally communicate with public network resources to perform their intended function.\nExclude said processes from the detection if they are too noisy for your environment.\nJoin this detection with the Process Execution events to provide context and avoid false positives.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1218",
+    "T1567"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350112"
+}

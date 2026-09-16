@@ -1,0 +1,23 @@
+{
+  "uuid": "cf5787d4-cb5e-4a93-8463-a353073e8638",
+  "title": "Cisco IOS XE Implant Access",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the potential exploitation of the Cisco IOS XE vulnerability, CVE-2023-20198, in the Web User Interface.\nIt monitors POST requests to the \"/webui/logoutconfirm.html?logon_hash=*\" endpoint using the Web datamodel.\nThis activity can be significant as it indicates potential access request to the implant\nIf confirmed malicious, attackers could maintain privileged access, compromising the device's integrity and security.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2023-20198"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349988"
+}

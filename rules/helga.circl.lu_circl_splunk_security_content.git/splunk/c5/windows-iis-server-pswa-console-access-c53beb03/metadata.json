@@ -1,0 +1,23 @@
+{
+  "uuid": "c53beb03-c4da-48fd-815d-ff08bec9c2e4",
+  "title": "Windows IIS Server PSWA Console Access",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects access attempts to the PowerShell Web Access (PSWA) console on Windows IIS servers. It monitors web traffic for requests to PSWA-related URIs, which could indicate legitimate administrative activity or potential unauthorized access attempts. By tracking source IP, HTTP status, URI path, and HTTP method, it helps identify suspicious patterns or brute-force attacks targeting PSWA. This detection is crucial for maintaining the security of remote PowerShell management interfaces and preventing potential exploitation of this powerful administrative tool.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349966"
+}

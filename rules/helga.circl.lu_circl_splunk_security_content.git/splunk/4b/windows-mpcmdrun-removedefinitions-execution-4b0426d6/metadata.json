@@ -1,0 +1,23 @@
+{
+  "uuid": "4b0426d6-706f-4308-98ec-84c22798975a",
+  "title": "Windows MpCmdRun RemoveDefinitions Execution",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies the execution of MpCmdRun.exe with the \"-RemoveDefinitions\" argument, which is used to remove definitions from the Windows Malware Protection Engine.\nThis behavior can be significant as it might indicate potential malware activity or attempts to bypass security measures.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350394"
+}

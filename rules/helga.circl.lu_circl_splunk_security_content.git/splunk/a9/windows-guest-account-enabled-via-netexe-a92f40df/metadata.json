@@ -1,0 +1,23 @@
+{
+  "uuid": "a92f40df-32ce-4469-b00c-7832b3d91d9c",
+  "title": "Windows Guest Account Enabled Via Net.EXE",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "By default, the Windows guest account is heavily restricted, with limited permissions and access to system resources.\nHowever, if the guest account is activated, it can potentially be used to perform malicious activities such as installing malware, deleting files, stealing data, or even taking control of the system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350360"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "6ae33787-4b5a-4fff-95f3-07775a5994f1",
+  "title": "Linux Possible Cronjob Modification With Editor",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potential unauthorized modifications to Linux cronjobs using text editors like \"nano,\" \"vi,\" or \"vim.\" It identifies this activity by monitoring command-line executions that interact with cronjob configuration paths. This behavior is significant for a SOC as it may indicate attempts at privilege escalation or establishing persistent access. If confirmed malicious, the impact could be severe, allowing attackers to execute damaging actions such as data theft, system sabotage, or further network penetration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1053.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350090"
+}

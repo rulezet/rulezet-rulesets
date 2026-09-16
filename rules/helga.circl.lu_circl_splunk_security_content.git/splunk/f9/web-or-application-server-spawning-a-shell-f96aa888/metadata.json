@@ -1,0 +1,28 @@
+{
+  "uuid": "f96aa888-4769-40a2-ad51-9317fea45d53",
+  "title": "Web or Application Server Spawning a Shell",
+  "format": "splunk",
+  "author": "Michael Haag, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects instances where Java, or Tomcat\nprocesses spawn a Linux shell, which may indicate exploitation attempts, such as\nthose related to CVE-2021-44228 (Log4Shell). This detection leverages Endpoint Detection\nand Response (EDR) telemetry, focusing on process names and parent-child process\nrelationships. This activity is significant as it can signify a compromised Java\napplication, potentially leading to unauthorized shell access. If confirmed malicious,\nattackers could execute arbitrary commands, escalate privileges, or maintain persistent\naccess, posing a severe threat to the environment.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2021-44228"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350023"
+}

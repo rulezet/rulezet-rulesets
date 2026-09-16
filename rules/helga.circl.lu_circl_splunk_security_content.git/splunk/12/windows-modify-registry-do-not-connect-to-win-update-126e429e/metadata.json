@@ -1,0 +1,23 @@
+{
+  "uuid": "126e429e-c025-4813-ad75-389b7100c5ee",
+  "title": "Windows Modify Registry Do Not Connect To Win Update",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a suspicious modification to the Windows registry that disables automatic updates. It leverages data from the Endpoint datamodel, specifically monitoring changes to the registry path \"*\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows\\\\WindowsUpdate\\\\DoNotConnectToWindowsUpdateInternetLocations\" with a value of \"0x00000001\". This activity is significant as it can be used by adversaries, including malware like RedLine Stealer, to evade detection and prevent the system from receiving critical updates. If confirmed malicious, this could allow attackers to exploit vulnerabilities, persist in the environment, and potentially deploy additional payloads.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350339"
+}

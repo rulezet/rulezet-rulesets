@@ -1,0 +1,27 @@
+{
+  "uuid": "4331581a-c4d1-432f-9b13-7cb187c773c9",
+  "title": "Windows Phishing Recent ISO Exec Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of registry artifacts when an ISO container is opened, clicked, or mounted on a Windows operating system. It leverages data from the Endpoint.Registry data model, specifically monitoring registry keys related to recent ISO or IMG file executions. This activity is significant as adversaries increasingly use container-based phishing campaigns to bypass macro-based document execution controls. If confirmed malicious, this behavior could indicate an initial access attempt, potentially leading to further exploitation, persistence, or data exfiltration within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:banker=\"Gozi\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350331"
+}

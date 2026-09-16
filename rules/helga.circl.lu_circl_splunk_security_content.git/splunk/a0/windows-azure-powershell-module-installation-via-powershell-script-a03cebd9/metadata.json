@@ -1,0 +1,27 @@
+{
+  "uuid": "a03cebd9-efed-46a9-b59b-1f1e4dff238b",
+  "title": "Windows Azure PowerShell Module Installation Via PowerShell Script",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects the installation of Azure AD and cloud management modules via PowerShell Script Block Logging.\nTools such as AADInternals, AzureAD, MSOnline, and Az.Resources provide deep access to Azure Active Directory objects, user accounts, service principals, and tenant configurations making them high-value targets for adversaries conducting reconnaissance, privilege escalation, or persistence operations post-compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.007",
+    "T1069.003",
+    "T1078",
+    "T1098",
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350022"
+}

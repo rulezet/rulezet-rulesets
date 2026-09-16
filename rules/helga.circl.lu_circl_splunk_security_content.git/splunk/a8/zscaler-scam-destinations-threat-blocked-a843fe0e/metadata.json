@@ -1,0 +1,21 @@
+{
+  "uuid": "a843fe0e-9f5c-476e-ad22-9637bfcf4d13",
+  "title": "Zscaler Scam Destinations Threat Blocked",
+  "format": "splunk",
+  "author": "Gowthamaraj Rajendran, Rod Soto, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies blocked scam-related activities detected by Zscaler within a network. It leverages web proxy logs to examine actions flagged as scam threats, focusing on data points such as device owner, user, URL category, destination URL, and IP. This detection is significant for SOC as it helps in the early identification and mitigation of scam activities, ensuring network safety. If confirmed malicious, this activity could indicate attempts to deceive users, potentially leading to data theft or financial loss.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349985"
+}

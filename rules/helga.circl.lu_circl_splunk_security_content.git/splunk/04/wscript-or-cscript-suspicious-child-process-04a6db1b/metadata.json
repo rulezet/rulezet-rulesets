@@ -1,0 +1,28 @@
+{
+  "uuid": "04a6db1b-51f6-4c61-a1b0-906822ac5256",
+  "title": "Wscript Or Cscript Suspicious Child Process",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic identifies a suspicious spawned process by WScript or CScript process. This technique was a common technique used by adversaries and malware to execute different LOLBIN, other scripts like PowerShell or spawn a suspended process to inject its code as a defense evasion. This TTP may detect some normal script that uses several application tools that are in the list of the child process it detects but a good pivot and indicator that a script may execute suspicious code.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"WhisperGate\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"MuddyWater - G0069\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1134.004",
+    "T1543"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350306"
+}

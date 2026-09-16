@@ -1,0 +1,24 @@
+{
+  "uuid": "5c822af2-ab88-416c-9e5a-05373861a28b",
+  "title": "Windows DLL Side-Loading Process Child Of Calc",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies suspicious child processes spawned by calc.exe, indicative of a potential DLL side-loading technique. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process GUIDs, names, and parent processes. In previous versions of the \"calc.exe\" binary, namely on Windows 7, it was vulnerable to DLL side-loading, where an attacker is able to load an arbitrary DLL named \"WindowsCodecs.dll\". This activity was observed in Qakbot malware, back in 2022. If confirmed malicious, this behavior could allow attackers to execute arbitrary code, maintain persistence, and escalate privileges, posing a severe threat to the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350249"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "4c80cbd4-6139-4d5f-b5d8-e3598ea14d8a",
+  "title": "Cisco Isovalent - Non Allowlisted Image Use",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects use of container images that fall outside an approved\nallowlist, leveraging Cisco Isovalent/Tetragon runtime telemetry (image name and\nworkload identity). Adversaries commonly introduce untrusted or newly published\nimages to deploy tooling, establish persistence, or abuse supply‑chain trust. This\nbehavior may indicate image pulls from unauthorized registries, execution of\nunvetted software, or a drift from established deployment baselines. Extra scrutiny\nis warranted for namespaces and workloads that normally source images from restricted\nregistries, and for pods that suddenly begin running images outside expected\nprefixes.\nMaintain an environment‑specific allowlist via the macro `cisco_isovalent_allowed_images`\n(for example, allow trusted registries/prefixes such as ImageName=\"gcr.io/org/*\",\n\"registry.local/*\", or \"myco/*\") and keep it updated as new baseline images are\nintroduced. This analytic alerts on images NOT matching the allowlist.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350211"
+}

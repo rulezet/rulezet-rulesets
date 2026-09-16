@@ -1,0 +1,25 @@
+{
+  "uuid": "3cb54f86-dc45-4b77-9b60-0665da87eb9c",
+  "title": "Linux Suspicious Staging of Alternate System Files",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of sensitive system files such as nsswitch.conf, passwd, shadow, sudoers, and NSS shared libraries outside of their canonical /etc or /var/lib/docker paths.\nThis technique is associated with CVE-2025-32463 (chwoot), where an attacker stages a fake root directory containing spoofed system configuration files and NSS libraries to manipulate how privileged processes such as sudo resolve name services, enabling local privilege escalation by hijacking library loading without modifying the real /etc directory.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [
+    "CVE-2025-32463"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350329"
+}

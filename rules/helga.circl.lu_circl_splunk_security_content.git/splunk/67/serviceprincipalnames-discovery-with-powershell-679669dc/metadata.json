@@ -1,0 +1,25 @@
+{
+  "uuid": "679669dc-5581-4f18-acff-2600a08b4ce4",
+  "title": "ServicePrincipalNames Discovery with PowerShell",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of `powershell.exe` to query the domain for Service Principal Names (SPNs) using Script Block Logging EventCode 4104. It identifies the use of the KerberosRequestorSecurityToken class within the script block, which is equivalent to using setspn.exe. This activity is significant as it often precedes kerberoasting or silver ticket attacks, which can lead to credential theft. If confirmed malicious, attackers could leverage this information to escalate privileges or persist within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1558.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350215"
+}

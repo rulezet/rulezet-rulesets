@@ -1,0 +1,32 @@
+{
+  "uuid": "f3fcc0c1-a313-43a7-ad6d-ec7dae87112b",
+  "title": "Executables Or Script Creation In Temp Path",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the creation of executables or scripts in temporary file paths on Windows systems. It leverages the Endpoint.Filesystem data set to detect files with specific extensions (e.g., .exe, .dll, .ps1) created in temporary directories (e.g., \\windows\\Temp\\, \\AppData\\Local\\Temp\\).\nThis activity can be significant as adversaries often use these paths to evade detection and maintain persistence.\nIf confirmed malicious, this behavior could allow attackers to execute unauthorized code, escalate privileges, or persist within the environment, posing a significant security threat.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:stealer=\"Vidar\"",
+    "misp-galaxy:wiper=\"WhisperGate\"",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350042"
+}

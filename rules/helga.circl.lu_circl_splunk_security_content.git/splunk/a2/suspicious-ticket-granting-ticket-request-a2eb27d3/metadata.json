@@ -1,0 +1,26 @@
+{
+  "uuid": "a2eb27d3-b4b4-4fbb-a02d-2b38229cd3af",
+  "title": "Suspicious Ticket Granting Ticket Request",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious Kerberos Ticket Granting Ticket (TGT) requests that may indicate exploitation of CVE-2021-42278 and CVE-2021-42287. It leverages Event ID 4781 (account name change) and Event ID 4768 (TGT request) to identify sequences where a newly renamed computer account requests a TGT. This behavior is significant as it could represent an attempt to escalate privileges by impersonating a Domain Controller. If confirmed malicious, this activity could allow attackers to gain elevated access and potentially control over the domain environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078.002"
+  ],
+  "cve": [
+    "CVE-2021-42278",
+    "CVE-2021-42287"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350418"
+}

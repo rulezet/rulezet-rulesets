@@ -1,0 +1,23 @@
+{
+  "uuid": "f12daace-1ddc-4262-a38c-71d9e6a20acc",
+  "title": "Windows Findstr GPP Discovery",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the findstr command to search for unsecured credentials in Group Policy Preferences (GPP). It leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions involving findstr.exe with references to SYSVOL and cpassword. This activity is significant because it indicates an attempt to locate and potentially decrypt embedded credentials in GPP, which could lead to unauthorized access. If confirmed malicious, this could allow an attacker to escalate privileges or gain access to sensitive systems and data within the domain.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1552.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350421"
+}

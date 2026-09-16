@@ -1,0 +1,23 @@
+{
+  "uuid": "38defb81-b646-445e-976a-b8fa60042c16",
+  "title": "Citrix ADC and Gateway CitrixBleed 2 Memory Disclosure",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies potential exploitation attempts of CVE-2025-5777 (CitrixBleed 2), a memory disclosure vulnerability in Citrix NetScaler ADC and Gateway.\nThe vulnerability is triggered by sending POST requests with incomplete form data to the /p/u/doAuthentication.do endpoint, causing the device to leak memory contents including session tokens and authentication materials.\nThis search looks for POST requests to the vulnerable endpoint that may indicate scanning or exploitation attempts.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-5777"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349930"
+}

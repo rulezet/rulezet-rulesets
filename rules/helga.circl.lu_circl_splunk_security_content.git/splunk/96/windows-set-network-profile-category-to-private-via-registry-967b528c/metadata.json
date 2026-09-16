@@ -1,0 +1,23 @@
+{
+  "uuid": "967b528c-5acc-4058-a959-fdcb446f9a76",
+  "title": "Windows Set Network Profile Category to Private via Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to modify the Windows Registry to change a network profile's category to \"Private\", which may indicate an adversary is preparing the environment for lateral movement or reducing firewall restrictions. Specifically, this activity involves changes to the Category value within the HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Profiles\\{GUID} registry path. A value of 1 corresponds to a private network profile, which typically enables less restrictive firewall policies. While this action can occur during legitimate network configuration, it may also be a sign of malicious behavior when combined with other indicators such as suspicious account activity, unexpected administrative privilege usage, or execution of unsigned binaries. Monitoring for this registry modification—especially outside standard IT processes or correlated with persistence mechanisms—can help identify stealthy post-exploitation activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350079"
+}

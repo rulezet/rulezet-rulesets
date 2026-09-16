@@ -1,0 +1,28 @@
+{
+  "uuid": "11f0a5ff-d3b8-422b-a834-08527799ec35",
+  "title": "Common Ransomware Notes",
+  "format": "splunk",
+  "author": "David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of files with names commonly associated with ransomware notes.\nIt leverages file-system activity data from the Endpoint Filesystem data model, typically populated by endpoint detection and response (EDR) tools or Sysmon logs.\nThis activity is significant because ransomware notes indicate a potential ransomware attack, which can lead to data encryption and extortion.\nIf confirmed malicious, this activity could result in significant data loss, operational disruption, and financial impact due to ransom demands.\nNote that this analytic relies on a lookup table (ransomware_notes_lookup) that contains known ransomware note file names.\nEnsure that this lookup table is regularly updated to include new ransomware note file names as they are identified in the threat landscape.\nAlso this analytic leverages a sub-search to enhance performance. sub-searches have limitations on the amount of data they can return. Keep this in mind if you have an extensive list of ransomware note file names.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:ransomware=\"Clop\"",
+    "misp-galaxy:ransomware=\"Ryuk ransomware\"",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350163"
+}

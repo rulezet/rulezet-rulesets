@@ -1,0 +1,23 @@
+{
+  "uuid": "84c17201-552f-4ee5-9eeb-b3e73fcdb8f3",
+  "title": "Adobe ColdFusion Access Control Bypass",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potential exploitation attempts against Adobe ColdFusion vulnerabilities CVE-2023-29298 and CVE-2023-26360.\nIt monitors requests to specific ColdFusion Administrator endpoints, especially those with an unexpected additional forward slash, using the Web datamodel.\nThis activity is significant for a SOC as it indicates attempts to bypass access controls, which can lead to unauthorized access to ColdFusion administration endpoints.\nIf confirmed malicious, this could result in data theft, brute force attacks, or further exploitation of other vulnerabilities, posing a serious security risk to the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2023-29298"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349932"
+}

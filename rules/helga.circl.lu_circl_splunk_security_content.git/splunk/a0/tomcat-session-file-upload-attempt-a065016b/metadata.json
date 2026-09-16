@@ -1,0 +1,24 @@
+{
+  "uuid": "a065016b-2aab-4b13-ac45-f2287ee87714",
+  "title": "Tomcat Session File Upload Attempt",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies potential exploitation of CVE-2025-24813 in Apache Tomcat through the initial stage of the attack. This first phase occurs when an attacker attempts to upload a malicious serialized Java object with a .session file extension via an HTTP PUT request. When successful, these uploads typically result in HTTP status codes 201 (Created) or 409 (Conflict) and create the foundation for subsequent deserialization attacks by placing malicious content in a location where Tomcat's session management can access it.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2025-24813"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349996"
+}

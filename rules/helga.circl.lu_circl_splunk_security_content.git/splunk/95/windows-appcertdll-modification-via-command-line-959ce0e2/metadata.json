@@ -1,0 +1,23 @@
+{
+  "uuid": "959ce0e2-c1c8-4ffd-becf-577eb6ca7033",
+  "title": "Windows AppCertDLL Modification Via Command Line",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects attempts to modify AppCertDLL registry keys via some command line utility. Values under this key are used to specify DLLs loaded by the Windows Session Manager.\nSuch modifications can be abused by attackers to load malicious code early in the system startup process, enabling persistent malware execution with high privileges.\nIf confirmed malicious, this behavior may lead to system compromise, persistence, and the evasion of security controls.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.009"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350046"
+}

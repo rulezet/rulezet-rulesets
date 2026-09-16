@@ -1,0 +1,25 @@
+{
+  "uuid": "3c4158e0-7f70-487e-90bd-843602b0feaa",
+  "title": "Windows PowerShell Invoke-RestMethod IP Information Collection",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of PowerShell's Invoke-RestMethod cmdlet to collect geolocation data from ipinfo.io or IP address information from api.ipify.org. This behavior leverages PowerShell Script Block Logging to identify scripts that gather external IP information and potential geolocation data. This activity is significant as it may indicate reconnaissance efforts, where threat actors are attempting to determine the geographical location or network details of a compromised system. While some legitimate software may use these services, this pattern is commonly observed in malware and post-exploitation toolkits like those used by Water Gamayun threat actors.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1016",
+    "T1059.001",
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350300"
+}

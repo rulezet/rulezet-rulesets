@@ -1,0 +1,23 @@
+{
+  "uuid": "1f412ca6-202d-42b8-8fa6-878c6c655ac1",
+  "title": "Windows Local LLM Framework Execution",
+  "format": "splunk",
+  "author": "Rod Soto, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects execution of unauthorized local LLM frameworks (Ollama, LM Studio, GPT4All, Jan, llama.cpp, KoboldCPP, Oobabooga, NutStudio) and Python-based AI/ML libraries (HuggingFace Transformers, LangChain) on Windows endpoints by leveraging process creation events.\nIt identifies cases where known LLM framework executables are launched or command-line arguments reference AI/ML libraries.\nThis activity is significant as it may indicate shadow AI deployments, unauthorized model inference operations, or potential data exfiltration through local AI systems.\nIf confirmed malicious, this could lead to unauthorized access to sensitive data, intellectual property theft, or circumvention of organizational AI governance policies.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350268"
+}

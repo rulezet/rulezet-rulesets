@@ -1,0 +1,24 @@
+{
+  "uuid": "27f88863-fe77-4f73-9ae4-9f1cdc092f4b",
+  "title": "Windows Potato Privilege Escalation Tool Execution",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects execution of known Potato-family privilege escalation tools based on original file name, process name, or binary path.\nA tool class that has been a dominant post-compromise privilege escalation method for over a decade and remains actively used by ransomware operators, red teams, and nation-state actors alike.\nThe Potato family exploits Windows token impersonation and privilege abuse to escalate from a service account, IIS worker process, or other restricted context to SYSTEM.\nThe core abuse chain across most variants involves tricking a SYSTEM-level process into authenticating to an attacker-controlled endpoint, capturing that authentication, and impersonating the resulting SYSTEM token to spawn an elevated process.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350326"
+}

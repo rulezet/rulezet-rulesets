@@ -1,0 +1,31 @@
+{
+  "uuid": "936ea8c8-b0c3-4685-bc82-018a7de89cd0",
+  "title": "Windows Exchange Autodiscover SSRF Abuse",
+  "format": "splunk",
+  "author": "Michael Haag, Nathaniel Stearns, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic identifies potential exploitation attempts of ProxyShell (CVE-2021-34473, CVE-2021-34523, CVE-2021-31207) and ProxyNotShell (CVE-2022-41040, CVE-2022-41082) vulnerabilities in Microsoft Exchange Server. The detection focuses on identifying the SSRF attack patterns used in these exploit chains. The analytic monitors for suspicious POST requests to /autodiscover/autodiscover.json endpoints that may indicate attempts to enumerate LegacyDN attributes as part of initial reconnaissance. It also detects requests containing X-Rps-CAT parameters that could indicate attempts to impersonate Exchange users and access the PowerShell backend. Additionally, it looks for MAPI requests that may be used to obtain user SIDs, along with suspicious user agents (particularly Python-based) commonly used in automated exploit attempts. If successful, these attacks can lead to remote code execution as SYSTEM, allowing attackers to deploy webshells, access mailboxes, or gain persistent access to the Exchange server and potentially the broader network environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2021-31207",
+    "CVE-2021-34473",
+    "CVE-2021-34523",
+    "CVE-2022-41040",
+    "CVE-2022-41082"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349968"
+}
