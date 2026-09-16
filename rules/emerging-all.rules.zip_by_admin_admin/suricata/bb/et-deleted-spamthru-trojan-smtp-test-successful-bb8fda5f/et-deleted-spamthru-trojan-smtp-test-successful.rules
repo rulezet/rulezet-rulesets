@@ -1,0 +1,1 @@
+alert tcp any 25 -> any any (msg:"ET DELETED SpamThru trojan SMTP test successful"; flow:established,to_client; dsize:6; content:"XSMTPX"; reference:url,www.secureworks.com/analysis/spamthru/; classtype:trojan-activity; sid:2003139; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

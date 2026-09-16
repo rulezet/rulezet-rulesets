@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Win32.WinSpy.pob Sending Data over SMTP 2"; flow:to_server,established; content:"Subject|3a 20|LOG|20|FILE|20 20|Current User|3a|"; reference:md5,d95845c510ec1f5ad38cb9ccab16c38b; classtype:trojan-activity; sid:2018020; rev:3; metadata:created_at 2014_01_28, signature_severity Unknown, updated_at 2019_07_26;)

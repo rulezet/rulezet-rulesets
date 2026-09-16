@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 1024: -> $EXTERNAL_NET 1024: (msg:"ET DELETED Vipdataend C&C Traffic - Checkin (XY)"; flow:established,to_server; dsize:<20; content:"XY|3a|2|7c|212"; offset:0; depth:9; classtype:trojan-activity; sid:2007970; rev:8; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

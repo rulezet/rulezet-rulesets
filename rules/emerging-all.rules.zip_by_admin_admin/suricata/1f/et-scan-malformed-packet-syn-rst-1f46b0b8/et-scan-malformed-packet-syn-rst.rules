@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"ET SCAN Malformed Packet SYN RST"; flags:SR; classtype:bad-unknown; sid:2011368; rev:2; metadata:created_at 2010_09_28, confidence Medium, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

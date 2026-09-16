@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET DELETED FAKEAV Gemini - JavaScript Redirection To FakeAV Binary"; flow:established,to_client; content:"<script type=|22|text/javascript|22|>"; nocase; content:"location.assign|28|"; nocase; within:17; classtype:bad-unknown; sid:2011918; rev:5; metadata:created_at 2010_11_10, signature_severity Unknown, updated_at 2019_07_26;)

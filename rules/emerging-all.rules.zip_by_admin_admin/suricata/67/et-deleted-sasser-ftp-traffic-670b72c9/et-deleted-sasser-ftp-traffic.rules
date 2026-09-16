@@ -1,0 +1,1 @@
+alert tcp any any -> any 5554 (msg:"ET DELETED Sasser FTP Traffic"; flow: to_server,established; content:"up.exe"; reference:url,vil.mcafeesecurity.com/vil/content/Print125009.htm; classtype:misc-activity; sid:2000040; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

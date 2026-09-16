@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED LDPinch Checkin (4)"; flow:established,to_server; content:"a="; content:"&b=Pinch"; nocase; distance:0; content:"&c="; distance:0; classtype:trojan-activity; sid:2008061; rev:5; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

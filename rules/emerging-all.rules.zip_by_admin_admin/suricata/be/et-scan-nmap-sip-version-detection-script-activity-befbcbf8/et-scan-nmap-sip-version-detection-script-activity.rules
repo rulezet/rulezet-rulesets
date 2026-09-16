@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5060:5061 (msg:"ET SCAN NMAP SIP Version Detection Script Activity"; content:"Via|3A| SIP/2.0/TCP nm"; content:"From|3A| <sip|3A|nm@nm"; within:150; fast_pattern; classtype:attempted-recon; sid:2018318; rev:1; metadata:created_at 2014_03_25, confidence Low, signature_severity Informational, updated_at 2019_07_26;)

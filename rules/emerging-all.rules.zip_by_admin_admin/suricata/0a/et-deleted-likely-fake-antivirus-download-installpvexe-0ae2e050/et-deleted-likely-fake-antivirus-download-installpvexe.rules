@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Likely Fake Antivirus Download installpv.exe"; flow:established,to_server; content:"GET"; http_method; content:"/installpv.exe"; http_uri; nocase; classtype:trojan-activity; sid:2010057; rev:5; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

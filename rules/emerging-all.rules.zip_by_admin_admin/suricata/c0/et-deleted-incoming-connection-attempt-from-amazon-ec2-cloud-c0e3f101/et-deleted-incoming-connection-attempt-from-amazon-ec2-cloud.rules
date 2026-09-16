@@ -1,0 +1,1 @@
+alert tcp [174.129.0.0/16,67.202.0.0/18,79.125.0.0/17,184.72.0.0/15,75.101.128.0/17,174.129.0.0/16,204.236.128.0/17] any -> $HOME_NET any (msg:"ET DELETED Incoming Connection Attempt From Amazon EC2 Cloud"; flow:to_server; flags:S,12; classtype:misc-activity; sid:2010815; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

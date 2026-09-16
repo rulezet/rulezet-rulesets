@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"ET SCAN NMAP SIP Version Detect OPTIONS Scan"; flow:established,to_server; content:"OPTIONS sip|3A|nm SIP/"; depth:19; classtype:attempted-recon; sid:2018317; rev:1; metadata:created_at 2014_03_25, confidence Low, signature_severity Informational, updated_at 2019_07_26;)

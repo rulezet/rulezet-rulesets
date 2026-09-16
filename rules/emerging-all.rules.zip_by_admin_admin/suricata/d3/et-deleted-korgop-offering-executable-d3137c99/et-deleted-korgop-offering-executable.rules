@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> any 445 (msg:"ET DELETED Korgo.P offering executable"; flow: to_server,established; content:"|FF|SMB"; depth: 10; content:"|58|http"; content:".exe"; nocase; within: 36; reference:url,www.f-secure.com/v-descs/korgo_p.shtml; classtype:trojan-activity; sid:2001337; rev:8; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

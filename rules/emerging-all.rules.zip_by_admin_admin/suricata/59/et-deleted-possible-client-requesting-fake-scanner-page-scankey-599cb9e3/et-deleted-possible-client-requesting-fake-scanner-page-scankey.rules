@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED Possible Client requesting fake scanner page /scan/?key="; flow:established,to_server; content:"/scan/?key="; http_uri; classtype:bad-unknown; sid:2011545; rev:3; metadata:created_at 2010_09_27, signature_severity Unknown, updated_at 2019_07_26;)

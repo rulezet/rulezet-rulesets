@@ -1,0 +1,1 @@
+alert ip $EXTERNAL_NET $SHELLCODE_PORTS -> $HOME_NET any (msg:"GPL SHELLCODE x86 NOOP"; content:"|90 90 90 90 90 90 90 90 90 90 90 90 90 90|"; depth:128; reference:arachnids,181; classtype:shellcode-detect; sid:2100648; rev:8; metadata:created_at 2010_09_23, confidence High, signature_severity Minor, updated_at 2019_07_26;)

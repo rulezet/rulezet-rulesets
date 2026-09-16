@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 1802 -> $HOME_NET any (msg:"ET DELETED TroDjan 2.0 FTP Channel Open Command"; flow:established,to_server; dsize:7; content:"ftpopen"; classtype:trojan-activity; sid:2008588; rev:3; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

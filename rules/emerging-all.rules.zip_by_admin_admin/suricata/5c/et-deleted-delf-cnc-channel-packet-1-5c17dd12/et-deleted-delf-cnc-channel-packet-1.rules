@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 1024: (msg:"ET DELETED Delf CnC Channel Packet 1"; flowbits:isnotset,ET.unk.1; flow:established,to_server; dsize:<200; content:"|8e 00 d0 00|"; depth:4; flowbits:set,ET.unk.1; flowbits:noalert; classtype:command-and-control; sid:2008006; rev:7; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 9295 (msg:"ET DELETED Troxen GetSpeed Request"; flow:established,to_server; content:"GetSpeed |0d 0a|"; depth:11; reference:md5,af89d15930fe59dcb621069abc83cc66; classtype:trojan-activity; sid:2011233; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

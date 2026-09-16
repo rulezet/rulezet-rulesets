@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Rdxrp.com Traffic (Generic)"; flow: to_server,established; content:"/rdxr"; nocase; http_uri; content:".dat"; nocase; http_uri; classtype:trojan-activity; sid:2001312; rev:8; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

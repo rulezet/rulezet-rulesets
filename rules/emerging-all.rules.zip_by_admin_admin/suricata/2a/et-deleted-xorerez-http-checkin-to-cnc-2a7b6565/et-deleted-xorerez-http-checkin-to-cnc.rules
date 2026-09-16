@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED Xorer.ez HTTP Checkin to CnC"; flow:established,to_server; content:"/qq.html?username="; nocase; http_uri; content:"&zhaosp="; nocase; http_uri; classtype:command-and-control; sid:2008081; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

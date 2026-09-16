@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 81 -> $EXTERNAL_NET any (msg:"ET DELETED Bifrose Response from victim"; flow:established,from_server; dsize:13; content:"|09 00 00 00 9a|"; depth:5; content:"|74|"; distance:7; within:8; classtype:trojan-activity; sid:2009797; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

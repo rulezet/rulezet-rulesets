@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 8444 (msg:"ET INFO Bitmessage Activity"; flow:established,to_server; content:"version"; offset:4; depth:7; content:"Bitmessage|3a|"; distance:0; reference:url,bitmessage.org; classtype:policy-violation; sid:2019746; rev:2; metadata:created_at 2014_11_19, confidence High, signature_severity Informational, updated_at 2019_07_26;)

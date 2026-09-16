@@ -1,0 +1,1 @@
+alert tcp $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER Mambo.PerlBot Spreader IRC DDOS Attack Done Message"; flow:established,to_server; content:"PRIVMSG|20|"; content:"Attack"; fast_pattern; within:50; content:"done"; within:8; classtype:trojan-activity; sid:2017832; rev:1; metadata:created_at 2013_12_10, signature_severity Major, updated_at 2019_07_26;)

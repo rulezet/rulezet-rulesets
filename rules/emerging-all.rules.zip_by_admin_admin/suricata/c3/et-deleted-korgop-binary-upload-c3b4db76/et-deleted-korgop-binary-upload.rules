@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> any any (msg:"ET DELETED Korgo.P binary upload"; flow: to_server,established; content:"|aa4f7ea86c90457d686868f0de687a68689768686868|"; reference:url,www.f-secure.com/v-descs/korgo_p.shtml; classtype:trojan-activity; sid:2001338; rev:9; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

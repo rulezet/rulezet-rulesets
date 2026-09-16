@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 1024: (msg:"ET DELETED Emogen Infection Checkin Initial Packet"; flow:established,to_server; dsize:<100; content:"|00 00 00 00 00 00|WindowsXP|00 00 00|"; flowbits:set,ET.emogen1; flowbits:noalert; classtype:trojan-activity; sid:2008269; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 6667 -> $HOME_NET any (msg:"ET DELETED iroffer IRC Bot offered files advertisement"; flow: from_server,established; content:"|54 6F 74 61 6C 20 4F 66 66 65 72 65 64 3A|"; depth: 500; reference:url,iroffer.org; classtype:trojan-activity; sid:2000339; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)
