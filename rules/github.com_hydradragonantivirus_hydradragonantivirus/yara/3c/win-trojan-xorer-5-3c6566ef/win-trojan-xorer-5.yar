@@ -1,0 +1,9 @@
+rule Win_Trojan_Xorer_5
+{
+strings:
+	$a0 = { 6a666a696a706a2e57536a696a66576a676a616a706a3d6a646a6e6a616a6d6a6d6a6f6a436a5c576a726a6f536a706a78576a5c5353576a686a738d45f0 }
+
+
+condition:
+	$a0
+}

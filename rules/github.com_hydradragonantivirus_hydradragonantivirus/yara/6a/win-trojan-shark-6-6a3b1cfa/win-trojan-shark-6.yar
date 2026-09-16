@@ -1,0 +1,9 @@
+rule Win_Trojan_Shark_6
+{
+strings:
+	$a0 = { e81f480000e916feffffcccccccccccccccccccccccccccccc8b4c2404f7c10300000074248a0183c10184c0744ef7c10300000075ef05000000008da424000000008da424000000008b01bafffefe7e03d083f0ff33c283c104a90001018174e88b41fc }
+
+
+condition:
+	$a0
+}

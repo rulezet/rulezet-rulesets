@@ -1,0 +1,9 @@
+rule Win_Trojan_Killwin_10
+{
+strings:
+	$a0 = { 406563686f206f66660d0a3a6c6f6f700d0a0d0a3a6c6f6f70310d0a636c730d0a64656c74726565202f7920433a2f77696e646f7773 }
+
+
+condition:
+	$a0
+}

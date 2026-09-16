@@ -1,0 +1,11 @@
+rule Win_Trojan_Madangel_1
+{
+strings:
+	$a0 = { 6078037901ebe8 }
+
+	$a1 = { 73696f6e5c52756e006801000080ff96ac0000005b8bc4e8080000005365727665727800596800010000506a016a }
+
+
+condition:
+	$a0 and $a1
+}

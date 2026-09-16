@@ -1,0 +1,9 @@
+rule Win_Trojan_Zlob_2195
+{
+strings:
+	$a0 = { 8bc8ba94564000b890564000e80aebffffb890564000ba6c334000e85bebffff8b1590564000b880334000e873faffffe8a6f9ffff33c05a595964891068e43240008d45e8ba02000000e804eaffff }
+
+
+condition:
+	$a0
+}

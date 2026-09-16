@@ -1,0 +1,9 @@
+rule Win_Trojan_Wsnpoem_1
+{
+strings:
+	$a0 = { 1a0e1705aeb6cdca998357bc6fa0feee22c109feb0b0fdfcc4bbd0ed04c348e1beb5fff73e0d1006adb006b8a5a8fe0506031b59199ae6e890af08f7b1aed3e5a9a6dbec9e9ce54e1791c4d1b1ff5b3c06a906e8ac9900e27991fad73a10f2f7aeafe7efb4aff3e99e8b6b44e6c17dbfa237e9f1b6b1f5eba0775c5de20352644577f9e58a97fff8a5900159 }
+
+
+condition:
+	$a0
+}

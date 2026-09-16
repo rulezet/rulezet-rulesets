@@ -1,0 +1,9 @@
+rule Win_Trojan_Killfiles_39
+{
+strings:
+	$a0 = { 74736b696c6c206578706c6f7265720d0a64656c202577696e646972255c6578706c6f7265722e657865 }
+
+
+condition:
+	$a0
+}
