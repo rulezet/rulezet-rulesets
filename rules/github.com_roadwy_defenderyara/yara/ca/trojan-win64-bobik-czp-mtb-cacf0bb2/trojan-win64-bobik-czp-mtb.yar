@@ -1,0 +1,9 @@
+rule Trojan_Win64_Bobik_CZP_MTB{
+	meta:
+		description = "Trojan:Win64/Bobik.CZP!MTB,SIGNATURE_TYPE_PEHSTR_EXT,05 00 05 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {44 8b d0 eb ?? ?? c1 e2 04 eb ?? ?? ?? 41 c1 ea 05 eb ?? ?? ?? 41 33 d2 71 ?? 69 07 ?? ?? ?? ?? 01 2c 45 8b d4 eb 02 03 70 41 8b cc eb ?? ?? ?? c1 e9 0b eb ?? ?? ?? ?? 83 e1 } 	condition:
+		((#a_03_0  & 1)*5) >=5
+ 
+}

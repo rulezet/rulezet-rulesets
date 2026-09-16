@@ -1,0 +1,9 @@
+rule Trojan_Win64_QakbotPacker_QM_MTB{
+	meta:
+		description = "Trojan:Win64/QakbotPacker.QM!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {f5 d7 39 07 d7 e7 ?? 03 35 ?? ?? ?? ?? 98 35 ?? ?? ?? ?? e0 ?? ff 07 d7 4a 33 98 ?? ?? ?? ?? 6a ?? 75 ?? f5 1a d7 e4 ?? 6a 0f 75 ?? f5 2b 73 ?? f5 } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}

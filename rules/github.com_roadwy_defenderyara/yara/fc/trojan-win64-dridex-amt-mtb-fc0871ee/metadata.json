@@ -1,0 +1,21 @@
+{
+  "uuid": "fc0871ee-374f-4829-a1f1-c48dc9fb721e",
+  "title": "Trojan_Win64_Dridex_AMT_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win64/Dridex.AMT!MTB,SIGNATURE_TYPE_PEHSTR_EXT,16 00 16 00 05 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:banker=\"Dridex\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/258773"
+}
