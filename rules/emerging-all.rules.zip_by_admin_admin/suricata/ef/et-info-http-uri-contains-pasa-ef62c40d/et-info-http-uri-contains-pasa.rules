@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"ET INFO HTTP URI contains pasa="; flow:established,to_server; http.uri; content:"pasa="; nocase; pcre:"/(?<=(?:\?|&))pasa=(?!&)./i"; classtype:misc-activity; sid:2017081; rev:4; metadata:attack_target Client_Endpoint, created_at 2013_07_02, confidence High, signature_severity Informational, updated_at 2023_05_01; target:src_ip;)

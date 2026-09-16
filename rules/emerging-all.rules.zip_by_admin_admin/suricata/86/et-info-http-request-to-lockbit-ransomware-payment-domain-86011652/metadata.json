@@ -1,0 +1,23 @@
+{
+  "uuid": "86011652-4c94-4eda-9a84-f5862a9beb4b",
+  "title": "ET INFO HTTP Request to Lockbit Ransomware Payment Domain",
+  "format": "suricata",
+  "author": "Unknown",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "No description provided",
+  "source": "emerging-all.rules.zip by admin admin",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"LockBit\""
+  ],
+  "attack_techniques": [
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2025-12-19",
+  "last_modified": "2025-12-19",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/139462"
+}
