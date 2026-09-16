@@ -1,0 +1,19 @@
+{
+  "uuid": "21677ae1-acb2-4588-a54b-ca64fd150342",
+  "title": "SUSP_PE_Compromised_Certificate_Feb25",
+  "format": "yara",
+  "author": "Jonathan Peters",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious PE files signed with a certificate used in a widespread phishing attack in February 2025",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184650"
+}

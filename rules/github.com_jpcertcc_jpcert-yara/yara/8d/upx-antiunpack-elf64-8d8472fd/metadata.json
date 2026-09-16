@@ -1,0 +1,20 @@
+{
+  "uuid": "8d8472fd-ab2c-4868-a936-5750a067a675",
+  "title": "upx_antiunpack_elf64",
+  "format": "yara",
+  "author": "JPCERT/CC Incident Response Group",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "UPX Anti-Unpacking technique to magic renamed for ELF64",
+  "source": "https://github.com/JPCERTCC/jpcert-yara",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "runtime-packer:pe=\"upx\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184462"
+}

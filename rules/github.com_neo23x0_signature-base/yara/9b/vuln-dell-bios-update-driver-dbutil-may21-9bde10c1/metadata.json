@@ -1,0 +1,23 @@
+{
+  "uuid": "9bde10c1-851f-43af-bd88-6d72a467a7d3",
+  "title": "VULN_Dell_BIOS_Update_Driver_DBUtil_May21",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vulnerable DELL BIOS update driver that allows privilege escalation as reported in CVE-2021-21551 - DBUtil_2_3.Sys - note: it's usual location is in the C:\\\\Windows\\\\Temp folder",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2021-21551"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184616"
+}

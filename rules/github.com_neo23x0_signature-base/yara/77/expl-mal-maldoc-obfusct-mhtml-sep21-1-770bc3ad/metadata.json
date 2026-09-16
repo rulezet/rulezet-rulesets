@@ -1,0 +1,21 @@
+{
+  "uuid": "770bc3ad-c8c8-47b7-938c-c7307f4d0725",
+  "title": "EXPL_MAL_MalDoc_OBFUSCT_MHTML_Sep21_1",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious office reference files including an obfuscated MHTML reference exploiting CVE-2021-40444",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2021-40444"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184683"
+}

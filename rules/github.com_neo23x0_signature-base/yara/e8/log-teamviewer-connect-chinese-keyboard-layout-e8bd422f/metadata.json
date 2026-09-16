@@ -1,0 +1,21 @@
+{
+  "uuid": "e8bd422f-a93e-4aab-8003-599b4c54cd99",
+  "title": "LOG_TeamViewer_Connect_Chinese_Keyboard_Layout",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a suspicious TeamViewer log entry stating that the remote systems had a Chinese keyboard layout",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184624"
+}
