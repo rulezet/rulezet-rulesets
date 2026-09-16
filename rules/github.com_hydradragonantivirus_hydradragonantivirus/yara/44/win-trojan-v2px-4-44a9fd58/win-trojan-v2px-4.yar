@@ -1,0 +1,9 @@
+rule Win_Trojan_V2PX_4
+{
+strings:
+	$a0 = { 34f7f54d429f300630023ada3ad6da2bda36c23179afa6a0a7ad11a0790d16f0f18c8a888f8e88828b8e828a858ebcb1bfadb9a9bbadb5a1b7adb1a9b3aeadb2ac8e978a968ea182a08eab8aaa8ed578bf0762ad03641f620e5cea03c7ef45b37a59f88beaf101894ee689cb2f0e33f8bbf8a9c0f22ded03bc7ea364c0a576d8bbf089e5bb0de801005695c9390bc1feb1a80b132a }
+
+
+condition:
+	$a0
+}

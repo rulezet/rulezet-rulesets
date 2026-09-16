@@ -1,0 +1,9 @@
+rule Win_Trojan_V_82
+{
+strings:
+	$a0 = { cd21501e066a000726813e800300c0746090908cd8488ed8a0000032e4d1e02db400754d909066a103002d600066 }
+
+
+condition:
+	$a0
+}
