@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"VvvebJs Arbitrary File Upload Attempt"; content:"POST /save.php HTTP/1.1"; content:"file=demo/landing/index.php"; content:"html="; sid:1003216; rev:1; reference:cve,CVE-2024-29272; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2024-29272;)
