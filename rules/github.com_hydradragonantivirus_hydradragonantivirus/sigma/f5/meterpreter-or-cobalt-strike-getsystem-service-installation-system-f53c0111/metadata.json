@@ -1,0 +1,25 @@
+{
+  "uuid": "f53c0111-9ba7-4c17-8f76-5ab376b7a014",
+  "title": "Meterpreter or Cobalt Strike Getsystem Service Installation - System",
+  "format": "sigma",
+  "author": "Teymur Kheirkhabarov, Ecco, Florian Roth (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of getsystem Meterpreter/Cobalt Strike command by detecting a specific service installation",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1134.001",
+    "T1134.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366583"
+}

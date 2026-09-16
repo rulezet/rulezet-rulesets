@@ -1,0 +1,25 @@
+{
+  "uuid": "7e26679a-8e20-4de2-9d51-8603fa543e7e",
+  "title": "Suspicious Teams Application Related ObjectAcess Event",
+  "format": "sigma",
+  "author": "@SerkinValery",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects an access to authentication tokens and accounts of Microsoft Teams desktop application.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1528"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366454"
+}

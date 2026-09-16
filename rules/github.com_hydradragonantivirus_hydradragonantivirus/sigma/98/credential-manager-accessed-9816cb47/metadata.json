@@ -1,0 +1,23 @@
+{
+  "uuid": "9816cb47-5e2c-4529-ae5b-cd53470cdcb9",
+  "title": "Credential Manager Accessed",
+  "format": "sigma",
+  "author": "Zach Mathis",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "A process has read credentials in the Credential Manager. There will be many false positives so check if the Process ID (PID) is that of known malware on the system.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1555.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366640"
+}

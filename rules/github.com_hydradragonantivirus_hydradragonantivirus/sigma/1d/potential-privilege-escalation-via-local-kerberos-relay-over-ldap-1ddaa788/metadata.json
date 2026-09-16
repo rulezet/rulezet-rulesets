@@ -1,0 +1,23 @@
+{
+  "uuid": "1ddaa788-f089-4b20-9a6a-26328915f137",
+  "title": "Potential Privilege Escalation via Local Kerberos Relay over LDAP",
+  "format": "sigma",
+  "author": "Elastic, @SBousseaden",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a suspicious local successful logon event where the Logon Package is Kerberos, the remote address is set to localhost, and the target user SID is the built-in local Administrator account.\nThis may indicate an attempt to leverage a Kerberos relay attack variant that can be used to elevate privilege locally from a domain joined limited user to local System privileges.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366530"
+}

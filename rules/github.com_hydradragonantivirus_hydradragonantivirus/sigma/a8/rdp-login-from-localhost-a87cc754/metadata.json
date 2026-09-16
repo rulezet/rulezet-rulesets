@@ -1,0 +1,23 @@
+{
+  "uuid": "a87cc754-98c2-4fd2-8465-1d27d10eb151",
+  "title": "RDP Login from Localhost",
+  "format": "sigma",
+  "author": "Thomas Patzke",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "RDP login with localhost source address may be a tunnelled login",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366546"
+}

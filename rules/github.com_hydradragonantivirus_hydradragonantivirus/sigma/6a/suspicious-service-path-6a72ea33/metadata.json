@@ -1,0 +1,23 @@
+{
+  "uuid": "6a72ea33-a628-4785-abed-3481dd66adb1",
+  "title": "Suspicious Service Path",
+  "format": "sigma",
+  "author": "Zach Mathis",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Malware will often create services for persistence and use BASE64 encoded strings to execute malicious code or abuse legitimate binaries like cmd.exe, powershell, etc... inside the path to execute. Normally, services will not run built-in binaries, run from user or temp folders or contain encoded data.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366623"
+}

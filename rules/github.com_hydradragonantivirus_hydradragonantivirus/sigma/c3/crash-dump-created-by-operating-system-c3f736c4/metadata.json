@@ -1,0 +1,24 @@
+{
+  "uuid": "c3f736c4-4d5b-44a0-b394-3f6f538d937c",
+  "title": "Crash Dump Created By Operating System",
+  "format": "sigma",
+  "author": "Jason Mull",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects \"BugCheck\" errors indicating the system rebooted due to a crash, capturing the bugcheck code, dump file path, and report ID.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.002",
+    "T1005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366552"
+}

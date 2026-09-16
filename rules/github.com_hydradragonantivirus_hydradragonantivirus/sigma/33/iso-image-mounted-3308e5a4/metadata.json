@@ -1,0 +1,24 @@
+{
+  "uuid": "3308e5a4-3704-4a14-bfce-e4e216bf34b5",
+  "title": "ISO Image Mounted",
+  "format": "sigma",
+  "author": "Syed Hasan (@syedhasan009)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the mount of an ISO image on an endpoint",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1553.005",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366453"
+}

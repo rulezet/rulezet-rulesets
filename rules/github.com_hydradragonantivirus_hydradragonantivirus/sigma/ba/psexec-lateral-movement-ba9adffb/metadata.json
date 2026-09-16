@@ -1,0 +1,28 @@
+{
+  "uuid": "ba9adffb-0e43-4bf9-9ce6-a57481fb6695",
+  "title": "PSExec Lateral Movement",
+  "format": "sigma",
+  "author": "Zach Mathis",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "PSExec is a MS SysInternals tool often abused for lateral movement.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.002",
+    "T1136.002",
+    "T1543.003",
+    "T1569.002",
+    "T1570"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366619"
+}

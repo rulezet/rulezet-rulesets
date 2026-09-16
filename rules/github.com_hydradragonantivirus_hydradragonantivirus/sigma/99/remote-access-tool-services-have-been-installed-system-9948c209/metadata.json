@@ -1,0 +1,24 @@
+{
+  "uuid": "9948c209-7130-4174-958d-620644b48e74",
+  "title": "Remote Access Tool Services Have Been Installed - System",
+  "format": "sigma",
+  "author": "Connor Martin, Nasreddine Bencherchali",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects service installation of different remote access tools software. These software are often abused by threat actors to perform",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543.003",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366592"
+}

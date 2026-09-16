@@ -1,0 +1,24 @@
+{
+  "uuid": "484da8b0-445b-46f1-93a7-7a53d8341f9a",
+  "title": "External Disk Drive Or USB Storage Device Was Recognized By The System",
+  "format": "sigma",
+  "author": "Keith Wright",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects external disk drives or plugged-in USB devices.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1091",
+    "T1200"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366508"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "0d85226a-d704-489a-97fd-0797208f2d37",
+  "title": "RDP over Reverse SSH Tunnel WFP",
+  "format": "sigma",
+  "author": "Samir Bousseaden",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects svchost hosting RDP termsvcs communicating with the loopback address",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.001",
+    "T1090.001",
+    "T1090.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366507"
+}

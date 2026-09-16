@@ -1,0 +1,23 @@
+{
+  "uuid": "65267b05-2f6a-459b-ad90-07e30b880632",
+  "title": "Enabled User Right in AD to Control User Objects",
+  "format": "sigma",
+  "author": "@neu5ron",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects scenario where if a user is assigned the SeEnableDelegationPrivilege right in Active Directory it would allow control of other AD user objects.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366484"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "fa187475-f39b-4786-9510-be3b2a8f1a1b",
+  "title": "Possible Impacket SecretDump Remote Activity",
+  "format": "sigma",
+  "author": "Samir Bousseaden, wagga",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect AD credential dumping using impacket secretdump HKTL",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.002",
+    "T1003.003",
+    "T1003.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366471"
+}

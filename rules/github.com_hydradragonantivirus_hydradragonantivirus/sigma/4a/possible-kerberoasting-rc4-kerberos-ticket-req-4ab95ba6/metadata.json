@@ -1,0 +1,23 @@
+{
+  "uuid": "4ab95ba6-8df8-4828-a6a8-49e95accc64c",
+  "title": "Possible Kerberoasting (RC4 Kerberos Ticket Req)",
+  "format": "sigma",
+  "author": "Yusuke Matsui, Zach Mathis",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries may abuse a valid Kerberos ticket-granting ticket (TGT) or sniff network traffic to obtain a ticket-granting service (TGS) ticket that may be vulnerable to Brute Force.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1558.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366633"
+}

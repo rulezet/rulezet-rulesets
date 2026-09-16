@@ -1,0 +1,14 @@
+import "pe"
+rule ms_vc4 {
+  meta:
+    author      = "PEiD"
+    description = "Microsoft Visual C++ 4.x"
+    group       = "15"
+    function    = "0"
+
+  strings:
+    $a0 = { 64 A1 ?? ?? ?? ?? 55 8B EC 6A FF 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 50 64 89 25 ?? ?? ?? ?? 83 EC ?? 53 56 57 }
+
+  condition:
+    $a0 at pe.entry_point
+}

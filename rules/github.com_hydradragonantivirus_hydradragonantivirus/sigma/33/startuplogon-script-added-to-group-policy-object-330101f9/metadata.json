@@ -1,0 +1,24 @@
+{
+  "uuid": "330101f9-96ab-4633-beac-3331f0470bed",
+  "title": "Startup/Logon Script Added to Group Policy Object",
+  "format": "sigma",
+  "author": "Elastic, Josh Nickels, Marius Rothenbücher",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the modification of Group Policy Objects (GPO) to add a startup/logon script to users or computer objects.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1484.001",
+    "T1547"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366470"
+}

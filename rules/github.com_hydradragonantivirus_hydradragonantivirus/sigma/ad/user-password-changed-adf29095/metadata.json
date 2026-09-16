@@ -1,0 +1,22 @@
+{
+  "uuid": "adf29095-900a-4d0a-a919-135f55528bcb",
+  "title": "User Password Changed",
+  "format": "sigma",
+  "author": "Darkrael",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "A user account changed it's own password. Adversaries might change the password to lockout legitimate user or set the password to a known clear text passwort via Pass the Hash if only the password hash is known. This will allow an adversary to access services where Pass the Hash is not an option.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366628"
+}

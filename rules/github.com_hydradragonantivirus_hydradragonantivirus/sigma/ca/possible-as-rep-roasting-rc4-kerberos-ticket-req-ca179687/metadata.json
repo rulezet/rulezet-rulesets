@@ -1,0 +1,23 @@
+{
+  "uuid": "ca179687-6157-4b7c-82e5-b1b7f0025fcc",
+  "title": "Possible AS-REP Roasting (RC4 Kerberos Ticket Req)",
+  "format": "sigma",
+  "author": "Yusuke Matsui, Zach Mathis",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "For each account found without preauthentication, an adversary may send an AS-REQ message without the encrypted timestamp and receive an AS-REP message with TGT data which may be encrypted with an insecure algorithm such as RC4.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1558.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366634"
+}

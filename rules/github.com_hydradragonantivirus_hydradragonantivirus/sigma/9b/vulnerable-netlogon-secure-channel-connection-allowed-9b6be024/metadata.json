@@ -1,0 +1,25 @@
+{
+  "uuid": "9b6be024-54a1-427f-bff5-91d1dae03071",
+  "title": "Vulnerable Netlogon Secure Channel Connection Allowed",
+  "format": "sigma",
+  "author": "NVISO",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects that a vulnerable Netlogon secure channel connection was allowed, which could be an indicator of CVE-2020-1472.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [
+    "CVE-2020-1472"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366547"
+}

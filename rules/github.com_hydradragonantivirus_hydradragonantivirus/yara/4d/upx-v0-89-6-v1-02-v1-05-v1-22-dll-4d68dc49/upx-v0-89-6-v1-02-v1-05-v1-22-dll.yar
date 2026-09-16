@@ -1,0 +1,8 @@
+import "pe"
+rule UPX_v0_89_6___v1_02___v1_05___v1_22_DLL {
+  strings:
+    $a0 = { 80 7C 24 08 01 0F 85 ?? ?? ?? 00 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF }
+
+  condition:
+    $a0 at pe.entry_point
+}

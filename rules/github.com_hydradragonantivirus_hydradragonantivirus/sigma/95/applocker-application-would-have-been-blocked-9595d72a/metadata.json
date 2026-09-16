@@ -1,0 +1,28 @@
+{
+  "uuid": "9595d72a-6589-4d52-a33f-56cdf5f62635",
+  "title": "AppLocker Application Would Have Been Blocked",
+  "format": "sigma",
+  "author": "heyyanu",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects when AppLocker \"Audit only\" enforcement mode reports that an Application, DLL, Script, MSI, or Packaged-App would have been blocked if AppLocker \"Enforce rules\" enforcement mode was enabled.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1059.003",
+    "T1059.005",
+    "T1059.006",
+    "T1059.007",
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366609"
+}

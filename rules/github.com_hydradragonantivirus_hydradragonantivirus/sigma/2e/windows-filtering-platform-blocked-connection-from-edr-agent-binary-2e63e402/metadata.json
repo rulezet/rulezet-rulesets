@@ -1,0 +1,23 @@
+{
+  "uuid": "2e63e402-fea5-4567-8d6d-a7f8cf73d139",
+  "title": "Windows Filtering Platform Blocked Connection From EDR Agent Binary",
+  "format": "sigma",
+  "author": "@gott_cyber",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a Windows Filtering Platform (WFP) blocked connection event involving common Endpoint Detection and Response (EDR) agents.\nAdversaries may use WFP filters to prevent Endpoint Detection and Response (EDR) agents from reporting security events.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366531"
+}

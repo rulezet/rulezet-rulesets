@@ -1,0 +1,11 @@
+rule PEiD_00047_AINEXE_v2_1_ {
+  meta:
+    description = "[AINEXE v2.1]"
+    ep_only     = "true"
+
+  strings:
+    $a = { A1 ?? ?? 2D ?? ?? 8E D0 BC ?? ?? 8C D8 36 A3 ?? ?? 05 ?? ?? 36 A3 ?? ?? 2E A1 ?? ?? 8A D4 B1 04 D2 EA FE C9 }
+
+  condition:
+    $a
+}

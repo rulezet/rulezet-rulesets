@@ -1,0 +1,25 @@
+{
+  "uuid": "080b9ea1-2b32-4265-aaf6-436215542d8d",
+  "title": "Process Ran With High Privilege",
+  "format": "sigma",
+  "author": "Zach Mathis",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Malware may generate a 4673 event (A privileged service was called) when dumping hashes or wiping disk. \nFor example, mimikatz will generate 4 logs using SeTcbPrivilege (Act as part of the OS.) \nDisk wipers like bcwipe will also generate this.\nMore legitimate filepaths may have to be added to the filter.\nThis is marked as a medium alert as there is a high possibility for false positives.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.001",
+    "T1561"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366636"
+}

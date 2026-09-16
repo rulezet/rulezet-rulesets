@@ -1,0 +1,23 @@
+{
+  "uuid": "a3cd93c4-e9fb-4a05-a66a-a6e44aeeeffa",
+  "title": "Remote Task Creation via ATSVC Named Pipe",
+  "format": "sigma",
+  "author": "Samir Bousseaden",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects remote task creation via at.exe or API interacting with ATSVC namedpipe",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366452"
+}

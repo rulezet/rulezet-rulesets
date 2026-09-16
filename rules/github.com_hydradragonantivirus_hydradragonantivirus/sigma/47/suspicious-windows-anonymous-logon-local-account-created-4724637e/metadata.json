@@ -1,0 +1,24 @@
+{
+  "uuid": "4724637e-780a-4866-986b-143a69121f41",
+  "title": "Suspicious Windows ANONYMOUS LOGON Local Account Created",
+  "format": "sigma",
+  "author": "James Pemberton / @4A616D6573",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the creation of suspicious accounts similar to ANONYMOUS LOGON, such as using additional spaces. Created as an covering detection for exclusion of Logon Type 3 from ANONYMOUS LOGON accounts.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1136.001",
+    "T1136.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366457"
+}

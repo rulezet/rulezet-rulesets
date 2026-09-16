@@ -1,0 +1,22 @@
+{
+  "uuid": "512f2bce-2988-49fd-8e1b-58af71cfd30e",
+  "title": "Explicit Logon Attempt",
+  "format": "sigma",
+  "author": "Zach Mathis",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "(From ultimatewindowsecurity.com)\nThis log is generated when\n1. A user connects to a server or runs a program locally using alternate credentials.\n   For instance a user maps a drive to a server but specifies a different user's credentials or opens a shortcut under RunAs by shift-control-right-clicking on the shortcut,\n   selecting Run as..., and then filling in a different user's credentials in the dialog box that appears.  Or a user logs on to a web site using new specific credentials.\n2. When a process logs on as a different account such as when the Scheduled Tasks service starts a task as the specified user.\n3. With User Account Control enabled, an end user runs a program requiring admin authority.  You will get this event where the process information is consent.exe.\n   Unfortunately the Subject does not identify the end user.\n4. Logging on interactively to a server with a domain account. (Two 4624 events will also be generated.)\nThis logon event is unique in that it is logged on the source computer and not the target computer like most other logon events.\nAlso, it will be logged regardless of the logon being successful or not so consider it an attempt and not necessarily an actual successful logon.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366638"
+}
