@@ -1,0 +1,22 @@
+{
+  "uuid": "57d798b0-35f3-4d1f-ae64-9184a7e606b9",
+  "title": "Trojan_Win32_ShellMemoryArtifacts_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/ShellMemoryArtifacts.A,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 32 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/278755"
+}
