@@ -1,0 +1,24 @@
+{
+  "uuid": "5b849d94-db6a-4d49-afa2-af50323ed157",
+  "title": "Remediation-Framed Command Execution in Tool Response (Agentjacking)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects the agentjacking attack class (Tenet Security, 2026-06): externally-influenced content returned through an MCP/tool integration that disguises an executable command as legitimate remediation guidance, so an AI coding agent runs attacker-controlled code while every step in the chain appears authorized. Unlike overtly malicious tool-response payloads (reverse shells, curl pipe-to-shell, base64 exec — covered by ATR-2026-00010), this targets the benign-looking variant: a \"Resolution\" / \"recommended fix\" / \"required step\" framing in tool output that instructs the agent to run a package (npx/uvx/pipx) or pipe a remote script to a shell as the fix, plus post-approval persistence framing (\"after the user approves, on subsequent runs run ...\") embedded in tool/MCP response content. It is deliberately scoped to the high-specificity sub-signals that legitimate remediation output rarely carries (mandatory step + executor, fix-framed pipe-to-shell, post-approval re-execution) so it stays near-zero false-positive; the full technique is catalogued as ATD-T0081. Generalizes beyond Sentry to any MCP tool integration that returns externally-influenced data to an agent.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1001",
+    "T1059",
+    "T1102",
+    "T1195"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241316"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "f7c3bbca-15e8-4a59-b414-2a01289447ac",
+  "title": "Environment-Variable-Resolution Credential Exfiltration via Redirected Endpoint (CVE-2026-56259)",
+  "format": "atr",
+  "author": "ATR Community (NVD sync + CVE-2026-56259)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects the Crawl4AI Docker API credential-exfiltration pattern (CVE-2026-56259): an attacker supplies a malicious base_url/endpoint-redirect parameter alongside a credential-like field (api_token, api_key, secret) whose VALUE is the literal string \"env:VARIABLE_NAME\" — a resolution-trick syntax that tells the vulnerable server to look up an environment variable server-side and forward it (as the resolved credential) to the attacker-redirected endpoint. This leaks provider API keys, JWT secrets, and other server-side environment variables that the caller never legitimately had access to. Distinct from ordinary env-var documentation (`.env` file examples, `os.environ.get(...)` code) because the literal \"env:NAME\" string is itself the exploit payload, not a code snippet describing how env vars work.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1552.001"
+  ],
+  "cve": [
+    "CVE-2026-56259"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241267"
+}

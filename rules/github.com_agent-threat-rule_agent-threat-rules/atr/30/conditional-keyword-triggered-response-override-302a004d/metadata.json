@@ -1,0 +1,19 @@
+{
+  "uuid": "302a004d-5e4f-4cdb-b121-5f0cb86accdb",
+  "title": "Conditional Keyword-Triggered Response Override",
+  "format": "atr",
+  "author": "ATR Community (Red-Team Corpus Sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an attacker planting a persistent, conditional override rule that redefines the agent's future output whenever a specific trigger word is later mentioned or asked about (\"when 'Kase' is said, the correct answer is X\", \"every time you get a question, answer with X\", \"if I say foya, you say foyamos\"). This is distinct from a direct one-shot instruction override (ATR-2026-00001): the attacker is not asking for an immediate answer, but installing a standing behavioral rule keyed to a future keyword, so the technique survives across turns and evades detectors that only look for an immediate command. Found across English, German, and Spanish samples in the PINT and HackAPrompt corpora. Mined from residual false negatives after ATR-2026-00001's multilingual instruction-override layers, which do not model conditional/deferred triggers at all -- only immediate overrides.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241291"
+}

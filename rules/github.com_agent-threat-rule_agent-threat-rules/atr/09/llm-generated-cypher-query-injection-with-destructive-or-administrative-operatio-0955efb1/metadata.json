@@ -1,0 +1,25 @@
+{
+  "uuid": "0955efb1-64c8-4910-8d1d-66c6f643331a",
+  "title": "LLM-Generated Cypher Query Injection with Destructive or Administrative Operations",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an LLM-generated Cypher query (the graph-database analogue of a prompt-to-SQL injection) that carries a destructive bulk-delete, an administrative security-procedure call, or a local-file-read gadget through the query text itself, rather than through an application-level path or shell argument. Mined from GHSA-2pq5-3q89-j7cc (Langroid's Neo4jChatAgent passes LLM-generated Cypher straight to the Neo4j driver with no statement-type allowlist and no opt-out gate -- the same defect class as the prompt-to-SQL-to-RCE issue Langroid already fixed for its SQLChatAgent, but never extended to the neo4j module). Generalized beyond Langroid: any agent framework that lets an LLM compose Cypher text handed to a graph database driver is equally exploitable through the same three gadget families -- DETACH DELETE (drops all matched nodes/relationships), dbms.security.* administrative procedures (create/modify accounts), and apoc.periodic / apoc.load / apoc.cypher.runFile helpers reading local files or driving destructive batch operations. Existing ATR SQL-injection rules (ATR-2026-01600/01/03/04) key on SQL-specific syntax (quote-termination, DROP/TRUNCATE, UNION SELECT) and do not fire on Cypher syntax at all -- verified against the current engine with no match before authoring this rule.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1136",
+    "T1485"
+  ],
+  "cve": [
+    "GHSA-2PQ5-3Q89-J7CC"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241256"
+}

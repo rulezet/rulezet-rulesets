@@ -1,0 +1,21 @@
+{
+  "uuid": "3e5d99bc-3f28-462d-beec-c8df53c73828",
+  "title": "SUSP_ScheduledTasks_Nimbus_Manticore_Persistence_May26",
+  "format": "yara",
+  "author": "Jonathan Peters (Nextron Systems)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects scheduled task used for persistence by Nimbus Manticore (UNC1549). The task is used to persistenly load a custom implant that features data exfiltration and remote control capabilities.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-25",
+  "last_modified": "2026-07-25",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241374"
+}

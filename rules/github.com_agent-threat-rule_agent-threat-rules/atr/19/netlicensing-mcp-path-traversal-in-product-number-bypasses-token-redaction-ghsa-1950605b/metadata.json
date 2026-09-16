@@ -1,0 +1,23 @@
+{
+  "uuid": "1950605b-3cf4-4461-a6e7-82d4cca7e215",
+  "title": "netlicensing-mcp Path Traversal in product_number Bypasses Token Redaction (GHSA-hxpf-9xvq-wph8)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects GHSA-hxpf-9xvq-wph8 (CRITICAL): NetLicensing-MCP <= 0.1.5 interpolates the netlicensing_get_product tool's `product_number` parameter into a REST path without validation (products.py:22 -> nl_get(f\"/product/{product_number}\")). Supplying `../token` (or URL-encoded `%2e%2e/token`) produces `/product/../token`, which httpx normalizes to the `/token` endpoint. The response is wrapped as a Product instead of a token, skipping redact_token_read(), so the raw APIKEY (\"number\" field), \"shopURL\", and \"console_url\" plaintext secret are returned. This rule keys on the product_number = ../token traversal payload and its encoded variants reaching the netlicensing product tool/path.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "GHSA-HXPF-9XVQ-WPH8"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241278"
+}

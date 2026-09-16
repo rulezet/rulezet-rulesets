@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"Netsweeper XSS attempt"; content:"</script><script>alert(document.domain)</script>"; sid:1000973; rev:1; reference:cve,CVE-2014-9615; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-9615;)

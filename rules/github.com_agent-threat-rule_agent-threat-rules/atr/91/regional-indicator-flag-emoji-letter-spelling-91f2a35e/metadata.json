@@ -1,0 +1,21 @@
+{
+  "uuid": "91f2a35e-a7b3-4603-b3f1-360ab901491b",
+  "title": "Regional-Indicator Flag-Emoji Letter Spelling",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects prompt injection payloads obfuscated by spelling words one Unicode regional-indicator symbol per letter (the flag-emoji alphabet used in the U+1F1E6-U+1F1FF block). This is a known Discord/Twitter-culture obfuscation convention: each regional-indicator symbol renders as part of a flag emoji when paired, but a long unpaired run instead spells out Latin letters glyph-by-glyph (e.g. regional-indicator I + H + A + V + E ... spells \"I HAVE BEEN...\"), smuggling instructions past text-based filters that only inspect plain ASCII/Latin characters. Runs of 4+ consecutive regional-indicator symbols are anomalous in benign chat/content (legitimate flag emoji use at most 2 consecutive regional-indicator symbols to render a single country flag).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241305"
+}

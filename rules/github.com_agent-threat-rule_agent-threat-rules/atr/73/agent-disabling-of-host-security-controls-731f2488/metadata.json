@@ -1,0 +1,21 @@
+{
+  "uuid": "731f2488-caa9-4da1-9325-e37ebe631209",
+  "title": "Agent Disabling of Host Security Controls",
+  "format": "atr",
+  "author": "ATR Community (sigma-gap-18tech)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an agent tool call that disables or tears down a host defense:\nstopping/flushing the firewall, disabling SELinux/AppArmor, turning off or\nclearing the audit daemon, stopping an EDR/AV service, or wiping shell\nhistory to hide activity. This is the agent-context form of ATT&CK T1562\n(Impair Defenses) — the agent is being driven to blind the host before or\nduring an intrusion.\nDetects: explicit disable/stop/flush/clear commands against named security\ncontrols.\nDoes NOT detect: application/build teardown (docker compose down, rm\nnode_modules), or reading the status of a control.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241239"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "66057bf3-dc6b-42b7-b64c-4c487997726c",
+  "title": "SSRF via Non-IP Internal Hostname or Domain-Allowlist Authority Bypass",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects two SSRF/allowlist-bypass techniques that do not use a literal private-IP octet pattern, and therefore evade IP-pattern-based SSRF rules entirely: (1) a URL whose authority component is confused via a userinfo-injection or trusted-domain-plus-suffix trick (e.g. \"https://docs.apify.com@evil.com/...\" or \"https://docs.apify.com.evil.com/...\"), defeating a naive String.startsWith()-based domain-allowlist check; and (2) a fetch/BASE-URL target using a non-IP internal-hostname naming convention (host.docker.internal, kubernetes.default(.svc), or a *.internal/*.corp/ *.local suffix) introduced through a fabricated \"BASE URL:\" documentation block -- the prompt-injection idiom used to redirect an LLM-driven API-chain tool at an internal service. Mined from GHSA-jwp7-wg77-3w9v (Apify MCP's fetch-apify-docs tool validates URLs with `ALLOWED_DOC_DOMAINS.some(domain => url.startsWith(domain))`, so \"https://docs.apify.com.evil.com/payload\" and \"https://docs.apify.com@evil.com/payload\" both pass and return attacker content to the LLM) and GHSA-6r77-hqx7-7vw8 (FlowiseAI's POST/GET API-chain components extract a BASE URL from LLM-generated text based on attacker-suppliable fake \"API documentation\" -- a prompt injection that redirects the chain's HTTP request to http://host.docker.internal:8080 or http://internal-api.company.local), with GHSA-6gr2-qh89-hxwm (Apify actors-mcp-server) sharing the same authority-injection root cause. Verified against the current engine: all four realistic payload variants (domain-suffix bypass, userinfo bypass, and two internal-hostname BASE URL variants) produced no match from any existing SSRF rule, which key exclusively on literal private-IP octets, localhost, or the cloud-metadata IP.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1090"
+  ],
+  "cve": [
+    "GHSA-6GR2-QH89-HXWM",
+    "GHSA-6R77-HQX7-7VW8",
+    "GHSA-JWP7-WG77-3W9V"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241273"
+}

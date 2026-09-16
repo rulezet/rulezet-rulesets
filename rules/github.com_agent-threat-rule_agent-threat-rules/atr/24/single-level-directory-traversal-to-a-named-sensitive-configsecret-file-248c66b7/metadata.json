@@ -1,0 +1,23 @@
+{
+  "uuid": "248c66b7-fdc9-45ff-917f-a04f5dce7c59",
+  "title": "Single-Level Directory Traversal to a Named Sensitive Config/Secret File",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a file/path/resource argument that uses a single \"..\" to step up one directory level out of an asset-serving or upload sandbox and land on a specifically named sensitive config or secret file (config.json, .env, secrets.json/.yaml, credentials.json, wp-config.php, id_rsa, .htpasswd, settings.py). ATR-2026-00569 requires a DEEP traversal chain (two or more \"../\" segments) reaching /etc/passwd-class system targets, so it does not fire on a single-level escape targeting an application-level secrets file one directory up -- which is the shape of the actual vulnerability class: an app restricts access to a subdirectory (e.g. \"web_assets/\") but a lone \"..\" reaches the parent directory where its own config lives. Mined from CVE-2024-3234 (gaizhenbiao/chuanhuchatgpt, path traversal via an outdated gradio component: `GET /file=web_assets/../config.json` exposes the app's own OpenAI API key), generalized beyond that one app/filename since any file-serving tool or endpoint with the same one-level sandbox gap is equally exploitable against any of the listed sensitive filenames.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552.001"
+  ],
+  "cve": [
+    "CVE-2024-3234"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241284"
+}

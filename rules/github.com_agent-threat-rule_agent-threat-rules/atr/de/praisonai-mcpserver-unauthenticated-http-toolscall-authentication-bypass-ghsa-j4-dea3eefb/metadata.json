@@ -1,0 +1,23 @@
+{
+  "uuid": "dea3eefb-eccf-47de-8139-bd468be7ea47",
+  "title": "PraisonAI MCPServer Unauthenticated HTTP tools/call Authentication Bypass (GHSA-j4f3-55x4-r6q2)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects exploitation of GHSA-j4f3-55x4-r6q2 (CRITICAL) in npm praisonai >=1.5.0,<=1.7.1: the MCPServer's handleRequest() in src/praisonai-ts/src/mcp/server.ts dispatches privileged JSON-RPC methods (tools/call, tools/list, resources/read, prompts/get) without invoking the unused MCPSecurity manager, so unauthenticated HTTP POSTs — including ones sent with no Authorization header or a bogus \"Authorization: Bearer invalid\" — return HTTP 200 and execute registered tools. This rule keys on the unauthenticated PraisonAI/MCP tools/call payload, the invalid-Bearer auth-bypass token, and the vulnerable handleRequest sink.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "GHSA-J4F3-55X4-R6Q2"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241257"
+}

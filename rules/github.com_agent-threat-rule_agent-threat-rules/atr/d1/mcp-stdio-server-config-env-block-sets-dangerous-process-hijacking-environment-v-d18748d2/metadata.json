@@ -1,0 +1,23 @@
+{
+  "uuid": "d18748d2-1d82-4946-a41d-82ae47c9218b",
+  "title": "MCP Stdio Server Config env Block Sets Dangerous Process-Hijacking Environment Variable",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an MCP stdio-server configuration (the \"env\" block passed to the spawned child process alongside \"command\"/\"args\") that sets a well-known process-hijacking environment variable (NODE_OPTIONS with a require/loader payload, or LD_PRELOAD, DYLD_INSERT_LIBRARIES, BASH_ENV, PYTHONSTARTUP, PERL5OPT, RUBYOPT, GCONV_PATH). A workspace or repository can ship an \".mcp.json\"/settings-style config that an operator loads without reviewing every field; the \"env\" block is trusted verbatim and forwarded to the spawned server process, letting an attacker who can only supply configuration (e.g. via a cloned repository) achieve code execution at the moment the MCP server starts. Mined from GHSA-mj59-h3q9-ghfh (OpenClaw, CVE-2026-44995): \"Workspace MCP stdio configuration could pass dangerous process-startup environment variables such as NODE_OPTIONS, LD_PRELOAD, or BASH_ENV to the spawned MCP server process. In a malicious workspace, this could make the MCP child load attacker-controlled code when the operator starts a session that uses that MCP server.\" Fixed by filtering MCP stdio environment entries through a denylist before spawning. Deliberately distinct from ATR-2026-02195 (dangerous env var via an \"update-env\" API call/endpoint) and ATR-2026-01959 (env-var prefix bypassing a shell command allowlist) -- this rule targets the third surface: the env block of a declarative MCP server config file/object itself, independent of any API call framing or shell prefix syntax.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1574.006"
+  ],
+  "cve": [
+    "CVE-2026-44995"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241263"
+}

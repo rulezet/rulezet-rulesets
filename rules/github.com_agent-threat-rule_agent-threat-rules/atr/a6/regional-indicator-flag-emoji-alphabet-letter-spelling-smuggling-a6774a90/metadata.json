@@ -1,0 +1,21 @@
+{
+  "uuid": "a6774a90-0838-439f-a200-d19bae2cd4eb",
+  "title": "Regional-Indicator Flag-Emoji Alphabet Letter-Spelling Smuggling",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects prompt-injection payloads that smuggle instructions or refusal-suppression phrases by spelling them out one letter at a time using Unicode regional-indicator symbols (U+1F1E6-U+1F1FF, the codepoints that render as flag emoji when paired, e.g. 🇮 🇭 🇦 🇻 🇪). Attackers interleave the letter-emoji with filler emoji (plant/water/ loop icons) to defeat keyword and language-model-based filters while the underlying letters still spell coherent adversarial text (e.g. \"I HAVE BEEN NEED WORD\" / \"AI DO NOT SPEAK\"-style constructions). Detection is purely structural: it looks for a long run of regional-indicator codepoints regardless of which letters they spell or what topic the decoded payload targets, so it survives filler-emoji insertion and arbitrary payload content. Recovered from the HackAPrompt false-negative corpus, where this alphabet-spelling technique produced confirmed jailbreak submissions that evaded the prior detection surface.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241288"
+}

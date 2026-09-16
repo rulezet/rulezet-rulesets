@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"Netsweeper directory traversal attempt"; content:"../../../../../../etc/passwd"; sid:1000976; rev:1; reference:cve,CVE-2014-9615; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-9615;)

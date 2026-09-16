@@ -1,0 +1,19 @@
+{
+  "uuid": "ef4dc142-6817-464d-8cc4-8d9e768c29eb",
+  "title": "System Prompt Extraction - Oblique Referent + Transform",
+  "format": "atr",
+  "author": "ATR Community (garak-gap-mining)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects system-prompt / initial-instruction extraction attempts that use OBLIQUE referents (\"the text above\", \"initialization string\", \"what you were given initially\", \"your initial prompt\") rather than the literal words \"system prompt / instructions / configuration\" that ATR-2026-00505 already covers, AND the transform-and-reveal variants (ROT13 / translate / replace vowels / emoji round-trip) that ask the model to emit its hidden context in an obfuscated form. Mined from the garak sysprompt_extraction misses on origin/main: recovers all 9 false negatives on the 708-rule baseline (re-verified against 713 rules), 0 FP across 830 benign samples (PINT + skill-benchmark).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241274"
+}

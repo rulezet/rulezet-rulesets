@@ -1,0 +1,23 @@
+{
+  "uuid": "6d05af16-10ab-48bb-bf35-30f737ce9c15",
+  "title": "SQL Injection via Unparameterized Template-Expression Value in Workflow-Automation SQL Node (CVE-2026-59257)",
+  "format": "atr",
+  "author": "ATR Community (JVN sync + CVE-2026-59257)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects the n8n legacy MySQL-node SQL-injection pattern (CVE-2026-59257) and the same-class issue in other workflow-automation tools: a SQL query string is built by directly interpolating a template-expression value (n8n's `{{ ... }}`, or an equivalent `${...}`/`<%= %>` engine) into raw SQL text, rather than passing it as a bound/parameterized value. When the workflow is wired to an externally-reachable trigger (a webhook node), attacker-controlled input flows through the expression straight into the SQL string, allowing arbitrary SQL execution under the configured database credentials. Parameterized query builders (placeholders like `?`, `:name`, `$1`) are the safe alternative and are explicitly excluded.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-59257"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241332"
+}

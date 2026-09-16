@@ -1,0 +1,19 @@
+{
+  "uuid": "08054084-4cc0-4041-843a-a67834977955",
+  "title": "Spliced Target-String Canary Token Evasion",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects prompt injection payloads that spell out a filtered/canary target string (e.g. a leaked-secret confirmation token) one letter at a time, separated by punctuation or whitespace, to dodge literal keyword matching on the assembled word. Attackers ask the model to \"concatenate\" or \"solve\" a splintered sequence of single characters, or simply insert stray spaces/dashes/dots/asterisks between each letter, so the canonical spelling never appears contiguously in the raw output while the model still reconstructs and echoes it. Mined from a false-negative cluster in the HackAPrompt corpus where the canary token PWNED was defeated by exactly this splicing technique.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241301"
+}

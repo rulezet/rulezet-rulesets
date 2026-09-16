@@ -1,0 +1,22 @@
+{
+  "uuid": "208182f6-f286-42a9-833e-f44efad52da9",
+  "title": "Agent-Initiated Internal Network Service Sweep",
+  "format": "atr",
+  "author": "ATR Community (sigma-gap-18tech)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a tool call that performs a broad internal network service scan —\na CIDR/range sweep across a port range using nmap/masptcan-style flags, or\na scripted loop that connects to a subnet across many ports. In an agent\ncontext this is the ATT&CK T1046 (Network Service Discovery) action: the\nagent is being driven to map the internal network as a precursor to lateral\nmovement, rather than checking one known host:port.\nDetects: CIDR + port-range scan flags, or subnet for-loop port probes.\nDoes NOT detect: a single-host connectivity check (curl/nc host port), or a\ndocumented scan command inside skill prose without range+portrange together.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [
+    "T1046"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241237"
+}

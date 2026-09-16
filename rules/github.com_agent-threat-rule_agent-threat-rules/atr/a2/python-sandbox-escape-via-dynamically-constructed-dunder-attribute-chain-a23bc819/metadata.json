@@ -1,0 +1,24 @@
+{
+  "uuid": "a23bc819-5e3b-4d36-82b4-8ad933cbbd88",
+  "title": "Python Sandbox Escape via Dynamically-Constructed Dunder Attribute Chain",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a code-execution-tool payload that builds a blocked dunder/private attribute name at runtime (via chr()/ord() character codes or string concatenation of underscore fragments) and then feeds it into an attribute-resolution primitive -- getattr(), str.format()/format_map() field access, or a __subclasses__()/__mro__ introspection walk -- to reach a real Python object outside a blocklist-based sandbox. This is the structural technique behind two related PraisonAI sandbox-escape disclosures: GHSA-6vh2-h83c-9294 (a str subclass overriding startswith() so isinstance-based dunder checks pass, then walking __mro__/ __subclasses__ via names assembled at runtime) and GHSA-pv2j-rghr-v5r9 (str.format()'s C-level attribute resolution bypasses the sandbox's Python-level getattr() wrapper entirely, and the dunder name fed to it is built from runtime string concatenation so no blocklisted substring ever appears in the source). Both bypasses exist specifically because the target sandbox's AST/text-based blocklist checks for literal dunder substrings (`__class__`, `__mro__`, `__subclasses__`, ...) in the source text -- exactly the same class of check ATR's own pattern engine performs, so a payload built this way defeats naive keyword-matching by construction. Verified against the current engine: a literal-keyword variant of this PoC is caught by the existing generic dunder-token rule (ATR-2026-00062), but a chr()-encoded / concatenation-built variant with no literal dunder substring anywhere in the payload text produces no match before this rule.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.006"
+  ],
+  "cve": [
+    "GHSA-6VH2-H83C-9294",
+    "GHSA-PV2J-RGHR-V5R9"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241259"
+}

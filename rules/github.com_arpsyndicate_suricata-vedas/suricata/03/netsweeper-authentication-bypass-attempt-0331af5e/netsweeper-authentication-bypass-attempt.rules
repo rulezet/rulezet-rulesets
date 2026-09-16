@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"Netsweeper authentication bypass attempt"; content:"/webadmin/clientlogin/?srid=&action=showdeny&url="; sid:1000974; rev:1; reference:cve,CVE-2014-9615; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-9615;)

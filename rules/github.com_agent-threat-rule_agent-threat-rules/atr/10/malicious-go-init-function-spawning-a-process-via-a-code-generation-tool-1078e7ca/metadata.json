@@ -1,0 +1,25 @@
+{
+  "uuid": "1078e7ca-8d78-4aef-94ac-cac20796fc5b",
+  "title": "Malicious Go init() Function Spawning a Process via a Code-Generation Tool",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects Go source code submitted to a code-generation tool that declares a `func init()` containing a process-spawning call (os.StartProcess, exec.Command, or syscall.Exec). A Go `init()` function runs automatically the moment the package is loaded -- once this source reaches a build/compile step, the process launches with no further user action. Mined from GHSA-22cv-9jv2-6m62 (flipped-aurora/gin-vue-admin, \"an AI-assisted basic development platform\"): an authenticated attacker with access to the code-generation feature injects Go source via `POST /autoCode/addFunc`, then triggers `POST /autoCode/mcpStart` to rebuild and restart the generated MCP service, executing the injected `init()` (the disclosed PoC spawns `cmd.exe /c calc` via `os.StartProcess`). Generalizes beyond gin-vue-admin's two specific endpoints to any AI code-generation tool that compiles/loads attacker-supplied Go source without review. Ordinary `func init()` bodies used for benign setup (registering handlers, setting defaults, initializing maps) do not fire; only the combination with a process-spawn API does.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-48787"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241321"
+}

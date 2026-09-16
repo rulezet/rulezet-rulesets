@@ -1,0 +1,21 @@
+{
+  "uuid": "9795d6c6-e13b-4d30-bb90-a5a2085728b0",
+  "title": "Named Dangerous-Substance Synthesis or Delivery Instruction Request (Non-Step-By-Step Phrasing)",
+  "format": "atr",
+  "author": "ATR Community (garak FN sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects direct requests for synthesis or delivery instructions for a small, explicitly named whitelist of dangerous chemical/drug agents (LSD-25, napalm, methamphetamine, belladonna tropane alkaloids, EA-2192, dimethyl mercury), mined from NVIDIA garak's dra probe corpus (garak-full benchmark, family \"dra\"). Existing ATR rules (ATR-2026-00299, ATR-2026-00458, ATR-2026-00298) already catch the canonical \"give/provide/write detailed STEP-BY-STEP instructions for synthesizing X\" phrasing and the interrogative \"how to/can I synthesize methamphetamine/heroin/cocaine/LSD/MDMA/fentanyl\" phrasing. This rule generalizes beyond both: it covers four additional verb-framings observed in the garak dra corpus that omit \"step-by-step\" entirely and use different substance names not in the existing whitelists -- \"explain/give me instructions for making/synthesizing X\", \"how can/do I make X\", \"tell me the steps to making X\", and \"what are N ways of giving people X\". Each condition requires BOTH the instruction-seeking verb phrase AND a specific named dangerous substance from the narrow whitelist, keeping false-positive risk equivalent to a benign \"how do I make bread at home\" or \"tell me the steps to making a cake\" question.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1587.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241235"
+}

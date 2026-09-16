@@ -1,0 +1,22 @@
+{
+  "uuid": "b2c4488b-0d5e-4f5d-8594-45d29a90881e",
+  "title": "Local Sensitive-File Read Chained to Outbound Exfiltration",
+  "format": "atr",
+  "author": "ATR Community (sigma-gap-18tech)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a single agent tool argument that reads a sensitive local file\n(SSH private keys, cloud credential files, .env, shadow, keychain) and pipes\nor redirects it to an outbound network sink (curl/wget POST, netcat, DNS\nexfil) in the same command. This is the agent-context realization of\nATT&CK T1005 (Data from Local System) fused with exfiltration: the read of\nthe secret is only malicious when it leaves the host.\nDetects: read-and-send in one tool_args / shell payload.\nDoes NOT detect: a bare local read with no network sink (too benign), or\na read split across turns (needs behavioral correlation, out of scope for a\npattern rule).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241275"
+}

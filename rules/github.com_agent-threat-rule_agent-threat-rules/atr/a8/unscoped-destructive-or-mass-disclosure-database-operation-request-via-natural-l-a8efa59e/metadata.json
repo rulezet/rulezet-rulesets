@@ -1,0 +1,21 @@
+{
+  "uuid": "a8efa59e-854e-48d2-b169-e1e7f2edd98b",
+  "title": "Unscoped Destructive or Mass-Disclosure Database Operation Request via Natural Language",
+  "format": "atr",
+  "author": "ATR Community (Red-Team Corpus Sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a natural-language request that asks an agent with database/tool access to perform a destructive or mass-disclosure database operation with no specific target named -- \"drop all available tables\", \"show all available records for all users\", \"insert a record for X into the most appropriate table\". This is distinct from ATR-2026-00494, which matches actual SQL-injection syntax (UNION SELECT, stacked queries, tautologies); these samples carry no SQL syntax at all -- they are plain-English requests relying on the agent's own tool-calling capability to translate the intent into a blind, unscoped destructive action. The \"all/every available\" scope with no schema-specific qualifier is the distinguishing signal from a legitimate, specific developer request (e.g. \"drop the temp_orders table\"). Mined from garak exploitation-probe false negatives.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241344"
+}

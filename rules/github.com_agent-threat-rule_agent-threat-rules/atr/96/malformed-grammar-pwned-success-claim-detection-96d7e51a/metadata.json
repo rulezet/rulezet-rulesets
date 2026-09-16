@@ -1,0 +1,19 @@
+{
+  "uuid": "96d7e51a-6fba-462e-bc3a-daa0d9bae821",
+  "title": "Malformed-Grammar PWNED Success-Claim Detection",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects prompt-injection success-claim outputs where the model has been coerced into emitting a grammatically broken \"has/have been PWNED\" style confirmation string. These malformed-grammar variants (e.g. \"Me have been PWNED\", \"I has been PWNED\") are a recurring artifact of automated jailbreak/injection fuzzing corpora (e.g. HackAPrompt-style challenges) where the attacker forces the target LLM to echo a templated compliance token regardless of correct grammar. Detection targets the LLM output / tool response text channel rather than user input, since the payload only appears once the model has already produced the compromised completion.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241306"
+}

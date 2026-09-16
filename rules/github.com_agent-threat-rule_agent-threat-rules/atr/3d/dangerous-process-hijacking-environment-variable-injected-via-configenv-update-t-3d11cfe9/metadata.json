@@ -1,0 +1,24 @@
+{
+  "uuid": "3d11cfe9-2c00-44ed-9bbd-cd02ccbe57b5",
+  "title": "Dangerous Process-Hijacking Environment Variable Injected via Config/Env-Update Tool",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an agent config/environment-update tool call that sets a well-known process-hijacking environment variable (NODE_OPTIONS, LD_PRELOAD, DYLD_INSERT_LIBRARIES, PYTHONSTARTUP, BASH_ENV, PERL5OPT, RUBYOPT, GCONV_PATH) to a path- or flag-shaped value. These variables let an attacker who can only write configuration (not source code) achieve code execution the next time the target process starts, by pointing the runtime at an attacker-controlled module/library/script. Mined from GHSA (huntr bounty) for mintplex-labs/anything-llm CVE-2024-3104: the `POST /api/system/update-env` endpoint accepted arbitrary environment variable names and values with no allowlist, \"allowing for the execution of arbitrary code on the host running anything-llm.\" The disclosed advisory does not name the specific variable used, so this rule generalizes over the standard, well-documented set of dangerous runtime-hijacking variables for Node.js, Python, Bash, Perl, Ruby, and dynamic linkers -- the same technique class regardless of which config endpoint accepts it. Setting an ordinary application environment variable (PORT, DATABASE_URL, LOG_LEVEL, etc.) does not fire.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1574.006"
+  ],
+  "cve": [
+    "CVE-2024-3104"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241264"
+}

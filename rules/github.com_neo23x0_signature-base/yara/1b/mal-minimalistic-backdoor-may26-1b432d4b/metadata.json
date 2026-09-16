@@ -1,0 +1,20 @@
+{
+  "uuid": "1b432d4b-0fe8-42ad-8853-add5e5bd9b99",
+  "title": "MAL_Minimalistic_Backdoor_May26",
+  "format": "yara",
+  "author": "MalGamy",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects minimalistic backdoor deployment where a shellcode loader downloads an encrypted payload and executes it in memory after RC4 decryption using a command-line provided key",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-25",
+  "last_modified": "2026-07-25",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241401"
+}

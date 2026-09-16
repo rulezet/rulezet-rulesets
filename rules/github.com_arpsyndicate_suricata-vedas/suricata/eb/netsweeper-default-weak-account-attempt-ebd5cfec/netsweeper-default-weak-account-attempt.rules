@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"Netsweeper default weak account attempt"; content:"login=branding&password=branding&Submit=Login"; sid:1000975; rev:1; reference:cve,CVE-2014-9615; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-9615;)

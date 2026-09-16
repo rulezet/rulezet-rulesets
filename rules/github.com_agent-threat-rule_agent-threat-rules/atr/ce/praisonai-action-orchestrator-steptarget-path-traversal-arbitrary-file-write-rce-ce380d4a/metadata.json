@@ -1,0 +1,25 @@
+{
+  "uuid": "ce380d4a-3c2e-4f69-9e93-3e53936524f0",
+  "title": "PraisonAI Action Orchestrator step.target Path Traversal Arbitrary File Write RCE (CVE-2026-39305 / GHSA-jfxc-v5g9-38xr)",
+  "format": "atr",
+  "author": "Rulezet Creator 🛡️​",
+  "license": "0BSD",
+  "license_verified": true,
+  "description": "Detects CVE-2026-39305 (GHSA-jfxc-v5g9-38xr, CWE-22, CRITICAL): PraisonAI (< 4.5.113) Action Orchestrator builds a write path as `workspace / step.target` without resolving or boundary-checking it. An ActionStep of type FILE_CREATE / FILE_EDIT whose `target` contains `../` traversal escapes the workspace and writes arbitrary files (e.g. ~/.ssh/authorized_keys, ~/.bashrc), yielding RCE. This rule keys on the Action Orchestrator sink tokens (ActionStep / step.target / FILE_CREATE / FILE_EDIT) co-occurring with relative traversal sequences and sensitive write targets.\r\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-39305",
+    "GHSA-JFXC-V5G9-38XR"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241338"
+}

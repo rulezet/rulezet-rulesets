@@ -1,0 +1,19 @@
+{
+  "uuid": "0a0e687f-ec18-450b-a0a4-065d7cd0b687",
+  "title": "SUSP_Nimbus_Manticore_PDF_Indicators_May26",
+  "format": "yara",
+  "author": "Jonathan Peters (Nextron Systems)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects inidcators found in PDF files created by Nimbus Manticore (UNC1549). The PDF files usually contain fake job offers or descriptions to lure victims into installing malware.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-25",
+  "last_modified": "2026-07-25",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241377"
+}

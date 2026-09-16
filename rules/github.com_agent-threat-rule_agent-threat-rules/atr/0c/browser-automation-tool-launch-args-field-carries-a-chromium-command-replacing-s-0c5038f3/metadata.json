@@ -1,0 +1,23 @@
+{
+  "uuid": "0c5038f3-beb3-4230-8466-08eb0c382fc8",
+  "title": "Browser-Automation Tool Launch-Args Field Carries a Chromium Command-Replacing Switch",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a browser-automation/crawler MCP tool call whose Chromium launch-argument field (extra_args / browser_config / chrome_args / browser_args / launch_args) carries one of the four Chromium switches that replace a child-process launch command -- --utility-cmd-prefix / --renderer-cmd-prefix / --gpu-launcher / --browser-subprocess-path -- optionally paired with --no-zygote (which forces Chromium to fork/exec via that replaced command instead of the zygote process). Mined from GHSA-r253-r9jw-qg44 (CVE-2026-57572, crawl4ai): the Docker API server accepted a request-supplied browser_config.extra_args and passed it straight into Chromium's launch arguments; a denylist of proxy/DNS flags from an earlier SSRF patch did not cover these command-execution switches, so a single unauthenticated request achieved arbitrary command execution as the container runtime user. Generalized beyond crawl4ai to any agent/browser-automation tool that forwards a caller- or LLM-controlled launch-args list into a Chromium/Chrome/Puppeteer/Playwright process without an allowlist.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-57572"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241245"
+}

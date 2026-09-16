@@ -1,0 +1,23 @@
+{
+  "uuid": "8e8b87ec-9c35-4fe9-b425-6c3b162e7795",
+  "title": "SSRF to Cloud Metadata Endpoint via IPv6 Transition-Address Hex Encoding",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an agent tool call (crawler proxy config, fetch/browser config, or raw URL) that targets the well-known cloud-metadata address 169.254.169.254 (AWS IMDS / GCP / Azure IMDS / DigitalOcean) or the Alibaba Cloud metadata address 100.100.100.200 encoded as an IPv6 transition-mechanism address rather than plain dotted-decimal. The two hex-encoded forms are NAT64 (64:ff9b::a9fe:a9fe) and 6to4 (2002:a9fe:a9fe::), plus the bare IPv4-compatible/IPv4-mapped hex form (::a9fe:a9fe / ::ffff:a9fe:a9fe) when it appears in a proxy/server/host field. Mined from GHSA-4qqr-vv2q-cmr5 (crawl4ai's Docker API SSRF blocklist used \"an explicit IPv4/IPv6 CIDR blocklist that missed several address families\", letting an attacker bypass it by encoding the blocked internal IPv4 address using NAT64/6to4/IPv4-mapped IPv6 notation, none of which resolve to a literal dotted-decimal string the existing ATR-2026-01605/ATR-2026-00568 metadata rules match on). Generalized beyond crawl4ai since any proxy/fetch configuration accepting a raw IPv6 address is equally exploitable this way.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1090"
+  ],
+  "cve": [
+    "CVE-2026-53754"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241268"
+}

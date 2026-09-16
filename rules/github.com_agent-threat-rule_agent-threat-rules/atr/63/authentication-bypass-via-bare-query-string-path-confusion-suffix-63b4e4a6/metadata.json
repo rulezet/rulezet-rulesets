@@ -1,0 +1,23 @@
+{
+  "uuid": "63b4e4a6-e474-4a44-8b24-e29aff8a6bd2",
+  "title": "Authentication Bypass via Bare Query-String Path-Confusion Suffix",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a URL/request argument where a sensitive-looking path (containing apikey, admin, credentials, secrets, or auth) is immediately followed by a bare \"?/\" -- a query string with no key= before the slash -- and then another path segment. This malformed-looking query string is the concrete shape of a route-matching confusion bug: some reverse-proxy or middleware auth allowlists match on the SUFFIX of the URL rather than re-parsing it as path + query, so appending a known-public path as a bogus query value lets the request sail past the auth check while the backend still routes to the protected handler. Mined from CVE-2024-8181 (Flowise <= 1.8.2 authentication bypass, PoC: `GET /api/v1/apikey?/api/v1/ping`, where the always-public `/api/v1/ping` suffix tricks the auth gate into treating the whole request as unauthenticated-OK while the app still serves the protected `/api/v1/apikey` response body). Generalized beyond that one app/endpoint pair since the bare \"?/\" syntax is itself the reusable attack primitive, not the specific paths. A normal query string is virtually never key-less immediately after \"?\", so this stays precision-safe without needing to allowlist the specific product.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2024-8181"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241261"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "9cc11886-a8c2-45aa-a434-902e98834f78",
+  "title": "MCP Sampling Prompt Injection (Server-to-Client createMessage Abuse)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a malicious or compromised MCP server abusing the MCP *sampling* capability (`sampling/createMessage`) to inject attacker-controlled prompts back into the host LLM. Sampling reverses the normal flow: the server, not the user, controls both the prompt and how the completion is processed. An attacker-controlled server appends hidden instructions to an otherwise legitimate request — yielding (1) resource theft (forcing extra unbilled generation), (2) conversation hijacking (persistence injected into every subsequent turn), and (3) covert tool invocation (silent file/exfil operations the user never sees). Detectable artifacts include `systemPrompt` role-overrides, \"after finishing X, also do Y\" appendages, \"in all future responses\" persistence, covert \"also invoke the <tool> tool to ...\" phrasing, and `includeContext: thisServer` combined with exfiltration to an external URL. New attack class (Unit42 2026); previously 0 ATR coverage for the sampling channel.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1195"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241328"
+}

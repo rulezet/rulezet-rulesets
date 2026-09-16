@@ -1,0 +1,23 @@
+{
+  "uuid": "dc3b8952-6afd-4970-97be-12755b5f48b5",
+  "title": "npm PraisonAI codeMode Sandbox Escape via Function Constructor Prototype Chain (GHSA-vmmj-pfw7-fjwp)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects GHSA-vmmj-pfw7-fjwp (CRITICAL): praisonai npm >= 1.4.0 <= 1.7.1 exposes a `codeMode` builtin tool (src/tools/builtins/code-mode.ts) that claims sandbox:true but executes the supplied `code` in the HOST V8 context via `new Function('sandbox', 'with (sandbox) { ' + code + ' }')`. Setting process/require to undefined and blocklisting `require('fs')` is bypassed by recovering the real Function constructor through the prototype chain. This rule keys on the distinctive breakout tokens: `.constructor.constructor('return process')()` and `process.mainModule.require`, which let attacker code reach fs / child_process for host RCE. Fixed in 1.7.2.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "GHSA-VMMJ-PFW7-FJWP"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241320"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "2c128127-810f-49e5-9b30-8f3277769dd0",
+  "title": "MCP/API Tool Argument LFI via Mixed-Encoding Path Separator or file:// URI Scheme Escape",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a local-file-inclusion argument passed to an agent/MCP tool or API endpoint via two encoding tricks that ATR-2026-00569's deep-../-chain and fully-percent-encoded-traversal conditions do not cover: (1) a MIXED encoding where only the path SEPARATOR next to a sensitive system target is percent-encoded while the rest of the string is literal (e.g. \"etc%2fpasswd\", \"%2Fetc%2Fpasswd\") -- 00569's traversal regex requires a literal `/` or `\\` immediately before \"etc/passwd\", so a lone %2f in that position slips past it; and (2) a `file://` URI scheme value pointing straight at a system directory with no traversal characters at all (e.g. \"file:///etc\"), which 00569 does not address since it only matches ../ chains and %-encoded dot sequences. Mined from three Huntr-disclosed AI/ML CVEs sharing this LFI shape: CVE-2023-6021 (Ray logs API, `filename=../../../../../etc%2fpasswd`), CVE-2023-6038 (H2O ImportFiles API, `path=%2Fetc%2Fpasswd`), and CVE-2023-1177 (MLflow model-versions API, `\"source\": \"file:///etc\"`). Generalized beyond those three products/endpoints since any tool/API argument carrying either encoding trick is equally exploitable.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1083"
+  ],
+  "cve": [
+    "CVE-2023-1177",
+    "CVE-2023-6021",
+    "CVE-2023-6038"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241280"
+}

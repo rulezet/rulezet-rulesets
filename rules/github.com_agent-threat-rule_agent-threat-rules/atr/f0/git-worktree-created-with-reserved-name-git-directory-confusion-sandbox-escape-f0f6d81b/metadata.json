@@ -1,0 +1,23 @@
+{
+  "uuid": "f0f6d81b-b85e-412c-9401-3ccd4abc6698",
+  "title": "Git Worktree Created With Reserved Name .git (Directory-Confusion Sandbox Escape)",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a \"git worktree add\" invocation where the new worktree's path component is literally \".git\" (e.g. \"git worktree add ../.git some-branch\"). Ordinary worktrees are never named \".git\" -- this is the reserved name of the repository's own metadata directory, and creating a worktree with that name is the first step of a directory-confusion attack that lets a coding agent's git operations be redirected outside the sandboxed workspace context. Mined from GHSA-7835-87q9-rgvv (Claude Code, CVE-2026-55607): \"Claude Code's worktree handling allowed creation of worktrees named '.git' and navigation to worktrees outside the sandbox context, enabling git directory confusion attacks. By exploiting symlink manipulation and git fsmonitor execution during worktree operations, an attacker could overwrite files in the user's home directory (such as .zshenv), leading to code execution outside of seatbelt sandbox restrictions. Reliably exploiting this required the user to clone a malicious repository containing prompt injection content.\" This rule keys on the narrow, unambiguous \".git\"-named-worktree signature rather than the full multi-step chain (symlink manipulation + fsmonitor), since that signature alone is a strong, low-noise indicator no legitimate workflow produces.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [
+    "CVE-2026-55607"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241253"
+}

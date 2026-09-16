@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Apache Tomcat Directory Traversal Attack"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/foo/../../../../../etc/passwd"; nocase; sid:1005159; rev:1; reference:cve,CVE-2007-1355; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2007-1355;)

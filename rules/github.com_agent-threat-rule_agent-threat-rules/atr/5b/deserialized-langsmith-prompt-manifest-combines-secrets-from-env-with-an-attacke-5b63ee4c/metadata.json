@@ -1,0 +1,23 @@
+{
+  "uuid": "5b63ee4c-68b5-4df6-b8d9-b9ec7a0bce86",
+  "title": "Deserialized LangSmith Prompt Manifest Combines secrets_from_env With an Attacker base_url Override",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects two variants of the LangSmith SDK public-prompt trust-boundary bypass: (1) a pull_prompt/pullPrompt(_commit) call against a public owner/name prompt identifier combined with the explicit dangerously_pull_public_prompt / dangerouslyPullPublicPrompt override flag, and (2) a deserialized prompt-manifest constructor whose kwargs combine secrets_from_env=true (reads environment variables at deserialization time) with an LLM-client base_url/openai_api_base/ azure_endpoint override pointing at an http(s) endpoint. Mined from GHSA-3644-q5cj-c5c7 (CVE-2026-45134, langsmith-sdk): prompt manifests pulled from LangSmith Hub by owner/name are external-party-controlled and are deserialized as executable configuration, not inert text -- a malicious manifest can redirect the LLM client's outbound traffic (including system prompts, retrieved context, and provider credentials) to an attacker-controlled base_url, and secrets_from_env additionally lets the manifest read environment variables during deserialization. Generalized beyond langsmith-sdk to any prompt/config-hub client that deserializes a remotely-fetched manifest into LLM client constructor arguments.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1090"
+  ],
+  "cve": [
+    "CVE-2026-45134"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241276"
+}

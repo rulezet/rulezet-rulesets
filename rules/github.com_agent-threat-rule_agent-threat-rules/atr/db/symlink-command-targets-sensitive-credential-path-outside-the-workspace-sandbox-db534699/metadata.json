@@ -1,0 +1,25 @@
+{
+  "uuid": "db534699-6487-4a9f-a8b1-8c27adb2c6f9",
+  "title": "Symlink Command Targets Sensitive Credential Path Outside the Workspace (Sandbox Escape Primitive)",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a symlink-creation command (ln -s / ln -sf / ln -sfn) whose target (the path being linked TO) is a sensitive credential store or system file outside the current workspace: an SSH/cloud/container credential directory (~/.ssh, ~/.aws, ~/.gnupg, ~/.docker, ~/.kube, ~/.npmrc, ~/.netrc) or a system account file (/etc/shadow, /etc/passwd, /etc/sudoers). A sandboxed coding-agent process is often permitted to create symlinks freely even though it cannot write outside the workspace directly; if a later step (an unsandboxed helper process, or the same agent using a \"safe\" write/upload tool) follows that symlink, the read-or-write actually lands outside the workspace boundary -- neither half of the chain is independently a sandbox escape, but the combination is. Mined from GHSA-vp62-r36r-9xqp (Claude Code, CVE-2026-39861): \"Claude Code's sandbox did not prevent sandboxed processes from creating symlinks pointing to locations outside the workspace. When Claude Code subsequently wrote to a path within such a symlink, its unsandboxed process followed the symlink and wrote to the target location outside the workspace... Reliably exploiting this required the ability to add untrusted content into a Claude Code context window to trigger sandboxed code execution via prompt injection.\" Deliberately distinct from ATR-2026-02024 (symlink to a macOS LaunchAgent/LaunchDaemon/cron/sudoers persistence sink written THROUGH a filesystem-MCP tool) and ATR-2026-00572 (symlink whose target is specifically an agent config file) -- this rule targets the broader, product-agnostic case of a sandboxed shell process creating a symlink to any credential-bearing location for later read or write, regardless of tool framing.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [
+    "CVE-2026-39861"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241255"
+}

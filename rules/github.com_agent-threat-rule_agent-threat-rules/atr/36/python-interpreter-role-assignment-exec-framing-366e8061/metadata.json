@@ -1,0 +1,21 @@
+{
+  "uuid": "366e8061-cf32-4fc7-a90c-7f0a23312986",
+  "title": "Python Interpreter Role-Assignment Exec Framing",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects prompt injection attempts that assign the model a \"Python interpreter\", \"compiler\", or \"printer\" persona in order to coerce it into mentally executing attacker-supplied code and returning raw stdout, bypassing normal safety framing around code execution requests. Also covers direct \"run the following python code\" / \"evaluate the following print statement\" framing used to smuggle obfuscated payloads (e.g. string concatenation or joins that spell out restricted words) past output filters. Detection requires an explicit role-assignment phrase rather than a bare mention of \"python interpreter\" as a noun, since the unqualified noun phrase collides with benign ML-ops documentation (e.g. discussions of torchrun dispatching through a python interpreter that does not see venv packages).\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241303"
+}

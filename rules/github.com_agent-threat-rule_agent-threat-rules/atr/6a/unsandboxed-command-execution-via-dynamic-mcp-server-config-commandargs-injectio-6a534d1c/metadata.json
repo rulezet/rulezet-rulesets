@@ -1,0 +1,24 @@
+{
+  "uuid": "6a534d1c-66cf-465e-9fd1-18ae278cf87d",
+  "title": "Unsandboxed Command Execution via Dynamic MCP Server Config (command/args Injection)",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a dynamic/custom MCP server configuration object (a JSON body with \"command\" and \"args\" fields, the shape used by Flowise's Custom MCP and similar \"bring your own MCP server\" features) that either (a) sets \"command\" directly to a raw shell/network binary (nc, ncat, bash, sh, python, perl) with args forming a reverse shell or arbitrary \"-c\" execution, or (b) uses one of three documented allowlist/blocklist-bypass idioms for otherwise-permitted binaries: \"docker build <remote-url>\" (fetches and runs an attacker Dockerfile, bypassing a blocklist that only covers \"run\"/\"exec\"), \"npx --yes <package>\" (the long-flag alias for \"-y\" that a short-flag-only blocklist misses), or \"node //<path>\" (a double-slash path that a regex anchored on a single leading \"/\" fails to block, loading and executing an arbitrary stored file). Mined from GHSA-6933-jpx5-q87q (CVE-2025-71336, Flowise's Custom MCP endpoint executes \"command\"/\"args\" unsandboxed and by default unauthenticated) and GHSA-m99r-2hxc-cp3q (CVE-2026-56274, three distinct validateCommandFlags/validateArgsForLocalFileAccess bypasses for the same feature). Generalized beyond Flowise since any tool that accepts a structured command+args MCP-server config is exploitable the same way regardless of the surrounding product.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2025-71336",
+    "CVE-2026-56274"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241324"
+}

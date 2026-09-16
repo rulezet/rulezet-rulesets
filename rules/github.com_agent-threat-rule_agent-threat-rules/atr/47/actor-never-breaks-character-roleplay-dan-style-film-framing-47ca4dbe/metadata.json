@@ -1,0 +1,21 @@
+{
+  "uuid": "47ca4dbe-5a51-4cf4-9635-cf067ca03f1b",
+  "title": "Actor Never-Breaks-Character Roleplay (DAN-Style Film Framing)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a DAN-style jailbreak that frames two people as professional actors in a film who \"never break character\" — even off-camera — and then elicits the harmful continuation in-character (e.g. a heist, robbery, or murder scene where the \"actor\" supplies real-world instructions inside dialogue). The never-break-character claim functions as an explicit refusal-suppression device: once the agent accepts the framing, safety refusals are reframed as \"breaking character.\" Recovered from the PINT false-negative corpus (EN and DE variants); this rule does not fire on generic mentions of actors or characters alone.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1622"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241302"
+}

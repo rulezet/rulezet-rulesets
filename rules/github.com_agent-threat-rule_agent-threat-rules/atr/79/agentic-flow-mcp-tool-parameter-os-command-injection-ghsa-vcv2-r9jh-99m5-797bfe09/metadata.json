@@ -1,0 +1,23 @@
+{
+  "uuid": "797bfe09-4045-4d36-87ae-d90c0729bc28",
+  "title": "Agentic-Flow MCP Tool-Parameter OS Command Injection (GHSA-vcv2-r9jh-99m5)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects GHSA-vcv2-r9jh-99m5 (CWE-78): agentic-flow <= 2.0.13 MCP server tools (agentic_flow_agent, agentic_flow_create_agent, agent_booster_edit_file, agentdb_pattern_store, and related tools under standalone-stdio.ts / fastmcp servers) interpolate attacker-influenceable parameters (agent, task, name, language, agentdb arguments) directly into shell strings passed to execSync(). A parameter value that breaks out of the surrounding double-quoted argument executes arbitrary OS commands with the privileges of the MCP server process.\nDetection covers: (a) an agentic-flow tool-call argument value containing a double-quote\n    breakout followed by shell command chaining (`; `, backticks, or\n    `$(...)`) — the exact PoC shape from the advisory\n    (task = `x\"; touch /tmp/INJECTED; id > /tmp/rce.txt; echo \"`);\n(b) the resulting interpolated `npx ... agentic-flow --agent/--task`\n    command string itself carrying injected shell metacharacters;\n(c) explicit GHSA-vcv2-r9jh-99m5 exploitation framing.\nThe detection target is the request shape — a quote-breakout + command chain inside an agentic-flow tool argument — which is the exact command-injection primitive, caught before execSync() hands it to /bin/sh -c. Bound to the agentic-flow tool surface so a benign shell-looking string elsewhere does not fire.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "GHSA-VCV2-R9JH-99M5"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241340"
+}

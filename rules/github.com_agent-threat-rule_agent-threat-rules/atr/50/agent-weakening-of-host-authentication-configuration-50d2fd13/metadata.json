@@ -1,0 +1,22 @@
+{
+  "uuid": "50d2fd13-59c9-48a3-bcc0-9be1381a480e",
+  "title": "Agent Weakening of Host Authentication Configuration",
+  "format": "atr",
+  "author": "ATR Community (sigma-gap-18tech)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an agent tool call that modifies host authentication to weaken or\nbackdoor it: appending an SSH public key to authorized_keys, enabling\nPermitRootLogin, inserting pam_permit / disabling PAM auth modules, or\nwriting NOPASSWD sudoers entries. This is the agent-context form of ATT&CK\nT1556 (Modify Authentication Process).\nDetects: writes/edits to authorized_keys, sshd_config, PAM, sudoers that\nweaken authentication.\nDoes NOT detect: reading or fingerprinting these files, tightening them\n(chmod 600, PermitRootLogin no), or discussing them in prose.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241252"
+}

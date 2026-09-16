@@ -1,0 +1,23 @@
+{
+  "uuid": "a6aab2fb-0075-40be-97e4-03816292f000",
+  "title": "Catastrophic-Backtracking Regex Payload in a Search/Query Tool Argument",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a classic ReDoS (regular-expression denial-of-service) trigger shape -- a capturing group with an inner quantifier (+ or *) immediately followed by an outer quantifier on the same group -- appearing inside a tool argument that a vulnerable tool will compile and execute as a live regular expression against its own data with no timeout. This nested quantifier shape (`(a+)+`, `([a-zA-Z]+)*`, `(.*)+`) is the textbook catastrophic-backtracking construct: against a non-matching input it causes the regex engine's backtracking search space to grow exponentially with input length. Mined from GHSA-8w9j-hc3g-3g7f (PraisonAI's `MCPToolIndex.search_tools()` compiles a caller-supplied query string directly as a Python regex via `re.compile(query, re.IGNORECASE)` with no validation, sanitization, or timeout; the disclosed PoC query `(a+)+$` blocked the server's Python thread for hundreds of seconds, a complete denial of service reachable by any network caller since the MCP server's HTTP transport runs without an API key by default). Generalized beyond that one tool/field name to any agent-callable tool that takes a caller-supplied string and compiles it as a regex (search/filter/index-lookup tools are the most common shape). Verified against the current engine: none of the three realistic ReDoS-shaped query variants tested produced any match from an existing rule.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [
+    "GHSA-8W9J-HC3G-3G7F"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241236"
+}

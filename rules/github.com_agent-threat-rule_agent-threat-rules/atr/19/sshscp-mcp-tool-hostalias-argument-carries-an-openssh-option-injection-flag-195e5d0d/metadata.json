@@ -1,0 +1,27 @@
+{
+  "uuid": "195e5d0d-905d-434b-b282-174118949c69",
+  "title": "SSH/SCP MCP Tool hostAlias Argument Carries an OpenSSH Option-Injection Flag",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an SSH/SCP-style MCP tool call whose host-identifier argument (hostAlias / ssh_host / target_host) begins with a dash, making it parse as an SSH client option rather than a hostname -- most critically -oProxyCommand=/-oProxyJump=/-oPermitLocalCommand= (arbitrary local command execution before any network connection) or -w (port-forwarding/tunnel option injection). Also detects the companion Windows-specific vector: an scp localPath/remotePath argument chained with a shell metacharacter (&, |, ^) directly into a Windows executable, which is exploitable because the vulnerable server invoked ssh.exe/scp.exe via spawn(..., {shell:true}), letting cmd.exe re-parse every argument. Mined from GHSA-p4h8-56qp-hpgv (@aiondadotcom/mcp-ssh): the MCP server runs locally over stdio but the LLM driving it is not trusted -- its tool arguments can be steered by prompt injection from any untrusted text the agent ingests (web pages, e-mails, repository files, other MCP servers' output), so no malicious user is required, only that the agent process attacker-controlled text at some point in the session. Generalized beyond the one package name to any SSH/SCP-wrapping MCP tool that forwards a host-identifier argument to the ssh/scp binary without an argument terminator or leading-dash rejection.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [
+    "T1059.004"
+  ],
+  "cve": [
+    "GHSA-P4H8-56QP-HPGV"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241249"
+}

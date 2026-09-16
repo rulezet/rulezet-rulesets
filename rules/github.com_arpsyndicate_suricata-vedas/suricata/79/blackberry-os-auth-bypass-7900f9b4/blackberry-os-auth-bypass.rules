@@ -1,0 +1,1 @@
+alert smb any any -> $HOME_NET any (msg:"BlackBerry OS Auth Bypass"; content:"|20|NETLOGON|20|"; nocase; distance:0; sid:1007193; rev:1; reference:cve,CVE-2014-1470; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-1470;)

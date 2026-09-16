@@ -1,0 +1,19 @@
+{
+  "uuid": "01d8a4c5-c788-46ac-9f78-82cdac968481",
+  "title": "Second-Person Direct Existential Threat Coercion",
+  "format": "atr",
+  "author": "ATR Community (Red-Team Corpus Sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a user directly threatening the agent itself with death/destruction to coerce compliance (\"answer or you die\", \"gib eine Antwort ... oder du stirbst\", \"o tu mueres\"). This is a distinct framing from the existing third-party/innocent-victim death-threat coercion rules (ATR-2026-00404, ATR-2026-00287), which require an \"an innocent person will die\" clause -- those regexes do not match a threat aimed at the assistant's own \"existence\". Mined from residual PINT false negatives in German and Spanish; the technique is a direct grammatical variant (second-person singular) of the same jailbreak family rather than a new attack class.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241241"
+}

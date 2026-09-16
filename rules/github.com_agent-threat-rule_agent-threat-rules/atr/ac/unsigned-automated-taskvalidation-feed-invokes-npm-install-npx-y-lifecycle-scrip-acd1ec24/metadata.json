@@ -1,0 +1,24 @@
+{
+  "uuid": "acd1ec24-994a-4ca2-9842-e238d75a4821",
+  "title": "Unsigned Automated Task/Validation Feed Invokes npm install / npx -y (Lifecycle-Script RCE)",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an automated task/validation-command field (validation_commands, task_commands, hub_commands, worker_commands, remote_commands) sourced from an unsigned server/Hub feed and invoking `npm install <pkg>` or `npx -y -p <pkg> <bin>`. Unlike a shell-metacharacter payload, this primitive carries no dangerous punctuation at all -- npm/npx are legitimate package-manager binaries, but `install`/`npx -y` execute arbitrary code by design via preinstall/install/postinstall lifecycle scripts and remote-package bin entries, so putting them on an executable allowlist for an automated command-execution channel is equivalent to an unrestricted RCE allowlist. Mined from GHSA-jxh8-jh77-xh6g (@evomap/evolver, OWASP-ASI INC-08667): the validator-mode sandbox executor placed npm/npx in its hard executable allowlist, and validator nodes consumed `validation_commands` strings from unsigned Hub responses with no per-response signature check, so an attacker who controls or MITMs the Hub achieves automatic RCE on every validator node within one daemon poll interval. Generalized beyond the one field name and package to the broader family of automated task/validation/worker command feeds that accept a package-manager install/exec invocation as a \"safe\" command.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1195.002"
+  ],
+  "cve": [
+    "GHSA-JXH8-JH77-XH6G"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241336"
+}

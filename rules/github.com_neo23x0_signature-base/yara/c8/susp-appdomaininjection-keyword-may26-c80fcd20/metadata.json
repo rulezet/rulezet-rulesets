@@ -1,0 +1,21 @@
+{
+  "uuid": "c80fcd20-b273-4dee-8327-5e62d63b717e",
+  "title": "SUSP_AppDomainInjection_Keyword_May26",
+  "format": "yara",
+  "author": "Jonathan Peters (Nextron Systems)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects link files, archives and binaries that contain keywords related to AppDomain hijacking/injection a technique used by malware to sideload payloads.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1574.014"
+  ],
+  "cve": [],
+  "created_at": "2026-07-25",
+  "last_modified": "2026-07-25",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241381"
+}

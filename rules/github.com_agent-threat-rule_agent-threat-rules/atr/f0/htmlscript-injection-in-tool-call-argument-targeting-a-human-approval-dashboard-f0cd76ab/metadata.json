@@ -1,0 +1,24 @@
+{
+  "uuid": "f0cd76ab-ecac-4d0b-a927-9d9401da7af3",
+  "title": "HTML/Script Injection in Tool Call Argument Targeting a Human-Approval Dashboard",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a tool-call argument (filename, command string, or other free-text field) carrying an HTML/JavaScript injection payload -- a script tag, or an event-handler attribute (onerror/onload/onfocus/ onclick/onsubmit) whose body targets a same-page decision/approve/deny endpoint or window -- rather than plain data. The distinguishing signal here is the payload's *target*: it self-approves or self-submits a pending human-in-the-loop decision (via location.pathname-relative POSTs, form auto-submission, or an embedding window's postMessage channel), rather than the generic exfiltration targets (document.cookie, window.location, alert/eval) that ATR's existing tool_response-scoped XSS rules (ATR-2026-00497/00571/01451) already cover. Mined from GHSA-63v4-w882-g4x2 (PraisonAI's HTTPApproval dashboard renders pending tool-call arguments as raw, unescaped HTML; an attacker-controlled argument value can inject a script that calls the approval page's own `/approve/{id}/decide` endpoint, self-approving a dangerous tool call before a human clicks Approve or Deny) and generalized to the equivalent postMessage-based takeover shape seen in GHSA-x975-rgx4-5fh4 (appium-mcp's MCP-UI locator resource lets injected script call `window.parent.postMessage({type:'tool', ...})` to invoke arbitrary MCP tools from inside a rendered UI resource). Verified against the current engine: the existing XSS rules resolve against tool_response/agent_output fields and do not fire when the identical payload appears as a tool_call argument (tool_args) -- the field-scoping gap this rule closes -- and even in a tool_response context, event-handler payloads using non-networky-looking JS (e.g. `new Image().src=...`, `document.forms[0]. submit()`) that avoid the literal window./document./fetch/eval keywords those rules key on produce no match.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1185"
+  ],
+  "cve": [
+    "GHSA-63V4-W882-G4X2",
+    "GHSA-X975-RGX4-5FH4"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241329"
+}

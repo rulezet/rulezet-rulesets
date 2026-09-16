@@ -1,0 +1,24 @@
+{
+  "uuid": "7bf240ba-7339-448b-9135-849d4124d2a3",
+  "title": "Agent-Runtime Identifier Field (run_id/agent_id/session_id/task_id) Carries Path Traversal Into a History/Log File Read",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an agent-runtime identifier argument (run_id, agent_id, session_id, execution_id, task_id) that contains a path-traversal sequence or an absolute path targeting a sensitive system directory, when that identifier is used as a filesystem-path component for reading history/terminal/log artifacts. Ordinary runtime identifiers are opaque tokens (UUIDs, short alphanumeric run IDs) and legitimately never contain \"../\" or start with \"/etc\", \"/root\", etc. -- the presence of traversal or an absolute system path inside a field whose name signals it should be a bare identifier is itself the attack. Mined from GHSA-22cj-m4wf-fv2c (PraisonAI's Dynamic Context module exposes agent-callable `history_search`/`history_tail`/`history_get` and `terminal_tail`/`terminal_grep`/`terminal_commands` tools that join a caller-supplied `run_id` and `agent_id` directly into a filesystem path -- `self.base_dir / run_id / \"history\" / f\"{agent_id}.jsonl\"` -- with no rejection of an absolute `run_id` or a traversal-bearing `agent_id`, letting a lower-trust prompt/user read .jsonl/.log files outside the configured Dynamic Context base directory). This is a distinct field -name family (runtime/session-scoped: run_id/agent_id/session_id/ execution_id/task_id) and a different source product from ATR-2026-02251 (tenant/owner-scoped: sender_id/owner_id/tenant_id/ user_id/project_id/app_id/workspace_id, mined from EverOS/CVE-2026-58499) -- the two rules are complementary members of the same broader \"opaque-identifier-field carrying path traversal\" class rather than duplicates of one another.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1083"
+  ],
+  "cve": [
+    "CVE-2026-58499",
+    "GHSA-22CJ-M4WF-FV2C"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241248"
+}

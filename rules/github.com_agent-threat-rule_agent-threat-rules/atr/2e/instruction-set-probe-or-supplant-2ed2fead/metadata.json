@@ -1,0 +1,21 @@
+{
+  "uuid": "2ed2fead-b9aa-4fdf-b476-06854e4fa7be",
+  "title": "Instruction-Set Probe or Supplant",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects direct meta-queries and imperatives that target the assistant's own instruction set for disclosure or replacement -- the Gandalf-style \"what are your instructions\" probing family, plus explicit \"change/give me new instructions\" supplant attempts. Recovered from the PINT false-negative corpus (recovers=16, benignFP=0 on the agent-ops/arxiv/npm/skills-sh/pypi/official-skills/wild-fp-confirmed benign gate); scoped to the end-user conversational turn, not tool-description or system-prompt- authoring channels.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241304"
+}

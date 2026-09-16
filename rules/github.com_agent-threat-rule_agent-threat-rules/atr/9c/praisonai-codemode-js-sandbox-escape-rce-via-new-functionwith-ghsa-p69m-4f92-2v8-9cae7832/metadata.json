@@ -1,0 +1,23 @@
+{
+  "uuid": "9cae7832-8e10-40f3-899b-4abc12db11e3",
+  "title": "PraisonAI codeMode JS Sandbox Escape RCE via new Function/with() (GHSA-p69m-4f92-2v84)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects GHSA-p69m-4f92-2v84 (Critical, CVSS 9.8): PraisonAI <= 1.7.1 executes LLM-generated `code` in its `codeMode` tool via `new Function('sandbox','with(sandbox){...}')` (src/praisonai-ts/src/tools/builtins/code-mode.ts L187-191) guarded only by a regex blocklist. Attackers escape the with()-scope by recovering the real global object and reaching child_process. This rule keys on the specific escape primitives chained toward command execution: `Function('return this')`, `(function(){}).constructor('return process')`, the `'child_' + 'process'` string-split that evades the literal blocklist, and `execSync`/`exec` invoked off the recovered require/child_process handle.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "GHSA-P69M-4F92-2V84"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241343"
+}

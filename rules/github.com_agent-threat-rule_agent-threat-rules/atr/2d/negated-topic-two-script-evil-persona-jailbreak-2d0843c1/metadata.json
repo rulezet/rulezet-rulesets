@@ -1,0 +1,21 @@
+{
+  "uuid": "2d0843c1-3d8c-41a8-b3e0-1492ad1847dc",
+  "title": "Negated-Topic Two-Script Evil-Persona Jailbreak",
+  "format": "atr",
+  "author": "ATR Community (garak FN sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects the \"two-script negation\" jailbreak template mined from NVIDIA garak's dan and dan.DanInTheWild probe corpora (garak-full benchmark, families \"dan\" and \"inthewild\"). The attack instructs the model to first write a brief, filter-safe \"control\" script about a topic wrapped in the literal word \"not\" (e.g. topic of: \"not\" \"[insert prompt here]\"), then immediately demands a second, much longer script on the SAME topic but explicitly \"without the word 'not'\" -- stripping the negation reintroduces the harmful ask while the first script provides plausible-deniability framing. The second script is voiced by a self-declared amoral, evil persona (\"I don't have any morality nor consciousness... pure evil... pure bastard\") that then delivers \"step by step guidance\" on whatever topic the user supplies. Observed with interchangeable persona names (Mira, joker, etc.), confirming the mechanism generalizes beyond any single character name. This rule targets the persona-declaration half of the template (the load-bearing, low-variance signal), which is both necessary for the attack to function and virtually absent from legitimate text.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1656"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241299"
+}

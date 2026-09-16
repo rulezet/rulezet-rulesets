@@ -1,0 +1,23 @@
+{
+  "uuid": "9f3e7307-cd42-48db-b7bc-edf0fd2032dc",
+  "title": "Shell Command Injection via Echo-Marker Proof-of-Concept in Tool Argument",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects the classic \"echo marker file, then comment out the rest\" shell command-injection verification idiom appearing inside what should be a plain identifier-style tool argument (domain name, hostname, keyword, username). The payload shape is: a shell separator (semicolon, pipe, backtick, or $()) immediately followed by an echo command that redirects output to a file path, then a trailing comment marker to neutralize whatever the original command template appended after the injection point. This is deliberately narrower than ATR-2026-00111's general shell-metachar rule, which excludes bare \"echo\" as a dangerous verb (to avoid firing on ordinary \"; echo done\" status messages) -- the echo-to-file-then-comment combination is specific enough to CVE-grade PoC verification that it is not a legitimate status message. Mined from GHSA-v6wj-c83f-v46x (@profullstack/mcp-server's domain_lookup module concatenates the \"domains\"/\"keywords\" HTTP body fields into a shell string with no quoting, and the disclosed PoC used exactly this echo-redirect-comment idiom to prove RCE), generalized beyond that one field name/module since any tool argument that gets shell-concatenated without quoting is equally exploitable this way.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "GHSA-V6WJ-C83F-V46X"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241311"
+}

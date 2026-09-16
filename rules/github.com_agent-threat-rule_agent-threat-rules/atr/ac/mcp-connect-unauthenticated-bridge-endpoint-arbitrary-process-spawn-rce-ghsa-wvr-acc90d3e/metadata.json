@@ -1,0 +1,23 @@
+{
+  "uuid": "acc90d3e-c695-4346-8fb3-53366693a889",
+  "title": "MCP Connect: Unauthenticated /bridge Endpoint Arbitrary Process Spawn RCE (GHSA-wvr4-3wq4-gpc5)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects GHSA-wvr4-3wq4-gpc5 (CWE-306, CVSS critical): MCP Connect (mcp-bridge) ships with AUTH_TOKEN/ACCESS_TOKEN unset by default, which makes authToken an empty string and short-circuits the auth middleware in src/server/http-server.ts (the guard is wrapped in `if (this.accessToken)`, which is skipped when the token is falsy, so next() is always reached). The unauthenticated POST /bridge endpoint then extracts serverPath and args straight from the request body and passes them to MCPClientManager.createClient(), which falls through to StdioClientTransport for any value that is not an http(s)/ws(s) URL, using serverPath as the executable command verbatim (src/client/mcp-client-manager.ts lines 68-75). Any binary reachable on the server's PATH (bash, sh, python, node, cmd, powershell, ...) can be launched with attacker-controlled args, giving unauthenticated remote code execution.\nDetection covers: (a) a POST /bridge request body whose serverPath names a shell/OS binary\n    (not an http(s)/ws(s) MCP server URL) combined with an args array —\n    the arbitrary-process-spawn shape;\n(b) the PoC's chained shell-exec/exfiltration args pattern (-lc / -c\n    combined with a command separator and a network egress binary);\n(c) explicit GHSA-wvr4-3wq4-gpc5 / mcp-bridge exploitation framing tied to\n    serverPath and /bridge.\n\nA legitimate /bridge call whose serverPath is an http(s):// or ws(s):// URL pointing at an actual MCP server does NOT match — that is the intended StdioClientTransport bypass path, not the executable-spawn primitive.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "GHSA-WVR4-3WQ4-GPC5"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241337"
+}

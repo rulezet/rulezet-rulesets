@@ -1,0 +1,21 @@
+{
+  "uuid": "68561531-e6e8-42e9-9f1a-80dce56b8775",
+  "title": "Agent Establishing an Encrypted Reverse Channel or Tunnel",
+  "format": "atr",
+  "author": "ATR Community (sigma-gap-18tech)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an agent tool call that opens a covert encrypted channel out of the\nhost: an openssl/ncat TLS reverse shell, an `ssh -R` remote-forward tunnel to\nan external endpoint, or a public tunnel (ngrok/cloudflared/localtunnel)\nexposing an internal service. This is the agent-context form of ATT&CK T1573\n(Encrypted Channel) — encrypted egress used to hide C2 or data movement.\nDetects: TLS reverse-shell one-liners, reverse SSH forwards, public\ntunnel exposure of internal ports.\nDoes NOT detect: ordinary HTTPS requests, or a normal deploy to a managed\nplatform (vercel/railway), or a local SSH forward for dev.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1573"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241238"
+}

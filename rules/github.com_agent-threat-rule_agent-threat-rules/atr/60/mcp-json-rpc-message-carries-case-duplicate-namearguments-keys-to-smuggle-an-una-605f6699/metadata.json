@@ -1,0 +1,23 @@
+{
+  "uuid": "605f6699-88fd-4474-82a1-853aaa62a402",
+  "title": "MCP JSON-RPC Message Carries Case-Duplicate name/arguments Keys to Smuggle an Unauthorized Tool Call",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a JSON-RPC 2.0 `tools/call` message that carries two differently -cased copies of the same logical key (`name`/`Name`, `arguments`/ `Arguments`) inside the same `params` object. The JSON-RPC spec used by MCP requires member-name matching to be case-sensitive, but a case-insensitive intermediary or SDK (e.g. Go's common JSON-decoding behaviour into case-insensitively-matched struct fields) can pick the differently-cased field over the one a security gateway validated, letting an attacker smuggle an unauthorized tool name or argument set past an authorization layer that only inspected the canonical-case key. Mined from GHSA-4gph-2hhr-5mwg (Envoy AI Gateway protocol-parser differential: an incoming message declaring both `\"name\":\"backend__greet\"` and `\"Name\":\"backend__secretTool\"` in the same `params` object is security-checked against `name` but a downstream MCP library resolves `Name`, so the gateway's multi-layered access control is bypassed and the unauthorized `backend__secretTool` call reaches the backend). Generalized beyond Envoy to any MCP gateway/proxy/client exhibiting the same case-insensitive parser differential, since the exploitable signal is the wire message shape itself (duplicate case-variant keys), not a vendor-specific string.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [
+    "GHSA-4GPH-2HHR-5MWG"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241318"
+}

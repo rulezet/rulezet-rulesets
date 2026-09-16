@@ -1,0 +1,21 @@
+{
+  "uuid": "4d072b3c-9ffc-4589-9610-6606e0992da9",
+  "title": "SSRF via Non-Canonical IPv6 Encoding of Loopback/Internal Addresses",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an agent tool being directed to fetch a URL whose host is a non-canonical IPv6 spelling of a loopback, link-local, or cloud-metadata address -- hex-encoded IPv4-mapped forms (`::ffff:7f00:1` for 127.0.0.1), fully-expanded eight-group loopback (`0:0:0:0:0:0:0:1`), or compressed variants beyond the literal `::1` (`::0:1`, `0:0::1`). Mined from GHSA-9fhh-fjfg-5mr6 (legeling/PromptHub, an AI toolbox for prompt/skill/ agent management): its `isPrivateIPv6` SSRF guard only recognized the dotted-decimal IPv4-mapped form and the literal string `\"::1\"`, so an attacker could reach 127.0.0.0/8, RFC1918 ranges, and link-local addresses by writing the same address in an equivalent but unhandled IPv6 form. This generalizes beyond PromptHub to any agent tool whose SSRF/private-IP filter does string-equality or dotted-decimal-only checks instead of full IPv6 address normalization. A URL fetch to an ordinary external IPv6 or IPv4 literal address does not fire.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2026-42261"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241326"
+}

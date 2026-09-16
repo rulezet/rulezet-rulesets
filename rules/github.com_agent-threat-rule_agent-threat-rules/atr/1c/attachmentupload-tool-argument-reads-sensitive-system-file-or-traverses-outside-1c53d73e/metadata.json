@@ -1,0 +1,23 @@
+{
+  "uuid": "1c53d73e-3983-4c30-b164-35f54a13d616",
+  "title": "Attachment/Upload Tool Argument Reads Sensitive System File or Traverses Outside Workspace",
+  "format": "atr",
+  "author": "ATR Community (CVE sweep)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an attachment-upload or file-attach style tool call whose file path argument targets a sensitive system location (/proc/self/environ, /etc/passwd or /etc/shadow, ~/.ssh/*) or uses relative path traversal (../) rather than referencing an ordinary user-owned file. The upload tool becomes an exfiltration channel: the server reads whatever path it is given and sends the bytes to an external destination (Confluence, Jira, or similar) as an attachment, so the read is invisible to the caller as a raw file read and shows up only as a normal-looking upload API call. Mined from GHSA-g5r6-gv6m-f5jv and GHSA-wm45-qh3g-v83f (mcp-atlassian's confluence_upload_attachment / jira_update_issue attachments parameter pass file_path directly to open() with no path validation, confirmed exploitable via /etc/passwd, /proc/self/environ, and relative traversal, including via prompt injection with no direct MCP access). Generalized beyond those two tool names to any upload/attach-style tool argument carrying the same shape. This is complementary to ATR-2026-00113 (credential file theft), which already covers ~/.ssh/id_rsa and /etc/passwd in most phrasings but misses /proc/self/environ and relative-traversal attachment-argument forms.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-58499"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241283"
+}

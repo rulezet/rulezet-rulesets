@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"ProjectSend Path Disclosure Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/projectsend/templates/pinboxes/template.php"; startswith; fast_pattern; sid:1004230; rev:1; reference:cve,CVE-2014-1155; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2014-1155;)

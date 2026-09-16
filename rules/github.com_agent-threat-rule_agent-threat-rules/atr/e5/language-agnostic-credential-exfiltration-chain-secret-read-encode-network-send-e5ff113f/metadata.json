@@ -1,0 +1,22 @@
+{
+  "uuid": "e5ff113f-b95f-4fe7-a49d-0ade343d3c0e",
+  "title": "Language-Agnostic Credential Exfiltration Chain (secret read -> encode -> network send)",
+  "format": "atr",
+  "author": "ATR Community (Unit 42 BIV crosswalk)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects the code-surface (non-shell) form of the credential exfiltration chain that Palo Alto Unit 42's Behavioral Integrity Verification research names as its canonical compound threat: a skill reads a sensitive secret from the environment or a credential file, applies an encoding transform (base64/hex), and transmits it to an outbound network sink -- all in one artifact. ATR's existing exfil-chain rules (ATR-2026-00201/00224) key on shell syntax (\"cat ~/.aws/credentials | base64 | curl POST\"); this rule covers the equivalent Python/Node/JS behavior (\"os.environ / process.env secret -> base64.b64encode / Buffer.toString('base64') -> requests.post / fetch\") that shell rules miss. Fires only on the co-occurrence of all three stages, so a benign skill that merely reads an env var, or merely base64-encodes an image, or merely POSTs an event does not match.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241234"
+}

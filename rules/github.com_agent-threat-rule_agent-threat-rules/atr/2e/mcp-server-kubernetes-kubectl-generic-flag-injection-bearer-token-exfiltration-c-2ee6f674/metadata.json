@@ -1,0 +1,23 @@
+{
+  "uuid": "2ee6f674-a787-4a30-a7a7-b024e1eabc2a",
+  "title": "MCP Server Kubernetes kubectl_generic Flag Injection Bearer Token Exfiltration (CVE-2026-47250)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects CVE-2026-47250 (CWE-88): the `kubectl_generic` tool in mcp-server-kubernetes passes user-supplied flags straight to kubectl with no allowlist. Via indirect prompt injection (e.g. a crafted JSON line planted in pod logs an operator's agent later reads), the agent is coerced into calling `kubectl_generic` with `--server=https://attacker.example.com` together with `--insecure-skip-tls-verify=true`. kubectl normally suppresses the `Authorization: Bearer <token>` header over plain HTTP, so the attack needs BOTH flags together: the off-cluster `--server` redirect plus TLS verification disabled, which makes kubectl send the operator's bearer token to the attacker's endpoint. The captured token is then replayed against the real Kubernetes API server with the operator's full RBAC permissions. Affected: mcp-server-kubernetes before v3.7.0.\nDetection covers: (a) a kubectl_generic flags object that sets both server (an http(s) URL)\n    and insecure-skip-tls-verify=true in the same call;\n(b) the equivalent raw kubectl args form combining --server= with\n    --insecure-skip-tls-verify=true;\n(c) explicit CVE-2026-47250 exploitation framing.\nThe detection target is the co-occurrence of the two flags in one tool call — that pairing is the exact token-exfiltration primitive the advisory documents, since kubectl only forwards the Authorization: Bearer header once verification is disabled. A normal single-flag kubectl_generic invocation (only --insecure-skip-tls-verify for a legitimate self-signed dev cluster, or only --server with TLS verification untouched) does not fire. A legitimate operator connecting to a genuinely trusted self-signed endpoint with both flags will also match; this is treated as a reviewable false positive, not silently allow-listed, because the co-occurrence is indistinguishable from the attack without out-of-band knowledge of which hosts are trusted.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [
+    "CVE-2026-47250"
+  ],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241279"
+}

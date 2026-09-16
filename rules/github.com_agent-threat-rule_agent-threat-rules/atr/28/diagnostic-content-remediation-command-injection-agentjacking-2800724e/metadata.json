@@ -1,0 +1,21 @@
+{
+  "uuid": "2800724e-5e4b-467f-841f-d86301217049",
+  "title": "Diagnostic Content Remediation Command Injection (Agentjacking)",
+  "format": "atr",
+  "author": "ATR Community",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects indirect prompt injection delivered through untrusted diagnostic / error-monitoring content (the \"Agentjacking\" class disclosed by Tenet Security, 2026-06, against the Sentry MCP server). An attacker plants a fabricated error event whose remediation section instructs the coding agent to run an attacker-controlled command; the agent treats the injected text as trusted diagnostic guidance and executes it. This rule keys on the distinctive combination of a resolution / remediation framing carried inside diagnostic content AND an auto-executing or remote-fetch-execute payload (npx --yes on a scoped package, curl/wget piped to a shell, iwr|iex, base64|sh). It does not fire on ordinary remediation advice that names a known package install, and it does not key on any single vendor name.\n",
+  "source": "https://github.com/Agent-Threat-Rule/agent-threat-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-07-22",
+  "last_modified": "2026-07-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/241345"
+}
