@@ -1,0 +1,5 @@
+# Trojan_Autorun_Gen_Heur_Mint_Murphy_3_316_1
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/473220)
+
+Rulezet UUID: `923f1658-9026-478b-80da-114387025949`
