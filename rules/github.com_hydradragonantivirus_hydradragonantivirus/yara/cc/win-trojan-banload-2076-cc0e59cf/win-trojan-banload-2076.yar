@@ -1,0 +1,9 @@
+rule Win_Trojan_Banload_2076
+{
+strings:
+	$a0 = { 9c6a??730beb027575e8????????6635????eb1d83c4??eb027575ff0c2471017179e07a017583 }
+
+
+condition:
+	$a0
+}
