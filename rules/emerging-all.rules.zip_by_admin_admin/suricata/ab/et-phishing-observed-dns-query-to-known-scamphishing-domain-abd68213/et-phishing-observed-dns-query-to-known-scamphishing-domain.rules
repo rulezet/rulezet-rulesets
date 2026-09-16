@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET PHISHING Observed DNS Query to Known Scam/Phishing Domain"; dns.query; content:"creator-partners.com"; endswith; fast_pattern; classtype:bad-unknown; sid:2033463; rev:1; metadata:created_at 2021_07_27, confidence High, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2021_07_27;)
