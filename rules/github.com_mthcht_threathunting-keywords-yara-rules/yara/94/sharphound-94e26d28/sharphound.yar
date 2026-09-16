@@ -1,0 +1,21 @@
+rule sharphound
+{
+    meta:
+        description = "Detection patterns for the tool 'sharphound' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "sharphound"
+        rule_category = "signature_keyword"
+
+    strings:
+                        $string1 = " --stealth --secureldap" nocase ascii wide
+                        $string2 = "3f31295f3435ec6223bbd70a6c0d4620a344e2232c7255dd8fa84ed48aa7a59a" nocase ascii wide
+                        $string3 = "ATK/BloodH-B" nocase ascii wide
+                        $string4 = /HackTool\.MSIL\.SharpHound/ nocase ascii wide
+                        $string5 = /Hacktool\.SharpHound/ nocase ascii wide
+                        $string6 = "HackTool:W32/SharpHound" nocase ascii wide
+                        $string7 = /Trojan\:Win32\/Sabsik\.TE\.B\!ml/ nocase ascii wide
+
+    condition:
+        any of them
+}

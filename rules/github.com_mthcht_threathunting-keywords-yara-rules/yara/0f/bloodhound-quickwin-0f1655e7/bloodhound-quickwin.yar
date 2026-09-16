@@ -1,0 +1,19 @@
+rule bloodhound_quickwin
+{
+    meta:
+        description = "Detection patterns for the tool 'bloodhound-quickwin' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "bloodhound-quickwin"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /\sbhqc\.py\s\-/ nocase ascii wide
+                        $string2 = /\/bhqc\.py\s\-/ nocase ascii wide
+                        $string3 = /\/bloodhound\-quickwin\.git/ nocase ascii wide
+                        $string4 = "bloodhound-quickwin-main" nocase ascii wide
+                        $string5 = "kaluche/bloodhound-quickwin" nocase ascii wide
+
+    condition:
+        any of them
+}
