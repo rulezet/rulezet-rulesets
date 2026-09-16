@@ -1,0 +1,7 @@
+rule libavcodec_ff_aac_scalefactor_code__32_big_484_ {
+  strings:
+    $a0 = { 00 03 ff e8 00 03 ff e6 00 03 ff e7 00 03 ff e5 00 07 ff f5 00 07 ff f1 00 07 ff ed 00 07 ff f6 00 07 ff ee 00 07 ff ef 00 07 ff f0 00 07 ff fc 00 07 ff fd 00 07 ff ff 00 07 ff fe 00 07 ff f7 00 07 ff f8 00 07 ff fb 00 07 ff f9 00 03 ff e4 00 07 ff fa 00 03 ff e3 00 01 ff ef 00 01 ff f0 00 00 ff f5 00 01 ff ee 00 00 ff f2 00 00 ff f3 00 00 ff f4 00 00 ff f1 00 00 7f f6 00 00 7f f7 00 00 3f f9 00 00 3f f5 00 00 3f f7 00 00 3f f3 00 00 3f f6 00 00 3f f2 00 00 1f f7 00 00 1f f5 00 00 0f f9 00 00 0f f7 00 00 0f f6 00 00 07 f9 00 00 0f f4 00 00 07 f8 00 00 03 f9 00 00 03 f7 00 00 03 f5 00 00 01 f8 00 00 01 f7 00 00 00 fa 00 00 00 f8 00 00 00 f6 00 00 00 79 00 00 00 3a 00 00 00 38 00 00 00 1a 00 00 00 0b 00 00 00 04 00 00 00 00 00 00 00 0a 00 00 00 0c 00 00 00 1b 00 00 00 39 00 00 00 3b 00 00 00 78 00 00 00 7a 00 00 00 f7 00 00 00 f9 00 00 01 f6 00 00 01 f9 00 00 03 f4 00 00 03 f6 00 00 03 f8 00 00 07 f5 00 00 07 f4 00 00 07 f6 00 00 07 f7 00 00 0f f5 00 00 0f f8 00 00 1f f4 00 00 1f f6 00 00 1f f8 00 00 3f f8 00 00 3f f4 00 00 ff f0 00 00 7f f4 00 00 ff f6 00 00 7f f5 00 03 ff e2 00 07 ff d9 00 07 ff da 00 07 ff db 00 07 ff dc 00 07 ff dd 00 07 ff de 00 07 ff d8 00 07 ff d2 00 07 ff d3 00 07 ff d4 00 07 ff d5 00 07 ff d6 00 07 ff f2 00 07 ff df 00 07 ff e7 00 07 ff e8 00 07 ff e9 00 07 ff ea 00 07 ff eb 00 07 ff e6 00 07 ff e0 00 07 ff e1 00 07 ff e2 00 07 ff e3 00 07 ff e4 00 07 ff e5 00 07 ff d7 00 07 ff ec 00 07 ff f4 00 07 ff f3 }
+
+  condition:
+    $a0
+}

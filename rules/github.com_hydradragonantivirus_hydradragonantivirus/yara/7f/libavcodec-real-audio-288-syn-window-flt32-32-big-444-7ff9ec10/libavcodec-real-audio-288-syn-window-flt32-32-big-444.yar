@@ -1,0 +1,7 @@
+rule libavcodec_real_audio_288_syn_window__flt32___32_big_444_ {
+  strings:
+    $a0 = { 3f 13 a2 05 3f 14 b1 cd 3f 15 c3 7a 3f 16 d7 1f 3f 17 ec bb 3f 19 04 60 3f 1a 1e 00 3f 1b 3c 00 3f 1c 5a 00 3f 1d 7a 00 3f 1e 9e 00 3f 1f c4 00 3f 20 ea 00 3f 22 14 00 3f 23 40 00 3f 24 6c 00 3f 25 9c 00 3f 26 ce 00 3f 28 02 00 3f 29 3a 00 3f 2a 72 00 3f 2b ac 00 3f 2c ea 00 3f 2e 2a 00 3f 2f 6c 00 3f 30 b0 00 3f 31 f6 00 3f 33 3e 00 3f 34 8a 00 3f 35 d8 00 3f 37 28 00 3f 38 7a 00 3f 39 d0 00 3f 3b 26 00 3f 3c 80 00 3f 3d dc 00 3f 3f 3c 00 3f 40 9c 00 3f 42 00 00 3f 43 68 00 3f 44 d0 00 3f 46 3c 00 3f 47 aa 00 3f 49 1c 00 3f 4a 8e 00 3f 4c 04 00 3f 4d 7e 00 3f 4e fa 00 3f 50 78 00 3f 51 fa 00 3f 53 7e 00 3f 55 04 00 3f 56 8e 00 3f 58 1a 00 3f 59 aa 00 3f 5b 3c 00 3f 5c d0 00 3f 5e 68 00 3f 60 04 00 3f 61 a2 00 3f 63 42 00 3f 64 e6 00 3f 66 8e 00 3f 68 38 00 3f 69 e4 00 3f 6b 94 00 3f 6d 48 00 3f 6e fe 00 3f 70 b8 00 3f 72 74 00 3f 74 34 00 3f 75 f8 00 3f 77 be 00 3f 79 88 00 3f 7b 56 00 3f 7d 26 00 3f 7e ae 00 3f 7f a2 00 3f 7f fe 00 3f 7f c6 00 3f 7e fa 00 3f 7d 98 00 3f 7b a0 00 3f 79 18 00 3f 75 fc 00 3f 72 50 00 3f 6e 18 00 3f 69 54 00 3f 64 08 00 3f 5e 38 00 3f 57 e4 00 3f 51 12 00 3f 49 c8 00 3f 42 06 00 3f 39 d4 00 3f 31 34 00 3f 28 2c 00 3f 1e c4 00 3f 14 fe 00 3f 0a e0 00 3f 00 72 00 3e eb 70 00 3e d5 74 00 3e be fc 00 3e a8 14 00 3e 90 c8 00 3e 72 58 00 3e 42 88 00 3e 12 48 00 3d c3 70 00 3d 43 a0 00 }
+
+  condition:
+    $a0
+}

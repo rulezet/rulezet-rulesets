@@ -1,0 +1,7 @@
+rule libavcodec_vp6_ract_pct__8_byt_396_ {
+  strings:
+    $a0 = { e3 f6 e6 f7 f4 ff ff ff ff ff ff ff ff d1 e7 e7 f9 f9 fd ff ff ff ff ff e1 f2 f1 fb fd ff ff ff ff ff ff f1 fd fc ff ff ff ff ff ff ff ff f8 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff f0 ff f8 ff ff ff ff ff ff ff ff ff ff f0 fd ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ce cb e3 ef f7 ff fd ff ff ff ff cf c7 dc ec f3 fc fc ff ff ff ff d4 db e6 f3 f4 fd fc ff ff ff ff ec ed f7 fc fd ff ff ff ff ff ff f0 f0 f8 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff e6 e9 f9 ff ff ff ff ff ff ff ff ee ee fa ff ff ff ff ff ff ff ff f8 fb ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff e1 ef e3 e7 f4 fd f3 ff ff fd ff e8 ea e0 e4 f2 f9 f2 fc fb fb ff eb f9 ee f0 fb ff f9 ff fd fd ff f9 fd fb fa ff ff ff ff ff ff ff fb fa f9 ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff f3 f4 fa fa ff ff ff ff ff ff ff f9 f8 fa fd ff ff ff ff ff ff ff fd ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff }
+
+  condition:
+    $a0
+}

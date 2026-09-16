@@ -1,0 +1,7 @@
+rule EPWIC_s_from_var_func__flt64___64_lil_488_ {
+  strings:
+    $a0 = { 32 5a 47 55 13 44 d3 bf ed 65 db 69 6b 44 d0 bf aa 47 1a dc d6 16 ca bf 88 be bb 95 25 3a c3 bf a2 65 38 f9 88 f3 b7 bf e9 55 ae 01 5b 6f a1 bf cf 23 90 5c 48 d1 9c 3f 88 82 19 53 b0 c6 b7 3f 19 a9 f7 54 4e 7b c4 3f ae 64 c7 46 20 5e cd 3f 32 5a 47 55 13 44 d3 3f 86 02 b6 83 11 fb d7 3f 29 23 2e 00 8d d2 dc 3f 80 d2 50 a3 90 e4 e0 3f 46 cd 57 c9 c7 6e e3 3f 81 5b 77 f3 54 07 e6 3f 54 8f 34 b8 ad ad e8 3f 3c 4b 90 11 50 61 eb 3f 58 1e a4 a7 c8 21 ee 3f d7 51 d5 04 51 77 f0 3f 88 85 5a d3 bc e3 f1 3f d9 eb dd 1f ef 55 f3 3f 76 37 4f 75 c8 cd f4 3f 25 92 e8 65 14 4b f6 3f 21 ea 3e 00 a9 cd f7 3f a1 2d e7 52 5c 55 f9 3f 52 0f d1 e8 0e e2 fa 3f 4f 06 47 c9 ab 73 fc 3f ee 77 28 0a f4 09 fe 3f 30 64 75 ab e7 a4 ff 3f 6e fa b3 1f 29 a2 00 40 c0 b2 d2 a4 14 74 01 40 2a 52 61 6c 21 48 02 40 3c 14 05 fa 44 1e 03 40 83 34 63 d1 74 f6 03 40 8d ee 20 76 a6 d0 04 40 b0 1b b6 2d ca ac 05 40 b4 59 f5 b9 da 8a 06 40 ed 81 56 60 c8 6a 07 40 23 32 ac e2 8d 4c 08 40 e3 a5 9b c4 20 30 09 40 bd 18 ca 89 76 15 0a 40 3f c6 dc b5 84 fc 0a 40 30 4c a6 0a 46 e5 0b 40 56 48 f9 49 b5 cf 0c 40 08 94 4d b9 c2 bb 0d 40 45 2f a3 58 6e a9 0e 40 9b 55 9f ab ad 98 0f 40 4d a1 f3 1a bb 44 10 40 20 7b bd fb e3 bd 10 40 0f d6 ff 39 cc 37 11 40 fc 00 a4 36 71 b2 11 40 cb 4a 93 52 d0 2d 12 40 44 51 a0 4f e4 a9 12 40 66 14 cb 2d ad 26 13 40 15 e3 fc 4d 28 a4 13 40 18 5b 08 72 50 22 14 40 53 cb d6 fa 22 a1 14 40 c6 33 68 e8 9f 20 15 40 54 e3 a5 9b c4 a0 15 40 c4 77 62 d6 8b 21 16 40 }
+
+  condition:
+    $a0
+}

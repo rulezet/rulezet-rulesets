@@ -1,0 +1,7 @@
+rule libavcodec_COOK_cvh_huffcodes0__16_big_382_ {
+  strings:
+    $a0 = { 00 00 00 08 00 2c 00 2d 00 62 00 63 00 d4 00 d5 00 d6 01 c6 01 c7 03 ca 07 d6 07 d7 00 09 00 14 00 2e 00 64 00 65 00 d7 00 d8 01 c8 01 c9 01 ca 01 cb 03 cb 07 d8 07 d9 00 15 00 2f 00 66 00 d9 00 da 01 cc 01 cd 01 ce 01 cf 03 cc 03 cd 03 ce 07 da 0f e4 00 30 00 67 00 db 01 d0 01 d1 01 d2 01 d3 03 cf 03 d0 03 d1 03 d2 07 db 0f e5 1f ea 00 68 00 69 00 dc 01 d4 01 d5 01 d6 03 d3 03 d4 03 d5 03 d6 07 dc 07 dd 0f e6 1f eb 00 dd 00 de 01 d7 01 d8 01 d9 03 d7 03 d8 03 d9 03 da 07 de 07 df 0f e7 1f ec 3f f2 00 df 00 e0 01 da 01 db 03 db 03 dc 07 e0 07 e1 07 e2 0f e8 0f e9 1f ed 1f ee 7f f4 00 e1 00 e2 01 dc 01 dd 03 dd 03 de 07 e3 07 e4 07 e5 0f ea 0f eb 1f ef 3f f3 7f f5 01 de 01 df 01 e0 03 df 03 e0 03 e1 07 e6 07 e7 0f ec 1f f0 0f ed 3f f4 7f f6 ff f8 01 e1 01 e2 03 e2 03 e3 03 e4 03 e5 07 e8 0f ee 0f ef 3f f5 3f f6 ff f9 ff fa ff fa 01 e3 01 e4 03 e6 03 e7 07 e9 07 ea 0f f0 1f f1 1f f2 3f f7 3f f8 7f f7 7f f7 ff fa 03 e8 03 e9 03 ea 07 eb 07 ec 0f f1 0f f2 1f f3 7f f8 7f f9 ff fb 3f f8 7f f7 7f f7 07 ed 07 ee 07 ef 0f f3 1f f4 1f f5 1f f6 7f fa ff fc ff fd ff fb ff fb 3f f8 7f f7 07 f0 07 f1 0f f4 1f f7 1f f8 3f f9 7f fb ff fe ff ff }
+
+  condition:
+    $a0
+}

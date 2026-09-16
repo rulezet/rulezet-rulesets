@@ -1,0 +1,7 @@
+rule libavcodec_imc_quantizer2__flt32___32_lil_448_ {
+  strings:
+    $a0 = { e2 93 0e 3e 07 7b b3 3e 50 71 18 3f cd 93 5b 3f c9 8e 8f 3f 75 b1 b1 3f a9 12 d9 3f 18 22 08 40 9b e8 93 3d 0a 9f 3d 3e af 26 97 3e 1d 3c d3 3e 66 6a 0a 3f 70 42 2d 3f 33 dd 4f 3f 52 99 72 3f e7 fb 89 3f 81 09 9a 3f 80 2b ab 3f f3 ad bd 3f ee ea d1 3f 41 4a e8 3f 2c 7d 04 40 8a ca 1c 40 40 bd 19 3d e9 5f d2 3d 24 0f 24 3e 60 3a 5d 3e 01 6d 8b 3e 0d 17 a9 3e b4 cb c7 3e d3 db e7 3e 4e 98 04 3f e5 d5 15 3f a9 69 27 3f eb 1e 39 3f 45 a0 4a 3f 87 e1 5b 3f a6 9a 6d 3f 75 3f 7f 3f a1 f4 87 3f f9 14 90 3f 7b 4c 98 3f 9b c8 a0 3f 33 88 a9 3f c3 a0 b2 3f 1d 05 bc 3f 50 c5 c5 3f 44 30 d0 3f 38 13 db 3f 0a bf e6 3f 6b 82 f4 3f e4 6a 03 40 0a 4b 0e 40 81 e9 1e 40 8b 36 50 40 da aa e4 3d f6 7c b5 3e 26 6f 24 3f f8 16 76 3f 4c c4 a5 3f 16 13 cf 3f 0b b3 fe 3f 5f b5 20 40 e7 6d 6c 3d c3 f4 2d 3e 96 5d 98 3e 9b 8e e0 3e 64 24 17 3f 45 d5 3f 3f 64 91 6a 3f 8c 2c 8b 3f d3 a1 a1 3f f8 e3 b6 3f c1 52 cd 3f ad 34 e5 3f f2 0a 00 40 6d 53 0f 40 a8 8e 29 40 0d d5 a8 40 8d 7b f3 3c 41 d3 b2 3d 3a eb 13 3e 20 26 51 3e 80 9f 89 3e 49 a1 ac 3e ad 4f d1 3e f3 54 f7 3e 89 7c 0f 3f e0 b9 23 3f 26 6f 38 3f 4b e5 4d 3f 86 ab 63 3f 3e b2 79 3f b9 fe 87 3f 61 55 93 3f 0e c0 9e 3f cc d1 a9 3f 3a cd b4 3f 73 10 c0 3f 6e be cb 3f 62 dc d7 3f b6 82 e4 3f ec 13 f2 3f 09 54 00 40 ed 2b 08 40 a8 56 11 40 ef 73 1e 40 3b 34 2e 40 ec 86 46 40 75 f5 95 40 28 52 c7 40 }
+
+  condition:
+    $a0
+}
