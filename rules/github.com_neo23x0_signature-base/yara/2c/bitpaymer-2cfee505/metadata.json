@@ -1,0 +1,20 @@
+{
+  "uuid": "2cfee505-fe38-4034-bba8-f65fc0bdfc08",
+  "title": "BitPaymer",
+  "format": "yara",
+  "author": "Morphisec labs",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Rule to detect newer Bitpaymer samples. Rule is based on BitPaymer custom packer",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186494"
+}

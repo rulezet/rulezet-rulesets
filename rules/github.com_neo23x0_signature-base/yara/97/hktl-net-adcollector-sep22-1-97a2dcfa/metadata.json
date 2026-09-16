@@ -1,0 +1,21 @@
+{
+  "uuid": "97a2dcfa-4046-49b6-bc2e-bc1ddc0c2e5b",
+  "title": "HKTL_NET_AdCollector_Sep22_1",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects ADCollector Tool - a lightweight tool to quickly extract valuable information from the Active Directory environment for both attacking and defending",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186529"
+}

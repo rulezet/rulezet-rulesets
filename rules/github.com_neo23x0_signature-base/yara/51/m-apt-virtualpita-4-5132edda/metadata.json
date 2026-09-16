@@ -1,0 +1,19 @@
+{
+  "uuid": "5132edda-d686-4352-977c-cc76d9be54ce",
+  "title": "M_APT_VIRTUALPITA_4",
+  "format": "yara",
+  "author": "Mandiant",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Finds opcodes from 401f1c to 401f4f in fe34b7c071d96dac498b72a4a07cb246 to decode text with multiple XORs",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186548"
+}

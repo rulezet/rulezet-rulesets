@@ -1,0 +1,20 @@
+{
+  "uuid": "52cee072-4ca9-478e-a72c-f154cc164ec1",
+  "title": "APT_MAL_RANSOM_ViceSociety_PolyVice_Jan23_1",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects NTRU-ChaChaPoly (PolyVice) malware used by Vice Society",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186464"
+}

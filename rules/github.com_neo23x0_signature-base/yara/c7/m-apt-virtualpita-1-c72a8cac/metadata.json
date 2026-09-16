@@ -1,0 +1,19 @@
+{
+  "uuid": "c72a8cac-2208-45eb-85fb-0f3018a0fa94",
+  "title": "M_APT_VIRTUALPITA_1",
+  "format": "yara",
+  "author": "Mandiant",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Finds opcodes to set a port to bind on 2233, encompassing the setsockopt(), htons(), and bind() from 40973d to 409791 in fe34b7c071d96dac498b72a4a07cb246 (may produce some FPs - comment by Florian Roth)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186536"
+}

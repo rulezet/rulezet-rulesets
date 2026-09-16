@@ -1,0 +1,19 @@
+{
+  "uuid": "6f7135f4-1bb9-40d3-9367-4a2edc9a4cb8",
+  "title": "SUSP_WER_Critical_HeapCorruption",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a crashed application that crashed due to a heap corruption error (could be a sign of exploitation)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186335"
+}

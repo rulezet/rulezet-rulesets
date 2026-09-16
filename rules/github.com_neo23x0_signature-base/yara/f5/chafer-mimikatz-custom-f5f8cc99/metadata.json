@@ -1,0 +1,21 @@
+{
+  "uuid": "f5f8cc99-f858-4285-b511-eb58645f6621",
+  "title": "Chafer_Mimikatz_Custom",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems) / Markus Neis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Custom Mimikatz Version",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"OilRig - G0049\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186408"
+}

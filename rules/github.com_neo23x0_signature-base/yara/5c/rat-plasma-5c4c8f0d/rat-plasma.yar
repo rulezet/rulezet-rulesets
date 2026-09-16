@@ -1,0 +1,25 @@
+rule RAT_Plasma
+{
+	meta:
+		author = "Kevin Breen <kevin@techanarchy.net>"
+		date = "01.04.2014"
+		description = "Detects Plasma RAT"
+		reference = "http://malwareconfig.com/stats/Plasma"
+		maltype = "Remote Access Trojan"
+		filetype = "exe"
+
+		id = "2a19c0de-0078-5487-869c-1bcabea57300"
+	strings:
+		$a = "Miner: Failed to Inject." wide
+		$b = "Started GPU Mining on:" wide
+		$c = "BK: Hard Bot Killer Ran Successfully!" wide
+		$d = "Uploaded Keylogs Successfully!" wide
+		$e = "No Slowloris Attack is Running!" wide
+		$f = "An ARME Attack is Already Running on" wide
+		$g = "Proactive Bot Killer Enabled!" wide
+		$h = "PlasmaRAT" wide ascii
+		$i = "AntiEverything" wide ascii
+
+	condition:
+		all of them
+}

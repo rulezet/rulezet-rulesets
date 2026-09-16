@@ -1,0 +1,19 @@
+{
+  "uuid": "307c3cdc-6a3e-4e4c-bc44-f26647f3293b",
+  "title": "SUSP_Base64_Encoded_Hacktool_Dev",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a suspicious base64 encoded keyword",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186561"
+}

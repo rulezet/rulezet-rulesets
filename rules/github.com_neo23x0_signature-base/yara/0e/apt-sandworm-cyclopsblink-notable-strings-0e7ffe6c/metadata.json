@@ -1,0 +1,20 @@
+{
+  "uuid": "0e7ffe6c-c08b-4799-8487-4893dfbad3e8",
+  "title": "APT_Sandworm_CyclopsBlink_notable_strings",
+  "format": "yara",
+  "author": "NCSC",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects notable strings identified within the Cyclops Blink executable",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Sandworm Team - G0034\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186465"
+}
