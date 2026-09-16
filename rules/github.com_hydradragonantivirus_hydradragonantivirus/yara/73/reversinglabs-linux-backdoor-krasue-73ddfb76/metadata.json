@@ -1,0 +1,22 @@
+{
+  "uuid": "73ddfb76-d462-4941-ae63-4284f7da2cc9",
+  "title": "REVERSINGLABS_Linux_Backdoor_Krasue",
+  "format": "yara",
+  "author": "ReversingLabs",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Yara rule that detects Krasue backdoor.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/706989"
+}

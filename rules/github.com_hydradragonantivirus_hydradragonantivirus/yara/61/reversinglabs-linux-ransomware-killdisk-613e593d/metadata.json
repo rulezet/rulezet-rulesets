@@ -1,0 +1,23 @@
+{
+  "uuid": "613e593d-e597-452c-99ab-874b390a8c42",
+  "title": "REVERSINGLABS_Linux_Ransomware_Killdisk",
+  "format": "yara",
+  "author": "ReversingLabs",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Yara rule that detects KillDisk ransomware.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"KillDisk\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707069"
+}

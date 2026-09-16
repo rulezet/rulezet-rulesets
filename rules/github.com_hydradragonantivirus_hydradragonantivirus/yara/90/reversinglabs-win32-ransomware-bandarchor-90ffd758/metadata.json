@@ -1,0 +1,22 @@
+{
+  "uuid": "90ffd758-6772-4d96-9b40-b1a6d2a5438b",
+  "title": "REVERSINGLABS_Win32_Ransomware_Bandarchor",
+  "format": "yara",
+  "author": "ReversingLabs",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Yara rule that detects BandarChor ransomware.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707012"
+}

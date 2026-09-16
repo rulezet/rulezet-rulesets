@@ -1,0 +1,22 @@
+{
+  "uuid": "a626985f-aa85-490c-9764-7d1bca725c38",
+  "title": "REVERSINGLABS_Win32_Ransomware_Asn1Encoder",
+  "format": "yara",
+  "author": "ReversingLabs",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Yara rule that detects ASN1Encoder ransomware.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707185"
+}

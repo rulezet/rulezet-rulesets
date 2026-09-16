@@ -1,0 +1,22 @@
+{
+  "uuid": "87b1e46f-0af6-4407-85a5-aa8f38e9e808",
+  "title": "REVERSINGLABS_Win32_Ransomware_Plague17",
+  "format": "yara",
+  "author": "ReversingLabs",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Yara rule that detects Plague17 ransomware.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707166"
+}

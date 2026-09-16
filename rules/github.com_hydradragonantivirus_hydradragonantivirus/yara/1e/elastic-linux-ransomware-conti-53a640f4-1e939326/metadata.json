@@ -1,0 +1,23 @@
+{
+  "uuid": "1e939326-7038-4273-9ba0-1960b977df42",
+  "title": "ELASTIC_Linux_Ransomware_Conti_53A640F4",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects Linux Ransomware Conti (Linux.Ransomware.Conti)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Conti\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707246"
+}

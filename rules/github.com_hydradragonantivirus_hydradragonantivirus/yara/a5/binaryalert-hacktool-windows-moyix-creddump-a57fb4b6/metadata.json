@@ -1,0 +1,22 @@
+{
+  "uuid": "a57fb4b6-025b-4bb0-8cd9-2a8954a3e7c0",
+  "title": "BINARYALERT_Hacktool_Windows_Moyix_Creddump",
+  "format": "yara",
+  "author": "@mimeframe",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "creddump is a python tool to extract credentials and secrets from Windows registry hives.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707413"
+}

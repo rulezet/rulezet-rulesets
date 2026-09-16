@@ -1,0 +1,20 @@
+{
+  "uuid": "fb30797a-b009-4a16-92da-d8283e7f8866",
+  "title": "CAPE_Trickbot_Permadll_UEFI_Module",
+  "format": "yara",
+  "author": "@VK_Intel | Advanced Intelligence",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects TrickBot Banking module permaDll",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Trickbot\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707294"
+}

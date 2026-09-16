@@ -1,0 +1,21 @@
+{
+  "uuid": "26f0fc2f-ac49-4679-9f64-bcd686b547e8",
+  "title": "ELASTIC_Linux_Cryptominer_Xmrig_79B42B21",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects Linux Cryptominer Xmrig (Linux.Cryptominer.Xmrig)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707256"
+}
