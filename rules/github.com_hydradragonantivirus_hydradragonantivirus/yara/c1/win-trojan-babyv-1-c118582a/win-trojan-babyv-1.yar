@@ -1,0 +1,9 @@
+rule Win_Trojan_Babyv_1
+{
+strings:
+	$a0 = { 61672e77726974656c696e652022667628323134293d222277696e646f7773d3c5bbafb4f3caa62e455845222222 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_VNuke_2
+{
+strings:
+	$a0 = { ffebe05f5e5b8be55dc30000ffffffff0200000054540000ffffffff240000000203373e03345b03313256634c6f4e652076312e302042792056697275 }
+
+
+condition:
+	$a0
+}

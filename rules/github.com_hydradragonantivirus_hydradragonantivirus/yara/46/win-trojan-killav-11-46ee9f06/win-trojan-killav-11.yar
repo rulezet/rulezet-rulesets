@@ -1,0 +1,11 @@
+rule Win_Trojan_Killav_11
+{
+strings:
+	$a0 = { 64656c20633a5c70726f6772617e315c662d70726f745c2a2e646c6c }
+
+	$a1 = { 64656c20633a5c70726f6772617e315c6d63616665655c2a2e767363 }
+
+
+condition:
+	$a0 and $a1
+}

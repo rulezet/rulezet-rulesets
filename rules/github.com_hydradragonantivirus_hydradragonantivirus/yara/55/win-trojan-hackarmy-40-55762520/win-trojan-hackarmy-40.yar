@@ -1,0 +1,11 @@
+rule Win_Trojan_Hackarmy_40
+{
+strings:
+	$a0 = { 6500626f74736d75746578780023 }
+
+	$a1 = { 6b696c6c636c6f6e657300636c6f6e6573656e6400505249564d5347004e4f54494345004e }
+
+
+condition:
+	$a0 and $a1
+}

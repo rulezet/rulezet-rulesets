@@ -1,0 +1,9 @@
+rule Win_Trojan_Hijack_2
+{
+strings:
+	$a0 = { 696620284d61726b65722e696e6465784f6628223c4a61636b5261626269743e2229203d3d202d3129207b }
+
+
+condition:
+	$a0
+}

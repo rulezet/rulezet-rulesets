@@ -1,0 +1,9 @@
+rule Win_Trojan_Adex_1
+{
+strings:
+	$a0 = { 8bc381c4545100005d5f5e5bc300004164756c74204578706c6f72657220362e300000000000007264706f }
+
+
+condition:
+	$a0
+}
