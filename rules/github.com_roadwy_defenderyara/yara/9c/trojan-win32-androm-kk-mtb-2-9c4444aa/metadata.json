@@ -1,0 +1,22 @@
+{
+  "uuid": "9c4444aa-6d08-494b-b30d-0127a295ae10",
+  "title": "Trojan_Win32_Androm_KK_MTB_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Androm.KK!MTB,SIGNATURE_TYPE_PEHSTR_EXT,10 00 10 00 07 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/276416"
+}
