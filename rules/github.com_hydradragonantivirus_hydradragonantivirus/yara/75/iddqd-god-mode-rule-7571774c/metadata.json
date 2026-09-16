@@ -1,0 +1,22 @@
+{
+  "uuid": "7571774c-8ec4-46e6-a6a6-4a16aff9d434",
+  "title": "IDDQD_God_Mode_Rule",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a wide array of cyber threats, from malware and ransomware to advanced persistent threats (APTs)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/706049"
+}

@@ -1,0 +1,32 @@
+rule backdoor_mod_x {
+  meta:
+    description = "work1 - file backdoor_mod_x.php"
+    author      = "Brian Laskowski"
+    reference   = "https://github.com/Hestat/lw-yara/"
+    date        = "2019-12-22"
+    hash1       = "2ebab963b4bdb879246e07c3fdcd5b4f1f78ca1a7cbd277d55f2732fbe4c9959"
+
+  strings:
+    $s1  = "$w = $v(\"/*iXedVoqe2988*/\", $xsqPYkUn667( jr_Uz($xsqPYkUn667($qosNeVMz3605), \"NSRvfrEi5875\")));" fullword ascii
+    $s2  = "$XODAtKds5345 = \"8swkd9hm_1(na;xv07uoi4bg*63)eqz2f.jlp/rc5yt\";" fullword ascii
+    $s3  = "FF2E1GSw6FwZUYHpBHj0AQwU1EBl2YER+DQI5PCUlCwFWCmJSBGFjQwVBAxp/Qlh+DQI5PCUjKRlvUVBSBBsAGQcqCB1lVU9FLD4hETYhByhXYFtPLQQqED9AfBxXVWF" ascii
+    $s4  = "BBGJiBi0hB152X1x/GGIcJgVAE1lsCg5DL2E+Gi01dAJ7a1BeFmIcMDMeHy9gVERbHRUAIzM0fCBhCXlgBGJiBiobIQFUVXEBBColEQI6D1hva1wCDTQ5PARADw9WC2V" ascii
+    $s5  = "dFD0EAz9BFxlXCgJTFAs6BgVBFxN+e1NdLWEcBgcmDwZvYFBbBQA5EQNAH1hXVXkFLwRrAy81AxNsCltFAz46GgMxIgJWe1sCBBsbTywLJl5vVQ5MBRAABjYmBF5/f1w" ascii
+    $s6  = "ZFwQhQSUVLiN2aVtfFwscGi8xIR5vC3lNLBAxQCUVLiN2aVx/LT4ERgIqDxx8e2UFLxQ+DComcBBvYHpSHgAQNwU1IQ9WYGFZLT05GSw6FwZUYHpBHj4qBgQfNhp/cHk" ascii
+    $s7  = "eLGA2DComABB7bHJbAhATGDVCfCN6ewZmBColESxCMTlmbFBBGAAxBS8xIQNWfFAHADoxBikFKiN/fw5CKhVrHAc1AxBWCmEFLSoTTy8xJgd6T1h/FD5rDzwlAwNUe1B" ascii
+    $s8  = "ZLD42RgcxdRF6T0cMDTklAAVACxBUYHUFHjobQSUVKQVsCl9DBxAxTgc2AEJkCg5ALWFrBTwmMh9UfHIeHhQABgIbBwNXf3FPLSljHARAcFlvbwIFHjkqGwRBDx18fwJ" ascii
+    $s9  = "/DQI+HwUfEwFUQkR+DQI5PCUlCwFWCmJSBGAQGAVBAxp/Qlh+DQI5PCUjKRBvYGUELT5mESw6FwZUYHpBHj0YGgULBFB8e2UFLxQ+DComcBFRb2FMKwA1HzNCEyRnbXl" ascii
+    $s10 = "/BBsQGgUfdBN8fAdSAxchPSUjLiN2b21DLTo1HQcmdBNRcH1GFARmGSw0fDhhCXlgGSo2ASsLIQ1+awdNASoABjYYdR56QQdBBBQ5BiUVLiN2aVx/BBsQGgUfdBN8e0Q" ascii
+    $s11 = "FKgsYAy81HwFXcHlZASQ9PCUqdSJ2aVtYKgRnHAI1KR9XUXVPFAQqGj9BFwJsUVBeFBQbBi86NiJ2aVx/LWA2BgI1CwZ+e2UFLxQ+DComcFlQYHVZBQI+QSUVLiN2aVt" ascii
+    $s12 = "hGBUhGAU2AAdta1xSAjoTGD4xJhpXVmFGLBAqRgc1KRN5VXlaLARrHSocHwFXcGFZBQcmDzwqF1hWVQNSFD4UBQVAEF58UgMNLwRnAQIqFA5RcFtCFAdjRjwqLVl8fwJ" ascii
+    $s13 = "SBxATES81KQR+e2VaFAQUHS0hB152UXZSBxATES8xBA58e3ZSBxATES8xBA58e3ZSBxATES8xBA58e3ZeLWAUBS8xcVB8e1N/Gj8cMDMeFA5mbQJgGioQESwLcQJRf3F" ascii
+    $s14 = "/DQI+HwUfEwFUQkR+DQI5PCUlCwFWCmJSBGAQGAVBAxp/Qlh+DQI5PCUjKRBvYGUELT5mESw6FwZUYHpBHj0YGgULBFB8e2UFLxQ+DComcBFRb2FMKwA1HwVAExpvb3k" ascii
+    $s15 = "/DQI5PCUjLgJtCXVlG2IAFCxBBBB/CQdSHgATGDNCEyRnbXlgBxA9ETQeDzlha3ZbAjoAEDM3fD1jfkRbLRcbGD4hcQd8fU9/GgY+Iy82CB58fQ5yHD8cMDAxBAd5UVB" ascii
+    $s16 = "PKhsfGSxAdFxWC3FGFmE2GgI0fANXf1tZLD0AEAclcARXQVRFBQI9PCUhF1lvbwZCGWJiETYhBABhYFthLQQlES0xDBxXYFtPLQQqEDxAE1ltCnlGLwQEAwI0fBlXVW1" ascii
+
+  condition:
+    (uint16(0) == 0x3f3c and
+      filesize < 300KB and
+      (8 of them)
+    ) or (all of them)
+}

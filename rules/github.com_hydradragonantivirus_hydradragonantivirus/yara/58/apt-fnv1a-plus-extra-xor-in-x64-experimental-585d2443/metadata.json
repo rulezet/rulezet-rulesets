@@ -1,0 +1,21 @@
+{
+  "uuid": "585d2443-3443-4853-a2dc-d15508aa1039",
+  "title": "APT_fnv1a_plus_extra_XOR_in_x64_experimental",
+  "format": "yara",
+  "author": "Arnim Rupp",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": false,
+  "description": "This rule detects the specific x64 implementation of fnv1a like used in the SUNBURST backdoor (standard fnv1a + one final XOR before RET), rewritten in c. (fnv64a_offset and fnv64a_prime are standard constants in the fnv1a hashing algorithm.)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:backdoor=\"SUNBURST\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/706007"
+}
