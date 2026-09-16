@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET WEB_CLIENT MALVERTISING Flash - URI - /loading?vkn="; flow:established,to_server; http.uri; content:"/loading?vkn="; classtype:trojan-activity; sid:2017032; rev:3; metadata:created_at 2013_06_19, signature_severity Major, updated_at 2024_03_17;)

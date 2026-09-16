@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP host-domain-lookup.com spyware related Checkin"; flow:established,to_server; http.uri; content:"?udata="; content:"mission_supgrade|3a|"; fast_pattern; classtype:pup-activity; sid:2007749; rev:8; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_18;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET CURRENT_EVENTS SibHost Jar Request"; flow:established,to_server; http.uri; content:".jar?m="; pcre:"/\.jar\?m=[1-2]$/"; http.user_agent; content:"|29 20|Java/1"; fast_pattern; classtype:trojan-activity; sid:2015951; rev:18; metadata:created_at 2012_11_28, signature_severity Minor, updated_at 2024_03_18;)

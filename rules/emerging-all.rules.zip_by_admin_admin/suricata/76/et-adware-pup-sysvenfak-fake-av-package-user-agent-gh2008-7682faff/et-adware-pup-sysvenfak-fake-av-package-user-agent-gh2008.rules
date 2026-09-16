@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP SysVenFak Fake AV Package User-Agent (gh2008)"; flow:established,to_server; http.user_agent; content:"gh20"; startswith; classtype:pup-activity; sid:2007944; rev:8; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_18;)

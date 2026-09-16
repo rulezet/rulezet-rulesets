@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Fake Mozilla UA Outbound (Mozilla/0.xx)"; flow:established,to_server; http.user_agent; content:"Mozilla/0."; startswith; classtype:pup-activity; sid:2010905; rev:9; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_18;)

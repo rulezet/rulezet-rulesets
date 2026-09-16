@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP SysVenFak Fake AV Package Victim Checkin (victim.php)"; flow:established,to_server; http.uri; content:"/victim.php?"; fast_pattern; pcre:"/victim\.php\?\d\d\d\d\d/i"; classtype:pup-activity; sid:2007945; rev:6; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_18;)

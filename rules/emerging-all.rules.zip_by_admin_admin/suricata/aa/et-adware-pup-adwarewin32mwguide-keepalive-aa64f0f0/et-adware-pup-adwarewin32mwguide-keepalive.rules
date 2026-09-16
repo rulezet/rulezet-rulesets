@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP AdWare.Win32.MWGuide keepalive"; flow:established,to_server; http.uri; content:"/alive.php?aff_id="; classtype:pup-activity; sid:2008840; rev:8; metadata:created_at 2010_07_30, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_18;)

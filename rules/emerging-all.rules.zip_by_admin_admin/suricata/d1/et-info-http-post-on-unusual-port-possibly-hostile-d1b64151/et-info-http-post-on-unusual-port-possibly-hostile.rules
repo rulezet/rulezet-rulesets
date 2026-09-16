@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET !$HTTP_PORTS (msg:"ET INFO HTTP POST on unusual Port Possibly Hostile"; flow:established,to_server; http.method; content:"POST"; nocase; classtype:policy-violation; sid:2006409; rev:11; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_18;)

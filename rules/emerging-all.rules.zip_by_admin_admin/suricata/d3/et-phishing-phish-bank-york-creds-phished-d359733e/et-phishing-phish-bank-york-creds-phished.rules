@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET PHISHING PHISH Bank - York - Creds Phished"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/secured/private/login.php"; fast_pattern; classtype:social-engineering; sid:2015983; rev:4; metadata:created_at 2012_12_05, confidence Medium, signature_severity Major, updated_at 2024_03_18;)

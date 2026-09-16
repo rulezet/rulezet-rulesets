@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET CURRENT_EVENTS Phoenix/Fiesta URI Requested Contains /? and hex"; flow:established,to_server; http.uri; content:"/?"; fast_pattern; pcre:"/\/\?[0-9a-f]{60,66}[\x3b\d\x2c]*$/"; classtype:exploit-kit; sid:2013094; rev:10; metadata:created_at 2011_06_22, signature_severity Unknown, updated_at 2024_03_18;)

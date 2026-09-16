@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO Gteko User-Agent Detected - Dell Remote Access"; flow:established,to_server; http.user_agent; content:"Windows 98"; content:"GtekClient"; fast_pattern; classtype:policy-violation; sid:2008037; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_18;)
