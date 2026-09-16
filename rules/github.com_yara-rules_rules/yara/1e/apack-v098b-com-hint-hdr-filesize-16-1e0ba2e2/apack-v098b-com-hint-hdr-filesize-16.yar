@@ -1,0 +1,9 @@
+import "pe"
+rule aPack_v098b_com_Hint_HDR_FILESIZE_16: PEiD
+{
+    strings:
+        $a = { BE ?? ?? BF ?? ?? 8B CF FC 57 F3 A4 C3 BF ?? ?? 57 57 BE ?? ?? B2 ?? BD ?? ?? 50 A4 }
+    condition:
+        $a at pe.entry_point
+
+}

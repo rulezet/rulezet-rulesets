@@ -1,0 +1,9 @@
+import "pe"
+rule tElock_099c_Private_ECLIPSE_tE_additional: PEiD
+{
+    strings:
+        $a = { E9 3F DF FF FF 00 00 00 ?? ?? ?? ?? 04 ?? ?? 00 00 00 00 00 00 00 00 00 24 ?? ?? 00 14 ?? ?? 00 0C ?? ?? 00 00 00 00 00 00 00 00 00 31 ?? ?? 00 1C ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3C ?? ?? 00 00 00 00 00 4F ?? ?? 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
