@@ -1,0 +1,9 @@
+rule Trojan_Win32_Tofsee_RWS_MTB{
+	meta:
+		description = "Trojan:Win32/Tofsee.RWS!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {c1 e9 05 03 4d ?? 03 d6 33 c2 81 3d ?? ?? ?? ?? 72 07 00 00 c7 05 ?? ?? ?? ?? b4 1a 3a df 89 1d ?? ?? ?? ?? 89 1d ?? ?? ?? ?? 89 45 ?? 75 } 	condition:
+		((#a_02_0  & 1)*1) >=1
+ 
+}

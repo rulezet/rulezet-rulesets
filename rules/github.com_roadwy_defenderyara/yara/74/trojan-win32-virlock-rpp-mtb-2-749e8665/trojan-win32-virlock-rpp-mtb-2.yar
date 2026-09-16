@@ -1,0 +1,9 @@
+rule Trojan_Win32_VirLock_RPP_MTB_2{
+	meta:
+		description = "Trojan:Win32/VirLock.RPP!MTB,SIGNATURE_TYPE_PEHSTR,01 00 01 00 02 00 00 "
+		
+	strings :
+		$a_01_0 = {8a 06 32 c2 88 07 46 90 47 90 49 } 		$a_01_1 = {8a 06 32 c2 88 07 46 47 e9 00 00 00 00 49 83 f9 00 } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1) >=1
+ 
+}

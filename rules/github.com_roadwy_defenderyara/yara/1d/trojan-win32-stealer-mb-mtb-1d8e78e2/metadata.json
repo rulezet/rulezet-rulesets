@@ -1,0 +1,22 @@
+{
+  "uuid": "1d8e78e2-4a1d-4a22-892c-3c4cd3a9d5a4",
+  "title": "Trojan_Win32_Stealer_MB_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Stealer.MB!MTB,SIGNATURE_TYPE_PEHSTR_EXT,10 00 10 00 07 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/271393"
+}
