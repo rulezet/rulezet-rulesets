@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Replace macro from outside RFC1918"; content: "S-300000"; content: "RTS1_IP"; meta_content:!"value ''%sagan%", $RFC1918; default_proto: tcp; classtype: misc-activity; program: *FIPAYPIN*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002770; sid:5002770; rev:3;)

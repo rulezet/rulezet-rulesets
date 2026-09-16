@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] WebVPN Citrix encountered bad flow control flow"; append_program; content: "%ASA"; pcre: "/%ASA[-]+7-723004/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000581; sid: 5000581; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] Possible downgrade attack"; program: hostapd; content: "downgrade attack"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001041; sid: 5001041; rev: 2;)

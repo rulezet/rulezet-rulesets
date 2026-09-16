@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Deny inbound UDP"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+2-106006|%PIX[-]+2-106006|%FWSM[-]+2-106006; default_proto: udp; classtype: suspicious-traffic; normalize; reference: url, wiki.quadrantsec.com/bin/view/Main/5000633; sid: 5000633; rev: 6;)

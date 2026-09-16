@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Failed to open pinpad [0/2]"; content: "S-300000"; content: "Failed to open pinpad"; default_proto: tcp; classtype: misc-activity; program: *FIPAYPIN*; threshold: type suppress, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002769; sid:5002769; rev:3;)

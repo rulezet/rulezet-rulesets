@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Unable to modify file"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+7-716030|%FWSM[-]+7-716030/"; classtype: policy-violation; reference: url, wiki.quadrantsec.com/bin/view/Main/5000573; sid: 5000573; rev: 5;)

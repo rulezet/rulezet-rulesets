@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] Radius - Starting accounting session"; program: hostapd; content: "RADIUS"; content: "starting accounting session"; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001044; sid: 5001044; rev: 2;)

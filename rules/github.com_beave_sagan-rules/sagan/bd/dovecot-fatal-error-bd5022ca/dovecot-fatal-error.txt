@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Fatal error"; content: "Fatal"; default_proto: tcp; classtype: program-error; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000267; sid:5000267; rev:2;)

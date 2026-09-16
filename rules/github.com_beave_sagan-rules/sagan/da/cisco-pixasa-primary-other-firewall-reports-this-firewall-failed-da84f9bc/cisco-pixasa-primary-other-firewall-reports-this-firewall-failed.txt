@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [Primary] Other firewall reports this firewall failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+1-103004|%PIX[-]+1-103004|%FWSM[-]+1-103004/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000604; sid: 5000604; rev: 5;)

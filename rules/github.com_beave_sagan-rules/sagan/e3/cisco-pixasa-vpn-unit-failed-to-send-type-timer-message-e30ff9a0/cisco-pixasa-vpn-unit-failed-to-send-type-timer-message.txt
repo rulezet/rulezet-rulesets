@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to send type timer message"; append_program; content: "%ASA"; pcre: "/%ASA[-]+5-720020/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000529; sid: 5000529; rev: 4;)

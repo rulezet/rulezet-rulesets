@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] unknownFutureValue Event Detected"; program: azureEventHub; json_content:"riskState","unknownFutureValue"; json_contains; classtype: bad-unknown; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004772; rev: 2;)

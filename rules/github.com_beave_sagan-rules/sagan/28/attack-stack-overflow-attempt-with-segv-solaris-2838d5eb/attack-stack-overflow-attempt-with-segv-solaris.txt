@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Stack overflow attempt with SEGV [Solaris]"; content: "attempt to execute code on stack by"; nocase; classtype: exploit-attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5000099; sid:5000099; rev:2;)

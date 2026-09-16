@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HORDEIMP] Failed login"; content: "FAILED LOGIN"; default_proto: tcp; default_dst_port: $HTTP_PORT; classtype: unsuccessful-user; program: HORDE; reference: url,wiki.quadrantsec.com/bin/view/Main/5000368; sid:5000368; rev:3;)

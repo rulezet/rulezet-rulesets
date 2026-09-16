@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] IEEE 802.11 - Associated"; program: hostapd; content: "IEEE 802.11"; content: " associated"; classtype: successful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5001047; sid: 5001047; rev: 2;)

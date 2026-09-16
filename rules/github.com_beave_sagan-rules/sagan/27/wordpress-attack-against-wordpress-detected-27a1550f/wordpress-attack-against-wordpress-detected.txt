@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WORDPRESS] - Attack against Wordpress detected"; content: "Warning"; content: "IDS"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: misc-attack; program: WPsyslog; reference: url,wiki.quadrantsec.com/bin/view/Main/5000203; sid: 5000203; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Trendmicro] Url Filtering Logs Detected"; content: "LogUrlFiltering; classtype: suspicious-traffic; program: TRENDMICRO; reference: url,wiki.quadrantsec.com/bin/view/Main/5003795; sid:5003795; rev:1 ;)

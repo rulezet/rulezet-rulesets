@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Buffer overflow attempt on rpc.statd"; pcre: "/gethostbyname error for \W+/"; classtype: exploit-attempt; program: rpc.statd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000095; sid:5000095; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] VPN failover client is transitioning to active state"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-720039/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000555; sid: 5000555; rev: 4;)

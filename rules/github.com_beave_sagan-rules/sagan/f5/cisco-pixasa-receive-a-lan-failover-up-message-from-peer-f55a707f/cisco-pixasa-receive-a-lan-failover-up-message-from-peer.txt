@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Receive a LAN_FAILOVER_UP message from peer"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+1-105034|%PIX[-]+1-105034/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000618; sid: 5000618; rev: 4;)

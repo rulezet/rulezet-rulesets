@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] RCMD backconnection failed "; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-201006|%PIX[-]+3-201006|%FWSM[-]+3-201006/"; default_proto: tcp; default_dst_port: 514/"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5000656; sid: 5000656; rev: 5;)

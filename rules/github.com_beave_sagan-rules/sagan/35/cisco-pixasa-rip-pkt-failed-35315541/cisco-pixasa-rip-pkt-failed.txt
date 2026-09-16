@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] RIP pkt failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+1-107002|%PIX[-]+1-107002|%FWSM[-]+1-107002/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000629; sid: 5000629; rev: 5;)

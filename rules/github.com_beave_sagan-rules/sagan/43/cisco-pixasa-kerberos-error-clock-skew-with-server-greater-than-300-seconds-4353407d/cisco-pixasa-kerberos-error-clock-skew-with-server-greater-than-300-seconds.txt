@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Kerberos error. Clock skew with server greater than 300 seconds"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-113020|%PIX[-]+3-113020|%FWSM[-]+3-109020/"; classtype: configuration-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000654; sid: 5000654; rev: 5;)

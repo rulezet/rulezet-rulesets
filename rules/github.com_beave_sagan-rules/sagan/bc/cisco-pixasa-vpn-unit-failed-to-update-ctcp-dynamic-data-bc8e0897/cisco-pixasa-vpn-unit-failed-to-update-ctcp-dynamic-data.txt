@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to update cTCP dynamic data"; append_program; content: "%ASA"; pcre: "/%ASA[-]+5-720071/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000533; sid: 5000533; rev: 4;)

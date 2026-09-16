@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] Possible downgrade attack"; program: hostapd; content: "TLSv1"; content: "Failed to decrypt"; classtype: unsuccessful-user ; reference: url, wiki.quadrantsec.com/bin/view/Main/5001042; sid: 5001042; rev: 2;)

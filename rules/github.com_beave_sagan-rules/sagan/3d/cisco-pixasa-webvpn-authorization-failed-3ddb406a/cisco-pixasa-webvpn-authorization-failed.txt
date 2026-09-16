@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] WebVPN authorization failed"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-719019/"; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5000543; sid: 5000543; rev: 4;)

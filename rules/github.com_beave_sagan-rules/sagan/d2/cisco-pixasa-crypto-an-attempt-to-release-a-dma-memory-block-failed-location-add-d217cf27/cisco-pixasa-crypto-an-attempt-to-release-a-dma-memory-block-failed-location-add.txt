@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] CRYPTO An attempt to release a DMA memory block failed, location address"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+6-402129|%FWSM[-]+6-402129/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000535; sid: 5000535; rev: 5;)

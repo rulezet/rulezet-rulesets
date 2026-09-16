@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Deny protocol reverse path check"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+1-106021|%PIX[-]+1-106021|%FWSM[-]+1-106021/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000625; sid: 5000625; rev: 5;)

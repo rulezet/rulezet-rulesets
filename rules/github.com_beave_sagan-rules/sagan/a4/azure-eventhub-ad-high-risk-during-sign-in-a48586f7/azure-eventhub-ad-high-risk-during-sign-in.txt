@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] High Risk During Sign in"; program: azureEventHub; json_content:"riskLevelDuringSignIn","high"; classtype: correlated-attack; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-azure-monitor-sign-ins-log-schema; sid:5004773; rev: 2;)

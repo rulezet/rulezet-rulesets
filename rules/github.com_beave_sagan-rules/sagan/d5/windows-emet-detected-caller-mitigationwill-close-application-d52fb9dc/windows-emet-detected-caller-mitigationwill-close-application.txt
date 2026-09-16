@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-EMET] Detected Caller mitigation/will close application"; event_id: 2; classtype: suspicious-command; program: EMET; reference: url,wiki.quadrantsec.com/bin/view/Main/5002101; sid:5002101; rev:3;)

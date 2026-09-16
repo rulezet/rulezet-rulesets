@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] File access DENIED, filename"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+7-716021|%FWSM[-]+7-716021/"; classtype: policy-violation; reference: url, wiki.quadrantsec.com/bin/view/Main/5000566; sid: 5000566; rev: 5;)

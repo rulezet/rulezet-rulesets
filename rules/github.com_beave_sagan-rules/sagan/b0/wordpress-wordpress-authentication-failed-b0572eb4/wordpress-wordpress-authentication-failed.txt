@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WORDPRESS] - Wordpress authentication failed"; content: "User authentication failed"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: unsuccessful-user; program: WPsyslog; reference: url,wiki.quadrantsec.com/bin/view/Main/5000198; sid: 5000198; rev:3;)

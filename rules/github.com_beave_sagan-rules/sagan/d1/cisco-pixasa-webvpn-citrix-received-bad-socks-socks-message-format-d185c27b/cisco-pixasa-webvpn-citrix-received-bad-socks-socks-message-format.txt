@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] WebVPN Citrix received bad SOCKS socks message format"; append_program; content: "%ASA"; pcre: "/%ASA[-]+7-723012/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000584; sid: 5000584; rev: 4;)

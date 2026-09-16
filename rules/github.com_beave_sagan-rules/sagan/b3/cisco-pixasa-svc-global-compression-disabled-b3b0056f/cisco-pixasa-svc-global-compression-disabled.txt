@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] SVC Global Compression Disabled"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-722025|%FWSM[-]+6-722025/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000563; sid: 5000563; rev: 5;)

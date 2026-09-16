@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] IEEE 802.11 - deauthenticated due to local deauth request"; program: hostapd; content: "IEEE 802.11"; content: "deauthenticated due to local deauth request"; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001049; sid: 5001049; rev: 2;)

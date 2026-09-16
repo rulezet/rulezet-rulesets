@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] VPN Stateful failover Message Thread is being disabled"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-720056/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000557; sid: 5000557; rev: 4;)

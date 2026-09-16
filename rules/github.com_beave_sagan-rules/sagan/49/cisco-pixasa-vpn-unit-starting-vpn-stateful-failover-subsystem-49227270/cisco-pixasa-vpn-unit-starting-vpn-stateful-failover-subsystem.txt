@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Starting VPN Stateful Failover Subsystem"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-720002/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000548; sid: 5000548; rev: 4;)

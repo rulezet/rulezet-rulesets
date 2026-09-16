@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] WebVPN has not been successfully authenticated. Access denied"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-719023/"; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5000545; sid: 5000545; rev: 4;)

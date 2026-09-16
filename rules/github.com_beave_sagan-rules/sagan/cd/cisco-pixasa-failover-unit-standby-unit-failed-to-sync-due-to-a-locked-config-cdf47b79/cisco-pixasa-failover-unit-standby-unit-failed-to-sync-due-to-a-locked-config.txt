@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [failover_unit] Standby unit failed to sync due to a locked config"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+1-105021|%PIX[-]+1-105021|%FWSM[-]+1-105021/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000615; sid: 5000615; rev: 5;)

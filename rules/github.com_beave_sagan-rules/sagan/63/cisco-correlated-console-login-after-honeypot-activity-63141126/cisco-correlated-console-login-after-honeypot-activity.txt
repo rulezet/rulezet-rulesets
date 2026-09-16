@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-CORRELATED] Console login after honeypot activity"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; classtype: correlated-attack; xbits: isset,honeypot,track ip_src; parse_src_ip: 1; threshold: type suppress, track by_src, count 5, seconds 3600; reference: url, wiki.quadrantsec.com/bin/view/Main/5003211; sid:5003211; rev:3;)

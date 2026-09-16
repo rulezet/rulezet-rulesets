@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to process state update message from the active peer"; append_program; content: "%ASA"; pcre: "/%ASA[-]+5-720036/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000532; sid: 5000532; rev: 4;)

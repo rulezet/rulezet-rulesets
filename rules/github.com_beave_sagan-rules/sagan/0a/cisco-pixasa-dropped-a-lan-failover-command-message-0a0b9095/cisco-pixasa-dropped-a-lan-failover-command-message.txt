@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] dropped a LAN Failover command message"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+1-105036|%PIX[-]+1-105036/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000620; sid: 5000620; rev: 4;)

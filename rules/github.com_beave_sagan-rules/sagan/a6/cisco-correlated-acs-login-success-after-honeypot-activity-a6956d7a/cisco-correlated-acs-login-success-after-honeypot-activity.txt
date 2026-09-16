@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-CORRELATED] ACS Login success after honeypot activity"; program: CisACS_01_PassedAuth; classtype: correlated-attack; xbits: isset,honeypot,track ip_src; parse_src_ip: 2; threshold: type suppress, track by_src, count 5, seconds 3600; reference: url, wiki.quadrantsec.com/bin/view/Main/5003223; sid:5003223; rev:3;)

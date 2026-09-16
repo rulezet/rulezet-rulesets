@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Unable to view file"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+7-716027|%FWSM[-]+7-716027/"; classtype: policy-violation; reference: url, wiki.quadrantsec.com/bin/view/Main/5000570; sid: 5000570; rev: 5;)

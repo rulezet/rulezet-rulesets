@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [Primary] Unable to verify the Interface count with mate. Failover may be disabled in mate"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+1-105039|%PIX[-]+1-105039/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000621; sid: 5000621; rev: 4;)

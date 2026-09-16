@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] WPA pairwise key handshake complete"; program: hostapd; content: "WPA"; content: "pairwise key handshake completed"; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001045; sid: 5001045; rev: 2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] SVC Session Termination Out"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+7-722031|%FWSM[-]+7-722031; parse_src_ip: 1/"; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5000580; sid: 5000580; rev: 6;)

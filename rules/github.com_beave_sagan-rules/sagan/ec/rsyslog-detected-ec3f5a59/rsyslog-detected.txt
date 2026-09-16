@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"RSyslog detected"; program: rsyslogd|rsyslogd-*; metadata: fingerprint_source logs, fingerprint_os linux, fingerprint_expire 86400; classtype: fingerprint; threshold: type limit, track by_src, seconds 3600, count 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5100003; sid: 5100043; rev:1;)

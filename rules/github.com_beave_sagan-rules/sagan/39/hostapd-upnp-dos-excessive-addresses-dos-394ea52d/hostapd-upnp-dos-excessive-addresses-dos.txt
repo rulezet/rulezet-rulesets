@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] UPnP DoS excessive addresses [DoS]"; program: hostapd; content: "UPnP"; content: "Ignoring excessive addresses"; classtype: attempted-dos; reference: url, wiki.quadrantsec.com/bin/view/Main/5001043; sid: 5001043; rev: 2;)

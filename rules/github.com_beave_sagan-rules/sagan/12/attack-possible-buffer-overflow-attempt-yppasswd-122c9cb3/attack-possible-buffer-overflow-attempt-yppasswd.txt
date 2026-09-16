@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Possible buffer overflow attempt [yppasswd?]" ; content: "@@@@@@@@@@@@@@@@@@@@@@@@@"; classtype: exploit-attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5000356; sid:5000365; rev:2;)

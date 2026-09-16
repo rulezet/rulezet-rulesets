@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [Primary] Other firewall network interface OK"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+1-103002|%PIX[-]+-1-103002|%FWSM[-]+1-103002/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000602; sid: 5000602; rev: 5;)

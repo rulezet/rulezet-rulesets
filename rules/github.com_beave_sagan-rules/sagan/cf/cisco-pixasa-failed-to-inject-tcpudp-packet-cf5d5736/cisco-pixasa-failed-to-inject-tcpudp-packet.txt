@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failed to inject {TCP|UDP} packet"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+7-421004|%FWSM[-]+7-421004/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000565; sid: 5000565; rev: 5;)

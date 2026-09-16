@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Email Proxy DNS name resolution failed for hostname"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-719025/"; classtype: configuration-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000547; sid: 5000547; rev: 5;)

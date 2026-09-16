@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] HA non-block send failed for peer msg. HA error code."; append_program; content: "%ASA"; pcre: "/%ASA[-]+5-720021/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000530; sid: 5000530; rev: 4;)

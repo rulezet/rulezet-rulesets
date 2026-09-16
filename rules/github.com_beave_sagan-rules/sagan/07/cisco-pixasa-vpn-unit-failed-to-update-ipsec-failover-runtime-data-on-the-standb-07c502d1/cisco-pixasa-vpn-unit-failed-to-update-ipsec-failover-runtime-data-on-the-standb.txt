@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] Failed to update IPSec failover runtime data on the standby unit"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-720012/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000554; sid: 5000554; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CENTRIFY] PAM access right added"; content: "centrifyEventID=36601"; classtype: system-event; program: *adclient*; sid: 5004131; reference:url,wiki.quadrantsec.com/bin/view/Main/5004131; reference:url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html; rev: 1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HOSTAPD] WPA - group key handshake complete [RSN]"; program: hostapd; content: "WPA"; content: "group key handshake completed"; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001048; sid: 5001048; rev: 2;)

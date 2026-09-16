@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Invalid username"; pcre: "/user not found|User not known|unknown user/i"; default_proto: tcp; classtype: unsuccessful-user; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000268; sid:5000268; rev:2;)

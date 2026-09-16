@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] WebVPN access DENIED to specified location url"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-716004/"; classtype: policy-violation; reference: url, wiki.quadrantsec.com/bin/view/Main/5000536; sid: 5000536; rev: 4;)

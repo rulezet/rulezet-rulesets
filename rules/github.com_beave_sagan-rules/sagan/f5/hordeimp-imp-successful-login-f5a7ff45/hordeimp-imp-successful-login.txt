@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HORDEIMP] IMP successful login"; content: "Login success for"; default_proto: tcp; default_dst_port: $HTTP_PORT; classtype: successful-user; program: HORDE; reference: url,wiki.quadrantsec.com/bin/view/Main/5000370; sid:5000370; rev:3;)

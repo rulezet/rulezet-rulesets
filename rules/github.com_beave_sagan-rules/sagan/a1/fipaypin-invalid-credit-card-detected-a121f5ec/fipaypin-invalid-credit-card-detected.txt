@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Invalid credit card detected"; content: "S-300000"; content: "Swpe: Response"; meta_content:!"track2=%sagan%", $CREDIT_CARD_PREFIXES; default_proto: tcp; classtype: misc-activity; program: *FIPAYPIN*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002766; sid:5002766; rev:4;)

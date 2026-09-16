@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARTILLERY] Issue identified - Permissions not set as root"; content: "not set to root"; content: "Issue identified|3a|"; classtype: configuration-error; program: Artillery; reference: url,wiki.quadrantsec.com/bin/view/Main/5002082; reference: url,www.trustedsec.com/downloads/artillery; sid:5002082; rev:3;)

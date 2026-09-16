@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Unable to install ACL, downloaded for user"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-109032|%PIX[-]+3-109032|%FWSM[-]+3-109032/"; classtype: configuration-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000653; sid: 5000653; rev: 5;)

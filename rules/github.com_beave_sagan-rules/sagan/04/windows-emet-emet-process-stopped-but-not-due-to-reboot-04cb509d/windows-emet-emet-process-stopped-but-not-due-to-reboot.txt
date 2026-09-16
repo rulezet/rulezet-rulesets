@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-EMET] EMET process stopped, but not due to reboot"; event_id: 4689,593; content: "EMET_Agent.exe"; nocase; flexbits: isset,by_src,reboot.windows; program: *Security*; classtype: trojan-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5002102; sid:5002102; rev:8;)

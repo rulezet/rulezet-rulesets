@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ATTACK] Buffer overflow attempt on WU-FTPD version prior to 2.6" ; pcre: "/\S+ FTP LOGIN FROM \.+ 0bin0sh/"; classtype: exploit-attempt; program: ftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000096; sid:5000096; rev:2;)

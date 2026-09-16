@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Email Proxy piggyback auth fail session"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-719024/"; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5000546; sid: 5000546; rev: 4;)

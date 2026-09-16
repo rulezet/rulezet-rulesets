@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WORDPRESS] - Wordpress Wordpress Comment Flood Attempt"; content: "Comment flood attempt"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: attempted-dos; program: WPsyslog; reference: url,wiki.quadrantsec.com/bin/view/Main/5000202; sid: 5000202; rev:3;)

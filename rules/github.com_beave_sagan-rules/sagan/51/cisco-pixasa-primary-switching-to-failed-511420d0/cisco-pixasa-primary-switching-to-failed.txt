@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [Primary] Switching to FAILED"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+1-104003|%FWSM[-]+1-104003/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000589; sid: 5000589; rev: 5;)

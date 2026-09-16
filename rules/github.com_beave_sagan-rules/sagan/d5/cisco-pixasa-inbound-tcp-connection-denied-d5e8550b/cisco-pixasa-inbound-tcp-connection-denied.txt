@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Inbound TCP connection denied"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+2-106001|%PIX[-]+2-106001|%FWSM[-]+2-106001;  default_proto: tcp; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5000631; sid: 5000631; rev: 5;)

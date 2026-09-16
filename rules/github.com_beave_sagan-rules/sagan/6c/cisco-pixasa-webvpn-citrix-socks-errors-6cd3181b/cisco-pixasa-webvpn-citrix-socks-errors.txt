@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] WebVPN Citrix SOCKS errors"; append_program; content: "%ASA"; pcre: "/%ASA[-]+7-723006/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000582; sid: 5000582; rev: 4;)

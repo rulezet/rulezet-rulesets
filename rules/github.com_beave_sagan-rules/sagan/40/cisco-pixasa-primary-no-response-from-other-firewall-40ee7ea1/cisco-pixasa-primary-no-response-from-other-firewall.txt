@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [Primary] No response from other firewall"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+1-103001|%PIX[-]+1-103001|%FWSM[-]+1-103001/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000601; sid: 5000601; rev: 5;)

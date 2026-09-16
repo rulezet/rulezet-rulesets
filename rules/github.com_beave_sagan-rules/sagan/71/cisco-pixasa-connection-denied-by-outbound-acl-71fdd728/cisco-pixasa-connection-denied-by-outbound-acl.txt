@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Connection denied by outbound ACL"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+2-106002|%PIX[-]+2-106002|%FWSM[-]+2-106002/"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5000632; sid: 5000632; rev: 5;)

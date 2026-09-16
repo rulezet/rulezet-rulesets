@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] WebVPN session not allowed. WebVPN ACL parse error"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-716009/"; classtype: configuration-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000538; sid: 5000538; rev: 4;)

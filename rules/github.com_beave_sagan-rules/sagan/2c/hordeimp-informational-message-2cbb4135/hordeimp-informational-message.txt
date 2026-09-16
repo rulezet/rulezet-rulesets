@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HORDEIMP] Informational message"; content: "[info]"; default_proto: tcp; default_dst_port: $HTTP_PORT; classtype: unknown; program: HORDE; reference: url,wiki.quadrantsec.com/bin/view/Main/5000371; sid:5000371; rev:3;)

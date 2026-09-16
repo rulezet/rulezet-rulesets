@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [VPN-unit] VPN failover client is being disabled"; append_program; content: "%ASA"; pcre: "/%ASA[-]+6-720010/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000553; sid: 5000553; rev: 4;)

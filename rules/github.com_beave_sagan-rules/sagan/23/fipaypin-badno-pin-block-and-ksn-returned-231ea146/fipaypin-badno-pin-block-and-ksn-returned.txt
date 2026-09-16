@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Bad/No Pin Block and KSN returned"; content: "S-300000"; content: "Bad/No Pin Block and KSN returned"; default_proto: tcp; classtype: misc-activity; program: *FIPAYPIN*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002767; sid:5002767; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [Primary] Switching to OK."; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+1-104004|%FWSM[-]+1-104004/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000590; sid: 5000590; rev: 5;)

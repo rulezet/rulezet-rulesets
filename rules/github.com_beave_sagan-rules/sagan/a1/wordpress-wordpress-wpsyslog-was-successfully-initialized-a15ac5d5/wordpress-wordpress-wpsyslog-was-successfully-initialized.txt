@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WORDPRESS] - Wordpress WPsyslog was successfully initialized"; content: "WPsyslog was successfully init"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: system-event; program: WPsyslog; reference: url,wiki.quadrantsec.com/bin/view/Main/5000200; sid: 5000200; rev:3;)

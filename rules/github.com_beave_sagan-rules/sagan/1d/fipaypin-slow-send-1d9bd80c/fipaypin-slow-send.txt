@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Slow send!"; content: "S-302046"; default_proto: tcp; classtype: misc-activity; program: *FIPEMV*; after: track by_src, count 5, seconds 300; threshold: type suppress, track by_src, count 2, seconds 3600; reference: url,wiki.quadrantsec.com/bin/view/Main/5002765; sid:5002765; rev:3;)

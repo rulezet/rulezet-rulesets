@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [Primary] Error reading failover cable status"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+1-101005|%PIX[-]+1-101005/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000599; sid: 5000599; rev: 4;)

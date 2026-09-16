@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] [Primary] Mate failover version is not compatible"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+1-105040|%PIX[-]+1-105040/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000622; sid: 5000622; rev: 4;)

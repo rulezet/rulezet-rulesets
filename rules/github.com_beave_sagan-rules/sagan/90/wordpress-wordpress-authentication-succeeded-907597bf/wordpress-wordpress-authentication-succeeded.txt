@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WORDPRESS] - Wordpress authentication succeeded"; content: "User logged in"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; program: WPsyslog; reference: url,wiki.quadrantsec.com/bin/view/Main/5000199; sid: 5000199; rev:3;)

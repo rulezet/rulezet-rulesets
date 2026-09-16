@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[AZURE EVENTHUB AD] Account lockout"; program: azureEventHub; json_content:"resultType",”50053”; classtype: unsuccessful-user; reference:url,https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/reference-sign-ins-error-codes; sid:5004774; rev: 2;)

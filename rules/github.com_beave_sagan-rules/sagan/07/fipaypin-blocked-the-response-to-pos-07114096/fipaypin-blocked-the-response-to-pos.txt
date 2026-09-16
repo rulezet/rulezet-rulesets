@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FIPAYPIN] Blocked the response to POS"; content: "S-300000"; content: "Blocked the response to POS"; default_proto: tcp; classtype: misc-activity; program: *FIPAYPIN*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002768; sid:5002768; rev:3;)

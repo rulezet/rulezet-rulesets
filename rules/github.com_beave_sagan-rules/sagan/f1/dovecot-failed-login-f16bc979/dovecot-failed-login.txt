@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DOVECOT] Failed login"; content: "Password mismatch"; default_proto: tcp; classtype: unsuccessful-user; program: dovecot; reference: url,wiki.quadrantsec.com/bin/view/Main/5000265; sid:5000265; rev:2;)

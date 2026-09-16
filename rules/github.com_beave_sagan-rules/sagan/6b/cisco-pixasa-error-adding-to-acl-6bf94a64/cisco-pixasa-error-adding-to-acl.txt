@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Error adding to ACL"; append_program; meta_content: ""%sagan%", %ASA,%FWSM; pcre: "/%ASA[-]+6-716050|%FWSM[-]+6-716050/"; classtype: configuration-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000540; sid: 5000540; rev: 5;)
