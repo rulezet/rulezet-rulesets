@@ -1,0 +1,22 @@
+{
+  "uuid": "ba41681b-cbfb-4e1d-84f8-e407a222b735",
+  "title": "Trojan_Win32_MshtaUrsnif_C",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/MshtaUrsnif.C,SIGNATURE_TYPE_CMDHSTR_EXT,36 01 36 01 0b 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/279973"
+}
