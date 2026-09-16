@@ -1,0 +1,23 @@
+{
+  "uuid": "39055962-303c-4923-a8d6-9e65e6c78610",
+  "title": "Remote Access Tool - Team Viewer Session Started On Windows Host",
+  "format": "sigma",
+  "author": "Josh Nickels, Qi Nan",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the command line executed when TeamViewer starts a session started by a remote host.\nOnce a connection has been started, an investigator can verify the connection details by viewing the \"incoming_connections.txt\" log file in the TeamViewer folder.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1133"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343473"
+}

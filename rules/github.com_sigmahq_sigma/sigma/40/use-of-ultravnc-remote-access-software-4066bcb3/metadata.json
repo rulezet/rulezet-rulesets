@@ -1,0 +1,24 @@
+{
+  "uuid": "4066bcb3-2960-4246-b2f9-a7752bda3a44",
+  "title": "Use of UltraVNC Remote Access Software",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "An adversary may use legitimate desktop support and remote access software,to establish an interactive command and control channel to target systems within networks",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1219",
+    "T1219.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343850"
+}

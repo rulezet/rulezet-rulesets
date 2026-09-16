@@ -1,0 +1,23 @@
+{
+  "uuid": "a2a52f3c-9123-479d-8a02-9151e20bdf68",
+  "title": "Suspicious CustomShellHost Execution",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of CustomShellHost.exe where the child isn't located in 'C:\\Windows\\explorer.exe'. CustomShellHost is a known LOLBin that can be abused by attackers for defense evasion techniques.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1216"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343638"
+}

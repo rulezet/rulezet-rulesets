@@ -1,0 +1,23 @@
+{
+  "uuid": "aa629b3b-0ec7-48ee-9e1c-fa80c83de713",
+  "title": "Windows Firewall Disabled via PowerShell",
+  "format": "sigma",
+  "author": "Tim Rauch, Elastic (idea)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects attempts to disable the Windows Firewall using PowerShell",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343726"
+}

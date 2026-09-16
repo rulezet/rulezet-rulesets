@@ -1,0 +1,23 @@
+{
+  "uuid": "93f74d5d-eae1-4949-bad8-763d6de6025a",
+  "title": "Proxy Execution via Vshadow",
+  "format": "sigma",
+  "author": "David Faiss",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the invocation of vshadow.exe with the -exec parameter that executes a specified script or command after the shadow copies are created but before the VShadow tool exits.\nVShadow is a command-line tool that you can use to create and manage volume shadow copies. While legitimate backup or administrative scripts may use this flag,\nattackers can leverage this parameter to proxy the execution of malware.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343581"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "3d898791-7607-46a7-bd40-4ee9f0df3273",
+  "title": "Potential Execution of Sysinternals Tools",
+  "format": "sigma",
+  "author": "Markus Neis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects command lines that contain the 'accepteula' flag which could be a sign of execution of one of the Sysinternals tools",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1588.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343823"
+}

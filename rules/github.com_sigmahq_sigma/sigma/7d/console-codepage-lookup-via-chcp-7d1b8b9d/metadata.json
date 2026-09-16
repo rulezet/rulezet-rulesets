@@ -1,0 +1,25 @@
+{
+  "uuid": "7d1b8b9d-3197-45fd-a950-266c895920c7",
+  "title": "Console CodePage Lookup Via CHCP",
+  "format": "sigma",
+  "author": "_pete_0, TheDFIRReport",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects use of chcp to look up the system locale value as part of host discovery",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"Conti\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1614.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343571"
+}

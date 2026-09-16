@@ -1,0 +1,23 @@
+{
+  "uuid": "3ef76c59-78e9-479e-93b0-22933ac1ed27",
+  "title": "Suspicious Registry Modification From ADS Via Regini.EXE",
+  "format": "sigma",
+  "author": "Eli Salem, Sander Wiebing, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the import of an alternate data stream with regini.exe, regini.exe can be used to modify registry keys.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343590"
+}

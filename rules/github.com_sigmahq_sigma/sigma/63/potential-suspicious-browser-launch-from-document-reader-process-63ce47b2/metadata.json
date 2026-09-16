@@ -1,0 +1,23 @@
+{
+  "uuid": "63ce47b2-a6ae-4fcf-960c-97e71a88bc72",
+  "title": "Potential Suspicious Browser Launch From Document Reader Process",
+  "format": "sigma",
+  "author": "Joseph Kamau",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a browser process or browser tab is launched from an application that handles document files such as Adobe, Microsoft Office, etc. And connects to a web application over http(s), this could indicate a possible phishing attempt.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343626"
+}

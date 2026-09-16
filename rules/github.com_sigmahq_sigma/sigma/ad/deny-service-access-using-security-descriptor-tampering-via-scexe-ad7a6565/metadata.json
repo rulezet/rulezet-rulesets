@@ -1,0 +1,23 @@
+{
+  "uuid": "ad7a6565-39c2-4ea2-b689-810c14a0d8bd",
+  "title": "Deny Service Access Using Security Descriptor Tampering Via Sc.EXE",
+  "format": "sigma",
+  "author": "Jonhnathan Ribeiro, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious DACL modifications to deny access to a service that affects critical trustees. This can be used to hide services or make them unstoppable.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343803"
+}

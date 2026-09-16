@@ -1,0 +1,27 @@
+{
+  "uuid": "213d2911-13e0-4d66-9a5b-9e6cbb73b54e",
+  "title": "Rundll32 Execution Without Parameters",
+  "format": "sigma",
+  "author": "Bartlomiej Czyz, Relativity",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects rundll32 execution without parameters as observed when running Metasploit windows/smb/psexec exploit module",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1021.002",
+    "T1569.002",
+    "T1570"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343920"
+}

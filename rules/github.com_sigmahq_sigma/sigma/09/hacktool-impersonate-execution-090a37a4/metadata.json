@@ -1,0 +1,26 @@
+{
+  "uuid": "090a37a4-a83e-441e-b001-70d84d884aa1",
+  "title": "HackTool - Impersonate Execution",
+  "format": "sigma",
+  "author": "Sai Prashanth Pulisetti @pulisettis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of the Impersonate tool. Which can be used to manipulate tokens on a Windows computers remotely (PsExec/WmiExec) or interactively",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1134.001",
+    "T1134.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343712"
+}

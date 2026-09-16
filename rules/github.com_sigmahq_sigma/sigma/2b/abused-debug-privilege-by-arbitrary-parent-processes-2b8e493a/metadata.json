@@ -1,0 +1,23 @@
+{
+  "uuid": "2b8e493a-cb95-4ba9-ba0a-3ca961f1288c",
+  "title": "Abused Debug Privilege by Arbitrary Parent Processes",
+  "format": "sigma",
+  "author": "Semanur Guneysu @semanurtg, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detection of unusual child processes by different system processes",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343487"
+}

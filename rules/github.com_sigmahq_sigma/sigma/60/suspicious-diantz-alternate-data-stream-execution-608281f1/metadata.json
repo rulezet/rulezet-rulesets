@@ -1,0 +1,23 @@
+{
+  "uuid": "608281f1-829e-44c3-bbf3-2fc187d6ab5b",
+  "title": "Suspicious Diantz Alternate Data Stream Execution",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Compress target file into a cab file stored in the Alternate Data Stream (ADS) of the target file.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1564.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343505"
+}

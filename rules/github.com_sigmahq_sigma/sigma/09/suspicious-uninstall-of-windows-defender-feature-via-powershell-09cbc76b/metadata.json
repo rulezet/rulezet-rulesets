@@ -1,0 +1,24 @@
+{
+  "uuid": "09cbc76b-a4d1-48df-bd77-f95cd937faa3",
+  "title": "Suspicious Uninstall of Windows Defender Feature via PowerShell",
+  "format": "sigma",
+  "author": "yxinmiracle",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of PowerShell with Uninstall-WindowsFeature or Remove-WindowsFeature cmdlets to disable or remove the Windows Defender GUI feature, a common technique used by adversaries to evade defenses.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343762"
+}

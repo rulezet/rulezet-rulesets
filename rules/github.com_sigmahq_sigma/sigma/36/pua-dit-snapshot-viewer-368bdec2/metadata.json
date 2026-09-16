@@ -1,0 +1,24 @@
+{
+  "uuid": "368bdec2-5913-44b1-9070-e576daab6fb4",
+  "title": "PUA - DIT Snapshot Viewer",
+  "format": "sigma",
+  "author": "Furkan Caliskan (@caliskanfurkan_)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of Ditsnap tool, an inspection tool for Active Directory database, ntds.dit.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343507"
+}

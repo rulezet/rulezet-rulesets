@@ -1,0 +1,24 @@
+{
+  "uuid": "b20c3e63-3ee1-426c-9e38-2dd4f8c5b011",
+  "title": "Uncommon Child Process Of Setres.EXE",
+  "format": "sigma",
+  "author": "@gott_cyber, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects uncommon child process of Setres.EXE.\nSetres.EXE is a Windows server only process and tool that can be used to set the screen resolution.\nIt can potentially be abused in order to launch any arbitrary file with a name containing the word \"choice\" from the current execution path.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1202",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343621"
+}

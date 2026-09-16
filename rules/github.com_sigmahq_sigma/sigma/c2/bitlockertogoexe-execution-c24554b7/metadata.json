@@ -1,0 +1,23 @@
+{
+  "uuid": "c24554b7-1004-42ae-bb74-e33bb42b0c4d",
+  "title": "BitLockerTogo.EXE Execution",
+  "format": "sigma",
+  "author": "Josh Nickels, mttaggart",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of \"BitLockerToGo.EXE\".\nBitLocker To Go is BitLocker Drive Encryption on removable data drives. This feature includes the encryption of, USB flash drives, SD cards, External hard disk drives, Other drives that are formatted by using the NTFS, FAT16, FAT32, or exFAT file system.\nThis is a rarely used application and usage of it at all is worth investigating.\nMalware such as Lumma stealer has been seen using this process as a target for process hollowing.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343698"
+}

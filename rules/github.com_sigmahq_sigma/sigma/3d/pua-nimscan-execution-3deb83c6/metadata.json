@@ -1,0 +1,23 @@
+{
+  "uuid": "3deb83c6-e62a-47be-bb48-a9b4eef27221",
+  "title": "PUA - NimScan Execution",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of NimScan, a portscanner utility.\nIn early 2025, adversaries were observed using this utility to scan for open ports on remote hosts in a compromised environment.\nThis rule identifies the execution of NimScan based on the process image name and specific hash values associated with different versions of the tool.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1046"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343847"
+}

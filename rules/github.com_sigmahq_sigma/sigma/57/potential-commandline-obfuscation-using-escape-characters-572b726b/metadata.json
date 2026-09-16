@@ -1,0 +1,23 @@
+{
+  "uuid": "572b726b-59e7-4e4b-ba72-77faec88a977",
+  "title": "Potential Commandline Obfuscation Using Escape Characters",
+  "format": "sigma",
+  "author": "juju4",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential commandline obfuscation using known escape characters",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1140"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343475"
+}

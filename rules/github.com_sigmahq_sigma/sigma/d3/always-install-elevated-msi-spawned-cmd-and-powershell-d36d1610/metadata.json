@@ -1,0 +1,23 @@
+{
+  "uuid": "d36d1610-a8ae-45c5-8a3d-f979be4fa307",
+  "title": "Always Install Elevated MSI Spawned Cmd And Powershell",
+  "format": "sigma",
+  "author": "Teymur Kheirkhabarov (idea), Mangatas Tondang (rule), oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Windows Installer service (msiexec.exe) spawning \"cmd\" or \"powershell\"",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343574"
+}
