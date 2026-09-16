@@ -1,0 +1,22 @@
+{
+  "uuid": "30fd24f0-6e2b-4c97-8165-1a142e6d8eb6",
+  "title": "Trojan_Win32_ICLoader_AGKA_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/ICLoader.AGKA!MTB,SIGNATURE_TYPE_PEHSTR_EXT,05 00 05 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/286205"
+}
