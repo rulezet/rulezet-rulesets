@@ -1,0 +1,9 @@
+rule Trojan_Win32_Convagent_BAD_MTB_2{
+	meta:
+		description = "Trojan:Win32/Convagent.BAD!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {8a 0c 32 80 f9 64 77 ?? b0 64 eb ?? 80 f9 c8 b0 2d 76 ?? b0 c8 2a c1 88 04 32 42 3b d7 72 } 	condition:
+		((#a_03_0  & 1)*2) >=2
+ 
+}

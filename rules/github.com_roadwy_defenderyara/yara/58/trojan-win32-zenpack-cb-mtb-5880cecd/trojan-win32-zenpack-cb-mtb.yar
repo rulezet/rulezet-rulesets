@@ -1,0 +1,9 @@
+rule Trojan_Win32_Zenpack_CB_MTB{
+	meta:
+		description = "Trojan:Win32/Zenpack.CB!MTB,SIGNATURE_TYPE_PEHSTR_EXT,06 00 06 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {ff d0 89 da 01 15 ?? ?? ?? ?? 89 f0 01 05 ?? ?? ?? ?? 55 8f 05 ?? ?? ?? ?? 89 f8 01 05 ?? ?? ?? ?? eb d7 } 	condition:
+		((#a_03_0  & 1)*6) >=6
+ 
+}

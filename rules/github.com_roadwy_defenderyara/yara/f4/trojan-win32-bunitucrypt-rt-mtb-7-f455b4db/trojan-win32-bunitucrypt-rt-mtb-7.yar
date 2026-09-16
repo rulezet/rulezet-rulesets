@@ -1,0 +1,9 @@
+rule Trojan_Win32_BunituCrypt_RT_MTB_7{
+	meta:
+		description = "Trojan:Win32/BunituCrypt.RT!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_00_0 = {2d 00 10 00 00 83 c0 04 a3 } 		$a_03_1 = {8b d8 83 c3 04 e8 ?? ?? ?? ?? 2b d8 01 1d ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b d8 83 c3 04 e8 ?? ?? ?? ?? 2b d8 01 ?? ?? ?? ?? ?? 68 } 	condition:
+		((#a_00_0  & 1)*1+(#a_03_1  & 1)*1) >=2
+ 
+}
