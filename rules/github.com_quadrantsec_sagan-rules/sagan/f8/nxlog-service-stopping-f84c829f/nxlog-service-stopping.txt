@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NXLOG] Service stopping"; content: "stopping nxlog service"; flexbits: set,nxlog_shutdown,1200; flexbits:noeve; classtype: program-error; program: nxlog; sid:5005746; rev:2;)

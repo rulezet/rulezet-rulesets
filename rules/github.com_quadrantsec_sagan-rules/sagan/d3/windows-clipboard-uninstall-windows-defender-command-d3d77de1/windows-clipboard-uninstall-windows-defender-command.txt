@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] Uninstall Windows Defender Command"; program:Clipboard; content:"Uninstall-WindowsFeature -Name Windows-Defender"; nocase; classtype:suspicious-command; sid:5008368; rev:1;)

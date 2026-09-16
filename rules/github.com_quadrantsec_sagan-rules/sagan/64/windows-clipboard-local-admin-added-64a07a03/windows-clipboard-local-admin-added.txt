@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] Local Admin Added"; program:Clipboard; content:"net localgroup administrators"; nocase; classtype:suspicious-command; sid:5010473; rev:1;)

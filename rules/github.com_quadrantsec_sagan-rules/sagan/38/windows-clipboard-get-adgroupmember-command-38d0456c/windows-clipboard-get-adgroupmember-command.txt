@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] Get-ADGroupMember Command"; program:Clipboard; content:"Get-ADGroupMember"; classtype:suspicious-command; sid:5008362; rev:1;)

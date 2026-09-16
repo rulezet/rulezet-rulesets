@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] Powershell encodedcommand"; program:Clipboard; content:"powershell"; nocase; content:"-encodedcommand"; nocase; classtype:suspicious-command; sid:5008370; rev:1;)

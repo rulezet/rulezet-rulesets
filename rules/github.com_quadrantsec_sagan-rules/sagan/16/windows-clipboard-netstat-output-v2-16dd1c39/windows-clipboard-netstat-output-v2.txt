@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] netstat output v2"; program:Clipboard; content:"TCP"; content:"ESTABLISHED"; classtype:suspicious-command; sid:5008379; rev:1;)

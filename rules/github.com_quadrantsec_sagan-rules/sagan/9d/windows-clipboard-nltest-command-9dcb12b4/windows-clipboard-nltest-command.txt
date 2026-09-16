@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] nltest command"; program:Clipboard; content:"nltest /dclist"; nocase; classtype:suspicious-command; sid:5008377; rev:1;)

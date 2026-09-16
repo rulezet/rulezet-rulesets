@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] net commands"; program:Clipboard; meta_content:"net %sagan%",group,user; meta_nocase; classtype:suspicious-command; sid:5008374; rev:1;)

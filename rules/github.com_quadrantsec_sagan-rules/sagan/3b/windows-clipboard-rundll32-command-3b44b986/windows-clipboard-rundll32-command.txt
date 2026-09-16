@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] rundll32 command"; program:Clipboard; content:"rundll32.exe"; nocase; classtype:suspicious-command; sid:5008371; rev:1;)

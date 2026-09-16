@@ -1,0 +1,1 @@
+alert any any any -> any any (msg: "[AZURE-EVENTHUB-AD] MFA Phone Device Registered"; program: azureEventHub; json_content: ".operationName", "User registered security info"; content:"User registered phone"; json_map: "src_ip", ".callerIpAddress"; classtype: system-event; sid:5015932; rev:4; metadata: created_on 2025_04_25, updatedOn 2025_05_14, mitre_technique_id T1556.006;)

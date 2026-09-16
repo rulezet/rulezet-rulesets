@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] WAF Virus Scan - Virus Found"; content:"VIRUS_SCAN"; content:!"DENY"; content:!"Virus Found=|22|No|22|"; parse_src_ip: 1; parse_dst_ip: 2; reference:url,https://campus.barracuda.com/product/webapplicationfirewall/doc/29819001/attacks-description-action-policy/; classtype:exploit-attempt; sid:5015827; rev:2;)

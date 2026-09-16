@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] Disable Windows Defender Command"; program:Clipboard; content:"\SOFTWARE\Policies\Microsoft\Windows Defender"; content:"DisableAntiSpyware"; classtype:suspicious-command; sid:5008366; rev:1;)
