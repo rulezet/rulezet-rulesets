@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Self Audit - Removed Monitoring Plan"; program:netwrix_auditor_api_data; json_content:".DataSource","Self-audit"; json_content:".Action","Removed Monitoring Plan"; classtype:system-event; sid:5013751; rev:1;)

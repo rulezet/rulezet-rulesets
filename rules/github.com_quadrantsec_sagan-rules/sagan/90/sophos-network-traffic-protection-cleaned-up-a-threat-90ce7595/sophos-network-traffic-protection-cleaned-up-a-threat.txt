@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Network Traffic Protection cleaned up a threat"; program:sophos; content:"Event::Endpoint::CoreIpsClean"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007336; rev:1;)

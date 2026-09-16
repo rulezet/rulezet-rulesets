@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Windows Server - System Service Added"; program:netwrix_auditor_api_data; json_content:".DataSource","Windows Server"; json_content:".Action","Added"; json_contains; content:"Path to executable"; content:!"|22|C:\Program Files"; classtype:system-event; sid:5013776; rev:1;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Windows Server - Modified Hard Drive"; program:netwrix_auditor_api_data; json_content:".DataSource","Windows Server"; json_content:".Action","Modified"; json_contains; content:"Hard Drive"; classtype:system-event; sid:5013780; rev:1;)

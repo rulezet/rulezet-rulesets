@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Computer removed from isolation by an administrator"; program:sophos; content:"Event::Endpoint::Isolation::UnIsolated::ADMIN"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007283; rev:1;)

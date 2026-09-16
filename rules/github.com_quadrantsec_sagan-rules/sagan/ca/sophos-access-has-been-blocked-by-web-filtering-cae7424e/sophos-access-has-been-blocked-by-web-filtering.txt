@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Access has been blocked by web filtering"; program:sophos; content:"Event::Endpoint::WebFilteringBlocked"; classtype:system-event; parse_src_ip: 1; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007285; rev:2;)

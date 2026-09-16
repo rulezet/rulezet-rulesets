@@ -1,0 +1,23 @@
+{
+  "uuid": "e4731908-f5b6-421f-a942-960333191c63",
+  "title": "[AWS-CLOUDTRAIL] AWS Cloudtrail event detected (StartQuery)",
+  "format": "sagan",
+  "author": "quadrantsec",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "",
+  "source": "https://github.com/quadrantsec/sagan-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1078",
+    "T1530"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/749504"
+}

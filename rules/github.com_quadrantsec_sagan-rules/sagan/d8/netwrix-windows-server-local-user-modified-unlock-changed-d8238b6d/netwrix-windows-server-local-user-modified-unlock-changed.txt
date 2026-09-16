@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Windows Server Local User Modified Unlock Changed"; program:netwrix_auditor_api_data; json_content:".DataSource","Windows Server"; json_content:".Action","Modified"; json_contains; content:"Unlocked changed from |22|Yes|22| to |22|No|22|"; classtype:system-event; sid:5013785; rev:1;)

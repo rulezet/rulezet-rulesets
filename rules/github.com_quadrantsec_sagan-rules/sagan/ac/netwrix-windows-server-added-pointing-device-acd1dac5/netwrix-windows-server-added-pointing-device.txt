@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Windows Server - Added Pointing Device"; program:netwrix_auditor_api_data; json_content:".DataSource","Windows Server"; json_content:".Action","Added"; json_contains; content:"Pointing Device"; classtype:system-event; sid:5013782; rev:1;)

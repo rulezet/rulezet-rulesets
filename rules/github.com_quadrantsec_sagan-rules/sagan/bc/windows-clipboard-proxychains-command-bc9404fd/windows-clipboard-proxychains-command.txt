@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] proxychains command"; program:Clipboard; content:"proxychains "; nocase; classtype:suspicious-command; sid:5008653; metadata: created_on 2022_11_22, old_sid 5008382; rev:1;)

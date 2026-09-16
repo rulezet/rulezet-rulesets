@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SECURITY] A service was installed in the system (powershell)"; program:System; event_id:7045; content:"Service File Name"; content:"%COMSPEC%"; distance:0; content:"powershell"; distance:0; classtype:suspicious-command; sid:5008357; rev:1;)

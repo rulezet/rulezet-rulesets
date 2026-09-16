@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SECURITY] A service was installed in the system (rundll32 .xls)"; program:System; event_id:7045; content:"Service File Name"; content:"rundll32"; distance:0; content:".xls,"; nocase; distance:0; classtype:suspicious-command; sid:5008359; rev:1;)

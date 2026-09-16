@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Active Directory User Added"; program:netwrix_auditor_api_data; json_content:".DataSource","Active Directory"; json_content:".Action","Added user"; json_contains; json_content:!".Details","Security Universal Group"; classtype:system-event; sid:5013744; rev:1;)

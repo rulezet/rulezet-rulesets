@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-SECURITY] Service being stopped by net command v1"; program:*Sysmon*|*Security*; event_id:4688,1; content:"C|3a 5c 5c|Windows|5c 5c|system32|5c 5c|net1 stop"; nocase; meta_content:"%sagan%",|5c 5c|Windows|5c 5c|Temp,|5c 5c|AppData|5c 5c|Local|5c 5c|Temp|; meta_nocase; classtype:suspicious-command; sid:5008343; rev:2;)

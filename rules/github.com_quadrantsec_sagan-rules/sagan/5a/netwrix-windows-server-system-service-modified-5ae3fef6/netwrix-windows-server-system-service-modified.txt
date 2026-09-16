@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Windows Server - System Service Modified"; program:netwrix_auditor_api_data; json_content:".DataSource","Windows Server"; json_content:".Action","Modified"; json_contains; content:"Start Mode changed from |22|Auto|22| to |22|Manual|22|"; classtype:system-event; sid:5013773; rev:1;)

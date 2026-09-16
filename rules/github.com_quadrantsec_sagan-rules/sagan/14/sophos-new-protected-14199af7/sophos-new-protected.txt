@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] New protected"; program:sophos; content:"Event::Endpoint::Protected"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007259; rev:1;)

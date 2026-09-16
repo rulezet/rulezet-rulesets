@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SECURITY] PsExec AcceptEULA Detected"; program:*Security*|*Sysmon*; event_id:1,4688; content:"psexec.exe -accepteula"; nocase; content:"psexec.exe"; classtype:discovery; sid:5015510; rev:1; metadata:created_at 2025_03_06, updated_at 2025_03_06, mitre_tactic_id TA0002, mitre_technique_id T1059;)

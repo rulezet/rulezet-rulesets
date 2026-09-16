@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SECURITY] PsExec Executed from Suspicious Directory"; program:*Security*|*Sysmon*; event_id:1,4688; content:"C:\WINDOWS\SYSTEM32\LogFiles\"; nocase; content:"psexec.exe"; classtype:discovery; sid:5015509; rev:1; metadata:created_at 2025_03_06, updated_at 2025_03_06, mitre_tactic_id TA0003, mitre_technique_id T1043;)

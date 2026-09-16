@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[WINDOWS-SECURITY] Windows Registry - Restricted Admin Mode Enabled (Windows Security Audit) - Critical"; event_id:4657; pcre:"/ObjectName.*HKLM\\System\\CurrentControlSet\\Control\\Lsa\\DisableRestrictedAdmin\s/i"; pcre:"/NewValue.*0x0/i"; classtype:privilege-escalation; sid:5017386; rev:1;)

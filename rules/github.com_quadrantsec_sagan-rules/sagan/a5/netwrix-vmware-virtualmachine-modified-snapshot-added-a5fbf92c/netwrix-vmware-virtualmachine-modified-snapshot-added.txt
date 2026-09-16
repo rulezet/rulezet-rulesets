@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] VMware - VirtualMachine Modified Snapshot added"; program:netwrix_auditor_api_data; json_content:".DataSource","VMware"; json_content:".Action","Modified"; json_contains; json_content:".ObjectType","VirtualMachine"; content:"Added Snapshot"; classtype:system-event; sid:5013765; rev:1;)

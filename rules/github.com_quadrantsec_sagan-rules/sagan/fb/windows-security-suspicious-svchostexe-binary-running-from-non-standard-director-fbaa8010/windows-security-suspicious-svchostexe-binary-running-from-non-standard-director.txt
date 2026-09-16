@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[WINDOWS-SECURITY] Suspicious svchost.exe Binary Running from Non-Standard Directory - Critical"; program:*Security*; event_id:4688; pcre:"/NewProcessName.*\\svchost\.exe/i"; pcre:"/NewProcessName:(?!.*\\Windows\\System32\\|.*\\Windows\\SysWOW64\\).+ Token Elevation Type.+/i"; classtype:suspicious-traffic; priority:1; sid:5017394; rev:1;)

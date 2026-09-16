@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Sophos AutoUpdate is not running."; program:sophos; content:"Event::Endpoint::UpdateFailure::SOCKET_ERROR"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007253; rev:1;)

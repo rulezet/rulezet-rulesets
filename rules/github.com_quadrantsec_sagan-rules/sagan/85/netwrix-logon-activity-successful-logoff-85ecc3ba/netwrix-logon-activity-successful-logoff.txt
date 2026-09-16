@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Logon Activity - Successful Logoff"; program:netwrix_auditor_api_data; json_content:".DataSource","Logon Activity"; json_content:".Action","Logoff"; json_contains; classtype:system-event; sid:5013746; rev:1;)

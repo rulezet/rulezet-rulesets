@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Failed to download updates."; program:sophos; content:"Event::Endpoint::UpdateFailure::ERROR_UPDATING_SOPHOS"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007243; rev:1;)

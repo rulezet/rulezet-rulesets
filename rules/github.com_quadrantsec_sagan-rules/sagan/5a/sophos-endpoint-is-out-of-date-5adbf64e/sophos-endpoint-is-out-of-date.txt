@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Endpoint is out of date"; program:sophos; content:"Event::Endpoint::OutOfDate"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007260; rev:1;)

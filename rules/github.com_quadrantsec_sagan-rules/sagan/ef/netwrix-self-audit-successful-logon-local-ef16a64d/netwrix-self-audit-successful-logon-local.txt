@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Self Audit - Successful Logon Local"; program:netwrix_auditor_api_data; json_content:".DataSource","Self-audit"; json_content:".Action","Successful Logon"; json_content:".Message","Successful Logon Local"; classtype:trojan-activity; sid:5013748; rev:1;)

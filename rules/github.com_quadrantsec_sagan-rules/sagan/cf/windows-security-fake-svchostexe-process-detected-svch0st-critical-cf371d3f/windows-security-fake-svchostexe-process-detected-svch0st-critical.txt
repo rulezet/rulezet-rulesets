@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[WINDOWS-SECURITY] Fake svchost.exe Process Detected (svch0st) - Critical"; program:*Security*; event_id:4688; pcre:"/NewProcessName.*\\svch0st\.exe/i"; classtype:suspicious-traffic; priority:1; sid:5017395; rev:1;)

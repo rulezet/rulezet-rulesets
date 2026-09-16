@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] The device has been detected as a duplicate device. For more information"; program:sophos; content:"Event::Endpoint::CloneDetected"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007225; rev:1;)

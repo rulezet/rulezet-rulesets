@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SECURITY] Batch File Added to Registry"; program:*Security*|*Sysmon*; event_id:1,4688; content:"reg.exe"; nocase; pcre: "/reg add .HKLM.*\.(bat|cmd).*CurrentDirectory/"; classtype:discovery; sid:5015512; rev:4; metadata:created_at 2025_03_06, updated_at 2025_12_02, mitre_tactic_id TA0005, mitre_technique_id T1112;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SECURITY] Copied rundll32 command executing non-standard dll"; program:Clipboard; content:"rundll32.exe"; nocase; content:!".dll,"; distance:0; nocase; classtype:suspicious-command; sid:5008348; rev:1;)

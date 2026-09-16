@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] User Activity (Video) - Session Start"; program:netwrix_auditor_api_data; json_content:".DataSource","User Activity (Video)"; json_content:".Action","Session start"; json_contains; classtype:system-event; sid:5013754; rev:1;)

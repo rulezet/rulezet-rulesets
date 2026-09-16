@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Self Audit - Added Data source"; program:netwrix_auditor_api_data; json_content:".DataSource","Self-audit"; json_content:".Action","Added Data source"; classtype:system-event; sid:5013752; rev:1;)

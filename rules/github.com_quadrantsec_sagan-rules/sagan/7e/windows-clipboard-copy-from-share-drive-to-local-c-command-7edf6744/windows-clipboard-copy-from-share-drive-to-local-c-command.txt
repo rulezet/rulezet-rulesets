@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] copy from share drive to local C: command"; program:Clipboard; content:"copy \\";nocase; content:"\\C$\\"; nocase; distance:0; content:"C:\\"; distance:0; classtype:suspicious-command; sid:5008651; metadata: created_on 2022_11_22, old_sid 5008380; rev:1;)

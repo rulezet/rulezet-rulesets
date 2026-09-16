@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] User Activity (Video) - Activated Window - COM Surrogate"; program:netwrix_auditor_api_data; json_content:".DataSource","User Activity (Video)"; json_content:".Action","Activated Window"; json_contains; json_content:".What","COM Surrogate"; json_contains; classtype:system-event; sid:5013757; rev:1;)

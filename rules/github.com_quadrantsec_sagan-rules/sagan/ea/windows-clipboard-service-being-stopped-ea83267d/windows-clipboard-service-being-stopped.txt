@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-CLIPBOARD] Service being stopped"; program:Clipboard; content:"net stop"; content:!"SnowInventoryClient"; classtype:suspicious-command; sid:5008635; metadata: created_on 2022_11_22, old_sid 5008364; rev:1;)

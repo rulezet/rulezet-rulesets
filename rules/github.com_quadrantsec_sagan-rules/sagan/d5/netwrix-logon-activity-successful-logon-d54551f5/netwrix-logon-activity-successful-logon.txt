@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Logon Activity - Successful Logon"; program:netwrix_auditor_api_data; json_content:".DataSource","Logon Activity"; json_content:".Action","Successful Logon"; classtype:system-event; sid:5013745; rev:1;)

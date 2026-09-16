@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] VMware - VirtualMachine Removed"; program:netwrix_auditor_api_data; json_content:".DataSource","VMware"; json_content:".Action","Removed"; json_contains; json_content:".ObjectType","VirtualMachine"; classtype:system-event; sid:5013760; rev:1;)

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[WINDOWS-SECURITY] Firewall Allow Rule Created For Illegitimate SVCHOST.EXE Binary"; program:*Sysmon*|*Security*; event_id:4688,1; content:"netsh"; nocase; pcre:"/firewall add allowed program (?!.*\\Windows\\System32\\|.*\\Windows\\SysWOW64\\).*svch[o0]st\.exe/i"; content:"ENABLE"; nocase; classtype:evasion; sid:5017398; rev:1;)

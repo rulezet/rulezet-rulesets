@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] The mobile device is now non compliant. Mandatory app not installed."; program:sophos; content:"Event::Endpoint.Mobile::NowNonCompliant::GENERAL_MANDATORY_APPS"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007321; rev:1;)

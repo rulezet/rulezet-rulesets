@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Windows Server Environment Variable Added"; program:netwrix_auditor_api_data; json_content:".DataSource","Windows Server"; json_content:".Action","Added"; json_contains; content:"Environment Variables"; classtype:system-event; sid:5013784; rev:1;)
