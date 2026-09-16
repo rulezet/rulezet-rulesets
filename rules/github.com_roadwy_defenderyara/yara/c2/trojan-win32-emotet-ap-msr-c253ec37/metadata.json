@@ -1,0 +1,22 @@
+{
+  "uuid": "c253ec37-f9f8-400e-8f18-91931693135a",
+  "title": "Trojan_Win32_Emotet_AP_MSR",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Emotet.AP!MSR,SIGNATURE_TYPE_PEHSTR_EXT,06 00 06 00 06 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/272700"
+}

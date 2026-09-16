@@ -1,0 +1,9 @@
+rule Trojan_Win32_CobaltStrike_BAA_MTB{
+	meta:
+		description = "Trojan:Win32/CobaltStrike.BAA!MTB,SIGNATURE_TYPE_PEHSTR_EXT,28 00 28 00 04 00 00 "
+		
+	strings :
+		$a_01_0 = {e8 02 00 00 00 80 00 00 00 04 00 00 00 24 } 		$a_01_1 = {42 2e 69 64 61 74 61 00 00 00 10 00 00 00 90 00 00 00 04 00 00 00 28 } 		$a_01_2 = {2e 72 73 72 63 00 00 00 00 1e 00 00 00 a0 00 00 00 1e 00 00 00 2c } 		$a_01_3 = {2e 62 6f 6f 74 00 00 00 00 68 bc 00 00 c0 13 01 00 68 bc 00 00 4a } 	condition:
+		((#a_01_0  & 1)*10+(#a_01_1  & 1)*10+(#a_01_2  & 1)*10+(#a_01_3  & 1)*10) >=40
+ 
+}
