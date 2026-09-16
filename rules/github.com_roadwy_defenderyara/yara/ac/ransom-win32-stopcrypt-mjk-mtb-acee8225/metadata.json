@@ -1,0 +1,22 @@
+{
+  "uuid": "acee8225-b296-46cf-8d56-cac4ff6aeb61",
+  "title": "Ransom_Win32_StopCrypt_MJK_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Ransom:Win32/StopCrypt.MJK!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/317455"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "6e2ed7ed-8e19-4532-8c8b-2394fe1746bc",
+  "title": "Ransom_Win32_ZhenCrypt_AB_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Ransom:Win32/ZhenCrypt.AB!MTB,SIGNATURE_TYPE_PEHSTR_EXT,07 00 07 00 08 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/317876"
+}

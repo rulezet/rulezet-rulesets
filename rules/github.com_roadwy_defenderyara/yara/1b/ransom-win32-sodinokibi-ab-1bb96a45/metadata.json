@@ -1,0 +1,23 @@
+{
+  "uuid": "1bb96a45-570b-4cbc-904b-7c2c05a92eed",
+  "title": "Ransom_Win32_Sodinokibi_AB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Ransom:Win32/Sodinokibi.AB,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/317659"
+}

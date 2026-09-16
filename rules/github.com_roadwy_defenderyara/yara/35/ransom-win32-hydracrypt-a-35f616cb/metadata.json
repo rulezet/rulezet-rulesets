@@ -1,0 +1,22 @@
+{
+  "uuid": "35f616cb-1fe9-4c8e-b3e2-ed71e58f9e58",
+  "title": "Ransom_Win32_HydraCrypt_A_",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Ransom:Win32/HydraCrypt.A!!HydraCrypt.gen!A,SIGNATURE_TYPE_ARHSTR_EXT,07 00 07 00 0e 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/317563"
+}
