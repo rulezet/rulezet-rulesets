@@ -1,0 +1,9 @@
+import "pe"
+rule CERBERUS_v20: PEiD
+{
+    strings:
+        $a = { 9C 2B ED 8C ?? ?? 8C ?? ?? FA E4 ?? 88 ?? ?? 16 07 BF ?? ?? 8E DD 9B F5 B9 ?? ?? FC F3 A5 }
+    condition:
+        $a at pe.entry_point
+
+}

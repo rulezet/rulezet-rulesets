@@ -1,0 +1,22 @@
+{
+  "uuid": "c9ef148d-95f9-46fb-9990-64f4ba5b771e",
+  "title": "android_metasploit",
+  "format": "yara",
+  "author": "https://twitter.com/plutec_net",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This rule detects apps made with metasploit framework",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Android\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/200961"
+}

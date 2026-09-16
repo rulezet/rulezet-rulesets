@@ -1,0 +1,23 @@
+{
+  "uuid": "965aa263-6cec-488b-b044-95ad829aa032",
+  "title": "android_meterpreter",
+  "format": "yara",
+  "author": "73mp74710n",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Rule android_meterpreter (No description metadata provided).",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "false-positive:risk=\"high\"",
+    "misp-galaxy:operating-system=\"Android\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/200956"
+}

@@ -1,0 +1,9 @@
+import "pe"
+rule PKLITE32_11_PKWARE_Inc_additional: PEiD
+{
+    strings:
+        $a = { 68 ?? ?? ?? 00 68 ?? ?? ?? 00 68 00 00 00 00 E8 ?? ?? ?? ?? E9 }
+    condition:
+        $a at pe.entry_point
+
+}

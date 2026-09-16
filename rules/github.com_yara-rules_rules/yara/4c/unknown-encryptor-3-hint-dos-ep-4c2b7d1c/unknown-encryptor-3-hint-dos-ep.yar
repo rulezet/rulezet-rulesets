@@ -1,0 +1,9 @@
+import "pe"
+rule Unknown_encryptor_3_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? 1E 06 8C D8 05 ?? ?? 8E D8 8E C0 2E ?? ?? ?? ?? 2E ?? ?? ?? ?? 8B E8 2E }
+    condition:
+        $a at pe.entry_point
+
+}

@@ -1,0 +1,9 @@
+import "pe"
+rule vfpexeNc_V500_Wang_JianGuo_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 50 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 CC }
+    condition:
+        $a at pe.entry_point
+
+}

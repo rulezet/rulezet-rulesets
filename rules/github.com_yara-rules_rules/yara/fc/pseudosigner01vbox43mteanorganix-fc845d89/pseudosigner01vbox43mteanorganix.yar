@@ -1,0 +1,11 @@
+import "pe"
+rule PseudoSigner01VBOX43MTEAnorganix
+{
+      meta:
+		author="malware-lu"
+strings:
+		$a0 = { 0B C0 0B C0 0B C0 0B C0 0B C0 0B C0 0B C0 0B C0 E9 }
+
+condition:
+		$a0 at pe.entry_point
+}

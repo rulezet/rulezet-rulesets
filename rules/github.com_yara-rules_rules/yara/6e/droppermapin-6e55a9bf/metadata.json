@@ -1,0 +1,23 @@
+{
+  "uuid": "6e55a9bf-e378-47e0-85b7-72e75075a0e9",
+  "title": "dropperMapin",
+  "format": "yara",
+  "author": "https://twitter.com/plutec_net",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This rule detects mapin dropper files",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Android\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/200981"
+}
