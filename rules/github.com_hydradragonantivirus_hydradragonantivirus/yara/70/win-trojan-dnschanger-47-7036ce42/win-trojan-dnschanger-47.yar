@@ -1,0 +1,9 @@
+rule Win_Trojan_DNSChanger_47
+{
+strings:
+	$a0 = { 6820a14000ff75e8e8b68600006823a14000ff75e8e8a9860000ff75e8e8ad170000594050ff75e86a016a006825a14000ff75fce87c850000ff75fce862850000 }
+
+
+condition:
+	$a0
+}

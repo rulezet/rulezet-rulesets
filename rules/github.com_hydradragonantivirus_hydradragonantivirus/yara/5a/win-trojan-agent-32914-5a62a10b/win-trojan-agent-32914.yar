@@ -1,0 +1,9 @@
+rule Win_Trojan_Agent_32914
+{
+strings:
+	$a0 = { 7f221d7eecfa8c45de33b3725c03599bcb802599d539360f2e5286b382842c8e064fe55a71aa1348ceeadff522c87d029258570996ca2c2fc0b6455ef4d567eac1c19fb4f141fc0f0a5e26446d9f8cbae714a515f0 }
+
+
+condition:
+	$a0
+}

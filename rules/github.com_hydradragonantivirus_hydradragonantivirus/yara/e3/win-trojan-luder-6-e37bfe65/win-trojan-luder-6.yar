@@ -1,0 +1,9 @@
+rule Win_Trojan_Luder_6
+{
+strings:
+	$a0 = { 5bdb8ba6d5ed79c2d94eb4ba6c05e38ba208f2104a78092b9d13f0b75bf9a2a13c26c3dfbbec0493ae157158524bee43b426ab3c9ac1b3f75421ffc34ff49f5692a2f7032ffb199731bdabdb4616c2b75b5aff8025bda366e3fdeb9e7c349f05e232330a4d13923fd80df7b2ab497a885b53ff475d5fc6f9f4abf2e9160b8edf830381adbe61b3bbc5eac4edb253ffb71bb0c3b1f56e }
+
+
+condition:
+	$a0
+}
