@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED HTTP Request to a Suspicious *.cu.cc domain"; flow:to_server,established; http.header; content:".cu.cc|0d 0a|"; fast_pattern; classtype:bad-unknown; sid:2013242; rev:5; metadata:created_at 2011_07_09, signature_severity Unknown, updated_at 2021_06_23;)

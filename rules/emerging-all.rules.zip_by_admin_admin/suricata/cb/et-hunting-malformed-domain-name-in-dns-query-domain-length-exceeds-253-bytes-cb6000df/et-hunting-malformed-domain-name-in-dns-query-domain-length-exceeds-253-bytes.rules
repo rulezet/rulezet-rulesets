@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET HUNTING Malformed Domain Name in DNS Query (Domain Length Exceeds 253 Bytes)"; dns.query; bsize:>253; classtype:bad-unknown; sid:2032779; rev:1; metadata:created_at 2021_04_19, confidence High, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2021_04_19;)

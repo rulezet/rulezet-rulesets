@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO Observed DNS Query to DDNS Domain .otzo .com"; dns.query; content:".otzo.com"; endswith; fast_pattern; reference:url,changeip.com; classtype:bad-unknown; sid:2033120; rev:1; metadata:created_at 2021_06_09, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2021_06_09;)

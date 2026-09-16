@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Suspicious POST to ROBOTS.TXT"; flow:established,to_server; content:"POST"; nocase; http_method; content:"/robots.txt"; nocase; http_uri; pcre:"/^\s?\+x=[0-9]*\;\ +y=[0-9]/C"; classtype:unknown; sid:2002856; rev:10; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2021_06_23;)
