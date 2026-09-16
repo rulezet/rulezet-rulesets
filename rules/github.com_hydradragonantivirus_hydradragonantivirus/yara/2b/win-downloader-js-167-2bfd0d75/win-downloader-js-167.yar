@@ -1,0 +1,9 @@
+rule Win_Downloader_JS_167
+{
+strings:
+	$a0 = { 706c6d783d22736865222b226c6c223b[0-21]75796b707974613d223030303031746d70222b222e657865223b }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Downloader_VBS_152
+{
+strings:
+	$a0 = { 646f7768696c656c656e2873293e316b3d222668222b7563617365286c65667428732c322929 }
+
+
+condition:
+	$a0
+}
