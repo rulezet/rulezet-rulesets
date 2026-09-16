@@ -1,0 +1,1 @@
+alert smtp $EXTERNAL_NET any -> $SMTP_SERVERS any (msg:"ET INFO Office Document Containing AutoExec Macro Via smtp"; flow:established,to_server; content:"QQB1AHQAbwBFAHgAZQBj"; reference:url,support.microsoft.com/kb/286310; classtype:policy-violation; sid:2019618; rev:3; metadata:created_at 2014_10_31, confidence High, signature_severity Informational, updated_at 2024_04_07;)
