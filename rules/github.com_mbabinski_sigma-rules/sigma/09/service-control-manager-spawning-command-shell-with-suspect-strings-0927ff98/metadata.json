@@ -1,0 +1,26 @@
+{
+  "uuid": "0927ff98-2756-4144-85ec-41d7973d575e",
+  "title": "Service Control Manager Spawning Command Shell with Suspect Strings",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "The following pseudo detector should generate an alert when services.exe spawns \ncmd.exe along with a corresponding echo or /c command, which are common attributes \nof post exploitation that we’ve seen in association with this technique. Part of \nthe RedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.003",
+    "T1569",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210032"
+}

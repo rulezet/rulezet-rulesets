@@ -1,0 +1,24 @@
+{
+  "uuid": "ed2d6808-e639-4644-946a-3f181ee036c3",
+  "title": "Office Products Spawning WMI",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "It’s almost always malicious when wmic.exe spawns as a child process of Microsoft Office and \nsimilar products. As such, it makes sense to examine the chain of execution and follow-on \nactivity when this occurs. The following is a non-exhaustive example analytic that will catch \nsome of this activity. Part of the RedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210012"
+}

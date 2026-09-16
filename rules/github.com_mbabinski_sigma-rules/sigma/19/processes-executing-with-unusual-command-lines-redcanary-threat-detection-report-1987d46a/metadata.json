@@ -1,0 +1,23 @@
+{
+  "uuid": "1987d46a-865a-46c3-afb4-90e4016f6a4c",
+  "title": "Processes Executing with Unusual Command Lines (RedCanary Threat Detection Report)",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects non-powershell.exe processes executing with command lines that are usually \nassociated with powershell. This is an example for demonstration purposes only. \nPart of the RedCanary 2023 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210110"
+}

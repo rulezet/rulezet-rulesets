@@ -1,0 +1,31 @@
+title: Cobalt Strike Beacon Implant Command Issued via Named Pipe (RedCanary Threat Detection Report)
+id: 0da8f33f-2703-4a4e-92f8-a6090a31b1e1
+status: experimental
+description: Detects named pipe creation indicating Cobalt Strike beacon implant issuing commands via SMB named pipe. Part of the RedCanary 2023 Threat Detection Report.
+references:
+    - https://redcanary.com/threat-detection-report/threats/cobalt-strike/
+author: RedCanary, Sigma formatting by Micah Babinski
+date: 2023/05/10
+tags:
+    - attack.s0154
+logsource:
+    category: pipe_created
+    product: windows
+detection:
+    selection:
+        PipeName|startswith:
+            - '\msagent_'
+            - '\interprocess_'
+            - '\lsarpc_'
+            - '\samr_'
+            - '\netlogon_'
+            - '\wkssvc_'
+            - '\srvsvc_'
+            - '\mojo_'
+            - '\postex_'
+            - '\status_'
+            - '\msse-'
+    condition: selection
+falsepositives:
+    - Unknown
+level: low

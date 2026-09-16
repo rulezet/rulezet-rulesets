@@ -1,0 +1,25 @@
+{
+  "uuid": "afea1507-b31d-4e78-abb4-d6160e9b1443",
+  "title": "PowerShell -encodedcommand Switch",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "This detection analytic looks for the execution of powershell.exe with command \nlines that include variations of the -encodedcommand argument; PowerShell will \nrecognize and accept anything from -e onward, and it will show up outside of \nthe encoded bits. Part of the RedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209995"
+}

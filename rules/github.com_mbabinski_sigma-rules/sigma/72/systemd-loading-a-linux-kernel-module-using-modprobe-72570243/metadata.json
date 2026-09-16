@@ -1,0 +1,24 @@
+{
+  "uuid": "72570243-4dc8-408a-9edd-b38184c1b790",
+  "title": "Systemd Loading a Linux Kernel Module Using modprobe",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects the systemd process loading a Linux Kernel Modules using modprobe. Part of the \nRedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1547",
+    "T1547.006"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210003"
+}

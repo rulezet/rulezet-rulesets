@@ -1,0 +1,26 @@
+{
+  "uuid": "710253a9-6daf-491f-80f9-c0caf0309283",
+  "title": "Download by Process with Double File Extension",
+  "format": "sigma",
+  "author": "Micah Babinski, @micahbabinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects downloads by processes with double file extensions, a common method of masquerading or obfuscating a file type in malware delivery. Observed in early 2023 AsyncRAT/Quasar malware delivery using malicious OneNote files.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1071.004",
+    "T1218",
+    "T1218.009"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210049"
+}

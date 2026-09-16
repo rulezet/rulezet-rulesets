@@ -1,0 +1,22 @@
+{
+  "uuid": "212e1f12-9b79-4e30-8b11-e2cade62c8f2",
+  "title": "Email Forwarding Rule - Suspicious Rule Names",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects the creation of email forwarding rules with suspicious names. Part of the \nRedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [
+    "T1114",
+    "T1114.003"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210022"
+}

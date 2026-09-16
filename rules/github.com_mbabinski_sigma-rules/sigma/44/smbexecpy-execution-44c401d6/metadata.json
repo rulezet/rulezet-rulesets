@@ -1,0 +1,28 @@
+{
+  "uuid": "44c401d6-f63b-4ee3-a414-4bdbf8647513",
+  "title": "SMBexec.py Execution",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Similar to the wmiexec.py detector logic, this detection analytic is looking for services.exe \nspawning cmd.exe with a command line that has the following strings: '/Q', '/c', 'echo',' > ', \n' 2>&1'. These strings are unique to the execution of smbexec.py, which allows a semi-interactive \nshell used through SMB. This script functions similar to psexec.py, but does not write a service \nbinary to disk on the target machine. Part of the RedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.003",
+    "T1569",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210004"
+}

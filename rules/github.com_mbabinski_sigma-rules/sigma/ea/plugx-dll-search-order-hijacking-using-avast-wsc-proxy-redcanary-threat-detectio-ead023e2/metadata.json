@@ -1,0 +1,21 @@
+{
+  "uuid": "ead023e2-3dcb-4388-b1c2-ef65c9d2014c",
+  "title": "PlugX DLL Search Order Hijacking Using Avast wsc_proxy (RedCanary Threat Detection Report)",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects possible DLL Search Order hijacking using Avast antivirus wsc_proxy application. \nThis technique is associated with PlugX. Part of the RedCanary 2023 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210076"
+}

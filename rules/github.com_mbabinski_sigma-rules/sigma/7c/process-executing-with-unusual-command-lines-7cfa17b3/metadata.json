@@ -1,0 +1,23 @@
+{
+  "uuid": "7cfa17b3-a657-4fa1-a098-89e9753574af",
+  "title": "Process Executing with Unusual Command Lines",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Looks for the execution of non-powershell process with command lines matching common powershell format. Inspired by the 2022 Red Canary Threat Detection report.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210132"
+}

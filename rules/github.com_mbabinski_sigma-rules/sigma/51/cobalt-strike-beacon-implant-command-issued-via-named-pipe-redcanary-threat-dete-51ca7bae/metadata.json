@@ -1,0 +1,22 @@
+{
+  "uuid": "51ca7bae-1250-4921-845c-c1cc61274877",
+  "title": "Cobalt Strike Beacon Implant Command Issued via Named Pipe (RedCanary Threat Detection Report)",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects named pipe creation indicating Cobalt Strike beacon implant issuing commands via SMB named pipe. Part of the RedCanary 2023 Threat Detection Report.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210103"
+}

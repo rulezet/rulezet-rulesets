@@ -1,0 +1,24 @@
+{
+  "uuid": "d74ea161-a612-4836-ad80-6e4cd986e199",
+  "title": "Common Payload and C2 URI Paths",
+  "format": "sigma",
+  "author": "NTT Security - Axel Olsson",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "The rule detectes commonly used payload and C2 URI paths lacking properties of normal web surf",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT28 - G0007\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Turla - G0010\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Sandworm Team - G0034\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210195"
+}

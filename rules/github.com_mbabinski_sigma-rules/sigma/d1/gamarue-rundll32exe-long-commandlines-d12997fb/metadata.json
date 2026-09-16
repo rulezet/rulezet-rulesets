@@ -1,0 +1,24 @@
+{
+  "uuid": "d12997fb-9904-4197-b3de-345b540869ac",
+  "title": "Gamarue Rundll32.exe Long Commandlines",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Fortunately for defenders, Gamarue is detectable with endpoint telemetry. The majority \nof Gamarue activity we see involves rundll32.exe executing with unusual command lines \nthat include long filenames with repeating characters and random function names. Part \nof the RedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1027.010"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209997"
+}

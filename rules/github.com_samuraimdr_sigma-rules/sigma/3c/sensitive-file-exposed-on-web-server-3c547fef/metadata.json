@@ -1,0 +1,22 @@
+{
+  "uuid": "3c547fef-fbf3-4f97-abab-c86d3b15024d",
+  "title": "Sensitive File Exposed on Web Server",
+  "format": "sigma",
+  "author": "NTT Security - Patrik Olson",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potentially sensitive files downloaded from a web server",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [
+    "T1594",
+    "T1595"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210253"
+}

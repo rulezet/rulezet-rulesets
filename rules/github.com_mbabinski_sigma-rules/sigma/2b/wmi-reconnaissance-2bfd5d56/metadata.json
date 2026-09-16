@@ -1,0 +1,25 @@
+{
+  "uuid": "2bfd5d56-da0b-4880-9dac-8c9117613a1a",
+  "title": "WMI Reconnaissance",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Reconnaissance is harder to detect because it looks very similar to normal admin behavior. \nEven so, we detect a relatively high volume of adversaries leveraging WMI to quickly gather \ndomain information such as users, groups, or computers in the domain. The following may help \nyou detect related activity. Part of the RedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1087",
+    "T1087.002"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210008"
+}

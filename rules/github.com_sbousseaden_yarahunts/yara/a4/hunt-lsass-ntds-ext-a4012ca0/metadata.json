@@ -1,0 +1,20 @@
+{
+  "uuid": "a4012ca0-df8b-4599-a16d-44f72037b613",
+  "title": "hunt_lsass_ntds_ext",
+  "format": "yara",
+  "author": "SBousseaden",
+  "license": "",
+  "license_verified": false,
+  "description": "hunting rule for necessary exports in a DLL that can be abused for persistence or alike by loading it into lsass via NTDS registry",
+  "source": "https://github.com/sbousseaden/YaraHunts",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Mimikatz\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210322"
+}

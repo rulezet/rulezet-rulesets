@@ -1,0 +1,19 @@
+{
+  "uuid": "ca3b2ece-27ae-4619-9b53-f545ad9edeea",
+  "title": "pdf_fake_password",
+  "format": "yara",
+  "author": "Paul Melson @pmelson",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects PDF obfuscated via /Encrypt and /AuthEvent/DocOpen but opens without password",
+  "source": "https://github.com/pmelson/yara_rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210290"
+}

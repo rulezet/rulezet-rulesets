@@ -1,0 +1,20 @@
+{
+  "uuid": "7d237a9a-89cf-428e-9ad8-dfd3ceeb235f",
+  "title": "Rhadamanthys Infostealer User-Agent",
+  "format": "sigma",
+  "author": "NTT Security - Amata Anantaprayoon, Patrik Olson",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Rhadamanthys infostealer uses a user-agent of curl/5.9 which was released in 1999",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:stealer=\"Rhadamanthys\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210238"
+}

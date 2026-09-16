@@ -1,0 +1,19 @@
+{
+  "uuid": "f721b1ab-b934-4b97-a95f-471364bee1d5",
+  "title": "hunt_multi_EDR_discovery",
+  "format": "yara",
+  "author": "SBousseaden",
+  "license": "",
+  "license_verified": false,
+  "description": "Hunting rule for the presence of at least 3 different known EDR driver names, more drivers can be found in the reference link",
+  "source": "https://github.com/sbousseaden/YaraHunts",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210329"
+}

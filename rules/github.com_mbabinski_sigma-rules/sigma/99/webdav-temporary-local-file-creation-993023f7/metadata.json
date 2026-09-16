@@ -1,0 +1,24 @@
+{
+  "uuid": "993023f7-ce8b-47f4-8e24-9be28133baf7",
+  "title": "WebDAV Temporary Local File Creation",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects the creation of WebDAV temporary files with suspicious extensions",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1566",
+    "T1584"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210184"
+}

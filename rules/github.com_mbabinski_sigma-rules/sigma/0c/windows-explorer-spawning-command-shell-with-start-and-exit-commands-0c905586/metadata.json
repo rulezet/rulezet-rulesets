@@ -1,0 +1,25 @@
+{
+  "uuid": "0c905586-1fc2-4d65-8e2d-1a8440555e1e",
+  "title": "Windows Explorer Spawning Command Shell with Start and Exit Commands",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "This detection analytic looks for instances of explorer.exe spawning cmd.exe along \nwith corresponding start and exit commands that we commonly observe in conjunction \nwith a wide variety of malicious activity. Part of the RedCanary 2024 Threat \nDetection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1053",
+    "T1059",
+    "T1059.003"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210028"
+}

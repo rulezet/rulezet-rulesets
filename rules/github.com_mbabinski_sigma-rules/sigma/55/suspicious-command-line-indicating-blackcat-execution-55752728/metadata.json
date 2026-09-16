@@ -1,0 +1,26 @@
+{
+  "uuid": "55752728-8dc6-4402-b177-e5925ae4e623",
+  "title": "Suspicious Command Line Indicating BlackCat Execution",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects process execution with the --access-token flag accompanied by a 64-character alphanumeric string in the space-delimited command-line arguments..",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"BlackCat\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209978"
+}

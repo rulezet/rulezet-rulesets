@@ -1,0 +1,24 @@
+{
+  "uuid": "8744e5d4-ad41-4a38-964b-e4891a815e2a",
+  "title": "Suspicious Calc DLL Load",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects Windows 7 calc.exe loading DLLs from suspicious or abnormal file paths.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210181"
+}

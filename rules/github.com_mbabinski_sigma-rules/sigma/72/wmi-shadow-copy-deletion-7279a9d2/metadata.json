@@ -1,0 +1,25 @@
+{
+  "uuid": "7279a9d2-bd89-4c26-a673-27fc5592c71b",
+  "title": "WMI Shadow Copy Deletion",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "It’s not uncommon for ransomware operators to leverage WMI to delete volume shadows, \nsignificantly complicating the process for recovering access to encrypted systems and files. \nIf you want to detect ransomware using WMI to delete shadow copies, consider looking for \nwmic.exe execution with command lines including shadowcopy or delete. Part of the RedCanary \n2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210010"
+}

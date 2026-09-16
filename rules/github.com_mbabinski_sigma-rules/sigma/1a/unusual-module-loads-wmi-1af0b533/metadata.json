@@ -1,0 +1,23 @@
+{
+  "uuid": "1af0b533-a041-44fc-a2fe-f87301d0d621",
+  "title": "Unusual Module Loads - WMI",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "By monitoring and detecting on module loads, you can catch a variety of different malicious \nactivities, including defense evasion and credential theft. In cases where an adversary is \nusing WMI for credential theft, consider looking for the execution of wmiprvse.exe (or its \nchild processes) with unusual module loads like samlib.dll or vaultcli.dll. WMI is also a \nuseful vehicle for bypassing application controls, and we commonly see adversaries—real and \nsimulated–using a WMI bypass method called “SquibblyTwo.” The following pseudo-detection \nanalytic is designed specifically to catch application control bypasses, but you can likely \nadapt it to detect other threats by substituting in a different DLL or by removing the command. \nPart of the RedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1047"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210033"
+}

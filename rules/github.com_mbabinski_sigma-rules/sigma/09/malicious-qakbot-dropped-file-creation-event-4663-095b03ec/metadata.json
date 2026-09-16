@@ -1,0 +1,27 @@
+{
+  "uuid": "095b03ec-2cc2-447f-9f4e-98a7010feadf",
+  "title": "Malicious QakBot Dropped File Creation (Event 4663)",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects creation of files potentially associated with QakBot initial infection, documented by Adithya Chandra and Sushant Kumar Arya of Trellix in August 2022.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1553",
+    "T1566"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210179"
+}

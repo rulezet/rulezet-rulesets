@@ -1,0 +1,25 @@
+{
+  "uuid": "0d9b2480-7155-4158-ab17-b39b7fbb8bcb",
+  "title": "Bypassing Security Controls - Command Shell",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Adversaries bypass controls using the Windows Command Shell in a plethora of ways, \nbut you can detect the one we see most often with a simple combination of process \nexecution and a corresponding command line. Part of the RedCanary 2024 Threat \nDetection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.003",
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209990"
+}

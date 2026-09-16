@@ -1,0 +1,26 @@
+title: Impacket Atexec.py Execution (RedCanary Threat Detection Report)
+id: 6b588393-f45f-484b-8233-56bbc657c63c
+status: experimental
+description: Detects execution from Impacket's atexec.py. Part of the RedCanary 2023 Threat Detection Report.
+references:
+    - https://redcanary.com/threat-detection-report/threats/impacket/
+author: RedCanary, Sigma formatting by Micah Babinski
+date: 2023/05/10
+tags:
+    - attack.s0357
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        ParentImage|endswith:
+            - '\svchost.exe'
+            - '\taskeng.exe'
+        CommandLine|contains|all:
+            - 'cmd.exe'
+            - 'windows\temp'
+            - '2>&1'
+    condition: selection
+falsepositives:
+    - Unknown
+level: low

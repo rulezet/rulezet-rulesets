@@ -1,0 +1,25 @@
+{
+  "uuid": "595b23e2-5d66-4764-8633-26686f84e14f",
+  "title": "Suspicious Fsutil Execution Allowing Remote Connections",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects the use of fsutil to permit additional types of symbolic links on a computer. These can be used to enable ransomware to follow shortcusts to find all files it wants to encrypt.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"BlackCat\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1547"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209975"
+}

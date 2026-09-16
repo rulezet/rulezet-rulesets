@@ -1,0 +1,23 @@
+{
+  "uuid": "e2401b77-7113-422f-87ad-23b36a0f1c82",
+  "title": "SocGholish Script File Whoami Output to File (RedCanary Threat Detection Report)",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects wscript spawning CMD which in turn runs whoami, with the output of the command directed to a file. Part of the RedCanary 2023 Threat Detection Report.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1033"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210080"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "230452b2-63b3-43a5-93ed-9807fe0979da",
+  "title": "Command Shell Bypassing Security Controls",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects common ways to bypass controls using Windows Command Shell. Inspired by the 2022 Red Canary Threat Detection report.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.003"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210148"
+}

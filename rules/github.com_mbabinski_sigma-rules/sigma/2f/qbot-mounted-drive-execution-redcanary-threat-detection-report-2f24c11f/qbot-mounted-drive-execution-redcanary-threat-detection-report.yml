@@ -1,0 +1,24 @@
+title: QBot Mounted Drive Execution (RedCanary Threat Detection Report)
+id: 949afe0b-2d45-4999-be9c-fe4808b8a68b
+status: experimental
+description: Detects process creation from wscript or cscript interpreters with commands occuring on mounted drive letters. Defenders should check whether these processes have child processes. Part of the RedCanary 2023 Threat Detection Report.
+references:
+    - https://redcanary.com/threat-detection-report/threats/qbot/
+author: RedCanary, Sigma formatting by Micah Babinski
+date: 2023/05/10
+tags:
+    - attack.s0650
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        ParentImage|endswith: '\explorer.exe'
+        Image|endswith:
+            - '\wscript.exe'
+            - '\cscript.exe'
+        CommandLine|re: '[d-z]:\\[^\\]+\.(?:js|vbs|wsf)'
+    condition: selection
+falsepositives:
+    - Unknown
+level: low

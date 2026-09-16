@@ -1,0 +1,20 @@
+{
+  "uuid": "37e13e35-15cd-47f0-a5a4-04948c11a688",
+  "title": "Qakbot/Pikabot Payload Download",
+  "format": "sigma",
+  "author": "NTT Security - Robin Hellsten, Patrik Olson, Amata Anantaprayoon",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Request towards url matching Qakbot/Pikabot payload pattern. Typically leads to download of .zip file containing a .js or .msi payload",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:banker=\"Qakbot\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210235"
+}

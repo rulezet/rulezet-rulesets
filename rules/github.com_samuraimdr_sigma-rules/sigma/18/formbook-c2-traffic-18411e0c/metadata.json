@@ -1,0 +1,20 @@
+{
+  "uuid": "18411e0c-0747-4a74-ade0-212dd8b3ac9d",
+  "title": "Formbook C2 Traffic",
+  "format": "sigma",
+  "author": "NTT Security - Amata Anantaprayoon",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects URI combos used by Formbook/Xloader",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:stealer=\"FormBook\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210252"
+}

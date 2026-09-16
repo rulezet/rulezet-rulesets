@@ -1,0 +1,24 @@
+title: Mimikatz Module Names in Command Line (RedCanary Threat Detection Report)
+id: ca5d91c2-3411-4085-a003-d7df8ce60244
+status: experimental
+description: Detects presence of common Mimikatz module names in command line strings. Part of the RedCanary 2023 Threat Detection Report.
+references:
+    - https://redcanary.com/threat-detection-report/threats/mimikatz/
+    - https://github.com/gentilkiwi/mimikatz/wiki (for additional module names)
+author: RedCanary, Sigma formatting by Micah Babinski
+date: 2023/05/10
+tags:
+    - attack.s0002
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine|contains:
+            - 'sekurlsa::logonpasswords'
+            - 'lsadump::sam'
+            - 'sekurlsa::minidump'
+    condition: selection
+falsepositives:
+    - Unknown
+level: low

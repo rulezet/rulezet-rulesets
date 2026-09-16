@@ -1,0 +1,25 @@
+{
+  "uuid": "42182ec5-02b1-4826-8c4c-e61e21831ede",
+  "title": "Qbot Mounted Drive Script Executions",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects Windows Scripting Host processes (wscript.exe and cscript.exe) that are \ninvoking the execution of common scripting formats that Red Canary has observed \nbeing used by Qbot—such as .js, .vbs, and .wsf—that are from a logical mounted \ndrive using the drive letters D: through Z: and that have a child process. Part \nof the RedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210030"
+}

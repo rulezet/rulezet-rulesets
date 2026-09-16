@@ -1,0 +1,24 @@
+{
+  "uuid": "5ca3064f-90dc-420f-b62c-951474165505",
+  "title": "Svchost Not Matching Normal Execution Parameters",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Looks for the execution of svchost without the normal -k parameter. Inspired by the 2022 Red Canary Threat Detection report.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.005"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210149"
+}

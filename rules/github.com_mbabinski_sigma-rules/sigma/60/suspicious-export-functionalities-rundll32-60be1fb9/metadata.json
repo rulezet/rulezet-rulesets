@@ -1,0 +1,25 @@
+{
+  "uuid": "60be1fb9-9658-491c-8a52-9b6ef9599bc4",
+  "title": "Suspicious Export Functionalities - Rundll32",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Consider monitoring for instances of rundll32.exe running Windows \nnative DLLs that have export functionalities that adversaries commonly \nleverage for executing malicious code and evading defensive controls. \nThe following pseudo-analytic applies specifically to adversaries who \nuse the MiniDump export functionality of comsvcs.dll to dump the \ncontents of LSASS, but this logic could be adapted to detect other \nmalicious activity as well. Part of the RedCanary 2024 Threat Detection \nReport.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1218",
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210007"
+}

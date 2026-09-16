@@ -1,0 +1,20 @@
+{
+  "uuid": "845ca130-4554-4b80-ace0-cda3d7a7c81c",
+  "title": "mimikatz_memssp_hookfn",
+  "format": "yara",
+  "author": "SBousseaden",
+  "license": "",
+  "license_verified": false,
+  "description": "hunt for default mimikatz memssp module both ondisk and in memory artifacts",
+  "source": "https://github.com/sbousseaden/YaraHunts",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Mimikatz\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210314"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "9bcd81e2-9b73-46ec-ae4a-9594a275ce1a",
+  "title": "ChromeLoader NW.js Runtime App Installation Paths",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Red Canary has had success detecting ChromeLoader by looking for instances of NW.js \napplications that are unsigned and running from %AppData/Roaming%. This behavior is \nnot unique to ChromeLoader, and some tuning may be required to avoid detecting \nlegitimate applications. A partial list of common ChromeLoader NW.js runtime app \ninstallation paths is included below to help distinguish the signal from the noise. \nPart of the RedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1176"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209992"
+}

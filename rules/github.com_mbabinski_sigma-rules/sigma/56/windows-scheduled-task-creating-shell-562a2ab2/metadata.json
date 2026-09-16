@@ -1,0 +1,25 @@
+{
+  "uuid": "562a2ab2-53ee-4891-b7a3-c7a99a4157b6",
+  "title": "Windows Scheduled Task Creating Shell",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Adversaries frequently establish persistence by using scheduled tasks to launch \nthe Windows Command Shell. Detecting this behavior is relatively straightforward. \nPart of the RedCanary 2024 Threat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1053",
+    "T1059",
+    "T1059.003"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210040"
+}

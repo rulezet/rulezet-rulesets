@@ -1,0 +1,27 @@
+{
+  "uuid": "bbea8956-9be4-4c12-a69a-05de787fdb7c",
+  "title": "Suspicious 'Admin' Local User Creation with Net Command",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects creation of a local user account using the net command with 'Admin' in the name - this technique is used by Vice Society ransomware gang to create bogus user accounts that attempt to blend in with an administrative user account naming convention.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.003",
+    "T1136",
+    "T1136.001"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210157"
+}

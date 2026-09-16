@@ -1,0 +1,24 @@
+{
+  "uuid": "7c80e965-06f8-406c-9759-9c800ad05672",
+  "title": "Autoit3.exe Executable File Creation Matching DarkGate Behavior",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects the usage of curl.exe, KeyScramblerLogon, or other non-standard/suspicious processes used to create Autoit3.exe. \nThis activity has been associated with DarkGate malware, which uses Autoit3.exe to execute shellcode that performs \nprocess injection and connects to the DarkGate command-and-control server. Curl, KeyScramblerLogon, and these other \nprocesses consitute non-standard and suspicious ways to retrieve the Autoit3 executable.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210155"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "f17d90e8-e495-46de-aba2-dee84c2e4a08",
+  "title": "Cobalt Strike UAC Bypass Using SQL Server Client Configuration Utility (RedCanary Threat Detection Report)",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects a possible Cobalt Strike UAC bypass attempt using cliconfg.exe, the SQL Server Client Configuration Utility. Part of the RedCanary 2023 Threat Detection Report.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210096"
+}

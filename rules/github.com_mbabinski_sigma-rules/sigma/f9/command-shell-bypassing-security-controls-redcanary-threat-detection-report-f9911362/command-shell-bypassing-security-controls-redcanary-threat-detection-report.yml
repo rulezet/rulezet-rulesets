@@ -1,0 +1,24 @@
+title: Command Shell Bypassing Security Controls (RedCanary Threat Detection Report)
+id: e76af6c9-1c66-4ed7-9a36-b2f905e2e78c
+status: experimental
+description: Detects command line strings which indicate potential attempts to bypass controls. Part of the RedCanary 2023 Threat Detection Report.
+references:
+    - https://redcanary.com/threat-detection-report/techniques/windows-command-shell/
+author: RedCanary, Sigma formatting by Micah Babinski
+date: 2023/05/10
+tags:
+    - attack.execution
+    - attack.t1059.003
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        Image|endswith: '\cmd.exe'
+        CommandLine|contains:
+            - 'bypass'
+            - '-exec'
+    condition: selection
+falsepositives:
+    - Unknown
+level: low

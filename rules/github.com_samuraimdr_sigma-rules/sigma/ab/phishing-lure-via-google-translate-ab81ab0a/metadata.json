@@ -1,0 +1,21 @@
+{
+  "uuid": "ab81ab0a-d94b-4385-b18b-50791cdd6e9d",
+  "title": "Phishing Lure via Google Translate",
+  "format": "sigma",
+  "author": "NTT Security - Patrik Olson",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "It is common for phishing lures to be served from IPFS or object storage services, using Google Translate as a proxy",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210196"
+}

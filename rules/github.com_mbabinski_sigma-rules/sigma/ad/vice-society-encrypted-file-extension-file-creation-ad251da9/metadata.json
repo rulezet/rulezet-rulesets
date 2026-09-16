@@ -1,0 +1,24 @@
+{
+  "uuid": "ad251da9-8e84-4189-b46f-7b33049932ac",
+  "title": "Vice Society Encrypted File Extension File Creation",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects creation of potentially-encrypted files by Vice Society ransomeware. As this is based only on file extensions, the analyst should investigate surrounding activity to validate that this is not part of a benign applicatoin.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210159"
+}

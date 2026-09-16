@@ -1,0 +1,23 @@
+{
+  "uuid": "54186bbb-ddd5-438b-8be9-38884072fa21",
+  "title": "Security tool keyword in download",
+  "format": "sigma",
+  "author": "NTT Security - Axel Olsson",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Searches for security tool associated strings in requests for file downloads",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "misp-galaxy:tool=\"Empire\"",
+    "misp-galaxy:tool=\"ProcDump\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210221"
+}

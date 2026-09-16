@@ -1,0 +1,23 @@
+{
+  "uuid": "ad26c052-ae4e-4f8a-8e91-ac80b136fb1a",
+  "title": "Suspicious Registry Import",
+  "format": "sigma",
+  "author": "NTT Security - Patrik Olson",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Some malware droppers consist of a single .reg file that writes a base64 encoded payload into registry and creates a Run key for execution/persistence. Investigate where the .reg file comes from and if possible, if it creates any suspicious registry keys.",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1547.001"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210269"
+}

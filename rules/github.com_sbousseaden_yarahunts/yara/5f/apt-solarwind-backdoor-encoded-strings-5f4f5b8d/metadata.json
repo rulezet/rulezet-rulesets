@@ -1,0 +1,21 @@
+{
+  "uuid": "5f4f5b8d-673e-403c-b13f-156678b4a211",
+  "title": "APT_Solarwind_Backdoor_Encoded_Strings",
+  "format": "yara",
+  "author": "SBousseaden",
+  "license": "",
+  "license_verified": false,
+  "description": "This rule is looking for some key encoded strings of the SUNBURST backdoor",
+  "source": "https://github.com/sbousseaden/YaraHunts",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:backdoor=\"SUNBURST\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210325"
+}

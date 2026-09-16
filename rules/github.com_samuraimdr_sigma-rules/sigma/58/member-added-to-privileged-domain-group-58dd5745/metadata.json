@@ -1,0 +1,21 @@
+{
+  "uuid": "58dd5745-c2ad-4407-b99c-31f8145bd2c6",
+  "title": "Member Added to Privileged Domain Group",
+  "format": "sigma",
+  "author": "NTT Security - Nils Hult",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Could indicate privilege escalation or persistence. Look for suspicious surrounding activity or odd account name.",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210282"
+}

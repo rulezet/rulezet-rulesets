@@ -1,0 +1,19 @@
+{
+  "uuid": "a9a7f9c3-e27c-41d8-9768-81fae2398e80",
+  "title": "Methodology_Mutation_StackPush_Windows_Pipe_Functions",
+  "format": "yara",
+  "author": "Stairwell",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Searching for PE files with mutations of odd, rare, or interesting string equities. Here we look for strings from common PE strings, DLLs and functions in type 2 stack strings form, where the string pushed onto the stack 4 bytes at a time using PUSH 0x68, appearing in reverse four byte chunk order, where the PUSH which shows up as an ASCII letter h.",
+  "source": "https://github.com/stairwell-inc/threat-research",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210359"
+}

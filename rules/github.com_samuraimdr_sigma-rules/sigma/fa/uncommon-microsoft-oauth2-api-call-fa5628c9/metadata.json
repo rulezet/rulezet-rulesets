@@ -1,0 +1,21 @@
+{
+  "uuid": "fa5628c9-7dc0-4a94-8a66-35d03bc1a991",
+  "title": "Uncommon Microsoft Oauth2 API call",
+  "format": "sigma",
+  "author": "NTT Security - Axel Olsson",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Uncommon Microsoft Oauth2 API call observed to renew access token by BlueBravo",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210240"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "701900fe-5e1e-4584-ae72-a264da1b90cd",
+  "title": "File Creation of Executables in Temp Folders (Event 4663)",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects creation of files potentially matching attempts to copy executables to temporary directories to hide usage.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210192"
+}

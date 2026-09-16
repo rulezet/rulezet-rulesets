@@ -1,0 +1,24 @@
+{
+  "uuid": "305e64f9-940b-4ad4-915e-516ec0a69c11",
+  "title": "Windows Scheduled Task Create Shell",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects creation of scheduled tasks which may establish persistence using the command shell. Inspired by the 2022 Red Canary Threat Detection report.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1053",
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210151"
+}

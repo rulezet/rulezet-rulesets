@@ -1,0 +1,19 @@
+{
+  "uuid": "29e7e8c1-a53b-4e48-835d-a14e19f87ac0",
+  "title": "Suspicious POST Request Towards Wordpress Site",
+  "format": "sigma",
+  "author": "NTT Security - Axel Olsson",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects abnormal POST requests towards Wordpress websites without cs-referer set, common characteristics for malware using compromised Wordpress sites for hosting C2.",
+  "source": "https://github.com/SamuraiMDR/sigma-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210223"
+}

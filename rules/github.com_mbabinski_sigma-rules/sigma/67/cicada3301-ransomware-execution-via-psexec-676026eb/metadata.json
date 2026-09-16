@@ -1,0 +1,26 @@
+{
+  "uuid": "676026eb-9abd-4526-9775-f828c1697989",
+  "title": "Cicada3301 Ransomware Execution via PSExec",
+  "format": "sigma",
+  "author": "Micah Babinski, Based on Morphisec report by Michael Gorelik (@smgoreli)",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects the use of a potentially-renamed psexec to run the Cicada3301 ransomware tool.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1569",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209983"
+}

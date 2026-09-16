@@ -1,0 +1,25 @@
+{
+  "uuid": "e66aca35-9006-46c7-8629-b5bd4afa5766",
+  "title": "Obfuscated Commands - Command Shell",
+  "format": "sigma",
+  "author": "RedCanary, Sigma formatting by Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detecting obfuscation in the command shell is relatively straightforward, but \nthere are a lot of variations to consider when you’re developing detection \ncoverage. Of course, the process you’re looking for will always be cmd.exe, \nbut the corresponding command line can contain a variety of suspicious characters. \nThe trick is finding the thresholds where the inclusion of obfuscation characters \ngo from normal to anomalous (but benign) to suspicious enough to warrant alerting. \nThe following pseudo-detection logic offers a good starting point for developing \ndetection coverage for obfuscation in the command line. Part of the RedCanary 2024 \nThreat Detection Report.\n",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059",
+    "T1059.003"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210018"
+}

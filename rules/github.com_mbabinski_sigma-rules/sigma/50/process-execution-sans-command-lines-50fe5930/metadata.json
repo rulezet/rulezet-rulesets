@@ -1,0 +1,23 @@
+{
+  "uuid": "50fe5930-04cd-430d-b382-23afcc165f99",
+  "title": "Process Execution sans Command Lines",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Looks for process execution with no command line arguments, which may indicate process injection. Inspired by the 2022 Red Canary Threat Detection report.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210134"
+}

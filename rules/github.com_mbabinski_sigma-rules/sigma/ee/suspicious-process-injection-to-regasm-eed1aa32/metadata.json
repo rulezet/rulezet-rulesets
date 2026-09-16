@@ -1,0 +1,24 @@
+{
+  "uuid": "eed1aa32-4b1c-4dc2-89c1-1fd72615fa4e",
+  "title": "Suspicious Process Injection to RegAsm",
+  "format": "sigma",
+  "author": "Micah Babinski (@micahbabinski)",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects potential process injection of RegAsm.exe as indicated by lack of command-line arguments. This was observed in a recent campaign to distribute AsyncRAT and Quasar RAT using malicious OneNot files.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218",
+    "T1218.009"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210047"
+}

@@ -1,0 +1,23 @@
+title: Common BloodHound Command-Line Options (RedCanary Threat Detection Report)
+id: 2b7d1fff-74b3-496c-b8f9-3bd90ba102c5
+status: experimental
+description: Detects common BloodHound parameters in command line strings. Part of the RedCanary 2023 Threat Detection Report.
+references:
+    - https://redcanary.com/threat-detection-report/threats/bloodhound/
+author: RedCanary, Sigma formatting by Micah Babinski
+date: 2023/05/10
+tags:
+    - attack.s0521
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine|contains:
+            - '-collectionmethod'
+            - 'invoke-bloodhound'
+            - 'get-bloodhounddata'
+    condition: selection
+falsepositives:
+    - Unknown
+level: low

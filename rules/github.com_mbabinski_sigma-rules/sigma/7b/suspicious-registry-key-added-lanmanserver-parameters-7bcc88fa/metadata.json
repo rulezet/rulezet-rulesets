@@ -1,0 +1,26 @@
+{
+  "uuid": "7bcc88fa-59c1-4557-bd4e-0e61237d91f4",
+  "title": "Suspicious Registry Key Added: LanmanServer Parameters",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects registry addition for LanmanServer MaxMpxCt. BlackCat does this to increase the number of outstanding requests allowed, such as SMB requests to distribute ransomware through an environment.",
+  "source": "https://github.com/mbabinski/Sigma-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"BlackCat\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1562"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209979"
+}
