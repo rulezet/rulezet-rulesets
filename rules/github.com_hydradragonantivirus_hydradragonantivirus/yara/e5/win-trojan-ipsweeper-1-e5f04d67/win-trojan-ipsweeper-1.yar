@@ -1,0 +1,9 @@
+rule Win_Trojan_IPSweeper_1
+{
+strings:
+	$a0 = { 6423e83006a411a828ad91f04620a1c02273ce41e1e97bbb51deff0d5dccdce9fc3bfc23bb99b902dbb902ef7bbc05bdec0adaf205a901dade4855200d5d906d720b6b920bae40adee720adc9071739015c905b7205f4c817d3242f6dc0adbb80dadcaeffffffbfbf3e7cfbf7efefbe7df4fde7eff03f3dfe08699020d4aa96cb65aed166e04a05d87fd79b0 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Intruder_14
+{
+strings:
+	$a0 = { 847e8300aa411a820fd247c15882a70089cf3907840bddda977b99babb99bbd3f0efe11ddccdc90b7bb912ef7bbc06deec256d7902d480f6b79214480357241b5c80b5c90aeb902b7b9c80b739071739015c80b6e702dae407b7b906edb90adddc05ed72bdfdf7fffff537d7d3dfbf9efcf9efe7bf9e7cfe07d7dfd08659020d52a76cb65aecf65e08a05d9f }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Saur_1
+{
+strings:
+	$a0 = { 149022a0828c8f82b10108044df3643583796b5af72e65bccef7387f0eff01e7733b902def3205b739a0dbcc815b5d8b78b05ed6ec82f187a5ae405ae406f1c80dae415eb9215b72095b920fa6406f5c90b6f720b9ce64179db816de5c16de772db99ceffffffedf7fdf3e7dfbe6fefdf7f79f7f7efdbbbfdbe7bfc0cb992012630da6d367b1d86d04487cbf }
+
+
+condition:
+	$a0
+}

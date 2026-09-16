@@ -1,0 +1,9 @@
+rule Win_Trojan_Y3kRat_1
+{
+strings:
+	$a0 = { 847d0202d08235041f491f0462054d0226f9b0348379cb52f399cceafe1dce9f873f08f7b99dc816dee40bde5cd05bcec0adaec0b520bdadd90a2401f4c905ae416d32057ae41af2e6c1f4cd83d5cd83e99016b920db720b6f33617b5c05b79905ab8b7f3ef7fffffd7eff7a7cf9f7e79f7e7df9f7cfbfe07fbdff8332c24825262b55aad367b2ef84c974ff }
+
+
+condition:
+	$a0
+}

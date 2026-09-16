@@ -1,0 +1,9 @@
+rule Win_Trojan_Minilash_1
+{
+strings:
+	$a0 = { f0300b4208a820fc48fa2b10286c089bf7707700b9954b79ae6b1bf873587e19f84739ad73501b9cd40bccce6c1cb96056d7706d582e5b7720a9202b7520b4d40b78ea4171d48d6badc15bad8b8dd6e0a9a80b6ea41b6ea0b973520e5ba06e5e6a0db734dd67ffffef73aebaefbefcefcefcf3befdf3dfe03afbe8434c8106a8cb6db6daed367b6160be57fe }
+
+
+condition:
+	$a0
+}

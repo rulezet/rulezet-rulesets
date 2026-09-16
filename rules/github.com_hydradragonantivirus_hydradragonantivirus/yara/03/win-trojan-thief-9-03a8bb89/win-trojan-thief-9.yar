@@ -1,0 +1,9 @@
+rule Win_Trojan_Thief_9
+{
+strings:
+	$a0 = { 3bd33b0ed86cd2d86e5e5dd3b7a4ec7370ef6b6d244d79f7de7de70f4e22222f655b737aacbbff29b9bdcc465eee0c9b36836d88c92f67059222c96bc056036c90c1fc430645701917056c3022c3163198ac94c64ec8e31b1722db26463d8e4edb9b725bb7bdcd9bff5dddfefffd5f7cf3e79ef9e7bef9e7be7bf9fbf838b9f7e7cff7cf3e7cf12042621858 }
+
+
+condition:
+	$a0
+}

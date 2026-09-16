@@ -1,0 +1,9 @@
+rule Win_Trojan_Mnets_1
+{
+strings:
+	$a0 = { 3211f40805a1022a083e923e0ac40a9c02539e720f006f76a8ddcbdd6ff0ee74fe1bfc23bdccee406ef7205dddef01b7b6056d7906ab05db6f2415241f5c905ae40b7ae405d7246b5c9056e705d6e72029901bae4836dc82dddc9176dc02edee05f4ee3737fffffdeefcf9f3efdfbfbefefbfbf7dfbe7ef3fc07cf7f821a620835263b85c2df6cb5700582f9 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Linker_1
+{
+strings:
+	$a0 = { 2a4b19b27fcb4bb11a7701a5e594194fbf2b41f1eeff05cb861c88ac0d2d3f21e991bfb2ef72aaf8284f31256b92bfc7ea5d7268365ed80d5c237983d42d0b7af6ad3e35925b931664aacbb0c9a1b8a22acf03ca0ef60c6cc5d57a050bc3ba96deca0933daa3fa4b4b475e0673fa545c0b80e1c8562a82495030f33aecad534c99be56bee8317ecd2ad314aa3d8ee674 }
+
+
+condition:
+	$a0
+}

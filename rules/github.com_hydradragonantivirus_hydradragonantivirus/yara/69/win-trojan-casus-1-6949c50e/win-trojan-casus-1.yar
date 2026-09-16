@@ -1,0 +1,9 @@
+rule Win_Trojan_Casus_1
+{
+strings:
+	$a0 = { a12315041f491fc2b021490089ce481c20ddcddadbdfe1db733be867737f80f7bfc605bbdc817bdbbc06edc815b6f205d480edb792154802b72416b920dae482eb902bb7202db9c83ab9c80ae41adb9217b5c85db6e48b777016db816e6ee5b73bdffffff73bf3e7cfbf3cf3ef9f7cf3ef9e79fe07e7bfc08a971c45316adb6db5f0565b60f1df1bff1cf84a }
+
+
+condition:
+	$a0
+}

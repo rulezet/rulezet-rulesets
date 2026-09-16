@@ -1,0 +1,9 @@
+rule Win_Trojan_Cyn_4
+{
+strings:
+	$a0 = { 0c847d020168408a820fa48f82b102a70089cf390787a5ddaa5bb9bbadfe1dcd3f86ff086f733b901b7b902f777bc06ded815b5e41aac176dbc9044905adc905ae40b7ae48375c91aeb9c82b7380eb739054c80dae485f4c80dbb922edb803bbb90b6ef71b9bfffffef77f3e7cfbf7efefdfdf6e79cff01f3dfe08698c20d5192db6db5daad16c2c17c3ffbf }
+
+
+condition:
+	$a0
+}

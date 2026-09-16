@@ -1,0 +1,9 @@
+rule Win_Trojan_QQShou_17
+{
+strings:
+	$a0 = { d6e5b6346950792d525b69c47da6aab27c4a7cae9aeb0f20529ae55249536ed13c63974b12e268ff20bab78b31fc5b757d1f7f6b0b2bb7e7ac65194fc822fc622d2e2988c5a35cd778db3a5a3c65102b415b3cedab707e9e03ee73e2aa716c5c4bddae98a0165ee8758f64cd756d62af }
+
+
+condition:
+	$a0
+}

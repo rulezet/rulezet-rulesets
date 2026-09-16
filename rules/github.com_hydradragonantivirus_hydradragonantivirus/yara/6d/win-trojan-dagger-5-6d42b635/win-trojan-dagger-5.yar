@@ -1,0 +1,9 @@
+rule Win_Trojan_Dagger_5
+{
+strings:
+	$a0 = { 06407d060368411a820fa48f8211014e01139e720f0f4bbdaaedb977adfc3b9a7e1bf847bdccee40b77b902f76f780dbdb02b6bc80d4806d6f202a4045b901b5c816f5c906eb9215d73905b7380f5b9c82a6405b7241b6e40bb6e483b6e02edee02d6e56fe7deffffffafdf9f3e7f7afdf4fefef3ef9fe03e7bfc10db1841ab325a6d367b2586d0582f8fff4 }
+
+
+condition:
+	$a0
+}

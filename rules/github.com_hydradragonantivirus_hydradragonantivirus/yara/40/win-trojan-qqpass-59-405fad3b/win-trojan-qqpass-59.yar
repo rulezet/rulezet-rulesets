@@ -1,0 +1,9 @@
+rule Win_Trojan_QQPass_59
+{
+strings:
+	$a0 = { 0a1062a0a28c8fd148808601133ee40c20eedeb4b77f16ef3bde69f877f08f7bce77902deef205e5ef701dbbd81adae41bd582f6b7202d6416ebc80b6f202ebc906d7906bd7920ade4035de482d3901b6f301e3bc82ddef205ddde036f2f0477bbcb7ffffff83bfefefef9f333cf3e79e7cf3cf333f7fef7fe0cc3112094192d168b3d92c5c11325f47fe9cf }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Neodurk_1
+{
+strings:
+	$a0 = { 847e0600d481150415b23e8ac40a1b0226fddc0d902e5ca8dbad656fe1cd61f867e11ce6b5cd483739a817975cd835cb02b6bb836ac1756ddc8ad200d5e482d3502daea416ba835e1adc16dd6e056eb7054d406aea41cb9a80e5ba9178dd02f33351b6e734bcce7e1cfffffd9e75d75df7df9df9df9e77dfbe6f7fbf5f7d08618420d4aaf6db6daed568b614 }
+
+
+condition:
+	$a0
+}

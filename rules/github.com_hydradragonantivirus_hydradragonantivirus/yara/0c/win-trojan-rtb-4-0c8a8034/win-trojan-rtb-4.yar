@@ -1,0 +1,9 @@
+rule Win_Trojan_RTB_4
+{
+strings:
+	$a0 = { 028412d4107a48fa230e8b34044d7ba81a225ccbbab77f86edfc39ce1f86ff01e73f1816ef9901ce5dc8aeee40ab5d41bc4902daea47a10e8db920b5c80b5c90dbc720adb9016dcd41dae483d320adb921795c85bce732476db80b6dc0bbcb72bbcce7ffffee73e74fbe79f7dfbe79f7efbe7f03f3bfc0cb9908a252e5aad569b35937c2417d1ffaf3a12182 }
+
+
+condition:
+	$a0
+}

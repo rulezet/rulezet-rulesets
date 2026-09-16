@@ -1,0 +1,9 @@
+rule Win_Trojan_Spambot_21
+{
+strings:
+	$a0 = { 1a9e61def969046dcc4da0d7bca0a440e919704c9d38efac3e2cb88bcbfd463f16e309abb96d547eba68049fea836cfb76afb4ab3558422f17d8309a7562034ff9033848508ef7525cb2b851bacf325e5ae78ed7e31d32bb547c54beda0ab1cf07e6bf20a8676c496730ecb9d9bf0c80f9ad057cfbb4b7d839ac70ecad2ebf60be0d74838f3c80fe6aa4027b19fda7fc }
+
+
+condition:
+	$a0
+}

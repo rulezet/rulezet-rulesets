@@ -1,0 +1,9 @@
+rule Win_Trojan_Dafunks_1
+{
+strings:
+	$a0 = { 01aa202d0822a083e923e0a44053804a73ce41e1e97bbaa5ddccdd6ee66e74fe1dfe10ddccdc816f77205def7bc06ddb02b6de41b52016b7920a90f4ab920b5c80deb920bd7391af5ce416dce45d6e72029902b6e483db7205db7205edb905dbdc06fa637bfcb7bfffffec6fcf9f3efdfbfbefefbfbf7dfbe7ef3fc07cf7f82196508354a95a6d367b2d8ed0 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Infector_5
+{
+strings:
+	$a0 = { 842d09088c1056c8f82b0f4a1c02273ce40e102eeaa37737badccef734fe1bfc23bdccee406dee40bbe9c06ddd815b5e40aaf05cb6f24569203e9b20b4c836d72036b906bae720b6e701adce41532036b920eddc80edb922f6dc05edee46dbbdc5cdcceffffffb7df9f3e7dfbf7f7dfdf7f7efbf7cfdce7f7f9eff0a986308a2954ed96cb5da6cfc1920be4f }
+
+
+condition:
+	$a0
+}

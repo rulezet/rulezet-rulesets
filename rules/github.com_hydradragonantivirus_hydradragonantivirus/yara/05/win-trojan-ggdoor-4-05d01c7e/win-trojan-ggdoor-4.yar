@@ -1,0 +1,9 @@
+rule Win_Trojan_GGDoor_4
+{
+strings:
+	$a0 = { 8080ac8ec462021c022739c90d905ef6d05cedee3735dd770fa33e81cfaa42dbdd44bdedce42dced90ab5e41b5241c6de482b202db7520b5d02daea415bae0d72ea416ba82e37520b6e88b71d40b6e6a172e66a035ba8b6e5d41bad669bdcbdcfa3bdfdfff56ef9e79ffffbdfcdefe7cfffedeff01f3dfc2254b849894bc1d92bd61aed47afbf9b3d11111b9 }
+
+
+condition:
+	$a0
+}

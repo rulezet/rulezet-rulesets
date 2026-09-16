@@ -1,0 +1,9 @@
+rule Win_Trojan_InfecDoor_2
+{
+strings:
+	$a0 = { 8fa0c01a1046a083e923e08c4053a044ef9d81d205dd54db9cce6b7f0de61f867e11dde737902dcde40bb977a0dbb6056d7b06d48265b7b20a9203e9b20b5e406ebc80daf3b1aebcec16de741c6f3b07d39016bc906dbc80e5bc9072de02e5ce42b6de377f4dffffff5f7e7cf9fdebf7d3fbfbcfbe7f80f9eff0432c0106a4c36eb75b2d568b6940be47fd3a }
+
+
+condition:
+	$a0
+}

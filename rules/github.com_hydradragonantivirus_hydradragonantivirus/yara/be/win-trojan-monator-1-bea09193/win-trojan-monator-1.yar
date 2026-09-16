@@ -1,0 +1,9 @@
+rule Win_Trojan_Monator_1
+{
+strings:
+	$a0 = { acb596ee2e46b1e332e177c776cb52bafbf66b5a9f35a204e88a8aeed01bfe8979ccde48b77bc915b6c82d0901ad9a06a483d09011920ec4cd1d664808644e9320143240430ea990ed820a643a5707a980eea60bba98adadcb5ddddce5b9cce673999cfdfff4de79e7be7cf7cf7e76fbf3535d330cc3cf7fbdf3dfef77a663d5b21ef4f16c2e02ea5ee15fef }
+
+
+condition:
+	$a0
+}

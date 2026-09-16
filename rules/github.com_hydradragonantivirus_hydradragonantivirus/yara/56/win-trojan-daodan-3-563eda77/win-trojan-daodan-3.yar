@@ -1,0 +1,9 @@
+rule Win_Trojan_Daodan_3
+{
+strings:
+	$a0 = { 211fa0c02d08315041fa48f82b102a70089cf3907840bbb546ee6e6b7fc7734ff1bfe23bdccee406ef7205eedef01b7b6056dbc815482edb792089083f4c905ae40b7ae405ae48d75ce415b9c175b9c80a6405db920edb905dddc9176dc817b7b8176ddc6e6fefffaf77fbd7af7efdfcfb7bf9cf39f807afbfa28618c20d4aa970b85bad769b7920be5ffdb9 }
+
+
+condition:
+	$a0
+}
