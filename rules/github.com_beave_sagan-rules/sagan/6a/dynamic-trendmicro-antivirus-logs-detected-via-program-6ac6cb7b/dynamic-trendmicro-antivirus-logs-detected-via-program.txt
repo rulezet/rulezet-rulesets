@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Trendmicro Antivirus logs detected via program."; program: TMCM; dynamic_load: $RULE_PATH/trendmicro.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003008; sid:5003008; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "Watchguard detect"; metadata: fingerprint_source logs, fingerprint_type server, fingerprint_expire 86400; threshold: type limit, track by_src, seconds 3600, count 1; program: WatchGuard*; classtype: fingerprint; reference: url,wiki.quadrantsec.com/bin/view/Main/5100114; sid:5100114; rev:1;)

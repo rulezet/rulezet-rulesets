@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] MySQL/MariaDB logs detected via program."; program: mysqld|MySQL; dynamic_load: $RULE_PATH/mysql.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002985; sid:5002985; rev:3;)

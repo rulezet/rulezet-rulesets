@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A client was using an unusual port"; program: snort; content: "Classification|3a| A client was using an unusual port"; classtype: unusual-client-port-connection; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000998; sid: 5000998; rev:5;)

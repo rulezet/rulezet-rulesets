@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Certificate enrollment failed for trustpoint"; append_program; pcre: "/%ASA[-]+3-717002|%PIX[-]+3-717002/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000747; sid: 5000747; rev: 3;)

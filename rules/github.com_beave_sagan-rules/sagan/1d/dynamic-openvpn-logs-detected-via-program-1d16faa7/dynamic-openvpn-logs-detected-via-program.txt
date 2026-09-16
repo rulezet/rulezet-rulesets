@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] OpenVPN logs detected via program."; program: openvpn; dynamic_load: $RULE_PATH/openvpn.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002989; sid:5002989; rev:2;)

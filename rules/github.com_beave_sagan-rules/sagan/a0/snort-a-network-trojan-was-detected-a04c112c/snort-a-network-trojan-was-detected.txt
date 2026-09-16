@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A Network Trojan was detected"; program: snort; content: "Classification|3a| A Network Trojan was detected"; classtype: trojan-activity; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000997; sid: 5000997; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted Denial of Service"; program: snort; content: "Classification|3a| Attempted Denial of Service"; classtype: attempted-dos; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000982; sid: 5000982; rev:5;)

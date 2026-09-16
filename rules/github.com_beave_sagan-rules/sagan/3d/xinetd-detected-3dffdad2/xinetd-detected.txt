@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "xinetd detected"; program: xinetd; metadata: fingerprint_source logs, fingerprint_os linux, fingerprint_type server, fingerprint_expire 86400; threshold: type limit, track by_src, seconds 3600, count 1; classtype: fingerprint; reference: url,wiki.quadrantsec.com/bin/view/Main/5100108; sid:5100108; rev:1;)

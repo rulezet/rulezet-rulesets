@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Riverbed logs detected via program."; program: webasd; dynamic_load: $RULE_PATH/riverbed.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002996; sid:5002996; rev:2;)

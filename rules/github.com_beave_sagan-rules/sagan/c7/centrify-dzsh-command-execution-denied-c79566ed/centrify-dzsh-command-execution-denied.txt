@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CENTRIFY] dzsh command execution denied"; content: "centrifyEventID=33001"; classtype: system-event; program: *adclient*; sid: 5004276; reference:url,wiki.quadrantsec.com/bin/view/Main/5004276; reference:url,docs.centrify.com/en/css/2018-html/index.html#page/server-suite%2FCentrify_Documentation_Roadmap_v5.html; rev: 1;)

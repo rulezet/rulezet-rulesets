@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Tripwire logs detected via program."; program: tripwire; dynamic_load: $RULE_PATH/tripwire.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003009; sid:5003009; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted Information Leak"; program: snort; content: "Classification|3a| Attempted Information Leak"; classtype: attempted-recon; xbits: set,recon,track ip_src, expire 86400; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000979; sid: 5000979; rev:6;)

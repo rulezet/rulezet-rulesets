@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Name lookup failed for hostname during PKI operation"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+4-717026|%PIX[-]+4-717026|%FWSM[-]+4-717026/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000784; sid: 5000784; rev: 5;)

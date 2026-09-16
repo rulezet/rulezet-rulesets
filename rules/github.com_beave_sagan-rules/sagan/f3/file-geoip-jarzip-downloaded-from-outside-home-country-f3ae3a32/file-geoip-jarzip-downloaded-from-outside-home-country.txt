@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[FILE-GEOIP] Jar/Zip Downloaded from outside HOME_COUNTRY"; program: snort; country_code: track by_src, isnot $HOME_COUNTRY; content: "FILE-IDENTIFY"; content: "Jar"; classtype: bad-unknown; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5001981; sid: 5001981; rev:3;)

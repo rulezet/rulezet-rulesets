@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] H225 message contains bad protocol discriminator hex"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+4-405103|%PIX[-]+4-405103|%FWSM[-]+4-405103/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000769; sid: 5000769; rev: 5;)

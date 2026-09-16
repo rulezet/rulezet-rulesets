@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] SSH-Tectia-Server logs detected via program."; program: SSH_Tectia_Server; dynamic_load: $RULE_PATH/ssh-tectia-server.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003004; sid:5003004; rev:2;)

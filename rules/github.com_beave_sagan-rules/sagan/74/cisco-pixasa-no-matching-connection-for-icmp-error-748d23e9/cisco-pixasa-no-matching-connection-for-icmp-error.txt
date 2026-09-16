@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] No matching connection for ICMP error"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+4-313005|%PIX[-]+4-313005|%FWSM[-]+4-313005; default_proto: icmp; classtype: network-event; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5000761; sid: 5000761; rev: 6;)

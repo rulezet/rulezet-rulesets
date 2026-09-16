@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Kismet_Server logs detected via program."; program: kismet_server; dynamic_load: $RULE_PATH/kismet.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002980; sid:5002980; rev:2;)

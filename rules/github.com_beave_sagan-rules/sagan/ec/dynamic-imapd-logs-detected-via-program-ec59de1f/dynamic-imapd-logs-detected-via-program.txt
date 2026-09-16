@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] IMAPD logs detected via program."; program: imapd|imapd-ssl; dynamic_load: $RULE_PATH/imapd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002978; sid:5002978; rev:2;)

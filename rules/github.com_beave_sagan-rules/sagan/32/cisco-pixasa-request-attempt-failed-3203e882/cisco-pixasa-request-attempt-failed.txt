@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Request attempt failed!"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-713107|%PIX[-]+3-713107/"; classtype: bad-unknown; reference: url, wiki.quadrantsec.com/bin/view/Main/5000730; sid: 5000730; rev: 4;)

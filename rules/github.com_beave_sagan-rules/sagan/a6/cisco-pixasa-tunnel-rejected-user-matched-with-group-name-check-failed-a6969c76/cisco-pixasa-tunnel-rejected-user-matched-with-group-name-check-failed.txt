@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Tunnel Rejected User matched with group name, check failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-713059|%PIX[-]+3-713059/"; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5000726; sid: 5000726; rev: 4;)

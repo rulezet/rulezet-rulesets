@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Dropping Skinny message length value too large"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+4-608003|%PIX[-]+4-608003|%FWSM[-]+4-608003/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000778; sid: 5000778; rev: 5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Shun add failed unable to allocate resources"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+4-401005|%PIX[-]+4-401005|%FWSM[-]+4-401005/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000763; sid: 5000763; rev: 5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] VPopmail logs detected via program."; program: vpopmail; dynamic_load: $RULE_PATH/vpopmail.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003012; sid:5003012; rev:2;)

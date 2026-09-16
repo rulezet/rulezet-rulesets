@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A system call was detected"; program: snort; content: "Classification|3a| A system call was detected"; classtype: system-call-detect; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000995; sid: 5000995; rev:5;)

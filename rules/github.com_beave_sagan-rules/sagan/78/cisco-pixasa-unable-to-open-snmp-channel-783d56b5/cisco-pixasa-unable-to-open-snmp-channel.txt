@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Unable to open SNMP channel"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-212001|%PIX[-]+3-212001|%FWSM[-]+3-212001/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000666; sid: 5000666; rev: 5;)

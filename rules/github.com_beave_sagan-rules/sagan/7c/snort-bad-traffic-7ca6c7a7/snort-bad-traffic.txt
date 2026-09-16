@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Bad Traffic"; program: snort; content: "Classification|3a| Bad Traffic"; classtype: bad-unknown; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000978; sid: 5000978; rev:5;)

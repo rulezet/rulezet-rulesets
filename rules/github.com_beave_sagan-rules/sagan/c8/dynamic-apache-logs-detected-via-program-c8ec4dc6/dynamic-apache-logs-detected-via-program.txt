@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Apache logs detected via program."; program: proftpd|httpd; dynamic_load: $RULE_PATH/apache.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003023; sid:5003023; rev:2;)

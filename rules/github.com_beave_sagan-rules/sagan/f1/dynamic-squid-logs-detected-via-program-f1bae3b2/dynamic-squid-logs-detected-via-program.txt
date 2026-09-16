@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Squid logs detected via program."; program: squid; dynamic_load: $RULE_PATH/squid.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003003; sid:5003032; rev:2;)

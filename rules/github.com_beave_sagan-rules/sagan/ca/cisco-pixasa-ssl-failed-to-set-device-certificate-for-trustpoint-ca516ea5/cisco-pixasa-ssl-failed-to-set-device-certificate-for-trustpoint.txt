@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] SSL failed to set device certificate for trustpoint"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-717023|%PIX[-]+3-717023/"; classtype: sytem-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000753; sid: 5000753; rev: 4;)

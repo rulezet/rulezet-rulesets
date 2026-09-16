@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] MRIB connection-open failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-326009|%PIX[-]+3-326009|%FWSM[-]+3-326009/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000699; sid: 5000699; rev: 5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Decode of an RPC Query"; program: snort; content: "Classification|3a| Decode of an RPC Query"; classtype: rpc-portmap-decode; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000989; sid: 5000989; rev:5;)

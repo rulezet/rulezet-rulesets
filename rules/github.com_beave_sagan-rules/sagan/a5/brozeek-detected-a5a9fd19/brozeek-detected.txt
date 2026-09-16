@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "Bro/Zeek detected"; program: bro|zeek; metadata: fingerprint_source logs, fingerprint_os windows, fingerprint_type server, fingerprint_expire 86400; classtype: fingerprint; reference: url,wiki.quadrantsec.com/bin/view/Main/5100071; sid:5100071; rev:1;)

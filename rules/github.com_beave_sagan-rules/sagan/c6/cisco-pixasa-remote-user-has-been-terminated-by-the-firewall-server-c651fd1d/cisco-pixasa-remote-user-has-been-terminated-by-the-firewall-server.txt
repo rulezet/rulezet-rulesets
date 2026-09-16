@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Remote user has been terminated by the Firewall Server"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-713163|%PIX[-]+3-713163/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000737; sid: 5000737; rev: 4;)

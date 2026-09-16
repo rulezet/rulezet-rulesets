@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Client-reported firewall does not match configured firewall action tunnel"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-713141|%PIX[-]+3-713141/"; classtype: policy-violation; reference: url, wiki.quadrantsec.com/bin/view/Main/5000732; sid: 5000732; rev: 4;)

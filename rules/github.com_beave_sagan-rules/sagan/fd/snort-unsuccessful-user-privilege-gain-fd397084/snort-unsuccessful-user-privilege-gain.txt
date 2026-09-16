@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Unsuccessful User Privilege Gain"; program: snort; content: "Classification|3a| Unsuccessful User Privilege Gain"; classtype: unsuccessful-user; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000985; sid: 5000985; rev:5;)

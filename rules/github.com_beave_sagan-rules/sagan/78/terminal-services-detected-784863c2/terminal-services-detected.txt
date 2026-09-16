@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "Terminal Services detected"; metadata: fingerprint_source logs, fingerprint_os windows, fingerprint_type server, fingerprint_expire 86400; threshold: type limit, track by_src, seconds 3600, count 1; program: TermService; classtype: fingerprint; reference: url,wiki.quadrantsec.com/bin/view/Main/5100122; sid:5100122; rev:1;)

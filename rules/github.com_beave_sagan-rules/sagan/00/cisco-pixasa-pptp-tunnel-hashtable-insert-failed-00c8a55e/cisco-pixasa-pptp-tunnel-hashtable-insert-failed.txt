@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] PPTP tunnel hashtable insert failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-213002|%PIX[-]+3-213002|%FWSM[-]+3-213002/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000671; sid: 5000671; rev: 5;)

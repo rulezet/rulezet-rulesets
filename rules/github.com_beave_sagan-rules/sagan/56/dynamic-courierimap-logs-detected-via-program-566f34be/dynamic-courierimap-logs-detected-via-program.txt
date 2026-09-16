@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Courier/IMAP logs detected via program."; program: imapd|imapd-sslcourierlogger; dynamic_load: $RULE_PATH/courier.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002968; sid:5002968; rev:2;)

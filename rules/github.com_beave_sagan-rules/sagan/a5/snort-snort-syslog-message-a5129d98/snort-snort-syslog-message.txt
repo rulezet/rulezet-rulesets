@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Snort syslog message"; program: snort; content: "Classification"; content: "Priority"; classtype: suspicious-command; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000386; sid: 5000386; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] DigitalPersona logs detected via program."; program: DigitalPersona*; dynamic_load: $RULE_PATH/digitalpersona.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002970; sid:5002970; rev:2;)

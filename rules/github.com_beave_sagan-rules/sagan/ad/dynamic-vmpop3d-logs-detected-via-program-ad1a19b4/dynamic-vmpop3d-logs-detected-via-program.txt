@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Vmpop3d logs detected via program."; program: vm-pop3d; dynamic_load: $RULE_PATH/vmpop3d.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003010; sid:5003010; rev:2;)

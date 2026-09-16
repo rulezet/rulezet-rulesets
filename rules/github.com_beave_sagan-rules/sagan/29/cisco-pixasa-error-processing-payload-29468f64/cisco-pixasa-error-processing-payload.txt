@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Error processing payload"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-713048|%PIX[-]+3-713048|%FWSM[-]+3-713048; parse_src_ip: 1; parse_dst_ip: 2/"; classtype: bad-unknown; reference: url, wiki.quadrantsec.com/bin/view/Main/5000725; sid: 5000725; rev: 7;)

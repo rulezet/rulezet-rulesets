@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[FILE-GEOIP] PDF Downloaded from outside HOME_COUNTRY"; program: snort; country_code: track by_src, isnot $HOME_COUNTRY; content: "FILE-IDENTIFY"; content: "PDF"; classtype: bad-unknown; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5001982; sid: 5001982; rev:3;)

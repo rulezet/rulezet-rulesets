@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] VSFTPD logs detected via program."; program: vsftpd; dynamic_load: $RULE_PATH/vsftpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003013; sid:5003013; rev:2;)

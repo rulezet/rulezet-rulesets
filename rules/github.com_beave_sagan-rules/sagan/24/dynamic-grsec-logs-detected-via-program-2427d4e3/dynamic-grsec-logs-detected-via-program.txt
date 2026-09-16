@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Grsec logs detected via program."; program: grsec; dynamic_load: $RULE_PATH/grsec.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002974; sid:5002974; rev:2;)

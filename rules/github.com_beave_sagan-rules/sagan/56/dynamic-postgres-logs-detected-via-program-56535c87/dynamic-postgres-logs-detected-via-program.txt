@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Postgres logs detected via program."; program: postgres; dynamic_load: $RULE_PATH/postgresql.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002992; sid:5002992; rev:3;)

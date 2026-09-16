@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Dropping SNMP request"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-212006|%PIX[-]+3-212006|%FWSM[-]+3-212006; default_proto: udp; default_dst_port: $SNMP_PORT; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000670; sid: 5000670; rev: 6;)

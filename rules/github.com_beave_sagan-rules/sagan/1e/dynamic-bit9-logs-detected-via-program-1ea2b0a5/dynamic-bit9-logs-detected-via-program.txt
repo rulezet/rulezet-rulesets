@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Bit9 logs detected via program."; program: bit9; dynamic_load: $RULE_PATH/bit9.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002965; sid:5002965; rev:2;)

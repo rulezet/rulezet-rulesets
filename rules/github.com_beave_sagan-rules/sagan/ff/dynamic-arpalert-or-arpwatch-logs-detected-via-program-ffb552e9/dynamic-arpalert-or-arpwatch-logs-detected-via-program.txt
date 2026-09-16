@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Arpalert or Arpwatch logs detected via program."; program: arpalert|arpwatch; dynamic_load: $RULE_PATH/arp.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002960; sid:5002960; rev:2;)

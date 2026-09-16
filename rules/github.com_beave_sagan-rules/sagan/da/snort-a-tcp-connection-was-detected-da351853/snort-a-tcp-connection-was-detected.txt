@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A TCP connection was detected"; program: snort; content: "Classification|3a| A TCP connection was detected"; classtype: tcp-connection; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000996; sid: 5000996; rev:5;)

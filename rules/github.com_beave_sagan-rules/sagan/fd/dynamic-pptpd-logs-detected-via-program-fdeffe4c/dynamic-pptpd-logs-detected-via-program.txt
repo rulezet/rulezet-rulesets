@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] pptpd logs detected via program."; program: pptpd; dynamic_load: $RULE_PATH/pptpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002993; sid:5002993; rev:2;)

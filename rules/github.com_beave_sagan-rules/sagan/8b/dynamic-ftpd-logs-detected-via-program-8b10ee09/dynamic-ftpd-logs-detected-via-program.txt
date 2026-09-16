@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] FTPD logs detected via program."; program: ftpd|ftp|FTP|FTPD; dynamic_load: $RULE_PATH/ftpd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002973; sid:5002973; rev:2;)

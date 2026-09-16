@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failed to refresh CRL cache entry from the server for trustpoint"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-717012|%PIX[-]+3-717012/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000750; sid: 5000750; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Executable code was detected"; program: snort; content: "Classification|3a| Executable code was detected"; classtype: shellcode-detect; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000990; sid: 5000990; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Tunnel group search using certificate maps failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+4-717037|%PIX[-]+4-717037/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000786; sid: 5000786; rev: 4;)

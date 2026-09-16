@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] OSSEC logs detected via program."; program: ossec; dynamic_load: $RULE_PATH/ossec.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002990; sid:5002990; rev:2;)

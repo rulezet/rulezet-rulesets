@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Juniper logs detected via program."; program: Juniper; dynamic_load: $RULE_PATH/juniper.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003021; sid:5003021; rev:2;)

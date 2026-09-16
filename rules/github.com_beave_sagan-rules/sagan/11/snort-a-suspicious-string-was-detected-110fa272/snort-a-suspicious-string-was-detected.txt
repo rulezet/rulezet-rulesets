@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A suspicious string was detected"; program: snort; content: "Classification|3a| A suspicious string was detected"; classtype: string-detect; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000991; sid: 5000991; rev:5;)

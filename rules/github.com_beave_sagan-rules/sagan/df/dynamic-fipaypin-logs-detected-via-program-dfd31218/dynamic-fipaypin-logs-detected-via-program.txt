@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] FIPAYPIN logs detected via program."; program: *PIPAYPIN*; dynamic_load: $RULE_PATH/fipaypin.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002972; sid:5002972; rev:2;)

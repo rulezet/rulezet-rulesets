@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] An attempted login using a suspicious username was detected"; program: snort; content: "Classification|3a| An attempted login using a suspicious username was detected"; classtype: suspicious-login; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000993; sid: 5000993; rev:5;)

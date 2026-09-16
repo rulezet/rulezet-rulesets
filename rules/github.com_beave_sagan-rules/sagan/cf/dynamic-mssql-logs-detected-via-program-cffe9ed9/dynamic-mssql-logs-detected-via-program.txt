@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] MSSQL logs detected via program."; program: MSSQL*; dynamic_load: $RULE_PATH/windows-mssql.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003015; sid:5003015; rev:2;)

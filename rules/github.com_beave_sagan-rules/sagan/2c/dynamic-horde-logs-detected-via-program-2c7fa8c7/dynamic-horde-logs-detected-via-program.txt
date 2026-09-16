@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Horde logs detected via program."; program: HORDE; dynamic_load: $RULE_PATH/hordeimp.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002976; sid:5002976; rev:2;)

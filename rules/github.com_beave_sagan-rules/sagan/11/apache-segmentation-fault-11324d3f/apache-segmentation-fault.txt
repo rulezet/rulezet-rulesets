@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any ( msg:"[APACHE] Segmentation fault"; content: "signal Segmentation Fault"; default_proto:tcp; default_dst_port: $HTTP_PORT; classtype: program-error; program: apache|httpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000155; sid:5000155; rev:5;)

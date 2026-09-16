@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Weblabyrinth logs detected via program."; program: weblabyrinth; dynamic_load: $RULE_PATH/weblabrinth.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003014; sid:5003014; rev:2;)

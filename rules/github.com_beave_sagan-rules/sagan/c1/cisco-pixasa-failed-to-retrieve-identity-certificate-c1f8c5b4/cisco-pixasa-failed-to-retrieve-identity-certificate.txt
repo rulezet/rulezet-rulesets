@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failed to retrieve identity certificate"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-713082|%PIX[-]+3-713082/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000728; sid: 5000728; rev: 4;)

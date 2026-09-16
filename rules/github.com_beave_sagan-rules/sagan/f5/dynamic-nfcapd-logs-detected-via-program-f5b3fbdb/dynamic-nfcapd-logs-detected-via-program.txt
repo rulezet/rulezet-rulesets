@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Nfcapd logs detected via program."; program: nfcapd; dynamic_load: $RULE_PATH/nfcapd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002987; sid:5002987; rev:2;)

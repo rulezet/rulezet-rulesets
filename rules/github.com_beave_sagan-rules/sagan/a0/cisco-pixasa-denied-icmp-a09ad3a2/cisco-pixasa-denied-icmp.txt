@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Denied ICMP"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+4-313004|%PIX[-]+4-313004|%FWSM[-]+4-313004; default_proto: icmp; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000760; sid: 5000760; rev: 5;)

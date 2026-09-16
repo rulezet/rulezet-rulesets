@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-BLACKLIST] Login failure from blacklisted IP - Specified account expired"; event_id: 532; classtype: unsuccessful-user; program: *Security*; blacklist: by_src; normalize; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002219; sid: 5002219; rev:5;)

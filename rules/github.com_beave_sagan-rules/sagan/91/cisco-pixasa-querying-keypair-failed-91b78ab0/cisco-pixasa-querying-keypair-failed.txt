@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Querying keypair failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-717001|%PIX[-]+3-717001/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000746; sid: 5000746; rev: 4;)

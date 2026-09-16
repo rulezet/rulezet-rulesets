@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "Samba server detected"; program: smbd; metadata: fingerprint_source logs, fingerprint_os linux, fingerprint_type server, fingerprint_expire 86400; threshold: type limit, track by_src, seconds 3600, count 1; classtype: fingerprint; reference: url,wiki.quadrantsec.com/bin/view/Main/5100094; sid:5100094; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failed to save logging buffer to flash or syslog directory using file name filename"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-414002|%PIX[-]+3-414002|%FWSM[-]+3-414002/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000721; sid: 5000721; rev: 5;)

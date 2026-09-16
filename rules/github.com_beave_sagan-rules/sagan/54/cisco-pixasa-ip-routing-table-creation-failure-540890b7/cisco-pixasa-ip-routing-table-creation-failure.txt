@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] IP routing table creation failure"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-317003|%PIX[-]+3-317003|%FWSM[-]+3-317003/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000681; sid: 5000681; rev: 5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] CRL polling failed for trustpoint"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-717010|%PIX[-]+3-717010/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000749; sid: 5000749; rev: 4;)

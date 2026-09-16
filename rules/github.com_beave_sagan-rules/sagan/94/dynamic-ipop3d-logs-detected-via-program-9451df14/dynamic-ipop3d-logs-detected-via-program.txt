@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] IPOP3D logs detected via program."; program: ipop3d; dynamic_load: $RULE_PATH/ipop3d.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002979; sid:5002979; rev:2;)

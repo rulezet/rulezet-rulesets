@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Symantec EMS logs detected via program."; program: pgp/client; dynamic_load: $RULE_PATH/symantec-ems.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003006; sid:5003006; rev:2;)

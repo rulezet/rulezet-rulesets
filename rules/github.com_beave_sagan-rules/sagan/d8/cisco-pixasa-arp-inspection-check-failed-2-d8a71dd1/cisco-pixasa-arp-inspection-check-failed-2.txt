@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] ARP inspection check failed [2]"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-322003|%PIX[-]+3-322003|%FWSM[-]+3-322003/"; classtype: bad-unknown; reference: url, wiki.quadrantsec.com/bin/view/Main/5000687; sid: 5000687; rev: 5;)

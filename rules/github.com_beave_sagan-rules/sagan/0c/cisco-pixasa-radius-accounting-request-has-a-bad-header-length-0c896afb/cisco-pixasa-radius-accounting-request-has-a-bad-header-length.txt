@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Radius Accounting Request has a bad header length"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-324301|%PIX[-]+3-324301|%FWSM[-]+3-324301/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000691; sid: 5000691; rev: 5;)

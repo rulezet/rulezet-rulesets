@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] IKE Receiver Error reading from socket"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-713203|%PIX[-]+3-713203/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000742; sid: 5000742; rev: 4;)

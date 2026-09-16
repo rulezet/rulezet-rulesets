@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[APACHE] Client sent malformed Host header"; content: "Client sent malformed Host header"; default_proto:tcp; default_dst_port: $HTTP_PORT; classtype: string-detect; program: apache|httpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000158; parse_src_ip: 1; sid:5000158; rev:7;)

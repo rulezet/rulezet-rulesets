@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Certificate validation failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-717009|%PIX[-]+3-717009/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000748; sid: 5000748; rev: 4;)

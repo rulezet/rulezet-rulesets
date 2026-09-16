@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted User Privilege Gain"; program: snort; content: "Classification|3a| Attempted User Privilege Gain"; classtype: attempted-user; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000984; sid: 5000984; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Initialization of string functionality failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+3-326012|%PIX[-]+3-326012|%FWSM[-]+3-326012/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000702; sid: 5000702; rev: 5;)

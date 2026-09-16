@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] MongoDB logs detected via program."; program: mongodb; dynamic_load: $RULE_PATH/mongodb.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002984; sid:5002984; rev:2;)

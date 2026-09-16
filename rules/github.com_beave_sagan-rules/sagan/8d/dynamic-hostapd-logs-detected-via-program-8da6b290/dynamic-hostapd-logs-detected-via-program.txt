@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Hostapd logs detected via program."; program: hostapd; dynamic_load: $RULE_PATH/hostapd.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002977; sid:5002977; rev:2;)

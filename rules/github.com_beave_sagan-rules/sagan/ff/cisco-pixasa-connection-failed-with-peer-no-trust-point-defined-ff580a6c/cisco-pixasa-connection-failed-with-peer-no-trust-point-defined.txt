@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Connection failed with peer, no trust-point defined"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-713226|%PIX[-]+3-713226/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000743; sid: 5000743; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Bro logs detected via program."; program: bro; dynamic_load: $RULE_PATH/bro-ids.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002966; sid:5002966; rev:2;)

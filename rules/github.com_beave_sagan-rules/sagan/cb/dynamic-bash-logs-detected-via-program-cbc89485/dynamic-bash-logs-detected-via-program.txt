@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Bash logs detected via program."; program: bash|-bash|sh|-sh; dynamic_load: $RULE_PATH/bash.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5002963; sid:5002963; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] RTCP conformance Dropping RTCP packet"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+4-431002|%PIX[-]+4-431002|%FWSM[-]+4-431002/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000776; sid: 5000776; rev: 5;)

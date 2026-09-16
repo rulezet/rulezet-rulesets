@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] A suspicious filename was detected"; program: snort; content: "Classification|3a| A suspicious filename was detected"; classtype: suspicious-filename-detect; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000992; sid: 5000992; rev:5;)

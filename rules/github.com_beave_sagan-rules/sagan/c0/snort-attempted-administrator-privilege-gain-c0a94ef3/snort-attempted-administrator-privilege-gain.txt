@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Attempted Administrator Privilege Gain"; program: snort; content: "Classification|3a| Attempted Administrator Privilege Gain"; classtype: attempted-admin; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000987; sid: 5000987; rev:5;)

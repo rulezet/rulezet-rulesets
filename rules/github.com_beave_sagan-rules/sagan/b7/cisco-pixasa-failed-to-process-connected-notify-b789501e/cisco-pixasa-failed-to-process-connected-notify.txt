@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failed to process CONNECTED notify!"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+3-713112|%PIX[-]+3-713112/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000731; sid: 5000731; rev: 4;)

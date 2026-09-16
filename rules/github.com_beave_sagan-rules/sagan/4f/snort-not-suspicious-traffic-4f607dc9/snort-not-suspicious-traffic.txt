@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Not Suspicious Traffic"; program: snort; content: "Classification|3a| Not Suspicious Traffic"; classtype: not-suspicious; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000976; sid: 5000976; rev:5;)
