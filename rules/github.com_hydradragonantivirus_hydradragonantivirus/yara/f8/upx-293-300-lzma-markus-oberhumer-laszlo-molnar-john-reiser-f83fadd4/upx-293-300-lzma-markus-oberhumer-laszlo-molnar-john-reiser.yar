@@ -1,0 +1,10 @@
+import "pe"
+rule _UPX_293__300_LZMA__Markus_Oberhumer_Laszlo_Molnar__John_Reiser_
+{
+	meta:
+		description = "UPX 2.93 - 3.00 [LZMA] -> Markus Oberhumer, Laszlo Molnar & John Reiser"
+	strings:
+		$0 = {60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 89 E5 8D 9C 24 ?? ?? ?? ?? 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? ?? 57 83 C3 04 53 68 ?? ?? ?? ?? 56 83 C3 04 53 50 C7 03 03 00 02 00 90 90 90 90 90}
+	condition:
+		$0 at pe.entry_point
+}

@@ -1,0 +1,10 @@
+import "pe"
+rule _Vx_Horse1776_
+{
+	meta:
+		description = "Vx: Horse.1776"
+	strings:
+		$0 = {E8 ?? ?? 5D 83 ?? ?? 06 1E 26 ?? ?? ?? ?? BF ?? ?? 1E 0E 1F 8B F7 01 EE B9 ?? ?? FC F3 A6 1F 1E 07}
+	condition:
+		$0 at pe.entry_point
+}

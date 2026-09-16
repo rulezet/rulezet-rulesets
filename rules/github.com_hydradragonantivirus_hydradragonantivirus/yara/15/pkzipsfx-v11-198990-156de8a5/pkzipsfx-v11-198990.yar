@@ -1,0 +1,10 @@
+import "pe"
+rule _PKZIPSFX_v11_198990_
+{
+	meta:
+		description = "PKZIP-SFX v1.1 1989-90"
+	strings:
+		$0 = {FC 2E 8C 0E ?? ?? A1 ?? ?? 8C CB 81 C3 ?? ?? 3B C3 72 ?? 2D ?? ?? 2D ?? ?? FA BC ?? ?? 8E D0 FB}
+	condition:
+		$0 at pe.entry_point
+}

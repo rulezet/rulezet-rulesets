@@ -1,0 +1,10 @@
+import "pe"
+rule _PureBasic_4x__Neil_Hodgson_
+{
+	meta:
+		description = "PureBasic 4.x -> Neil Hodgson"
+	strings:
+		$0 = {68 ?? ?? 00 00 68 00 00 00 00 68 ?? ?? ?? 00 E8 ?? ?? ?? 00 83 C4 0C 68 00 00 00 00 E8 ?? ?? ?? 00 A3 ?? ?? ?? 00 68 00 00 00 00 68 00 10 00 00 68 00 00 00 00 E8 ?? ?? ?? 00 A3}
+	condition:
+		$0 at pe.entry_point
+}
