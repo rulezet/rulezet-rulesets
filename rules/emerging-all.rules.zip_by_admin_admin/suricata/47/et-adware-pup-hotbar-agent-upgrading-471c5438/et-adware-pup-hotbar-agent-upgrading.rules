@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Hotbar Agent Upgrading"; flow:established,to_server; http.uri; content:"/updates/hotbar/"; nocase; reference:url,www.hotbar.com; classtype:pup-activity; sid:2000924; rev:12; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_15;)

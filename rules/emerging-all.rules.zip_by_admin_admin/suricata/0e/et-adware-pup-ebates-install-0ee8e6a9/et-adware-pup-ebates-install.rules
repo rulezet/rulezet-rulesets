@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Ebates Install"; flow:established,to_server; http.uri; content:"/ebates.exe"; reference:url,www.pestpatrol.com/PestInfo/e/ebates_moneymaker.asp; classtype:pup-activity; sid:2001038; rev:11; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_15;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET CURRENT_EVENTS WindowsLive Imposter Site Payload Download"; flow:established,to_server; http.uri; content:"/MRT/update/"; fast_pattern; startswith; content:".exe"; classtype:bad-unknown; sid:2012532; rev:3; metadata:created_at 2011_03_21, signature_severity Unknown, updated_at 2024_03_15;)

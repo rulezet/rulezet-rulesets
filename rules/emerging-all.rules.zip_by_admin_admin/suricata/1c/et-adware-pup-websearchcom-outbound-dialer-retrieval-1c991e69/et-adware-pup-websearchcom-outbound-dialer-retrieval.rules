@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Websearch.com Outbound Dialer Retrieval"; flow:established,to_server; http.uri; content:"/1/rdgUS10.exe"; nocase; reference:mcafee,131461; classtype:pup-activity; sid:2001517; rev:11; metadata:created_at 2010_07_30, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_15;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Traffic Syndicate Agent Updating (1)"; flow:established,to_server; http.uri; content:"/TbLinkConfig.asmx"; nocase; threshold: type limit, track by_src, count 1, seconds 360; classtype:pup-activity; sid:2001315; rev:12; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_15;)

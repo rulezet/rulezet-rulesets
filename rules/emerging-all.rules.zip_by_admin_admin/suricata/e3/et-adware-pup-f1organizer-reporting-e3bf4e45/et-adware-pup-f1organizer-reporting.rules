@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP F1Organizer Reporting"; flow:established,to_server; http.uri; content:"/f1/audit/"; nocase; classtype:pup-activity; sid:2000582; rev:11; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_15;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP GlobalPhon.com Dialer Download"; flow:established,to_server; http.uri; content:"/dialer/internazionale_ver"; fast_pattern; nocase; content:".CAB"; nocase; classtype:pup-activity; sid:2001657; rev:8; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_15;)

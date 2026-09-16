@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP LocalNRD Spyware Checkin"; flow:established,to_server; http.uri; content:"/a/Drk.syn?"; fast_pattern; nocase; content: "adcontext"; nocase; reference:url,www.localnrd.com; classtype:pup-activity; sid:2001340; rev:13; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_15;)

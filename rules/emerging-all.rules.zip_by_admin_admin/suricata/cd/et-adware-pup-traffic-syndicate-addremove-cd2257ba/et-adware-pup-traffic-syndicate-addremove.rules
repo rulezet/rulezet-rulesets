@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Traffic Syndicate Add/Remove"; flow:established,to_server; http.uri; content:"/Support/AddRemove.aspx?id="; nocase; classtype:pup-activity; sid:2001313; rev:10; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_15;)

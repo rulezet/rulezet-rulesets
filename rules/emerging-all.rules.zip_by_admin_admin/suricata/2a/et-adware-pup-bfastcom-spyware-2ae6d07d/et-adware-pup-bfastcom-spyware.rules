@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Bfast.com Spyware"; flow:established,to_server; http.uri; content:"/bfast/serve?bfmid"; nocase; classtype:pup-activity; sid:2001398; rev:11; metadata:created_at 2010_07_30, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_15;)

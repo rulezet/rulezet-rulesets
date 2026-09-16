@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER IBM Lotus Domino BaseTarget XSS attempt"; flow:established,to_server; http.uri; content:"OpenForm"; nocase; pcre:"/BaseTarget=.*?\"/i"; reference:bugtraq,14845; classtype:web-application-attack; sid:2002376; rev:12; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_16;)

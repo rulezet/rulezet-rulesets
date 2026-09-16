@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER MS Site Server admin attempt"; flow:established,to_server; http.uri; content:"/Site Server/Admin/knowledge/persmbr/"; nocase; reference:nessus,11018; classtype:web-application-attack; sid:2101818; rev:6; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_15;)

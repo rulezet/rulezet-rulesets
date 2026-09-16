@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP MyWebSearch Toolbar Receiving Configuration"; flow:established,to_server; http.uri; content:"/speedbar/mySpeedbarCfg"; nocase; classtype:pup-activity; sid:2000600; rev:15; metadata:created_at 2010_07_30, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_15;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER robots.txt access"; flow:established,to_server; http.uri; content:"/robots.txt"; nocase; reference:nessus,10302; classtype:web-application-activity; sid:2101852; rev:6; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_15;)

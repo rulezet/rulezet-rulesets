@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP F1Organizer Config Download"; flow:established,to_server; http.uri; content:"/F1/Cmd4F1"; nocase; classtype:pup-activity; sid:2001221; rev:10; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_15;)

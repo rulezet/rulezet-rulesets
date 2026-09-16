@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET CURRENT_EVENTS Clickfraud Framework Request"; flow:established,to_server; urilen:>400; http.uri; content:"/go.php?uid="; fast_pattern; content:"&data="; classtype:bad-unknown; sid:2013093; rev:4; metadata:created_at 2011_06_22, signature_severity Unknown, updated_at 2024_03_16;)

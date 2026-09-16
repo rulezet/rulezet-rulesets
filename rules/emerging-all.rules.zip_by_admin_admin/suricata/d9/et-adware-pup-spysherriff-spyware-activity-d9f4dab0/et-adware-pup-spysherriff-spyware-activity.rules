@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP SpySherriff Spyware Activity"; flow:established,to_server; http.uri; content:"/progs_exe/jbsrak/"; nocase; classtype:pup-activity; sid:2002984; rev:8; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_16;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Hotbar Keywords Download"; flow:established,to_server; http.uri; content:"/keywords/kyfb."; fast_pattern; nocase; content:"partner_id="; nocase; reference:url,www.hotbar.com; classtype:pup-activity; sid:2003388; rev:8; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_16;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER webalizer access"; flow:established,to_server; http.uri; content:"/webalizer/"; nocase; reference:bugtraq,3473; reference:cve,2001-0835; reference:nessus,10816; classtype:web-application-activity; sid:2101847; rev:13; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_15;)

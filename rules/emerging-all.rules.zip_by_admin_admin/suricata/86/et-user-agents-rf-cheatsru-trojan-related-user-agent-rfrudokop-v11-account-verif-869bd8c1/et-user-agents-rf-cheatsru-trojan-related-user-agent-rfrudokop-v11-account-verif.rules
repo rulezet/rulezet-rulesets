@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET USER_AGENTS Rf-cheats.ru Trojan Related User-Agent (RFRudokop v.1.1 account verification)"; flow:established,to_server; http.user_agent; content:"RFRudokop"; startswith; classtype:trojan-activity; sid:2008046; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_16;)
