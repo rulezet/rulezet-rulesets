@@ -1,0 +1,87 @@
+rule hidden_tear
+{
+    meta:
+        description = "Detection patterns for the tool 'hidden-tear' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "hidden-tear"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = "\"dsdoskdosk837928hduijfh\"" nocase ascii wide
+                        $string2 = /\/hidden\-tear\.exe/ nocase ascii wide
+                        $string3 = /\/hidden\-tear\.git/ nocase ascii wide
+                        $string4 = /\/HiddenTear\.zip/ nocase ascii wide
+                        $string5 = /\/hidden\-tear\/write\.php\?info\=/ nocase ascii wide
+                        $string6 = /\/hidden\-tear\-remake\.git/ nocase ascii wide
+                        $string7 = /\\hidden_tear\.Form1\.resources/ nocase ascii wide
+                        $string8 = /\\hidden\-tear\.csproj/ nocase ascii wide
+                        $string9 = /\\hidden\-tear\.exe/ nocase ascii wide
+                        $string10 = /\\hidden\-tear\.pdb/ nocase ascii wide
+                        $string11 = /\\hidden\-tear\.sln/ nocase ascii wide
+                        $string12 = /\\hidden\-tear\.vshost\.exe/ nocase ascii wide
+                        $string13 = /\\HiddenTear\.zip/ nocase ascii wide
+                        $string14 = /\\hidden\-tear\-remake\\/ nocase ascii wide
+                        $string15 = ">hidden_tear_decrypter<" nocase ascii wide
+                        $string16 = /\>hidden\-tear\.exe\</ nocase ascii wide
+                        $string17 = ">hidden-tear<" nocase ascii wide
+                        $string18 = "07dd043bc4e5ef2651ac9a1b4e5b849ce2e3dd6e3ca593a48625b568cfff924b" nocase ascii wide
+                        $string19 = "099923b629ff4309a579a66eaa857de4e5d5caa093b6226ee7c491742d9168e9" nocase ascii wide
+                        $string20 = "0xbdg/hidden-tear-remake" nocase ascii wide
+                        $string21 = "19804c0341ec2408b025626ac9259438f9c403104f155eedfa9b2395d85490b3" nocase ascii wide
+                        $string22 = "2949af17b0dd766d99667bcc09646f484583cd7dcc0216fd626b517b47a91a73" nocase ascii wide
+                        $string23 = "3ce3579ba41d1ccab336da1f8768a257142c3f6eee0e8daac2605065e3a43234" nocase ascii wide
+                        $string24 = "4182eca7aebb0a2cddd4d7c069fec1295f3fcf3a48d1c2e7f690a7be6e8324e2" nocase ascii wide
+                        $string25 = "5664867318d287a388546bbb20c8d7fb7d24680a97209f4f29d25b9cb9da24ec" nocase ascii wide
+                        $string26 = "66012c3a70e772908a9e8571665562fad55a04447452b751719a80d20ebf83e7" nocase ascii wide
+                        $string27 = "660309440ef382c2966a9186161e0777d4e4fbd7b0acce8ef040e43609513282" nocase ascii wide
+                        $string28 = "79f30574ad34a49673425cb37cd038106cc9fb49615cd6a2d05986e0c7c010e2" nocase ascii wide
+                        $string29 = "7a1d50f5e8827f2b2f920811f966be5358f0a24fa52301852b32ba94146a7be6" nocase ascii wide
+                        $string30 = "82C19CBA-E318-4BB3-A408-5005EA083EC5" nocase ascii wide
+                        $string31 = "8e8f868c283b165b0ccf0da8c85458d10d785bc872007be2ee33cb756a741ceb" nocase ascii wide
+                        $string32 = "a4045cfd2b84fce0d46096b6dc9f82f8745907b5828a96b522da42cbd5f5563f" nocase ascii wide
+                        $string33 = /All\syour\simportant\sfiles\s\(documents\,\sphotos\,\svideos\,\sdatabases\,\sand\sother\sfiles\)\shave\sbeen\sencrypted\susing\sa\sstrong\sencryption\salgorithm\.\sYou\sare\sunable\sto\saccess\sthese\sfiles\sas\sthey\shave\sbeen\stransformed\sinto\sunreadable\scontent/ nocase ascii wide
+                        $string34 = "b12ada1dcac400d11a462a62ec3957adbdb82a4bfb04cef08533281bdbf286a5" nocase ascii wide
+                        $string35 = "B138FFBA-1076-4B58-8A98-67B34E8A7C5C" nocase ascii wide
+                        $string36 = "c5b452ef4e7c5a5cd045419c94244148563d168a7d682baa622d113466e4a3ae" nocase ascii wide
+                        $string37 = "cd4f7b330f78c41ce8f119e1bd4c14a2da54ed3f2b1482c18247acea6411d2a4" nocase ascii wide
+                        $string38 = /Cryptolocker\-1\.0\.0\.rar/ nocase ascii wide
+                        $string39 = "d7af38341aa0abbe61415eed66c9df434b901425b5c2acfe01b9619530c826a2" nocase ascii wide
+                        $string40 = "e4cfb74b6002861358363025a31d0dd682a1cb67149d6608825f63fe46d01c38" nocase ascii wide
+                        $string41 = "fb20b0f19aab92962085d0d2fbf21ccc142620e12b6cccc20f28387b6c379d65" nocase ascii wide
+                        $string42 = "Files has been encrypted with hidden tear" nocase ascii wide
+                        $string43 = "goliate/hidden-tear" nocase ascii wide
+                        $string44 = /hidden_tear_decrypter\.Properties\.Resources/ nocase ascii wide
+                        $string45 = /hidden\-tear\-1\-master\.zip/ nocase ascii wide
+                        $string46 = /hidden\-tear\-decrypter\.csproj/ nocase ascii wide
+                        $string47 = /hidden\-tear\-decrypter\.exe/ nocase ascii wide
+                        $string48 = /hidden\-tear\-decrypter\.pdb/ nocase ascii wide
+                        $string49 = /hidden\-tear\-master\.zip/ nocase ascii wide
+                        $string50 = /hidden\-tear\-remake\.zip/ nocase ascii wide
+                        $string51 = /http\:\/\/utkusen\.com\/hidden\-tear\// nocase ascii wide
+                        $string52 = "namespace hidden_tear" nocase ascii wide
+                        $string53 = /namespace\shidden_tear\.Tools\,/ nocase ascii wide
+                        $string54 = /New\sVictim\s\[\{Environment\.UserName\}/ nocase ascii wide
+                        $string55 = "Send me some bitcoins or kebab" nocase ascii wide
+                        $string56 = /using\shidden_tear\.Tools/ nocase ascii wide
+                        $string57 = /Your\sFiles\sHave\sBeen\sEncrypted\!.{0,100}What\sHappened\sto\sMy\sFiles\?/ nocase ascii wide
+                        $string58 = "Your files have been infected and stolen" nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}
