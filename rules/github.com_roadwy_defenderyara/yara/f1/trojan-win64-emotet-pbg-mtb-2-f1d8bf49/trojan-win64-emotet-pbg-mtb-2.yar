@@ -1,0 +1,9 @@
+rule Trojan_Win64_Emotet_PBG_MTB_2{
+	meta:
+		description = "Trojan:Win64/Emotet.PBG!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {48 03 c1 48 63 0d ?? ?? ?? ?? 48 03 c1 48 63 0d ?? ?? ?? ?? 48 03 4c 24 ?? 0f b6 04 01 03 44 24 ?? 8b 4c 24 ?? 33 c8 8b c1 8b 0d ?? ?? ?? ?? 8b 14 24 2b d1 8b ca } 		$a_01_1 = {44 6c 6c 52 65 67 69 73 74 65 72 53 65 72 76 65 72 } 	condition:
+		((#a_03_0  & 1)*1+(#a_01_1  & 1)*1) >=2
+ 
+}
