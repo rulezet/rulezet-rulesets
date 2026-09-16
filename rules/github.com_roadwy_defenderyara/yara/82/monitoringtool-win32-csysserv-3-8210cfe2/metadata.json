@@ -1,0 +1,21 @@
+{
+  "uuid": "8210cfe2-7228-4a0e-8761-a6cf9491af62",
+  "title": "MonitoringTool_Win32_Csysserv_3",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "MonitoringTool:Win32/Csysserv,SIGNATURE_TYPE_PEHSTR,04 00 04 00 05 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/339370"
+}

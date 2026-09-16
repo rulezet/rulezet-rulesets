@@ -1,0 +1,21 @@
+{
+  "uuid": "63d2c55e-aaa4-4e35-aeb2-c030f8e6a85b",
+  "title": "SoftwareBundler_Win32_InstallMonetizer_3",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "SoftwareBundler:Win32/InstallMonetizer,SIGNATURE_TYPE_PEHSTR_EXT,24 00 24 00 08 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/339220"
+}

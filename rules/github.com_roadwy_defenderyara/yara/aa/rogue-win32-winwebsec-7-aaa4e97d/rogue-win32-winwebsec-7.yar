@@ -1,0 +1,9 @@
+rule Rogue_Win32_Winwebsec_7{
+	meta:
+		description = "Rogue:Win32/Winwebsec,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 03 00 00 "
+		
+	strings :
+		$a_03_0 = {6b 65 79 3d [0-10] 26 73 74 73 3d } 		$a_03_1 = {68 00 01 00 80 6a 00 6a 00 ff 35 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? 8d 45 f0 ba 05 00 00 00 e8 } 		$a_03_2 = {68 00 04 00 00 8d 85 ?? ?? ?? ?? 50 8b 45 ec 50 e8 ?? ?? ?? ?? 83 f8 01 1b db 43 84 db 74 0a 83 7d e8 00 0f 87 } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1+(#a_03_2  & 1)*1) >=3
+ 
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "fe3f445e-9770-45f9-8444-654ff7dccfa2",
+  "title": "MonitoringTool_Win32_Sfkeylogger",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "MonitoringTool:Win32/Sfkeylogger,SIGNATURE_TYPE_PEHSTR_EXT,06 00 04 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/339351"
+}

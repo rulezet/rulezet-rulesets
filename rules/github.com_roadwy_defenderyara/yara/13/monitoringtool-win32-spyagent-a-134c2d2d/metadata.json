@@ -1,0 +1,21 @@
+{
+  "uuid": "134c2d2d-1fa4-4d80-b556-d3d1910a8372",
+  "title": "MonitoringTool_Win32_SpyAgent_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "MonitoringTool:Win32/SpyAgent.A,SIGNATURE_TYPE_PEHSTR_EXT,21 00 21 00 09 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/339336"
+}
