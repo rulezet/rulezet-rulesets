@@ -1,0 +1,24 @@
+{
+  "uuid": "e295f978-39cd-4f96-8266-a03606bdc18d",
+  "title": "Disable-WindowsOptionalFeature Command PowerShell",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect built in PowerShell cmdlet Disable-WindowsOptionalFeature, Deployment Image Servicing and Management tool.\nSimilar to DISM.exe, this cmdlet is used to enumerate, install, uninstall, configure, and update features and packages in Windows images\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1562.001",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342367"
+}

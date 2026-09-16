@@ -1,0 +1,24 @@
+{
+  "uuid": "e4c5843e-0003-4cfa-913b-497f14c2075b",
+  "title": "Credential Dumping Activity By Python Based Tool",
+  "format": "sigma",
+  "author": "Bhabesh Raj, Jonhnathan Ribeiro",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects LSASS process access for potential credential dumping by a Python-like tool such as LaZagne or Pypykatz.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Lazagne\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342292"
+}

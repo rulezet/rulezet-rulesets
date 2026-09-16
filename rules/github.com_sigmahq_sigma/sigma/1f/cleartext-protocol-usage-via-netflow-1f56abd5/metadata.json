@@ -1,0 +1,19 @@
+{
+  "uuid": "1f56abd5-c3bb-40ea-9aad-9259f54de91d",
+  "title": "Cleartext Protocol Usage Via Netflow",
+  "format": "sigma",
+  "author": "Alexandr Yampolskyi, SOC Prime",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Ensure that all account usernames and authentication credentials are transmitted across networks using encrypted channels\nEnsure that an encryption is used for all sensitive information in transit.\nEnsure that an encrypted channels is used for all administrative account access.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342125"
+}

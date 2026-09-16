@@ -1,0 +1,24 @@
+{
+  "uuid": "c30c86bb-2571-48fe-9b8d-78592377bbd6",
+  "title": "Vulnerable Driver Load",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects loading of known vulnerable drivers via their hash.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342289"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "4d19df77-e0f3-49f5-b06c-6ee0d5de0e4e",
+  "title": "Leviathan Registry Key Activity",
+  "format": "sigma",
+  "author": "Aidan Bracher",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects registry key used by Leviathan APT in Malaysian focused campaign",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1547.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342098"
+}

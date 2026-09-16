@@ -1,0 +1,25 @@
+{
+  "uuid": "c8180f31-51b3-4c1a-92a5-1aead8384595",
+  "title": "WinDivert Driver Load",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the load of the Windiver driver, a powerful user-mode capture/sniffing/modification/blocking/re-injection package for Windows",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1557.001",
+    "T1599.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342271"
+}

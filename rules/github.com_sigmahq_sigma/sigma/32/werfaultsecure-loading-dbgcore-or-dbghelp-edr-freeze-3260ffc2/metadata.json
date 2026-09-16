@@ -1,0 +1,23 @@
+{
+  "uuid": "3260ffc2-2161-44a4-bbd4-811791815e8b",
+  "title": "WerFaultSecure Loading DbgCore or DbgHelp - EDR-Freeze",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the loading of dbgcore.dll or dbghelp.dll by WerFaultSecure.exe, which has been observed in EDR-Freeze attacks to suspend processes and evade detection.\nHowever, this behavior has also been observed during normal software installations, so further investigation is required to confirm malicious activity.\nWhen threat hunting, look for this activity in conjunction with other suspicious processes starting, network connections, or file modifications that occur shortly after the DLL load.\nPay special attention to timing - if other malicious activities occur during or immediately after this library loading, it may indicate EDR evasion attempts.\nAlso correlate with any EDR/AV process suspension events or gaps in security monitoring during the timeframe.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342150"
+}

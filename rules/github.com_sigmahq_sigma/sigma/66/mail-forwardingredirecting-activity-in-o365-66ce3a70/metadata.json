@@ -1,0 +1,23 @@
+{
+  "uuid": "66ce3a70-1822-40ba-a829-a4bbaffaf902",
+  "title": "Mail Forwarding/Redirecting Activity In O365",
+  "format": "sigma",
+  "author": "RedCanary Team (idea), Harjot Singh @cyb3rjy0t",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects email forwarding or redirecting activity in O365 Audit logs.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1020",
+    "T1114.003",
+    "T1564.008"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342265"
+}

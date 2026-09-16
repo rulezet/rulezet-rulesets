@@ -1,0 +1,23 @@
+{
+  "uuid": "68579a6f-45dd-4c40-b3d0-570d67b69ea6",
+  "title": "MSMQ Corrupted Packet Encountered",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects corrupted packets sent to the MSMQ service. Could potentially be a sign of CVE-2023-21554 exploitation",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-21554"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341997"
+}

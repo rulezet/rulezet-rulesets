@@ -1,0 +1,19 @@
+{
+  "uuid": "30222d99-dd96-470b-babe-7ae8a3cf023b",
+  "title": "Potential Operation Triangulation C2 Beaconing Activity - DNS",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential beaconing activity to domains used in 0day attacks on iOS devices and revealed by Kaspersky and the FSB",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341952"
+}

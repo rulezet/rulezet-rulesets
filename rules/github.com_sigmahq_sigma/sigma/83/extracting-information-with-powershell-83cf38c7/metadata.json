@@ -1,0 +1,23 @@
+{
+  "uuid": "83cf38c7-64c9-4087-b7b4-7a51de7b89f3",
+  "title": "Extracting Information with PowerShell",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Adversaries may search local file systems and remote file shares for files containing insecurely stored credentials.\nThese can be files created by users to store their own credentials, shared credential stores for a group of individuals,\nconfiguration files containing passwords for a system or service, or source code/binary files containing embedded passwords.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342328"
+}

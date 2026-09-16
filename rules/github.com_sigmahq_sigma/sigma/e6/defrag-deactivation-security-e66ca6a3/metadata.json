@@ -1,0 +1,23 @@
+{
+  "uuid": "e66ca6a3-1dc4-4c57-8139-b18c5c7f2472",
+  "title": "Defrag Deactivation - Security",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Bartlomiej Czyz (@bczyz1)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the deactivation and disabling of the Scheduled defragmentation task as seen by Slingshot APT group",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1053"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342116"
+}

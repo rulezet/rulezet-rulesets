@@ -1,0 +1,23 @@
+{
+  "uuid": "703a2522-a4c4-448d-a3ab-f4864ffc00a3",
+  "title": "DarkGate - Autoit3.EXE Execution Parameters",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of the legitimate Autoit3 utility from a suspicious parent process. AutoIt3.exe is used within\nthe DarkGate infection chain to execute shellcode that performs process injection and connects to the DarkGate\ncommand-and-control server.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341987"
+}

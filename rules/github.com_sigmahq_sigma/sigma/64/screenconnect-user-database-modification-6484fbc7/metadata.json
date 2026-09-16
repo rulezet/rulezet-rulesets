@@ -1,0 +1,23 @@
+{
+  "uuid": "6484fbc7-84f7-4ed5-a8f9-814455b8daab",
+  "title": "ScreenConnect User Database Modification",
+  "format": "sigma",
+  "author": "Matt Anderson, Andrew Schwartz, Caleb Stewart, Huntress",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects file modifications to the temporary xml user database file indicating local user modification in the ScreenConnect server.\nThis will occur during exploitation of the ScreenConnect Authentication Bypass vulnerability (CVE-2024-1709) in versions <23.9.8, but may also be observed when making legitimate modifications to local users or permissions.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2024-1709"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342059"
+}

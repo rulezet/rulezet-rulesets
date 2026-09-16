@@ -1,0 +1,23 @@
+{
+  "uuid": "0bfe7f18-5232-42b4-83a5-8b63f2e31bd8",
+  "title": "Potential Compromised 3CXDesktopApp Update Activity",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the 3CXDesktopApp updater downloading a known compromised version of the 3CXDesktopApp software",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341934"
+}

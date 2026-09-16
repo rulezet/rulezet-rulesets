@@ -1,0 +1,25 @@
+{
+  "uuid": "5d268119-a224-4d10-b536-07d11dc670d1",
+  "title": "Potential Credential Dumping Activity Via LSASS",
+  "format": "sigma",
+  "author": "Samir Bousseaden, Michael Haag",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects process access requests to the LSASS process with specific call trace calls and access masks.\nThis behaviour is expressed by many credential dumping tools such as Mimikatz, NanoDump, Invoke-Mimikatz, Procdump and even the Taskmgr dumping feature.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:tool=\"ProcDump\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342308"
+}

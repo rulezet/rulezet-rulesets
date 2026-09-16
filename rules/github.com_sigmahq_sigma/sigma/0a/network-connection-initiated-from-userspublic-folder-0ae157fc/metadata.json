@@ -1,0 +1,23 @@
+{
+  "uuid": "0ae157fc-b5f2-4d36-88da-74b7e59489bb",
+  "title": "Network Connection Initiated From Users\\Public Folder",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a network connection initiated from a process located in the \"C:\\Users\\Public\" folder.\nAttacker are known to drop their malicious payloads and malware in this directory as its writable by everyone.\nUse this rule to hunt for potential suspicious or uncommon activity in your environement.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342174"
+}

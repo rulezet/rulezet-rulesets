@@ -1,0 +1,21 @@
+{
+  "uuid": "fa2a8847-c4ba-4101-aa99-958f4eed3e97",
+  "title": "Potential COLDSTEEL Persistence Service DLL Load",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a suspicious DLL load by an \"svchost\" process based on location and name that might be related to ColdSteel RAT. This DLL location and name has been seen used by ColdSteel as the service DLL for its persistence mechanism\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341971"
+}

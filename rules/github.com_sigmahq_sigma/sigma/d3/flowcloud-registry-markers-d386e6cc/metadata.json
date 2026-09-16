@@ -1,0 +1,23 @@
+{
+  "uuid": "d386e6cc-6141-4576-a6b6-1f440d1f9af8",
+  "title": "FlowCloud Registry Markers",
+  "format": "sigma",
+  "author": "NVISO",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects FlowCloud malware registry markers from threat group TA410.\nThe malware stores its configuration in the registry alongside drivers utilized by the malware's keylogger components.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342085"
+}

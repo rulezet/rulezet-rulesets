@@ -1,0 +1,23 @@
+{
+  "uuid": "32bce6ef-d2cf-4bb8-8c04-186bc41cff32",
+  "title": "Set Files as System Files Using Attrib.EXE",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of \"attrib\" with the \"+s\" flag to mark files as system files",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1564.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342258"
+}

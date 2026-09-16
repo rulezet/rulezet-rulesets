@@ -1,0 +1,26 @@
+{
+  "uuid": "ccd8b70f-58cb-4c9a-a2d7-954d5bff0f4c",
+  "title": "HackTool - CobaltStrike BOF Injection Pattern",
+  "format": "sigma",
+  "author": "Christian Burkard (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a typical pattern of a CobaltStrike BOF which inject into other processes",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1106",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342306"
+}

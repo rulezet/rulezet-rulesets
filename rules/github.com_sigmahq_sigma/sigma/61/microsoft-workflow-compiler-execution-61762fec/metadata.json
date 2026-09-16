@@ -1,0 +1,24 @@
+{
+  "uuid": "61762fec-1cd7-42c3-9b02-5fff803100f0",
+  "title": "Microsoft Workflow Compiler Execution",
+  "format": "sigma",
+  "author": "Nik Seetharaman, frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of Microsoft Workflow Compiler, which may permit the execution of arbitrary unsigned code.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1127",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342241"
+}

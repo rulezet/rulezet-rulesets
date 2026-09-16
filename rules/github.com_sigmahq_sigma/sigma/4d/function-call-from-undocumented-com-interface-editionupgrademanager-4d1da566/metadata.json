@@ -1,0 +1,23 @@
+{
+  "uuid": "4d1da566-acde-4409-b252-4c46a186b551",
+  "title": "Function Call From Undocumented COM Interface EditionUpgradeManager",
+  "format": "sigma",
+  "author": "oscd.community, Dmitry Uchakin",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects function calls from the EditionUpgradeManager COM interface. Which is an interface that is not used by standard executables.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342297"
+}

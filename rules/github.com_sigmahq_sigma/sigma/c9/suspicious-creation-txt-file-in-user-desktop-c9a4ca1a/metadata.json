@@ -1,0 +1,24 @@
+{
+  "uuid": "c9a4ca1a-9e15-4422-bf0d-d020e6e035d5",
+  "title": "Suspicious Creation TXT File in User Desktop",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects creation of .txt files in user desktop folders via cmd.exe. This behavior may indicate ransomware deploying ransom notes, but can also occur during legitimate administrative tasks.\nAnalysts should investigate for suspicious filenames (e.g., \"RANSOM\", \"DECRYPT\", \"READ_ME\"), bulk file creation patterns, or concurrent encryption activity to determine if this is part of a ransomware attack.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342179"
+}

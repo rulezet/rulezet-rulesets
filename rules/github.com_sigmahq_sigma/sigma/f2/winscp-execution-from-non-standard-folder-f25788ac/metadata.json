@@ -1,0 +1,24 @@
+{
+  "uuid": "f25788ac-d2c9-440d-acad-7a89a7ac8167",
+  "title": "Winscp Execution From Non Standard Folder",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of Winscp from an a non standard folder. This could indicate the execution of Winscp portable.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1048"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342205"
+}

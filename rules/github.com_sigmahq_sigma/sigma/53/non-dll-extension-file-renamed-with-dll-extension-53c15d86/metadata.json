@@ -1,0 +1,24 @@
+{
+  "uuid": "53c15d86-01a9-4586-9c2a-8b4284eb4e15",
+  "title": "Non-DLL Extension File Renamed With DLL Extension",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects rename operations of files with non-DLL extensions to files with a DLL extension. This is often performed by malware in order to avoid initial detections based on extensions.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.008"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342197"
+}

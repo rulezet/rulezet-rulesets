@@ -1,0 +1,24 @@
+{
+  "uuid": "ef9858ee-d1cd-4979-b961-e47cb0114fb9",
+  "title": "System Drawing DLL Load",
+  "format": "sigma",
+  "author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects processes loading \"System.Drawing.ni.dll\". This could be an indicator of potential Screen Capture.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1113"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342147"
+}

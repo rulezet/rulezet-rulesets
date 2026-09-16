@@ -1,0 +1,24 @@
+{
+  "uuid": "e72a19ed-1086-4913-b9f1-fc93e26862d2",
+  "title": "OceanLotus Registry Activity",
+  "format": "sigma",
+  "author": "megan201296, Jonhnathan Ribeiro",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects registry keys created in OceanLotus (also known as APT32) attacks",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT32 - G0050\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342114"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "b52c688c-e3c7-4c3a-88e3-dee289b8ab9e",
+  "title": "PowerShell ShellCode",
+  "format": "sigma",
+  "author": "David Ledbetter (shellcode), Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Base64 encoded Shellcode",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342333"
+}

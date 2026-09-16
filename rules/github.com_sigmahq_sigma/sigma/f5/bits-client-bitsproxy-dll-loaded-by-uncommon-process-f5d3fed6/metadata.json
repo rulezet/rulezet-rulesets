@@ -1,0 +1,23 @@
+{
+  "uuid": "f5d3fed6-edb1-4954-b739-f39828a87be8",
+  "title": "BITS Client BitsProxy DLL Loaded By Uncommon Process",
+  "format": "sigma",
+  "author": "UnicornOfHunt",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects an uncommon process loading the \"BitsProxy.dll\". This DLL is used when the BITS COM instance or API is used.\nThis detection can be used to hunt for uncommon processes loading this DLL in your environment. Which may indicate potential suspicious activity occurring.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1197"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342146"
+}

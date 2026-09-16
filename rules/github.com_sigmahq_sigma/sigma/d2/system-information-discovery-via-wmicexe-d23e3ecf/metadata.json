@@ -1,0 +1,23 @@
+{
+  "uuid": "d23e3ecf-2a84-4f5a-a497-10c878483db0",
+  "title": "System Information Discovery Via Wmic.EXE",
+  "format": "sigma",
+  "author": "Joseliyo Sanchez, @Joseliyo_Jstnk",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of the WMI command-line (WMIC) utility to identify and display various system information,\nincluding OS, CPU, GPU, disk drive names, memory capacity, display resolution, baseboard, BIOS,\nand GPU driver products/versions.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342228"
+}

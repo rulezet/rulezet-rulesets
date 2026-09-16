@@ -1,0 +1,23 @@
+{
+  "uuid": "a81b3a78-1a14-4544-ac3f-3394cf9b5b53",
+  "title": "WDAC Policy File Creation In CodeIntegrity Folder",
+  "format": "sigma",
+  "author": "Andreas Braathen (mnemonic.io)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Attackers can craft a custom Windows Defender Application Control (WDAC) policy that blocks Endpoint Detection and Response (EDR) components while allowing their own malicious code. The policy is placed in the privileged Windows Code Integrity folder (C:\\Windows\\System32\\CodeIntegrity\\). Upon reboot, the policy prevents EDR drivers from loading, effectively bypassing security measures and may further enable undetected lateral movement within an Active Directory environment.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342185"
+}

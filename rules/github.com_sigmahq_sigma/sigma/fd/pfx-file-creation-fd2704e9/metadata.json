@@ -1,0 +1,24 @@
+{
+  "uuid": "fd2704e9-cc9e-47bf-b455-95eb4c368c96",
+  "title": "PFX File Creation",
+  "format": "sigma",
+  "author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of PFX files (Personal Information Exchange format).\nPFX files contain private keys and certificates bundled together, making them valuable targets for attackers seeking to:\n\n    - Exfiltrate digital certificates for impersonation or signing malicious code\n    - Establish persistent access through certificate-based authentication\n    - Bypass security controls that rely on certificate validation\n\nAnalysts should investigate PFX file creation events by examining which process created the PFX file and its parent process chain, as well as unusual locations outside standard certificate stores or development environments.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1552.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342183"
+}

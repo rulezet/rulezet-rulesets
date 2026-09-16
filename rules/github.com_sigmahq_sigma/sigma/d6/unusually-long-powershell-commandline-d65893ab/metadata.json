@@ -1,0 +1,23 @@
+{
+  "uuid": "d65893ab-7809-45f9-b3dd-f4f711d759c0",
+  "title": "Unusually Long PowerShell CommandLine",
+  "format": "sigma",
+  "author": "oscd.community, Natalia Shornikova",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects unusually long PowerShell command lines with a length of 1000 characters or more",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342206"
+}

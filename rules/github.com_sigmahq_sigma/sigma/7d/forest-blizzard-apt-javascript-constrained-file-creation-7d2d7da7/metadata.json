@@ -1,0 +1,25 @@
+{
+  "uuid": "7d2d7da7-2b99-4a08-b219-e65a8ebbb750",
+  "title": "Forest Blizzard APT - JavaScript Constrained File Creation",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of JavaScript files inside of the DriverStore directory.\nForest Blizzard used this to exploit the CVE-2022-38028 vulnerability in Windows Print Spooler service by modifying a JavaScript constraints file and executing it with SYSTEM-level permissions.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685.001"
+  ],
+  "cve": [
+    "CVE-2022-38028"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342068"
+}

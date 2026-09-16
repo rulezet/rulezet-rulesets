@@ -1,0 +1,23 @@
+{
+  "uuid": "46c1aca6-cdec-4ae8-940f-4798a3cda8fe",
+  "title": "Access To Sysvol Policies Share By Uncommon Process",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects file access requests to the Windows Sysvol Policies Share by uncommon processes",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1552.006"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342188"
+}

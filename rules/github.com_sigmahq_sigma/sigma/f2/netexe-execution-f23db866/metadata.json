@@ -1,0 +1,32 @@
+{
+  "uuid": "f23db866-5656-4e56-a8a7-009d4f38f61c",
+  "title": "Net.EXE Execution",
+  "format": "sigma",
+  "author": "Michael Haag, Mark Woan (improvements), James Pemberton / @4A616D6573 / oscd.community (improvements)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of \"Net.EXE\".",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1007",
+    "T1018",
+    "T1021.002",
+    "T1049",
+    "T1069.001",
+    "T1069.002",
+    "T1087.001",
+    "T1087.002",
+    "T1135",
+    "T1201"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342232"
+}

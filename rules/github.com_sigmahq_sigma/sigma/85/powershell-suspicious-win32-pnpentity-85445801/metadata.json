@@ -1,0 +1,23 @@
+{
+  "uuid": "85445801-a768-43fe-9164-6ecc3a6e28c8",
+  "title": "Powershell Suspicious Win32_PnPEntity",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Adversaries may attempt to gather information about attached peripheral devices and components connected to a computer system.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1120"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342327"
+}

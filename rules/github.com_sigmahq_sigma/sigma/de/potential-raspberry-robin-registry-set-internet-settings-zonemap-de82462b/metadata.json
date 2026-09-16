@@ -1,0 +1,23 @@
+{
+  "uuid": "de82462b-fce2-4843-aa27-0ec6366e7c33",
+  "title": "Potential Raspberry Robin Registry Set Internet Settings ZoneMap",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects registry modifications related to the proxy configuration of the system, potentially associated with the Raspberry Robin malware, as seen in campaigns running in Q1 2024.\nRaspberry Robin may alter proxy settings to circumvent security measures, ensuring unhindered connection with Command and Control servers for maintaining control over compromised systems if there are any proxy settings that are blocking connections.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342037"
+}

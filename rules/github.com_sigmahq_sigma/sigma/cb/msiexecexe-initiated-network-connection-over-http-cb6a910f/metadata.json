@@ -1,0 +1,23 @@
+{
+  "uuid": "cb6a910f-eb57-4aad-b5d1-e84044731158",
+  "title": "Msiexec.EXE Initiated Network Connection Over HTTP",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a network connection initiated by an \"Msiexec.exe\" process over port 80 or 443.\nAdversaries might abuse \"msiexec.exe\" to install and execute remotely hosted packages.\nUse this rule to hunt for potentially anomalous or suspicious communications.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218.007"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342178"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "1bee0e62-af19-49bd-b03a-82eb652d4c49",
+  "title": "Elevated System Shell Spawned",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a shell program such as the Windows command prompt or PowerShell is launched with system privileges. Use this rule to hunt for potential suspicious processes.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342238"
+}

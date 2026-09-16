@@ -1,0 +1,25 @@
+{
+  "uuid": "5d821728-655b-433f-9e76-fbed7dad9fd6",
+  "title": "Kapeka Backdoor Persistence Activity",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Kapeka backdoor persistence activity.\nDepending on the process privileges, the Kapeka dropper then sets persistence for the backdoor either as a scheduled task (if admin or SYSTEM) or autorun registry (if not).\nFor the scheduled task, it creates a scheduled task called \"Sens Api\" via schtasks command, which is set to run upon system startup as SYSTEM.\nTo establish persistence through the autorun utility, it adds an autorun entry called \"Sens Api\" under HKCU\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run via the \"reg add\" command.\nBoth persistence mechanisms are set to launch the binary by calling rundll32 and passing the backdoor's first export ordinal (#1) without any additional argument.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342045"
+}

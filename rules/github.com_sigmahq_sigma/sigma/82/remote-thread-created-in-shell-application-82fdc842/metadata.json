@@ -1,0 +1,24 @@
+{
+  "uuid": "82fdc842-621e-48e8-b58e-6d9afd72b055",
+  "title": "Remote Thread Created In Shell Application",
+  "format": "sigma",
+  "author": "Splunk Research Team",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects remote thread creation in command shell applications, such as \"Cmd.EXE\" and \"PowerShell.EXE\".\nIt is a common technique used by malware, such as IcedID, to inject malicious code and execute it within legitimate processes.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342142"
+}

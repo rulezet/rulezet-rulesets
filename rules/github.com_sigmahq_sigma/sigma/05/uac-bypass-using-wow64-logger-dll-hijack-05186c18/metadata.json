@@ -1,0 +1,23 @@
+{
+  "uuid": "05186c18-d434-48d8-81ad-a28c708b577a",
+  "title": "UAC Bypass Using WOW64 Logger DLL Hijack",
+  "format": "sigma",
+  "author": "Christian Burkard (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the pattern of UAC Bypass using a WoW64 logger DLL hijack (UACMe 30)",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342311"
+}

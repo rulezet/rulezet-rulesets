@@ -1,0 +1,25 @@
+{
+  "uuid": "de7310af-b181-4681-b6aa-c7491021fea6",
+  "title": "HackTool - HandleKatz Duplicating LSASS Handle",
+  "format": "sigma",
+  "author": "Bhabesh Raj (rule), @thefLinkk",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects HandleKatz opening LSASS to duplicate its handle to later dump the memory without opening any new handles",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001",
+    "T1106"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342315"
+}

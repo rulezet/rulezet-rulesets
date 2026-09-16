@@ -1,0 +1,19 @@
+{
+  "uuid": "0b4f5811-d842-47fc-8822-3bbf9adb836b",
+  "title": ".Class Extension URI Ending Request",
+  "format": "sigma",
+  "author": "Andreas Hunkeler (@Karneades)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects requests to URI ending with the \".class\" extension in proxy logs.\nThis could rules can be used to hunt for potential downloads of Java classes as seen for example in Log4shell exploitation attacks against Log4j.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342262"
+}

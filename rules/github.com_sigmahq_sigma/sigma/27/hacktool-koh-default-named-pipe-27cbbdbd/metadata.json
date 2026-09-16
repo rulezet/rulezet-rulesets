@@ -1,0 +1,26 @@
+{
+  "uuid": "27cbbdbd-a531-4c20-9e7c-8076d762e712",
+  "title": "HackTool - Koh Default Named Pipe",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects creation of default named pipes used by the Koh tool",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1134.001",
+    "T1528"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342277"
+}

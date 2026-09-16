@@ -1,0 +1,23 @@
+{
+  "uuid": "049f6ea5-6f27-43cd-9c22-8188724037fb",
+  "title": "Use Short Name Path in Command Line",
+  "format": "sigma",
+  "author": "frack113, Nasreddine Bencherchali",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of short name paths (8.3 format) in command lines, which can be used to obfuscate paths or access restricted locations.\nWindows creates short 8.3 filenames (like PROGRA~1) for compatibility with MS-DOS-based or 16-bit Windows programs.\nWhen investigating, examine:\n- Commands using short paths to access sensitive directories or files\n- Web servers on Windows (especially Apache) where short filenames could bypass security controls\n- Correlation with other suspicious behaviors\n- baseline of short name usage in your environment and look for deviations\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1564.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342250"
+}

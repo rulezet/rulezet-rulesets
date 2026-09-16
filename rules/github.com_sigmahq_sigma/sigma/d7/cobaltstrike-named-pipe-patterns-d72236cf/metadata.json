@@ -1,0 +1,24 @@
+{
+  "uuid": "d72236cf-a3ef-41f4-b060-f23ad764a242",
+  "title": "CobaltStrike Named Pipe Patterns",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Christian Burkard (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of a named pipe with a pattern found in CobaltStrike malleable C2 profiles",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342294"
+}

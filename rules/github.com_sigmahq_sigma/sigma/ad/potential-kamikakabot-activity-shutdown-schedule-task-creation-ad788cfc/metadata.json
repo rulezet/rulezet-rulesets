@@ -1,0 +1,21 @@
+{
+  "uuid": "ad788cfc-ad36-4e79-9d2b-032d57a4a4b8",
+  "title": "Potential KamiKakaBot Activity - Shutdown Schedule Task Creation",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), X__Junior (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of a schedule task that runs weekly and execute the \"shutdown /l /f\" command.\nThis behavior was observed being used by KamiKakaBot samples in order to achieve persistence on a system.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342033"
+}

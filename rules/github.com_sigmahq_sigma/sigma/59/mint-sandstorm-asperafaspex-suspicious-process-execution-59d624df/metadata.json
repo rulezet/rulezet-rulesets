@@ -1,0 +1,22 @@
+{
+  "uuid": "59d624df-4dfc-4e05-af22-5fe1b59d44e6",
+  "title": "Mint Sandstorm - AsperaFaspex Suspicious Process Execution",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), MSTIC (idea)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious execution from AsperaFaspex as seen used by Mint Sandstorm",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"ProcDump\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341943"
+}

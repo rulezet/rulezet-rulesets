@@ -1,0 +1,23 @@
+{
+  "uuid": "624dab0f-a3e8-42a3-be4a-13008ab1ba36",
+  "title": "Microsoft Word Add-In Loaded",
+  "format": "sigma",
+  "author": "Steffen Rogge (dr0pd34d)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Microsoft Word loading an Add-In (.wll) file which can be used by threat actors for initial access or persistence.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342153"
+}

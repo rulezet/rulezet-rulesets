@@ -1,0 +1,22 @@
+{
+  "uuid": "ee3180ad-e648-4e94-b733-ddb4fb5d6db4",
+  "title": "Qakbot Uninstaller Execution",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of the Qakbot uninstaller file mentioned in the USAO-CDCA document on the disruption of the Qakbot malware and botnet",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341956"
+}

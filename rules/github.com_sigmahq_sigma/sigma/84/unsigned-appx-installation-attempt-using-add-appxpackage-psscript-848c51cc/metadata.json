@@ -1,0 +1,21 @@
+{
+  "uuid": "848c51cc-67bf-4b12-91e7-68b1b197553b",
+  "title": "Unsigned AppX Installation Attempt Using Add-AppxPackage - PsScript",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of the \"Add-AppxPackage\" or it's alias \"Add-AppPackage\" to install unsigned AppX packages",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342352"
+}

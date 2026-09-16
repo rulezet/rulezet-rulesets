@@ -1,0 +1,23 @@
+{
+  "uuid": "ac7babe5-cc94-4838-bb09-89ece7990b80",
+  "title": "Diskshadow Script Mode Execution",
+  "format": "sigma",
+  "author": "Ivan Dyachkov, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of \"Diskshadow.exe\" in script mode using the \"/s\" flag. Attackers often abuse \"diskshadow\" to execute scripts that deleted the shadow copies on the systems. Investigate the content of the scripts and its location.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342212"
+}

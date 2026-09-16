@@ -1,0 +1,23 @@
+{
+  "uuid": "5d157726-14e5-4eea-851c-21b3f701ea1c",
+  "title": "Suspicious Service DACL Modification Via Set-Service Cmdlet - PS",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of the \"Set-Service\" powershell cmdlet to configure a new SecurityDescriptor that allows a service to be hidden from other utilities such as \"sc.exe\", \"Get-Service\"...etc. (Works only in powershell 7)",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574.011"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342385"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "e07f5608-482f-49e5-ad0d-9f268ae16f57",
+  "title": "ComRAT Network Communication",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Turla ComRAT network communication.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Turla - G0010\""
+  ],
+  "attack_techniques": [
+    "T1071.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342087"
+}

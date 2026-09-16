@@ -1,0 +1,24 @@
+{
+  "uuid": "877deac3-351f-4a18-9949-e3259a1c014e",
+  "title": "DMSA Service Account Created in Specific OUs - PowerShell",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of a dMSA service account using the New-ADServiceAccount cmdlet in certain OUs.\nThe fact that the cmdlet is used to create a dMSASvc account in a specific OU is highly suspicious.\nIt is a pattern trying to exploit the BadSuccessor privilege escalation vulnerability in Windows Server 2025.\nOn top of that, if the user that is creating the dMSASvc account is not a legitimate administrator or does not have the necessary permissions,\nit is a strong signal of an attempted or successful abuse of the BaDSuccessor vulnerability for privilege escalation within the Windows Server 2025 Active Directory environment.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1078.002",
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342321"
+}

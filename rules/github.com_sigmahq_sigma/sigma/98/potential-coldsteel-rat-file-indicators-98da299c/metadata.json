@@ -1,0 +1,21 @@
+{
+  "uuid": "98da299c-64f3-45b5-a823-132b3a72ea0b",
+  "title": "Potential COLDSTEEL RAT File Indicators",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of a file named \"dllhost.exe\" in the \"C:\\users\\public\\Documents\\\" directory. Seen being used by the COLDSTEEL RAT in some of its variants.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341972"
+}

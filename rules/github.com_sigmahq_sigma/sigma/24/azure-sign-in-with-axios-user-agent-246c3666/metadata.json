@@ -1,0 +1,21 @@
+{
+  "uuid": "246c3666-b44d-4524-abbc-d6b6d508f98d",
+  "title": "Azure Sign-In With Axios User Agent",
+  "format": "sigma",
+  "author": "Marco Pedrinazzi (@pedrinazziM) (InTheCyber)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects sign-in attempts in Azure/Entra ID logs where the user agent contains \"axios\",\nindicating potential use of automated credential harvesting or AiTM phishing infrastructure.\nAxios is a Node.js HTTP client abused to intercept and replay stolen credentials and MFA tokens.\nWhen triaging results, analysts should:\n    - Check the sign-in risk level, MFA status, and conditional access results for signs of bypass.\n    - Look for sign-ins from unusual locations or IPs, especially if the same IP targets multiple accounts.\n    - Prioritize successful sign-ins over failed ones, as they may indicate a completed credential replay or AiTM attack.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1557"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342263"
+}

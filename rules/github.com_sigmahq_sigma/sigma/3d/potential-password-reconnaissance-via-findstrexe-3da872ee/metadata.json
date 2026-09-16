@@ -1,0 +1,23 @@
+{
+  "uuid": "3da872ee-df8a-4d7e-b55f-33734fb95589",
+  "title": "Potential Password Reconnaissance Via Findstr.EXE",
+  "format": "sigma",
+  "author": "Josh Nickels",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects command line usage of \"findstr\" to search for the \"passwords\" keyword in a variety of different languages",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342243"
+}

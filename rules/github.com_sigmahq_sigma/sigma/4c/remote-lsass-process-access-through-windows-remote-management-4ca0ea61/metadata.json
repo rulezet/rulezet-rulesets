@@ -1,0 +1,26 @@
+{
+  "uuid": "4ca0ea61-c5b8-4e0e-b27e-bcf996f6cada",
+  "title": "Remote LSASS Process Access Through Windows Remote Management",
+  "format": "sigma",
+  "author": "Patryk Prauze - ING Tech",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects remote access to the LSASS process via WinRM. This could be a sign of credential dumping from tools like mimikatz.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001",
+    "T1021.006",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342312"
+}
