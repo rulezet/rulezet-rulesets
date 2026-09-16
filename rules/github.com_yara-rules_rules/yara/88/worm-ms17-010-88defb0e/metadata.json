@@ -1,0 +1,21 @@
+{
+  "uuid": "88defb0e-f418-4558-85e4-3b8a91dfda13",
+  "title": "worm_ms17_010",
+  "format": "yara",
+  "author": "Blueliv",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects Worm used during 2017-May-12th WannaCry campaign, which is based on ETERNALBLUE",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:ransomware=\"WannaCry\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/198056"
+}

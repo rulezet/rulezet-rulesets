@@ -1,0 +1,20 @@
+{
+  "uuid": "7b8808d7-f29c-469e-9110-4acde0730a8a",
+  "title": "CN_Toolset_NTscan_PipeCmd",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a Chinese hacktool from a disclosed toolset - file PipeCmd.exe",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"HackTool\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/197939"
+}

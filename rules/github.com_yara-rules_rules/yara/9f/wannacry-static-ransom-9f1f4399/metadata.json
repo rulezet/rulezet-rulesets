@@ -1,0 +1,20 @@
+{
+  "uuid": "9f1f4399-dd98-442b-92c4-f62fd7ad03ea",
+  "title": "wannacry_static_ransom",
+  "format": "yara",
+  "author": "Blueliv",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects WannaCryptor spreaded during 2017-May-12th campaign and variants",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:ransomware=\"WannaCry\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/198048"
+}

@@ -1,0 +1,9 @@
+import "pe"
+rule MSLRH_032a_fake_PEBundle_02_3x_emadicius_additional: PEiD
+{
+    strings:
+        $a = { EB 03 CD 20 C7 1E EB 03 CD 20 EA 9C EB 02 EB 01 EB 01 EB 60 EB 03 CD 20 EB EB 01 EB E8 03 00 00 00 E9 EB 04 58 40 50 C3 EB 03 CD 20 EB EB 03 CD 20 03 61 9D 83 C4 04 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 }
+    condition:
+        $a at pe.entry_point
+
+}

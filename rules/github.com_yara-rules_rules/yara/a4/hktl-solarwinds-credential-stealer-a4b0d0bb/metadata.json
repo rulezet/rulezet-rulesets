@@ -1,0 +1,19 @@
+{
+  "uuid": "a4b0d0bb-825e-4658-ba6e-a5ef8ecc8eaf",
+  "title": "HKTL_Solarwinds_credential_stealer",
+  "format": "yara",
+  "author": "Arnim Rupp",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects solarwinds credential stealers like e.g. solarflare via the touched certificate, files and database columns",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/198285"
+}

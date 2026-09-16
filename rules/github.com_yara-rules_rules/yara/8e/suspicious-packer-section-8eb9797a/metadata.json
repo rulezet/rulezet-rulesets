@@ -1,0 +1,22 @@
+{
+  "uuid": "8eb9797a-7a5c-4b30-a065-7042bb76c7ba",
+  "title": "suspicious_packer_section",
+  "format": "yara",
+  "author": "@j0sm1",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "The packer/protector section names/keywords",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "runtime-packer:pe=\"upx\"",
+    "runtime-packer:pe=\"themida\"",
+    "runtime-packer:pe=\"aspack\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/198333"
+}
