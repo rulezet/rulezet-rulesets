@@ -1,0 +1,5 @@
+# Win_Spyware_Banker_5960
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/405446)
+
+Rulezet UUID: `92102802-1fed-4436-807c-f4f240b8d2f9`
