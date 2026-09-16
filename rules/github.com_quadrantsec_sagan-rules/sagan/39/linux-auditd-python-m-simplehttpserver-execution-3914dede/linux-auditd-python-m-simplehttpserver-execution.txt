@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] python -m SimpleHTTPServer execution"; content: "type=EXECVE"; content:"|22|python"; content: "|22|-m|22|"; content: "|22|SimpleHTTPServer|22|"; classtype:suspicious-command; program:audispd; sid:5005668; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CLOUDTRAIL] RDS cloudtrail event detected - (DeleteOptionGroup)"; program: rds.amazonaws.com; content: "event detectedName|22 3a 20 22|DeleteOptionGroup|22|"; classtype: bad-unknown; reference: url,www.gorillastack.com/news/cloudtrail-event detected-names/; sid:5005535; rev:1;)

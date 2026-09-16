@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] /tmp/ns_sploit execution"; content: "type=EXECVE"; content:"|22|/tmp/ns_sploit|22|"; classtype:suspicious-command; program:audispd; sid:5005653; rev:1;)

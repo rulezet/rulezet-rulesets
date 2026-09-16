@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] /etc/shadow access"; content: "type=EXECVE"; content:"|22|/etc/shadow|22|";  classtype: suspicious-command; program: audispd; sid:5005624; rev:1;)

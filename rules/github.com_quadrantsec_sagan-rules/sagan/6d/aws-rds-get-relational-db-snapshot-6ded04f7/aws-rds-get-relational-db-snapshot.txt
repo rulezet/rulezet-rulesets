@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[AWS] RDS Get Relational DB Snapshot"; program:rds.amazonaws.com; json_content:".eventName","GetRelationalDatabaseSnapshot"; parse_src_ip:1; normalize; classtype:system-event; sid:5017155; rev:1; metadata: createdOn 2025_05_09, updatedOn 2025_07_30;)

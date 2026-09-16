@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] authorized_keys accessed"; content: "type=EXECVE"; content:"|22|authorized_keys|22|"; classtype:suspicious-command; program:audispd; sid:5005655; rev:1;)

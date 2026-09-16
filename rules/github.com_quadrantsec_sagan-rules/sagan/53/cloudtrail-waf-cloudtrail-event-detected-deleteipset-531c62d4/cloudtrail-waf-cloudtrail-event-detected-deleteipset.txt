@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CLOUDTRAIL] WAF cloudtrail event detected - (DeleteIPSet)"; program: waf.amazonaws.com; content: "event detectedName|22 3a 20 22|DeleteIPSet|22|"; classtype: bad-unknown; reference: url,www.gorillastack.com/news/cloudtrail-event detected-names/; sid:5005586; rev:1;)

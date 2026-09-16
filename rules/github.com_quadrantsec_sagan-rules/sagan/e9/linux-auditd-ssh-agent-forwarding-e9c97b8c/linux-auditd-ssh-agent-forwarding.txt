@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] SSH agent forwarding"; content: "type=EXECVE"; content:"|22|ssh|22|"; content:"|22|-A|22|"; classtype:suspicious-command; program:audispd; sid:5005637; rev:1;)

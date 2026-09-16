@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] /tmp/haxhax execution"; content: "type=EXECVE"; content:"|22|/tmp/haxhax|22|"; classtype:suspicious-command; program:audispd; sid:5005652; rev:1;)

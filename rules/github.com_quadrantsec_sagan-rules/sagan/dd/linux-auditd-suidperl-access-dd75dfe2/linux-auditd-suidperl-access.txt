@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] suidperl access"; content: "type=EXECVE"; content:"|22|suidperl|22|";  classtype: suspicious-command; program: audispd; sid:5005628; rev:1;)

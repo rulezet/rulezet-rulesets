@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] chmod u+s execution"; content: "type=EXECVE"; content:"|22|chmod|22|"; content: "|22|u+s|22|"; classtype:suspicious-command; program:audispd; sid:5005656; rev:1;)

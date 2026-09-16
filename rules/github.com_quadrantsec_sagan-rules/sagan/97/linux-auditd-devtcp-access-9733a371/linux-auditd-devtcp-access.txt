@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] /dev/tcp access"; content: "type=EXECVE"; content:"|22|/dev/tcp|22|"; classtype:suspicious-command; program:audispd; sid:5005634; rev:1;)

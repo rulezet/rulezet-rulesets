@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] ./a.out execution attempt"; content: "type=EXECVE"; content:"|22|./a.out|22|"; classtype: suspicious-command; program: audispd; sid:5005619; rev:1;)

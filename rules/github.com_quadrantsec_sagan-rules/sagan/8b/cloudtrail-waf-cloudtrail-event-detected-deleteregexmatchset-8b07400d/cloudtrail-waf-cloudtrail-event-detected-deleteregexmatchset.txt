@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CLOUDTRAIL] WAF cloudtrail event detected - (DeleteRegexMatchSet)"; program: waf.amazonaws.com; content: "event detectedName|22 3a 20 22|DeleteRegexMatchSet|22|"; classtype: bad-unknown; reference: url,www.gorillastack.com/news/cloudtrail-event detected-names/; sid:5005588; rev:1;)

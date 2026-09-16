@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] wget execution"; content: "type=EXECVE"; content:"|22|wget|22|"; classtype:suspicious-command; program:audispd; sid:5005649; rev:1;)

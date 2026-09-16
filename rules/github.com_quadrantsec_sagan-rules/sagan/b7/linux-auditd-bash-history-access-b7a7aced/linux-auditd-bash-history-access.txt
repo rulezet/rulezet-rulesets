@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] .bash_history access"; content: "type=EXECVE"; content:"|22|.bash_history|22|";  classtype: suspicious-command; program: audispd; sid:5005626; rev:1;)

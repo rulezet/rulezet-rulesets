@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] make execution"; content: "type=EXECVE"; content:"|22|make|22|";  classtype: suspicious-command; program: audispd; sid:5005625; rev:1;)

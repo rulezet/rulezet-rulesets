@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[AWS] EC2 List Snapshots"; program:ec2.amazonaws.com; json_content:".eventName","ListSnapshots"; after:track by_username,count 10, seconds 60; json_map:"src_ip",".sourceIPAddress"; json_map:"username",".userIdentity.sessionContext.se"; classtype:system-event; sid:5017064; rev:1; metadata: createdOn 2025_05_09, updatedOn 2025_07_30;)

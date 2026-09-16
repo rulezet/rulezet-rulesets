@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CLOUDTRAIL] Route 53 cloudtrail event detected - (ChangeResourceRecordSets)"; program: route53.amazonaws.com; content: "event detectedName|22 3a 20 22|ChangeResourceRecordSets|22|"; classtype: bad-unknown; reference: url,www.gorillastack.com/news/cloudtrail-event detected-names/; sid:5005553; rev:1;)

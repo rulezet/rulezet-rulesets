@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] Netcat execution"; content: "type=EXECVE"; meta_content: "|22|%sagan%|22|",nc,ncat,netcat; classtype:suspicious-command; program:audispd; sid:5005632; rev:1;)

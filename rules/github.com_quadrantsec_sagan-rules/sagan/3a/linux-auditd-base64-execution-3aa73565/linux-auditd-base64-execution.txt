@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] base64 execution"; content: "type=EXECVE"; content:"|22|base64|22|"; classtype:suspicious-command; program:audispd; sid:5005651; rev:1;)

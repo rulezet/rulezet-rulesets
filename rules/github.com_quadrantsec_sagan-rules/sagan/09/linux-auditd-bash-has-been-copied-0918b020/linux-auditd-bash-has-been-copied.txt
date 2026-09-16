@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] bash has been copied"; content: "type=EXECVE"; content:"|22|cp|22|"; content: "|22|/bin/bash|22|"; classtype:suspicious-command; program:audispd; sid:5005660; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CLOUDTRAIL] RDS cloudtrail event detected - (ModifyDBClusterParameterGroup)"; program: rds.amazonaws.com; content: "event detectedName|22 3a 20 22|ModifyDBClusterParameterGroup|22|"; classtype: bad-unknown; reference: url,www.gorillastack.com/news/cloudtrail-event detected-names/; sid:5005538; rev:1;)

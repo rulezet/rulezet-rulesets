@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] curl execution"; content: "type=EXECVE"; content:"|22|curl|22|"; classtype:suspicious-command; program:audispd; sid:5005650; rev:1;)

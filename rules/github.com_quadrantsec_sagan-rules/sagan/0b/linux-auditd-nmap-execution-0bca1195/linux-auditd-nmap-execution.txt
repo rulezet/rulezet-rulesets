@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] nmap execution"; content: "type=EXECVE"; content:"|22|nmap|22|";  classtype: suspicious-command; program: audispd; sid:5005622; rev:1;)

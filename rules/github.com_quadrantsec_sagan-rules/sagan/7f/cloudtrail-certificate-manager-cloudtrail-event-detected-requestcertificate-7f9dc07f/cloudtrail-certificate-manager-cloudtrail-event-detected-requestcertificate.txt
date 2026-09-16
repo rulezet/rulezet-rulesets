@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CLOUDTRAIL] Certificate Manager cloudtrail event detected - (RequestCertificate)"; program: acm.amazonaws.com; content: "event detectedName|22 3a 20 22|RequestCertificate|22|"; classtype: bad-unknown; reference: url,www.gorillastack.com/news/cloudtrail-event detected-names/; sid:5005440; rev:1;)

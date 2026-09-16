@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] /tmp/ysocereal.jar execution"; content: "type=EXECVE"; content:"|22|/tmp/ysocereal.jar|22|"; classtype:suspicious-command; program:audispd; sid:5005654; rev:1;)

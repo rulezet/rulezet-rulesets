@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-DEFENDER] WindowsDefenderAv alert detected"; json_content: ".detectionSource","WindowsDefenderAv"; classtype: suspicious-traffic; sid:5006526; rev: 1;)

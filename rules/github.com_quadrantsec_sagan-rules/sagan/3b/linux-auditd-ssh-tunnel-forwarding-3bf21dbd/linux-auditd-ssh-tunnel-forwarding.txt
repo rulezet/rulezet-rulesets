@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] SSH tunnel forwarding"; content: "type=EXECVE"; content:"|22|ssh|22|"; content:"|22|-w|22|"; classtype:suspicious-command; program:audispd; sid:5005643; rev:1;)

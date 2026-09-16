@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] gcc execution"; content: "type=EXECVE"; content:"|22|gcc|22|"; classtype: suspicious-command; program: audispd; sid:5005620; rev:1;)

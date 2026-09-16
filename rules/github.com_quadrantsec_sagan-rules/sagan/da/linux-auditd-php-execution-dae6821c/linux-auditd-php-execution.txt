@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] PHP execution"; content: "type=EXECVE"; content:"|22|php|22|"; classtype:suspicious-command; program:audispd; sid:5005633; rev:1;)

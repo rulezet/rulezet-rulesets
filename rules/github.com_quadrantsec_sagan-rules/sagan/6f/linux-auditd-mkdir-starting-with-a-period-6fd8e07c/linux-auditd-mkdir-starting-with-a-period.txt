@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-AUDITD] mkdir starting with a period"; content: "type=EXECVE"; content:"|22|mkdir|22|"; content: "a1=|22|."; classtype:suspicious-command; program:audispd; sid:5005673; rev:1;)
