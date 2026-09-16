@@ -1,0 +1,10 @@
+import "pe"
+rule _Unknown_by_SMT_
+{
+	meta:
+		description = "Unknown by SMT"
+	strings:
+		$0 = {60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 83 ?? ?? 57 EB}
+	condition:
+		$0 at pe.entry_point
+}

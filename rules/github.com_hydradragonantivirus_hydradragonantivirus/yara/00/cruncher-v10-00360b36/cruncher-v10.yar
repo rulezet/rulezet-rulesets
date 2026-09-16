@@ -1,0 +1,10 @@
+import "pe"
+rule _Cruncher_v10_
+{
+	meta:
+		description = "Cruncher v1.0"
+	strings:
+		$0 = {2E ?? ?? ?? ?? 2E ?? ?? ?? B4 30 CD 21 3C 03 73 ?? BB ?? ?? 8E DB 8D ?? ?? ?? B4 09 CD 21 06 33 C0 50 CB}
+	condition:
+		$0 at pe.entry_point
+}

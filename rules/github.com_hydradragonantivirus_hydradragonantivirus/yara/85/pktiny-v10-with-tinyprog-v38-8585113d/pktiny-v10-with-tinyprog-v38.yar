@@ -1,0 +1,10 @@
+import "pe"
+rule _PKTINY_v10_with_TINYPROG_v38_
+{
+	meta:
+		description = "PKTINY v1.0 with TINYPROG v3.8"
+	strings:
+		$0 = {2E C6 06 ?? ?? ?? 2E C6 06 ?? ?? ?? 2E C6 06 ?? ?? ?? E9 ?? ?? E8 ?? ?? 83}
+	condition:
+		$0 at pe.entry_point
+}

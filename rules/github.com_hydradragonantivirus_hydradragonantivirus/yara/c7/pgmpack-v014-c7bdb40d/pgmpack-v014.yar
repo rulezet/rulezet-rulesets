@@ -1,0 +1,10 @@
+import "pe"
+rule _PGMPACK_v014_
+{
+	meta:
+		description = "PGMPACK v0.14"
+	strings:
+		$0 = {1E 17 50 B4 30 CD 21 3C 02 73 ?? B4 4C CD 21 FC BE ?? ?? BF ?? ?? E8 ?? ?? E8 ?? ?? BB ?? ?? BA ?? ?? 8A C3 8B F3}
+	condition:
+		$0 at pe.entry_point
+}

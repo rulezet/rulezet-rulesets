@@ -1,0 +1,10 @@
+import "pe"
+rule _PEArmor_V07X__hying_
+{
+	meta:
+		description = "PE-Armor V0.7X -> hying"
+	strings:
+		$0 = {60 E8 00 00 00 00 5D 81 ED ?? ?? ?? ?? 8D B5 ?? ?? ?? ?? 55 56 81 C5 ?? ?? ?? ?? 55 C3}
+	condition:
+		$0 at pe.entry_point
+}

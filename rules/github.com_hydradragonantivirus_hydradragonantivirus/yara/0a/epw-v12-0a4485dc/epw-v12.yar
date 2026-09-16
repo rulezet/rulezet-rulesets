@@ -1,0 +1,10 @@
+import "pe"
+rule _EPW_v12_
+{
+	meta:
+		description = "EPW v1.2"
+	strings:
+		$0 = {06 57 1E 56 55 52 51 53 50 2E ?? ?? ?? ?? 8C C0 05 ?? ?? 2E ?? ?? ?? 8E D8 A1 ?? ?? 2E}
+	condition:
+		$0 at pe.entry_point
+}

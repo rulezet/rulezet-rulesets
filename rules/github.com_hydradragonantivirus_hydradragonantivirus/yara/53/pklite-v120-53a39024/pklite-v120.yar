@@ -1,0 +1,10 @@
+import "pe"
+rule _PKLITE_v120_
+{
+	meta:
+		description = "PKLITE v1.20"
+	strings:
+		$0 = {B8 ?? ?? BA ?? ?? 05 ?? ?? 3B 06 ?? ?? 72 ?? B4 09 BA ?? ?? CD 21 B4 4C CD 21}
+	condition:
+		$0 at pe.entry_point
+}

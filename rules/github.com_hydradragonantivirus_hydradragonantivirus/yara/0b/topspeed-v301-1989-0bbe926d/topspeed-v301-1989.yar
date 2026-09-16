@@ -1,0 +1,10 @@
+import "pe"
+rule _TopSpeed_v301_1989_
+{
+	meta:
+		description = "TopSpeed v3.01 1989"
+	strings:
+		$0 = {1E BA ?? ?? 8E DA 8B ?? ?? ?? 8B ?? ?? ?? FF ?? ?? ?? 50 53}
+	condition:
+		$0 at pe.entry_point
+}
