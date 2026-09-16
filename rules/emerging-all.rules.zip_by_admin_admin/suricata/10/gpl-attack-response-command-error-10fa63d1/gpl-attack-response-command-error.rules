@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"GPL ATTACK_RESPONSE command error"; flow:established,to_client; file.data; content:"Bad command or filename"; nocase; classtype:bad-unknown; sid:2100495; rev:11; metadata:created_at 2010_09_23, confidence Medium, signature_severity Informational, updated_at 2024_04_03;)

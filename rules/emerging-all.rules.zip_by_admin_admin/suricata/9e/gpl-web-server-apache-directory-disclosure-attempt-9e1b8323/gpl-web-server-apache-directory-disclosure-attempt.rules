@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER apache directory disclosure attempt"; flow:established,to_server; http.uri.raw; content:"////////"; depth:200; reference:bugtraq,2503; classtype:attempted-dos; sid:2101156; rev:14; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_04_03;)
