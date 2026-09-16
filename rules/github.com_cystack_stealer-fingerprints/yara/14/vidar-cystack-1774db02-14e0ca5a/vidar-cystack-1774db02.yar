@@ -1,0 +1,40 @@
+rule Vidar_cystack_1774db02
+{
+    meta:
+        family = "Vidar"
+        fingerprint_id = "cystack_1774db02"
+
+    strings:
+        $key_0 = "AV:" ascii
+        $key_1 = "Arena Breakout:" ascii
+        $key_2 = "Car Dealer Simulator:" ascii
+        $key_3 = "Computer Name:" ascii
+        $key_4 = "Cores:" ascii
+        $key_5 = "Country:" ascii
+        $key_6 = "Date:" ascii
+        $key_7 = "Display Resolution:" ascii
+        $key_8 = "GUID:" ascii
+        $key_9 = "Game of Thrones:" ascii
+        $key_10 = "HWID:" ascii
+        $key_11 = "Install Date:" ascii
+        $key_12 = "Ip:" ascii
+        $key_13 = "Keyboard Languages:" ascii
+        $key_14 = "Local Time:" ascii
+        $key_15 = "MachineID:" ascii
+        $key_16 = "Path:" ascii
+        $key_17 = "Police Shootout:" ascii
+        $key_18 = "Prison Escape Simulator:" ascii
+        $key_19 = "Processor:" ascii
+        $key_20 = "RAM:" ascii
+        $key_21 = "SWAT Commander:" ascii
+        $key_22 = "The Seven Deadly Sins:" ascii
+        $key_23 = "Threads:" ascii
+        $key_24 = "TimeZone:" ascii
+        $key_25 = "User Name:" ascii
+        $key_26 = "VideoCard:" ascii
+        $key_27 = "Windows:" ascii
+        $key_28 = "Work Dir:" ascii
+
+    condition:
+        all of ($key_*)
+}
