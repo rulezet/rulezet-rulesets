@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] Oracle Database Server SDO_CS.TRANSFORM_LAYER Buffer Overflow"; content: "SID: 5974 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6105974; sid: 6105974; rev: 4;)

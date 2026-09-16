@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] HP Info Center HPInfoDLL.dll ActiveX Control Remote Code Execution"; content: "SID: 6171 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6106171; sid: 6106171; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] DNS Tunneling"; content: "SID: 6066 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: udp; default_dst_port: $DNS_PORT; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6106066; sid: 6106066; rev: 5;)
