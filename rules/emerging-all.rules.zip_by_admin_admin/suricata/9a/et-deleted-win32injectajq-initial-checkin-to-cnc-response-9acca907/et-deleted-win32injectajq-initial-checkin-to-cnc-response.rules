@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET DELETED Win32.Inject.ajq Initial Checkin to CnC Response"; flow:established,from_server; flowbits:isset,ET.inj.ajq.1; dsize:4; content:"|00 0e 04 00|"; classtype:command-and-control; sid:2008057; rev:3; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

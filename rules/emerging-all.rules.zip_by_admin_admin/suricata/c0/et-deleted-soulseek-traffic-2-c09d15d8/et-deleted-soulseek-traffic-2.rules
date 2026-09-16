@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> 38.115.131.0/24 5534 (msg:"ET DELETED Soulseek traffic (2)"; flow: established; reference:url,www.slsknet.org; classtype:policy-violation; sid:2001186; rev:9; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

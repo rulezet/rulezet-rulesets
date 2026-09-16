@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED SPL Landing Page Requested"; flow:established,to_server; content:"/?"; http_uri; content:"YWZmaWQ9"; http_uri; classtype:trojan-activity; sid:2015698; rev:3; metadata:created_at 2012_09_12, signature_severity Unknown, updated_at 2019_07_26;)

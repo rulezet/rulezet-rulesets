@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 53 -> $HOME_NET :1023 (msg:"GPL MISC source port 53 to <1024"; flow:to_server; flags:S,12; reference:arachnids,07; classtype:bad-unknown; sid:2100504; rev:9; metadata:created_at 2010_09_23, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert udp $HOME_NET any -> $EXTERNAL_NET 69 (msg:"ET TFTP Outbound TFTP Data Transfer with Cisco config"; content:"|00 03|"; depth:2; content:"|0a 21 20|version|20|"; distance:2; within:12; classtype:policy-violation; sid:2015857; rev:5; metadata:created_at 2012_11_01, signature_severity Minor, updated_at 2019_07_26;)

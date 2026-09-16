@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 3127 (msg:"ET SCAN Behavioral Unusual Port 3127 traffic, Potential Scan or Backdoor"; flow:to_server; flags: S,12; threshold: type both, track by_src, count 10 , seconds 60; classtype:misc-activity; sid:2002973; rev:5; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)

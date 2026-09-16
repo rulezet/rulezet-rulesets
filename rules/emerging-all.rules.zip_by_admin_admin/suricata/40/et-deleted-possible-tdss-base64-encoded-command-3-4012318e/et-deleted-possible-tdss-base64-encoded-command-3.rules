@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Possible TDSS Base64 Encoded Command 3"; flow:established,to_server; content:"ZEV4ZWN"; http_uri; classtype:trojan-activity; sid:2012923; rev:3; metadata:created_at 2011_06_02, signature_severity Unknown, updated_at 2019_07_26;)

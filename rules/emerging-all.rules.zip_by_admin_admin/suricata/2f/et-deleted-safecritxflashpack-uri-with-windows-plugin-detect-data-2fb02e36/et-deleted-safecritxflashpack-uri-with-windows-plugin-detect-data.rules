@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED Safe/CritX/FlashPack URI with Windows Plugin-Detect Data"; flow:established,to_server; content:"/pd.php?id="; http_uri; fast_pattern:only; pcre:"/\/pd\.php\?id=[a-f0-9]+$/U"; classtype:exploit-kit; sid:2017812; rev:5; metadata:created_at 2013_12_06, signature_severity Unknown, updated_at 2019_07_26;)

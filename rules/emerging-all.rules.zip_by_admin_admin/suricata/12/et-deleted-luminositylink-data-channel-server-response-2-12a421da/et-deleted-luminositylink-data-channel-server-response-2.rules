@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"ET DELETED LuminosityLink - Data Channel Server Response 2"; flow:established,to_client; content:"8_=_8"; isdataat:!1,relative; dsize:<25; classtype:trojan-activity; sid:2022708; rev:2; metadata:created_at 2016_04_06, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

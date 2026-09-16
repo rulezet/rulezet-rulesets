@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ATTACK_RESPONSE SysInternals sc.exe Output Outbound"; flow:established; content:"SERVICE_NAME|3a|"; content:"TYPE"; distance:0; content:"SERVICE_EXIT_CODE"; distance:0; classtype:successful-admin; sid:2020088; rev:1; metadata:created_at 2015_01_05, signature_severity Minor, updated_at 2019_07_26;)

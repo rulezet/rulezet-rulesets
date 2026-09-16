@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Zango-Hotbar User-Agent (zb-hb)"; flow:to_server,established; content:"zb-hb-"; fast_pattern:only; http_header; pcre:"/User-Agent\:[^\n]+zb-hb-/Hi"; classtype:trojan-activity; sid:2003223; rev:11; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

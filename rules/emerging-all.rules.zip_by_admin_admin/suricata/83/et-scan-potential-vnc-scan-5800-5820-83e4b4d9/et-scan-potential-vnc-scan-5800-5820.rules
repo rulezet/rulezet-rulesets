@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 5800:5820 (msg:"ET SCAN Potential VNC Scan 5800-5820"; flow:to_server; flags:S,12; threshold: type both, track by_src, count 5, seconds 60; classtype:attempted-recon; sid:2002910; rev:6; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ATTACK_RESPONSE Microsoft WMIC Prompt Outbound"; flow:established; content:"wmic|3a|root|5c|cli>"; classtype:successful-admin; sid:2020086; rev:1; metadata:created_at 2015_01_05, signature_severity Minor, updated_at 2019_07_26;)
