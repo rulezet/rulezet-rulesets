@@ -1,0 +1,9 @@
+rule TrojanDownloader_O97M_AgentTesla_RVG_MTB{
+	meta:
+		description = "TrojanDownloader:O97M/AgentTesla.RVG!MTB,SIGNATURE_TYPE_MACROHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_01_0 = {63 72 65 61 74 65 6f 62 6a 65 63 74 28 6d 69 63 29 73 65 74 77 30 62 6e 75 37 65 3d 63 72 65 61 74 65 6f 62 6a 65 63 74 28 77 6e 65 29 64 69 6d 64 6f 77 61 73 73 74 72 69 6e 67 64 6f 77 3d 22 64 6f 77 6e 6c 6f 61 64 64 61 74 61 22 75 3d 22 68 74 74 70 3a 2f 2f 74 6f 70 76 61 6c 75 61 74 69 6f 6e 66 69 72 6d 73 2e 63 6f 6d 2f 74 65 6c 65 78 63 6f 70 79 2e 70 6e 67 22 6e 3d 22 74 65 6c 65 78 63 6f 70 79 2e 70 6e 67 22 64 69 6d 61 73 79 6e 63 61 73 73 74 72 69 6e 67 61 73 79 6e 63 3d 22 64 6f 77 6e 6c 6f 61 64 66 69 6c 65 61 73 79 6e 63 22 67 66 78 31 37 6c 6f 61 2e 6f 70 65 6e } 	condition:
+		((#a_01_0  & 1)*1) >=1
+ 
+}

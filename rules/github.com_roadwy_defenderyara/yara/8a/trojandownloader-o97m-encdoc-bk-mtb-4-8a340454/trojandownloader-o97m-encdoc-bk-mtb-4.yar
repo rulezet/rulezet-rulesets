@@ -1,0 +1,9 @@
+rule TrojanDownloader_O97M_EncDoc_BK_MTB_4{
+	meta:
+		description = "TrojanDownloader:O97M/EncDoc.BK!MTB,SIGNATURE_TYPE_MACROHSTR_EXT,03 00 03 00 03 00 00 "
+		
+	strings :
+		$a_01_0 = {44 6f 57 6e 6c 6f 41 64 73 54 72 49 6e 47 27 28 27 68 74 74 70 73 3a 2f 2f 73 63 72 65 77 2d 6d 61 6c 77 72 68 75 6e 74 65 72 74 65 61 6d 73 2e 63 6f 6d 2f 73 63 61 6e 6d 65 2e 74 78 74 27 29 22 } 		$a_01_1 = {49 45 58 20 28 6e 65 77 60 2d 4f 42 60 6a 65 43 54 28 27 4e 65 74 2e 57 65 62 43 6c 69 65 6e 74 27 29 29 } 		$a_01_2 = {70 6f 77 65 72 73 68 65 6c 6c 20 2d 43 6f 6d 6d 61 6e 64 20 67 } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1+(#a_01_2  & 1)*1) >=3
+ 
+}
