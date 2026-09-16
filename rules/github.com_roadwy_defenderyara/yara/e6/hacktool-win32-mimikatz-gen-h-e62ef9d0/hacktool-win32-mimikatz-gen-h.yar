@@ -1,0 +1,9 @@
+rule HackTool_Win32_Mimikatz_gen_H{
+	meta:
+		description = "HackTool:Win32/Mimikatz.gen!H,SIGNATURE_TYPE_PEHSTR_EXT,04 00 04 00 04 00 00 "
+		
+	strings :
+		$a_03_0 = {50 6a 00 68 00 01 00 00 6a 22 bb ?? ?? ?? ?? 53 6a 00 56 ff 15 ?? ?? ?? ?? 8b d0 85 d2 7c } 		$a_03_1 = {ba 03 c1 22 00 3b c2 0f 87 ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? ba 43 c0 22 00 3b c2 0f 87 ?? ?? ?? ?? 0f 84 ?? ?? ?? ?? 2d 03 c0 22 00 74 ?? 83 e8 04 74 } 		$a_03_2 = {53 68 69 77 69 6b ff 75 f8 6a 01 ff 15 ?? ?? ?? ?? 8b d8 } 		$a_03_3 = {68 69 77 69 6b ff 75 ec ff 15 ?? ?? ?? ?? 5b } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1+(#a_03_2  & 1)*1+(#a_03_3  & 1)*1) >=4
+ 
+}

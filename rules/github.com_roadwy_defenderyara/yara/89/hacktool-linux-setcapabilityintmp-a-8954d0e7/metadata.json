@@ -1,0 +1,22 @@
+{
+  "uuid": "8954d0e7-f06c-420b-be6f-368b0dd14e11",
+  "title": "HackTool_Linux_SetCapabilityInTmp_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "HackTool:Linux/SetCapabilityInTmp.A,SIGNATURE_TYPE_CMDHSTR_EXT,16 00 16 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/313820"
+}

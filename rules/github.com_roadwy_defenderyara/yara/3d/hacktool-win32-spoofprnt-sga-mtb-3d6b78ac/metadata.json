@@ -1,0 +1,22 @@
+{
+  "uuid": "3d6b78ac-39b1-4a92-9d69-2859545b402f",
+  "title": "HackTool_Win32_SpoofPrnt_SGA_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "HackTool:Win32/SpoofPrnt.SGA!MTB,SIGNATURE_TYPE_PEHSTR,05 00 05 00 06 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/313539"
+}
