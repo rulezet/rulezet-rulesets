@@ -1,0 +1,8 @@
+import "pe"
+rule ACProtect_V2_0____risco {
+  strings:
+    $a0 = { 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? C3 C3 }
+
+  condition:
+    $a0 at pe.entry_point
+}

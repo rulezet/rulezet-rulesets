@@ -1,0 +1,8 @@
+import "pe"
+rule T_PACK_v0_5c__m2 {
+  strings:
+    $a0 = { 68 ?? ?? FD 60 BE ?? ?? BF ?? ?? B9 ?? ?? F3 A4 8B F7 BF ?? ?? FC 46 E9 CE FD }
+
+  condition:
+    $a0 at pe.entry_point
+}

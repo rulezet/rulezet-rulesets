@@ -1,0 +1,8 @@
+import "pe"
+rule Vx__November_17_768 {
+  strings:
+    $a0 = { E8 ?? ?? 5E 81 EE ?? ?? 50 33 C0 8E D8 80 3E ?? ?? ?? 0E 1F ?? ?? FC }
+
+  condition:
+    $a0 at pe.entry_point
+}

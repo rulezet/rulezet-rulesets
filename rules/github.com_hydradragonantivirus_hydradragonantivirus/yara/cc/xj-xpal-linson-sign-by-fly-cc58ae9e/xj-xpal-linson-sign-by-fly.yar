@@ -1,0 +1,8 @@
+import "pe"
+rule XJ___XPAL____LiNSoN_____Sign_By_fly {
+  strings:
+    $a0 = { 55 8B EC 6A FF 68 ?? ?? 40 00 68 ?? ?? 40 00 64 A1 00 00 00 00 50 64 89 25 00 00 00 00 83 EC 44 53 56 57 66 9C }
+
+  condition:
+    $a0 at pe.entry_point
+}

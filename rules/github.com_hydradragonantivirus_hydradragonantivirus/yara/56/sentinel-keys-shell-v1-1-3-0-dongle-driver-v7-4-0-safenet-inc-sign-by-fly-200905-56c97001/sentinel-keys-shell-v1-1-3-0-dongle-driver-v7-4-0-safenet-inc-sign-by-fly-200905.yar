@@ -1,0 +1,8 @@
+import "pe"
+rule Sentinel_Keys_Shell_V1_1_3_0_Dongle_Driver_V7_4_0_____SafeNet_Inc______Sign_By_fly___20090524 {
+  strings:
+    $a0 = { 55 8B EC 81 EC 0C 01 00 00 53 56 57 C7 85 04 FF FF FF 00 00 00 00 C7 45 FC 00 00 00 00 C7 45 EC 00 00 00 00 C7 45 F8 00 00 00 00 C7 85 08 FF FF FF 00 00 00 00 C7 45 E4 04 00 00 00 83 3D ?? ?? ?? ?? 00 74 05 E9 ?? ?? 00 00 A1 ?? ?? ?? ?? 83 C0 01 }
+
+  condition:
+    $a0 at pe.entry_point
+}

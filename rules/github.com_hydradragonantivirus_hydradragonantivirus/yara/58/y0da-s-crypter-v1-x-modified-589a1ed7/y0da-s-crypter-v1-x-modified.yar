@@ -1,0 +1,8 @@
+import "pe"
+rule y0da_s_Crypter_v1_x___Modified {
+  strings:
+    $a0 = { 60 E8 00 00 00 00 5D 81 ED ?? ?? ?? ?? B9 ?? ?? 00 00 8D BD ?? ?? ?? ?? 8B F7 AC }
+
+  condition:
+    $a0 at pe.entry_point
+}

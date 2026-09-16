@@ -1,0 +1,8 @@
+import "pe"
+rule iLUCRYPT_v4_018_rule__exe_ {
+  strings:
+    $a0 = { 8B EC FA C7 ?? ?? ?? ?? 4C 4C C3 FB BF ?? ?? B8 ?? ?? 2E ?? ?? D1 C8 4F 81 }
+
+  condition:
+    $a0 at pe.entry_point
+}

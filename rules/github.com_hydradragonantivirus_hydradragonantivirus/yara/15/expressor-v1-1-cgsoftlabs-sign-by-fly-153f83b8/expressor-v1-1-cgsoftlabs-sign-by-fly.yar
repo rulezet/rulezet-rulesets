@@ -1,0 +1,8 @@
+import "pe"
+rule eXPressor_V1_1____CGSoftLabs_____Sign_By_fly {
+  strings:
+    $a0 = { E9 ?? ?? 00 00 E9 ?? ?? 00 00 E9 ?? 12 00 00 E9 ?? 0C 00 00 E9 ?? ?? 00 00 E9 ?? ?? 00 00 E9 ?? ?? 00 00 }
+
+  condition:
+    $a0 at pe.entry_point
+}

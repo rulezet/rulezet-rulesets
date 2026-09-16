@@ -1,0 +1,8 @@
+import "pe"
+rule Borland_Delphi_v5_0_KOL {
+  strings:
+    $a0 = { 55 8B EC 83 C4 F0 B8 ?? ?? 40 00 E8 ?? ?? FF FF E8 ?? ?? FF FF E8 ?? ?? FF FF 8B C0 00 00 00 00 00 00 00 00 00 00 00 }
+
+  condition:
+    $a0 at pe.entry_point
+}
