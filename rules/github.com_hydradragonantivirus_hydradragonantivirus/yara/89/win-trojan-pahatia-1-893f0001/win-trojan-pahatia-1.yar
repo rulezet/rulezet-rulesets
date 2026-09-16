@@ -1,0 +1,9 @@
+rule Win_Trojan_Pahatia_1
+{
+strings:
+	$a0 = { c745fc09000000684856400068f4554000ff1510114000c745fc0a0000006a026848564000ff1564114000 }
+
+
+condition:
+	$a0
+}

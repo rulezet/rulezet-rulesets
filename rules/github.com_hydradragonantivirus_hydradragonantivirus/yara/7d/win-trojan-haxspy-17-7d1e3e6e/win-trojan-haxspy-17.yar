@@ -1,0 +1,9 @@
+rule Win_Trojan_Haxspy_17
+{
+strings:
+	$a0 = { e887130000668cd8a804751e6a006a006a036a006a0068000000c06850410010e873130000a38b590010 }
+
+
+condition:
+	$a0
+}
