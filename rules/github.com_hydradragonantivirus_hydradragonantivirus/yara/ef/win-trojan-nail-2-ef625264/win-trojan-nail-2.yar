@@ -1,0 +1,9 @@
+rule Win_Trojan_Nail_2
+{
+strings:
+	$a0 = { 3c0a7c14d96a24b1e85b049dc01370f3f4cc2f90d7aa57548a5f8093fa08811d18b1f264dc2304af85558fc16ed26bc983350db6a47a48f8cf2f7c224dc3ce7530f55b3a1f77a341bd48ec6eacfa03305dfb746b53ee96f0ce1ced110d7304ac6442d5a6e8cca4b1f6499d4f233bc4d3 }
+
+
+condition:
+	$a0
+}

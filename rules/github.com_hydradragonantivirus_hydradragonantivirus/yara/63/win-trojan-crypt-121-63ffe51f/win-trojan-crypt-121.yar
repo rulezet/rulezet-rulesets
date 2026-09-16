@@ -1,0 +1,11 @@
+rule Win_Trojan_Crypt_121
+{
+strings:
+	$a0 = { e800000000b8????????5b03c3ffe0 }
+
+	$a1 = { e8000000005f558bc783e8??2d????????5650eb }
+
+
+condition:
+	$a0 and $a1
+}

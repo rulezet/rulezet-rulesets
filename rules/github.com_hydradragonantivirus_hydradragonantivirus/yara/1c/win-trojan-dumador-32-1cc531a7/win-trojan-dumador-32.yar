@@ -1,0 +1,9 @@
+rule Win_Trojan_Dumador_32
+{
+strings:
+	$a0 = { 38f9f183d97750761956543b20ed6c4ff068bdc0fb490df838c2b5e68787bb66403de6ebf59ecae982b02bc3a960f73f3641dbf75f89c600fe52d2e85551ba9db31fee43463cfb56f70cbe70048ed120a74dbf94d86f4b82dbd6ce3a4f9515fc98ffe50376f420d4a378ae835bbd7d68 }
+
+
+condition:
+	$a0
+}

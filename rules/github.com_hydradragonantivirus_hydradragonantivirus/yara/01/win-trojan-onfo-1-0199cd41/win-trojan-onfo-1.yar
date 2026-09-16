@@ -1,0 +1,9 @@
+rule Win_Trojan_Onfo_1
+{
+strings:
+	$a0 = { d74f204e4642f9ff4f5420534d555246204d45202184b9b576fb6b53457070e4ccfc6974ae024380a3a6dbb14d012866690e0031ce4dac0015b6621d73ab7f0a3605fcb663 }
+
+
+condition:
+	$a0
+}
