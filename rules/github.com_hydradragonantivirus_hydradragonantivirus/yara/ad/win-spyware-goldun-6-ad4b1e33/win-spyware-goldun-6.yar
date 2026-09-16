@@ -1,0 +1,9 @@
+rule Win_Spyware_Goldun_6
+{
+strings:
+	$a0 = { 34bdacf67087df2092e9006cab75386df7efa200ee52d3d2c15cc61a006ccd593ee7745b4e38b43da67b14006422cc86267305cfd016c3b010b99000d66b20aa6521f9019b7b57b8ca495fcce17406c3e4389ca62e0333acaa6167d4 }
+
+
+condition:
+	$a0
+}

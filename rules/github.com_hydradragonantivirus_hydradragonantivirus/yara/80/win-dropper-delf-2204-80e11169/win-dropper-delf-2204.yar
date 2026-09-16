@@ -1,0 +1,9 @@
+rule Win_Dropper_Delf_2204
+{
+strings:
+	$a0 = { 00a10228083e923a14881436044deb702106f2ad6db9dce3799dee74fc3bf817bdccee40b7bcc02f6f6c06de640b55906f160bdb6ee08d6415e5c80b5c80bc72035720d7ae482d7201c6e482d72016b901ebcc817bce641bdbdc85e5ef301bdce671e733bcffffff6fbfdf3e7dfbad79e7df3cfbe6bcdeff7f9eff0434bc1154c5fb1d8ec5bdd777f0c2fa1f }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Spyware_Small_62
+{
+strings:
+	$a0 = { 5818c24288b901676cbdb23ae460c7052c82af788a73c21cd9373ed2c58c530cb1a651d414571036374d5c26ab163538aa059e2ea859372d6438899ed18c8b01 }
+
+
+condition:
+	$a0
+}

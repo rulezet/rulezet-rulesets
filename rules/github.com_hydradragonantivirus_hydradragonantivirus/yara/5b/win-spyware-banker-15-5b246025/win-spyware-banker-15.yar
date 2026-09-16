@@ -1,0 +1,9 @@
+rule Win_Spyware_Banker_15
+{
+strings:
+	$a0 = { ebeb8be55dc30000ffffffff08000000494578706c6f726500000000ffffffff340000002268747470733a2f2f777777322e62616e636f62726173 }
+
+
+condition:
+	$a0
+}
