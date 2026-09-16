@@ -1,0 +1,9 @@
+rule Win_Trojan_Prosti_19
+{
+strings:
+	$a0 = { 486b1784a09cd6bd570ad18a43f5403c1e9bafc94799b771f17e30a3947fefbcb3bddc263af99745a993cfaa84d5b7f2ddea822dad2e1ee649feab0984183c6fe3927da63409401e52f9fa661fa5b21fb68faec437d30ad4b02a2bfcfb754ffc6b88fb24e8fda07c5bc14492ec14cef2651dd683b874bdac2014b3012ed2ab128301f933b806fffbf0ee59c3 }
+
+
+condition:
+	$a0
+}

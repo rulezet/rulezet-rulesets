@@ -1,0 +1,9 @@
+rule Win_Trojan_Hupigon_1593
+{
+strings:
+	$a0 = { 686450400050ff15585840008d5424108d4c2408526a066874584000c744241c18000000 }
+
+
+condition:
+	$a0
+}
