@@ -1,0 +1,9 @@
+rule Backdoor_BAT_AgentTesla_MTB{
+	meta:
+		description = "Backdoor:BAT/AgentTesla!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {26 16 00 03 6f ?? ?? 00 0a ?? 28 ?? ?? 00 0a ?? 3b ?? ?? 00 00 72 ?? ?? 00 70 28 ?? ?? 00 06 38 ?? ?? 00 00 72 ?? ?? 00 70 28 ?? ?? 00 06 } 	condition:
+		((#a_02_0  & 1)*1) >=1
+ 
+}
