@@ -1,0 +1,9 @@
+rule Win_Trojan_Hacdef_76
+{
+strings:
+	$a0 = { 80e2e4c2d065b33ab906e4d90e459290acd58bee6db7d0fe85de75b231367ca183d2787579d7e44f762c4cd1c5dbae70b3cc2fbe3abfbce00b709d33fd921e06c26ef8d27ebfffa381a70643d030ee715d1a7eac56deec919a08bea7aca655f676d4e5d2ab676587f09e04166e6e8225ceba14da157a29957219c2 }
+
+
+condition:
+	$a0
+}

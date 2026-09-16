@@ -1,0 +1,9 @@
+rule Win_Trojan_ProAgent_21_3
+{
+strings:
+	$a0 = { f708ad679c8dc1c2c0275fcaba78ce98a8f3d1d7e29d3abb4e755eecc01c5c0d3165b22aa0adc1a3911abd6c62027bbb0838a3b27bc4748aa90a9b024089522d2ece4d4df7019f7e0ef421e2db79730830a4220c5c854ec6821e1451f7a23910c5cbddd4bc8d09f74c632cd67fa5c88bee9a32c0097cb544d04ad0 }
+
+
+condition:
+	$a0
+}

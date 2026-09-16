@@ -1,0 +1,9 @@
+rule Win_Trojan_UltimaRat_2
+{
+strings:
+	$a0 = { 3cbd933cc3d07b547feebe6902325bd85be2be40d0b0624bd09fc542b0fafb31302d4b964a384c3fa893a9acfdd9f183720cbbec34d053cc4757165502100a99f76d1e7a01360b0aa7fdeeaae6c84f47ce5d57dfd6eadcb2b85477d06b4e1cd8da242b7935cd464d89b0a4e125a12418be7a91310fe9436e1247b8 }
+
+
+condition:
+	$a0
+}

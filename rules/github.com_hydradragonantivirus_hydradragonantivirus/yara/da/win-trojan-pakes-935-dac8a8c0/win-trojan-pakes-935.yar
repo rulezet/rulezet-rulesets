@@ -1,0 +1,9 @@
+rule Win_Trojan_Pakes_935
+{
+strings:
+	$a0 = { 3bebeb121cf1fc08ba851628a3389b99af17a69c4d6b672cf02d1025be6cbb9f0cc708ad29de55dee2250bb52c03c8bd844622889a6d6ccbddaae897dbd1de34c03766f0859066c7661f91208bcc2806fd0262bbedceeeb47bcd5238b61a124fe2c9166aad0726ebf971da23d0bc57de4244270da397cd82fd06e1 }
+
+
+condition:
+	$a0
+}

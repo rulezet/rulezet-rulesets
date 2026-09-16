@@ -1,0 +1,9 @@
+rule Win_Trojan_Qooloc_14
+{
+strings:
+	$a0 = { b41013fbf67f94212d7e77955791e8790ac7523ee50e507ddd6630d5e2f56159f3cfc1bc2ee66f3d98a6e827bbe0f74ace03acfded77dd7cb39f1bce6f6c45bebcf4f45300fe0bdd2575a78479d4f982f6ae10d7ca1e77d3191f5ae12c19b96f9fb72a31ea398c1a62a6679edbb02a1785f3b055749f864f0ddf95 }
+
+
+condition:
+	$a0
+}
