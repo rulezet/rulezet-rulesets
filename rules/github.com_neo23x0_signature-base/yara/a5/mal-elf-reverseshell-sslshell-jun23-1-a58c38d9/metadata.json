@@ -1,0 +1,21 @@
+{
+  "uuid": "a58c38d9-59b7-42a4-b451-9b615f355e4b",
+  "title": "MAL_ELF_ReverseShell_SSLShell_Jun23_1",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects reverse shell named SSLShell used in Barracuda ESG exploitation (CVE-2023-2868)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-2868"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186264"
+}

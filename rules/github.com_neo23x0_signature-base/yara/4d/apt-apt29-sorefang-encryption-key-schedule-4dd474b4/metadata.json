@@ -1,0 +1,20 @@
+{
+  "uuid": "4dd474b4-5903-4f6e-a6db-67e1bd6ab031",
+  "title": "APT_APT29_sorefang_encryption_key_schedule",
+  "format": "yara",
+  "author": "NCSC",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Rule to detect SoreFang based on the key schedule used for encryption",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185915"
+}

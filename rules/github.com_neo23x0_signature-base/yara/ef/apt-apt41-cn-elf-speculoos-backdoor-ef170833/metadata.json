@@ -1,0 +1,20 @@
+{
+  "uuid": "ef170833-42d2-40c4-9359-783c6d36e0b9",
+  "title": "APT_APT41_CN_ELF_Speculoos_Backdoor",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Speculoos Backdoor used by APT41",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185995"
+}

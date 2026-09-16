@@ -1,0 +1,19 @@
+{
+  "uuid": "5525651a-7b7d-4fbd-9e19-2f1418d8368f",
+  "title": "SUSP_EnableContent_String_Gen",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious string that asks to enable active content in Office Doc",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186269"
+}

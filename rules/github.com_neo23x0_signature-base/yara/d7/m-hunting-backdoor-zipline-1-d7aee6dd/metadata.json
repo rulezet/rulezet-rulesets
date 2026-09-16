@@ -1,0 +1,20 @@
+{
+  "uuid": "d7aee6dd-c2f0-43de-9f8a-e89fee137403",
+  "title": "M_Hunting_Backdoor_ZIPLINE_1",
+  "format": "yara",
+  "author": "Mandiant",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This rule detects unique strings in ZIPLINE, a passive ELF backdoor that waits for incoming TCP connections to receive commands from the threat actor.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186067"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "4d06ce7c-f5af-4ae2-880a-d23e7010c3b8",
+  "title": "EXPL_RAR_Archive_with_Path_Traversal_Aug25",
+  "format": "yara",
+  "author": "Arnim Rupp (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects RAR archives abused for path traversal like CVE-2025-8088 and CVE-2025-6218",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-6218",
+    "CVE-2025-8088"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186086"
+}

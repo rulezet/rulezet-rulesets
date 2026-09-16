@@ -1,0 +1,20 @@
+{
+  "uuid": "77ad7c02-078a-4a2d-9112-bbb6f81ed87f",
+  "title": "APT_APT29_sorefang_custom_encode_decode",
+  "format": "yara",
+  "author": "NCSC",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Rule to detect SoreFang based on the custom encoding/decoding algorithm function",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185944"
+}

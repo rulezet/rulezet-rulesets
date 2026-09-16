@@ -1,0 +1,21 @@
+{
+  "uuid": "51873436-ea25-4e65-b405-aa29cec1b2fc",
+  "title": "MAL_ELF_SALTWATER_Jun23_1",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects SALTWATER malware used in Barracuda ESG exploitations (CVE-2023-2868)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-2868"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186268"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "f9996b7e-6401-4522-8b74-ec628e9d6b12",
+  "title": "APT_APT29_sorefang_command_elem_cookie_ga_boundary_string",
+  "format": "yara",
+  "author": "NCSC",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Rule to detect SoreFang based on scheduled task element and Cookie header/boundary strings",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185928"
+}

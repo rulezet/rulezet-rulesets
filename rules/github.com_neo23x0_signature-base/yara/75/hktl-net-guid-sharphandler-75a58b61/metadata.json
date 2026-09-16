@@ -1,0 +1,19 @@
+{
+  "uuid": "75a58b61-721b-4fd8-8553-d77e3da285da",
+  "title": "HKTL_NET_GUID_SharpHandler",
+  "format": "yara",
+  "author": "Arnim Rupp (https://github.com/ruppde)",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "Detects .NET red/black-team tools via typelibguid",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186077"
+}
