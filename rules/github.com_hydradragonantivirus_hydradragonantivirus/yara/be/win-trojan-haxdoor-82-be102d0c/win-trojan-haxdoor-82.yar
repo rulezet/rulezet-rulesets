@@ -1,0 +1,9 @@
+rule Win_Trojan_Haxdoor_82
+{
+strings:
+	$a0 = { 17d603d746813e656261797f434304e37e041e77fe160917368ce2def639706179701832c847616c2e6390263913 }
+
+
+condition:
+	$a0
+}
