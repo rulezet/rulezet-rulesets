@@ -1,0 +1,22 @@
+{
+  "uuid": "d6f82f44-e334-4400-9236-a44298f693cf",
+  "title": "DITEKSHEN_INDICATOR_TOOL_PET_P0Wnedshell",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects compiled executables of p0wnedShell post-exploitation toolkit",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710194"
+}

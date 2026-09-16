@@ -1,0 +1,19 @@
+{
+  "uuid": "b06218b7-47ba-469b-891b-ca1eebcf0003",
+  "title": "MAL_Driver_Windowsrwinddkprovider_Netfiltersys_Windowsrwinddkdriver_2060",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_206006a1.sys",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710411"
+}

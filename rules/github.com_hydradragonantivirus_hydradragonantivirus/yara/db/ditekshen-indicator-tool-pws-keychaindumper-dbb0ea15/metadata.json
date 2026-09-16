@@ -1,0 +1,22 @@
+{
+  "uuid": "dbb0ea15-b713-4536-8a1e-77960167c4cb",
+  "title": "DITEKSHEN_INDICATOR_TOOL_PWS_Keychaindumper",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects macOS certificate/password keychain dumping tool",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"PWS\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710196"
+}

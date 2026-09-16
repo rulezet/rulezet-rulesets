@@ -1,0 +1,19 @@
+{
+  "uuid": "37343dd6-fbf8-48c6-93e1-04f0a9593e89",
+  "title": "MAL_Driver_Pinchinstechnologycoltd_Rwtkrlsys_Ransomwareterminator_1A74",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_1a74c2bd.sys",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710412"
+}

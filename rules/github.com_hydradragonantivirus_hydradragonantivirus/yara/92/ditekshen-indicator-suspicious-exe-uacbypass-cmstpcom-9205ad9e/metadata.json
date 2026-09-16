@@ -1,0 +1,24 @@
+{
+  "uuid": "9205ad9e-d1a0-41cf-ab86-c9a4810dc764",
+  "title": "DITEKSHEN_INDICATOR_SUSPICIOUS_EXE_Uacbypass_CMSTPCOM",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects Windows exceutables bypassing UAC using CMSTP COM interfaces. MITRE (T1218.003)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218",
+    "T1218.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710278"
+}

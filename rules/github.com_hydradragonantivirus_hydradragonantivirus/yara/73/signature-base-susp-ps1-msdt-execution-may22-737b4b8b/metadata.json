@@ -1,0 +1,21 @@
+{
+  "uuid": "737b4b8b-0f02-498e-a190-3ccbec57b8ef",
+  "title": "SIGNATURE_BASE_SUSP_PS1_Msdt_Execution_May22",
+  "format": "yara",
+  "author": "Nasreddine Bencherchali, Christian Burkard",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious calls of msdt.exe as seen in CVE-2022-30190 / Follina exploitation",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2022-30190"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710380"
+}

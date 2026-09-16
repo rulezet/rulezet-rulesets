@@ -1,0 +1,19 @@
+{
+  "uuid": "6ea0d20d-3fc4-42de-8609-c5a453a7a78e",
+  "title": "DITEKSHEN_INDICATOR_SUSPICIOUS_EXE_WMI_Enumeratevideodevice",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects executables attemping to enumerate video devices using WMI",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710309"
+}

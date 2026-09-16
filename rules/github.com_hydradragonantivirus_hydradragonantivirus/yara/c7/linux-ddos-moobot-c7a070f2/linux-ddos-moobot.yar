@@ -1,0 +1,24 @@
+import "elf"
+rule linux_ddos_moobot {
+  meta:
+    author      = "@_lubiedo"
+    date        = "2020-04-29"
+    description = "MOOBOT DDoS botnet"
+
+  strings:
+        $str0 = "The cow says moooooooo!" ascii
+    $str1 = ":44169" ascii
+    $str2 = ":1999" ascii
+    $str3 = "WriteMeHere" ascii
+    $str4 = "/bin/busybox MOOBOT\n" ascii
+    $str5 = "MOOBOT: applet not found" ascii
+    $str6 = "The cow says failed executeing" ascii
+    $str7 = "TheCowSaysGoodBye"
+
+  condition:
+    (elf.type == elf.ET_EXEC and
+            (elf.sections[6].name == ".gosymtab" or
+        elf.sections[7].name == ".gopclntab" or
+        elf.sections[8].name == ".go.buildinfo") and
+      filesize < 10MB) and 3 of ($str*)
+}

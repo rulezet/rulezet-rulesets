@@ -1,0 +1,19 @@
+{
+  "uuid": "a3bc28fc-6e2b-42d0-85f8-7d8956c6354b",
+  "title": "MAL_Driver_Dwadsafeloadsys_E112",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - driver_e1123b59.sys",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710421"
+}

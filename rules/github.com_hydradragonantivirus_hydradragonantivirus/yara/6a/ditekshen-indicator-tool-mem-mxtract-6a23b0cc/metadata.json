@@ -1,0 +1,21 @@
+{
+  "uuid": "6a23b0cc-f1ae-4e3d-b585-949e1c2c6289",
+  "title": "DITEKSHEN_INDICATOR_TOOL_MEM_Mxtract",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects mXtract, a linux-based tool that dumps memory for offensive pentration testing and can be used to scan memory for private keys, ips, and passwords using regexes.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710181"
+}

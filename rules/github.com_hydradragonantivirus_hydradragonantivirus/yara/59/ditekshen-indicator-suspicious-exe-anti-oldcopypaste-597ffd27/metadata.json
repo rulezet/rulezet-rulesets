@@ -1,0 +1,20 @@
+{
+  "uuid": "597ffd27-2da5-4cb5-af65-5c5ea58f3e44",
+  "title": "DITEKSHEN_INDICATOR_SUSPICIOUS_EXE_Anti_Oldcopypaste",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects executables potentially checking for WinJail sandbox window",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Virus\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710310"
+}
