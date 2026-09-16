@@ -1,0 +1,9 @@
+rule Win_Adware_Craagle_3
+{
+strings:
+	$a0 = { 5b70726f78795d20757365616c776179733d30[0-34]5b67656e6572616c5d206c696d69747365617263683d2d31 }
+
+
+condition:
+	$a0
+}

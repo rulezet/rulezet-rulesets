@@ -1,0 +1,9 @@
+rule Win_Adware_Lop_165
+{
+strings:
+	$a0 = { ee89276c2c36893a9bf47ab6d91ebba954ef37afe2b41dfc8a8721301733be9868c73cc105a573c47217eb96ba9e7142cc1835ad580420fe48a95af6e4e0e90dee5eba6107c51239d35a315dc32dc70f3ef4034d98d0a6dedcbc87a93e1874849a11 }
+
+
+condition:
+	$a0
+}

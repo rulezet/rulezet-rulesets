@@ -1,0 +1,9 @@
+rule Win_Adware_Search_21
+{
+strings:
+	$a0 = { 558bec6a006a006a0033c0556805e84a0064ff306489208d45f8e83138fdff8b45f88d4dfcba18e84a00e8494ffdff8b4dfcba30e84a00b844e84a00e8a74dfdff8d45f4e80738fdff8b45f4ba18e84a00e8ba52fdff33c05a5959648910680ce84a00 }
+
+
+condition:
+	$a0
+}

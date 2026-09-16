@@ -1,0 +1,9 @@
+rule Win_Adware_RSpy_1
+{
+strings:
+	$a0 = { 746f702e68ea6d706c0e343138360a3c0b183e0c65614164ed69f7e79fa044414e474501523a2053505957efc7a23c2f9317c0736372f2 }
+
+
+condition:
+	$a0
+}

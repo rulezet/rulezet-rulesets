@@ -1,0 +1,9 @@
+rule Win_Adware_Lookme_32
+{
+strings:
+	$a0 = { 1dedf1ac9139f6c7e6c32ab16504962ffc4bb43dda16fcad15e772331a880550591468f295a29069f6394e24e94d23bc0fe3f6b8b6f38052583fe334da33f6f7c65197a543cd2d899c9227cbc623eb707faeb2ea6178bcf95b5ede2e59036b0d5baabd42688050ffed187ceaee20 }
+
+
+condition:
+	$a0
+}

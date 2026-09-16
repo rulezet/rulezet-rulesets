@@ -1,0 +1,9 @@
+rule Win_Adware_Virtumonde_127
+{
+strings:
+	$a0 = { 444541424339303236367d00000000ffffffff6170746d6e647577706f672c687374666b7370646a727b35413345 }
+
+
+condition:
+	$a0
+}

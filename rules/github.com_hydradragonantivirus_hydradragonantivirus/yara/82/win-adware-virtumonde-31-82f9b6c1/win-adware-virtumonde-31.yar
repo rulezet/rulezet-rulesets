@@ -1,0 +1,9 @@
+rule Win_Adware_Virtumonde_31
+{
+strings:
+	$a0 = { 344ad5aa55214623da1a75ebd6250f46e1c7274e34310a7bee46d6dbef611d7af5ead4a5d0f556ae5d5388ebd6adda0ecbd7af5fbf737cb6e7cd9bbc69e565757070d5aa552011a6d02ad5ebd6adda8f6ba2b999bc7daf35606d9b376fde5575f8152a2113a3dce3b13acd4ad6ad5ab564521f5fbe7c72e366773b376fdebc0fe56185a2d511f7ae5dba }
+
+
+condition:
+	$a0
+}

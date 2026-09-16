@@ -1,0 +1,9 @@
+rule Win_Adware_Toolbar_38
+{
+strings:
+	$a0 = { 5400000000cceccfc2cbd1cbf70000000026746d3d00000000535052494e4720544f555200687474703a2f2f69656261722e74 }
+
+
+condition:
+	$a0
+}

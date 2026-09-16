@@ -1,0 +1,9 @@
+rule Win_Adware_Navipro_30
+{
+strings:
+	$a0 = { 3e76fd70fddff8d6ca64f923fb900d020d61e5c6be37bfd57f68438be2e9a2d3054626c20064dc1cabf4d372fab27dffc3e1c4bac1e68fa9bd51963a0246301506bfd74c7619e43c1caa1723f2d66efd8689f9efeca8c6a1a01d61f148b9e9251ff475f011e02b98023d5ad796aa938d9accea1a046c5c11a9bdadcd2cbfd7b6307a4fcd446d28ac04678122 }
+
+
+condition:
+	$a0
+}

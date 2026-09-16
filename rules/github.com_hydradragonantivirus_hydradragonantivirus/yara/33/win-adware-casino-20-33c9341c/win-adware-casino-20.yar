@@ -1,0 +1,9 @@
+rule Win_Adware_Casino_20
+{
+strings:
+	$a0 = { 75726163616f3121301f060355040a1418436173696e6f2056696c6c616765204f6e204e6574204e }
+
+
+condition:
+	$a0
+}

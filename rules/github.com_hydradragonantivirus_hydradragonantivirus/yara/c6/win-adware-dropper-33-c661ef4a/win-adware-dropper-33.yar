@@ -1,0 +1,9 @@
+rule Win_Adware_Dropper_33
+{
+strings:
+	$a0 = { 909c7c9abc2341f8563627b0fb636c4f6773039ba5ec7e94e34f667c359b6348663b5dde13a1f827325e63731afbdfcbf18f60bc9bcd2bd87d1bdbf5f0d7b359ccee7d1cbf9ebe7a3673d89d3e895c9d26efb1107e259bb3d8fd20d7cf458cf7b27935bbf7b23d93cd4d6c96b1fb718e3f89f1556c8ee6fcff80f37f39e3836c4e65 }
+
+
+condition:
+	$a0
+}
