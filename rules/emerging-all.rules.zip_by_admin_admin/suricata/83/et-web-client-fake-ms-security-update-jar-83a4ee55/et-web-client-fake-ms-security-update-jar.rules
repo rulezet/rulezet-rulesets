@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET WEB_CLIENT Fake MS Security Update (Jar)"; flow:established,to_client; flowbits:set,et.exploitkitlanding; file.data; content:"Microsoft Security Update"; content:"applet_ssv_validated"; fast_pattern; classtype:exploit-kit; sid:2017549; rev:5; metadata:created_at 2013_10_02, signature_severity Major, updated_at 2024_03_14;)

@@ -1,0 +1,1 @@
+alert tcp any 6666:7000 -> any any (msg:"ET CHAT IRC PING command"; flow:established,to_client; flowbits:set,is_proto_irc; content:"PING|20|"; classtype:misc-activity; sid:2002027; rev:18; metadata:created_at 2010_07_30, signature_severity Informational, updated_at 2024_03_14;)

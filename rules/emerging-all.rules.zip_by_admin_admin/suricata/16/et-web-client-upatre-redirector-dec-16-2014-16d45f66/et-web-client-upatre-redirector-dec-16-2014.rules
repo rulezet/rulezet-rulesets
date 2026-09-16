@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET WEB_CLIENT Upatre Redirector Dec 16 2014"; flow:established,to_client; flowbits:isset,Upatre.Redirector; file.data; content:"PK|03 04|"; within:4; classtype:trojan-activity; sid:2019954; rev:4; metadata:created_at 2014_12_17, signature_severity Major, updated_at 2024_03_14;)

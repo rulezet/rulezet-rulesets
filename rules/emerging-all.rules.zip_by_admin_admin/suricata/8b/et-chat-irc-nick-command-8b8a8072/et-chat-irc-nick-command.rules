@@ -1,0 +1,1 @@
+alert tcp any any -> any 6666:7000 (msg:"ET CHAT IRC NICK command"; flow:established,to_server; flowbits:set,is_proto_irc; content:"NICK|20|"; nocase; content:"|0a|"; within:40; classtype:misc-activity; sid:2002024; rev:21; metadata:created_at 2010_07_30, signature_severity Informational, updated_at 2024_03_14;)

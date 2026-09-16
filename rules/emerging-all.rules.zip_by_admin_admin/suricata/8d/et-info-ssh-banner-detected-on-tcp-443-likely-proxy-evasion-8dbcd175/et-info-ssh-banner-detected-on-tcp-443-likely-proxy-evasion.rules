@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 443 -> $HOME_NET any (msg:"ET INFO SSH banner detected on TCP 443 likely proxy evasion"; flow:established,to_client; flowbits:set,ET.is_ssh_server_banner; content:"SSH-"; depth:4; classtype:bad-unknown; sid:2013936; rev:8; metadata:created_at 2011_11_21, confidence High, signature_severity Informational, updated_at 2024_03_14;)

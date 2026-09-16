@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 6666:7000 (msg:"GPL CHAT IRC Channel join"; flow:established,to_server; flowbits:set,is_proto_irc; content:"JOIN|20 3a 20 23|"; fast_pattern; nocase; classtype:policy-violation; sid:2101729; rev:14; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_14;)

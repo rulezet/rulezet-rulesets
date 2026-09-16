@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET INFO Zip File"; flow:established,to_client; flowbits:set,et.http.PK; flowbits:noalert; file.data; content:"PK|03 04|"; within:4; classtype:misc-activity; sid:2017669; rev:7; metadata:created_at 2013_11_06, confidence High, signature_severity Informational, updated_at 2024_03_14;)

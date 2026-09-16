@@ -1,0 +1,1 @@
+alert tcp any any -> any 6666:7000 (msg:"ET CHAT IRC PONG response"; flow:established,to_server; flowbits:set,is_proto_irc; content:"PONG|20|"; depth:5; classtype:misc-activity; sid:2002028; rev:22; metadata:created_at 2010_07_30, signature_severity Informational, updated_at 2024_03_14;)

@@ -1,0 +1,1 @@
+alert ftp $HOME_NET any -> any any (msg:"ET INFO FTP Login Successful"; flow:established,to_client; flowbits:isnotset,ftp.user.logged_in; flowbits:isset,ET.ftp.user.login; flowbits:set,ftp.user.logged_in; content:"230 "; depth:4; classtype:misc-activity; sid:2003410; rev:11; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_14;)
