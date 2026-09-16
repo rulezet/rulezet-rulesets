@@ -1,0 +1,9 @@
+rule Win_Trojan_Microbes_2
+{
+strings:
+	$a0 = { eb05a4341225128cc88ed88ed0bc00f0fba113042d0400a31304b106d3e08ec006c706d7010000c706d9010800c606db0102b9040051b402b001b5278a0edb01b601b2008b1ed7 }
+
+
+condition:
+	$a0
+}

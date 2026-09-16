@@ -1,0 +1,9 @@
+rule Win_Trojan_Malmsey_2
+{
+strings:
+	$a0 = { 8bf6b44eb92700ba8102cd217209e83a017504b44febf3b42acd2180fa03750580fe0a7402cd20c606870200b400b003cd10b408cd10a28902803e8902007505 }
+
+
+condition:
+	$a0
+}

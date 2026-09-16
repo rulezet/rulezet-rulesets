@@ -1,0 +1,9 @@
+rule Win_Trojan_Lirva_2
+{
+strings:
+	$a0 = { 877096dcd82963bbd03e5110616c1c72776548f4e8689435724d03b1ddfddf112e3a3a5d7c4b615a416b484b4e7c5b0f2e9d716be2044f32846329bb766374add07b47e8b690 }
+
+
+condition:
+	$a0
+}

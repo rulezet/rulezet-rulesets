@@ -1,0 +1,9 @@
+rule Win_Trojan_Malign_2
+{
+strings:
+	$a0 = { 35900001004c3fde9a4d616c69676e245761697420242e247603004008013e00bb01709f0001400f8d1391022a2e }
+
+
+condition:
+	$a0
+}

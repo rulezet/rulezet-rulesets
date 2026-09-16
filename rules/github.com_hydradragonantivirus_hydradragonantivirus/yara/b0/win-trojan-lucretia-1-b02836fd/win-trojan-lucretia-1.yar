@@ -1,0 +1,9 @@
+rule Win_Trojan_Lucretia_1
+{
+strings:
+	$a0 = { 52e8bd095ab8004ccd21cd205374616e646172642022676f6174222066696c6520627920446d69747279204f2e }
+
+
+condition:
+	$a0
+}

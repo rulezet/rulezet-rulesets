@@ -1,0 +1,9 @@
+rule Win_Trojan_Lokjaw_1
+{
+strings:
+	$a0 = { 405b6c196b7504575d2e611d2e256b06644d16244548242e7062194762066d2e242e052e7b70621945142d455d2e7b }
+
+
+condition:
+	$a0
+}

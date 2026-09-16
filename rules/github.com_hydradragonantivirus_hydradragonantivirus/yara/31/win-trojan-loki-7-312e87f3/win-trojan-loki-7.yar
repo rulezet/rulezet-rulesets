@@ -1,0 +1,9 @@
+rule Win_Trojan_Loki_7
+{
+strings:
+	$a0 = { 8bf381c6a603b90500f3a4cd713d9999750bb8000133f633f733c9ffe08bfb81ef000133c08ec026a18400268b1e860089858e04899d90040e0789a592 }
+
+
+condition:
+	$a0
+}
