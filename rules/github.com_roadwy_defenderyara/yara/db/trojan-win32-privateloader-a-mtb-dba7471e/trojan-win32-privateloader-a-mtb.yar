@@ -1,0 +1,9 @@
+rule Trojan_Win32_PrivateLoader_A_MTB{
+	meta:
+		description = "Trojan:Win32/PrivateLoader.A!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {2b f1 66 c1 ca ?? 66 85 ee 0f bb d1 8b 4d ?? 66 c1 e2 ?? 66 8b d1 f9 85 c7 66 c1 ea 05 66 85 cc f8 66 81 fd ?? ?? 66 2b ca 66 89 8c 5f } 	condition:
+		((#a_03_0  & 1)*2) >=2
+ 
+}

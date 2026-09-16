@@ -1,0 +1,9 @@
+rule Trojan_Win32_CoinMinerCrypt_MR_MTB{
+	meta:
+		description = "Trojan:Win32/CoinMinerCrypt.MR!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {29 c2 43 89 ?? ba ?? ?? ?? ?? 39 ?? 90 18 bf ?? ?? ?? ?? 42 e8 ?? ?? ?? ?? 09 ?? 42 4a 31 ?? 89 ?? 81 } 	condition:
+		((#a_02_0  & 1)*1) >=1
+ 
+}

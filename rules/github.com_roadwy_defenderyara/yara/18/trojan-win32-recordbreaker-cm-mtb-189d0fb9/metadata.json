@@ -1,0 +1,22 @@
+{
+  "uuid": "189d0fb9-5d9c-41f1-8f1e-cc444827a134",
+  "title": "Trojan_Win32_RecordBreaker_CM_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/RecordBreaker.CM!MTB,SIGNATURE_TYPE_PEHSTR_EXT,06 00 06 00 01 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/277733"
+}
