@@ -1,0 +1,24 @@
+{
+  "uuid": "5e18c771-af30-4381-a52c-8be9393d5dd5",
+  "title": "Potential SPN Enumeration Via Setspn.EXE",
+  "format": "sigma",
+  "author": "Markus Neis, keepwatch",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects service principal name (SPN) enumeration used for Kerberoasting",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1208",
+    "T1558.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364801"
+}

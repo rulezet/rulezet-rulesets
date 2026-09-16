@@ -1,0 +1,26 @@
+{
+  "uuid": "25edd1f3-0c4e-4b09-9d54-0580b753d355",
+  "title": "Sdiagnhost Calling Suspicious Child Process",
+  "format": "sigma",
+  "author": "Nextron Systems, @Kostastsale",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects sdiagnhost.exe calling a suspicious child process (e.g. used in exploits for Follina / CVE-2022-30190)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1218"
+  ],
+  "cve": [
+    "CVE-2022-30190"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364690"
+}

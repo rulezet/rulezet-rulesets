@@ -1,0 +1,23 @@
+{
+  "uuid": "87f022bb-3ccb-492b-8fac-c2767d4fada5",
+  "title": "Imports Registry Key From an ADS",
+  "format": "sigma",
+  "author": "Oddvar Moe, Sander Wiebing, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the import of a alternate datastream to the registry with regedit.exe.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364871"
+}

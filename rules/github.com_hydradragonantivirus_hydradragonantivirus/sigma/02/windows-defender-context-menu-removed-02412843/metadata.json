@@ -1,0 +1,26 @@
+{
+  "uuid": "02412843-0fb7-40fe-a536-206099cac7f7",
+  "title": "Windows Defender Context Menu Removed",
+  "format": "sigma",
+  "author": "Matt Anderson (Huntress)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of reg.exe or PowerShell to delete the Windows Defender context menu handler registry keys.\nThis action removes the \"Scan with Microsoft Defender\" option from the right-click menu for files, directories, and drives.\nAttackers may use this technique to hinder manual, on-demand scans and reduce the visibility of the security product.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:tool=\"Empire\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364529"
+}

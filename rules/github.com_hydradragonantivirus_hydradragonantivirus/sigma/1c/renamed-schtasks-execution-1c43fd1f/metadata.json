@@ -1,0 +1,24 @@
+{
+  "uuid": "1c43fd1f-dc3a-407f-bae3-f8d06cea3e5f",
+  "title": "Renamed Schtasks Execution",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of renamed schtasks.exe binary, which is a legitimate Windows utility used for scheduling tasks.\nOne of the very common persistence techniques is schedule malicious tasks using schtasks.exe.\nSince, it is heavily abused, it is also heavily monitored by security products. To evade detection, threat actors may rename the schtasks.exe binary to schedule their malicious tasks.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.003",
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364740"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "ef92b783-e11c-419d-b452-c7e07457a582",
+  "title": "Recon Command Output Piped To Findstr.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of a potential recon command where the results are piped to \"findstr\". This is meant to trigger on inline calls of \"cmd.exe\" via the \"/c\" or \"/k\" for example.\nAttackers often time use this technique to extract specific information they require in their reconnaissance phase.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1057"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364681"
+}

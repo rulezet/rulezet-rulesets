@@ -1,0 +1,23 @@
+{
+  "uuid": "ca2d9997-7886-4b60-a522-47790a62d64f",
+  "title": "Change Default File Association Via Assoc",
+  "format": "sigma",
+  "author": "Timur Zinniatullin, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects file association changes using the builtin \"assoc\" command.\nWhen a file is opened, the default program used to open the file (also called the file association or handler) is checked. File association selections are stored in the Windows Registry and can be edited by users, administrators, or programs that have Registry access or by administrators using the built-in assoc utility. Applications can modify the file association for a given file extension to call an arbitrary program when a file with the given extension is opened.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364577"
+}

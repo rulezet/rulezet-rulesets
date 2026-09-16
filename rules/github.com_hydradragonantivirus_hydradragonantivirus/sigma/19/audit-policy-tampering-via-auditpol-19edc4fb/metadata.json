@@ -1,0 +1,24 @@
+{
+  "uuid": "19edc4fb-0db9-4809-b959-7aa3c2676e08",
+  "title": "Audit Policy Tampering Via Auditpol",
+  "format": "sigma",
+  "author": "Janantha Marasinghe (https://github.com/blueteam0ps)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Threat actors can use auditpol binary to change audit policy configuration to impair detection capability.\nThis can be carried out by selectively disabling/removing certain audit policies as well as restoring a custom policy owned by the threat actor.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:backdoor=\"SUNBURST\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364610"
+}

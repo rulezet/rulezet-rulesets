@@ -1,0 +1,24 @@
+{
+  "uuid": "de8664fe-5cae-4854-a6d8-41517118c76c",
+  "title": "Suspicious Microsoft OneNote Child Process",
+  "format": "sigma",
+  "author": "Tim Rauch (Nextron Systems), Nasreddine Bencherchali (Nextron Systems), Elastic (idea)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious child processes of the Microsoft OneNote application. This may indicate an attempt to execute malicious embedded objects from a .one file.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364647"
+}

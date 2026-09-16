@@ -1,0 +1,24 @@
+{
+  "uuid": "f3a4d66b-5ec0-4c36-a3a6-d79af86d3e68",
+  "title": "Potential Encoded PowerShell Patterns In CommandLine",
+  "format": "sigma",
+  "author": "Teymur Kheirkhabarov (idea), Vasiliy Burov (rule), oscd.community, Tim Shelton",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects specific combinations of encoding methods in PowerShell via the commandline",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364620"
+}

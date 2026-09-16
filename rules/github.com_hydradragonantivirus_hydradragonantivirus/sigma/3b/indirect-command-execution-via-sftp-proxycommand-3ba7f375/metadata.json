@@ -1,0 +1,23 @@
+{
+  "uuid": "3ba7f375-3449-4437-9bc2-46d3d203032d",
+  "title": "Indirect Command Execution via SFTP ProxyCommand",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of SFTP.exe to execute commands indirectly via ProxyCommand parameter.\nThreat actors were seen leveraging this legitimate Windows binary to bypass security controls and execute arbitrary commands while evading detection.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364440"
+}

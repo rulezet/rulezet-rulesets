@@ -1,0 +1,23 @@
+{
+  "uuid": "016e756b-7839-45d9-afa1-dd341e956e9b",
+  "title": "Malicious Windows Script Components File Execution by TAEF Detection",
+  "format": "sigma",
+  "author": "Agro (@agro_sev) oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Windows Test Authoring and Execution Framework (TAEF) framework allows you to run automation by executing tests files written on different languages (C, C#, Microsoft COM Scripting interfaces\nAdversaries may execute malicious code (such as WSC file with VBScript, dll and so on) directly by running te.exe\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364522"
+}

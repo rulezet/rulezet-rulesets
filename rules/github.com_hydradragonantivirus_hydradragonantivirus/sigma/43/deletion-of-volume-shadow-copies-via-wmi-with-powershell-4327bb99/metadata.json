@@ -1,0 +1,25 @@
+{
+  "uuid": "4327bb99-a75c-4a72-97a3-0d75dbb259db",
+  "title": "Deletion of Volume Shadow Copies via WMI with PowerShell",
+  "format": "sigma",
+  "author": "Tim Rauch, Elastic (idea)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects deletion of Windows Volume Shadow Copies with PowerShell code and Get-WMIObject. This technique is used by numerous ransomware families such as Sodinokibi/REvil",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364713"
+}

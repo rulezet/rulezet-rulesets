@@ -1,0 +1,25 @@
+{
+  "uuid": "a7d356a3-f488-43b3-966b-a46c3f967ece",
+  "title": "Powershell Executed From Headless ConHost Process",
+  "format": "sigma",
+  "author": "Matt Anderson (Huntress)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of powershell commands from headless ConHost window.\nThe \"--headless\" flag hides the windows from the user upon execution.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1059.003",
+    "T1564.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364624"
+}

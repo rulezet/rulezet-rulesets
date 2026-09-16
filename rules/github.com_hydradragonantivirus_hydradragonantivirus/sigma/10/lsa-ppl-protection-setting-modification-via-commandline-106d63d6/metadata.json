@@ -1,0 +1,23 @@
+{
+  "uuid": "106d63d6-2efa-47a4-8940-6dd276361152",
+  "title": "LSA PPL Protection Setting Modification via CommandLine",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects modification of LSA PPL protection settings via CommandLine.\nIt may indicate an attempt to disable protection and enable credential dumping tools to access LSASS process memory.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1689"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364700"
+}

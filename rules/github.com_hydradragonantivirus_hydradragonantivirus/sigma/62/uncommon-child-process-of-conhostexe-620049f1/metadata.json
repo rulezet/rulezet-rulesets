@@ -1,0 +1,23 @@
+{
+  "uuid": "620049f1-9c9a-4831-9b54-6f2127cb005a",
+  "title": "Uncommon Child Process Of Conhost.EXE",
+  "format": "sigma",
+  "author": "omkar72",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects uncommon \"conhost\" child processes. This could be a sign of \"conhost\" usage as a LOLBIN or potential process injection activity.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364720"
+}

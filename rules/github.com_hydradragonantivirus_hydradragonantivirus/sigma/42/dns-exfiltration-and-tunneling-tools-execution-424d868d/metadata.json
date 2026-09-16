@@ -1,0 +1,25 @@
+{
+  "uuid": "424d868d-7003-4383-87d1-5c8d6864cbb1",
+  "title": "DNS Exfiltration and Tunneling Tools Execution",
+  "format": "sigma",
+  "author": "Daniil Yugoslavskiy, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Well-known DNS Exfiltration tools execution",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1048.001",
+    "T1071.004",
+    "T1132.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364541"
+}

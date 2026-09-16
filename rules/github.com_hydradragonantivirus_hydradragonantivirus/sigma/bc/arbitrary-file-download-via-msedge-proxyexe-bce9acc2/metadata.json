@@ -1,0 +1,23 @@
+{
+  "uuid": "bce9acc2-1452-49f5-96c7-2c1e2afc2804",
+  "title": "Arbitrary File Download Via MSEDGE_PROXY.EXE",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects usage of \"msedge_proxy.exe\" to download arbitrary files",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364436"
+}

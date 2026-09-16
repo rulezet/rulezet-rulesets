@@ -1,0 +1,24 @@
+{
+  "uuid": "ba35848e-17f9-441a-b3e2-d6d8791e9512",
+  "title": "Potential Arbitrary Command Execution Via FTP.EXE",
+  "format": "sigma",
+  "author": "Victor Sergeev, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects execution of \"ftp.exe\" script with the \"-s\" or \"/s\" flag and any child processes ran by \"ftp.exe\".",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364821"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "faa7f4de-8c23-467f-878b-29c2412729f7",
+  "title": "XSL Script Execution Via WMIC.EXE",
+  "format": "sigma",
+  "author": "Timur Zinniatullin, oscd.community, Swachchhanda Shrawan Poudel",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of WMIC with the \"format\" flag to potentially load local XSL files.\nAdversaries abuse this functionality to execute arbitrary files while potentially bypassing application whitelisting defenses.\nExtensible Stylesheet Language (XSL) files are commonly used to describe the processing and rendering of data within XML files.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1059.005",
+    "T1059.007",
+    "T1220"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364575"
+}

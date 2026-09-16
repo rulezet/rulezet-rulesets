@@ -1,0 +1,23 @@
+{
+  "uuid": "e7b260e3-8164-45e2-ab51-0f6324539336",
+  "title": "Suspicious Network Command",
+  "format": "sigma",
+  "author": "frack113, Christopher Peacock '@securepeacock', SCYTHE '@scythe_io'",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries may look for details about the network configuration and settings of systems they access or through information discovery of remote systems",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1016"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364475"
+}

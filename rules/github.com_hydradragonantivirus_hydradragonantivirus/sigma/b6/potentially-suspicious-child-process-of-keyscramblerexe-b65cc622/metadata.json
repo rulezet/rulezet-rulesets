@@ -1,0 +1,24 @@
+{
+  "uuid": "b65cc622-9fa0-4816-bb57-ae4a37ab71a5",
+  "title": "Potentially Suspicious Child Process of KeyScrambler.exe",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects potentially suspicious child processes of KeyScrambler.exe",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1203",
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364914"
+}

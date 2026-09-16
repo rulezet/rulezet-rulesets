@@ -1,0 +1,25 @@
+{
+  "uuid": "0920d004-e8fa-4bb7-900d-edc6f6724706",
+  "title": "Potential Dropper Script Execution Via WScript/CScript/MSHTA",
+  "format": "sigma",
+  "author": "Margaritis Dimitrios (idea), Florian Roth (Nextron Systems), oscd.community, Nasreddine Bencherchali (Nextron Systems), Dave Johnson",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects wscript/cscript/mshta executions of scripts located in user directories",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.005",
+    "T1059.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364857"
+}

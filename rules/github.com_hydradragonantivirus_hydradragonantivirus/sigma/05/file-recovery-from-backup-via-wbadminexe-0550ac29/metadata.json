@@ -1,0 +1,23 @@
+{
+  "uuid": "0550ac29-3c8f-4349-ab2d-2b868d7fdefa",
+  "title": "File Recovery From Backup Via Wbadmin.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the recovery of files from backups via \"wbadmin.exe\".\nAttackers can restore sensitive files such as NTDS.DIT or Registry Hives from backups in order to potentially extract credentials.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364463"
+}

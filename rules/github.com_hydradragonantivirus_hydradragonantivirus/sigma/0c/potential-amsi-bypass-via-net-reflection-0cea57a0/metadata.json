@@ -1,0 +1,23 @@
+{
+  "uuid": "0cea57a0-42c0-474c-bae7-59538d701213",
+  "title": "Potential AMSI Bypass Via .NET Reflection",
+  "format": "sigma",
+  "author": "Markus Neis, @Kostastsale",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects Request to \"amsiInitFailed\" that can be used to disable AMSI Scanning",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364677"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "46990e73-9564-4a99-bf7d-8b1471e0697f",
+  "title": "Potential Command Line Path Traversal Evasion Attempt",
+  "format": "sigma",
+  "author": "Christian Burkard (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects potential evasion or obfuscation attempts using bogus path traversal via the commandline",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364844"
+}

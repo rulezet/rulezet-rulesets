@@ -1,0 +1,23 @@
+{
+  "uuid": "783b6ce1-6f19-4eaa-8c8a-08c06b0ed2cb",
+  "title": "Potential Defense Evasion Via Right-to-Left Override",
+  "format": "sigma",
+  "author": "Micah Babinski, @micahbabinski, Swachchhanda Shrawan Poudel (Nextron Systems), Luc Génaux",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the presence of the \"u202+E\" character, which causes a terminal, browser, or operating system to render text in a right-to-left sequence.\nThis character is used as an obfuscation and masquerading techniques by adversaries to trick users into opening malicious files.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364494"
+}

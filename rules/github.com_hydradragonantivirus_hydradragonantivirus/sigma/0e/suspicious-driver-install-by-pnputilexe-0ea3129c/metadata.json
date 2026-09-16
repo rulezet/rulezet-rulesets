@@ -1,0 +1,23 @@
+{
+  "uuid": "0ea3129c-fa4e-4b35-bb61-a528881b95da",
+  "title": "Suspicious Driver Install by pnputil.exe",
+  "format": "sigma",
+  "author": "Hai Vaknin @LuxNoBulIshit, Avihay eldad  @aloneliassaf, Austin Songer @austinsonger",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects when a possible suspicious driver is being installed via pnputil.exe lolbin",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1547"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364820"
+}

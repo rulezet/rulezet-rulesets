@@ -1,0 +1,24 @@
+{
+  "uuid": "ebb0d873-e169-4ea6-95ea-8215b7c582b4",
+  "title": "Windows EventLog Autologger Session Registry Modification Via CommandLine",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects attempts to disable Windows EventLog autologger sessions via registry modification.\nThe AutoLogger event tracing session records events that occur early in the operating system boot process.\nApplications and device drivers can use the AutoLogger session to capture traces before the user logs in.\nAdversaries may disable these sessions to evade detection and prevent security monitoring of early boot activities and system events.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562.001",
+    "T1685.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364919"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "ff0294e8-1ab0-4f8c-83a9-d5521fff6065",
+  "title": "Uncommon One Time Only Scheduled Task At 00:00",
+  "format": "sigma",
+  "author": "pH-T (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects scheduled task creation events that include suspicious actions, and is run once at 00:00",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364425"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "1402f401-9c44-4f7a-bc4a-4088f4d8addc",
+  "title": "RDP Enable or Disable via Win32_TerminalServiceSetting WMI Class",
+  "format": "sigma",
+  "author": "Daniel Koifman (KoifSec), Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects enabling or disabling of Remote Desktop Protocol (RDP) using alternate methods such as WMIC or PowerShell.\nIn PowerShell one-liner commands, the \"SetAllowTSConnections\" method of the \"Win32_TerminalServiceSetting\" class may be used to enable or disable RDP.\nIn WMIC, the \"rdtoggle\" alias or \"Win32_TerminalServiceSetting\" class may be used for the same purpose.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.001",
+    "T1047"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364817"
+}

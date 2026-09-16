@@ -1,0 +1,23 @@
+{
+  "uuid": "c31067fe-78ad-44ee-8408-50ace2ba9587",
+  "title": "Rundll32 Execution With Uncommon DLL Extension",
+  "format": "sigma",
+  "author": "Tim Shelton, Florian Roth (Nextron Systems), Yassine Oukessou",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of rundll32 with a command line that doesn't contain a common extension",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364724"
+}

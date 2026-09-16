@@ -1,0 +1,23 @@
+{
+  "uuid": "ef4762c8-509b-44c2-9387-a2d5adf02d99",
+  "title": "Potential Persistence Via Logon Scripts - CommandLine",
+  "format": "sigma",
+  "author": "Tom Ueltschi (@c_APT_ure)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the addition of a new LogonScript to the registry value \"UserInitMprLogonScript\" for potential persistence",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1037.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364796"
+}

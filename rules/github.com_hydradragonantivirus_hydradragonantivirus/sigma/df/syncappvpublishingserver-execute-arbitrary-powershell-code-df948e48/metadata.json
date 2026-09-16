@@ -1,0 +1,23 @@
+{
+  "uuid": "df948e48-3c98-41f0-ac5f-8cedbeb70417",
+  "title": "SyncAppvPublishingServer Execute Arbitrary PowerShell Code",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Executes arbitrary PowerShell code using SyncAppvPublishingServer.exe.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364453"
+}

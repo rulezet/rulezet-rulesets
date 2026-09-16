@@ -1,0 +1,23 @@
+{
+  "uuid": "5030bc43-57ec-4666-b3f2-7735c75bb8c0",
+  "title": "New Root Certificate Installed Via CertMgr.EXE",
+  "format": "sigma",
+  "author": "oscd.community, @redcanary, Zach Stanford @svch0st",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects execution of \"certmgr\" with the \"add\" flag in order to install a new certificate on the system.\nAdversaries may install a root certificate on a compromised system to avoid warnings when connecting to adversary controlled web servers.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1553.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364511"
+}

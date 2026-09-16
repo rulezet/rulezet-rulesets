@@ -1,0 +1,23 @@
+{
+  "uuid": "2ceb9324-eaa0-4817-b268-6ff8bd19f068",
+  "title": "Potential Persistence Via Microsoft Compatibility Appraiser",
+  "format": "sigma",
+  "author": "Sreeman",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects manual execution of the \"Microsoft Compatibility Appraiser\" task via schtasks.\nIn order to trigger persistence stored in the \"\\AppCompatFlags\\TelemetryController\" registry key.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364533"
+}

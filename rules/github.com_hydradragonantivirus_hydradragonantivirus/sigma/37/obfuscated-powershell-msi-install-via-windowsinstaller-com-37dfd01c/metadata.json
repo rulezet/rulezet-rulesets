@@ -1,0 +1,25 @@
+{
+  "uuid": "37dfd01c-fe47-4d35-9cc7-452160019c43",
+  "title": "Obfuscated PowerShell MSI Install via WindowsInstaller COM",
+  "format": "sigma",
+  "author": "Meroujan Antonyan (vx3r)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of obfuscated PowerShell commands that attempt to install MSI packages via the Windows Installer COM object (`WindowsInstaller.Installer`).\nThe technique involves manipulating strings to hide functionality, such as constructing class names using string insertion (e.g., 'indowsInstaller.Installer'.Insert(0,'W')) and correcting\nmalformed URLs (e.g., converting 'htps://' to 'https://') at runtime. This behavior is commonly associated with malware loaders or droppers that aim to bypass static detection\nby hiding intent in runtime-generated strings and using legitimate tools for code execution. The use of `InstallProduct` and COM object creation, particularly combined with\nhidden window execution and suppressed UI, indicates an attempt to install software (likely malicious) without user interaction.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027.010",
+    "T1059.001",
+    "T1218.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364699"
+}

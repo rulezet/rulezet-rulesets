@@ -1,0 +1,23 @@
+{
+  "uuid": "5583877a-16a8-45a7-bb1e-ad710008feb8",
+  "title": "Sensitive File Dump Via Wbadmin.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the dump of highly sensitive files such as \"NTDS.DIT\" and \"SECURITY\" hive.\nAttackers can leverage the \"wbadmin\" utility in order to dump sensitive files that might contain credential or sensitive information.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364487"
+}

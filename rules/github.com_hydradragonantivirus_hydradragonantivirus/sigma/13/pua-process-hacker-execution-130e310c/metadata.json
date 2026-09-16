@@ -1,0 +1,25 @@
+{
+  "uuid": "130e310c-c764-4c0a-9408-e225d53a6541",
+  "title": "PUA - Process Hacker Execution",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of Process Hacker based on binary metadata information (Image, Hash, Imphash, etc).\nProcess Hacker is a tool to view and manipulate processes, kernel options and other low level options.\nThreat actors abused older vulnerable versions to manipulate system processes.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543",
+    "T1564",
+    "T1622"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364899"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "6d9fedfc-b429-4ca0-a911-094259036ef4",
+  "title": "Suspicious Schtasks Execution AppData Folder",
+  "format": "sigma",
+  "author": "pH-T (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the creation of a schtask that executes a file from C:\\Users\\<USER>\\AppData\\Local",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364692"
+}

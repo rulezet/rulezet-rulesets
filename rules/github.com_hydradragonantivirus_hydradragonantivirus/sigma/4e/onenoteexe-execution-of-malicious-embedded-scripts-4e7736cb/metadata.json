@@ -1,0 +1,23 @@
+{
+  "uuid": "4e7736cb-c5eb-4788-a445-bf211bba2c80",
+  "title": "OneNote.EXE Execution of Malicious Embedded Scripts",
+  "format": "sigma",
+  "author": "@kostastsale",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of malicious OneNote documents that contain embedded scripts.\nWhen a user clicks on a OneNote attachment and then on the malicious link inside the \".one\" file, it exports and executes the malicious embedded script from specific directories.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364781"
+}

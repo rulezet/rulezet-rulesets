@@ -1,0 +1,23 @@
+{
+  "uuid": "3cf6772c-c960-4905-83ff-099aab17dbff",
+  "title": "Capture Credentials with Rpcping.exe",
+  "format": "sigma",
+  "author": "Julia Fomina, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects using Rpcping.exe to send a RPC test connection to the target server (-s) and force the NTLM hash to be sent in the process.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364570"
+}
