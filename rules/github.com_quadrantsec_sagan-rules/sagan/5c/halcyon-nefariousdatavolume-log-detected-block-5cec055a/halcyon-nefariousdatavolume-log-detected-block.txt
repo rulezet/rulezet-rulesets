@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[HALCYON] NefariousDataVolume Log Detected (Block)"; program:halcyon_webapi_data; json_content:".kind","NefariousDataVolume"; json_content:".action","Block"; parse_src_ip:1; normalize; reference:url,https://api.halcyon.ai/docs/index.html; classtype:suspicious-activity; sid:5017190; rev:1;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MIMECAST] A user has clicked on link that is potentially malicious"; program: MIMECAST; content: "reason=malicious"; content: "url="; parse_src_ip: 1; reference: url,www.mimecast.com/tech-connect/documentation/tutorials/understanding-siem-logs/; classtype: bad-unknown; sid:5005771; rev:1;)

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg: "[SONICWALL] VPN Login from Outside HOME_COUNTRY"; meta_content: "m=%sagan% ", 235,237; content: "fw_action="; parse_src_ip: 2; country_code: track by_src, isnot $HOME_COUNTRY; normalize; classtype: suspicious-traffic; reference: url,https://www.sonicwall.com/techdocs/pdf/SonicOS-X_7.0.1_LogEvents_ReferenceGuide.pdf; sid:5015146; rev:1;)

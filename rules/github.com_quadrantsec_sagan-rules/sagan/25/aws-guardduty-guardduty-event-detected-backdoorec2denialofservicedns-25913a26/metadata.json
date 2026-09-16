@@ -1,0 +1,22 @@
+{
+  "uuid": "25913a26-273e-4cc7-bad0-f519798971c7",
+  "title": "[AWS-GUARDDUTY] GuardDuty event detected (Backdoor:EC2/DenialOfService.Dns)",
+  "format": "sagan",
+  "author": "quadrantsec",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "",
+  "source": "https://github.com/quadrantsec/sagan-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1498",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/744800"
+}

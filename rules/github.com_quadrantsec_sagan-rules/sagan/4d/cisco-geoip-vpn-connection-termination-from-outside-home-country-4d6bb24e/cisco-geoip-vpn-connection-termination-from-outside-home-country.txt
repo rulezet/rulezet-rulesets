@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] VPN connection termination from outside HOME_COUNTRY"; content:"connection terminated"; program: %*-6-722022|%*-6-722023; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; parse_src_ip: 1; sid: 5006541; rev: 3;)

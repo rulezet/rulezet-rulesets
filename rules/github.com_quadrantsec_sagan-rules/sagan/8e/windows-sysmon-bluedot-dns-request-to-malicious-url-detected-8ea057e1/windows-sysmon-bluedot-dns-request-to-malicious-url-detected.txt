@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[WINDOWS-SYSMON-BLUEDOT] DNS Request To Malicious URL Detected"; program:*Sysmon*; event_id:22; bluedot: type url, Malicious; json_map: "src_ip", ".xff"; threshold: type suppress, track by_src, count 5, seconds 3600; classtype:suspicious-traffic; sid:5017458; rev:1;)

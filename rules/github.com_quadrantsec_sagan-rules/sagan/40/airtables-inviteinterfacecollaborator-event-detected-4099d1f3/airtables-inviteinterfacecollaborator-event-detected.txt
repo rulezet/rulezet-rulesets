@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[AIRTABLES] inviteInterfaceCollaborator event detected"; program:airtable_audit_log_data; json_content:".action","inviteInterfaceCollaborator"; json_map: "src_ip",".origin.ipAddress"; classtype:system-event; reference:url,airtable.com/developers/web/api/audit-log-event-types; sid:5013672; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MIMECAST] An internal user name has been impersonated"; program: MIMECAST; content: "Definition=Default Impersonation Definition"; nocase; reference: url,www.mimecast.com/tech-connect/documentation/tutorials/understanding-siem-logs/; classtype: bad-unknown; sid:5005770; rev: 1;)

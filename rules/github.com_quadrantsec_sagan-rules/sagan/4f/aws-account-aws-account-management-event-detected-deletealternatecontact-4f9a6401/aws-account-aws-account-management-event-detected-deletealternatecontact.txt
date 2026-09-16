@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[AWS-ACCOUNT] AWS Account Management event detected (DeleteAlternateContact) "; program:account.amazonaws.com; content:"eventName|22 3a 20 22|DeleteAlternateContact"; classtype:system-event; reference:url,docs.aws.amazon.com/organizations/latest/APIReference/API_Operations.html; sid:5011401; rev:1;)

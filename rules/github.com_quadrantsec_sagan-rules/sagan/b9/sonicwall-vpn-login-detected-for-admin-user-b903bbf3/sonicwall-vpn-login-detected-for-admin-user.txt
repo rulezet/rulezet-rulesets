@@ -1,0 +1,1 @@
+alert any any any -> any any (msg: "[SONICWALL] VPN Login Detected for Admin User"; content: "m=235 "; content: "fw_action="; parse_src_ip: 2; normalize; classtype: system-event; reference: url,https://www.sonicwall.com/techdocs/pdf/SonicOS-X_7.0.1_LogEvents_ReferenceGuide.pdf; sid:5015140; rev:1;)

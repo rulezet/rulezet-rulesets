@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[AWS-DETECTIVE] AWS Detective event detected (ListOrganizationAdminAccounts) "; program:detective.amazonaws.com; content:"eventName|22 3a 20 22|ListOrganizationAdminAccounts"; classtype:system-event; reference:url,docs.aws.amazon.com/detective/latest/APIReference/API_Operations.html; sid:5011957; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Forbidden E-Mail Attachment"; content: "E-Mail Attachment"; default_proto: tcp; parse_src_ip: 2; parse_dst_ip: 3; normalize;  content:"sn="; content:!"MCAS"; classtype:suspicious-traffic; sid:5012105; rev:2;)

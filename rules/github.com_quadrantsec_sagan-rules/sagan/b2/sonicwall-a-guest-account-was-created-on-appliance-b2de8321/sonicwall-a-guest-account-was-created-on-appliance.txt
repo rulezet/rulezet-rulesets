@@ -1,0 +1,1 @@
+alert any any any -> any any (msg: "[SONICWALL] A Guest Account Was Created on Appliance"; content: "m=558 "; content: "fw_action="; normalize; classtype: system-event; reference: url,https://www.sonicwall.com/techdocs/pdf/SonicOS-X_7.0.1_LogEvents_ReferenceGuide.pdf; sid:5015156; rev:1;)

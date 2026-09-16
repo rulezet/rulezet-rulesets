@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[Barracuda] Incident Response Deleted Email Detected"; program:Forensics; content:"|22|category|22 3a 22|Deleted Email|22|"; parse_src_ip:1; reference:url,https://campus.barracuda.com/product/forensics/doc/167841332/reviewing-insights/; classtype:suspicious-activity; sid:5015587; rev:1;)

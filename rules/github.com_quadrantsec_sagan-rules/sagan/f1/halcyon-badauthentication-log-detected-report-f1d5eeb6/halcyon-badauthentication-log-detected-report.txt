@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[HALCYON] BadAuthentication Log Detected (Report)"; program:halcyon_webapi_data; json_content:".kind","BadAuthentication"; json_content:".action","Report"; parse_src_ip:1; normalize; reference:url,https://api.halcyon.ai/docs/index.html; classtype:suspicious-activity; sid:5017181; rev:1;)

@@ -1,0 +1,22 @@
+{
+  "uuid": "0498b4e7-6f9c-401a-86b0-859a0eed7f92",
+  "title": "[AWS-GUARDDUTY] GuardDuty event detected (Impact:EC2/SuspiciousDomainRequest.Reputation)",
+  "format": "sagan",
+  "author": "quadrantsec",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "",
+  "source": "https://github.com/quadrantsec/sagan-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1043",
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/744837"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "5c874579-3e49-4621-ac05-5f26eeb6cda8",
+  "title": "[AWS-GUARDDUTY] GuardDuty event detected (Backdoor:EC2/DenialOfService.Tcp)",
+  "format": "sagan",
+  "author": "quadrantsec",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "",
+  "source": "https://github.com/quadrantsec/sagan-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1498",
+    "T1498.001",
+    "T1498.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/744801"
+}

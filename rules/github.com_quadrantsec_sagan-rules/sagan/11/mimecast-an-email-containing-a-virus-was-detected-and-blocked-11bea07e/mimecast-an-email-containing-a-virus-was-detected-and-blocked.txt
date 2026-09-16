@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MIMECAST] An email containing a virus was detected and blocked"; program: MIMECAST; content:"RejType=Virus Signature Detection"; parse_src_ip:1; reference:url,www.mimecast.com/tech-connect/documentation/tutorials/understanding-siem-logs/; classtype:bad-unknown; sid:5005768; rev:3;)

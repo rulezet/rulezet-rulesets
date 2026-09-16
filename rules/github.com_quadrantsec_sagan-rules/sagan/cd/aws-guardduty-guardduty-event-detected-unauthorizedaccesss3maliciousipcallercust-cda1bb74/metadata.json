@@ -1,0 +1,23 @@
+{
+  "uuid": "cda1bb74-55ae-4c64-a49b-f7a9efd037db",
+  "title": "[AWS-GUARDDUTY] GuardDuty event detected (UnauthorizedAccess:S3/MaliciousIPCaller.Custom)",
+  "format": "sagan",
+  "author": "quadrantsec",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "",
+  "source": "https://github.com/quadrantsec/sagan-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1048",
+    "T1133",
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/744902"
+}

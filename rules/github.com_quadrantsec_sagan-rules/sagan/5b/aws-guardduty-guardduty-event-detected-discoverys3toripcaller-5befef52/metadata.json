@@ -1,0 +1,23 @@
+{
+  "uuid": "5befef52-02eb-4527-8589-697cda2dffee",
+  "title": "[AWS-GUARDDUTY] GuardDuty event detected (Discovery:S3/TorIPCaller)",
+  "format": "sagan",
+  "author": "quadrantsec",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "",
+  "source": "https://github.com/quadrantsec/sagan-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1530",
+    "T1567.002",
+    "T1595"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/744829"
+}

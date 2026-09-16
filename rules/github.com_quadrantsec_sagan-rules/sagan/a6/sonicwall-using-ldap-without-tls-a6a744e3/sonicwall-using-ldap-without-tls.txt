@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] Using LDAP Without TLS"; content: "Using LDAP Without TLS"; default_proto: tcp; parse_src_ip: 2; parse_dst_ip: 3; normalize; classtype:suspicious-traffic; sid:5012106; rev:1;)
