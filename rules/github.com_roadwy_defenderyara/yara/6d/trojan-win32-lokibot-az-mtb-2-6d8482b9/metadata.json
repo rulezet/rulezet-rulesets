@@ -1,0 +1,22 @@
+{
+  "uuid": "6d8482b9-66c3-4163-b6d5-ac5c1a822fe9",
+  "title": "Trojan_Win32_Lokibot_AZ_MTB_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Lokibot.AZ!MTB,SIGNATURE_TYPE_PEHSTR,02 00 02 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/273229"
+}

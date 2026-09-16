@@ -1,0 +1,9 @@
+rule Trojan_Win32_LokiBot_SR_MTB{
+	meta:
+		description = "Trojan:Win32/LokiBot.SR!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {6a 00 6a 00 6a 00 6a 00 6a 00 e8 ?? ?? ?? ?? 4b 75 ?? 6a 00 6a 00 6a 00 6a 00 6a 00 e8 ?? ?? ?? ?? bb ?? ?? ?? ?? [0-04] 6a 00 6a 00 6a 00 6a 00 6a 00 e8 ?? ?? ?? ?? 4b } 		$a_03_1 = {8b c8 03 ca 73 05 e8 ?? ?? ?? ?? 8a 09 [0-04] 80 f1 ?? 03 d0 73 05 e8 ?? ?? ?? ?? 88 0a c3 } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1) >=2
+ 
+}
