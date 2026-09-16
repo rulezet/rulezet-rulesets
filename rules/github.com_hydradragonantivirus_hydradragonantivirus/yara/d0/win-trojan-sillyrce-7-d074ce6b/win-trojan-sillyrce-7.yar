@@ -1,0 +1,9 @@
+rule Win_Trojan_SillyRCE_7
+{
+strings:
+	$a0 = { ec8b76008b447390a300018a447590a202012bc08ed8833e8600507501c3a184008b168600c70684003000c7068600 }
+
+
+condition:
+	$a0
+}

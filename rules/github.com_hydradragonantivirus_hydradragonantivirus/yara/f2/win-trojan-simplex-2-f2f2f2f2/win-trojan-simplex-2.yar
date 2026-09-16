@@ -1,0 +1,9 @@
+rule Win_Trojan_Simplex_2
+{
+strings:
+	$a0 = { e800005d81ed03001e06b8450bcd210bc074478cd8488ed8803e00005a753b832e030040832e1200408e0612000e1f8bf5b9090133fff3a533c08ed81ec50684 }
+
+
+condition:
+	$a0
+}
