@@ -1,0 +1,9 @@
+rule Trojan_WinNT_Sirefef_D{
+	meta:
+		description = "Trojan:WinNT/Sirefef.D,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {7c 1c 6a 62 68 ?? ?? ?? ?? 6a 01 6a 00 68 ?? ?? ?? ?? ff 74 24 20 ff d6 ff 74 24 0c ff d7 68 } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "187153dc-1c6b-47ad-87e1-21e9bc93b6c9",
+  "title": "Trojan_WinNT_Rootkitdrv_B",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:WinNT/Rootkitdrv.B,SIGNATURE_TYPE_PEHSTR,0d 00 0c 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/307996"
+}

@@ -1,0 +1,9 @@
+rule Trojan_WinNT_Hookmoot_gen_A{
+	meta:
+		description = "Trojan:WinNT/Hookmoot.gen!A,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {0f b7 40 01 8b 0d ?? ?? ?? ?? a3 ?? ?? ?? ?? 8b 09 8b 04 81 a3 ?? ?? ?? ?? 8d 45 ?? 50 68 ?? ?? ?? ?? e8 } 		$a_03_1 = {50 0f 20 c0 a3 ?? ?? ?? ?? 25 ff ff fe ff 0f 22 c0 58 } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1) >=2
+ 
+}
