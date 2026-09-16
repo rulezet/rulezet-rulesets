@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[WINDOWS-SYSMON] Suspicious svchost.exe Binary Running from Non-Standard Directory - Critical"; program:*Sysmon*; event_id:1; pcre:"/Image.*\\svchost\.exe/i"; pcre:"/ Image: (?!.*\\Windows\\System32\\|.*\\Windows\\SysWOW64\\).+ FileVersion.+/i"; classtype:suspicious-traffic; priority:1; sid:5017392; rev:1;)

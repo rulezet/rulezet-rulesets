@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Process Injection - Rundll32 remote thread into winlogon"; program:*Sysmon*; event_id:8; content:"SourceImage: C:\\Windows\\SysWOW64\\rundll32.exe"; nocase; content:"TargetImage: C:\\Windows\\System32\\winlogon.exe"; nocase; classtype:suspicious-command; sid:5008353; rev:1;)

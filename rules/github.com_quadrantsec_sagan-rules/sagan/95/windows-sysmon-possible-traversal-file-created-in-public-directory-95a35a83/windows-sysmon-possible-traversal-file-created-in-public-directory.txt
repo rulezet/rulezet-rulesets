@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Possible Traversal - File created in Public directory"; program:*Sysmon*; event_id:11; content:"TargetFilename: C:\\Users\\Public"; nocase; sid:5008349; rev:1;)

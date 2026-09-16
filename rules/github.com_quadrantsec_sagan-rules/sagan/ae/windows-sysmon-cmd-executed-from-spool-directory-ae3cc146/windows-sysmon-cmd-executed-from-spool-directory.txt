@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] CMD executed from spool directory"; program:*Sysmon*; event_id:1; content:"CurrentDirectory: c:\windows\system32\spool\drivers\x64\3\"; nocase; content:"CommandLine: cmd.exe"; nocase; classtype:suspicious-command;sid:5008345; rev:1;)

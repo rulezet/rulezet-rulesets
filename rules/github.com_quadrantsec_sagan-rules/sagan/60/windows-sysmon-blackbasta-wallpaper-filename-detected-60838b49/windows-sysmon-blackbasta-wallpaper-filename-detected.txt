@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Blackbasta wallpaper filename detected"; program:*Sysmon*; event_id:12,13,14; content:"\Desktop\Wallpaper"; content:"dlaksjdoiwq.jpg"; reference:url,www.deepinstinct.com/blog/black-basta-ransomware-threat-emergence; classtype:trojan-activity; sid:5008396; rev:1;)

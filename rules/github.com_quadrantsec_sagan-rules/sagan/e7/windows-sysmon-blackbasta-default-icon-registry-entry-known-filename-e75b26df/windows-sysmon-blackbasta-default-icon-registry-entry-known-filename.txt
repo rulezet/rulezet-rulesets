@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Blackbasta default icon registry entry known filename"; program:*Sysmon*; event_id:12,13,14; content:"\.basta\DefaultIcon"; content:"fkdjsadasd.ico"; reference:url,www.deepinstinct.com/blog/black-basta-ransomware-threat-emergence; classtype:trojan-activity; sid:5008398; rev:1;)

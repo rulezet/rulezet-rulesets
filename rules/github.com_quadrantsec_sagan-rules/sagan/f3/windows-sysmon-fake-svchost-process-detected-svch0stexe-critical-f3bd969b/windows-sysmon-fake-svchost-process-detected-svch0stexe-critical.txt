@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[WINDOWS-SYSMON] Fake SVCHOST Process Detected (svch0st.exe) - Critical"; program:*Sysmon*; event_id:1; pcre:"/Image.*\\svch0st\.exe/i"; classtype:suspicious-traffic; priority:1; sid:5017393; rev:1;)

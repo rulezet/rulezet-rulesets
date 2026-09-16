@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WINDOWS-SYSMON] GitHub Cloning Of BloodHoundAD Detected"; program:*Sysmon*; content: "git clone https://github.com/BloodHoundAD/BloodHound"; nocase; classtype: suspicious-traffic; reference: url,https://github.com/BloodHoundAD/BloodHound; sid:5014583; rev:1; metadata:created_on 2024_04_16, severity critical;)
