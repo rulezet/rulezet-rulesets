@@ -1,0 +1,9 @@
+rule Trojan_Win32_Delf_IU_dll{
+	meta:
+		description = "Trojan:Win32/Delf.IU!dll,SIGNATURE_TYPE_PEHSTR_EXT,04 00 04 00 04 00 00 "
+		
+	strings :
+		$a_01_0 = {21 40 23 77 61 6e 67 6a 69 26 68 79 7a 2a 2a } 		$a_01_1 = {79 64 67 69 64 63 6e 61 66 67 2e 64 61 74 } 		$a_01_2 = {75 64 70 5c 68 6a 6f 62 31 32 33 5c 63 6f 6d } 		$a_02_3 = {2e 6c 6c 61 64 73 2e 63 6e [0-05] 2f 69 65 62 61 72 2f 74 74 65 73 74 2e 61 73 70 } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1+(#a_01_2  & 1)*1+(#a_02_3  & 1)*1) >=4
+ 
+}

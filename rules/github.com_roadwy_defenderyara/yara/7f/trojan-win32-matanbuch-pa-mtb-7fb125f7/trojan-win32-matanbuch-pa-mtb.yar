@@ -1,0 +1,9 @@
+rule Trojan_Win32_Matanbuch_PA_MTB{
+	meta:
+		description = "Trojan:Win32/Matanbuch.PA!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {0f b7 08 8b 55 ?? 0f be 02 33 c8 66 89 8d ?? ?? ?? ?? 8b 4d ?? 8b 55 ?? 8d 44 4a 02 89 85 ?? ?? ?? ?? 8b 8d ?? ?? ?? ?? 66 8b 95 ?? ?? ?? ?? 66 89 11 eb } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}

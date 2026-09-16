@@ -1,0 +1,22 @@
+{
+  "uuid": "197bbbb0-9e3b-493f-b475-ae38a0a28827",
+  "title": "Trojan_Win32_CoinMiner_GG_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/CoinMiner.GG!MTB,SIGNATURE_TYPE_PEHSTR_EXT,21 00 21 00 08 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/285530"
+}

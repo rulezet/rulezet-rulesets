@@ -1,0 +1,9 @@
+rule Trojan_Win32_Razy_GAB_MTB{
+	meta:
+		description = "Trojan:Win32/Razy.GAB!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {08 68 10 60 10 30 28 a8 ?? ?? ?? ?? b0 f8 a0 ?? ?? ?? ?? 40 d0 38 a0 ?? ?? ?? ?? 30 88 ?? ?? ?? ?? e0 ?? 88 d0 88 50 b0 } 	condition:
+		((#a_03_0  & 1)*10) >=10
+ 
+}

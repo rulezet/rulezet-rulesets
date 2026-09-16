@@ -1,0 +1,22 @@
+{
+  "uuid": "88511cb2-aeba-4e46-a1ab-3034df684eef",
+  "title": "Trojan_Win32_CoinMiner_DA_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/CoinMiner.DA!MTB,SIGNATURE_TYPE_PEHSTR,0d 00 0d 00 0e 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/285546"
+}
