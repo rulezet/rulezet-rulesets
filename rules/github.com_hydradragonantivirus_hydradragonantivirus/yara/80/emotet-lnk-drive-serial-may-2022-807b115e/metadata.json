@@ -1,0 +1,19 @@
+{
+  "uuid": "807b115e-b8be-4448-a253-c9be92eda5ba",
+  "title": "Emotet_LNK_Drive_Serial_May_2022",
+  "format": "yara",
+  "author": "BitsOfBinary",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects an LNK from May 2022 tagged as dropping Emotet based on a unique drive serial",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/706748"
+}

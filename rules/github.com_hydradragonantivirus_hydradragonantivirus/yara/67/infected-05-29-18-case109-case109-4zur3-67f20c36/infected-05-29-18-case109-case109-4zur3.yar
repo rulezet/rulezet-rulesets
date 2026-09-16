@@ -1,0 +1,36 @@
+rule _infected_05_29_18_case109_case109_4Zur3 {
+  meta:
+    description = "case109 - file 4Zur3.php"
+    author      = "Brian Laskowski"
+    reference   = "https://github.com/Hestat/lw-yara"
+    date        = "2018-05-29"
+    hash1       = "d540fc9ae3efd056cb83ed3abbadd6a34ddfea2229fa36b2e0328272004c8e32"
+
+  strings:
+    $s1  = "UnBMVXB2YjIxc1lURXVkSGgwSWpzS0NRbGxkbUZzSUNKc2JpQXRjeUF2YUc5dFpUSXZKR2t2Y0hWaWJHbGpYMmgwYld3dllteHZaeTlqYjI1bWFXZDFjbUYwYVc5dUxu" ascii  
+    $s2  = "RzlqWVhScGIyNGlQZzBLSkZCeWIyMXdkQ0IxY0d4dllXUThZbkkrUEdKeVBnMEtSbWxzWlc1aGJXVTZJRHhwYm5CMWRDQjBlWEJsUFNKbWFXeGxJaUJ1WVcxbFBTSm1J" ascii  
+    $s3  = "UzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwTkNuTjFZaUJRY21sdWRFWnBiR1ZWY0d4dllXUkdiM0p0RFFwN0RRb0pKRVZ1WTI5a1pVTjFjbkpsYm5SRWFYSWdQ" ascii  
+    $s4  = "bk5sY3lCSFJWUXNJRkJQVTFRZ1lXNWtJRzExYkhScGNHRnlkQzltYjNKdExXUmhkR0VnZEdoaGRDQnBjeUIxYzJWa0lHWnZjaUIxY0d4dllXUnBibWNnWm1sc1pYTXVE" ascii  
+    $s5  = "R0YyWlNCMGJ5QnpaVzVrSUc5dWJIa2dkR2hsSUd4cGJtc2djR0ZuWlEwS0NYc05DZ2tKSmxCeWFXNTBSRzkzYm14dllXUk1hVzVyVUdGblpTZ2tWR0Z5WjJWMFJtbHNa" ascii  
+    $s6  = "cmFtPjxpbnB1dCB0eXBlPXN1Ym1pdCB2YWx1ZT0iPj4iPjwvZm9ybT48YnI+PHNwYW4+R2xvYiAobGlzdCBkaXIpPC9zcGFuPjxmb3JtIG9uc3VibWl0PVwnZyhudWxs" ascii  
+    $s7  = "R2x2YmlCbGNTQWlaRzkzYm14dllXUWlLU0FKQ1FrSkl5QjFjMlZ5SUhkaGJuUnpJSFJ2SUdSdmQyNXNiMkZrSUdFZ1ptbHNaUTBLZXcwS0NYQnlhVzUwSUNaRWIzZHVi" ascii  
+    $s8  = "aHdJSE5vTFdOdmJtWnBaeTh3TFNScExWZHZjbVJ3Y21WemN6RXVkSGgwSWpzS0NRbGxkbUZzSUNKc2JpQXRjeUF2YUc5dFpUUXZKR2t2Y0hWaWJHbGpYMmgwYld3dllt" ascii  
+    $s9  = "U0IwWVhKblpYUTlKMTlpYkdGdWF5Y2dhSEpsWmowaUl5SStTR1ZzY0R3dllUNE5Dand2ZEdRK0RRbzhMM1J5UGcwS1BIUnlQZzBLUEhSa0lHTnZiSE53WVc0OUlqSWlQ" ascii  
+    $s10 = "RzkzYm14dllXUW1iejFuYnlabVBTSXVKR1l1SWljK1JHOTNibXh2WVdROEwyRStJSHdnUEdFZ2IyNWpiR2xqYXoxY0ltbG1LQ0ZqYjI1bWFYSnRLQ2RTWlcxdmRtVWda" ascii  
+    $s11 = "V2xyTjBSUmIwcGpNMng2WkVkV2RFdERTakZpYms1c1pFTkNTVk5XVGxWU2EyeE5VbFJ6WjJSWE5YcGFXRkZuVlRCR1YxSlZhRXBWTVZGblR6SldhbUZIT0dkS01YTnlX" ascii  
+    $s12 = "QXRjeUF2YUc5dFpUY3ZKR2t2Y0hWaWJHbGpYMmgwYld3dllXUnRhVzR2WTI5dVptbG5MbkJvY0NCemFDMWpiMjVtYVdjdk1DMGthUzFQZEdobGNqSXVkSGgwSWpzS0NR" ascii  
+    $s13 = "eUIxY0d4dllXUWdabWxzWlhNTkNpTXRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRM" ascii  
+    $s14 = "MlJsUkdseUtDUndZWFJvS1M0aUptTTlJaTRrWVdOMGFXOXVMaUluUGlJdUpHWnBiR1V1SWp3dllUNDhMM1JrUGlJN0RRb0pDUWtrY21WemRXeDBJQzQ5SUNJOGRHUStJ" ascii  
+    $s15 = "cHV0IHR5cGU9dGV4dCBuYW1lPXBhcmFtPjxpbnB1dCB0eXBlPXN1Ym1pdCB2YWx1ZT0iPj4iPjwvZm9ybT48YnI+PHNwYW4+UG9zaXhfZ2V0cHd1aWQgKCJSZWFkIiAv" ascii  
+    $s16 = "MjVzYjJGa0lqNE5DaVJRY205dGNIUWdaRzkzYm14dllXUThZbkkrUEdKeVBnMEtSbWxzWlc1aGJXVTZJRHhwYm5CMWRDQjBlWEJsUFNKMFpYaDBJaUJ1WVcxbFBTSm1J" ascii  
+    $s17 = "NGdMWE1nTDJodmJXVXZKR2t2Y0hWaWJHbGpYMmgwYld3dlltbHNiR2x1Wnk5amIyNW1hV2QxY21GMGFXOXVMbkJvY0NCemFDMWpiMjVtYVdjdk1DMGthUzFYYUcwMkxu" ascii  
+    $s18 = "bGpYMmgwYld3dllteHZaeTkzY0MxamIyNW1hV2N1Y0dod0lITm9MV052Ym1acFp5OHdMU1JwTFZkdmNtUndjbVZ6Y3pJdWRIaDBJanNLQ1FsbGRtRnNJQ0pzYmlBdGN5" ascii  
+    $s19 = "eUEwSURVZ05pQTNJRGdnT1NBeE1DQXhNU0F4TWk4N0RRb0pDU1JzYlhScGJXVWdQU0J6Y0hKcGJuUm1LQ0lsTURKa0x5VnpMeVUwWkNBbE1ESmtPaVV3TW1RaUxDUmtM" ascii  
+    $s20 = "R2hsSUhWelpYSWdZVzVrSUhCeWIzWnBaR1Z6SUdFZ2JHbHVhdzBLSXlCMGFISnZkV2RvSUNCM2FHbGphQ0IwYUdVZ1ptbHNaU0JqWVc0Z1ltVWdaRzkzYm14dllXUmxa" ascii  
+
+  condition:
+    (uint16(0) == 0x3f3c and
+      filesize < 1000KB and
+      (8 of them)
+    ) or (all of them)
+}

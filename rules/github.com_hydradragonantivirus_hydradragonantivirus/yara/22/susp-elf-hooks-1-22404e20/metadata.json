@@ -1,0 +1,19 @@
+{
+  "uuid": "22404e20-c28a-422d-9fd5-977ed6f7a07a",
+  "title": "SUSP_ELF_HOOKS_1",
+  "format": "yara",
+  "author": "@qutluch@infosec.exchange",
+  "license": "BSD-2-Clause",
+  "license_verified": true,
+  "description": "Rule to find suspicious ELF shared-object files that might be hooking functions.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/706804"
+}

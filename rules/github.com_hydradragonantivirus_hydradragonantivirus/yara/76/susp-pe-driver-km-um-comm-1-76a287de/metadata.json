@@ -1,0 +1,19 @@
+{
+  "uuid": "76a287de-5b5f-44a4-932f-9d78bec1558b",
+  "title": "SUSP_PE_DRIVER_KM_UM_COMM_1",
+  "format": "yara",
+  "author": "@qutluch@infosec.exchange",
+  "license": "BSD-2-Clause",
+  "license_verified": true,
+  "description": "Rule looking for suspicious drivers using socket-um from km-um-communication.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/706782"
+}

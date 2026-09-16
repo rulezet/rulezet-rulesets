@@ -1,0 +1,19 @@
+{
+  "uuid": "c6085a37-e3c4-4a92-86e7-5edb45c68b01",
+  "title": "AcidBox_SSP_DLL_Loader_Format_String_Combos_Loose",
+  "format": "yara",
+  "author": "BitsOfBinary",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects AcidBox SSP DLL loaders, based on combinations of format strings seen in samples. This rule uses a looser set of strings, so may be more false positive-prone.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/706755"
+}

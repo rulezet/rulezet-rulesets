@@ -1,0 +1,19 @@
+{
+  "uuid": "33df0201-e321-4154-b9ad-91985b8df7c3",
+  "title": "AcidBox_SSP_DLL_Loader_Imphash",
+  "format": "yara",
+  "author": "BitsOfBinary",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects AcidBox SSP DLL loaders, based on a unique import hash",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/706756"
+}

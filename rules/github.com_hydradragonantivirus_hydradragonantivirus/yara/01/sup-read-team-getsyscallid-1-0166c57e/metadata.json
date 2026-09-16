@@ -1,0 +1,19 @@
+{
+  "uuid": "0166c57e-cee8-4cbf-95fa-5ee1735a57c3",
+  "title": "SUP_READ_TEAM_GETSYSCALLID_1",
+  "format": "yara",
+  "author": "@qutluch@infosec.exchange",
+  "license": "BSD-2-Clause",
+  "license_verified": true,
+  "description": "Rule detecting opcodes for an observed GetSyscallId function in red team tools.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/706775"
+}
