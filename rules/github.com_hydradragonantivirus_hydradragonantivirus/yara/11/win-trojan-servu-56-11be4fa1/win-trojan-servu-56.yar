@@ -1,0 +1,9 @@
+rule Win_Trojan_Servu_56
+{
+strings:
+	$a0 = { c20d99960536d8a1563696d8d876ecab2af00849f3cf3c9279091a496bd6dd7bf919bbf86ae6e5cc871edcc8c7b9b9c80ede901b7b21d2d640b5bc912a0236b9c12f5c05c6e70153223f4ce40a9913ad724013211a19c3e8cc80753201d2602d4c14132edbbddfc37fffffd7df5fdefdfbf5efcf7f3e73cf3e79e64cc3f23d7dfd04acbeb34e0a30be06354e }
+
+
+condition:
+	$a0
+}
