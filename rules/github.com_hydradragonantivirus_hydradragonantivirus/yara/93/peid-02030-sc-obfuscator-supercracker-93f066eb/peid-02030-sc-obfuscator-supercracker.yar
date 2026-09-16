@@ -1,0 +1,11 @@
+rule PEiD_02030_SC_Obfuscator____SuperCRacker_ {
+  meta:
+    description = "[SC Obfuscator -> SuperCRacker]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 60 33 C9 8B 1D 00 ?? ?? ?? 03 1D 08 ?? ?? ?? 8A 04 19 84 C0 74 09 3C ?? 74 05 34 ?? 88 04 19 41 3B 0D 04 ?? ?? ?? 75 E7 A1 08 ?? ?? ?? 01 05 0C ?? ?? ?? 61 FF 25 0C }
+
+  condition:
+    $a
+}

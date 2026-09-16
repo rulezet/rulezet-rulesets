@@ -1,0 +1,11 @@
+rule PEiD_01868_PseudoSigner_0_2__DxPack_1_0__ {
+  meta:
+    description = "[PseudoSigner 0.2 [DxPack 1.0]]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 60 E8 00 00 00 00 5D 8B FD 81 ED 90 90 90 90 2B B9 00 00 00 00 81 EF 90 90 90 90 83 BD 90 90 90 90 90 0F 84 00 00 00 00 }
+
+  condition:
+    $a
+}

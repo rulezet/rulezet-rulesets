@@ -1,0 +1,11 @@
+rule PEiD_02150_StarForce_Protection_Driver____Protection_Technology__h__ {
+  meta:
+    description = "[StarForce Protection Driver -> Protection Technology (h)]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 57 68 ?? 0D 01 00 68 00 ?? ?? 00 E8 50 ?? FF FF 68 ?? ?? ?? 00 68 ?? ?? ?? 00 68 ?? ?? ?? 00 68 ?? ?? ?? 00 68 ?? ?? ?? 00 }
+
+  condition:
+    $a
+}

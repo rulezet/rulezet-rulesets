@@ -1,0 +1,11 @@
+rule PEiD_01896_PUNiSHER_1_5__DEMO_____FEUERRADER_AHTeam_ {
+  meta:
+    description = "[PUNiSHER 1.5 (DEMO) -> FEUERRADER/AHTeam]"
+    ep_only     = "false"
+
+  strings:
+    $a = { EB 04 83 A4 BC CE 60 EB 04 80 BC 04 11 E8 00 00 00 00 81 2C 24 CA C2 41 00 EB 04 64 6B 88 18 5D E8 00 00 00 00 EB 04 64 6B 88 18 81 2C 24 86 00 00 00 EB 04 64 6B 88 18 8B 85 9C C2 41 00 EB 04 64 6B 88 18 29 04 24 EB 04 64 6B 88 18 EB 04 64 6B 88 18 8B 04 }
+
+  condition:
+    $a
+}

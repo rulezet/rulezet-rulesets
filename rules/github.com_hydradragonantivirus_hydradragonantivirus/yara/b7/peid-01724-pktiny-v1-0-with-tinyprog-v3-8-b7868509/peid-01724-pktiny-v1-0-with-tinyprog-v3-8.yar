@@ -1,0 +1,11 @@
+rule PEiD_01724_PKTINY_v1_0_with_TINYPROG_v3_8_ {
+  meta:
+    description = "[PKTINY v1.0 with TINYPROG v3.8]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 2E C6 06 ?? ?? ?? 2E C6 06 ?? ?? ?? 2E C6 06 ?? ?? ?? E9 ?? ?? E8 ?? ?? 83 }
+
+  condition:
+    $a
+}

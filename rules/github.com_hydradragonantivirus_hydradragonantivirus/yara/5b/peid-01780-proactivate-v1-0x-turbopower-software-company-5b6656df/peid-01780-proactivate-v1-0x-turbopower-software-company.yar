@@ -1,0 +1,11 @@
+rule PEiD_01780_ProActivate_V1_0X____TurboPower_Software_Company_ {
+  meta:
+    description = "[ProActivate V1.0X -> TurboPower Software Company]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 55 8B EC B9 0E 00 00 00 6A 00 6A 00 49 75 F9 51 53 56 57 B8 ?? ?? ?? ?? 90 90 90 90 90 33 C0 55 68 ?? ?? ?? ?? 64 FF 30 64 89 20 A1 ?? ?? ?? ?? 83 C0 05 A3 ?? ?? ?? ?? C7 05 ?? ?? ?? ?? 0D 00 00 00 E8 85 E2 FF FF 81 3D ?? ?? ?? ?? 21 7E 7E 40 75 7A 81 3D }
+
+  condition:
+    $a
+}

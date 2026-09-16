@@ -1,0 +1,11 @@
+rule PEiD_01876_PseudoSigner_0_2__Lockless_Intro_Pack__ {
+  meta:
+    description = "[PseudoSigner 0.2 [Lockless Intro Pack]]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 2C E8 EB 1A 90 90 5D 8B C5 81 ED F6 73 90 90 2B 85 90 90 90 90 83 E8 06 89 85 FF 01 EC AD }
+
+  condition:
+    $a
+}

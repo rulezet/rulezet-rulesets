@@ -1,0 +1,11 @@
+rule PEiD_02153_Stealth_PE_v1_1_ {
+  meta:
+    description = "[Stealth PE v1.1]"
+    ep_only     = "true"
+
+  strings:
+    $a = { BA ?? ?? ?? 00 FF E2 BA ?? ?? ?? 00 B8 ?? ?? ?? ?? 89 02 83 C2 03 B8 ?? ?? ?? ?? 89 02 83 C2 FD FF E2 }
+
+  condition:
+    $a
+}

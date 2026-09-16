@@ -1,0 +1,11 @@
+rule PEiD_01716_PKLITE_v2_00c_ {
+  meta:
+    description = "[PKLITE v2.00c]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 50 B8 ?? ?? BA ?? ?? 3B C4 73 ?? 8B C4 2D ?? ?? 25 ?? ?? 8B F8 B9 ?? ?? BE ?? ?? FC }
+
+  condition:
+    $a
+}

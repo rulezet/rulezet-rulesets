@@ -1,0 +1,11 @@
+rule PEiD_01928_RCryptor_v1_6____Vaska_ {
+  meta:
+    description = "[RCryptor v1.6 -> Vaska]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 33 D0 68 ?? ?? ?? ?? FF D2 B8 ?? ?? ?? ?? 3D ?? ?? ?? ?? 74 06 80 30 ?? 40 EB F3 }
+
+  condition:
+    $a
+}
