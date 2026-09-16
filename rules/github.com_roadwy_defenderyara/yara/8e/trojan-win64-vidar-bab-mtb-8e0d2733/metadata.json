@@ -1,0 +1,21 @@
+{
+  "uuid": "8e0d2733-63c3-47f5-aa13-d466e9888c0d",
+  "title": "Trojan_Win64_Vidar_BAB_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win64/Vidar.BAB!MTB,SIGNATURE_TYPE_PEHSTR_EXT,09 00 09 00 09 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:stealer=\"Vidar\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/256247"
+}
