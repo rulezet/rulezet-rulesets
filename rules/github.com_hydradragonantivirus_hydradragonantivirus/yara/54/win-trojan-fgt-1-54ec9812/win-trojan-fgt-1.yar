@@ -1,0 +1,9 @@
+rule Win_Trojan_FGT_1
+{
+strings:
+	$a0 = { 5053515256579c1ee830028b1e3a028bc3059b03b104d3e88cd903c18ed8891e000006b42fcd21891e56008c06580007ba5a00b41acd211eba76030e1fb82425 }
+
+
+condition:
+	$a0
+}

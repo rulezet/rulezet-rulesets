@@ -1,0 +1,9 @@
+rule Win_Trojan_Fyodor_1
+{
+strings:
+	$a0 = { 060000000000000000000000000000009000002a2e636f6d0000c60601014bb44e33c9ba1601cd217240b8003d }
+
+
+condition:
+	$a0
+}

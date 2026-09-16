@@ -1,0 +1,9 @@
+rule Win_Trojan_Fewster_1
+{
+strings:
+	$a0 = { e90000e800005e81ee0601e5403c7b7203e816018b84c907a300018a84cb07a20201b41a8d943b08cd21c6843a0800b44732d287ee8db6f807cd2187eeb44eb90700c6 }
+
+
+condition:
+	$a0
+}

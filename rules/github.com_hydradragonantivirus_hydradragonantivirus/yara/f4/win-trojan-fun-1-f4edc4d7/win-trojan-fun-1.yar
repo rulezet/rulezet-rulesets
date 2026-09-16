@@ -1,0 +1,9 @@
+rule Win_Trojan_Fun_1
+{
+strings:
+	$a0 = { baa303b44e0e1fba4a03b80125cd21b003cd21be3412b934128db67003cd21b8023dba9e00cd218bd8b9a70290ba0001b440cd2166756e2e7662730046756e20576f726d }
+
+
+condition:
+	$a0
+}

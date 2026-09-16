@@ -1,0 +1,9 @@
+rule Win_Trojan_FairviewHigh_1
+{
+strings:
+	$a0 = { ec56b8ff0850e8e10159b82b0950e8d90159b8620950e8d10159e82501a2c009b8940350e80f0259803ec00957746033f6e8a3000bc0740ae8640046fe06 }
+
+
+condition:
+	$a0
+}
