@@ -1,0 +1,12 @@
+rule eBayId_index3 {
+	meta:
+		description = "Webshells Auto-generated - file index3.php"
+		license = "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
+		author = "Florian Roth (Nextron Systems)"
+		hash = "0412b1e37f41ea0d002e4ed11608905f"
+		id = "4fc30150-7b44-53c4-888c-faf651495407"
+	strings:
+		$s8 = "$err = \"<i>Your Name</i> Not Entered!</font></h2>Sorry, \\\"You"
+	condition:
+		all of them
+}

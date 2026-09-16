@@ -1,0 +1,21 @@
+{
+  "uuid": "64f01c61-6ff7-4ca9-a602-b0287b9e6a22",
+  "title": "MAL_WAR_Ivanti_EPMM_MobileIron_Mi_War_Aug23",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects WAR file found in the Ivanti EPMM / MobileIron Core compromises exploiting CVE-2023-35078",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-35078"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/189611"
+}

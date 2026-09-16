@@ -1,0 +1,12 @@
+rule FSO_s_phvayv_2 {
+	meta:
+		description = "Webshells Auto-generated - file phvayv.php"
+		license = "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
+		author = "Florian Roth (Nextron Systems)"
+		hash = "205ecda66c443083403efb1e5c7f7878"
+		id = "8bd52f9b-a232-566d-90ab-4085933cdc65"
+	strings:
+		$s2 = "rows=\"24\" cols=\"122\" wrap=\"OFF\">XXXX</textarea></font><font"
+	condition:
+		all of them
+}

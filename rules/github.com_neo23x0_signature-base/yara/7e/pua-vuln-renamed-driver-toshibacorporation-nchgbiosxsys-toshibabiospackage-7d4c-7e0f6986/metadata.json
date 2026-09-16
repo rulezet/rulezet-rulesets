@@ -1,0 +1,19 @@
+{
+  "uuid": "7e0f6986-424e-4a60-b6d3-2aa7737caead",
+  "title": "PUA_VULN_Renamed_Driver_Toshibacorporation_Nchgbiosxsys_Toshibabiospackage_7D4C",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NCHGBIOS2x64.SYS",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/189483"
+}

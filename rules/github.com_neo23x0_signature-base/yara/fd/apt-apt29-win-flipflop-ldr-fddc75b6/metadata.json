@@ -1,0 +1,21 @@
+{
+  "uuid": "fddc75b6-f58a-4e14-bd39-f38ab91b229e",
+  "title": "APT_APT29_Win_FlipFlop_LDR",
+  "format": "yara",
+  "author": "threatintel@volexity.com",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "A loader for the CobaltStrike malware family, which ultimately takes the first and second bytes of an embedded file, and flips them prior to executing the resulting payload.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/189727"
+}

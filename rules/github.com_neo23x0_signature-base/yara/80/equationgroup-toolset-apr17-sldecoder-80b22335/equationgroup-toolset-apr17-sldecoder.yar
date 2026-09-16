@@ -1,0 +1,15 @@
+rule EquationGroup_Toolset_Apr17_SlDecoder {
+   meta:
+      description = "Detects EquationGroup Tool - April Leak"
+      license = "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
+      author = "Florian Roth (Nextron Systems)"
+      reference = "https://steemit.com/shadowbrokers/@theshadowbrokers/lost-in-translation"
+      date = "2017-04-15"
+      hash1 = "b220f51ca56d9f9d7d899fa240d3328535f48184d136013fd808d8835919f9ce"
+      id = "1760e84b-fc40-5d60-9351-3a3134af9e9f"
+   strings:
+      $x1 = "Error in conversion. SlDecoder.exe <input filename> <output filename> at command line " fullword wide
+      $x2 = "KeyLogger_Data" fullword wide
+   condition:
+      ( uint16(0) == 0x5a4d and filesize < 200KB and 1 of them )
+}
