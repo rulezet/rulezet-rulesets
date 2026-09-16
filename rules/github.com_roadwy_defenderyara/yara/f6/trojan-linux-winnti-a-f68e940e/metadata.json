@@ -1,0 +1,23 @@
+{
+  "uuid": "f68e940e-7772-46cd-a640-e31ca3bf5ef9",
+  "title": "Trojan_Linux_Winnti_A_",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Linux/Winnti.A!!Winnti.A,SIGNATURE_TYPE_ARHSTR_EXT,0b 00 0b 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Winnti Group - G0044\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/252630"
+}

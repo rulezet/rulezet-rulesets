@@ -1,0 +1,9 @@
+rule Trojan_Linux_Rootkit_B_MTB{
+	meta:
+		description = "Trojan:Linux/Rootkit.B!MTB,SIGNATURE_TYPE_ELFHSTR_EXT,04 00 04 00 04 00 00 "
+		
+	strings :
+		$a_01_0 = {72 6f 6f 74 2d 73 68 65 6c 6c } 		$a_01_1 = {75 6e 68 69 64 65 2d 70 69 64 } 		$a_01_2 = {72 6f 6f 74 6b 69 74 20 4c 4b 4d } 		$a_01_3 = {68 69 64 65 2d 66 69 6c 65 } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1+(#a_01_2  & 1)*1+(#a_01_3  & 1)*1) >=4
+ 
+}

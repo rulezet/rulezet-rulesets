@@ -1,0 +1,23 @@
+{
+  "uuid": "a7ce68dd-b4f1-4727-8bac-ec9f2acdc8c3",
+  "title": "Trojan_Linux_Turla_D",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Linux/Turla.D,SIGNATURE_TYPE_ELFHSTR_EXT,03 00 03 00 0b 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Turla - G0010\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/252750"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "6f6e9ae2-63fb-4b47-b3d6-db9c147df2f5",
+  "title": "Trojan_Linux_ProcessHider_SR7",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Linux/ProcessHider.SR7,SIGNATURE_TYPE_ELFHSTR_EXT,0e 00 0e 00 07 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/252784"
+}
