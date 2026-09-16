@@ -1,0 +1,22 @@
+{
+  "uuid": "1b7b2c4f-e996-47c0-8d7c-248f8c428ae0",
+  "title": "Trojan_Win32_VB_PA",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/VB.PA,SIGNATURE_TYPE_PEHSTR_EXT,ffffffa4 01 ffffffa4 01 07 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/275694"
+}

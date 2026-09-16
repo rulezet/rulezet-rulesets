@@ -1,0 +1,22 @@
+{
+  "uuid": "ad77d11d-eb5f-41b4-8a1f-79cc09e95a5f",
+  "title": "Trojan_Win32_VB_DNB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/VB.DNB,SIGNATURE_TYPE_PEHSTR_EXT,4b 00 4b 00 10 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/275691"
+}
