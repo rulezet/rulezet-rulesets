@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"SURICATA DNS Name too long"; app-layer-event:dns.name_too_long; classtype:protocol-command-decode; sid:224008; rev:1;)

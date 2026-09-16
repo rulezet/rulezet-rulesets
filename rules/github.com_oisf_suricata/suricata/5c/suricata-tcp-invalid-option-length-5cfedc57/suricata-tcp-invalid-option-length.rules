@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA TCP invalid option length"; decode-event:tcp.invalid_optlen; classtype:protocol-command-decode; sid:2200035; rev:2;)

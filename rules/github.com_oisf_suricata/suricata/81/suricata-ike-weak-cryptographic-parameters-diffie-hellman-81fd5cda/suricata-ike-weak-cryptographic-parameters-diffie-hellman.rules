@@ -1,0 +1,1 @@
+alert ike any any -> any any (msg:"SURICATA IKE weak cryptographic parameters (Diffie-Hellman)"; flow:to_client; app-layer-event:ike.weak_crypto_dh; classtype:protocol-command-decode; sid:2224005; rev:3;)

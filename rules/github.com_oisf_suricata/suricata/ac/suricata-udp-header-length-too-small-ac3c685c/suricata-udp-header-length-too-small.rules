@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA UDP header length too small"; decode-event:udp.hlen_too_small; classtype:protocol-command-decode; sid:2200039; rev:2;)

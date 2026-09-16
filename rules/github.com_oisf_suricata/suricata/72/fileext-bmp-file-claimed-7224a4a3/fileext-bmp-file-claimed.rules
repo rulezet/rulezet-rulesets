@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"FILEEXT BMP file claimed"; fileext:"bmp"; sid:3; rev:1;)

@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA ICMPv4 truncated packet"; decode-event:icmpv4.ipv4_trunc_pkt; classtype:protocol-command-decode; sid:2200026; rev:2;)

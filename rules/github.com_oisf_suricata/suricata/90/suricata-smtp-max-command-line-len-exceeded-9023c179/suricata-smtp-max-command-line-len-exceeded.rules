@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP max command line len exceeded"; flow:established,to_server; app-layer-event:smtp.max_command_line_len_exceeded; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220002; rev:2;)

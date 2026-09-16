@@ -1,0 +1,1 @@
+alert mqtt any any -> any any (msg:"SURICATA MQTT message seen before CONNECT/CONNACK completion"; app-layer-event:mqtt.unintroduced_message; classtype:protocol-command-decode; sid:2229005; rev:1;)

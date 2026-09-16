@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM reassembly segment before base seq (retransmission)"; stream-event:reassembly_segment_before_base_seq; flowint:tcp.retransmission.count,+,1; noalert; classtype:protocol-command-decode; sid:2210047; rev:2;)

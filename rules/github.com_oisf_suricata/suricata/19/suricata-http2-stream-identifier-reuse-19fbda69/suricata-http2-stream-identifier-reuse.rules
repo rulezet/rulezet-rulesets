@@ -1,0 +1,1 @@
+alert http2 any any -> any any (msg:"SURICATA HTTP2 stream identifier reuse"; flow:established; app-layer-event:http2.stream_id_reuse; classtype:protocol-command-decode; sid:2290007; rev:1;)

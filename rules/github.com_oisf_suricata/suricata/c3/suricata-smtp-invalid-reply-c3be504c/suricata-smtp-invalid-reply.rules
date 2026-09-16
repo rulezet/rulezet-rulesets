@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP invalid reply"; flow:established,to_client; app-layer-event:smtp.invalid_reply; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220000; rev:1;)

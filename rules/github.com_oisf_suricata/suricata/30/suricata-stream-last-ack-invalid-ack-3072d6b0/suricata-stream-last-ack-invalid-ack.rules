@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM Last ACK invalid ACK"; stream-event:lastack_invalid_ack; threshold:type backoff, track by_flow, count 1, multiplier 10; classtype:protocol-command-decode; sid:2210040; rev:3;)

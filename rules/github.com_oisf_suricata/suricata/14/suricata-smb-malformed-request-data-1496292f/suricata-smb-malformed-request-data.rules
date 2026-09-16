@@ -1,0 +1,1 @@
+alert smb any any -> any any (msg:"SURICATA SMB malformed request data"; flow:to_server; app-layer-event:smb.malformed_data; classtype:protocol-command-decode; sid:2225002; rev:1;)

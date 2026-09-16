@@ -1,0 +1,1 @@
+alert rfb any any -> any any (msg:"SURICATA RFB Malformed or unknown message"; app-layer-event:rfb.malformed_message; classtype:protocol-command-decode; sid:2233000; rev:1;)

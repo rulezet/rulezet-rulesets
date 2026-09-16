@@ -1,0 +1,1 @@
+alert http2 any any -> any any (msg:"SURICATA HTTP2 invalid frame data"; flow:established; app-layer-event:http2.invalid_frame_data; classtype:protocol-command-decode; sid:2290002; rev:1;)

@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv6 AH reserved field not 0"; decode-event:ipv6.exthdr_ah_res_not_null; classtype:protocol-command-decode; sid:2200081; rev:2;)

@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA PPP wrong type"; decode-event:ppp.wrong_type; classtype:protocol-command-decode; sid:2200047; rev:2;)

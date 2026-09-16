@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"FILEMAGIC pdf"; flow:established,to_server; filemagic:"PDF document"; filestore; sid:9; rev:1;)

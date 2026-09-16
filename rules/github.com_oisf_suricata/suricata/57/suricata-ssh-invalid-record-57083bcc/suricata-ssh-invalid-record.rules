@@ -1,0 +1,1 @@
+alert ssh any any -> any any (msg:"SURICATA SSH invalid record"; flow:established; app-layer-event:ssh.invalid_record; classtype:protocol-command-decode; sid:2228002; rev:1;)

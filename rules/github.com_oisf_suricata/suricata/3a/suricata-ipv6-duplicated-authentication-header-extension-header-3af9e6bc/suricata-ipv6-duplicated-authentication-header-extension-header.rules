@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv6 duplicated Authentication Header extension header"; decode-event:ipv6.exthdr_dupl_ah; classtype:protocol-command-decode; sid:2200019; rev:2;)

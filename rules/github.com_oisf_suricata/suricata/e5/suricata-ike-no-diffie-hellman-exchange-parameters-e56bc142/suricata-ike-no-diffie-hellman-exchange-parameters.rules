@@ -1,0 +1,1 @@
+alert ike any any -> any any (msg:"SURICATA IKE no Diffie-Hellman exchange parameters"; flow:to_client; app-layer-event:ike.weak_crypto_no_dh; classtype:protocol-command-decode; sid:2224006; rev:3;)

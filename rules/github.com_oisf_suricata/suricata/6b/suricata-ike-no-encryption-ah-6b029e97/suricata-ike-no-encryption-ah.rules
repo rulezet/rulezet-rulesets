@@ -1,0 +1,1 @@
+alert ike any any -> any any (msg:"SURICATA IKE no encryption (AH)"; flow:to_client; app-layer-event:ike.no_encryption; classtype:protocol-command-decode; sid:2224008; rev:2;)

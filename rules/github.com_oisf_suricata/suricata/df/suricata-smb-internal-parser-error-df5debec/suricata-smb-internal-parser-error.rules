@@ -1,0 +1,1 @@
+alert smb any any -> any any (msg:"SURICATA SMB internal parser error"; flow:to_server; app-layer-event:smb.internal_error; classtype:protocol-command-decode; sid:2225000; rev:1;)

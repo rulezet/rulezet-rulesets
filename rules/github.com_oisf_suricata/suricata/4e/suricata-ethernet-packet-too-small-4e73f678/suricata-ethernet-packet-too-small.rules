@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA Ethernet packet too small"; decode-event:ethernet.pkt_too_small; classtype:protocol-command-decode; sid:2200042; rev:2;)

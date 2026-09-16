@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"SURICATA DNS Infinite loop"; app-layer-event:dns.infinite_loop; classtype:protocol-command-decode; sid:224009; rev:1;)

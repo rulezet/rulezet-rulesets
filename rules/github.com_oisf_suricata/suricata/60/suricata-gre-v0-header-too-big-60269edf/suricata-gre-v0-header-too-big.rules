@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA GRE v0 header too big"; decode-event:gre.version0_hdr_too_big; classtype:protocol-command-decode; sid:2200056; rev:2;)

@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM pkt seen on wrong thread"; stream-event:wrong_thread; threshold:type backoff, track by_flow, count 1, multiplier 10; sid:2210059; rev:2;)

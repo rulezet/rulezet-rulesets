@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM CLOSING ACK wrong seq"; stream-event:closing_ack_wrong_seq; classtype:protocol-command-decode; sid:2210018; rev:2;)

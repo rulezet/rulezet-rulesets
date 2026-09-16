@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA ICMPv4 unknown version"; decode-event:icmpv4.ipv4_unknown_ver; classtype:protocol-command-decode; sid:2200027; rev:2;)

@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv6 truncated extension header"; decode-event:ipv6.trunc_exthdr; classtype:protocol-command-decode; sid:2200014; rev:2;)

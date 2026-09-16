@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv4 with ICMPv6 header"; decode-event:ipv4.icmpv6; classtype:protocol-command-decode; sid:2200092; rev:2;)

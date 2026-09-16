@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv4 padding required "; decode-event:ipv4.opt_pad_required; classtype:protocol-command-decode; sid:2200007; rev:2;)

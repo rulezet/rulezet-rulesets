@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv4 wrong IP version"; decode-event:ipv4.wrong_ip_version; classtype:protocol-command-decode; sid:2200011; rev:2;)

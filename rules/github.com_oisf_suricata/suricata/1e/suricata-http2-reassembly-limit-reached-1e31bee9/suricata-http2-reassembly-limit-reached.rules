@@ -1,0 +1,1 @@
+alert http2 any any -> any any (msg:"SURICATA HTTP2 reassembly limit reached"; flow:established; app-layer-event:http2.reassembly_limit_reached; classtype:protocol-command-decode; sid:2290015; rev:1;)

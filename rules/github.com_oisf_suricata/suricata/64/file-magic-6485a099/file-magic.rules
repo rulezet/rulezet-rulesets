@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"FILE magic"; filemagic:"GIF"; filestore; noalert; sid:23; rev:1;)

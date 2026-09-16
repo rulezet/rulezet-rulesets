@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA GRE wrong version"; decode-event:gre.wrong_version; classtype:protocol-command-decode; sid:2200053; rev:2;)

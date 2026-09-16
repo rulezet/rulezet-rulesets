@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA ICMPv6 unassigned type"; decode-event:icmpv6.unassigned_type; classtype:protocol-command-decode; sid:2200108; rev:2;)

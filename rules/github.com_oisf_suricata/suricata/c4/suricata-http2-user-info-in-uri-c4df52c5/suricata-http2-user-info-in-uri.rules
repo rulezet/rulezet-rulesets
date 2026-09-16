@@ -1,0 +1,1 @@
+alert http2 any any -> any any (msg:"SURICATA HTTP2 user info in uri"; flow:established,to_server; app-layer-event:http2.userinfo_in_uri; classtype:protocol-command-decode; sid:2290014; rev:1;)

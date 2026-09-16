@@ -1,0 +1,1 @@
+alert http2 any any -> any any (msg:"SURICATA HTTP2 invalid client magic"; flow:established; app-layer-event:http2.invalid_client_magic; classtype:protocol-command-decode; sid:2290001; rev:1;)

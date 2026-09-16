@@ -1,0 +1,1 @@
+drop tcp any any -> any any (msg:"SURICATA STREAM 3way handshake toclient data injection suspected"; flow:to_client; stream-event:3whs_ack_data_inject; classtype:protocol-command-decode; sid:2210057; rev:1;)

@@ -1,0 +1,1 @@
+alert dhcp any any -> any any (msg:"SURICATA DHCP truncated options"; app-layer-event:dhcp.truncated_options; classtype:protocol-command-decode; sid:2227001; rev:1;)

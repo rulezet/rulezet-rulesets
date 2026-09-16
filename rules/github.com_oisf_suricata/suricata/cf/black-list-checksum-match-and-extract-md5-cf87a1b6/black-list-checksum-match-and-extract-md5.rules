@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Black list checksum match and extract MD5"; filemd5:fileextraction-chksum.list; filestore; sid:28; rev:1;)

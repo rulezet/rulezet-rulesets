@@ -1,0 +1,1 @@
+alert http2 any any -> any any (msg:"SURICATA HTTP2 failed decompression"; flow:established; app-layer-event:http2.failed_decompression; classtype:protocol-command-decode; sid:2290009; rev:1;)

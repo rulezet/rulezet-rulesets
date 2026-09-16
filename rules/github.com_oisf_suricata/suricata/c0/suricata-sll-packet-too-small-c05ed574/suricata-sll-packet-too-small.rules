@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA SLL packet too small"; decode-event:sll.pkt_too_small; classtype:protocol-command-decode; sid:2200041; rev:2;)

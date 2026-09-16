@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA UDP packet too small"; decode-event:udp.pkt_too_small; classtype:protocol-command-decode; sid:2200038; rev:2;)

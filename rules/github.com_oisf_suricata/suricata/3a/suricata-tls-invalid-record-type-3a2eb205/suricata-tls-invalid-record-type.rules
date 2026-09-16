@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"SURICATA TLS invalid record type"; flow:established; app-layer-event:tls.invalid_record_type; flowint:tls.anomaly.count,+,1; classtype:protocol-command-decode; sid:2230002; rev:1;)

@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM Packet with invalid ack"; stream-event:pkt_invalid_ack; threshold:type backoff, track by_flow, count 1, multiplier 10; classtype:protocol-command-decode; sid:2210045; rev:2;)

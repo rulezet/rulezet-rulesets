@@ -1,0 +1,1 @@
+alert smb any any -> any any (msg:"SURICATA SMB max requested READ size exceeded"; flow:to_server; app-layer-event:smb.read_request_too_large; classtype:protocol-command-decode; sid:2225009; rev:1;)

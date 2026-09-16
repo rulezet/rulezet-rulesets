@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM 3way handshake SYNACK resend with different ack"; stream-event:3whs_synack_resend_with_different_ack; threshold:type backoff, track by_flow, count 1, multiplier 2; classtype:protocol-command-decode; sid:2210004; rev:3;)

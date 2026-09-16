@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"FILESTORE jpg"; flow:established,to_server; fileext:"jpg"; filestore; sid:6; rev:1;)

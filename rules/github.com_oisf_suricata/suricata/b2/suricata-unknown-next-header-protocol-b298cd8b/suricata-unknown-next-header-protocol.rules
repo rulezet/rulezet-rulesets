@@ -1,0 +1,1 @@
+alert ipv6 any any -> any any (msg:"SURICATA unknown next header / protocol"; decode-event:ipv6.unknown_next_header; classtype:protocol-command-decode; sid:2200097; rev:2;)

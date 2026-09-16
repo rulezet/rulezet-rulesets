@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"SURICATA DNS Z flag set"; app-layer-event:dns.z_flag_set; classtype:protocol-command-decode; sid:2240006; rev:2;)

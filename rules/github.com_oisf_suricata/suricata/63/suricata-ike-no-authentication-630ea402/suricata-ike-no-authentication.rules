@@ -1,0 +1,1 @@
+alert ike any any -> any any (msg:"SURICATA IKE no authentication"; flow:to_client; app-layer-event:ike.weak_crypto_no_auth; classtype:protocol-command-decode; sid:2224007; rev:3;)

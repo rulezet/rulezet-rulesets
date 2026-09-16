@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP Mime malformed message found"; flow:established; app-layer-event:smtp.mime_malformed_msg; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220010; rev:1;)

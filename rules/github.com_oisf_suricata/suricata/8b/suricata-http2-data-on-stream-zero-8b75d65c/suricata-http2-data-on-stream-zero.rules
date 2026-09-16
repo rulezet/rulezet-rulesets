@@ -1,0 +1,1 @@
+alert http2 any any -> any any (msg:"SURICATA HTTP2 data on stream zero"; flow:established; app-layer-event:http2.data_stream_zero; classtype:protocol-command-decode; sid:2290018; rev:1;)

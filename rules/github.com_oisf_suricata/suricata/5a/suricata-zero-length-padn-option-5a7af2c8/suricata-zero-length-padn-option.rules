@@ -1,0 +1,1 @@
+alert ipv6 any any -> any any (msg:"SURICATA zero length padN option"; decode-event:ipv6.zero_len_padn; classtype:protocol-command-decode; sid:2200094; rev:2;)

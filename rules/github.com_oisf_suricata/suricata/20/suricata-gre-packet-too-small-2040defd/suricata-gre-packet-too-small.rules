@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA GRE packet too small"; decode-event:gre.pkt_too_small; classtype:protocol-command-decode; sid:2200052; rev:2;)

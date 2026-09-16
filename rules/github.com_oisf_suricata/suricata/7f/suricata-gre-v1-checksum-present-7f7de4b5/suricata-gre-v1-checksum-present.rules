@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA GRE v1 checksum present"; decode-event:gre.version1_chksum; classtype:protocol-command-decode; sid:2200057; rev:2;)

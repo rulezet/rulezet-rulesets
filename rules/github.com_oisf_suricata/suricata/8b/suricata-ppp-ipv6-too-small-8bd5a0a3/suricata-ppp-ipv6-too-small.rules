@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA PPP IPv6 too small"; decode-event:ppp.ip6_pkt_too_small; classtype:protocol-command-decode; sid:2200046; rev:2;)

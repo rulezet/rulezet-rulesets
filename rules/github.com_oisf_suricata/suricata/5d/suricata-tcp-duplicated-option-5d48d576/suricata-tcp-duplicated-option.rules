@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA TCP duplicated option"; decode-event:tcp.opt_duplicate; classtype:protocol-command-decode; sid:2200037; rev:2;)

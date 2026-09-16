@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM CLOSEWAIT retransmission packet before last ack"; stream-event:closewait_pkt_before_last_ack; flowint:tcp.retransmission.count,+,1; noalert; classtype:protocol-command-decode; sid:2210052; rev:3;)

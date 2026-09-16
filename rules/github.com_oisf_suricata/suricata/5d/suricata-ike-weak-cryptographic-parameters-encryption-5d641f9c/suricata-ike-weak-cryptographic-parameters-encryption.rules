@@ -1,0 +1,1 @@
+alert ike any any -> any any (msg:"SURICATA IKE weak cryptographic parameters (Encryption)"; flow:to_client; app-layer-event:ike.weak_crypto_enc; classtype:protocol-command-decode; sid:2224002; rev:2;)

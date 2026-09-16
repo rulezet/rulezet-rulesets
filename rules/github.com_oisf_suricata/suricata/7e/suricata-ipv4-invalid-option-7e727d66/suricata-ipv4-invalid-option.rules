@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv4 invalid option"; decode-event:ipv4.opt_invalid; classtype:protocol-command-decode; sid:2200004; rev:2;)

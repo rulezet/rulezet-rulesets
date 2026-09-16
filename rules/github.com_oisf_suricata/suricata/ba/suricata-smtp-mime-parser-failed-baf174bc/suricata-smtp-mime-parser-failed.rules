@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP Mime parser failed"; flow:established; app-layer-event:smtp.mime_parse_failed; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220009; rev:1;)

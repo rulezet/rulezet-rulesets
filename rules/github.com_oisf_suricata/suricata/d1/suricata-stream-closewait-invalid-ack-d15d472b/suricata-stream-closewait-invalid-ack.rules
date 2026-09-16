@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM CLOSEWAIT invalid ACK"; stream-event:closewait_invalid_ack; classtype:protocol-command-decode; sid:2210017; rev:2;)

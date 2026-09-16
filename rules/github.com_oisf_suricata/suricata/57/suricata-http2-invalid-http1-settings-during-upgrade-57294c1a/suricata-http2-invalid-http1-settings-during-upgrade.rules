@@ -1,0 +1,1 @@
+alert http2 any any -> any any (msg:"SURICATA HTTP2 invalid HTTP1 settings during upgrade"; flow:established; app-layer-event:http2.invalid_http1_settings; classtype:protocol-command-decode; sid:2290008; rev:1;)

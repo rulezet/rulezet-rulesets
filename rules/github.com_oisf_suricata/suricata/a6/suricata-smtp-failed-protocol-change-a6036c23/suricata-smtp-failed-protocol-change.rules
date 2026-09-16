@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP failed protocol change"; flow:established,to_client; app-layer-event:smtp.failed_protocol_change; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220021; rev:2;)

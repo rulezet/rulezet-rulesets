@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Black list checksum match and extract SHA256"; filesha256:fileextraction-chksum.list; filestore; sid:30; rev:1;)

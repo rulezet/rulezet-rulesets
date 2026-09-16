@@ -1,0 +1,1 @@
+alert ipv6 any any -> any any (msg:"SURICATA data after none (59) header"; decode-event:ipv6.data_after_none_header; classtype:protocol-command-decode; sid:2200096; rev:2;)

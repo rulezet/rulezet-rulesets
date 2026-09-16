@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA ICMPv6 packet too small"; decode-event:icmpv6.pkt_too_small; classtype:protocol-command-decode; sid:2200028; rev:2;)

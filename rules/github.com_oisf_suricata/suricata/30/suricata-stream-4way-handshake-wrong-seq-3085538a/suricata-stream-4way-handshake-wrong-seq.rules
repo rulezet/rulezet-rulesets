@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM 4way handshake wrong seq"; stream-event:4whs_wrong_seq; classtype:protocol-command-decode; sid:2210013; rev:2;)

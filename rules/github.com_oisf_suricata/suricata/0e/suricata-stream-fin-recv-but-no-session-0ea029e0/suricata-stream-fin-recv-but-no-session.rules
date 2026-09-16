@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM FIN recv but no session"; stream-event:fin_but_no_session; threshold:type backoff, track by_flow, count 1, multiplier 10; classtype:protocol-command-decode; sid:2210037; rev:3;)

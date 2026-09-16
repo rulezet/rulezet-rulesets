@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"SURICATA DNS invalid authorities"; app-layer-event:dns.invalid_authorities; classtype:protocol-command-decode; sid:2240012; rev:1;)

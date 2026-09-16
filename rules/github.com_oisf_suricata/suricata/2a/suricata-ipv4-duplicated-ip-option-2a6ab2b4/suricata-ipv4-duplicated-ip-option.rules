@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv4 duplicated IP option"; decode-event:ipv4.opt_duplicate; classtype:protocol-command-decode; sid:2200009; rev:2;)

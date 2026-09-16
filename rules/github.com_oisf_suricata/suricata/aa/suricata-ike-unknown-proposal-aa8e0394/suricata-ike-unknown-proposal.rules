@@ -1,0 +1,1 @@
+alert ike any any -> any any (msg:"SURICATA IKE unknown proposal"; flow:to_server; app-layer-event:ike.unknown_proposal; classtype:protocol-command-decode; sid:2224011; rev:2;)

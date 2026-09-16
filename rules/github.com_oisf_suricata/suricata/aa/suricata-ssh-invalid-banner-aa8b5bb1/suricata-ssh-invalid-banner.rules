@@ -1,0 +1,1 @@
+alert ssh any any -> any any (msg:"SURICATA SSH invalid banner"; flow:established; app-layer-event:ssh.invalid_banner; classtype:protocol-command-decode; sid:2228000; rev:1;)

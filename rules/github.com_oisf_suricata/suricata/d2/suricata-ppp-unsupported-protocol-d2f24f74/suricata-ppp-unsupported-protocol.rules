@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA PPP unsupported protocol"; decode-event:ppp.unsup_proto; classtype:protocol-command-decode; sid:2200048; rev:2;)

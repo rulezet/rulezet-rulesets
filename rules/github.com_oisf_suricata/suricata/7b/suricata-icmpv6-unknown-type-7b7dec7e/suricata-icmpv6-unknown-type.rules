@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA ICMPv6 unknown type"; decode-event:icmpv6.unknown_type; classtype:protocol-command-decode; sid:2200029; rev:2;)

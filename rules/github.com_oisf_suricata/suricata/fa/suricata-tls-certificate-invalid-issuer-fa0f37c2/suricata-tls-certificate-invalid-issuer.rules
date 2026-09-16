@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"SURICATA TLS certificate invalid issuer"; flow:established; app-layer-event:tls.certificate_invalid_issuer; flowint:tls.anomaly.count,+,1; classtype:protocol-command-decode; sid:2230029; rev:1;)

@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM excessive retransmissions"; flowbits:isnotset,tcp.retransmission.alerted; flowint:tcp.retransmission.count,>=,10; flowbits:set,tcp.retransmission.alerted; classtype:protocol-command-decode; sid:2210054; rev:1;)

@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA ICMPv6 MLD hop limit not 1"; decode-event:icmpv6.mld_message_with_invalid_hl; classtype:protocol-command-decode; sid:2200102; rev:2;)

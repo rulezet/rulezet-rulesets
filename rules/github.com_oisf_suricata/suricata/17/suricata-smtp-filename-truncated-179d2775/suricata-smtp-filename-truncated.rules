@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP filename truncated"; flow:established,to_server; app-layer-event:smtp.mime_long_filename; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220020; rev:1;)

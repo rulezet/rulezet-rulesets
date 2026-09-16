@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM 3way handshake excessive different SYNs"; stream-event:3whs_syn_flood; threshold:type backoff, track by_flow, count 1, multiplier 2; classtype:protocol-command-decode; sid:2210063; rev:2;)

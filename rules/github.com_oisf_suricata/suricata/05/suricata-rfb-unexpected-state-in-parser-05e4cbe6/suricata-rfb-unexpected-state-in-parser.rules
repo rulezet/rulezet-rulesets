@@ -1,0 +1,1 @@
+alert rfb any any -> any any (msg:"SURICATA RFB Unexpected State in Parser"; app-layer-event:rfb.confused_state; classtype:protocol-command-decode; sid:2233003; rev:1;)

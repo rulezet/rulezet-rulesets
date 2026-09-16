@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP unable to match reply with request"; flow:established,to_client; app-layer-event:smtp.unable_to_match_reply_with_request; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220001; rev:1;)

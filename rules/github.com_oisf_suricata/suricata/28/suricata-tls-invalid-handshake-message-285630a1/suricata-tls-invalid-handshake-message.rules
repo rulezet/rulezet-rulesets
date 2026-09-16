@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"SURICATA TLS invalid handshake message"; flow:established; app-layer-event:tls.invalid_handshake_message; flowint:tls.anomaly.count,+,1; classtype:protocol-command-decode; sid:2230003; rev:1;)

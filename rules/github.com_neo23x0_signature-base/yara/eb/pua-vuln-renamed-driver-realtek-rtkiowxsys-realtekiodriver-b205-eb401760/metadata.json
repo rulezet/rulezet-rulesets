@@ -1,0 +1,19 @@
+{
+  "uuid": "eb401760-543a-46cc-8d76-7e4c0d5ae585",
+  "title": "PUA_VULN_Renamed_Driver_Realtek_Rtkiowxsys_Realtekiodriver_B205",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkiow8x64.sys ",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/190342"
+}

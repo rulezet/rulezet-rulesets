@@ -1,0 +1,19 @@
+{
+  "uuid": "92fc5cf9-9095-4e89-8ee1-670b0781332b",
+  "title": "PUA_VULN_Renamed_Driver_Micsystechnologycoltd_Msiosys_Msiodriverversion_X_43BA",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - MsIo64.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/190433"
+}

@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv6 HOPOPTS only padding"; decode-event:ipv6.hopopts_only_padding; classtype:protocol-command-decode; sid:2200087; rev:2;)

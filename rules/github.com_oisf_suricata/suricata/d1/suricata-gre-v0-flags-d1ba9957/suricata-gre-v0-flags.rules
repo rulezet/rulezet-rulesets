@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA GRE v0 flags"; decode-event:gre.version0_flags; classtype:protocol-command-decode; sid:2200055; rev:2;)

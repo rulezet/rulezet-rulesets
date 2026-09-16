@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv4 header size too small"; decode-event:ipv4.hlen_too_small; classtype:protocol-command-decode; sid:2200001; rev:2;)

@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM TIMEWAIT ACK with wrong seq"; stream-event:timewait_ack_wrong_seq; threshold:type backoff, track by_flow, count 1, multiplier 10; classtype:protocol-command-decode; sid:2210042; rev:3;)

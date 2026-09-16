@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"FILE magic -- windows"; flow:established,to_client; filemagic:"executable for MS Windows"; filestore; sid:18; rev:1;)

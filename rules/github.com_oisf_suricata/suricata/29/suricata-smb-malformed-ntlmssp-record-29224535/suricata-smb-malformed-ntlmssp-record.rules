@@ -1,0 +1,1 @@
+alert smb any any -> any any (msg:"SURICATA SMB malformed NTLMSSP record"; flow:to_server; app-layer-event:smb.malformed_ntlmssp_request; classtype:protocol-command-decode; sid:2225004; rev:1;)

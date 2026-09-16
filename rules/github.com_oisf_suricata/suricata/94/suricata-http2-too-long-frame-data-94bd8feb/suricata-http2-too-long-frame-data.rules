@@ -1,0 +1,1 @@
+alert http2 any any -> any any (msg:"SURICATA HTTP2 too long frame data"; flow:established; app-layer-event:http2.long_frame_data; classtype:protocol-command-decode; sid:2290006; rev:1;)

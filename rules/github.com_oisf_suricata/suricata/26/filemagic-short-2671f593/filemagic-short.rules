@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"FILEMAGIC short"; flow:established,to_server; filemagic:"very short file (no magic)"; filestore; sid:12; rev:1;)

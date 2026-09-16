@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv6 duplicated Routing extension header"; decode-event:ipv6.exthdr_dupl_rh; classtype:protocol-command-decode; sid:2200016; rev:2;)

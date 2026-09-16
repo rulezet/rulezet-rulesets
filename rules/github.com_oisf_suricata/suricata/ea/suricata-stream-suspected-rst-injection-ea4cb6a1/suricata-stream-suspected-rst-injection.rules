@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM suspected RST injection"; stream-event:suspected_rst_inject; threshold:type backoff, track by_flow, count 1, multiplier 2; classtype:protocol-command-decode; sid:2210058; rev:2;)

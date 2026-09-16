@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA TCP header length too small"; decode-event:tcp.hlen_too_small; classtype:protocol-command-decode; sid:2200034; rev:2;)

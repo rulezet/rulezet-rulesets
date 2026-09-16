@@ -1,0 +1,1 @@
+alert ssh any any -> any any (msg:"SURICATA SSH too long banner"; flow:established; app-layer-event:ssh.long_banner; classtype:protocol-command-decode; sid:2228001; rev:1;)

@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA PPPOE wrong code"; decode-event:pppoe.wrong_code; classtype:protocol-command-decode; sid:2200050; rev:2;)

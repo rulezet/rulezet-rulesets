@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA PPP packet too small"; decode-event:ppp.pkt_too_small; classtype:protocol-command-decode; sid:2200043; rev:2;)

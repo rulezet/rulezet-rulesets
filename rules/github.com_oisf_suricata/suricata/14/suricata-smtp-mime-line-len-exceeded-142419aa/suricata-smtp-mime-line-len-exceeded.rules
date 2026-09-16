@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP Mime line len exceeded"; flow:established; app-layer-event:smtp.mime_long_line; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220015; rev:1;)

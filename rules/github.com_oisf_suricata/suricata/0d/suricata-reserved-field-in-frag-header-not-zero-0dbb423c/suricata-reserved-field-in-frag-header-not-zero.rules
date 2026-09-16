@@ -1,0 +1,1 @@
+alert ipv6 any any -> any any (msg:"SURICATA reserved field in Frag Header not zero"; decode-event:ipv6.fh_non_zero_reserved_field; classtype:protocol-command-decode; sid:2200095; rev:2;)

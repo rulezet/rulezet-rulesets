@@ -1,0 +1,1 @@
+alert ipv6 any any -> any any (msg:"SURICATA RH Type 0"; decode-event:ipv6.rh_type_0; classtype:protocol-command-decode; sid:2200093; rev:2;)

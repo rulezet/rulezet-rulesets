@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"SURICATA DNS malformed response data"; flow:to_client; app-layer-event:dns.malformed_data; classtype:protocol-command-decode; sid:2240003; rev:2;)

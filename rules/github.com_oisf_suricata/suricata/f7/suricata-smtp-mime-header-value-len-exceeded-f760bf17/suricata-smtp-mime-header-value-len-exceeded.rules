@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP Mime header value len exceeded"; flow:established; app-layer-event:smtp.mime_long_header_value; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220013; rev:1;)

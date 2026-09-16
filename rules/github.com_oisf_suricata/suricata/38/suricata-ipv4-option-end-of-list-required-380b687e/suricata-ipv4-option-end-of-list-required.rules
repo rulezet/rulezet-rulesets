@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv4 option end of list required"; decode-event:ipv4.opt_eol_required; classtype:protocol-command-decode; sid:2200008; rev:2;)

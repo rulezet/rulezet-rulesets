@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM FIN2 ack with wrong seq"; stream-event:fin2_ack_wrong_seq; threshold:type backoff, track by_flow, count 1, multiplier 10; classtype:protocol-command-decode; sid:2210034; rev:3;)

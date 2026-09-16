@@ -1,0 +1,1 @@
+alert mqtt any any -> any any (msg:"SURICATA MQTT invalid QOS level"; app-layer-event:mqtt.invalid_qos_level; classtype:protocol-command-decode; sid:2229006; rev:1;)

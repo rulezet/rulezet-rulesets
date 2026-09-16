@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM 3way handshake async wrong sequence"; stream-event:3whs_async_wrong_seq; threshold:type backoff, track by_flow, count 1, multiplier 2; classtype:protocol-command-decode; sid:2210001; rev:3;)

@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM CLOSEWAIT FIN out of window"; stream-event:closewait_fin_out_of_window; classtype:protocol-command-decode; sid:2210016; rev:2;)

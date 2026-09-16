@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM ESTABLISHED SYNACK to server"; stream-event:est_synack_toserver; threshold:type backoff, track by_flow, count 1, multiplier 10;  classtype:protocol-command-decode; sid:2210025; rev:3;)

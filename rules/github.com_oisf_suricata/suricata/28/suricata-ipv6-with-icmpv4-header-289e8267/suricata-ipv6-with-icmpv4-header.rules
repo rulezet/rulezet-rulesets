@@ -1,0 +1,1 @@
+alert ipv6 any any -> any any (msg:"SURICATA IPv6 with ICMPv4 header"; decode-event:ipv6.icmpv4; classtype:protocol-command-decode; sid:2200090; rev:2;)

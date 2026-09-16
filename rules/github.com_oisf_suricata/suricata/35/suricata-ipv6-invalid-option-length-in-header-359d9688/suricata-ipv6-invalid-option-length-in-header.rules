@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv6 invalid option length in header"; decode-event:ipv6.exthdr_invalid_optlen; classtype:protocol-command-decode; sid:2200021; rev:3;)

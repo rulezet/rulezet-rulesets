@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP tls rejected"; flow:established,to_client; app-layer-event:smtp.tls_rejected; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220007; rev:2;)

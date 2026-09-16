@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA Ethertype unknown"; decode-event:ethernet.unknown_ethertype; threshold: type limit, track by_rule, seconds 60, count 1; classtype:protocol-command-decode; sid:2200121; rev:1;)

@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM ESTABLISHED SYN resend"; stream-event:est_syn_resend; threshold:type backoff, track by_flow, count 1, multiplier 10; classtype:protocol-command-decode; sid:2210026; rev:3;)

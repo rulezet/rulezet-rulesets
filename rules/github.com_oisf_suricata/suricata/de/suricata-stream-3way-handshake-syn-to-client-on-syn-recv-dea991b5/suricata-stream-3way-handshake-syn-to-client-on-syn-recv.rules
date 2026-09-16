@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM 3way handshake SYN to client on SYN recv"; stream-event:3whs_syn_toclient_on_syn_recv; threshold:type backoff, track by_flow, count 1, multiplier 2; classtype:protocol-command-decode; sid:2210009; rev:3;)

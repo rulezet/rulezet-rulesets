@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM spurious retransmission"; stream-event:pkt_spurious_retransmission; threshold:type backoff, track by_flow, count 1, multiplier 10; classtype:protocol-command-decode; sid:2210061; rev:2;)

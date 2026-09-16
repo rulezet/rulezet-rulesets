@@ -1,0 +1,1 @@
+alert ike any any -> any any (msg:"SURICATA IKE multiple server proposal"; flow:to_client; app-layer-event:ike.multiple_server_proposal; classtype:protocol-command-decode; sid:2224013; rev:1;)

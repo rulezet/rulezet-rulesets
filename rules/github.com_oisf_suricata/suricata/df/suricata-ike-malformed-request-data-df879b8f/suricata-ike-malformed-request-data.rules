@@ -1,0 +1,1 @@
+alert ike any any -> any any (msg:"SURICATA IKE malformed request data"; flow:to_server; app-layer-event:ike.malformed_data; classtype:protocol-command-decode; sid:2224000; rev:2;)

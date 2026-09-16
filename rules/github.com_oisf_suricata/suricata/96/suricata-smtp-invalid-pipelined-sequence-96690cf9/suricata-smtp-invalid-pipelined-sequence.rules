@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP invalid pipelined sequence"; flow:established,to_server; app-layer-event:smtp.invalid_pipelined_sequence; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220004; rev:1;)

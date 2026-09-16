@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM 4way handshake invalid ack"; stream-event:4whs_invalid_ack; classtype:protocol-command-decode; sid:2210014; rev:2;)

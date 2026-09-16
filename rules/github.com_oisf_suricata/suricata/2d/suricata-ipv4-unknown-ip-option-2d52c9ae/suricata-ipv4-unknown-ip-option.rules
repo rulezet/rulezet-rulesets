@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA IPv4 unknown IP option"; decode-event:ipv4.opt_unknown; classtype:protocol-command-decode; sid:2200010; rev:2;)

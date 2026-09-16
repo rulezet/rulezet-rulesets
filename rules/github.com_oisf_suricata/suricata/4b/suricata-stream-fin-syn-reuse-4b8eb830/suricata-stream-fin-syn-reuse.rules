@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM FIN SYN reuse"; stream-event:fin_syn; threshold:type backoff, track by_flow, count 1, multiplier 2; classtype:protocol-command-decode; sid:2210060; rev:2;)

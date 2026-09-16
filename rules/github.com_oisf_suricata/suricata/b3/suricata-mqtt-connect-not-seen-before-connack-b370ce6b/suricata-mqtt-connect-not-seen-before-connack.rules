@@ -1,0 +1,1 @@
+alert mqtt any any -> any any (msg:"SURICATA MQTT CONNECT not seen before CONNACK"; app-layer-event:mqtt.missing_connect; classtype:protocol-command-decode; sid:2229000; rev:1;)

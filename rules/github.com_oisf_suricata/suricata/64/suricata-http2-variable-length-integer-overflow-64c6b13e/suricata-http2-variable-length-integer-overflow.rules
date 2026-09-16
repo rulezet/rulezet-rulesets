@@ -1,0 +1,1 @@
+alert http2 any any -> any any (msg:"SURICATA HTTP2 variable-length integer overflow"; flow:established; app-layer-event:http2.header_integer_overflow; classtype:protocol-command-decode; sid:2290011; rev:1;)

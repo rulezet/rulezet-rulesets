@@ -1,0 +1,1 @@
+alert rfb any any -> any any (msg:"SURICATA RFB Unknown security result"; app-layer-event:rfb.unknown_security_result; classtype:protocol-command-decode; sid:2233002; rev:1;)

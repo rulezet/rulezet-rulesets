@@ -1,0 +1,1 @@
+alert smb any any -> any any (msg:"SURICATA SMB wrong direction"; app-layer-event:smb.response_to_server; classtype:protocol-command-decode; sid:2225007; rev:1;)

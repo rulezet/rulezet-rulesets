@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA ICMPv6 private experimentation type"; decode-event:icmpv6.experimentation_type; classtype:protocol-command-decode; sid:2200109; rev:2;)

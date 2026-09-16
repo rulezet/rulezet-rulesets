@@ -1,0 +1,1 @@
+alert ftp-data any any -> any any (msg:"File Found within FTP and stored"; filestore; filename:"password"; ftpdata_command:stor; sid:31; rev:1;)

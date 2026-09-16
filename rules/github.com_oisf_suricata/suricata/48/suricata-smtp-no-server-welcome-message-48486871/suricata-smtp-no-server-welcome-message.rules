@@ -1,0 +1,1 @@
+alert smtp any any -> any any (msg:"SURICATA SMTP no server welcome message"; flow:established,to_client; app-layer-event:smtp.no_server_welcome_message; flowint:smtp.anomaly.count,+,1; classtype:protocol-command-decode; sid:2220006; rev:1;)

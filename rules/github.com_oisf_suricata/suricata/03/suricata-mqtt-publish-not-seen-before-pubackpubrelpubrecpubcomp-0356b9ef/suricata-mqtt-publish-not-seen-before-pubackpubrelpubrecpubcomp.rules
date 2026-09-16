@@ -1,0 +1,1 @@
+alert mqtt any any -> any any (msg:"SURICATA MQTT PUBLISH not seen before PUBACK/PUBREL/PUBREC/PUBCOMP"; app-layer-event:mqtt.missing_publish; classtype:protocol-command-decode; sid:2229001; rev:1;)

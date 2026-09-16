@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM FIN out of window"; stream-event:fin_out_of_window; threshold:type backoff, track by_flow, count 1, multiplier 10; classtype:protocol-command-decode; sid:2210038; rev:3;)
