@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET P2P Bittorrent P2P Client User-Agent (KTorrent 2.x)"; flow:established,to_server; http.user_agent; content:"ktorrent/2"; startswith; reference:url,ktorrent.org; classtype:policy-violation; sid:2011711; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_04_13;)

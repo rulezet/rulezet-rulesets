@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET USER_AGENTS Suspicious User Agent (AskInstallChecker)"; flow:established,to_server; http.method; content:"GET"; http.user_agent; content:"AskInstall"; startswith; nocase; classtype:policy-violation; sid:2011225; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_04_13;)

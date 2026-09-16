@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Likely Hostile User-Agent (Forthgoer)"; flow:established,to_server; http.user_agent; content:"Forthgoer"; startswith; classtype:pup-activity; sid:2011247; rev:11; metadata:created_at 2010_07_30, confidence Medium, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_04_13;)

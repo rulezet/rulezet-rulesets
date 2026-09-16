@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Sogou Toolbar Checkin"; flow:established,to_server; http.uri; content:"/seversion.txt"; http.user_agent; content:"SeFastSetup"; startswith; classtype:pup-activity; sid:2011226; rev:10; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_04_13;)

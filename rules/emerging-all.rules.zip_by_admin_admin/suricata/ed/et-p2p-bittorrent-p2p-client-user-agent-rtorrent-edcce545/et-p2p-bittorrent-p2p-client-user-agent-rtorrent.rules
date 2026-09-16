@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET P2P Bittorrent P2P Client User-Agent (rTorrent)"; flow:established,to_server; http.user_agent; content:"rtorrent/"; startswith; reference:url,libtorrent.rakshasa.no; classtype:policy-violation; sid:2011705; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_04_13;)

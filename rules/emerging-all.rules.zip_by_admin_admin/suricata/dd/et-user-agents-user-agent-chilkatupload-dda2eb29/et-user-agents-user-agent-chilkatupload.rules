@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET USER_AGENTS User-Agent (ChilkatUpload)"; flow:established,to_server; http.user_agent; content:"ChilkatUpload"; startswith; nocase; reference:url,chilkatsoft.com; classtype:trojan-activity; sid:2016904; rev:6; metadata:created_at 2013_05_21, confidence High, signature_severity Major, updated_at 2024_04_13;)

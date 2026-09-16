@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP User-Agent (CustomSpy)"; flow:established,to_server; http.user_agent; content:"|28|CustomSpy|29 |"; startswith; endswith; classtype:pup-activity; sid:2011271; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_04_13;)

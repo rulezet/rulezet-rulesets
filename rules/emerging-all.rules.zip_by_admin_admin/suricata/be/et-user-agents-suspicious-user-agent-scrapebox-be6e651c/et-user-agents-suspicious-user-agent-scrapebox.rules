@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET USER_AGENTS Suspicious User Agent (ScrapeBox)"; flow:established,to_server; http.user_agent; content:"ScrapeBox"; startswith; classtype:trojan-activity; sid:2011282; rev:8; metadata:created_at 2010_09_28, confidence High, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_04_13;)

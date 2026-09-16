@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP YourSiteBar User-Agent (istsvc)"; flow:established,to_server; http.user_agent; content:"istsvc"; nocase; startswith; endswith; reference:url,www.ysbweb.com; classtype:pup-activity; sid:2001699; rev:266; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_04_13;)
