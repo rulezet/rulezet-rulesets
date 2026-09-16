@@ -1,0 +1,9 @@
+rule Win_Spyware_Delf_1396
+{
+strings:
+	$a0 = { 0149062a0828c8fd158814201139f648708376eb4dbb99dc6ee77b95fc3bf80ef733b902dcdc816ddde036ee40db57916eac17b5b24174904bae405b720375c906d724575ce02db9c06b7240572037ae483b7720bbddc82ddb906dddc15ddcc6ee66effffffb7dfef5ebdfbe73dfcf7f39efe7cfbce73f6f5e7e822a5c711485db5daed5bd5977d1e3be77fe }
+
+
+condition:
+	$a0
+}

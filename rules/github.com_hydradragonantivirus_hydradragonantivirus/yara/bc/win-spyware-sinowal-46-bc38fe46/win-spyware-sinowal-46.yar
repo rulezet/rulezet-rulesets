@@ -1,0 +1,9 @@
+rule Win_Spyware_Sinowal_46
+{
+strings:
+	$a0 = { da44d0a3ae48b85db4db4c1cee9b1daad5f39ecfbbfdd28f575f8a1be1b5c60cfd177cba6bb0469b53a3017a62ecfbb2398d286e59b0b1bae848d8522b4a7310499b84e8eae18e0a48d6e22db92b75f85a5fffffffedfcf7f3fbf9efeff7c7fbfc1e0f78f1ef97e7eff9410b4923830a292270aa4a57320e5a394ee699c8bd301b015819a94ba54d1c877098 }
+
+
+condition:
+	$a0
+}
