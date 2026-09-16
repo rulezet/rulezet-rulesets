@@ -1,0 +1,24 @@
+{
+  "uuid": "4d90f5a5-abdc-4cdc-a8cc-0d00f50138b7",
+  "title": "Citrix NetScaler Unexpected PHP File in VPN Theme Directory - STRICT",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects creation or modification of a PHP-family file beneath the NetScaler /var/vpn/theme directory, including the public proof-of-concept path x.php. This high-confidence post-exploitation signal may indicate a webshell written after CVE-2026-8452, but the file event alone does not attribute the write or prove command execution; authorized customization can also match. SOC L1 should hash and preserve the file, identify the creating process and user, inspect nearby SAML requests and nsppe or pitboss events, and validate the NetScaler build and change ticket.\nDétecte la création ou la modification d'un fichier de la famille PHP sous le répertoire NetScaler /var/vpn/theme, y compris le chemin x.php de la preuve de concept publique. Ce signal post-exploitation de haute confiance peut indiquer un webshell écrit après CVE-2026-8452, mais l'événement fichier seul n'attribue pas l'écriture et ne prouve pas une exécution de commande ; une personnalisation autorisée peut également correspondre. Le SOC L1 doit calculer le hash et préserver le fichier, identifier le processus et l'utilisateur créateurs, examiner les requêtes SAML proches ainsi que les événements nsppe ou pitboss, puis valider la version de NetScaler et le ticket de changement.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2026-8452"
+  ],
+  "created_at": "2026-09-04",
+  "last_modified": "2026-09-04",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347438"
+}

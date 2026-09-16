@@ -1,0 +1,24 @@
+{
+  "uuid": "2a31ef09-0cd8-4705-a921-cd987e6b2c64",
+  "title": "Potential Self-Signed TLS Certificate Recently Issued on External Connection",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies completed outbound TLS connections to external destinations where the server presents a recently issued,\nlikely self-signed certificate whose issuer and subject distinguished names are equal. C2 frameworks frequently use\nfreshly generated self-signed certificates instead of publicly trusted CAs. This behavioral logic complements hash-based\nC2 certificate rules, such as default Cobalt Strike team-server certificates, by catching rotated or custom\ninfrastructure that does not reuse default tooling certificates. Distinguished-name equality identifies self-issued\ncertificates but does not cryptographically prove that the certificate signed itself. The rule does not cover private-CA\nsigned certificates, where issuer and subject differ, or C2 that uses publicly trusted certificates such as Let's\nEncrypt.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Cobalt Strike\""
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1573",
+    "T1573.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347882"
+}

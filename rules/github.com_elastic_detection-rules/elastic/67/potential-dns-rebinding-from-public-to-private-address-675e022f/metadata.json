@@ -1,0 +1,21 @@
+{
+  "uuid": "675e022f-562a-45da-b304-50ed8199f60c",
+  "title": "Potential DNS Rebinding from Public to Private Address",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a client resolving the same public registered domain to both a public IP address and a private, loopback,\nlink-local, unique-local IPv6, or shared address. This includes both address classes being observed at the same\ntimestamp, and a public answer followed within five minutes by a private answer where the minimum TTL across all answer\nrecords in the private-answer events is 60 seconds or less. Either pattern is consistent with DNS rebinding that pivots\nbrowser or application trust to internal resources.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1189"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347867"
+}

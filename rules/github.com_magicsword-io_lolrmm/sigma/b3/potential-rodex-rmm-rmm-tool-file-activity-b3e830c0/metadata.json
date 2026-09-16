@@ -1,0 +1,23 @@
+{
+  "uuid": "b3e830c0-89cf-4855-9716-8723764edacf",
+  "title": "Potential Rodex RMM RMM Tool File Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects potential files activity of Rodex RMM RMM tool\n",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-04",
+  "last_modified": "2026-09-04",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347696"
+}

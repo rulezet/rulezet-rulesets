@@ -1,0 +1,24 @@
+{
+  "uuid": "a186eab4-38e6-4f9f-99fa-485efdfa0081",
+  "title": "FortiGate Overly Permissive Firewall Policy Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation or modification of a FortiGate firewall policy that permits all sources, all\ndestinations, and all services. An overly permissive policy effectively bypasses all firewall protections. Threat actors\nexploiting CVE-2026-24858 have been observed creating such policies to allow unrestricted traffic flow through\ncompromised FortiGate devices.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.004"
+  ],
+  "cve": [
+    "CVE-2026-24858"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347895"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "914e7349-129d-4dd4-9f48-db4e1342d2d3",
+  "title": "Windows Installer with Suspicious Properties",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of an installer from an archive or with suspicious properties. Adversaries may abuse\nmsiexec.exe to launch local or network accessible MSI files in an attempt to bypass application whitelisting.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218",
+    "T1218.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347842"
+}

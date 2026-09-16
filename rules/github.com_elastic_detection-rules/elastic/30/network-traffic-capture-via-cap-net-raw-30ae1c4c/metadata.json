@@ -1,0 +1,23 @@
+{
+  "uuid": "30ae1c4c-05f8-4367-a32e-9c9cb165f96c",
+  "title": "Network Traffic Capture via CAP_NET_RAW",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the ability of a process to be able to create RAW and PACKET socket types for the available network\nnamespaces by a non-root user. A malicious process with this capability may exploit routing between hosts, bypass\nnetwork access controls, and otherwise tamper with host networking if a firewall is not in place to limit the packet\ntypes and contents. The CAP_NET_RAW capability allows the process to bind to any address within the available\nnamespaces, which allows network traffic sniffing by a non root user. The rule identifies previously unknown processes\nexecuting with CAP_NET_RAW capabilities through the use of the new terms rule type.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1040"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347717"
+}

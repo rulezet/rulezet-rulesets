@@ -1,0 +1,23 @@
+{
+  "uuid": "34a3eadd-c300-4f84-86ec-e1c012e836f4",
+  "title": "ICMP Redirect Message from Internal Host",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies ICMP Redirect messages (type 5 for IPv4, type 137 for IPv6) sourced from an internal IPv4 or IPv6 address.\nLegitimate redirects are normally sent only by on-path routers. A workstation or server emitting redirects can indicate\nroute manipulation for adversary-in-the-middle activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1557"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347868"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "e8f8e80f-7581-4a62-9803-8f8b8b60d7f7",
+  "title": "Web Application Suspicious Activity: POST Request Declined",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A POST request to a web application returned a 403 response, which indicates the web application declined to process the\nrequest because the action requested was not allowed.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347847"
+}

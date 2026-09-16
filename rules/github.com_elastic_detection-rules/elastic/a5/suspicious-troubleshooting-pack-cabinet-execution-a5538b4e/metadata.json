@@ -1,0 +1,25 @@
+{
+  "uuid": "a5538b4e-519d-4cd1-a903-2d2ccae69787",
+  "title": "Suspicious Troubleshooting Pack Cabinet Execution",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of the Microsoft Diagnostic Wizard to open a diagcab file from a suspicious path and with an\nunusual parent process. This may indicate an attempt to execute malicious Troubleshooting Pack Cabinet files.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204",
+    "T1204.002",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347773"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "443b5e14-62cd-457b-9054-d29267488f02",
+  "title": "Registry Persistence via AppCert DLL",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects attempts to maintain persistence by creating registry keys using AppCert DLLs. AppCert DLLs are loaded by every\nprocess using the common API functions to create processes.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546",
+    "T1546.009"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347919"
+}

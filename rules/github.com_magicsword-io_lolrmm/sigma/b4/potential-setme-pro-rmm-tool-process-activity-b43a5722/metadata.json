@@ -1,0 +1,23 @@
+{
+  "uuid": "b43a5722-b10d-4191-9fc0-07e25ef550f6",
+  "title": "Potential SetMe PRO RMM Tool Process Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects potential processes activity of SetMe PRO RMM tool\n",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-04",
+  "last_modified": "2026-09-04",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347662"
+}

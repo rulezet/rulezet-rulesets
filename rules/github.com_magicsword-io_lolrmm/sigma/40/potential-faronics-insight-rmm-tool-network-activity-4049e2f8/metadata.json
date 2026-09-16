@@ -1,0 +1,23 @@
+{
+  "uuid": "4049e2f8-fc69-4b17-8fef-8e6873a95199",
+  "title": "Potential Faronics Insight RMM Tool Network Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects potential network activity of Faronics Insight RMM tool\n",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-04",
+  "last_modified": "2026-09-04",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347517"
+}

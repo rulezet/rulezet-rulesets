@@ -1,0 +1,27 @@
+{
+  "uuid": "44ad283c-9d0b-4e94-900f-6980ce4b3239",
+  "title": "FortiGate FortiCloud SSO Login from Unusual Source",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the first successful FortiCloud SSO login from a previously unseen source IP address to a FortiGate\ndevice within the last 5 days. FortiCloud SSO logins from new source IPs may indicate exploitation of SAML-based\nauthentication bypass vulnerabilities such as CVE-2026-24858, where crafted SAML assertions allow unauthorized access to\nFortiGate devices registered to other accounts. Environments that regularly use FortiCloud SSO will only alert on new\nsource IPs not seen in the lookback window.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1190",
+    "T1606",
+    "T1606.002"
+  ],
+  "cve": [
+    "CVE-2026-24858"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347892"
+}

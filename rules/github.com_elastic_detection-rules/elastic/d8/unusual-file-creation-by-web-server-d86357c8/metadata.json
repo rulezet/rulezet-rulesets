@@ -1,0 +1,30 @@
+{
+  "uuid": "d86357c8-c0d4-48d4-ab10-a4c1f4a4a968",
+  "title": "Unusual File Creation by Web Server",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects unusual file creations from a web server parent process. Adversaries may attempt to create files from\na web server parent process to establish persistence, execute malicious scripts, or exfiltrate data. ES|QL rules have\nlimited fields available in its alert documents. Make sure to review the original documents to aid in the investigation\nof this alert.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1071",
+    "T1190",
+    "T1505",
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347793"
+}

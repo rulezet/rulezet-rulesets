@@ -1,0 +1,24 @@
+{
+  "uuid": "8305be16-688b-497e-bb24-c9249dbc04f5",
+  "title": "Google Workspace Login Flagged Suspicious",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Surfaces Google Workspace sign-in events that Google's identity risk engine has flagged as suspicious via the\n`is_suspicious` field on the `login` activity record. This is Google's own ML-driven sign-in risk signal. The field is\nset by Google server-side based on signals like sign-ins from anonymizer infrastructure, known-malicious IP ranges,\natypical user characteristics, or anomalous device fingerprints. Use this signal as enrichment alongside the other\nWorkspace sign-in rules rather than as a standalone alert. This rule is a building block. It does not generate\nuser-facing alerts by default but populates `signal.rule.building_block_type` for correlation rules or analyst pivots.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1528",
+    "T1557"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347740"
+}

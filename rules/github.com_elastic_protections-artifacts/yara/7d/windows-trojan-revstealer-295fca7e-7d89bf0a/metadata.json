@@ -1,0 +1,22 @@
+{
+  "uuid": "7d89bf0a-d39f-49b5-8c5b-1b8bac0770db",
+  "title": "Windows_Trojan_RevStealer_295fca7e",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies WinUpdate module",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-05",
+  "last_modified": "2026-09-05",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347714"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "f58c55a3-db5e-4f2d-81a1-f55451b4d706",
+  "title": "Execution via MS VisualStudio Pre/Post Build Events",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of a command via Microsoft Visual Studio Pre or Post build events. Adversaries may backdoor a\ntrusted visual studio project to execute a malicious command during the project build process.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.003",
+    "T1127",
+    "T1127.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347764"
+}

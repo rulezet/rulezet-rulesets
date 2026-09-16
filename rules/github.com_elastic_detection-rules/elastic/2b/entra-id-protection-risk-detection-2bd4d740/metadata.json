@@ -1,0 +1,19 @@
+{
+  "uuid": "2bd4d740-8262-4a1a-93df-07097b446fa8",
+  "title": "Entra ID Protection - Risk Detection",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies Microsoft Entra ID Protection sign-in risk detections triggered by a range of risk events such as anonymized\nIP addresses, password spray attacks, impossible travel, token anomalies, and more. These detections are often early\nindicators of potential account compromise or malicious sign-in behavior. This is a promotion rule intended to surface\nall Entra ID sign-in risk events for further investigation and correlation with other identity-related activity. This is\na building block rule that is used to collect all Microsoft Entra ID Protection sign-in or user risk detections. It is\nnot intended to be used as a standalone detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347827"
+}

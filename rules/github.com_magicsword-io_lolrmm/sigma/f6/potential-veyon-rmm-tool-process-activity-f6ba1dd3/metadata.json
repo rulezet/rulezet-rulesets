@@ -1,0 +1,23 @@
+{
+  "uuid": "f6ba1dd3-c51a-4679-9bd9-47583ad41efb",
+  "title": "Potential Veyon RMM Tool Process Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects potential processes activity of Veyon RMM tool\n",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-04",
+  "last_modified": "2026-09-04",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347477"
+}

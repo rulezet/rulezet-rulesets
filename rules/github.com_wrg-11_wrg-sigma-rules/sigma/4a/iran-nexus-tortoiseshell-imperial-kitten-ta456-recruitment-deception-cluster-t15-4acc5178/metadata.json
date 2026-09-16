@@ -1,0 +1,23 @@
+{
+  "uuid": "4acc5178-80db-494e-b10e-351fbe404f99",
+  "title": "Iran-nexus Tortoiseshell (Imperial Kitten / TA456) recruitment-deception cluster — T1583",
+  "format": "sigma",
+  "author": "WRG Breach Intel — Phase 6",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Breach intel signature for actor iran_nexus_tortoiseshell, MITRE technique T1583. Derived from 1 observed incident(s) in the WRG breach catalog.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1583"
+  ],
+  "cve": [],
+  "created_at": "2026-08-28",
+  "last_modified": "2026-08-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347432"
+}

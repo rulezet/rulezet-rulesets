@@ -1,0 +1,21 @@
+{
+  "uuid": "57327915-0c92-45a5-b104-65de02593ed4",
+  "title": "PostgreSQL COPY PROGRAM Command Execution",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies PostgreSQL \"COPY\" statements that invoke an operating-system command through the \"PROGRAM\" option. A\nsuperuser or role with \"pg_execute_server_program\" can use this feature to execute arbitrary commands as the PostgreSQL\nservice account, a technique used after credential compromise and by cryptomining campaigns.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347883"
+}

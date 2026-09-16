@@ -1,0 +1,23 @@
+{
+  "uuid": "315656f0-f166-4b4f-888c-5f6c7bf952a1",
+  "title": "Okta Admin Console Login Failure",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies failed login attempts to the Okta Admin Console. Adversaries may attempt to gain unauthorized access to\nadministrator portals during reconnaissance or privilege escalation phases. Repeated failures may indicate brute force\nattacks, credential spraying, or attempts to use compromised credentials. Monitoring Admin Console access failures\nprovides visibility into potential account takeover attempts targeting administrative accounts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1110"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347800"
+}

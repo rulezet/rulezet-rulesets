@@ -1,0 +1,23 @@
+{
+  "uuid": "e668a7ff-6ec1-4792-b1aa-f272e71bea16",
+  "title": "Iran-nexus Tortoiseshell (Imperial Kitten / TA456) recruitment-deception cluster — T1656",
+  "format": "sigma",
+  "author": "WRG Breach Intel — Phase 6",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Breach intel signature for actor iran_nexus_tortoiseshell, MITRE technique T1656. Derived from 1 observed incident(s) in the WRG breach catalog.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1656"
+  ],
+  "cve": [],
+  "created_at": "2026-08-28",
+  "last_modified": "2026-08-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347427"
+}

@@ -1,0 +1,71 @@
+[metadata]
+bypass_bbr_timing = true
+creation_date = "2023/01/24"
+integration = ["windows", "endpoint", "system"]
+maturity = "production"
+updated_date = "2026/03/24"
+
+[rule]
+author = ["Elastic"]
+building_block_type = "default"
+description = """
+Detects the usage of commonly used system time discovery techniques, which attackers may use during the reconnaissance
+phase after compromising a system.
+"""
+from = "now-9m"
+index = [
+    "endgame-*",
+    "logs-endpoint.events.process-*",
+    "logs-system.security*",
+    "logs-windows.*",
+    "winlogbeat-*",
+]
+language = "eql"
+license = "Elastic License v2"
+name = "System Time Discovery"
+risk_score = 21
+rule_id = "06568a02-af29-4f20-929c-f3af281e41aa"
+severity = "low"
+tags = [
+    "Domain: Endpoint",
+    "OS: Windows",
+    "Use Case: Threat Detection",
+    "Tactic: Discovery",
+    "Data Source: Elastic Defend",
+    "Data Source: Elastic Endgame",
+    "Rule Type: BBR",
+    "Data Source: Windows Security Event Logs",
+]
+timestamp_override = "event.ingested"
+type = "eql"
+
+query = '''
+process where host.os.type == "windows" and event.type == "start" and
+(
+ (
+    (process.name: "net.exe" or (process.name : "net1.exe" and not process.parent.name : "net.exe")) and 
+    process.args : "time" and not process.args : "/set"
+ ) or 
+ (process.name: "w32tm.exe" and process.args: "/tz") or 
+ (process.name: "tzutil.exe" and process.args: "/g")
+) and not user.id : ("S-1-5-18", "S-1-5-19", "S-1-5-20")
+'''
+
+
+[[rule.threat]]
+framework = "MITRE ATT&CK"
+
+[[rule.threat.technique]]
+id = "T1124"
+name = "System Time Discovery"
+reference = "https://attack.mitre.org/techniques/T1124/"
+
+[[rule.threat.technique]]
+id = "T1614"
+name = "System Location Discovery"
+reference = "https://attack.mitre.org/techniques/T1614/"
+
+[rule.threat.tactic]
+id = "TA0007"
+name = "Discovery"
+reference = "https://attack.mitre.org/tactics/TA0007/"

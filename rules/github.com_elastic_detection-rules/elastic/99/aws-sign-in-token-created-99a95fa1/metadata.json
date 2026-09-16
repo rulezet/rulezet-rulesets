@@ -1,0 +1,24 @@
+{
+  "uuid": "99a95fa1-9de4-4eb2-8f9e-39cd431c788a",
+  "title": "AWS Sign-In Token Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Captures requests to the AWS federation endpoint (signin.amazonaws.com) for GetSigninToken. This API exchanges existing\ntemporary AWS credentials (e.g., from STS GetFederationToken or AssumeRole) for a short-lived sign-in token that is\nembedded in a one-click URL to the AWS Management Console. It is commonly used by custom federation tools and automation\nto pivot from programmatic access to a browser session. This is a building block rule meant to be used for correlation\nwith other rules to detect suspicious activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1550",
+    "T1550.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347746"
+}

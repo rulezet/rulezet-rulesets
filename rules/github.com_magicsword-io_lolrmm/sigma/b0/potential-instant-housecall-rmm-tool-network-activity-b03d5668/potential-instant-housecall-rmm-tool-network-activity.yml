@@ -1,0 +1,27 @@
+title: Potential Instant Housecall RMM Tool Network Activity
+id: e65c0189-e2f8-4d59-ac5d-95550fd5a2ab
+status: experimental
+description: |
+    Detects potential network activity of Instant Housecall RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2025-12-01
+modified: 2026-09-02
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - '*.instanthousecall.com'
+            - 'secure.instanthousecall.com'
+            - '*.instanthousecall.net'
+            - 'instanthousecall.com'
+    condition: selection
+falsepositives:
+    - Legitimate use of Instant Housecall
+level: medium

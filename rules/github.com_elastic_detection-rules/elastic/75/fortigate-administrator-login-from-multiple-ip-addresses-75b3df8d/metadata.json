@@ -1,0 +1,23 @@
+{
+  "uuid": "75b3df8d-ca44-4d99-a169-05d4405a341a",
+  "title": "FortiGate Administrator Login from Multiple IP Addresses",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects successful logins to the FortiGate management interface using the same Administrator account from\nmultiple distinct source IP addresses within an 24-hour period. Administrator logins from multiple locations in a short\ntime window may indicate credential sharing, compromised credentials, or unauthorized access and should be investigated.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347878"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "9bea3cc9-dc10-46b0-967b-d85eef259b7a",
+  "title": "First-Time FortiGate Administrator Login",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the first observed successful login of a user with the Administrator role to the FortiGate management\ninterface within the last 5 days. First-time administrator logins can indicate newly provisioned accounts,\nmisconfigurations, or unauthorized access using valid credentials and should be reviewed promptly.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347860"
+}

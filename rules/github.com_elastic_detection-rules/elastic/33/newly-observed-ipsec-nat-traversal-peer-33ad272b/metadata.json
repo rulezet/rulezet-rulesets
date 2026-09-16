@@ -1,0 +1,23 @@
+{
+  "uuid": "33ad272b-5b50-460c-a30c-3fe08c108853",
+  "title": "Newly Observed IPSEC NAT Traversal Peer",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies outbound IPSEC NAT Traversal (NAT-T) traffic to an external destination IP that was not observed\nduring the previous 5 days. IPSEC is a VPN technology that allows one system to talk to another using encrypted\ntunnels. NAT Traversal encapsulates IPSEC ESP traffic in UDP and, once a NAT device is detected, both peers float to UDP\nport 4500 for the tunnel data channel. Newly observed external NAT-T peers may indicate unauthorized VPN use or an\nadversary tunneling command and control or exfiltration traffic over the Internet.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1095",
+    "T1572",
+    "T1573"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347861"
+}

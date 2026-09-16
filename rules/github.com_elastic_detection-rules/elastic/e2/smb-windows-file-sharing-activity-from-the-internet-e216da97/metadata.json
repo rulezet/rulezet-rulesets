@@ -1,0 +1,26 @@
+{
+  "uuid": "e216da97-5964-4760-b5b2-9264d823e194",
+  "title": "SMB (Windows File Sharing) Activity from the Internet",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects network events that may indicate inbound Windows file sharing (SMB or CIFS) traffic originating from\nthe Internet. SMB should never be directly reachable from the Internet, as it is a primary target for exploitation by\nthreat actors seeking initial access. Inbound SMB from a public IP is a direct precondition for attacks such as\nEternalBlue (MS17-010) and related SMB remote code execution vulnerabilities.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"NotPetya\"",
+    "misp-galaxy:ransomware=\"WannaCry\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347857"
+}

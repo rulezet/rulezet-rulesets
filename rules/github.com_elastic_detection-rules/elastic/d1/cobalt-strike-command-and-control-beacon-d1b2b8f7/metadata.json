@@ -1,0 +1,27 @@
+{
+  "uuid": "d1b2b8f7-e2a6-405c-9c5c-df7794888798",
+  "title": "Cobalt Strike Command and Control Beacon",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Cobalt Strike is a threat emulation platform commonly modified and used by adversaries to conduct network attack and\nexploitation campaigns. This rule detects a network activity algorithm leveraged by Cobalt Strike implant beacons for\ncommand and control.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1071.001",
+    "T1568",
+    "T1568.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347902"
+}

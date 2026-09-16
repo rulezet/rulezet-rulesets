@@ -1,0 +1,23 @@
+{
+  "uuid": "c22b5d8f-8433-45b6-b9be-5db7de9dca16",
+  "title": "Anomalous React Server Components Flight Data Patterns",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects anomalous patterns in React Server Components (RSC) Flight protocol data streams that may indicate\ncode injection or exploitation attempts. The Flight protocol is used by React and Next.js for server-client\ncommunication, and should never contain Node.js code execution primitives like child_process, fs module calls, or eval\npatterns. This building block rule casts a wider net to identify suspicious payloads that warrant further investigation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.007",
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347830"
+}

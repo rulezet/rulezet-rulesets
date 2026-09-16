@@ -1,0 +1,24 @@
+{
+  "uuid": "f8e8a757-3d84-4218-9d9d-c6ac885c0db2",
+  "title": "Potential Timestomp in Executable Files",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the modification of a file creation time for executable files in sensitive system directories. Adversaries\nmay modify file time attributes to blend malicious executables with legitimate system files. Timestomping is a technique\nthat modifies the timestamps of a file often to mimic files that are in trusted directories.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1070.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347907"
+}

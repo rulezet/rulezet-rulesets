@@ -1,0 +1,23 @@
+title: Potential DesktopNow RMM Tool Network Activity
+id: 8e485557-189d-4e48-835c-f55b3e114c4e
+status: experimental
+description: |
+    Detects potential network activity of DesktopNow RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2025-12-01
+modified: 2026-09-02
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith: '*.nchuser.com'
+    condition: selection
+falsepositives:
+    - Legitimate use of DesktopNow
+level: medium

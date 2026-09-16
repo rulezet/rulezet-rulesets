@@ -1,0 +1,24 @@
+{
+  "uuid": "54323c01-06e7-4c1f-a8ad-ae87ba4e85cb",
+  "title": "WatchGuard Fireware EPM abnormal termination - STRICT",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Alerts when a WatchGuard Fireware event or diagnostic record identifies the epm process and reports an abnormal termination, crash, segmentation fault, core dump, or crash-driven restart. On a Firebox with the deprecated Mobile Security feature enabled, this high-confidence signal is consistent with a failed CVE-2026-13086 exploitation attempt, but the event alone does not prove exploitation or successful code execution because an unrelated software fault can also crash the service. SOC L1 should confirm the Fireware version and Mobile Security state, collect the fault report, and correlate the event time with connections from Trusted interfaces to the EPM service.\nAlerte lorsqu'un événement ou un enregistrement de diagnostic WatchGuard Fireware identifie le processus epm et signale une terminaison anormale, un crash, une erreur de segmentation, un core dump ou un redémarrage provoqué par un crash. Sur un Firebox avec la fonctionnalité obsolète Mobile Security activée, ce signal à haute confiance est compatible avec une tentative d'exploitation échouée de CVE-2026-13086, mais l'événement seul ne prouve ni l'exploitation ni une exécution de code réussie, car un défaut logiciel sans rapport peut également faire planter le service. Le SOC L1 doit confirmer la version de Fireware et l'état de Mobile Security, collecter le rapport de panne et corréler l'heure de l'événement avec les connexions provenant des interfaces Trusted vers le service EPM.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1210",
+    "T1499.004"
+  ],
+  "cve": [
+    "CVE-2026-13086"
+  ],
+  "created_at": "2026-09-04",
+  "last_modified": "2026-09-04",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347436"
+}

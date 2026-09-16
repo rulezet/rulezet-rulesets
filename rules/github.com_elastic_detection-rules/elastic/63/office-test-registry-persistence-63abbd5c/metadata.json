@@ -1,0 +1,25 @@
+{
+  "uuid": "63abbd5c-7e79-4240-9a70-c557f3c88e26",
+  "title": "Office Test Registry Persistence",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the modification of the Microsoft Office \"Office Test\" Registry key, a registry location that can be used to\nspecify a DLL which will be executed every time an MS Office application is started. Attackers can abuse this to gain\npersistence on a compromised host.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1137",
+    "T1137.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347909"
+}

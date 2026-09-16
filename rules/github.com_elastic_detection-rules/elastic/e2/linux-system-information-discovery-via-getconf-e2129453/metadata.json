@@ -1,0 +1,25 @@
+{
+  "uuid": "e2129453-e37f-487b-ba2d-b73f5c3f82f7",
+  "title": "Linux System Information Discovery via Getconf",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies Linux system information discovery via the \"getconf\" command. The \"getconf\" command is used to query system configuration\nvariables and system limits. Adversaries may use this command to gather information about the system, such as the page size, maximum number\nof open files, and other system limits, to aid in further exploration and exploitation of the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347790"
+}

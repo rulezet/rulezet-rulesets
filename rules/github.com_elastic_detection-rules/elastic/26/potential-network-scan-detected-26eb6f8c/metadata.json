@@ -1,0 +1,23 @@
+{
+  "uuid": "26eb6f8c-8ce7-4a00-941f-3f64d81ddb70",
+  "title": "Potential Network Scan Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies a potential port scan from an internal IP address. A port scan is a method utilized by attackers to\nsystematically scan a target system for open ports, allowing them to identify available services and potential\nvulnerabilities. By mapping out the open ports, attackers can gather critical information to plan and execute targeted\nattacks, gaining unauthorized access, compromising security, and potentially leading to data breaches, unauthorized\ncontrol, or further exploitation of the targeted system. This rule defines a threshold-based approach to detect\nconnection attempts from a single internal source to a wide range of destination ports on a single destination.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1046",
+    "T1595",
+    "T1595.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347854"
+}

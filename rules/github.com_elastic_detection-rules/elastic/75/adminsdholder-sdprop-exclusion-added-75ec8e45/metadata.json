@@ -1,0 +1,26 @@
+{
+  "uuid": "75ec8e45-3dba-45ac-90bf-f78d760eafd8",
+  "title": "AdminSDHolder SDProp Exclusion Added",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a modification on the dsHeuristics attribute on the bit that holds the configuration of groups excluded from\nthe SDProp process. The SDProp compares the permissions on protected objects with those defined on the AdminSDHolder\nobject. If the permissions on any of the protected accounts and groups do not match, the permissions on the protected\naccounts and groups are reset to match those of the domain's AdminSDHolder object, meaning that groups excluded will\nremain unchanged. Attackers can abuse this misconfiguration to maintain long-term access to privileged accounts in these\ngroups.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.002",
+    "T1098",
+    "T1484"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347914"
+}

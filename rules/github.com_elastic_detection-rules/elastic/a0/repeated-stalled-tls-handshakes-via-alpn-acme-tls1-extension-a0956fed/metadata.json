@@ -1,0 +1,24 @@
+{
+  "uuid": "a0956fed-e9a8-4d5f-b228-11c9d9f003ee",
+  "title": "Repeated Stalled TLS Handshakes via ALPN acme-tls/1 Extension",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects two ALPN-based denial-of-service patterns against TLS servers. The first identifies repeated stalled\nhandshakes advertising the acme-tls/1 ALPN extension with no session established, indicating potential goroutine or\nworker exhaustion in reverse proxies. The second matches connections where a malformed ALPN extension triggers TLS\nalerts such as decode_error or illegal_parameter, consistent with zero-length ALPN list exploitation. Both patterns are\nanomalous outside of scheduled ACME TLS-ALPN-01 certificate validation activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1499",
+    "T1499.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347881"
+}

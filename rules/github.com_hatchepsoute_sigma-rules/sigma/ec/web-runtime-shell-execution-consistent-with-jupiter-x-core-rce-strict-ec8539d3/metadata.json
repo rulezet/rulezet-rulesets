@@ -1,0 +1,27 @@
+{
+  "uuid": "ec8539d3-675b-4d39-92fa-d56297606099",
+  "title": "Web Runtime Shell Execution Consistent With Jupiter X Core RCE - STRICT",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a PHP or web server runtime spawning a shell with reconnaissance, download, interpreter, or public-PoC command markers. This is a high-confidence post-exploitation signal that can follow CVE-2025-0366, but it is not sufficient by itself to attribute the activity to that CVE. SOC L1 should correlate the process with web requests, the hosting account, the working directory, and file changes.\nDétecte un moteur PHP ou un serveur web qui lance un shell avec des marqueurs de reconnaissance, de téléchargement, d'interpréteur ou du PoC public. Il s'agit d'un signal post-exploitation à haute confiance qui peut suivre CVE-2025-0366, mais il ne suffit pas à attribuer l'activité à cette CVE. Le SOC L1 doit corréler le processus avec les requêtes web, le compte d'hébergement, le répertoire courant et les modifications de fichiers.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2025-0366"
+  ],
+  "created_at": "2026-08-28",
+  "last_modified": "2026-08-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347426"
+}

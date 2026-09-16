@@ -1,0 +1,34 @@
+{
+  "uuid": "f826e3ed-18a5-48c7-85a4-db832d0ae441",
+  "title": "Execution of Persistent Suspicious Program",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies execution of suspicious persistent programs (scripts, rundll32, etc.) by looking at process lineage and\ncommand line usage.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1127",
+    "T1127.001",
+    "T1218",
+    "T1218.004",
+    "T1218.005",
+    "T1218.009",
+    "T1218.010",
+    "T1218.011",
+    "T1547",
+    "T1547.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347910"
+}

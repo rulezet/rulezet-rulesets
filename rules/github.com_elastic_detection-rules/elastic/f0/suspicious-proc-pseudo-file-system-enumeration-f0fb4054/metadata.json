@@ -1,0 +1,24 @@
+{
+  "uuid": "f0fb4054-85ec-4dd7-911f-512025b3f7b5",
+  "title": "Suspicious Proc Pseudo File System Enumeration",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for a rapid enumeration of 25 different proc cmd, stat, and exe files, which suggests an abnormal\nactivity pattern. Such behavior could be an indicator of a malicious process scanning or gathering information about\nrunning processes, potentially for reconnaissance, privilege escalation, or identifying vulnerable targets.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1057",
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347802"
+}

@@ -1,0 +1,27 @@
+title: Potential Netreo RMM Tool Network Activity
+id: cad3922b-33f7-4510-a4ea-5fd1c8915154
+status: experimental
+description: |
+    Detects potential network activity of Netreo RMM tool
+references:
+    - https://github.com/magicsword-io/LOLRMM
+author: LOLRMM Project
+date: 2025-12-01
+modified: 2026-09-02
+tags:
+    - attack.command-and-control
+    - attack.t1219
+logsource:
+    product: windows
+    category: network_connection
+detection:
+    selection:
+        DestinationHostname|endswith:
+            - 'charon.netreo.net'
+            - 'activation.netreo.net'
+            - '*.api.netreo.com'
+            - 'netreo.com'
+    condition: selection
+falsepositives:
+    - Legitimate use of Netreo
+level: medium

@@ -1,0 +1,24 @@
+{
+  "uuid": "96571290-ee15-4b06-a8a8-95ac447fd3da",
+  "title": "Executable File with Unusual Extension",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation or modification of an executable file with an unexpected file extension. Attackers may attempt\nto evade detection by masquerading files using the file extension values used by image, audio, or document file types.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347795"
+}

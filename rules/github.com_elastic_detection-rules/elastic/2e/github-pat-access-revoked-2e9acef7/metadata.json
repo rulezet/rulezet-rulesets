@@ -1,0 +1,21 @@
+{
+  "uuid": "2e9acef7-ac62-4431-b3cf-29b85c1f433e",
+  "title": "GitHub PAT Access Revoked",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Access to private GitHub organization resources was revoked for a PAT.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1531"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347792"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "f280b6bf-309d-4712-9354-604b9db38696",
+  "title": "Azure Virtual Machine Configuration Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a successful write to an Azure virtual machine resource\n(\"MICROSOFT.COMPUTE/VIRTUALMACHINES/WRITE\"). This operation is the parent action behind VM userData injection, where an\nadversary with VM contributor rights writes a base64 startup payload into the VM \"userData\" field that executes on the\nnext reboot (a control-plane persistence technique requiring no guest access). The Azure activity log does not record the\n\"userData\" value or which property changed, so this behavior is indistinguishable from any other VM write at detection\ntime. This is a building block rule and does not generate alerts on its own; it captures the VM write population so it\ncan be correlated with other signals and baselined over time to tune a higher-fidelity userData-injection detection.\nTo investigate a candidate, retrieve the live \"userData\" from the VM with an Azure Resource Manager GET using \"$expand=userData\".\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1651"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347733"
+}

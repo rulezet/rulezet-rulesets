@@ -1,0 +1,27 @@
+{
+  "uuid": "bea68d43-b33d-4771-95a0-38dc9429c42b",
+  "title": "File or Directory Deletion Command",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies the execution of commands that can be used to delete files and directories. Adversaries may delete\nfiles and directories on a host system, such as logs, browser history, or malware.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1070.004",
+    "T1112",
+    "T1218",
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347817"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "21e6de67-cce6-42bc-b574-e625316fd2d1",
+  "title": "M365 Purview DLP Signal",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies Microsoft 365 Data Loss Prevention (DLP) and Data Lifecycle Management (DLM) signals from Microsoft Purview\nacross Exchange, SharePoint, OneDrive, and endpoint devices. These events indicate potential data exfiltration attempts,\npolicy violations involving sensitive data, or unauthorized sharing of classified information. This building block rule\ngenerates security events for correlation, threat hunting, and telemetry collection to support detection of collection\nand exfiltration activities.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1114",
+    "T1530",
+    "T1567",
+    "T1567.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347781"
+}

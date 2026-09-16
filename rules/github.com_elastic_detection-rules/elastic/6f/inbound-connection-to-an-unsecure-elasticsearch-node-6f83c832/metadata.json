@@ -1,0 +1,22 @@
+{
+  "uuid": "6f83c832-e9ac-4ddf-b885-a73761fa2902",
+  "title": "Inbound Connection to an Unsecure Elasticsearch Node",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies Elasticsearch nodes that do not have Transport Layer Security (TLS), and/or lack authentication, and are\naccepting inbound network connections over the default Elasticsearch port.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1595"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347888"
+}

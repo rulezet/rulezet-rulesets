@@ -1,0 +1,24 @@
+{
+  "uuid": "deb62a59-636c-48ca-858b-8bd55767ed47",
+  "title": "File and Directory Permissions Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the change of permissions/ownership of files/folders through built-in Windows utilities. Threat actors may\nrequire permission modification of files/folders to change, modify or delete them.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1222",
+    "T1222.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347771"
+}

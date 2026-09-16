@@ -1,0 +1,27 @@
+{
+  "uuid": "ebe15a5a-fa15-4f90-a227-90f0665e9510",
+  "title": "Potential PowerShell Obfuscation via High Special Character Proportion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies PowerShell script block content with an unusually high proportion of non-alphanumeric characters, often\nproduced by encoding, string mangling, or dynamic code generation. Attackers use special-character heavy obfuscation to\nconceal payloads and hinder static analysis and AMSI.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1027.010",
+    "T1059",
+    "T1059.001",
+    "T1140"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347751"
+}

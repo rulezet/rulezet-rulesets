@@ -1,0 +1,24 @@
+{
+  "uuid": "d03809a3-85c5-4786-a6cb-443864ca23ed",
+  "title": "First Time Seen Memcached Writer",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the first successful or no-reply Memcached store command from a client to a server. Memcached commonly has no\nauthentication, so an unauthorized writer can overwrite session tokens, poison cached application content, or alter\nsecurity-sensitive state. This behavior can enable session hijacking such as the exposure described by CVE-2026-29093.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1565",
+    "T1565.001"
+  ],
+  "cve": [
+    "CVE-2026-29093"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347864"
+}

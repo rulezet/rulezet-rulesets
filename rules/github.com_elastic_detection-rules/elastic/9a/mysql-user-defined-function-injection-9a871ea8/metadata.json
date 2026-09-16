@@ -1,0 +1,22 @@
+{
+  "uuid": "9a871ea8-4d5f-4b4c-baf7-ce998755f07e",
+  "title": "MySQL User-Defined Function Injection",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies MySQL statements that create a user-defined function backed by a shared library. Adversaries with sufficient\ndatabase privileges can place a malicious library in the MySQL plugin directory and register it with \"CREATE FUNCTION\n... SONAME\", establishing a database-resident primitive for operating-system command execution.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1505",
+    "T1505.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347886"
+}

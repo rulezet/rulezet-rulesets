@@ -1,0 +1,27 @@
+{
+  "uuid": "fc5971af-c363-4f6b-a05e-af3f29b52935",
+  "title": "Default Cobalt Strike Team Server Certificate",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the use of the default Cobalt Strike Team Server TLS certificate. Cobalt Strike is software for\nAdversary Simulations and Red Team Operations which are security assessments that replicate the tactics and techniques\nof an advanced adversary in a network. Modifications to the Packetbeat configuration can be made to include MD5 and\nSHA256 hashing algorithms (the default is SHA1). See the References section for additional information on module\nconfiguration.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT32 - G0050\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN6 - G0037\"",
+    "misp-galaxy:tool=\"Cobalt Strike\""
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1071.001",
+    "T1573"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347906"
+}

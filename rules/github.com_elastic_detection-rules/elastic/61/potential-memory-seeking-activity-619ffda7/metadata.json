@@ -1,0 +1,26 @@
+{
+  "uuid": "619ffda7-d944-4094-afd3-e54e4e9b938c",
+  "title": "Potential Memory Seeking Activity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Monitors for the execution of Unix utilities that may be leveraged as memory address seekers. Attackers may leverage\nbuilt-in utilities to seek specific memory addresses, allowing for potential future manipulation/exploitation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1057"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347737"
+}

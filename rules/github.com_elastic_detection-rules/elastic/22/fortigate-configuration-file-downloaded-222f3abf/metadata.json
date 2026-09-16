@@ -1,0 +1,26 @@
+{
+  "uuid": "222f3abf-6786-49bc-8de5-78a87fb011b8",
+  "title": "FortiGate Configuration File Downloaded",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the download of a FortiGate device configuration file. Configuration exports contain sensitive data\nincluding administrator password hashes, LDAP bind credentials, VPN pre-shared keys, routing tables, and firewall\npolicies. Threat actors exploiting CVE-2026-24858 have been observed exporting the full device configuration\nimmediately after gaining access to harvest credentials and map the internal network.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.001",
+    "T1602",
+    "T1602.002"
+  ],
+  "cve": [
+    "CVE-2026-24858"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347880"
+}

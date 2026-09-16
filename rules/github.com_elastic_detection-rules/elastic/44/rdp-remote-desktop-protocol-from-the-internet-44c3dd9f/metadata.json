@@ -1,0 +1,27 @@
+{
+  "uuid": "44c3dd9f-712b-4545-8674-2ef7b5f11a12",
+  "title": "RDP (Remote Desktop Protocol) from the Internet",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects network events that may indicate the use of RDP traffic from the Internet. RDP is commonly used by\nsystem administrators to remotely control a system for maintenance or to use shared resources. It should almost never be\ndirectly exposed to the Internet, as it is frequently targeted and exploited by threat actors as an initial access or\nbackdoor vector.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.001",
+    "T1133",
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347872"
+}

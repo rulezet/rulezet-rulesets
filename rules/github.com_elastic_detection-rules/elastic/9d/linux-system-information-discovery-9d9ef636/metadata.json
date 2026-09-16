@@ -1,0 +1,23 @@
+{
+  "uuid": "9d9ef636-cd36-40db-bab6-3319a506e6c9",
+  "title": "Linux System Information Discovery",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies Linux system information discovery activity via built-in commands that read common\nsystem files. Adversaries may use these commands to gather information about the operating system, installed\nservices, and hardware configuration to aid in further exploration and exploitation of the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347808"
+}

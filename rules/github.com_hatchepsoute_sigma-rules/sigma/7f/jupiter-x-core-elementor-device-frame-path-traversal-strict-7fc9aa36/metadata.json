@@ -1,0 +1,24 @@
+{
+  "uuid": "7fc9aa36-6395-4fde-b99f-dd0a8c98810e",
+  "title": "Jupiter X Core Elementor Device Frame Path Traversal - STRICT",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a WordPress Elementor save request that uses the Jupiter X Core raven-video widget and a device_frame path traversal to a Jupiter X form upload. This combination is highly consistent with the CVE-2025-0366 SVG-to-local-file-inclusion chain, but the event alone does not prove code execution. SOC L1 should verify the authenticated account, source IP, plugin version, nearby SVG uploads, and subsequent page or process activity.\nDétecte une requête de sauvegarde Elementor WordPress qui utilise le widget raven-video de Jupiter X Core et une traversée de chemin device_frame vers un téléversement de formulaire Jupiter X. Cette combinaison est fortement cohérente avec la chaîne SVG vers inclusion de fichier local de CVE-2025-0366, mais l'événement seul ne prouve pas l'exécution de code. Le SOC L1 doit vérifier le compte authentifié, l'adresse IP source, la version du plugin, les téléversements SVG proches et les activités ultérieures de page ou de processus.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2025-0366"
+  ],
+  "created_at": "2026-08-28",
+  "last_modified": "2026-08-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347425"
+}

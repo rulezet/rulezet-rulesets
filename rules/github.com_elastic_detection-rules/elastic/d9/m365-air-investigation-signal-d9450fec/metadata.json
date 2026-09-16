@@ -1,0 +1,22 @@
+{
+  "uuid": "d9450fec-7c1a-4bcf-95fa-4b5f8558b36d",
+  "title": "M365 AIR Investigation Signal",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies Microsoft 365 Automated Investigation and Response (AIR) events including automated investigations,\nmanual investigations, and admin-initiated actions. These events track Microsoft's automated threat response\nactivities and can indicate active threats being remediated. This building block rule generates security events\nfor correlation, threat hunting, and telemetry collection to provide visibility into automated response actions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1204",
+    "T1566"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347778"
+}

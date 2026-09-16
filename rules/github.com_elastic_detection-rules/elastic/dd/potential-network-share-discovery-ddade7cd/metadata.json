@@ -1,0 +1,26 @@
+{
+  "uuid": "ddade7cd-b1eb-4c1a-8421-226259e54dde",
+  "title": "Potential Network Share Discovery",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Adversaries may look for folders and drives shared on remote systems to identify sources of information to gather as a\nprecursor for collection and identify potential systems of interest for Lateral Movement.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.002",
+    "T1039",
+    "T1135"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347752"
+}

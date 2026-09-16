@@ -1,0 +1,26 @@
+{
+  "uuid": "e0bad977-94ea-40f7-92f9-bde4eb96538b",
+  "title": "System Hosts File Access",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the use of built-in tools to read the contents of \"/etc/hosts\" on a local machine. Attackers may use this data\nto discover remote machines in an environment that may be used for Lateral Movement from the current system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1016",
+    "T1018"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347739"
+}

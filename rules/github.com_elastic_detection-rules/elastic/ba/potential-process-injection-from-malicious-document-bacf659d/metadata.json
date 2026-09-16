@@ -1,0 +1,25 @@
+{
+  "uuid": "bacf659d-c5f0-4e97-a531-0fb067b5d45b",
+  "title": "Potential Process Injection from Malicious Document",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies child processes of frequently targeted Microsoft Office applications (Word, PowerPoint, Excel) with unusual\nprocess arguments and path. This behavior is often observed during exploitation of Office applications or from documents\nwith malicious macros.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1566",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347749"
+}

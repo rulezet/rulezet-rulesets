@@ -1,0 +1,28 @@
+{
+  "uuid": "e17823a1-5e2e-43c3-a815-d4ca71cf9e57",
+  "title": "Potential Privilege Escalation via InstallerFileTakeOver",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a potential exploitation of InstallerTakeOver (CVE-2021-41379) default PoC execution. Successful exploitation\nallows an unprivileged user to escalate privileges to SYSTEM.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.005",
+    "T1068",
+    "T1574"
+  ],
+  "cve": [
+    "CVE-2021-41379"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347912"
+}

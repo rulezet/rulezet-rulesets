@@ -1,0 +1,25 @@
+{
+  "uuid": "25e9a838-61fc-42f3-ad16-afc04c1a6d24",
+  "title": "Halfbaked Command and Control Beacon",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Halfbaked is a malware family used to establish persistence in a contested network. This rule detects a network activity\nalgorithm leveraged by Halfbaked implant beacons for command and control.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\""
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1071.001",
+    "T1568",
+    "T1568.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347870"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "ea35ac07-428a-4e69-8e2d-784bb5ee15d1",
+  "title": "AWS IAM Login Profile Added to User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when an AWS IAM login profile is added to a user. Adversaries may add a login profile to an IAM user who\ntypically does not have one and is used only for programmatic access. This can be used to maintain access to the account\neven if the original access key is rotated or disabled. This is a building block rule and does not generate alerts on\nits own. It is meant to be used for correlation with other rules to detect suspicious activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1098",
+    "T1098.001",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/347734"
+}
