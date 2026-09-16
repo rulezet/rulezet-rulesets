@@ -1,0 +1,23 @@
+rule PK_O365_ExrobotosV4 : Office365
+{
+    meta:
+        description = "Phishing Kit impersonating Office 365"
+        licence = "GPL-3.0"
+        author = "Thomas 'tAd' Damonneville"
+        reference = ""
+        date = "2021-01-14"
+        comment = "Phishing Kit - O365 - 'OFF365 V4 2020 by ExRobotos'"
+
+    strings:
+                $zip_file = { 50 4b 03 04 }
+                $spec_file = "api.php"
+        $spec_file2 = "config.php"
+        $spec_file3 = "EMAILS.txt"
+        $spec_file4 = "UsedEmails.txt"
+        $spec_file5 = "output.php"
+
+    condition:
+                uint32(0) == 0x04034b50 and
+                $zip_file and
+                all of ($spec_file*)
+}
