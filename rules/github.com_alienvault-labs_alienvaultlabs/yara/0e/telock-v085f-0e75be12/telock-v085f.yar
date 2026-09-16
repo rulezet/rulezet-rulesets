@@ -1,0 +1,9 @@
+rule _tElock_v085f_
+{
+	meta:
+		description = "tElock v0.85f"
+	strings:
+		$0 = {E8 02 ?? ?? ?? E8 ?? E8 ?? ?? ?? ?? 5E}
+	condition:
+		$0 at entrypoint
+}

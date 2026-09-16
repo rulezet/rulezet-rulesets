@@ -1,0 +1,18 @@
+rule CSStatsSectionStealer_cystack_8e08a598
+{
+    meta:
+        family = "CSStatsSectionStealer"
+        fingerprint_id = "cystack_8e08a598"
+
+    strings:
+        $key_0 = "Computer:" ascii
+        $key_1 = "Cookies:" ascii
+        $key_2 = "Credit Cards:" ascii
+        $key_3 = "OS:" ascii
+        $key_4 = "Passwords:" ascii
+        $key_5 = "Time:" ascii
+        $key_6 = "User:" ascii
+
+    condition:
+        all of ($key_*)
+}

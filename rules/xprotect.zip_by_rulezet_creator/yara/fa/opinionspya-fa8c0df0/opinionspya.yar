@@ -1,0 +1,10 @@
+rule OpinionSpyA
+{
+    meta:
+        description = "OSX.OpinionSpy"
+        xprotect_rule = true
+    strings:
+    	$a = {504B010214000A0000000800547D8B3B9B0231BC [4] 502D0700250000000000 [12] 636F6D2F697A666F7267652F697A7061636B2F70616E656C732F706F696E7374616C6C6572}
+    condition:
+		$a
+}
