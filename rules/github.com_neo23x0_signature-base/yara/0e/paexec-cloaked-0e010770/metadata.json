@@ -1,0 +1,21 @@
+{
+  "uuid": "0e010770-982a-403b-8550-c42cb7d2276a",
+  "title": "PAExec_Cloaked",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a renamed remote access tool PAEXec (like PsExec)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:wiper=\"Shamoon\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188277"
+}

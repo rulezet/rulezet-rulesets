@@ -1,0 +1,19 @@
+{
+  "uuid": "c1ea2707-2d64-4f4e-8cd2-0ff7773864ba",
+  "title": "SndVol_ANOMALY",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "Anomaly rule looking for certain strings in a system file (maybe false positive on certain systems) - file SndVol.exe",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188238"
+}

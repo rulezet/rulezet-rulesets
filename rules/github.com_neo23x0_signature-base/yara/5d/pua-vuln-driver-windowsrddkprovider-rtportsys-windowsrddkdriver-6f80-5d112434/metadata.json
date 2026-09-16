@@ -1,0 +1,19 @@
+{
+  "uuid": "5d112434-51a4-4e51-9032-9e42698d862e",
+  "title": "PUA_VULN_Driver_Windowsrddkprovider_Rtportsys_Windowsrddkdriver_6F80",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtport.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188072"
+}

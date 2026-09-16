@@ -1,0 +1,19 @@
+{
+  "uuid": "797817f4-9276-4ca8-8b74-9a4a6ba3c014",
+  "title": "PUA_VULN_Driver_Iobitinformationtechnology_Iobitunlockersys_Unlocker_F85C",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iobitunlocker.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188230"
+}

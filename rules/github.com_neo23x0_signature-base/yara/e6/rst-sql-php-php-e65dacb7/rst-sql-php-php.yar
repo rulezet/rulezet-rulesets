@@ -1,0 +1,14 @@
+rule rst_sql_php_php {
+	meta:
+		description = "Semi-Auto-generated  - file rst_sql.php.php.txt"
+		author = "Neo23x0 Yara BRG + customization by Stefan -dfate- Molls"
+		hash = "0961641a4ab2b8cb4d2beca593a92010"
+		id = "41730336-0dce-5ed9-95b0-c911a4e3cb48"
+	strings:
+		$s0 = "C:\\tmp\\dump_"
+		$s1 = "RST MySQL"
+		$s2 = "http://rst.void.ru"
+		$s3 = "$st_form_bg='R0lGODlhCQAJAIAAAOfo6u7w8yH5BAAAAAAALAAAAAAJAAkAAAIPjAOnuJfNHJh0qtfw0lcVADs=';"
+	condition:
+		2 of them
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "352310f1-e0d2-40fb-a4b5-4748aebc2998",
+  "title": "APT_SUSP_Solarwinds_Orion_Config_Anomaly_Dec20",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a suspicious renamed Afind.exe as used by different attackers",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188273"
+}

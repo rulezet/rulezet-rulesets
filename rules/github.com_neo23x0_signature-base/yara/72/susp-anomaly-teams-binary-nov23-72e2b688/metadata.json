@@ -1,0 +1,19 @@
+{
+  "uuid": "72e2b688-4e0b-45f7-9290-03de26315338",
+  "title": "SUSP_ANOMALY_Teams_Binary_Nov23",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a suspicious binary with the name teams.exe, update.exe or squirrel.exe in the AppData folder of Microsoft Teams that is unsigned or signed by a different CA",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188289"
+}

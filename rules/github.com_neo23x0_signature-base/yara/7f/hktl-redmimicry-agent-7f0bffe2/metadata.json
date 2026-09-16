@@ -1,0 +1,21 @@
+{
+  "uuid": "7f0bffe2-32d1-4dc2-b70a-4c34675232c5",
+  "title": "HKTL_RedMimicry_Agent",
+  "format": "yara",
+  "author": "mirar@chaosmail.org",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "matches the RedMimicry agent executable and payload",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188173"
+}
