@@ -1,0 +1,20 @@
+{
+  "uuid": "ed35bbfe-0aba-462c-9500-dcfa5c87b003",
+  "title": "INDICATOR_KB_ID_QakBot",
+  "format": "yara",
+  "author": "ditekShen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects QakBot executables with specific email addresses found in the code signing certificate",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362522"
+}

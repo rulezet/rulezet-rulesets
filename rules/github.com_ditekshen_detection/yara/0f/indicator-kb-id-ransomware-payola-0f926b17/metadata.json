@@ -1,0 +1,20 @@
+{
+  "uuid": "0f926b17-a9ff-4690-b770-9aaa03a86e0a",
+  "title": "INDICATOR_KB_ID_Ransomware_Payola",
+  "format": "yara",
+  "author": "ditekShen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects files referencing identities associated with Payola ransomware",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362583"
+}

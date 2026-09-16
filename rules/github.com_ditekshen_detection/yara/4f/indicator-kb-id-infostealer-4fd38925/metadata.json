@@ -1,0 +1,19 @@
+{
+  "uuid": "4fd38925-fd2d-4fe5-b29c-26b484249224",
+  "title": "INDICATOR_KB_ID_Infostealer",
+  "format": "yara",
+  "author": "ditekshen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects exfiltration email addresses correlated from various infostealers. The same email may be observed in multiple families.",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362571"
+}

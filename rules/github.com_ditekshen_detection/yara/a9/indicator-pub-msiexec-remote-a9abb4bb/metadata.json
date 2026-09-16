@@ -1,0 +1,19 @@
+{
+  "uuid": "a9abb4bb-794a-48aa-8fb6-062b0b545d7d",
+  "title": "INDICATOR_PUB_MSIEXEC_Remote",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "detects VB-enable Microsoft Publisher files utilizing Microsoft Installer to retrieve remote files and execute them",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362447"
+}

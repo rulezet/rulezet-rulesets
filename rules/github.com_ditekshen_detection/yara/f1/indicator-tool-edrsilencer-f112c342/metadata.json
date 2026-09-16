@@ -1,0 +1,21 @@
+{
+  "uuid": "f112c342-4df8-4e18-b478-6c587f2f4bdd",
+  "title": "INDICATOR_TOOL_EDRSilencer",
+  "format": "yara",
+  "author": "ditekshen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects EDRSilencer",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362429"
+}

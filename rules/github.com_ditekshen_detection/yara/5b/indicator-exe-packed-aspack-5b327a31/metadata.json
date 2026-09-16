@@ -1,0 +1,20 @@
+{
+  "uuid": "5b327a31-5834-4678-baa5-034961f83715",
+  "title": "INDICATOR_EXE_Packed_ASPack",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects executables packed with ASPack",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "runtime-packer:pe=\"aspack\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362479"
+}

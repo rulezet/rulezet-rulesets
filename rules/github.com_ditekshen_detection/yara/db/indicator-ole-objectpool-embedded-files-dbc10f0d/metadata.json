@@ -1,0 +1,19 @@
+{
+  "uuid": "dbc10f0d-b4a0-42d4-813a-08697e519889",
+  "title": "INDICATOR_OLE_ObjectPool_Embedded_Files",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects OLE documents with ObjectPool OLE storage and embed suspicous excutable files",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362441"
+}

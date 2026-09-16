@@ -1,0 +1,19 @@
+{
+  "uuid": "f5ecf6f5-d7a1-4782-99e3-adc2261955f5",
+  "title": "INDICATOR_OLE_Suspicious_Reverse",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "detects OLE documents containing VB scripts with reversed suspicious strings",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362453"
+}
