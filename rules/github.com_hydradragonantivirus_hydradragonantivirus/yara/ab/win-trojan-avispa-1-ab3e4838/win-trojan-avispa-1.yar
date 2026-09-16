@@ -1,0 +1,9 @@
+rule Win_Trojan_Avispa_1
+{
+strings:
+	$a0 = { f60188c080c34488c02e8b0788dbb9f20288db80e95488db33c19088c92e890788c943439088c9b8d4f788c905f81088d29039c388d272d190 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Baton_1
+{
+strings:
+	$a0 = { 666f722025256620696e20282a2e6261742920646f20434f5059202525662b2530202f623e6e756c }
+
+
+condition:
+	$a0
+}

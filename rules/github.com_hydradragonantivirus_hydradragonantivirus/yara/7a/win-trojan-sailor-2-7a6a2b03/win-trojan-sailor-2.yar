@@ -1,0 +1,9 @@
+rule Win_Trojan_Sailor_2
+{
+strings:
+	$a0 = { 0102bb007eba8000b90100cd137227be6c7d565f81c70002b90700f3a77417c606847d01b80202fec4bb007cb90100cd13c606847d00bf120447ff0d8b05b106d3e08ec087064e }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Duke_3
+{
+strings:
+	$a0 = { 2544756b6566257365742079633d6e756c0d0a7365742079632544756b656b253d257963250d }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Winstart_III_1
+{
+strings:
+	$a0 = { 3a785679540d0a4043545459204e554c0d0a4543484f20494e5354414c4c484947483d433a5c57494e53544152542e }
+
+
+condition:
+	$a0
+}

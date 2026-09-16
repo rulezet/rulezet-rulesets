@@ -1,0 +1,9 @@
+rule Win_Trojan_Bomgen_1
+{
+strings:
+	$a0 = { 6966206572726f726c6576656c20312063747479206e756c0d0a636f70792025302025746d70255c }
+
+
+condition:
+	$a0
+}
