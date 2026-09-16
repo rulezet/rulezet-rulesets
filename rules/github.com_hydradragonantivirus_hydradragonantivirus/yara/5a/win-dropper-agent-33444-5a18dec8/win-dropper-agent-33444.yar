@@ -1,0 +1,9 @@
+rule Win_Dropper_Agent_33444
+{
+strings:
+	$a0 = { fdd585a697225d749d0bf1ed0f1601922092cd4ddd73da5dbb685848da56fb075aca430d9dd1671552f1e4e17f8e60093f8ef7502c70774172dceb257af358bd938e933c13252f2220bec9bf0d3aaef4bd4974a29ccae5b7ec2d30ef5dbb91224fe6921643bd }
+
+
+condition:
+	$a0
+}

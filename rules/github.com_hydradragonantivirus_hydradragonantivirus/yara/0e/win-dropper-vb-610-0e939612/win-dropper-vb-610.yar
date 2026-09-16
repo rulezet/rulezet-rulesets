@@ -1,0 +1,9 @@
+rule Win_Dropper_VB_610
+{
+strings:
+	$a0 = { 96d36e9751b4aad692c9dda5bb2cb2b453efbcfa727a713ac0299596b77593b9dccdc87fc77308b77bd247b5c3f0bd462ed4e492a04eb76f0922c1917668b2e9842ea606c94c3256990b2430ec54c8baeccd915315ac995914c7b574cedd7bb331ef7199daef75ccdef7739fdfffa9f7e79fbf3cf7cf7df4f79f79f430ccf7e7cff7cf9e7cf12dd6cad0ffed }
+
+
+condition:
+	$a0
+}

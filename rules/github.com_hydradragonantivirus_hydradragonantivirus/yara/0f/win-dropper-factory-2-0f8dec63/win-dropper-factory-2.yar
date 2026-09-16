@@ -1,0 +1,9 @@
+rule Win_Dropper_Factory_2
+{
+strings:
+	$a0 = { 405a8c05a10054107d247c14880870089cf390787a5def6a5ef733badee677b87f0dfe11ef733b901bbdc817bddde036ed815b5e41b52036b7901124836b920b5c80ddb920dd7391aeb9c82d739071739014c817d3248edb906eedc9072ee036eee05bab8b7fbf7fffffd4efe7efefcf9f3efa79f7e7df3cf3fc07efbfe88618420d4aab6db6daed166b6140 }
+
+
+condition:
+	$a0
+}
