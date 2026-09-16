@@ -1,0 +1,9 @@
+rule Win_Trojan_Crypt_324
+{
+strings:
+	$a0 = { 03ceba756800004b03d0b9537343470bc075164181c17738520048c34781c25877730081e94a6c447703c847bf5247 }
+
+
+condition:
+	$a0
+}

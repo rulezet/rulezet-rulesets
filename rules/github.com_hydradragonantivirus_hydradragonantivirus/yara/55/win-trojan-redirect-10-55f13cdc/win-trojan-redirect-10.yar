@@ -1,0 +1,9 @@
+rule Win_Trojan_Redirect_10
+{
+strings:
+	$a0 = { 3c7363726970743e646f63756d656e742e6c6f636174696f6e3d22687474703a2f2f6f6e6c7966696e642e6e65742f696e2e6367 }
+
+
+condition:
+	$a0
+}

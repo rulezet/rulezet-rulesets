@@ -1,0 +1,9 @@
+rule Win_Trojan_PDFex_2
+{
+strings:
+	$a0 = { 6d61696c746f3a74657374252e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f2e2e2f77696e646f77732f73797374656d33322f63616c632e657865 }
+
+
+condition:
+	$a0
+}

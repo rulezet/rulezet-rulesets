@@ -1,0 +1,9 @@
+rule Win_Trojan_Gbot_31
+{
+strings:
+	$a0 = { 558bec81eca40100006a006a006a006a006a006a0083e000e8560000002683c0fdf8660fafc2ba060000000fb6c06683f87c367463546a02ff15 }
+
+
+condition:
+	$a0
+}
