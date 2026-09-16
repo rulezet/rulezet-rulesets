@@ -1,0 +1,11 @@
+rule Win_Trojan_Shutdown_4
+{
+strings:
+	$a0 = { 558bec6a006800a04000ff15008040006a006870a04000ff150080400033c05dc21000 }
+
+	$a1 = { 73687574646f776e202d72202d66202d742030 }
+
+
+condition:
+	$a0 and $a1
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Haxdoor_133
+{
+strings:
+	$a0 = { 558bece800000000582d08104000608bf08d863410400050ff96431040000bc0740d03863f104000ba36363600ffd0 }
+
+
+condition:
+	$a0
+}

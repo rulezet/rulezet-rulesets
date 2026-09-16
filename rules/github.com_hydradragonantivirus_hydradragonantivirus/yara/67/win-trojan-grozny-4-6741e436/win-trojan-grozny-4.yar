@@ -1,0 +1,9 @@
+rule Win_Trojan_Grozny_4
+{
+strings:
+	$a0 = { 666f722025256120696e2028256772252920646f207365742047726f7a6e793d20252561 }
+
+
+condition:
+	$a0
+}

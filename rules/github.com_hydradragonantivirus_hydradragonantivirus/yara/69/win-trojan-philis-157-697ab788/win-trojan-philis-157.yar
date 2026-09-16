@@ -1,0 +1,9 @@
+rule Win_Trojan_Philis_157
+{
+strings:
+	$a0 = { 8d55fcb82c0f4100e8e13effff8b45fc508d55f8b83c0f4100e8d03effff8b45f88b0d040242005ae895feffffa0f0014200e87747ffffa104024200e84127ffff508d55f4b8480f4100e89f3effff8b45f4e82b27ffff508d55f0b8600f4100e8893effff8b45f0e81527ffff8bd033c059e8ff5bffff84c0 }
+
+
+condition:
+	$a0
+}
