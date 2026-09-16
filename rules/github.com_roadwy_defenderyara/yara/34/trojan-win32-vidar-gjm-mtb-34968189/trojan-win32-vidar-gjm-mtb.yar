@@ -1,0 +1,9 @@
+rule Trojan_Win32_Vidar_GJM_MTB{
+	meta:
+		description = "Trojan:Win32/Vidar.GJM!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {8a 10 8b 85 ?? ?? ?? ?? 32 d1 88 14 18 8b 8d ?? ?? ?? ?? ff 85 ?? ?? ?? ?? 51 43 e8 ?? ?? ?? ?? 83 c4 ?? 39 85 } 	condition:
+		((#a_03_0  & 1)*10) >=10
+ 
+}

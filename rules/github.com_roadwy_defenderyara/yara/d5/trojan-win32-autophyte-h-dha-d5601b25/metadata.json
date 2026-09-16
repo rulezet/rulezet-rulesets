@@ -1,0 +1,22 @@
+{
+  "uuid": "d5601b25-4e39-4181-b4e2-bdd0afe4c511",
+  "title": "Trojan_Win32_Autophyte_H_dha",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Autophyte.H!dha,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 16 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/263677"
+}
