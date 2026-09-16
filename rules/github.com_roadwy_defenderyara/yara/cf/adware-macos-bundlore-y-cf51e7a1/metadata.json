@@ -1,0 +1,22 @@
+{
+  "uuid": "cf51e7a1-05ca-4850-a290-bd97764c0373",
+  "title": "Adware_MacOS_Bundlore_Y",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Adware:MacOS/Bundlore.Y,SIGNATURE_TYPE_CMDHSTR_EXT,05 00 05 00 05 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"Adware\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/315658"
+}

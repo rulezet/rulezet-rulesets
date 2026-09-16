@@ -1,0 +1,22 @@
+{
+  "uuid": "91fe8dc4-2b91-40f0-a486-02407fa60c05",
+  "title": "Adware_Win32_Trickler_RT_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Adware:Win32/Trickler.RT!MTB,SIGNATURE_TYPE_PEHSTR_EXT,18 00 18 00 06 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Adware\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/315838"
+}

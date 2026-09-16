@@ -1,0 +1,22 @@
+{
+  "uuid": "90c95bec-e32c-4704-aa67-49ed1c8d36eb",
+  "title": "Adware_Win32_ClickPotato_19",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Adware:Win32/ClickPotato,SIGNATURE_TYPE_PEHSTR,05 00 05 00 08 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Adware\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/315833"
+}
