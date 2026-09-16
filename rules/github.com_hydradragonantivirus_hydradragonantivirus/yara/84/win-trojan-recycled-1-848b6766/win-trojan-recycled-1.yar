@@ -1,0 +1,11 @@
+rule Win_Trojan_Recycled_1
+{
+strings:
+	$a0 = { 763d646f63756d656e742e616c6c282272656379636c656422293b }
+
+	$a1 = { 762e7374796c652e746f703d6d6174682e72616e646f6d28313030 }
+
+
+condition:
+	$a0 and $a1
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Maldal_6
+{
+strings:
+	$a0 = { 7966696c652077616e6e616826225c2226226c75636b65792e657865222c22613a5c6d616c616c2e65786522 }
+
+
+condition:
+	$a0
+}

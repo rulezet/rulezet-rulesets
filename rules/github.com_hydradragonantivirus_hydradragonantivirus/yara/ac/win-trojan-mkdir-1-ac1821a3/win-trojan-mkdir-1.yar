@@ -1,0 +1,9 @@
+rule Win_Trojan_Mkdir_1
+{
+strings:
+	$a0 = { 723633206d6420633a5c666f6c646572363420636f707920253020613a5c676f2e7478742e626174 }
+
+
+condition:
+	$a0
+}

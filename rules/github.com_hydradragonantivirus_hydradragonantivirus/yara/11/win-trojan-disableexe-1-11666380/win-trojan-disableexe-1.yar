@@ -1,0 +1,9 @@
+rule Win_Trojan_Disableexe_1
+{
+strings:
+	$a0 = { 227065726365697665647479706522203d202274657874223e3e633a5c6f70656e6578652e726567 }
+
+
+condition:
+	$a0
+}

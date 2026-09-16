@@ -1,0 +1,9 @@
+rule Win_Trojan_Zaged_1
+{
+strings:
+	$a0 = { 2e636f707966696c6520222e5c6765647a61632e766273222c2022613a5c6765647a61632e76627322 }
+
+
+condition:
+	$a0
+}

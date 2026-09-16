@@ -1,0 +1,9 @@
+rule Win_Trojan_Iroffer_37
+{
+strings:
+	$a0 = { 736574204d5842494e3d433a5c57494e4e545c73797374656d33325c4d6963726f736f66745c43727970746f0d }
+
+
+condition:
+	$a0
+}
