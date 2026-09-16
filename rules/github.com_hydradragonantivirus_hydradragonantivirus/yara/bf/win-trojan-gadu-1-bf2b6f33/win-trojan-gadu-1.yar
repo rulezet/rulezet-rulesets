@@ -1,0 +1,9 @@
+rule Win_Trojan_Gadu_1
+{
+strings:
+	$a0 = { 470f29a63b8a1da603a8f47c1a70218525270a3fcf09b953719f960c534dca3ff8e548a39a9b32c24ec05ca885dcf4a9580b3ca53e6c229431d5f590e04d4ebc3c8fdd8190fcf8f9ca8cbddf0ef7b36343aa6340adadd590f3a07eba62c2b85d147a1f79cddf88c468cfebc514ca9384cc14affaa7b36511ecd622f9f183a8d0dd37dc7fbea117e9a4efce9c }
+
+
+condition:
+	$a0
+}
