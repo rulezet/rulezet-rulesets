@@ -1,0 +1,5 @@
+# TTP_XOR_MULT_DOSStub_8113
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/587946)
+
+Rulezet UUID: `f87c2146-9bf8-44b3-bd56-4abf49ede2ea`
