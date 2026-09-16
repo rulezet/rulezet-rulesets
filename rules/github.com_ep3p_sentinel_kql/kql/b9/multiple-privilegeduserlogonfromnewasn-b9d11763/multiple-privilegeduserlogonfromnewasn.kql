@@ -1,0 +1,61 @@
+let query_frequency = 1h;
+let query_period = 14d;
+let _PartialSuccessResultTypes = toscalar(
+    _GetWatchlist("ResultType-SignInLogsErrorCodes")
+    | where Notes has_any ("[Success]", "[Expired]")
+    | summarize make_list(ResultType)
+);
+let _HomeTenantId = toscalar(
+    _GetWatchlist("UUID-AADTenantIds")
+    | where Notes has "[HomeTenant]"
+    | summarize make_list(TenantId)
+);
+let _PrivilegedAccounts = toscalar(
+    PrivilegedIdentityInfo(query_period, time(null))
+    | summarize make_list(AccountObjectId)
+);
+let _PreviousASNs = toscalar(
+    union SigninLogs, AADNonInteractiveUserSignInLogs
+    | where TimeGenerated between (ago(query_period) .. ago(query_frequency))
+    | where isnotempty(AutonomousSystemNumber)
+        and HomeTenantId in (_HomeTenantId)
+        and not(UserType == "Guest")
+        and ResultType in (_PartialSuccessResultTypes)
+        and UserId in (_PrivilegedAccounts)
+    | summarize make_set(AutonomousSystemNumber)
+);
+union SigninLogs, AADNonInteractiveUserSignInLogs
+| where TimeGenerated > ago(query_frequency)
+| where isnotempty(AutonomousSystemNumber)
+    and HomeTenantId in (_HomeTenantId)
+    and not(UserType == "Guest")
+    and ResultType in (_PartialSuccessResultTypes)
+    and UserId in (_PrivilegedAccounts)
+    and not(AutonomousSystemNumber in (_PreviousASNs))
+| project-reorder
+    TimeGenerated,
+    Category,
+    UserPrincipalName,
+    UserDisplayName,
+    IPAddress,
+    Location,
+    AutonomousSystemNumber,
+    ResultType,
+    ResultDescription,
+    DeviceDetail*,
+    UserAgent,
+    ClientAppUsed,
+    AppDisplayName,
+    ResourceDisplayName,
+    Status*,
+    AuthenticationDetails,
+    MfaDetail*,
+    AuthenticationRequirement,
+    ConditionalAccessPolicies*,
+    ConditionalAccessStatus,
+    Risk*,
+    HomeTenantId,
+    ResourceTenantId,
+    UserId,
+    OriginalRequestId,
+    CorrelationId

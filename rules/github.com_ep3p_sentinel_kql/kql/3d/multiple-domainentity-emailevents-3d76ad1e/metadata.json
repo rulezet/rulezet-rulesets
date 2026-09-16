@@ -1,0 +1,19 @@
+{
+  "uuid": "3d76ad1e-8edf-46d6-a8bc-18687d146c14",
+  "title": "Multiple Domainentity Emailevents",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "This query assumes a feed of threat indicators is ingested/synchronized periodically, and each synchronization ingests new indicators and only old indicators that have been modified. Active threat indicators in Sentinel are renovated as ThreatIntelligenceIndicator events every ~12 days.",
+  "source": "https://github.com/ep3p/Sentinel_KQL",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345602"
+}

@@ -1,0 +1,19 @@
+AuditLogs
+| where LoggedByService == "PIM" and AADOperationType == "ActivateAlert"
+| mv-apply AuxiliarTargetResources = TargetResources on (
+    summarize AlertProperties = make_bag(bag_pack(tostring(AuxiliarTargetResources["type"]), bag_pack("id", AuxiliarTargetResources["id"], "displayName", AuxiliarTargetResources["displayName"])))
+    )
+| extend
+    AlertName = strcat("PIM alert", " - ", AlertProperties["AlertInfo"]["displayName"]),
+    Provider = tostring(AlertProperties["Provider"]["displayName"]),
+    Subscription = tostring(AlertProperties["subscription"]["displayName"])
+| project
+    TimeGenerated,
+    OperationName,
+    AlertName,
+    Provider,
+    Subscription,
+    AlertProperties,
+    InitiatedBy,
+    TargetResources,
+    CorrelationId

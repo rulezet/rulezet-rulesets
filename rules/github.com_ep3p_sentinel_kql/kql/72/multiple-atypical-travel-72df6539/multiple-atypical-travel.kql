@@ -1,0 +1,259 @@
+let query_frequency = 5m;
+let query_period = 2d;
+let _CorporateGeolocations = toscalar(
+    _GetWatchlist("Activity-ExpectedSignificantActivity")
+    | where Activity == "CorporateGeolocation"
+    | summarize make_list(Auxiliar)
+);
+AADUserRiskEvents
+| where TimeGenerated > ago(query_period)
+| where Source == "IdentityProtection" and RiskEventType == "unlikelyTravel"
+| summarize FirstTimeGenerated = min(TimeGenerated), arg_max(TimeGenerated, *) by Id
+| where FirstTimeGenerated > ago(query_frequency)
+| project
+    //TimeGenerated,
+    ActivityDateTime,
+    DetectedDateTime,
+    Source,
+    Activity,
+    DetectionTimingType,
+    UserDisplayName,
+    UserPrincipalName,
+    UserId,
+    IpAddress,
+    RequestId,
+    CorrelationId,
+    TokenIssuerType,
+    RiskEventType,
+    RiskDetail,
+    RiskLevel,
+    RiskState,
+    AdditionalInfo,
+    Id
+| mv-apply Auxiliar = AdditionalInfo on (
+    summarize AdditionalInfoBag = make_bag(bag_pack(tostring(Auxiliar["Key"]), Auxiliar["Value"]))
+    )
+| extend
+    AltAlertLink = strcat("https://entra.microsoft.com/#blade/Microsoft_AAD_IAM/RiskDetectionsBlade/riskState~/[]/userId/", UserId, "/riskLevel/[]/daysBack/90"),// Someone wrote "90s" incorrectly in Defender XDR portal
+    AltDescription = "Sign-in from an atypical location based on the user’s recent sign-ins",
+    AltAlertSeverity = strcat(toupper(substring(RiskLevel, 0, 1)), substring(RiskLevel, 1)),
+    AltTactics = "InitialAccess",
+    AltTechniques = replace_regex(tostring(split(tostring(AdditionalInfoBag["mitreTechniques"]), ",")), @'(\")(T\d+)(\.\d+)(\")', @"\1\2\4"),
+    AltSubTechniques = replace_regex(tostring(split(tostring(AdditionalInfoBag["mitreTechniques"]), ",")), @'(\,)?(\"T\d+\")', @"")
+| join kind=leftouter (
+    SecurityAlert
+    | where ProviderName == "IPC" and ProductName == "Azure Active Directory Identity Protection" and AlertType == "ImpossibleTravel"
+    | summarize arg_max(TimeGenerated, *) by VendorOriginalId
+    | project
+        AlertName,
+        AlertSeverity,
+        Description,
+        AlertStatus = Status,
+        Entities,
+        ExtendedProperties,
+        VendorName,
+        ProviderName,
+        ProductName,
+        ProductComponentName,
+        RemediationSteps,
+        Tactics,
+        Techniques,
+        SubTechniques,
+        VendorOriginalId,
+        SystemAlertId,
+        CompromisedEntity,
+        AlertLink
+    ) on $left.Id == $right.VendorOriginalId
+| extend
+    AlertLink = coalesce(AlertLink, AltAlertLink),
+    Description = coalesce(Description, AltDescription),
+    AlertSeverity = coalesce(AlertSeverity, AltAlertSeverity),
+    Tactics = coalesce(Tactics, AltTactics),
+    Techniques = coalesce(Techniques, iff(array_length(todynamic(AltTechniques)) == 0, "", AltTechniques)),
+    SubTechniques = coalesce(SubTechniques, iff(array_length(todynamic(AltSubTechniques)) == 0, "", AltSubTechniques))
+| as _Events
+| lookup kind=leftouter (
+    union (
+        SigninLogs
+        | where TimeGenerated > ago(query_period)
+        //| where RiskEventTypes_V2 has "unlikelyTravel"
+        | where OriginalRequestId in (toscalar(_Events | summarize make_list(RequestId)))
+        | extend TimeReceived = _TimeReceived
+        | summarize arg_max(TimeReceived, *) by OriginalRequestId
+        | extend Preference = 1
+    ),
+    (
+        SigninLogs
+        | where TimeGenerated > ago(query_period)
+        | where RiskEventTypes_V2 has "unlikelyTravel"
+        | where CorrelationId in (toscalar(_Events | summarize make_list(CorrelationId)))
+        | extend TimeReceived = _TimeReceived
+        | summarize arg_max(TimeReceived, *) by OriginalRequestId
+        | extend Preference = 0
+    )
+    | project
+        TimeGenerated,
+        CreatedDateTime,
+        Type,
+        //UserDisplayName,
+        //UserPrincipalName,
+        //UserId,
+        AlternateSignInName,
+        SignInIdentifier,
+        UserType,
+        IPAddress,
+        AutonomousSystemNumber,
+        Location,
+        NetworkLocationDetails,
+        ResultType,
+        ResultSignature,
+        ResultDescription,
+        ClientAppUsed,
+        AppDisplayName,
+        ResourceDisplayName,
+        DeviceDetail,
+        UserAgent,
+        Status,
+        MfaDetail,
+        AuthenticationContextClassReferences,
+        AuthenticationDetails,
+        AuthenticationProcessingDetails,
+        AuthenticationProtocol,
+        AuthenticationRequirement,
+        AuthenticationRequirementPolicies,
+        SessionLifetimePolicies,
+        //TokenIssuerType,
+        IncomingTokenType,
+        TokenProtectionStatusDetails,
+        ConditionalAccessStatus,
+        ConditionalAccessPolicies,
+        SignInLogs_RiskDetail = RiskDetail,
+        RiskEventTypes_V2,
+        RiskLevelAggregated,
+        RiskLevelDuringSignIn,
+        SignInLogs_RiskState = RiskState,
+        HomeTenantId,
+        ResourceTenantId,
+        CrossTenantAccessType,
+        AppId,
+        ResourceIdentity,
+        UniqueTokenIdentifier,
+        SessionId,
+        OriginalRequestId,
+        CorrelationId,
+        Preference
+    | summarize arg_max(Preference, *) by OriginalRequestId
+    ) on CorrelationId
+| extend Preference = case(
+    OriginalRequestId == RequestId, 4,
+    IpAddress == IPAddress, 3,
+    Preference == 0, 2,
+    isempty(OriginalRequestId), 1,
+    0
+    )
+| summarize arg_max(Preference, *) by Id
+| mv-apply Auxiliar = AdditionalInfo on (
+    summarize AdditionalInfoBag = make_bag(bag_pack(tostring(Auxiliar["Key"]), Auxiliar["Value"]))
+    )
+| extend
+    RelatedEventTimeInUtc = tostring(AdditionalInfoBag["relatedEventTimeInUtc"]),
+    RelatedIPAddress = tostring(AdditionalInfoBag["relatedLocation"]["clientIP"]),
+    RelatedCountry = tostring(AdditionalInfoBag["relatedLocation"]["countryCode"])
+| where case(
+    // AlertStatus == "Resolved" and tostring(todynamic(ExtendedProperties)["State"]) == "Closed", false,
+    // RiskState == "dismissed" and RiskDetail == "aiConfirmedSigninSafe", false,
+    RiskState == "remediated" and RiskDetail == "userChangedPasswordOnPremises", false,
+    RiskState == "remediated" and RiskDetail == "userPassedMFADrivenByRiskBasedPolicy", false,
+    Location == RelatedCountry and RelatedCountry in (_CorporateGeolocations), false,
+    true
+    )
+| project
+    //TimeGenerated,
+    ActivityDateTime,
+    DetectedDateTime,
+    Source,
+    Activity,
+    DetectionTimingType,
+    UserDisplayName,
+    UserPrincipalName,
+    UserId,
+    IpAddress,
+    RequestId,
+    CorrelationId,
+    TokenIssuerType,
+    RiskEventType,
+    RiskDetail,
+    RiskLevel,
+    RiskState,
+    AdditionalInfo,
+    Id,
+    AlertName,
+    AlertSeverity,
+    Description,
+    AlertStatus,
+    Entities,
+    ExtendedProperties,
+    VendorName,
+    ProviderName,
+    ProductName,
+    ProductComponentName,
+    RemediationSteps,
+    Tactics,
+    Techniques,
+    SubTechniques,
+    VendorOriginalId,
+    SystemAlertId,
+    CompromisedEntity,
+    AlertLink,
+    TimeGenerated,
+    CreatedDateTime,
+    Type,
+    //UserDisplayName,
+    //UserPrincipalName,
+    //UserId,
+    AlternateSignInName,
+    SignInIdentifier,
+    UserType,
+    IPAddress,
+    AutonomousSystemNumber,
+    Location,
+    NetworkLocationDetails,
+    RelatedEventTimeInUtc,
+    RelatedIPAddress,
+    RelatedCountry,
+    ResultType,
+    ResultSignature,
+    ResultDescription,
+    ClientAppUsed,
+    AppDisplayName,
+    ResourceDisplayName,
+    DeviceDetail,
+    UserAgent,
+    Status,
+    MfaDetail,
+    AuthenticationContextClassReferences,
+    AuthenticationDetails,
+    AuthenticationProcessingDetails,
+    AuthenticationProtocol,
+    AuthenticationRequirement,
+    AuthenticationRequirementPolicies,
+    SessionLifetimePolicies,
+    //TokenIssuerType,
+    IncomingTokenType,
+    TokenProtectionStatusDetails,
+    ConditionalAccessStatus,
+    ConditionalAccessPolicies,
+    SignInLogs_RiskDetail,
+    RiskEventTypes_V2,
+    RiskLevelAggregated,
+    RiskLevelDuringSignIn,
+    SignInLogs_RiskState,
+    HomeTenantId,
+    ResourceTenantId,
+    CrossTenantAccessType,
+    AppId,
+    ResourceIdentity,
+    UniqueTokenIdentifier,
+    SessionId//,
+    //OriginalRequestId,
+    //CorrelationId

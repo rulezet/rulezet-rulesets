@@ -1,0 +1,15 @@
+let query_frequency = 1h;
+let query_lookback = 3d;
+let _MonitoredRules = toscalar(
+    _GetWatchlist('AlertName-SubstitutedDetections')
+    | where ProductName == "Anomalies"
+    | summarize make_list(AlertName)
+);
+Anomalies
+| where TimeGenerated > ago(query_frequency)
+| where not(replace_string(replace_string(RuleName, "(Preview) ", ""), " - Customized", "") in (_MonitoredRules))
+| join kind = leftanti (
+    Anomalies
+    | where TimeGenerated between (ago(query_frequency + query_lookback) .. ago(query_frequency))
+    | distinct RuleName
+) on RuleName

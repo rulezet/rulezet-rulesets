@@ -1,0 +1,22 @@
+// Title: Shared Device Identification (Version 2)
+// Description: Identifies devices with multiple unique users (excluding a whitelist and specific device types). This version directly summarizes from DeviceLogonEvents for DeviceName.
+// Category: Security / Audit
+
+let WhitelistedAccounts = dynamic([
+    "user1@example.com",
+    "user2@example.com",
+    "admin@example.com"
+    // ... add authorized shared users here
+]);
+let Filtered =
+DeviceLogonEvents
+| where AccountName contains "@"
+| where AccountName !in (WhitelistedAccounts)
+// Filter out specific device naming conventions (e.g., AVDs, Servers)
+| where DeviceName !contains "<Excluded-Prefix-1>"
+    and DeviceName !contains "<Excluded-Prefix-2>"
+    and DeviceName !contains "<Excluded-Prefix-3>"
+    and DeviceName !contains "<Excluded-Prefix-4>";
+Filtered
+| summarize Users = make_set(AccountName), UserCount = dcount(AccountName) by DeviceId, DeviceName
+| where UserCount > 1

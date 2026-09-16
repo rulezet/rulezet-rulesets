@@ -1,0 +1,39 @@
+SecurityAlert
+| where AlertName has "Suspicious request to Kubernetes API" and ProviderName == "Azure Security Center"
+| summarize arg_min(TimeGenerated, *) by SystemAlertId
+| extend ExtendedProperties = todynamic(ExtendedProperties)
+| extend
+    APIRequest = tostring(ExtendedProperties["API Request"]),
+    ContainerID = tostring(ExtendedProperties["Container ID"]),
+    ImageName = tostring(ExtendedProperties["Image Name"]),
+    UserName = tostring(ExtendedProperties["User Name"]),
+    ResourceType = tostring(ExtendedProperties["resourceType"])
+// Clean Entities
+| extend Entities = replace_regex(Entities, @'(\,\"\w+\"\:\{\"\$ref\"\:\"\d+\"\}|\"\w+\"\:\{\"\$ref\"\:\"\d+\"\}\,|\,\{\"\$ref\"\:\"\d+\"\})|\"\$id\"\:\"\d+\"\,', '')
+| summarize
+    TimeGenerated = min(TimeGenerated),
+    StartTime = min(StartTime),
+    EndTime = max(EndTime),
+    ContainerIDs = make_set(ContainerID, 250),
+    AlertLinks = make_set(AlertLink, 250),
+    Entities = make_set(todynamic(Entities)),
+    take_any(RemediationSteps, Tactics, Techniques)
+    by AlertName, AlertSeverity, Description, ResourceId = tolower(ResourceId), APIRequest, ImageName, UserName, ResourceType
+| project
+    TimeGenerated,
+    AlertName,
+    AlertSeverity,
+    Description,
+    RemediationSteps,
+    ResourceId,
+    ResourceType,
+    StartTime,
+    EndTime,
+    ImageName,
+    UserName,
+    APIRequest,
+    ContainerIDs,
+    AlertLinks,
+    Tactics,
+    Techniques,
+    Entities

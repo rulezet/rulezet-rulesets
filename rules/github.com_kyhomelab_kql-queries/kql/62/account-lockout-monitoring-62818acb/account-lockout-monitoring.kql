@@ -1,0 +1,37 @@
+// Title: Account Lockout Monitoring
+// Description: Tracks user account lockouts over the last 24 hours to identify potential brute-force attacks, credential stuffing, or users with authentication issues requiring support.
+// Category: Identity
+
+SigninLogs
+| where TimeGenerated > ago(24h)
+// ResultType 50053 = Account locked (user attempted sign-in with expired password)
+// ResultType 50057 = User account is disabled
+// Other failure codes that may indicate lockouts
+| where ResultType in (50053, 50057) or ResultDescription has "locked"
+| extend
+    Location = tostring(LocationDetails.city),
+    State = tostring(LocationDetails.state),
+    Country = tostring(LocationDetails.countryOrRegion),
+    IPAddress = tostring(IPAddress)
+| summarize
+    LockoutCount = count(),
+    FirstLockout = min(TimeGenerated),
+    LastLockout = max(TimeGenerated),
+    FailureCodes = make_set(ResultType),
+    SourceIPs = make_set(IPAddress),
+    Applications = make_set(AppDisplayName),
+    Locations = make_set(strcat(Location, ", ", State, ", ", Country))
+    by UserPrincipalName, UserDisplayName
+| extend TimeSpan = datetime_diff('hour', LastLockout, FirstLockout)
+| project
+    UserPrincipalName,
+    UserDisplayName,
+    LockoutCount,
+    FirstLockout,
+    LastLockout,
+    TimeSpanHours = TimeSpan,
+    FailureCodes,
+    SourceIPs,
+    Applications,
+    Locations
+| order by LockoutCount desc

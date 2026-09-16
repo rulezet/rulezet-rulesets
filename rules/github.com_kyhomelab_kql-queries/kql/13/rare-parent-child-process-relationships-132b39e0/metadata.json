@@ -1,0 +1,22 @@
+{
+  "uuid": "132b39e0-11fc-4499-9956-c3ed9c4f1895",
+  "title": "Rare Parent-Child Process Relationships",
+  "format": "kql",
+  "author": "kyhomelab",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Builds a 14-day baseline of parent-child process pairs, then surfaces pairs seen in the last 24h that are rare org-wide. Useful for catching novel execution chains (e.g., winword.exe -> powershell.exe).",
+  "source": "https://github.com/kyhomelab/kql-queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345538"
+}

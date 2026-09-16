@@ -1,0 +1,19 @@
+{
+  "uuid": "9315c384-4453-4961-aa84-6306d4701ce0",
+  "title": "Analytics Unexpectedentraiddevice",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "This query can help you to detect unexpected Entra ID devices. Click \"Save as function\", in Parameters write in the fields: \"timespan\" \"query_frequency\" \"14d\" \"timespan\" \"query_period\"    \"14d\" \"timespan\" \"query_wait\"      \"1h\" If you name the function \"UnexpectedEntraIDDevice\", you can check the function with queries like the following: UnexpectedEntraIDDevice() UnexpectedEntraIDDevice(1h, 14d, 1h) UnexpectedEntraIDDevice(14d, 14d, 1h) let query_frequency = 14d; let query_period = 14d; let query_wait = 1h; let Function = (query_frequency:timespan = 14d, query_period:timespan = 14d){ TrustType possible values: Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD) let _ExpectedTrustTypes = _GetWatchlist(\"Activity-ExpectedSignificantActivity\") | where Activity == \"EntraIDDeviceTrustType\" | mv-expand DeviceOSType = split(tostring(DeviceTrustType = split(Auxiliar, \" - \")[1]), \", \") to typeof(string) | project DeviceTrustType = tostring(split(Auxiliar, \" - \")[0]), DeviceOSType ; A device management app could be Microsoft Intune",
+  "source": "https://github.com/ep3p/Sentinel_KQL",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345903"
+}

@@ -1,0 +1,109 @@
+// This query assumes a feed of threat indicators is ingested/synchronized periodically, and each synchronization ingests new indicators and only old indicators that have been modified.
+// Active threat indicators in Sentinel are renovated as ThreatIntelligenceIndicator events every ~12 days.
+let query_frequency = 1h;
+let query_period = 14d;
+let query_wait = 0h;
+let table_query_lookback = 12h;
+let _TIBenignProperty =
+    _GetWatchlist('ID-TIBenignProperty')
+    | where Notes has_any ("[DestinationDomain]")
+    | project IndicatorId, BenignProperty
+;
+let _TIExcludedSources = toscalar(
+    _GetWatchlist('Activity-ExpectedSignificantActivity')
+    | where Activity == "ThreatIndicatorSource"
+    | summarize make_list(Auxiliar)
+    );
+let _TITableMatch = (table_start: datetime, table_end: datetime, only_new_ti: boolean, ti_start: datetime = datetime(null)) {
+    // Scheduled Analytics rules have a query period limit of 14d
+    let _Indicators =// materialize(
+        ThreatIntelligenceIndicator
+        | where TimeGenerated > ago(query_period)
+        // Take the earliest TimeGenerated and the latest column info
+        | summarize hint.strategy=shuffle
+            minTimeGenerated = min(TimeGenerated),
+            arg_max(TimeGenerated, Active, Description, ActivityGroupNames, IndicatorId, ThreatType, DomainName, Url, ExpirationDateTime, ConfidenceScore, AdditionalInformation, ExternalIndicatorId)
+            by IndicatorId
+        // Remove inactive or expired indicators
+        | where not(not(Active) or ExpirationDateTime < now())
+        // Pick indicators that contain the desired entity type
+        | where isnotempty(DomainName)
+        | extend Domain = tolower(DomainName)
+        // Remove indicators from specific sources
+        | where not(AdditionalInformation has_any (_TIExcludedSources) or Description has_any (_TIExcludedSources))
+        // Remove excluded indicators with benign properties
+        | join kind=leftanti _TIBenignProperty on IndicatorId, $left.Domain == $right.BenignProperty
+        // Deduplicate indicators by Domain column, equivalent to using join kind=innerunique afterwards
+        | summarize hint.strategy=shuffle
+            minTimeGenerated = min(minTimeGenerated),
+            take_any(*)
+            by Domain
+        // If we want only new indicators, remove indicators received previously
+        | where not(only_new_ti and minTimeGenerated < ti_start)
+    //)
+    ;
+    //let _IndicatorsLength = toscalar(_Indicators | summarize count());
+    //let _IndicatorsPrefilter = toscalar(
+    //    _Indicators
+    //    | extend AuxiliarField = tostring(split(Domain, ".")[-1])
+    //    | summarize make_set_if(AuxiliarField, isnotempty(AuxiliarField))
+    //);
+    //let _IndicatorsPrefilterLength = array_length(_IndicatorsPrefilter);
+    let _TableEvents =
+        Cisco_Umbrella_dns_CL
+        | where TimeGenerated between (table_start .. table_end)
+        // Filter events that may contain indicators
+        | where isnotempty(Domain_s)
+        //| where not(_IndicatorsPrefilterLength < 10000 and not(Domain_s has_any (_IndicatorsPrefilter))) // valid TLD ~1500 , "has_any" limit 10000
+        | summarize hint.strategy=shuffle take_any(*) by OriginalDomain = trim_end(@"\.", tolower(Domain_s))
+        //| where not(_IndicatorsPrefilterLength < 10000 and not(tostring(split(OriginalDomain, ".")[-1]) in (_IndicatorsPrefilter)))
+        | extend SplitLevelDomains = split(OriginalDomain, ".")
+        | mv-expand Level = range(0, array_length(SplitLevelDomains) - 2) to typeof(int)
+        | extend Domain = strcat_array(array_slice(SplitLevelDomains, Level, -1), ".")
+        //| where not(_IndicatorsLength < 1000000 and not(Domain in (toscalar(_Indicators | summarize make_list(Domain))))) // "in" limit 1.000.000
+        | project-rename Cisco_Umbrella_dns_CL_TimeGenerated = TimeGenerated
+    ;
+    _Indicators
+    | join kind=inner hint.strategy=shuffle _TableEvents on Domain
+    // Take only a single event by key columns
+    //| summarize hint.strategy=shuffle take_any(*) by Domain, Identities
+    | project
+        Cisco_Umbrella_dns_CL_TimeGenerated,
+        Description, ActivityGroupNames, IndicatorId, ThreatType, DomainName, Url, ExpirationDateTime, ConfidenceScore, AdditionalInformation,
+        EventStartTime = todatetime(column_ifexists('Timestamp_t', column_ifexists('Timestamp_s', ''))),
+        Dvc = "CiscoUmbrella",
+        DvcAction = column_ifexists('Action_s', ''),
+        QueryType_s,
+        SrcIpAddr = column_ifexists('InternalIp_s', ''),
+        SrcNatIpAddr = column_ifexists('ExternalIp_s', ''),
+        DnsQuery = trim_end(@'\.', column_ifexists('Domain_s', '')),
+        EventResult = iff(ResponseCode_s =~ 'NOERROR', 'Success', 'Failure'),
+        EventResultDetails = ResponseCode_s,  // => ResponseCodeNames
+        UrlCategory = column_ifexists('Categories_s', ''),
+        ThreatCategory = column_ifexists('Blocked_Categories_s', ''),
+        IdentityTypes = column_ifexists('Identity_Types_s', ''),
+        Identities = column_ifexists('Identities_s', ''),
+        PolicyIdentityType = column_ifexists('Policy_Identity_Type_s', ''),
+        PolicyIdentity = column_ifexists('Policy_Identity_s', '')
+    | mv-apply
+        Identities_s_aux = todynamic(Identities) to typeof(string),
+        Identity_Types_s_aux = todynamic(IdentityTypes) to typeof(string) on ( 
+        summarize IdentitiesDict = make_bag(pack(Identity_Types_s_aux, Identities_s_aux))
+        )
+    | extend
+        HostName = tostring(IdentitiesDict["AD Computers"]),
+        UserPrincipalName = tostring(IdentitiesDict["AD Users"])
+    | parse QueryType_s with DnsQueryType: int " (" DnsQueryTypeName: string ")"
+    | project-away QueryType_s, IdentitiesDict
+};
+union// isfuzzy=true
+    // Match      current table events                                all indicators available
+    _TITableMatch(ago(query_frequency + query_wait), ago(query_wait), false),
+    // Match      past table events                                                          new indicators since last query execution
+    _TITableMatch(ago(table_query_lookback + query_wait), ago(query_frequency + query_wait), true, ago(query_frequency))
+| summarize arg_max(Cisco_Umbrella_dns_CL_TimeGenerated, *) by IndicatorId, Identities
+| extend
+    timestamp = Cisco_Umbrella_dns_CL_TimeGenerated,
+    HostCustomEntity = HostName,
+    AccountCustomEntity = UserPrincipalName,
+    URLCustomEntity = Url

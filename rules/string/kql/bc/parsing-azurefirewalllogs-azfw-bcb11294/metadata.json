@@ -1,0 +1,19 @@
+{
+  "uuid": "bcb11294-db0f-43fc-93e3-95639fe7e662",
+  "title": "Parsing Azurefirewalllogs Azfw*",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "This query can help you to parse Azure Firewall events received in AZFW tables. Click \"Save as function\", in Parameters write in the fields: string   source                \"\" string   destination           \"\" int      source_port           int(null) int      destination_port      int(null) string   action                \"\" string   protocol              \"\" bool     network_log           true bool     application_log       true bool     nat_log               true bool     ids_log               true bool     threatintel_log       true string   firewall              \"\" If you name the function \"AzureFirewallLogs\", you can check the function with queries like the following: AzureFirewallLogs() AzureFirewallLogs(\"10.10.10.237/31\", \"172.29.55.47/24\") let Function = ( destination:string = \"\", source_port:int = int(null), destination_port:int = int(null), action:string = \"\", protocol:string = \"\", network_log:bool = true, application_log:bool = true, nat_log:bool = true, ids_log:bool = true, threatintel_log:bool = true, firewall:string = \"\" ){ Check inputs",
+  "source": "string = \"\",",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345919"
+}

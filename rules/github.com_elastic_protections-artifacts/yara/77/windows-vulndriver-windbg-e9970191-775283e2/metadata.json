@@ -1,0 +1,21 @@
+{
+  "uuid": "775283e2-3f0b-4758-80a4-9029a27cca33",
+  "title": "Windows_VulnDriver_Windbg_e9970191",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Subject: Microsoft Windows Hardware Compatibility Publisher, Version: <= 1.0.0.0",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-01",
+  "last_modified": "2026-08-01",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345428"
+}

@@ -1,0 +1,47 @@
+let event_list = dynamic([
+    "DeleteFlowLogs",
+    "UpdateTrail",
+    "DeleteTrail",
+    "StopLogging",
+    "StopEventDataStoreIngestion",
+    "UpdateEventDataStore",
+    "DeleteEventDataStore",
+    "PutEventSelectors",
+    "PutInsightSelectors",
+    "DeleteEventBus",
+    "DeactivateEventSource",
+    "DeleteArchive",
+    "DeleteLogStream",
+    "DeleteLogGroup",
+    "DeleteLoggingConfiguration"
+]);
+AWSCloudTrail
+| where EventName in (event_list)
+| invoke AWSIdentityRole()
+| project
+    TimeGenerated,
+    UserIdentityType,
+    Identity,
+    ActorRole,
+    UserIdentityAccountId,
+    UserIdentityAccountName,
+    RecipientAccountId,
+    RecipientAccountName,
+    AWSRegion,
+    SessionCreationDate,
+    UserIdentityPrincipalid,
+    UserIdentityArn,
+    SourceIpAddress,
+    EventSource,
+    EventTypeName,
+    EventName,
+    ManagementEvent,
+    ReadOnly,
+    ErrorCode,
+    ErrorMessage,
+    RequestParameters,
+    ResponseElements,
+    Resources,
+    SessionMfaAuthenticated,
+    UserAgent,
+    AwsEventId

@@ -1,0 +1,13 @@
+// Title: Critical Software Vulnerabilities by Device (Version 2)
+// Description: Identifies devices with more than 3 critical software vulnerabilities, providing a count and list of CVEs per device, excluding specific device name prefixes and patterns.
+// Category: Security / Vulnerability Management
+
+DeviceTvmSoftwareVulnerabilities 
+| where VulnerabilitySeverityLevel == "Critical"
+| where DeviceName !startswith "<Excluded-Device-Prefix-1>"
+| where DeviceName !startswith "<Excluded-Device-Prefix-2>"
+| where DeviceName !startswith "<Excluded-Device-Prefix-3>"
+| where DeviceName !contains "<Excluded-Device-Contains-Pattern>"
+| where OSPlatform in ("Windows11","Windows10","Windows","Linux","macOS")
+| summarize VulnerabilityCount = count(), CveList = make_set(CveId) by DeviceId, DeviceName, OSPlatform, OSVersion
+| where VulnerabilityCount > 3

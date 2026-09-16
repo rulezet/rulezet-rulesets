@@ -1,0 +1,21 @@
+{
+  "uuid": "adc7134e-1749-41fa-b540-473e3feebe67",
+  "title": "Multiple Password Spray Attack   Compromised Account",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "This rule checks other security alerts related to password spray activity, and gathers the IP addresses in the Entities of these alerts, that are presumably malicious. This rule detects if these IP addresses have successful (or partially successful) authentication activity, before and after the password spray occurred. This rule excludes the accounts that were already identified as compromised in the last day in the password spray alerts, to reduce noise.",
+  "source": "https://github.com/ep3p/Sentinel_KQL",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345773"
+}

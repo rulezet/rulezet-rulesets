@@ -1,0 +1,68 @@
+// Related to https://github.com/ep3p/Sentinel_KQL/blob/main/Queries/Defender%20for%20Identity/IdentityLogonEvents-Unexpected%20access%20to%20multiple%20devices.kql
+let query_frequency = 1h;
+let query_period = 14d;
+let device_threshold = 10;
+let excluded_department_jobtitle = dynamic([]);
+let excluded_accountnames = dynamic([]);
+DeviceEvents
+| where TimeGenerated > ago(query_period)
+| where ActionType == "NamedPipeEvent"// and InitiatingProcessVersionInfoFileDescription == "NT Kernel & System"
+| extend AdditionalFields = todynamic(AdditionalFields)
+| where AdditionalFields["FileOperation"] == "File opened"
+    and AdditionalFields["NamedPipeEnd"] == "Client"
+    and AdditionalFields["RemoteClientsAccess"] == "AcceptRemote"
+    and AdditionalFields["ShareName"] == "IPC$"
+| extend PipeName = tostring(AdditionalFields["PipeName"])
+| summarize TimeGenerated = arg_min(TimeGenerated, *) by DeviceId, RemoteIP, AccountSid, PipeName
+| where TimeGenerated > ago(query_frequency)
+| extend BinTimeGenerated = bin(TimeGenerated, query_frequency)
+| join hint.strategy=shuffle kind=leftouter (
+    DeviceLogonEvents
+    | where TimeGenerated > ago(query_frequency)
+    | where ActionType == "LogonSuccess" //and Protocol == "NTLM"
+    | summarize LogonProtocols = make_set(Protocol) by BinTimeGenerated = bin(TimeGenerated, query_frequency), DeviceId, RemoteIP, AccountSid
+    ) on BinTimeGenerated, DeviceId, RemoteIP, AccountSid
+// Related event
+// | join hint.shufflekey=DeviceId kind=leftouter (
+//     DeviceNetworkEvents
+//     | where TimeGenerated > ago(query_frequency)
+//     | where ActionType in ("InboundConnectionAccepted") // Other related events might be "ConnectionAttempt", "NetworkSignatureInspected"
+//     | where LocalPort == "445" and Protocol == "Tcp" and InitiatingProcessVersionInfoFileDescription == "NT Kernel & System"
+//     | extend RemoteIP = iff(RemoteIPType == "FourToSixMapping", trim_start("::ffff:", RemoteIP), RemoteIP)
+//     ) on DeviceId, RemoteIP
+| summarize
+    StartTime = min(TimeGenerated),
+    EndTime = max(TimeGenerated),
+    TargetDevices = array_sort_asc(make_set(DeviceName, 100)),
+    LogonProtocols = array_sort_asc(make_set(LogonProtocols, 100)),
+    PipeNames = array_sort_asc(make_set(PipeName, 100)),
+    take_any(ActionType, ReportId)
+    by RemoteIP, AccountSid
+| lookup kind=leftouter (
+    IdentityInfo
+    | where TimeGenerated > ago(14d)
+    | summarize arg_max(TimeGenerated, *) by AccountObjectId, OnPremSid
+    | project OnPremSid, AccountName, AccountUpn, AccountDisplayName, Department, JobTitle
+    ) on $left.AccountSid == $right.OnPremSid
+| where not(
+    Department has_any (excluded_department_jobtitle)
+    or JobTitle has_any (excluded_department_jobtitle)
+    or AccountName in (excluded_accountnames)
+    )
+| extend TargetDevicesCount = array_length(TargetDevices)
+| where TargetDevicesCount > device_threshold
+| project
+    StartTime,
+    EndTime,
+    RemoteIP,
+    AccountDisplayName,
+    AccountSid,
+    AccountName,
+    AccountUpn,
+    ActionType,
+    PipeNames,
+    LogonProtocols,
+    TargetDevicesCount,
+    TargetDevices,
+    Department,
+    JobTitle

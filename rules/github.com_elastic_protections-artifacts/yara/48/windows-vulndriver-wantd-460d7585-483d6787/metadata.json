@@ -1,0 +1,21 @@
+{
+  "uuid": "483d6787-34a2-4b3b-a659-ee5de75280db",
+  "title": "Windows_VulnDriver_Wantd_460d7585",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Name: wantd.sys, Version: <= 5.0.0.0",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-01",
+  "last_modified": "2026-08-01",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345518"
+}

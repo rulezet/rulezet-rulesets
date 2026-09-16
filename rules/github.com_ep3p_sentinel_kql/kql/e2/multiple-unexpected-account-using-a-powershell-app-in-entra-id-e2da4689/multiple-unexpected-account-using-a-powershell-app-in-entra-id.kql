@@ -1,0 +1,102 @@
+let query_frequency = 1h;
+let query_period = 14d;
+let _ShellApps = toscalar(
+    _GetWatchlist("UUID-EntraIdApps")
+    | where Notes has "[PowerShell]"
+    | summarize make_list(AppId)
+);
+// let _HomeTenantId = toscalar(
+//     _GetWatchlist("UUID-EntraIdTenantIds")
+//     | where Notes has "[HomeTenant]"
+//     | summarize make_list(TenantId)
+// );
+let _ExpectedResultTypes = toscalar(
+    _GetWatchlist("ResultType-SignInLogsErrorCodes")
+    | where isnotempty(ResultDescription) and not(Notes has_any ("[Success]", "[Expired]"))
+    | summarize make_list(ResultType)
+);
+let MicrosoftAzureCLI_appid = "04b07795-8ddb-461a-bbee-02f9e1bf7b46";
+let _MicrosoftAzureCLIExpectedResultTypes = toscalar(
+    _GetWatchlist("ResultType-SignInLogsErrorCodes")
+    | where (Notes has_all ("[Success]", "[Interrupt]") and Notes has_any ("[MFA]", "[NotCompliant]")) or (Notes has_all ("[Token]", "[Expired]"))
+    | summarize make_list(ResultType)
+);
+let _ExpectedADGroups = toscalar(
+    _GetWatchlist("RegEx-PrivDomainGroups")
+    | where Notes has "[PowerShell]"
+    | summarize RegEx = make_list(RegEx)
+    | extend RegEx = strcat(@'^(', strcat_array(RegEx, '|'), @')$')
+);
+let _ExpectedAADRoles = toscalar(
+    _GetWatchlist("RegEx-PrivAADRoles")
+    | where Notes has "[PowerShell]"
+    | summarize RegEx = make_list(RegEx)
+    | extend RegEx = strcat(@'^(', strcat_array(RegEx, '|'), @')$')
+);
+let _Users =
+    IdentityInfo
+    | where TimeGenerated between (ago(query_period) .. ago(query_frequency))
+    | summarize arg_max(TimeGenerated, *) by AccountObjectId
+    | project-away TimeGenerated
+;
+let _ExpectedUsers =
+    _Users
+    | mv-expand GroupMembership, AssignedRoles
+    | where GroupMembership matches regex _ExpectedADGroups or AssignedRoles matches regex _ExpectedAADRoles
+    | distinct AccountObjectId
+;
+union SigninLogs, AADNonInteractiveUserSignInLogs
+| where TimeGenerated > ago(query_frequency)
+| where AppId in (_ShellApps)
+//| where ResourceTenantId in (_HomeTenantId) // Remove events where the accessed resource is not from our tenant
+| where not(ResultType in (_ExpectedResultTypes))
+| where not(UserId in (_ExpectedUsers))
+// Remove unsuccessful guest signins from app "Microsoft Azure CLI", when they use this app we assume a signin event happens in all tenants where they are a guest
+| where not(AppId == MicrosoftAzureCLI_appid and ResultType in (_MicrosoftAzureCLIExpectedResultTypes))// and (UserType != "Member" or not(HomeTenantId in (_HomeTenantId))))
+| summarize arg_max(TimeGenerated, *) by UserId, SessionId, ResultType, IPAddress, AppDisplayName, AppId, ResourceDisplayName, ResourceIdentity
+| extend DeviceDetail = coalesce(tostring(DeviceDetail_dynamic), DeviceDetail_string)
+| summarize
+    StartTime = min(TimeGenerated),
+    EndTime = max(TimeGenerated),
+    Resources = make_set(ResourceDisplayName),
+    SessionIds = make_set(SessionId),
+    CorrelationIds = make_set(CorrelationId),
+    ResultTypes = make_set(ResultType),
+    take_anyif(UserPrincipalName, not(UserPrincipalName == UserId)),
+    take_any(Location, ClientAppUsed, UserAgent, AuthenticationDetails, RiskEventTypes, RiskLevelDuringSignIn, RiskLevelAggregated, DeviceDetail)
+    by UserId, IPAddress, AppDisplayName, AppId
+| join kind=leftouter _Users on $left.UserId == $right.AccountObjectId
+| extend UserPrincipalName = tolower(coalesce(UserPrincipalName, MailAddress, AccountUPN))
+| project
+    StartTime,
+    EndTime,
+    UserPrincipalName,
+    AccountDisplayName,
+    IPAddress,
+    Location,
+    ResultTypes,
+    AppDisplayName,
+    Resources,
+    ClientAppUsed,
+    DeviceDetail,
+    UserAgent,
+    UserType,
+    GroupMembership,
+    AssignedRoles,
+    AccountSID,
+    OnPremisesDistinguishedName,
+    MailAddress,
+    JobTitle,
+    Department,
+    Manager,
+    UserAccountControl,
+    RiskLevel,
+    RiskState,
+    AuthenticationDetails,
+    SessionIds,
+    CorrelationIds,
+    RiskEventTypes,
+    RiskLevelDuringSignIn,
+    RiskLevelAggregated,
+    AppId,
+    UserId

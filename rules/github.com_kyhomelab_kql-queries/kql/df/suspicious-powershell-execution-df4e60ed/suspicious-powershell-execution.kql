@@ -1,0 +1,57 @@
+// Title: Suspicious PowerShell Execution
+// Description: Detects potentially malicious PowerShell commands using encoded commands, web downloads, or obfuscation techniques. Useful for identifying fileless malware and script-based attacks.
+// Category: Security
+
+DeviceProcessEvents
+| where TimeGenerated > ago(24h)
+| where FileName =~ "powershell.exe" or FileName =~ "pwsh.exe"
+// Filter for suspicious command patterns
+| where ProcessCommandLine has_any (
+    "-enc",              // Encoded command
+    "-EncodedCommand",
+    "IEX",               // Invoke-Expression (code execution)
+    "Invoke-Expression",
+    "DownloadString",    // Web downloads
+    "DownloadFile",
+    "WebClient",
+    "Net.WebClient",
+    "Invoke-WebRequest",
+    "iwr",
+    "curl",
+    "wget",
+    "-w hidden",         // Hidden window
+    "-WindowStyle Hidden",
+    "bypass",            // Execution policy bypass
+    "-ExecutionPolicy Bypass",
+    "FromBase64String",  // Base64 decoding (often used for obfuscation)
+    "Convert::FromBase64String"
+)
+// Exclude known safe parent processes (adjust based on your environment)
+| where InitiatingProcessFileName !in~ (
+    "ccmexec.exe",       // SCCM/ConfigMgr
+    "wsmprovhost.exe"    // WinRM remoting (if expected)
+)
+| summarize
+    ExecutionCount = count(),
+    FirstSeen = min(TimeGenerated),
+    LastSeen = max(TimeGenerated),
+    UniqueCommands = make_set(ProcessCommandLine, 5),
+    DevicesAffected = dcount(DeviceName)
+    by AccountName, InitiatingProcessFileName, FileName
+| where ExecutionCount >= 1
+| extend RiskScore = case(
+    ExecutionCount > 10, "High",
+    ExecutionCount > 5, "Medium",
+    "Low"
+)
+| project
+    FirstSeen,
+    LastSeen,
+    AccountName,
+    ExecutionCount,
+    DevicesAffected,
+    RiskScore,
+    ParentProcess = InitiatingProcessFileName,
+    PowerShellBinary = FileName,
+    SampleCommands = UniqueCommands
+| order by ExecutionCount desc

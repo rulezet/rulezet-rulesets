@@ -1,0 +1,37 @@
+let _ExpectedEventNames = dynamic(["PutImage"]);
+let _ExpectedUsers = toscalar(
+    _GetWatchlist("Activity-ExpectedSignificantActivity")
+    | where Activity == "AWSIAMUser" and Auxiliar has_any (_ExpectedEventNames)
+    | summarize make_list(ActorPrincipalName)
+);
+AWSCloudTrail
+| where EventName == "PutImage"
+| where not(UserIdentityArn in (_ExpectedUsers))
+| invoke AWSIdentityRole()
+| project
+    TimeGenerated,
+    UserIdentityType,
+    Identity,
+    ActorRole,
+    UserIdentityAccountId,
+    UserIdentityAccountName,
+    RecipientAccountId,
+    RecipientAccountName,
+    AWSRegion,
+    SessionCreationDate,
+    UserIdentityPrincipalid,
+    UserIdentityArn,
+    SourceIpAddress,
+    EventSource,
+    EventTypeName,
+    EventName,
+    ManagementEvent,
+    ReadOnly,
+    ErrorCode,
+    ErrorMessage,
+    RequestParameters,
+    ResponseElements,
+    Resources,
+    SessionMfaAuthenticated,
+    UserAgent,
+    AwsEventId

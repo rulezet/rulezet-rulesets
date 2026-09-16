@@ -1,0 +1,19 @@
+{
+  "uuid": "90ba1597-92b8-4d7b-bc19-7fc48ce3d3df",
+  "title": "OAuth Application Consent Grants",
+  "format": "kql",
+  "author": "kyhomelab",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Tracks when users or admins grant permissions to OAuth applications. Useful for detecting illicit consent grant attacks where attackers trick users into granting malicious apps access to their data.",
+  "source": "https://github.com/kyhomelab/kql-queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345530"
+}

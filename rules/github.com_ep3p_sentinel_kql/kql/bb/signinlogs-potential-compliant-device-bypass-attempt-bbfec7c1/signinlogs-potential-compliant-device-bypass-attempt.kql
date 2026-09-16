@@ -1,0 +1,64 @@
+// https://labs.jumpsec.com/tokensmith-bypassing-intune-compliant-device-conditional-access/
+let query_frequency = 15m;
+//let query_period = query_frequency + query_wait;
+let query_wait = 15m;
+let _SuccessResultTypes = toscalar(
+    _GetWatchlist("ResultType-SignInLogsErrorCodes")
+    | where Notes has_all ("[Success]", "[Complete]") and isnotempty(ResultDescription)
+    | summarize make_list(ResultType)
+);
+let expected_resource_serviceprincipal_ids = dynamic(["90a2e5d2-fd7a-4a2e-bc90-3dc50ae8e3ee"]);// empty ResourceDisplayName, reused between tenants, ResourceIdentity == ResourceServicePrincipalId
+SigninLogs
+| where TimeGenerated between (ago(query_frequency + query_wait) .. ago(query_wait))
+| where AppId == "9ba1a5c7-f17a-4de9-a1f1-6178c8d51223"// Microsoft Intune Company Portal
+    and ResourceIdentity in ("00000003-0000-0000-c000-000000000000", "00000002-0000-0000-c000-000000000000")// Microsoft Graph, maybe also "Windows Azure Active Directory" according to www.glueckkanja.com
+| where isempty(tostring(DeviceDetail["deviceId"]))
+| where ResultType in (_SuccessResultTypes)
+| join kind=rightsemi (
+    SigninLogs
+    | where TimeGenerated > ago(query_frequency + query_wait)
+    ) on CorrelationId
+| summarize
+    arg_min(CreatedDateTime, *),
+    ResultTypes = array_sort_asc(make_set(ResultType)),
+    AppIds = array_sort_asc(make_set(AppId)),
+    ResourceIdentities = array_sort_asc(make_set(ResourceIdentity)),
+    ResourceServicePrincipalIds = array_sort_asc(make_set(ResourceServicePrincipalId)),
+    IPAddresses = array_sort_asc(make_set(IPAddress))
+    by CorrelationId, UserId//, IPAddress
+| where not(
+    ResultTypes has_all ("50097", "50129") // ResultTypes related to Entra registered (Workplace join)
+    and AppIds has "29d9ed98-a469-4536-ade2-f981bc1d605e" // Microsoft Authentication Broker
+    and ResourceIdentities has_any (expected_resource_serviceprincipal_ids) // ResourceDisplayName empty and ResourceIdentity == ResourceServicePrincipalId
+    and ResourceServicePrincipalIds has_any (expected_resource_serviceprincipal_ids) // ResourceDisplayName empty and ResourceIdentity == ResourceServicePrincipalId
+    )
+| project
+    CreatedDateTime,
+    UserPrincipalName,
+    UserDisplayName,
+    //IPAddress,
+    IPAddresses,
+    AutonomousSystemNumber,
+    Location,
+    ResultType,
+    ResultDescription,
+    AppDisplayName,
+    ResourceDisplayName,
+    ClientAppUsed,
+    UserAgent,
+    DeviceDetail,
+    AuthenticationRequirement,
+    ConditionalAccessStatus,
+    ConditionalAccessPolicies,
+    AppId,
+    ResourceIdentity,
+    ResourceServicePrincipalId,
+    HomeTenantId,
+    ResourceTenantId,
+    UserType,
+    UserId,
+    AuthenticationAppDeviceDetails,
+    UniqueTokenIdentifier,
+    SessionId,
+    OriginalRequestId,
+    CorrelationId

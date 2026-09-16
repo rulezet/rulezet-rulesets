@@ -1,0 +1,21 @@
+Anomalies
+| where RuleName endswith "UEBA Anomalous Account Creation" and RuleStatus != "Flighting"
+| extend
+    Query = ExtendedLinks[0]["DetailBladeInputs"],
+    UserCreated = extract(@'\"UserCreated\"\:\"([^\"]+)\"', 1, tostring(ActivityInsights))
+| project
+    TimeGenerated,
+    RuleName,
+    Description,
+    Query,
+    UserPrincipalName,
+    UserCreated,
+    ActivityInsights,
+    DeviceInsights,
+    UserInsights,
+    Score,
+    AnomalyDetails,
+    Entities,
+    Tactics,
+    Techniques,
+    ExtendedLinks

@@ -1,0 +1,73 @@
+let _HomeTenantId = toscalar(
+    _GetWatchlist("UUID-EntraIdTenantIds")
+    | where Notes has "[HomeTenant]"
+    | summarize make_list(TenantId)
+);
+let _SuccessResultTypes = toscalar(
+    _GetWatchlist("ResultType-SignInLogsErrorCodes")
+    | where Notes has "[Success]"
+    | summarize make_list(ResultType)
+);
+let _ExcludedResultTypes = toscalar(
+    _GetWatchlist("ResultType-SignInLogsErrorCodes")
+    | where Notes has_all ("[Success]", "[Interrupt]", "[Consent]") or Notes has_all ("[Success]", "[Interrupt]", "[Password]")
+    | summarize make_list(ResultType)
+);
+let _ExcludedAppIds = toscalar(
+    _GetWatchlist("UUID-EntraIdApps")
+    | where Notes has "[ExcludedConditionalAccess]"
+    | summarize make_list(AppId)
+);
+let _ExcludedUserIds = toscalar(
+    _GetWatchlist("Activity-ExpectedSignificantActivity")
+    | where Notes has "[ExcludedConditionalAccess]"
+    | summarize make_list(ActorId)
+);
+// let _TrustedNamedLocations = toscalar(
+//     _GetWatchlist("Activity-ExpectedSignificantActivity")
+//     | where Activity == "TrustedNamedLocation"
+//     | summarize make_list(SourceResource)
+// );
+SigninLogs
+| where not(AuthenticationRequirement == "multiFactorAuthentication") and not(ConditionalAccessStatus in ("failure", "notApplied")) and ResourceTenantId in (_HomeTenantId)
+| where ResultType in (_SuccessResultTypes) and not(ResultType in (_ExcludedResultTypes))
+| where not(AppId in (_ExcludedAppIds))
+| where not(UserId in (_ExcludedUserIds))
+// | mv-apply NetworkLocationDetail = todynamic(NetworkLocationDetails) on (
+//     summarize
+//         NetworkTypes = make_set(tostring(NetworkLocationDetail["networkType"])),
+//         NetworkNames = make_set(tostring(NetworkLocationDetail["networkNames"][0]))
+//     )
+// | where not(NetworkTypes has_any ("trustedNamedLocation") or NetworkNames has_any (_TrustedNamedLocations))
+| summarize
+    StartTime = min(CreatedDateTime),
+    EndTime = max(CreatedDateTime),
+    ResultTypes = array_sort_asc(make_set(ResultType)),
+    UserAgents = array_sort_asc(make_set(UserAgent)),
+    CorrelationIds = array_sort_asc(make_set(CorrelationId)),
+    arg_min(CreatedDateTime, *)
+    by UserId, IPAddress, AppId, ResourceIdentity
+| project
+    StartTime,
+    EndTime,
+    UserPrincipalName,
+    UserDisplayName,
+    IPAddress,
+    Location,
+    NetworkLocationDetails,
+    ResultTypes,
+    AppDisplayName,
+    ResourceDisplayName,
+    AuthenticationDetails,
+    AuthenticationRequirement,
+    ConditionalAccessStatus,
+    ConditionalAccessPolicies,
+    DeviceDetail,
+    ClientAppUsed,
+    UserAgents,
+    TokenIssuerType,
+    AppId,
+    ResourceIdentity,
+    UserType,
+    UserId,
+    CorrelationIds

@@ -1,0 +1,22 @@
+let query_frequency = 15m;
+let query_period = 30m;
+let threshold = 5;
+...
+| where TimeGenerated > ago(query_period)
+...
+| as _Events
+| join kind=leftsemi (
+    _Events
+    // query_period should be 2 * query_frequency
+    // if IdColumn is Type, and Type has only 1 possible value (only 1 table is used), activity_counts_metrics will only be useful to check if a threshold has been surpassed
+    | evaluate activity_counts_metrics(Type, TimeGenerated, ago(query_period), now(), query_frequency, ColumnToSummarizeBy1, ColumnToSummarizeBy2, ColumnToSummarizeBy3)
+    | summarize
+        arg_min(PreviousTimeGenerated = TimeGenerated, PreviousCount = ["count"]),
+        arg_max(CurrentTimeGenerated = TimeGenerated, CurrentCount = ["count"])
+        by ColumnToSummarizeBy1, ColumnToSummarizeBy2, ColumnToSummarizeBy3
+    | where CurrentTimeGenerated > ago(query_period)
+    | extend PreviousCount = iff(PreviousTimeGenerated == CurrentTimeGenerated, 0, PreviousCount)
+    | where (not(PreviousCount > threshold) and CurrentCount > threshold)
+        or ((CurrentCount - PreviousCount) > threshold)
+    ) on ColumnToSummarizeBy1, ColumnToSummarizeBy2, ColumnToSummarizeBy3
+...

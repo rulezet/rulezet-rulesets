@@ -1,0 +1,19 @@
+{
+  "uuid": "0b6ba7f5-c2b5-4327-b15d-b79ea486b0e2",
+  "title": "Awscloudtrail Aws Exfiltration Via Bucket Replication",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "let _ReplicationAWSAccounts = toscalar( _GetWatchlist(\"AccountId-AuditAWSAccounts\") | where Notes has \"[BucketReplication]\" | summarize make_list(AccountId) );",
+  "source": "https://github.com/ep3p/Sentinel_KQL",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345686"
+}

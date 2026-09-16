@@ -1,0 +1,21 @@
+{
+  "uuid": "af35323a-8e85-4098-824b-55a8599b3d6f",
+  "title": "Windows_VulnDriver_Termdd_1578eed1",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Name: termdd.sys, Version: <= 5.1.2276.1",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-01",
+  "last_modified": "2026-08-01",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345434"
+}

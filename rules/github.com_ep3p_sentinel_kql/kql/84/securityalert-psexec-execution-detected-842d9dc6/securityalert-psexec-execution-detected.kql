@@ -1,0 +1,42 @@
+SecurityAlert
+| where AlertName has "PsExec execution detected" and ProviderName == "Azure Security Center"
+| summarize arg_min(TimeGenerated, *) by SystemAlertId
+| extend ExtendedProperties = todynamic(ExtendedProperties)
+| extend
+    Computer = tostring(ExtendedProperties["Machine Name"]),
+    Account = tostring(ExtendedProperties["Account"]),
+    AccountSID = tostring(ExtendedProperties["User SID"]),
+    AccountLogonId = tostring(ExtendedProperties["Account Logon Id"]),
+    ProcessName = tostring(ExtendedProperties["Process Name"]),
+    CommandLine = tostring(ExtendedProperties["Command Line"])
+// Clean Entities
+| extend Entities = replace_regex(Entities, @'(\,\"\w+\"\:\{\"\$ref\"\:\"\d+\"\}|\"\w+\"\:\{\"\$ref\"\:\"\d+\"\}\,|\,\{\"\$ref\"\:\"\d+\"\})|\"\$id\"\:\"\d+\"\,', '')
+| summarize
+    TimeGenerated = min(TimeGenerated),
+    StartTime = min(StartTime),
+    EndTime = max(EndTime),
+    AccountLogonIds = make_set(AccountLogonId, 250),
+    CommandLines = make_set(CommandLine, 250),
+    AlertLinks = make_set(AlertLink, 250),
+    Entities = make_set(todynamic(Entities)),
+    take_any(RemediationSteps, Tactics, Techniques)
+    by AlertName, AlertSeverity, Description, ResourceId = tolower(ResourceId), Computer, Account, AccountSID, ProcessName
+| project
+    TimeGenerated,
+    AlertName,
+    AlertSeverity,
+    Description,
+    RemediationSteps,
+    ResourceId,
+    StartTime,
+    EndTime,
+    Computer,
+    Account,
+    AccountSID,
+    ProcessName,
+    CommandLines,
+    AccountLogonIds,
+    AlertLinks,
+    Tactics,
+    Techniques,
+    Entities

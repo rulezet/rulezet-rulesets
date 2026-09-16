@@ -1,0 +1,48 @@
+let _EntraConnectSyncAccounts = toscalar(
+    _GetWatchlist("Activity-ExpectedSignificantActivity")
+    | where Activity == "EntraConnectSync"
+    | summarize make_list(ActorId)
+);
+let _ExpectedCrossTenantSynchronization =
+    _GetWatchlist("Activity-ExpectedSignificantActivity")
+    | where Activity == "CrossTenantSynchronization"
+    | project InitiatorId = tostring(ActorId), CrossSynchronizationDomain = tostring(Auxiliar)
+;
+AuditLogs
+| where OperationName == "Add user" and Result == "success"
+| extend
+    Initiator = iif(isnotempty(InitiatedBy["app"]), tostring(InitiatedBy["app"]["displayName"]), tostring(InitiatedBy["user"]["userPrincipalName"])),
+    InitiatorId = iif(isnotempty(InitiatedBy["app"]), tostring(InitiatedBy["app"]["servicePrincipalId"]), tostring(InitiatedBy["user"]["id"])),
+    IPAddress = tostring(InitiatedBy[tostring(bag_keys(InitiatedBy)[0])]["ipAddress"])
+| where not(InitiatorId in (_EntraConnectSyncAccounts))
+| mv-apply ModifiedProperty = TargetResources[0]["modifiedProperties"] on (
+    extend NewValue = todynamic(tostring(ModifiedProperty["newValue"]))
+    | summarize TargetUserProperties = make_bag(pack(tostring(ModifiedProperty["displayName"]), iff(array_length(NewValue) == 1, tostring(NewValue[0]), NewValue)))
+    )
+| extend
+    TargetUserType = tostring(TargetUserProperties["UserType"]),
+    TargetUserPrincipalName = tostring(TargetResources[0]["userPrincipalName"]),
+    TargetId = tostring(TargetResources[0]["id"])
+| where not(TargetUserType == "Guest")
+| extend CrossSynchronizationDomain = extract(@"\_([^\_]+)\#EXT\#\@[^\@]+\.onmicrosoft\.com$", 1, TargetUserPrincipalName)
+| join kind=leftanti _ExpectedCrossTenantSynchronization on InitiatorId, CrossSynchronizationDomain
+| project
+    TimeGenerated,
+    LoggedByService,
+    Category,
+    AADOperationType,
+    Initiator,
+    IPAddress,
+    OperationName,
+    Result,
+    ResultDescription,
+    TargetUserType,
+    TargetUserPrincipalName,
+    CrossSynchronizationDomain,
+    TargetId,
+    TargetUserProperties,
+    AdditionalDetails,
+    InitiatorId,
+    InitiatedBy,
+    TargetResources,
+    CorrelationId

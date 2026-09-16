@@ -1,0 +1,18 @@
+// Title: Admin Role Assignment Changes
+// Description: Tracks when directory roles (like Global Admin, Security Admin) are assigned or removed from users. Useful for monitoring privileged access changes.
+// Category: Audit
+
+AuditLogs
+| where OperationName has_any ("Add member to role", "Remove member from role")
+| where TargetResources has "Role"
+| extend RoleName = tostring(TargetResources[0].displayName)
+| extend UserModified = tostring(TargetResources[0].userPrincipalName)
+| extend ModifiedBy = tostring(InitiatedBy.user.userPrincipalName)
+| project
+    TimeGenerated,
+    OperationName,
+    RoleName,
+    UserModified,
+    ModifiedBy,
+    Result
+| order by TimeGenerated desc

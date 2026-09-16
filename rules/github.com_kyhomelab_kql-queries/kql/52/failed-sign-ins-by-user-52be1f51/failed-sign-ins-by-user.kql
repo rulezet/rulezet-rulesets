@@ -1,0 +1,15 @@
+// Title: Failed Sign-ins by User
+// Description: Identifies users with multiple failed sign-in attempts in the last 24 hours. Helps detect potential brute-force attempts or users with authentication issues.
+// Category: Identity
+
+SigninLogs
+| where TimeGenerated > ago(24h)
+| where ResultType != 0  // Non-zero means failure
+| summarize
+    FailedAttempts = count(),
+    FailureCodes = make_set(ResultType),
+    Locations = make_set(Location),
+    Applications = make_set(AppDisplayName)
+    by UserPrincipalName
+| where FailedAttempts > 5
+| order by FailedAttempts desc

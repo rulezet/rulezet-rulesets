@@ -1,0 +1,19 @@
+{
+  "uuid": "d3f4eb5e-6fde-46ed-b622-46cd42114112",
+  "title": "Awscloudtrail Aws Exfiltration Via Datasync Task",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "let _TransferAWSAccounts = toscalar( _GetWatchlist(\"AccountId-AuditAWSAccounts\") | where Notes has \"[TransferTask]\" | summarize make_list(AccountId) );",
+  "source": "https://github.com/ep3p/Sentinel_KQL",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345676"
+}

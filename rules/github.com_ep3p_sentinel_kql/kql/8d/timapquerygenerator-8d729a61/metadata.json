@@ -1,0 +1,21 @@
+{
+  "uuid": "8d729a61-834a-4657-8690-8b50615eac1d",
+  "title": "Timapquerygenerator",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "This function can help you to achieve consistency when writing Analytics Rules for ThreatIntelligenceIndicators, where usually you will have to match one type of indicator with one type of table, and keeping track of the same changes in multiple rules is difficult. You can find an explanation of this function at https://github.com/ep3p/Sentinel_KQL/blob/main/Queries/Azure-Sentinel/Solutions/Threat%20Intelligence/Analytic%20Rules If you need to make changes to the algorithm that all these queries follow, you should modify this function once, and generate the queries again just by calling the function. You can call this function by running this same query code, or if you save this function as TIMapQueryGenerator, by simply calling: TIMapQueryGenerator let _TIMapQueryGenerator = () {",
+  "source": "https://github.com/ep3p/Sentinel_KQL",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345913"
+}

@@ -1,0 +1,15 @@
+// Title: Sign-in Latency by Application
+// Description: Measures average sign-in processing time by application over the last 7 days. Useful for identifying apps with slow authentication performance.
+// Category: Performance
+
+SigninLogs
+| where TimeGenerated > ago(7d)
+| where ResultType == 0  // Successful sign-ins only
+| where isnotempty(ProcessingTimeInMilliseconds)
+| summarize
+    AvgLatencyMs = avg(ProcessingTimeInMilliseconds),
+    MaxLatencyMs = max(ProcessingTimeInMilliseconds),
+    SigninCount = count()
+    by AppDisplayName
+| where SigninCount > 10  // Filter out rarely used apps
+| order by AvgLatencyMs desc

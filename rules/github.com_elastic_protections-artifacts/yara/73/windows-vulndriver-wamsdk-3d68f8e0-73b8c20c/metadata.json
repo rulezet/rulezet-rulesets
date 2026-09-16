@@ -1,0 +1,21 @@
+{
+  "uuid": "73b8c20c-b7c2-4e26-84c0-585f5df6cb71",
+  "title": "Windows_VulnDriver_Wamsdk_3d68f8e0",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Name: wamsdk.sys, Version: <= 1.1.100.0",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-01",
+  "last_modified": "2026-08-01",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345471"
+}

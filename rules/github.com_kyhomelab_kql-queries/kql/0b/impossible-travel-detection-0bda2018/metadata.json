@@ -1,0 +1,19 @@
+{
+  "uuid": "0bda2018-daaa-42dd-a085-043120cd1f62",
+  "title": "Impossible Travel Detection",
+  "format": "kql",
+  "author": "kyhomelab",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects sign-ins from geographically distant locations within a short time window, indicating potential credential theft or account compromise. Flags users logging in from locations that would be impossible to travel between.",
+  "source": "https://github.com/kyhomelab/kql-queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345545"
+}

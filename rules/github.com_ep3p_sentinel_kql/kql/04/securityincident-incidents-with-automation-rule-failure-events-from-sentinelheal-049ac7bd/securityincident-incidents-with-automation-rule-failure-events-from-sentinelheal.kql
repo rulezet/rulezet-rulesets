@@ -1,0 +1,14 @@
+// You will need previously https://github.com/ep3p/Sentinel_KQL/blob/main/Queries/Sentinel%20Performance/SentinelHealth-Sentinel%20failure.kql
+SecurityIncident
+| where Title has_all ("Sentinel health - Automation rule - ", " - Incident Number")
+| extend Number = tostring(split(Title, " ")[-1])
+| join kind=rightsemi (SecurityIncident | extend IncidentNumber = tostring(IncidentNumber)) on $left.Number == $right.IncidentNumber
+// | where Title has_all ("Sentinel health - Automation rule - ", " - Incident Number")
+// | extend Number = tostring(split(Title, " ")[-1])
+// | join kind=rightsemi (SecurityIncident | extend IncidentNumber = tostring(IncidentNumber)) on $left.Number == $right.IncidentNumber
+// | where Title has_all ("Sentinel health - Automation rule - ", " - Incident Number")
+// | extend Number = tostring(split(Title, " ")[-1])
+// | join kind=rightsemi (SecurityIncident | extend IncidentNumber = tostring(IncidentNumber)) on $left.Number == $right.IncidentNumber
+// | where Title has_all ("Sentinel health - Automation rule - ", " - Incident Number")
+// | extend Number = tostring(split(Title, " ")[-1])
+// | join kind=rightsemi (SecurityIncident | extend IncidentNumber = tostring(IncidentNumber)) on $left.Number == $right.IncidentNumber

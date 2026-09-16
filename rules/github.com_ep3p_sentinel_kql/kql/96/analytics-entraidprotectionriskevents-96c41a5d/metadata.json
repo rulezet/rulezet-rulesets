@@ -1,0 +1,23 @@
+{
+  "uuid": "96c41a5d-7269-409c-97a6-9943e129efc4",
+  "title": "Analytics Entraidprotectionriskevents",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "This query can help you to check Entra ID Protection risk events Click \"Save as function\", in Parameters write in the fields: \"timespan\" \"query_frequency\" \"90d\" \"timespan\" \"query_period\"    \"90d\" If you name the function \"EntraIDProtectionRiskEvents\", you can check the function with queries like the following: EntraIDProtectionRiskEvents() EntraIDProtectionRiskEvents(1h, 14d) EntraIDProtectionRiskEvents(90d, 90d) let query_frequency = 5m; let query_period = 2d; let Function = (query_frequency:timespan = 90d, query_period:timespan = 90d){",
+  "source": "https://github.com/ep3p/Sentinel_KQL",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Android\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345909"
+}

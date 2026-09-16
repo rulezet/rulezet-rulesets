@@ -1,0 +1,17 @@
+// Title: Conditional Access Policy Changes
+// Description: Monitors changes to Conditional Access policies including creation, modification, and deletion. Critical for tracking security policy drift.
+// Category: Audit
+
+AuditLogs
+| where Category == "Policy"
+| where OperationName has_any ("Add conditional access policy", "Update conditional access policy", "Delete conditional access policy")
+| extend PolicyName = tostring(TargetResources[0].displayName)
+| extend ModifiedBy = tostring(InitiatedBy.user.userPrincipalName)
+| project
+    TimeGenerated,
+    OperationName,
+    PolicyName,
+    ModifiedBy,
+    Result,
+    CorrelationId
+| order by TimeGenerated desc

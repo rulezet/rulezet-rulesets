@@ -1,0 +1,39 @@
+// https://github.com/FalconForceTeam/FalconFriday/blob/master/Collection/0xFF-0236-Resource_Shared_with_Unknown_External_Account-AWS.md
+let _SharedAWSAccounts = toscalar(
+    _GetWatchlist("AccountId-AuditAWSAccounts")
+    | where Notes has "[ShareSnapshot]"
+    | summarize make_list(AccountId)
+);
+AWSCloudTrail
+| where EventName == "ModifySnapshotAttribute"
+| mv-expand Item = todynamic(RequestParameters)["createVolumePermission"]["add"]["items"]
+| where isnotempty(Item)
+| where Item["userId"] contains "*" or not(tostring(Item["userId"]) in (_SharedAWSAccounts)) or Item or Item["group"] has "all"
+| invoke AWSIdentityRole()
+| project
+    TimeGenerated,
+    UserIdentityType,
+    Identity,
+    ActorRole,
+    UserIdentityAccountId,
+    UserIdentityAccountName,
+    RecipientAccountId,
+    RecipientAccountName,
+    AWSRegion,
+    SessionCreationDate,
+    UserIdentityPrincipalid,
+    UserIdentityArn,
+    SourceIpAddress,
+    EventSource,
+    EventTypeName,
+    EventName,
+    ManagementEvent,
+    ReadOnly,
+    ErrorCode,
+    ErrorMessage,
+    RequestParameters,
+    ResponseElements,
+    Resources,
+    SessionMfaAuthenticated,
+    UserAgent,
+    AwsEventId

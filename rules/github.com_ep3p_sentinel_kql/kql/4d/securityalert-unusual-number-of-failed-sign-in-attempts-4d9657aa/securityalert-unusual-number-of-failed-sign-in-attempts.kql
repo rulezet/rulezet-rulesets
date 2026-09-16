@@ -1,0 +1,37 @@
+SecurityAlert
+| where AlertName has "Unusual number of failed sign-in attempts" and ProviderName == "Azure Security Center"
+| summarize arg_min(TimeGenerated, *) by SystemAlertId
+| extend ExtendedProperties = todynamic(ExtendedProperties)
+| extend
+    MachineName = tostring(ExtendedProperties["Machine Name"]),
+    IPAddress = tostring(ExtendedProperties["IP Address"]),
+    ResourceType = tostring(ExtendedProperties["resourceType"])
+// Clean Entities
+| extend Entities = replace_regex(Entities, @'(\,\"\w+\"\:\{\"\$ref\"\:\"\d+\"\}|\"\w+\"\:\{\"\$ref\"\:\"\d+\"\}\,|\,\{\"\$ref\"\:\"\d+\"\})|\"\$id\"\:\"\d+\"\,', '')
+| summarize
+    TimeGenerated = min(TimeGenerated),
+    StartTime = min(StartTime),
+    EndTime = max(EndTime),
+    IPAddresses = make_set_if(IPAddress, isnotempty(IPAddress), 250),
+    ExtendedLinks = make_set(ExtendedLinks, 250),
+    AlertLinks = make_set(AlertLink, 250),
+    Entities = make_set(todynamic(Entities)),
+    take_any(RemediationSteps, Tactics, Techniques)
+    by AlertName, AlertSeverity, Description, ResourceId = tolower(ResourceId), MachineName, ResourceType
+| project
+    TimeGenerated,
+    AlertName,
+    AlertSeverity,
+    Description,
+    RemediationSteps,
+    ResourceId,
+    ResourceType,
+    StartTime,
+    EndTime,
+    MachineName,
+    IPAddresses,
+    ExtendedLinks,
+    AlertLinks,
+    Tactics,
+    Techniques,
+    Entities

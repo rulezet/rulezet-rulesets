@@ -1,0 +1,56 @@
+let query_frequency = 1h;
+let query_period = 14d;
+let executable_name = "dllhost.exe";
+let _ExpectedDomainsRegex = strcat(@'(', strcat_array(dynamic([
+    @"\.officeapps\.live\.com",
+    @"officeclient\.microsoft\.com",
+    @"ecs\.office\.com",
+    @"clients\.config\.office\.net",
+    @"config\.teams\.microsoft\.com",
+    @"fp\.measure\.office\.com",
+    @"fs\.microsoft\.com",
+    @"settings\-win\.data\.microsoft\.com"
+]), '|'), @')$');
+let _PreviousDomains = toscalar(
+    DeviceNetworkEvents
+    | where ingestion_time() between (ago(query_period) .. ago(query_frequency))
+    | where (InitiatingProcessFileName has executable_name or InitiatingProcessVersionInfoOriginalFileName has executable_name)  and (RemoteIPType == "Public" or (isempty(RemoteIPType) and not(ipv4_is_private(RemoteIP))))
+    | where isnotempty(RemoteUrl)
+    | summarize make_set(RemoteUrl)
+);
+let _PreviousIPRanges = toscalar(
+    union 
+        (
+        DeviceNetworkEvents
+        | where ingestion_time() between (ago(query_period) .. ago(query_frequency))
+        | where (InitiatingProcessFileName has executable_name or InitiatingProcessVersionInfoOriginalFileName has executable_name)  and (RemoteIPType == "Public" or (isempty(RemoteIPType) and not(ipv4_is_private(RemoteIP))))
+        | where isempty(RemoteUrl)
+        ),
+        (
+        DeviceNetworkEvents
+        | where ingestion_time() between (ago(query_period) .. ago(query_frequency))
+        | where isnotempty(RemoteUrl) and RemoteUrl matches regex _ExpectedDomainsRegex
+        )
+    | distinct RemoteIP
+    | summarize make_set(format_ipv4_mask(RemoteIP, 23))
+);
+DeviceNetworkEvents
+| where ingestion_time() > ago(query_frequency)
+| where (InitiatingProcessFileName has executable_name or InitiatingProcessVersionInfoOriginalFileName has executable_name)  and (RemoteIPType == "Public" or (isempty(RemoteIPType) and not(ipv4_is_private(RemoteIP))))
+//| where isnotempty(InitiatingProcessAccountUpn) and RemoteUrl matches regex @"d\d[a-z0-9]{12}\.cloudfront.net"
+| where not(RemoteUrl matches regex _ExpectedDomainsRegex or RemoteUrl in (_PreviousDomains) or ipv4_is_in_any_range(RemoteIP, _PreviousIPRanges))
+| project
+    TimeGenerated,
+    DeviceName,
+    LocalIP,
+    InitiatingProcessAccountUpn,
+    ActionType,
+    InitiatingProcessId,
+    InitiatingProcessFolderPath,
+    InitiatingProcessCommandLine,
+    Protocol,
+    RemoteUrl,
+    RemoteIP,
+    RemotePort,
+    InitiatingProcessParentId,
+    InitiatingProcessParentFileName

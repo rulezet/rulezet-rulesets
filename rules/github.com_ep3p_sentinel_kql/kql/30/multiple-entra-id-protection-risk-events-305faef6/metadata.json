@@ -1,0 +1,19 @@
+{
+  "uuid": "305faef6-2b62-4106-abc6-61e49e961956",
+  "title": "Multiple Entra Id Protection Risk Events",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "This query is too long to be in an Analytics Rule (more than 10.000 characters), so it had to be made a function that can be called by the rule. You can find the function in the next link, just try to define \"query_frequency\" and \"query_period\". https://github.com/ep3p/Sentinel_KQL/blob/main/Functions/Analytics-EntraIDProtectionRiskEvents.kql",
+  "source": "https://github.com/ep3p/Sentinel_KQL",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345656"
+}

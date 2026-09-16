@@ -1,0 +1,68 @@
+let query_frequency = 1h;
+let query_period = 14d;
+let suspicious_domains = dynamic([
+	@"d\d[a-z0-9]{12}\.cloudfront\.net",
+	@"[\-\w]+\-[a-f0-9]{3,5}\.kxcdn\.com",
+	@"[\-\w]+\-[a-z0-9]{16}\.\w\d\d\.azurefd\.net",
+    @"[\-\w]+\.[a-z0-9]+\.cloudapp\.azure\.com",
+	@"portswigger\.net",
+	@"oastify\.com",
+	@"whatismyip\.com",
+	@"whatismyip\.net",
+	@"whatismyipaddress\.com"
+]);
+let excluded_company_names = dynamic([]);
+let excluded_original_names = dynamic([]);
+DeviceNetworkEvents
+| where Timestamp > ago(query_period)
+| where RemoteUrl matches regex strcat_array(suspicious_domains, "|") // and not(InitiatingProcessAccountSid in ("S-1-5-18", "S-1-5-20"))
+| where isnotempty(InitiatingProcessFileName)
+| summarize
+    StartTime = arg_min(Timestamp, *),
+    EndTime = max(Timestamp),
+    DeviceNamesSample = array_sort_asc(make_set(DeviceName, 100)),
+    RemoteUrlsSample = array_sort_asc(make_set(RemoteUrl, 100))
+    by InitiatingProcessVersionInfoCompanyName, InitiatingProcessVersionInfoProductName, InitiatingProcessVersionInfoOriginalFileName, InitiatingProcessVersionInfoInternalFileName, InitiatingProcessVersionInfoFileDescription
+| where StartTime > ago(query_frequency)
+| invoke FileProfile("InitiatingProcessSHA1", 1000)
+| where not(GlobalPrevalence > 10000)
+| where not(GlobalPrevalence > 1000 and GlobalFirstSeen < ago(query_frequency) and SignatureState == "SignedValid")
+| where not(GlobalPrevalence > 500 and InitiatingProcessVersionInfoCompanyName in (excluded_company_names) and InitiatingProcessVersionInfoOriginalFileName in (excluded_original_names))
+| project
+    StartTime,
+    EndTime,
+    DeviceNamesSample,
+    RemoteUrlsSample,
+    Timestamp = StartTime,
+    DeviceId,
+    DeviceName,
+    LocalIP,
+    ActionType,
+    RemoteIP,
+    RemotePort,
+    RemoteUrl,
+    Protocol,
+    InitiatingProcessAccountName,
+    InitiatingProcessAccountSid,
+    InitiatingProcessAccountUpn,
+    InitiatingProcessAccountObjectId,
+    InitiatingProcessSHA1,
+    InitiatingProcessSHA256,
+    InitiatingProcessMD5,
+    InitiatingProcessFileName,
+    InitiatingProcessFolderPath,
+    InitiatingProcessCommandLine,
+    InitiatingProcessCreationTime,
+    IsInitiatingProcessRemoteSession,
+    InitiatingProcessParentFileName,
+    InitiatingProcessVersionInfoCompanyName,
+    InitiatingProcessVersionInfoProductName,
+    InitiatingProcessVersionInfoOriginalFileName,
+    InitiatingProcessVersionInfoInternalFileName,
+    InitiatingProcessVersionInfoFileDescription,
+    InitiatingProcessVersionInfoProductVersion,
+    GlobalPrevalence,
+    GlobalFirstSeen,
+    GlobalLastSeen,
+    SignatureState,
+    ReportId
