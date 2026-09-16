@@ -1,0 +1,21 @@
+{
+  "uuid": "f602ab69-b522-459d-8ada-b1316094bab0",
+  "title": "TrojanDropper_Win32_Cutwail_AH",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDropper:Win32/Cutwail.AH,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341418"
+}

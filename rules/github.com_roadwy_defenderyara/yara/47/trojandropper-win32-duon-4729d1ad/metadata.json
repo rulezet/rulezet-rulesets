@@ -1,0 +1,21 @@
+{
+  "uuid": "4729d1ad-f20b-4a84-9ce5-cf1fa4e4c06a",
+  "title": "TrojanDropper_Win32_Duon",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDropper:Win32/Duon,SIGNATURE_TYPE_PEHSTR,14 00 0f 00 09 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/340989"
+}

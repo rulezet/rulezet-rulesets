@@ -1,0 +1,21 @@
+{
+  "uuid": "9e1473ad-33a2-4ac5-8c11-072b933fb295",
+  "title": "TrojanDropper_Win32_VB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDropper:Win32/VB,SIGNATURE_TYPE_PEHSTR_EXT,ffffffde 00 ffffffde 00 09 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341286"
+}

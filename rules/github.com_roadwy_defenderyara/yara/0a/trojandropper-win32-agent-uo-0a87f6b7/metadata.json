@@ -1,0 +1,21 @@
+{
+  "uuid": "0a87f6b7-f63e-4d94-b2f9-aa34ee446b0c",
+  "title": "TrojanDropper_Win32_Agent_UO",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDropper:Win32/Agent.UO,SIGNATURE_TYPE_PEHSTR,04 00 04 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341110"
+}

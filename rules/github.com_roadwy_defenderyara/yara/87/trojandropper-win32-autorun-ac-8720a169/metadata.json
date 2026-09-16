@@ -1,0 +1,21 @@
+{
+  "uuid": "8720a169-f2f4-4d81-becb-01cbc7b6ab47",
+  "title": "TrojanDropper_Win32_Autorun_AC",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDropper:Win32/Autorun.AC,SIGNATURE_TYPE_PEHSTR_EXT,04 00 04 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341014"
+}
