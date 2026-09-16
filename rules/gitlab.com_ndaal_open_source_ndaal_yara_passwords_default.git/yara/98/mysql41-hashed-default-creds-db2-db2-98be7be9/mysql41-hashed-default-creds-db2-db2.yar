@@ -1,0 +1,33 @@
+rule mysql41_hashed_default_creds_db2_db2
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for db2_db2."
+        category = "INFO"
+        info = "MYSQL41"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="*EF23B7D8B076353461321AE54C8DB2DA734D1E44"
+    $a1="*7028FBB509AB06978796B74F3B84606D643FF311"
+    $a2="*58308C7E17F15657F79D7D18A00A5709FDEE9166"
+    $a3="*58308C7E17F15657F79D7D18A00A5709FDEE9166"
+    $a4="*30B8126C0817067A7C20CC99C4D6B8A8BD132700"
+    $a5="*30B8126C0817067A7C20CC99C4D6B8A8BD132700"
+    $a6="*E444D49D05D26C030E54AC0E4C44C705C1BB988D"
+    $a7="*E444D49D05D26C030E54AC0E4C44C705C1BB988D"
+    $a8="*BD3979056E0104C444F6C73EF2CC0B2A14C53A79"
+    $a9="*BD3979056E0104C444F6C73EF2CC0B2A14C53A79"
+    $a10="*7545F6ACA37249F2F086A83BB636D7DDB3E99538"
+    $a11="*BD3979056E0104C444F6C73EF2CC0B2A14C53A79"
+    $a12="*59F34589CBECBF3AB16AA51EA7E7C1D8DF068A76"
+    $a13="*BD3979056E0104C444F6C73EF2CC0B2A14C53A79"
+    $a14="*F83E9A44C3576A1BDD1C744125B30E4D4F754DA5"
+    $a15="*BD3979056E0104C444F6C73EF2CC0B2A14C53A79"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15)
+}

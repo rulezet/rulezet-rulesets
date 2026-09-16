@@ -1,0 +1,47 @@
+rule base64_hashed_default_creds_sap
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for sap."
+        category = "INFO"
+        info = "SHA3_512"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="RERJQw=="
+    $a1="MTk5MjA3MDY="
+    $a2="U0FQKg=="
+    $a3="UEFTUw=="
+    $a4="U0FQQ1BJQw=="
+    $a5="QURNSU4="
+    $a6="YWRtaW4="
+    $a7="YXhpczI="
+    $a8="QWRtaW5pc3RyYXRvcg=="
+    $a9="bWFuYWdl"
+    $a10="Y3RiX2FkbWlu"
+    $a11="c2FwMTIz"
+    $a12="RGV2ZWxvcGVy"
+    $a13="aXNkZXY="
+    $a14="RUFSTFlXQVRDSA=="
+    $a15="U1VQUE9SVA=="
+    $a16="aXRzYWRtaW4="
+    $a17="aW5pdA=="
+    $a18="UmVwbGljYXRvcg=="
+    $a19="aXNjb3B5"
+    $a20="U0FQKg=="
+    $a21="MDYwNzE5OTI="
+    $a22="U0FQKg=="
+    $a23="NzA2MTk5Mg=="
+    $a24="U0FQQ1BJQw=="
+    $a25="YWRtaW4="
+    $a26="U0FQUjM="
+    $a27="U0FQ"
+    $a28="eG1pX2RlbW8="
+    $a29="c2FwMTIz"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

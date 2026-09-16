@@ -1,0 +1,19 @@
+rule sha1_hashed_default_creds_oleg_khabarov
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for oleg_khabarov."
+        category = "INFO"
+        info = "SHA1"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8"
+    $a1="249ba36000029bbe97499c03db5a9001f6b734ec"
+condition:
+    ($a0 and $a1)
+}
