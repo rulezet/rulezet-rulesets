@@ -1,0 +1,9 @@
+rule Win_Trojan_Perflog_34
+{
+strings:
+	$a0 = { c876443314350e0020000000534f4d4132303039686b2e646c6c9adce84bb52dc0a83f2040d48d2dbdd01667a0fe63d0f9b57d02e3ac7c3ed46ab9bbd2552a4a2bca1474b528eae8ef391574d4d4a55e72535e23 }
+
+
+condition:
+	$a0
+}

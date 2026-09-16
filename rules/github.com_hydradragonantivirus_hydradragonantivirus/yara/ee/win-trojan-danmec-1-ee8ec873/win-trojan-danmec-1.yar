@@ -1,0 +1,9 @@
+rule Win_Trojan_Danmec_1
+{
+strings:
+	$a0 = { 92f861cd3cae239b1694159920aa37c75af08925c4660bb35e0cbd7128e29f5f22e8b17d4c1ef3cba6846549301a07f7eae0d9d5d4d6dbe3eefc0d2138526f8fb2d8012d5c8ec3fb3674b5f9408ad7277ad02985e446ab137eec5dd148c23fbf42c851dddde0e6effb0a1c31496482a3 }
+
+
+condition:
+	$a0
+}

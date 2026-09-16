@@ -1,0 +1,9 @@
+rule Win_Trojan_YakSin_1
+{
+strings:
+	$a0 = { 46468e8e4f31316e640e034734019508fd47041d6f01e759616b757a612001872569bb5bc8a13a02310002b2a0213954010c }
+
+
+condition:
+	$a0
+}

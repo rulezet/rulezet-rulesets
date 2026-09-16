@@ -1,0 +1,9 @@
+rule Win_Trojan_Startpage_392
+{
+strings:
+	$a0 = { 386169e4e4637a3a7e73ea75d324801f68746d456cc05c63306f75607279640369616c2e6578955254d16b2050d567861d }
+
+
+condition:
+	$a0
+}
