@@ -1,0 +1,22 @@
+{
+  "uuid": "9a82d8d1-14e5-480a-8a8f-9154cce30fe0",
+  "title": "HackTool_Win32_SuspTokenFetchReq",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "HackTool:Win32/SuspTokenFetchReq,SIGNATURE_TYPE_CMDHSTR_EXT,10 00 10 00 05 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/313392"
+}

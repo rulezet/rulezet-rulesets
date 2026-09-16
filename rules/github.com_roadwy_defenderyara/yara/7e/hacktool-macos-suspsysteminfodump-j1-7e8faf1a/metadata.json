@@ -1,0 +1,22 @@
+{
+  "uuid": "7e8faf1a-3c38-4312-ac07-80e66de620a0",
+  "title": "HackTool_MacOS_SuspSystemInfoDump_J1",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "HackTool:MacOS/SuspSystemInfoDump.J1,SIGNATURE_TYPE_CMDHSTR_EXT,0a 00 0a 00 01 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/313215"
+}

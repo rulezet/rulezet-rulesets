@@ -1,0 +1,23 @@
+{
+  "uuid": "52179bb6-2764-4cc0-ab1b-496e7a8b8f09",
+  "title": "HackTool_MacOS_Metasploit_P16",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "HackTool:MacOS/Metasploit.P16,SIGNATURE_TYPE_MACHOHSTR_EXT,08 00 08 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/313199"
+}
