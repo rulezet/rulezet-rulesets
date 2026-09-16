@@ -1,0 +1,22 @@
+{
+  "uuid": "a4a3df3c-0c8e-4d15-84a8-dca0186758a1",
+  "title": "RBAC Permission Enumeration Attempt",
+  "format": "sigma",
+  "author": "Leo Tsaousis (@laripping)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects identities attempting to enumerate their Kubernetes RBAC permissions.\nIn the early stages of a breach, attackers will aim to list the permissions they have within the compromised environment.\nIn a Kubernetes cluster, this can be achieved by interacting with the API server, and querying the SelfSubjectAccessReview API via e.g. a \"kubectl auth can-i --list\" command.\nThis will enumerate the Role-Based Access Controls (RBAC) rules defining the compromised user's authorization.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1069.003",
+    "T1087.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345030"
+}

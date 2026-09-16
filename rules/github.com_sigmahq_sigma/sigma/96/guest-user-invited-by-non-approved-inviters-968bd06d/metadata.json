@@ -1,0 +1,21 @@
+{
+  "uuid": "968bd06d-093b-45fe-b449-c89933c1ac15",
+  "title": "Guest User Invited By Non Approved Inviters",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Yochana Henderson, '@Yochana-H'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a user that doesn't have permissions to invite a guest user attempts to invite one.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345188"
+}

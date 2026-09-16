@@ -1,0 +1,21 @@
+{
+  "uuid": "95380a2b-5c7e-45ab-bdde-c08378cd29d6",
+  "title": "SQL Injection Strings In URI",
+  "format": "sigma",
+  "author": "Saw Win Naung, Nasreddine Bencherchali (Nextron Systems), Thurein Oo (Yoma Bank)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential SQL injection attempts via GET requests in access logs.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345352"
+}

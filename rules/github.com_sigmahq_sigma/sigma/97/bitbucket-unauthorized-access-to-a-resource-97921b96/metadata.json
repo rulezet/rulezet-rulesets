@@ -1,0 +1,21 @@
+{
+  "uuid": "97921b96-fe56-4be9-a1dd-e390d260101c",
+  "title": "Bitbucket Unauthorized Access To A Resource",
+  "format": "sigma",
+  "author": "Muhammad Faisal (@faisalusuf)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects unauthorized access attempts to a resource.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1586"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345041"
+}

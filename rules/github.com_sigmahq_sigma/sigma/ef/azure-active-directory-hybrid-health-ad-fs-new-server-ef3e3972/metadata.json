@@ -1,0 +1,21 @@
+{
+  "uuid": "ef3e3972-1b6d-4f12-88bb-4664a78fdf28",
+  "title": "Azure Active Directory Hybrid Health AD FS New Server",
+  "format": "sigma",
+  "author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research), MSTIC",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This detection uses azureactivity logs (Administrative category) to identify the creation or update of a server instance in an Azure AD Hybrid health AD FS service.\nA threat actor can create a new AD Health ADFS service and create a fake server instance to spoof AD FS signing logs. There is no need to compromise an on-prem AD FS server.\nThis can be done programmatically via HTTP requests to Azure.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1578"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345096"
+}

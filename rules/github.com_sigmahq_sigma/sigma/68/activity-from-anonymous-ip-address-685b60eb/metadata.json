@@ -1,0 +1,21 @@
+{
+  "uuid": "685b60eb-6b08-49e2-aa66-69f102eeac9f",
+  "title": "Activity From Anonymous IP Address",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies that users were active from an IP address that has been identified as an anonymous proxy IP address.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345162"
+}

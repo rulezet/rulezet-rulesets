@@ -1,0 +1,21 @@
+{
+  "uuid": "1bd76150-92d1-4a0b-a104-3366f55775d2",
+  "title": "Webshell ReGeorg Detection Via Web Logs",
+  "format": "sigma",
+  "author": "Cian Heasley",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Certain strings in the uri_query field when combined with null referer and null user agent can indicate activity associated with the webshell ReGeorg.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345348"
+}

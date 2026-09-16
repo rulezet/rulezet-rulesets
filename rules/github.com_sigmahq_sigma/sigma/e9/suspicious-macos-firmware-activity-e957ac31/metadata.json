@@ -1,0 +1,21 @@
+{
+  "uuid": "e957ac31-733b-48cf-b537-5976d342c612",
+  "title": "Suspicious MacOS Firmware Activity",
+  "format": "sigma",
+  "author": "Austin Songer @austinsonger",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a user manipulates with Firmward Password on MacOS. NOTE - this command has been disabled on silicon-based apple computers.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344975"
+}

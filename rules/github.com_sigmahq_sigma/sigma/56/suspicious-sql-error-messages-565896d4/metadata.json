@@ -1,0 +1,21 @@
+{
+  "uuid": "565896d4-2a30-43c6-b679-4ef44d8a6054",
+  "title": "Suspicious SQL Error Messages",
+  "format": "sigma",
+  "author": "Bjoern Kimminich",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects SQL error messages that indicate probing for an injection attack",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345010"
+}

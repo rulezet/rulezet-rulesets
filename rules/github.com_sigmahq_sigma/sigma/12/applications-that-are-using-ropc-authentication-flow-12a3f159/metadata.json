@@ -1,0 +1,21 @@
+{
+  "uuid": "12a3f159-d431-4972-a95b-7e961d96bca2",
+  "title": "Applications That Are Using ROPC Authentication Flow",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Bailey Bercik '@baileybercik'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Resource owner password credentials (ROPC) should be avoided if at all possible as this requires the user to expose their current password credentials to the application directly.\nThe application then uses those credentials to authenticate the user against the identity provider.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345148"
+}

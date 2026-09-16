@@ -1,0 +1,21 @@
+{
+  "uuid": "31971163-efac-457b-bd63-1ab30a4cce8b",
+  "title": "SharpHound Recon Account Discovery",
+  "format": "sigma",
+  "author": "Sagie Dulce, Dekel Paz",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects remote RPC calls useb by SharpHound to map remote connections and local group membership.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1087"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344996"
+}

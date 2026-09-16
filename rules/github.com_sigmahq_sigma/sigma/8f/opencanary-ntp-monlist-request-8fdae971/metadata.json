@@ -1,0 +1,21 @@
+{
+  "uuid": "8fdae971-befc-45bd-a743-90fb91ab4ae7",
+  "title": "OpenCanary - NTP Monlist Request",
+  "format": "sigma",
+  "author": "Security Onion Solutions",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects instances where an NTP service on an OpenCanary node has had a NTP monlist request.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1498"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345057"
+}

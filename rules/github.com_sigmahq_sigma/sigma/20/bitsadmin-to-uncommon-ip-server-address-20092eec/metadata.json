@@ -1,0 +1,22 @@
+{
+  "uuid": "20092eec-997e-477b-89ee-43bc2d57af04",
+  "title": "Bitsadmin to Uncommon IP Server Address",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Bitsadmin connections to IP addresses instead of FQDN names",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1071.001",
+    "T1197"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345327"
+}

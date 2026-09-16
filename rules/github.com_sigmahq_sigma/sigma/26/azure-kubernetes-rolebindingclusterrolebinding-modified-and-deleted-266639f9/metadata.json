@@ -1,0 +1,23 @@
+{
+  "uuid": "266639f9-f1ae-4e4a-8721-5497b8afcc67",
+  "title": "Azure Kubernetes RoleBinding/ClusterRoleBinding Modified and Deleted",
+  "format": "sigma",
+  "author": "Austin Songer @austinsonger",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation or patching of potential malicious RoleBinding/ClusterRoleBinding.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1489",
+    "T1496"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345101"
+}

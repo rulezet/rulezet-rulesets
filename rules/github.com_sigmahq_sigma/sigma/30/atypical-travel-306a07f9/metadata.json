@@ -1,0 +1,21 @@
+{
+  "uuid": "306a07f9-ffdb-495f-8e78-0713bf376e08",
+  "title": "Atypical Travel",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies two sign-ins originating from geographically distant locations, where at least one of the locations may also be atypical for the user, given past behavior.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345151"
+}

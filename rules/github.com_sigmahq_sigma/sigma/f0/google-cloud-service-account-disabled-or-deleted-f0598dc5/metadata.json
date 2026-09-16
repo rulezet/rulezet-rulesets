@@ -1,0 +1,21 @@
+{
+  "uuid": "f0598dc5-52f9-4125-9d32-5810f7fc3bda",
+  "title": "Google Cloud Service Account Disabled or Deleted",
+  "format": "sigma",
+  "author": "Austin Songer @austinsonger",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies when a service account is disabled or deleted in Google Cloud.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1531"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345227"
+}

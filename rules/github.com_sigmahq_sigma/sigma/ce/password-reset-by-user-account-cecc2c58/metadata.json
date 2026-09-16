@@ -1,0 +1,21 @@
+{
+  "uuid": "cecc2c58-a6db-4c76-83ff-1112c57962cd",
+  "title": "Password Reset By User Account",
+  "format": "sigma",
+  "author": "YochanaHenderson, '@Yochana-H'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect when a user has reset their password in Azure AD",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345172"
+}

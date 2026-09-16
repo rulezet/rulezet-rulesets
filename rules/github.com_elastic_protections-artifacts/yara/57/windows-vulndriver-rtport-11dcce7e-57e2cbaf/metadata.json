@@ -1,0 +1,21 @@
+{
+  "uuid": "57e2cbaf-7bf0-4387-90f8-6531d1b95a5c",
+  "title": "Windows_VulnDriver_Rtport_11dcce7e",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Name: rtport.sys, Version: <= 5.0.2195.1620",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-01",
+  "last_modified": "2026-08-01",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345395"
+}

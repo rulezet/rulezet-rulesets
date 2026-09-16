@@ -1,0 +1,19 @@
+{
+  "uuid": "3d752057-eca3-4200-bf26-fb8dc0a3d85d",
+  "title": "Kubernetes Unauthorized or Unauthenticated Access",
+  "format": "sigma",
+  "author": "kelnage",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a request to the Kubernetes API is rejected due to lack of authorization or due to an expired authentication token being used.\nThis may indicate an attacker attempting to leverage credentials they have obtained.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345028"
+}

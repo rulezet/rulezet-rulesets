@@ -1,0 +1,23 @@
+{
+  "uuid": "4e7c3dc8-35fb-4165-a723-72690283d851",
+  "title": "Time Machine Backup Disabled Via Tmutil - MacOS",
+  "format": "sigma",
+  "author": "Pratinav Chandra",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects disabling of Time Machine (Apple's automated backup utility software) via the native macOS backup utility \"tmutil\".\nAn attacker can use this to prevent backups from occurring.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344962"
+}

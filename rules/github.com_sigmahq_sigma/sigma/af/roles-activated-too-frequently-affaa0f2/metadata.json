@@ -1,0 +1,21 @@
+{
+  "uuid": "affaa0f2-e97d-4c56-b062-2c1ffc00b190",
+  "title": "Roles Activated Too Frequently",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies when the same privilege role has multiple activations by the same user.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345093"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "c632abfd-ba21-4bc3-b8c4-30d8f086acf0",
+  "title": "User Access Blocked by Azure Conditional Access",
+  "format": "sigma",
+  "author": "AlertIQ",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect access has been blocked by Conditional Access policies.\nThe access policy does not allow token issuance which might be sights≈ of unauthorizeed login to valid accounts.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004",
+    "T1110"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345141"
+}

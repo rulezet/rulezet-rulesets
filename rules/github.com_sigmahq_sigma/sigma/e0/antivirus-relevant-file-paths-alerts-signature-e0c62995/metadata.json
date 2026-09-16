@@ -1,0 +1,23 @@
+{
+  "uuid": "e0c62995-f6c2-4bfa-bc30-1a34f93b7259",
+  "title": "Antivirus - Relevant File Paths Alerts Signature",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Arnim Rupp",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects an Antivirus alert in a highly relevant file path or with a relevant file name.\nThis event must not be ignored just because the AV has blocked the malware but investigate, how it came there in the first place.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1588"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345365"
+}

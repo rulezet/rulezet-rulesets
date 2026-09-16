@@ -1,0 +1,21 @@
+{
+  "uuid": "350c4e47-94cd-4d33-87ab-919880d0b53a",
+  "title": "SES Identity Has Been Deleted",
+  "format": "sigma",
+  "author": "Janantha Marasinghe",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects an instance of an SES identity being deleted via the \"DeleteIdentity\" event. This may be an indicator of an adversary removing the account that carried out suspicious or malicious activities",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1070"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345239"
+}

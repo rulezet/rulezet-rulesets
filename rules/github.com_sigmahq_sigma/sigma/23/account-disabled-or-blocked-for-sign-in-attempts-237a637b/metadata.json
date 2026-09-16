@@ -1,0 +1,21 @@
+{
+  "uuid": "237a637b-b196-4f31-a739-d2778c164af9",
+  "title": "Account Disabled or Blocked for Sign in Attempts",
+  "format": "sigma",
+  "author": "Yochana Henderson, '@Yochana-H'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when an account is disabled or blocked for sign in but tried to log in",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345147"
+}

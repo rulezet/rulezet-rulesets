@@ -1,0 +1,21 @@
+{
+  "uuid": "ffd9db40-2c18-4d1d-b660-d6d3afcd236a",
+  "title": "Github New Secret Created",
+  "format": "sigma",
+  "author": "Muhammad Faisal (@faisalusuf)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a user creates action secret for the organization, environment, codespaces or repository.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345084"
+}

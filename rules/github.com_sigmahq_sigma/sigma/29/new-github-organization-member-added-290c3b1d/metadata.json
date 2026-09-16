@@ -1,0 +1,21 @@
+{
+  "uuid": "290c3b1d-1ee7-4bfb-a9fc-0f3af90bd8b3",
+  "title": "New Github Organization Member Added",
+  "format": "sigma",
+  "author": "Muhammad Faisal (@faisalusuf)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a new member is added or invited to a github organization.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345077"
+}

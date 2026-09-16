@@ -1,0 +1,23 @@
+{
+  "uuid": "07f6fb76-c091-48b9-8923-2a82fe770126",
+  "title": "Privileged Container Deployed",
+  "format": "sigma",
+  "author": "Leo Tsaousis (@laripping)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of a \"privileged\" container, an action which could be indicative of a threat actor mounting a container breakout attacks.\nA privileged container is a container that can access the host with all of the root capabilities of the host machine. This allows it to view, interact and modify processes, network operations, IPC calls, the file system, mount points, SELinux configurations etc. as the root user on the host.\nVarious versions of \"privileged\" containers can be specified, e.g. by setting the securityContext.privileged flag in the resource specification, setting non-standard Linux capabilities, or configuring the hostNetwork/hostPID fields\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345021"
+}

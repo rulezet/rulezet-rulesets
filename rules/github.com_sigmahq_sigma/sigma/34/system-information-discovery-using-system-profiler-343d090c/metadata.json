@@ -1,0 +1,25 @@
+{
+  "uuid": "343d090c-0ae0-4f2f-a1b5-82a3a8d650a5",
+  "title": "System Information Discovery Using System_Profiler",
+  "format": "sigma",
+  "author": "Stephen Lincoln `@slincoln_aiq` (AttackIQ)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of \"system_profiler\" with specific \"Data Types\" that have been seen being used by threat actors and malware. It provides system hardware and software configuration information.\nThis process is primarily used for system information discovery. However, \"system_profiler\" can also be used to determine if virtualization software is being run for defense evasion purposes.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1082",
+    "T1497.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344964"
+}

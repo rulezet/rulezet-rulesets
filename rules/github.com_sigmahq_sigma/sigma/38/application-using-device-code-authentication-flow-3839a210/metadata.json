@@ -1,0 +1,21 @@
+{
+  "uuid": "3839a210-f6cb-439e-9b18-95a75227d188",
+  "title": "Application Using Device Code Authentication Flow",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Bailey Bercik '@baileybercik'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Device code flow is an OAuth 2.0 protocol flow specifically for input constrained devices and is not used in all environments.\nIf this type of flow is seen in the environment and not being used in an input constrained device scenario, further investigation is warranted.\nThis can be a misconfigured application or potentially something malicious.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345135"
+}

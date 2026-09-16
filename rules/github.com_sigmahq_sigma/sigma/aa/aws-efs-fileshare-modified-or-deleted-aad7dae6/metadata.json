@@ -1,0 +1,19 @@
+{
+  "uuid": "aad7dae6-9014-48fb-8bf9-6741def1d57c",
+  "title": "AWS EFS Fileshare Modified or Deleted",
+  "format": "sigma",
+  "author": "Austin Songer @austinsonger",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a EFS Fileshare is modified or deleted.\nYou can't delete a file system that is in use.\nIf the file system has any mount targets, the adversary must first delete them, so deletion of a mount will occur before deletion of a fileshare.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345283"
+}

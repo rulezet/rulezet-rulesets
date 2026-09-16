@@ -1,0 +1,21 @@
+{
+  "uuid": "5a5983ce-4396-4a4b-b90c-49718be62854",
+  "title": "Added Credentials to Existing Application",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Bailey Bercik '@baileybercik'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a new credential is added to an existing application. Any additional credentials added outside of expected processes could be a malicious actor using those credentials.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345182"
+}

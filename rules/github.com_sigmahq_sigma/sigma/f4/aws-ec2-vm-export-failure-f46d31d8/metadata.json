@@ -1,0 +1,22 @@
+{
+  "uuid": "f46d31d8-ed3e-454a-9bff-092aebd87b7b",
+  "title": "AWS EC2 VM Export Failure",
+  "format": "sigma",
+  "author": "Diogo Braz",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "An attempt to export an AWS EC2 instance has been detected. A VM Export might indicate an attempt to extract information from an instance.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1537"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345243"
+}

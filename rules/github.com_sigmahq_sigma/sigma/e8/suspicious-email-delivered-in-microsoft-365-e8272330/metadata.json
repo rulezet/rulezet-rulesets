@@ -1,0 +1,22 @@
+{
+  "uuid": "e8272330-ae25-4f32-ba35-445660341530",
+  "title": "Suspicious Email Delivered In Microsoft 365",
+  "format": "sigma",
+  "author": "Marco Pedrinazzi (@pedrinazziM) (InTheCyber)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects instances where an email, identified as malicious or suspicious by the Microsoft Defender for Office 365 (formerly ATP) engine, was delivered to a user's Inbox or Junk folder.\nIt might indicate that a potential threat, such as a spearphishing attachment or links, has bypassed initial blocking mechanisms and reached an end-user, requiring further investigation and potential remediation.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566.001",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345312"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "f3be7f03-f353-478b-83a7-ed2be6431d0e",
+  "title": "AWS ElastiCache Security Group Modified or Deleted",
+  "format": "sigma",
+  "author": "Austin Songer @austinsonger",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies when an ElastiCache security group has been modified or deleted.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1531"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345280"
+}

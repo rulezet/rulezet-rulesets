@@ -1,0 +1,22 @@
+{
+  "uuid": "2772b3ac-b3b6-4320-80ce-3bd3dcaf20d2",
+  "title": "Application URI Configuration Changes",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Bailey Bercik '@baileybercik'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a configuration change is made to an applications URI.\nURIs for domain names that no longer exist (dangling URIs), not using HTTPS, wildcards at the end of the domain, URIs that are no unique to that app, or URIs that point to domains you do not control should be investigated.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004",
+    "T1528"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345200"
+}

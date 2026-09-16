@@ -1,0 +1,23 @@
+{
+  "uuid": "4723a0bf-463c-4f82-afcd-e9d9fc8ff323",
+  "title": "Antivirus - Remote Access Tools Signature",
+  "format": "sigma",
+  "author": "Arnim Rupp (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a highly relevant Antivirus alert that reports a remote access tool.\nThis event must not be ignored just because the AV has blocked the malware but investigate, how it came there in the first place.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"Vidar\""
+  ],
+  "attack_techniques": [
+    "T1203",
+    "T1219.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345371"
+}

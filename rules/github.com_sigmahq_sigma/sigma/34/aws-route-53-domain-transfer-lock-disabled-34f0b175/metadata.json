@@ -1,0 +1,21 @@
+{
+  "uuid": "34f0b175-b027-440b-a026-0f3c6201ee0e",
+  "title": "AWS Route 53 Domain Transfer Lock Disabled",
+  "format": "sigma",
+  "author": "Elastic, Austin Songer @austinsonger",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a transfer lock was removed from a Route 53 domain. It is recommended to refrain from performing this action unless intending to transfer the domain to a different registrar.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345255"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "a46b6035-03c8-4b58-bef6-6065c5305bbb",
+  "title": "Okta Admin Role Assigned to an User or Group",
+  "format": "sigma",
+  "author": "Austin Songer @austinsonger",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when an the Administrator role is assigned to an user or group.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345390"
+}

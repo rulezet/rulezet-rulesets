@@ -1,0 +1,21 @@
+{
+  "uuid": "7d2054c2-66ea-4764-af8c-cbf0c49d26f9",
+  "title": "Roles Are Not Being Used",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies when a user has been assigned a privilege role and are not using that role.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345097"
+}

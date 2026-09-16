@@ -1,0 +1,29 @@
+{
+  "uuid": "469b872c-605d-4b6b-9792-eb1db2d81a1f",
+  "title": "Suspicious Execution via macOS Script Editor",
+  "format": "sigma",
+  "author": "Tim Rauch (rule), Elastic (idea)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when the macOS Script Editor utility spawns an unusual child process.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.002",
+    "T1204",
+    "T1204.001",
+    "T1553",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344934"
+}

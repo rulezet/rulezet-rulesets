@@ -1,0 +1,24 @@
+{
+  "uuid": "48b64d01-f9a5-43ec-9302-aa1e8795b2dc",
+  "title": "System Information Discovery Via Sysctl - MacOS",
+  "format": "sigma",
+  "author": "Pratinav Chandra",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of \"sysctl\" with specific arguments that have been used by threat actors and malware. It provides system hardware information.\nThis process is primarily used to detect and avoid virtualization and analysis environments.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1082",
+    "T1497.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344936"
+}

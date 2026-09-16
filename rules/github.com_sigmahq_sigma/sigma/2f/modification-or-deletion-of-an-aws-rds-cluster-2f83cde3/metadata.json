@@ -1,0 +1,21 @@
+{
+  "uuid": "2f83cde3-870a-4312-ad7c-9a83b7ba75bd",
+  "title": "Modification or Deletion of an AWS RDS Cluster",
+  "format": "sigma",
+  "author": "Ivan Saakov",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects modifications to an RDS cluster or its deletion, which may indicate potential data exfiltration attempts, unauthorized access, or exposure of sensitive information.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1020"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345252"
+}

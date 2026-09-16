@@ -1,0 +1,26 @@
+{
+  "uuid": "09496bc0-0f06-42ee-98da-9957af20ff2b",
+  "title": "Suspicious Installer Package Child Process",
+  "format": "sigma",
+  "author": "Sohan G (D4rkCiph3r)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of suspicious child processes from macOS installer package parent process. This includes osascript, JXA, curl and wget amongst other interpreters",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.007",
+    "T1071",
+    "T1071.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344956"
+}

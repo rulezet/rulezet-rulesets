@@ -1,0 +1,21 @@
+{
+  "uuid": "7b72ab3b-f59b-4c8a-b9f2-a8390aa0d663",
+  "title": "Google Workspace Application Access Level Modified",
+  "format": "sigma",
+  "author": "Bryan Lim",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when an access level is changed for a Google workspace application.\nAn access level is part of BeyondCorp Enterprise which is Google Workspace's way of enforcing Zero Trust model.\nAn adversary would be able to remove access levels to gain easier access to Google workspace resources.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345236"
+}

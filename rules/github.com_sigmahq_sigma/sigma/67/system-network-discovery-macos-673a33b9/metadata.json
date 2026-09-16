@@ -1,0 +1,23 @@
+{
+  "uuid": "673a33b9-81b8-428f-87b1-55d1e51adf41",
+  "title": "System Network Discovery - macOS",
+  "format": "sigma",
+  "author": "remotephone, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects enumeration of local network configuration",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1016"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344951"
+}

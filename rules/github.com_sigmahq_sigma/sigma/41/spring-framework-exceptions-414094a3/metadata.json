@@ -1,0 +1,21 @@
+{
+  "uuid": "414094a3-597a-40d0-b599-8cc7c00654e1",
+  "title": "Spring Framework Exceptions",
+  "format": "sigma",
+  "author": "Thomas Patzke",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious Spring framework exceptions that could indicate exploitation attempts",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345007"
+}

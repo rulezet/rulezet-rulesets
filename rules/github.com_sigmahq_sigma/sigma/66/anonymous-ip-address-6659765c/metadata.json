@@ -1,0 +1,21 @@
+{
+  "uuid": "6659765c-ae93-49cb-b2a3-dbc106564c9f",
+  "title": "Anonymous IP Address",
+  "format": "sigma",
+  "author": "Gloria Lee, '@gleeiamglo'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Indicates sign-ins from an anonymous IP address, for example, using an anonymous browser or VPN.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1528"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345156"
+}

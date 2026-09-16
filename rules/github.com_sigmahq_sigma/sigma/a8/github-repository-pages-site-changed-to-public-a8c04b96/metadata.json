@@ -1,0 +1,21 @@
+{
+  "uuid": "a8c04b96-98ea-4e43-a56a-25ce5fbb4223",
+  "title": "GitHub Repository Pages Site Changed to Public",
+  "format": "sigma",
+  "author": "Ivan Saakov",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a GitHub Pages site of a repository is made public. This usually is part of a publishing process but could indicate or lead to potential unauthorized exposure of sensitive information or code.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1567.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345090"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "0527ff49-7e4c-48c1-a20e-39e373d49ead",
+  "title": "Payload Decoded and Decrypted via Built-in Utilities",
+  "format": "sigma",
+  "author": "Tim Rauch (rule), Elastic (idea)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a built-in utility is used to decode and decrypt a payload after a macOS disk image (DMG) is executed. Malware authors may attempt to evade detection and trick users into executing malicious code by encoding and encrypting their payload and placing it in a disk image file. This behavior is consistent with adware or malware families such as Bundlore and Shlayer.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"Adware\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1140",
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344978"
+}

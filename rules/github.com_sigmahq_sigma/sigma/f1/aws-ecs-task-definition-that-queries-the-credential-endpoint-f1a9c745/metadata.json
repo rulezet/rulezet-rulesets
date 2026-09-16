@@ -1,0 +1,22 @@
+{
+  "uuid": "f1a9c745-31bd-46f8-becc-c221ed89a3ea",
+  "title": "AWS ECS Task Definition That Queries The Credential Endpoint",
+  "format": "sigma",
+  "author": "Darin Smith",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when an Elastic Container Service (ECS) Task Definition includes a command to query the credential endpoint.\nThis can indicate a potential adversary adding a backdoor to establish persistence or escalate privileges.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1525"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345246"
+}

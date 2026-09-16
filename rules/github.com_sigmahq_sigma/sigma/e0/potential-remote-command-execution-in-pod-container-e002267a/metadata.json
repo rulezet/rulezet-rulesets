@@ -1,0 +1,21 @@
+{
+  "uuid": "e002267a-5dc2-4cdd-8901-f59fc16f3459",
+  "title": "Potential Remote Command Execution In Pod Container",
+  "format": "sigma",
+  "author": "Leo Tsaousis (@laripping)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects attempts to execute remote commands, within a Pod's container using e.g. the \"kubectl exec\" command.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1609"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345019"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "531bed5e-f1f4-40e5-9016-8bacc6538057",
+  "title": "Remote Registry Lateral Movement",
+  "format": "sigma",
+  "author": "Sagie Dulce, Dekel Paz",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects remote RPC calls to modify the registry and possible execute code",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344994"
+}

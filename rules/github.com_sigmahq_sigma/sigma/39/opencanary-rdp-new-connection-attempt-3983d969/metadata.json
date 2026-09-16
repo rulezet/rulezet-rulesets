@@ -1,0 +1,22 @@
+{
+  "uuid": "3983d969-c836-43f7-92dc-4bec9915d36f",
+  "title": "OpenCanary - RDP New Connection Attempt",
+  "format": "sigma",
+  "author": "Marco Pedrinazzi (@pedrinazziM)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects instances where an RDP service on an OpenCanary node has had a connection attempt.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1021.001",
+    "T1133"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345070"
+}

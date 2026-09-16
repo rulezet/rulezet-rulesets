@@ -1,0 +1,21 @@
+{
+  "uuid": "8eec2817-afea-445b-b7b4-7dfd354b7c90",
+  "title": "PST Export Alert Using New-ComplianceSearchAction",
+  "format": "sigma",
+  "author": "Nikita Khalimonenkov",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Alert when a user has performed an export to a search using 'New-ComplianceSearchAction' with the '-Export' flag. This detection will detect PST export even if the 'eDiscovery search or exported' alert is disabled in the O365.This rule will apply to ExchangePowerShell usage and from the cloud.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1114"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345302"
+}

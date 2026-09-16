@@ -1,0 +1,22 @@
+{
+  "uuid": "bb4e4f2c-0ed8-4b50-9820-ae6407df82ba",
+  "title": "Azure AD Only Single Factor Authentication Required",
+  "format": "sigma",
+  "author": "MikeDuddington, '@dudders1'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect when users are authenticating without MFA being required.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004",
+    "T1556.006"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345149"
+}

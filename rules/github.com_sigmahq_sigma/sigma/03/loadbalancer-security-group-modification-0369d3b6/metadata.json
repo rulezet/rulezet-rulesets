@@ -1,0 +1,21 @@
+{
+  "uuid": "0369d3b6-46b1-4cbd-9249-0c387bd887ff",
+  "title": "LoadBalancer Security Group Modification",
+  "format": "sigma",
+  "author": "jamesc-grafana",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects changes to the security groups associated with an Elastic Load Balancer (ELB) or Application Load Balancer (ALB).\nThis can indicate that a misconfiguration allowing more traffic into the system than required, or could indicate that an attacker is attempting to enable new connections into a VPC or subnet controlled by the account.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345292"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "6e9bacba-c4f0-49d3-9567-b85c6bbba11c",
+  "title": "AWS EC2 Disable EBS Encryption",
+  "format": "sigma",
+  "author": "Sittikorn S",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies disabling of default Amazon Elastic Block Store (EBS) encryption in the current region.\nDisabling default encryption does not change the encryption status of your existing volumes.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1486",
+    "T1565"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345251"
+}

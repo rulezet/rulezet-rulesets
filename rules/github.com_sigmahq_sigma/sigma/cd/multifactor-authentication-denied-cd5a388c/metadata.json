@@ -1,0 +1,23 @@
+{
+  "uuid": "cd5a388c-d8b0-4623-81b2-41cbb266503a",
+  "title": "Multifactor Authentication Denied",
+  "format": "sigma",
+  "author": "AlertIQ",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "User has indicated they haven't instigated the MFA prompt and could indicate an attacker has the password for the account.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004",
+    "T1110",
+    "T1621"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345143"
+}

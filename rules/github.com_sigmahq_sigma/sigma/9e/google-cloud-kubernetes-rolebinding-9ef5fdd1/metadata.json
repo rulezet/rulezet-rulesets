@@ -1,0 +1,19 @@
+{
+  "uuid": "9ef5fdd1-3050-4d0b-9676-f77dfd09ed6d",
+  "title": "Google Cloud Kubernetes RoleBinding",
+  "format": "sigma",
+  "author": "Austin Songer @austinsonger",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation or patching of potential malicious RoleBinding. This includes RoleBindings and ClusterRoleBinding.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345220"
+}

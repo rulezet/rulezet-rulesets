@@ -1,0 +1,23 @@
+{
+  "uuid": "5df0e339-d4e7-49b5-a7f4-1ae0b9647c14",
+  "title": "OSACompile Run-Only Execution",
+  "format": "sigma",
+  "author": "Sohan G (D4rkCiph3r)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential suspicious run-only executions compiled using OSACompile",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1059.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344933"
+}

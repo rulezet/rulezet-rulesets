@@ -1,0 +1,21 @@
+{
+  "uuid": "a1332bf4-99fa-4963-963c-b2515c11b546",
+  "title": "Privileged Account Creation",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Yochana Henderson, '@Yochana-H', Tim Shelton",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a new admin is created.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345210"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "a9c67dd5-e973-497d-bf31-0e60a0808fae",
+  "title": "Security Software Discovery - MacOs",
+  "format": "sigma",
+  "author": "Daniil Yugoslavskiy, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of system utilities (only grep for now) to discover security software discovery",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1518.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344941"
+}

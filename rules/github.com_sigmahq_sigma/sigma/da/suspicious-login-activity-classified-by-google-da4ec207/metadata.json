@@ -1,0 +1,21 @@
+{
+  "uuid": "da4ec207-ce0b-4e19-af50-3d01074c1e70",
+  "title": "Suspicious Login Activity Classified By Google",
+  "format": "sigma",
+  "author": "Tom Kluter",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Google Workspace login activity that's classified as suspicious by Google.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345232"
+}

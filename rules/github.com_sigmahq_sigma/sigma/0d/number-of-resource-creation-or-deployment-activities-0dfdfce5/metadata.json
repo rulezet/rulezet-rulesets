@@ -1,0 +1,21 @@
+{
+  "uuid": "0dfdfce5-b6aa-45d4-b49d-124584b72efa",
+  "title": "Number Of Resource Creation Or Deployment Activities",
+  "format": "sigma",
+  "author": "sawwinnnaung",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Number of VM creations or deployment activities occur in Azure via the azureactivity log.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345122"
+}

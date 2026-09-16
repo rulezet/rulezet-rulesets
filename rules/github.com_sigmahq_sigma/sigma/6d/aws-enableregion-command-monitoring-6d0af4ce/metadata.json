@@ -1,0 +1,19 @@
+{
+  "uuid": "6d0af4ce-ec7a-459f-b4ca-792d3d92804a",
+  "title": "AWS EnableRegion Command Monitoring",
+  "format": "sigma",
+  "author": "Ivan Saakov, Sergey Zelenskiy",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of the EnableRegion command in AWS CloudTrail logs.\nWhile AWS has 30+ regions, some of them are enabled by default, others must be explicitly enabled in each account separately.\nThere may be situations where security monitoring does not cover some new AWS regions.\nMonitoring the EnableRegion command is important for identifying potential persistence mechanisms employed by adversaries, as enabling additional regions can facilitate continued access and operations within an AWS environment.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345281"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "0ca737a0-b89f-4c87-9bd6-b3802b63b26a",
+  "title": "Roles Assigned Outside PIM",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies when a privilege role assignment has taken place outside of PIM and may indicate an attack.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345098"
+}

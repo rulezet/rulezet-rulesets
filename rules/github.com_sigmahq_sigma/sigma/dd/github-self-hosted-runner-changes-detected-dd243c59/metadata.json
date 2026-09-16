@@ -1,0 +1,23 @@
+{
+  "uuid": "dd243c59-2fcd-413b-a720-08f0a79518cc",
+  "title": "Github Self Hosted Runner Changes Detected",
+  "format": "sigma",
+  "author": "Muhammad Faisal (@faisalusuf)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "A self-hosted runner is a system that you deploy and manage to execute jobs from GitHub Actions on GitHub.com.\nThis rule detects changes to self-hosted runners configurations in the environment. The self-hosted runner configuration changes once detected,\nit should be validated from GitHub UI because the log entry may not provide full context.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004",
+    "T1213.003",
+    "T1526"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345079"
+}

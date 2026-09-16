@@ -1,0 +1,19 @@
+{
+  "uuid": "d36bf918-8ca7-4995-86eb-dc81b61719b5",
+  "title": "Remote Encrypting File System Abuse",
+  "format": "sigma",
+  "author": "Sagie Dulce, Dekel Paz",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects remote RPC calls to possibly abuse remote encryption service via MS-EFSR",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345002"
+}

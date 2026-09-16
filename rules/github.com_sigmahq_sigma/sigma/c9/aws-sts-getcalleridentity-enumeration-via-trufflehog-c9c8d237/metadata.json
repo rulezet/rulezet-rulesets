@@ -1,0 +1,21 @@
+{
+  "uuid": "c9c8d237-ef78-46af-8b2a-6e7b5bcdf90f",
+  "title": "AWS STS GetCallerIdentity Enumeration Via TruffleHog",
+  "format": "sigma",
+  "author": "Adan Alvarez @adanalvarez",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of TruffleHog for AWS credential validation by identifying GetCallerIdentity API calls where the userAgent indicates TruffleHog.\nThreat actors leverage TruffleHog to enumerate and validate exposed AWS keys.\nSuccessful exploitation allows threat actors to confirm the validity of compromised AWS credentials, facilitating further unauthorized access and actions within the AWS environment.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1087.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345247"
+}

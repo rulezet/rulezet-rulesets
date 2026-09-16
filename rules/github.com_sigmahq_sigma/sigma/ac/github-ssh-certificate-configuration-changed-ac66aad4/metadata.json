@@ -1,0 +1,21 @@
+{
+  "uuid": "ac66aad4-4630-49ab-a474-2eab31bc7a9e",
+  "title": "Github SSH Certificate Configuration Changed",
+  "format": "sigma",
+  "author": "Romain Gaillard (@romain-gaillard)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when changes are made to the SSH certificate configuration of the organization.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345083"
+}

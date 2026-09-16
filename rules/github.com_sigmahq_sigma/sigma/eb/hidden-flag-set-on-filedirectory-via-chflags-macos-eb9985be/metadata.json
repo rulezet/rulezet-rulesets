@@ -1,0 +1,28 @@
+{
+  "uuid": "eb9985be-9922-4323-8381-b504c6e7dd5d",
+  "title": "Hidden Flag Set On File/Directory Via Chflags - MacOS",
+  "format": "sigma",
+  "author": "Omar Khaled (@beacon_exe)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of the \"chflags\" utility with the \"hidden\" flag, in order to hide files on MacOS.\nWhen a file or directory has this hidden flag set, it becomes invisible to the default file listing commands and in graphical file browsers.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT32 - G0050\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1218",
+    "T1552.001",
+    "T1564.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344969"
+}

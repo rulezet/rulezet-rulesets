@@ -1,0 +1,22 @@
+{
+  "uuid": "991c4390-c431-4bf3-af14-bdb07db7ee19",
+  "title": "Azure Device or Configuration Modified or Deleted",
+  "format": "sigma",
+  "author": "Austin Songer @austinsonger",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies when a device or device configuration in azure is modified or deleted.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1565.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345124"
+}

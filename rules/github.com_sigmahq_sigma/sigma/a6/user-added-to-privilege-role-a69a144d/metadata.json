@@ -1,0 +1,21 @@
+{
+  "uuid": "a69a144d-7bfb-42ef-b7b2-766c899e0eaa",
+  "title": "User Added To Privilege Role",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Yochana Henderson, '@Yochana-H'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a user is added to a privileged role.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345176"
+}

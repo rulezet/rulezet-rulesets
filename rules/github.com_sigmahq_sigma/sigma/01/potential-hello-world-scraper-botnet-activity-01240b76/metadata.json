@@ -1,0 +1,21 @@
+{
+  "uuid": "01240b76-4a67-4ca6-a7d3-49de7a420a8e",
+  "title": "Potential Hello-World Scraper Botnet Activity",
+  "format": "sigma",
+  "author": "Joseph A. M.",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects network traffic potentially associated with a scraper botnet variant that uses the \"Hello-World/1.0\" user-agent string.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1595"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345339"
+}

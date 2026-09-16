@@ -1,0 +1,22 @@
+{
+  "uuid": "b626daf8-a652-4a5e-9c77-f8c19acbb0b1",
+  "title": "Bitbucket Global SSH Settings Changed",
+  "format": "sigma",
+  "author": "Muhammad Faisal (@faisalusuf)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Bitbucket global SSH access configuration changes.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1021.004",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345040"
+}

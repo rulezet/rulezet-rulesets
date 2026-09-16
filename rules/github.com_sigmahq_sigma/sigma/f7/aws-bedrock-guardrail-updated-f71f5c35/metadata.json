@@ -1,0 +1,21 @@
+{
+  "uuid": "f71f5c35-eed8-4726-bb2f-ac8b8f8e7b03",
+  "title": "AWS Bedrock Guardrail Updated",
+  "format": "sigma",
+  "author": "Marco Pedrinazzi (@pedrinazziM) (InTheCyber)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects updates to an Amazon Bedrock guardrail, which may indicate attempts to weaken\nmodel safety controls and allow unsafe or unauthorized model responses.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345259"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "afa0a04c-2bba-41eb-9097-95cebf146b78",
+  "title": "Primary Refresh Token Access Attempt",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Gloria Lee, '@gleeiamglo'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Indicates access attempt to the PRT resource which can be used to move laterally into an organization or perform credential theft",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1528"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345167"
+}

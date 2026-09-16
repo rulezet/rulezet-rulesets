@@ -1,0 +1,22 @@
+{
+  "uuid": "782b5aa0-2cd4-4ae2-804a-4aa0dd78fd54",
+  "title": "User Added To Group With CA Policy Modification Access",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', Thomas Detzner '@tdetzner'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Monitor and alert on group membership additions of groups that have CA policy modification access",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548",
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345179"
+}

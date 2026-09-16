@@ -1,0 +1,21 @@
+{
+  "uuid": "16a07b1c-0a95-45bb-817f-c7ac01c40795",
+  "title": "Delegated Permissions Granted For All Users",
+  "format": "sigma",
+  "author": "Bailey Bercik '@baileybercik', Mark Morowczynski '@markmorow'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when highly privileged delegated permissions are granted on behalf of all users",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1528"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345191"
+}

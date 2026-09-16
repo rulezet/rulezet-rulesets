@@ -1,0 +1,30 @@
+{
+  "uuid": "833f7119-b7bc-401b-9dbc-575c990e4b93",
+  "title": "APT User Agent",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Markus Neis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious user agent strings used in APT malware in proxy logs",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDownloader\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT17 - G0025\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT33 - G0064\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Winnti Group - G0044\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1071.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345350"
+}

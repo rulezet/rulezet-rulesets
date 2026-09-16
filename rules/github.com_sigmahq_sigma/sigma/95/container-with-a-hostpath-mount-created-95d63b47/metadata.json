@@ -1,0 +1,21 @@
+{
+  "uuid": "95d63b47-7a98-4133-8aa7-cb066a26eed5",
+  "title": "Container With A hostPath Mount Created",
+  "format": "sigma",
+  "author": "Leo Tsaousis (@laripping)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects creation of a container with a hostPath mount.\nA hostPath volume mounts a directory or a file from the node to the container.\nAttackers who have permissions to create a new pod in the cluster may create one with a writable hostPath volume and chroot to escape to the underlying node.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345029"
+}

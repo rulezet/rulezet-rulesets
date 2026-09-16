@@ -1,0 +1,21 @@
+{
+  "uuid": "f4c36921-52f5-4619-b67b-1b625ab640a3",
+  "title": "Bitbucket Global Secret Scanning Rule Deleted",
+  "format": "sigma",
+  "author": "Muhammad Faisal (@faisalusuf)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Bitbucket global secret scanning rule deletion activity.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345044"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "b3753d64-c1ce-4c3f-9151-7c0143fd7214",
+  "title": "Disabling Multi Factor Authentication",
+  "format": "sigma",
+  "author": "Splunk Threat Research Team (original rule), Harjot Singh @cyb3rjy0t (sigma rule)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects disabling of Multi Factor Authentication.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556.006"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345309"
+}

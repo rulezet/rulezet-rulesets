@@ -1,0 +1,23 @@
+{
+  "uuid": "5a52b309-7f0e-40c5-a90b-3784e09970ea",
+  "title": "Raw Paste Service Access",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects direct access to raw pastes in different paste services often used by malware in their second stages to download malicious code in encrypted or encoded form",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1071.001",
+    "T1102.001",
+    "T1102.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345336"
+}

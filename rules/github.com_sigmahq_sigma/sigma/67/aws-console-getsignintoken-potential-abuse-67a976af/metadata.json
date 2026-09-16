@@ -1,0 +1,22 @@
+{
+  "uuid": "67a976af-5453-4716-a673-4c92cc26c09b",
+  "title": "AWS Console GetSigninToken Potential Abuse",
+  "format": "sigma",
+  "author": "Chester Le Bron (@123Le_Bron)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potentially suspicious events involving \"GetSigninToken\".\nAn adversary using the \"aws_consoler\" tool can leverage this console API to create temporary federated credential that help obfuscate which AWS credential is compromised (the original access key) and enables the adversary to pivot from the AWS CLI to console sessions without the need for MFA using the new access key issued in this request.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1021.007",
+    "T1550.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345254"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "a8acbad5-0800-4e68-9e72-0989c377eaf8",
+  "title": "AWS KMS Imported Key Material Usage",
+  "format": "sigma",
+  "author": "toopricey",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the import or deletion of key material in AWS KMS, which can be used as part of ransomware attacks. This activity is uncommon and provides a high certainty signal.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1486",
+    "T1608.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345237"
+}

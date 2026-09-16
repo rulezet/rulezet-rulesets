@@ -1,0 +1,19 @@
+{
+  "uuid": "d6f630f1-a37f-485f-9117-ba3567857466",
+  "title": "Multi Factor Authentication Disabled For User Account",
+  "format": "sigma",
+  "author": "Harjot Singh (@cyb3rjy0t)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects changes to the \"StrongAuthenticationRequirement\" value, where the state is set to \"0\" or \"Disabled\".\nThreat actors were seen disabling multi factor authentication for users in order to maintain or achieve access to the account. Also see in SIM Swap attacks.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345173"
+}

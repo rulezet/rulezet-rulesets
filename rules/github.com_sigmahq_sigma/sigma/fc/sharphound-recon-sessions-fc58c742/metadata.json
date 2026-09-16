@@ -1,0 +1,21 @@
+{
+  "uuid": "fc58c742-f9bc-48e1-8323-dd57ff806fc6",
+  "title": "SharpHound Recon Sessions",
+  "format": "sigma",
+  "author": "Sagie Dulce, Dekel Paz",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects remote RPC calls useb by SharpHound to map remote connections and local group membership.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1033"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345008"
+}

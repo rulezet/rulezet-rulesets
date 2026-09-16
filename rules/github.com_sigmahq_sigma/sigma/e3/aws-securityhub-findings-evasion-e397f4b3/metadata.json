@@ -1,0 +1,21 @@
+{
+  "uuid": "e397f4b3-0469-4db7-8291-33b82212c3af",
+  "title": "AWS SecurityHub Findings Evasion",
+  "format": "sigma",
+  "author": "Sittikorn S",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the modification of the findings on SecurityHub.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345291"
+}

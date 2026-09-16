@@ -1,0 +1,22 @@
+{
+  "uuid": "4b9e8a0c-ddee-460e-aa47-417356a29c5e",
+  "title": "AWS S3 Bucket Versioning Disable",
+  "format": "sigma",
+  "author": "Sean Johnstone | Unit 42",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when S3 bucket versioning is disabled. Threat actors use this technique during AWS ransomware incidents prior to deleting S3 objects.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345250"
+}

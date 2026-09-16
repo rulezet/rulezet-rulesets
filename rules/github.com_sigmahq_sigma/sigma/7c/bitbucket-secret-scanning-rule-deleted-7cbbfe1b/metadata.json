@@ -1,0 +1,21 @@
+{
+  "uuid": "7cbbfe1b-d50c-4cd4-a5c0-ab87436c9515",
+  "title": "Bitbucket Secret Scanning Rule Deleted",
+  "format": "sigma",
+  "author": "Muhammad Faisal (@faisalusuf)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when secret scanning rule is deleted for the project or repository.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345045"
+}

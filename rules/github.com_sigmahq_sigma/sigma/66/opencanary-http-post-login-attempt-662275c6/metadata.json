@@ -1,0 +1,21 @@
+{
+  "uuid": "662275c6-7a55-446b-abd5-f90809e50994",
+  "title": "OpenCanary - HTTP POST Login Attempt",
+  "format": "sigma",
+  "author": "Security Onion Solutions",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects instances where an HTTP service on an OpenCanary node has had login attempt via Form POST.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345059"
+}
