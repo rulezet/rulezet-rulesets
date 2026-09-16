@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Data Leak Prevention Rule Matched"; content: "11000 type="; content: "Data Leak Prevention Rule matched"; classtype: policy-violation; reference: url,wiki.quadrantsec.com/bin/view/Main/5000952; sid: 5000952; rev:2;)

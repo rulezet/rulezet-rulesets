@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Interface is bound or unbound from a channel"; content: "NICMIGRATE"; classtype: network-event ; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001386; sid: 5001386; rev:2;)

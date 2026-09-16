@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - SSL Handshake Success"; content: "SSL_HANDSHAKE_SUCCESS"; classtype: not-suspicious; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001415; sid: 5001415; rev:2;)

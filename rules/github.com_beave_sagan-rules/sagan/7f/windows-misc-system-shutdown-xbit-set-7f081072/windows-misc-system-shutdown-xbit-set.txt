@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-MISC] System shutdown [XBIT SET]"; content: " 1074|3a| "; program: System|USER32; flexbits: set,reboot.windows,1800; flexbits:noeve; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002014; sid: 5002014; rev:28;)

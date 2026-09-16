@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] MSSQLServer I/O error"; content: " 823|3a| "; classtype: program-error; program: Ntfs; reference: url,wiki.quadrantsec.com/bin/view/Main/5001096; sid: 5001096; rev:4;)

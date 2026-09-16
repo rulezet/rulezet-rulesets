@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BIND] Version attempt"; content: "version.bind CH TXT"; default_proto: udp; default_dst_port: $DNS_PORT; classtype: attempted-recon; xbits: set,recon,track ip_src, expire 86400; program: named; parse_port; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001706; sid:5001706; rev: 4;)

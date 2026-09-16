@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BIND] Log permission misconfiguration"; content: "unable to rename log file"; default_proto: udp; default_dst_port: $DNS_PORT; classtype: program-error; program: named; parse_port; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000104; sid:5000104; rev:6;)

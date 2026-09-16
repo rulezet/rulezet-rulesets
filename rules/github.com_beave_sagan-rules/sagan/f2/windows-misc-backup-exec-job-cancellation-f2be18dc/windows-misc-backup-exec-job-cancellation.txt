@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Backup Exec - Job cancellation"; content: " 34114|3a| "; classtype: program-error; program: Backup; reference: url,wiki.quadrantsec.com/bin/view/Main/5000313; sid: 5000313; rev:4;)

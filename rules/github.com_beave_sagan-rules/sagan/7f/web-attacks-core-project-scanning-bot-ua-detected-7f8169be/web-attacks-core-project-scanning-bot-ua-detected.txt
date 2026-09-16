@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WEB-ATTACKS] Core-Project Scanning Bot UA Detected";  content:"User-Agent"; content: "core-project/1.0"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $HTTP_PORT; classtype:web-application-activity; sid:5001794; rev:2;)

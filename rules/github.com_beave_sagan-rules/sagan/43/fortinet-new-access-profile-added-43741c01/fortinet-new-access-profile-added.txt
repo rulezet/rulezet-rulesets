@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] New access profile added"; content: "32101 type="; content: "added new access profile"; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000931; sid: 5000931; rev:2;)

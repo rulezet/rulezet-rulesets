@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Interface's throughput is equal or greater than the min required"; content: "NICNORMAL_THROUGHPUT"; classtype: network-event; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001387; sid: 5001387; rev:2;)

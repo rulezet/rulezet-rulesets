@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Feature not supported"; content: "APPFW_XML_VALIDATION_ERR_NOT_SUPPORTED"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001313; sid: 5001313; rev:2;)

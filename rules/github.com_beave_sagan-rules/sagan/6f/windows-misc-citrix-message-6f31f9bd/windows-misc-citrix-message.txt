@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Citrix message"; classtype: system-event; program: Citrix; reference: url,wiki.quadrantsec.com/bin/view/Main/5000317; sid: 5000317; rev:3;)

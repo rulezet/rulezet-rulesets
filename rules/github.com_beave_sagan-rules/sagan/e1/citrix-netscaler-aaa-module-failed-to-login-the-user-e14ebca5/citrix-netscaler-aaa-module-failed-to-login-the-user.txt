@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - AAA module failed to login the user"; content: "LOGIN_FAILED"; classtype: unsuccessful-user; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001521; sid: 5001521; rev:2;)

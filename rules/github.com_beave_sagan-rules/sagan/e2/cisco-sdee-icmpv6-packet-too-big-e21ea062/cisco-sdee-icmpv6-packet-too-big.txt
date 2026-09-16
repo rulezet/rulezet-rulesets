@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] ICMPv6 Packet Too Big"; content: "SID: 1630 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: icmp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6101630; sid: 6101630; rev: 4;)

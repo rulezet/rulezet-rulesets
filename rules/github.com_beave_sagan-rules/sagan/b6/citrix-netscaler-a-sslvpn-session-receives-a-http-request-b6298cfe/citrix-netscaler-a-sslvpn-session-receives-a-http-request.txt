@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - A SSLVPN session receives a HTTP request"; content: "HTTPREQUEST"; classtype: not-suspicious; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001373; sid: 5001373; rev:2;)

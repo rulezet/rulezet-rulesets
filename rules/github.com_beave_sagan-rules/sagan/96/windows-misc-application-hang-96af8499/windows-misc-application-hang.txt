@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application hang"; content: " 1002|3a| "; classtype: program-error; program: Application; reference: url,wiki.quadrantsec.com/bin/view/Main/5000310; sid: 5000310; rev:4;)

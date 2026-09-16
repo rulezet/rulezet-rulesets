@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] Telnet Failure Log XSS"; content: "SID: 1729 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: tcp; default_dst_port: $TELNET_PORT; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6101729; sid: 6101729; rev: 5;)

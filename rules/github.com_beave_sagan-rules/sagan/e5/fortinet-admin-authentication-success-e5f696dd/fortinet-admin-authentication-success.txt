@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Admin authentication success"; content: "38001 type="; content: "succeeded in authentication"; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5000938; sid: 5000938; rev:2;)

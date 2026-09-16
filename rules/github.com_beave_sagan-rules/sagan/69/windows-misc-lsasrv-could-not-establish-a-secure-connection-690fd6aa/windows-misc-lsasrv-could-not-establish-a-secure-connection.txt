@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] LSASRV - Could not establish a secure connection"; content: " 40961|3a| "; classtype: network-event; program: LSASRV; reference: url,wiki.quadrantsec.com/bin/view/Main/5000381; sid: 5000381; rev:4;)

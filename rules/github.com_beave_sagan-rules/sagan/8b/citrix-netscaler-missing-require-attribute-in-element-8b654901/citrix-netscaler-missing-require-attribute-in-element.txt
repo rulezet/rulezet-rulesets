@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Missing require attribute in element"; content: "APPFW_XML_VALIDATOR_LOAD_ERR_REQUIRED_ATTRIBUTE"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001335; sid: 5001335; rev:2;)

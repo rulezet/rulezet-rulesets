@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - SSL Client Certificate SubjectName"; content: "SSL_HANDSHAKE_SUBJECTNAME"; classtype: not-suspicious; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001414; sid: 5001414; rev:2;)

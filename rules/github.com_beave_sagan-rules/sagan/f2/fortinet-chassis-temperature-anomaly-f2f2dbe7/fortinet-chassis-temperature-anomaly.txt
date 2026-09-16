@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Chassis temperature anomaly"; content: "99504 type="; content: "Chassis temperature anomaly"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000943; sid: 5000943; rev:2;)

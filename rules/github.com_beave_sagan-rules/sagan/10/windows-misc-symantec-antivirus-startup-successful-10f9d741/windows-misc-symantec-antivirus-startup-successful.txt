@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Symantec AntiVirus startup successful"; content: "startup was successful"; classtype: system-event; program: Symantec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000341; sid: 5000341; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Symantec AntiVirus New virus definition file loaded"; content: "New virus definition file loaded"; classtype: not-suspicious; program: Symantec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000343; sid: 5000343; rev:2;)

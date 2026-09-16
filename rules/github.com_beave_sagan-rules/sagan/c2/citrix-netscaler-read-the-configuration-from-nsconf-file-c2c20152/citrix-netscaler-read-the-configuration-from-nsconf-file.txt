@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Read the configuration from ns.conf file"; content: "CONFIGSTART"; classtype: system-event; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001358; sid: 5001358; rev:2;)

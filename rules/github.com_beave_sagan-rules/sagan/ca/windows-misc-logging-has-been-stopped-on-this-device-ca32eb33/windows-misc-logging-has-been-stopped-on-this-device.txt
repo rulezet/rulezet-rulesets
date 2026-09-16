@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Logging has been stopped on this device"; content: " 570|3a| "; content: "callback"; classtype: suspicious-traffic; program: The; reference: url,wiki.quadrantsec.com/bin/view/Main/5002955; sid:5002955; rev:3;)

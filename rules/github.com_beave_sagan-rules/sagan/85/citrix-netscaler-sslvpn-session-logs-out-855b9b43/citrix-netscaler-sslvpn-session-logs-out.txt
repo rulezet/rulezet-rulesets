@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - SSLVPN session logs out."; content: "LOGOUT "; classtype: successful-user; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001380; sid: 5001380; rev:2;)

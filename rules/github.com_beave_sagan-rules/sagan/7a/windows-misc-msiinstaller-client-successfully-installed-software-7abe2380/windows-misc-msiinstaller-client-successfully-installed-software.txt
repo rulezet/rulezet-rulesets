@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] MsiInstaller - Client successfully installed software"; content: "installed successfully"; nocase; classtype: not-suspicious; program: MsiInstaller; reference: url,wiki.quadrantsec.com/bin/view/Main/5000327; sid: 5000327; rev:2;)

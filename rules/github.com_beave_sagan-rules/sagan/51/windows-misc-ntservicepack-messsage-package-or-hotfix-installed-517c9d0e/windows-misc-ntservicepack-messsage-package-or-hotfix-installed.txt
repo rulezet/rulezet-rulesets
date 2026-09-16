@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] NtServicePack messsage - package or hotfix installed"; content: "was installed"; classtype: not-suspicious; program: NtServicePack; reference: url,wiki.quadrantsec.com/bin/view/Main/5000334; sid: 5000334; rev:2;)

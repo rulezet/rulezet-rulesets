@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Attack signature matched [see content] [2]"; content: "73001 type="; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5000963; sid: 5000963; rev:2;)

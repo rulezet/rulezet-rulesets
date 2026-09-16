@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Process with PID is being restarted"; content: "PB_PROCESS_RESTART"; classtype: system-event; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001393; sid: 5001393; rev:2;)

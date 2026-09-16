@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Botnet traffic detected"; content: "app_list=|22|BotnetOnly|22| app_type=|22|Botnet|22|"; classtype: trojan-activity; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5001627; sid: 5001627; rev:3;)

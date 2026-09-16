@@ -1,0 +1,1 @@
+drop any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BIND] Denied zone transfer attempt"; content: "denied AXFR from"; default_proto: udp; default_dst_port: $DNS_PORT; classtype: attempted-recon; xbits: set,recon,track ip_src, expire 86400; program: named; parse_port; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000102; sid:5000102; rev:9;)

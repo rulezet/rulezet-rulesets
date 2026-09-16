@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WEB-ATTACKS] ZmEu Scanner User-Agent Inbound"; content: "User-Agent"; content: "ZmEu"; parse_src_ip: 1; parse_dst_ip: 2; default_proto:tcp; default_dst_port: $HTTP_PORT; classtype:trojan-activity; sid:5001840; rev:2;)

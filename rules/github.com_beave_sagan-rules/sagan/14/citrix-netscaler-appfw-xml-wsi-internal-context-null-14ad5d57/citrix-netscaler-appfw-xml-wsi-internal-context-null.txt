@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - AppFw XML WSI Internal Context NULL"; content: "APPFW_XML_WSI_ERR_CTXT_NULL"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001338; sid: 5001338; rev:2;)

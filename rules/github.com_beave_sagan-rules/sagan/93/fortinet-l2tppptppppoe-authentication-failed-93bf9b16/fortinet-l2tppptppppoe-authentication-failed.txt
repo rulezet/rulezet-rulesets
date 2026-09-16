@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] L2TP/PPTP/PPPoE Authentication failed"; content: "29003 type="; content: "action=auth_failed"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000949; sid: 5000949; rev:2;)

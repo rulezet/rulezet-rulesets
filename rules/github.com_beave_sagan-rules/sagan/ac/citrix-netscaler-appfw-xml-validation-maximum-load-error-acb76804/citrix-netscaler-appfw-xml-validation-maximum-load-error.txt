@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - AppFw XML Validation Maximum Load Error"; content: "APPFW_XML_VALIDATOR_LOAD_ERR_MAX"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001334; sid: 5001334; rev:2;)

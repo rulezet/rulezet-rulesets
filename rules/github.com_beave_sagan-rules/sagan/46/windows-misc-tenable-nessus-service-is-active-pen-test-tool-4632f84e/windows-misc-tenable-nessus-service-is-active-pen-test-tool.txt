@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Tenable Nessus service is active [pen-test tool]"; content: "Tenable Nessus"; classtype: policy-violation; program: Service; reference: url,wiki.quadrantsec.com/bin/view/Main/5000339; sid: 5000339; rev:2;)

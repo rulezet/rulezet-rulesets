@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Eventlog service was stopped"; content: "Service Stopped"; classtype: system-event; program: Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5000320; sid: 5000320; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Pitboss watch is added or deleted on a process with the process id PID"; content: "PITBOSS"; classtype: system-event; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001396; sid: 5001396; rev:2;)

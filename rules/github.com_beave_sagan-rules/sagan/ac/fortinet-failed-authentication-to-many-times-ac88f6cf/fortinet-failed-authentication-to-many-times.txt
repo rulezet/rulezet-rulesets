@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Failed authentication to many times"; content: "38003 type="; content: "failed authentication to many times"; classtype: attempted-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5000941; sid: 5000941; rev:2;)

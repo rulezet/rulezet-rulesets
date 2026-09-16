@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Crypt32 Failed to extract third-party root list"; content: " 4107|3a| "; classtype: program-error; program: crypt32; reference: url,wiki.quadrantsec.com/bin/view/Main/5000356; sid: 5000356; rev:4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Element cannot be nil"; content: "APPFW_XML_VALIDATION_LOAD_ERR_CONTENTS_CANNOT_BE_NIL"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001321; sid: 5001321; rev:2;)

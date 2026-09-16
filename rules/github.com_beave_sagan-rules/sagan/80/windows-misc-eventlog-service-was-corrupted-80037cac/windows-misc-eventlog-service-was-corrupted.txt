@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Eventlog service was corrupted"; content: "was corrupted"; classtype: program-error; program: Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5000319; sid: 5000319; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] L2TP/PPTP/PPPoE Max connection reached"; content: "29004 type="; content: "No more clients can connect"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000950; sid: 5000950; rev:2;)

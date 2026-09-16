@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Flash memory is full!"; content: "20031 type="; content: "flash memory is full"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000937; sid: 5000937; rev:2;)

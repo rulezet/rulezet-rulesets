@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Disk corruption [0/2]"; content: " 55|3a| "; classtype: hardware-event; program: Ntfs; threshold:suppress, track by_src, count 1, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001056; sid: 5001056; rev:5;)

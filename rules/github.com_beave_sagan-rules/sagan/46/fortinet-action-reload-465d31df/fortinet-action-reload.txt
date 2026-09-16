@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Action reload"; content: "32095 type="; content: "action=reload"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000929; sid: 5000929; rev:2;)

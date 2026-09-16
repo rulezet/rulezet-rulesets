@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Cookie was removed"; content: "91000 type="; classtype: web-application-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5000965; sid: 5000965; rev:2;)

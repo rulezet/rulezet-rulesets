@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] System time has changed"; event_id: 4616,520; content:!"|3a|\Program Files\VMware\VMware Tools\vmtoolsd.exe"; classtype: system-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5001194; sid: 5001194; rev:11;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Symantec AntiVirus Successful remote connect by administrator"; content: "with Admin role"; content: "User"; content: "connected from"; classtype: successful-admin; program: Symantec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000344; sid: 5000344; rev:3;)

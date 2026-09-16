@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] WinRM [Windows Remote Management] is started and listening"; content: " 10148|3a| "; classtype: network-event; program: WinRM; reference: url,wiki.quadrantsec.com/bin/view/Main/5000346; sid: 5000346; rev:3;)

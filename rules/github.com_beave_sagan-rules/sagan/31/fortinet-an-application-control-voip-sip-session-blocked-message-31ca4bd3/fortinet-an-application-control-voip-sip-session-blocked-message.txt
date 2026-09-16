@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] An application control VoIP-SIP session blocked message"; content: "116011 type="; content: "kind="; classtype: policy-violation; reference: url,wiki.quadrantsec.com/bin/view/Main/5000958; sid: 5000958; rev:2;)

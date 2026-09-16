@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_ENABLED_ONBOARDING"; content: "event|5f|type|5f|id|22 3a| 9007"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004721; sid: 5004721; rev: 1;)

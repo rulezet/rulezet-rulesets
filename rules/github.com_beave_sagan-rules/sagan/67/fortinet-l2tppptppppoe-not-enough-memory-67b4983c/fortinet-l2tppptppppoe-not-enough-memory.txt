@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] L2TP/PPTP/PPPoE Not enough memory"; content: "29024 type="; content: "not enough memory"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000951; sid: 5000951; rev:2;)

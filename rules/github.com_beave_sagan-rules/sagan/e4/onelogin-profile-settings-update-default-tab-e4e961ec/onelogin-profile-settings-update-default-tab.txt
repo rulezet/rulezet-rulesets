@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] PROFILE_SETTINGS_UPDATE_DEFAULT_TAB"; content: "event|5f|type|5f|id|22 3a| 1605"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004706; sid: 5004706; rev: 1;)

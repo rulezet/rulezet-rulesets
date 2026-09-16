@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Severity ERROR when client security expression evaluates to False"; content: "CLISEC_EXP_EVAL"; classtype: unsuccessful-user; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001355; sid: 5001355; rev:2;)

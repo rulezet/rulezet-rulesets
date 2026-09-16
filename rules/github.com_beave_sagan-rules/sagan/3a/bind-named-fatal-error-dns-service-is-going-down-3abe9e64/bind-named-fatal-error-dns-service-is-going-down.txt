@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BIND] Named fatal error.  DNS service is going down"; content: "exiting"; content: "due to fatal error"; default_proto: udp; default_dst_port: $DNS_PORT; classtype: program-error; program: named; reference: url,wiki.quadrantsec.com/bin/view/Main/5000108; sid:5000108; rev: 5;)

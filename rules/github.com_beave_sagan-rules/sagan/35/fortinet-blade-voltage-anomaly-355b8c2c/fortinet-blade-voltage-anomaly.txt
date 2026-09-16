@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Blade voltage anomaly"; content: "99508 type="; content: "Blade voltage anomaly"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000947; sid: 5000947; rev:2;)

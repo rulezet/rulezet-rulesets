@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] MsiInstaller - Google Toolbar installed"; content: "Google Toolbar"; content: "installed successfully"; nocase; classtype: policy-violation; program: MsiInstaller; reference: url,wiki.quadrantsec.com/bin/view/Main/5000328; sid: 5000328; rev:2;)

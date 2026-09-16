@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - A http resource access is denied by policy engine"; content: "HTTP_RESOURCEACCESS_DENIED"; classtype: unsuccessful-user; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001374; sid: 5001374; rev:2;)

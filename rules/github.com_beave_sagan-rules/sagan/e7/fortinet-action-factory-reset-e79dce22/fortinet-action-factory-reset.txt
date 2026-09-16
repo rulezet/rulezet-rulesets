@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Action factory_reset"; content: "32095 type="; content: "action=factory_reset"; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000930; sid: 5000930; rev:2;)

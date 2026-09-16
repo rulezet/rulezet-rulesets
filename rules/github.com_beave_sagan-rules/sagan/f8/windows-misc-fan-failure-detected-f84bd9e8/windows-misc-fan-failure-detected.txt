@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Fan failure detected"; content:" 10|3a| Fan "; content:" has failed"; classtype: hardware-event; program: System; reference: url,wiki.quadrantsec.com/bin/view/Main/5003040; sid:5003040; rev:2;)

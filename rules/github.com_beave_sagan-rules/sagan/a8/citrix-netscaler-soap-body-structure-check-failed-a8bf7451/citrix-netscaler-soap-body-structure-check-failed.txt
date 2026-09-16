@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Soap Body structure check failed"; content: "APPFW_XML_VALIDATION_ERR_SOAP_BODY"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001317; sid: 5001317; rev:2;)

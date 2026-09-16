@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] AccessRequestApproved from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "AccessRequestApproved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005085; sid:5005085; rev: 1;)

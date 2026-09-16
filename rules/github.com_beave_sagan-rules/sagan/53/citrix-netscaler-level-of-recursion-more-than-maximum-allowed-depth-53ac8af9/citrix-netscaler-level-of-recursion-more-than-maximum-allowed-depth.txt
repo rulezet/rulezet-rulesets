@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Level of recursion more than maximum allowed depth"; content: "APPFW_XML_VALIDATION_ERR_REX_STACK_OVERFLOW"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001315; sid: 5001315; rev:2;)

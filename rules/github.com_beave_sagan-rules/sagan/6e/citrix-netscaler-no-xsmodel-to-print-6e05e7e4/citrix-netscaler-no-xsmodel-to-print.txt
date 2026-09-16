@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - No XSModel to print"; content: "APPFW_XML_XSD_COMPILE_NOMODEL_ERR"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001346; sid: 5001346; rev:2;)

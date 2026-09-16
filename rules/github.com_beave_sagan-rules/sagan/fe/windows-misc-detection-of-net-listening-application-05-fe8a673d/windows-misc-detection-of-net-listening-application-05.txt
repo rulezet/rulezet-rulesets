@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Detection of net listening application [0/5]"; event_id: 5154,861; threshold: type suppress, track by_src, count 5, seconds 300; classtype: network-event; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000306; sid: 5000306; rev:10;)

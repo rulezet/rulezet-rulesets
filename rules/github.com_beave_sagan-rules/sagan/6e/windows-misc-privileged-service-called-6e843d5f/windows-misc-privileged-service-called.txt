@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Privileged Service Called"; event_id: 4673,577; classtype: successful-admin; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000307; sid: 5000307; rev:9;)

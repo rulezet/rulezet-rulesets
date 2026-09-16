@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Server side and a client side TCP connection is delinked"; content: "CONN_DELINK"; classtype: network-event; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001359; sid: 5001359; rev:2;)

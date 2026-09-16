@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Did not get expected type for element"; content: "APPFW_XML_VALIDATION_ERR_INVALID_TYPE_SUBSTITUTION"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001309; sid: 5001309; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] SNMP Service has started successfully"; content: " 1001|3a| "; classtype: system-event; program: SNMP; reference: url,wiki.quadrantsec.com/bin/view/Main/5000335; sid: 5000335; rev:4;)

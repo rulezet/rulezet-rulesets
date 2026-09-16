@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - ICA application has terminated"; content: "ICAEND_CONNSTAT"; parse_src_ip: 1; classtype: system-event; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001375; sid: 5001375; rev:3;)

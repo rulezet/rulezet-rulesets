@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Monitor bound to the service has hit threshold limit"; content: "MONITORTH"; classtype: network-event; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001382; sid: 5001382; rev:2;)

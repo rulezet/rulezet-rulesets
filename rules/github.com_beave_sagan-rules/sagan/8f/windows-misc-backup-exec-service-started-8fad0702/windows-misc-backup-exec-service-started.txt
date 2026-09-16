@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Backup Exec - Service started"; content: " 57996|3a| "; classtype: system-event; program: Backup; reference: url,wiki.quadrantsec.com/bin/view/Main/5000315; sid: 5000315; rev:4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Trusted Platform Module [TPM] Error.  User name not found"; content: " 17150|3a| "; classtype: unsuccessful-user; program: DAC; reference: url,wiki.quadrantsec.com/bin/view/Main/5000318; sid: 5000318; rev:4;)

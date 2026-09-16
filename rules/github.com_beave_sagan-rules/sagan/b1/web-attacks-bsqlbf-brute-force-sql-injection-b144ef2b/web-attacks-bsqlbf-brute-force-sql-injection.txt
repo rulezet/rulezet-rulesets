@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WEB-ATTACKS] bsqlbf Brute Force SQL Injection"; content:"User-Agent"; content: "bsqlbf"; nocase; parse_src_ip: 1; parse_dst_ip: 2; reference:url,code.google.com/p/bsqlbf-v2/; reference:url,doc.emergingthreats.net/2008362; default_proto:tcp; default_dst_port: $HTTP_PORT; classtype:web-application-activity; sid:5001792; rev:2;)

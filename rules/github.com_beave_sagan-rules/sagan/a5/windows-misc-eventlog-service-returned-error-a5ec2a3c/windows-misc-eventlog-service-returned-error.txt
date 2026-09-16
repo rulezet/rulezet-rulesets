@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Eventlog service returned error"; content: "returned error"; classtype: program-error; program: Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5000322; sid: 5000322; rev:3;)

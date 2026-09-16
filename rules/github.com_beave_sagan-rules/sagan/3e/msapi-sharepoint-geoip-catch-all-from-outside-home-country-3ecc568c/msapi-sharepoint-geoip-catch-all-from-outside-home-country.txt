@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] Catch all from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005084; sid:5005084; rev: 1;)

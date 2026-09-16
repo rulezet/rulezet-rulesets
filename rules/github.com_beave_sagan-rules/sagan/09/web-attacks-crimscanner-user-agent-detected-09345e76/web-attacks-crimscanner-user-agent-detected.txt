@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WEB-ATTACKS] crimscanner User-Agent detected"; content:"GET"; nocase; content:"User-Agent"; content: "crimscanner"; nocase; parse_src_ip: 1; parse_dst_ip: 2; reference:url,doc.emergingthreats.net/2010954; default_proto:tcp; default_dst_port: $HTTP_PORT; classtype:network-scan; sid:5001795; rev:2;)

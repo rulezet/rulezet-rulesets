@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Unable to log events to security log"; content: " 521|3a| "; threshold: type suppress, track by_src, count 1, seconds 86400; classtype: program-error; program: *Security*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002564; sid:5002564; rev:4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Eventlog service reporting uptime [in seconds]"; content: "The system uptime"; classtype: not-suspicious; program: Eventlog; reference: url,wiki.quadrantsec.com/bin/view/Main/5000323; sid: 5000323; rev:2;)

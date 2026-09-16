@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] File intercepted via e-mail"; content: "63002 type="; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000961; sid: 5000961; rev:2;)

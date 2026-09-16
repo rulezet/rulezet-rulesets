@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] New user group added"; content: "32120 type="; content: "added an user group"; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000936; sid: 5000936; rev:2;)

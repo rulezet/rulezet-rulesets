@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application uninstall"; content: " 11724|3a| "; classtype: program-error; program: MsiInstaller; reference: url,wiki.quadrantsec.com/bin/view/Main/5001182; sid: 5001182; rev:3;)

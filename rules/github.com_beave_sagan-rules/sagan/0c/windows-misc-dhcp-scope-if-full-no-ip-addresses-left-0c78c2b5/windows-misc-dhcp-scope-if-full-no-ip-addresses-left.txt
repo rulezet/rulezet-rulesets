@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] DHCP Scope if full.  No IP addresses left"; content: " 5001650|3a| "; classtype: network-event; program: DHCP-Server; reference: url,wiki.quadrantsec.com/bin/view/Main/5001650; sid: 5001650; rev:3;)

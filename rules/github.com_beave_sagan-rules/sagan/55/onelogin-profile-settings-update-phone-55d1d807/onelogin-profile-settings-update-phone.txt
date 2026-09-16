@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] PROFILE_SETTINGS_UPDATE_PHONE"; content: "event|5f|type|5f|id|22 3a| 1604"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004705; sid: 5004705; rev: 1;)

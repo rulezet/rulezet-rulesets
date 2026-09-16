@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Blade fan anomaly"; content: "99506 type="; content: "Blade fan anomaly"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000945; sid: 5000945; rev:2;)

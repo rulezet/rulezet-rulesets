@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] MsiInstaller - RegWork - Registry clearner"; content: "RegWork"; content: "Product"; classtype: policy-violation; program: MsiInstaller; reference: url,wiki.quadrantsec.com/bin/view/Main/5000330; sid: 5000330; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] General CRITICAL event"; content: "devname="; content: "pri=critical"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000975; sid: 5000975; rev:2;)

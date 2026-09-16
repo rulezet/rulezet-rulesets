@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Configuration change"; content: "32102 type="; content: "made a change"; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000932; sid: 5000932; rev:2;)

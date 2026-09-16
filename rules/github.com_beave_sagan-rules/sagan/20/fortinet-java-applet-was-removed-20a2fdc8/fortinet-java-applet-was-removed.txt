@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Java applet was removed"; content: "91005 type="; classtype: web-application-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5000966; sid: 5000966; rev:2;)

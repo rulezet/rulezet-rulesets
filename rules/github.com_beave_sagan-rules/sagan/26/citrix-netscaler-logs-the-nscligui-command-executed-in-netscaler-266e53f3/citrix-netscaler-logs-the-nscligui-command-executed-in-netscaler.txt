@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Logs the NSCLI/GUI command executed in NetScaler"; content: "CMD_EXECUTED"; classtype: system-event;  parse_src_ip: 1; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001356; sid: 5001356; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WEB-ATTACKS] Havij SQL Injection Tool User-Agent Inbound"; content: "User-Agent"; content: " Havij"; content: "Connection: "; parse_src_ip: 1; parse_dst_ip: 2; reference:url,itsecteam.com/en/projects/project1.htm; default_proto:tcp; default_dst_port: $HTTP_PORT; classtype:web-application-attack; sid:5001838; rev:2;)

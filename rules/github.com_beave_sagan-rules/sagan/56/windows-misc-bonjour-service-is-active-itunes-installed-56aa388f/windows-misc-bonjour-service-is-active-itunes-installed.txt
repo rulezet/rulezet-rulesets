@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Bonjour service is active [iTunes installed?]"; content: "Bonjour"; classtype: policy-violation; program: Service; reference: url,wiki.quadrantsec.com/bin/view/Main/5000382; sid: 5000382; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SHAREPOINT-GEOIP] AddedToSecureLink from outside HOME_COUNTRY"; json_content: ".Workload","SharePoint"; json_content: ".Operation", "AddedToSecureLink"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005090; sid:5005090; rev: 1;)

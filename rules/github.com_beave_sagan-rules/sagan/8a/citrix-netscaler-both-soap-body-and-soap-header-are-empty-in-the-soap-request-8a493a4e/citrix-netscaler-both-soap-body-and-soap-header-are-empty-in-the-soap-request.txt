@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Both SOAP Body and SOAP Header are empty in the SOAP request"; content: "APPFW_XML_VALIDATION_ERR_SOAPBODY_EMPTY"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001316; sid: 5001316; rev:2;)

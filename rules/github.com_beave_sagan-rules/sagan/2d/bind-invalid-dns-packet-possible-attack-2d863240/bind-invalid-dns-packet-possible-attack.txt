@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BIND] Invalid DNS packet.  Possible attack" ; content: "dropping source port zero packet from"; default_proto: udp; default_dst_port: $DNS_PORT; classtype: exploit-attempt; program: named; parse_port; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000101; sid:5000101; rev:5;)
