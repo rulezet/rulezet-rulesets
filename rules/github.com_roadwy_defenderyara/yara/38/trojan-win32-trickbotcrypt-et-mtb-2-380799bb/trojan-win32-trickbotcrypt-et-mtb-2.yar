@@ -1,0 +1,9 @@
+rule Trojan_Win32_TrickBotCrypt_ET_MTB_2{
+	meta:
+		description = "Trojan:Win32/TrickBotCrypt.ET!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {33 c0 81 e2 ff 00 00 00 8a 04 0e 03 c2 33 d2 f7 35 ?? ?? ?? ?? 8a 04 0a 8a 13 32 d0 8b 44 24 ?? 45 88 13 90 09 04 00 8b 54 24 } 		$a_81_1 = {31 59 34 4f 47 26 77 73 26 56 44 6c 79 3e 71 3e 62 29 57 76 52 33 48 63 5a 36 49 67 72 78 4e 55 49 47 62 5f 37 30 47 74 49 26 38 65 4a 23 2a 35 40 43 69 2a 61 72 46 37 48 46 70 } 	condition:
+		((#a_03_0  & 1)*1+(#a_81_1  & 1)*1) >=1
+ 
+}

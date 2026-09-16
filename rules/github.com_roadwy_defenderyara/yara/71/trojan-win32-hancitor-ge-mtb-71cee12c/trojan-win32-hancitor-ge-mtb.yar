@@ -1,0 +1,9 @@
+rule Trojan_Win32_Hancitor_GE_MTB{
+	meta:
+		description = "Trojan:Win32/Hancitor.GE!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {2b d1 66 89 55 ?? 8b 45 ?? 05 ?? ?? ?? ?? 0f b6 0d ?? ?? ?? ?? 2b c1 03 45 ?? 03 45 ?? 89 45 ?? 8b 7d ?? ba ?? ?? ?? ?? 2b d0 ff d7 } 	condition:
+		((#a_02_0  & 1)*10) >=10
+ 
+}
