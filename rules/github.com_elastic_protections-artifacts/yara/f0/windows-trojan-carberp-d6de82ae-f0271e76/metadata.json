@@ -1,0 +1,22 @@
+{
+  "uuid": "f0271e76-21c9-4e9b-945e-b034c7479af1",
+  "title": "Windows_Trojan_Carberp_d6de82ae",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies VNC module from the leaked Carberp source code. This could exist in other malware families.",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/211802"
+}
