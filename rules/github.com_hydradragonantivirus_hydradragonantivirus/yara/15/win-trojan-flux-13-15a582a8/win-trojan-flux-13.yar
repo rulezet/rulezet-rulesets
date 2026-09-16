@@ -1,0 +1,9 @@
+rule Win_Trojan_Flux_13
+{
+strings:
+	$a0 = { 8d85ecf2ffff50ff757cff95583ffdff898558f6ffff8d8504f3ffff50ff757cff95583ffdff89855cf6ffff8d851cf3ffff50ff757cff95583ffdff898560f6ffff8d85fb3dfdff50ff757cff95583ffdff89856841fdff538d85144bfdff508d85d8fcffff50ff152010400085c00f843f010000568d85ecfdffff50ff152810400068c81940008d85ecfdffff50ff95 }
+
+
+condition:
+	$a0
+}

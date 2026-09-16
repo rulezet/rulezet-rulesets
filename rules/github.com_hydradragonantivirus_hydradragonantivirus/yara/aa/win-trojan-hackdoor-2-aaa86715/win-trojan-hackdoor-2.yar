@@ -1,0 +1,11 @@
+rule Win_Trojan_Hackdoor_2
+{
+strings:
+	$a0 = { c2100033c08b74245066a1949442005056ff1520c3410085c074278b44245c8b5c2458505357566a0456e83f }
+
+	$a1 = { 3a00484b444f4f525f434f4e54 }
+
+
+condition:
+	$a0 and $a1
+}

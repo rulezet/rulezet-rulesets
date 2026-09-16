@@ -1,0 +1,9 @@
+rule Win_Trojan_Tiny_103
+{
+strings:
+	$a0 = { bf01014f57a5a5c3[0-25]80f4f0cd21c3[0-10]b802cde8??ff72??930e1f0e07b4cfb90400ba??????????803e????4d74 }
+
+
+condition:
+	$a0
+}

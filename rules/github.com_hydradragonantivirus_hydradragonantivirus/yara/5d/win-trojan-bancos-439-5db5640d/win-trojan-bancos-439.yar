@@ -1,0 +1,9 @@
+rule Win_Trojan_Bancos_439
+{
+strings:
+	$a0 = { 5dc30000ffffffff010000005c000000ffffffff0d000000737973626c6f676765722e6a73000000ffffffff0900000077696e6379732e6a73000000ffffffff0a0000007773636e }
+
+
+condition:
+	$a0
+}

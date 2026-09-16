@@ -1,0 +1,9 @@
+rule Win_Trojan_I13_38
+{
+strings:
+	$a0 = { 8db6????568bfeb9????ad35????abe2f9c3 }
+
+
+condition:
+	$a0
+}
