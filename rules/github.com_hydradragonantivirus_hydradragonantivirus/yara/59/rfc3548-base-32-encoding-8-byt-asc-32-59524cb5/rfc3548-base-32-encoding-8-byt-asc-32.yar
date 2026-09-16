@@ -1,0 +1,8 @@
+rule rfc3548_Base_32_Encoding__8_byt_ASC_32_
+{
+strings:
+	$a0 = { 4142434445464748494a4b4c4d4e4f505152535455565758595a323334353637 }
+
+condition:
+	$a0
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "d8e6f9c5-8b63-43ca-94ac-0ac233e85495",
+  "title": "HUNT_nopsled_32",
+  "format": "yara",
+  "author": "@petermstewart",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Matches 32 repeated no-operation hex bytes - 0x90",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/371548"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "73f729db-6eca-41ce-b6e1-a4346c43bc3a",
+  "title": "SUSP_PE_RSRCs_Name_Strings_64_and_32_Refs",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "check for PEs that contain both 64 and 32/86 in resource names, potentially indicating second-stage payloads based on bitness",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/371573"
+}

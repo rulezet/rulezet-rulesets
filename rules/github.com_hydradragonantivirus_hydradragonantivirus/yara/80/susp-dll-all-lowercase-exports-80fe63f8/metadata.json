@@ -1,0 +1,19 @@
+{
+  "uuid": "80fe63f8-8559-402d-8d04-c39974c629df",
+  "title": "SUSP_DLL_All_LowerCase_Exports",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "track weird PE's that do not contain any capital letters in their export names, inspired by the CoreLump, MataDoor L-Library Loader, and BruteRatel families",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/371564"
+}

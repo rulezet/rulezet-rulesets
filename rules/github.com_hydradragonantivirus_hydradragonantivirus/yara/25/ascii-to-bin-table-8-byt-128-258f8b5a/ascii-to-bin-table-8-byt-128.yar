@@ -1,0 +1,8 @@
+rule ASCII_to_BIN_table__8_byt_128_
+{
+strings:
+	$a0 = { ffffffffffffffffffe0f0fffff1ffffffffffffffffffffffffffffffffffffe0ffffffffffffffffffff3efff2ff3f3435363738393a3b3c3dffffff00ffffff000102030405060708090a0b0c0d0e0f10111213141516171819ffffffffffff1a1b1c1d1e1f202122232425262728292a2b2c2d2e2f30313233ffffffffff }
+
+condition:
+	$a0
+}

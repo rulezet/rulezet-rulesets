@@ -1,0 +1,8 @@
+rule DES_semi_weak_keys__8_byt_96_
+{
+strings:
+	$a0 = { 01fe01fe01fe01fefe01fe01fe01fe011fe01fe00ef10ef1e01fe01ff10ef10e01e001e001f101f1e001e001f101f1011ffe1ffe0efe0efefe1ffe1ffe0efe0e011f011f010e010e1f011f010e010e01e0fee0fef1fef1fefee0fee0fef1fef1 }
+
+condition:
+	$a0
+}

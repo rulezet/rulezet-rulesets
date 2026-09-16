@@ -1,0 +1,8 @@
+rule Whirlpool_rc__64_big_80_
+{
+strings:
+	$a0 = { 1823c6e887b8014f36a6d2f5796f915260bc9b8ea30c7b351de0d7c22e4bfe57157737e59ff04ada58c9290ab1a06b85bd5d10f4cb3e0567e427418ba77d95d8fbee7c66dd17479eca2dbf07ad5a8333 }
+
+condition:
+	$a0
+}

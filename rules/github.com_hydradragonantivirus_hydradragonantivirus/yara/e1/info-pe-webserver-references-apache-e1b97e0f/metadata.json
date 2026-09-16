@@ -1,0 +1,19 @@
+{
+  "uuid": "e1b97e0f-1e8d-479f-9d39-189df4129d06",
+  "title": "INFO_PE_WebServer_References_Apache",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "track executable files that reference the Apache web server, which might be a fake response page to being probed ",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/371561"
+}

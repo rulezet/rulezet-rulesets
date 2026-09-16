@@ -1,0 +1,19 @@
+{
+  "uuid": "13dbcf95-64fa-4b05-b073-df101a6dd862",
+  "title": "SUSP_References_Likely_Traffic_Capture_802_11",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "look for string refs to 802.11 that might get used for localized traffic capture",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/371576"
+}
