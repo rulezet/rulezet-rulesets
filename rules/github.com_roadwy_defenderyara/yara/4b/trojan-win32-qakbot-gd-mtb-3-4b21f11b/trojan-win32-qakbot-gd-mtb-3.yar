@@ -1,0 +1,9 @@
+rule Trojan_Win32_Qakbot_GD_MTB_3{
+	meta:
+		description = "Trojan:Win32/Qakbot.GD!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {31 d1 8b 55 fc fc f3 a4 52 c7 04 e4 ff ff 0f 00 59 89 75 fc 33 75 fc 0b b3 ?? ?? ?? ?? 83 e0 00 09 f0 8b 75 fc 68 ?? ?? ?? ?? 8f 83 ?? ?? ?? ?? 21 8b ?? ?? ?? ?? 01 83 ?? ?? ?? ?? ff a3 } 	condition:
+		((#a_02_0  & 1)*10) >=10
+ 
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "5cc86b60-d2f0-47b1-b716-eb99d8756ed3",
+  "title": "Trojan_Win32_ColdCryptor_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/ColdCryptor.A,SIGNATURE_TYPE_PEHSTR_EXT,06 00 06 00 06 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/265712"
+}
