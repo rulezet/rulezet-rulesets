@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"Netwrix device detected"; program:Netwrix_Auditor_Integration; metadata: fingerprint_source logs, fingerprint_os netwrix, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5013725; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] SCSI bug fault occurred"; content: "SCSI bus fault"; classtype: hardware-event; program: CPQCISSE; sid:5009225; metadata: created_on 2022_11_22, old_sid 5000316; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[IAM-ACCESS-ANALYZER] IAM Access Analyzer event detected (GetAnalyzedResource) "; program:access-analyzer.amazonaws.com; content:"eventName|22 3a 20 22|GetAnalyzedResource"; classtype:system-event; reference:url,docs.aws.amazon.com/access-analyzer/latest/APIReference/Welcome.html; sid:5011381; rev:1;)

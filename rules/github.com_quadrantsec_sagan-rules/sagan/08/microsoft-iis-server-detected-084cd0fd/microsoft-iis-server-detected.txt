@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"Microsoft IIS server detected"; program:*IIS*; metadata: fingerprint_source logs, fingerprint_os windows, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5100141; rev:1;)

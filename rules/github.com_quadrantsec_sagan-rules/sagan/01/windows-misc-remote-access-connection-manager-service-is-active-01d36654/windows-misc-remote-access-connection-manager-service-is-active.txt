@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Remote Access Connection Manager service is active"; content: "Remote Access Connection Manager"; classtype: network-event; program: Service; sid:5009252; metadata: created_on 2022_11_22, old_sid 5000340; rev:2;)

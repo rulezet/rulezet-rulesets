@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] WinVNC4 Connection close - reset by peer"; content: "Connection reset by peer"; content: "closed"; parse_src_ip: 1; parse_port; default_proto: tcp; default_dst_port: 5900; classtype: not-suspicious; program: WinVNC4; sid:5009264; metadata: created_on 2022_11_22, old_sid 5000351; rev:6;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"NxLog Version 6.0 Detected"; json_content:".NxlogVersion","6.0"; json_contains; metadata: fingerprint_source log, fingerprint_os Windows, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; parse_src_ip:1; classtype:fingerprint; sid:5100194; rev:1;)

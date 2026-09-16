@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] VSS shutdown [XBIT SET]"; json_map:"event_id",".EventID"; json_map:"message",".RenderedDescription"; event_id: 8225; flexbits: set,vss_shutdown,1200; flexbits:noeve; classtype: program-error; program: *Application*; sid:5009290; metadata: created_on 2022_11_22, old_sid 5005745; rev:2;)

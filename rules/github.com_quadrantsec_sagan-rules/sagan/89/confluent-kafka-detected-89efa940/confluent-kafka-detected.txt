@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"Confluent Kafka detected"; content:".data.methodName";content:"kafka."; metadata: fingerprint_source logs, fingerprint_os confluent, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5100172; rev:1;)

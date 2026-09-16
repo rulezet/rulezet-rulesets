@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Backup Exec - Alert - insert media"; content: " 58061|3a| "; classtype: hardware-event; program: Backup; sid:5009228; metadata: created_on 2022_11_22, old_sid 5000314; rev:4;)

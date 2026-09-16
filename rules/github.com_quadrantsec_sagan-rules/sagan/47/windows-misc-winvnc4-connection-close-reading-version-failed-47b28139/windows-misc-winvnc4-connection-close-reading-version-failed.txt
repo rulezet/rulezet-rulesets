@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] WinVNC4 Connection close - reading version failed"; content: "reading version failed"; content: "closed"; parse_src_ip: 1; parse_port; default_proto: tcp; default_dst_port: 5900; classtype: suspicious-traffic; program: WinVNC4; sid:5009266; metadata: created_on 2022_11_22, old_sid 5000353; rev:6;)

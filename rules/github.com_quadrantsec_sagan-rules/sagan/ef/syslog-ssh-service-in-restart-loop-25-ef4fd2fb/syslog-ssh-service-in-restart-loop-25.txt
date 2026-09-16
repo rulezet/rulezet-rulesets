@@ -1,0 +1,1 @@
+alert any any any -> any any (msg: "[SYSLOG] SSH Service in Restart Loop (25)"; content: "starting ssh |28|count 25|29|"; nocase; classtype: hardware-event; sid: 5015341; syslog_facility: kern; rev:1;)

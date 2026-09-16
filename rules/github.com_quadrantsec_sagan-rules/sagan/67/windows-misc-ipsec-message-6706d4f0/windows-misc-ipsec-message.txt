@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] IPSec message"; classtype: not-suspicious; program: IPSec; sid:5009236; metadata: created_on 2022_11_22, old_sid 5000324; rev:3;)

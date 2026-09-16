@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Symantec AntiVirus couldn't scan some files or directories"; content: "Could not scan"; classtype: program-error; program: Symantec; sid:5009255; metadata: created_on 2022_11_22, old_sid 5000342; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"SonicWall device detected"; content:"serial"; content:"msgid"; content:"firewallaction"; metadata: fingerprint_source log, fingerprint_os sonicwall, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5100188; rev:1;)

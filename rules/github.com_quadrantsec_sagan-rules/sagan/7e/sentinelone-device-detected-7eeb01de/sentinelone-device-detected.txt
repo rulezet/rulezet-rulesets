@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"SentinelOne device detected"; content:"SentinelOne"; metadata: fingerprint_source log, fingerprint_os sentinelone, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5100186; rev:1;)

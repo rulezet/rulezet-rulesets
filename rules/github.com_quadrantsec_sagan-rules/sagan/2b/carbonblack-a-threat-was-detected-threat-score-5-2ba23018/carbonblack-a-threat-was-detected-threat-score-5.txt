@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CARBONBLACK] A threat was detected (Threat Score 5)"; program:bit9|carbonblack; content:"Carbon Black has detected a threat"; content:"Threat score: 5"; distance:0; classtype:successful-user; sid:5008393; rev:1;)

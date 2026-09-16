@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"Fortigate device detected"; content:"devname="; pcre:"/log_*id=\x22*[0-9]{10}\x22*/"; metadata: fingerprint_source logs, fingerprint_os forti-os, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5100137; rev:2;)

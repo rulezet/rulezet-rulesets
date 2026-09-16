@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"MSAPI AirInvestigation device detected"; json_content: ".Workload","AirInvestigation"; metadata: fingerprint_source logs, fingerprint_os msapi_airinvestigation, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5013707; rev:1;)

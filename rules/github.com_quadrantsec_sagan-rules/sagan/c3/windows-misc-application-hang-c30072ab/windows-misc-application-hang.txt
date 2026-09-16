@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Application hang"; content: " 1002|3a| "; classtype: program-error; program: Application; sid:5009223; metadata: created_on 2022_11_22, old_sid 5000310; rev:4;)

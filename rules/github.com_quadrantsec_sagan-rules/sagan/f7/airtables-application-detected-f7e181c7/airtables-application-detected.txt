@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"Airtables application detected"; program:airtable_audit_log_data; metadata: fingerprint_source logs, fingerprint_os airtables, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5100146; rev:1;)

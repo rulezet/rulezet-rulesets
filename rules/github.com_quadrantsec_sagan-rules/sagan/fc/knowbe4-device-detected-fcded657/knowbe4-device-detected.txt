@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"KnowBe4 device detected"; program:knowbe4; metadata: fingerprint_source logs, fingerprint_os knowbe4, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5013703; rev:1;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[MICROSOFT-ATP] Persistence alert"; json_content: ".category", "Persistence"; json_contains; json_map: "flow_id", ".id"; json_map: "username", ".relatedUser.userName"; classtype: suspicious-traffic; sid:5005698; rev:2;)

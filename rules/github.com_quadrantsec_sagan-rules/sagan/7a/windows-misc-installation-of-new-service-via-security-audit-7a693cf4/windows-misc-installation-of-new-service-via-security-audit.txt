@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Installation of new service via Security Audit "; json_map:"event_id",".EventID"; json_map:"message",".RenderedDescription"; event_id: 4697,601; classtype: suspicious-traffic; program: *Security*; reference: url,pastebin.com/raw/0SNSvyjJ; sid:5009289; metadata: created_on 2022_11_22, old_sid 5002818; rev:5;)

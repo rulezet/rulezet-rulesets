@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-POWERSHELL] Obfuscated New-Object Command (1/2)"; program: *PowerShell*; content:"RightToLeft";nocase; content:"|27|eW.teN ct|27 20 2B 20 27|ejbO|2d|weN|28 27|";classtype: suspicious-command; sid:5009331; metadata: created_on 2022_11_22, old_sid 5005985; rev:2;)

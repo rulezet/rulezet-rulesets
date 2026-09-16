@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Event log has been cleared."; json_map:"event_id",".EventID"; json_map:"message",".RenderedDescription"; event_id: 104; content: "cleared"; classtype: suspicious-traffic; program: *Eventlog*; sid:5009292; metadata: created_on 2022_11_22, old_sid 5002954; rev:4;)

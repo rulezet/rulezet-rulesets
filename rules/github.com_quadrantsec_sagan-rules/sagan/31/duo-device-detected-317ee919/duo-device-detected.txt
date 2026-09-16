@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"Duo device detected"; program:duo; metadata: fingerprint_source logs, fingerprint_os duo, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5100177; rev:1;)

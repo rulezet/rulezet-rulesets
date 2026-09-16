@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"Microsoft Network Share detected"; program:*Security*; event_id:5140; metadata: fingerprint_source logs, fingerprint_os windows, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5100145; rev:1;)

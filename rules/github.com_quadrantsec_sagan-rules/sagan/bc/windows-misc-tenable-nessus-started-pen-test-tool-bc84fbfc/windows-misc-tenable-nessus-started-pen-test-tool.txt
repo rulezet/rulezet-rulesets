@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Tenable Nessus started [pen-test tool]"; content: "started successfully"; classtype: suspicious-traffic; program: Tenable; sid:5009258; metadata: created_on 2022_11_22, old_sid 5000345; rev:2;)

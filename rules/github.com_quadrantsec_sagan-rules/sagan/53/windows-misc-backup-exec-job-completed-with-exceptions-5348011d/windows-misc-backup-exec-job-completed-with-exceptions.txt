@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Backup Exec - Job completed with exceptions"; content: " 57755|3a| "; classtype: program-error; program: Backup; sid:5009226; metadata: created_on 2022_11_22, old_sid 5000312; rev:4;)

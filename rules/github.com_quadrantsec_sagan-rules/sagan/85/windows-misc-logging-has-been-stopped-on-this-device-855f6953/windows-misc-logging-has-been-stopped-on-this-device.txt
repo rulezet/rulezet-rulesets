@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] Logging has been stopped on this device"; json_map:"event_id",".EventID"; json_map:"message",".RenderedDescription"; event_id: 570; content: "callback"; classtype: suspicious-traffic; program: The; sid:5009293; metadata: created_on 2022_11_22, old_sid 5002955; rev:4;)

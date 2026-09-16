@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"Microsoft Exchange Management device detected"; program:MSExchange_Management; metadata: fingerprint_source logs, fingerprint_os microsoft-windows, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5013724; rev:1;)

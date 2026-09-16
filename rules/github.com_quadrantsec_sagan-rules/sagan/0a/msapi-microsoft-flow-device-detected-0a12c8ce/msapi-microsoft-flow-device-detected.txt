@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"MSAPI Microsoft Flow device detected"; json_content: ".Workload","MicrosoftFlow"; metadata: fingerprint_source logs, fingerprint_os msapi_microsoft_flow, fingerprint_expire 86400; threshold: type suppress, track by_src, seconds 43200, count 1; classtype:fingerprint; sid:5013712; rev:1;)

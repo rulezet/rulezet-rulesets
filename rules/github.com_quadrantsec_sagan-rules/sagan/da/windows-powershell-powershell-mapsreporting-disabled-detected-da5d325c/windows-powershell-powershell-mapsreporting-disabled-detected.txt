@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[WINDOWS-POWERSHELL] Powershell MAPSReporting Disabled detected"; program: *PowerShell*; content: "MAPSReporting Disabled"; content: !"|5f|cmdletization|5f|defaultValueIsPresent";nocase; content:!"ValidateNotNullOrEmpty";nocase; classtype: suspicious-command; sid:5009327; metadata: created_on 2022_11_22, old_sid 5005917; rev:1;)

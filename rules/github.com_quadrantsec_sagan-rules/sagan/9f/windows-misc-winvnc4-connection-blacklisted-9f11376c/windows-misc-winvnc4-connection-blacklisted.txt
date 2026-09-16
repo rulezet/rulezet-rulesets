@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MISC] WinVNC4 Connection blacklisted"; content: "blacklisted"; content: "Connections"; default_proto: tcp; default_dst_port: 5900; classtype: suspicious-traffic; parse_src_ip: 1; parse_port; program: WinVNC4; sid:5009262; metadata: created_on 2022_11_22, old_sid 5000349; rev:5;)
