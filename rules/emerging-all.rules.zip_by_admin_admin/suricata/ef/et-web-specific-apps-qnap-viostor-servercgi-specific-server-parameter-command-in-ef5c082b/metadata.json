@@ -1,0 +1,24 @@
+{
+  "uuid": "ef5c082b-3778-4272-92ce-ea3de6eb31f1",
+  "title": "ET WEB_SPECIFIC_APPS QNAP Viostor server.cgi SPECIFIC_SERVER Parameter Command Injection Attempt (CVE-2023-47565)",
+  "format": "suricata",
+  "author": "Unknown",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "No description provided",
+  "source": "emerging-all.rules.zip by admin admin",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:botnet=\"Mirai\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2023-47565"
+  ],
+  "created_at": "2025-12-19",
+  "last_modified": "2025-12-19",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/174700"
+}
