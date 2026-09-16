@@ -1,0 +1,22 @@
+{
+  "uuid": "95bdddd7-a44f-4b25-aa28-72733d4528a3",
+  "title": "Backdoor_Win32_Zonebac_gen_B",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/Zonebac.gen!B,SIGNATURE_TYPE_PEHSTR,2d 00 2d 00 3d 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/322552"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "d50beabf-f6e0-42c9-a0a9-48c5d2af40b2",
+  "title": "Backdoor_Win32_Mdmbot_G_dha",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/Mdmbot.G!dha,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/322473"
+}

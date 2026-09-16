@@ -1,0 +1,22 @@
+{
+  "uuid": "71f5adce-d05d-4fa6-9b74-ed8b1b63d1c7",
+  "title": "Backdoor_Win32_ParalaxRat_STD_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/ParalaxRat.STD,SIGNATURE_TYPE_PEHSTR_EXT,07 00 07 00 0a 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/322813"
+}

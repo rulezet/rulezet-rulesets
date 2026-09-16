@@ -1,0 +1,22 @@
+{
+  "uuid": "a025c3fd-5874-48f0-a809-148a6d5dd06c",
+  "title": "Backdoor_Win32_Bifrose_FI",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/Bifrose.FI,SIGNATURE_TYPE_PEHSTR_EXT,ffffff8d 00 ffffff8d 00 09 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/322805"
+}
