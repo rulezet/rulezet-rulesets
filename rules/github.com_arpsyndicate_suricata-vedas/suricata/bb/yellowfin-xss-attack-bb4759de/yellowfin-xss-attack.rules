@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Yellowfin XSS Attack"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/activitystreamajax.i4"; nocase; sid:1004283; rev:1; reference:cve,CVE-2021-36388; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2021-36388;)
