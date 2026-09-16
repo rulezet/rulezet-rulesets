@@ -1,0 +1,9 @@
+rule Backdoor_Win32_Poison_I{
+	meta:
+		description = "Backdoor:Win32/Poison.I,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 03 00 00 "
+		
+	strings :
+		$a_02_0 = {8b c1 bf 0a 00 00 00 99 f7 ff 83 fa 08 7c [0-04] ba ?? ?? 00 00 8a 04 16 8a 91 ?? ?? ?? ?? 32 c2 88 81 ?? ?? ?? ?? 41 81 f9 ?? ?? ?? ?? 7e d2 } 		$a_02_1 = {7e d2 33 c0 b1 ?? 8a 90 90 ?? ?? ?? ?? 32 d1 88 ?? ?? ?? ?? ?? 40 3d ?? ?? ?? ?? 7e } 		$a_01_2 = {8b 44 24 04 56 8b 74 24 0c 8a 08 8a 16 88 10 88 0e 5e c2 08 00 } 	condition:
+		((#a_02_0  & 1)*1+(#a_02_1  & 1)*1+(#a_01_2  & 1)*1) >=3
+ 
+}
