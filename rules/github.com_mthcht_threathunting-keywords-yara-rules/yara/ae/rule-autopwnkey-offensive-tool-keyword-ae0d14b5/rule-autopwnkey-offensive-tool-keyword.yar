@@ -1,0 +1,110 @@
+rule rule_AutoPwnKey_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'AutoPwnKey' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "AutoPwnKey"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_AutoPwnKey_offensive_tool_keyword = /\sAddNewAdminUser\.ahk/ nocase ascii wide
+                        $string2_AutoPwnKey_offensive_tool_keyword = /\sAddScriptToRegistry\.ahk/ nocase ascii wide
+                        $string3_AutoPwnKey_offensive_tool_keyword = /\sAutoCrypt\.ahk/ nocase ascii wide
+                        $string4_AutoPwnKey_offensive_tool_keyword = /\sChromeDump\.ahk/ nocase ascii wide
+                        $string5_AutoPwnKey_offensive_tool_keyword = /\scmstp_uac\.ahk/ nocase ascii wide
+                        $string6_AutoPwnKey_offensive_tool_keyword = /\sDenyOutboundFirewall\.ahk/ nocase ascii wide
+                        $string7_AutoPwnKey_offensive_tool_keyword = /\sDomainTrustRecon\.ahk/ nocase ascii wide
+                        $string8_AutoPwnKey_offensive_tool_keyword = /\sEdgeDump\.ahk/ nocase ascii wide
+                        $string9_AutoPwnKey_offensive_tool_keyword = /\sEnumerateDCs\.ahk/ nocase ascii wide
+                        $string10_AutoPwnKey_offensive_tool_keyword = /\sIdentifyDomainAdmins\.ahk/ nocase ascii wide
+                        $string11_AutoPwnKey_offensive_tool_keyword = /\sIdentifyGroupMembershipActiveUser\.ahk/ nocase ascii wide
+                        $string12_AutoPwnKey_offensive_tool_keyword = /\sKeyLogger\.ahk/ nocase ascii wide
+                        $string13_AutoPwnKey_offensive_tool_keyword = /\sPersistViaScheduledTask\.ahk/ nocase ascii wide
+                        $string14_AutoPwnKey_offensive_tool_keyword = /\sPortScanner\.ahk/ nocase ascii wide
+                        $string15_AutoPwnKey_offensive_tool_keyword = /\sReverseShell\.ahk/ nocase ascii wide
+                        $string16_AutoPwnKey_offensive_tool_keyword = /\sUnconstrainedDelegationCheck\s\.ahk/ nocase ascii wide
+                        $string17_AutoPwnKey_offensive_tool_keyword = /\sUnconstrainedDelegationCheck\.ahk/ nocase ascii wide
+                        $string18_AutoPwnKey_offensive_tool_keyword = /\sUnhookNTDLL\.ahk/ nocase ascii wide
+                        $string19_AutoPwnKey_offensive_tool_keyword = "\"ServiceName=\"\"bypassit\"" nocase ascii wide
+                        $string20_AutoPwnKey_offensive_tool_keyword = /\/AddNewAdminUser\.ahk/ nocase ascii wide
+                        $string21_AutoPwnKey_offensive_tool_keyword = /\/AddScriptToRegistry\.ahk/ nocase ascii wide
+                        $string22_AutoPwnKey_offensive_tool_keyword = /\/AutoCrypt\.ahk/ nocase ascii wide
+                        $string23_AutoPwnKey_offensive_tool_keyword = /\/AutoPwnKey\.git/ nocase ascii wide
+                        $string24_AutoPwnKey_offensive_tool_keyword = /\/c\snet\sgroup\s.{0,1000}Domain\sAdmins.{0,1000}\s\/domain\s\>\>\soutput\.txt/ nocase ascii wide
+                        $string25_AutoPwnKey_offensive_tool_keyword = /\/ChromeDump\.ahk/ nocase ascii wide
+                        $string26_AutoPwnKey_offensive_tool_keyword = /\/cmstp_uac\.ahk/ nocase ascii wide
+                        $string27_AutoPwnKey_offensive_tool_keyword = /\/DenyOutboundFirewall\.ahk/ nocase ascii wide
+                        $string28_AutoPwnKey_offensive_tool_keyword = /\/DomainTrustRecon\.ahk/ nocase ascii wide
+                        $string29_AutoPwnKey_offensive_tool_keyword = /\/EdgeDump\.ahk/ nocase ascii wide
+                        $string30_AutoPwnKey_offensive_tool_keyword = /\/EnumerateDCs\.ahk/ nocase ascii wide
+                        $string31_AutoPwnKey_offensive_tool_keyword = /\/IdentifyDomainAdmins\.ahk/ nocase ascii wide
+                        $string32_AutoPwnKey_offensive_tool_keyword = /\/IdentifyGroupMembershipActiveUser\.ahk/ nocase ascii wide
+                        $string33_AutoPwnKey_offensive_tool_keyword = /\/KeyLogger\.ahk/ nocase ascii wide
+                        $string34_AutoPwnKey_offensive_tool_keyword = /\/PersistViaScheduledTask\.ahk/ nocase ascii wide
+                        $string35_AutoPwnKey_offensive_tool_keyword = /\/PortScanner\.ahk/ nocase ascii wide
+                        $string36_AutoPwnKey_offensive_tool_keyword = /\/ReverseShell\.ahk/ nocase ascii wide
+                        $string37_AutoPwnKey_offensive_tool_keyword = /\/UnconstrainedDelegationCheck\s\.ahk/ nocase ascii wide
+                        $string38_AutoPwnKey_offensive_tool_keyword = /\/UnhookNTDLL\.ahk/ nocase ascii wide
+                        $string39_AutoPwnKey_offensive_tool_keyword = /\\AddNewAdminUser\.ahk/ nocase ascii wide
+                        $string40_AutoPwnKey_offensive_tool_keyword = /\\AddScriptToRegistry\.ahk/ nocase ascii wide
+                        $string41_AutoPwnKey_offensive_tool_keyword = /\\AutoCrypt\.ahk/ nocase ascii wide
+                        $string42_AutoPwnKey_offensive_tool_keyword = /\\AutoPwnKey\-main/ nocase ascii wide
+                        $string43_AutoPwnKey_offensive_tool_keyword = /\\ChromeDump\.ahk/ nocase ascii wide
+                        $string44_AutoPwnKey_offensive_tool_keyword = /\\cmstp_uac\.ahk/ nocase ascii wide
+                        $string45_AutoPwnKey_offensive_tool_keyword = /\\Crypttest\\.{0,1000}\.encrypted/ nocase ascii wide
+                        $string46_AutoPwnKey_offensive_tool_keyword = /\\DenyOutboundFirewall\.ahk/ nocase ascii wide
+                        $string47_AutoPwnKey_offensive_tool_keyword = /\\Documents\\Crypttest\\/ nocase ascii wide
+                        $string48_AutoPwnKey_offensive_tool_keyword = /\\DomainTrustRecon\.ahk/ nocase ascii wide
+                        $string49_AutoPwnKey_offensive_tool_keyword = /\\EdgeDump\.ahk/ nocase ascii wide
+                        $string50_AutoPwnKey_offensive_tool_keyword = /\\EnumerateDCs\.ahk/ nocase ascii wide
+                        $string51_AutoPwnKey_offensive_tool_keyword = /\\IdentifyDomainAdmins\.ahk/ nocase ascii wide
+                        $string52_AutoPwnKey_offensive_tool_keyword = /\\IdentifyGroupMembershipActiveUser\.ahk/ nocase ascii wide
+                        $string53_AutoPwnKey_offensive_tool_keyword = /\\KeyLogger\.ahk/ nocase ascii wide
+                        $string54_AutoPwnKey_offensive_tool_keyword = /\\PersistViaScheduledTask\.ahk/ nocase ascii wide
+                        $string55_AutoPwnKey_offensive_tool_keyword = /\\PortScanner\.ahk/ nocase ascii wide
+                        $string56_AutoPwnKey_offensive_tool_keyword = /\\ReverseShell\.ahk/ nocase ascii wide
+                        $string57_AutoPwnKey_offensive_tool_keyword = /\\UnconstrainedDelegationCheck\s\.ahk/ nocase ascii wide
+                        $string58_AutoPwnKey_offensive_tool_keyword = /\\UnconstrainedDelegationCheck\.ahk/ nocase ascii wide
+                        $string59_AutoPwnKey_offensive_tool_keyword = /\\UnhookNTDLL\.ahk/ nocase ascii wide
+                        $string60_AutoPwnKey_offensive_tool_keyword = "0d0b7a5276ebfefb28407800d2ba37f5102c9917cacaac5b265df55f95759b14" nocase ascii wide
+                        $string61_AutoPwnKey_offensive_tool_keyword = "2ffc8e93d89c9f9c090df5e44eb7921633c6954176b06183acbd459369a919b8" nocase ascii wide
+                        $string62_AutoPwnKey_offensive_tool_keyword = "63da55b370a27e54e02b3d7b56515734dd12a930faec455beaf2c6e9bcbfab32" nocase ascii wide
+                        $string63_AutoPwnKey_offensive_tool_keyword = "7b6b043f894bb0f34244c9cb88dc1cf801d16010817d51fe7c1f6be2af6b91bf" nocase ascii wide
+                        $string64_AutoPwnKey_offensive_tool_keyword = "91a579342f9fd24373e7d273db24aa0f936c9cb7929a3f0dcee357a84173e1eb" nocase ascii wide
+                        $string65_AutoPwnKey_offensive_tool_keyword = "9566f875d51e0259d3d64d6a20250ffaffd527e17e060cde0b77dea42a10a13e" nocase ascii wide
+                        $string66_AutoPwnKey_offensive_tool_keyword = "9fc04e375ecd2d91dff8a0cd64fc10852bdca276699fd6d633b4e5537b7d5c5a" nocase ascii wide
+                        $string67_AutoPwnKey_offensive_tool_keyword = "a83ba2c435fcf714eda4cc84cde9a72c8214157eba585b2debba0f9274af0e8f" nocase ascii wide
+                        $string68_AutoPwnKey_offensive_tool_keyword = /AutoCrypt_Password\.txt/ nocase ascii wide
+                        $string69_AutoPwnKey_offensive_tool_keyword = "AutoPwnKey Agent Manager" nocase ascii wide
+                        $string70_AutoPwnKey_offensive_tool_keyword = /AutoPwnKey\.AgentManager/ nocase ascii wide
+                        $string71_AutoPwnKey_offensive_tool_keyword = /autopwnkey\.db/ nocase ascii wide
+                        $string72_AutoPwnKey_offensive_tool_keyword = "AutoPwnKey-agent" nocase ascii wide
+                        $string73_AutoPwnKey_offensive_tool_keyword = "AutoPwnKey-server" nocase ascii wide
+                        $string74_AutoPwnKey_offensive_tool_keyword = "AutoPwnKey-server/logs" nocase ascii wide
+                        $string75_AutoPwnKey_offensive_tool_keyword = "b5df5bd38cb4be2db37d159e001de5e5b6e9bbfc0f0e90a59827fd6290a1f05f" nocase ascii wide
+                        $string76_AutoPwnKey_offensive_tool_keyword = "b7fa937e1b42914b6dee7a038520775e09532babd8c296a8e86db0faab66236c" nocase ascii wide
+                        $string77_AutoPwnKey_offensive_tool_keyword = "c2109f44079ae2c753b2f2763562c141d7db57a33649baa7086b204109a98d25" nocase ascii wide
+                        $string78_AutoPwnKey_offensive_tool_keyword = "c46f4d7407e46fd600a3e400128c22a599bf7152068af8304fbd47c91ca39698" nocase ascii wide
+                        $string79_AutoPwnKey_offensive_tool_keyword = "c9d16fdf0e5aa489bd8c6f0d930a8c25d9ad665583adb7780bc261b4df9c639c" nocase ascii wide
+                        $string80_AutoPwnKey_offensive_tool_keyword = "CroodSolutions/AutoPwnKey" nocase ascii wide
+                        $string81_AutoPwnKey_offensive_tool_keyword = /curl\s\-L\s\-o\sahk\.exe\shttps\:\/\/github\.com\/AutoHotkey\// nocase ascii wide
+                        $string82_AutoPwnKey_offensive_tool_keyword = "d15d3424eed0a69503213f2c7261d831f676b51383f4a10924bee81ce0e47d49" nocase ascii wide
+                        $string83_AutoPwnKey_offensive_tool_keyword = "deda1e50aa7963be239c0e43bb7dcd05014b1e048f89fe08f537ef0ce19afe58" nocase ascii wide
+                        $string84_AutoPwnKey_offensive_tool_keyword = /Desktop\\AutoCrypt_Password\.txt/ nocase ascii wide
+                        $string85_AutoPwnKey_offensive_tool_keyword = /DiscoverBasicHostRecon\.ahk/ nocase ascii wide
+                        $string86_AutoPwnKey_offensive_tool_keyword = "e6d5759ff74805dfb7e2b133493111a1a265e06d4dfcee80302048b6a173334a" nocase ascii wide
+                        $string87_AutoPwnKey_offensive_tool_keyword = "ef105cd1be00cf14b44173895a2610f5e5ed4d06390494be20bf7175215ea851" nocase ascii wide
+                        $string88_AutoPwnKey_offensive_tool_keyword = "KeyLogger data received" nocase ascii wide
+                        $string89_AutoPwnKey_offensive_tool_keyword = /Keylogger\sstarting\.\.\./ nocase ascii wide
+                        $string90_AutoPwnKey_offensive_tool_keyword = /Keylogger\sstopping\.\.\./ nocase ascii wide
+                        $string91_AutoPwnKey_offensive_tool_keyword = /keylogger_output_.{0,1000}\.txt/ nocase ascii wide
+                        $string92_AutoPwnKey_offensive_tool_keyword = "Monitor KeyLogger output from a specific agent" nocase ascii wide
+                        $string93_AutoPwnKey_offensive_tool_keyword = /netsh\sadvfirewall\sfirewall\sadd\srule\s.{0,1000}Deny\sOutbound\sfor\s/ nocase ascii wide
+                        $string94_AutoPwnKey_offensive_tool_keyword = /self\.keylogger_widget/ nocase ascii wide
+                        $string95_AutoPwnKey_offensive_tool_keyword = "Starting AddUserToAdminGroup for user:" nocase ascii wide
+                        $string96_AutoPwnKey_offensive_tool_keyword = "Starting AutoPwnKey Port Scanner at" nocase ascii wide
+
+    condition:
+        any of them
+}

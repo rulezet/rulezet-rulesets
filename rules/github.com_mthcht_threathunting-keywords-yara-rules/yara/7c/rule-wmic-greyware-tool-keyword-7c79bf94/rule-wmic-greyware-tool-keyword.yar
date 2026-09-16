@@ -1,0 +1,72 @@
+rule rule_wmic_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'wmic' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "wmic"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+                        $string1_wmic_greyware_tool_keyword = /\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\spowershell\.exe\s\-nop\s\-w\shidden\s\-c\s.{0,1000}IEX\s\(\(new\-object\snet\.webclient\)\.downloadstring\(\'https\:\/\// nocase ascii wide
+                        $string2_wmic_greyware_tool_keyword = /\.exe\sshadowcopy\sdelete/ nocase ascii wide
+                        $string3_wmic_greyware_tool_keyword = /\/NAMESPACE\:\\\\root\\Microsoft\\Windows\\Defender\sPATH\sMSFT_MpPreference\scall\sAdd\sExclusionExtension\=exe\sForce\=True/ nocase ascii wide
+                        $string4_wmic_greyware_tool_keyword = /\\Temp\\.{0,1000}\\ntds\.dit/ nocase ascii wide
+                        $string5_wmic_greyware_tool_keyword = /\\Temp\\.{0,1000}\\ntds\.jfm/ nocase ascii wide
+                        $string6_wmic_greyware_tool_keyword = /\\Users\\Public\\.{0,1000}ntds\.dit/ nocase ascii wide
+                        $string7_wmic_greyware_tool_keyword = /\\Users\\Public\\.{0,1000}ntds\.jfm/ nocase ascii wide
+                        $string8_wmic_greyware_tool_keyword = /ac\si\sntds.{0,1000}\\\\127\.0\.0\.1\\ADMIN\$\\/ nocase ascii wide
+                        $string9_wmic_greyware_tool_keyword = /cmd\s\s\/c\swmic\s\/node\:.{0,1000}\sprocess\scall\screate\s\\"C\:\\programdata\\/ nocase ascii wide
+                        $string10_wmic_greyware_tool_keyword = /cmd\s\s\/c\swmic\s\/node\:.{0,1000}\sprocess\scall\screate\s\\"C\:\\Temp\\/ nocase ascii wide
+                        $string11_wmic_greyware_tool_keyword = /cmd\s\s\/c\swmic\s\/node\:.{0,1000}\sprocess\scall\screate\s\\"C\:\\users\\.{0,1000}\\AppData\\Local\\Temp/ nocase ascii wide
+                        $string12_wmic_greyware_tool_keyword = /cmd\s\s\/c\swmic\s\/node\:.{0,1000}\sprocess\scall\screate\s\\"C\:\\users\\Public/ nocase ascii wide
+                        $string13_wmic_greyware_tool_keyword = /cmd\.exe\s\/C\swmic\s\/node\:.{0,1000}\s\/user\:.{0,1000}\s\/password\:.{0,1000}\sos\sget\scaption/ nocase ascii wide
+                        $string14_wmic_greyware_tool_keyword = "process call create \"powershell enable-psremoting -force\"" nocase ascii wide
+                        $string15_wmic_greyware_tool_keyword = /start\swmic\s\/node\:\@C\:\\.{0,1000}\.txt\s\/user\:.{0,1000}\/password\:.{0,1000}\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\sbitsadmin\s\/transfer\s.{0,1000}\.exe\s/ nocase ascii wide
+                        $string16_wmic_greyware_tool_keyword = /Win32_Shadowcopy\s\|\sForEach\-Object\s\{\$_\.Delete\(\)\;/ nocase ascii wide
+                        $string17_wmic_greyware_tool_keyword = /wmic\s\/.{0,1000}\s\/user\:administrator\sprocess\scall\screate\s.{0,1000}cmd\.exe\s\/c\s/ nocase ascii wide
+                        $string18_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\s\/user\:.{0,1000}\s\/password\:.{0,1000}\sprocess\scall\screate\s\\"\\\\.{0,1000}\\.{0,1000}\.exe/ nocase ascii wide
+                        $string19_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\spath\sWin32_TerminalServiceSetting\swhere\sAllowTSConnections\=\\"0\\"\scall\sSetAllowTSConnections\s\\"1\\"/ nocase ascii wide
+                        $string20_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}\..{0,1000}\..{0,1000}\..{0,1000}computersystem\sget\susername/ nocase ascii wide
+                        $string21_wmic_greyware_tool_keyword = /wmic\s\/node\:.{0,1000}localhost.{0,1000}computersystem\sget\susername/ nocase ascii wide
+                        $string22_wmic_greyware_tool_keyword = /wmic\s\/node\:\{1\}\sprocess\scall\screate\s\\"rundll32\.exe\sC\:\\ProgramData\\/ nocase ascii wide
+                        $string23_wmic_greyware_tool_keyword = "wmic computersystem get domain" nocase ascii wide
+                        $string24_wmic_greyware_tool_keyword = /wmic\sprocess\scall\screate.{0,1000}ntdsutil\s.{0,1000}ac\si\sntds.{0,1000}\sifm.{0,1000}create\sfull/ nocase ascii wide
+                        $string25_wmic_greyware_tool_keyword = "wmic process get commandline -all" nocase ascii wide
+                        $string26_wmic_greyware_tool_keyword = "wmic process get commandline" nocase ascii wide
+                        $string27_wmic_greyware_tool_keyword = "wmic product where \"name like '%Malwarebytes%'\" call uninstall /nointeractive" nocase ascii wide
+                        $string28_wmic_greyware_tool_keyword = "wmic product where \"name like 'Malwarebytes%'\" call uninstall /nointeractive" nocase ascii wide
+                        $string29_wmic_greyware_tool_keyword = "wmic service brief" nocase ascii wide
+                        $string30_wmic_greyware_tool_keyword = "wmic service where \"caption like '%Sophos%'\" call stopservice" nocase ascii wide
+                        $string31_wmic_greyware_tool_keyword = "wmic service where \"name like '%veeam%'\" call stopservice" nocase ascii wide
+                        $string32_wmic_greyware_tool_keyword = "wmic service where \"name like 'acronisagent%'\" call stopservice" nocase ascii wide
+                        $string33_wmic_greyware_tool_keyword = "wmic service where \"name like 'acrsch2svc%'\" call stopservice" nocase ascii wide
+                        $string34_wmic_greyware_tool_keyword = "wmic service where \"name like 'agntsvc%'\" call stopservice" nocase ascii wide
+                        $string35_wmic_greyware_tool_keyword = "wmic service where \"name like 'arsm%'\" call stopservice" nocase ascii wide
+                        $string36_wmic_greyware_tool_keyword = "wmic service where \"name like 'backp%'\" call stopservice" nocase ascii wide
+                        $string37_wmic_greyware_tool_keyword = "wmic service where \"name like 'backup%'\" call stopservice" nocase ascii wide
+                        $string38_wmic_greyware_tool_keyword = "wmic service where \"name like 'cbservi%'\" call stopservice" nocase ascii wide
+                        $string39_wmic_greyware_tool_keyword = "wmic service where \"name like 'cbvscserv%'\" call stopservice" nocase ascii wide
+                        $string40_wmic_greyware_tool_keyword = "wmic service where \"name like 'shadowprotectsvc%'\" call stopservice" nocase ascii wide
+                        $string41_wmic_greyware_tool_keyword = "wmic service where \"name like 'spxservice%'\" call stopservice" nocase ascii wide
+                        $string42_wmic_greyware_tool_keyword = "wmic service where \"name like 'sqbcoreservice%'\" call stopservice" nocase ascii wide
+                        $string43_wmic_greyware_tool_keyword = "wmic service where \"name like 'stc_endpt_svc%'\" call stopservice" nocase ascii wide
+                        $string44_wmic_greyware_tool_keyword = "wmic service where \"name like 'storagecraft imagemanager%'\" call stopservice" nocase ascii wide
+                        $string45_wmic_greyware_tool_keyword = "wmic service where \"name like 'veeam%'\" call stopservice" nocase ascii wide
+                        $string46_wmic_greyware_tool_keyword = "wmic service where \"name like 'vsnapvss%'\" call stopservice" nocase ascii wide
+                        $string47_wmic_greyware_tool_keyword = "wmic service where \"name like 'vssvc%'\" call stopservice" nocase ascii wide
+                        $string48_wmic_greyware_tool_keyword = "wmic service where \"name like 'wbengine%'\" call stopservice" nocase ascii wide
+                        $string49_wmic_greyware_tool_keyword = "wmic SHADOWCOPY /nointeractive" nocase ascii wide
+                        $string50_wmic_greyware_tool_keyword = "wmic shadowcopy delete" nocase ascii wide
+                        $string51_wmic_greyware_tool_keyword = "wmic useraccount get /ALL /format:csv" nocase ascii wide
+                        $string52_wmic_greyware_tool_keyword = "wmic volume list brief" nocase ascii wide
+                        $string53_wmic_greyware_tool_keyword = /wmic.{0,1000}\/Namespace\:\\\\root\\SecurityCenter2\sPath\sAntiVirusProduct\sGet\sdisplayName/ nocase ascii wide
+                        $string54_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}\.txt\:.{0,1000}\.exe/ nocase ascii wide
+                        $string55_wmic_greyware_tool_keyword = /wmic\.exe\sprocess\scall\screate\s.{0,1000}cmd\s\/c\s/ nocase ascii wide
+                        $string56_wmic_greyware_tool_keyword = /wmic\.exe\sSHADOWCOPY\s\/nointeractive/ nocase ascii wide
+                        $string57_wmic_greyware_tool_keyword = /wmic\.exe\sshadowcopy\sdelete/ nocase ascii wide
+                        $string58_wmic_greyware_tool_keyword = /WMIC\.exe\sshadowcopy\swhere\s.{0,1000}ID\=.{0,1000}\sdelete/ nocase ascii wide
+
+    condition:
+        any of them
+}
