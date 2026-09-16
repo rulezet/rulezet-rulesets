@@ -1,0 +1,9 @@
+rule Win_Trojan_Ritzen_2
+{
+strings:
+	$a0 = { e90000e8b00181ed06011e582e89863e052e80be510445741d8db652048cc0408ec0bff000b90300f3a48cc0488ec0b800010e50eb152e8b8604058bd88cd803c30510 }
+
+
+condition:
+	$a0
+}

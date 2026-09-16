@@ -1,0 +1,9 @@
+rule Win_Trojan_Riot_17
+{
+strings:
+	$a0 = { e803000000005d0e16585a3bd07563ba4559b801facd218d9e5802b90100ba8000b80102cd1326803fe87503eb1c90b90200b80103cd138d76fdb9bc01908bfb }
+
+
+condition:
+	$a0
+}

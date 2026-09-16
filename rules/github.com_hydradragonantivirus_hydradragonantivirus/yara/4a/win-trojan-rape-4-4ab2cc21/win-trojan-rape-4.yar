@@ -1,0 +1,9 @@
+rule Win_Trojan_Rape_4
+{
+strings:
+	$a0 = { e800005e81ee03008beefc5006561e33c08ed8c40684002e89845a072e8c845c070e1fb86969cd2181fb6969754207e9cb008cc383c3102e039c2a072e899c5f002e8b }
+
+
+condition:
+	$a0
+}
