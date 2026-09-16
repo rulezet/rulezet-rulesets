@@ -1,0 +1,9 @@
+rule Win_Downloader_4411_1
+{
+strings:
+	$a0 = { 68bc3040006810204000e8bd02000083c408eb1268983040006810204000e8a902000083c408 }
+
+
+condition:
+	$a0
+}
