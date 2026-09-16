@@ -1,0 +1,9 @@
+rule Trojan_Win64_IcedID_AA_MTB{
+	meta:
+		description = "Trojan:Win64/IcedID.AA!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {0f af c8 2b d1 89 55 ?? 8b 4d ?? 8b 45 ?? 0f af c8 8b 45 ?? 2b c8 01 4d ?? 41 8b cf ff 15 ?? ?? ?? ?? 8b 45 ?? 8d 0c 80 89 4d ?? b9 ?? ?? ?? ?? 8b 45 ?? 2b c8 8b 45 ?? d3 f8 41 8b cf d1 f8 89 45 ?? ff 15 ?? ?? ?? ?? 8b 45 ?? 85 c0 74 } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}

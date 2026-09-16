@@ -1,0 +1,21 @@
+{
+  "uuid": "19a2006b-cf81-4297-a60c-213f8c36d2a6",
+  "title": "Trojan_Win64_IcedID_BB_MSR",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win64/IcedID.BB!MSR,SIGNATURE_TYPE_PEHSTR_EXT,14 00 14 00 0a 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:banker=\"IcedID\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/254755"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "51f81c61-0246-4ba0-8bd1-54dc931505db",
+  "title": "Trojan_Win64_IcedID_AD_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win64/IcedID.AD!MTB,SIGNATURE_TYPE_PEHSTR_EXT,05 00 05 00 05 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:banker=\"IcedID\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/254662"
+}

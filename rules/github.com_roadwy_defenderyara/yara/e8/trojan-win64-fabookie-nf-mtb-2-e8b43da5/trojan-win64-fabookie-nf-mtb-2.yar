@@ -1,0 +1,9 @@
+rule Trojan_Win64_Fabookie_NF_MTB_2{
+	meta:
+		description = "Trojan:Win64/Fabookie.NF!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {e8 03 01 00 00 33 db eb 2b 44 8b 48 ?? 33 c0 8d 58 ?? 84 c9 75 22 46 3b 8c 00 ?? ?? ?? ?? 75 0a 42 8b } 		$a_03_1 = {eb 3b 33 c0 48 8b cf 41 8d 51 ?? e8 6e 2b 00 00 4c 8b 1f 48 8d 54 24 ?? 48 8b cf 41 } 	condition:
+		((#a_03_0  & 1)*5+(#a_03_1  & 1)*5) >=10
+ 
+}
