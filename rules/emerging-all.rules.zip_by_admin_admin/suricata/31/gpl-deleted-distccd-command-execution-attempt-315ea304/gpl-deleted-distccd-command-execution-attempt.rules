@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 3632 (msg:"GPL DELETED distccd command execution attempt"; flow:established,to_server; content:"DIST00000001"; depth:12; nocase; reference:url,distcc.samba.org/security.html; classtype:misc-activity; sid:2103061; rev:4; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)

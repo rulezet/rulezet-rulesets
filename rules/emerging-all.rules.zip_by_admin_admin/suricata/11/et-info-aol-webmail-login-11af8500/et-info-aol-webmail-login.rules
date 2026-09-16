@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO AOL Webmail Login"; flow:established,to_server; http.uri; content:"/login/login.psp?siteId="; fast_pattern; content:"triedAimAuth"; classtype:policy-violation; sid:2000572; rev:8; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_10;)
