@@ -1,0 +1,22 @@
+{
+  "uuid": "f6a5b4d5-af8a-4153-8898-cbd5a9a3ed9a",
+  "title": "AWS IAM Permission Boundary or Guardrail Policy Deleted by Unusual Identity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the first time an AWS identity successfully deletes an IAM managed policy whose ARN contains\nguardrail-related keywords (for example Boundary, Deny, Restrict, Guard, SCP, Guardrail). Adversaries who have\nobtained elevated IAM privileges may delete policies to remove restrictive permissions boundaries,\neliminate deny-based guardrails, or clean up after a privilege escalation operation. Infrastructure-as-code tools (Terraform, CloudFormation, Pulumi, and Ansible) are excluded because policy lifecycle management is a routine part of automated deployments. A policy deletion by an identity not seen performing this activity during the prior seven days may indicate newly compromised credentials being used to modify the account's permission structure.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1562"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348909"
+}

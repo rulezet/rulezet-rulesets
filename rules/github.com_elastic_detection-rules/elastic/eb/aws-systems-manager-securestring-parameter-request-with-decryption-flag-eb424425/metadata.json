@@ -1,0 +1,22 @@
+{
+  "uuid": "eb424425-032e-4f11-8aab-986a09cbabf6",
+  "title": "AWS Systems Manager SecureString Parameter Request with Decryption Flag",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the first occurrence of a user identity accessing AWS Systems Manager (SSM) SecureString parameters using the GetParameter or GetParameters API actions with credentials in the request parameters. This could indicate that the user is accessing sensitive information. This rule detects when a user accesses a SecureString parameter with the withDecryption parameter set to true. This is a New Terms rule that detects the first occurrence of an AWS identity accessing SecureString parameters with decryption.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1555",
+    "T1555.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348903"
+}

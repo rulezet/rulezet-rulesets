@@ -1,0 +1,27 @@
+{
+  "uuid": "eb0594ff-3c6b-467f-9536-9f00b7db070a",
+  "title": "Suspicious Network Tool Launch Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects commonly abused network utilities running inside a container. Network utilities like nc, nmap, dig,\ntcpdump, ngrep, telnet, mitmproxy, zmap can be used for malicious purposes such as network reconnaissance, monitoring,\nor exploitation, and should be monitored closely within a container.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1040",
+    "T1046",
+    "T1105",
+    "T1595"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348574"
+}

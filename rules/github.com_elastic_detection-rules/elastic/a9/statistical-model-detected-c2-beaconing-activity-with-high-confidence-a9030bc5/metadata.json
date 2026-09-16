@@ -1,0 +1,23 @@
+{
+  "uuid": "a9030bc5-f938-4f9d-8631-26a70acc206e",
+  "title": "Statistical Model Detected C2 Beaconing Activity with High Confidence",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A statistical model has identified command-and-control (C2) beaconing activity with high confidence. Beaconing can help\nattackers maintain stealthy communication with their C2 servers, receive instructions and payloads, exfiltrate data and\nmaintain persistence in a network.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1102",
+    "T1102.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348798"
+}

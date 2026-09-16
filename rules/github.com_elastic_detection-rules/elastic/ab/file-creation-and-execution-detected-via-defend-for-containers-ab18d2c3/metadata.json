@@ -1,0 +1,28 @@
+{
+  "uuid": "ab18d2c3-1a0e-4c2b-93df-84fbca0ff3d9",
+  "title": "File Creation and Execution Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when a process creates a file inside of a running container, followed by its execution.\nThis could indicate a potential container breakout attempt, an attacker's attempt to gain unauthorized access to the\nunderlying host, or to evade detection by security controls.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1071"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348610"
+}

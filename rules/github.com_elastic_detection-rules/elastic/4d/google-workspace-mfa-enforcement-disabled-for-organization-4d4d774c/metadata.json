@@ -1,0 +1,23 @@
+{
+  "uuid": "4d4d774c-752f-4f42-a6c3-58f62cda2e8b",
+  "title": "Google Workspace MFA Enforcement Disabled For Organization",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an administrator disables multi-factor authentication enforcement or removes the ability for users\nto enroll in 2-step verification across a Google Workspace organization or organizational unit. Adversaries with\nadministrative access may weaken tenant-wide authentication requirements to enable password-only sign-ins, facilitate\ncredential abuse at scale, and reduce friction for follow-on account takeover across the domain.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1531",
+    "T1556",
+    "T1556.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348616"
+}

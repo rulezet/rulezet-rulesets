@@ -1,0 +1,25 @@
+{
+  "uuid": "c54cb1bd-38c0-4ee0-b920-2bda1049abea",
+  "title": "GCP Logging Sink Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a modification to a Logging sink in Google Cloud Platform (GCP). Logging compares the log entry to the sinks\nin that resource. Each sink whose filter matches the log entry writes a copy of the log entry to the sink's export\ndestination. An adversary may update a Logging sink to exfiltrate logs to a different export destination.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1537",
+    "T1562",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348795"
+}

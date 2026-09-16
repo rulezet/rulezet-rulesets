@@ -1,0 +1,22 @@
+{
+  "uuid": "79fd06b2-52b0-4702-a2fd-c48e56d16eb9",
+  "title": "AWS Route 53 Resolver Query Log Configuration Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the deletion of an Amazon Route 53 Resolver Query Log Configuration. Resolver query logs provide critical\nvisibility into DNS activity across VPCs, including lookups made by EC2 instances, containers, Lambda functions, and\nother AWS resources. Deleting a query log configuration immediately stops DNS query and response logging for the\nassociated VPC. Adversaries may delete these configurations to evade detection, suppress forensic evidence, or degrade\nsecurity monitoring capabilities.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348811"
+}

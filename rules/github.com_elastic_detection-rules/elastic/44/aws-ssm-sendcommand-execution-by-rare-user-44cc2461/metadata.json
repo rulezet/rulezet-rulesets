@@ -1,0 +1,22 @@
+{
+  "uuid": "44cc2461-0401-4190-9d53-1ee732968329",
+  "title": "AWS SSM `SendCommand` Execution by Rare User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the execution of commands or scripts on EC2 instances using AWS Systems Manager (SSM), such as RunShellScript, RunPowerShellScript or custom documents. While legitimate users may employ these commands for management tasks, they can also be exploited by attackers with credentials to establish persistence, install malware, or execute reverse shells for further access to compromised instances. This is a New Terms rule that looks for the first instance of this behavior by a user or role.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1651"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348912"
+}

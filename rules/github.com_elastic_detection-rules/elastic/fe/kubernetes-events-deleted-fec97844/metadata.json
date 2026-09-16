@@ -1,0 +1,22 @@
+{
+  "uuid": "fec97844-bbdf-40e5-9b44-b0dde5771331",
+  "title": "Kubernetes Events Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the deletion of Kubernetes events, which can indicate an attempt to cover up malicious\nactivity or misconfigurations. Adversaries may delete events to remove traces of their actions, making it\nharder for defenders to investigate and respond to incidents.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1070.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348473"
+}

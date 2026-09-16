@@ -1,0 +1,22 @@
+{
+  "uuid": "0b0c5783-d5b5-453b-bbbf-d6fbbdd4ac14",
+  "title": "Deprecated - M365 Teams External Access Enabled",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when external access is enabled in Microsoft Teams. External access lets Teams and Skype for Business users\ncommunicate with other users that are outside their organization. An adversary may enable external access or add an\nallowed domain to exfiltrate data or maintain persistence in an environment.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1484",
+    "T1562"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348713"
+}

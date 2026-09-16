@@ -1,0 +1,22 @@
+{
+  "uuid": "a0694f6e-a9d7-4f66-9c0e-9cbf4c7e5d74",
+  "title": "GCP Service Account Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a new service account is created in Google Cloud Platform (GCP). A service account is a special type of\naccount used by an application or a virtual machine (VM) instance, not a person. Applications use service accounts to\nmake authorized API calls, authorized as either the service account itself, or as G Suite or Cloud Identity users\nthrough domain-wide delegation. If service accounts are not tracked and managed properly, they can present a security\nrisk. An adversary may create a new service account to use during their operations in order to avoid using a standard\nuser account and attempt to evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1136",
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348745"
+}

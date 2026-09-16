@@ -1,0 +1,25 @@
+{
+  "uuid": "58bc878f-bc4e-4891-8c0a-f98479035288",
+  "title": "AWS IAM Sensitive Operations via Lambda Execution Role",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful IAM API calls that create or empower IAM users and roles, attach or embed policies, or wire roles to\ninstance profiles when the caller is an assumed role session associated with AWS Lambda. Serverless execution roles are\noften over-permissioned; an adversary who can run or compromise function code can abuse these APIs for privilege\nescalation and persistence—for example creating users or roles, issuing keys, attaching managed or inline policies, or\npreparing EC2 instance profiles for lateral movement.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1098",
+    "T1136",
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348911"
+}

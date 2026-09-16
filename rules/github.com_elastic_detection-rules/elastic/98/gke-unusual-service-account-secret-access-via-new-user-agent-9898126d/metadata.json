@@ -1,0 +1,22 @@
+{
+  "uuid": "9898126d-80d6-48e7-8ddb-c74dd2476500",
+  "title": "GKE Unusual Service Account Secret Access via New User Agent",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the first successful GKE secrets.get by a pod service account from a previously unseen combination of\nservice-account identity, user agent, and source IP. Controllers routinely read secrets with a stable client\nfingerprint; a new user agent or source for that service account could indicate a stolen token used outside\nthe workload (for example curl, a custom script, or kubectl from an unexpected host).\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348778"
+}

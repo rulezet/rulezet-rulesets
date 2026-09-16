@@ -1,0 +1,21 @@
+{
+  "uuid": "f6f1c543-b294-470b-920a-60407cfb6e34",
+  "title": "AWS RDS DB Instance or Cluster Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the deletion of an Amazon RDS DB instance, Aurora cluster, or global database cluster. Deleting these\nresources permanently destroys stored data and can cause major service disruption. Adversaries with sufficient\npermissions may delete RDS resources to impede recovery, destroy evidence, or inflict operational impact on the\nenvironment.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348878"
+}

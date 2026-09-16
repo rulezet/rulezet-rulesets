@@ -1,0 +1,22 @@
+{
+  "uuid": "d4f899bd-4bd0-4c2b-984f-a5ed556e6d55",
+  "title": "GKE Secret get or list with Suspicious User Agent",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful GKE secret get or list operations where the user agent matches scripting runtimes, minimal HTTP\nclients, or offensive-distribution fingerprints rather than typical kubectl or controller traffic.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348726"
+}

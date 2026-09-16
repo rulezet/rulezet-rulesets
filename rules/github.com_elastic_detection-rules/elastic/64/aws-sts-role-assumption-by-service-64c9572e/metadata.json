@@ -1,0 +1,24 @@
+{
+  "uuid": "64c9572e-ecbc-4ce8-8e65-dc2953844222",
+  "title": "AWS STS Role Assumption by Service",
+  "format": "elastic",
+  "author": "Elastic, Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a service has assumed a role in AWS Security Token Service (STS). Services can assume a role to obtain\ntemporary credentials and access AWS resources. Adversaries can use this technique for credential access and privilege\nescalation. This is a New Terms rule that identifies when a service assumes a role in AWS Security Token Service (STS)\nto obtain temporary credentials and access AWS resources. While often legitimate, adversaries may use this technique for\nunauthorized access, privilege escalation, or lateral movement within an AWS environment.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548",
+    "T1548.005",
+    "T1550",
+    "T1550.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348828"
+}

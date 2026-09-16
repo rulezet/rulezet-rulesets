@@ -1,0 +1,27 @@
+{
+  "uuid": "807fedcd-4a99-4f8e-a11b-1e2fa1fd573e",
+  "title": "DNS Enumeration Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the execution of DNS enumeration tools inside a container. DNS enumeration tools are used to\nenumerate the DNS servers and domains of the container, which can be used by an adversary to gain information about\nthe network configuration of the container and the services running inside it.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1016",
+    "T1018",
+    "T1046",
+    "T1049",
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348589"
+}

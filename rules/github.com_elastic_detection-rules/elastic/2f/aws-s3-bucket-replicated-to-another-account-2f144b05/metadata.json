@@ -1,0 +1,23 @@
+{
+  "uuid": "2f144b05-9c26-4bba-aa44-6a7cf0b539c1",
+  "title": "AWS S3 Bucket Replicated to Another Account",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation or modification of an S3 bucket replication configuration that sends data to a bucket in a\ndifferent AWS account. Cross-account replication can be used legitimately for backup, disaster recovery, and\nmulti-account architectures, but adversaries with write access to an S3 bucket may abuse replication rules to silently\nexfiltrate large volumes of data to attacker-controlled accounts. This rule detects \"PutBucketReplication\" events where\nthe configured destination account differs from the source bucket's account, indicating potential unauthorized\ncross-account data movement.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1537",
+    "T1567",
+    "T1567.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348840"
+}

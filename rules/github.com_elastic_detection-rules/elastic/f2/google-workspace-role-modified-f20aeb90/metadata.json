@@ -1,0 +1,21 @@
+{
+  "uuid": "f20aeb90-a181-4b58-bd80-53e0a1fbb6ac",
+  "title": "Google Workspace Role Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a custom admin role or its privileges are modified in Google Workspace. Adversaries may add or expand\nprivileges on an existing role to elevate access for assigned users or groups without creating a new role or directly\nassigning a well-known admin role. Because privilege changes take effect for all principals assigned the role, modifying\nrole permissions can silently expand access across multiple accounts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348639"
+}

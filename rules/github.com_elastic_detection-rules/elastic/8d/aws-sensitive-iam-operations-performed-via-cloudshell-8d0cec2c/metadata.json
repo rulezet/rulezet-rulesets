@@ -1,0 +1,25 @@
+{
+  "uuid": "8d0cec2c-46a0-4571-9b45-aa2d0d68f232",
+  "title": "AWS Sensitive IAM Operations Performed via CloudShell",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies sensitive AWS IAM operations performed via AWS CloudShell based on the user agent string. CloudShell is a\nbrowser-based shell that provides command-line access to AWS resources directly from the AWS Management Console. While\nconvenient for administrators, CloudShell access from compromised console sessions can enable attackers to perform\nprivileged operations without installing tools or using programmatic credentials. This rule detects high-risk actions\nsuch as creating IAM users, access keys, roles, or attaching policies when initiated from CloudShell, which may indicate\npost-compromise credential harvesting or privilege escalation activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.001",
+    "T1098.003",
+    "T1136",
+    "T1136.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348845"
+}

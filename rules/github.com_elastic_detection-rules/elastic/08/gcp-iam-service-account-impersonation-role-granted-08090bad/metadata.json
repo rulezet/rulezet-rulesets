@@ -1,0 +1,23 @@
+{
+  "uuid": "08090bad-744c-41ea-ba9a-38e6042c3618",
+  "title": "GCP IAM Service Account Impersonation Role Granted",
+  "format": "elastic",
+  "author": "Elastic, Aryu Zaw",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a service account impersonation role is granted on a Google Cloud Platform (GCP) service account via a\nSetIamPolicy operation. Roles such as \"roles/iam.serviceAccountTokenCreator\", \"roles/iam.serviceAccountUser\", and\n\"roles/iam.serviceAccountOpenIdTokenCreator\" allow a principal to mint access or identity tokens for the target service\naccount, or to act as it when deploying resources. Adversaries who have obtained sufficient privileges may grant\nthemselves or an attacker-controlled principal one of these roles to impersonate a higher-privileged service account,\nescalating privileges and establishing durable, key-less persistence that survives credential rotation. This is a New\nTerms rule that alerts when the granting principal has not been observed performing this action in the last weeks.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348773"
+}

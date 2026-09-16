@@ -1,0 +1,23 @@
+{
+  "uuid": "56bd6d6f-2753-4ca3-9649-d73fcc52e33c",
+  "title": "GitHub Private Repository Turned Public",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a private GitHub repository is changed to public visibility. Adversaries may change repository\nvisibility to public in order to exfiltrate sensitive code or data, potentially indicating a compromise or\nunauthorized access.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1020",
+    "T1567",
+    "T1567.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348459"
+}

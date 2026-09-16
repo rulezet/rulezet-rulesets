@@ -1,0 +1,147 @@
+[metadata]
+creation_date = "2023/03/21"
+integration = ["google_workspace"]
+maturity = "production"
+updated_date = "2026/06/02"
+
+[rule]
+author = ["Elastic"]
+description = """
+Detects when an anonymous user views, copies, or downloads a private key or credential file from Google Drive via an
+anyone-with-the-link share. Adversaries who obtain or create open Drive links can harvest encryption keys and secrets
+stored in user drives, then use those materials to decrypt data, authenticate to services, or expand access beyond the
+initial compromise.
+"""
+false_positives = [
+    """
+    A user may generate a shared access link to encryption key files to share with others. It is unlikely that the
+    intended recipient is an external or anonymous user.
+    """,
+]
+from = "now-130m"
+index = ["filebeat-*", "logs-google_workspace.drive-*"]
+interval = "10m"
+language = "eql"
+license = "Elastic License v2"
+name = "Google Workspace Drive Encryption Key(s) Accessed from Anonymous User"
+note = """## Triage and analysis
+
+### Investigating Google Workspace Drive Encryption Key(s) Accessed from Anonymous User
+
+Threat actors and opportunistic scanners frequently abuse Google Drive links set to "Anyone with the link" to access
+sensitive files without authenticating. Private keys, keystores, and token files stored in user drives are high-value
+targets. Possession of these files can enable decryption of protected data, signing or impersonation, and lateral
+movement into systems that trust the exposed material.
+
+This rule uses EQL to detect `view`, `copy`, or `download` activity in `google_workspace.drive` where
+`google_workspace.drive.visibility` is `people_with_link`, `source.user.email` is empty (anonymous access), and
+`file.extension` matches common key or credential file types.
+
+### Possible investigation steps
+
+- Identify the file accessed by reviewing `file.name` and `google_workspace.drive.file.type`, and note `event.action` (`view`, `copy`, or `download`) and `event.ingested`.
+- Identify the file owner by reviewing `google_workspace.drive.file.owner.email` and determine whether that user should store key material in Drive.
+- Review `source.user.id` and any available IP or user-agent context in the raw event to characterize the anonymous accessor.
+- Confirm sharing posture in Google Drive:
+  - Open the file in Drive as an administrator or the owner and review Share settings.
+  - Verify whether access is "Anyone with the link" and whether the link was intentionally published or may have been exposed after account compromise.
+- Search Kibana for related Drive activity for the same file or owner:
+  ```
+  data_stream.dataset: "google_workspace.drive" and google_workspace.drive.file.owner.email: "<OWNER_EMAIL>" and file.name: "<FILE_NAME>"
+  ```
+  - Look for earlier `change_user_access`, `change_document_visibility`, or `rename` events that may indicate when the link was opened.
+  - Search for other key-like files owned by the same user with `people_with_link` visibility.
+- Determine blast radius — identify which systems, applications, or cloud resources the key protects (VPN, TLS, code signing, service accounts, encrypted archives).
+- Contact the file owner and security stakeholders to confirm whether anonymous access was expected (for example, a documented external audit). Treat unexpected access as high priority.
+
+### False positive analysis
+
+- Legitimate use of link-based sharing for key files is rare; validate business justification before closing as benign.
+- Automated scanners or DLP tools may touch public links — correlate with known security tooling and owner intent.
+
+### Response and remediation
+
+- Initiate the incident response process based on triage findings.
+- Revoke the open link or restrict sharing to specific users; move key material out of broadly link-shared locations.
+- If access is unauthorized, rotate or replace the exposed keys and review dependent systems for abuse.
+- Review the file owner's account for signs of compromise (unusual logins, OAuth grants, or mass sharing changes).
+
+## Setup
+
+The Google Workspace Fleet integration, Filebeat module, or similarly structured data is required to be compatible with this rule.
+
+### Important Information Regarding Google Workspace Event Lag Times
+- As per Google's documentation, Google Workspace administrators may observe lag times ranging from minutes up to 3 days between the time of an event's occurrence and the event being visible in the Google Workspace admin/audit logs.
+- This rule is configured to run every 10 minutes with a lookback time of 130 minutes.
+- To reduce the risk of false negatives, consider reducing the interval that the Google Workspace (formerly G Suite) Filebeat module polls Google's reporting API for new events.
+- By default, `var.interval` is set to 2 hours (2h). Consider changing this interval to a lower value, such as 10 minutes (10m).
+- See the following references for further information:
+  - https://support.google.com/a/answer/7061566
+  - https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-module-google_workspace.html"""
+references = [
+    "https://support.google.com/drive/answer/2494822",
+    "https://www.elastic.co/security-labs/google-workspace-attack-surface-part-one",
+    "https://www.elastic.co/security-labs/google-workspace-attack-surface-part-two"
+]
+risk_score = 73
+rule_id = "980b70a0-c820-11ed-8799-f661ea17fbcc"
+severity = "high"
+tags = [
+    "Domain: Cloud",
+    "Data Source: Google Workspace",
+    "Use Case: Configuration Audit",
+    "Tactic: Credential Access",
+    "Tactic: Collection",
+    "Resources: Investigation Guide",
+]
+timestamp_override = "event.ingested"
+type = "eql"
+
+query = '''
+file where data_stream.dataset == "google_workspace.drive" and event.action : ("copy", "view", "download") and
+    google_workspace.drive.visibility: "people_with_link" and source.user.email == "" and
+    file.extension: (
+        "token","assig", "pssc", "keystore", "pub", "pgp.asc", "ps1xml", "pem", "gpg.sig", "der", "key",
+        "p7r", "p12", "asc", "jks", "p7b", "signature", "gpg", "pgp.sig", "sst", "pgp", "gpgz", "pfx", "crt",
+        "p8", "sig", "pkcs7", "jceks", "pkcs8", "psc1", "p7c", "csr", "cer", "spc", "ps2xml")
+'''
+
+[rule.investigation_fields]
+field_names = [
+    "source.user.id",
+    "event.action",
+    "file.name",
+    "google_workspace.drive.file.type",
+    "google_workspace.drive.file.owner.email",
+]
+
+[[rule.threat]]
+framework = "MITRE ATT&CK"
+
+[[rule.threat.technique]]
+id = "T1552"
+name = "Unsecured Credentials"
+reference = "https://attack.mitre.org/techniques/T1552/"
+
+[[rule.threat.technique.subtechnique]]
+id = "T1552.004"
+name = "Private Keys"
+reference = "https://attack.mitre.org/techniques/T1552/004/"
+
+[rule.threat.tactic]
+id = "TA0006"
+name = "Credential Access"
+reference = "https://attack.mitre.org/tactics/TA0006/"
+
+[[rule.threat]]
+framework = "MITRE ATT&CK"
+
+[[rule.threat.technique]]
+id = "T1530"
+name = "Data from Cloud Storage"
+reference = "https://attack.mitre.org/techniques/T1530/"
+
+[rule.threat.tactic]
+id = "TA0009"
+name = "Collection"
+reference = "https://attack.mitre.org/tactics/TA0009/"

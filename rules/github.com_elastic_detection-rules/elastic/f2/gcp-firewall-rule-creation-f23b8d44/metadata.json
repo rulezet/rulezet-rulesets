@@ -1,0 +1,24 @@
+{
+  "uuid": "f23b8d44-c830-43dd-8c75-f81267ec7508",
+  "title": "GCP Firewall Rule Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a firewall rule is created in Google Cloud Platform (GCP) for Virtual Private Cloud (VPC) or App Engine.\nThese firewall rules can be configured to allow or deny connections to or from virtual machine (VM) instances or\nspecific applications. An adversary may create a new firewall rule in order to weaken their target's security controls\nand allow more permissive ingress or egress traffic flows for their benefit.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348731"
+}

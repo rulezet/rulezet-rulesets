@@ -1,0 +1,24 @@
+{
+  "uuid": "1ff859b0-c5ba-488f-a5b4-df115f47a0ef",
+  "title": "Stolen Credentials Used to Login to Okta Account After MFA Reset",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects a sequence of suspicious activities on Windows hosts indicative of credential compromise, followed by efforts to\nundermine multi-factor authentication (MFA) and single sign-on (SSO) mechanisms for an Okta user account.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1556",
+    "T1556.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348518"
+}

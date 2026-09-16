@@ -1,0 +1,22 @@
+{
+  "uuid": "3145c7bb-b172-4f3c-abc9-1811f2bf6463",
+  "title": "Kubernetes Pod Exec with Curl or Wget to HTTPS",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects pod or attach exec API calls where the decoded request query implies curl or wget fetching an\nhttps URL. Attackers with permission to exec into workloads often run one-liners to stage tooling, pull\nscripts or binaries, or exfiltrate data over HTTPS—activity that should be rare compared to shells, debuggers, or\nexpected health checks. The rule decodes the audit requestURI, reconstructs a readable command string from\nrepeated command parameters, and applies noise filters for common cluster health and OIDC/JWKS endpoints so\nbenign automation is less likely to alert.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1609"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348476"
+}

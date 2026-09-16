@@ -1,0 +1,22 @@
+{
+  "uuid": "ba2d95c4-fc99-4794-ae91-bd955ba23776",
+  "title": "AWS IAM User Self-Created Access Key Subsequently Used",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects an AWS IAM user using an existing credential to create a new access key for itself and subsequently using the\nnew key within one hour. This behavior can indicate an adversary converting compromised credentials into an additional\nlong-term credential for persistence. Unlike a standalone self-service key creation alert, requiring subsequent use of\nthe new key reduces noise from unused or abandoned credential-rotation operations.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348836"
+}

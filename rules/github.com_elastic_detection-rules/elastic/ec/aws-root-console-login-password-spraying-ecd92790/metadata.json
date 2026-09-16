@@ -1,0 +1,22 @@
+{
+  "uuid": "ecd92790-c906-42e3-9dcc-381987f83fda",
+  "title": "AWS Root Console Login Password Spraying",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies failed authentication attempts against the AWS Management Console root user from the same source IP address\ntargeting multiple AWS accounts. Password spraying uses few attempts per target across many accounts to avoid lockout,\nmaking per-account volume an unreliable signal. This rule detects the cross-account breadth pattern: a single source IP\ngenerating root ConsoleLogin failures across two or more distinct AWS accounts. Requires an AWS Organizations-level\nCloudTrail trail aggregating events from member accounts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1110",
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348888"
+}

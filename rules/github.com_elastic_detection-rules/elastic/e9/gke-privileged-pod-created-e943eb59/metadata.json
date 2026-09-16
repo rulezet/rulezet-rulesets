@@ -1,0 +1,22 @@
+{
+  "uuid": "e943eb59-b1d6-4d1b-96e3-8a4519046dc5",
+  "title": "GKE Privileged Pod Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful GKE audit events where a pod is created with allowPrivilegeEscalation enabled. This weakens\ncontainer isolation and can help an attacker escalate toward host access. Standalone pods are included; workloads owned\nby ReplicaSet, DaemonSet, or StatefulSet controllers are excluded.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1610",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348759"
+}

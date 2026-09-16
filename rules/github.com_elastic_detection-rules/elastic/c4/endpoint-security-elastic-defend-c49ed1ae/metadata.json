@@ -1,0 +1,20 @@
+{
+  "uuid": "c49ed1ae-d5f4-47e6-b675-0339103d0460",
+  "title": "Endpoint Security (Elastic Defend)",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Generates a detection alert each time an Elastic Defend alert is received. Enabling this rule allows you to immediately\nbegin investigating your Endpoint alerts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348649"
+}

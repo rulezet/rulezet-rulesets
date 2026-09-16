@@ -1,0 +1,22 @@
+{
+  "uuid": "85cfc4d0-bc95-418c-a378-62a39b408137",
+  "title": "M365 Identity OAuth ROPC Grant via Legacy Authentication Client",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a successful login by a user principal through a legacy authenticated client (such as Authenticated SMTP,\nIMAP, POP, or Exchange ActiveSync) in the Microsoft 365 Unified Audit Log, evidenced by the \"BAV2ROPC\" user agent.\nLegacy basic-authentication clients are translated by Entra ID into a Resource Owner Password Credentials (ROPC) grant,\na single-factor flow that submits the user's password directly and bypasses interactive multi-factor authentication.\nThis is commonly abused during password spraying and account takeover.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348702"
+}

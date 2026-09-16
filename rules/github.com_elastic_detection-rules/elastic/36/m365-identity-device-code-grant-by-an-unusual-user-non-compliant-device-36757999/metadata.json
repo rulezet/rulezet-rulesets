@@ -1,0 +1,26 @@
+{
+  "uuid": "36757999-48a9-493f-8594-5a91bddabe76",
+  "title": "M365 Identity Device Code Grant by an Unusual User (Non-Compliant Device)",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a Microsoft 365 user completing an OAuth device code grant (\"Cmsi:Cmsi\") from a non-compliant device for the\nfirst time within the rule's historical window, regardless of the requesting application or target resource. Device code\nphishing kits complete the full login (password and MFA) at the genuine Microsoft endpoint and harvest the resulting\ntoken by polling, so MFA does not stop them. Because the victim authorizes the flow in their own browser, the grant is\nfrequently completed on a personal or attacker-controlled device that is not enrolled or compliant with the\norganization's device policies. A user appearing with this device code flow on a non-compliant device for the first time\nin the lookback window is a strong early indicator of device code phishing, and removing the application and target\nconstraints catches grants against any first-party application, not just the Microsoft Authentication Broker.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1550",
+    "T1550.001",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348710"
+}

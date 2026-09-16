@@ -1,0 +1,22 @@
+{
+  "uuid": "f7fb72c2-d744-4161-a47b-352acc386291",
+  "title": "GKE Rapid Secret GET Activity Against Multiple Objects",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects an unusual volume of GKE API get requests against multiple distinct Secret objects from the same client\nfingerprint (user, source IP, and user agent) within the rule lookback window. This can indicate credential access or\nin-cluster reconnaissance, where a user or token is used to enumerate and retrieve sensitive data such as service\naccount tokens, registry credentials, TLS material, or application configuration. Failed get requests are included and\ncan signal RBAC probing; system service accounts are excluded only when secret reads succeed, since failed secret access\nby a service account may indicate compromise or misconfiguration worth investigating.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348771"
+}

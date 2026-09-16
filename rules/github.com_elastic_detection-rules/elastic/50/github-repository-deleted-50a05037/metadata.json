@@ -1,0 +1,21 @@
+{
+  "uuid": "50a05037-9b26-40b8-9481-6f8a31be731e",
+  "title": "GitHub Repository Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when a GitHub repository is deleted within your organization. Repositories are a critical component\nused within an organization to manage work, collaborate with others and release products to the public. Any delete\naction against a repository should be investigated to determine it's validity. Unauthorized deletion of organization\nrepositories could cause irreversible loss of intellectual property and indicate compromise within your organization.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348453"
+}

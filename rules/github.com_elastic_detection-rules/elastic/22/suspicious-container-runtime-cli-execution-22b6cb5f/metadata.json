@@ -1,0 +1,24 @@
+{
+  "uuid": "22b6cb5f-0cfd-4c0d-ba41-3a90bccc8fe9",
+  "title": "Suspicious Container Runtime CLI Execution",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects execution of container runtime CLI tools (ctr, crictl, nerdctl) with arguments indicating container creation,\ncommand execution inside existing containers, image manipulation, or host filesystem mounting. These tools interact\ndirectly with the container runtime socket, bypassing the Kubernetes API server, RBAC authorization, admission webhooks,\npod security standards, and Kubernetes audit logging entirely. Attackers with host-level access may use these tools to\ncreate privileged ghost containers, exec into other pods to steal service account tokens and secrets, pull\nattacker-controlled images, and destroy evidence, all while remaining invisible to Kubernetes-level monitoring.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1609",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348564"
+}

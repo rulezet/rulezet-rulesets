@@ -1,0 +1,21 @@
+{
+  "uuid": "0714ec47-19ac-477d-8922-f7b11b3efcef",
+  "title": "AWS Potential Cryptomining via ECS Task Definition Deployment",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a principal that, within a short window, both registers an Amazon ECS task definition using a public / non-ECR\ncontainer image at a high CPU allocation (8 or 16 vCPU) AND launches ECS workloads (RunTask, StartTask, or CreateService).\nRegistering a public miner image at maximum compute and then launching it is the ECS/Fargate cryptocurrency-mining\ndeployment pattern seen after credential compromise. Requiring both the mining-signature registration and a launch by the\nsame principal confirms an actual deployment rather than a standalone (possibly benign) task-definition registration,\nwhich sharply reduces false positives from high-compute workloads that are merely registered.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1496"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348908"
+}

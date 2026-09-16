@@ -1,0 +1,21 @@
+{
+  "uuid": "5046ad5d-96a5-4f14-b86f-f95f1efd926f",
+  "title": "AWS Lambda Function Invoked Cross-Account",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an AWS Lambda function invoked by a principal whose AWS account differs from the account that owns the\nfunction (a cross-account invocation). The caller's account is parsed from the invoking principal's ARN and compared to\nthe function account. Adversaries who have been granted invoke permission on a function from an external account, or who\noperate from a separate attacker-controlled account, can use cross-account invocation to execute functions or retrieve\nthe data they return. This is the data-plane counterpart to detecting the cross-account grant itself, and relies on AWS\nLambda data event logging, which is not enabled by default.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1648"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348832"
+}

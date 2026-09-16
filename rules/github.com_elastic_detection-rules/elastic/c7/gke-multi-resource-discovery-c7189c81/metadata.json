@@ -1,0 +1,23 @@
+{
+  "uuid": "c7189c81-0f0d-4200-9c4f-2780718278e8",
+  "title": "GKE Multi-Resource Discovery",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Adversaries who land credentials in a GKE cluster—or abuse an over-privileged token, often map the environment before\nexfiltration or privilege escalation. A practical first pass is to learn where workloads run, how the cluster is\npartitioned, and what RBAC exists at namespace vs cluster scope. Rapid get/list traffic across many distinct API\nresource kinds that answer those questions (namespaces, workloads, roles, cluster-wide roles) is a common setup and\norientation pattern for both interactive attackers and automated recon scripts. This rule highlights that\ncross-resource burst from a single client fingerprint within a one-minute bucket when both cluster-layout and RBAC\nresource kinds are touched, so analysts can separate routine automation from potential discovery ahead of follow-on\nactions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348754"
+}

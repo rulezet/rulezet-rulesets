@@ -1,0 +1,24 @@
+{
+  "uuid": "d4491ad3-b457-45f8-a7a7-0fdc68fa9b45",
+  "title": "Potential release_agent Container Escape Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects modification of the CGroup release_agent file from inside a privileged container. The release_agent is\na script that is executed at the termination of any process on that CGroup and is invoked from the host. A privileged\ncontainer with SYS_ADMIN capabilities, enables a threat actor to mount a CGroup directory and modify the release_agent\nwhich could be used for further privilege escalation and container escapes to the host machine.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1546",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348603"
+}

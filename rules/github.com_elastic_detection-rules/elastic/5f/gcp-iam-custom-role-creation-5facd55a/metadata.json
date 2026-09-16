@@ -1,0 +1,23 @@
+{
+  "uuid": "5facd55a-d4f2-4123-a2ab-432e38cede52",
+  "title": "GCP IAM Custom Role Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an Identity and Access Management (IAM) custom role creation in Google Cloud Platform (GCP). Custom roles are\nuser-defined, and allow for the bundling of one or more supported permissions to meet specific needs. Custom roles will\nnot be updated automatically and could lead to privilege creep if not carefully scrutinized.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348774"
+}

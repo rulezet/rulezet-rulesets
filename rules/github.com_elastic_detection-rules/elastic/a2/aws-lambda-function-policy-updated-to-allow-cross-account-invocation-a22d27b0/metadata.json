@@ -1,0 +1,24 @@
+{
+  "uuid": "a22d27b0-5a12-45b2-9548-eb47dfbae883",
+  "title": "AWS Lambda Function Policy Updated to Allow Cross-Account Invocation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a change to an AWS Lambda function resource policy that grants invoke permissions to an AWS account principal.\nUsing AddPermission, an adversary can authorize a principal in another account to call a function, creating a\ncross-account backdoor for execution or for relaying data to attacker-controlled infrastructure without modifying the\nfunction's code. This rule excludes public grants (principal set to \"*\"), which are covered by a separate rule, and\ngrants to AWS service principals, which are common for legitimate event triggers.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1546",
+    "T1578",
+    "T1578.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348860"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "6d27b934-fdfe-4602-a8c0-e966582b321a",
+  "title": "GCP Service Account Key Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a new key is created for a service account in Google Cloud Platform (GCP). A service account is a\nspecial type of account used by an application or a virtual machine (VM) instance, not a person. Applications use\nservice accounts to make authorized API calls, authorized as either the service account itself, or as G Suite or Cloud\nIdentity users through domain-wide delegation. If private keys are not tracked and managed properly, they can present a\nsecurity risk. An adversary may create a new key for a service account in order to attempt to abuse the permissions\nassigned to that account and evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348782"
+}

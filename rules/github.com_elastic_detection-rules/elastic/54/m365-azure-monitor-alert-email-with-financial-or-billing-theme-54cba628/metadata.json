@@ -1,0 +1,22 @@
+{
+  "uuid": "54cba628-73c9-4b6b-a43b-f94c82b49615",
+  "title": "M365 Azure Monitor Alert Email with Financial or Billing Theme",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects Azure Monitor alert notification emails with financial or billing themed subject lines delivered to organization\nusers. Adversaries abuse Azure Monitor alert rules to deliver callback phishing emails from Microsoft's legitimate\nazure-noreply@microsoft.com address. Because the emails originate from Microsoft's own infrastructure, they pass SPF,\nDKIM, and DMARC checks, bypassing email security filters and increasing victim trust. The attacker embeds a fraudulent\nbilling or security lure in the alert rule description, which is rendered in the notification email body. Observed\nsubject patterns include invoice numbers, payment references, and order confirmations.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566",
+    "T1566.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348447"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "1eab5468-586b-4ed0-a032-18e2b4d65f5f",
+  "title": "AWS SES Email Identity Verified Then Deleted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects an SES email identity being verified and subsequently deleted within a 30-minute window,\nperformed by the same AWS identity. Amazon SES requires email addresses and domains\nto be verified before they can be used as senders. An adversary who obtains SES credentials\nmay verify a domain or address they control, use it to send phishing or spam email, then delete\nthe identity to remove evidence of the sending domain from the account's verified identity list.\nThis verify-use-delete pattern is a recognized attacker technique for SES abuse.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1583",
+    "T1583.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348877"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "eb22a2f7-cdfe-41eb-8ed5-41ea9a510d25",
+  "title": "GKE Unusual Sensitive Workload Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the first occurrence of create or patch activity against sensitive GKE workloads (DaemonSets, Deployments, or\nCronJobs) from an unusual combination of user agent, source IP, and user identity, which may indicate privilege\nescalation or unauthorized access within the cluster.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348758"
+}

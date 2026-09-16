@@ -1,0 +1,22 @@
+{
+  "uuid": "104ec48e-788f-4ada-b568-c66211646867",
+  "title": "Kubernetes Ephemeral Container Added to Pod",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects allowed updates to the pods/ephemeralcontainers subresource by a non-system identity. Ephemeral containers are\ncommonly used for debugging (kubectl debug) but can also be abused to inject tooling into a running pod, access mounted\nsecrets, and execute commands in the target pod context. Attackers with sufficient RBAC may use ephemeral containers to\nescalate privileges, move laterally, or establish persistence without deploying a new workload.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1609",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348509"
+}

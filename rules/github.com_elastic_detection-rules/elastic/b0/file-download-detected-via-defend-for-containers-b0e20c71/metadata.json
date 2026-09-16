@@ -1,0 +1,29 @@
+{
+  "uuid": "b0e20c71-b799-4312-8a08-8dfb168418cd",
+  "title": "File Download Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the download of files from inside a container. The files are downloaded using the \"curl\" or\n\"wget\" command-line tools. Adversaries may use these tools to download files from the internet to gain access to\nsensitive data or communicate with C2 servers.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1071",
+    "T1071.001",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348585"
+}

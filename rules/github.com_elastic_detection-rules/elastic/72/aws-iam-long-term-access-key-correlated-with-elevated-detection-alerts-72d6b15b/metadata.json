@@ -1,0 +1,23 @@
+{
+  "uuid": "72d6b15b-d44e-4b4c-a7d5-816d2d7d72ec",
+  "title": "AWS IAM Long-Term Access Key Correlated with Elevated Detection Alerts",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Correlates open detection alerts that share the same long-term IAM access key ID ( prefix AKIA). It fires when the rule\nAWS Long-Term Access Key First Seen from Source IP (rule_id: 9f8e3c5e-f72e-4e91-93f6-e98a4fae3e4f) has triggered for\nthat key and at least one other open alert for the same key is medium, high, or critical severity. This higher-order\nrule helps prioritize long-term key novelty when it co-occurs with elevated detections that may indicate post-compromise\nactivity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1552"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348826"
+}

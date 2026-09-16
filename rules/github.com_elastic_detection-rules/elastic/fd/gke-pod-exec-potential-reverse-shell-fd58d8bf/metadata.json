@@ -1,0 +1,24 @@
+{
+  "uuid": "fd58d8bf-ad4c-4bb7-978d-6619320948d0",
+  "title": "GKE Pod Exec Potential Reverse Shell",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful GKE pod exec sessions whose command resembles reverse-shell or bind-shell one-liner patterns,\nincluding /dev/tcp and /dev/udp redirection, netcat/ncat exec-style flags, socat shell handoff, mkfifo pipelines, and\ncommon language socket idioms. Legitimate debug sessions sometimes use similar building blocks, but together these\npatterns align with post-exploitation interactive access and command-and-control. Common localhost /dev/tcp health-check\nports are excluded. GKE records the command in gcp.audit.labels.command.gke.io/command when an explicit command is\npassed to exec.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1095",
+    "T1609"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348737"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "db591d9b-e994-4fc6-92b0-a759a541bdb2",
+  "title": "Kubernetes Pod Created with a Sensitive hostPath Volume",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when a pod is created with a sensitive volume of type hostPath. A hostPath volume type mounts a\nsensitive file or folder from the node to the container. If the container gets compromised, the attacker can use this\nmount for gaining access to the node. There are many ways a container with unrestricted access to the host filesystem\ncan escalate privileges, including reading data from other containers, and accessing tokens of more privileged pods.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1610",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348497"
+}

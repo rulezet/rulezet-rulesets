@@ -1,0 +1,22 @@
+{
+  "uuid": "a84b7a02-1c16-47ac-87b7-158bf9194955",
+  "title": "Unusual City For a GCP Event",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected GCP Audit event activity that, while not inherently suspicious or abnormal, is sourcing from\na geolocation (city) that is unusual for the event action. This can be the result of compromised credentials or keys being\nused by a threat actor in a different geography than the authorized user(s).\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348755"
+}

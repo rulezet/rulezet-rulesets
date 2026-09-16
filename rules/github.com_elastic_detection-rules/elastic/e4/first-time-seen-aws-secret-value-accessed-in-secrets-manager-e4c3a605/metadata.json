@@ -1,0 +1,22 @@
+{
+  "uuid": "e4c3a605-2d5d-41b0-b508-a43cf1697c2a",
+  "title": "First Time Seen AWS Secret Value Accessed in Secrets Manager",
+  "format": "elastic",
+  "author": "Nick Jones, Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "An adversary with access to a compromised AWS service such as an EC2 instance, Lambda function, or other service may\nattempt to leverage the compromised service to access secrets in AWS Secrets Manager. This rule looks for the first time\na specific user identity has programmatically retrieved a secret value from Secrets Manager using the GetSecretValue\naction. This rule assumes that AWS services such as Lambda functions and EC2 instances are setup with IAM role's\nassigned that have the necessary permissions to access the secrets in Secrets Manager. An adversary with access to a\ncompromised AWS service would rely on its' attached role to access the secrets in Secrets Manager.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1555",
+    "T1555.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348850"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "265aa703-37a0-4830-a0cd-d88f52fd3ee8",
+  "title": "Google Workspace Device Registration After OAuth from Suspicious ASN",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a Google Workspace account completes OAuth authorization for a specific Google OAuth client from a\nhigh-risk autonomous system number (ASN), followed within 30 seconds by a device registration event with account state\nREGISTERED. This sequence can indicate device enrollment or join flows initiated from attacker-controlled or\nresidential-proxy infrastructure after a user authorizes a sensitive client.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.005",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348626"
+}

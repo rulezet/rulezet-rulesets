@@ -1,0 +1,21 @@
+{
+  "uuid": "a5324de5-4a98-4e95-b030-9d7ded1a4e45",
+  "title": "AWS Bedrock Unauthorized Foundation Model Access Attempt",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies failed, access-denied attempts to enable account-level access to an Amazon Bedrock foundation model, either\nby granting a foundation-model entitlement, submitting a use case for model access, or creating a foundation-model\nagreement (accepting the EULA). These account-level \"model access\" actions unlock a foundation model so that it can\nsubsequently be invoked. A principal that is repeatedly denied when attempting these actions may be a compromised or\nunder-privileged identity probing for the ability to unlock expensive models (LLMjacking) or to establish a durable\nability to invoke models. Unlike the companion rule that detects successful model-access grants, this rule surfaces the\nattempt itself, which is a high-signal indicator of credential boundary-testing even though access was not granted.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348813"
+}

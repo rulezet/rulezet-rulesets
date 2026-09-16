@@ -1,0 +1,22 @@
+{
+  "uuid": "3eaf77cd-bb9c-4c08-b5fc-431620cac3c9",
+  "title": "M365 Exchange Mailbox Accessed by Unusual Client",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies suspicious Microsoft 365 mail access by ClientAppId. This rule detects when a user accesses their mailbox\nusing a client application that is not typically used by the user, which may indicate potential compromise or\nunauthorized access attempts. Adversaries may use custom or third-party applications to access mailboxes, bypassing\nstandard security controls. First-party Microsoft applications are also abused after OAuth tokens are compromised,\nallowing adversaries to access mailboxes without raising suspicion.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1114",
+    "T1114.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348700"
+}

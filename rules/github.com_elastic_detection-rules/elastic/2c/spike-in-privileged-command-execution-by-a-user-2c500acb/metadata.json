@@ -1,0 +1,26 @@
+{
+  "uuid": "2c500acb-09d6-4881-b36f-9b421660c4f8",
+  "title": "Spike in Privileged Command Execution by a User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job has detected an increase in the execution of privileged commands by a user, suggesting potential\nprivileged access activity. This may indicate an attempt by the user to gain unauthorized access to sensitive or\nrestricted parts of the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1548"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348449"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "d484940e-231b-4179-8621-8c32bbfd97e3",
+  "title": "Kubernetes API Server Proxying Request to Kubelet",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects non-system identities using the Kubernetes nodes/proxy API to proxy requests through the API server directly\nto a node's Kubelet. The nodes/proxy subresource allows any principal with this RBAC permission to reach the Kubelet\nAPI on any worker node without needing direct network access or Kubelet TLS certificates. Through this proxy path,\nan attacker can list all pod specifications including environment variable secrets, read Kubelet configuration and\nPKI material, retrieve container logs, and access running pod metadata across all workloads on the target node.\nMonitoring and health check endpoints such as /metrics, /healthz, and /stats are excluded to reduce noise from legitimate\nobservability tooling.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1550",
+    "T1550.001",
+    "T1552.007",
+    "T1611",
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348502"
+}

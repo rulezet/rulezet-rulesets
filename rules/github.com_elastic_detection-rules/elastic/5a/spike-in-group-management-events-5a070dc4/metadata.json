@@ -1,0 +1,27 @@
+{
+  "uuid": "5a070dc4-7e2d-4bec-a9e7-596d749e3e67",
+  "title": "Spike in Group Management Events",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job has identified a spike in group management events for a user, indicating potential privileged\naccess activity. The machine learning has flagged an abnormal rise in group management actions (such as adding or\nremoving users from privileged groups), which could point to an attempt to escalate privileges or unauthorized\nmodifications to group memberships.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1098",
+    "T1098.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348445"
+}

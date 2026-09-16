@@ -1,0 +1,23 @@
+{
+  "uuid": "9bdafe75-4335-4ef5-bf32-da82ea64b139",
+  "title": "High Number of Cloned GitHub Repos From PAT",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects a high number of unique private repo clone events originating from a single personal access token within a short\ntime period.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1213",
+    "T1213.003",
+    "T1648"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348466"
+}

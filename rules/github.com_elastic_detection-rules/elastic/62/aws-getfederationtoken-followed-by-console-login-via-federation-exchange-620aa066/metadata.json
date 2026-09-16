@@ -1,0 +1,21 @@
+{
+  "uuid": "620aa066-41e8-4f5e-b201-3fce4aab8526",
+  "title": "AWS GetFederationToken Followed by Console Login via Federation Exchange",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the three-event chain produced by tools like aws_consoler that convert exfiltrated\nlong-term IAM access keys into browser-accessible AWS console sessions: GetFederationToken\nobtains temporary credentials, GetSigninToken exchanges them for a federation sign-in token\nvia the AWS federation endpoint, and ConsoleLogin confirms the resulting console session was\nopened — all from the same source IP within two minutes. This sequence is a high-confidence\nindicator of credential abuse using stolen IAM access keys.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1606"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348841"
+}

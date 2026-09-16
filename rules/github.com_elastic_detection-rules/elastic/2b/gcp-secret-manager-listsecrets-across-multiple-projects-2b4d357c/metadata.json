@@ -1,0 +1,21 @@
+{
+  "uuid": "2b4d357c-7917-45e7-b17a-ded81c4aa9ef",
+  "title": "GCP Secret Manager ListSecrets Across Multiple Projects",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects a single identity listing Google Cloud Secret Manager secrets across many distinct projects in a short window.\nListSecrets does not return secret values, but sweeping many projects is a common reconnaissance step before targeted\nAccessSecretVersion calls. Legitimate workloads typically list secrets within one project or a small set of projects;\ncross-project bursts from one user and source IP are uncommon outside security tooling or compromise.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1526"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348756"
+}

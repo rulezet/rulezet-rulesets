@@ -1,0 +1,26 @@
+{
+  "uuid": "cc7e0a61-1d36-49a4-9536-494176ef4ac7",
+  "title": "AWS SageMaker Notebook Lifecycle Configuration With Suspicious Script Content",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an Amazon SageMaker notebook lifecycle configuration whose OnStart or OnCreate script, after base64 decoding,\ncontains patterns associated with malicious activity such as reverse shells, EC2 instance metadata (IMDS) credential\naccess, or download-and-execute commands. A lifecycle configuration runs as root on the notebook instance, so a script\nwith these patterns is a strong indicator of an attempt to backdoor the notebook, steal the execution role's\ncredentials, or establish persistent code execution. This rule decodes the script in the request and matches high-signal\nindicators; it is a higher-fidelity companion to the rule that alerts on any lifecycle configuration change.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1546"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348814"
+}

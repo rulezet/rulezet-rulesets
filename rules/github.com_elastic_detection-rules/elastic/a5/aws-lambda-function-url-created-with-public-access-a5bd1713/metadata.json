@@ -1,0 +1,23 @@
+{
+  "uuid": "a5bd1713-e26e-4a5c-8a52-90ff1f2cd5a4",
+  "title": "AWS Lambda Function URL Created with Public Access",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation or update of an AWS Lambda function URL configured with an authentication type of NONE, which\nexposes the function to unauthenticated invocation directly from the public internet. Adversaries can use a public\nfunction URL to establish a durable, internet-reachable entry point for command and control, data egress, or on-demand\nexecution of attacker-controlled code, bypassing the need for valid AWS credentials to invoke the function. Function\nURLs with public access should be rare and deliberate, so this configuration warrants review.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1578",
+    "T1578.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348834"
+}

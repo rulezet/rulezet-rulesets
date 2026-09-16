@@ -1,0 +1,24 @@
+{
+  "uuid": "c5e74584-b8e3-4c07-a03f-a6da14403590",
+  "title": "Host Detected with Suspicious Windows Process(es)",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job combination has identified a host with one or more suspicious Windows processes that exhibit\nunusually high malicious probability scores.These process(es) have been classified as malicious in several ways. The\nprocess(es) were predicted to be malicious by the ProblemChild supervised ML model. If the anomaly contains a cluster of\nsuspicious processes, each process has the same host name, and the aggregate score of the event cluster was calculated\nto be unusually high by an unsupervised ML model. Such a cluster often contains suspicious or malicious activity,\npossibly involving LOLbins, that may be resistant to detection using conventional search rules.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348659"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "a1963667-febd-4e85-bb00-75cd47d46658",
+  "title": "AWS IAM Permissions Boundary Modified or Removed",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the modification or removal of an IAM permissions boundary on an IAM user or role. A permissions boundary\ncaps the maximum permissions an identity can have, regardless of its attached identity policies. An adversary who can\ndelete a boundary (\"DeleteUserPermissionsBoundary\", \"DeleteRolePermissionsBoundary\") or replace it with a more\npermissive one (\"PutUserPermissionsBoundary\", \"PutRolePermissionsBoundary\") can lift that cap and unlock permissions the\nidentity's policies already grant, enabling privilege escalation. Boundary changes are infrequent and usually performed\nby a small set of administrators or infrastructure-as-code pipelines, so changes by unexpected principals warrant\nreview.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348858"
+}

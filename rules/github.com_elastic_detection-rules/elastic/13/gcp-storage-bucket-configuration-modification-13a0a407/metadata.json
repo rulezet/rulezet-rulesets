@@ -1,0 +1,22 @@
+{
+  "uuid": "13a0a407-b4e7-4133-80f0-ee023021d359",
+  "title": "GCP Storage Bucket Configuration Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when the configuration is modified for a storage bucket in Google Cloud Platform (GCP). An adversary may\nmodify the configuration of a storage bucket in order to weaken the security controls of their target's environment.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1578",
+    "T1578.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348740"
+}

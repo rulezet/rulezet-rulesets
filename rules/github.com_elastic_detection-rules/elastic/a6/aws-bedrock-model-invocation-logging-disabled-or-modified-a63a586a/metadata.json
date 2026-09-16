@@ -1,0 +1,22 @@
+{
+  "uuid": "a63a586a-40df-4fda-85be-a89692be45c9",
+  "title": "AWS Bedrock Model Invocation Logging Disabled or Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an AWS Bedrock model invocation logging configuration is deleted or overwritten via the\nDeleteModelInvocationLoggingConfiguration or PutModelInvocationLoggingConfiguration API calls. Model invocation logging\nis the source that feeds the logs-aws_bedrock.invocation-* dataset relied upon by all data-plane Bedrock detections. An\nadversary who has gained access to a Bedrock environment can blind defenders by deleting this configuration, or by using\nthe Put API to redirect logs to an attacker-controlled or non-monitored S3 bucket or CloudWatch log group. Because this\nsingle control-plane action can neutralize the entire data-plane detection stack, it is a high-value evasion technique\nthat should be validated against expected administrative change activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348893"
+}

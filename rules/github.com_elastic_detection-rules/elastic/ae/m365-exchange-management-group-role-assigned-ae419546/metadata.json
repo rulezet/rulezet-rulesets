@@ -1,0 +1,24 @@
+{
+  "uuid": "ae419546-7a2b-485b-96ce-408a31043449",
+  "title": "M365 Exchange Management Group Role Assigned",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a new role is assigned to a management group in Microsoft 365. An adversary may attempt to add a role in\norder to maintain persistence in an environment.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348723"
+}

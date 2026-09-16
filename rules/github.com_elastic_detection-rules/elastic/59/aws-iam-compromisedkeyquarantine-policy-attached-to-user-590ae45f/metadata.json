@@ -1,0 +1,23 @@
+{
+  "uuid": "590ae45f-6bc9-4139-93f7-8095750a0b88",
+  "title": "AWS IAM CompromisedKeyQuarantine Policy Attached to User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule looks for use of the IAM `AttachUserPolicy` API operation to attach the `CompromisedKeyQuarantine` or `CompromisedKeyQuarantineV2` AWS managed policies to an existing IAM user.\nThis policy denies access to certain actions and is applied by the AWS team in the event that an IAM user's credentials have been compromised or exposed publicly.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1552"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348870"
+}

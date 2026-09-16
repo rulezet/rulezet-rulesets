@@ -1,0 +1,26 @@
+{
+  "uuid": "0ca538fb-8dea-4b7d-a72c-1036a49d0416",
+  "title": "Several Failed Protected Branch Force Pushes by User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects a high number of failed force push attempts to protected branches by a single user within a short\ntime frame. Adversaries may attempt multiple force pushes to overwrite commit history on protected branches,\npotentially leading to data loss or disruption of development workflows.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1020",
+    "T1485",
+    "T1565",
+    "T1565.001",
+    "T1567",
+    "T1567.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348468"
+}

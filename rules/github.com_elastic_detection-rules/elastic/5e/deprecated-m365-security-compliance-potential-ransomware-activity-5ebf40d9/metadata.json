@@ -1,0 +1,24 @@
+{
+  "uuid": "5ebf40d9-ac98-48c4-9adc-a79135aba840",
+  "title": "Deprecated - M365 Security Compliance Potential Ransomware Activity",
+  "format": "elastic",
+  "author": "Elastic, Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when Microsoft Cloud App Security flags potential ransomware activity in Microsoft 365. This rule detects\nevents where the Security Compliance Center reports a \"Ransomware activity\" or \"Potential ransomware activity\" alert,\nwhich may indicate file encryption, mass file modifications, or uploads of ransomware-infected files to cloud services\nsuch as SharePoint or OneDrive.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1486",
+    "T1565",
+    "T1565.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348684"
+}

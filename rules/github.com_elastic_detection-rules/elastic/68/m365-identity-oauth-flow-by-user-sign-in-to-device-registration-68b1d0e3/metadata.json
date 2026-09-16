@@ -1,0 +1,25 @@
+{
+  "uuid": "68b1d0e3-7f3e-49c0-85dd-32311e6867e1",
+  "title": "M365 Identity OAuth Flow by User Sign-in to Device Registration",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies attempts to register a new device in Microsoft Entra ID after OAuth authentication with authorization code\ngrant. Adversaries may use OAuth phishing techniques to obtain an OAuth authorization code, which can then be exchanged\nfor access and refresh tokens. This rule detects a sequence of events where a user principal authenticates via OAuth,\nfollowed by a device registration event, indicating potential misuse of the OAuth flow to establish persistence or\naccess resources.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.005",
+    "T1528",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348688"
+}

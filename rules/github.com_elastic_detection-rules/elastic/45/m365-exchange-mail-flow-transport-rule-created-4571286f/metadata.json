@@ -1,0 +1,23 @@
+{
+  "uuid": "4571286f-1c1d-4d9b-8143-e96cfed9b461",
+  "title": "M365 Exchange Mail Flow Transport Rule Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a transport rule creation in Microsoft 365. As a best practice, Exchange Online mail transport rules should\nnot be set to forward email to domains outside of your organization. An adversary may create transport rules to\nexfiltrate data.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1114",
+    "T1114.003",
+    "T1537"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348718"
+}

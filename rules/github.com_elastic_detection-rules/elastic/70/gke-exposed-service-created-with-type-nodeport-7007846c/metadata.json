@@ -1,0 +1,21 @@
+{
+  "uuid": "7007846c-315a-479d-a24a-033fb7fb3b1a",
+  "title": "GKE Exposed Service Created With Type NodePort",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects creation or modification of a GKE Service with type NodePort. NodePort exposes a static port on every worker\nnode that hosts matching pods, which widens the cluster's external attack surface and can bypass load-balancer and\nfirewall controls. Attackers may create NodePort Services to intercept traffic or establish a direct path into the\ncluster.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1133"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348743"
+}

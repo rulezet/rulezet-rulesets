@@ -1,0 +1,121 @@
+[metadata]
+creation_date = "2023/10/12"
+integration = ["lmd", "endpoint"]
+maturity = "production"
+updated_date = "2026/07/27"
+min_stack_version = "9.4.0"
+min_stack_comments = "Use EA (Entity Analytics) fields"
+
+[rule]
+anomaly_threshold = 70
+author = ["Elastic"]
+description = """
+A machine learning job has detected an RDP session started at an usual time or weekday. An RDP session at an unusual
+time could be followed by other suspicious activities, so catching this is a good first step in detecting a larger
+attack.
+"""
+from = "now-12h"
+interval = "15m"
+license = "Elastic License v2"
+machine_learning_job_id = "lmd_unusual_time_weekday_rdp_session_start_ea"
+name = "Unusual Time or Day for an RDP Session"
+references = [
+    "https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html",
+    "https://docs.elastic.co/en/integrations/lmd",
+    "https://www.elastic.co/blog/detecting-lateral-movement-activity-a-new-kibana-integration",
+    "https://www.elastic.co/blog/remote-desktop-protocol-connections-elastic-security",
+]
+risk_score = 21
+rule_id = "3f4e2dba-828a-452a-af35-fe29c5e78969"
+setup = """## Setup
+
+This rule requires the `host.ip` field to be populated.
+For **Elastic Defend** events on versions **8.18 and above**, this field is **disabled by default**.
+
+If you are using **Elastic Defend**, ensure host IP collection is enabled by following the configuration steps in the
+[helper guide](https://www.elastic.co/docs/solutions/security/configure-elastic-defend/configure-data-volume-for-elastic-endpoint#host-fields).
+
+The rule requires the Lateral Movement Detection integration assets to be installed, as well as file and Windows RDP process events collected by the Elastic Defend integration.
+
+### Lateral Movement Detection Setup
+The Lateral Movement Detection integration detects lateral movement activity by identifying abnormalities in file and Windows RDP events. Anomalies are detected using Elastic's Anomaly Detection feature.
+
+#### Prerequisite Requirements:
+- Fleet is required for Lateral Movement Detection.
+- To configure Fleet Server refer to the [documentation](https://www.elastic.co/guide/en/fleet/current/fleet-server.html).
+- Windows RDP process events collected by the [Elastic Defend](https://docs.elastic.co/en/integrations/endpoint) integration.
+- To install Elastic Defend, refer to the [documentation](https://www.elastic.co/guide/en/security/current/install-endpoint.html).
+
+#### The following steps should be executed to install assets associated with the Lateral Movement Detection integration:
+- Go to the Kibana homepage. Under Management, click Integrations.
+- In the query bar, search for Lateral Movement Detection and select the integration to see more details about it.
+- Follow the instructions under the **Installation** section.
+- For this rule to work, complete the instructions through **Add preconfigured anomaly detection jobs**.
+"""
+severity = "low"
+tags = [
+    "Data Source: Elastic Defend",
+    "Use Case: Lateral Movement Detection",
+    "Rule Type: ML",
+    "Rule Type: Machine Learning",
+    "Tactic: Lateral Movement",
+    "Resources: Investigation Guide",
+]
+type = "machine_learning"
+note = """## Triage and analysis
+
+> **Disclaimer**:
+> This investigation guide was created using generative AI technology and has been reviewed to improve its accuracy and relevance. While every effort has been made to ensure its quality, we recommend validating the content and adapting it to suit your specific environment and operational needs.
+
+### Investigating Unusual Time or Day for an RDP Session
+
+Remote Desktop Protocol (RDP) enables remote access to systems, crucial for IT management but also a target for adversaries seeking unauthorized access. Attackers exploit RDP by initiating sessions at odd hours to avoid detection. The detection rule leverages machine learning to identify atypical RDP session timings, flagging potential lateral movement attempts for further investigation.
+
+### Possible investigation steps
+
+- Review the timestamp of the RDP session to determine the specific unusual time or day it was initiated, and correlate it with known business hours or scheduled maintenance windows.
+- Identify the source and destination IP addresses involved in the RDP session to determine if they are internal or external, and check for any known associations with previous security incidents.
+- Examine the user account used to initiate the RDP session, verifying if it is a legitimate account and if the login aligns with the user's typical behavior or role within the organization.
+- Check for any additional suspicious activities or alerts involving the same user account or IP addresses around the time of the unusual RDP session, such as failed login attempts or access to sensitive files.
+- Investigate any recent changes or anomalies in the network or system configurations that could have facilitated the unusual RDP session, such as newly opened ports or modified firewall rules.
+- Consult logs from other security tools or systems, such as SIEM or endpoint detection and response (EDR) solutions, to gather more context on the RDP session and any related activities.
+
+### False positive analysis
+
+- Regular maintenance activities by IT staff during off-hours can trigger false positives. Identify and document these activities to create exceptions in the detection rule.
+- Scheduled automated tasks or scripts that initiate RDP sessions at unusual times may be misclassified. Review and whitelist these tasks to prevent unnecessary alerts.
+- Time zone differences for remote employees accessing systems outside of standard business hours can lead to false positives. Adjust detection parameters to account for these time zone variations.
+- Third-party vendors or contractors who require access at non-standard times should be documented and their access patterns reviewed to establish exceptions.
+- Emergency access situations where IT staff need to respond to critical incidents outside normal hours should be logged and considered when analyzing alerts.
+
+### Response and remediation
+
+- Immediately isolate the affected system from the network to prevent further unauthorized access or lateral movement.
+- Terminate the suspicious RDP session to halt any ongoing unauthorized activities.
+- Conduct a thorough review of the affected system's logs and processes to identify any malicious activities or changes made during the session.
+- Reset credentials for any accounts accessed during the unusual RDP session to prevent further unauthorized use.
+- Apply security patches and updates to the affected system to address any vulnerabilities that may have been exploited.
+- Escalate the incident to the security operations center (SOC) or incident response team for further analysis and to determine if additional systems are compromised.
+- Implement enhanced monitoring on the affected system and related network segments to detect any further suspicious activities or attempts at unauthorized access."""
+[[rule.threat]]
+framework = "MITRE ATT&CK"
+
+[[rule.threat.technique]]
+id = "T1021"
+name = "Remote Services"
+reference = "https://attack.mitre.org/techniques/T1021/"
+
+[[rule.threat.technique.subtechnique]]
+id = "T1021.001"
+name = "Remote Desktop Protocol"
+reference = "https://attack.mitre.org/techniques/T1021/001/"
+
+[[rule.threat.technique]]
+id = "T1210"
+name = "Exploitation of Remote Services"
+reference = "https://attack.mitre.org/techniques/T1210/"
+
+[rule.threat.tactic]
+id = "TA0008"
+name = "Lateral Movement"
+reference = "https://attack.mitre.org/tactics/TA0008/"

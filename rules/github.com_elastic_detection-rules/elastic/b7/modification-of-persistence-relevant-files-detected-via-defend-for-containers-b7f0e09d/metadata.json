@@ -1,0 +1,36 @@
+{
+  "uuid": "b7f0e09d-9100-42db-a3ae-ee43a680aa14",
+  "title": "Modification of Persistence Relevant Files Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects attempts from within a Linux container to create or modify files commonly used for\npersistence on native Linux systems, including cron jobs, systemd units, sudoers files, and shell\nprofile configurations. While many of these mechanisms do not provide reliable persistence in typical\ncontainerized workloads, such modifications are unusual and may indicate persistence attempts, privilege\nabuse, or preparation for container escape, especially when performed outside normal image build or\npackage management processes.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1053",
+    "T1053.002",
+    "T1053.003",
+    "T1053.006",
+    "T1543",
+    "T1543.002",
+    "T1546",
+    "T1546.004",
+    "T1548",
+    "T1548.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348613"
+}

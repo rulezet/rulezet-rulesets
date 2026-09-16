@@ -1,0 +1,22 @@
+{
+  "uuid": "79447b36-1090-40a2-b68f-ef289bf98dd4",
+  "title": "GKE Pod Exec with Curl or Wget to HTTPS",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful GKE pod exec sessions where the executed command implies curl or wget fetching an HTTPS URL.\nAttackers with pods/exec often run one-liners to stage tooling, pull scripts or binaries, or exfiltrate data over\nHTTPS—activity that should be rare compared to shells, debuggers, or expected health checks. Common cluster health,\nlocalhost, and OIDC/JWKS endpoint patterns are excluded to reduce benign automation noise. GKE records the command in\ngcp.audit.labels.command.gke.io/command when an explicit command is passed to exec.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1609"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348765"
+}

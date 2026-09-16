@@ -1,0 +1,22 @@
+{
+  "uuid": "c691bd62-4490-4f61-9cd5-25d61198c360",
+  "title": "Ransomware - Detected - Elastic Defend",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Generates a detection alert each time an Elastic Defend alert for ransomware are received. Enabling this rule allows you\nto immediately begin investigating your Endpoint ransomware alerts. This rule identifies Elastic Defend ransomware\ndetections only, and does not include prevention alerts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348652"
+}

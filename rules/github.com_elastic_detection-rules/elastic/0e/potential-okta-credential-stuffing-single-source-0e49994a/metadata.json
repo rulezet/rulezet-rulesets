@@ -1,0 +1,22 @@
+{
+  "uuid": "0e49994a-1aa9-43ca-b828-d683e392ade2",
+  "title": "Potential Okta Credential Stuffing (Single Source)",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects potential credential stuffing attacks where a single source IP attempts authentication against many Okta\nuser accounts with minimal attempts per user, indicating the use of breached credential lists.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1110",
+    "T1110.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348528"
+}

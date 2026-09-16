@@ -1,0 +1,23 @@
+{
+  "uuid": "16761292-fcc4-40ee-8add-585bd1a8aea7",
+  "title": "GCP IAM Role Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an Identity and Access Management (IAM) role deletion in Google Cloud Platform (GCP). A role contains a set\nof permissions that allows you to perform specific actions on Google Cloud resources. An adversary may delete an IAM\nrole to inhibit access to accounts utilized by legitimate users.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1531"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348793"
+}

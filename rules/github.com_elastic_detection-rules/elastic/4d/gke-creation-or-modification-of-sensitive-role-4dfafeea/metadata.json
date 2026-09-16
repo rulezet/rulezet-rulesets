@@ -1,0 +1,22 @@
+{
+  "uuid": "4dfafeea-1aaf-407b-98e5-04c78ba89748",
+  "title": "GKE Creation or Modification of Sensitive Role",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects creation or modification of GKE Roles or ClusterRoles that grant high-risk permissions, such as wildcard\naccess or RBAC escalation verbs (bind, escalate, impersonate), which may enable privilege escalation or unauthorized\naccess within the cluster.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348748"
+}

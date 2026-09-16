@@ -1,0 +1,24 @@
+{
+  "uuid": "6b831110-79c9-44d2-8219-e1d8331fb2eb",
+  "title": "Unusual AWS S3 Object Encryption with SSE-C",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when AWS S3 objects stored in a bucket are encrypted using Server-Side Encryption with Customer-Provided Keys (SSE-C). Adversaries with compromised AWS credentials can encrypt objects in an S3 bucket using their own encryption keys, rendering the objects unreadable or recoverable without the key. This can be used as a form of ransomware to extort the bucket owner for the decryption key. This is a New Terms rule that flags when this behavior is observed for the first time user and target bucket name.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348881"
+}

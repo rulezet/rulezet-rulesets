@@ -1,0 +1,22 @@
+{
+  "uuid": "8e22991b-e90f-4bfd-aaf6-0b2a3fb0b9d7",
+  "title": "AWS Rare Source AS Organization Activity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Surfaces an AWS identity whose successful API traffic is dominated by a small set of large cloud-provider source AS\norganization labels, yet also shows a very small share of traffic from other AS organization names—including at least one\nsensitive control-plane, credential, storage, or model-invocation action on that uncommon network path with recent\nactivity from the uncommon path. The intent is to highlight disproportionate “baseline” cloud egress versus sparse use\nfrom rarer networks on the same principal, a shape that can appear when automation or CI credentials are reused or\npivoted outside their usual hosted-cloud footprint.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348812"
+}

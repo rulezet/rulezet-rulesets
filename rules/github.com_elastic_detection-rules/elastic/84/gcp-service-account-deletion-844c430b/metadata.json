@@ -1,0 +1,21 @@
+{
+  "uuid": "844c430b-d788-4ff9-9e96-b22e1e670abb",
+  "title": "GCP Service Account Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a service account is deleted in Google Cloud Platform (GCP). A service account is a special type of\naccount used by an application or a virtual machine (VM) instance, not a person. Applications use service accounts to\nmake authorized API calls, authorized as either the service account itself, or as G Suite or Cloud Identity users\nthrough domain-wide delegation. An adversary may delete a service account in order to disrupt their target's business\noperations.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1531"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348770"
+}

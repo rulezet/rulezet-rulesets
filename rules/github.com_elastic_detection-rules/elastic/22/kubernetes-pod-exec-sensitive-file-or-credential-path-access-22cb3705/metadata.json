@@ -1,0 +1,24 @@
+{
+  "uuid": "22cb3705-6816-4eb5-b754-1be815e77e89",
+  "title": "Kubernetes Pod Exec Sensitive File or Credential Path Access",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects Kubernetes pod exec sessions whose decoded command line references high-value host or in-cluster paths and\nmaterial types: mounted service account or platform tokens, kubelet and control-plane configuration areas, host\nidentity stores, root dot-directories for cloud and kubeconfig material, common private-key and keystore extensions,\nprocess environment dumps, and configuration filenames suggestive of embedded secrets. The intent is to catch\ninteractive or scripted access that often precedes lateral movement, privilege escalation, or credential theft from\nthe node or workload boundary. A narrow exclusion ignores benign reads of resolv.conf. The query also labels an\naccess_type bucket to speed triage without altering the detection predicates you validated.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.001",
+    "T1552.007",
+    "T1609"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348478"
+}

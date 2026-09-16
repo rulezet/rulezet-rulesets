@@ -1,0 +1,25 @@
+{
+  "uuid": "ea16283c-ab85-4142-8af7-4711853019d7",
+  "title": "AWS S3 Bucket Configuration Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the deletion of critical Amazon S3 bucket configurations such as bucket policies, lifecycle configurations\nor encryption settings. These actions are typically administrative but may also represent\nadversarial attempts to remove security controls, disable data retention mechanisms, or conceal evidence of malicious\nactivity. Adversaries who gain access to AWS credentials may delete logging, lifecycle, or policy configurations to\ndisrupt forensic visibility and inhibit recovery. For example, deleting a bucket policy can open a bucket to public\naccess or remove protective access restrictions, while deleting lifecycle rules can prevent object archival or automatic\nbackups. Such actions often precede data exfiltration or destructive operations and should be reviewed in context with\nrelated S3 or IAM events.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1490",
+    "T1562",
+    "T1562.001",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348849"
+}

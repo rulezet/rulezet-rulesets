@@ -1,0 +1,23 @@
+{
+  "uuid": "6ce6c6e2-03bc-4a7a-a95a-6573679fe81c",
+  "title": "Google Workspace Drive Encryption Key(s) Accessed from Anonymous User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an anonymous user views, copies, or downloads a private key or credential file from Google Drive via an\nanyone-with-the-link share. Adversaries who obtain or create open Drive links can harvest encryption keys and secrets\nstored in user drives, then use those materials to decrypt data, authenticate to services, or expand access beyond the\ninitial compromise.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1530",
+    "T1552",
+    "T1552.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348633"
+}

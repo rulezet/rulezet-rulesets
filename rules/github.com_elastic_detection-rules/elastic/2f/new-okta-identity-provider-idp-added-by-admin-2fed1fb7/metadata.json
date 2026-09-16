@@ -1,0 +1,24 @@
+{
+  "uuid": "2fed1fb7-4d32-4a14-b67b-dc6f3f693297",
+  "title": "New Okta Identity Provider (IdP) Added by Admin",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the creation of a new Identity Provider (IdP) by a Super Administrator or Organization Administrator within\nOkta.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1484",
+    "T1484.002",
+    "T1556",
+    "T1556.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348540"
+}

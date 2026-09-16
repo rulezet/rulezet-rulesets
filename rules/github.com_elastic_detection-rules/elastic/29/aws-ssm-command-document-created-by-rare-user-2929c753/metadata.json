@@ -1,0 +1,21 @@
+{
+  "uuid": "2929c753-eb3c-4f71-b514-034c4fee7f31",
+  "title": "AWS SSM Command Document Created by Rare User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when an AWS Systems Manager (SSM) command document is created by a user or role who does not typically perform this action. Adversaries may create SSM command documents to execute commands on managed instances, potentially leading to unauthorized access, command and control, data exfiltration and more.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1651"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348827"
+}

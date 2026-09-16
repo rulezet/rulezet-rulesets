@@ -1,0 +1,25 @@
+{
+  "uuid": "a9773c4a-b047-480e-84bb-68119fa1de6d",
+  "title": "AWS IAM Principal Enumeration via UpdateAssumeRolePolicy",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects repeated failed attempts to update an IAM role’s trust policy in an AWS account, consistent with role and user\nenumeration techniques. In this technique, an attacker who controls credentials in the current account repeatedly calls\nUpdateAssumeRolePolicy on a single role, cycling through guessed cross-account role or user ARNs as the principal. When\nthose principals are invalid, IAM returns MalformedPolicyDocumentException, producing a burst of failed\nUpdateAssumeRolePolicy events. This rule alerts on that brute-force pattern originating from this account, which may\nindicate that the account is being used as attack infrastructure or that offensive tooling (such as Pacu) is running\nhere. Note: this rule does not detect other accounts enumerating roles, because those API calls are logged in the\ncaller’s account, not the target account.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1069",
+    "T1069.003",
+    "T1087",
+    "T1087.004",
+    "T1110"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348854"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "36497095-a898-4c4c-acae-1bbf78b2c86b",
+  "title": "AWS GuardDuty Member Account Manipulation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects attempts to disassociate or manipulate Amazon GuardDuty member accounts within an AWS organization. In\nmulti-account GuardDuty deployments, a delegated administrator account aggregates findings from member accounts.\nAdversaries may attempt to disassociate member accounts, delete member relationships, stop monitoring members, or delete\npending invitations to break this centralized visibility. These actions can be precursors to or alternatives for\ndeleting GuardDuty detectors entirely, allowing attackers to operate undetected in member accounts while the\nadministrator account loses visibility. This rule identifies successful API calls that manipulate GuardDuty member\nrelationships, which are rare in normal operations and warrant immediate investigation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348892"
+}

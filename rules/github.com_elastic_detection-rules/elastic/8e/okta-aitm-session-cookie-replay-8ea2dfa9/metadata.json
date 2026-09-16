@@ -1,0 +1,23 @@
+{
+  "uuid": "8ea2dfa9-3b01-4273-8d80-2360cdf06a05",
+  "title": "Okta AiTM Session Cookie Replay",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects potential Adversary-in-the-Middle (AiTM) session cookie replay attacks against Okta. This rule identifies when\nan Okta session is used from multiple IP addresses or with suspicious non-browser user agents after initial\nauthentication. AiTM attacks capture session cookies via phishing proxies (e.g., Evilginx, Modlishka) and replay them\nfrom attacker infrastructure, bypassing MFA. The detection correlates session start events with subsequent policy\nevaluations or SSO attempts that occur from different IPs or programmatic user agents.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1539",
+    "T1550",
+    "T1550.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348552"
+}

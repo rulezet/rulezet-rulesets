@@ -1,0 +1,26 @@
+{
+  "uuid": "0573702f-0037-4e11-96c0-a5a0fcaa868a",
+  "title": "M365 Identity Device Code Grant with Unusual User and ASN",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a Microsoft 365 OAuth device code grant (\"Cmsi:Cmsi\") with application Microsoft Authentication Broker\n(\"29d9ed98-a469-4536-ade2-f981bc1d605e\") for Microsoft Graph from a source ASN not previously observed for that user in\na historical window. Phishing kits leveraging device code phishing complete the full login (password and MFA) at the\ngenuine Microsoft endpoint and harvest the resulting token by polling, so MFA does not stop them and the authorization\ncommonly originates from attacker-controlled residential proxy or hosting infrastructure rather than the user's normal\nnetwork.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1550",
+    "T1550.001",
+    "T1566",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348694"
+}

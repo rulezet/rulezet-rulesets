@@ -1,0 +1,25 @@
+{
+  "uuid": "2a811144-7e18-435d-a4fb-bda44a23a44b",
+  "title": "Tunneling and/or Port Forwarding Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the use of tunneling and/or port forwarding tools inside a container. This\ncould indicate a threat actor is using these tools to communicate with a C2 server, is attempting\nto exfiltrate data from the container, or is attempting to pivot within the container network.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1090",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348591"
+}

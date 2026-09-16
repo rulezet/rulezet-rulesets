@@ -1,0 +1,19 @@
+{
+  "uuid": "dc6914f7-d120-4522-a3b2-8e6e6d2e4098",
+  "title": "Forwarded Google Workspace Security Alert",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the occurrence of a security alert from the Google Workspace alerts center. Google Workspace's security alert\ncenter provides an overview of actionable alerts that may be affecting an organization's domain. An alert is a warning\nof a potential security issue that Google has detected.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348627"
+}

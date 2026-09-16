@@ -1,0 +1,22 @@
+{
+  "uuid": "ba0424c1-46a7-4724-a4d4-6cc2dd689d1c",
+  "title": "Google Workspace User Organizational Unit Changed",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Users in Google Workspace are typically assigned a specific organizational unit that grants them permissions to certain\nservices and roles that are inherited from this organizational unit. Adversaries may compromise a valid account and\nchange which organizational account the user belongs to which then could allow them to inherit permissions to\napplications and resources inaccessible prior to.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348615"
+}

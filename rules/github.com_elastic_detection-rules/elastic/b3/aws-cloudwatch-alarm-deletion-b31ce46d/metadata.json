@@ -1,0 +1,23 @@
+{
+  "uuid": "b31ce46d-4ec5-4c1d-9843-92e4a42865c3",
+  "title": "AWS CloudWatch Alarm Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the deletion of one or more Amazon CloudWatch alarms using the \"DeleteAlarms\" API. CloudWatch alarms are\ncritical for monitoring metrics and triggering alerts when thresholds are exceeded. An adversary may delete alarms to\nimpair visibility, silence alerts, and evade detection following malicious activity. This behavior may occur during\npost-exploitation or cleanup phases to remove traces of compromise or disable automated responses.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001",
+    "T1562.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348822"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "8720ec6a-95f0-4daa-8a8f-0a6135544f6a",
+  "title": "Spike in Group Lifecycle Change Events",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job has identified an unusual spike in Okta group lifecycle change events, indicating potential\nprivileged access activity. Adversaries may be altering group structures to escalate privileges, maintain persistence,\nor facilitate lateral movement within an organization’s identity management system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1078",
+    "T1098",
+    "T1098.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348438"
+}

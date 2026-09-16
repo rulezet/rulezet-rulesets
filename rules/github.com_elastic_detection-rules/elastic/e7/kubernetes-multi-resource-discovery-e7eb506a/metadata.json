@@ -1,0 +1,23 @@
+{
+  "uuid": "e7eb506a-09dc-48e3-8862-eeb2f78c15dc",
+  "title": "Kubernetes Multi-Resource Discovery",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Adversaries who land credentials in a cluster—or abuse an over-privileged token—often map the environment before\nexfiltration or privilege escalation. A practical first pass is to learn where workloads run, how the cluster is\npartitioned, and what RBAC exists at namespace vs cluster scope. Rapid `get`/`list` traffic across distinct\nAPI resource kinds that answer those questions (namespaces, workloads, roles, cluster-wide roles) is a common\nsetup and orientation pattern for both interactive attackers and automated recon scripts. It is less typical for\nsteady-state controllers, which usually touch a narrow set of resources repeatedly. This rule highlights that\ncross-resource burst from a single client fingerprint within a one-minute bucket so analysts can separate routine\nautomation from potential discovery and permission reconnaissance ahead of follow-on actions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348510"
+}

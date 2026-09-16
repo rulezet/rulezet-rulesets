@@ -1,0 +1,24 @@
+{
+  "uuid": "d2262c34-2518-4ae9-80c2-6bc30919b339",
+  "title": "M365 Exchange Inbox Phishing Evasion Rule Created",
+  "format": "elastic",
+  "author": "Elastic, Jamie Lee, Marco Pedrinazzi",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a user creates a new inbox rule in Microsoft 365 that deletes or moves emails containing suspicious\nkeywords. Adversaries who have compromised accounts often create inbox rules to hide alerts, security notifications, or\nother sensitive messages by automatically deleting them or moving them to obscure folders. Common destinations include\nDeleted Items, Junk Email, RSS Feeds, and RSS Subscriptions. This is a New Terms rule that triggers only when the user\nprincipal name and associated source IP address have not been observed performing this activity in the past 14 days.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1137",
+    "T1137.005",
+    "T1564",
+    "T1564.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348682"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "253ab93a-22cd-4edd-9f8a-61116e4ed4a4",
+  "title": "Dynamic Linker Modification Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation or modification of the dynamic linker preload shared object (ld.so.preload) inside a\ncontainer. The Linux dynamic linker is used to load libraries needed by a program at runtime. Adversaries may hijack the\ndynamic linker by modifying the /etc/ld.so.preload file to point to malicious libraries. This behavior can be used to\ngrant unauthorized access to system resources and has been used to evade detection of malicious processes in container\nenvironments.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1574",
+    "T1574.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348568"
+}

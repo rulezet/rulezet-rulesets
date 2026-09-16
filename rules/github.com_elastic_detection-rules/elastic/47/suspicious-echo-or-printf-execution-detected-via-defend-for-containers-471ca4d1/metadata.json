@@ -1,0 +1,42 @@
+{
+  "uuid": "471ca4d1-76e8-4a6d-bf50-8c2f5632189b",
+  "title": "Suspicious Echo or Printf Execution Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the execution of the echo/printf command to write data to potential persistence files, decode base64/32/16 and\nhex content or establish connections to a potential C2. The echo/printf commands are used to display a line of text or write data\nto a file. Threat actors may abuse the echo/printf commands to write data to files or file descriptors that are executed (by\nother processes or services) to establish persistence or escalate privileges.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1053",
+    "T1053.003",
+    "T1059",
+    "T1059.004",
+    "T1098",
+    "T1098.004",
+    "T1140",
+    "T1543",
+    "T1543.004",
+    "T1546",
+    "T1546.004",
+    "T1548",
+    "T1548.003",
+    "T1574",
+    "T1574.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348571"
+}

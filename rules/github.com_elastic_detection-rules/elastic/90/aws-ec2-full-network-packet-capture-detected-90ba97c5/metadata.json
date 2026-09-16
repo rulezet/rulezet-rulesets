@@ -1,0 +1,26 @@
+{
+  "uuid": "90ba97c5-9afd-436f-b63f-09a56318f166",
+  "title": "AWS EC2 Full Network Packet Capture Detected",
+  "format": "elastic",
+  "author": "Elastic, Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful creation of an Amazon EC2 Traffic Mirroring session. A session copies full packets from a source\nElastic Network Interface (ENI) to a mirror target (e.g., an ENI or NLB) using a mirror filter (ingress/egress rules).\nWhile used for diagnostics and NDR/IDS tooling, adversaries can abuse sessions to covertly capture and exfiltrate\nsensitive, potentially unencrypted, traffic from instances or subnets.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1020",
+    "T1040",
+    "T1074",
+    "T1537"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348808"
+}

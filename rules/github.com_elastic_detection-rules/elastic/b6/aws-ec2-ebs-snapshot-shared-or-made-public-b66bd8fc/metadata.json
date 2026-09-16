@@ -1,0 +1,23 @@
+{
+  "uuid": "b66bd8fc-f414-485e-a753-ef88c2827caf",
+  "title": "AWS EC2 EBS Snapshot Shared or Made Public",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an Amazon Elastic Block Store (EBS) snapshot is shared with another AWS account or made public. EBS\nsnapshots contain copies of data volumes that may include sensitive or regulated information. Adversaries may exploit\nModifySnapshotAttribute to share snapshots with external accounts or the public, allowing them to copy and access data\nin an environment they control. This activity often precedes data exfiltration or persistence operations, where the\nattacker transfers stolen data out of the victim account or prepares a staging area for further exploitation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1537"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348825"
+}

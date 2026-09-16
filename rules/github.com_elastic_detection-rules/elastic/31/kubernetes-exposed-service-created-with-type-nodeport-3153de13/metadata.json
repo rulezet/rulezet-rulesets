@@ -1,0 +1,21 @@
+{
+  "uuid": "3153de13-0d78-4435-8e43-c417554b62fa",
+  "title": "Kubernetes Exposed Service Created With Type NodePort",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects an attempt to create or modify a service as type NodePort. The NodePort service allows a user to\nexternally expose a set of labeled pods to the internet. This creates an open port on every worker node in the cluster\nthat has a pod for that service. When external traffic is received on that open port, it directs it to the specific pod\nthrough the service representing it. A malicious user can configure a service as type Nodeport in order to intercept\ntraffic from other pods or nodes, bypassing firewalls and other network security measures configured for load balancers\nwithin a cluster. This creates a direct method of communication between the cluster and the outside world, which could\nbe used for more malicious behavior and certainly widens the attack surface of your cluster.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1133"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348496"
+}

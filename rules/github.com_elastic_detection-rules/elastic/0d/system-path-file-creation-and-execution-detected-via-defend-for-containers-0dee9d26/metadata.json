@@ -1,0 +1,30 @@
+{
+  "uuid": "0dee9d26-c794-42e1-82ea-bc4ad58b3ba1",
+  "title": "System Path File Creation and Execution Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when a process creates a file inside of a system binary location, inside of a running\ncontainer. The system binary locations are /etc, /root, /bin, /usr/bin, /usr/local/bin, and /entrypoint. Adversaries\nmay use these locations to create files that can be used to execute commands on the underlying host, or to evade\ndetection by security controls.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.005",
+    "T1059",
+    "T1059.004",
+    "T1071",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348600"
+}

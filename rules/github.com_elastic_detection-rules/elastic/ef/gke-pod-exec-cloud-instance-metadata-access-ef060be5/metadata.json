@@ -1,0 +1,23 @@
+{
+  "uuid": "ef060be5-4dd3-4d1a-811e-7cd7803773f0",
+  "title": "GKE Pod Exec Cloud Instance Metadata Access",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful GKE pod exec sessions whose command references Google Cloud instance metadata endpoints, including\nmetadata.google.internal, computeMetadata/v1, or the link-local metadata IP 169.254.169.254. Workloads that reach the\nGKE metadata service from an exec session are often attempting to harvest short-lived credentials or instance attributes\nfrom the node or workload identity boundary. That behavior is high risk because it can expose cloud credentials to code\nrunning inside a container. GKE records the command in gcp.audit.labels.command.gke.io/command when an explicit command\nis passed to exec.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.005",
+    "T1609"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348741"
+}

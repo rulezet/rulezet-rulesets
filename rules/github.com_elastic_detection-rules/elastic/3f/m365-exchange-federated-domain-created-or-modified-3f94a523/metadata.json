@@ -1,0 +1,22 @@
+{
+  "uuid": "3f94a523-0fbc-49c2-9208-e436e7e91cb5",
+  "title": "M365 Exchange Federated Domain Created or Modified",
+  "format": "elastic",
+  "author": "Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a new or modified federation domain, which can be used to create a trust between O365 and an external\nidentity provider.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1484",
+    "T1484.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348683"
+}

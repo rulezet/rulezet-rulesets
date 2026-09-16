@@ -1,0 +1,22 @@
+{
+  "uuid": "12a47da9-3b58-464a-ab18-2e8021e99cbe",
+  "title": "Unauthorized Access to an Okta Application",
+  "format": "elastic",
+  "author": "Elastic, Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies unauthorized access attempts to Okta applications.",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348557"
+}

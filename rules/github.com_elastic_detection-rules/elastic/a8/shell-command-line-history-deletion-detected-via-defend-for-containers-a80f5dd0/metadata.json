@@ -1,0 +1,24 @@
+{
+  "uuid": "a80f5dd0-c45c-40e5-b1a4-98e46cee2278",
+  "title": "Shell Command-Line History Deletion Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the deletion of shell command-line history files inside a container. The shell command-line history\nfiles are used to store the command-line history for the shell. Adversaries may delete these files to cover their tracks\nor evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1070.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348569"
+}

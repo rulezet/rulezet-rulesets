@@ -1,0 +1,24 @@
+{
+  "uuid": "2684cf49-1218-4b22-b57d-57d5bc1406e7",
+  "title": "GKE Pod Exec Sensitive File or Credential Path Access",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful GKE pod exec sessions where the executed command references high-value host or in-cluster paths:\nmounted service account or platform tokens, kubelet and control-plane configuration areas, host identity stores, root\nor home credential directories, common private-key and keystore extensions, process environment dumps, and configuration\nfilenames suggestive of embedded secrets. Attackers with pods/exec often use these one-liners to steal credentials\nbefore lateral movement or privilege escalation. A narrow exclusion ignores benign resolv.conf reads. GKE records the\ncommand in gcp.audit.labels.command.gke.io/command when an explicit command is passed to exec.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.001",
+    "T1552.007",
+    "T1609"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348730"
+}

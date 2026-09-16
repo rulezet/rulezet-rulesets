@@ -1,0 +1,33 @@
+{
+  "uuid": "576ada2c-b769-4d5e-82d3-7a5487cc1694",
+  "title": "Encoded Payload Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the execution of potential defense evasion techniques via encoded payloads\ninside a container. Attackers may use base64 encoding/decoding to obfuscate data, such as command and\ncontrol traffic or payloads, to evade detection by host- or network-based security controls.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059",
+    "T1059.004",
+    "T1059.006",
+    "T1140",
+    "T1204",
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348592"
+}

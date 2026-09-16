@@ -1,0 +1,26 @@
+{
+  "uuid": "4c17ea83-6592-4194-8c9a-b76cd78a52ed",
+  "title": "Kubernetes Secret or ConfigMap Access via Azure Arc Proxy",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when secrets or configmaps are accessed, created, modified, or deleted in a Kubernetes cluster by the Azure Arc\nAAD proxy service account. When operations are routed through the Azure Arc Cluster Connect proxy, the Kubernetes audit\nlog records the acting user as system:serviceaccount:azure-arc:azure-arc-kube-aad-proxy-sa with the actual caller\nidentity in the impersonatedUser field. This pattern indicates that someone is accessing the cluster through the Azure\nARM API rather than directly via kubectl against the API server. While legitimate for Arc-managed workflows, adversaries\nwith stolen service principal credentials can abuse Arc Cluster Connect to read, exfiltrate, or modify secrets and\nconfigmaps while appearing as the Arc proxy service account in K8s audit logs. This rule uses a 5-day new-terms history\nwindow keyed on the impersonated identity and alerts the first time that Azure AD principal performs this activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1213",
+    "T1530",
+    "T1552",
+    "T1552.007",
+    "T1565",
+    "T1565.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348487"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "46a74ea1-ea74-4975-9349-d2fb0450a8e7",
+  "title": "AWS S3 Bucket Expiration Lifecycle Configuration Added",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the addition of an expiration lifecycle configuration to an Amazon S3 bucket. S3 lifecycle rules can\nautomatically delete or transition objects after a defined period. Adversaries can abuse them by configuring\nauto-deletion of logs, forensic evidence, or sensitive objects to cover their tracks. This rule detects the use of the\nPutBucketLifecycle or PutBucketLifecycleConfiguration APIs with Expiration parameters, which may indicate an attempt to\nautomate the removal of data to hinder investigation or maintain operational secrecy after malicious activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1485",
+    "T1485.001",
+    "T1562",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348816"
+}

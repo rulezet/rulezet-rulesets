@@ -1,0 +1,23 @@
+{
+  "uuid": "1cebf873-9622-41ef-86d9-363d93b92657",
+  "title": "GKE Anonymous Endpoint Permission Enumeration",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects bursts of GKE API requests from an anonymous identity that probe many distinct actions and resources with\nmostly failed outcomes. This pattern is consistent with unauthenticated permission enumeration against an exposed API\nserver. On GKE GCP audit logs, unauthenticated probes often omit \"client.user.email\" (null principal) with\nUnauthorized failures; those events are included alongside \"system:anonymous\" / \"system:unauthenticated\".\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1595",
+    "T1595.003",
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348789"
+}

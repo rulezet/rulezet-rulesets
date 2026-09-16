@@ -1,0 +1,21 @@
+{
+  "uuid": "d8fc3ad6-eaba-49f2-917d-5338ae7844a5",
+  "title": "GKE Anonymous Pod Create/Update/Patch",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects create, update, or patch of pods by an unauthenticated anonymous GKE identity. Anonymous pod mutation is a\ncritical misconfiguration signal and a common path for unauthenticated attackers to deploy workloads or maintain access.\nIncludes \"system:anonymous\" / \"system:unauthenticated\" and GKE audit rows with a missing principal (seen on\nunauthenticated Unauthorized/forbidden pod writes).\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1610"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348790"
+}

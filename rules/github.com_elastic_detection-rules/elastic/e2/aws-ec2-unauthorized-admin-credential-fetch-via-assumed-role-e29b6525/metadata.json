@@ -1,0 +1,24 @@
+{
+  "uuid": "e29b6525-5c86-4055-8e25-65d7e2f1f363",
+  "title": "AWS EC2 Unauthorized Admin Credential Fetch via Assumed Role",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the first occurrence of an unauthorized attempt by an AWS role to use `GetPassword` to access the administrator password of an EC2 instance. \nAdversaries may use this API call to escalate privileges or move laterally within EC2 instances.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1552",
+    "T1552.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348846"
+}

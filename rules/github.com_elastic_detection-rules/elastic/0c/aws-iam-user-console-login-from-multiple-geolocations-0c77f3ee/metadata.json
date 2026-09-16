@@ -1,0 +1,23 @@
+{
+  "uuid": "0c77f3ee-18c4-4446-a947-4e6dafd050a3",
+  "title": "AWS IAM User Console Login from Multiple Geolocations",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an IAM user that successfully signs in to the AWS Management Console from two or more distinct countries\nwithin a short window. A single user authenticating from multiple geographic locations in a brief period is physically\nimplausible and indicates that the account's credentials or console session are being used from more than one place at\nonce. This is a hallmark of adversary-in-the-middle (AiTM) phishing and session theft, where the legitimate user signs\nin from their location while the attacker replays the captured session or credentials from their own infrastructure.\nBecause the attacker logs in from a different network, the divergent sign-in geolocations are the detectable signal even\nwhen MFA appears satisfied (AiTM relays the live MFA challenge). This is the CloudTrail-native analog of\nidentity-provider impossible-travel sign-in detections.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1539"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348876"
+}

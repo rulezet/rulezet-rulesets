@@ -1,0 +1,22 @@
+{
+  "uuid": "865a3cf3-07a6-442d-a678-868a51061c4f",
+  "title": "AWS EC2 NACL Entry Created or Replaced Allowing All Traffic by New Identity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects a principal account creating or replacing - or attempts to create or replace - an AWS Network \nAccess Control List (NACL) entry using protocol -1 (all traffic). Both successful and failed outcomes \nare included. A NACL entry with protocol -1 passes all traffic regardless of port, which would disable \nnetwork-layer controls for the affected subnets. Monitoring for new identities performing this change \nhelps surface freshly compromised credentials or unauthorized principals removing a defense-in-depth \nlayer to facilitate lateral movement or data exfiltration. This signal only flags if this behavior was \nnot observed historically in a specific time window.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348843"
+}

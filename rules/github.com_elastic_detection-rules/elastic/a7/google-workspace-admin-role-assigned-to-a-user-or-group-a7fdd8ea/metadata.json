@@ -1,0 +1,22 @@
+{
+  "uuid": "a7fdd8ea-5385-457f-a69f-841bcb555bb2",
+  "title": "Google Workspace Admin Role Assigned to a User or Group",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Assigning an administrative role to a user or group grants elevated privileges within Google Workspace, including\naccess to the Google Admin console and the ability to manage domain resources and applications. Adversaries may assign\nadministrator roles to an existing account or a newly created account/group to establish persistence, facilitate\nprivilege escalation, and enable follow-on actions across the tenant. In particular, users with Super Admin privileges\ncan bypass single sign-on (SSO) if it is enabled in Google Workspace.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348618"
+}

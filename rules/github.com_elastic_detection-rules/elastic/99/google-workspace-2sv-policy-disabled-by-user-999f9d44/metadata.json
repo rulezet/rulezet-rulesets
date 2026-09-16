@@ -1,0 +1,21 @@
+{
+  "uuid": "999f9d44-e5f1-4790-b727-20531ab7cf5b",
+  "title": "Google Workspace 2SV Policy Disabled By User",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a Google Workspace user disables 2-step verification (2SV) on their account. An adversary with access to a\ncompromised account may remove 2SV to eliminate the second authentication factor, leaving password-only access and\nmaking future sign-ins easier to abuse, relay, or maintain without triggering MFA challenges.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348621"
+}

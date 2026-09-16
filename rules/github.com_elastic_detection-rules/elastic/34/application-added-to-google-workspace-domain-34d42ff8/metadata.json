@@ -1,0 +1,24 @@
+{
+  "uuid": "34d42ff8-7264-4a9d-a6a8-39636310a077",
+  "title": "Application Added to Google Workspace Domain",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an administrator adds a Google Workspace Marketplace application to the domain. Adversaries with\nadministrative access may register a malicious OAuth application to establish long-lived API access to mail, drive, and\nother Workspace data, maintaining persistence and enabling collection without relying on a single user password alone.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348630"
+}

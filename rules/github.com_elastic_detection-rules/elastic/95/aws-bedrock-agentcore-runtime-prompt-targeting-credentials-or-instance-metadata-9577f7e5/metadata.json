@@ -1,0 +1,22 @@
+{
+  "uuid": "9577f7e5-c922-4fa3-af15-431dc186b718",
+  "title": "AWS Bedrock AgentCore Runtime Prompt Targeting Credentials or Instance Metadata",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies prompts sent to an Amazon Bedrock AgentCore runtime that attempt to harvest credentials or coerce the agent\ninto exfiltrating data. The runtime application logs capture the caller-supplied prompt; this rule flags prompts that\nreference the cloud instance metadata service (169.254.169.254, the ECS task metadata address, or the\n\"latest/meta-data\" / \"security-credentials\" paths), prompts that name AWS access or secret keys directly, and\nprompt-injection or jailbreak language (\"ignore previous instructions\", \"developer mode\", \"do anything now\") combined\nwith intent to reveal secrets, system prompts, or send data to an external endpoint. Asking an agent to read instance\nmetadata credentials or to exfiltrate secrets is rarely legitimate and indicates an attempt to weaponize the agent for\ncredential theft, even when the model refuses the request.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348515"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "fc11e097-6771-43b8-b259-55b1f38c2dc2",
+  "title": "AWS EC2 AMI Shared with Another Account",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an AWS Amazon Machine Image (AMI) being shared with another AWS account. Adversaries with access may share an AMI with an external AWS account as a means of data exfiltration. AMIs can contain secrets, bash histories, code artifacts, and other sensitive data that adversaries may abuse if shared with unauthorized accounts. AMIs can be made publicly available accidentally as well.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1537"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348894"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "f1cdfd37-894b-46d3-8216-3bbe6e071c14",
+  "title": "GitHub UEBA - Multiple Alerts from a GitHub Account",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule is part of the \"GitHub UEBA - Unusual Activity from Account Pack\", and leverages alert data to determine when\nmultiple alerts are executed by the same user in a timespan of one hour. Analysts can use this to prioritize triage and\nresponse, as these alerts are a higher indicator of compromised user accounts or PATs.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348467"
+}

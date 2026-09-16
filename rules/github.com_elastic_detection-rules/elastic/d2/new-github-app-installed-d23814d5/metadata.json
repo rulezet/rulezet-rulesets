@@ -1,0 +1,23 @@
+{
+  "uuid": "d23814d5-4508-4cc0-baac-b3d2996d5a5d",
+  "title": "New GitHub App Installed",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when a new GitHub App has been installed in your organization account. GitHub Apps extend GitHub's\nfunctionality both within and outside of GitHub. When an app is installed it is granted permissions to read or modify\nyour repository and organization data. Only trusted apps should be installed and any newly installed apps should be\ninvestigated to verify their legitimacy. Unauthorized app installation could lower your organization's security posture\nand leave you exposed for future attacks.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1072",
+    "T1098",
+    "T1199"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348470"
+}

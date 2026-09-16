@@ -1,0 +1,23 @@
+{
+  "uuid": "7036aa83-f9ae-44fd-90ea-34eb7e64d4e9",
+  "title": "Kubernetes Secret Access via Unusual User Agent",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when secrets are accessed via an unusual user agent, user name and source IP. Attackers\nmay attempt to access secrets in a Kubernetes cluster to gain access to sensitive information after gaining\naccess to the cluster.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348493"
+}

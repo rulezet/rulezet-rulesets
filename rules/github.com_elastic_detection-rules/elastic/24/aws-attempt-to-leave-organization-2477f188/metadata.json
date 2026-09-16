@@ -1,0 +1,23 @@
+{
+  "uuid": "2477f188-373e-45f0-8377-7ebe4261cba5",
+  "title": "AWS Attempt to Leave Organization",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects any attempt, successful or denied, for a member account to leave an AWS Organization via the LeaveOrganization\nAPI. Leaving an organization immediately strips the account of every Service Control Policy (SCP) guardrail the\norganization enforces, removes it from centralized CloudTrail aggregation, and eliminates the management account's\nability to audit or control it going forward. An adversary who has gained root or organization-management-capable access\nin a member account may use this technique to escape organizational security controls and operate unmonitored. Denied\nattempts are included because a blocked call is just as strong a signal of intent as a successful one, and is often the\nonly trace left when the account's default permissions correctly prevent the action.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1531",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348852"
+}

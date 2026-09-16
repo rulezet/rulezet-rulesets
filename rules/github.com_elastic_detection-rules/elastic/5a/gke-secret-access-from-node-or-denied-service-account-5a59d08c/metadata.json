@@ -1,0 +1,24 @@
+{
+  "uuid": "5a59d08c-a045-4492-bed5-c1d093f72060",
+  "title": "GKE Secret Access from Node or Denied Service Account",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects GKE Secrets API activity that should not occur in normal cluster operation: a node identity\n(system:node:*) performing secrets get or list, or a pod service account failing a secrets get.\nKubelet and node credentials are not expected to call the Secrets API for enumeration or direct reads,\nand a denied service-account secret get could indicate stolen-token probing or over-privileged tooling\nreaching beyond its RBAC.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348750"
+}

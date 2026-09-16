@@ -1,0 +1,24 @@
+{
+  "uuid": "568bcee9-d37a-4556-a2fd-5a28ed4bece2",
+  "title": "AWS Secrets Manager Rapid Secrets Retrieval",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies rapid secret retrieval activity from AWS Secrets Manager using the GetSecretValue or BatchGetSecretValue API\nactions. Adversaries who compromise an IAM user, instance role, or temporary credentials may attempt to enumerate or\nexfiltrate secrets in bulk to escalate privileges, move laterally, or gain persistence. This rule detects 20 or more\nunique secret retrievals by the same user identity within a short time window, which may indicate credential compromise\nor automated secret harvesting.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1213",
+    "T1213.006",
+    "T1555",
+    "T1555.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348857"
+}

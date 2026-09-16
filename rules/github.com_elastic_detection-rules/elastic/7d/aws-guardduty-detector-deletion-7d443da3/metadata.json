@@ -1,0 +1,24 @@
+{
+  "uuid": "7d443da3-5ccb-43f5-a1f0-b392da237a4e",
+  "title": "AWS GuardDuty Detector Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the deletion of an Amazon GuardDuty detector. GuardDuty provides continuous monitoring for malicious or\nunauthorized activity across AWS accounts. Deleting the detector disables this visibility, stopping all threat detection\nand removing existing findings. Adversaries may delete GuardDuty detectors to impair security monitoring and evade\ndetection during or after an intrusion. This rule identifies successful \"DeleteDetector\" API calls and can indicate a\ndeliberate defense evasion attempt.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348896"
+}

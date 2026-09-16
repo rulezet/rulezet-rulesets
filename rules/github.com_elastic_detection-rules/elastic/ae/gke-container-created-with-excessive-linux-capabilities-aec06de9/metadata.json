@@ -1,0 +1,24 @@
+{
+  "uuid": "aec06de9-409f-420a-8081-1af11522cb3f",
+  "title": "GKE Container Created with Excessive Linux Capabilities",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects GKE pod creation with dangerous Linux capabilities that are commonly abused in container escape techniques.\nStandalone pods are included; controller-owned ReplicaSet, DaemonSet, and StatefulSet workloads are excluded.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1610",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348727"
+}

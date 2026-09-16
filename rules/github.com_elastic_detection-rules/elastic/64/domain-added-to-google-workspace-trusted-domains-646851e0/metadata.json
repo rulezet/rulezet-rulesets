@@ -1,0 +1,26 @@
+{
+  "uuid": "646851e0-ed54-4d4c-b754-2712e4ff1af0",
+  "title": "Domain Added to Google Workspace Trusted Domains",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an administrator adds a domain to the Google Workspace allowlisted (trusted) domains list. Adversaries with\nadministrative access may onboard a domain they control to relax cross-organization sharing restrictions, enabling\ndata collection and exfiltration through Drive, Chat, and other services that honor the tenant trust boundary.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1484",
+    "T1484.002",
+    "T1562",
+    "T1562.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348624"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "86845356-c380-4796-ac4d-4247ab407407",
+  "title": "AWS STS AssumeRole with New MFA Device",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a user has assumed a role using a new MFA device. Users can assume a role to obtain temporary credentials and access AWS resources using the AssumeRole API of AWS Security Token Service (STS).\nWhile a new MFA device is not always indicative of malicious behavior it should be verified as adversaries can use this technique for persistence and privilege escalation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1548",
+    "T1550",
+    "T1550.001",
+    "T1556",
+    "T1556.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348842"
+}

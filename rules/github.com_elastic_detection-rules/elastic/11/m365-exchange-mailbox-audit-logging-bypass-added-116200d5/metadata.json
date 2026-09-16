@@ -1,0 +1,23 @@
+{
+  "uuid": "116200d5-e6ba-4fcf-9ec2-f9d1f1a97972",
+  "title": "M365 Exchange Mailbox Audit Logging Bypass Added",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the occurrence of mailbox audit bypass associations. The mailbox audit is responsible for logging specified\nmailbox events (like accessing a folder or a message or permanently deleting a message). However, actions taken by some\nauthorized accounts, such as accounts used by third-party tools or accounts used for lawful monitoring, can create a\nlarge number of mailbox audit log entries and may not be of interest to your organization. Because of this,\nadministrators can create bypass associations, allowing certain accounts to perform their tasks without being logged.\nAttackers can abuse this allowlist mechanism to conceal actions taken, as the mailbox audit will log no activity done by\nthe account.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348714"
+}

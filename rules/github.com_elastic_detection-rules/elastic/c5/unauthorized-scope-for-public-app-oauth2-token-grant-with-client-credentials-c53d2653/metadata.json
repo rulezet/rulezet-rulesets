@@ -1,0 +1,24 @@
+{
+  "uuid": "c53d2653-53a3-4b66-aa07-c08a0eb2a918",
+  "title": "Unauthorized Scope for Public App OAuth2 Token Grant with Client Credentials",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a failed OAuth 2.0 token grant attempt for a public client app using client credentials. This event is\ngenerated when a public client app attempts to exchange a client credentials grant for an OAuth 2.0 access token, but\nthe request is denied due to the lack of required scopes. This could indicate compromised client credentials in which an\nadversary is attempting to obtain an access token for unauthorized scopes. This is a [New\nTerms](https://www.elastic.co/guide/en/security/current/rules-ui-create.html#create-new-terms-rule) rule where the\n`okta.actor.display_name` field value has not been seen in the last 14 days regarding this event.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1550",
+    "T1550.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348527"
+}

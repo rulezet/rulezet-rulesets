@@ -1,0 +1,22 @@
+{
+  "uuid": "0426df6a-3038-4a1e-a6a4-785c0bccfe7e",
+  "title": "GCP IAM Service Account Key Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the deletion of an Identity and Access Management (IAM) service account key in Google Cloud Platform (GCP).\nEach service account is associated with two sets of public/private RSA key pairs that are used to authenticate. If a key\nis deleted, the application will no longer be able to access Google Cloud resources using that key. A security best\npractice is to rotate your service account keys regularly.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1531"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348744"
+}

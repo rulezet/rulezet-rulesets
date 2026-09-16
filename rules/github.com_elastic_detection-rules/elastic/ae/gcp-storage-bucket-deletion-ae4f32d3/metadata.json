@@ -1,0 +1,23 @@
+{
+  "uuid": "ae4f32d3-f75b-4e53-ae6f-43c318666916",
+  "title": "GCP Storage Bucket Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a Google Cloud Platform (GCP) storage bucket is deleted. An adversary may delete a storage bucket in\norder to disrupt their target's business operations.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348724"
+}

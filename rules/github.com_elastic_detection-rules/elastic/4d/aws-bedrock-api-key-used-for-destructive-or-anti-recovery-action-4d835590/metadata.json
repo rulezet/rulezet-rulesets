@@ -1,0 +1,23 @@
+{
+  "uuid": "4d835590-273e-4ee3-9c54-ede8ea9ea559",
+  "title": "AWS Bedrock API Key Used for Destructive or Anti-Recovery Action",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an Amazon Bedrock API key (bearer token) being used to perform a destructive or anti-recovery control-plane\naction, such as deleting a guardrail, deleting a custom or imported model, removing provisioned throughput, or disabling\nmodel invocation logging. Bedrock API keys are bearer credentials intended for model invocation (InvokeModel, Converse);\nusing one to delete Bedrock resources or disable logging is inconsistent with that purpose and is characteristic of\nLLMjacking or sabotage following key theft. Every Bedrock API key call is identifiable in CloudTrail by\n\"additionalEventData.callWithBearerToken\" being true. The rule matches regardless of outcome, because a destructive\nattempt via a bearer token is suspicious even when denied.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348875"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "e884d508-007b-40f1-a847-fdb55c13a6f4",
+  "title": "Google Workspace Custom Admin Role Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a custom administrative role is created in Google Workspace. Unlike prebuilt admin roles, custom roles\nallow granular selection of privileges across Google services and can be assigned to users or groups. Adversaries may\ncreate a custom admin role to craft elevated permissions tailored to their objectives, then assign that role to a\ncompromised or attacker-controlled account to establish persistence and enable follow-on actions such as modifying\nsecurity controls, granting OAuth access, or changing mail routing.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348631"
+}

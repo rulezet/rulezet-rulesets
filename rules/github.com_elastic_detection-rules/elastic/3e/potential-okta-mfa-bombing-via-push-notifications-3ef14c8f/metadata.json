@@ -1,0 +1,23 @@
+{
+  "uuid": "3ef14c8f-2f5f-47c6-bd26-26493c966e30",
+  "title": "Potential Okta MFA Bombing via Push Notifications",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an attacker abuses the Multi-Factor authentication mechanism by repeatedly issuing login requests until the\nuser eventually accepts the Okta push notification. An adversary may attempt to bypass the Okta MFA policies configured\nfor an organization to obtain unauthorized access.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1621"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348541"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "b85e5df6-3317-449f-88b4-6a640c9aa3e7",
+  "title": "Kubernetes Rapid Secret GET Activity Against Multiple Objects",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects an unusual volume of Kubernetes API get requests against multiple distinct Secret objects from the same client \nfingerprint (user, source IP, and user agent) within a defined lookback window. This can indicate credential access or in-cluster\nreconnaissance, where a user or token is used to enumerate and retrieve sensitive data such as service account tokens, registry \ncredentials, TLS material, or application configuration. Failed get requests are also included, as they may reveal RBAC boundaries, \nconfirm the existence of targeted secrets, or reflect automated probing activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348485"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "228a14e4-cc7b-416d-8cd2-8feebb5d29a6",
+  "title": "M365 Identity Login from Atypical Region",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful Microsoft 365 portal logins from a country and region the user has not previously authenticated\nfrom in a specific time window. Atypical regions are identified by combining the user's country and region geolocation history; an\nauthentication from a new country/region pair for that user may indicate an adversary attempting to access the\naccount from an unusual location or behind a VPN. \n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Android\"",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348690"
+}

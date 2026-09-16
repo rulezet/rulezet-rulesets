@@ -1,0 +1,24 @@
+{
+  "uuid": "185e3117-bd21-4ae4-839b-f71e05252fa5",
+  "title": "Malicious File - Prevented - Elastic Defend",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Generates a detection alert each time an Elastic Defend alert for malicious files is received. Enabling this rule allows\nyou to immediately begin investigating your Endpoint malicious file alerts. This rule identifies Elastic Defend\nmalicious file preventions only, and does not include detection only alerts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1204",
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348650"
+}

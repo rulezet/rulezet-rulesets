@@ -1,0 +1,24 @@
+{
+  "uuid": "fb07ac25-2c6e-4442-960f-4f015807f4fd",
+  "title": "Unusual Remote File Extension",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "An anomaly detection job has detected a remote file transfer with a rare extension, which could indicate potential\nlateral movement activity on the host.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1210",
+    "T1570"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348672"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "8bbda28c-ccc4-4ca3-a766-716389a04235",
+  "title": "Spike in Number of Connections Made to a Destination IP",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job has detected a high count of source IPs establishing an RDP connection with a single destination\nIP. Attackers might use multiple compromised systems to attack a target to ensure redundancy in case a source IP gets\ndetected and blocked.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.001",
+    "T1210"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348662"
+}

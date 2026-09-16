@@ -1,0 +1,24 @@
+{
+  "uuid": "626445bd-c5b8-4a64-a3d0-65b8709779c2",
+  "title": "M365 Exchange Inbox Rule with Obfuscated Name",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a Microsoft Exchange inbox rule is created or modified with a name composed only of special characters.\nAdversaries may use obfuscated inbox rule names to evade detection, hide malicious forwarding or deletion rules, or blend\nin with benign audit noise. The rule name is parsed from \"o365.audit.ObjectId\", which encodes the mailbox identity and\nrule name separated by a backslash.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1137",
+    "T1137.005",
+    "T1564",
+    "T1564.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348705"
+}

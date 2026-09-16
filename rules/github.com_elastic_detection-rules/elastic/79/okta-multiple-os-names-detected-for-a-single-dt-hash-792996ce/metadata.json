@@ -1,0 +1,21 @@
+{
+  "uuid": "792996ce-5ce2-4312-9e1f-750bbdfce750",
+  "title": "Okta Multiple OS Names Detected for a Single DT Hash",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a single Okta device token hash (dt_hash) is associated with multiple operating system types. This is\nhighly anomalous because a device token is tied to a specific device and its operating system. This alert strongly\nindicates that an attacker has stolen a device token and is using it to impersonate a legitimate user from a\ndifferent machine.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1539"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348547"
+}

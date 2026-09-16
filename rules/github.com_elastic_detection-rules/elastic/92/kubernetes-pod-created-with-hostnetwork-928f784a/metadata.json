@@ -1,0 +1,22 @@
+{
+  "uuid": "928f784a-1bca-488c-851a-09c7de788a69",
+  "title": "Kubernetes Pod Created With HostNetwork",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rules detects an attempt to create or modify a pod attached to the host network. HostNetwork allows a pod to use\nthe node network namespace. Doing so gives the pod access to any service running on localhost of the host. An attacker\ncould use this access to snoop on network activity of other pods on the same node or bypass restrictive network policies\napplied to its given namespace.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1610",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348482"
+}

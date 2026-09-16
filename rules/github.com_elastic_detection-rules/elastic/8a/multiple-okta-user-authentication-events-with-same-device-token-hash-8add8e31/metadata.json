@@ -1,0 +1,23 @@
+{
+  "uuid": "8add8e31-def0-4efa-b50a-d5545194080b",
+  "title": "Multiple Okta User Authentication Events with Same Device Token Hash",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a high number of Okta user authentication events are reported for multiple users in a short time frame.\nAdversaries may attempt to launch a credential stuffing or password spraying attack from the same device by using a list\nof known usernames and passwords to gain unauthorized access to user accounts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1110",
+    "T1110.003",
+    "T1110.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348567"
+}

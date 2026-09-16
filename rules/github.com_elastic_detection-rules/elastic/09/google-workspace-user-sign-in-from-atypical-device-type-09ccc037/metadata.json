@@ -1,0 +1,32 @@
+{
+  "uuid": "09ccc037-9ead-405c-b0d6-a746f1be07d6",
+  "title": "Google Workspace User Sign-in from Atypical Device Type",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the first time a Google Workspace user is observed authenticating from a device of a given type (e.g., WINDOWS,\nMAC, ANDROID, IOS, LINUX) within a historical window. Note that \"DEVICE_REGISTER_UNREGISTER_EVENT\" events do not\nrepresent one-time physical device enrollments; the Google Reports API emits a fresh \"google_workspace.device.id\" on\neach event, and the same physical device may produce multiple events per day as sessions/sync renewals occur. The rule\ntherefore surfaces a user authenticating from a new device type, not a new physical device. This is still high-fidelity\nbecause adversaries who compromise a Workspace identity via AiTM kits or stolen OAuth refresh tokens frequently relay\nsessions from device types that diverge from the legitimate user's baseline (e.g., a WINDOWS session appearing for a\nknown macOS user, or simultaneous WINDOWS+MAC sessions within minutes), which is the canonical kit fingerprint. Because\nthe underlying token retains access after password rotation, treat unexpected device-type divergence as a compromise\nindicator and revoke tokens, not just credentials.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "misp-galaxy:operating-system=\"Android\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1098",
+    "T1098.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348640"
+}

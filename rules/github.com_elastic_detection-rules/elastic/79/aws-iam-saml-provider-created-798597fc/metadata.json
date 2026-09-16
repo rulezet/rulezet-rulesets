@@ -1,0 +1,26 @@
+{
+  "uuid": "798597fc-0066-4d5d-9bf5-b39d50288bcb",
+  "title": "AWS IAM SAML Provider Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the creation of a new SAML Identity Provider (IdP) in AWS IAM. SAML providers enable federated authentication\nbetween AWS and external identity providers, allowing users to access AWS resources using credentials from the external\nIdP. Adversaries who have gained administrative access may create rogue SAML providers to establish persistent,\nfederated access to AWS accounts that survives credential rotation. This technique allows attackers to assume roles and\naccess resources by forging SAML assertions from an IdP they control. Creating a SAML provider is a rare administrative\naction that should be closely monitored and validated against authorized infrastructure changes.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1098",
+    "T1098.001",
+    "T1484",
+    "T1484.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348900"
+}

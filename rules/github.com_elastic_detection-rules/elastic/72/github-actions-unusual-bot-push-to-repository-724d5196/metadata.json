@@ -1,0 +1,27 @@
+{
+  "uuid": "724d5196-efbb-4d7b-a596-8b1cab94ca84",
+  "title": "GitHub Actions Unusual Bot Push to Repository",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when the github-actions[bot] pushes code to a repository where it has not performed this behavior before in a certain time window. This may\nindicate a supply chain attack where malicious code running in a CI workflow attempts to modify repository contents,\nsuch as injecting backdoor workflow files.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1195",
+    "T1195.002",
+    "T1565",
+    "T1565.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348458"
+}

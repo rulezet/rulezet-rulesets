@@ -1,0 +1,23 @@
+{
+  "uuid": "18f5722c-2dba-4a0d-90ea-99c35763b8b3",
+  "title": "AWS Backup Resource Enumeration via Long-Term Access Key",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects enumeration of AWS Backup resources using long-term IAM access keys (AKIA* prefix).\nAWS Backup protects EC2 instances, EBS volumes, RDS databases, DynamoDB tables, EFS file\nsystems, and S3 buckets. An adversary who obtains long-term access keys may enumerate backup\nvaults, backup plans, and protected resources as a precursor to ransomware. Identifying which\nresources have recent backups (indicating high-value data) and what vault access policies can\nbe modified to delete or corrupt the backups before encrypting the primary data.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1526"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348838"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "81addd9c-61ac-4b84-a58f-cf0546c9793c",
+  "title": "AWS RDS DB Instance or Cluster Password Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the modification of the master password for an AWS RDS DB instance or cluster. Changing the master password\nis a legitimate recovery action when access is lost, but adversaries with sufficient permissions may modify it to regain\naccess, establish persistence, bypass existing controls, or escalate privileges within a compromised environment.\nBecause RDS does not expose the password in API responses, this operation can meaningfully alter access pathways to\nsensitive data stores.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1098.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348807"
+}

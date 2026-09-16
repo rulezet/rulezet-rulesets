@@ -1,0 +1,22 @@
+{
+  "uuid": "7ab6913b-8a86-43c5-967f-5629f0a5971d",
+  "title": "AWS AssumeRoleWithWebIdentity from Kubernetes SA and External ASN",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful `AssumeRoleWithWebIdentity` where the caller identity is a Kubernetes service account and the source \nautonomous system organization is present but not `Amazon.com, Inc.` EKS workloads that obtain IAM credentials via IAM Roles \nfor Service Accounts (IRSA) normally reach STS from AWS-managed or AWS-associated networks; the same identity from a clearly \nexternal ASN can indicate a stolen or misused projected service-account token being exchanged for IAM credentials off-cluster.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348919"
+}

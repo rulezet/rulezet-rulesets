@@ -1,0 +1,24 @@
+{
+  "uuid": "43da1bae-74b1-48b4-99c1-6e34f340871a",
+  "title": "AWS Credentials Used from GitHub Actions and Non-CI/CD Infrastructure",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects AWS access keys that are used from both GitHub Actions CI/CD infrastructure and non-CI/CD infrastructure.\nThis pattern indicates potential credential theft where an attacker who has stolen AWS credentials configured as GitHub\nActions secrets and is using them from their own infrastructure.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1550",
+    "T1550.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348867"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "a6a61213-e88b-4f19-bde5-153e8f5266d0",
+  "title": "Chroot Execution Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when chroot is executed inside a container. Chroot is a Linux utility that allows a user to\nrun a command in a different directory. This can be used to escape a container and gain access to the host system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348598"
+}

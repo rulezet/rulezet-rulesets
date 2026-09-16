@@ -1,0 +1,22 @@
+{
+  "uuid": "c1e3ef65-ce4d-4dd6-8622-e5db0277e1d2",
+  "title": "M365 Exchange Inbox Forwarding Rule Created",
+  "format": "elastic",
+  "author": "Elastic, Gary Blackwell, Austin Songer, Marco Pedrinazzi",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a new Inbox forwarding rule is created in Microsoft 365. Inbox rules process messages in the Inbox based\non conditions and take actions. In this case, the rules will forward the emails to a defined address. Attackers can\nabuse Inbox Rules to intercept and exfiltrate email data without making organization-wide configuration changes or\nhaving the corresponding privileges.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1114",
+    "T1114.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348680"
+}

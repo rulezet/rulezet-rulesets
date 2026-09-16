@@ -1,0 +1,23 @@
+{
+  "uuid": "7608930e-2bde-4760-92e4-d3740af6b4ce",
+  "title": "Google Workspace Suspended User Account Renewed",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a previously suspended user's account is renewed in Google Workspace. An adversary may renew a suspended\nuser account to maintain access to the Google Workspace organization with a valid account.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.004",
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348628"
+}

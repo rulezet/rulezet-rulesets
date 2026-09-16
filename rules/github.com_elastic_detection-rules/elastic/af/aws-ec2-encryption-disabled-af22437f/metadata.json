@@ -1,0 +1,25 @@
+{
+  "uuid": "af22437f-87fc-44ac-87a2-a82a5c160317",
+  "title": "AWS EC2 Encryption Disabled",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when Amazon Elastic Block Store (EBS) encryption by default is disabled in an AWS region. EBS encryption ensures\nthat newly created volumes and snapshots are automatically protected with AWS Key Management Service (KMS) keys.\nDisabling this setting introduces significant risk as all future volumes created in that region will be unencrypted by\ndefault, potentially exposing sensitive data at rest. Adversaries may disable encryption to weaken data protection\nbefore exfiltrating or tampering with EBS volumes or snapshots. This may be a step in preparation for data theft or\nransomware-style attacks that depend on unencrypted volumes.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1565",
+    "T1565.001",
+    "T1578",
+    "T1578.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348906"
+}

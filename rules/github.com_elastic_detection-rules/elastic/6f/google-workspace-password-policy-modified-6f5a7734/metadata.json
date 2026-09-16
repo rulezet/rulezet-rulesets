@@ -1,0 +1,22 @@
+{
+  "uuid": "6f5a7734-56cc-411d-8ce5-8e24a1d6d11f",
+  "title": "Google Workspace Password Policy Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a Google Workspace administrator modifies organization password policy settings. Adversaries with\nadministrative access may weaken password requirements, such as disabling strong password enforcement, allowing password\nreuse, or reducing minimum length, to increase the success of password spraying and credential stuffing against tenant\naccounts and to sustain access after initial compromise.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1484"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348614"
+}

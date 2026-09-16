@@ -1,0 +1,22 @@
+{
+  "uuid": "a6524f98-955c-4a74-8f9a-800398b2f2ae",
+  "title": "Kubernetes Suspicious Assignment of Controller Service Account",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects a request to attach a controller service account to an existing or new pod running in the kube-system\nnamespace. By default, controllers running as part of the API Server utilize admin-equivalent service accounts hosted in\nthe kube-system namespace. Controller service accounts aren't normally assigned to running pods and could indicate\nadversary behavior within the cluster. An attacker that can create or modify pods or pod controllers in the kube-system\nnamespace, can assign one of these admin-equivalent service accounts to a pod and abuse their powerful token to escalate\nprivileges and gain complete cluster control.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348505"
+}

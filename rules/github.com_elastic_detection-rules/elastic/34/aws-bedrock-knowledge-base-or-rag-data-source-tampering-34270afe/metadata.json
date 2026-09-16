@@ -1,0 +1,22 @@
+{
+  "uuid": "34270afe-6fc0-4abb-8541-7b6227c39fa8",
+  "title": "AWS Bedrock Knowledge Base or RAG Data Source Tampering",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects control-plane mutations to AWS Bedrock knowledge bases and their backing RAG data sources via CloudTrail. An\nadversary with access to Bedrock Agent APIs can poison the corpus that RAG-enabled models treat as authoritative by\ningesting attacker-controlled documents (IngestKnowledgeBaseDocuments, StartIngestionJob), deleting legitimate documents\n(DeleteKnowledgeBaseDocuments), or repointing/altering the data source itself (CreateDataSource, UpdateDataSource,\nDeleteDataSource, UpdateKnowledgeBase). Because downstream applications and users trust model answers grounded in this\nstored data, tampering with the corpus is a stored data manipulation that can drive misinformation, fraud, or\nmanipulated decisions at inference time. This is a New Terms rule that looks for the first time a given identity ARN\nperforms one of these knowledge base or data source mutations within the history window.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1565",
+    "T1565.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348871"
+}

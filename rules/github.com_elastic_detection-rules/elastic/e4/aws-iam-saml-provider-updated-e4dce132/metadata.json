@@ -1,0 +1,22 @@
+{
+  "uuid": "e4dce132-f74d-4a2b-aa37-dd0b21c98594",
+  "title": "AWS IAM SAML Provider Updated",
+  "format": "elastic",
+  "author": "Elastic, Austin Songer",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an AWS IAM SAML provider is updated, which manages federated authentication between AWS and external\nidentity providers (IdPs). Adversaries with administrative access may modify a SAML provider’s metadata or certificate\nto redirect authentication flows, enable unauthorized federation, or escalate privileges through identity trust\nmanipulation. Because SAML providers underpin single sign-on (SSO) access for users and applications, unauthorized\nmodifications may allow persistent or covert access even after credentials are revoked. Monitoring  \"UpdateSAMLProvider\"\nAPI activity is critical to detect potential compromise of federated trust relationships.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1484",
+    "T1484.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348889"
+}

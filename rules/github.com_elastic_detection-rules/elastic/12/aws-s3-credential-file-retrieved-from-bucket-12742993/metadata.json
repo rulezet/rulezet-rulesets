@@ -1,0 +1,23 @@
+{
+  "uuid": "12742993-b25e-4fb3-93c2-6160e955cca1",
+  "title": "AWS S3 Credential File Retrieved from Bucket",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects successful S3 GetObject calls targeting high-value credential and secret files commonly\nstored in S3 buckets: AWS credentials files (\".aws/credentials\", \".aws/config\"), SSH private keys\n(\"id_rsa\", \"id_ed25519\", \"id_ecdsa\", \"id_dsa\"), environment files (\".env\"), PEM and PuTTY key files,\nand other private key patterns. These file types are high-yield targets for credential harvesting\nfrom S3. The rule excludes AWSService identity type to suppress S3 replication, Glacier restore,\nand other AWS-internal data movement that legitimately reads these files.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1530",
+    "T1552",
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348835"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "cb00013d-d0aa-4c6e-9fa9-7730158c62d9",
+  "title": "GKE Pod Created With HostNetwork",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects GKE pod create, update, or patch events that enable host network namespace sharing. HostNetwork grants access to\nthe node network stack and can bypass namespace network policies. System identities and controller-owned workloads are\nexcluded.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1610",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348786"
+}

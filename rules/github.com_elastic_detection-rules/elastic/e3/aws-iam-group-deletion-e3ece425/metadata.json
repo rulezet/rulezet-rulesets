@@ -1,0 +1,21 @@
+{
+  "uuid": "e3ece425-96fe-44c2-870a-3aeab6b7ab76",
+  "title": "AWS IAM Group Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an IAM group is deleted using the DeleteGroup API call. Deletion of an IAM group may represent a malicious\nattempt to remove audit trails, disrupt operations, or hide adversary activity (for example after using the group\nbriefly for privileged access). This can be an indicator of impact or cleanup in an attack lifecycle.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1531"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348901"
+}

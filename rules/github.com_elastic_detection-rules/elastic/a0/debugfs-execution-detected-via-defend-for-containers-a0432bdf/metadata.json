@@ -1,0 +1,24 @@
+{
+  "uuid": "a0432bdf-b32a-45d4-bc0c-bcfd871742fc",
+  "title": "DebugFS Execution Detected via Defend for Containers",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the use of the built-in Linux DebugFS utility from inside a privileged container. DebugFS is a special\nfile system debugging utility which supports reading and writing directly from a hard drive device. When launched inside\na privileged container, a container deployed with all the capabilities of the host machine, an attacker can access\nsensitive host level files which could be used for further privilege escalation and container escapes to the host\nmachine.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1006",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348609"
+}

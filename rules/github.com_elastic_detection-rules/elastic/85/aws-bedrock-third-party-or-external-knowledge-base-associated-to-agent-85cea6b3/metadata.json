@@ -1,0 +1,21 @@
+{
+  "uuid": "85cea6b3-e225-4e18-8305-204658d20433",
+  "title": "AWS Bedrock Third-Party or External Knowledge Base Associated to Agent",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an Amazon Bedrock agent is associated with, or updated to use, a knowledge base via the AssociateAgentKnowledgeBase, \nor UpdateAgentKnowledgeBase API actions. Bedrock agents consume knowledge base (RAG) content as trusted context for the model. \nBy wiring an agent to an externally controlled or third-party knowledge base, or by swapping in an attacker-controlled knowledge base, \nan adversary can redraw the agent's trust boundary toward an untrusted source. This is a software-supply-chain compromise and an indirect \nprompt-injection delivery vector: poisoned or adversarial content served from the associated knowledge base is treated as authoritative\nby the agent. Validate that the associated knowledge base, and any underlying data source, is owned and controlled by your organization.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1505"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348862"
+}

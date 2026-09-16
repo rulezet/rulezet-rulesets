@@ -1,0 +1,23 @@
+{
+  "uuid": "8c53910a-869a-4caa-9619-44bc88522efd",
+  "title": "AWS DynamoDB Table Exported to S3",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when an AWS DynamoDB table is exported to S3. Adversaries may use the ExportTableToPointInTime operation to collect sensitive information or exfiltrate data from DynamoDB tables. This rule detects unusual user activity by monitoring for the ExportTableToPointInTime action in CloudTrail logs. This is a New Terms rule that only flags when this behavior is observed by a user or role for the first time.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1213",
+    "T1567",
+    "T1567.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348856"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "6982d2db-cfec-4627-b476-4f499b2d9c51",
+  "title": "GCP Logging Bucket Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies a Logging bucket deletion in Google Cloud Platform (GCP). Log buckets are containers that store and organize\nlog data. A deleted bucket stays in a pending state for 7 days, and Logging continues to route logs to the bucket during\nthat time. To stop routing logs to a deleted bucket, you can delete the log sinks that have the bucket as their\ndestination, or modify the filter for the sinks to stop it from routing logs to the deleted bucket. An adversary may\ndelete a log bucket to evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348734"
+}

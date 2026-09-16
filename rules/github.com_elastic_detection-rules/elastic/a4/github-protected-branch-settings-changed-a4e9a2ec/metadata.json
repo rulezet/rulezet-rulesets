@@ -1,0 +1,22 @@
+{
+  "uuid": "a4e9a2ec-b68d-4531-bb63-9604b29a403d",
+  "title": "GitHub Protected Branch Settings Changed",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects setting modifications for protected branches of a GitHub repository. Branch protection rules can be\nused to enforce certain workflows or requirements before a contributor can push changes to a branch in your repository.\nChanges to these protected branch settings should be investigated and verified as legitimate activity. Unauthorized\nchanges could be used to lower your organization's security posture and leave you exposed for future attacks.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/348457"
+}
