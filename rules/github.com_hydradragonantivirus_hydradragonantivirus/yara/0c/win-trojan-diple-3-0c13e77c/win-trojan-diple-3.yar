@@ -1,0 +1,9 @@
+rule Win_Trojan_Diple_3
+{
+strings:
+	$a0 = { 558bec81ecfc0100006aff6aff6a006a006affff15????4100506a03ff15????41003b042a7441b8????40008d040255506a056a00ff15????410056e82700000087f4fc8d042483e8f88b0087542410 }
+
+
+condition:
+	$a0
+}

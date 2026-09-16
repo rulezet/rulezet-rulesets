@@ -1,0 +1,9 @@
+rule Win_Trojan_Ransom_41
+{
+strings:
+	$a0 = { 558bec81ecd0020000c685d3fdffffc06800401a00680000001fff151c714000898540fdffff8985c4fdffff6800880200680000b800ff1538714000ff15dc704000052cda0380018540fdffff0185c4fdffff89d6c685d0fdfffff7c685d1fdfffffcc685d4fdffffc48185c4fdffff10453c808bbdc4fdffff8b078985c8fd }
+
+
+condition:
+	$a0
+}

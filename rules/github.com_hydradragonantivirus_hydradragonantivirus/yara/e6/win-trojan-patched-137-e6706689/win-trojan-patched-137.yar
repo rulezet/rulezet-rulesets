@@ -1,0 +1,11 @@
+rule Win_Trojan_Patched_137
+{
+strings:
+	$a0 = { d01100018b45f48946505ec9c204009090909090 }
+
+	$a1 = { 7265722e70646200000000014ee201008bff558bec56578b7d086a0257ff34150001 }
+
+
+condition:
+	$a0 and $a1
+}
