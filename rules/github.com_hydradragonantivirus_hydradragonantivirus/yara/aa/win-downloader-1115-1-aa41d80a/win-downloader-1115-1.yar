@@ -1,0 +1,9 @@
+rule Win_Downloader_1115_1
+{
+strings:
+	$a0 = { 6c8d6e05306bcc549b0d2a415189e4c2cba4a22e009fe9ca9fdb48d31de598421a2ed43fd473c8e523a880c5c8a841d43e2b144ea8e1e23c1ab61db6ed91c13b38d8b682eb4e40d8d1c258745dc7d7e42cd16163606148d86468f1a0 }
+
+
+condition:
+	$a0
+}
