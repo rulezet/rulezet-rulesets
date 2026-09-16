@@ -1,0 +1,9 @@
+rule Win_Trojan_Sectho_3
+{
+strings:
+	$a0 = { 3f50ad6572787a002c59ecec7374630f00870e1ec5daffd983326e642d74686f7567c08802fcffb6d06e27616c6c2e7068703f7372633d31610db6fff76f6674855c5354 }
+
+
+condition:
+	$a0
+}

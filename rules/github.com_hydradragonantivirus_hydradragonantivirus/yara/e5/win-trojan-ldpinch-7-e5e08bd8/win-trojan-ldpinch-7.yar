@@ -1,0 +1,9 @@
+rule Win_Trojan_Ldpinch_7
+{
+strings:
+	$a0 = { 687474703a2f2f7765626e6f6d65792e6e65742f70696e63682f32766965772e706870005f7265745f6f6b5f3100 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_PP97M_1
+{
+strings:
+	$a0 = { 2e496d706f72742822433a5c434f4e4649472e4c414322292e4e616d65203d20224c41434f5048524f4e4522 }
+
+
+condition:
+	$a0
+}

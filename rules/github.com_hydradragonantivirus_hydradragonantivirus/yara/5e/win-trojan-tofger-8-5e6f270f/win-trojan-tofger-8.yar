@@ -1,0 +1,9 @@
+rule Win_Trojan_Tofger_8
+{
+strings:
+	$a0 = { 8ad808f0c0e8040ac3880747ff0d1e833d055dfed6ff007602ebdac3e8c52bff6a00e8b414a3d2e96e9ead1609a4d668b84504aebdf9975b1dfa130bc0740650e86e6a0aff359b1b6bed20360732067e1a53727bfc37558bec83c4b0c745d0a006d403ec8dec3ed84e11400ddc00e006 }
+
+
+condition:
+	$a0
+}

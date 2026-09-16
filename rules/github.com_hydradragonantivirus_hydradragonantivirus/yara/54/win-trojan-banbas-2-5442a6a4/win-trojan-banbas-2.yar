@@ -1,0 +1,9 @@
+rule Win_Trojan_Banbas_2
+{
+strings:
+	$a0 = { 8c55cf6470b9344c99b68d4233344de33812b17f95a088b355b2bc93c09873693fcc2d8db9c6a181a1fea071aed18f73d9db83d73b14603159446bce49f64cf979d9cdc50ba1464395ed13748530bc5362c72fce690ecfd8e5aea4aaffb9bb6a1aac44cb8dbe4533d8884b253bbd7ddc50dd6ff578c2e4b3 }
+
+
+condition:
+	$a0
+}

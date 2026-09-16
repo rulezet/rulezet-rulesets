@@ -1,0 +1,9 @@
+rule Win_Trojan_PakaDSB_1
+{
+strings:
+	$a0 = { 4f0dc7fe6ec632c9ca08437ae942ad044603bef565bd293fc17e3a71e039a4893d09b5ec5c149f39629719d0f3488eb6a51504ac3853d0bb4900efab6a4c5f319c9af2254ab98575e460cb2764eddc1483db47efefe2bf8f7f57c22a6bfab70bfad23ea6e639c686764eb9216223ae12 }
+
+
+condition:
+	$a0
+}

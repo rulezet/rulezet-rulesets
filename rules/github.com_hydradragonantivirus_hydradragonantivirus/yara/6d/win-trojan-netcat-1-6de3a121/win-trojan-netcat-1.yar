@@ -1,0 +1,9 @@
+rule Win_Trojan_NetCat_1
+{
+strings:
+	$a0 = { c0577e72add509baec392cef5e1ae8affe9f0ee59d56556f0c12f572a81aecc60d5c98e1a267a5a0a3967ae9982117e9b632fd98e45232bbb58d72c3d502f5b5ab73132a5e6c577da873a5f83a913e19ec16193466b003773ce8046573aad957 }
+
+
+condition:
+	$a0
+}

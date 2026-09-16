@@ -1,0 +1,9 @@
+rule Win_Trojan_Zapchast_1
+{
+strings:
+	$a0 = { 3c097502b020aaebf2aa8d8514ae7537f78bf08bf81814eb1b440318029939ebb6ef102025fe10e12cfeee7d2d4982b9d22474fb3b4d087415f76eacfb581d320a12410d0febe6aa0cdd77efdc070b42f4b000aa2973118b7d0c0ab8776eafb9023ea19c577cfe18b567df3e450d7274 }
+
+
+condition:
+	$a0
+}
