@@ -1,0 +1,20 @@
+{
+  "uuid": "3314608c-6f89-465f-a783-ad741a1e3b68",
+  "title": "INDICATOR_KB_CERT_01cf0b0f01b20b70bfaa69722979ef5c",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects executables signed with stolen, revoked or invalid certificates",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Ryuk ransomware\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/363687"
+}

@@ -1,0 +1,12 @@
+rule Base58 : hardened
+{
+	meta:
+		description = "Uses constants related to base58"
+		author = "Ivan Kwiatkowski (@JusticeRage)"
+
+	strings:
+		$alphabet = {31 32 33 34 35 36 37 38 39 41 42 43 44 45 46 47 48 4a 4b 4c 4d 4e 50 51 52 53 54 55 56 57 58 59 5a 61 62 63 64 65 66 67 68 69 6a 6b 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a}
+
+	condition:
+		all of them
+}

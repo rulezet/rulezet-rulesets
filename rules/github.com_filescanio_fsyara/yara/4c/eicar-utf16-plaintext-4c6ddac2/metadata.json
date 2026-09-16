@@ -1,0 +1,19 @@
+{
+  "uuid": "4c6ddac2-b27c-4a65-8faa-3e5f27a453a9",
+  "title": "EICAR_UTF16_Plaintext",
+  "format": "yara",
+  "author": "filescan.io",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects the EICAR test string stored as UTF-16, which the ASCII-only EICAR rules miss",
+  "source": "https://github.com/filescanio/fsYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/363907"
+}

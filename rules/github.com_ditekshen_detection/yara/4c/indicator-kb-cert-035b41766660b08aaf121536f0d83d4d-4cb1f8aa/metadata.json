@@ -1,0 +1,19 @@
+{
+  "uuid": "4cb1f8aa-cc72-4364-b946-8481509bfca8",
+  "title": "INDICATOR_KB_CERT_035b41766660b08aaf121536f0d83d4d",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects signed excutable of DiskCryptor open encryption solution that offers encryption of all disk partitions",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/363641"
+}
