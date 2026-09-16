@@ -1,0 +1,10 @@
+rule file_elf_header {
+  meta:
+    description   = "Matches ELF file \x7fELF header as uint32"
+    last_modified = "2024-01-02"
+    author        = "@petermstewart"
+    DaysofYara    = "2/100"
+
+  condition:
+    uint32(0) == 0x464c457f
+}

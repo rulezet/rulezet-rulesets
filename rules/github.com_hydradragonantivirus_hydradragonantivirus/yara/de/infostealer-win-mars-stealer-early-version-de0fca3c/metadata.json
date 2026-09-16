@@ -1,0 +1,20 @@
+{
+  "uuid": "de0fca3c-0395-45f2-b0b7-9cab5df3cc34",
+  "title": "infostealer_win_mars_stealer_early_version",
+  "format": "yara",
+  "author": "HydraDragonAntivirus",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Identifies samples of Mars Stealer early version based on opcodes of the function loading obfuscated strings.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"Mars Stealer\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/705787"
+}
