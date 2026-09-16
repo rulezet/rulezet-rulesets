@@ -1,0 +1,19 @@
+{
+  "uuid": "4e5bba4f-859b-401c-a59c-ff267e454af9",
+  "title": "PUA_VULN_Driver_Elaboratebytesag_Elbycdio_Cdrtools_1F15",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - elbycdio.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187341"
+}

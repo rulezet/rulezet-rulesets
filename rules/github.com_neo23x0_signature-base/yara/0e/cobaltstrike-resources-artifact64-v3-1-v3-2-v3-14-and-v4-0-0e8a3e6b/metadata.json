@@ -1,0 +1,20 @@
+{
+  "uuid": "0e8a3e6b-76de-4dad-8605-92a8dd6624ce",
+  "title": "CobaltStrike_Resources_Artifact64_v3_1_v3_2_v3_14_and_v4_0",
+  "format": "yara",
+  "author": "gssincla@google.com",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Cobalt Strike's resources/artifact64{svcbig.exe,.dll,big.dll,svc.exe} and resources/artifactuac(big)64.dll signature for versions 3.14 to 4.x and resources/artifact32svc.exe for 3.14 to 4.x",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Cobalt Strike\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187752"
+}

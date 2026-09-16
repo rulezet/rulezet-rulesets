@@ -1,0 +1,21 @@
+{
+  "uuid": "33459a92-1327-4092-867c-8cd3cf82f087",
+  "title": "CobaltStrike_Resources_Artifact32_and_Resources_Dropper_v1_49_to_v3_14",
+  "format": "yara",
+  "author": "gssincla@google.com",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Cobalt Strike's resources/artifact32{.exe,.dll,big.exe,big.dll} and resources/dropper.exe signature for versions 1.49 to 3.14",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:tool=\"Cobalt Strike\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187729"
+}

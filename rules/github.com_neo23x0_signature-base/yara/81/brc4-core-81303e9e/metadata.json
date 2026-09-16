@@ -1,0 +1,21 @@
+{
+  "uuid": "81303e9e-1347-4ea3-bf13-4b57f4c045c3",
+  "title": "brc4_core",
+  "format": "yara",
+  "author": "@ninjaparanoid",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Hunts for known strings used in Badger till release v1.2.9 when not in an encrypted state",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187608"
+}

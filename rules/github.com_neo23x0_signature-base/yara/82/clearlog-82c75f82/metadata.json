@@ -1,0 +1,21 @@
+{
+  "uuid": "82c75f82-55cb-4d4c-aecf-7be335e0f4cd",
+  "title": "clearlog",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "Detects Fireball malware - file clearlog.dll",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187562"
+}

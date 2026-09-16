@@ -1,0 +1,22 @@
+{
+  "uuid": "fed22438-ccbb-4d43-b73b-4931ee3622e9",
+  "title": "APT_NK_Methodology_Artificial_UserAgent_IE_Win7",
+  "format": "yara",
+  "author": "Steve Miller aka @stvemillertime",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects hard-coded User-Agent string that has been present in several APT37 malware families.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187632"
+}

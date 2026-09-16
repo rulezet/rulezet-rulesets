@@ -1,0 +1,22 @@
+{
+  "uuid": "dc01db08-d75a-4692-89f0-0fa59bc89766",
+  "title": "FIN7_Dropper_Aug17",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "Detects Word Dropper from Proofpoint FIN7 Report",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187581"
+}

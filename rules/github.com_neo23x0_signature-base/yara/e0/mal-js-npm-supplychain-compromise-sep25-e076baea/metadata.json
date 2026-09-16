@@ -1,0 +1,21 @@
+{
+  "uuid": "e076baea-fe7d-4c3a-95f2-620be06cb041",
+  "title": "MAL_JS_NPM_SupplyChain_Compromise_Sep25",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a supply chain compromise in NPM packages (TinyColor, CrowdStrike etc.)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187355"
+}

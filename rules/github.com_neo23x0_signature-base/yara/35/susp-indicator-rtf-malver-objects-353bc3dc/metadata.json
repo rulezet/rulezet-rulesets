@@ -1,0 +1,21 @@
+{
+  "uuid": "353bc3dc-3be9-4614-b0a3-d29b9111949d",
+  "title": "SUSP_INDICATOR_RTF_MalVer_Objects",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects RTF documents with non-standard version and embedding one of the object mostly observed in exploit (e.g. CVE-2017-11882) documents.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2017-11882"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187702"
+}

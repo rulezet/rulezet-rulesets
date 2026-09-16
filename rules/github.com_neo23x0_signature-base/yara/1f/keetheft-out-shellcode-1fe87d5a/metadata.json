@@ -1,0 +1,19 @@
+{
+  "uuid": "1fe87d5a-8a1f-4a6d-ad1e-d49822a15946",
+  "title": "KeeTheft_Out_Shellcode",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "Detects component of KeeTheft - KeePass dump tool - file Out-Shellcode.ps1",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187408"
+}

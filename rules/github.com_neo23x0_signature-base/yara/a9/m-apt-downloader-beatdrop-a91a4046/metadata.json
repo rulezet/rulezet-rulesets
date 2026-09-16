@@ -1,0 +1,22 @@
+{
+  "uuid": "a91a4046-2edf-4574-b3c1-c5fc34bf4d03",
+  "title": "M_APT_Downloader_BEATDROP",
+  "format": "yara",
+  "author": "Mandiant",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Rule looking for BEATDROP malware",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187575"
+}

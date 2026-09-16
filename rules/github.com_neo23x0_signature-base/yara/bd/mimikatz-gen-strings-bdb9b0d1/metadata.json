@@ -1,0 +1,20 @@
+{
+  "uuid": "bdb9b0d1-e300-495f-a3d5-d33821333a9e",
+  "title": "Mimikatz_Gen_Strings",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "Detects Mimikatz by using some special strings",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Mimikatz\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187343"
+}

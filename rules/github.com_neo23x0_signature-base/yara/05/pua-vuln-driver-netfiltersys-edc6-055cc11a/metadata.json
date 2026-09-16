@@ -1,0 +1,19 @@
+{
+  "uuid": "055cc11a-daa2-4fb9-b1b2-62506600a546",
+  "title": "PUA_VULN_Driver_Netfiltersys_EDC6",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - netfilter2.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187749"
+}

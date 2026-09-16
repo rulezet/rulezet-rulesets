@@ -1,0 +1,20 @@
+{
+  "uuid": "5f49236e-367a-48ba-99b6-7eacc00a6f62",
+  "title": "MAL_Fake_Document_Software_Indicators_Nov23",
+  "format": "yara",
+  "author": "Jonathan Peters",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects indicators of fake document/image utility software that acts as a downloader for additional malware",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"TrojanDownloader\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187613"
+}
