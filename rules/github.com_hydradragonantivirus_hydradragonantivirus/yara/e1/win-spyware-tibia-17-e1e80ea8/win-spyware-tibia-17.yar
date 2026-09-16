@@ -1,0 +1,9 @@
+rule Win_Spyware_Tibia_17
+{
+strings:
+	$a0 = { 0146bec3a4d9d323d61c2be6a1b327bd7fa37930c2cdedea1c6a977c3adffb5223c95e646e23d059a0d638d2af91658a5fc3508f242f3bc8690a4fc645a8e1ce591ed149656ee20968d8a1d62ada4d7144d2361869cf8372f2f7232d3ab2757a67affc9f49e5b4699c }
+
+
+condition:
+	$a0
+}

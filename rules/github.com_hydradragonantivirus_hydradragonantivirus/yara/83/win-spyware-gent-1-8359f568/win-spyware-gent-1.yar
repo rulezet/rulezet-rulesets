@@ -1,0 +1,9 @@
+rule Win_Spyware_gent_1
+{
+strings:
+	$a0 = { 2e736f636b7772697465202d6e207370792d20242b205b20257370792e69205d20636f6e6e65637420246d65 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,11 @@
+rule Win_Spyware_6677_1
+{
+strings:
+	$a0 = { 8b45083b45fc7507c745f801000000ac0ac074353c2074d43c227412837d10017e0a837df8017504aaff4d10ebe1ac }
+
+	$a1 = { 4c594c4f414445522e455845004d42 }
+
+
+condition:
+	$a0 and $a1
+}
