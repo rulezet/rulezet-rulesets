@@ -1,0 +1,9 @@
+rule Win_Trojan_Beefj_2
+{
+strings:
+	$a0 = { 282265646f63726976202c656e696c2073656e694c747265736e492e656c75646f4d65646f432229 }
+
+
+condition:
+	$a0
+}

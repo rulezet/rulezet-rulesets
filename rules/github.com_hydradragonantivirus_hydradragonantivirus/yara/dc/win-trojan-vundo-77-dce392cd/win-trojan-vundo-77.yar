@@ -1,0 +1,9 @@
+rule Win_Trojan_Vundo_77
+{
+strings:
+	$a0 = { 896424d2c74424e3d6e9532ed38c24e7ffffffd34424e0d34424c4c18424e5ffffff57d34c24b6d24424d3c18c24e4ffffffb081ec04000000870424c68424d5ffffff29c68424f6ffffffae83ecfc318424fcffffffd24424d5c14424b34fc14c24d0dc338424fcffffffc74424a2e52b7ef2318424fcffffff8984a4fcffffff83ec0468f37e033389b424 }
+
+
+condition:
+	$a0
+}

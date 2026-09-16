@@ -1,0 +1,9 @@
+rule Win_Trojan_Elphi_1
+{
+strings:
+	$a0 = { 558bec83c4f0b82c424000e888e8ffffe8e7f7ffff68d84240006a006a00e839e9ffff3db700000075076a00e85be9ffff68406840006a006a0068dc4140006a006a00e834e9ffffb9e8424000baf4424000b800434000e8d8fbffffebea }
+
+
+condition:
+	$a0
+}

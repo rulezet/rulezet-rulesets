@@ -1,0 +1,9 @@
+rule Win_Trojan_Spambot_279
+{
+strings:
+	$a0 = { 807c2408010f859a01000060be00??????8dbe00??2fff5783cdffeb0d9090908a064688074701db75078b1e83eefc11db72edb80100000001db75078b1e83eefc11db11c001db730b75198b1e83eefc11db72104801db75078b1e83eefc11db11c0ebd4 }
+
+
+condition:
+	$a0
+}

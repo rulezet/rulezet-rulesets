@@ -1,0 +1,9 @@
+rule Win_Trojan_Vundo_88
+{
+strings:
+	$a0 = { 6800000000310c246892dcb870d38424f7ffffffd34c24d583ecfc318c24fcffffffc14c24e263898424d4ffffff899c24a4ffffff338c24fcffffffc18c24d5ffffff60c14c24b319c74424b2de2f84ef318c24fcffffff898ca4fcffffff2bd1c14c24f5bfc68424d0ffffff8cc18c24f3ffffffd5c04424e2ea310c24c18424d4ffffffdbc14424f478c1 }
+
+
+condition:
+	$a0
+}
