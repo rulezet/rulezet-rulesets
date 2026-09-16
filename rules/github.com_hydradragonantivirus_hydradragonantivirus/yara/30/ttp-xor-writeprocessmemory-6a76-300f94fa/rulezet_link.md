@@ -1,0 +1,5 @@
+# TTP_XOR_WriteProcessMemory_6a76
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/647692)
+
+Rulezet UUID: `300f94fa-9d0a-48f6-9a46-0385e2b82311`
