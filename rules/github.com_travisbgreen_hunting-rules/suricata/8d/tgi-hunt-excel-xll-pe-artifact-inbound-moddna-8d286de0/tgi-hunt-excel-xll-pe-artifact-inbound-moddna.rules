@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Excel XLL PE Artifact Inbound (MODDNA)"; flow:established,to_client; content:"MODDNA"; classtype:bad-unknown; sid:2610820; rev:1;)

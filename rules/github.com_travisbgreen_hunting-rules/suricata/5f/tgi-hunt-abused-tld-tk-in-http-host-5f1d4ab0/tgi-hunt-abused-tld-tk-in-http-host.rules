@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Abused TLD .tk in HTTP Host"; flow:established; content:".tk"; http_host; endswith; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610040; rev:1;)

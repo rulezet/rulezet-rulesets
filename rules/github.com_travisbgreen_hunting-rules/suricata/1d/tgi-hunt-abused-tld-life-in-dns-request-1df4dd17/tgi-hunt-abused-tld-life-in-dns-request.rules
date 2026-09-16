@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"TGI HUNT Abused TLD .life in DNS Request"; flow:established,to_server; dns_query; content:".life"; endswith; classtype:bad-unknown; sid:2610148;)

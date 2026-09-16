@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT HTTP POST to Frequently Fronted Domain (fastly)"; flow:established,to_server; content:"POST"; http_method; content:".fastly.net"; http_host; fast_pattern; classtype:trojan-activity; sid:2610824; rev:1;)

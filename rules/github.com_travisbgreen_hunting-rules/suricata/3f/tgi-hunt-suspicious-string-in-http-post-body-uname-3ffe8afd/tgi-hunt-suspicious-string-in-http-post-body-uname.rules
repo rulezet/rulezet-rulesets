@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Suspicious String in HTTP POST Body (uname)"; flow:established,to_server; http.request_body; content:"uname"; pcre:"/\buname\b/"; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; reference:url,unit42.paloaltonetworks.com/exploits-interactsh/; sid:2610849; rev:1;)

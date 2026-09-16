@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Java Serialized Object Common Shell Strings Observed Inbound"; flow:established; content:"|ac ed 00|"; content:"org.apache.commons.collections"; fast_pattern; classtype:bad-unknown; sid:2610792; rev:2;)

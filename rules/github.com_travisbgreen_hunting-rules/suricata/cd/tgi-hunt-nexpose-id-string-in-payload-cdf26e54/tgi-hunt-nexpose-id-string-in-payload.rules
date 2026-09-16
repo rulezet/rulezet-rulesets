@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"TGI HUNT Nexpose ID string in Payload"; content:"vulnerable-status-determined-by-nexpose"; nocase; classtype:policy-violation; sid:2610881; rev:1;)

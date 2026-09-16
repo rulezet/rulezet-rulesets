@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> any any (msg:"TGI HUNT Malicious admin:admin B64 String in HTTP"; flow:established; content:"YWRtaW46YWRtaW4"; fast_pattern; http.user_agent; content:!"OmnicastHttpClientAsync"; classtype:bad-unknown; sid:2610700; rev:2;)

@@ -1,0 +1,1 @@
+alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT SSL/TLS Certificate Observed (cobaltstrike tls.serial)"; flow:established,to_client; tls.cert_serial; content:"08:bb:00:ee"; endswith; classtype:bad-unknown; sid:2610744; rev:1;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> any any (msg:"TGI HUNT Malicious JexRemoteTools.jar String in HTTP"; flow:established; content:"JexReverse.class"; fast_pattern; classtype:bad-unknown; sid:2610720; rev:1;)

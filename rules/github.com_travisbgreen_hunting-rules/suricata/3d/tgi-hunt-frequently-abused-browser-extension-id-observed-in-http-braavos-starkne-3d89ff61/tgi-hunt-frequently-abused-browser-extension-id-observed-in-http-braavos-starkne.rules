@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Browser Extension ID observed in HTTP (Braavos (StarkNet) Wallet)"; flow:established; content:"jnlgamecbpmbajjfhmmmlhejkemejdma"; nocase; pcre:"/\bjnlgamecbpmbajjfhmmmlhejkemejdma\b/i"; reference:url,travisgreen.net/2025/04/15/browser-extension-abuse.html; classtype:misc-activity; sid:2619200; rev:1;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> any any (msg:"TGI HUNT eval( in HTTP URI"; flow:established; http.uri; content:"eval("; fast_pattern; classtype:bad-unknown; sid:2610656; rev:1;)

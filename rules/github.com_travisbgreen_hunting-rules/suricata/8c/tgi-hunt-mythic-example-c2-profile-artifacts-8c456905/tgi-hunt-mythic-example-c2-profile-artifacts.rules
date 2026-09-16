@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT Mythic Example C2 Profile Artifacts"; flow:established,to_server; http.uri; content:"/data"; endswith; http.user_agent; content:"Mozilla/5.0 (Windows NT 6.3|3b| Trident/7.0|3b| rv:11.0) like Gecko"; classtype:bad-unknown; sid:2610844; rev:1;)

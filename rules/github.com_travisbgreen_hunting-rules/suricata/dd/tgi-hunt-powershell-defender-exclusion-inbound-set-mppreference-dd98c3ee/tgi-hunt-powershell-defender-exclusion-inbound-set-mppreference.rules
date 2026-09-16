@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Powershell Defender Exclusion Inbound (Set-MpPreference)"; flow:established,to_client; content:"Set-MpPreference"; nocase; classtype:bad-unknown; sid:2610830; rev:1;)

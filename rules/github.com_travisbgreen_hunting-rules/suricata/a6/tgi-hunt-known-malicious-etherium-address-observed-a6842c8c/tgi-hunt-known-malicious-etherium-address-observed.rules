@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET any (msg:"TGI HUNT Known Malicious Etherium Address Observed"; flow:established; content:"0xfe5df6Aa09A8cd90C86b7aa32a3086AfF8bb79f9"; reference:url,trac-labs.com/dont-ghost-the-socgholish-ghostweaver-backdoor-574154dd9983; classtype:bad-unknown; sid:2610870; rev:1;)

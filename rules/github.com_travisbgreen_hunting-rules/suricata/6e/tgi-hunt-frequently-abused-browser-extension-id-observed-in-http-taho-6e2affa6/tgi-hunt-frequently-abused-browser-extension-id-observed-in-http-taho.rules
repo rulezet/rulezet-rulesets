@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Browser Extension ID observed in HTTP (Taho)"; flow:established; content:"eajafomhmkipbjmfmhebemolkcicgfmd"; nocase; pcre:"/\beajafomhmkipbjmfmhebemolkcicgfmd\b/i"; reference:url,travisgreen.net/2025/04/15/browser-extension-abuse.html; classtype:misc-activity; sid:2619075; rev:1;)

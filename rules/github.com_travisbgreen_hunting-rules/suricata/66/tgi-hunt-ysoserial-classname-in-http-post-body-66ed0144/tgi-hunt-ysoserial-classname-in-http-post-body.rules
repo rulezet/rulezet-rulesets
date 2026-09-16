@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Ysoserial Classname in HTTP POST Body"; flow:established,to_server; http.request_body; content:"ClaimsIdentity"; fast_pattern; classtype:bad-unknown; sid:2610878; rev:1;)

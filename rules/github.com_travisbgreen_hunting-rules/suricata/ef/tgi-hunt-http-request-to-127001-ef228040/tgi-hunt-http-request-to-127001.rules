@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT HTTP Request to 127.0.0.1"; flow:established,to_server; content:"127.0.0.1"; http_host; fast_pattern; classtype:trojan-activity; sid:2610636; rev:1;)

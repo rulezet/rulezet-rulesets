@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Abused TLD .desi in HTTP Host"; flow:established,to_server; content:".desi"; http_host; endswith; classtype:bad-unknown; sid:2610140;)

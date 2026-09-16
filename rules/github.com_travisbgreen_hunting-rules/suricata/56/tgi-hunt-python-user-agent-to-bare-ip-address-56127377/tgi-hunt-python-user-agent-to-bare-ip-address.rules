@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT Python User-Agent to Bare IP Address"; flow:established,to_server; http.user_agent; content:"Python"; nocase; fast_pattern; http.host; pcre:"/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/"; classtype:bad-unknown; sid:2610810; rev:1;)

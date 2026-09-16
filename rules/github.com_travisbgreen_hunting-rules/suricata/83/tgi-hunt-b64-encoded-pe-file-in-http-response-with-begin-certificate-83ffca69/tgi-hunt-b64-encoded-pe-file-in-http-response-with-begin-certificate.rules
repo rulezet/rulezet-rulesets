@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"TGI HUNT B64 Encoded PE File in HTTP response with BEGIN CERTIFICATE"; flow:established; http.response_body; content:"-----BEGIN CERTIFICATE-----"; fast_pattern; content:"TVqQAAMAAAA"; distance:0; within:16; classtype:bad-unknown; sid:2610874; rev:1;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Suspicious String Inbound (Pyarmor file artifacts)"; flow:established; content:"# Pyarmor"; content:"from pyarmor_runtime_"; distance:0; fast_pattern; reference:url,malware.news/t/unpacking-pyarmor-v8-scripts/91006; classtype:bad-unknown; sid:2610868; rev:1;)

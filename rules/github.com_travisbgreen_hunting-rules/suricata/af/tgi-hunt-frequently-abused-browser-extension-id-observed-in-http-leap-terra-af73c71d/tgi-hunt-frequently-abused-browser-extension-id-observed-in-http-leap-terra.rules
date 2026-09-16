@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Browser Extension ID observed in HTTP (Leap Terra)"; flow:established; content:"aijcbedoijmgnlmjeegjaglmepbmpkpi"; nocase; pcre:"/\baijcbedoijmgnlmjeegjaglmepbmpkpi\b/i"; reference:url,travisgreen.net/2025/04/15/browser-extension-abuse.html; classtype:misc-activity; sid:2619018; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Browser Extension ID observed in HTTP (HAVAH Wallet)"; flow:established; content:"cnncmdhjacpkmjmkcafchppbnpnhdmon"; nocase; pcre:"/\bcnncmdhjacpkmjmkcafchppbnpnhdmon\b/i"; reference:url,travisgreen.net/2025/04/15/browser-extension-abuse.html; classtype:misc-activity; sid:2619061; rev:1;)

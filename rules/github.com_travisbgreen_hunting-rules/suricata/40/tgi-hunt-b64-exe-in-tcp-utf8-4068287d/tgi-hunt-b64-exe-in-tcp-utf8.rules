@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"TGI HUNT b64 exe in TCP (UTF8)"; flow:established; content:"TVqQAAMAAAAEAAAA//8AAL"; fast_pattern; classtype:bad-unknown; sid:2610776; rev:1;)

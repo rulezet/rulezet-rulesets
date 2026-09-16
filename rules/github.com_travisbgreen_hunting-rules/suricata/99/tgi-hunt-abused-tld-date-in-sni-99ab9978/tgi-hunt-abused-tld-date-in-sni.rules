@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"TGI HUNT Abused TLD .date in SNI"; flow:established,to_server; tls_sni; content:".date"; endswith; classtype:bad-unknown; sid:2610086;)

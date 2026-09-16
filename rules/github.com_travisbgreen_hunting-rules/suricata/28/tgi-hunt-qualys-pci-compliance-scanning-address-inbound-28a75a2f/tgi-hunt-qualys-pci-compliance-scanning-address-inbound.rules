@@ -1,0 +1,1 @@
+alert ip [64.39.96.0/20] any -> $HOME_NET any (msg:"TGI HUNT Qualys PCI Compliance Scanning Address Inbound"; flow:established,to_server; classtype:bad-unknown; sid:2610840; rev:1;)

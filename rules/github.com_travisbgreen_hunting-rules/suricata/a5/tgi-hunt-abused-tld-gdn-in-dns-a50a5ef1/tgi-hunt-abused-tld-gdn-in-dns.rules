@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"TGI HUNT Abused TLD .gdn in DNS"; flow:established; dns_query; content:".gdn"; endswith; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610032; rev:1;)

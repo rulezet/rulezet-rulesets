@@ -1,0 +1,1 @@
+alert smb any any -> $HOME_NET any (msg:"TGI HUNT Suspicious ntds.dit Filename in SMB Request (UTF-16LE)"; flow:established,to_server; content:"n|00|t|00|d|00|s|00|.|00|d|00|i|00|t"; fast_pattern; reference:url,stealthbits.com/blog/extracting-password-hashes-from-the-ntds-dit-file; classtype:attempted-admin; sid:2610684; rev:2;)

@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"TGI HUNT TLS Suspicious String in TLS Subject (metasploit)"; flow:established,to_client; content:"metasploit"; nocase; classtype:bad-unknown; sid:2610648; rev:1;)

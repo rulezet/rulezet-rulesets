@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Suspicious Strings Inbound (pty implant)"; flow:established; content:"import pty"; content:"pty.spawn"; distance:0; classtype:bad-unknown; sid:2610846; rev:1;)

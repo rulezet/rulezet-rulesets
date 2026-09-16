@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Java Serialized Object Magic Bytes Observed Inbound"; flow:established; content:"|ac ed 00|"; content:"|6a 61 76 61 2e 6c 61 6e 67 2e|"; fast_pattern; content:!"jamfsoftware.datasource.core"; content:!"www.seeburger"; classtype:bad-unknown; sid:2610788; rev:3;)

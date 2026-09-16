@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> any any (msg:"TGI HUNT Malicious Vulnscan String in HTTP"; flow:established; content:"cHJpbnQobWQ1KDMxMzM3KSk7"; fast_pattern; classtype:bad-unknown; sid:2610728; rev:1;)

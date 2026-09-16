@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET any (msg:"TGI HUNT Known Malicious Bech32 Bitcoin Address Observed"; flow:established; content:"bc1qvae6tdt2uf45u38cu8pzxlc63esxut0s5ty2rm"; reference:url,trac-labs.com/dont-ghost-the-socgholish-ghostweaver-backdoor-574154dd9983; classtype:bad-unknown; sid:2610871; rev:1;)

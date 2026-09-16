@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET 23 (msg:"TGI HUNT Sudo Command in Telnet Traffic"; flow:established,to_server; content:"sudo|20|"; nocase; fast_pattern; pcre:"/\bsudo\b/i"; classtype:bad-unknown; sid:2610640; rev:1;)

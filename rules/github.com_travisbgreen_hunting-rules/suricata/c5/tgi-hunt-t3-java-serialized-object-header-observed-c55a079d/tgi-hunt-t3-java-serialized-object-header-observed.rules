@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"TGI HUNT T3 Java Serialized Object Header Observed"; flow:established; content:"|74 33 20 31 32 2e 32 2e 31 0a 41 53 3a 32 35 35|"; fast_pattern; classtype:bad-unknown; sid:2610784; rev:1;)

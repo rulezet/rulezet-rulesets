@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"TGI HUNT PE File b64 and compressed"; flow:established,to_client; content:"7b0HYBxJliUmL23Ke39K9UrX"; threshold:type limit, track by_src, seconds 60, count 1; reference:url,github.com/lukebaggett/dnscat2-powershell/blob/master/dnscat2.ps1; classtype:bad-unknown; sid:2610814; rev:1;)

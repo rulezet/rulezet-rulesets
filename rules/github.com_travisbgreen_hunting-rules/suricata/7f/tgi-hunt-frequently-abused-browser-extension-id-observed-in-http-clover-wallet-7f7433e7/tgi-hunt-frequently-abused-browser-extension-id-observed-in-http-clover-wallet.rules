@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Browser Extension ID observed in HTTP (Clover Wallet)"; flow:established; content:"nhnkbkgjikgcigadomkphalanndcapjk"; nocase; pcre:"/\bnhnkbkgjikgcigadomkphalanndcapjk\b/i"; reference:url,travisgreen.net/2025/04/15/browser-extension-abuse.html; classtype:misc-activity; sid:2619264; rev:1;)

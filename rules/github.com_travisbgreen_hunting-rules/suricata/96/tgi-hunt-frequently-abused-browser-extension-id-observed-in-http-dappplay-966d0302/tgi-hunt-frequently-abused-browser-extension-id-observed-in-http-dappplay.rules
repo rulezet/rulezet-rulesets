@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Browser Extension ID observed in HTTP (DAppPlay)"; flow:established; content:"lodccjjbdhfakaekdiahmedfbieldgik"; nocase; pcre:"/\blodccjjbdhfakaekdiahmedfbieldgik\b/i"; reference:url,travisgreen.net/2025/04/15/browser-extension-abuse.html; classtype:misc-activity; sid:2619236; rev:1;)

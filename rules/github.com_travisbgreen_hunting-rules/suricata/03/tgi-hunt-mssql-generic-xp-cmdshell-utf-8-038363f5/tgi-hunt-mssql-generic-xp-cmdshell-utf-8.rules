@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET 1433 (msg:"TGI HUNT MSSQL Generic xp_cmdshell (UTF-8)"; flow:established,to_client; content:"|65 78 65 63 20 6d 61 73 74 65 72 2e 2e 78 70 5f 63 6d 64 73 68 65 6c 6c|"; reference:url,travisgreen.net/updates/20240123; classtype:bad-unknown; sid:2610861; rev:1;)

@@ -1,0 +1,1 @@
+alert tcp any any -> $EXTERNAL_NET any (msg:"TGI HUNT MS Copyright Banner Outbound"; flow:established; content:"Copyright |28|C|29|"; content:"Microsoft Corp"; distance:0; app-layer-protocol:!http; content:!"MicrosoftAjax.js"; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610672; rev:2;)

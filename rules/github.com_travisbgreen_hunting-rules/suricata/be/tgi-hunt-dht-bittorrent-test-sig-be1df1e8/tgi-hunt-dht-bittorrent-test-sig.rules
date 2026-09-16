@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"TGI HUNT DHT BitTorrent Test sig"; flow:established; content:"|4b 37 59 c9 86 0f 12 50 00 00 00 01|"; depth:12; fast_pattern; classtype:bad-unknown; sid:2610796; rev:1;)

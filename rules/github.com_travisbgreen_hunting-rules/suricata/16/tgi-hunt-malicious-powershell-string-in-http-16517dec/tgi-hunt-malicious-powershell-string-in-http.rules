@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> any any (msg:"TGI HUNT Malicious Powershell String in HTTP"; flow:established; content:"JABzAD0AT"; fast_pattern; classtype:bad-unknown; sid:2610696; rev:1;)

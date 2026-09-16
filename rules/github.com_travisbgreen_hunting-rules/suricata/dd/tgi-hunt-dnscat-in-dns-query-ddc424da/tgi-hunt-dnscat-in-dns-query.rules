@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"TGI HUNT dnscat in DNS Query"; flow:established; dns_query; content:"dnscat."; bsize:>40; threshold:type limit, track by_src, seconds 60, count 1; reference:url,github.com/iagox86/dnscat2; classtype:bad-unknown; sid:2610812; rev:1;)

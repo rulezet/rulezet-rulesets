@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"TGI HUNT Bare LDAP Query for Domain Computers (BlackByte syntax)"; flow:established; content:"(&(objectClass=computer))"; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610842; rev:1;)

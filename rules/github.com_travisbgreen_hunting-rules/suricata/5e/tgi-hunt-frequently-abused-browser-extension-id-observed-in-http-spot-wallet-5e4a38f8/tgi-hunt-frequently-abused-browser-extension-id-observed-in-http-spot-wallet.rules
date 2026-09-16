@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Browser Extension ID observed in HTTP (Spot wallet)"; flow:established; content:"pfdaepphglddodhkmcfoefimbcnkipmn"; nocase; pcre:"/\bpfdaepphglddodhkmcfoefimbcnkipmn\b/i"; reference:url,travisgreen.net/2025/04/15/browser-extension-abuse.html; classtype:misc-activity; sid:2619303; rev:1;)

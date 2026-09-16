@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Suspicious String in HTTP POST Body (interact .sh)"; flow:established,to_server; http.request_body; content:".interact.sh"; pcre:"/\.interact\.sh\b/i"; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; reference:url,unit42.paloaltonetworks.com/exploits-interactsh/; sid:2610848; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Abused TLD .ryukyu in HTTP Host"; flow:established,to_server; content:".ryukyu"; http_host; endswith; classtype:bad-unknown; sid:2610152;)

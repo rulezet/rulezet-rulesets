@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"TGI HUNT log4j with Base64"; flow:established; content:"jndi|3a|"; fast_pattern; content:"Base64"; nocase; classtype:bad-unknown; sid:2610800; rev:1;)

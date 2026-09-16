@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Possible Vulntest Inbound"; flow:established,to_server; http.uri; content:"touch"; pcre:"/(?:\x60|\x24|\x3b)/Ui"; classtype:bad-unknown; sid:2610816; rev:1;)

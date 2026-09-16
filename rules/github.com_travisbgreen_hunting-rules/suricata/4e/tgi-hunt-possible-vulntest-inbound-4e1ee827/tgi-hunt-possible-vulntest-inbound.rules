@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Possible Vulntest Inbound"; flow:established,to_server; http.user_agent; content:"GIS - AppSec Team"; classtype:bad-unknown; sid:2610818; rev:1;)

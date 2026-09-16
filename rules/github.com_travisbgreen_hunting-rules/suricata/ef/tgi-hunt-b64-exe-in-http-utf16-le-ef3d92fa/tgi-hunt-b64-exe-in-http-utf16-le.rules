@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT b64 exe in HTTP (UTF16-LE)"; flow:established; content:"T|00|V|00|q|00|Q|00|A|00|A|00|M|00|A|00|A|00|A|00|A|00|E|00|A|00|A|00|A|00|A|00|/|00|/|00|8|00|A|00|A|00|L"; fast_pattern; classtype:bad-unknown; sid:2610772; rev:1;)

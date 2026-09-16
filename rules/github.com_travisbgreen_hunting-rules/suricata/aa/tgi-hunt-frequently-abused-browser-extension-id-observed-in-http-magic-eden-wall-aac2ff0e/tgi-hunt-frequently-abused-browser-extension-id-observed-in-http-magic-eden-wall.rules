@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Browser Extension ID observed in HTTP (Magic Eden Wallet)"; flow:established; content:"mkpegjkblkkefacfnmkajcjmabijhclg"; nocase; pcre:"/\bmkpegjkblkkefacfnmkajcjmabijhclg\b/i"; reference:url,travisgreen.net/2025/04/15/browser-extension-abuse.html; classtype:misc-activity; sid:2619249; rev:1;)

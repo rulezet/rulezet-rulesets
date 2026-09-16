@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> any any (msg:"TGI HUNT Malicious Host Artifact String in HTTP (base64 Microsoft Windows)"; flow:established; content:"TWljcm9zb2Z0IFdpbmRvd3Mg"; fast_pattern; classtype:bad-unknown; sid:2610736; rev:1;)

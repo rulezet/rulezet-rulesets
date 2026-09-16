@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"TGI HUNT B64 Encoded Windows System Path"; flow:established; http.response_body; content:"dpbmRvd3Ncc3lzdGVtMzJc"; fast_pattern; classtype:bad-unknown; sid:2610875; rev:1;)

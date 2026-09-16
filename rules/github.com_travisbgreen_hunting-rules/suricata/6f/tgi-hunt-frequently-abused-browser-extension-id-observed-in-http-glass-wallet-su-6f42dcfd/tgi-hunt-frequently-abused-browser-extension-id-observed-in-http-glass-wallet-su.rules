@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Browser Extension ID observed in HTTP (Glass wallet - Sui wallet)"; flow:established; content:"loinekcabhlmhjjbocijdoimmejangoa"; nocase; pcre:"/\bloinekcabhlmhjjbocijdoimmejangoa\b/i"; reference:url,travisgreen.net/2025/04/15/browser-extension-abuse.html; classtype:misc-activity; sid:2619237; rev:1;)

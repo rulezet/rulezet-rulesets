@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Suspicious String Inbound as B64 (admin:)"; flow:established; content:"YWRtaW46"; classtype:bad-unknown; sid:2610845; rev:1;)

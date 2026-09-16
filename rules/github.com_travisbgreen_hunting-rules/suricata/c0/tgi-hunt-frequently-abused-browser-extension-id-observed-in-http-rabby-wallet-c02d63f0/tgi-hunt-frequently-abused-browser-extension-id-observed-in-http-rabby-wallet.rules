@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Browser Extension ID observed in HTTP (Rabby Wallet)"; flow:established; content:"acmacodkjbdgmoleebolmdjonilkdbch"; nocase; pcre:"/\bacmacodkjbdgmoleebolmdjonilkdbch\b/i"; reference:url,travisgreen.net/2025/04/15/browser-extension-abuse.html; classtype:misc-activity; sid:2619004; rev:1;)

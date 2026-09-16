@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT HTTP POST to Frequently Fronted Domain (AWS)"; flow:established,to_server; content:"POST"; http_method; content:".awsstatic.com"; http_host; fast_pattern; classtype:trojan-activity; sid:2610632; rev:1;)

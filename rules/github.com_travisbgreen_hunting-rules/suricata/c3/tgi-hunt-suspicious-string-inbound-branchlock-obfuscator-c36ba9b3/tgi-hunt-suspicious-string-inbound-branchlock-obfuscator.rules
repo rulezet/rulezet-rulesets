@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Suspicious String Inbound (Branchlock obfuscator)"; flow:established; content:"Obfuscated using the Branchlock obfuscator for java"; fast_pattern; reference:url,www.fortinet.com/blog/threat-research/vcurms-a-simple-and-functional-weapon; classtype:bad-unknown; sid:2610866; rev:1;)

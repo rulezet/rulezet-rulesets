@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT WAF MITM of HTTPS"; flow:established,to_server; http.header; content:"X-forwarded-proto"; nocase; pcre:"/^[^\r\n]*https/Ri"; classtype:misc-activity; sid:2610826; rev:1;)

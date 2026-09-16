@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> any any (msg:"TGI HUNT Possible Hafnium Webshell Access"; flow:established; http.uri; content:"/aspnet_client/"; fast_pattern; content:".asp"; classtype:bad-unknown; sid:2610652; rev:1;)
