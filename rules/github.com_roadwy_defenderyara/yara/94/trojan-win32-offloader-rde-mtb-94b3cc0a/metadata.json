@@ -1,0 +1,22 @@
+{
+  "uuid": "94b3cc0a-71b1-4e8d-8da9-32c8b0e0183a",
+  "title": "Trojan_Win32_OffLoader_RDE_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/OffLoader.RDE!MTB,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/264215"
+}

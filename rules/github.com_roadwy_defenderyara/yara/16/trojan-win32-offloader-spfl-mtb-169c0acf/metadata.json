@@ -1,0 +1,22 @@
+{
+  "uuid": "169c0acf-c0d6-4891-86a2-8bb092c1f926",
+  "title": "Trojan_Win32_OffLoader_SPFL_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/OffLoader.SPFL!MTB,SIGNATURE_TYPE_PEHSTR_EXT,04 00 04 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/264227"
+}
