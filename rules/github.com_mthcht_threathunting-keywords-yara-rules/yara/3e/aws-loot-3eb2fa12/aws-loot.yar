@@ -1,0 +1,22 @@
+rule AWS_Loot
+{
+    meta:
+        description = "Detection patterns for the tool 'AWS-Loot' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "AWS-Loot"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /\sawsloot\.py/ nocase ascii wide
+                        $string2 = /\.\/awsloot\s/
+                        $string3 = /\.\/awsloot\.py/
+                        $string4 = "/AWS-Loot" nocase ascii wide
+                        $string5 = /\/CodeBuildLooter\.py/ nocase ascii wide
+                        $string6 = /\/EC2Looter\.py/ nocase ascii wide
+                        $string7 = /\/LambdaLooter\.py/ nocase ascii wide
+                        $string8 = /awsloot\.py\s/ nocase ascii wide
+
+    condition:
+        any of them
+}

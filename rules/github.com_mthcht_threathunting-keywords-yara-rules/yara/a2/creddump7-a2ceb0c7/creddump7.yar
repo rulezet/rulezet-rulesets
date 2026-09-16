@@ -1,0 +1,53 @@
+rule creddump7
+{
+    meta:
+        description = "Detection patterns for the tool 'creddump7' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "creddump7"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /\scachedump\.py/ nocase ascii wide
+                        $string2 = /\sdomcachedump\.py/ nocase ascii wide
+                        $string3 = " install creddump7" nocase ascii wide
+                        $string4 = /\slsadump\.py/ nocase ascii wide
+                        $string5 = /\slsasecrets\.py/ nocase ascii wide
+                        $string6 = /\spwdump\.py/ nocase ascii wide
+                        $string7 = /\/cachedump\.py/ nocase ascii wide
+                        $string8 = /\/creddump7\.git/ nocase ascii wide
+                        $string9 = /\/creddump7\.git/ nocase ascii wide
+                        $string10 = "/creddump7/releases/" nocase ascii wide
+                        $string11 = /\/domcachedump\.py/ nocase ascii wide
+                        $string12 = /\/lsadump\.py/ nocase ascii wide
+                        $string13 = /\/lsasecrets\.py/ nocase ascii wide
+                        $string14 = /\/pwdump\.py/ nocase ascii wide
+                        $string15 = /\\cachedump\.py/ nocase ascii wide
+                        $string16 = /\\creddump7\-master/ nocase ascii wide
+                        $string17 = /\\domcachedump\.py/ nocase ascii wide
+                        $string18 = /\\lsadump\.py/ nocase ascii wide
+                        $string19 = /\\lsasecrets\.py/ nocase ascii wide
+                        $string20 = /\\pwdump\.py/ nocase ascii wide
+                        $string21 = "17723167fed5ac513f66d4540006dc989d6cf341d43464d241f84daccf889f47" nocase ascii wide
+                        $string22 = "4595ba305652431a89d142e09e6e5a9e67515bec0864017e8331082d3004611f" nocase ascii wide
+                        $string23 = "5a66c739cbd2e664a77e6dbbdcb318ca7a99e1a98e9314b0a90ea20378cdb9bd" nocase ascii wide
+                        $string24 = "960ad2b1c19c9d10ecd0c64f6aee01d77564ac9e48b76247a217b637c1a6d482" nocase ascii wide
+                        $string25 = "9f10e67d819156bec13f1a307df49dcf21bd91ddff45205818e402899e58ccca" nocase ascii wide
+                        $string26 = "ac4319f7349146fa891f608416dbf40475ebfdbbbec155939eb34d8fa1a67079" nocase ascii wide
+                        $string27 = "CiscoCXSecurity/creddump7" nocase ascii wide
+                        $string28 = "creddump7 -" nocase ascii wide
+                        $string29 = /creddump7\.exe/ nocase ascii wide
+                        $string30 = /creddump7\.win32\./ nocase ascii wide
+                        $string31 = /debian\.org\/pkg\-security\-team\/creddump7/ nocase ascii wide
+                        $string32 = "df8687a87b12b4cfcd9cad7082ed7c92bb43726b0d026aeeae6efd575539c0e8" nocase ascii wide
+                        $string33 = "eab9878a9916e998587cf5587e3ac5ce0e5509713b3afe6e64003e8c6962b565" nocase ascii wide
+                        $string34 = "f379a925c80b2f5959d3b3a0658895f7dad370b7478736a2957bc1ae2b59f14c" nocase ascii wide
+                        $string35 = /framework\.win32\.domcachedump/ nocase ascii wide
+                        $string36 = /framework\.win32\.lsasecrets/ nocase ascii wide
+                        $string37 = /https\:\/\/code\.google\.com\/p\/creddump\// nocase ascii wide
+                        $string38 = /pwdump\.py\sSYSTEM\sSAM/ nocase ascii wide
+                        $string39 = /usr\/share\/wordlists\/rockyou\.txt/ nocase ascii wide
+
+    condition:
+        any of them
+}

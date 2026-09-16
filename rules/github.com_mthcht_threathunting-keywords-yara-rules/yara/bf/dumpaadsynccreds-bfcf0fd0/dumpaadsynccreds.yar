@@ -1,0 +1,25 @@
+rule DumpAADSyncCreds
+{
+    meta:
+        description = "Detection patterns for the tool 'DumpAADSyncCreds' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "DumpAADSyncCreds"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /\/DumpAADSyncCreds\.git/ nocase ascii wide
+                        $string2 = /\[\+\]\sObtained\sADSync\sservice\saccount\stoken\sfrom\smiiserver\sprocess/ nocase ascii wide
+                        $string3 = "95A40D7C-F3F7-4C45-8C5A-D384DE50B6C9" nocase ascii wide
+                        $string4 = "ADSync passwords can be read or modified as local administrator only for ADSync version " nocase ascii wide
+                        $string5 = "Dump AAD connect account credential in current context" nocase ascii wide
+                        $string6 = /DumpAADSyncCreds\.csproj/ nocase ascii wide
+                        $string7 = /DumpAADSyncCreds\.exe/ nocase ascii wide
+                        $string8 = /DumpAADSyncCreds\.sln/ nocase ascii wide
+                        $string9 = "e6e05a88178633c271919ae5ea4c9633991774e2fd345ffe3052c209e2ef31d5" nocase ascii wide
+                        $string10 = "Hagrid29/DumpAADSyncCreds" nocase ascii wide
+                        $string11 = "P@ss4Hagrid29" nocase ascii wide
+
+    condition:
+        any of them
+}

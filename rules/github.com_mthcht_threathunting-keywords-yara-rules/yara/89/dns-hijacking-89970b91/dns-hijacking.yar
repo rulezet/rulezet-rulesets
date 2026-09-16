@@ -1,0 +1,16 @@
+rule DNS_Hijacking
+{
+    meta:
+        description = "Detection patterns for the tool 'DNS-Hijacking' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "DNS-Hijacking"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /\/DNS\-Hijacking\.git/
+                        $string2 = "DyeKuu/DNS-Hijacking"
+
+    condition:
+        any of them
+}

@@ -1,0 +1,19 @@
+rule ETWEventSubscription
+{
+    meta:
+        description = "Detection patterns for the tool 'ETWEventSubscription' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "ETWEventSubscription"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /DoEvil\(\)/ nocase ascii wide
+                        $string2 = /ETWEventSubscription.{0,1000}Program\.cs/ nocase ascii wide
+                        $string3 = /ETWEventSubscription\.exe.{0,1000}\s\-ProcStart\s/ nocase ascii wide
+                        $string4 = /ETWEventSubscription\.exe.{0,1000}\s\-UserLogon/ nocase ascii wide
+                        $string5 = /OffensiveCSharp.{0,1000}ETWEventSubscription/ nocase ascii wide
+
+    condition:
+        any of them
+}
