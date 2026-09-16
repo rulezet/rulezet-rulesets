@@ -1,0 +1,9 @@
+rule Win_Trojan_Pdp_2
+{
+strings:
+	$a0 = { 018814eb400b003d4b56436904ef0d05000188139c2e803e13010075381e065053515256572ec6061301012e }
+
+
+condition:
+	$a0
+}
