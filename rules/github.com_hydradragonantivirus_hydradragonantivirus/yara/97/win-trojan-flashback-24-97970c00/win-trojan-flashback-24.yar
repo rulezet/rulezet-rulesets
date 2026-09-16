@@ -1,0 +1,11 @@
+rule Win_Trojan_Flashback_24
+{
+strings:
+	$a0 = { 6b696c6c616c6c20536166617269 }
+
+	$a1 = { 687474703a2f2f61646f6265736f6674776172657570646174652e636f6d2f636f756e7465722f }
+
+
+condition:
+	$a0 and $a1
+}

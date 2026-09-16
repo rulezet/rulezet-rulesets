@@ -1,0 +1,9 @@
+rule Win_Trojan_Redir_17
+{
+strings:
+	$a0 = { 3c736372697074207372633d687474703a2f2f616c6973612d6361727465722e636f6d2f75722e7068703e }
+
+
+condition:
+	$a0
+}

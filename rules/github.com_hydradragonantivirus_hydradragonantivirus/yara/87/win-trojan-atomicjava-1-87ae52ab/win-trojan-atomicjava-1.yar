@@ -1,0 +1,13 @@
+rule Win_Trojan_Atomicjava_1
+{
+strings:
+	$a0 = { cafebabe }
+
+	$a1 = { 6a6176612f7574696c2f636f6e63757272656e742f61746f6d69632f41746f6d69635265666572656e636541727261793b }
+
+	$a2 = { 31343630393532353334453442303934 }
+
+
+condition:
+	$a0 and $a1 and $a2
+}

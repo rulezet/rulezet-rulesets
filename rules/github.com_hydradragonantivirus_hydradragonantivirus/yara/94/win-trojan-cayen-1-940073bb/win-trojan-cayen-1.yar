@@ -1,0 +1,9 @@
+rule Win_Trojan_Cayen_1
+{
+strings:
+	$a0 = { 7068696c652e636f70792822633a5c5c646f776e6c6f6164735c5c222b726e647068696c65732c7472756529 }
+
+
+condition:
+	$a0
+}
