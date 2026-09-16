@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Broadcom wireless improper SSID handling"; program: kismet_server; content: "MSFBCOMSSID"; classtype: exploit-attempt; reference: url, wiki.quadrantsec.com/bin/view/Main/5001034; reference: url, http://www.wve.org/entries/show/WVE-2006-0071; sid: 5001034; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD] terminated [crash]" ; content: "ProFTPD terminating"; content: "signal 11"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: program-error; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000093; sid: 5000093; rev:3;)

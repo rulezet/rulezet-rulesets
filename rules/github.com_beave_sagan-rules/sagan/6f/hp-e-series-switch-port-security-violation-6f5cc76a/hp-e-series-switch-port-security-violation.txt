@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] Port Security Violation"; program: FFI; content: "Security Violation"; nocase; normalize; classtype: policy-violation; sid: 5001123; reference: url,wiki.quadrantsec.com/bin/view/Main/5001123; rev:4;)

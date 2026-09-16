@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Intrusion Detection - Sub Seven attack dropped"; content: "Sub Seven attack dropped"; classtype: exploit-attempt; normalize; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002723; rev:4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD] Small PassivePorts range in config file"; content: "unable to find open port in PassivePorts range"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: program-error; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000084; sid: 5000084; rev:3;)

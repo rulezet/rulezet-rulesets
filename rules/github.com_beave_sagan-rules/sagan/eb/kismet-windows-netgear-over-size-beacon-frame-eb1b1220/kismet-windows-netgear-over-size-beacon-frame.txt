@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Windows Netgear over-size beacon frame"; program: kismet_server; content: "MSFNETGEARBEACON"; classtype: exploit-attempt; reference: url, wiki.quadrantsec.com/bin/view/Main/5001036; sid: 5001036; rev:3;)

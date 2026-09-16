@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VPOPMAIL] User not found/Invalid login for POP3 service"; content: "vpopmail user not found"; default_proto: tcp; default_dst_port: $POP3_PORT; classtype: unsuccessful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000212; sid: 5000212; rev:4;)

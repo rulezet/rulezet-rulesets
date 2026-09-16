@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MONGODB] IOS_Base exception causing immediate shutdown"; content: "ios_base"; content: "shutdown"; default_proto: tcp; default_dst_port: 27017; classtype: system-event; program: mongod; reference: url,www.mongodb.org; sid: 5001596; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[RSA-DPM] Certificate ServerCert status Yellow"; content: "RKMA_MONITORING_EVENT"; content: "ServerCert|2c|Status|3a|YELLOW"; threshold: type suppress, track by_src, count 5, secounds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003962; sid:5003962; rev:2;)

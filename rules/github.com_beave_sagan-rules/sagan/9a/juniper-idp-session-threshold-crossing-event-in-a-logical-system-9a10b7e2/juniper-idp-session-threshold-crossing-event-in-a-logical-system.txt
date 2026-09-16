@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] IDP session threshold crossing event in a logical system"; content: "IDP_SESSION_LOG_EVENT_LS"; default_proto: tcp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5001145; sid: 5001145; rev:2;)

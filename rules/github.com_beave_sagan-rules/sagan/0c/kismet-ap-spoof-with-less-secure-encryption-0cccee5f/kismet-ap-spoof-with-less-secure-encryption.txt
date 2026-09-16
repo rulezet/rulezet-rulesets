@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] AP spoof with less-secure encryption"; program: kismet_server; content: "CRYPTODROP"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001025; sid: 5001025; rev:3;)

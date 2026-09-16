@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[RSA-DPM] URL:/appliance-console status Yellow"; content: "RKMA_MONITORING_EVENT"; content: "appliance|2d|console|2c|Status|3a|YELLOW"; threshold: type suppress, track by_src, count 5, secounds 900; reference: url,wiki.quadrantsec.com/bin/view/Main/5003956; sid:5003956; rev:2;)

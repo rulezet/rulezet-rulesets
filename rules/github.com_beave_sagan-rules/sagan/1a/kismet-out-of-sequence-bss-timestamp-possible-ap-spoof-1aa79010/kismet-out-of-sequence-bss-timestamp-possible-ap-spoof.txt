@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Out-of-sequence BSS timestamp.  Possible AP spoof"; program: kismet_server; content: "BSSTIMESTAMP"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001023; reference: url, http://www.wve.org/entries/show/WVE-2005-0019; sid: 5001023; rev:3;)

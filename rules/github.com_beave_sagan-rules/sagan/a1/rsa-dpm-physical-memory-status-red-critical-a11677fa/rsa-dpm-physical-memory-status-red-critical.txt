@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[RSA-DPM] Physical Memory status RED [Critical]"; content: "RKMA_MONITORING_EVENT"; content: "|5b|Type|3a|Physical"; content: "RED"; distance: 45; within: 25; threshold: type suppress, track by_src, count 2, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5003939; sid:5003939; rev:3;)

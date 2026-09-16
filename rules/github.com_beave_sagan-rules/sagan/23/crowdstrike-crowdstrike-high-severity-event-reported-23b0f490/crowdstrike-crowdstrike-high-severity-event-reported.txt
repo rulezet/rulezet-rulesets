@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike High Severity Event Reported "; content: "DetectionSummaryEvent"; nocase; content: "SeverityName=|22|High"; nocase; parse_src_ip:1; classtype:exploit-attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5004756; sid:5004756; rev:1;)

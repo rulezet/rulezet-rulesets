@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Invalid disconnect/deauthenticate"; program: kismet_server; meta_content: "%sagan%",DISCONCODEINVALID,DEAUTHCODEINVALID; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001030; sid: 5001030; rev:4;)

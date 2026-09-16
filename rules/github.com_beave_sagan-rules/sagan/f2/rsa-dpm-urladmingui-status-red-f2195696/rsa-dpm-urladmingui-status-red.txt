@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[RSA-DPM] URL:/admingui status Red"; content: "RKMA_MONITORING_EVENT"; content: "admingui|2c|Status|3a|RED"; threshold: type suppress, track by_src, count 2, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5003959; sid:5003959; rev:2;)

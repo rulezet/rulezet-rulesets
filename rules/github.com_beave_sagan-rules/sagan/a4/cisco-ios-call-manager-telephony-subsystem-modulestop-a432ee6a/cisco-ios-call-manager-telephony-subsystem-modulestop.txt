@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Call Manager Telephony Subsystem ModuleStop"; content: "ModuleStop"; content: "CMT Subsystem"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001710; sid: 5001710; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ListColumnCreated from outside HOME_COUNTRY"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "ListColumnCreated"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004932; sid:5004932; rev: 1;)

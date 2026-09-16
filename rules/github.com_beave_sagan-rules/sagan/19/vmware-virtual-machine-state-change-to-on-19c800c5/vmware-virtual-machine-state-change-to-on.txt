@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Virtual machine state change to ON"; content: "VM_STATE_ON"; default_proto:tcp; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000209; sid: 5000209; rev:2; )

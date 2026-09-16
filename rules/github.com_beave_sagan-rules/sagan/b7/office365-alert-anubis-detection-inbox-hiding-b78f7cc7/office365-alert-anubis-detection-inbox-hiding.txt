@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_ANUBIS_DETECTION_INBOX_HIDING"; content: "ALERT_ANUBIS_DETECTION_INBOX_HIDING"; classtype:suspicious-command; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003984; sid:5003984; rev:1;)

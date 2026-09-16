@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SECURITYCOMPLIANCECENTER] Alert Updated"; json_content: ".Workload","AlertUpdated"; json_content: ".Operation", "AlertEntityGenerated"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005083; sid:5005083; rev: 1;)

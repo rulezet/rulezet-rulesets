@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] A compiled and optimized IDP policy was loaded successfully into the IDP engine"; content: "IDP_POLICY_LOAD_SUCCEEDED"; default_proto: tcp; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001139; sid: 5001139; rev:2;)

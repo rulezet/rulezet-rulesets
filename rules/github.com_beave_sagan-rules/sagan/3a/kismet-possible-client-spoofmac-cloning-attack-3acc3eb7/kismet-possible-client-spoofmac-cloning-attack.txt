@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Possible client spoof/MAC cloning attack"; program: kismet_server; meta_content: "%sagan%",DHCPNAMECHANGE,DHCPOSCHANGE; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001031; sid: 5001031; rev:4;)

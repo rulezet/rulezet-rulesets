@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Spoofed client [incorrectly] injecting data"; program: kismet_server; content: "DISASSOCTRAFFIC"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001029; sid: 5001029; rev:3;)

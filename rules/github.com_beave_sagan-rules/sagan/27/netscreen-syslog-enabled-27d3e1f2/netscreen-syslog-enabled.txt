@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Syslog enabled"; program: Netscreen; content: "Syslog has been enabled"; default_proto: tcp; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000404; sid:5000404; rev:2;)

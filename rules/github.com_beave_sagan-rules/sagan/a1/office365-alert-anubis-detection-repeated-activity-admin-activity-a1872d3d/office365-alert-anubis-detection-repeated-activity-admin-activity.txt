@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_ANUBIS_DETECTION_REPEATED_ACTIVITY_ADMIN_ACTIVITY"; content: "ALERT_ANUBIS_DETECTION_REPEATED_ACTIVITY_ADMIN_ACTIVITY"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003929; sid:5003929; rev:1;)

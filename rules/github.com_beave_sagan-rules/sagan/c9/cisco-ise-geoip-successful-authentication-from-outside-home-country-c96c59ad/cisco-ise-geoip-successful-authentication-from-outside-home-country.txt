@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-ISE-GEOIP] Successful authentication from outside HOME_COUNTRY"; program: CISE_Passed_Authentications; content: "Device IP Address"; classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5003781; sid:5003781; rev:1;)

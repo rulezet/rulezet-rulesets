@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Lost access to volume"; content: "Event 37 : "; default_proto:tcp; classtype: hardware-event; program: Hostd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001098; sid: 5001099; rev:2;)

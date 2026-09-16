@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] ALERT_CABINET_EVENT_MATCH_AUDIT"; content: "ALERT_CABINET_EVENT_MATCH_AUDIT"; classtype:unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003803; sid:5003803; rev:3;)

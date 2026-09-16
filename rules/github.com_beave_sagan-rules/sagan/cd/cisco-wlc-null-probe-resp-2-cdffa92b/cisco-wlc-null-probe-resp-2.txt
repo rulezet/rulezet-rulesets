@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Null probe resp 2"; program: snmptrapd; content: "signatureName=NULL probe resp 2"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002106; sid:5002106; rev:2;)

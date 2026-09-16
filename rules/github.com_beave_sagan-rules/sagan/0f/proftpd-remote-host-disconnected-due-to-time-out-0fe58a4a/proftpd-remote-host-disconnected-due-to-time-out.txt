@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD] Remote host disconnected due to time out" ;content: "FTP session idle timeout"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: not-suspicious; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000374; sid: 5000374; rev:3;)

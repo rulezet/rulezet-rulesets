@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD] Unable to bind to address" ; content: "listen"; content: "failed in";  default_proto: tcp; default_dst_port: $FTP_PORT; classtype: program-error; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000094; sid:5000094; rev:3;)

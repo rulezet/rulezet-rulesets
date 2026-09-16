@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Suspicious WMIC call - bios Get Version"; event_id: 1; content: "wmic"; nocase; content: "bios Get Version"; nocase; classtype: suspicious-command; program: *Sysmon*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002813; sid:5002813; rev:5;)

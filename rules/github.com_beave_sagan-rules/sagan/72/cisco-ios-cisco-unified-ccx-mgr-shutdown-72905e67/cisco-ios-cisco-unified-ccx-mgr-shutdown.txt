@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Cisco Unified CCX MGR Shutdown"; content: "MGR_SHUTDOWN"; content: "Cisco Unified CCX"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001712; sid: 5001712; rev:2;)

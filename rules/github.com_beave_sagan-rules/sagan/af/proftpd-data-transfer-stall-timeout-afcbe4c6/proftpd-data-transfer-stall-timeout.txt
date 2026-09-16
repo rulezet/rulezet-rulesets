@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD] Data transfer stall timeout" ;content: "Data transfer stall timeout"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: not-suspicious; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000092; sid: 5000092; rev:3;)

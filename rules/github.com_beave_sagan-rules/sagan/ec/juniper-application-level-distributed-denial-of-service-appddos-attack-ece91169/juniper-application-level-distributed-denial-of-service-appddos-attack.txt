@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] Application-level distributed denial-of-service (AppDDoS) attack"; content: "IDP_APPDDOS_APP_ATTACK_EVENT"; default_proto: tcp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5001150; sid: 5001150; rev:2;)

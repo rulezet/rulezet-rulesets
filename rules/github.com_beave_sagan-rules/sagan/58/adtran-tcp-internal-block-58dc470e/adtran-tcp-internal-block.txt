@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ADTRAN] TCP INTERNAL BLOCK"; content: "Access Policy"; content: "tcp"; default_proto: tcp; program: FIREWALL; normalize; classtype: bad-unknown; sid:5001126; reference: url,wiki.quadrantsec.com/bin/view/Main/5001126; rev:4;)

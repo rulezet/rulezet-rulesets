@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Low Severity Event Reported "; content: "DetectionSummaryEvent"; nocase; content: "SeverityName=|22|Low"; nocase; content:!"BullPlugin"; nocase; parse_src_ip:1; classtype:exploit-attempt; reference: url,wiki.quadrantsec.com/bin/view/Main/5004758; sid:5004758; rev:1;)

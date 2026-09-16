@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER-GEOIP] User login from outside HOME_COUNTRY"; content: "LOGIN,"; parse_src_ip: 1; default_proto: tcp; classtype: successful-user; program: imapd|imapd-ssl|courierlogger; country_code: track by_src, isnot $HOME_COUNTRY; reference: url,wiki.quadrantsec.com/bin/view/Main/5002396; sid:5002396; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Remote Response Session End Event Reported"; content: "RemoteResponseSessionEndEvent"; nocase; parse_src_ip:1; classtype:suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004786; sid:5004786; rev:1;)

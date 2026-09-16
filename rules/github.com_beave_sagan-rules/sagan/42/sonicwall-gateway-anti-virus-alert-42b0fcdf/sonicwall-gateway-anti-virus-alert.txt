@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[SONICWALL] Gateway Anti-Virus Alert"; content: "m|3d|809"; content: "Gateway Anti-Virus Alert"; classtype: suspicious-traffic; parse_src_ip: 2; parse_dst_ip:3; reference: url,software.sonicwall.com/Manual/232-001655-00_Rev_A_SonicOS_Enhanced_5.1_Log_Event_Reference_Guide.pdf; sid:5003983; rev:1;)

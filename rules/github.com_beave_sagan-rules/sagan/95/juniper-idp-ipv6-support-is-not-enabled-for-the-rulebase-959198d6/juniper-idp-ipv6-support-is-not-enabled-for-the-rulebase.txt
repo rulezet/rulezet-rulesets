@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] IDP IPv6 support is not enabled for the rulebase"; content: "IDP_IGNORED_IPV6_ADDRESSES"; default_proto: tcp; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001136; sid: 5001136; rev:2;)

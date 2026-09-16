@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] IDP policy commit has completed"; content: "IDP_COMMIT_COMPLETED"; default_proto: tcp; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001134; sid: 5001134; rev:2;)

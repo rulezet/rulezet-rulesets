@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD] Maximum login attempts reached [DoS?]"; content: "Maximum login attempts"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: successful-dos; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000086; sid: 5000086; rev:3;)

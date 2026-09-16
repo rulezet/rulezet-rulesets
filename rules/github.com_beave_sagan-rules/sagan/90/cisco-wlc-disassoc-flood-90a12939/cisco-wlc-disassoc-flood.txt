@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-WLC] Disassoc flood"; program: snmptrapd; content: "signatureName=Disassoc flood"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/support/docs/wireless-mobility/wireless-lan-wlan/69366-controller-ids-sig.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002110; sid:5002110; rev:2;)

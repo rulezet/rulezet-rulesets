@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD] Connection refused by TCP Wrappers"; content: "refused connect from"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: tcp-connection; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000083; sid: 5000083; rev:3;)

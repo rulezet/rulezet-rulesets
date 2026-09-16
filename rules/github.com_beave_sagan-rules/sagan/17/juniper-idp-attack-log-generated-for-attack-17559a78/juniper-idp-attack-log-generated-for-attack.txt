@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] IDP Attack log generated for attack"; content: "IDP_ATTACK_LOG_EVENT"; default_proto: tcp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5001132; sid: 5001132; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Kismet starting to gather packets [Startup]"; program: kismet_server; content: "Found IP range"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001020; sid: 5001020; rev:3;)

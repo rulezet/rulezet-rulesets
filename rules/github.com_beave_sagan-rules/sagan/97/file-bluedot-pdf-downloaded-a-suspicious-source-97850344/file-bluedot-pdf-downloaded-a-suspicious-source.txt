@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[FILE-BLUEDOT] PDF Downloaded a suspicious source"; program: snort; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; content: "FILE-IDENTIFY"; content: "PDF"; classtype: bad-unknown; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002913; sid:5002913; rev:4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] DHCP DISCOVER send with Client-ID not matching MAC"; program: kismet_server; content: "DHCPCLIENTID"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001027; sid: 5001027; rev:3;)

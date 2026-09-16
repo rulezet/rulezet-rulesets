@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] ShortcutAdded from outside HOME_COUNTRY"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "ShortcutAdded"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004950; sid:5004950; rev: 1;)

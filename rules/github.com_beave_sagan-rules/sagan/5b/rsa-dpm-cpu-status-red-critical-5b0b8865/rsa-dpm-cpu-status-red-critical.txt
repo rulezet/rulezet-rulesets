@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[RSA-DPM] CPU status Red - [Critical]"; content: "RKMA_MONITORING_EVENT"; content: "No|3a|CPU|2d|"; content: "RED"; distance: 20; within: 12; threshold: type suppress, track by_src, count 2, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5003945; sid:5003945; rev:2;)

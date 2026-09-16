@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] IDP signature update license key has expired"; content: "IDP_SIGNATURE_LICENSE_EXPIRED"; default_proto: tcp; classtype: program-error; reference: url,wiki.quadrantsec.com/bin/view/Main/5001146; sid: 5001146; rev:2;)

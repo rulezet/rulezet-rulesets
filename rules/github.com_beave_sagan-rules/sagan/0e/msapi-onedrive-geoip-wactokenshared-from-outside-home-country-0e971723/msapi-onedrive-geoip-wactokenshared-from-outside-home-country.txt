@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] WACTokenShared from outside HOME_COUNTRY"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "WACTokenShared"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004954; sid:5004954; rev: 1;)

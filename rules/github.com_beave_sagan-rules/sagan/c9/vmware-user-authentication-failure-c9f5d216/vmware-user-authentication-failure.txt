@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] User authentication failure"; content: "Rejected password for"; default_proto:tcp; classtype: unsuccessful-admin; program: vmware-hostd|vmware-authd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001529; sid: 5001529; rev:2;)

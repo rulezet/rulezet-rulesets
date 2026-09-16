@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] IDP daemon encountered an internal error"; content: "IDP_INTERNAL_ERROR"; default_proto: tcp; classtype: program-error; reference: url,wiki.quadrantsec.com/bin/view/Main/5001130; sid: 5001130; rev:2;)

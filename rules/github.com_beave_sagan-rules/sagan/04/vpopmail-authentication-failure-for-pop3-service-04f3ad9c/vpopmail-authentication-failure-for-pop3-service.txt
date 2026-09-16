@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VPOPMAIL] Authentication failure for POP3 service"; content: "password fail"; default_proto: tcp; default_dst_port: $POP3_PORT; classtype: unsuccessful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000211; sid: 5000211; rev:4;)

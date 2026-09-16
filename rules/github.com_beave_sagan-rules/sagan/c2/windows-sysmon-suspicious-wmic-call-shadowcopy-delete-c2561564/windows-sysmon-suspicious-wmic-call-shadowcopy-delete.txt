@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Suspicious WMIC call - shadowcopy delete"; event_id: 1; content: "wmic"; nocase; content: "shadowcopy delete"; nocase; classtype: suspicious-command; program: *Sysmon*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002810; sid:5002810; rev:5;)

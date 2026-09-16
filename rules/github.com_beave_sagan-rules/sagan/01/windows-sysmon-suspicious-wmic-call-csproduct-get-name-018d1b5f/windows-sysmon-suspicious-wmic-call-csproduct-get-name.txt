@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Suspicious WMIC call - csproduct Get Name"; event_id: 1; content: "wmic"; nocase; content: "csproduct Get Name"; nocase; classtype: suspicious-command; program: *Sysmon*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002815; sid:5002815; rev:5;)

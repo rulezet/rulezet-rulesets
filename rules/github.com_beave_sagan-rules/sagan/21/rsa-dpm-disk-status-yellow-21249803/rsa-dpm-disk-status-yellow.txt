@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[RSA-DPM] Disk status Yellow"; content: "RKMA_MONITORING_EVENT"; content: "DiskInfo|3d|"; content: "YELLOW"; distance: 25; within: 10; threshold: type suppress, track by_src, count 5, secounds 900;  reference: url,wiki.quadrantsec.com/bin/view/Main/5003942; sid:5003942; rev:3;)

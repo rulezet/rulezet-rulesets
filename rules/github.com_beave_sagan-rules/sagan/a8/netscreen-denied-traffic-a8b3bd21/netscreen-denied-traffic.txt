@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Denied traffic"; program: Netscreen; content: "action=Deny"; default_proto: tcp; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000403; sid: 5000403; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] ARP address change"; content: "KERN_ARP_ADDR_CHANGE"; default_proto: tcp; classtype: network-event; sid: 5000891; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD] Host name or host address mismatch"; pcre: "/name mismatch|address mismatch/i"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: suspicious-traffic; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000087; sid: 5000087; rev:3;)

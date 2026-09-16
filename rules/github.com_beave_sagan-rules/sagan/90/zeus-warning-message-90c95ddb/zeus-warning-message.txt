@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Warning message"; pcre: "/^[\S+ \S+] WARN/"; classtype: system-event; program: zeus; reference: url,wiki.quadrantsec.com/bin/view/Main/5000282; sid: 5000282; rev:3;)

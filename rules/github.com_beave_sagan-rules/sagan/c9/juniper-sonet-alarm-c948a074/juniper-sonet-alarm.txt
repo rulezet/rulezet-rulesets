@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] SONET Alarm"; content: "Asserting SONET alarm"; default_proto: tcp; classtype: network-event; sid: 5000895; threshold:suppress, track by_src, count 5, seconds 120; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-ONEDRIVE-GEOIP] FolderMoved from outside HOME_COUNTRY"; json_content: ".Workload","OneDrive"; json_content: ".Operation", "FolderMoved"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004928; sid:5004928; rev: 1;)

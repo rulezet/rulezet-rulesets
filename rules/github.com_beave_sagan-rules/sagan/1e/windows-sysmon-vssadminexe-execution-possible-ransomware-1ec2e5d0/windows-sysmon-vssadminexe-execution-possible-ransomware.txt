@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] vssadmin.exe execution. Possible ransomware"; event_id: 1; content: "vssadmin.exe"; nocase; content: "Delete Shadows"; nocase; classtype: trojan-activity; program: *Sysmon*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002803; sid:5002803; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Teardrop attack"; program: Netscreen; content: "Teardrop Attack"; default_proto: tcp; classtype: denial-of-service; parse_src_ip: 1; reference: url,www.juniper.net/techpubs/software/screenos/screenos5.2.0/NS_Messages.pdf; sid: 5001612; rev:3;)

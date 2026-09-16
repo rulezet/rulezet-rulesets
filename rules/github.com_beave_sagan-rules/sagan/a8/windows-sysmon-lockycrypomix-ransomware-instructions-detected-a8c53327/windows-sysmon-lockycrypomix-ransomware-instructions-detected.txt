@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Locky/CrypoMix ransomware instructions detected!"; event_id: 1; content: "notepad.exe"; nocase; content: "_HELP_instructions.txt "; classtype: trojan-activity; program: *Sysmon*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002802; sid:5002802; rev:6;)

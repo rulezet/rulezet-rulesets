@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] port is off-line"; program: ports; content:"is now off-line; classtype: hardware-event; sid: 5001121; reference: url,wiki.quadrantsec.com/bin/view/Main/5001121; rev:3;)

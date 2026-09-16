@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Older AirJack tool in use"; program: kismet_server; content: "AIRJACKSSID"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001021; sid: 5001021; rev:3;)

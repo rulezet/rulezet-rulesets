@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Detected new turbocell network"; program: kismet_server; content: "Detected new turbocell"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001017; sid: 5001017; rev:3;)

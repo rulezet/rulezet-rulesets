@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZEUS] Informational message"; pcre: "/^[\S+ \S+] INFO|^[\S+ \S+] SSL/"; classtype: system-event; program: zeus; reference: url,wiki.quadrantsec.com/bin/view/Main/5000281; sid: 5000281; rev:3;)

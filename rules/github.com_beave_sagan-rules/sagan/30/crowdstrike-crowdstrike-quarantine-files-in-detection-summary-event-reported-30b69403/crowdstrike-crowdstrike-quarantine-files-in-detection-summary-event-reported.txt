@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Quarantine Files in Detection Summary Event reported"; content: "Quarantined Files In A Detection Summary Event"; nocase; parse_src_ip:1; classtype:suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005232; sid:5005232; rev:1;)

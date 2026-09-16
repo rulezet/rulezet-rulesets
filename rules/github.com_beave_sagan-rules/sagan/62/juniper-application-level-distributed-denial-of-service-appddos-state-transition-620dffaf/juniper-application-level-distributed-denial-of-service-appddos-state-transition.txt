@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] application-level distributed denial-of-service (AppDDoS) state transition occurred in logical system"; content: "IDP_APPDDOS_APP_STATE_EVENT_LS"; default_proto: tcp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5001148; sid: 5001148; rev:2;)

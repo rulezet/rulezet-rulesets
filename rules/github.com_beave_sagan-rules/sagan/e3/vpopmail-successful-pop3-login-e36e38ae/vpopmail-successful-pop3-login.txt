@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VPOPMAIL] Successful POP3 login"; content: "login success"; default_proto: tcp; default_dst_port: $POP3_PORT; classtype: successful-user; program: vpopmail; reference: url,wiki.quadrantsec.com/bin/view/Main/5000213; sid: 5000213; rev:4;)

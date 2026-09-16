@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Detected new probe network"; program: kismet_server; content: "Detected new probe"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001016; sid: 5001016; rev:3;)

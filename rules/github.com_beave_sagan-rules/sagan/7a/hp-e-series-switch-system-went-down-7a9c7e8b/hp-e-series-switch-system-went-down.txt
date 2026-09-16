@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HP-E-SERIES-SWITCH] System went down:"; program: system; content:"System went down:"; classtype: hardware-event; sid: 5001122; reference: url,wiki.quadrantsec.com/bin/view/Main/5001122; rev:3;)

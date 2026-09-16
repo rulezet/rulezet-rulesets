@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Misconfigured or spoofed client [ignoring DHCP]"; program: kismet_server; content: "DHCPCONFLICT"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001028; sid: 5001028; rev:3;)

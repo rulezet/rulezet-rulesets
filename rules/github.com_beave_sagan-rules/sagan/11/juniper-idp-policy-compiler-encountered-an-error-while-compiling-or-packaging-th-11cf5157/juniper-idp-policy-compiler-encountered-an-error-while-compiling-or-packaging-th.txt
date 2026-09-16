@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] IDP policy compiler encountered an error while compiling or packaging the policy"; content: "IDP_POLICY_COMPILATION_FAILED"; default_proto: tcp; classtype: program-error; reference: url,wiki.quadrantsec.com/bin/view/Main/5001137; sid: 5001137; rev:2;)

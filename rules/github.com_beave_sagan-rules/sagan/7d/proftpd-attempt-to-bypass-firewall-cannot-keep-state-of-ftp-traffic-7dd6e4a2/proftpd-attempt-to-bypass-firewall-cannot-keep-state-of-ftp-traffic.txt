@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD] Attempt to bypass firewall - cannot keep state of FTP traffic"; content: "Refused PORT"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: suspicious-traffic; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000085; sid: 5000085; rev:3;)

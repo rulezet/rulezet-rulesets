@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OFFICE365] EVENT_CATEGORY_DELETE_USER"; content: "EVENT_CATEGORY_DELETE_USER"; classtype:unsuccessful-user; reference: url,docs.microsoft.com/en-us/cloud-app-security/monitor-alerts; reference: url,wiki.quadrantsec.com/bin/view/Main/5003820; sid:5003820; rev:1;)

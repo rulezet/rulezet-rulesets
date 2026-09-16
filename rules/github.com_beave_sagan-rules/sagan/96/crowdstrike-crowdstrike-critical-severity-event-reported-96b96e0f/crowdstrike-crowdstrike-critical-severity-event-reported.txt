@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[CROWDSTRIKE] CrowdStrike Critical Severity Event Reported "; content: "DetectionSummaryEvent"; nocase; content: "SeverityName=|22|Critical"; nocase; content: !"BullPlugin.exe"; nocase; parse_src_ip:1; classtype:suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5004757; sid:5004757; rev:1;)

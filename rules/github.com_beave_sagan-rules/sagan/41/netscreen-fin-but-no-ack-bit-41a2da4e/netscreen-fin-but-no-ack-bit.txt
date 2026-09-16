@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] FIN but no ACK bit"; program: Netscreen; content: "FIN but no ACK bit"; default_proto: tcp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000397; sid: 5000397; rev:2;)

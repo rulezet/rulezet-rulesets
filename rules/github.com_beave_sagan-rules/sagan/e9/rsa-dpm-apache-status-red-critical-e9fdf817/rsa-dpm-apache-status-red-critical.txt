@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[RSA-DPM] APACHE status Red - [Critical]"; content: "RKMA_MONITORING_EVENT"; content: "APACHE|2c|Status|3a|RED"; threshold: type suppress, track by_src, count 2, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5003947; sid:5003947; rev:2;)

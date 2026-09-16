@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Detected new managed network"; program: kismet_server; content: "Detected new managed"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001014; sid: 5001014; rev:3;)

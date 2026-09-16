@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] Port scan!"; program: Netscreen; content: "Port scan"; default_proto: tcp; classtype: network-scan; reference: url,wiki.quadrantsec.com/bin/view/Main/5000398; sid: 5000398; rev:2;)

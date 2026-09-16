@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE] Possible HD/Datastore failure"; content: ": 1672: "; default_proto:tcp; classtype: hardware-event; program: vmkernel; reference: url,wiki.quadrantsec.com/bin/view/Main/5001100; sid: 5001100; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[NETSCREEN] No tcp flag has been detected"; program: Netscreen; content: "No tcp flag has been detected"; default_proto: tcp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000402; sid: 5000402; rev:2;)

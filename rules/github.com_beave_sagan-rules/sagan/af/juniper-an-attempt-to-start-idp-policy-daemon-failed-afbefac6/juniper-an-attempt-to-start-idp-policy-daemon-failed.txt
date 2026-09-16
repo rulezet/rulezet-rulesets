@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] An attempt to start IDP policy daemon failed"; content: "IDP_DAEMON_INIT_FAILED"; default_proto: tcp; classtype: program-error; reference: url,wiki.quadrantsec.com/bin/view/Main/5001131; sid: 5001131; rev:2;)

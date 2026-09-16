@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PROFTPD] Authentication success"; content: "Login successful"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: successful-user; program: proftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000082; sid: 5000082; rev:3;)

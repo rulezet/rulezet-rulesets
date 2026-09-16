@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[JUNIPER] The scheduled IDP security package update has started"; content: "IDP_SCHEDULED_UPDATE_STARTED"; default_proto: tcp; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001142; sid: 5001142; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Older Lucent/Orinico card scanning the network"; program: kismet_server; content: "LUCENTTEST"; classtype: network-scan; reference: url, wiki.quadrantsec.com/bin/view/Main/5001033; sid: 5001033; rev:3;)

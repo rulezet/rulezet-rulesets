@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[BASH] telnet execution"; content:"telnet "; content:"HISTORY"; classtype: suspicious-command; reference: url,wiki.quadrantsec.com/bin/view/Main/5000002; program: bash|-bash|sh|-sh; sid:5000002; rev:5;)

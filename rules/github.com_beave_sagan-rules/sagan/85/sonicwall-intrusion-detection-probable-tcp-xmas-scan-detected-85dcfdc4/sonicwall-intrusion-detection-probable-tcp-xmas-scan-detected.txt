@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Intrusion Detection - Probable TCP XMAS scan detected"; content: "Probable TCP XMAS scan detected"; classtype: network-scan; parse_src_ip: 2; parse_dst_ip: 3; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002701; rev:4;)

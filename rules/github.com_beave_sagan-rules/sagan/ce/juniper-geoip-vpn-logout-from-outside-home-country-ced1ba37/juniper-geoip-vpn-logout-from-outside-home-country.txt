@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[JUNIPER-GEOIP] VPN Logout from outside HOME_COUNTRY"; program: Juniper; content: "Logout from"; country_code: track by_src, isnot $HOME_COUNTRY; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002029; sid:5002029; rev:2;)

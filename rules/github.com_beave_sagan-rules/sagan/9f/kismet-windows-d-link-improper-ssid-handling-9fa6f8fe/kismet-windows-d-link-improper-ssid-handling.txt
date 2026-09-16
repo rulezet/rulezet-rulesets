@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Windows D-Link improper SSID handling "; program: kismet_server; content: "MSFDLINKRATE"; classtype: exploit-attempt; reference: url, wiki.quadrantsec.com/bin/view/Main/5001035; reference: url, http://www.wve.org/entries/show/WVE-2006-0072; sid: 5001035; rev:3;)

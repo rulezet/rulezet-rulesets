@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] PSExec execution detected"; event_id: 1; meta_content: "MD5=%sagan%,",$PSEXEC_MD5; classtype: suspicious-command; program: *Sysmon*; reference: url,wiki.quadrantsec.com/bin/view/Main/5002799; sid:5002799; rev:5;)

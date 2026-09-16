@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Possible spoof/broken AP"; program: kismet_server; content: "APSPOOF"; classtype: suspicious-traffic; reference: url, wiki.quadrantsec.com/bin/view/Main/5001022; sid: 5001022; rev:3;)

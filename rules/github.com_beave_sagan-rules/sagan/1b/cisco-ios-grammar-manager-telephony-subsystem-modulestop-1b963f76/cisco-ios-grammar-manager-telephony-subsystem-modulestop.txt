@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Grammar Manager Telephony Subsystem ModuleStop"; content: "ModuleStop"; content: "Grammar Manager"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001711; sid: 5001711; rev:2;)

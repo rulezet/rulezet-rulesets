@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[KISMET] Active scanning tool deteceted [probe]"; program: kismet_server; content: "PROBENOJOIN"; classtype: network-scan; reference: url, wiki.quadrantsec.com/bin/view/Main/5001039; sid: 5001039; rev:3;)
