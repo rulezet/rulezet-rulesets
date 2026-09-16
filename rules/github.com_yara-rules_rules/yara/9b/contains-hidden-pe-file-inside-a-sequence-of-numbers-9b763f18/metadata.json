@@ -1,0 +1,21 @@
+{
+  "uuid": "9b763f18-5c56-4c97-b384-ffd0bb4c8272",
+  "title": "Contains_hidden_PE_File_inside_a_sequence_of_numbers",
+  "format": "yara",
+  "author": "Martin Willing (https://evild3ad.com)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect a hidden PE file inside a sequence of numbers (comma separated)",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/196084"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "89878195-3c67-40cb-9a12-d8cfbc13800f",
+  "title": "FE_LEGALSTRIKE_RTF",
+  "format": "yara",
+  "author": "joshua.kim@FireEye.com",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Rtf Phishing Campaign leveraging the CVE 2017-0199 exploit, to point to the domain 2bunnyDOTcom",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2017-0199"
+  ],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/196000"
+}

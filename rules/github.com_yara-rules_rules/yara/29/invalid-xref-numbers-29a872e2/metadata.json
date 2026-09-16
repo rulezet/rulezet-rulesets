@@ -1,0 +1,19 @@
+{
+  "uuid": "29a872e2-7d76-4c67-a661-46b3796b7af8",
+  "title": "invalid_xref_numbers",
+  "format": "yara",
+  "author": "Glenn Edwards (@hiddenillusion)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "The first entry in a cross-reference table is always free and has a generation number of 65,535",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/196105"
+}
