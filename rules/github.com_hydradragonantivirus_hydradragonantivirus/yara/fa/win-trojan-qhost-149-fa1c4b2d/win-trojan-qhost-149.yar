@@ -1,0 +1,9 @@
+rule Win_Trojan_Qhost_149
+{
+strings:
+	$a0 = { 3e3e633a5c77696e646f77735c73797374656d33325c647269766572735c6574635c686f737473 }
+
+
+condition:
+	$a0
+}

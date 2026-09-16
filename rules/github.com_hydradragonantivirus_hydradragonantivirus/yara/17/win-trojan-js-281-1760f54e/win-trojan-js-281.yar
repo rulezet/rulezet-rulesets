@@ -1,0 +1,9 @@
+rule Win_Trojan_JS_281
+{
+strings:
+	$a0 = { 31392c3035343b223b7467756f756c6a3d6963696b6c6d702e73706c697428223b22293b66636a7574613d61 }
+
+
+condition:
+	$a0
+}
