@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NINJARMM] Bitdefender - Threat Blocked"; program:ninjarmm; json_content:".type","Antivirus"; json_content:".statusCode","BDAS_BITDEFENDER_THREAT_BLOCKED"; classtype:malware; sid:5007160; rev:1;)

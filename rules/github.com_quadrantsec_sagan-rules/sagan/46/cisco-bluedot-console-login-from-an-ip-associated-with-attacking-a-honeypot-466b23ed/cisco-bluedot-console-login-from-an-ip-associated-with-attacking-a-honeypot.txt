@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] Console login from an IP associated with attacking a honeypot"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; bluedot: type ip_reputation, track by_src, mdate_effective_period 3 months,Honeypot; classtype: successful-user; parse_src_ip: 1; sid:5005836; rev: 1;)

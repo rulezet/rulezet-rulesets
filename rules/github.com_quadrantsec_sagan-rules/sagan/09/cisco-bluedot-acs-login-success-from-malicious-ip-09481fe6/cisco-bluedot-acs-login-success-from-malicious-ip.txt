@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] ACS Login success from Malicious IP"; program: CisACS_01_PassedAuth; bluedot: type ip_reputation, track by_src, mdate_effective_period 3 months, Malicious; classtype: successful-user; parse_src_ip: 2; sid:5005831; rev: 1;)

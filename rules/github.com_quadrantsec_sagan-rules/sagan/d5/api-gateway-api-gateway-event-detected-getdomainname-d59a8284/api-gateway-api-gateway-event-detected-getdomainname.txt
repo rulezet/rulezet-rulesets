@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[API-GATEWAY] API Gateway event detected (GetDomainName) "; program:apigateway.amazonaws.com; content:"eventName|22 3a 20 22|GetDomainName"; classtype:system-event; reference:url,docs.aws.amazon.com/apigateway/latest/api/API_Operations.html; sid:5011656; rev:1;)

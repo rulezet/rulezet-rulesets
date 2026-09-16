@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] ACS Login success from Tor IP"; program: CisACS_01_PassedAuth; bluedot: type ip_reputation, track by_src, mdate_effective_period 3 months,Tor; classtype: successful-user; parse_src_ip: 2; sid:5005830; rev: 1;)

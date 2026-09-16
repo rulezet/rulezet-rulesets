@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-SECUREENDPOINT] Threat Detected"; program: CISCO-AMP; content: "|22|event_type_id|22 3A|553648222"; parse_src_ip: 2; parse_dst_ip: 1; classtype: suspicious-traffic; sid:5014313; rev:2; metadata: updated_on 2024_06_13;)

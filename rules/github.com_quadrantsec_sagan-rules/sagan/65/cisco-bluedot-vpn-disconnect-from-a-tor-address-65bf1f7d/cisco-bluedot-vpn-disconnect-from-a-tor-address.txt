@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] VPN disconnect from a Tor address"; append_program; meta_content: "%sagan%",-6-113019,-6-716002,-6-721018; bluedot: type ip_reputation, track by_src, mdate_effective_period 3 months,Tor; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; sid:5005823; rev: 3;)

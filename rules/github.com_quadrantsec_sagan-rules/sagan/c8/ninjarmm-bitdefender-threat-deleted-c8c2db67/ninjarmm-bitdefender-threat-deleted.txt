@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NINJARMM] Bitdefender - Threat Deleted"; program:ninjarmm; json_content:".type","Antivirus"; json_content:".statusCode","BDAS_BITDEFENDER_THREAT_DELETED"; classtype:malware; sid:5007161; rev:1;)

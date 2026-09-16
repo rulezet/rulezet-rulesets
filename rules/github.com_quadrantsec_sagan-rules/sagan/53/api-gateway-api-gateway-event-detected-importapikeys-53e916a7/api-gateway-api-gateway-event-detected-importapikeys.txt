@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[API-GATEWAY] API Gateway event detected (ImportApiKeys) "; program:apigateway.amazonaws.com; content:"eventName|22 3a 20 22|ImportApiKeys"; classtype:system-event; reference:url,docs.aws.amazon.com/apigateway/latest/api/API_Operations.html; sid:5011687; rev:1;)

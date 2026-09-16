@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] ACS Login success from an IP address associated with attack a honeypot"; program: CisACS_01_PassedAuth; bluedot: type ip_reputation, track by_src, mdate_effective_period 3 months, Malicious,Tor,Honeypot,Proxy; classtype: successful-user; parse_src_ip: 2; sid:5005833; rev: 1;)

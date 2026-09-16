@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] FTP file transfer from or to an IP associated with attacking a honeypot"; program: %*-6-303002; bluedot: type ip_reputation, track by_src, mdate_effective_period 3 months,Honeypot; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: successful-user; normalize; sid:5005828; rev: 1;)

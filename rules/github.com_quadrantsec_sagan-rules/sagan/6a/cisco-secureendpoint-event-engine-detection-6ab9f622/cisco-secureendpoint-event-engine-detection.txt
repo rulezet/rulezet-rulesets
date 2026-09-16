@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CISCO-SECUREENDPOINT] Event Engine Detection"; program:*CiscoSecureEndpoint*|CISCO-AMP; content:"401: {Description: EVENT_ENGINE_DETECTION_RESULT"; classtype:trojan-activity; sid:5008356; rev:2; metadata: updated_on 2024_06_13;)

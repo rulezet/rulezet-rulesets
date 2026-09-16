@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] Console login from known proxy"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; bluedot: type ip_reputation, track by_src, mdate_effective_period 3 months, Proxy; classtype: successful-user; parse_src_ip: 1; sid:5005837; rev: 1;)

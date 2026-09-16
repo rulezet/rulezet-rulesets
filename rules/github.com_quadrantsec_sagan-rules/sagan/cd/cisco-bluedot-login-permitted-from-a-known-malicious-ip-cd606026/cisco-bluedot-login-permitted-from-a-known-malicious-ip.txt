@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] Login permitted from a known malicious IP"; content:"-6-605005"; append_program;  bluedot: type ip_reputation, track by_src, mdate_effective_period 1 months, Malicious; classtype:  successful-user; parse_src_ip: 1; parse_dst_ip: 2; sid:5005819; rev: 1;)
