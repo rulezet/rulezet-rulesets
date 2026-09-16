@@ -1,0 +1,9 @@
+rule Win_Dropper_Agent_34714
+{
+strings:
+	$a0 = { 558bec6aff687820400068c017400064a100000000506489250000000083ec685356578965e833db895d }
+
+
+condition:
+	$a0
+}

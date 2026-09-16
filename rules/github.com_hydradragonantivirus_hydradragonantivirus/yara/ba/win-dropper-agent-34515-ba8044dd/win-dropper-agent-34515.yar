@@ -1,0 +1,11 @@
+rule Win_Dropper_Agent_34515
+{
+strings:
+	$a0 = { 6c00000000ffffffff1200000073693423244734354552 }
+
+	$a1 = { 61616f68427c606677766045000000ffffffff010000004e000000000000004f50 }
+
+
+condition:
+	$a0 and $a1
+}

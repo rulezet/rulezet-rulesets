@@ -1,0 +1,9 @@
+rule Win_Dropper_Microjoin_24
+{
+strings:
+	$a0 = { eb156b505357fa907b898122090431b5d45eb7d71914a72b5edb414c6b88a030a0bd490849580a892634c45bb0496eb5b5dad08b6de399746d67d9bea6d3fe60a62d05db75b6bae2ecf68647901fbb0a8eafdad9a532d386a60f0a456117f6ec77d1d9d9f1dffedb1f7b92ef7ccff33dcefdce39fb7cc1569fc06d4221 }
+
+
+condition:
+	$a0
+}
