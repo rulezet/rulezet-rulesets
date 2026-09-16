@@ -1,0 +1,9 @@
+rule Win_Trojan_Winblow_1
+{
+strings:
+	$a0 = { 6563686f206f66660d0a6563686f2048656c6c6f0d0a72656e616d6520633a5c77696e646f77732077696e64626c6f77730d0a }
+
+
+condition:
+	$a0
+}

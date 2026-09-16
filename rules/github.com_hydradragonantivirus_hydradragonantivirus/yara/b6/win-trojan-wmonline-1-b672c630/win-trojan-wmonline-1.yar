@@ -1,0 +1,9 @@
+rule Win_Trojan_WMOnline_1
+{
+strings:
+	$a0 = { 6e766164692d6c6f2e2e78696e67612d6c6f206e6f206963712e2e7663207175652073616265210d0a0012010017ff1802ff }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Sin4Cyn_2
+{
+strings:
+	$a0 = { 35f000e0103bef1e46b64d2ec3c15d720b06004c716169f96162656c3201ff4ab57420d5dadfb8a063616620796f752077c90fd9682f6cfa201c642073d8bd68db15769b0d6c }
+
+
+condition:
+	$a0
+}

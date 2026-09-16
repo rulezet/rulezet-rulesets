@@ -1,0 +1,9 @@
+rule Win_Trojan_Ultimx_1
+{
+strings:
+	$a0 = { 63746f72792a60269adbbebd0f6373654861276c758a4a15dfdb057467634c5cff66932a37623441646472cd827c73381d46726565adb7ddecee104e6f70793f }
+
+
+condition:
+	$a0
+}
