@@ -1,0 +1,5 @@
+# TTP_XOR_QUAD_CurrentVersionRun_094c
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/491748)
+
+Rulezet UUID: `d0b0f313-1e7c-45ca-aefd-f0994ee8b41d`
