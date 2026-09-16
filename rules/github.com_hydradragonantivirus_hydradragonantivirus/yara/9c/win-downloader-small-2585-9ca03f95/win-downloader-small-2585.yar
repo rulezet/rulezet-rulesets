@@ -1,0 +1,9 @@
+rule Win_Downloader_Small_2585
+{
+strings:
+	$a0 = { 2389e5249481ec9400000081ecfc0c000080f58b89e38925bb514000a12c60400080ead1898360080000a12860400080 }
+
+
+condition:
+	$a0
+}
