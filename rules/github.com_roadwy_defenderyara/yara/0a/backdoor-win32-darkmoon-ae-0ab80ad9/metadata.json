@@ -1,0 +1,22 @@
+{
+  "uuid": "0ab80ad9-47fd-4615-a64e-b12f5d9b995c",
+  "title": "Backdoor_Win32_Darkmoon_AE",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/Darkmoon.AE,SIGNATURE_TYPE_PEHSTR_EXT,48 00 48 00 0d 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/324610"
+}

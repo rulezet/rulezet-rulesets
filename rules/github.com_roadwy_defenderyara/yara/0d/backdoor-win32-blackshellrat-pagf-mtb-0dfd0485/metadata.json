@@ -1,0 +1,22 @@
+{
+  "uuid": "0dfd0485-5fbd-4e4e-8fa2-13aab58e42e2",
+  "title": "Backdoor_Win32_BlackShellRat_PAGF_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/BlackShellRat.PAGF!MTB,SIGNATURE_TYPE_PEHSTR_EXT,07 00 07 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/324731"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "0de8f547-3360-4a17-91a2-90a792b25de2",
+  "title": "Backdoor_Win32_Blackhole_U_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/Blackhole.U,SIGNATURE_TYPE_PEHSTR_EXT,ffffff99 00 ffffff99 00 0d 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:exploit-kit=\"BlackHole\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/324535"
+}
