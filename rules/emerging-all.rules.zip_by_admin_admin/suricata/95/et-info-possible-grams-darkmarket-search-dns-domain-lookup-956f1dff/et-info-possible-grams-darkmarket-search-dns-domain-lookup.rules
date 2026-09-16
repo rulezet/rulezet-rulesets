@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO Possible Grams DarkMarket Search DNS Domain Lookup"; dns.query; content:"grams7enufi7jmdl"; nocase; fast_pattern; startswith; classtype:policy-violation; sid:2018406; rev:6; metadata:created_at 2014_04_22, confidence Medium, signature_severity Informational, updated_at 2024_04_22;)
