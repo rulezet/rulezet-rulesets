@@ -1,0 +1,9 @@
+rule VirTool_Win32_Obfuscator_AGO_2{
+	meta:
+		description = "VirTool:Win32/Obfuscator.AGO,SIGNATURE_TYPE_PEHSTR_EXT,02 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {f3 a5 66 a5 83 c4 04 68 ?? ?? ?? 00 a4 ff 15 ?? ?? ?? 00 0f b7 ?? ?? ?? ?? 00 69 c0 f0 49 02 00 33 c9 85 c0 7e ?? 8b c1 99 be 03 00 00 00 f7 fe 85 d2 74 ?? 8a ?? ?? ?? ?? 00 a1 ?? ?? ?? 00 80 c2 ?? 30 14 08 0f b7 ?? ?? ?? ?? 00 69 c0 f0 49 02 00 } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}
