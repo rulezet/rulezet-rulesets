@@ -1,0 +1,1 @@
+alert file ( msg:"INDICATOR-DOCUMENT RTF remote template document detected"; file_type:"RTF"; file_data; content:"|7B 5c 2a 5c 74 65 6d 70 6c 61 74 65 20|"; content:"http",within 10; service:http, smtp; rem:"yara:INDICATOR_RTF_RemoteTemplate"; classtype:trojan-activity; sid:910005; rev:1; )

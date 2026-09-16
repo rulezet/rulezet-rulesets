@@ -1,0 +1,1 @@
+alert http ( msg:"INDICATOR-DOCUMENT Doc.Trojan.ReconDoc outbound connection"; flow:to_server,established; http_uri; content:".php?id="; base64_decode:relative; base64_data; content:"document_name:"; content:"|7C|computer_name:"; content:"|7C|user_name:"; metadata:ruleset community, service http; classtype:trojan-activity; sid:920065; rev:1; )
