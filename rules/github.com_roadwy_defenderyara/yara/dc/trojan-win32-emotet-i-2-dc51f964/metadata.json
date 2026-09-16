@@ -1,0 +1,22 @@
+{
+  "uuid": "dc51f964-9d53-4a61-8e4e-7a1818f5b86d",
+  "title": "Trojan_Win32_Emotet_I_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Emotet.I,SIGNATURE_TYPE_PEHSTR,14 00 14 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/272355"
+}

@@ -1,0 +1,9 @@
+rule Trojan_Win32_Emotet_GKM_MTB_12{
+	meta:
+		description = "Trojan:Win32/Emotet.GKM!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {99 8b ce f7 f9 8b 45 ?? 83 4d ?? ?? 8a 8c 15 ?? ?? ?? ?? 30 08 40 8d 8d ?? ?? ?? ?? 89 45 ?? e8 ?? ?? ?? ?? ff 4d ?? 75 } 	condition:
+		((#a_02_0  & 1)*1) >=1
+ 
+}
