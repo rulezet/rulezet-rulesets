@@ -1,0 +1,9 @@
+rule Win_Trojan_Boot_15
+{
+strings:
+	$a0 = { 32e4cd138ec197408bdd41ba80002e3816????74345232d250cd13585abb0006e8c5007226e8c6007421b8010350b90400cd132e8816b6010e07be????bf????b94000f3a45833db41cd13 }
+
+
+condition:
+	$a0
+}

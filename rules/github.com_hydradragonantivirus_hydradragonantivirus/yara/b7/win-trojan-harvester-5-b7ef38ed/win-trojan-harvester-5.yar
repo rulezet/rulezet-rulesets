@@ -1,0 +1,9 @@
+rule Win_Trojan_Harvester_5
+{
+strings:
+	$a0 = { fd1a592d7daa250935356d368e10a961e8ffffffade3dd5a3cdb0d3cda531e8a71196a0dfaf2b745947eaf5ffbd2fafffffffff57e7352bfd7afa0f5bbdb4cfde333917c3773653c4afd093a3aff2614efa5a7ffffbfc5196f1a7d51365ad772e7d1104f8ea09fbf3f68d5d83109328dfeffff8ff0e1f08b9d645b29014d9909ec0ecd179bf5b2bbce390f37feffffb7b39ddbc9ee21 }
+
+
+condition:
+	$a0
+}

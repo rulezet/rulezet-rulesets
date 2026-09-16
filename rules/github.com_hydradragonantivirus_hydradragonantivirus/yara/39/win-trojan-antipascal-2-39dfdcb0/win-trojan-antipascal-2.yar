@@ -1,0 +1,9 @@
+rule Win_Trojan_Antipascal_2
+{
+strings:
+	$a0 = { be000189f7c704????c644????56b9??04ad35????d1c8abe2f7c3 }
+
+
+condition:
+	$a0
+}

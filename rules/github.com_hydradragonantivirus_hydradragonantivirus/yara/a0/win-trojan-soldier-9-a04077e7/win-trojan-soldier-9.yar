@@ -1,0 +1,9 @@
+rule Win_Trojan_Soldier_9
+{
+strings:
+	$a0 = { b82135cd21891e????8c06????b82125ba????cd21e9????9c3d004b740d3d3efd74069dea }
+
+
+condition:
+	$a0
+}

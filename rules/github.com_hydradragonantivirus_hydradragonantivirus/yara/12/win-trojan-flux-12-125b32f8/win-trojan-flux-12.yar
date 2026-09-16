@@ -1,0 +1,9 @@
+rule Win_Trojan_Flux_12
+{
+strings:
+	$a0 = { fb54be2bbbebab54dea3262e57555454fb43544354542e6bdebf262e73555454fbfc543d17a3abab2e6bde6540ad20364b555454fc543ddfa3ababf4f52068f06268fe2047284783f8fd20dea3262df7b9ababfcfb6cab3fababab54bedbbbebab20d6a7c1aff39870f822ee5322ee5726eea3fb20eebbf8c3b2aba9abf8f8f8ae6baaababfbc3a9abab2b543c27a6abab26ee57fb }
+
+
+condition:
+	$a0
+}

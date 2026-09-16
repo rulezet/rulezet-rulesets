@@ -1,0 +1,9 @@
+rule Win_Trojan_Cyberwarrior_6
+{
+strings:
+	$a0 = { abcde800005d81ed????bf00018db6e501b90500f3a4b41a8d96????cd21b44e8d96????b107cd217303e99400b8014332c98d96????cd21b8023d8d96????cd2193b43fb905008d96????cd213e81bee5015a4d74623e81be????5a4d74 }
+
+
+condition:
+	$a0
+}

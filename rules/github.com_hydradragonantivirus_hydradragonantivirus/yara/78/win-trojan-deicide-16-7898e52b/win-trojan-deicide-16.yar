@@ -1,0 +1,9 @@
+rule Win_Trojan_Deicide_16
+{
+strings:
+	$a0 = { b43db002ba????cd21a3????8bd8b43fb90400ba????cd21b43ecd212ea1????3d }
+
+
+condition:
+	$a0
+}

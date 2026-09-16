@@ -1,0 +1,9 @@
+rule Win_Trojan_Supra_2
+{
+strings:
+	$a0 = { b82135cd21891e????8c06????b425ba????cd21b2??cd2780fc4b7541 }
+
+
+condition:
+	$a0
+}

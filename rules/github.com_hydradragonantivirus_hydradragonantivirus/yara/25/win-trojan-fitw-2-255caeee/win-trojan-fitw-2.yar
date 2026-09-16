@@ -1,0 +1,9 @@
+rule Win_Trojan_Fitw_2
+{
+strings:
+	$a0 = { b418cd21b454cd21eb02????b0aabb????bd????e90100??cd0ecd08 }
+
+
+condition:
+	$a0
+}

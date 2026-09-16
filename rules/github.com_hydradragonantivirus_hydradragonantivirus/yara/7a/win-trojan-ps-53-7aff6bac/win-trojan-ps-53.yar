@@ -1,0 +1,9 @@
+rule Win_Trojan_PS_53
+{
+strings:
+	$a0 = { 5053515256571e063d004b7403e9[1-12]b82435cd210653ba????b82425cd210e078bda817f034d4174d9b800432ec516????cd2172??511e52b801435033c9cd21 }
+
+
+condition:
+	$a0
+}

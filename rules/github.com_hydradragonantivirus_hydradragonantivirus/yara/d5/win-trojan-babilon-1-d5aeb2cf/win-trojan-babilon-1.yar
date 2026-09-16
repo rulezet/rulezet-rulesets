@@ -1,0 +1,9 @@
+rule Win_Trojan_Babilon_1
+{
+strings:
+	$a0 = { 1fb82135cd21891e????8c06????891e????8c06????b452cd21fa8cde268b47fe1f }
+
+
+condition:
+	$a0
+}
