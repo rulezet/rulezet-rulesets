@@ -1,0 +1,9 @@
+rule Win_Trojan_Nprank_1
+{
+strings:
+	$a0 = { 7368656c6c5f74726179776e640000005c000000ffffffff0c00000077696e6c6f676f6e2e6578650000000057696e6c6f676f6e }
+
+
+condition:
+	$a0
+}

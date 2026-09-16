@@ -1,0 +1,9 @@
+rule Win_Trojan_Banger_1
+{
+strings:
+	$a0 = { ecff0fbe5401ff83fa5c74145cac2055f8b6b9c7af6808277d278d95b4f7a5627b1052532afcfc8b8d2d050a377b83e1108911bd0b4ef01329df626960e028860162e2cf53f0475112fcf885c075be2045b79b6bf09d85b03c1af4bddd8bcbf4 }
+
+
+condition:
+	$a0
+}

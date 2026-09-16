@@ -1,0 +1,9 @@
+rule Win_Trojan_PS_11
+{
+strings:
+	$a0 = { b82435cd212e899e????2e8c86????b4258d96????cd210e07b447b2008db6????cd21 }
+
+
+condition:
+	$a0
+}

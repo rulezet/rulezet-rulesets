@@ -1,0 +1,9 @@
+rule Win_Trojan_Neuroquila_5
+{
+strings:
+	$a0 = { fb0e8bc31fb8????c7c3????d1078d06????81ebfefffb81fb????8bc07303fc75ea }
+
+
+condition:
+	$a0
+}

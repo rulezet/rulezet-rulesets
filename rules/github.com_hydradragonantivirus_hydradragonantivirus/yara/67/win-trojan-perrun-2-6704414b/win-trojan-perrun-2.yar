@@ -1,0 +1,9 @@
+rule Win_Trojan_Perrun_2
+{
+strings:
+	$a0 = { 898a256b7f006a7067766972aab36067bf8009536414f5ff00755ffbbe0bb81320038e0c8712575efeb70c001744f76100c411f42240eba659765dfcd71c0746 }
+
+
+condition:
+	$a0
+}

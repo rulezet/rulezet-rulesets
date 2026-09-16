@@ -1,0 +1,9 @@
+rule Win_Trojan_Sometrouble_2
+{
+strings:
+	$a0 = { 592d0189bffd110628546878da442d6f4e652c67e0bff6b53f73682cf32e784d732c616b41113825580970b01fee0647ef8b73060b292a1359c0442748a247be604de12c52bd406f }
+
+
+condition:
+	$a0
+}
