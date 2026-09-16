@@ -1,0 +1,21 @@
+{
+  "uuid": "25f4181d-fbcf-4966-9271-10d49afa4855",
+  "title": "TrojanSpy_Win32_Keylogger_BW",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanSpy:Win32/Keylogger.BW,SIGNATURE_TYPE_PEHSTR_EXT,1d 00 1c 00 0b 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/327213"
+}

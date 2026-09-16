@@ -1,0 +1,21 @@
+{
+  "uuid": "80db6373-a9ff-4e37-b773-c08e59f25a0f",
+  "title": "TrojanSpy_Win32_Banker_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanSpy:Win32/Banker,SIGNATURE_TYPE_PEHSTR_EXT,14 00 14 00 11 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/327054"
+}

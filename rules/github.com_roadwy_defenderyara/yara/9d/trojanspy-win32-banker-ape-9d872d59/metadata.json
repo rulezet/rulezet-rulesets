@@ -1,0 +1,21 @@
+{
+  "uuid": "9d872d59-f144-421b-b193-443eaba1d2f5",
+  "title": "TrojanSpy_Win32_Banker_APE",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanSpy:Win32/Banker.APE,SIGNATURE_TYPE_PEHSTR_EXT,19 00 19 00 0d 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/327073"
+}

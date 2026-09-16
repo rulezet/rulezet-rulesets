@@ -1,0 +1,21 @@
+{
+  "uuid": "9fb734e3-47b3-467f-8ba9-13d68d1d1f2a",
+  "title": "TrojanSpy_Win32_Banker_AOT_3",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanSpy:Win32/Banker.AOT,SIGNATURE_TYPE_PEHSTR_EXT,0e 00 0e 00 06 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/327079"
+}
