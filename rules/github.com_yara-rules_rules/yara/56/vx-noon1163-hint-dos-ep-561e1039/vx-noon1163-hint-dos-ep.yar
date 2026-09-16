@@ -1,0 +1,9 @@
+import "pe"
+rule Vx_Noon1163_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { E8 ?? ?? 5B 50 56 B4 CB CD 21 3C 07 ?? ?? 81 ?? ?? ?? 2E ?? ?? 4D 5A ?? ?? BF 00 01 89 DE FC }
+    condition:
+        $a at pe.entry_point
+
+}
