@@ -1,0 +1,9 @@
+rule Win_Trojan_Hob_1
+{
+strings:
+	$a0 = { b0b30d0ab3b15370656369616c20666f722068306220416b4120694e446953536f4c55626c65202f2f5b427a5a5db1b3 }
+
+
+condition:
+	$a0
+}

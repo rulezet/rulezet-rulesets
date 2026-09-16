@@ -1,0 +1,9 @@
+rule Win_Trojan_Nazi_5
+{
+strings:
+	$a0 = { f0ff520000000c1140234e415a492076322e3020626574610d0f000a0df00024050032045030e00e0030 }
+
+
+condition:
+	$a0
+}

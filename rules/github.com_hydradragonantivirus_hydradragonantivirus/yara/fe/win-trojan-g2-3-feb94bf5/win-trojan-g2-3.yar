@@ -1,0 +1,9 @@
+rule Win_Trojan_G2_3
+{
+strings:
+	$a0 = { 140683ebfee2f7fc06146395f32606320ccc4758d3354367568856a0de5c94ec89420914429734260650a72606a2de54 }
+
+
+condition:
+	$a0
+}
