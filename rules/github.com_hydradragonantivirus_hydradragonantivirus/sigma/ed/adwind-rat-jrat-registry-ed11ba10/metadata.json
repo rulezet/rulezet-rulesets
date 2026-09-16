@@ -1,0 +1,24 @@
+{
+  "uuid": "ed11ba10-1862-48ca-b703-a5a247f668cd",
+  "title": "Adwind RAT / JRAT - Registry",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Tom Ueltschi, Jonhnathan Ribeiro, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects javaw.exe in AppData folder as used by Adwind / JRAT",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.005",
+    "T1059.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365434"
+}

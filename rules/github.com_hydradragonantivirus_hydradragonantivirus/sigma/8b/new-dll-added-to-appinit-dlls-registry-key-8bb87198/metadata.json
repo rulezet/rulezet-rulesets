@@ -1,0 +1,23 @@
+{
+  "uuid": "8bb87198-e0aa-4ba1-87a5-d81cd09f84ae",
+  "title": "New DLL Added to AppInit_DLLs Registry Key",
+  "format": "sigma",
+  "author": "Ilyas Ochkov, oscd.community, Tim Shelton",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "DLLs that are specified in the AppInit_DLLs value in the Registry key HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows are loaded by user32.dll into every process that loads user32.dll",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.010"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365705"
+}

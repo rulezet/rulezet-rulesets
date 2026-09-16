@@ -1,0 +1,24 @@
+{
+  "uuid": "a9c8ced2-a914-44d6-8c9c-247dfc180742",
+  "title": "ServiceDll Hijack",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects changes to the \"ServiceDLL\" value related to a service in the registry.\nThis is often used as a method of persistence.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365491"
+}

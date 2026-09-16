@@ -1,0 +1,24 @@
+{
+  "uuid": "32e73c2e-58af-4fa4-a717-076cfccfc377",
+  "title": "Disable Internal Tools or Feature in Registry",
+  "format": "sigma",
+  "author": "frack113, Nasreddine Bencherchali (Nextron Systems), CrimpSec",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects registry modifications that change features of internal Windows tools (malware like Agent Tesla uses this technique)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"TrojanDownloader\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365667"
+}

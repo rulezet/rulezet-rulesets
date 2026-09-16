@@ -1,0 +1,25 @@
+{
+  "uuid": "db2b91aa-01be-4a1f-b017-665e97db9700",
+  "title": "PUA - Sysinternals Tools Execution - Registry",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of some potentially unwanted tools such as PsExec, Procdump, etc. (part of the Sysinternals suite) via the creation of the \"accepteula\" registry key.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:tool=\"ProcDump\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1588.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365675"
+}

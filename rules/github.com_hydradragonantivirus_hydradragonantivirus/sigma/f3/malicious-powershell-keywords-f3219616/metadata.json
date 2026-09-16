@@ -1,0 +1,25 @@
+{
+  "uuid": "f3219616-2988-429c-b0f8-f83da9ebadb9",
+  "title": "Malicious PowerShell Keywords",
+  "format": "sigma",
+  "author": "Sean Metcalf (source), Florian Roth (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects keywords from well-known PowerShell exploitation frameworks",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365784"
+}

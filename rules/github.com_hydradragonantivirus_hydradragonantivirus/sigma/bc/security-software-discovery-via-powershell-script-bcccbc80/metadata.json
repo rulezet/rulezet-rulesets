@@ -1,0 +1,24 @@
+{
+  "uuid": "bcccbc80-288c-40ba-b2df-0646ad4f1a8b",
+  "title": "Security Software Discovery Via Powershell Script",
+  "format": "sigma",
+  "author": "frack113, Anish Bogati, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects calls to \"get-process\" where the output is piped to a \"where-object\" filter to search for security solution processes.\nAdversaries may attempt to get a listing of security software, configurations, defensive tools, and sensors that are installed on a system or in a cloud environment. This may include things such as firewall rules and anti-virus\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1518.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365800"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "ea0ff14a-3698-430f-a86b-53355651da2c",
+  "title": "New Netsh Helper DLL Registered From A Suspicious Location",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects changes to the Netsh registry key to add a new DLL value that is located on a suspicious location. This change might be an indication of a potential persistence attempt by adding a malicious Netsh helper\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1128",
+    "T1546.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365600"
+}

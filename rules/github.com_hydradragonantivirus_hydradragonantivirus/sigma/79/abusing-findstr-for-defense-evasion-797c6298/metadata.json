@@ -1,0 +1,26 @@
+{
+  "uuid": "797c6298-3192-4a65-b211-c76cf2a3fdcf",
+  "title": "Abusing Findstr for Defense Evasion",
+  "format": "sigma",
+  "author": "Furkan CALISKAN, @caliskanfurkan_, @oscd_initiative, Nasreddine Bencherchali",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Attackers can use findstr to hide their artifacts or search specific strings and evade defense mechanism",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1218",
+    "T1552.001",
+    "T1564.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365482"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "4d6b0a30-25f7-49b8-a2c9-db1c88450966",
+  "title": "Windows Hypervisor Enforced Code Integrity Disabled",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Anish Bogati",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects changes to the HypervisorEnforcedCodeIntegrity registry key and the \"Enabled\" value being set to 0 in order to disable the Hypervisor Enforced Code Integrity feature. This allows an attacker to load unsigned and untrusted code to be run in the kernel\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562.001",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365554"
+}

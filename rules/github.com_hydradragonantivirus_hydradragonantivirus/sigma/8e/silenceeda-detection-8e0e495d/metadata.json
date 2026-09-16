@@ -1,0 +1,27 @@
+{
+  "uuid": "8e0e495d-00d9-4816-93cd-d65d06197501",
+  "title": "Silence.EDA Detection",
+  "format": "sigma",
+  "author": "Alina Stepchenkova, Group-IB, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects Silence EmpireDNSAgent as described in the Group-IP report",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Empire\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1071.004",
+    "T1529",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365885"
+}

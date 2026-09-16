@@ -1,0 +1,24 @@
+{
+  "uuid": "72a314aa-c372-45fa-bc4e-ca90a873b05d",
+  "title": "TA505 Dropper Load Pattern",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects mshta loaded by wmiprvse as parent as used by TA505 malicious documents",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1106"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365431"
+}

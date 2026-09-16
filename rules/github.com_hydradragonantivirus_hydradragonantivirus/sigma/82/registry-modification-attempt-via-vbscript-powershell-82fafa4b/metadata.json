@@ -1,0 +1,24 @@
+{
+  "uuid": "82fafa4b-f9cc-428e-83e0-24a4d9e6887e",
+  "title": "Registry Modification Attempt Via VBScript - PowerShell",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects attempts to modify the registry using VBScript's CreateObject(\"Wscript.shell\") and RegWrite methods embedded within PowerShell scripts or commands.\nThreat actors commonly embed VBScript code within PowerShell to perform registry modifications, attempting to evade detection that monitors for direct registry access through traditional tools.\nThis technique can be used for persistence, defense evasion, and privilege escalation by modifying registry keys without using regedit.exe, reg.exe, or PowerShell's native registry cmdlets.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.005",
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365768"
+}

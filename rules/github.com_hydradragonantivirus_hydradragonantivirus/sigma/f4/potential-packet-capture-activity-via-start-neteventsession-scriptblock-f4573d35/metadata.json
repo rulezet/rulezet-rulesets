@@ -1,0 +1,23 @@
+{
+  "uuid": "f4573d35-a045-4d8c-833a-f977c4f3f9c7",
+  "title": "Potential Packet Capture Activity Via Start-NetEventSession - ScriptBlock",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of powershell scripts with calls to the \"Start-NetEventSession\" cmdlet. Which allows an attacker to start event and packet capture for a network event session.\nAdversaries may attempt to capture network to gather information over the course of an operation.\nData captured via this technique may include user credentials, especially those sent over an insecure, unencrypted protocol.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1040"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365884"
+}

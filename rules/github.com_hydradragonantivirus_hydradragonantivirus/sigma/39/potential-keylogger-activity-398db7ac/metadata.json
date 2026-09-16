@@ -1,0 +1,23 @@
+{
+  "uuid": "398db7ac-0b6b-4ae2-93af-69a31b1fd5f3",
+  "title": "Potential Keylogger Activity",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects PowerShell scripts that contains reference to keystroke capturing functions",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1056.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365798"
+}

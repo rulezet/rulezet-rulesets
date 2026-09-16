@@ -1,0 +1,24 @@
+{
+  "uuid": "ac9c584b-a8c5-4ccf-9d9b-8995dba573d5",
+  "title": "Atbroker Registry Change",
+  "format": "sigma",
+  "author": "Mateusz Wydra, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects creation/modification of Assistive Technology applications and persistence with usage of 'at'",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218",
+    "T1547"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365721"
+}

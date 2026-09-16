@@ -1,0 +1,23 @@
+{
+  "uuid": "a50c3d98-a34b-4aba-9a60-d1460d5d5808",
+  "title": "UAC Bypass via Sdclt",
+  "format": "sigma",
+  "author": "Omer Yampel, Christian Burkard (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the pattern of UAC Bypass using registry key manipulation of sdclt.exe (e.g. UACMe 53)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365612"
+}

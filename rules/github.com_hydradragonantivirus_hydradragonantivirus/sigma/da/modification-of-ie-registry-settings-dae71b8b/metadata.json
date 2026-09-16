@@ -1,0 +1,23 @@
+{
+  "uuid": "dae71b8b-77f9-4ae6-b9b6-935940db6d68",
+  "title": "Modification of IE Registry Settings",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects modification of the registry settings used for Internet Explorer and other Windows components that use these settings. An attacker can abuse this registry key to add a domain to the trusted sites Zone or insert JavaScript for persistence",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365489"
+}

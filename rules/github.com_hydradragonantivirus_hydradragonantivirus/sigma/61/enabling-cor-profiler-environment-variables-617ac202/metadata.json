@@ -1,0 +1,23 @@
+{
+  "uuid": "617ac202-f498-47cd-9948-73e0b2dfaf3e",
+  "title": "Enabling COR Profiler Environment Variables",
+  "format": "sigma",
+  "author": "Jose Rodriguez (@Cyb3rPandaH), OTR (Open Threat Research), Jimmy Bayne (@bohops)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects .NET Framework CLR and .NET Core CLR \"cor_enable_profiling\" and \"cor_profiler\" variables being set and configured.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.012"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365657"
+}

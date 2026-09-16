@@ -1,0 +1,23 @@
+{
+  "uuid": "18ee69fb-aded-4635-831f-6729540df218",
+  "title": "Registry Persistence via Explorer Run Key",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a possible persistence mechanism using RUN key for Windows Explorer and pointing to a suspicious folder",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1547.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365604"
+}

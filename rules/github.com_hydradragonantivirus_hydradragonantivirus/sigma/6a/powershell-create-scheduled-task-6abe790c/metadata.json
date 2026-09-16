@@ -1,0 +1,23 @@
+{
+  "uuid": "6abe790c-2ec7-491a-aae9-36f308cf0410",
+  "title": "Powershell Create Scheduled Task",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries may abuse the Windows Task Scheduler to perform task scheduling for initial or recurring execution of malicious code",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365841"
+}

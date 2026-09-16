@@ -1,0 +1,23 @@
+{
+  "uuid": "68b52a94-b420-4184-9566-c48543fb6595",
+  "title": "Read and Execute a File Via Cmd.exe",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect use of \"/R <\" to read and execute a file via cmd.exe",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365465"
+}

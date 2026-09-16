@@ -1,0 +1,23 @@
+{
+  "uuid": "ff1f4253-d290-4cd5-b260-fcd95f57a126",
+  "title": "Lsass Full Dump Request Via DumpType Registry Settings",
+  "format": "sigma",
+  "author": "@pbssubhash",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the setting of the \"DumpType\" registry value to \"2\" which stands for a \"Full Dump\". Technique such as LSASS Shtinkering requires this value to be \"2\" in order to dump LSASS.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365682"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "bd08a9b7-c913-459d-b933-e4f2210ab405",
+  "title": "Hide Schedule Task Via Index Value Tamper",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects when the \"index\" value of a scheduled task is modified from the registry\nWhich effectively hides it from any tooling such as \"schtasks /query\" (Read the referenced link for more information about the effects of this technique)\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365596"
+}

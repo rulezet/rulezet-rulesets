@@ -1,0 +1,23 @@
+{
+  "uuid": "6bd03100-6c8b-40c8-9e48-0d3873d31c64",
+  "title": "Powershell Detect Virtualization Environment",
+  "format": "sigma",
+  "author": "frack113, Duc.Le-GTSC",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries may employ various system checks to detect and avoid virtualization and analysis environments.\nThis may include changing behaviors based on the results of checks for the presence of artifacts indicative of a virtual machine environment (VME) or sandbox\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1497.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365823"
+}

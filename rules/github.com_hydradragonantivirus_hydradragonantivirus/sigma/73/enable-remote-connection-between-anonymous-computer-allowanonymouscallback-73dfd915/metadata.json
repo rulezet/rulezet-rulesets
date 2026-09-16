@@ -1,0 +1,23 @@
+{
+  "uuid": "73dfd915-78e1-4ef2-92a0-d403c2a668ce",
+  "title": "Enable Remote Connection Between Anonymous Computer - AllowAnonymousCallback",
+  "format": "sigma",
+  "author": "X__Junior (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects enabling of the \"AllowAnonymousCallback\" registry value, which allows a remote connection between computers that do not have a trust relationship.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365692"
+}

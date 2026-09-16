@@ -1,0 +1,24 @@
+{
+  "uuid": "bd23c8d7-3011-4ed7-bedc-81b35f48ba12",
+  "title": "Activity Related to NTDS.dit Domain Hash Retrieval",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Michael Haag",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious commands that could be related to activity that uses volume shadow copy to steal and retrieve hashes from the NTDS.dit file remotely",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365478"
+}

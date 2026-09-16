@@ -1,0 +1,23 @@
+{
+  "uuid": "13c0fe8e-1405-460f-8151-1ef21883d57a",
+  "title": "New PortProxy Registry Entry Added",
+  "format": "sigma",
+  "author": "Andreas Hunkeler (@Karneades)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the modification of the PortProxy registry key which is used for port forwarding.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1090"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365719"
+}

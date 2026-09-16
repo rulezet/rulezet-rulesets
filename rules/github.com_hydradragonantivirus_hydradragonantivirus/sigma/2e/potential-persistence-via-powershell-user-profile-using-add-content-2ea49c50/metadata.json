@@ -1,0 +1,23 @@
+{
+  "uuid": "2ea49c50-6f5f-4957-8c11-c91b7591f13c",
+  "title": "Potential Persistence Via PowerShell User Profile Using Add-Content",
+  "format": "sigma",
+  "author": "frack113, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects calls to \"Add-Content\" cmdlet in order to modify the content of the user profile and potentially adding suspicious commands for persistence",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.013"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365852"
+}

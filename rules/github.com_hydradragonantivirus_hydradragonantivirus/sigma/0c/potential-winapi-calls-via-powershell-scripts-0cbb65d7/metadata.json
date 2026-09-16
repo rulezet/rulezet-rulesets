@@ -1,0 +1,24 @@
+{
+  "uuid": "0cbb65d7-1123-492d-b5c0-fb7aec0d17c1",
+  "title": "Potential WinAPI Calls Via PowerShell Scripts",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Nikita Nazarov, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects use of WinAPI functions in PowerShell scripts",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1106"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365820"
+}

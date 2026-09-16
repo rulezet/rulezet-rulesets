@@ -1,0 +1,23 @@
+{
+  "uuid": "c7270d1f-ddbf-46d2-abdf-fd0cc21a5780",
+  "title": "UAC Bypass Abusing Winsat Path Parsing - Registry",
+  "format": "sigma",
+  "author": "Christian Burkard (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the pattern of UAC Bypass using a path parsing issue in winsat.exe (UACMe 52)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365508"
+}

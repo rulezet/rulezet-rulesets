@@ -1,0 +1,23 @@
+{
+  "uuid": "a53ed962-f541-4f34-a8e5-e318abb1b351",
+  "title": "Esentutl Volume Shadow Copy Service Keys",
+  "format": "sigma",
+  "author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the volume shadow copy service initialization and processing via esentutl. Registry keys such as HKLM\\\\System\\\\CurrentControlSet\\\\Services\\\\VSS\\\\Diag\\\\VolSnap\\\\Volume are captured.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365709"
+}

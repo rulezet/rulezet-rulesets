@@ -1,0 +1,23 @@
+{
+  "uuid": "3c1b92c8-e6e6-4e85-81fc-d9daf53a97bc",
+  "title": "ScreenSaver Registry Key Set",
+  "format": "sigma",
+  "author": "Jose Luis Sanchez Martinez (@Joseliyo_Jstnk)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects registry key established after masqueraded .scr file execution using Rundll32 through desk.cpl",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365552"
+}

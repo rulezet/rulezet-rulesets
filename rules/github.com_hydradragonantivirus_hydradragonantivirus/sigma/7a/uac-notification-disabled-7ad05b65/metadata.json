@@ -1,0 +1,24 @@
+{
+  "uuid": "7ad05b65-597f-4dfa-99a1-72ec1ba3501e",
+  "title": "UAC Notification Disabled",
+  "format": "sigma",
+  "author": "frack113, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects when an attacker tries to disable User Account Control (UAC) notification by tampering with the \"UACDisableNotify\" value.\nUAC is a critical security feature in Windows that prevents unauthorized changes to the operating system. It prompts the user for permission or an administrator password before allowing actions that could affect the system's operation or change settings that affect other users.\nWhen \"UACDisableNotify\" is set to 1, UAC prompts are suppressed.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365662"
+}

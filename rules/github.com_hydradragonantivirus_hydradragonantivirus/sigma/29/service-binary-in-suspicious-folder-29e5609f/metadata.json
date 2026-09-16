@@ -1,0 +1,24 @@
+{
+  "uuid": "29e5609f-9a22-4691-9924-b5656b199387",
+  "title": "Service Binary in Suspicious Folder",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect the creation of a service with a service binary located in a suspicious directory",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365545"
+}

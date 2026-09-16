@@ -1,0 +1,23 @@
+{
+  "uuid": "397025e5-c93b-40ea-825a-95b1a590c4c4",
+  "title": "Disable Windows Event Logging Via Registry",
+  "format": "sigma",
+  "author": "frack113, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects tampering with the \"Enabled\" registry key in order to disable Windows logging of a Windows event channel",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365588"
+}

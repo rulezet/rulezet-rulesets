@@ -1,0 +1,23 @@
+{
+  "uuid": "8e2e5180-6f91-433e-b38b-7f88e2a320f5",
+  "title": "Manipulation of User Computer or Group Security Principals Across AD",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries may create a domain account to maintain access to victim systems.\nDomain accounts are those managed by Active Directory Domain Services where access and permissions are configured across systems and services that are part of that domain..\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1136.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365867"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "87fb58d4-b621-4202-bf4c-c86803eccaa1",
+  "title": "Potential AutoLogger Sessions Tampering",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects tampering with autologger trace sessions which is a technique used by attackers to disable logging.\nThe AutoLogger event tracing session records events up that occur early in the operating system boot process.\nApplications and device drivers can use the AutoLogger session to capture traces before the user logs in, and also used by security solutions as telemetry source.\nAdversaries may disable these sessions to evade detection and prevent security monitoring of early boot activities and system events.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562.001",
+    "T1685.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365580"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "245472db-d5d2-4bcc-939c-e75d523ebab9",
+  "title": "Usage of Renamed Sysinternals Tools - RegistrySet",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects non-sysinternals tools setting the \"accepteula\" key which normally is set on sysinternals tool execution",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:tool=\"ProcDump\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1588.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365539"
+}

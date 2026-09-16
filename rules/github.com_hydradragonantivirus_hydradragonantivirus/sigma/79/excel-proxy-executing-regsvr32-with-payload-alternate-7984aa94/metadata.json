@@ -1,0 +1,27 @@
+{
+  "uuid": "7984aa94-f1c5-411e-94a8-227dce0993a6",
+  "title": "Excel Proxy Executing Regsvr32 With Payload Alternate",
+  "format": "sigma",
+  "author": "Vadim Khrykov (ThreatIntel), Cyb3rEng (Rule)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Excel called wmic to finally proxy execute regsvr32 with the payload.\nAn attacker wanted to break suspicious parent-child chain (Office app spawns LOLBin).\nBut we have command-line in the event which allow us to \"restore\" this suspicious parent-child chain and detect it.\nMonitor process creation with \"wmic process call create\" and LOLBins in command-line with parent Office application processes.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1204.002",
+    "T1218.010"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365435"
+}

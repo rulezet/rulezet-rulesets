@@ -1,0 +1,23 @@
+{
+  "uuid": "dd04bc67-c085-475f-8414-e8292ede0be3",
+  "title": "Add Port Monitor Persistence in Registry",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries may use port monitors to run an attacker supplied DLL during system boot for persistence or privilege escalation.\nA port monitor can be set through the AddMonitor API call to set a DLL to be loaded at startup.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1547.010"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365627"
+}

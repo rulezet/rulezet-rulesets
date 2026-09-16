@@ -1,0 +1,23 @@
+{
+  "uuid": "dcf83096-d79b-49ab-9bde-bb6163793251",
+  "title": "Antivirus Filter Driver Disallowed On Dev Drive - Registry",
+  "format": "sigma",
+  "author": "@kostastsale, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects activity that indicates a user disabling the ability for Antivirus mini filter to inspect a \"Dev Drive\".\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365633"
+}

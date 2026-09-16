@@ -1,0 +1,23 @@
+{
+  "uuid": "c68efa8b-6974-474c-a927-df641b342f95",
+  "title": "Directory Service Restore Mode(DSRM) Registry Value Tampering",
+  "format": "sigma",
+  "author": "Nischal Khadgi",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects changes to \"DsrmAdminLogonBehavior\" registry value.\nDuring a Domain Controller (DC) promotion, administrators create a Directory Services Restore Mode (DSRM) local administrator account with a password that rarely changes. The DSRM account is an “Administrator” account that logs in with the DSRM mode when the server is booting up to restore AD backups or recover the server from a failure.\nAttackers could abuse DSRM account to maintain their persistence and access to the organization's Active Directory.\nIf the \"DsrmAdminLogonBehavior\" value is set to \"0\", the administrator account can only be used if the DC starts in DSRM.\nIf the \"DsrmAdminLogonBehavior\" value is set to \"1\", the administrator account can only be used if the local AD DS service is stopped.\nIf the \"DsrmAdminLogonBehavior\" value is set to \"2\", the administrator account can always be used.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365674"
+}

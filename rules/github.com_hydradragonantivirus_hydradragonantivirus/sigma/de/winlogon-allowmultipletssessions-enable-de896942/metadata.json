@@ -1,0 +1,24 @@
+{
+  "uuid": "de896942-262b-4259-9d4b-9a6436c164fb",
+  "title": "Winlogon AllowMultipleTSSessions Enable",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects when the 'AllowMultipleTSSessions' value is enabled.\nWhich allows for multiple Remote Desktop connection sessions to be opened at once.\nThis is often used by attacker as a way to connect to an RDP session without disconnecting the other users\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365599"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "7199606a-62dc-4dff-a87a-f19ce59b2048",
+  "title": "Potential Suspicious PowerShell Keywords",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Perez Diego (@darkquassar), Tuan Le (NCSGroup)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects potentially suspicious keywords that could indicate the use of a PowerShell exploitation framework",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365901"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "9dcd2f5c-1d46-4ccc-b943-8c73f371bf6c",
+  "title": "Tamper Windows Defender - PSClassic",
+  "format": "sigma",
+  "author": "frack113, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Attempting to disable scheduled scanning and other parts of Windows Defender ATP or set default actions to allow.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562.001",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365729"
+}

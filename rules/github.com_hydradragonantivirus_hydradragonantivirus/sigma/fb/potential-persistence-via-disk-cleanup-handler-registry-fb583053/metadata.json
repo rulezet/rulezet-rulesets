@@ -1,0 +1,21 @@
+{
+  "uuid": "fb583053-3550-4f5c-af46-9042ca51073b",
+  "title": "Potential Persistence Via Disk Cleanup Handler - Registry",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects when an attacker modifies values of the Disk Cleanup Handler in the registry to achieve persistence.\nThe disk cleanup manager is part of the operating system. It displays the dialog box […]\nThe user has the option of enabling or disabling individual handlers by selecting or clearing their check box in the disk cleanup manager's UI.\nAlthough Windows comes with a number of disk cleanup handlers, they aren't designed to handle files produced by other applications.\nInstead, the disk cleanup manager is designed to be flexible and extensible by enabling any developer to implement and register their own disk cleanup handler.\nAny developer can extend the available disk cleanup services by implementing and registering a disk cleanup handler.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365723"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "7ec11fe3-ac6e-4ec2-aa3b-c057a361d69c",
+  "title": "Potential Registry Persistence Attempt Via DbgManagedDebugger",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the addition of the \"Debugger\" value to the \"DbgManagedDebugger\" key in order to achieve persistence. Which will get invoked when an application crashes",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365522"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "368d2f41-ee25-4d10-8a08-63e48ab35c7d",
+  "title": "PUA - Sysinternal Tool Execution - Registry",
+  "format": "sigma",
+  "author": "Markus Neis",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of a Sysinternals Tool via the creation of the \"accepteula\" registry key",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1588.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365681"
+}

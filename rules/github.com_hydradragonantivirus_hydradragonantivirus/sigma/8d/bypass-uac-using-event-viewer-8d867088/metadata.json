@@ -1,0 +1,24 @@
+{
+  "uuid": "8d867088-40cb-4a56-a43f-bad5ac0161d1",
+  "title": "Bypass UAC Using Event Viewer",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Bypasses User Account Control using Event Viewer and a relevant Windows Registry modification",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1547.010",
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365608"
+}

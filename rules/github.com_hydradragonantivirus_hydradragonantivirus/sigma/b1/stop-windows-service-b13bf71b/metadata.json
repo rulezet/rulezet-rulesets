@@ -1,0 +1,23 @@
+{
+  "uuid": "b13bf71b-dae0-457b-9e03-a2f2d38b6858",
+  "title": "Stop Windows Service",
+  "format": "sigma",
+  "author": "Jakob Weinzettl, oscd.community, Nasreddine Bencherchali",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a Windows service to be stopped",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1489"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365455"
+}

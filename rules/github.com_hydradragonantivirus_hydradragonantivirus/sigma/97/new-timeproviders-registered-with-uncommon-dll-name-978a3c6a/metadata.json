@@ -1,0 +1,23 @@
+{
+  "uuid": "978a3c6a-3a09-4a77-886a-f980937bce75",
+  "title": "New TimeProviders Registered With Uncommon DLL Name",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects processes setting a new DLL in DllName in under HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\W32Time\\TimeProvider.\nAdversaries may abuse time providers to execute DLLs when the system boots.\nThe Windows Time service (W32Time) enables time synchronization across and within domains.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1547.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365677"
+}

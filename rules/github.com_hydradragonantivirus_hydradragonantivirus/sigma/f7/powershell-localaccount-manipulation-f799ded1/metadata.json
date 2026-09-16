@@ -1,0 +1,23 @@
+{
+  "uuid": "f799ded1-987b-4c72-8326-2f605d94efb0",
+  "title": "Powershell LocalAccount Manipulation",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries may manipulate accounts to maintain access to victim systems.\nAccount manipulation may consist of any action that preserves adversary access to a compromised account, such as modifying credentials or permission groups\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365860"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "7262cacf-671d-41d8-bf75-7dc17f621c9e",
+  "title": "New BgInfo.EXE Custom WMI Query Registry Configuration",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects setting of a new registry value related to BgInfo configuration, which can be abused to execute custom WMI query via \"BgInfo.exe\"",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365639"
+}

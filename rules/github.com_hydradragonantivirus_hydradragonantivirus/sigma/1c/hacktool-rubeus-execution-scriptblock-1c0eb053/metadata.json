@@ -1,0 +1,26 @@
+{
+  "uuid": "1c0eb053-55a6-453a-a158-50b25fb84600",
+  "title": "HackTool - Rubeus Execution - ScriptBlock",
+  "format": "sigma",
+  "author": "Christian Burkard (Nextron Systems), Florian Roth (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of the hacktool Rubeus using specific command line flags",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1550.003",
+    "T1558.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365826"
+}

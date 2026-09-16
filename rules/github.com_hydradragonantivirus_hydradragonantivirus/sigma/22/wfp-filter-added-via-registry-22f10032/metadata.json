@@ -1,0 +1,24 @@
+{
+  "uuid": "22f10032-8bde-4230-87ae-63dbdd2fff3e",
+  "title": "WFP Filter Added via Registry",
+  "format": "sigma",
+  "author": "Frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects registry modifications that add Windows Filtering Platform (WFP) filters, which may be used to block security tools and EDR agents from reporting events.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1569.002",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365531"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "e78b1b07-13b5-48dc-9218-a2eedd6cec58",
+  "title": "UAC Bypass Using Windows Media Player - Registry",
+  "format": "sigma",
+  "author": "Christian Burkard (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the pattern of UAC Bypass using Windows Media Player osksupport.dll (UACMe 32)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365525"
+}

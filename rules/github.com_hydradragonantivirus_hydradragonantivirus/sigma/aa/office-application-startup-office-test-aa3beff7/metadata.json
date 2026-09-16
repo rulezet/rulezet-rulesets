@@ -1,0 +1,23 @@
+{
+  "uuid": "aa3beff7-a827-4b08-9cb1-2ecd451caf9b",
+  "title": "Office Application Startup - Office Test",
+  "format": "sigma",
+  "author": "omkar72",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the addition of office test registry that allows a user to specify an arbitrary DLL that will be executed every time an Office application is started",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1137.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365697"
+}

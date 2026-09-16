@@ -1,0 +1,23 @@
+{
+  "uuid": "fa3b3862-a2cf-45a5-a521-7803b3ffa379",
+  "title": "Outlook EnableUnsafeClientMailRules Setting Enabled - Registry",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects an attacker trying to enable the outlook security setting \"EnableUnsafeClientMailRules\" which allows outlook to run applications or execute macros",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365619"
+}

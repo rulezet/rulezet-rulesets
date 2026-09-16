@@ -1,0 +1,23 @@
+{
+  "uuid": "b832a3af-5ee4-4e1e-bf57-4ec0c01f4994",
+  "title": "Potential In-Memory Execution Using Reflection.Assembly",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects usage of \"Reflection.Assembly\" load functions to dynamically load assemblies in memory",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1620"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365769"
+}

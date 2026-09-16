@@ -1,0 +1,23 @@
+{
+  "uuid": "3db2c796-b8a2-418c-95c5-f860ef227fa0",
+  "title": "Usage Of Web Request Commands And Cmdlets - ScriptBlock",
+  "format": "sigma",
+  "author": "James Pemberton / @4A616D6573",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of various web request commands with commandline tools and Windows PowerShell cmdlets (including aliases) via PowerShell scriptblock logs",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365777"
+}

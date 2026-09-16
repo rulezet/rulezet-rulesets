@@ -1,0 +1,24 @@
+{
+  "uuid": "6eeac802-f9c4-4318-ad4b-6d0d2d66ee22",
+  "title": "Suspicious Get Information for SMB Share - PowerShell Module",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries may look for folders and drives shared on remote systems as a means of identifying sources of information to gather as a precursor for Collection and\nto identify potential systems of interest for Lateral Movement.\nNetworks often contain shared network drives and folders that enable users to access file directories on various systems across a network.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.001",
+    "T1069.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365906"
+}

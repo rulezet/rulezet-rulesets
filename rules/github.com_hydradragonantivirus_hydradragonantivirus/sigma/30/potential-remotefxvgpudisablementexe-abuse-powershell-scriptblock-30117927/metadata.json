@@ -1,0 +1,23 @@
+{
+  "uuid": "30117927-7d93-412d-91bb-020458d7530f",
+  "title": "Potential RemoteFXvGPUDisablement.EXE Abuse - PowerShell ScriptBlock",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects PowerShell module creation where the module Contents are set to \"function Get-VMRemoteFXPhysicalVideoAdapter\". This could be a sign of potential abuse of the \"RemoteFXvGPUDisablement.exe\" binary which is known to be vulnerable to module load-order hijacking.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365809"
+}

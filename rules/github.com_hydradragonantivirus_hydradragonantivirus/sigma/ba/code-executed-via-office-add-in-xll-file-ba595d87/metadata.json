@@ -1,0 +1,23 @@
+{
+  "uuid": "ba595d87-fd09-49bb-ac4f-c36ea80cf26e",
+  "title": "Code Executed Via Office Add-in XLL File",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries may abuse Microsoft Office add-ins to obtain persistence on a compromised system.\nOffice add-ins can be used to add functionality to Office programs\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1137.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365849"
+}

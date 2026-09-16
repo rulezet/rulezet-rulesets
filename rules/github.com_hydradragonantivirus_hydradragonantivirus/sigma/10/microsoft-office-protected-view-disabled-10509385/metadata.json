@@ -1,0 +1,24 @@
+{
+  "uuid": "10509385-e86f-4a11-88e3-62d1aecb241b",
+  "title": "Microsoft Office Protected View Disabled",
+  "format": "sigma",
+  "author": "frack113, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects changes to Microsoft Office protected view registry keys with which the attacker disables this feature.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562.001",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365679"
+}

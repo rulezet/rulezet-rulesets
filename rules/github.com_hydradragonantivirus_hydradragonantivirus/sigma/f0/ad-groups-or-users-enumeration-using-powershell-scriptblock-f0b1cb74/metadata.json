@@ -1,0 +1,24 @@
+{
+  "uuid": "f0b1cb74-0b23-4673-9133-9ebd10cdd901",
+  "title": "AD Groups Or Users Enumeration Using PowerShell - ScriptBlock",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries may attempt to find domain-level groups and permission settings.\nThe knowledge of domain-level permission groups can help adversaries determine which groups exist and which users belong to a particular group.\nAdversaries may use this information to determine which users have elevated permissions, such as domain administrators.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.001",
+    "T1069.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365763"
+}
