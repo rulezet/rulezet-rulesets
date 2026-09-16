@@ -1,0 +1,1 @@
+alert udp $EXTERNAL_NET any -> $HOME_NET 162 (msg:"GPL SNMP trap udp";  reference:bugtraq,4088; reference:bugtraq,4089; reference:bugtraq,4132; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:2101419; rev:11; metadata:created_at 2010_09_23, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_08_20;)

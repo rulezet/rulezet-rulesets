@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER /system32/ in Uri - Possible Protected Directory Access Attempt"; flow:established,to_server; http.uri; content:"/system32/"; nocase; classtype:attempted-recon; sid:2009362; rev:7; metadata:created_at 2010_07_30, confidence Medium, signature_severity Major, updated_at 2020_08_20;)

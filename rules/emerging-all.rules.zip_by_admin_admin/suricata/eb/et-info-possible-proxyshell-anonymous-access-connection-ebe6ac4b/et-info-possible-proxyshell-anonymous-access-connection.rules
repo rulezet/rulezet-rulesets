@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO Possible ProxyShell Anonymous Access Connection"; flow:established,to_server; http.uri; content:"/services/get_proxies/"; classtype:policy-violation; sid:2010969; rev:5; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, updated_at 2020_08_04;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO IP Check Domain (icanhazip. com in HTTP Host)"; flow:established,to_server; http.host; content:"icanhazip.com"; pcre:"/^(?:\x3a\d{1,5})?$/R"; classtype:attempted-recon; sid:2017398; rev:6; metadata:created_at 2013_08_30, confidence High, signature_severity Informational, updated_at 2020_08_25;)

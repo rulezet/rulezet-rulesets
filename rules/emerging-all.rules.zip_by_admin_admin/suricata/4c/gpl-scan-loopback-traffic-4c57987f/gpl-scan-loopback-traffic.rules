@@ -1,0 +1,1 @@
+alert ip any any <> 127.0.0.0/8 any (msg:"GPL SCAN loopback traffic";  reference:url,rr.sans.org/firewall/egress.php; classtype:bad-unknown; sid:2100528; rev:7; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2020_08_20;)

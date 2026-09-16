@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 1024: -> $EXTERNAL_NET 1024: (msg:"ET DELETED Beizhu/Womble/Vipdataend Checking in with Controller"; flow:established,to_server; dsize:<70; content:"|3a|Windows"; depth:11; offset:2; content:"|7c|212("; within:15; classtype:trojan-activity; sid:2008334; rev:11; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2020_08_20;)

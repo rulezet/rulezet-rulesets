@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET USER_AGENTS Long Fake wget 3.0 User-Agent Detected"; flow:established,to_server; http.user_agent; content:"wget 3.0"; classtype:trojan-activity; sid:2013178; rev:6; metadata:created_at 2011_07_04, confidence High, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_08_18;)

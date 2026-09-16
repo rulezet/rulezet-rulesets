@@ -1,0 +1,1 @@
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO check.torproject.org IP lookup/Tor Usage check over TLS with SNI"; flow:established,to_server; tls.sni; content:"check.torproject.org"; nocase; classtype:external-ip-check; sid:2017928; rev:4; metadata:created_at 2014_01_04, confidence High, signature_severity Informational, updated_at 2020_08_20;)

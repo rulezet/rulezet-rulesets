@@ -1,0 +1,1 @@
+alert udp $HOME_NET any -> 78.47.139.110 53 (msg:"ET DELETED Possible DNS Data Exfiltration to SSHD Rootkit Last Resort CnC";  reference:url,isc.sans.edu/diary/SSHD+rootkit+in+the+wild/15229; classtype:command-and-control; sid:2016473; rev:4; metadata:created_at 2013_02_22, signature_severity Unknown, updated_at 2020_08_20;)

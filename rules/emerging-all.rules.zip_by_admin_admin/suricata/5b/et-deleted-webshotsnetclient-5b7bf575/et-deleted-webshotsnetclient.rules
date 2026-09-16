@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED WebshotsNetClient"; flow: to_server,established; content:"WebshotsNetClient"; http_header; nocase; reference:url,www.webshots.com; classtype:policy-violation; sid:2002407; rev:9; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_08_20;)
