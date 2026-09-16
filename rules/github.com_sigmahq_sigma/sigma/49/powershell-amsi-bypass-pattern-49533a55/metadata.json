@@ -1,0 +1,23 @@
+{
+  "uuid": "49533a55-a2fc-4a86-8804-f8c8f08a34c2",
+  "title": "PowerShell AMSI Bypass Pattern",
+  "format": "sigma",
+  "author": "@Kostastsale",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects attempts to disable AMSI in the command line. It is possible to bypass AMSI by disabling it before loading the main payload.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341467"
+}

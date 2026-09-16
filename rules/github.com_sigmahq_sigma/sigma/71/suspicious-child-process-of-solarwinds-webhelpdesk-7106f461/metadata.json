@@ -1,0 +1,27 @@
+{
+  "uuid": "7106f461-e31f-42a6-adba-1d4eeebe6724",
+  "title": "Suspicious Child Process of SolarWinds WebHelpDesk",
+  "format": "sigma",
+  "author": "Huntress Team, Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious child processes spawned by SolarWinds WebHelpDesk (WHD) application, which may indicate exploitation activity leveraging RCE vulnerabilities such as CVE-2025-40551, CVE-2025-40536, or CVE-2025-26399\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-26399",
+    "CVE-2025-40536",
+    "CVE-2025-40551"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341695"
+}

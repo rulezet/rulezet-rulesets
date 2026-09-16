@@ -1,0 +1,26 @@
+{
+  "uuid": "828cb547-0d54-4eb2-96ed-f4036e4410b6",
+  "title": "Suspicious Process Spawned by CentreStack Portal AppPool",
+  "format": "sigma",
+  "author": "Jason Rathbun (Blackpoint Cyber)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects unexpected command shell execution (cmd.exe) from w3wp.exe when tied to CentreStack's portal.config, indicating potential exploitation (e.g., CVE-2025-30406)\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.003",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2025-30406"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341716"
+}

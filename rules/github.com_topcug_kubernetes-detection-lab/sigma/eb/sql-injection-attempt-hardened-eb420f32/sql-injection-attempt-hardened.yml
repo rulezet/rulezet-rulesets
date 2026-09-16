@@ -1,0 +1,30 @@
+title: SQL Injection Attempt (Hardened)
+id: 82c1f97b-6b31-45e2-81b5-97e07dd42e21
+description: Detects SQL injection in HTTP requests, including basic and lightly obfuscated variants
+author: Detection Engineering
+date: 2025/08/09
+status: experimental
+level: high
+tags:
+  - attack.initial_access
+  - attack.t1190
+logsource:
+  category: webserver
+  product: "*"
+
+detection:
+  q_tautology:
+    cs_uri_query|re: (?i)(or|and)\s*['"]?\s*\d+\s*=\s*\d+.*(?:--|#|/\*)
+  q_union:
+    cs_uri_query|re: (?i)['"]?\s*union\s+(?:all\s+)?select\b
+  q_urlenc_tautology:
+    cs_uri_query|re: (?i)(%27|')\s*(or|and)\s*1\s*(%3d|=)\s*1.*(%2d%2d|%23)
+
+  b_tautology:
+    sc_content|re: (?i)(or|and)\s*['"]?\s*\d+\s*=\s*\d+.*(?:--|#|/\*)
+  b_union:
+    sc_content|re: (?i)['"]?\s*union\s+(?:all\s+)?select\b
+  b_urlenc_tautology:
+    sc_content|re: (?i)(%27|')\s*(or|and)\s*1\s*(%3d|=)\s*1.*(%2d%2d|%23)
+
+  condition: 1 of q_* or 1 of b_*

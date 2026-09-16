@@ -1,0 +1,23 @@
+{
+  "uuid": "1101a99e-6312-48b0-b77c-81a71789bdc3",
+  "title": "Run Whoami as SYSTEM",
+  "format": "sigma",
+  "author": "Teymur Kheirkhabarov, Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a whoami.exe executed by LOCAL SYSTEM. This may be a sign of a successful local privilege escalation.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1033"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341462"
+}

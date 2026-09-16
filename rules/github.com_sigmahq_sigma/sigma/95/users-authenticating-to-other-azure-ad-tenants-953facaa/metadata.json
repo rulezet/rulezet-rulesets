@@ -1,0 +1,21 @@
+{
+  "uuid": "953facaa-00fe-4061-b94d-3fd2e8123cb6",
+  "title": "Users Authenticating To Other Azure AD Tenants",
+  "format": "sigma",
+  "author": "MikeDuddington, '@dudders1'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect when users in your Azure AD tenant are authenticating to other Azure AD Tenants.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341651"
+}

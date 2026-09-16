@@ -1,0 +1,23 @@
+{
+  "uuid": "b9cd6e5b-3310-4313-9880-27e03c97dee6",
+  "title": "Windows Management Instrumentation DLL Loaded Via Microsoft Word",
+  "format": "sigma",
+  "author": "Michael R. (@nahamike01)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects DLL's Loaded Via Word Containing VBA Macros Executing WMI Commands",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1047"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341464"
+}

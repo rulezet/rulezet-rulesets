@@ -1,0 +1,27 @@
+{
+  "uuid": "672a861b-d329-42ca-b6fc-deb666c912ce",
+  "title": "Turla Group Lateral Movement",
+  "format": "sigma",
+  "author": "Markus Neis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects automated lateral movement by Turla group",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Turla - G0010\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1021.002",
+    "T1059",
+    "T1083",
+    "T1135"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341766"
+}

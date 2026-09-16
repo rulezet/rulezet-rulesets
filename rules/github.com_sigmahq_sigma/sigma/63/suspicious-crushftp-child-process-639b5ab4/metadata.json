@@ -1,0 +1,27 @@
+{
+  "uuid": "639b5ab4-2975-43c9-ace5-14cd3774c702",
+  "title": "Suspicious CrushFTP Child Process",
+  "format": "sigma",
+  "author": "Craig Sweeney, Matt Anderson, Jose Oregon, Tim Kasper, Faith Stratton, Samantha Shaw, Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious child processes spawned by the CrushFTP service that may indicate exploitation of remote code execution vulnerabilities such as\nCVE-2025-31161, where attackers can achieve RCE through crafted HTTP requests.\nThe detection focuses on commonly abused Windows executables (like powershell.exe, cmd.exe etc.) that attackers typically use post-exploitation to execute malicious commands.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1059.003",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-31161"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341700"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "83db934c-3a96-453c-a34c-bb24e1e76fb9",
+  "title": "TanStack Supply-Chain Attack Execution Indicators - Linux",
+  "format": "sigma",
+  "author": "Leonardo Gasparini",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects process execution indicators associated with the Mini Shai-Hulud supply-chain campaign targeting TanStack npm packages and others such as mistralai and uipath reported on early May 2026.\nThe preinstall hook runs setup.mjs, which downloads a platform-specific Bun runtime.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059.006",
+    "T1059.007",
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341768"
+}

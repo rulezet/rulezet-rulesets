@@ -1,0 +1,23 @@
+{
+  "uuid": "8ababce9-5046-4074-a543-48ce74f1c9af",
+  "title": "Potential Java WebShell Upload in SAP NetViewer Server",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential Java webshell uploads via HTTP requests with Content-Type 'application/octet-stream' and Java file extensions.\nThis behavior might indicate exploitation of vulnerabilities like CVE-2025-31324, which allows remote code execution through webshells in SAP NetViewer.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2025-31324"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341711"
+}

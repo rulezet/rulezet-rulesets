@@ -1,0 +1,25 @@
+{
+  "uuid": "fcbd1a08-90da-43d6-b50d-78cdc0af5363",
+  "title": "PwnKit Local Privilege Escalation",
+  "format": "sigma",
+  "author": "Sreeman",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential PwnKit exploitation CVE-2021-4034 in auth logs",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1548.001"
+  ],
+  "cve": [
+    "CVE-2021-4034"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341865"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "7f73b231-ffef-44b5-9692-a16013a622e1",
+  "title": "Execute MSDT.EXE Using Diagcab File",
+  "format": "sigma",
+  "author": "GossiTheDog, frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects diagcab leveraging the \"ms-msdt\" handler or the \"msdt.exe\" binary to execute arbitrary commands as seen in CVE-2022-30190",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [
+    "CVE-2022-30190"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341546"
+}

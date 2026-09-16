@@ -1,0 +1,24 @@
+{
+  "uuid": "205caafd-05f5-4626-8714-88ca17db19b1",
+  "title": "Suspicious Office Child Process PowerShell Execution",
+  "format": "sigma",
+  "author": "Nikolai Kruchkov",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects Microsoft Office applications spawning PowerShell with suspicious execution parameters frequently associated with phishing payloads, malware delivery, macro abuse, and post-exploitation activity.",
+  "source": "https://github.com/kruchkovnik15-dot/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341441"
+}

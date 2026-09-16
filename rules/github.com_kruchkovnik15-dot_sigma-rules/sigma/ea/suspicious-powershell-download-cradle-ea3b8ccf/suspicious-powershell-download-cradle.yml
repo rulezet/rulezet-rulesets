@@ -1,0 +1,45 @@
+title: Suspicious PowerShell Download Cradle
+id: 6c9f0b5e-7d2a-4a34-93f2-8d9d2e4c8a21
+status: test
+description: Detects PowerShell commands using common download cradle patterns to retrieve remote content or payloads.
+author: Nikolai Kruchkov
+date: 2026-06-01
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
+  - https://attack.mitre.org/techniques/T1105/
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection_image:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+  selection_download:
+    CommandLine|contains:
+      - 'Invoke-WebRequest'
+      - 'Invoke-RestMethod'
+      - 'DownloadString'
+      - 'DownloadFile'
+      - 'System.Net.WebClient'
+      - 'Start-BitsTransfer'
+  selection_url:
+    CommandLine|contains:
+      - 'http://'
+      - 'https://'
+  condition: selection_image and selection_download and selection_url
+
+falsepositives:
+  - Internal automation scripts
+  - Software deployment tools
+  - Administrative download tasks
+
+level: high
+
+tags:
+  - attack.execution
+  - attack.t1059.001
+  - attack.command_and_control
+  - attack.t1105

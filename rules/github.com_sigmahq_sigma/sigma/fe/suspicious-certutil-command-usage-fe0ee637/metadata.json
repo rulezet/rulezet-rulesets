@@ -1,0 +1,24 @@
+{
+  "uuid": "fe0ee637-af47-4450-b147-28691aee951b",
+  "title": "Suspicious Certutil Command Usage",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), juju4, keepwatch",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a suspicious Microsoft certutil execution with sub commands like 'decode' sub command, which is sometimes used to decode malicious code",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1140"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341560"
+}

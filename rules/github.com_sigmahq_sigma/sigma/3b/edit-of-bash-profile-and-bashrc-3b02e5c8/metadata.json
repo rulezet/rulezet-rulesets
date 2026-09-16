@@ -1,0 +1,24 @@
+{
+  "uuid": "3b02e5c8-3707-49f0-9c76-4356573e1d3b",
+  "title": "Edit of .bash_profile and .bashrc",
+  "format": "sigma",
+  "author": "Peter Matkovski",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects change of user environment. Adversaries can insert code into these files to gain persistence each time a user logs in or opens a new shell.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1156",
+    "T1546.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341449"
+}

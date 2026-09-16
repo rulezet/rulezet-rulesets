@@ -1,0 +1,50 @@
+title: Suspicious Encoded PowerShell Execution
+id: 9a4d7f8c-2d31-4a9f-8f5e-4c2d9b1a7e63
+status: stable
+description: Detects PowerShell execution using encoded command arguments combined with suspicious execution flags commonly observed in malicious scripts and payload execution.
+author: Nikolai Kruchkov
+date: 2026-06-02
+references:
+  - https://attack.mitre.org/techniques/T1059/001/
+  - https://attack.mitre.org/techniques/T1027/
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection_image:
+    Image|endswith:
+      - '\powershell.exe'
+      - '\pwsh.exe'
+
+  selection_encoded:
+    CommandLine|contains:
+      - '-enc'
+      - '-encodedcommand'
+      - '/enc'
+      - '/encodedcommand'
+
+  selection_suspicious_flags:
+    CommandLine|contains:
+      - '-nop'
+      - '-w hidden'
+      - '-windowstyle hidden'
+      - '-executionpolicy bypass'
+      - '-ep bypass'
+      - '-noni'
+
+  condition: selection_image and selection_encoded and selection_suspicious_flags
+
+falsepositives:
+  - Administrative scripts using encoded PowerShell for automation
+  - Software deployment tools
+  - Security testing activity
+
+level: high
+
+tags:
+  - attack.execution
+  - attack.t1059.001
+  - attack.defense_evasion
+  - attack.t1027

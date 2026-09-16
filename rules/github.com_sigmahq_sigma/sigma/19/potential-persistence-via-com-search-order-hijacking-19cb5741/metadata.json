@@ -1,0 +1,23 @@
+{
+  "uuid": "19cb5741-322a-4e9f-a383-aec2bd827654",
+  "title": "Potential Persistence Via COM Search Order Hijacking",
+  "format": "sigma",
+  "author": "Maxime Thiebaut (@0xThiebaut), oscd.community, Cédric Hien",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential COM object hijacking leveraging the COM Search Order",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1546.015"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341479"
+}

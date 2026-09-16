@@ -1,0 +1,21 @@
+{
+  "uuid": "75b4d296-a038-43b6-832a-95842bba2ecc",
+  "title": "Peach Sandstorm APT Process Activity Indicators",
+  "format": "sigma",
+  "author": "X__Junior (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects process creation activity related to Peach Sandstorm APT",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341919"
+}

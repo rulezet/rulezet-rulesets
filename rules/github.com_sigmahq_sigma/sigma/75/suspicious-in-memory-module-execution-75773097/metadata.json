@@ -1,0 +1,24 @@
+{
+  "uuid": "75773097-eb49-4400-b01c-beb4eb6ba62f",
+  "title": "Suspicious In-Memory Module Execution",
+  "format": "sigma",
+  "author": "Perez Diego (@darkquassar), oscd.community, Jonhnathan Ribeiro",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the access to processes by other suspicious processes which have reflectively loaded libraries in their memory space.\nAn example is SilentTrinity C2 behaviour. Generally speaking, when Sysmon EventID 10 cannot reference a stack call to a dll loaded from disk (the standard way),\nit will display \"UNKNOWN\" as the module name. Usually this means the stack call points to a module that was reflectively loaded in memory.\nAdding to this, it is not common to see such few calls in the stack (ntdll.dll --> kernelbase.dll --> unknown) which essentially means that\nmost of the functions required by the process to execute certain routines are already present in memory, not requiring any calls to external libraries.\nThe latter should also be considered suspicious.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1055.001",
+    "T1055.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341567"
+}

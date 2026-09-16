@@ -1,0 +1,23 @@
+{
+  "uuid": "87fdcacc-39ef-4271-8a93-13f5b147e8d2",
+  "title": "Atomic MacOS Stealer - FileGrabber Activity",
+  "format": "sigma",
+  "author": "Jason Phang Vern - Onn, Robbin Ooi Zhen Heng (Gen Digital)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious activity associated with Atomic MacOS Stealer (Amos) campaigns, including execution of FileGrabber and curl-based POST requests used for data exfiltration. The rule identifies either the execution of FileGrabber targeting /tmp or the use of curl to POST sensitive user data (including files such as /tmp/out.zip) to remote servers, which are key indicators of Amos infostealer activity.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1059.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341679"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "c8c94a69-25a5-4e3d-be79-36818eba5b6e",
+  "title": "Suspicious Cmd Execution via WMI",
+  "format": "sigma",
+  "author": "Tim Rauch",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious command execution (cmd) via Windows Management Instrumentation (WMI) on a remote host. This could be indicative of adversary lateral movement.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1047"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341584"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "065338ab-d6d0-4a1f-ad05-9716ce7bbca1",
+  "title": "FakeUpdates/SocGholish Activity",
+  "format": "sigma",
+  "author": "@kostastsale",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects initial execution of FakeUpdates/SocGholish malware via wscript that later executes commands via cmd or powershell.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341754"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "4101db05-68ad-4f5a-92ed-11ea3178b9f1",
+  "title": "Atomic MacOS Stealer - Persistence Indicators",
+  "format": "sigma",
+  "author": "Jason Phang Vern - Onn, Robbin Ooi Zhen Heng (Gen Digital)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects creation of persistence artifacts placed by Atomic MacOS Stealer in macOS systems. Recent Atomic MacOS Stealer variants have been observed dropping these to maintain persistent access after compromise.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1543.004",
+    "T1564.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341675"
+}

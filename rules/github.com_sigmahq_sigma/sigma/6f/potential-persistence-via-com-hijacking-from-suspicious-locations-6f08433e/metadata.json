@@ -1,0 +1,23 @@
+{
+  "uuid": "6f08433e-2ba1-4ef4-975c-7aa93f8d0665",
+  "title": "Potential Persistence Via COM Hijacking From Suspicious Locations",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential COM object hijacking where the \"Server\" (In/Out) is pointing to a suspicious or unusual location.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1546.015"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341553"
+}

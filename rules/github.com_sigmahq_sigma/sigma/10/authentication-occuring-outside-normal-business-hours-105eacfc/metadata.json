@@ -1,0 +1,21 @@
+{
+  "uuid": "105eacfc-865b-4095-aacc-3ee14d40ceb0",
+  "title": "Authentication Occuring Outside Normal Business Hours",
+  "format": "sigma",
+  "author": "Mark Morowczynski '@markmorow', MikeDuddington, '@dudders1'",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects user signs ins outside of normal business hours.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341608"
+}

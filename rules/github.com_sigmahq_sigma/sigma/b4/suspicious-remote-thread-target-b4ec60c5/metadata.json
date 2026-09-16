@@ -1,0 +1,21 @@
+{
+  "uuid": "b4ec60c5-e291-4e1d-9c24-efd8dd451143",
+  "title": "Suspicious Remote Thread Target",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Offensive tradecraft is switching away from using APIs like \"CreateRemoteThread\", however, this is still largely observed in the wild.\nThis rule aims to detect suspicious processes (those we would not expect to behave in this way like winword.exe or outlook.exe) creating remote threads on other processes.\nIt is a generalistic rule, but it should have a low FP ratio due to the selected range of processes.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341450"
+}

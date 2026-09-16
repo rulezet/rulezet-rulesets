@@ -1,0 +1,24 @@
+{
+  "uuid": "04e60252-d507-4f44-8c73-04f233c627a5",
+  "title": "CosmicDuke Service Installation",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Daniil Yugoslavskiy, oscd.community (update)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the installation of a service named \"javamtsup\" on the system.\nThe CosmicDuke info stealer uses Windows services typically named \"javamtsup\" for persistence.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1543.003",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341663"
+}

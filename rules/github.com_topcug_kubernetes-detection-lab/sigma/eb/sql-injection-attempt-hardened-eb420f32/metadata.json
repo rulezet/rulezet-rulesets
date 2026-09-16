@@ -1,0 +1,21 @@
+{
+  "uuid": "eb420f32-0e66-47ef-a492-7eae9408fc93",
+  "title": "SQL Injection Attempt (Hardened)",
+  "format": "sigma",
+  "author": "Detection Engineering",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects SQL injection in HTTP requests, including basic and lightly obfuscated variants",
+  "source": "https://github.com/topcug/kubernetes-detection-lab",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341445"
+}

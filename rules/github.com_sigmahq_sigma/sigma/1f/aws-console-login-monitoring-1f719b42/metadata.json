@@ -1,0 +1,21 @@
+{
+  "uuid": "1f719b42-bd27-4948-aa02-a77eff2639eb",
+  "title": "AWS Console Login Monitoring",
+  "format": "sigma",
+  "author": "Ivan Saakov",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects AWS console logins from countries and IP addresses that are not recognized as legitimate for the organization.\nThis alert can help identify potential unauthorized access attempts from unusual locations, which may indicate compromised credentials or malicious activity.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341647"
+}

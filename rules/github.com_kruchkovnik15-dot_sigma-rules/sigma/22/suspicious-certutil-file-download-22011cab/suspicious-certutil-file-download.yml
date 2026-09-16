@@ -1,0 +1,52 @@
+title: Suspicious Certutil File Download
+
+id: b42e78f0-3a77-4d65-9e12-5d5e8f10f121
+
+status: stable
+
+description: Detects certutil.exe being used to download remote content from external locations, commonly observed in malware staging, payload retrieval, and LOLBin abuse scenarios.
+
+author: Nikolai Kruchkov
+
+date: 2026-06-02
+
+references:
+  - https://attack.mitre.org/techniques/T1105/
+  - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+
+  selection_image:
+    Image|endswith:
+      - '\certutil.exe'
+
+  selection_download:
+    CommandLine|contains:
+      - 'http://'
+      - 'https://'
+      - '-urlcache'
+      - '-verifyctl'
+      - '-split'
+
+  filter_known_pkI:
+    CommandLine|contains:
+      - 'crl.microsoft.com'
+      - 'cacerts.digicert.com'
+
+  condition: selection_image and selection_download and not filter_known_pkI
+
+falsepositives:
+  - Enterprise PKI operations
+  - Certificate validation workflows
+  - Approved software deployment solutions
+
+level: high
+
+tags:
+  - attack.command_and_control
+  - attack.t1105
+  - attack.defense_evasion

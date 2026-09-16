@@ -1,0 +1,24 @@
+{
+  "uuid": "2c712ac8-c0db-402c-b061-d6f5fe425510",
+  "title": "Shai-Hulud Malicious Bun Execution - Linux",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of `bun_environment.js` via the Bun runtime, a behavior associated with the Shai-Hulud \"Second Coming\" NPM supply chain attack.\nThe malware uses a `setup_bun.js` script to install the Bun runtime if not present, and then executes the malicious `bun_environment.js` payload.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1195.002",
+    "T1203"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341685"
+}

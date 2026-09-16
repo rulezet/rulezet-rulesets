@@ -1,0 +1,24 @@
+{
+  "uuid": "7c4bb0f3-cce3-430f-bfef-7919f984366b",
+  "title": "Credential Dumping by LaZagne",
+  "format": "sigma",
+  "author": "Bhabesh Raj, Jonhnathan Ribeiro",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects LSASS process access by LaZagne for credential dumping.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Lazagne\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341488"
+}

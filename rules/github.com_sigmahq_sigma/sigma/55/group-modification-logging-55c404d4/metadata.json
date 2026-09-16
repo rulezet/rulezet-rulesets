@@ -1,0 +1,23 @@
+{
+  "uuid": "55c404d4-85bd-49ba-9293-e32ea82e3580",
+  "title": "Group Modification Logging",
+  "format": "sigma",
+  "author": "Alexandr Yampolskyi, SOC Prime",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Configure systems to issue a log entry and alert when an account is added to or removed from any group assigned administrative privileges.\nSigma detects\nEvent ID 4728 indicates a \"Member is added to a Security Group\".\nEvent ID 4729 indicates a \"Member is removed from a Security enabled-group\".\nEvent ID 4730 indicates a \"Security Group is deleted\".\nThe case is not applicable for Unix OS.\nSupported OS - Windows 2008 R2 and 7, Windows 2012 R2 and 8.1, Windows 2016 and 10 Windows Server 2019, Windows Server 2000, Windows 2003 and XP.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341562"
+}

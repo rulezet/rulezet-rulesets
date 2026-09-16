@@ -1,0 +1,26 @@
+{
+  "uuid": "8eabfa71-0ce9-49e5-b818-21e102c48a95",
+  "title": "Windows Suspicious Child Process from Node.js - React2Shell",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems), Nasreddine Bencherchali",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious child processes started by Node.js server processes on Windows, which may indicate exploitation of vulnerabilities like CVE-2025-55182 (React2Shell).\nAttackers can abuse the Node.js 'child_process' module to run system commands or scripts using methods such as spawn(), exec(), execFile(), fork(), or execSync().\nIf execSync() or exec() is used in the exploit, the command line often shows a shell (e.g., cmd.exe /d /s /c ...) running a suspicious command unless other shells are explicitly invoked.\nFor other methods, the spawned process appears directly in the Image field unless a shell is explicitly used.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-55182"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341693"
+}

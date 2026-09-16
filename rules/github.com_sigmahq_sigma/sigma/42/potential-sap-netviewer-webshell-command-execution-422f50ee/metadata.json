@@ -1,0 +1,24 @@
+{
+  "uuid": "422f50ee-dcee-4b9a-afad-b94aa994eaf7",
+  "title": "Potential SAP NetViewer Webshell Command Execution",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential command execution via webshell in SAP NetViewer through JSP files with cmd parameter.\nThis rule is created to detect exploitation of vulnerabilities like CVE-2025-31324, which allows remote code execution via a webshell.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2025-31324"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341714"
+}

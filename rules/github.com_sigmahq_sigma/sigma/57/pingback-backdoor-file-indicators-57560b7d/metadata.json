@@ -1,0 +1,24 @@
+{
+  "uuid": "57560b7d-67a5-40d2-9e50-380403528b15",
+  "title": "Pingback Backdoor File Indicators",
+  "format": "sigma",
+  "author": "Bhabesh Raj",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of Pingback backdoor that creates ICMP tunnel for C2 as described in the trustwave report",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341812"
+}

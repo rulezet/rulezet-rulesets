@@ -1,0 +1,28 @@
+{
+  "uuid": "73a1831d-3635-443d-b2c7-45e420655192",
+  "title": "Malicious Service Installations",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Daniil Yugoslavskiy, oscd.community (update)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects known malicious service installs that only appear in cases of lateral movement, credential dumping, and other suspicious activities.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:ransomware=\"WannaCry\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1035",
+    "T1050",
+    "T1543.003",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341616"
+}

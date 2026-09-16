@@ -1,0 +1,23 @@
+{
+  "uuid": "7663b3a2-bb48-43a3-b949-28b4d7aba66f",
+  "title": "UNC4841 - Download Compressed Files From Temp.sh Using Wget",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of \"wget\" to download a \".zip\" or \".rar\" files from \"temp.sh\". As seen used by UNC4841 during their Barracuda ESG zero day exploitation.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1140"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341910"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "7e9f3603-bbc5-4a2f-9fae-85d79c28a389",
+  "title": "PrinterNightmare Mimikatz Driver Name",
+  "format": "sigma",
+  "author": "Markus Neis, @markus_neis, Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects static QMS 810 and mimikatz driver name used by Mimikatz as exploited in CVE-2021-1675 and CVE-2021-34527",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1204"
+  ],
+  "cve": [
+    "CVE-2021-1675",
+    "CVE-2021-34527"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341830"
+}

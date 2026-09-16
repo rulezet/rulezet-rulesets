@@ -1,0 +1,24 @@
+{
+  "uuid": "ea3b8ccf-4c61-4b2b-a72f-2b3880213db4",
+  "title": "Suspicious PowerShell Download Cradle",
+  "format": "sigma",
+  "author": "Nikolai Kruchkov",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects PowerShell commands using common download cradle patterns to retrieve remote content or payloads.",
+  "source": "https://github.com/kruchkovnik15-dot/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341438"
+}

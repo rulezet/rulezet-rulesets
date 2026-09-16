@@ -1,0 +1,23 @@
+{
+  "uuid": "c4384e03-38d1-4cc6-ac32-8f344a041039",
+  "title": "ProxyLogon Reset Virtual Directories Based On IIS Log",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "When exploiting this vulnerability with CVE-2021-26858, an SSRF attack is used to manipulate virtual directories",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2021-26858"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341825"
+}

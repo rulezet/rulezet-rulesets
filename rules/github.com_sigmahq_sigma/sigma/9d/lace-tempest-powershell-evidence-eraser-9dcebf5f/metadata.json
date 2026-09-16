@@ -1,0 +1,25 @@
+{
+  "uuid": "9dcebf5f-8fd2-43c1-8705-cc487070589a",
+  "title": "Lace Tempest PowerShell Evidence Eraser",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a PowerShell script used by Lace Tempest APT to erase evidence from victim servers by exploiting CVE-2023-47246 as reported by SysAid Team\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [
+    "CVE-2023-47246"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341918"
+}

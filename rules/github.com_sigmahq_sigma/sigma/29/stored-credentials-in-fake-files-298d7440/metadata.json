@@ -1,0 +1,23 @@
+{
+  "uuid": "298d7440-a81f-46e9-8bc7-d5a79d41aecb",
+  "title": "Stored Credentials in Fake Files",
+  "format": "sigma",
+  "author": "Teymur Kheirkhabarov (idea), Ryan Plas (rule), oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Search for accessing of fake files with stored credentials",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1555"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341621"
+}

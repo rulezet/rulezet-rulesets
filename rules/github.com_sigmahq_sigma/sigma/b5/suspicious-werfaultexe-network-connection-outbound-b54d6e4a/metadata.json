@@ -1,0 +1,25 @@
+{
+  "uuid": "b54d6e4a-b47e-4fe0-88e8-998d2d475fe2",
+  "title": "Suspicious Werfault.exe Network Connection Outbound",
+  "format": "sigma",
+  "author": "Sreeman",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Adversaries can migrate cobalt strike/metasploit/C2 beacons on compromised systems to legitimate werfault.exe process to avoid detection.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1571"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341631"
+}

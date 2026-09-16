@@ -1,0 +1,27 @@
+{
+  "uuid": "15055d59-1b72-41f8-b471-0749c7b03a23",
+  "title": "Possible Applocker Bypass",
+  "format": "sigma",
+  "author": "juju4",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of executables that can be used to bypass Applocker whitelisting",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1127.001",
+    "T1218",
+    "T1218.004",
+    "T1218.005",
+    "T1218.009"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341568"
+}

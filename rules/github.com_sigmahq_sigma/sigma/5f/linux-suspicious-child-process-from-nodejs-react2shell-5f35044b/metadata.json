@@ -1,0 +1,27 @@
+{
+  "uuid": "5f35044b-61fb-4aba-9618-dfac5661aa4a",
+  "title": "Linux Suspicious Child Process from Node.js - React2Shell",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems), Nasreddine Bencherchali",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious child processes spawned from Node.js server processes on Linux systems, potentially indicating remote code execution exploitation such as CVE-2025-55182 (React2Shell).\nThis rule particularly looks for exploitation of vulnerability on Node.js Servers where attackers abuse Node.js child_process module to execute arbitrary system commands.\nWhen execSync() or exec() is used, the command line often includes a shell invocation followed by suspicious commands or scripts (e.g., /bin/sh -c <malicious-command>).\nFor other methods, the Image field will show the spawned process directly.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-55182"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341692"
+}

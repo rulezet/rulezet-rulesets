@@ -1,0 +1,26 @@
+{
+  "uuid": "b93a136e-1613-4550-af32-bfdb1671a46c",
+  "title": "Potential SAP NetWeaver Webshell Creation - Linux",
+  "format": "sigma",
+  "author": "Elastic (idea), Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of suspicious files (jsp, java, class) in SAP NetWeaver directories,\nwhich may indicate exploitation attempts of vulnerabilities such as CVE-2025-31324.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059.003",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-31324"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341708"
+}

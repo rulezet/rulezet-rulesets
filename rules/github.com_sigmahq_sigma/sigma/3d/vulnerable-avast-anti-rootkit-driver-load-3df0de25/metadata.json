@@ -1,0 +1,23 @@
+{
+  "uuid": "3df0de25-9b2c-48c7-8d25-b98f2fe00fb7",
+  "title": "Vulnerable AVAST Anti Rootkit Driver Load",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the load of a signed and vulnerable AVAST Anti Rootkit driver often used by threat actors or malware for stopping and disabling AV and EDR products",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341458"
+}

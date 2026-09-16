@@ -1,0 +1,24 @@
+{
+  "uuid": "e4bda57f-0b29-495f-969e-58731374050e",
+  "title": "WordPress Wp2shell Webshell Plugin Access",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects post-exploitation access to the wp2shell webshell plugin dropped after successful\nexploitation of CVE-2026-63030 and CVE-2026-60137. After the pre-auth SQLi-to-admin bridge is established,\nthe attacker can upload a malicious plugin (wp2shell) to the target WordPress instance.\nAt this phase, the attacker accesses the webshell for command execution and persistence.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2026-60137",
+    "CVE-2026-63030"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341783"
+}

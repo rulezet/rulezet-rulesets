@@ -1,0 +1,25 @@
+{
+  "uuid": "4b53f4b7-690f-418b-879a-8a98ab58ad15",
+  "title": "TeamPCP LiteLLM Supply Chain Attack Persistence Indicators",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of specific persistence files as observed in the LiteLLM PyPI supply chain attack.\nIn March 2026, a supply chain attack was discovered involving the popular open-source LLM framework LiteLLM by Threat Actor TeamPCP.\nThe malicious package harvests every credential on the system, encrypts and exfiltrates them, and installs a persistent C2 backdoor.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1195.002",
+    "T1543.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341763"
+}

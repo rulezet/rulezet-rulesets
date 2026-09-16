@@ -1,0 +1,24 @@
+{
+  "uuid": "90eaa9dc-e10c-42ca-8ece-39cb9b21b194",
+  "title": "TanStack Supply-Chain Attack DNS Indicators",
+  "format": "sigma",
+  "author": "Leonardo Gasparini",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects DNS queries to attacker-controlled infrastructure used by the Mini Shai-Hulud campaign targeting TanStack npm packages along with other packages such as mistralai, uipath and so on.\nThe domain git-tanstack.com (registered May 9, 2026) hosted secondary payloads including transformers.pyz.\nThe filev2.getsession.org endpoint was used for credential exfiltration via the Session protocol.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1048",
+    "T1071.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341765"
+}

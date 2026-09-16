@@ -1,0 +1,23 @@
+{
+  "uuid": "80827f0c-74d3-487e-8820-eab7932cd971",
+  "title": "Katz Stealer DLL Loaded",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects loading of DLLs associated with Katz Stealer malware 2025 variants.\nKatz Stealer is a malware variant that is known to be used for stealing sensitive information from compromised systems.\nThe process that loads these DLLs are very likely to be malicious.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1129"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341687"
+}

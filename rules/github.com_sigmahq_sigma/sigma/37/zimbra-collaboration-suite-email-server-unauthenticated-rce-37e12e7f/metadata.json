@@ -1,0 +1,21 @@
+{
+  "uuid": "37e12e7f-5f36-4380-a6de-3e3455d40e41",
+  "title": "Zimbra Collaboration Suite Email Server Unauthenticated RCE",
+  "format": "sigma",
+  "author": "@gott_cyber",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects an attempt to leverage the vulnerable servlet \"mboximport\" for an unauthenticated remote command injection",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341737"
+}

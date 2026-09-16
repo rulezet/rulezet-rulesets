@@ -1,0 +1,22 @@
+{
+  "uuid": "21e8e6f0-7e5a-4dd5-9a3a-42c4566f6fd3",
+  "title": "Okta Session Impersonation Granted From Untrusted Domain",
+  "format": "sigma",
+  "author": "zendannyy",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Okta session impersonation grant event where a user is granted the ability to impersonate another user's session.\nThis event type \"user.session.impersonation.grant\" signifies that someone has been given temporary access to act on behalf of another user account.\nThreat actors may abuse this functionality to escalate privileges, access sensitive resources, or perform unauthorized actions while appearing to be the impersonated user.\nLegitimate use cases are typically limited to Okta support scenarios or authorized administrative troubleshooting.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1199",
+    "T1484.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/341640"
+}
