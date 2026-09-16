@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Atadommoc.C - HTTP CnC"; flow:established,to_server; content:"POST"; http_method; content:"rxT"; http_client_body; depth:3; classtype:command-and-control; sid:2015581; rev:3; metadata:created_at 2012_08_07, signature_severity Unknown, updated_at 2019_07_26;)

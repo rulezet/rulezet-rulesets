@@ -1,0 +1,1 @@
+alert udp any any -> $HOME_NET 4070 (msg:"ET SCAN HID VertX and Edge door controllers discover"; dsize:<45; content:"discover|3b|013|3b|"; reference:url,exploit-db.com/exploits/44992/; classtype:attempted-recon; sid:2025822; rev:2; metadata:attack_target IoT, created_at 2018_07_10, deployment Datacenter, confidence High, signature_severity Informational, updated_at 2019_07_26;)

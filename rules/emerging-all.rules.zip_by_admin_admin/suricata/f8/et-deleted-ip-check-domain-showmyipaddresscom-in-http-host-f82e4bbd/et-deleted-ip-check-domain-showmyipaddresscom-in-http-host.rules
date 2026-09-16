@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED IP Check Domain (showmyipaddress.com in HTTP Host)"; flow:established,to_server; content:"Host|3a| www.showmyipaddress.com"; nocase; http_header; classtype:policy-violation; sid:2012691; rev:3; metadata:created_at 2011_04_18, signature_severity Unknown, updated_at 2019_07_26;)
