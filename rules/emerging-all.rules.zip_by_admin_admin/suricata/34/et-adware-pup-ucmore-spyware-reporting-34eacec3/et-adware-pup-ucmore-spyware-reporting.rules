@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP UCMore Spyware Reporting"; flow:established,to_server; http.uri; content:"/iis2ucms.asp"; nocase; reference:url,www3.ca.com/securityadvisor/pest/pest.aspx?id=58660; classtype:pup-activity; sid:2001995; rev:10; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_07;)

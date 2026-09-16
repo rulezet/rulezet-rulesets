@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET INFO Proxy TRACE Request - inbound"; flow:established,to_server; http.method; content:"TRACE"; nocase; classtype:bad-unknown; sid:2010766; rev:13; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_07;)

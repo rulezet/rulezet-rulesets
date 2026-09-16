@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET INFO TRACE Request - outbound"; flow:established,to_server; content:"TRACE "; nocase; depth: 6; classtype:bad-unknown; sid:2010767; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_07;)
