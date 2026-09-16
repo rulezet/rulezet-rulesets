@@ -1,0 +1,9 @@
+rule Trojan_BAT_NanoCore_VN_MTB_5{
+	meta:
+		description = "Trojan:BAT/NanoCore.VN!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {0a 06 14 18 8d ?? ?? ?? 01 25 16 7e ?? ?? ?? 04 a2 25 17 72 ?? ?? ?? 70 a2 6f ?? ?? ?? 0a 26 2a 90 09 0c 00 00 03 72 ?? ?? ?? 70 6f ?? ?? ?? 0a } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}
