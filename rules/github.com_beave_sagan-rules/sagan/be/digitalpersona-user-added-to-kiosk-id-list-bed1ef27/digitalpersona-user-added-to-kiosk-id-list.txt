@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DIGITALPERSONA] User added to Kiosk ID list"; content: " 1537: "; classtype: system-event; program: DigitalPersona* reference: url,wiki.quadrantsec.com/bin/view/Main/5001461; sid: 5001461; rev:3;)

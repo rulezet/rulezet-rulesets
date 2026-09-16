@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Connection blocked by TCP Wrappers"; pcre: "/refused connect from|libwrap refused connection|connection from \S+ denied/i"; parse_src_ip: 1; classtype: tcp-connection; reference: url,wiki.quadrantsec.com/bin/view/Main/5000121; sid: 5000121; rev:2;)

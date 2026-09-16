@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_FIELD_ADDED"; content: "event|5f|type|5f|id|22 3a| 194"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004495; sid: 5004495; rev: 1;)

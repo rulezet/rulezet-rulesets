@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] RADIUS_CONFIG_DELETED"; content: "event|5f|type|5f|id|22 3a| 163"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004464; sid: 5004464; rev: 1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DIGITALPERSONA] DPHost cannot started"; content: " 1797: "; classtype: system-event; program: DigitalPersona* reference: url,wiki.quadrantsec.com/bin/view/Main/5001467; sid: 5001467; rev:3;)

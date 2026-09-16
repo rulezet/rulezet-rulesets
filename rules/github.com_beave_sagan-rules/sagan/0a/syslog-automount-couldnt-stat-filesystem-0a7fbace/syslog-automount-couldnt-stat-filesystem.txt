@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] automount - Couldn't stat filesystem"; program: automount; content: "could not stat fs of"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000395; sid: 5000395; rev:1;)

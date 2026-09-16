@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] WORKDAY_REAL_TIME_NOTIFICATION"; content: "event|5f|type|5f|id|22 3a| 219"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004520; sid: 5004520; rev: 1;)

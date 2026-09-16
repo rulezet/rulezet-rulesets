@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DIGITALPERSONA] One-to-many matched failed"; content: " 2050: "; classtype: system-event; program: DigitalPersona* reference: url,wiki.quadrantsec.com/bin/view/Main/5001471; sid: 5001471; rev:3;)

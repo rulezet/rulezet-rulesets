@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DIGITALPERSONA] Shared account missing"; content: " 1037: "; classtype: system-event; program: DigitalPersona* reference: url,wiki.quadrantsec.com/bin/view/Main/5001452; sid: 5001452; rev:3;)

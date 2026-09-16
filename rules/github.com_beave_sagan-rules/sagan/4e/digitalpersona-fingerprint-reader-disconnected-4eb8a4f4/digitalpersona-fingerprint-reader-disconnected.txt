@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DIGITALPERSONA] Fingerprint reader disconnected"; content: " 1794: "; classtype: system-event; program: DigitalPersona* reference: url,wiki.quadrantsec.com/bin/view/Main/5001438; sid: 5001438; rev:3;)

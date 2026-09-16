@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Cooling fan failure [MSE-3355]"; program: snmptrapd; content: "=FAN_MONITOR|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002156; sid:5002156; rev:3;)

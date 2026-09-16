@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] User or group was deleted from the system"; pcre: "/delete user|account deleted|remove group/i"; nocase; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000376; sid: 5000376; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Internal high temperature detected!"; program: snmptrapd; content: "=SENSED_TEMPERATURE_HIGH|28|"; classtype: hardware-event; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002130; sid:5002130; rev:3;)

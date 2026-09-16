@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DIGITALPERSONA] System unlocked"; content: " 1031: "; classtype: successful-user; program: DigitalPersona* reference: url,wiki.quadrantsec.com/bin/view/Main/5001446; sid: 5001446; rev:3;)

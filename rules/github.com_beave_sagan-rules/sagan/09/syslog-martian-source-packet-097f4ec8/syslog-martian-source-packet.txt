@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Martian source packet"; content: "martian source"; parse_src_ip: 2; parse_dst_ip: 1; classtype: bad-unknown; program: martian; syslog_facility: kern; reference: url,wiki.quadrantsec.com/bin/view/Main/5000059; sid: 5000059; rev:2;)

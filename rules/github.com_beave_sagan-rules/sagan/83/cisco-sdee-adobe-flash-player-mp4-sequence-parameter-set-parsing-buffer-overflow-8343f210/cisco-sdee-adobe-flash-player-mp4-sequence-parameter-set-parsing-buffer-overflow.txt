@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] Adobe Flash Player MP4 Sequence Parameter Set Parsing Buffer Overflow"; content: "SID: 1395 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6101395; sid: 6101395; rev: 4;)

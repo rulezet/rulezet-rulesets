@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] New group added to the system"; content: "new group"; nocase; program: useradd|adduser; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000130; sid: 5000130; rev:2;)

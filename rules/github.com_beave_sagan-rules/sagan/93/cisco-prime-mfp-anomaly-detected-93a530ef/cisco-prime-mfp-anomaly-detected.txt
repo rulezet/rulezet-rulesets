@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] MFP anomaly detected"; program: snmptrapd; content: "=MFP_ANOMALY_DETECTED_TRAP|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002150; sid:5002150; rev:3;)

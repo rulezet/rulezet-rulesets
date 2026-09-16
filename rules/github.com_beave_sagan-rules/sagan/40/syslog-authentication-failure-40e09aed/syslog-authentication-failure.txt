@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Authentication failure"; pcre: "/failed to authorize|wrong password given|repeated login failures|authentication failed|more authentication failures/i"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001528; sid: 5001528; rev:1;)

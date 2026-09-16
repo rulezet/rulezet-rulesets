@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SYSLOG] Remounting filesystem read-only"; content: "Remounting filesystem read-only"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001973; program: kernel; sid: 5001973; rev:1;)

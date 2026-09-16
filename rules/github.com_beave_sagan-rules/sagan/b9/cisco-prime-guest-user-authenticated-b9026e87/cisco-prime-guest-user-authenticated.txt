@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] GUEST user authenticated"; program: snmptrapd; content: "=GUEST_USER_AUTHENTICATED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002153; sid:5002153; rev:3;)

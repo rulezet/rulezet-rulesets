@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DIGITALPERSONA] Logoff"; content: " 1027: "; classtype: successful-user; program: DigitalPersona* reference: url,wiki.quadrantsec.com/bin/view/Main/5001442; sid: 5001442; rev:3;)

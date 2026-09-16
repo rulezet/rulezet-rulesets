@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Nagios npre - Host not allowed"; program: npre; content: "is not allowed to talk to us"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000410; sid: 5000410; rev:1;)

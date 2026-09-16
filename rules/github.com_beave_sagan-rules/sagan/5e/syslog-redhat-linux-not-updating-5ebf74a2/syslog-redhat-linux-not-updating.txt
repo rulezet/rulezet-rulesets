@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Redhat Linux not updating"; content: "your system is up-to-date"; classtype: program-error; program: rhsmd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001961; sid:5001961; rev:1;)

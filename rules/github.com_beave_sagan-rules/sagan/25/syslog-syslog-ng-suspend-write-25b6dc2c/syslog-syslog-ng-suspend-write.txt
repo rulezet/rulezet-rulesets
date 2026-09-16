@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] syslog-ng suspend write"; program: syslog-ng; content: "Suspending write operation"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001012; sid: 5001012; rev:1;)

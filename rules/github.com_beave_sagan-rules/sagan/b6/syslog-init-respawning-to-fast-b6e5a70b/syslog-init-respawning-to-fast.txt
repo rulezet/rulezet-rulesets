@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] init respawning to fast"; content: "respawning too fast"; classtype: program-error; program: init; threshold: type suppress, track by_src, count 5, seconds 60; reference: url,wiki.quadrantsec.com/bin/view/Main/5000058; sid: 5000058; rev:2;)

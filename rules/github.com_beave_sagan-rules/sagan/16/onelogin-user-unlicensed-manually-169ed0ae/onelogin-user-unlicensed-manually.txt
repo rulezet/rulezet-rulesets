@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_UNLICENSED_MANUALLY"; content: "event|5f|type|5f|id|22 3a| 225"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004526; sid: 5004526; rev: 1;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-AETAS] ACS Login success at suspicious time"; program: CisACS_01_PassedAuth; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002040; sid: 5002040; rev: 3;)

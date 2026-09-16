@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Information for a user was changed"; content: "changed user"; nocase; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000377; sid: 5000377; rev:1;)

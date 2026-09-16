@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] System out of memory!"; content: "out of memory"; nocase; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000125; sid: 5000125; syslog_facility: kern; rev:1;)

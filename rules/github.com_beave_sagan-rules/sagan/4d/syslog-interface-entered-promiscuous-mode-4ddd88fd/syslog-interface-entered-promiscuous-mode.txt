@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Interface entered promiscuous mode"; pcre: "/Promiscuous mode enabled|device \S+ entered promiscuous mode/i"; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5000124; sid: 5000124; syslog_facility: kern; rev:1;)

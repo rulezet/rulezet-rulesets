@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] BIG NAV DOS Attack"; program: snmptrapd; content: "=AP_BIG_NAV_DOS_ATTACK|28|"; classtype: attempted-dos; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002122; sid:5002122; rev:3;)

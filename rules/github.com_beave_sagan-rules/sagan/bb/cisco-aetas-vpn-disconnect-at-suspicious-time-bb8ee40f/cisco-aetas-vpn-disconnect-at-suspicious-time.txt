@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-AETAS] VPN disconnect at suspicious time"; program: %ASA*-4-113019; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002038; sid: 5002038; rev: 3;)

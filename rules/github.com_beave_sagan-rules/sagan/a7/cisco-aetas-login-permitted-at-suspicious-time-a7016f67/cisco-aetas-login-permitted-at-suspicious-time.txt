@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-AETAS] Login permitted at suspicious time"; program: %ASA*-6-605005; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002036; sid: 5002036; rev: 3;)

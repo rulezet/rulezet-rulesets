@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-AETAS] Console login at suspicious time"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002035; sid: 5002035; rev: 3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] syslog-ng I/O error"; program: syslog-ng; content: "I/O error occurred while writing"; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001011; sid: 5001011; rev:1;)

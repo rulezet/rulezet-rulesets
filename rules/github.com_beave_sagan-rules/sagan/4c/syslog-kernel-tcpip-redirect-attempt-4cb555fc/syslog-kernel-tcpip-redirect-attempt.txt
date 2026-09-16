@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Kernel TCP/IP redirect attempt"; content: "Advised path"; classtype: bad-unknown; program: Advised; syslog_facility: kern; reference: url,wiki.quadrantsec.com/bin/view/Main/5000057; sid: 5000057; rev:1;)

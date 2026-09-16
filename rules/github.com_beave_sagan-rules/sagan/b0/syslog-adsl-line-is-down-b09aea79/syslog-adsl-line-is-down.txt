@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] ADSL line is down"; content: "ADSL line is down"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000128; sid: 5000128; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Unable to mount NFS share"; content: "mount failure"; classtype: program-error; program: nfs; threshold: type suppress, track by_src, count 1, seconds 86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5000117; sid: 5000117; rev:2;)

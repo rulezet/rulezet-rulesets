@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Oversized packet - ping of death?"; content: "Oversized packet received from"; classtype: attempted-dos; reference: url,wiki.quadrantsec.com/bin/view/Main/5000123; sid: 5000123; syslog_facility: kern; rev:1;)

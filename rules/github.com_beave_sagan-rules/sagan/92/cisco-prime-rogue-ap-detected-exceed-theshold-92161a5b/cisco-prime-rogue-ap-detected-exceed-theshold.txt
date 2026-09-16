@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PRIME] Rogue AP detected exceed theshold"; program: snmptrapd; content: "=AP_MAX_ROGUE_COUNT_EXCEEDED|28|"; classtype: suspicious-traffic; reference: url,www.cisco.com/c/en/us/td/docs/wireless/ncs/1-1/configuration/guide/NCS11cg/event.html; reference: url,wiki.quadrantsec.com/bin/view/Main/5002124; sid:5002124; rev:3;)

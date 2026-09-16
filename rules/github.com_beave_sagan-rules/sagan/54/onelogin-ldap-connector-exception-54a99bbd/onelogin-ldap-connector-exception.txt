@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] LDAP_CONNECTOR_EXCEPTION"; content: "event|5f|type|5f|id|22 3a| 210"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004511; sid: 5004511; rev: 1;)

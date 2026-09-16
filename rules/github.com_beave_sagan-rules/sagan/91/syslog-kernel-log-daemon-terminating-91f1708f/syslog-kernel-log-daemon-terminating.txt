@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] Kernel log daemon terminating"; content: "kernel log daemon terminating"; nocase; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000126; sid: 5000126; syslog_facility: kern; rev:1;)

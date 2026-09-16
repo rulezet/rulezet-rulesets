@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] New user added to the system"; pcre: "/new user|new account added/i"; program: useradd|adduser; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000131; sid: 5000131; rev:2;)

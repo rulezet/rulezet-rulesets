@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-AETAS] WebVPN login at suspicious time"; program: %ASA*-6-716001; alert_time: days $SAGAN_DAYS, hours $SAGAN_HOURS; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002037; sid: 5002037; rev: 3;)
