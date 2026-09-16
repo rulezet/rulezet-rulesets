@@ -1,0 +1,9 @@
+rule Win_Trojan_Dasmin_4
+{
+strings:
+	$a0 = { 60e8000000005d81ed????4000b9????00008dbd????40008bf7ac34??2ac1fec890fec8eb01e92c??c0c0??fec802c1 }
+
+
+condition:
+	$a0
+}

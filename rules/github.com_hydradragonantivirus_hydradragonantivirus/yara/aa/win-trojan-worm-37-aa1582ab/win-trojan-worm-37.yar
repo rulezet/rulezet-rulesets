@@ -1,0 +1,11 @@
+rule Win_Trojan_Worm_37
+{
+strings:
+	$a0 = { 7372633d226369643a }
+
+	$a1 = { 436f6e74656e742d547970653a206170706c69636174696f6e2f6f637465742d73747265616d3b[40-130]2d2d2d2d2d2d2d2d2d2d }
+
+
+condition:
+	$a0 and $a1
+}

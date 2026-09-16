@@ -1,0 +1,11 @@
+rule Win_Trojan_U_98
+{
+strings:
+	$a0 = { 5589e55356578b7d1c8b75188b55148b4d108b5d0c8b4508cd80 }
+
+	$a1 = { 3a3a3a2043616c696e652049204d69737320596f75202843796e656f7829203a3a3a }
+
+
+condition:
+	$a0 and $a1
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_MPC_9
+{
+strings:
+	$a0 = { b4408d96????59cd21b8024233c999cd21b4408d960301b9????cd21b801578b8e????8b96????cd }
+
+
+condition:
+	$a0
+}

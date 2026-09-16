@@ -1,0 +1,9 @@
+rule Win_Trojan_Wootbot_8
+{
+strings:
+	$a0 = { 7ca49d8f0a5eebbd440332d7dc7ace2afa609dcc8419f49ddfe1d202f6c31aee9db22d38c031733ba3e11dfae72f4a8c5bdde9f86ad8eaa14f4d302525663f85d6d48bc5ee397c8dca2171a8d98c5f0c3755707ded5c3c52851c1417f3e449a1d621ad34aeaa0da99c0f10415872e2ae0afc0efdcd033e0294900135febcd0e12ba2fa918d55faadac2a9d8462e9f92769c2dd }
+
+
+condition:
+	$a0
+}

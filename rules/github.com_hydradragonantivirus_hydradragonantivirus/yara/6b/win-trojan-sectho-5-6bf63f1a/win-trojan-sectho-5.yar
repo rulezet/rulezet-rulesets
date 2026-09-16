@@ -1,0 +1,9 @@
+rule Win_Trojan_Sectho_5
+{
+strings:
+	$a0 = { 72ffbf0dc9795c77002e326e642d74686f756768742e83fdf6ed636f6d47646c67742c636b65725f2e2e0ac8e6fe7068703f69643d364f43c893cb438f1a6ba02b6934c90b9057e0 }
+
+
+condition:
+	$a0
+}
