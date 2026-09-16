@@ -1,0 +1,9 @@
+rule Win_Trojan_Grams_2
+{
+strings:
+	$a0 = { 93536f681b65187f72772b6d8d6dda842ece0a9545d8da32c632a4426497b45baba972c9e53fb54d5ca2693cb69acbcd69a70ba4c2d297c036ac43c7d897c26036ee0faea31bbacb4242fb416802761df8a1b620d343b7d575a6daf2fa5e0622fbe67bf77b9fdff3bccf3dffeeeebd48fc504430ef01311a1154298991 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Joiner_19
+{
+strings:
+	$a0 = { eb155d505357fa907b898166492088d4d2f6ba5e67509856bc6d07315b43048501ed4d4220a114124dd8106f8126b955d76a432f6e1bcfc4b59d653bdbce4ef781997628d8aeb3d54a67b73704823cb40a8e3fad9d2dca4c37345d4b412cecc29efd2e3a3b3bbeeddb3eec49bef3fd9eefe7dcef9cb3df1b68f70adc16 }
+
+
+condition:
+	$a0
+}

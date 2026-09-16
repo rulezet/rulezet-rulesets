@@ -1,0 +1,9 @@
+rule Win_Trojan_Graybird_35
+{
+strings:
+	$a0 = { 910f952f7e1ef976fd091357ca1aa6cbfbe6a922bcfa24462a1219eea02e148ab5802083eec09c16d3cf89496316f40540bf00d7dfdcb2e8e5cc3588afbba58076f92ddfbb3f9f982f2bbdd1fe454ed4f778f64a053c92790addf6532d142a2535db6a7b3d3156412bfb46cdfa5951889774f438c186add353c7cf4fcf }
+
+
+condition:
+	$a0
+}
