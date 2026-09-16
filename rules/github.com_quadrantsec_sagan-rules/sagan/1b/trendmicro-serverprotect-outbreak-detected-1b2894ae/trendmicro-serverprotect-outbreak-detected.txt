@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg: "[TRENDMICRO-SERVERPROTECT] Outbreak Detected"; event_id: 26; content: "Outbreak when total viruses found exceed"; classtype: malware; sid:5007686; rev:1;)

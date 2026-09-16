@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-MERAKI] IDS Ruleset - Option Updated"; program:meraki_dashboard_api_data; content:"label|22 3a 20 22|IDS ruleset"; nocase; classtype:system-event; sid:5016059; rev:1;)

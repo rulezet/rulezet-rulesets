@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] WPA failed authentication attempt"; content: "auth_neg_failed|22 3a 20 22|1|22|; content: "type|22 3a 20 22|disassociation"; classtype: attempted-user; sid:5015133; metadata: disabled_on 2023_08_02; rev:1;)

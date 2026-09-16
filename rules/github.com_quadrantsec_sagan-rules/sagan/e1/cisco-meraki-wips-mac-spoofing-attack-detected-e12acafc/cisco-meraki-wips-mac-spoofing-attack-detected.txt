@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] WIPS Mac Spoofing Attack Detected"; content: "type|22 3a 20 22|mac_spoofing_attack"; classtype:attempted-user; reference:url,https://documentation.meraki.com/General_Administration/Monitoring_and_Reporting/Syslog_Event_Types_and_Log_Samples; sid:5015136; rev:1;)

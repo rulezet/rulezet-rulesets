@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CISCO-AIRMARSHAL] Rogue SSID Detected"; content:"airmarshal_events"; content:"rogue_ssid_detected"; reference:url,https://documentation.meraki.com/General_Administration/Monitoring_and_Reporting/Syslog_Event_Types_and_Log_Samples; classtype:suspicious-activity; sid:5015339; rev:1;)

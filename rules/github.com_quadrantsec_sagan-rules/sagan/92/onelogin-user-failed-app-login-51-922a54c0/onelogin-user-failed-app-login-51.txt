@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_FAILED_APP_LOGIN [5/1]"; program:onelogin; json_content: ".event_type_id", "9"; parse_src_ip:1; json_map:"username",".user_name"; after:track by_username, count 5, seconds 60; threshold:type suppress, track by_username, count 1, seconds 3600; classtype:system-event; sid:5006116; rev:6;)

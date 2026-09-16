@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-SECURITYCOMPLIANCECENTER] Tenant Allow/Block List About To Expire"; program:SecurityComplianceCenter; json_content: ".Operation", "AlertEntityGenerated"; json_content: ".Name", "Tenant Allow/Block List entry is about to expire"; json_map: "program",".Workload"; classtype: system-event; sid:5015332; rev:1;)

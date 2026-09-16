@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] WPA failed authentication attempt"; content: "type|22 3a 20 22|device_packet_flood"; content: "packet|22 3a 20 22|deauth22"; classtype: attempted-user; reference: url,meraki.cisco.com/lib/pdf/meraki_whitepaper_air_marshal.pdf; sid:5015135; rev:1;)

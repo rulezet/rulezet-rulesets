@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CISCO-AIRMARSHAL] SSID Spoofing Detected"; content:"airmarshal_events"; content:"ssid_spoofing_detected"; reference:url,https://documentation.meraki.com/General_Administration/Monitoring_and_Reporting/Syslog_Event_Types_and_Log_Samples; classtype:suspicious-activity; sid:5015340; rev:1;)

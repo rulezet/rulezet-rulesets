@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Malicious file blocked by amp"; content: "malicious"; content:"action|22 3a 20 22|block"; parse_src_ip: 1; parse_dst_ip: 2; classtype: suspicious-traffic; reference: url,documentation.meraki.com/MX-Z/Content_Filtering_and_Threat_Protection/; sid:5015131; rev:1;)

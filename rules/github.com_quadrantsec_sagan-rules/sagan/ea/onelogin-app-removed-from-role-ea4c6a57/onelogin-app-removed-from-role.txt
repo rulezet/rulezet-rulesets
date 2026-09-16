@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] APP_REMOVED_FROM_ROLE"; json_content: ".event_type_id", "2"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006109; rev: 3;)

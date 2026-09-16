@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-MERAKI] Network Configuration Change Detected"; program:meraki_dashboard_api_data; content:"label|22 3a 20 22|network"; nocase; classtype:system-event; sid:5016036; rev:1;)
