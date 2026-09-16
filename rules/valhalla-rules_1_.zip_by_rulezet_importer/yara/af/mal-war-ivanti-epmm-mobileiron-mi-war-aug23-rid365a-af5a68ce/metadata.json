@@ -1,0 +1,21 @@
+{
+  "uuid": "af5a68ce-658d-4ea4-b002-d032a4ab0e8d",
+  "title": "MAL_WAR_Ivanti_EPMM_MobileIron_Mi_War_Aug23_RID365A",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects WAR file found in the Ivanti EPMM / MobileIron Core compromises exploiting CVE-2023-35078",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-35078"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229458"
+}

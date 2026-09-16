@@ -1,0 +1,24 @@
+{
+  "uuid": "4bcf544c-392f-42f6-9e7f-7d68f5a1d5a8",
+  "title": "LOG_TeamViewer_Connect_Russian_Keyboard_Layout_RID3925",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects a suspicious TeamViewer log entry stating that the remote systems had a Russian keyboard layout",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1072",
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229692"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "0c051078-30b8-4c12-8909-8438e6b01cdd",
+  "title": "SUSP_3CX_MSI_Signed_Binary_Mar23_1_RID32C2",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects 3CX MSI installers signed with a known compromised certificate and signed in a time frame in which other known malicious binaries have been signed",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229509"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "f224b878-3e66-480e-86ae-fd72ff720186",
+  "title": "HKTL_FRP_Apr20_1_RID2BFF",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects FRP fast reverse proxy tool often used by threat groups",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1090"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229675"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "2eefc2f0-98fd-45e5-a9c5-23805e4c9481",
+  "title": "APT_NK_AR18_165A_1_RID2C15",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects APT malware from AR18-165A report by US CERT",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229853"
+}

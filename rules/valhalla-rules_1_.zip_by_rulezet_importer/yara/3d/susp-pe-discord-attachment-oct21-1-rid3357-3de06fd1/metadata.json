@@ -1,0 +1,19 @@
+{
+  "uuid": "3de06fd1-bfa3-4a54-9731-0d06497f7c0e",
+  "title": "SUSP_PE_Discord_Attachment_Oct21_1_RID3357",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects suspicious executable with reference to a Discord attachment (often used for malware hosting on a legitimate FQDN)",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229575"
+}

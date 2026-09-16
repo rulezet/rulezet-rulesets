@@ -1,0 +1,21 @@
+{
+  "uuid": "f26e4df7-8107-40b2-b34b-e339cd6d655d",
+  "title": "SUSP_Powershell_ShellCommand_May18_1_RID3475",
+  "format": "yara",
+  "author": "Tobias Michalski",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects a supcicious powershell commandline",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229869"
+}

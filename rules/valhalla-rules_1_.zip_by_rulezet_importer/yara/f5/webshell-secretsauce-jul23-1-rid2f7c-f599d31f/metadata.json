@@ -1,0 +1,23 @@
+{
+  "uuid": "f599d31f-4f15-4623-8fee-70dfaa8de964",
+  "title": "WEBSHELL_SECRETSAUCE_Jul23_1_RID2F7C",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects SECRETSAUCE PHP webshells (found after an exploitation of Citrix NetScaler ADC CVE-2023-3519)",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2023-3519"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229463"
+}

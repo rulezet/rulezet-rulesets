@@ -1,0 +1,24 @@
+{
+  "uuid": "cebb044a-dd7c-40ad-b830-a5629caa7f71",
+  "title": "SUSP_LNK_Follina_Jun22_RID2EB4",
+  "format": "yara",
+  "author": "Paul Hager",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects LNK files with suspicious Follina / CVE-2022-30190 strings",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1210",
+    "T1547.009"
+  ],
+  "cve": [
+    "CVE-2022-30190"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229543"
+}

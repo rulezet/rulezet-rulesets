@@ -1,0 +1,23 @@
+{
+  "uuid": "f7091b14-32b1-453b-b3ba-95c9c26901e3",
+  "title": "EXPL_MacOS_Switcharoo_Indicator_Dec22_RID34A9",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects indicators found after exploitations of CVE-2022-46689",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2022-46689"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229529"
+}

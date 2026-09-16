@@ -1,0 +1,22 @@
+{
+  "uuid": "6efe5bb4-912c-4eb6-99a4-1c4e7752c3a0",
+  "title": "APT_Sandworm_Keywords_May20_1_RID31CF",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects commands used by Sandworm group to exploit critical vulernability CVE-2019-10149 in Exim",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Sandworm Team - G0034\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2019-10149"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229662"
+}

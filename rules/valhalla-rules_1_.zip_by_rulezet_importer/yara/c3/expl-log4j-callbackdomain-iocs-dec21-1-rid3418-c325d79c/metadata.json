@@ -1,0 +1,21 @@
+{
+  "uuid": "c325d79c-d251-4b1f-a16e-d691a527f87c",
+  "title": "EXPL_Log4j_CallBackDomain_IOCs_Dec21_1_RID3418",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects IOCs found in Log4Shell incidents that indicate exploitation attempts of CVE-2021-44228",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2021-44228"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229567"
+}

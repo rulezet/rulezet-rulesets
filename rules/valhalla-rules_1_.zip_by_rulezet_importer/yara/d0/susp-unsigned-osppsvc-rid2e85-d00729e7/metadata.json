@@ -1,0 +1,21 @@
+{
+  "uuid": "d00729e7-e435-4e61-9225-229ed2fd3b69",
+  "title": "SUSP_Unsigned_OSPPSVC_RID2E85",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects a suspicious unsigned office software protection platform service binary",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229700"
+}

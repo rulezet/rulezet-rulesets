@@ -1,0 +1,21 @@
+{
+  "uuid": "2692e152-7f1e-4c91-a778-8f31668f36bb",
+  "title": "EXPL_POC_SpringCore_0day_Webshell_Mar22_1_RID35BB",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects webshell found after SpringCore exploitation attempts POC script",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229557"
+}

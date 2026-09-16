@@ -1,0 +1,22 @@
+{
+  "uuid": "39bcfa84-d7b2-4730-82ee-97bc31d6022a",
+  "title": "SUSP_Email_Suspicious_OneNote_Attachment_Jan23_2_RID3926",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects suspicious OneNote attachment that has a file name often used in phishing attacks",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1203",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229517"
+}

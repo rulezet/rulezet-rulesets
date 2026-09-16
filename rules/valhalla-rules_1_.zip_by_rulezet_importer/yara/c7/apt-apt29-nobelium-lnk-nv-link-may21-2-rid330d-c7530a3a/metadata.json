@@ -1,0 +1,21 @@
+{
+  "uuid": "c7530a3a-8f03-4692-84be-bb6e9e0c26a0",
+  "title": "APT_APT29_NOBELIUM_LNK_NV_Link_May21_2_RID330D",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects NV Link as used by NOBELIUM group",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1547.009"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229597"
+}

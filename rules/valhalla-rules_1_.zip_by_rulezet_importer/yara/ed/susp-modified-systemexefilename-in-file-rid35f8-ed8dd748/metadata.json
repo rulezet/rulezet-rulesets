@@ -1,0 +1,19 @@
+{
+  "uuid": "ed8dd748-5dbf-4480-841b-6c3f5bf32a45",
+  "title": "SUSP_Modified_SystemExeFileName_in_File_RID35F8",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detecst a variant of a system file name often used by attackers to cloak their activity",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229767"
+}

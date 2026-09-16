@@ -1,0 +1,22 @@
+{
+  "uuid": "6044359a-c9f7-432e-afac-c1d2caa9244e",
+  "title": "KeyBoy_876_0x4e20000_RID2CFA",
+  "format": "yara",
+  "author": "Markus Neis, Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects KeyBoy Backdoor",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229919"
+}

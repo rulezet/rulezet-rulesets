@@ -1,0 +1,21 @@
+{
+  "uuid": "7762b2f2-34dc-43ef-9086-aea9e13e439b",
+  "title": "VULN_Python_Hack_Backdoored_Ctx_May21_RID34D1",
+  "format": "yara",
+  "author": "Christian Burkard",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects backdoored python ctx version",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.006"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229552"
+}

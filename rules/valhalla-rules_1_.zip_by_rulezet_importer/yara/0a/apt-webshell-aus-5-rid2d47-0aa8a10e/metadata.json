@@ -1,0 +1,21 @@
+{
+  "uuid": "0aa8a10e-9c1c-49db-81b1-80f95678ff43",
+  "title": "APT_WebShell_AUS_5_RID2D47",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detetcs a webshell involved in the Australian Parliament House network compromise",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229750"
+}

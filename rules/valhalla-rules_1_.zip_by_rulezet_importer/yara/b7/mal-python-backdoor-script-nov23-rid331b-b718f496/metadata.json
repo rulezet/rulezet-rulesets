@@ -1,0 +1,26 @@
+{
+  "uuid": "b718f496-70c2-4c88-a10a-c58f8f2861a2",
+  "title": "MAL_Python_Backdoor_Script_Nov23_RID331B",
+  "format": "yara",
+  "author": "X__Junior",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects a trojan (written in Python) that communicates with c2 - was seen being used by LockBit 3.0 affiliates exploiting CVE-2023-4966",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"LockBit\""
+  ],
+  "attack_techniques": [
+    "T1059.006"
+  ],
+  "cve": [
+    "CVE-2023-4966"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229441"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "991f80c5-6fc3-49b6-b2f3-87c3b7167769",
+  "title": "APT_FIN7_MalDoc_Aug18_1_RID2E6D",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects malicious Doc from FIN7 campaign",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229807"
+}

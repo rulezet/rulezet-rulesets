@@ -1,0 +1,21 @@
+{
+  "uuid": "c22e745a-c2b6-4a93-b6f4-1186afb3939d",
+  "title": "HKTL_shellpop_Powershell_TCP_RID31D4",
+  "format": "yara",
+  "author": "Tobias Michalski",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects malicious powershell",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229868"
+}

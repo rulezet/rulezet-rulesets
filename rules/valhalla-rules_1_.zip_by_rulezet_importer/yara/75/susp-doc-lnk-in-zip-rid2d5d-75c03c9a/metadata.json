@@ -1,0 +1,21 @@
+{
+  "uuid": "75c03c9a-6b78-4d9f-9593-e66474e2bb62",
+  "title": "SUSP_DOC_LNK_in_ZIP_RID2D5D",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects suspicious .doc.lnk file in ZIP archive",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1547.009"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229713"
+}

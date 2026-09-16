@@ -1,0 +1,21 @@
+{
+  "uuid": "1c93dad8-695f-41dd-bfea-36cb266bf8f3",
+  "title": "SUSP_MAL_EXFIL_Stealer_Output_Characteristics_Sep22_1_RID3A81",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects typical stealer output files as created by RedLine or Racoon stealer",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1020"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229539"
+}

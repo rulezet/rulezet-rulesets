@@ -1,0 +1,22 @@
+{
+  "uuid": "a88c0b34-7d35-4a85-9a78-532d6238e92a",
+  "title": "SUSP_PowerShell_String_K32_RemProcess_RID3507",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects suspicious PowerShell code that uses Kernel32, RemoteProccess handles or shellcode",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229915"
+}

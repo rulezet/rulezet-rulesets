@@ -1,0 +1,23 @@
+{
+  "uuid": "b4a8fc15-b7fc-4694-b673-5585a9601782",
+  "title": "MAL_ELF_SALTWATER_Jun23_1_RID2EB8",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects SALTWATER malware used in Barracuda ESG exploitations (CVE-2023-2868)",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-2868"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229474"
+}

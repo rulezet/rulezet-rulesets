@@ -1,0 +1,25 @@
+import "pe"
+rule APT_Thrip_Sample_Jun18_11_RID2FD3 : APT DEMO EXE FILE G0030 G0076 {
+   meta:
+      description = "Detects sample found in Thrip report by Symantec "
+      author = "Florian Roth"
+      reference = "https://www.symantec.com/blogs/threat-intelligence/thrip-hits-satellite-telecoms-defense-targets "
+      date = "2018-06-21 12:13:41"
+      score = 75
+      customer = "demo"
+      license = "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/"
+      hash1 = "590a6796b97469f8e6977832a63c0964464901f075a9651f7f1b4578e55bd8c8"
+      tags = "APT, DEMO, EXE, FILE, G0030, G0076"
+      required_modules = "pe"
+      minimum_yara = "3.5.0"
+      
+   strings:
+      $s1 = "\\AppData\\Local\\Temp\\dw20.EXE" ascii
+      $s2 = "C:\\Windows\\system32\\sysprep\\cryptbase.dll" fullword ascii
+      $s3 = "WFQNJMBWF" fullword ascii
+      $s4 = "SQLWLWZSF" fullword ascii
+      $s5 = "PFQUFQSBPP" fullword ascii
+      $s6 = "WQZXQFPVOW" fullword ascii
+   condition: 
+      uint16 ( 0 ) == 0x5a4d and filesize < 100KB and ( pe.imphash ( ) == "6eef4394490378f32d134ab3bf4bf194" or all of them )
+}

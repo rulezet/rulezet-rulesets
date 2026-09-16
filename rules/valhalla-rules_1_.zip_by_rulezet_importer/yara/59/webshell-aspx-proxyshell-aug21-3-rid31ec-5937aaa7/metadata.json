@@ -1,0 +1,21 @@
+{
+  "uuid": "5937aaa7-2163-426d-a37c-788f67735993",
+  "title": "WEBSHELL_ASPX_ProxyShell_Aug21_3_RID31EC",
+  "format": "yara",
+  "author": "Max Altgelt",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects webshells dropped by ProxyShell exploitation based on their file header (must be DER), size and content",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229589"
+}

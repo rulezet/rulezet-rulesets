@@ -1,0 +1,21 @@
+{
+  "uuid": "c62bd3d4-5ea3-4c98-a2ae-b6432c482fef",
+  "title": "EXPL_POC_SpringCore_0day_Indicators_Mar22_1_RID3695",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects indicators found after SpringCore exploitation attempts and in the POC script",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1033"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229556"
+}

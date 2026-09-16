@@ -1,0 +1,22 @@
+{
+  "uuid": "ff2d54df-6651-4ff0-ad7a-9d6dae48860e",
+  "title": "APT_MAL_LNX_RedMenshen_BPFDoor_Controller_May22_3_RID3892",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects BPFDoor implants used by Chinese actor Red Menshen",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:backdoor=\"BPFDoor\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229553"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "fa094721-2564-4e07-89e7-cadb41f6f68c",
+  "title": "SUSP_ESXiArgs_Endpoint_Conf_Aug23_RID3307",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects indicators found in endpoint.conf files as modified by actors in the ESXiArgs campaign",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229457"
+}
