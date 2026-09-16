@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"SysAid Help Desk denial of service attempt"; flow:established,to_server; uricontent:"/sysaid/calculateRdsFileChecksum?fileName=../../../../../../dev/zero"; nocase; sid:1001562; rev:1; reference:cve,CVE-2015-2996; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2015-2996;)
