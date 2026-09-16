@@ -1,0 +1,26 @@
+{
+  "uuid": "7ec31e08-6e76-4e96-9c66-84daab55db47",
+  "title": "Windows MsMpEng Writing to System32",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects MsMpEng.exe creating a file in C:\\\\Windows\\\\System32\\\\.\nThis should never happen under normal operation Windows Defender does not install kernel drivers at runtime.\nIn the BlueHammer exploit, the TOCTOU race causes MsMpEng (SYSTEM) to write the attacker's driver payload directly into the drivers directory.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1543.003"
+  ],
+  "cve": [
+    "CVE-2026-33825"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350455"
+}

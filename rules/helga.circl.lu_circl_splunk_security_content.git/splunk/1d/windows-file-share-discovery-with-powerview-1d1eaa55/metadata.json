@@ -1,0 +1,23 @@
+{
+  "uuid": "1d1eaa55-cd6e-4e07-b40b-5488e2e8cf6e",
+  "title": "Windows File Share Discovery With Powerview",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the Invoke-ShareFinder PowerShell cmdlet from PowerView. This detection leverages PowerShell Script Block Logging to identify instances where this specific command is executed. Monitoring this activity is crucial as it indicates an attempt to enumerate network file shares, which may contain sensitive information such as backups, scripts, and credentials. If confirmed malicious, this activity could enable an attacker to escalate privileges or move laterally within the network, potentially compromising additional systems and sensitive data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1135"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350698"
+}

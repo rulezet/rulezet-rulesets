@@ -1,0 +1,24 @@
+{
+  "uuid": "68ad210b-cfec-419a-9901-e254f3f4621b",
+  "title": "Windows Disable Lock Workstation Feature Through Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a suspicious registry modification that disables the Lock Computer feature in Windows. It leverages data from the Endpoint.Registry data model, specifically monitoring changes to the registry path \"*\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\System\\\\DisableLockWorkstation\" with a value of \"0x00000001\". This activity is significant because it prevents users from locking their screens, a tactic often used by malware, including ransomware, to maintain control over compromised systems. If confirmed malicious, this could allow attackers to sustain their presence and execute further malicious actions without user interruption.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350852"
+}

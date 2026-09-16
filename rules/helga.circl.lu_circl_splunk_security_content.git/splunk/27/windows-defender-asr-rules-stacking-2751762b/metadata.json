@@ -1,0 +1,25 @@
+{
+  "uuid": "2751762b-a551-43b7-b5f8-7afc22a34c5f",
+  "title": "Windows Defender ASR Rules Stacking",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies security events from Microsoft Defender, focusing on Exploit Guard and Attack Surface Reduction (ASR) features. It detects Event IDs 1121, 1126, 1131, and 1133 for blocked operations, and Event IDs 1122, 1125, 1132, and 1134 for audit logs. Event ID 1129 indicates user overrides, while Event ID 5007 signals configuration changes. This detection uses a lookup to correlate ASR rule GUIDs with descriptive names. Monitoring these events is crucial for identifying unauthorized operations, potential security breaches, and policy enforcement issues. If confirmed malicious, attackers could bypass security measures, execute unauthorized actions, or alter system configurations.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1566.001",
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350641"
+}

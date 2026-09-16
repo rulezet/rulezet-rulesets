@@ -1,0 +1,29 @@
+{
+  "uuid": "c4a01296-88ad-44e0-a409-a8fd5087c18e",
+  "title": "Possible Lateral Movement PowerShell Spawn",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the spawning of a PowerShell process as a child or grandchild of commonly abused processes like services.exe, wmiprvse.exe, svchost.exe, wsmprovhost.exe, and mmc.exe.\nIt leverages data from Endpoint Detection and Response (EDR) agents, focusing on process and parent process names, as well as command-line executions.\nThis activity is significant as it could indicates lateral movement or remote code execution attempts by adversaries.\nIf confirmed malicious, this behavior could allow attackers to execute code remotely, escalate privileges, or persist within the environment.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.003",
+    "T1021.006",
+    "T1047",
+    "T1053.005",
+    "T1059.001",
+    "T1218.014",
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350527"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "fbc9274a-6fe3-40c1-87a8-4f7d62cb35b3",
+  "title": "Linux Suspicious Namespace Creation",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects an unprivileged user invoking the unshare syscall with user namespace flags followed within 120 seconds by a root-owned shell or interpreter spawning under the same parent process, correlating auditd syscall telemetry with Sysmon process creation events to identify the two-step sequence characteristic of user-namespace-based Linux kernel privilege escalation exploits such as DirtyFrag.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2026-43284",
+    "CVE-2026-43500"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350606"
+}

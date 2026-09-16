@@ -1,0 +1,25 @@
+{
+  "uuid": "10b2d3c5-60a7-462e-b4e6-70ec73e52130",
+  "title": "Disable Schedule Task",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of a command to disable an existing scheduled task using 'schtasks.exe' with the '/change' and '/disable' parameters. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line arguments. Disabling scheduled tasks is significant as it is a common tactic used by adversaries, including malware like IcedID, to disable security applications and evade detection. If confirmed malicious, this activity could allow attackers to persist undetected, disable critical security defenses, and further compromise the targeted host.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350744"
+}

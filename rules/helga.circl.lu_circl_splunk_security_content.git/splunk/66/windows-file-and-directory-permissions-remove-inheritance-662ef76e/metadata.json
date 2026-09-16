@@ -1,0 +1,23 @@
+{
+  "uuid": "662ef76e-87d9-4c15-bdbf-f73816947661",
+  "title": "Windows File and Directory Permissions Remove Inheritance",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the removal of permission inheritance using ICACLS. This analytic identifies instances where ICACLS is used to remove permission inheritance from files or directories. The /inheritance:r flag, which strips inherited permissions while optionally preserving or altering explicit permissions, is monitored to detect changes that may restrict access or establish isolated permission configurations. Removing inheritance can be a legitimate administrative action but may also indicate an attempt to conceal malicious activity or bypass inherited security controls.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1222.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350804"
+}

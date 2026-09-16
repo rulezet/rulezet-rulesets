@@ -1,0 +1,25 @@
+{
+  "uuid": "36905096-d5a1-4b99-9013-0c79b983f16e",
+  "title": "Linux Auditd Virtual Disk File And Directory Discovery",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious discovery of virtual disk files and directories, which may indicate an attacker's attempt to locate and access virtualized storage environments. Virtual disks can contain sensitive data or critical system configurations, and unauthorized discovery attempts could signify preparatory actions for data exfiltration or further compromise. By monitoring for unusual or unauthorized searches for virtual disk files and directories, this analytic helps identify potential reconnaissance activities, enabling security teams to respond promptly and safeguard against unauthorized access and data breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1083"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350478"
+}

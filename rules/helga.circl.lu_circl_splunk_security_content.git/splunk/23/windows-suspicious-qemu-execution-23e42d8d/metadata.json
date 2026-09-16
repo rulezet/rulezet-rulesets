@@ -1,0 +1,28 @@
+{
+  "uuid": "23e42d8d-9706-47d6-807b-6415114242f5",
+  "title": "Windows Suspicious QEMU Execution",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects execution of the QEMU binary and an image file with the -nographic flag.\nThis causes it to run in the background without any display.\nThis has been observed as a persistence and initial access technique by some threat actors to install a rogue linux virtual machine",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1001",
+    "T1036",
+    "T1204.002",
+    "T1564.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350484"
+}

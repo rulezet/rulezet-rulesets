@@ -1,0 +1,24 @@
+{
+  "uuid": "d125bacd-7152-4ee9-bcf7-aa60f833d0b2",
+  "title": "Linux File Creation In System Generator Directory",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potential persistence using a systemd generator on Linux, which involves creating a malicious script or binary that is typically executed during the system's boot process.\nSystemd generators are typically placed in directories like /lib/systemd/system-generators/, where they are run early in the boot sequence to dynamically generate or modify unit files that control system services.\nBy placing a custom generator in this directory, an attacker can ensure their code is executed each time the system starts, allowing them to maintain access or control even after reboots.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1037.005",
+    "T1547"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350911"
+}

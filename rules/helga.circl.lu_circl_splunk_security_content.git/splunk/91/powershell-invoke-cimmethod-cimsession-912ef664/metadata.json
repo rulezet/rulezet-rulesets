@@ -1,0 +1,23 @@
+{
+  "uuid": "912ef664-46fb-42d2-b0e2-9219b61d1e53",
+  "title": "PowerShell Invoke CIMMethod CIMSession",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of a New-CIMSession cmdlet followed by the use of the Invoke-CIMMethod cmdlet within PowerShell. It leverages PowerShell Script Block Logging to identify these specific cmdlets in the ScriptBlockText field. This activity is significant because it mirrors the behavior of the Invoke-WMIMethod cmdlet, often used for remote code execution via NTLMv2 pass-the-hash authentication. If confirmed malicious, this could allow an attacker to execute commands remotely, potentially leading to unauthorized access and control over targeted systems.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350717"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "9092f3e4-bfad-4860-b78d-7bd04a8a28e7",
+  "title": "Windows PowerShell Script TabExpansion Direct Call",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects specific indicators associated with the execution of the TabExpansion internal function in PowerShell.\nCalling this function directly is not normal and can be indicative of malicious activity such as TabShell.\nDue to the way PowerShell internals work it can be used in conjunction with directory transversal to load any PowerShell functions even in a sandboxed session.\nFalse positives could include legitimate usage of the TabExpansion function but calling it directly is very rare.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1129"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350498"
+}

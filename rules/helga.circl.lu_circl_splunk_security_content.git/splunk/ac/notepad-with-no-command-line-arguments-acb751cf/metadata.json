@@ -1,0 +1,23 @@
+{
+  "uuid": "acb751cf-d0df-42ff-af9b-af5e408f1304",
+  "title": "Notepad with no Command Line Arguments",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where Notepad.exe is launched without any command line arguments, a behavior commonly associated with the SliverC2 framework. This detection leverages process creation events from Endpoint Detection and Response (EDR) agents, focusing on processes initiated by Notepad.exe within a short time frame. This activity is significant as it may indicate an attempt to inject malicious code into Notepad.exe, a known tactic for evading detection. If confirmed malicious, this could allow an attacker to execute arbitrary code, potentially leading to system compromise and unauthorized access.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350812"
+}

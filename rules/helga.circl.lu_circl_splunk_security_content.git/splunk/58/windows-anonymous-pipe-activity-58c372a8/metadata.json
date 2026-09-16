@@ -1,0 +1,23 @@
+{
+  "uuid": "58c372a8-3573-4fe3-8686-61b0240c76fd",
+  "title": "Windows Anonymous Pipe Activity",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation or connection of anonymous pipes for inter-process communication (IPC) within a Windows environment. Anonymous pipes are commonly used by legitimate system processes, services, and applications to transfer data between related processes. However, adversaries frequently abuse anonymous pipes to facilitate stealthy process injection, command-and-control (C2) communication, credential theft, or privilege escalation. This detection monitors for unusual anonymous pipe activity, particularly involving non-system processes, unsigned executables, or unexpected parent-child process relationships. While legitimate use cases exist—such as Windows services, software installers, or security tools—unusual or high-frequency anonymous pipe activity should be investigated for potential malware, persistence mechanisms, or lateral movement techniques.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1559"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350789"
+}

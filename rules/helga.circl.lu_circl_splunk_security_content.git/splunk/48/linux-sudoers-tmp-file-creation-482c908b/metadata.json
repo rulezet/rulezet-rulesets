@@ -1,0 +1,23 @@
+{
+  "uuid": "482c908b-f2ad-4c69-8c01-69e1fee44dd9",
+  "title": "Linux Sudoers Tmp File Creation",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of the \"sudoers.tmp\" file, which occurs when editing the /etc/sudoers file using visudo or another editor on a Linux platform. This detection leverages filesystem data to identify the presence of \"sudoers.tmp\" files. Monitoring this activity is crucial as adversaries may exploit it to gain elevated privileges on a compromised host. If confirmed malicious, this activity could allow attackers to modify sudoers configurations, potentially granting them unauthorized access to execute commands as other users, including root, thereby compromising the system's security.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1548.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350764"
+}

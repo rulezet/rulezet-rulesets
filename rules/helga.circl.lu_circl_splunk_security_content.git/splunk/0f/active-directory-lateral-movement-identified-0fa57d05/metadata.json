@@ -1,0 +1,21 @@
+{
+  "uuid": "0fa57d05-28ad-48f3-b663-675f7c45cabc",
+  "title": "Active Directory Lateral Movement Identified",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies potential lateral movement activities within an organization's Active Directory (AD) environment. It detects this activity by correlating multiple analytics from the Active Directory Lateral Movement analytic story within a specified time frame. This is significant for a SOC as lateral movement is a common tactic used by attackers to expand their access within a network, posing a substantial risk. If confirmed malicious, this activity could allow attackers to escalate privileges, access sensitive information, and persist within the environment, leading to severe security breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1210"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350583"
+}

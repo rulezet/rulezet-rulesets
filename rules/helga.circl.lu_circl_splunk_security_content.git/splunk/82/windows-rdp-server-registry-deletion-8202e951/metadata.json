@@ -1,0 +1,23 @@
+{
+  "uuid": "8202e951-597a-45e4-845d-880b86b73be8",
+  "title": "Windows RDP Server Registry Deletion",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies the deletion of registry keys under HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal Server Client\\Servers\\, which store records of previously connected remote systems via Remote Desktop Protocol (RDP). These keys are created automatically when a user connects to a remote host using the native Windows RDP client (mstsc.exe) and can be valuable forensic artifacts for tracking remote access activity. Malicious actors aware of this behavior may delete these keys after using RDP to hide evidence of their activity and avoid detection during incident response. This form of artifact cleanup is a known defense evasion technique, often performed during or after lateral movement. Legitimate users rarely delete these keys manually, making such actions highly suspicious—especially when correlated with RDP usage, unusual logon behavior, or other signs of compromise. Detecting the deletion of these registry entries can provide crucial insight into attempts to cover tracks following interactive remote access.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350752"
+}

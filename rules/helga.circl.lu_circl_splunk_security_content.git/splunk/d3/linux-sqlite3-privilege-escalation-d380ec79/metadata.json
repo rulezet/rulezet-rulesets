@@ -1,0 +1,23 @@
+{
+  "uuid": "d380ec79-27af-4e0d-97ed-041ae17ef23d",
+  "title": "Linux Sqlite3 Privilege Escalation",
+  "format": "splunk",
+  "author": "Gowthamaraj Rajendran, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the sqlite3 command with elevated privileges, which can be exploited for privilege escalation. It leverages Endpoint Detection and Response (EDR) telemetry to identify instances where sqlite3 is used in conjunction with shell commands and sudo. This activity is significant because it indicates a potential attempt to gain root access, which could lead to full system compromise. If confirmed malicious, an attacker could execute arbitrary commands as root, leading to unauthorized access, data exfiltration, or further lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1548.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350686"
+}

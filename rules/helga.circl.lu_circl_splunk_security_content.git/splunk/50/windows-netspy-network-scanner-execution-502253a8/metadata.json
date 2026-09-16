@@ -1,0 +1,26 @@
+{
+  "uuid": "502253a8-ae77-4614-8fcb-ba8a34fcc720",
+  "title": "Windows Netspy Network Scanner Execution",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects usage of the Netspy scanner on an endpoint.\nNetspy is a lightweight, fast, and cross-platform tool designed for internal network segment discovery.\nThe tool supports various protocols, including ICMP, ARP, TCP, and UDP, allowing users to scan for active hosts and services within predefined IP ranges.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1018",
+    "T1595"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350720"
+}

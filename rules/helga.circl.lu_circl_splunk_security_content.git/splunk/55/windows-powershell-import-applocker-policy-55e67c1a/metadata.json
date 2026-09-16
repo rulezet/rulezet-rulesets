@@ -1,0 +1,25 @@
+{
+  "uuid": "55e67c1a-40a4-43b3-a704-0bbfb47aedd4",
+  "title": "Windows Powershell Import Applocker Policy",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the import of Windows PowerShell Applocker cmdlets, specifically identifying the use of \"Import-Module Applocker\" and \"Set-AppLockerPolicy\" with an XML policy.\nIt leverages PowerShell Script Block Logging (EventCode 4104) to capture and analyze script block text.\nThis activity is significant as it may indicate an attempt to enforce restrictive Applocker policies, potentially used by malware like Azorult to disable antivirus products.\nIf confirmed malicious, this could allow an attacker to bypass security controls, leading to further system compromise and persistence.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350840"
+}

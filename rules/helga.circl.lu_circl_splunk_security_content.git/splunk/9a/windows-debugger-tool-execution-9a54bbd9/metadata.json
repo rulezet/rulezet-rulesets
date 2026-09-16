@@ -1,0 +1,24 @@
+{
+  "uuid": "9a54bbd9-566b-4240-8df9-8a35286fb09a",
+  "title": "Windows Debugger Tool Execution",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analysis detects the use of debugger tools within a production environment. While these tools are legitimate for file analysis and debugging, they are abused by malware like PlugX and DarkGate for malicious DLL side-loading. The hunting query aids Security Operations Centers (SOCs) in identifying potentially suspicious tool executions, particularly for non-technical users in the production network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350766"
+}

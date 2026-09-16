@@ -1,0 +1,30 @@
+{
+  "uuid": "d73bfe2b-4cd2-4c12-9078-c23b56c70c7b",
+  "title": "Disable Show Hidden Files",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows registry that disable the display of hidden files. It leverages data from the Endpoint.Registry data model, specifically monitoring changes to registry paths associated with hidden file settings. This activity is significant because malware, such as worms and trojan spyware, often use hidden files to evade detection. If confirmed malicious, this behavior could allow an attacker to conceal malicious files on the system, making it harder for security tools and analysts to identify and remove the threat.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "ms-caro-malware-full:malware-type=\"Spyware\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1564.001",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350700"
+}

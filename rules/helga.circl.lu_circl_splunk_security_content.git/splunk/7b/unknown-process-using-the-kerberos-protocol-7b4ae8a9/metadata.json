@@ -1,0 +1,24 @@
+{
+  "uuid": "7b4ae8a9-9796-40ec-9806-24bb872dfaa5",
+  "title": "Unknown Process Using The Kerberos Protocol",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a non-lsass.exe process making an outbound connection on port 88, which is typically used by the Kerberos authentication protocol. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process and network traffic logs. This activity is significant because, under normal circumstances, only the lsass.exe process should interact with the Kerberos Distribution Center. If confirmed malicious, this behavior could indicate an adversary attempting to abuse the Kerberos protocol, potentially leading to unauthorized access or lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1550"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350465"
+}

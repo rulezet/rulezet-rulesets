@@ -1,0 +1,23 @@
+{
+  "uuid": "466131a5-59f8-4c7d-90bf-e9f159ff9745",
+  "title": "Windows Net System Service Discovery",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the enumeration of Windows services using the net start command, which is a built-in utility that lists all running services on a system. Adversaries, system administrators, or automated tools may use this command to gain situational awareness of what services are active, identify potential security software, or discover opportunities for privilege escalation and lateral movement. The execution of net start is often associated with reconnaissance activity during the early stages of an intrusion, as attackers attempt to map out the system’s defense mechanisms and operational services. By monitoring process execution for instances of cmd.exe /c net start or similar command-line usage, defenders can detect potentially suspicious activity. Correlating this behavior with other reconnaissance commands, such as tasklist or sc query, strengthens detection fidelity. While net start is not inherently malicious, unusual or repeated use in non-administrative contexts should be flagged for further investigation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350663"
+}

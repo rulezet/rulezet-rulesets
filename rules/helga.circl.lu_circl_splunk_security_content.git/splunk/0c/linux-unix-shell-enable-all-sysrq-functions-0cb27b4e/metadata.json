@@ -1,0 +1,25 @@
+{
+  "uuid": "0cb27b4e-393c-4f44-a060-bbacf8978532",
+  "title": "Linux Unix Shell Enable All SysRq Functions",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of a command to enable all SysRq functions on a Linux system, a technique associated with the AwfulShred malware. It leverages Endpoint Detection and Response (EDR) data to identify processes executing the command to pipe bitmask '1' to /proc/sys/kernel/sysrq. This activity is significant as it can indicate an attempt to manipulate kernel system requests, which is uncommon and potentially malicious. If confirmed, this could allow an attacker to reboot the system or perform other critical actions, leading to system instability or further compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350614"
+}

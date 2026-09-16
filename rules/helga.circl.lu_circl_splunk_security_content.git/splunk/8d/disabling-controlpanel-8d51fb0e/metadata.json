@@ -1,0 +1,24 @@
+{
+  "uuid": "8d51fb0e-0bc7-4ea1-b99b-49286a88b9e2",
+  "title": "Disabling ControlPanel",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects registry modifications that disable the Control Panel on Windows systems. It leverages data from the Endpoint.Registry data model, specifically monitoring changes to the registry path \"*\\\\SOFTWARE\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Policies\\\\Explorer\\\\NoControlPanel\" with a value of \"0x00000001\". This activity is significant as it is commonly used by malware to prevent users from accessing the Control Panel, thereby hindering the removal of malicious artifacts and persistence mechanisms. If confirmed malicious, this could allow attackers to maintain control over the infected machine and prevent remediation efforts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350797"
+}

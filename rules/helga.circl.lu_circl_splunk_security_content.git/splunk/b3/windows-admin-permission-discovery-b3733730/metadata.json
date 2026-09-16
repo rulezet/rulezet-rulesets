@@ -1,0 +1,23 @@
+{
+  "uuid": "b3733730-e576-40a0-b5c1-9f841e0c4bda",
+  "title": "Windows Admin Permission Discovery",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the creation of a suspicious file named 'win.dat' in the root directory (C:\\). It leverages data from the Endpoint.Filesystem datamodel to detect this activity. This behavior is significant as it is commonly used by malware like NjRAT to check for administrative privileges on a compromised host. If confirmed malicious, this activity could indicate that the malware has administrative access, allowing it to perform high-privilege actions, potentially leading to further system compromise and persistence.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350442"
+}

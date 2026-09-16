@@ -1,0 +1,24 @@
+{
+  "uuid": "0d3027fd-6ea3-47c3-9bc2-8b4ed489a6f4",
+  "title": "Windows Modify Registry to Add or Modify Firewall Rule",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a potential addition or modification of firewall rules, signaling possible configuration changes or security policy adjustments. It tracks commands such as netsh advfirewall firewall add rule and netsh advfirewall firewall set rule, which may indicate attempts to alter network access controls. Monitoring these actions ensures the integrity of firewall settings and helps prevent unauthorized network access.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350443"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "468832e9-8ba0-4500-a283-2c970ff51496",
+  "title": "Windows New Service Security Descriptor Set Via Sc.EXE",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects changes in a service security descriptor.\nIt leverages data from Endpoint Detection and Response (EDR) agents, specifically searching for any process execution involving the \"sc.exe\" binary with the \"sdset\" flag targeting any service.\nThis behavior can be legitimate, such as when a user or administrator is configuring a service's security settings.\nInvestigate appropariate services to determine if the behavior is malicious.\nIf confirmed malicious, this could allow an attacker to escalate their privileges, blind defenses and more.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1564"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350633"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "9db1a691-acfe-401f-9ab8-1b6d97b63654",
+  "title": "Windows Time Based Evasion",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potentially malicious processes that initiate a ping delay using an invalid IP address.\nIt leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions involving \"ping 0 -n\".\nMalware like NJRAT was observed using this technique to introduce time delays for evasion tactics, such as delaying self-deletion.\nIf confirmed malicious, this activity could indicate an active infection attempting to evade detection, potentially leading to further compromise and persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1497.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350885"
+}

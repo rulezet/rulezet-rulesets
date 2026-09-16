@@ -1,0 +1,24 @@
+{
+  "uuid": "ec37ca08-0dfe-47d9-888f-035bc5ca6506",
+  "title": "Windows Modify System Firewall with Notable Process Path",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Will Metcalf, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious modifications to system firewall rules, specifically allowing execution of applications from notable and potentially malicious file paths. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions involving firewall rule changes. This activity is significant as it may indicate an adversary attempting to bypass firewall restrictions to execute malicious files. If confirmed malicious, this could allow attackers to execute unauthorized code, potentially leading to further system compromise, data exfiltration, or persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1686"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350893"
+}

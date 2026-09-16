@@ -1,0 +1,24 @@
+{
+  "uuid": "287b2623-17a3-4a62-9d3a-99b0d9398fa8",
+  "title": "Windows MMC Loaded Script Engine DLL",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies when a Windows process loads scripting libraries like jscript.dll or vbscript.dll to execute script code on a target system. While these DLLs are legitimate parts of the operating system, their use by unexpected processes or in unusual contexts can indicate malicious activity, such as script-based malware, living-off-the-land techniques, or automated attacks. This detection monitors which processes load these libraries, along with their command-line arguments and parent processes, to help distinguish normal administrative behavior from potential threats. Alerts should be investigated with attention to the process context and any subsequent network or system activity, as legitimate tools like MMC snap-ins may also trigger this behavior under routine administrative tasks.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1620"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350813"
+}

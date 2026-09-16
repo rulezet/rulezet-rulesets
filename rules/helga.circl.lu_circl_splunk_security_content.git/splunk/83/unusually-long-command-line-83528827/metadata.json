@@ -1,0 +1,23 @@
+{
+  "uuid": "83528827-0418-419e-84be-b2cb3de76406",
+  "title": "Unusually Long Command Line",
+  "format": "splunk",
+  "author": "David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects unusually long command lines, which may indicate malicious activity. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on the length of command lines executed on hosts. This behavior is significant because attackers often use obfuscated or complex command lines to evade detection and execute malicious payloads. If confirmed malicious, this activity could lead to data theft, ransomware deployment, or further system compromise. Analysts should investigate the source and content of the command line, inspect relevant artifacts, and review concurrent processes to identify potential threats.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350670"
+}

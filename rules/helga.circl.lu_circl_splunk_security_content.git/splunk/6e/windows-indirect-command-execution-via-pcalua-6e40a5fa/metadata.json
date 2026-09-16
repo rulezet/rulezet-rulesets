@@ -1,0 +1,23 @@
+{
+  "uuid": "6e40a5fa-f639-4cfd-9de0-39dadbb4a076",
+  "title": "Windows Indirect Command Execution Via pcalua",
+  "format": "splunk",
+  "author": "Eric McGinnis, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects programs initiated by pcalua.exe, the Microsoft Windows Program Compatibility Assistant. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process and parent process information. While pcalua.exe can start legitimate programs, it is significant because attackers may use it to bypass command line execution protections. If confirmed malicious, this activity could allow attackers to execute arbitrary commands, potentially leading to unauthorized actions, privilege escalation, or persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350805"
+}

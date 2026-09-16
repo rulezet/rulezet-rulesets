@@ -1,0 +1,23 @@
+{
+  "uuid": "8010db83-92ee-49c8-a617-fc1961063b80",
+  "title": "Windows Time Based Evasion via Choice Exec",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of choice.exe in batch files as a delay tactic, a technique observed in SnakeKeylogger malware. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line executions. This activity is significant as it indicates potential time-based evasion techniques used by malware to avoid detection. If confirmed malicious, this behavior could allow attackers to execute code stealthily, delete malicious files, and persist on compromised hosts, making it crucial for SOC analysts to investigate promptly.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1497.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350665"
+}

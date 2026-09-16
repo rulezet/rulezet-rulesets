@@ -1,0 +1,24 @@
+{
+  "uuid": "d6e66253-5ed2-4c1f-9b12-c7da578d25a2",
+  "title": "Detect WMI Event Subscription Persistence",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the creation of WMI Event Subscriptions, which can be used to establish persistence or perform privilege escalation. It detects EventID 19 (EventFilter creation), EventID 20 (EventConsumer creation), and EventID 21 (FilterToConsumerBinding creation) from Sysmon logs. This activity is significant because WMI Event Subscriptions can execute code with elevated SYSTEM privileges, making it a powerful persistence mechanism. If confirmed malicious, an attacker could maintain long-term access, escalate privileges, and execute arbitrary code, posing a severe threat to the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350688"
+}

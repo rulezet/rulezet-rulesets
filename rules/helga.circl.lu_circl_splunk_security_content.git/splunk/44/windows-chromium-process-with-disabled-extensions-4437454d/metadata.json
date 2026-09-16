@@ -1,0 +1,23 @@
+{
+  "uuid": "4437454d-3d9f-44c1-b5e5-44dcc159e02f",
+  "title": "Windows Chromium Process with Disabled Extensions",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects instances of Chromium-based browser processes on Windows launched with extensions explicitly disabled via command-line arguments. Disabling extensions can be used by automation frameworks, testing tools, or headless browser activity, but may also indicate defense evasion or abuse of browser functionality by malicious scripts or malware. This behavior reduces browser visibility and bypasses user-installed security extensions, making it relevant for detecting non-interactive execution, suspicious automation, or living-off-the-land techniques. Analysts should validate execution context, parent process, and command-line parameters to determine legitimacy.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1497"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350790"
+}

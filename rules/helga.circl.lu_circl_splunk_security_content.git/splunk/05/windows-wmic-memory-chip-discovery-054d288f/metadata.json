@@ -1,0 +1,23 @@
+{
+  "uuid": "054d288f-9bb0-4c35-82a4-badf68290ce7",
+  "title": "Windows Wmic Memory Chip Discovery",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of Windows Management Instrumentation Command-line (WMIC) commands related to memory chip discovery on a Windows system. Specifically, it monitors instances where commands such as “wmic memorychip” are used to retrieve detailed information about installed RAM modules. While these commands can serve legitimate administrative and troubleshooting purposes, they may also be employed by adversaries to gather system hardware specifications as part of their reconnaissance activities. By identifying and alerting on WMIC memory chip queries, security teams can enhance their ability to spot unauthorized information gathering and take proactive measures to mitigate potential threats.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350599"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "a93e7f93-622c-4a9b-88ad-b1cd23ca5f51",
+  "title": "Windows Delete or Modify System Firewall",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies 'netsh' processes that delete or modify firewall configurations. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions containing specific keywords. This activity is significant because it can indicate malware, such as NJRAT, attempting to alter firewall settings to evade detection or remove traces. If confirmed malicious, this behavior could allow an attacker to disable security measures, facilitating further compromise and persistence within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1686"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350883"
+}

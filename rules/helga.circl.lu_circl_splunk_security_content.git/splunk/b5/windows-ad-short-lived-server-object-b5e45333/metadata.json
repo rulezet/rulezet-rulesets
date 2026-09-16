@@ -1,0 +1,23 @@
+{
+  "uuid": "b5e45333-ce2e-44db-8ae1-8db738a755e5",
+  "title": "Windows AD Short Lived Server Object",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the creation and quick deletion of a Domain Controller (DC) object within 30 seconds in an Active Directory environment, indicative of a potential DCShadow attack. This detection leverages Windows Security Event Codes 5137 and 5141, analyzing the duration between these events. This activity is significant as DCShadow allows attackers with privileged access to register a rogue DC, enabling unauthorized changes to AD objects, including credentials. If confirmed malicious, this could lead to unauthorized AD modifications, compromising the integrity and security of the entire domain.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1207"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350834"
+}

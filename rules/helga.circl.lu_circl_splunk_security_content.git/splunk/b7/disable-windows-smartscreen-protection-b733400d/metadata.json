@@ -1,0 +1,24 @@
+{
+  "uuid": "b733400d-3e5c-4791-a7f3-20fec1a4c68c",
+  "title": "Disable Windows SmartScreen Protection",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows registry that disable SmartScreen protection. It leverages data from the Endpoint.Registry data model, specifically monitoring changes to registry paths associated with SmartScreen settings. This activity is significant because SmartScreen provides an early warning system against phishing and malware. Disabling it can indicate malicious intent, often seen in Remote Access Trojans (RATs) to evade detection while downloading additional payloads. If confirmed malicious, this action could allow attackers to bypass security measures, increasing the risk of successful phishing attacks and malware infections.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350739"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "7b8167ac-de80-43c8-8794-ec78686c0192",
+  "title": "Windows AD DSRM Account Changes",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies changes to the Directory Services Restore Mode (DSRM) account behavior via registry modifications. It detects alterations in the registry path \"*\\\\System\\\\CurrentControlSet\\\\Control\\\\Lsa\\\\DSRMAdminLogonBehavior\" with specific values indicating potential misuse. This activity is significant because the DSRM account, if misconfigured, can be exploited to persist within a domain, similar to a local administrator account. If confirmed malicious, an attacker could gain persistent administrative access to a Domain Controller, leading to potential domain-wide compromise and unauthorized access to sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350826"
+}

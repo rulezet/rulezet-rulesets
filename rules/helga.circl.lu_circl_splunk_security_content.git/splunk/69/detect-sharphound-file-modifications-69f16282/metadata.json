@@ -1,0 +1,28 @@
+{
+  "uuid": "69f16282-b121-4d55-89e0-086291906ef9",
+  "title": "Detect SharpHound File Modifications",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of files typically associated with SharpHound, a reconnaissance tool used for gathering domain and trust data. It leverages file modification events from the Endpoint.Filesystem data model, focusing on default file naming patterns like `*_BloodHound.zip` and various JSON files. This activity is significant as it indicates potential domain enumeration, which is a precursor to more targeted attacks. If confirmed malicious, an attacker could gain detailed insights into the domain structure, facilitating lateral movement and privilege escalation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.001",
+    "T1069.002",
+    "T1087.001",
+    "T1087.002",
+    "T1482"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350898"
+}

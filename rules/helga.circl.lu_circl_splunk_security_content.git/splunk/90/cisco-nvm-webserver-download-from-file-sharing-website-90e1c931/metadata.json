@@ -1,0 +1,23 @@
+{
+  "uuid": "90e1c931-d9cf-40fc-8450-777648e60466",
+  "title": "Cisco NVM - Webserver Download From File Sharing Website",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects unexpected outbound network connections initiated by known webserver processes such as `httpd.exe`, `nginx.exe`, or `tomcat.exe` to common file sharing or public content hosting services like GitHub, Discord CDN, Transfer.sh, or Pastebin.\nWebservers are rarely expected to perform outbound downloads, especially to dynamic or anonymous file hosting domains. This behavior is often associated with server compromise,\nwhere an attacker uses a reverse shell, webshell, or injected task to fetch malware or tools post-exploitation.\nThe detection leverages Cisco Network Visibility Module flow data, enriched with process context, to identify this highly suspicious behavior.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350896"
+}

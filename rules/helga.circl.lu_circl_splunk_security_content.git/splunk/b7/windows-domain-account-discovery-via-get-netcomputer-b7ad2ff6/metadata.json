@@ -1,0 +1,23 @@
+{
+  "uuid": "b7ad2ff6-bbf8-4ff5-a295-c44e7e8a0101",
+  "title": "Windows Domain Account Discovery Via Get-NetComputer",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the PowerView PowerShell cmdlet Get-NetComputer, which is used to query Active Directory for user account details such as \"samaccountname,\" \"accountexpires,\" \"lastlogon,\" and more. It leverages Event ID 4104 from PowerShell Script Block Logging to identify this activity. This behavior is significant as it may indicate an attempt to gather user account information, which is often a precursor to further malicious actions. If confirmed malicious, this activity could lead to unauthorized access, privilege escalation, or lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1087.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350778"
+}

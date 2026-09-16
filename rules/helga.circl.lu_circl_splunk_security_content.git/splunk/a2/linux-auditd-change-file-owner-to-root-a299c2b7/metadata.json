@@ -1,0 +1,25 @@
+{
+  "uuid": "a299c2b7-1a6d-43a0-aab5-f7e3e61ad07e",
+  "title": "Linux Auditd Change File Owner To Root",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the 'chown' command to change a file owner to 'root' on a Linux system. It leverages Linux Auditd telemetry, specifically monitoring command-line executions and process details. This activity is significant as it may indicate an attempt to escalate privileges by adversaries, malware, or red teamers. If confirmed malicious, this action could allow an attacker to gain root-level access, leading to full control over the compromised host and potential persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1222.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350582"
+}

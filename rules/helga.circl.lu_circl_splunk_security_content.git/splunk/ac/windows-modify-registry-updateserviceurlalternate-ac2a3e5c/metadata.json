@@ -1,0 +1,23 @@
+{
+  "uuid": "ac2a3e5c-32b9-4991-be0a-8bee16a79cb3",
+  "title": "Windows Modify Registry UpdateServiceUrlAlternate",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a suspicious modification to the Windows Update configuration registry key, specifically targeting the UpdateServiceUrlAlternate setting. It leverages data from the Endpoint.Registry datamodel to identify changes to this registry path. This activity is significant because adversaries, including malware like RedLine Stealer, exploit this technique to bypass detection and deploy additional payloads. If confirmed malicious, this modification could allow attackers to redirect update services, potentially leading to the execution of malicious code, further system compromise, and persistent evasion of security defenses.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350681"
+}

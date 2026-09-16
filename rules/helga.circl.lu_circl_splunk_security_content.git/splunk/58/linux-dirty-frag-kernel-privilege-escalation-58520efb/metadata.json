@@ -1,0 +1,28 @@
+{
+  "uuid": "58520efb-8af6-4253-b9fa-6e3a5ddbf162",
+  "title": "Linux Dirty Frag Kernel Privilege Escalation",
+  "format": "splunk",
+  "author": "Axsel Riando Soplanit, Alexander Wijaya, Matthew Roytua, Muhammad Rafdi Aufar Ahmad, Brian Stevan Ambarita, Ensign Infosecurity",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects exploitation of Dirty Frag (CVE-2026-43284 and CVE-2026-43500), a Linux kernel local privilege escalation vulnerability.\nThe exploit corrupts the kernel page cache via the IPsec ESP or RxRPC subsystems using a high-frequency splice() syscall loop, followed by a privilege transition to root in the same audit session.\nThis analytic anchors on the exploit-specific behavioral signature, a sustained splice() spray (50 or more calls within a 60-second window) from an unprivileged process executing from a user-writable path (/home, /tmp, /dev/shm, /var/tmp, /run/user, /root), followed within 5 minutes by execution of a set-uid binary in the same auditd session.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1548.001"
+  ],
+  "cve": [
+    "CVE-2026-31431",
+    "CVE-2026-43284",
+    "CVE-2026-43500"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350436"
+}

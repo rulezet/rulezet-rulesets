@@ -1,0 +1,23 @@
+{
+  "uuid": "8f3527d6-99ed-4259-9c17-164cf9426e17",
+  "title": "Linux Stdout Redirection To Dev Null File",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects command-line activities that redirect stdout or stderr to the /dev/null file. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs. This behavior is significant as it can indicate attempts to hide command outputs, a technique observed in the CyclopsBlink malware to conceal modifications to iptables firewall settings. If confirmed malicious, this activity could allow an attacker to stealthily alter system configurations, potentially leading to unauthorized access or persistent control over the compromised machine.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1686"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350859"
+}

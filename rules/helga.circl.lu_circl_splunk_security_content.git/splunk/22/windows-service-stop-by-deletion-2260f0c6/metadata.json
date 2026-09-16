@@ -1,0 +1,24 @@
+{
+  "uuid": "2260f0c6-7471-48a9-b0fc-177665c4c2a6",
+  "title": "Windows Service Stop By Deletion",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of `sc.exe` to delete a Windows service. It leverages Endpoint Detection and Response (EDR) data, focusing on process execution logs that capture command-line arguments. This activity is significant because adversaries often delete services to disable security mechanisms or critical system functions, aiding in evasion and persistence. If confirmed malicious, this action could lead to the termination of essential security services, allowing attackers to operate undetected and potentially escalate their privileges or maintain long-term access to the compromised system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1489"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350518"
+}

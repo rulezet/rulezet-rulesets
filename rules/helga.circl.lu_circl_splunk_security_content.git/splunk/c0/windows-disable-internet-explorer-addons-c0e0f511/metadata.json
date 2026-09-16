@@ -1,0 +1,23 @@
+{
+  "uuid": "c0e0f511-bcd6-43ea-ab5e-035b90f20b72",
+  "title": "Windows Disable Internet Explorer Addons",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of iexplore.exe (Internet Explorer) with the -extoff command-line flag, which disables all browser extensions. This flag is commonly abused by adversaries to launch a clean browser session that bypasses security controls such as antivirus browser extensions, toolbars, or group policy-enforced add-ons.\nMalicious documents or scripts may leverage iexplore.exe -extoff to open phishing pages, command-and-control interfaces, or download additional payloads in an environment free from security monitoring plugins. While this flag may be used legitimately by IT administrators for troubleshooting purposes, its use in modern enterprise environments is rare and should be considered suspicious—particularly when launched by Office applications, scripting engines (e.g., PowerShell, WScript), or scheduled tasks.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1176.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350844"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "221a3352-626f-405a-994d-0967fce5ee54",
+  "title": "Ransomware Notes bulk creation",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the bulk creation of ransomware notes (e.g., .txt, .html, .hta files) on an infected machine. It leverages Sysmon EventCode 11 to detect multiple instances of these file types being created within a short time frame. This activity is significant as it often indicates an active ransomware attack, where the attacker is notifying the victim of the encryption. If confirmed malicious, this behavior could lead to widespread data encryption, rendering critical files inaccessible and potentially causing significant operational disruption.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:ransomware=\"Clop\"",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350755"
+}

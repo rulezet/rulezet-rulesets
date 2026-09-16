@@ -1,0 +1,24 @@
+{
+  "uuid": "d314c668-ece9-4bb3-8425-d4519e08aaff",
+  "title": "Windows Remote Create Service",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the creation of a new service on a remote endpoint using sc.exe. It leverages data from Endpoint Detection and Response (EDR) agents, specifically monitoring for EventCode 7045, which indicates a new service creation. This activity is significant as it may indicate lateral movement or remote code execution attempts by an attacker. If confirmed malicious, this could allow the attacker to establish persistence, escalate privileges, or execute arbitrary code on the remote system, potentially leading to further compromise of the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350503"
+}

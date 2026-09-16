@@ -1,0 +1,23 @@
+{
+  "uuid": "451437be-14ad-46c4-ab2f-8c4049dbd681",
+  "title": "Detect Regasm Spawning a Process",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects regasm.exe spawning a child process. This behavior is identified using data from Endpoint Detection and Response (EDR) agents, focusing on process creation events where regasm.exe is the parent process. This activity is significant because regasm.exe spawning a process is rare and can indicate an attempt to bypass application control mechanisms. If confirmed malicious, this could allow an attacker to execute arbitrary code, potentially leading to privilege escalation or persistent access within the environment. Immediate investigation is recommended to determine the legitimacy of the spawned process and any associated activities.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.009"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350808"
+}

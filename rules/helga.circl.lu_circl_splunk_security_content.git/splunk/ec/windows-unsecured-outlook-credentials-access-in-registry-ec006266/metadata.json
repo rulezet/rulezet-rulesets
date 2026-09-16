@@ -1,0 +1,23 @@
+{
+  "uuid": "ec006266-af7e-4e94-89df-67478c9c99c7",
+  "title": "Windows Unsecured Outlook Credentials Access In Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects unauthorized access to Outlook credentials stored in the Windows registry. It leverages Windows Security Event logs, specifically EventCode 4663, to identify access attempts to registry paths associated with Outlook profiles. This activity is significant as it may indicate attempts to steal sensitive email credentials, which could lead to unauthorized access to email accounts. If confirmed malicious, this could allow attackers to exfiltrate sensitive information, impersonate users, or execute further unauthorized actions within Outlook, posing a significant security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1552"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350884"
+}

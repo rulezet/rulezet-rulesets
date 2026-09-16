@@ -1,0 +1,23 @@
+{
+  "uuid": "4715305a-dabc-425d-8a10-96ad74ce2b20",
+  "title": "Windows Anomalous Registry Value Length in Environment Key",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects creation or modification of registry values under a user or system Environment key (paths matching *\\Environment\\*) where the stored value exceeds 2,000 characters.\nLegitimate environment variables are typically short strings (paths, tokens, or flags); unusually long values can indicate adversaries or malware staging encoded payloads, bloated malicious PATH entries, or other data in a location that is loaded for every interactive session.\nThis behavior has been observed in contexts such as .NET infostealer activity. Analysts should validate the writing process, value content, and whether the change aligns with trusted software deployment or administrative tasks.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350887"
+}

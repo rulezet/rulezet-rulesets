@@ -1,0 +1,24 @@
+{
+  "uuid": "5bd29747-6b96-4906-b523-8cdb75c2458a",
+  "title": "Windows Service Create with Tscon",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potential RDP Hijacking attempts by identifying the creation of a Windows service using sc.exe with a binary path that includes tscon.exe. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process creation events and command-line arguments. This activity is significant as it indicates an attacker may be trying to hijack a disconnected RDP session, posing a risk of unauthorized access. If confirmed malicious, the attacker could gain control over an existing user session, leading to potential data theft or further system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543.003",
+    "T1563.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350596"
+}

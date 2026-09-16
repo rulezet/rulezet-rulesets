@@ -1,0 +1,27 @@
+{
+  "uuid": "f1a4b27e-1309-4bbf-95ca-28e30a2ee647",
+  "title": "Windows Security And Backup Services Stop",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the suspicious termination of known services commonly targeted by ransomware before file encryption. It leverages Windows System Event Logs (EventCode 7036) to identify when critical services such as Volume Shadow Copy, backup, and antivirus services are stopped. This activity is significant because ransomware often disables these services to avoid errors and ensure successful file encryption. If confirmed malicious, this behavior could lead to widespread data encryption, rendering files inaccessible and potentially causing significant operational disruption and data loss.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350643"
+}

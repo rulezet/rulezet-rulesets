@@ -1,0 +1,26 @@
+{
+  "uuid": "23d90c0b-5d0b-48f8-b001-2ccb20f84df8",
+  "title": "Suspicious SQLite3 LSQuarantine Behavior",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the use of SQLite3 querying the MacOS preferences to determine the original URL from which a package was downloaded. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line executions involving LSQuarantine. This activity is significant as it is commonly associated with MacOS adware and other malicious software. If confirmed malicious, this behavior could indicate an attempt to track or manipulate downloaded packages, potentially leading to further system compromise or persistent adware infections.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Adware\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1074"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350913"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "5d51bfdb-1de9-4d70-878d-cfa65f194e70",
+  "title": "Short Lived Windows Accounts",
+  "format": "splunk",
+  "author": "David Dorsey, Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the rapid creation and deletion of Windows accounts within a short time frame of 1 hour. It leverages the \"Change\" data model in Splunk, specifically monitoring events with result IDs 4720 (account creation) and 4726 (account deletion). This behavior is significant as it may indicate an attacker attempting to create and remove accounts quickly to evade detection or gain unauthorized access. If confirmed malicious, this activity could lead to unauthorized access, privilege escalation, or further malicious actions within the environment. Immediate investigation of flagged events is crucial to mitigate potential damage.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078.003",
+    "T1136.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350576"
+}

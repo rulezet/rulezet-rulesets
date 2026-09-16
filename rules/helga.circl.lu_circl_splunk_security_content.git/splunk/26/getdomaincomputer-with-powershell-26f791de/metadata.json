@@ -1,0 +1,23 @@
+{
+  "uuid": "26f791de-c4c3-42e8-8a70-391e2499b318",
+  "title": "GetDomainComputer with PowerShell",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of `powershell.exe` with command-line arguments that utilize `Get-DomainComputer` to discover remote systems. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line executions. This activity is significant as `Get-DomainComputer` is part of PowerView, a tool often used by adversaries for domain enumeration and situational awareness. If confirmed malicious, this activity could allow attackers to map out the network, identify critical systems, and plan further attacks, potentially leading to unauthorized access and data exfiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1018"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350453"
+}

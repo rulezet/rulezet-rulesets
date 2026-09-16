@@ -1,0 +1,28 @@
+{
+  "uuid": "8fbacce7-9ce0-4df6-80cc-2fa19f97b09c",
+  "title": "Detect PsExec With accepteula Flag",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of `PsExec.exe` with the `accepteula` flag in the command line. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs and command-line arguments. This activity is significant because PsExec is commonly used by threat actors to execute code on remote systems, and the `accepteula` flag indicates first-time usage, which could signify initial compromise. If confirmed malicious, this activity could allow attackers to gain remote code execution capabilities, potentially leading to further system compromise and lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Sandworm Team - G0034\"",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350802"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "a00b526b-8e22-4a75-9589-808ce952967b",
+  "title": "Windows Multiple Users Fail To Authenticate Wth ExplicitCredentials",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a source user failing to authenticate with 30 unique users using explicit credentials on a host. It leverages Windows Event 4648, which is generated when a process attempts an account logon by explicitly specifying account credentials. This detection is significant as it may indicate a Password Spraying attack, where an adversary attempts to gain initial access or elevate privileges within an Active Directory environment. If confirmed malicious, this activity could lead to unauthorized access, privilege escalation, and potential compromise of sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350592"
+}

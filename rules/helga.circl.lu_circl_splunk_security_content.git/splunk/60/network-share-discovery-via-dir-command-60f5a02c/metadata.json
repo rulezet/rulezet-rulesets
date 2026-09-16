@@ -1,0 +1,26 @@
+{
+  "uuid": "60f5a02c-bbc2-4c6e-813c-44a700bb768b",
+  "title": "Network Share Discovery Via Dir Command",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects access to Windows administrative SMB shares (Admin$, IPC$, C$) using the 'dir' command. It leverages Windows Security Event Logs with EventCode 5140 to identify this activity.\nThis behavior is significant as it is commonly used by tools like PsExec/PaExec for staging binaries before creating and starting services on remote endpoints, a technique often employed by adversaries for lateral movement and remote code execution.\nIf confirmed malicious, this activity could allow attackers to propagate malware, such as IcedID, across the network, leading to widespread infection and potential data breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1135"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350699"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "f3ea9178-5e26-49cb-9db8-2d216221701f",
+  "title": "Linux Docker Root Directory Mount",
+  "format": "splunk",
+  "author": "Gowthamaraj Rajendran, Splunk, Emil Elsetrønning",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies Docker containers that mount the host's root directory into the container filesystem.\nMounting the entire host root directory into a container effectively grants the container visibility and potential write access to all files on the host system.\nIf the container is running as root or with elevated capabilities (e.g., --privileged), the risk is significantly increased.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350555"
+}

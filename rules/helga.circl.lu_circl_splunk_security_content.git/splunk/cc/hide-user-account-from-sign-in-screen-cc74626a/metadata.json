@@ -1,0 +1,24 @@
+{
+  "uuid": "cc74626a-2428-4f9f-9283-1f545f220490",
+  "title": "Hide User Account From Sign-In Screen",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a suspicious registry modification that hides a user account from the Windows Login screen. It leverages data from the Endpoint.Registry data model, specifically monitoring changes to the registry path \"*\\\\Windows NT\\\\CurrentVersion\\\\Winlogon\\\\SpecialAccounts\\\\Userlist*\" with a value of \"0x00000000\". This activity is significant as it may indicate an adversary attempting to create a hidden admin account to avoid detection and maintain persistence on the compromised machine. If confirmed malicious, this could allow the attacker to maintain undetected access and control over the system, posing a severe security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350680"
+}

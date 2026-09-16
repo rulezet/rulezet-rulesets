@@ -1,0 +1,23 @@
+{
+  "uuid": "91fedf58-2dec-42aa-b670-731938496e21",
+  "title": "Windows Defender ASR or Threat Configuration Tamper",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of commands to disable Attack Surface Reduction (ASR) rules or change threat default actions in Windows Defender.\nIt leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions involving \"Add-MpPreference\" or \"Set-MpPreference\".\nThis activity is significant because adversaries often use it to bypass Windows Defender, allowing malicious code to execute undetected.\nIf confirmed malicious, this behavior could enable attackers to evade antivirus detection, maintain persistence, and execute further malicious activities without interference from Windows Defender.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350769"
+}

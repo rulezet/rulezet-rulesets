@@ -1,0 +1,23 @@
+{
+  "uuid": "820cce72-9d08-4e85-9fdd-9ce2efc8c2a8",
+  "title": "Windows Chromium Browser with Custom User Data Directory",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects instances where the Chromium-based browser (e.g., Google Chrome, Microsoft Edge) is launched with the --user-data-dir command-line argument. While this flag is legitimate and used for multi-profile support or automation, it is frequently leveraged by malware and adversaries to run Chrome in an isolated environment for stealth operations, credential harvesting, phishing delivery, or evasion of user session artifacts.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1497"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350491"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "393be24e-cfec-4df2-9e87-86eea1ea64b4",
+  "title": "Windows Impair Defenses Disable AV AutoStart via Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the registry related to the disabling of autostart functionality for certain antivirus products, such as Kingsoft and Tencent. Malware like ValleyRAT may alter specific registry keys to prevent these security tools from launching automatically at startup, thereby weakening system defenses. By monitoring changes in the registry entries associated with antivirus autostart settings, this detection enables security analysts to identify attempts to disable protective software. Detecting these modifications early is critical for maintaining system integrity and preventing further compromise by malicious actors.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350615"
+}

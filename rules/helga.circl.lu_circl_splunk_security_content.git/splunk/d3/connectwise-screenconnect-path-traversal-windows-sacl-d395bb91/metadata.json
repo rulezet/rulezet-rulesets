@@ -1,0 +1,26 @@
+{
+  "uuid": "d395bb91-4c48-49ac-bdb0-831df62f6527",
+  "title": "ConnectWise ScreenConnect Path Traversal Windows SACL",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to exploit the ConnectWise ScreenConnect CVE-2024-1708 vulnerability using Windows SACL EventCode 4663. It identifies path traversal attacks by monitoring file system events related to the ScreenConnect service. This activity is significant as it allows unauthorized access to sensitive files and directories, potentially leading to data exfiltration or arbitrary code execution. If confirmed malicious, attackers could gain unauthorized access to critical data or execute harmful code, compromising the integrity and security of the affected system. Immediate remediation by updating to version 23.9.8 or above is recommended.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2024-1708",
+    "CVE-2024-1709"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350733"
+}

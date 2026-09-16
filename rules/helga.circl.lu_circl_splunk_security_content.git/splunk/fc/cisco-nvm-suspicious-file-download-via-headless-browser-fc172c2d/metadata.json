@@ -1,0 +1,22 @@
+{
+  "uuid": "fc172c2d-cfa9-4111-a1a2-8e4e45f1775b",
+  "title": "Cisco NVM - Suspicious File Download via Headless Browser",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic identifies the use of Chromium-based browsers (like Microsoft Edge) running in headless mode with the `--dump-dom` argument.\nThis behavior has been observed in attack campaigns such as DUCKTAIL, where browsers are automated to stealthily download content from the internet using direct URLs or suspicious hosting platforms.\nThe detection focuses on identifying connections to known file-sharing domains or direct IPs extracted from command-line arguments and cross-checks those against the destination of the flow.\nSince it leverages Cisco Network Visibility Module telemetry, the rule triggers only if a network connection is made.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350585"
+}

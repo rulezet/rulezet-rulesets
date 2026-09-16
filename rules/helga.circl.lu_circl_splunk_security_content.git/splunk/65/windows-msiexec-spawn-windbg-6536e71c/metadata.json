@@ -1,0 +1,23 @@
+{
+  "uuid": "6536e71c-5e79-4224-b491-05aec6a6a2e5",
+  "title": "Windows MSIExec Spawn WinDBG",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the unusual behavior of MSIExec spawning WinDBG. It detects this activity by analyzing endpoint telemetry data, specifically looking for instances where 'msiexec.exe' is the parent process of 'windbg.exe'. This behavior is significant as it may indicate an attempt to debug or tamper with system processes, which is uncommon in typical user activity and could signify malicious intent. If confirmed malicious, this activity could allow an attacker to manipulate or inspect running processes, potentially leading to privilege escalation or persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350558"
+}

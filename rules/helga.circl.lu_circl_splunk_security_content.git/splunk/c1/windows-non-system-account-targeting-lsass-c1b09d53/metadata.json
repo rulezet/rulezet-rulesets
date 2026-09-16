@@ -1,0 +1,24 @@
+{
+  "uuid": "c1b09d53-5bef-4533-bd88-b652c0824ce2",
+  "title": "Windows Non-System Account Targeting Lsass",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies non-SYSTEM accounts requesting access to lsass.exe. This detection leverages Sysmon EventCode 10 logs to monitor access attempts to the Local Security Authority Subsystem Service (lsass.exe) by non-SYSTEM users. This activity is significant as it may indicate credential dumping attempts or unauthorized access to sensitive credentials. If confirmed malicious, an attacker could potentially extract credentials from memory, leading to privilege escalation or lateral movement within the network. Immediate investigation is required to determine the legitimacy of the access request and to mitigate any potential threats.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350508"
+}

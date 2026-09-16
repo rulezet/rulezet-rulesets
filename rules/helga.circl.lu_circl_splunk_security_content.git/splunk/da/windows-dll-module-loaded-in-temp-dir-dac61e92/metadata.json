@@ -1,0 +1,24 @@
+{
+  "uuid": "dac61e92-e072-4e09-ad6c-85f598492f46",
+  "title": "Windows DLL Module Loaded in Temp Dir",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects instances where a Dynamic Link Library (DLL) is loaded from a temporary directory on a Windows system. Loading DLLs from non-standard paths such as %TEMP% is uncommon for legitimate applications and is often associated with adversary tradecraft, including DLL search order hijacking, side-loading, or execution of malicious payloads staged in temporary folders. Adversaries frequently leverage these directories because they are writable by standard users and often overlooked by security controls, making them convenient locations to drop and execute malicious files. This behavior may indicate attempts to evade detection, execute unauthorized code, or maintain persistence through hijacked execution flows. Detection of DLL loads from %TEMP% can help surface early signs of compromise and should be investigated in the context of the originating process, user account, and potential file creation or modification activity within the same directory.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350619"
+}

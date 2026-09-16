@@ -1,0 +1,23 @@
+{
+  "uuid": "59730f93-298d-4c88-be8c-f52b7face358",
+  "title": "Windows Chromium Process Launched with Logging Disabled",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects instances of Chromium-based browser processes on Windows launched with logging disabled via command-line arguments such as --disable-logging and --disable-logging-redirect.\nThe --disable-logging flag forces browser logging to be disabled, while --disable-logging-redirect disables log redirection and is commonly used for testing or debugging scenarios.\nLogging is enabled by default in Chromium debug builds, making these flags more likely to appear in debug or development environments.\nWhile these options may be legitimately used by automation frameworks, debugging workflows, or isolated testing environments, they are also leveraged by malware and malicious scripts to evade security monitoring.\nAnalysts should review the parent process, full command-line parameters, and execution context to determine whether the behavior is expected or potentially suspicious.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1497"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350524"
+}

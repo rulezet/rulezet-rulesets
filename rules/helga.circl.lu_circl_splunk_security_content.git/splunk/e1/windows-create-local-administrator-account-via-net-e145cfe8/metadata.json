@@ -1,0 +1,26 @@
+{
+  "uuid": "e145cfe8-edd4-4d9a-ac23-1ca3b300bdda",
+  "title": "Windows Create Local Administrator Account Via Net",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of a local administrator account using the \"net.exe\" command. It leverages Endpoint Detection and Response (EDR) data to identify processes named \"net.exe\" with the \"/add\" parameter and keywords related to administrator accounts. This activity is significant as it may indicate an attacker attempting to gain persistent access or escalate privileges. If confirmed malicious, this could lead to unauthorized access, data theft, or further system compromise. Review the process details, user context, and related artifacts to determine the legitimacy of the activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1136.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350779"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "7452ba9d-2b00-4427-8cdd-cd4d91027dbe",
+  "title": "Windows AppCertDLL Modification Via Registry",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects attempts to modify AppCertDLL registry entries.\nValues under this registry entry are used to specify DLLs loaded by the Windows Session Manager.\nSuch modifications can be abused by attackers to load malicious code early in the system startup process, enabling persistent malware execution with high privileges.\nIf confirmed malicious, this behavior may lead to system compromise, persistence, and the evasion of security controls.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.009"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350706"
+}

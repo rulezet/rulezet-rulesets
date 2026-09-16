@@ -1,0 +1,24 @@
+{
+  "uuid": "132546ee-d424-4ccc-86cc-20fca425fed5",
+  "title": "Linux File Creation In Init Boot Directory",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of files in Linux init boot directories, which are used for automatic execution upon system startup.\nIt leverages file system logs to identify new files in directories such as /etc/init.d/ and /etc/rc.d/. This activity is significant as it is a common persistence technique used by adversaries, malware authors, and red teamers.\nIf confirmed malicious, this could allow an attacker to maintain persistence on the compromised host, potentially leading to further exploitation and unauthorized control over the system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1037.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350775"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "38b8d556-1fbd-4478-9847-4855a6118593",
+  "title": "Detect RTLO In File Name",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the use of the right-to-left override\n(RTLO) character in file names. It leverages data from the Endpoint.Filesystem datamodel,\nspecifically focusing on file creation events and file names containing the RTLO\ncharacter (U+202E). This activity is significant because adversaries use RTLO to\ndisguise malicious files as benign by reversing the text that follows the character.\nIf confirmed malicious, this technique can deceive users and security tools, leading\nto the execution of harmful files and potential system compromise.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350628"
+}

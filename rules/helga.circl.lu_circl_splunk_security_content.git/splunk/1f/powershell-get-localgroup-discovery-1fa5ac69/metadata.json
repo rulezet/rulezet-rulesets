@@ -1,0 +1,23 @@
+{
+  "uuid": "1fa5ac69-b557-443a-8129-51b0029ee7fa",
+  "title": "PowerShell Get LocalGroup Discovery",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the use of the `get-localgroup` command executed via PowerShell or cmd.exe to enumerate local groups on an endpoint. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line arguments. Monitoring this activity is significant as it may indicate an attacker attempting to gather information about local group memberships, which can be a precursor to privilege escalation. If confirmed malicious, this activity could allow an attacker to identify and target privileged accounts, potentially leading to unauthorized access and control over the system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350784"
+}

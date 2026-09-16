@@ -1,0 +1,25 @@
+{
+  "uuid": "b0d66521-4388-411c-9bec-5903d6707e5d",
+  "title": "Cisco NVM - Suspicious Network Connection From Process With No Args",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects system binaries that are commonly abused in process injection techniques but are observed without any command-line arguments.\nIt leverages Cisco Network Visibility Module (NVM) flow data and process arguments\nto identify outbound connections initiated by curl where TLS checks were explicitly disabled.\nBinaries such as `rundll32.exe`, `regsvr32.exe`, `dllhost.exe`, `svchost.exe`, and others are legitimate Windows processes that are often injected into by malware or post-exploitation frameworks (e.g., Cobalt Strike) to hide execution.\nWhen these processes are seen initiating a network connection with an empty or missing command line, it can indicate\npotential injection and communication with a command and control server.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350825"
+}

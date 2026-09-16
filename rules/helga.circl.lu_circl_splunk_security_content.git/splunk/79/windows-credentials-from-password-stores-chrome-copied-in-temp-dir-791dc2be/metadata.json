@@ -1,0 +1,23 @@
+{
+  "uuid": "791dc2be-6ac2-4776-a701-a760026d8b1d",
+  "title": "Windows Credentials from Password Stores Chrome Copied in TEMP Dir",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the copying of Chrome's Local State and Login Data files into temporary folders, a tactic often used by the Braodo stealer malware. These files contain encrypted user credentials, including saved passwords and login session details. The detection monitors for suspicious copying activity involving these specific Chrome files, particularly in temp directories where malware typically processes the stolen data. Identifying this behavior enables security teams to act quickly, preventing attackers from decrypting and exfiltrating sensitive browser credentials and mitigating the risk of unauthorized access.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1555.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350770"
+}

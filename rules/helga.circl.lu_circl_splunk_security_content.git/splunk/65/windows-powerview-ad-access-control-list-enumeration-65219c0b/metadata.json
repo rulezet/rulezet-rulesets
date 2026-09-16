@@ -1,0 +1,25 @@
+{
+  "uuid": "65219c0b-b2a3-464d-8d76-7743c90afae4",
+  "title": "Windows PowerView AD Access Control List Enumeration",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of PowerView PowerShell cmdlets `Get-ObjectAcl` or `Get-DomainObjectAcl`, which are used to enumerate Access Control List (ACL) permissions for Active Directory objects. It leverages Event ID 4104 from PowerShell Script Block Logging to identify this activity. This behavior is significant as it may indicate an attempt to discover weak permissions in Active Directory, potentially leading to privilege escalation. If confirmed malicious, attackers could exploit these permissions to gain unauthorized access or escalate their privileges within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069",
+    "T1078.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350919"
+}

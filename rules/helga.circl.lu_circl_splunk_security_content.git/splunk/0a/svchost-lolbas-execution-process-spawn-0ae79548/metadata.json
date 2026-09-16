@@ -1,0 +1,24 @@
+{
+  "uuid": "0ae79548-6642-4b23-b622-b6a15c104ab9",
+  "title": "Svchost LOLBAS Execution Process Spawn",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects instances of 'svchost.exe' spawning Living Off The Land Binaries and Scripts (LOLBAS) processes. It leverages Endpoint Detection and Response (EDR) data to monitor child processes of 'svchost.exe' that match known LOLBAS executables. This activity is significant as adversaries often use LOLBAS techniques to execute malicious code stealthily, potentially indicating lateral movement or code execution attempts.\nIf confirmed malicious, this behavior could allow attackers to execute arbitrary commands, escalate privileges, or maintain persistence within the environment, posing a significant security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350835"
+}

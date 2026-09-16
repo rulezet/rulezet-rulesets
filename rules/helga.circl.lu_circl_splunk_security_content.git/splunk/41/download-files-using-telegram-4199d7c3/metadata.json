@@ -1,0 +1,23 @@
+{
+  "uuid": "4199d7c3-ea98-4eed-8254-daab5005461d",
+  "title": "Download Files Using Telegram",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious file downloads by the Telegram application on a Windows system. It leverages Sysmon EventCode 15 to identify instances where Telegram.exe creates files with a Zone.Identifier, indicating a download. This activity is significant as it may indicate an adversary using Telegram to download malicious tools, such as network scanners, for further exploitation. If confirmed malicious, this behavior could lead to network mapping, lateral movement, and potential compromise of additional systems within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350736"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "a9f121b4-7f4a-4984-ae95-3df5c212e4e5",
+  "title": "Suspicious Rundll32 StartW",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of rundll32.exe with the DLL function names \"Start\" and \"StartW,\" commonly associated with Cobalt Strike payloads. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions and process metadata. This activity is significant as it often indicates the presence of malicious payloads, such as Cobalt Strike, which can lead to unauthorized code execution. If confirmed malicious, this activity could allow attackers to inject shellcode, escalate privileges, and maintain persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350563"
+}

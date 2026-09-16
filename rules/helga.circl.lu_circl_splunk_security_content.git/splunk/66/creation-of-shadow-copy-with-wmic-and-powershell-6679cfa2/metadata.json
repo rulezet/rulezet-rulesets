@@ -1,0 +1,23 @@
+{
+  "uuid": "6679cfa2-557c-4c3e-aa9e-95b800e6720d",
+  "title": "Creation of Shadow Copy with wmic and powershell",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of shadow copies using \"wmic\" or \"Powershell\" commands. It leverages the Endpoint.Processes data model in Splunk to identify processes where the command includes \"shadowcopy\" and \"create\". This activity is significant because it may indicate an attacker attempting to manipulate or access data in an unauthorized manner, potentially leading to data theft or manipulation. If confirmed malicious, this behavior could allow attackers to backup and exfiltrate sensitive data or hide their tracks by restoring files to a previous state after an attack.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350785"
+}

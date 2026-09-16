@@ -1,0 +1,26 @@
+{
+  "uuid": "f16af8f4-83a5-4a77-b02a-dcd2b5fcdb42",
+  "title": "Windows WMI Process Call Create",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of WMI command lines used to create or execute processes. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line events that include specific keywords like \"process,\" \"call,\" and \"create.\" This activity is significant because adversaries often use WMI to execute malicious payloads on local or remote hosts, potentially bypassing traditional security controls. If confirmed malicious, this behavior could allow attackers to execute arbitrary code, escalate privileges, or maintain persistence within the environment, posing a severe threat to organizational security.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350861"
+}

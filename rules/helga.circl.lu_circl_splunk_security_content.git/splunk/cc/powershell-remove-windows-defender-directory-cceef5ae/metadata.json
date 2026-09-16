@@ -1,0 +1,24 @@
+{
+  "uuid": "cceef5ae-6486-48e8-b46d-b66a856e4e19",
+  "title": "Powershell Remove Windows Defender Directory",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a suspicious PowerShell command attempting to delete the Windows Defender directory.\nIt leverages PowerShell Script Block Logging to identify commands containing \"rmdir\" and targeting the Windows Defender path.\nThis activity is significant as it may indicate an attempt to disable or corrupt Windows Defender, a key security component.\nIf confirmed malicious, this action could allow an attacker to bypass endpoint protection, facilitating further malicious activities without detection.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"WhisperGate\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350511"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "6617a997-4247-4604-bfad-49715d0cb241",
+  "title": "GetDomainComputer with PowerShell Script Block",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the `Get-DomainComputer` commandlet using PowerShell Script Block Logging (EventCode=4104). This commandlet is part of PowerView, a tool often used for enumerating domain computers within Windows environments. The detection leverages script block text analysis to identify this specific command. Monitoring this activity is crucial as it can indicate an adversary's attempt to gather information about domain computers, which is a common step in Active Directory reconnaissance. If confirmed malicious, this activity could lead to further network enumeration and potential lateral movement within the domain.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1018"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350667"
+}

@@ -1,0 +1,29 @@
+{
+  "uuid": "d324b59a-361a-4eec-ab7a-b7388cdb8245",
+  "title": "Shai-Hulud Workflow File Creation or Modification",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects creation or deletion of malicious GitHub Actions workflow files associated with\nShai-Hulud worm variants on Linux or Windows endpoints. This includes the original shai-hulud-workflow.yml,\nthe 2.0 backdoor discussion.yaml (enables command injection via GitHub Discussions on self-hosted\nrunners named SHA1HULUD), and the secrets exfiltration workflow formatter_*.yml pattern. These\nfiles are used to exfiltrate credentials and propagate across repositories.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1195",
+    "T1554",
+    "T1574.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350903"
+}

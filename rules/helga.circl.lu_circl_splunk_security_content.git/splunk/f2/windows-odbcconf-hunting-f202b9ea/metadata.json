@@ -1,0 +1,23 @@
+{
+  "uuid": "f202b9ea-4052-4fee-be7a-1879e3e8d91c",
+  "title": "Windows Odbcconf Hunting",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of Odbcconf.exe within the environment. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process creation events where the process name is Odbcconf.exe. This activity is significant because Odbcconf.exe can be used by attackers to execute arbitrary commands or load malicious DLLs, potentially leading to code execution or persistence. If confirmed malicious, this behavior could allow an attacker to maintain access to the system, execute further malicious activities, or escalate privileges, posing a significant threat to the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350424"
+}

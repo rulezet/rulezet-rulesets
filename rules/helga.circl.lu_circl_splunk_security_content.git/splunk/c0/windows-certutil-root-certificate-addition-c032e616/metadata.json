@@ -1,0 +1,24 @@
+{
+  "uuid": "c032e616-b198-4919-b977-4f4dfd21025c",
+  "title": "Windows Certutil Root Certificate Addition",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of certutil.exe to add a certificate to the Root certificate store using the \"-addstore\" flag.\nIn this case, the certificate is loaded from a temporary file path (e.g., %TEMP%) or other uncommon locations (e.g. C:\\\\Users\\\\Public\\\\), which is highly suspicious and uncommon in legitimate administrative activity.\nThis behavior may indicate an adversary is installing a malicious root certificate to intercept HTTPS traffic, impersonate trusted entities, or bypass security controls.\nThe use of flags such as -f (force) and -Enterprise, combined with loading .tmp files from user-writable locations, is consistent with post-exploitation activity seen in credential theft and adversary-in-the-middle (AiTM) attacks.\nThis should be investigated immediately, especially if correlated with unauthorized privilege use or prior certificate modifications.\nYou should monitor when new certificates are added to the root store because this store is what your system uses to decide which websites, apps, and software can be trusted.\nIf an attacker manages to add their own certificate there, they can silently intercept encrypted traffic, impersonate trusted websites, or make malicious programs look safe.\nThis means they could steal sensitive data, bypass security tools, and keep access to your system even after other malware is removed.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1587.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350623"
+}

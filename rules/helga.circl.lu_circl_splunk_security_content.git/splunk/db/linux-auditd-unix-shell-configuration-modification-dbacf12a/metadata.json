@@ -1,0 +1,25 @@
+{
+  "uuid": "dbacf12a-cc3c-4726-9be7-d0968fe85fbd",
+  "title": "Linux Auditd Unix Shell Configuration Modification",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious access or modifications to Unix shell configuration files, which may indicate an attempt to alter system behavior or gain unauthorized access.\nUnix shell configuration files, such as `.bashrc` or `.profile`, control user environment settings and command execution.\nUnauthorized changes to these files can be used to execute malicious commands, escalate privileges, or hide malicious activities.\nBy monitoring for unusual or unauthorized modifications to shell configuration files, this analytic helps identify potential security threats, allowing security teams to respond quickly and mitigate risks.\nCorrelate this with related EXECVE or PROCTITLE events to identify the process or user responsible for the access or modification.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1546.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350828"
+}

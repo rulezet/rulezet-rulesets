@@ -1,0 +1,23 @@
+{
+  "uuid": "909226be-0e30-4fac-950f-3512c7bbb003",
+  "title": "Windows RDP Login Session Was Established",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects instances where a successful Remote Desktop Protocol (RDP) login session was established, as indicated by Windows Security Event ID 4624 with Logon Type 10. This event confirms that a user has not only provided valid credentials but has also initiated a full interactive RDP session. It is a key indicator of successful remote access to a Windows system. When correlated with Event ID 1149, which logs RDP authentication success, this analytic helps distinguish between mere credential acceptance and actual session establishment—critical for effective monitoring and threat detection.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350705"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "69d61a29-6eca-45e3-b707-7f26bdced9f2",
+  "title": "Windows Steal Authentication Certificates CertUtil Backup",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects CertUtil.exe performing a backup of the Certificate Store. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on specific command-line executions involving CertUtil with backup parameters. This activity is significant because it may indicate an attempt to steal authentication certificates, which are critical for secure communications. If confirmed malicious, an attacker could use the stolen certificates to impersonate users, decrypt sensitive data, or gain unauthorized access to systems, leading to severe security breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1649"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350544"
+}

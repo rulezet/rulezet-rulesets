@@ -1,0 +1,29 @@
+{
+  "uuid": "979bfd15-6bdd-4a66-b3ae-d934b641bc1e",
+  "title": "PowerShell PInvoke Process Injection API Chain",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects PowerShell Script Block Logging (Event ID 4104) evidence of a complete P/Invoke process-injection API chain at either the compile phase or the execution phase.\nPortions of this search were modified to retain the same functionality while preventing antivirus products from alerting on the detection itself\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055.001",
+    "T1055.003",
+    "T1055.004",
+    "T1055.012",
+    "T1055.013",
+    "T1059.001",
+    "T1620"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350629"
+}

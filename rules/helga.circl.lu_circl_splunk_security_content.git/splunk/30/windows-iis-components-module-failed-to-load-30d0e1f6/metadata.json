@@ -1,0 +1,25 @@
+{
+  "uuid": "30d0e1f6-fec5-4abd-82c8-e94f17639fd9",
+  "title": "Windows IIS Components Module Failed to Load",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when an IIS Module DLL fails to load due to a configuration problem, identified by EventCode 2282. This detection leverages Windows Application event logs to identify repeated failures in loading IIS modules. Such failures can indicate misconfigurations or potential tampering with IIS components. If confirmed malicious, this activity could lead to service disruptions or provide an attacker with opportunities to exploit vulnerabilities within the IIS environment. Immediate investigation is required to determine the legitimacy of the failing module and to mitigate any potential security risks.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"OilRig - G0049\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1505.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350657"
+}

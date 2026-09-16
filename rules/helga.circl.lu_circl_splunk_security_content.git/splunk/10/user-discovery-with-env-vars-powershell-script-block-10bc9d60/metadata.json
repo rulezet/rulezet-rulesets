@@ -1,0 +1,23 @@
+{
+  "uuid": "10bc9d60-3e06-43ff-b506-f644460859e9",
+  "title": "User Discovery With Env Vars PowerShell Script Block",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of PowerShell environment variables to identify the current logged user by leveraging PowerShell Script Block Logging (EventCode=4104). This method monitors script blocks containing `$env:UserName` or `[System.Environment]::UserName`. Identifying this activity is significant as adversaries and Red Teams may use it for situational awareness and Active Directory discovery on compromised endpoints. If confirmed malicious, this activity could allow attackers to gain insights into user context, aiding in further exploitation and lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1033"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350613"
+}

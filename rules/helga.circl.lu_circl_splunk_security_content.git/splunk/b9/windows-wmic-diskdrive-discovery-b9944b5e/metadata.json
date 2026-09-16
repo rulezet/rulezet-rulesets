@@ -1,0 +1,23 @@
+{
+  "uuid": "b9944b5e-8065-41b4-aec6-9800e63ded73",
+  "title": "Windows Wmic DiskDrive Discovery",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of Windows Management Instrumentation Command-line (WMIC) for disk drive discovery activities on a Windows system. This process involves monitoring commands such as “wmic diskdrive” which are often used by administrators for inventory and diagnostics but can also be leveraged by attackers to enumerate hardware details for malicious purposes. Detecting these commands is essential for identifying potentially unauthorized asset reconnaissance or pre-attack mapping behaviors. By capturing and analyzing WMIC disk drive queries, security teams can gain visibility into suspicious activities, enabling them to respond promptly and strengthen the organization’s security posture against insider threats or lateral movement attempts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350515"
+}

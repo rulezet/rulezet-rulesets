@@ -1,0 +1,27 @@
+{
+  "uuid": "89fd701e-e116-404f-afe6-afcc2942b5eb",
+  "title": "Network Traffic to Active Directory Web Services Protocol",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies network traffic directed to the Active Directory Web Services Protocol (ADWS) on port 9389. It leverages network traffic logs, focusing on source and destination IP addresses, application names, and destination ports. This activity is significant as ADWS is used to manage Active Directory, and unauthorized access could indicate malicious intent. If confirmed malicious, an attacker could manipulate Active Directory, potentially leading to privilege escalation, unauthorized access, or persistent control over the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.001",
+    "T1069.002",
+    "T1087.001",
+    "T1087.002",
+    "T1482"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350451"
+}

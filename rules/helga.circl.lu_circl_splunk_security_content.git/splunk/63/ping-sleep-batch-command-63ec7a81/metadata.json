@@ -1,0 +1,25 @@
+{
+  "uuid": "63ec7a81-c113-4408-982c-77e687196794",
+  "title": "Ping Sleep Batch Command",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the use of ping commands as a delay or sleep mechanism within batch-style command execution.\nIt leverages process creation telemetry from Endpoint Detection and Response (EDR) agents and examines process and parent process command-line fields for ping commands that specify a count and are chained with additional commands using command separators or redirection operators.\nWhile execution of the command may generate individual process creation events, such as a separate ping.exe process, this analytic specifically focuses on the original command string passed to a command interpreter, such as cmd.exe /c, that combines the ping-based delay with subsequent command execution.\nAdversaries may use ping as an alternative to explicit sleep or timeout commands to introduce execution delays, potentially evading automated analysis, sandboxing, or behavior-based detection.\nBecause ping is commonly used for legitimate network troubleshooting, findings should be reviewed in the context of the complete command line, parent process, user, and commands executed before or after the delay.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"WhisperGate\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1497.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350642"
+}

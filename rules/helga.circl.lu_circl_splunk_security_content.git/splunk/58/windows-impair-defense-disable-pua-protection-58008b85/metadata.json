@@ -1,0 +1,24 @@
+{
+  "uuid": "58008b85-c096-4159-a2f9-d84d461f2f59",
+  "title": "Windows Impair Defense Disable PUA Protection",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a modification in the Windows registry to disable Windows Defender PUA protection by setting PUAProtection to 0. This detection leverages data from the Endpoint.Registry datamodel, focusing on registry path changes related to Windows Defender. Disabling PUA protection is significant as it reduces defenses against Potentially Unwanted Applications (PUAs), which, while not always malicious, can negatively impact user experience and security. If confirmed malicious, this activity could allow an attacker to introduce adware, browser toolbars, or other unwanted software, potentially compromising system integrity and user productivity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Adware\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350654"
+}

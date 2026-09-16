@@ -1,0 +1,28 @@
+{
+  "uuid": "5942770b-b9ea-43fe-97db-df00941a0593",
+  "title": "Spoolsv Suspicious Process Access",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Michael Haag, Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious process access by spoolsv.exe, potentially indicating exploitation of the PrintNightmare vulnerability (CVE-2021-34527). It leverages Sysmon EventCode 10 to identify when spoolsv.exe accesses critical system files or processes like rundll32.exe with elevated privileges. This activity is significant as it may signal an attempt to gain unauthorized privilege escalation on a vulnerable machine. If confirmed malicious, an attacker could achieve elevated privileges, leading to further system compromise, persistent access, or unauthorized control over the affected environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2021-34527"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350872"
+}

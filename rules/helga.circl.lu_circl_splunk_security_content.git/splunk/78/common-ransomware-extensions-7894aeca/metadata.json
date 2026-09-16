@@ -1,0 +1,28 @@
+{
+  "uuid": "7894aeca-eeab-46f5-bdea-519820093195",
+  "title": "Common Ransomware Extensions",
+  "format": "splunk",
+  "author": "David Dorsey, Michael Haag, Nasreddine Bencherchali, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to files with extensions commonly associated with ransomware. It leverages the Endpoint.Filesystem data model to identify changes in file extensions that match known ransomware patterns.\nThis activity is significant because it suggests an attacker is attempting to encrypt or alter files, potentially leading to severe data loss and operational disruption.\nIf confirmed malicious, this activity could result in the encryption of critical data, rendering it inaccessible and causing significant damage to the organization's data integrity and availability.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:ransomware=\"Clop\"",
+    "misp-galaxy:ransomware=\"Ryuk ransomware\"",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350921"
+}

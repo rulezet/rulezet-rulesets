@@ -1,0 +1,25 @@
+{
+  "uuid": "ae1ebed3-9607-4b93-813d-54f3873a6f25",
+  "title": "Excessive Usage Of SC Service Utility",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects excessive usage of the `sc.exe` service utility on a host machine. It leverages Sysmon EventCode 1 logs to identify instances where `sc.exe` is executed more frequently than normal within a 15-minute window. This behavior is significant as it is commonly associated with ransomware, cryptocurrency miners, and other malware attempting to create, modify, delete, or disable services, potentially related to security applications or for privilege escalation. If confirmed malicious, this activity could allow attackers to manipulate critical services, leading to system compromise or disruption of security defenses.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350723"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "e8c9e665-a0cd-40b4-a2e8-0e292bfc7d87",
+  "title": "Linux Possible Nimbuspwn Privilege Escalation",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects directory traversal attempts associated with Nimbuspwn, a Linux privilege escalation vulnerability affecting the networkd-dispatcher service.\nNimbuspwn exploits weaknesses in the networkd-dispatcher service to traverse directories and execute arbitrary code with elevated privileges.\nIf confirmed malicious, this activity could allow an attacker to escalate privileges to root, potentially leading to full system compromise, persistent unauthorized access, and the ability to deploy additional malicious payloads.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2022-29799",
+    "CVE-2022-29800"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350821"
+}

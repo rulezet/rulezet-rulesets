@@ -1,0 +1,24 @@
+{
+  "uuid": "c61b9f4e-14fa-444a-86cf-0d538f701fdc",
+  "title": "Detect Rundll32 Inline HTA Execution",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of \"rundll32.exe\" with inline protocol handlers such as \"JavaScript\", \"VBScript\", and \"About\". This behavior is identified using Endpoint Detection and Response (EDR) telemetry, focusing on command-line arguments. This activity is significant as it is often associated with fileless malware or application whitelisting bypass techniques. If confirmed malicious, this could allow an attacker to execute arbitrary code, bypass security controls, and maintain persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350573"
+}

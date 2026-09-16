@@ -1,0 +1,23 @@
+{
+  "uuid": "c4402be7-c860-4693-ba79-e33b893d0426",
+  "title": "Windows RDPClient Connection Sequence Events",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic monitors Windows RDP client connection sequence events (EventCode 1024) from the Microsoft-Windows-TerminalServices-RDPClient/Operational log. These events track when RDP ClientActiveX initiates connection attempts to remote servers. The connection sequence is a critical phase of RDP where the client and server exchange settings and establish common parameters for the session. Monitoring these events can help identify unusual RDP connection patterns, potential lateral movement attempts, unauthorized remote access activity, and RDP connection chains that may indicate compromised systems. NOTE the analytic was written for Multi-Line as XML was not properly parsed out.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1133"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350605"
+}

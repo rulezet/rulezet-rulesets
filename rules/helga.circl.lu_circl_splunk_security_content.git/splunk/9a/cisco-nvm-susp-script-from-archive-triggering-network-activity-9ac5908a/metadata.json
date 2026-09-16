@@ -1,0 +1,22 @@
+{
+  "uuid": "9ac5908a-a448-48d6-a6d7-4c2728c487b9",
+  "title": "Cisco NVM - Susp Script From Archive Triggering Network Activity",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects script execution (`wscript.exe` or `cscript.exe`) triggered from compressed files opened directly using\n`explorer.exe`, `winrar.exe`, or `7zFM.exe`.\nWhen a user double clicks on a \".js\" file from within one of these compressed files. Its extracted temporally in the temp directory in folder with certain markers.\nIt leverages Cisco Network Visibility Module (NVM) flow data, in order to look for a specific parent/child relationship and an initiated network connection.\nThis behavior is exploited by threat actors such as Scarlet Goldfinch to deliver and run malicious scripts as an initial access technique.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.005",
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350718"
+}

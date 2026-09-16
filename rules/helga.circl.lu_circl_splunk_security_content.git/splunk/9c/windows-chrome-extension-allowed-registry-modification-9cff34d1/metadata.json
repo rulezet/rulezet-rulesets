@@ -1,0 +1,23 @@
+{
+  "uuid": "9cff34d1-e6cf-4b7c-8837-df03e3d8bd6b",
+  "title": "Windows Chrome Extension Allowed Registry Modification",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows registry keys that control the Chrome Extension Install Allowlist. Unauthorized changes to these keys may indicate attempts to bypass Chrome extension restrictions or install unapproved extensions. This detection helps identify potential security policy violations or malicious activity targeting Chrome extension settings.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1185"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350735"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "718546c1-c3e6-47f9-a853-8dd251fca1b4",
+  "title": "Excessive Usage Of Taskkill",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies excessive usage of `taskkill.exe`, a command-line utility used to terminate processes. The detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on instances where `taskkill.exe` is executed ten or more times within a one-minute span. This behavior is significant as adversaries often use `taskkill.exe` to disable security tools or other critical processes to evade detection. If confirmed malicious, this activity could allow attackers to bypass security defenses, maintain persistence, and further compromise the system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350543"
+}

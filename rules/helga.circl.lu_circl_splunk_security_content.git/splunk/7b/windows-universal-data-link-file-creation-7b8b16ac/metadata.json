@@ -1,0 +1,24 @@
+{
+  "uuid": "7b8b16ac-047e-4de2-b648-910bc66cee00",
+  "title": "Windows Universal Data Link File Creation",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the creation of Universal Data Link (UDL) files.\nThis could indicate a phishing technique that exploits UDL files, which are typically used in Windows for database connections.\nAttackers might leverage UDL files to bypass email filters and capture user credentials by tricking victims into testing a connection to a malicious server.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204.002",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350631"
+}

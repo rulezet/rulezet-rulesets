@@ -1,0 +1,23 @@
+{
+  "uuid": "666b9343-fa0d-46aa-b548-32b91036bf7d",
+  "title": "Detect RTLO In Process",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the abuse of the right-to-left override (RTLO) character (U+202E) in process names. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs and command-line data. This activity is significant because adversaries use the RTLO character to disguise malicious files or commands, making them appear benign. If confirmed malicious, this technique can allow attackers to execute harmful code undetected, potentially leading to unauthorized access, data exfiltration, or further system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350550"
+}

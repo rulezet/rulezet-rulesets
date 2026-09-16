@@ -1,0 +1,33 @@
+{
+  "uuid": "09664a1f-fe2c-44b7-9b2f-2f6a3e90756a",
+  "title": "Windows Common Abused Cmd Shell Risk Behavior",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where four or more distinct detection analytics are associated with malicious command line behavior on a specific host. This detection leverages the Command Line Interface (CLI) data from various sources to identify suspicious activities. This behavior is significant as it often indicates attempts to execute malicious commands, access sensitive data, install backdoors, or perform other nefarious actions. If confirmed malicious, attackers could gain unauthorized control, exfiltrate information, escalate privileges, or launch further attacks within the network, leading to severe compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Sandworm Team - G0034\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1016",
+    "T1033",
+    "T1049",
+    "T1059",
+    "T1222",
+    "T1529"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350556"
+}

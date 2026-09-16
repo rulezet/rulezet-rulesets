@@ -1,0 +1,24 @@
+{
+  "uuid": "99e1f95d-efec-43aa-b989-989d576749a7",
+  "title": "Windows Error Report Created in ReportQueue Manually",
+  "format": "splunk",
+  "author": "Onur Mustafa Erdogan, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a .wer file being written into the Windows Error Reporting ReportQueue directory by a process other than the standard error-reporting binaries.\nWindows Error Reporting normally populates ReportQueue only through werfault.exe, werfaultsecure.exe, or wermgr.exe following an actual application crash.\nIn the ShieldBreak exploit, the attacker fabricates a .wer report directly and manually invokes the QueueReporting scheduled task, which causes wermgr.exe to process the report and load an attacker-planted phantom DLL at SYSTEM integrity.\nIf confirmed malicious, this activity indicates preparation for a local privilege escalation attempt abusing Windows Error Reporting.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005",
+    "T1068"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350777"
+}

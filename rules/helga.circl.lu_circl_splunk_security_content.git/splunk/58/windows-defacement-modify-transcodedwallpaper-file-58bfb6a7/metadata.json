@@ -1,0 +1,23 @@
+{
+  "uuid": "58bfb6a7-2519-4dae-8ee6-02ca85bb6b36",
+  "title": "Windows Defacement Modify Transcodedwallpaper File",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies modifications to the TranscodedWallpaper file in the wallpaper theme directory, excluding changes made by explorer.exe. This detection leverages the Endpoint.Processes and Endpoint.Filesystem data models to correlate process activity with file modifications. This activity is significant as it may indicate an adversary attempting to deface or change the desktop wallpaper of a targeted host, a tactic often used to signal compromise or deliver a message. If confirmed malicious, this could be a sign of unauthorized access and tampering, potentially leading to further system compromise or data exfiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1491"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350674"
+}

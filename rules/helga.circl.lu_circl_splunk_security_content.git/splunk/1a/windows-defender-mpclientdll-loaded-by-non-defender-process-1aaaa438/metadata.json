@@ -1,0 +1,23 @@
+{
+  "uuid": "1aaaa438-8deb-4c69-b2c6-6206cde2e4c1",
+  "title": "Windows Defender MpClient.dll Loaded by Non-Defender Process",
+  "format": "splunk",
+  "author": "Onur Mustafa Erdogan, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects mpclient.dll, the Windows Defender client API library, being loaded by a process that is not part of the Windows Defender platform.\nmpclient.dll exposes the API surface used to drive on-demand Defender scans (IOAV, MpScan). In the ShieldBreak exploit, the attacker binary loads mpclient.dll directly and calls its scan APIs against an object-manager path in order to trigger a Defender scan against attacker-controlled content as part of a race condition targeting Defender's placeholder-hydration behavior.\nIf confirmed malicious, this activity indicates an attempt to weaponize Windows Defender's own scanning pipeline for local privilege escalation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350462"
+}

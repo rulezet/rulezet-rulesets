@@ -1,0 +1,24 @@
+{
+  "uuid": "89828560-9534-40e3-803d-417d56ebaa5d",
+  "title": "Windows ConsoleHost History File Deletion",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the deletion of the ConsoleHost_history.txt file, which stores command history for PowerShell sessions. Attackers may attempt to remove this file to cover their tracks and evade detection during post-exploitation activities. This detection focuses on file deletion commands executed via PowerShell, Command Prompt, or scripting languages that specifically target ConsoleHost_history.txt, typically located at %APPDATA%\\Microsoft\\Windows\\PowerShell\\PSReadline\\ConsoleHost_history.txt. Identifying such activity can help uncover potential anti-forensic behavior and suspicious administrative actions.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350474"
+}

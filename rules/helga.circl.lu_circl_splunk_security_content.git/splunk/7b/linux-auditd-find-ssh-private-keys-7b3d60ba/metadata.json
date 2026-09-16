@@ -1,0 +1,26 @@
+{
+  "uuid": "7b3d60ba-6632-489c-a67d-cfe987dd3c3d",
+  "title": "Linux Auditd Find Ssh Private Keys",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious attempts to find SSH private keys, which may indicate an attacker's effort to compromise secure access to systems. SSH private keys are essential for secure authentication, and unauthorized access to these keys can enable attackers to gain unauthorized access to servers and other critical infrastructure. By monitoring for unusual or unauthorized searches for SSH private keys, this analytic helps identify potential threats to network security, allowing security teams to quickly respond and safeguard against unauthorized access and potential breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1552.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350679"
+}

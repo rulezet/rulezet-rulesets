@@ -1,0 +1,24 @@
+{
+  "uuid": "01f52e60-45e1-44e1-96f9-cd63fc8ee3e6",
+  "title": "Suspicious writes to windows Recycle Bin",
+  "format": "splunk",
+  "author": "Rico Valdez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when a process other than explorer.exe writes to the Windows Recycle Bin. It leverages the Endpoint.Filesystem and Endpoint.Processes data models in Splunk to identify any process writing to the \"*$Recycle.Bin*\" file path, excluding explorer.exe. This activity is significant because it may indicate an attacker attempting to hide their actions, potentially leading to data theft, ransomware, or other malicious outcomes. If confirmed malicious, this behavior could allow an attacker to persist in the environment and evade detection by security tools.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350581"
+}

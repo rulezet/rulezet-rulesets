@@ -1,0 +1,27 @@
+{
+  "uuid": "1e52a140-39c0-4a1c-93ef-b91aa3481ae9",
+  "title": "Windows DisableAntiSpyware Registry",
+  "format": "splunk",
+  "author": "Rod Soto, Jose Hernandez, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the modification of the Windows Registry key \"DisableAntiSpyware\" being set to disable. This detection leverages data from the Endpoint.Registry datamodel, specifically looking for the registry value name \"DisableAntiSpyware\" with a value of \"0x00000001\". This activity is significant as it is commonly associated with Ryuk ransomware infections, indicating potential malicious intent to disable Windows Defender. If confirmed malicious, this action could allow attackers to disable critical security defenses, facilitating further malicious activities such as data encryption, exfiltration, or additional system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:ransomware=\"Ryuk ransomware\"",
+    "misp-galaxy:tool=\"Empire\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350608"
+}

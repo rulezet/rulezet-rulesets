@@ -1,0 +1,24 @@
+{
+  "uuid": "98942af6-16f1-4374-8cec-00d915448f2f",
+  "title": "Windows Export Certificate",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the export of a certificate from the Windows Certificate Store. It leverages the Certificates Lifecycle log channel, specifically event ID 1007, to identify this activity. Monitoring certificate exports is crucial as certificates can be used for authentication to VPNs or private resources. If malicious actors export certificates, they could potentially gain unauthorized access to sensitive systems or data, leading to significant security breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1552.004",
+    "T1649"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350803"
+}

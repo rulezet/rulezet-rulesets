@@ -1,0 +1,24 @@
+{
+  "uuid": "fc25f167-d87d-4b76-a366-ee9189f95aa7",
+  "title": "Windows MSIX Package Interaction",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This hunting query detects user interactions with MSIX packages by monitoring EventCode 171 in the Microsoft-Windows-AppXPackaging/Operational logs. These events are generated when a user clicks on or attempts to interact with an MSIX package, even if the package is not fully installed. This information can be valuable for security teams to identify what MSIX packages users are attempting to open in their environment, which may help detect malicious MSIX packages before they're fully installed. Monitoring these interactions can provide early warning of potential MSIX package abuse, which has been leveraged by threat actors such as FIN7, Zloader (Storm-0569), and FakeBat (Storm-1113).",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350516"
+}

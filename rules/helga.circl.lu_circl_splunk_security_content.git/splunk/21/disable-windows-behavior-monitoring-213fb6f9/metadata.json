@@ -1,0 +1,28 @@
+{
+  "uuid": "213fb6f9-c2a6-4fc6-8760-8b99dc9b48be",
+  "title": "Disable Windows Behavior Monitoring",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies modifications in the registry to disable Windows Defender's real-time behavior monitoring. It leverages data from the Endpoint.Registry data model, specifically monitoring changes to registry paths associated with Windows Defender settings. This activity is significant because disabling real-time protection is a common tactic used by malware such as RATs, bots, or Trojans to evade detection. If confirmed malicious, this action could allow an attacker to execute code, escalate privileges, or persist in the environment without being detected by antivirus software.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350548"
+}

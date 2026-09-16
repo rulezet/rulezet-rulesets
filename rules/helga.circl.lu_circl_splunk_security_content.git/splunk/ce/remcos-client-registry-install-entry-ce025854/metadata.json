@@ -1,0 +1,24 @@
+{
+  "uuid": "ce025854-e288-4589-b3fe-0d1de9604920",
+  "title": "Remcos client registry install entry",
+  "format": "splunk",
+  "author": "Steven Dick, Bhavin Patel, Rod Soto, Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the presence of a registry key associated with the Remcos RAT agent on a host. It leverages data from the Endpoint.Processes and Endpoint.Registry data models in Splunk, focusing on instances where the \"license\" key is found in the \"Software\\Remcos\" path. This behavior is significant as it indicates potential compromise by the Remcos RAT, a remote access Trojan used for unauthorized access and data exfiltration. If confirmed malicious, the attacker could gain control over the system, steal sensitive information, or use the compromised host for further attacks. Immediate investigation and remediation are required.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350610"
+}

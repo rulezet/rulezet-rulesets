@@ -1,0 +1,23 @@
+{
+  "uuid": "53a44e29-2468-4689-b5d6-a8d0b6c23a20",
+  "title": "Process Kill Base On File Path",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of `wmic.exe` with the `delete` command to remove an executable path. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names, parent processes, and command-line executions. This activity is significant because it often indicates the initial stages of an adversary setting up malicious activities, such as cryptocurrency mining, on an endpoint. If confirmed malicious, this behavior could allow an attacker to disable security tools or other critical processes, facilitating further compromise and persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350788"
+}

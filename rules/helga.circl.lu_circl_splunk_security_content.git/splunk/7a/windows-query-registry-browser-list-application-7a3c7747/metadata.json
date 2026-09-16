@@ -1,0 +1,23 @@
+{
+  "uuid": "7a3c7747-a64a-49a8-a06a-183252b72eca",
+  "title": "Windows Query Registry Browser List Application",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a suspicious process accessing the registry entries for default internet browsers. It leverages Windows Security Event logs, specifically event code 4663, to identify access attempts to these registry paths. This activity is significant because adversaries can exploit this registry key to gather information about installed browsers and their settings, potentially leading to the theft of sensitive data such as login credentials and browsing history. If confirmed malicious, this behavior could enable attackers to exfiltrate sensitive information and compromise user accounts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1012"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350867"
+}

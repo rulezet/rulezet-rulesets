@@ -1,0 +1,31 @@
+{
+  "uuid": "15562c8f-f504-4ae1-ad14-2ded0a6643bf",
+  "title": "Windows Office Product Spawned Uncommon Process",
+  "format": "splunk",
+  "author": "Michael Haag, Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a Microsoft Office product spawning uncommon processes. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process creation events where Office applications are the parent process. This activity is significant as it may indicate an attempt of a malicious macro execution or exploitation of an unknown vulnerability in an office product, in order to bypass security controls. If confirmed malicious, this behavior could allow an attacker to execute arbitrary code, potentially leading to system compromise, data exfiltration, or further lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:stealer=\"FormBook\"",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"MuddyWater - G0069\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350590"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "d296a3a3-74b0-4e28-a53b-e9409fd0692c",
+  "title": "Rundll32 Process Creating Exe Dll Files",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a rundll32 process creating executable (.exe) or dynamic link library (.dll) files. It leverages Sysmon EventCode 11 to identify instances where rundll32.exe generates these file types. This activity is significant because rundll32 is often exploited by malware, such as IcedID, to drop malicious payloads in directories like Temp, AppData, or ProgramData. If confirmed malicious, this behavior could allow an attacker to execute arbitrary code, establish persistence, or escalate privileges within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350783"
+}

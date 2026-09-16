@@ -1,0 +1,24 @@
+{
+  "uuid": "5de490ee-bb6e-421a-95a2-4aa7fe22ad60",
+  "title": "Windows WinSCP Configuration Security Access",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects unauthorized access to the WinSCP security configuration folder by processes other than WinSCP itself.\nWinSCP stores sensitive SSH and FTP session credentials, including passwords and private key references, under the user profile path Martin Prikryl\\WinSCP 2\\Configuration\\Security. Information-stealing malware such as Phantom Stealer targets this directory to harvest stored credentials for exfiltration.\nThe detection uses Windows Security Event 4663 (Object Access) to identify any non-WinSCP process reading or accessing files within this path, which is abnormal during routine system operation.\nAnalysts should investigate the accessing process, its parent, and any associated network activity to determine whether a credential theft attempt is underway.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350787"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "c5480c18-609b-44b7-8765-5851fb0aa512",
+  "title": "Windows Potential Cloudflared Network Connection",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects network connection events possibly associated with the Cloudflared tool, a tool used to create tunnels via Cloudflare.\nCloudflared is functionally very similar to ngrok, an ingress-as-a-service tool.\nIt reaches out to the Cloudflare Edge Servers, creating an outbound connection over HTTPS(HTTP2/QUIC), where the tunnel's controller makes services or private networks accessible.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350738"
+}

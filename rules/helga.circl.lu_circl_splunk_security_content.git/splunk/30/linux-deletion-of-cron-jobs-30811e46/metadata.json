@@ -1,0 +1,25 @@
+{
+  "uuid": "30811e46-59e5-4663-81f6-ea9e44d2d2f7",
+  "title": "Linux Deletion Of Cron Jobs",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the deletion of cron jobs on a Linux machine. It leverages filesystem event logs to identify when files within the \"/etc/cron.*\" directory are deleted. This activity is significant because attackers or malware may delete cron jobs to disable scheduled security tasks or evade detection mechanisms. If confirmed malicious, this action could allow an attacker to disrupt system operations, evade security measures, or facilitate further malicious activities such as data wiping, as seen with the acidrain malware.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"AcidRain\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1070.004",
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350809"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "6e93ec47-ef0a-4d36-820c-ae690603c051",
+  "title": "Windows Admin Password Changed by Non-Admin",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when a unprivileged user changes an Admin accounts password. This is a common artifact of successful exploitation of the BlueHammer Windows Defender privilege escalation. The attacker's process momentarily changes the passwords of high-value local accounts including the built-in Administrator to spawn an authenticated shell session, then immediately reverts the passwords to avoid detection. This uses EventID 4723 to log this activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1543.003"
+  ],
+  "cve": [
+    "CVE-2026-33825"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350456"
+}

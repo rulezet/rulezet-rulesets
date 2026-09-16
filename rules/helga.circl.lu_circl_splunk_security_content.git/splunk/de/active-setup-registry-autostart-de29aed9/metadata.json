@@ -1,0 +1,25 @@
+{
+  "uuid": "de29aed9-0c1d-49fe-9640-a13ecaf607e8",
+  "title": "Active Setup Registry Autostart",
+  "format": "splunk",
+  "author": "Steven Dick, Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious modifications to the Active Setup registry for persistence and privilege escalation. It leverages data from the Endpoint.Registry data model, focusing on changes to the \"StubPath\" value within the \"SOFTWARE\\\\Microsoft\\\\Active Setup\\\\Installed Components\" path. This activity is significant as it is commonly used by malware, adware, and APTs to maintain persistence on compromised machines. If confirmed malicious, this could allow attackers to execute code upon system startup, potentially leading to further system compromise and unauthorized access.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Adware\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1547.014"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350865"
+}

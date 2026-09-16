@@ -1,0 +1,25 @@
+{
+  "uuid": "9f6347bd-de87-4dac-b54b-fe0172635abf",
+  "title": "Windows Known GraphicalProton Loaded Modules",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the loading of DLL modules associated with the GraphicalProton backdoor implant, commonly used by SVR in targeted attacks. It leverages Sysmon EventCode 7 to identify specific DLLs loaded by processes. This activity is significant as it may indicate the presence of a sophisticated backdoor, warranting immediate investigation. If confirmed malicious, the attacker could gain persistent access to the compromised host, potentially leading to further exploitation and data exfiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350843"
+}

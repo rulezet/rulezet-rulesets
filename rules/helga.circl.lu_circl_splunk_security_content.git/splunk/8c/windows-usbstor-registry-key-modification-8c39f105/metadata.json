@@ -1,0 +1,27 @@
+{
+  "uuid": "8c39f105-70ce-4729-a6b5-cc8b96037e13",
+  "title": "Windows USBSTOR Registry Key Modification",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic is used to identify when a USB removable media device is attached to a Windows host. In this scenario we are querying the Endpoint Registry data model to look for modifications to the HKLM\\System\\CurrentControlSet\\Enum\\USBSTOR\\ key. Adversaries and Insider Threats may use removable media devices for several malicious activities, including initial access, execution, and exfiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1025",
+    "T1091",
+    "T1200"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350473"
+}

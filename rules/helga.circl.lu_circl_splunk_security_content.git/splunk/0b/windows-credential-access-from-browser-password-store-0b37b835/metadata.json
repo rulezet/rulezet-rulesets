@@ -1,0 +1,24 @@
+{
+  "uuid": "0b37b835-1211-4b2b-b351-6b2f850ec9d9",
+  "title": "Windows Credential Access From Browser Password Store",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Bhavin Patel Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a possible non-common browser process accessing its browser user data profile. This tactic/technique has been observed in various Trojan Stealers, such as SnakeKeylogger, which attempt to gather sensitive browser information and credentials as part of their exfiltration strategy. Detecting this anomaly can serve as a valuable pivot for identifying processes that access lists of browser user data profiles unexpectedly. This detection uses a lookup file `browser_app_list` that maintains a list of well known browser applications and the browser paths that are allowed to access the browser user data profiles.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1012"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350636"
+}

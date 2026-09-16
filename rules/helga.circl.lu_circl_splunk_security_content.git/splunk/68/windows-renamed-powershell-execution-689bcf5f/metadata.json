@@ -1,0 +1,24 @@
+{
+  "uuid": "689bcf5f-13aa-40d0-a0e8-8aab016f521a",
+  "title": "Windows Renamed Powershell Execution",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances where the PowerShell executable has been renamed and executed under an alternate filename. This behavior is commonly associated with attempts to evade security controls or bypass logging mechanisms that monitor standard PowerShell usage. While rare in legitimate environments, renamed PowerShell binaries are frequently observed in malicious campaigns leveraging Living-off-the-Land Binaries (LOLBins) and fileless malware techniques. This detection flags executions of PowerShell where the process name does not match the default powershell.exe or pwsh.exe, especially when invoked from unusual paths or accompanied by suspicious command-line arguments.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350815"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "4dba9534-1191-4b1f-b616-6d73f775f576",
+  "title": "Windows Execution of Microsoft MSC File In Suspicious Path",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when a Microsoft Management Console (MMC) process executes an .msc file in a suspicious path on a Windows system. While .msc files are legitimate components used for system administration, unexpected execution of these files by non-administrative processes or in unusual contexts can indicate malicious activity, such as living-off-the-land attacks, persistence mechanisms, or automated administrative abuse. This detection monitors process creation events, command-line arguments, and parent process relationships to help distinguish normal administrative usage from potential threats. Alerts should be investigated in the context of the process initiating the .msc file, the target system, and any subsequent network or system activity, as routine administrative tasks may also trigger this behavior.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.014"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350820"
+}

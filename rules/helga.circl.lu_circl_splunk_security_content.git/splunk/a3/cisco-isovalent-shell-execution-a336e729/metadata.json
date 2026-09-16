@@ -1,0 +1,21 @@
+{
+  "uuid": "a336e729-1ebf-4d36-9530-53cdf188247e",
+  "title": "Cisco Isovalent - Shell Execution",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of a shell inside a container namespace within the Cisco Isovalent environment. It identifies this activity by monitoring process execution logs for the execution of a shell (sh or bash) inside a container namespace. This behavior is significant for a SOC as it could allow an attacker to gain shell access to the container, potentially leading to further compromise of the Kubernetes cluster. If confirmed malicious, this activity could lead to data theft, service disruption, privilege escalation, lateral movement, and further attacks, severely compromising the cluster's security and integrity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1543"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350725"
+}
