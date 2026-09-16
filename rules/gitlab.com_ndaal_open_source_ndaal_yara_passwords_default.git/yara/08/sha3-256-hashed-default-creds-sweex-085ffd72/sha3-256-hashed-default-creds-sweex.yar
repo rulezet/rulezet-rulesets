@@ -1,0 +1,25 @@
+rule sha3_256_hashed_default_creds_sweex
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for sweex."
+        category = "INFO"
+        info = "SHA3_256"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="7655d678c888d13cd130845df4b7e77dfee0c691cabdaf7ee84c268fb43cdacb"
+    $a1="b7170130508f2002460d3e603420011ef75523057e56db8470317e942e388d4d"
+    $a2="1d6442ddcfd9db1ff81df77cbefcd5afcc8c7ca952ab3101ede17a84b866d3f3"
+    $a3="fb001dfcffd1c899f3297871406242f097aecf1a5342ccf3ebcd116146188e4b"
+    $a4="d99cff6dd5fd907def4381b046a27dca74dc887b3c1581e74c16b46543443c46"
+    $a5="fb001dfcffd1c899f3297871406242f097aecf1a5342ccf3ebcd116146188e4b"
+    $a6="1159364c952bf676504b627e6b8d4420c1ce7eb2916f0ac8ae50eed7e8ced6f8"
+    $a7="1159364c952bf676504b627e6b8d4420c1ce7eb2916f0ac8ae50eed7e8ced6f8"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7)
+}
