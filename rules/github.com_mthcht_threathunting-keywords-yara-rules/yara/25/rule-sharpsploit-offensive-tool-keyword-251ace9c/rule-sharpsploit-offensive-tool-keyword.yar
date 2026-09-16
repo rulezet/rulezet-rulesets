@@ -1,0 +1,96 @@
+rule rule_SharpSploit_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'SharpSploit' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "SharpSploit"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_SharpSploit_offensive_tool_keyword = /\sstring\sDCSync\(/ nocase ascii wide
+                        $string2_SharpSploit_offensive_tool_keyword = /\.Credentials\.Mimikatz\./ nocase ascii wide
+                        $string3_SharpSploit_offensive_tool_keyword = /\.Credentials\.Tokens\.BypassUAC/ nocase ascii wide
+                        $string4_SharpSploit_offensive_tool_keyword = /\.DCSync\(System\.String/ nocase ascii wide
+                        $string5_SharpSploit_offensive_tool_keyword = /\.Enumeration\.Domain\.Credential/ nocase ascii wide
+                        $string6_SharpSploit_offensive_tool_keyword = /\.Enumeration\.Domain\.SPNTicket/ nocase ascii wide
+                        $string7_SharpSploit_offensive_tool_keyword = /\.Enumeration\.Keylogger/ nocase ascii wide
+                        $string8_SharpSploit_offensive_tool_keyword = /\.Enumeration\.Keylogger\./ nocase ascii wide
+                        $string9_SharpSploit_offensive_tool_keyword = /\.Enumeration\.Network\.PortScanResult/ nocase ascii wide
+                        $string10_SharpSploit_offensive_tool_keyword = /\.Enumeration\.Registry\.GetRegistryKey\(/ nocase ascii wide
+                        $string11_SharpSploit_offensive_tool_keyword = /\.Enumeration\.Registry\.SetRegistryKey\(/ nocase ascii wide
+                        $string12_SharpSploit_offensive_tool_keyword = /\.Execution\.Injection\.Exe/ nocase ascii wide
+                        $string13_SharpSploit_offensive_tool_keyword = /\.LateralMovement\.PowerShellRemoting/ nocase ascii wide
+                        $string14_SharpSploit_offensive_tool_keyword = /\.LateralMovement\.SCM\./ nocase ascii wide
+                        $string15_SharpSploit_offensive_tool_keyword = /\.LateralMovement\.WMI\.WMIExecute\(/ nocase ascii wide
+                        $string16_SharpSploit_offensive_tool_keyword = /\.PrivilegeEscalation\.Exchange/ nocase ascii wide
+                        $string17_SharpSploit_offensive_tool_keyword = /\/powerkatz\.dll/ nocase ascii wide
+                        $string18_SharpSploit_offensive_tool_keyword = /\/powerkatz_x64\.dll/ nocase ascii wide
+                        $string19_SharpSploit_offensive_tool_keyword = /\/powerkatz_x86\.dll/ nocase ascii wide
+                        $string20_SharpSploit_offensive_tool_keyword = /\/SharpSploit\.git/ nocase ascii wide
+                        $string21_SharpSploit_offensive_tool_keyword = /\[\!\]\sCannot\senumerate\sdomain\./ nocase ascii wide
+                        $string22_SharpSploit_offensive_tool_keyword = /\[\!\]\sIt\swas\snot\spossible\sto\sretrieve\sGPO\sPolicies/ nocase ascii wide
+                        $string23_SharpSploit_offensive_tool_keyword = /\\powerkatz\.dll/ nocase ascii wide
+                        $string24_SharpSploit_offensive_tool_keyword = /\\powerkatz_x64\.dll/ nocase ascii wide
+                        $string25_SharpSploit_offensive_tool_keyword = /\\powerkatz_x86\.dll/ nocase ascii wide
+                        $string26_SharpSploit_offensive_tool_keyword = /\\PowerView\.ps1/ nocase ascii wide
+                        $string27_SharpSploit_offensive_tool_keyword = /\\SharpSploit\.csproj/ nocase ascii wide
+                        $string28_SharpSploit_offensive_tool_keyword = /\\SharpSploit\.xml/ nocase ascii wide
+                        $string29_SharpSploit_offensive_tool_keyword = /\\SharpSploit\-master/ nocase ascii wide
+                        $string30_SharpSploit_offensive_tool_keyword = ">SharpSploit<" nocase ascii wide
+                        $string31_SharpSploit_offensive_tool_keyword = "0d1448c1bc3c43a7a989e251079fcd0bea32cb8864b4b00cb8c17310464fd06d" nocase ascii wide
+                        $string32_SharpSploit_offensive_tool_keyword = "0e26255b8db0b2e2792225febc5d3adeebc02edff523e90156c76b5baf7ee9b3" nocase ascii wide
+                        $string33_SharpSploit_offensive_tool_keyword = "1bc8fca2c5b410f9c0bbfff18af3dc6295f2a8b8d7c2ba953e282b6a0bc6214c" nocase ascii wide
+                        $string34_SharpSploit_offensive_tool_keyword = "1bff5a9cb5275afd7b7d4bf2d3087f1b3bf94864c4decf73f1c82922ad646d2f" nocase ascii wide
+                        $string35_SharpSploit_offensive_tool_keyword = "23ae98fd603067f7325d89af5ed67ccee713397c2fed01ac736711a1b32e28d4" nocase ascii wide
+                        $string36_SharpSploit_offensive_tool_keyword = "2c9ffb6711e510c8087c1095324e7ceef0187de6526b13aff5ab1e775f5ed676" nocase ascii wide
+                        $string37_SharpSploit_offensive_tool_keyword = "2e321800803ff287f2c44203c718fa4a7a97dda864f1c2761e7720a57b18bd97" nocase ascii wide
+                        $string38_SharpSploit_offensive_tool_keyword = "3622f69f847b1fd331363a847f626b9931363c81946b6d6e7441dc0959b4d971" nocase ascii wide
+                        $string39_SharpSploit_offensive_tool_keyword = "3ee6cff71aef9e5d12e628c94a0c30e37b283f424aa487cf37248690d88c8966" nocase ascii wide
+                        $string40_SharpSploit_offensive_tool_keyword = "409284796af4c4aa27849cbd51e721620fe0eaa7e8482207905ac4d79bce680b" nocase ascii wide
+                        $string41_SharpSploit_offensive_tool_keyword = "4d31e1fd50918c09718d0657fb2c158a647b38ae833a231f52c717077d34d3cb" nocase ascii wide
+                        $string42_SharpSploit_offensive_tool_keyword = "52040049-D7FC-4C72-B6AE-BD2C7AB27DEE" nocase ascii wide
+                        $string43_SharpSploit_offensive_tool_keyword = "52083b583a80716b034b5ea9c98d0070091d63c2a13771afa42268cec2de7b1d" nocase ascii wide
+                        $string44_SharpSploit_offensive_tool_keyword = "5d43bbdef3c107cf95891b56c5b40febf853f0aca57991492a4025032a8fa050" nocase ascii wide
+                        $string45_SharpSploit_offensive_tool_keyword = "61e2497d69dac4b2bd43cb7f8427a81c52eb4f75e0b75b0550b136f3beff877a" nocase ascii wide
+                        $string46_SharpSploit_offensive_tool_keyword = "6fd0b65efe28fce4c186c04c467198ed5072bdcfeb90e939b06563253c4eab44" nocase ascii wide
+                        $string47_SharpSploit_offensive_tool_keyword = "7760248F-9247-4206-BE42-A6952AA46DA2" nocase ascii wide
+                        $string48_SharpSploit_offensive_tool_keyword = "7760248F-9247-4206-BE42-A6952AA46DA2" nocase ascii wide
+                        $string49_SharpSploit_offensive_tool_keyword = "7c8dd8b38777d6701ea54b98193216b808e2c7cb560a7cf1c07ef9e6b134dc9e" nocase ascii wide
+                        $string50_SharpSploit_offensive_tool_keyword = "7cb004e20f6509f08f6e7b33778f973378c8a8e3c8cc4530cacf1f02fee3c29a" nocase ascii wide
+                        $string51_SharpSploit_offensive_tool_keyword = "8694c7e87215c274f09116eb2f13cd23cf847abc46a25977088873b0d353c368" nocase ascii wide
+                        $string52_SharpSploit_offensive_tool_keyword = "8f1c38bd7991da18509ef47cf01ebb1f1527acce08a9a0b25f46f70486bd5132" nocase ascii wide
+                        $string53_SharpSploit_offensive_tool_keyword = "9a1f72ea60bdc475d434f1582a564e0afaa6b68fed8318d2e955d931135818f0" nocase ascii wide
+                        $string54_SharpSploit_offensive_tool_keyword = "a06482e7f00958c2c66cf33a59818551f697bd7f3a601fa227e97d75a5a1c142" nocase ascii wide
+                        $string55_SharpSploit_offensive_tool_keyword = "a441bc5046ec91f60d5a185edbee6a17e309c87f3268bb9c45bb9c83bb28ec23" nocase ascii wide
+                        $string56_SharpSploit_offensive_tool_keyword = "b22e1828fa279346364b3915e2182b42141a093fe053c43c4ae024061156a401" nocase ascii wide
+                        $string57_SharpSploit_offensive_tool_keyword = "b38dd36a7b348f6350623b1156c9f8805f323dbb9d1dad4b599b6712b8962e82" nocase ascii wide
+                        $string58_SharpSploit_offensive_tool_keyword = "bb205ccc783d22b06eac7ab9e5f2f14d793bf9b4ed6fe413f888463092ccf79a" nocase ascii wide
+                        $string59_SharpSploit_offensive_tool_keyword = "ca26faa4eec38d70b7237a0d1da33577295731d34c9aefa08ecdb2e8000cb4af" nocase ascii wide
+                        $string60_SharpSploit_offensive_tool_keyword = "cobbr/SharpSploit" nocase ascii wide
+                        $string61_SharpSploit_offensive_tool_keyword = "dcbc47feceabeaecb5941fd36b3ca000a18ebb5431cb0d415c44e1235140dc2c" nocase ascii wide
+                        $string62_SharpSploit_offensive_tool_keyword = /DEV\-COBBR\\\\TestAdmin/ nocase ascii wide
+                        $string63_SharpSploit_offensive_tool_keyword = "e1641d2918f41349e233feffd77b4f5088e4bc250d30a7be67693f3a09025088" nocase ascii wide
+                        $string64_SharpSploit_offensive_tool_keyword = /Enumeration\.Net\.GetNetLocalGroupMembers\(/ nocase ascii wide
+                        $string65_SharpSploit_offensive_tool_keyword = "f58d086ed47166b22d02ac004380311058c66aac51551a10b55d421578494f32" nocase ascii wide
+                        $string66_SharpSploit_offensive_tool_keyword = "f9bfe85b5bad130a6e0d3aaed75193779e150e88613fa1617470cf29d11a05b1" nocase ascii wide
+                        $string67_SharpSploit_offensive_tool_keyword = /GetDomainSPNTickets\(/ nocase ascii wide
+                        $string68_SharpSploit_offensive_tool_keyword = /Invoke\-DCOM\.ps1/ nocase ascii wide
+                        $string69_SharpSploit_offensive_tool_keyword = /Invoke\-TokenDuplication\.ps1/ nocase ascii wide
+                        $string70_SharpSploit_offensive_tool_keyword = /Kerberoast\(/ nocase ascii wide
+                        $string71_SharpSploit_offensive_tool_keyword = "Keylogger Exception - " nocase ascii wide
+                        $string72_SharpSploit_offensive_tool_keyword = /PassTheHash\(/ nocase ascii wide
+                        $string73_SharpSploit_offensive_tool_keyword = "powershell_reflective_mimikatz" nocase ascii wide
+                        $string74_SharpSploit_offensive_tool_keyword = "SharpSploit Service" nocase ascii wide
+                        $string75_SharpSploit_offensive_tool_keyword = "SharpSploit" nocase ascii wide
+                        $string76_SharpSploit_offensive_tool_keyword = /SharpSploit\.Enumeration\./ nocase ascii wide
+                        $string77_SharpSploit_offensive_tool_keyword = /SharpSploit\.Exe/ nocase ascii wide
+                        $string78_SharpSploit_offensive_tool_keyword = /SharpSploit\.Execution\./ nocase ascii wide
+                        $string79_SharpSploit_offensive_tool_keyword = /SharpSploit\.Persistence\./ nocase ascii wide
+                        $string80_SharpSploit_offensive_tool_keyword = /SharpSploitService\.exe/ nocase ascii wide
+                        $string81_SharpSploit_offensive_tool_keyword = "SharpSploitSvc" nocase ascii wide
+                        $string82_SharpSploit_offensive_tool_keyword = "Starting keylogger for " nocase ascii wide
+
+    condition:
+        any of them
+}

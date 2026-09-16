@@ -1,0 +1,19 @@
+rule rule_Synergy_httpx_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Synergy-httpx' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Synergy-httpx"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_Synergy_httpx_offensive_tool_keyword = /\/Synergy\-httpx\.git/ nocase ascii wide
+                        $string2_Synergy_httpx_offensive_tool_keyword = /curl\s\-\-connect\-timeout\s3\.14\s\-s\sifconfig\.me/ nocase ascii wide
+                        $string3_Synergy_httpx_offensive_tool_keyword = /synergy_httpx\.py/ nocase ascii wide
+                        $string4_Synergy_httpx_offensive_tool_keyword = "Synergy-httpx-main" nocase ascii wide
+                        $string5_Synergy_httpx_offensive_tool_keyword = "t3l3machus/Synergy-httpx" nocase ascii wide
+
+    condition:
+        any of them
+}

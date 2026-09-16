@@ -1,0 +1,136 @@
+rule rule_Rubeus_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Rubeus' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Rubeus"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_Rubeus_offensive_tool_keyword = " /altservice:ldap " nocase ascii wide
+                        $string2_Rubeus_offensive_tool_keyword = " /asrepkey" nocase ascii wide
+                        $string3_Rubeus_offensive_tool_keyword = /\s\/createnetonly\:.{0,1000}cmd\.exe/ nocase ascii wide
+                        $string4_Rubeus_offensive_tool_keyword = /\s\/createnetonly\:.{0,1000}cmd\.exe/ nocase ascii wide
+                        $string5_Rubeus_offensive_tool_keyword = " /credpassword" nocase ascii wide
+                        $string6_Rubeus_offensive_tool_keyword = /\s\/creduser\:.{0,1000}\s\/credpassword\:/ nocase ascii wide
+                        $string7_Rubeus_offensive_tool_keyword = /\s\/impersonateuser\:.{0,1000}\s\/msdsspn\:.{0,1000}\s\/ptt/ nocase ascii wide
+                        $string8_Rubeus_offensive_tool_keyword = /\s\/ldap\s.{0,1000}\s\/printcmd/ nocase ascii wide
+                        $string9_Rubeus_offensive_tool_keyword = " /ldapfilter:'admincount=1'" nocase ascii wide
+                        $string10_Rubeus_offensive_tool_keyword = " /nofullpacsig " nocase ascii wide
+                        $string11_Rubeus_offensive_tool_keyword = /\s\/outfile\:.{0,1000}\s\/spn\:/ nocase ascii wide
+                        $string12_Rubeus_offensive_tool_keyword = /\s\/outfile\:.{0,1000}\s\/spns\:/ nocase ascii wide
+                        $string13_Rubeus_offensive_tool_keyword = " /pwdsetafter:" nocase ascii wide
+                        $string14_Rubeus_offensive_tool_keyword = " /pwdsetbefore:" nocase ascii wide
+                        $string15_Rubeus_offensive_tool_keyword = " /rc4opsec " nocase ascii wide
+                        $string16_Rubeus_offensive_tool_keyword = " /s4uproxytarget" nocase ascii wide
+                        $string17_Rubeus_offensive_tool_keyword = " /s4utransitedservices" nocase ascii wide
+                        $string18_Rubeus_offensive_tool_keyword = " /service:krbtgt " nocase ascii wide
+                        $string19_Rubeus_offensive_tool_keyword = /\s\/simple\s.{0,1000}\s\/spn/ nocase ascii wide
+                        $string20_Rubeus_offensive_tool_keyword = /\s\/ticket\s.{0,1000}\.kirbi/ nocase ascii wide
+                        $string21_Rubeus_offensive_tool_keyword = /\s\/ticket\:.{0,1000}\s\/autoenterprise\s/ nocase ascii wide
+                        $string22_Rubeus_offensive_tool_keyword = /\s\/ticket\:.{0,1000}\.kirbi/ nocase ascii wide
+                        $string23_Rubeus_offensive_tool_keyword = " /usetgtdeleg " nocase ascii wide
+                        $string24_Rubeus_offensive_tool_keyword = /\sasktgs\s.{0,1000}\s\/ticket\:/ nocase ascii wide
+                        $string25_Rubeus_offensive_tool_keyword = /\sasktgs\s.{0,1000}\.kirbi/ nocase ascii wide
+                        $string26_Rubeus_offensive_tool_keyword = " asktgs /ticket:" nocase ascii wide
+                        $string27_Rubeus_offensive_tool_keyword = /\sasktgt\s.{0,1000}\s\/service\:/ nocase ascii wide
+                        $string28_Rubeus_offensive_tool_keyword = " asktgt /user " nocase ascii wide
+                        $string29_Rubeus_offensive_tool_keyword = " asktht /user:" nocase ascii wide
+                        $string30_Rubeus_offensive_tool_keyword = " asreproast " nocase ascii wide
+                        $string31_Rubeus_offensive_tool_keyword = /\sbrute\s.{0,1000}\s\/password/ nocase ascii wide
+                        $string32_Rubeus_offensive_tool_keyword = /\schangepw\s.{0,1000}\s\/ticket\:/ nocase ascii wide
+                        $string33_Rubeus_offensive_tool_keyword = /\sdiamond\s.{0,1000}\s\/certificate\:/ nocase ascii wide
+                        $string34_Rubeus_offensive_tool_keyword = " diamond /tgtdeleg " nocase ascii wide
+                        $string35_Rubeus_offensive_tool_keyword = " diamond /user:" nocase ascii wide
+                        $string36_Rubeus_offensive_tool_keyword = /\sdump\s.{0,1000}\s\/service\:/ nocase ascii wide
+                        $string37_Rubeus_offensive_tool_keyword = /\sgolden\s.{0,1000}\s\/badpwdcount/ nocase ascii wide
+                        $string38_Rubeus_offensive_tool_keyword = /\sgolden\s.{0,1000}\s\/ldap\s/ nocase ascii wide
+                        $string39_Rubeus_offensive_tool_keyword = /\sgolden\s.{0,1000}\s\/user\:/ nocase ascii wide
+                        $string40_Rubeus_offensive_tool_keyword = /\sharvest\s.{0,1000}\s\/monitorinterval\:/ nocase ascii wide
+                        $string41_Rubeus_offensive_tool_keyword = " kerberoast " nocase ascii wide
+                        $string42_Rubeus_offensive_tool_keyword = " kerberoast " nocase ascii wide
+                        $string43_Rubeus_offensive_tool_keyword = /\sklist\s.{0,1000}\s\/service\:/ nocase ascii wide
+                        $string44_Rubeus_offensive_tool_keyword = /\smonitor\s\/interval\:.{0,1000}\s\/filteruser\:/ nocase ascii wide
+                        $string45_Rubeus_offensive_tool_keyword = " preauthscan /users:" nocase ascii wide
+                        $string46_Rubeus_offensive_tool_keyword = " ptt /ticket:" nocase ascii wide
+                        $string47_Rubeus_offensive_tool_keyword = /\srenew\s.{0,1000}\.kirbi/ nocase ascii wide
+                        $string48_Rubeus_offensive_tool_keyword = /\srenew\s.{0,1000}\/ticket\:/ nocase ascii wide
+                        $string49_Rubeus_offensive_tool_keyword = /\sRubeus\.dll/ nocase ascii wide
+                        $string50_Rubeus_offensive_tool_keyword = /\sRubeus\.ps1/ nocase ascii wide
+                        $string51_Rubeus_offensive_tool_keyword = /\ss4u\s.{0,1000}\s\/bronzebit/ nocase ascii wide
+                        $string52_Rubeus_offensive_tool_keyword = /\ss4u\s.{0,1000}\s\/nopac/ nocase ascii wide
+                        $string53_Rubeus_offensive_tool_keyword = /\ss4u\s.{0,1000}\s\/ticket\:/ nocase ascii wide
+                        $string54_Rubeus_offensive_tool_keyword = /\ss4u\s.{0,1000}\.kirbi/ nocase ascii wide
+                        $string55_Rubeus_offensive_tool_keyword = /\ss4u\s.{0,1000}\/rc4\:.{0,1000}\s/ nocase ascii wide
+                        $string56_Rubeus_offensive_tool_keyword = /\ssilver\s.{0,1000}\s\/domain/ nocase ascii wide
+                        $string57_Rubeus_offensive_tool_keyword = /\ssilver\s.{0,1000}\s\/ldap\s/ nocase ascii wide
+                        $string58_Rubeus_offensive_tool_keyword = /\ssilver\s.{0,1000}\s\/passlastset\s/ nocase ascii wide
+                        $string59_Rubeus_offensive_tool_keyword = /\ssilver\s.{0,1000}\s\/service\:/ nocase ascii wide
+                        $string60_Rubeus_offensive_tool_keyword = /\stgssub\s.{0,1000}\s\/ticket\:/ nocase ascii wide
+                        $string61_Rubeus_offensive_tool_keyword = " tgtdeleg /nowrap" nocase ascii wide
+                        $string62_Rubeus_offensive_tool_keyword = " tgtdeleg /target:" nocase ascii wide
+                        $string63_Rubeus_offensive_tool_keyword = "\"User32LogonProcesss\"" nocase ascii wide
+                        $string64_Rubeus_offensive_tool_keyword = /\(msds\-supportedencryptiontypes\=0\)\(msds\-supportedencryptiontypes\:1\.2\.840\.113556\.1\.4\.803\:\=4\)\)\)/ nocase ascii wide
+                        $string65_Rubeus_offensive_tool_keyword = /\.exe\sdump\s\/luid\:.{0,1000}\s\/service\:krbtgt/ nocase ascii wide
+                        $string66_Rubeus_offensive_tool_keyword = /\.exe\shash\s\/password\:/ nocase ascii wide
+                        $string67_Rubeus_offensive_tool_keyword = /\.exe\sptt\s\/ticket\:.{0,1000}\.kirbi/ nocase ascii wide
+                        $string68_Rubeus_offensive_tool_keyword = /\/Bruteforcer\./ nocase ascii wide
+                        $string69_Rubeus_offensive_tool_keyword = "/format:hashcat" nocase ascii wide
+                        $string70_Rubeus_offensive_tool_keyword = "/Rubeus" nocase ascii wide
+                        $string71_Rubeus_offensive_tool_keyword = /\/Rubeus\.dll/ nocase ascii wide
+                        $string72_Rubeus_offensive_tool_keyword = /\/Rubeus\.exe/ nocase ascii wide
+                        $string73_Rubeus_offensive_tool_keyword = /\/Rubeus\.git/ nocase ascii wide
+                        $string74_Rubeus_offensive_tool_keyword = /\/Rubeus\.ps1/ nocase ascii wide
+                        $string75_Rubeus_offensive_tool_keyword = "/Rubeus/" nocase ascii wide
+                        $string76_Rubeus_offensive_tool_keyword = /\/Rubeus\-Rundll32\.git/ nocase ascii wide
+                        $string77_Rubeus_offensive_tool_keyword = "/Rubeus-Rundll32/" nocase ascii wide
+                        $string78_Rubeus_offensive_tool_keyword = /\\Bruteforcer\./ nocase ascii wide
+                        $string79_Rubeus_offensive_tool_keyword = /\\Rubeus\./ nocase ascii wide
+                        $string80_Rubeus_offensive_tool_keyword = /\\Rubeus\.dll/ nocase ascii wide
+                        $string81_Rubeus_offensive_tool_keyword = /\\Rubeus\.exe/ nocase ascii wide
+                        $string82_Rubeus_offensive_tool_keyword = /\\Rubeus\.ps1/ nocase ascii wide
+                        $string83_Rubeus_offensive_tool_keyword = /\\Rubeus\\/ nocase ascii wide
+                        $string84_Rubeus_offensive_tool_keyword = /\\Rubeus\-Rundll32\\/ nocase ascii wide
+                        $string85_Rubeus_offensive_tool_keyword = ">User32LogonProcesss<" nocase ascii wide
+                        $string86_Rubeus_offensive_tool_keyword = "3ae0b0ec554f725076ca89389d9a3523e503a24248ee8a9b342f68c156e77b12" nocase ascii wide
+                        $string87_Rubeus_offensive_tool_keyword = "658C8B7F-3664-4A95-9572-A3E5871DFC06" nocase ascii wide
+                        $string88_Rubeus_offensive_tool_keyword = "658C8B7F-3664-4A95-9572-A3E5871DFC06" nocase ascii wide
+                        $string89_Rubeus_offensive_tool_keyword = "658C8B7F-3664-4A95-9572-A3E5871DFC06" nocase ascii wide
+                        $string90_Rubeus_offensive_tool_keyword = "66e0681a500c726ed52e5ea9423d2654" nocase ascii wide
+                        $string91_Rubeus_offensive_tool_keyword = "asrep2kirbi" nocase ascii wide
+                        $string92_Rubeus_offensive_tool_keyword = /Asreproast\./ nocase ascii wide
+                        $string93_Rubeus_offensive_tool_keyword = /cmd\.exe\'\ssuccessfully\screated\swith\sLOGON_TYPE\s\=\s9/ nocase ascii wide
+                        $string94_Rubeus_offensive_tool_keyword = /Commands\/Brute\./ nocase ascii wide
+                        $string95_Rubeus_offensive_tool_keyword = /Commands\/Createnetonly\./ nocase ascii wide
+                        $string96_Rubeus_offensive_tool_keyword = /Commands\/Logonsession\./ nocase ascii wide
+                        $string97_Rubeus_offensive_tool_keyword = /Commands\/Preauthscan\./ nocase ascii wide
+                        $string98_Rubeus_offensive_tool_keyword = /Commands\/Silver\./ nocase ascii wide
+                        $string99_Rubeus_offensive_tool_keyword = "Domain/CommandCollection" nocase ascii wide
+                        $string100_Rubeus_offensive_tool_keyword = "e415296f956351bc4060d03fa52512415f353e26236b7fd97642f7ef608ca4e9" nocase ascii wide
+                        $string101_Rubeus_offensive_tool_keyword = "e8ddad70f68375dbf38d0e8550acf1e53f5382e0bf9a0ee8f02f8b1c6222db81" nocase ascii wide
+                        $string102_Rubeus_offensive_tool_keyword = "GhostPack/Rubeus" nocase ascii wide
+                        $string103_Rubeus_offensive_tool_keyword = "kerberoast /" nocase ascii wide
+                        $string104_Rubeus_offensive_tool_keyword = /Kerberoast\./ nocase ascii wide
+                        $string105_Rubeus_offensive_tool_keyword = /lib\/ForgeTicket\./ nocase ascii wide
+                        $string106_Rubeus_offensive_tool_keyword = /lib\/S4U\./ nocase ascii wide
+                        $string107_Rubeus_offensive_tool_keyword = "namespace Rubeus" nocase ascii wide
+                        $string108_Rubeus_offensive_tool_keyword = /Rubeus.{0,1000}currentluid/ nocase ascii wide
+                        $string109_Rubeus_offensive_tool_keyword = /Rubeus.{0,1000}harvest/ nocase ascii wide
+                        $string110_Rubeus_offensive_tool_keyword = /Rubeus.{0,1000}logonsession/ nocase ascii wide
+                        $string111_Rubeus_offensive_tool_keyword = /Rubeus.{0,1000}monitor/ nocase ascii wide
+                        $string112_Rubeus_offensive_tool_keyword = /Rubeus\.Commands/ nocase ascii wide
+                        $string113_Rubeus_offensive_tool_keyword = /Rubeus\.exe/ nocase ascii wide
+                        $string114_Rubeus_offensive_tool_keyword = /Rubeus\.git/ nocase ascii wide
+                        $string115_Rubeus_offensive_tool_keyword = /Rubeus\.Kerberos/ nocase ascii wide
+                        $string116_Rubeus_offensive_tool_keyword = /Rubeus\.lib/ nocase ascii wide
+                        $string117_Rubeus_offensive_tool_keyword = "Rubeus-master" nocase ascii wide
+                        $string118_Rubeus_offensive_tool_keyword = /rundll32\s.{0,1000}RunRubeus/ nocase ascii wide
+                        $string119_Rubeus_offensive_tool_keyword = "rvrsh3ll/Rubeus-Rundll32" nocase ascii wide
+                        $string120_Rubeus_offensive_tool_keyword = /Temp\\\\rubeus/ nocase ascii wide
+                        $string121_Rubeus_offensive_tool_keyword = /ticket\.kirbi/ nocase ascii wide
+                        $string122_Rubeus_offensive_tool_keyword = /using\sRubeus\.Domain\;/ nocase ascii wide
+
+    condition:
+        any of them
+}
