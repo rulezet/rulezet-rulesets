@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 1521 (msg:"ET INFO Known SSL traffic on port 1521 (Oracle) being excluded from SSL Alerts"; flow:established,to_server; flowbits:set,BS.SSL.Known.Port; flowbits:noalert; classtype:not-suspicious; sid:2003934; rev:5; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_14;)
