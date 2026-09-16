@@ -1,0 +1,23 @@
+{
+  "uuid": "f13b8383-6eb6-443f-82b8-9820b20917d3",
+  "title": "Windows_Trojan_Trickbot_6eb31e7b",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Targets DomainDll module containing functionality using LDAP to retrieve credentials and configuration information",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/213650"
+}
