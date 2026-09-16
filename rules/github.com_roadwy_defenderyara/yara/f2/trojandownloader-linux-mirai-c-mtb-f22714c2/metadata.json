@@ -1,0 +1,22 @@
+{
+  "uuid": "f22714c2-6794-4243-ae13-673f7e4d89e4",
+  "title": "TrojanDownloader_Linux_Mirai_C_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDownloader:Linux/Mirai.C!MTB,SIGNATURE_TYPE_ELFHSTR_EXT,01 00 01 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:botnet=\"Mirai\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/327721"
+}
