@@ -1,0 +1,23 @@
+{
+  "uuid": "263d75f4-0630-4ed9-9055-e17155b03778",
+  "title": "Trojan_Win32_RHADAMANTHYS_DB_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/RHADAMANTHYS.DB!MTB,SIGNATURE_TYPE_PEHSTR_EXT,47 00 47 00 0b 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:stealer=\"Rhadamanthys\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/282928"
+}

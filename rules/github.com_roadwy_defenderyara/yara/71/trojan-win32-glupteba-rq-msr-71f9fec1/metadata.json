@@ -1,0 +1,23 @@
+{
+  "uuid": "71f9fec1-abed-44a4-a6a7-769d1a26a669",
+  "title": "Trojan_Win32_Glupteba_RQ_MSR",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Glupteba.RQ!MSR,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:botnet=\"Glupteba\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/283308"
+}

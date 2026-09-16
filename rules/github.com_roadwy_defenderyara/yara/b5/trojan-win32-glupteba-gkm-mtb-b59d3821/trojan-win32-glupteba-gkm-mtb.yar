@@ -1,0 +1,9 @@
+rule Trojan_Win32_Glupteba_GKM_MTB{
+	meta:
+		description = "Trojan:Win32/Glupteba.GKM!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {33 c9 85 c0 76 ?? 8b 15 ?? ?? ?? ?? 8a 94 0a ?? ?? ?? ?? 8b 35 ?? ?? ?? ?? 88 14 0e 3d 03 02 00 00 75 ?? 83 25 14 d9 ?? ?? ?? ?? 3b c8 72 } 	condition:
+		((#a_02_0  & 1)*1) >=1
+ 
+}
