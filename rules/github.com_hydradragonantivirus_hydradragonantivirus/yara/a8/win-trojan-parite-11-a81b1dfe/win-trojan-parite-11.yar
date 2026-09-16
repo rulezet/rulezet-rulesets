@@ -1,0 +1,9 @@
+rule Win_Trojan_Parite_11
+{
+strings:
+	$a0 = { 003040cfbf4b8b349e7ed080c96f61087fc13f91ab4c84cd70c4cabe78954bea84ce878ec0f94a1aa6b4c4977d7115e0c6b585b61fa953125af0be5cf6fdb456246c6cdceb0aa1d257a26ddf81bac7d304ad3ccf2906718ecef06967ea1cb3ee0c67f0465e3a637a0b6b5d96e4fddf3ad027b2cb4e5db0be147b3862af15e431848e03b9a5b85a6c6ed55bfcce56b730 }
+
+
+condition:
+	$a0
+}

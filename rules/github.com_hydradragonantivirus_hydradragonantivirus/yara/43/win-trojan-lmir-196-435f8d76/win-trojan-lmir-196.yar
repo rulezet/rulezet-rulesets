@@ -1,0 +1,9 @@
+rule Win_Trojan_Lmir_196
+{
+strings:
+	$a0 = { 333000ffffffff0c0000006d697232686f6f6b2e646c6c00000000ffffffff0300000031323000558bec6a006a008b4508e85177ffff33c055684acd400064ff306489 }
+
+
+condition:
+	$a0
+}
