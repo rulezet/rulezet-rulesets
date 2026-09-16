@@ -1,0 +1,20 @@
+{
+  "uuid": "7553e06d-d674-45f2-a914-ff265c1604f6",
+  "title": "Vile_Ransomware",
+  "format": "yara",
+  "author": "Arrbat",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects Vile Ransomware, based on family-specific markers and ransom-note strings.",
+  "source": "yaraify-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228160"
+}

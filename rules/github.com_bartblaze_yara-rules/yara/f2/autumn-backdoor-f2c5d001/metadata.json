@@ -1,0 +1,20 @@
+{
+  "uuid": "f2c5d001-2a61-4a79-a316-dc890db50272",
+  "title": "Autumn_Backdoor",
+  "format": "yara",
+  "author": "@bartblaze",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Identifies backdoored libcef.dll (stage 1), used by a China-nexus APT, as seen in the Autumn Dragon report.",
+  "source": "https://github.com/bartblaze/Yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228245"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "459318f3-2bf1-434c-995a-ed09322d0d8b",
+  "title": "Babuk_Payload_Ransomware_ESXi",
+  "format": "yara",
+  "author": "kirkderp",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Babuk Payload ransomware Linux/ESXi variant - Curve25519 + ChaCha20 encryption, FBI RC4 footer key, ESXi VM inventory targeting",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223944"
+}

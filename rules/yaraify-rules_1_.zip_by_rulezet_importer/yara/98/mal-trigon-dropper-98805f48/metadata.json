@@ -1,0 +1,30 @@
+{
+  "uuid": "98805f48-d547-4c61-b6ea-50f0e27137ac",
+  "title": "MAL_Trigon_Dropper",
+  "format": "yara",
+  "author": "jaszzz",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Trigon multi-stage malicious dropper - process injection, keylogging, screenshot capture",
+  "source": "yaraify-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1055",
+    "T1056",
+    "T1113",
+    "T1497",
+    "T1547",
+    "T1573"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228184"
+}

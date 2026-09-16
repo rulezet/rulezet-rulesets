@@ -1,0 +1,20 @@
+{
+  "uuid": "a1618b92-a703-4d93-b086-691bd68643ca",
+  "title": "ClearWater_Ransomware",
+  "format": "yara",
+  "author": "Arrbat",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects ClearWater ransomware using a mix of family-specific names, 7-Zip SFX metadata, and anti-recovery indicators",
+  "source": "yaraify-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228173"
+}

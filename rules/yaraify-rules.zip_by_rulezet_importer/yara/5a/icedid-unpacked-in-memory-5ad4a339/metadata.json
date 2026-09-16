@@ -1,0 +1,20 @@
+{
+  "uuid": "5ad4a339-1571-4a8e-a150-75a4111c54b0",
+  "title": "Icedid_Unpacked_in_Memory",
+  "format": "yara",
+  "author": "0x0d4y",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "This rule detects samples from the IcedID family unpacked in memory, identifying code reuse of key functions.",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:banker=\"IcedID\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223983"
+}

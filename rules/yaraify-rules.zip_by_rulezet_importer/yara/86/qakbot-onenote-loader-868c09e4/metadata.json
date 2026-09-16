@@ -1,0 +1,21 @@
+{
+  "uuid": "868c09e4-50e4-4b7b-907a-ee76e89f7103",
+  "title": "QakBot_OneNote_Loader",
+  "format": "yara",
+  "author": "Ankit Anubhav - ankitanubhav.info",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a OneNote malicious loader mostly used by QBot (TA570/TA577)",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:banker=\"Qakbot\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223937"
+}

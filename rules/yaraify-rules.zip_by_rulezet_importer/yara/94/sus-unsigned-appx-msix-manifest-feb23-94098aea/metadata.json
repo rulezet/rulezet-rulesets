@@ -1,0 +1,21 @@
+{
+  "uuid": "94098aea-774d-47a1-b25f-9a713a3dd47b",
+  "title": "SUS_Unsigned_APPX_MSIX_Manifest_Feb23",
+  "format": "yara",
+  "author": "SECUINFRA Falcon Team (@SI_FalconTeam)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects suspicious Microsoft Windows APPX/MSIX Installer Manifests",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/224078"
+}

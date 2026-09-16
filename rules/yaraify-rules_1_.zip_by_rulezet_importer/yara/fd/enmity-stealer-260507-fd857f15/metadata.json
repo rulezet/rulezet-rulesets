@@ -1,0 +1,21 @@
+{
+  "uuid": "fd857f15-c656-4696-a790-a2eb2175965b",
+  "title": "Enmity_Stealer_260507",
+  "format": "yara",
+  "author": "derp.ca",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Submitted Enmity stealer build with Discord token JavaScript, browser credential SQL, wallet collection paths, certificate-store access, clipboard/keylogging imports, and process-memory imports.",
+  "source": "yaraify-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1555.003"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228177"
+}

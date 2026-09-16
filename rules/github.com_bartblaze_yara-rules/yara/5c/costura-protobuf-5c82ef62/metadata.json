@@ -1,0 +1,19 @@
+{
+  "uuid": "5c82ef62-7b71-4144-81c3-6cda3e525dd3",
+  "title": "Costura_Protobuf",
+  "format": "yara",
+  "author": "@bartblaze",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Identifies Costura and Protobuf in .NET assemblies, respectively for storing resources and (de)serialization. Seen together might indicate a suspect binary.",
+  "source": "https://github.com/bartblaze/Yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228193"
+}

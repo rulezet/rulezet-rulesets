@@ -1,0 +1,19 @@
+{
+  "uuid": "963ddd01-9bd4-4e33-bfb7-00b61fe2bf6d",
+  "title": "PureZip",
+  "format": "yara",
+  "author": "@bartblaze",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Identifies ZIP files with a hidden file named '__.exe', as seen in a massive PureCrypt campaign in Q1 2024.",
+  "source": "https://github.com/bartblaze/Yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228295"
+}

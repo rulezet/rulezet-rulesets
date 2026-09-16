@@ -1,0 +1,19 @@
+{
+  "uuid": "aff3b940-c94e-4b95-81f5-5359864a8992",
+  "title": "Win_FakeInstaller_PythonShellcodeLoader_Crepectl_2026",
+  "format": "yara",
+  "author": "SixHands",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects the analyzed fake installer sample using .key config, XOR key, and Python/fiber shellcode loader traits",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/224073"
+}

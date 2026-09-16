@@ -1,0 +1,22 @@
+{
+  "uuid": "60a8793f-7384-4e6a-b3e6-efe7c717c8b1",
+  "title": "BazarBackdoor",
+  "format": "yara",
+  "author": "@bartblaze",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Identifies Bazar backdoor.",
+  "source": "https://github.com/bartblaze/Yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:backdoor=\"BazarBackdoor\"",
+    "misp-galaxy:banker=\"Trickbot\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228290"
+}

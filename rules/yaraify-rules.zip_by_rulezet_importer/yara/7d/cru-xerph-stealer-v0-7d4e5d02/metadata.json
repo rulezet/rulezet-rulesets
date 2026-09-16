@@ -1,0 +1,21 @@
+{
+  "uuid": "7d4e5d02-bb3d-4f23-b5d5-85581e79e435",
+  "title": "CRU_Xerph_Stealer_v0",
+  "format": "yara",
+  "author": "ConnectWise CRU",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects window hiding and mutex creation routine of Xerph Stealer",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/224106"
+}

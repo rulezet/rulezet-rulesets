@@ -1,0 +1,19 @@
+{
+  "uuid": "54b04a10-717d-4274-be4b-146c709c6980",
+  "title": "banner",
+  "format": "nse",
+  "author": "CIRCL/Paul JUNG (Thanat0s)",
+  "license": "0BSD",
+  "license_verified": true,
+  "description": "This is a robust banner scanner.\r\nConnects to a TCP service, waits for a passive banner, sends two Enter\r\nkeystrokes if no data is received, and retries with \"GET /\" if the service\r\ncloses the connection or remains silent. The received banner is stored in\r\nhost.registry and reported in the script output in all cases.",
+  "source": "https://github.com/D4-project/Plum-Rules-NSE",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-28",
+  "last_modified": "2026-04-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/224141"
+}

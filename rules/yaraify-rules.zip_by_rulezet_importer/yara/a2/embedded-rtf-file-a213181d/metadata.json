@@ -1,0 +1,21 @@
+{
+  "uuid": "a213181d-cb7c-4c62-a69a-da7334687f58",
+  "title": "Embedded_RTF_File",
+  "format": "yara",
+  "author": "Nicholas Dhaeyer - @DhaeyerWolf",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Related to CVE-2023-36884. Hunts for any zip-like archive (eg. office documents) that have an embedded .rtf file, based on the '.rtf' extension of the file.",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-36884"
+  ],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/224120"
+}

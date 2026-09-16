@@ -1,0 +1,19 @@
+{
+  "uuid": "d6430574-10a0-4406-87b7-76372f2931c8",
+  "title": "Heuristics_ChromeCookieMonster",
+  "format": "yara",
+  "author": "Still",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "attempts to match strings related to Chromium's CookieMonster; typically used in Chromium secrets scanning by stealers; heuristics rule - may match false positives",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/224048"
+}

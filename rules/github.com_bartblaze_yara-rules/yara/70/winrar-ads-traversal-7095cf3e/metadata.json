@@ -1,0 +1,21 @@
+{
+  "uuid": "7095cf3e-13a6-44cf-abec-5f44156fe30b",
+  "title": "WinRAR_ADS_Traversal",
+  "format": "yara",
+  "author": "@bartblaze",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Identifies potential ADS traversal in RAR archives, seen in vulnerabilities such as CVE‑2025‑6218 and CVE-2025-8088.",
+  "source": "https://github.com/bartblaze/Yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2025-8088"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228202"
+}

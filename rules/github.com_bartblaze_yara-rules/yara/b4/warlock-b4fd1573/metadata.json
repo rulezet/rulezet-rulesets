@@ -1,0 +1,21 @@
+{
+  "uuid": "b4fd1573-06e9-4643-81a1-bd42e4d4c08d",
+  "title": "Warlock",
+  "format": "yara",
+  "author": "@bartblaze",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Identifies Warlock ransomware used by Storm-2603. It is also known as x2anylock ransomware and is a Lockbit (Black) derivative.",
+  "source": "https://github.com/bartblaze/Yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"LockBit\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228260"
+}

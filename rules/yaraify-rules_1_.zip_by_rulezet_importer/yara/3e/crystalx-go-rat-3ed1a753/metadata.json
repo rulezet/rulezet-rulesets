@@ -1,0 +1,21 @@
+{
+  "uuid": "3ed1a753-3a91-42e6-bf55-7df338bdbd4c",
+  "title": "CrystalX_Go_RAT",
+  "format": "yara",
+  "author": "derp.ca",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "CrystalX submitted loader and recovered Go payload rule targeting RCDATA 970 loader structure, PE-check code, WebSocket path, command vocabulary, and build support markers.",
+  "source": "yaraify-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1055.012"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228183"
+}

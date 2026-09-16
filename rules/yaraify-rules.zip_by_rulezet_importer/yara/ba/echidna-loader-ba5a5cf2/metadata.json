@@ -1,0 +1,21 @@
+{
+  "uuid": "ba5a5cf2-6a6d-48a6-985d-b0301654a314",
+  "title": "ECHidna_Loader",
+  "format": "yara",
+  "author": "kirkderp",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "ECHidna BoringSSL wrapper DLL with compressed RAT payload in PE overlay.",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [
+    "T1027.009"
+  ],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223920"
+}

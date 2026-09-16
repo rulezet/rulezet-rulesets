@@ -1,0 +1,21 @@
+{
+  "uuid": "7a144597-e2d6-45c4-aab1-b7cd1ed641b1",
+  "title": "HellsUchecker_MSBuild_Polyglot",
+  "format": "yara",
+  "author": "kirkderp",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "HellsUchecker BAT/MSBuild polyglot - batch script header with embedded MSBuild XML project containing C# inline task. Base91-encoded .NET assembly payload between custom delimiters.",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [
+    "T1127.001"
+  ],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223960"
+}

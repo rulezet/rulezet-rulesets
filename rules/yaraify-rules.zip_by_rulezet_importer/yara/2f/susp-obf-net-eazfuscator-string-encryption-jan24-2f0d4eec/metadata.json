@@ -1,0 +1,19 @@
+{
+  "uuid": "2f0d4eec-2706-4180-a312-ae81b324181d",
+  "title": "SUSP_OBF_NET_Eazfuscator_String_Encryption_Jan24",
+  "format": "yara",
+  "author": "Jonathan Peters",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects .NET images obfuscated with Eazfuscator string encryption. Eazfuscator is a widely used commercial obfuscation solution used by both legitimate software and malware.",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223926"
+}

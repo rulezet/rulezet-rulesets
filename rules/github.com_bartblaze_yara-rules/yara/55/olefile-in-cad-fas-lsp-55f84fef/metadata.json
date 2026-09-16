@@ -1,0 +1,19 @@
+{
+  "uuid": "55f84fef-82e3-4111-842b-8b41ba5afbdf",
+  "title": "OLEfile_in_CAD_FAS_LSP",
+  "format": "yara",
+  "author": "@bartblaze",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Identifies OLE files embedded in AutoCAD and related Autodesk files, quite uncommon and potentially malicious.",
+  "source": "https://github.com/bartblaze/Yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228209"
+}

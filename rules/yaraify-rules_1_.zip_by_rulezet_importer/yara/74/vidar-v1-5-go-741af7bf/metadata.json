@@ -1,0 +1,26 @@
+{
+  "uuid": "741af7bf-0993-4f71-947f-04e2a311f460",
+  "title": "Vidar_v1_5_Go",
+  "format": "yara",
+  "author": "derp.ca",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Submitted Vidar v1.5 Go build and memory/runtime rule with Go build metadata, native API layout, sandbox scoring strings, Telegram/Steam dead drops, multipart exfil fields, botnet ID, and AV process enumeration.",
+  "source": "yaraify-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:stealer=\"Vidar\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1555.003"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228159"
+}

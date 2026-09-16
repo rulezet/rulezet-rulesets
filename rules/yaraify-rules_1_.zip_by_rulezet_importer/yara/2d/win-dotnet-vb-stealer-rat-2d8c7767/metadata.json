@@ -1,0 +1,19 @@
+{
+  "uuid": "2d8c7767-c096-4166-833c-0f6268f1440b",
+  "title": "win_dotnet_vb_stealer_rat",
+  "format": "yara",
+  "author": "Arrbat",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects .NET/VB executables with stealer/RAT capabilities (sockets, HTTP, processes, registry, etc).",
+  "source": "yaraify-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/228161"
+}
