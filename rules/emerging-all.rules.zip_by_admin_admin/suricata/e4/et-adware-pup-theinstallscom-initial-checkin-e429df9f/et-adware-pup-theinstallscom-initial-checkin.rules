@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Theinstalls.com Initial Checkin"; flow:established,to_server; http.uri; content:"/plist.php?uid="; http.host; content:"theinstalls.com"; reference:url,www.theinstalls.com; classtype:pup-activity; sid:2007788; rev:7; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2020_08_31;)

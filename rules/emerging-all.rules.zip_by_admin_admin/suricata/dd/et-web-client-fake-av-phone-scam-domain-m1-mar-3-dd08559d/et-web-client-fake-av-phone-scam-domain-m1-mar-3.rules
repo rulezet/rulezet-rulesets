@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET WEB_CLIENT Fake AV Phone Scam Domain M1 Mar 3"; dns.query; content:"errorfound"; fast_pattern; nocase; isdataat:100,relative; classtype:social-engineering; sid:2022591; rev:5; metadata:created_at 2016_03_03, confidence High, signature_severity Minor, updated_at 2020_09_01;)

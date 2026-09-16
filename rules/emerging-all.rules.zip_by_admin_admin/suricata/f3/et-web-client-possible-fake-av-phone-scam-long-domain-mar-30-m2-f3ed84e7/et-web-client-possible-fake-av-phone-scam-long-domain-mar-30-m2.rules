@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET WEB_CLIENT Possible Fake AV Phone Scam Long Domain Mar 30 M2"; dns.query; content:"avirus"; fast_pattern; nocase; isdataat:100,relative; content:!"spotify.com"; classtype:social-engineering; sid:2022691; rev:6; metadata:created_at 2016_03_30, confidence Medium, signature_severity Minor, updated_at 2020_09_01;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP SweetIM Install in Progress"; flow:established,to_server; http.uri; content:"/download/install/silent/SSweetIMSetup.CIS"; nocase; classtype:pup-activity; sid:2013243; rev:4; metadata:created_at 2011_07_11, signature_severity Minor, updated_at 2020_08_31;)

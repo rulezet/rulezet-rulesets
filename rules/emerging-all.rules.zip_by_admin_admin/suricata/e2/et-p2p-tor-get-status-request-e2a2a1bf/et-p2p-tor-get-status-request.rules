@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET P2P Tor Get Status Request"; flow:established,to_server; http.uri; content:"/tor/status/"; nocase; reference:url,tor.eff.org; classtype:policy-violation; sid:2008115; rev:5; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_09_02;)
