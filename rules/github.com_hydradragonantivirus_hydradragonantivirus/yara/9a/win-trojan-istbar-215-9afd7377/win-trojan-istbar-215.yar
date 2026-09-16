@@ -1,0 +1,11 @@
+rule Win_Trojan_Istbar_215
+{
+strings:
+	$a0 = { ff257820400068000003006800000100e802000c405959c333c0c3c3ff2590204000ff2594204000cccccccc }
+
+	$a1 = { 202f6366673a6d746200000000 }
+
+
+condition:
+	$a0 and $a1
+}

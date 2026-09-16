@@ -1,0 +1,9 @@
+rule Win_Trojan_Worf_5
+{
+strings:
+	$a0 = { 21205468697320697320576f72662054726f6a616e207665722e20332e30210d0a5b4642695d }
+
+
+condition:
+	$a0
+}

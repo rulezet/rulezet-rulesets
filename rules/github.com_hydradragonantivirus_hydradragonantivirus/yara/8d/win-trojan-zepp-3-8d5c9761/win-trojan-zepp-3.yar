@@ -1,0 +1,9 @@
+rule Win_Trojan_Zepp_3
+{
+strings:
+	$a0 = { c60584ab400001e818180000c60584ab400000e80c1800005589e581ec00030000c60584ab400001e83318 }
+
+
+condition:
+	$a0
+}

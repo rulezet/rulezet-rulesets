@@ -1,0 +1,9 @@
+rule Win_Trojan_Bzub_50
+{
+strings:
+	$a0 = { 666f6a73696f67662e7a7a7a000000633a5c3439302d346b6a36696a35693675383575380000004e6f2069 }
+
+
+condition:
+	$a0
+}
