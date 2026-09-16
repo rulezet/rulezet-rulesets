@@ -1,0 +1,9 @@
+rule Win_Trojan_Aladino_2
+{
+strings:
+	$a0 = { 8fa3f24a75ef7395fb3065d41f3fbfd0a3da6bd7f9fb77a7ce77494c344d15ed35646dca22757013700bab234983f7e6c5db904a04add92ae901f22aa425cdff47a8effd340077213b12e7fc2f7819f8e17bfe6c6d2bed08432d0e3bc2a3eb104c5194ade86785df8b6a8169b8217e07c882c004fa }
+
+
+condition:
+	$a0
+}

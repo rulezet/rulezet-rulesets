@@ -1,0 +1,9 @@
+rule Win_Trojan_Startpage_96
+{
+strings:
+	$a0 = { 4ac29556150ec1aea85b569292802aff89244d68c33bda5ad1b8a4a8358195fb0113837e78716e706e7cbf615cc6288f4a20a802716f95b160e5d9ad9582ae584a582ed69a4ebfd65e93cde16e6f36d7ebc0abcabdc5c8a28c3b6ae0fb0c3dc40a7389c0c3d614e4a1eb2aa9c41cde218a44954b5355 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Scapur_4
+{
+strings:
+	$a0 = { 6c6f770b687474703a2f2f77002e70fbedffd690862d7363616e2e636f6d2f1f6d6f76652e204db3fd686dc9532e035248413522d937253032642f04db62c39cf93c20532bef144d6dffcf }
+
+
+condition:
+	$a0
+}

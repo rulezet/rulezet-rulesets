@@ -1,0 +1,9 @@
+rule Win_Trojan_Ghostbot_1
+{
+strings:
+	$a0 = { 29baec54d6f95642657e8f0b21ff16ffbf4e657442494f53207370726561644020666f756e6420285987ff612076696374696d3aea13c4407ebc5f }
+
+
+condition:
+	$a0
+}

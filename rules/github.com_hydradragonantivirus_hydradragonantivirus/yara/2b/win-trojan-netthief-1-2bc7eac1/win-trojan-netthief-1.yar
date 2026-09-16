@@ -1,0 +1,9 @@
+rule Win_Trojan_Netthief_1
+{
+strings:
+	$a0 = { 24f18a7a2532ac62a5b1374b58c4ee97a02bb0edabf14b3647d0269874c0f6cf7e48fb2d5ee6f275fc74f90d98da7796d6e84c258f29f1eaa76c9b8a321699add0dd0c52cbe56755adb6913dd4777c5f4a7f6bfcc3d2ff94df245c2930139500a3d76c150e11d0be48d268ecdc12a94a87f83ebd0855e919 }
+
+
+condition:
+	$a0
+}

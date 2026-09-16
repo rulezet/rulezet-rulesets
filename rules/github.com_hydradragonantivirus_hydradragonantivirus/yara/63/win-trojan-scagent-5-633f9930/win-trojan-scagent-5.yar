@@ -1,0 +1,9 @@
+rule Win_Trojan_Scagent_5
+{
+strings:
+	$a0 = { 8038bffa15d9c4ccdb3330511835be76033f395d18192aa0197e8a6db68d532c41204fe0084025606c0b131837a8e316dc8a6e567463e38d3c3abaaeea8d8f0324fc276cc08b9c0fde02e4dc5753bf6d4eb40f1acc758b18d56a6b62ab33ffcf2949e075c9da }
+
+
+condition:
+	$a0
+}

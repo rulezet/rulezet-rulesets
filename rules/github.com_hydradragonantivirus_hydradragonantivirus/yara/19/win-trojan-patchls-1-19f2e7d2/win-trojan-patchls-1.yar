@@ -1,0 +1,9 @@
+rule Win_Trojan_PatchLs_1
+{
+strings:
+	$a0 = { 0f87bd78cefdb75f2523df1dfe3ec97d83fff385fe4907f906ecfbeaa8b568fbb1b7467af10917594a19731b3d66c0e904e5cdc666bc2e0a13909b49d1d050a348563c33cdd030a02fe2b185f142dd2cef8543dc3c0ed3a557c10ea58e7bca9b3f702045cdddaa103323e76dfbb7179e92dd8557644e2807 }
+
+
+condition:
+	$a0
+}
