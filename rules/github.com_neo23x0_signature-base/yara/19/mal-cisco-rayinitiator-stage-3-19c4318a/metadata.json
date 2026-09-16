@@ -1,0 +1,19 @@
+{
+  "uuid": "19c4318a-5567-4869-a4fa-eaafc7106d3d",
+  "title": "MAL_Cisco_RayInitiator_Stage_3",
+  "format": "yara",
+  "author": "NCSC",
+  "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "license_verified": false,
+  "description": "Detects RayInitiator GRUB bootkit stage 3 install phase code that searches for the 'client-cert-fail' string.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/190025"
+}

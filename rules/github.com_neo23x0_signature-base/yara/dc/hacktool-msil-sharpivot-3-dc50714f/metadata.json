@@ -1,0 +1,19 @@
+{
+  "uuid": "dc50714f-987a-42f1-aba7-f3eabcaa0737",
+  "title": "HackTool_MSIL_SharPivot_3",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This rule looks for .NET PE files that have the strings of various method names in the SharPivot code.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/190008"
+}

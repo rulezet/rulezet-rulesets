@@ -1,0 +1,21 @@
+{
+  "uuid": "38dca163-c3fb-4112-9ce9-436726231744",
+  "title": "MAL_BACKORDER_LOADER_WIN_Go_Jan23",
+  "format": "yara",
+  "author": "Arda Buyukkaya (modified by Florian Roth)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the BACKORDER loader compiled in GO which download and executes a second stage payload from a remote server.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/190068"
+}

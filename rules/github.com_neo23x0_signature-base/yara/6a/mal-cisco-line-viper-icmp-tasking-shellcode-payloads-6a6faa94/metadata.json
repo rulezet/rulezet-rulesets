@@ -1,0 +1,19 @@
+{
+  "uuid": "6a6faa94-7b10-4373-8051-2a89dd6930a9",
+  "title": "MAL_Cisco_LINE_VIPER_ICMP_Tasking_Shellcode_Payloads",
+  "format": "yara",
+  "author": "NCSC",
+  "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+  "license_verified": false,
+  "description": "Detects LINE VIPER Cisco ASA malware code as part of ICMP tasking shellcode payloads.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/190047"
+}

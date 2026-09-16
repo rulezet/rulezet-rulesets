@@ -1,0 +1,19 @@
+{
+  "uuid": "eb083198-3162-4404-b31f-658b8f7c6497",
+  "title": "SUSP_Disable_ETW_Jun20_1",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects method to disable ETW in ENV vars before executing a program",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/189886"
+}

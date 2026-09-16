@@ -1,0 +1,19 @@
+{
+  "uuid": "915a1ada-03e9-48b8-b78a-40a4446fe407",
+  "title": "SUSP_Modified_SystemExeFileName_in_File",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detecst a variant of a system file name often used by attackers to cloak their activity",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/189848"
+}

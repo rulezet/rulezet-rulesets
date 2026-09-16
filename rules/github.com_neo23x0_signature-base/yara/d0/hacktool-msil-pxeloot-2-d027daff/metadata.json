@@ -1,0 +1,19 @@
+{
+  "uuid": "d027daff-95b9-4228-832e-de1c3dee1aae",
+  "title": "HackTool_MSIL_PXELOOT_2",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This rule looks for .NET PE files that have the strings of various method names in the PXE And Loot code.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/190196"
+}
