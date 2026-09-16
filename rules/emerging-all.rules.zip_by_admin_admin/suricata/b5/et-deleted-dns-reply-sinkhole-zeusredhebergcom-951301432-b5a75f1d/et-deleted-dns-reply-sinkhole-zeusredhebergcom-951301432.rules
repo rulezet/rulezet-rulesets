@@ -1,0 +1,1 @@
+alert dns any any -> $HOME_NET any (msg:"ET DELETED DNS Reply Sinkhole - zeus.redheberg.com - 95.130.14.32"; content:"|00 01 00 01|"; content:"|00 04 5f 82 0e 20|"; distance:4; within:6; classtype:trojan-activity; sid:2016105; rev:4; metadata:created_at 2012_12_28, signature_severity Unknown, updated_at 2022_07_13;)

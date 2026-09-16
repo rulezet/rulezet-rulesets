@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO DNS Query for Suspicious .com.ru Domain"; dns.query; dotprefix; content:".com.ru"; fast_pattern; nocase; endswith; reference:url,sign.kaffenews.com/?p=104; classtype:bad-unknown; sid:2011407; rev:4; metadata:created_at 2010_09_28, confidence Medium, signature_severity Informational, updated_at 2022_07_15;)

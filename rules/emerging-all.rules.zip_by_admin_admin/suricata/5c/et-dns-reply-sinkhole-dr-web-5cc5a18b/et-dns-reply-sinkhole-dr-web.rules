@@ -1,0 +1,1 @@
+alert dns any any -> $HOME_NET any (msg:"ET DNS Reply Sinkhole - Dr. Web"; content:"|00 01 00 01|"; content:"|00 04 5b e9 f4 6a|"; distance:4; within:6; reference:url,virustracker.info; classtype:trojan-activity; sid:2016418; rev:6; metadata:created_at 2013_02_16, confidence High, signature_severity Major, updated_at 2022_07_13;)
