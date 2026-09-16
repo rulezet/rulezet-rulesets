@@ -1,0 +1,112 @@
+rule _20160916_0382d6e02bd607eb785685e61e885b80_20160916_0a83430638a2_761 {
+  meta:
+    description = "datamaliciousorder - from files 20160916_0382d6e02bd607eb785685e61e885b80.js, 20160916_0a83430638a2112430b901d55269acf9.js, 20160916_0c7c2d711206e6c3f01ef07a0962ab6d.js, 20160916_0fd5dd9671368110adc3fe9142ecc83e.js, 20160916_1720b3e1fc8404daf105af8c1e576bce.js, 20160916_1ca4ab070b842e248b021c607aafb8b0.js, 20160916_203cd066c114b01687f72c98ee777fc3.js, 20160916_203f6b117e98dd104f3e7c928cca7cd2.js, 20160916_38643f65435b2bdbdab02a5ca807c45f.js, 20160916_3887d067ad7e7c291885e72305fb7326.js, 20160916_3a33e3fefeddf6ffb3dc0574bf5603ed.js, 20160916_3a8335f14709d0b7a74569d832adaf73.js, 20160916_3f8818634ad7a52f0232e8704656487a.js, 20160916_432ab987c256a335626db258c97e107a.js, 20160916_4647a11d2443c3d9de2066f827f6e880.js, 20160916_46c41ff51af3df2f9c5a47e682c5f57e.js, 20160916_47483e8304abea368c832c457d38a21c.js, 20160916_4ecb3bca514f91721587802949990b16.js, 20160916_4f0bb398d516e27e70063bf79716bbd4.js, 20160916_50be9b9695f15d8082c42a064a1e6b42.js, 20160916_526bfb4c6c16d52a675d69d2cb810539.js, 20160916_5295071cd28c812267876fd7fb494425.js, 20160916_57b494f92afed5c9ede17ae70e509b37.js, 20160916_5a7004b2498f2f3df3a1717db3baac9d.js, 20160916_5b7df55894e18740c7230c040d8ac968.js, 20160916_5bb92d62f63b847c8abfeaa7ddd605a9.js, 20160916_5d4e39db91d17c26a464bef330aa1302.js, 20160916_5e6b1c1b599c8749139726c98aa476a8.js, 20160916_61fca1ee1bc9f3d889cb4f3adfcd4c27.js, 20160916_6467d5b47d7c79baf01b4bc9a427fb85.js, 20160916_67be04114246b176e108fe4d37905c78.js, 20160916_6ac409a963e291a3476b8e63c192569d.js, 20160916_6e9a93c6574faffd6d348923c2b0b1a8.js, 20160916_70247bb4382e0683b5fd91527b13bc9f.js, 20160916_7124263c68ed3e91106bb7465fb2a04f.js, 20160916_72c426e9c7f034530d59b7318aee1b3f.js, 20160916_72cd9e25ecb01f9df46d57d060307f88.js, 20160916_75fd02ceceee36d365b98a97ba4744b6.js, 20160916_7987ae2f77169ece6c178e71e1dda9a9.js, 20160916_7d7c6627b8a7efc7b648941e944c8b81.js, 20160916_8164fa0466a40b8a05025842d78d1c74.js, 20160916_8166c60460821587f2b5cf2ad849c2c5.js, 20160916_91db1a5248e4279ba93131574240529f.js, 20160916_9702234e04ae15867c0458a406ebeed5.js, 20160916_98bf3f7d1231683408357136137625fb.js, 20160916_9b4bfc15afb643b849c5a24e33dc66ff.js, 20160916_a24dfae117cd4496f80a5eae06e54d51.js, 20160916_a71053a96e000327a094a76fa7846842.js, 20160916_a86457908c77b84aaf20b722d9d00826.js, 20160916_a8753d09387bd9459961525dbc64ff4e.js, 20160916_aa8344e416185cee7596a5b9344e43bd.js, 20160916_b0280bcb1ef7cee2beded091bf2d8877.js, 20160916_b45c59160ebf209415584eba265c14d5.js, 20160916_b53dd29b1bc18b9e4bf2f5f24cb31bbd.js, 20160916_b57a6081f775288454f3af5479206eb0.js, 20160916_baedab72916448bb3bc2c113e45e413d.js, 20160916_be700c8947010f8a945196add7464ae1.js, 20160916_c2e68cb0ebe9a5eb29daa8de25ba36bb.js, 20160916_c58f38904c06ee6fad28414d5386de6e.js, 20160916_c6725f6f263eb01bec444d628e1b9c33.js, 20160916_cdd2915167be97b0a346a27f4c7bd6f8.js, 20160916_d75a0b235960778496799b7436e54e09.js, 20160916_d7f9157a43b219fabfb9026984db3635.js, 20160916_da0b4627e3ef077df7c9d50712c19a69.js, 20160916_da70889cc19b332a4a5516ff82b29ba7.js, 20160916_dc0f60425f91809227bab6a596324a35.js, 20160916_e4774fa57a96ed7b132a63f92fd2ffeb.js, 20160916_e6252ed9bdca7754b732770b67036f4f.js, 20160916_e6b90805c9ab863974b9898b3cc3f46e.js, 20160916_e6fc8b984c2a60fe8628b4ed820d26e4.js, 20160916_ea506926dd63b1a4f5e5523b2fc5ad32.js, 20160916_f00b3e1c2c814d0541e252b2a44265ac.js, 20160916_f06f9547a7bc007d6a12a9d466d489ed.js, 20160916_f22b7bd56f5abe819fbbc33a6ca468b0.js, 20160916_f406c5c04cd564a852912f6dcb0e96ee.js, 20160916_f44bcaebfeed22d57f43777848bf6dee.js, 20160916_f5f881d3b11cbc14791e24466f6ef342.js, 20160916_fa60865e43fdb22e1d3131960604ee0d.js, 20160916_fc05b275a4ff2f7695f4ba194f99d9c2.js, 20160916_fd3fc86ee565973daa99be373ebcfbb1.js"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "e5f0acee359ddc35d411c6338180f0ff7b1e12f49e8f478c6da828d7daa91c35"
+    hash2       = "a2f65d852b3e7799f2ed325fd2ac04af3e2d216bc1dd2106be2e34ad1cc73ef7"
+    hash3       = "b6c8c4e4ce86b0e0e6c4b44338bb9a04db429d569cde474365fff6d2583a56cf"
+    hash4       = "b6dea14c2fca354929a7b3776c828feef0858a6537e318fa08ce665d241504a0"
+    hash5       = "f3f3ace72ad6559143b82e8fd38c36eea7bf8ae14ba14f7214bfba298c98c538"
+    hash6       = "0530edaffd1389038bc6e14d8598dac0164a2cb96e8def7c7453b917ab8fa21d"
+    hash7       = "a65124d5c09894573a6c8e980490989f0f4fa31d6f293f6c9b83bcd9fe3ae8fa"
+    hash8       = "82cef9eb8543a543941ee007d101833d57f8f44df8d682c00e85a79e9864aa15"
+    hash9       = "f21b76f641719a0d763703b2ff75ceb55b9c705e838a6d5d024ca699945dd356"
+    hash10      = "894ecc9cf7ba41794a077b6e79cc043ca5677500a9656ffa7d97c6a4ff7d9f43"
+    hash11      = "761e9bab09ee197e9f1fc1fd2e824702d29959ff10923f0778f814b6b7cbbbb7"
+    hash12      = "2df033b2ad22a72185e70c997ce6136f5db6cc788dd765651d68587ec9faa5e5"
+    hash13      = "0a07335d1df644119f016097e563e5c3815367a0e20e37571d3e67e6e6c3f974"
+    hash14      = "78dbe2ddb4cef02cd919062dfd48d1a3b2398efbbb3271fed7d37f31aff06419"
+    hash15      = "ced7c33a8f8cfbe63c001f9773a98918c7286fe783e93212973d947008c464b7"
+    hash16      = "0eaa320c3980096d1eb3cf068af5fc8c44f13defc26cbc52d5a577d7f52599f6"
+    hash17      = "31e8400db73005d4c6494fa39319087445dab6400d0f89900b14f50022e0b1f0"
+    hash18      = "f5a37a0c32bf39b131415d67f81126fe9686913f93a32123e6ce0f4a2836a043"
+    hash19      = "1091c0c3febaa62eb13bcefc313c021856ee96c077f3178fef5c6c021dd8a408"
+    hash20      = "644359f490575604c7b3cb96a0b283bf88ea88ca02003e539290dee686e4b5a5"
+    hash21      = "5964fb473b1d30cd48008830be174d3c1f3f78026d4f0ecb23cef7021b190602"
+    hash22      = "2d0e24bd9f2e7f8c64b7ce58d4ff041ceb4beff3dbfd2134028948f7d66a5111"
+    hash23      = "fcfc1db7bb4b3e3b94b6dc0d2dfe47a76a76214e4e4a82095758f7c6d2e1ddbd"
+    hash24      = "029a83170e3389972d2814b01ba4e47c121f6bd9e4a39249419a6b202d1049f5"
+    hash25      = "8aa60aa62411c95ca655f2e67a99f6548d735dbed81cdc200c2274660e5e00a0"
+    hash26      = "17051596487e7aa32a1362b6f1af16394a9f2352657b334a89b3c93889a71573"
+    hash27      = "596b204d52fc4c9f7cded19c0ac9c12f0ac2aba5f7d0060bd9d2e3d7720141c7"
+    hash28      = "621e976086a929f9915d48de5f19e89572b7ca706988a3ca548f02d2cc3a991a"
+    hash29      = "736d9e11a33fa1b27015f38648a65ca37bee365427e76c66696e8cdafd596971"
+    hash30      = "54be726d139d390492b42571e0def8ad3820de801bd3577481fd3062e4a3e384"
+    hash31      = "39f61f374dac2f296a9294b5f81b182c8df0261d25899b69fadfc567d38913ad"
+    hash32      = "c032c0d70a8c8513c2106650c78a372292e3929fd11a1fda5cf47e7b090b9a0c"
+    hash33      = "7f2155b66d9a7583b72445978f0438c303cdf07544da2ea039360b4685649a36"
+    hash34      = "8642943be4d9ae61cc8328f0c253c3cea4cfe8b25834caaa5594a21e530a768a"
+    hash35      = "cf0e6a388713537cfb05aae02785d0fddb07ddd201d3532e4b83bf3676db3482"
+    hash36      = "d118847f6d5c28cb4d410b6660b688a7468db7a72880bc032d487351a8a51466"
+    hash37      = "0e27a6146fce16cc66738b8c62165d3a9b152eab17f38db7601d590ccf51162a"
+    hash38      = "1eeb57a64ea119d6b1ac6d2799e848c6efd376e5dea9602c84b502b4d545c442"
+    hash39      = "1d56ef4abfb3729ff5558e1233bd43c923335db659c720fb03132cf8e982eab5"
+    hash40      = "cdc7ba1456d4dbfe2098d3245f7587124e02ca5ee7ce229d2283a5bce96c6989"
+    hash41      = "068177812e7445b4db7506c7cbf9ca7daf2496c9553afa30d7804b96ddb31f2b"
+    hash42      = "ba77821517e0a4ab5618d88507ac3f30e2c84e3a25930b2a1df5790be6e65696"
+    hash43      = "674585198f8cb99d81ebe820edcacf9ac217b7dce8fb09d719bad85f7ca2cdec"
+    hash44      = "afa90d61cc4b30abfb44f757a047091dddea8cf522265b67851d4be78917264a"
+    hash45      = "902a3618076d155660b58d7fbeb928137b46b1665259fd7247023c3507305ef5"
+    hash46      = "440f1194073dce0b1ea0b3730c89be1600fd884228b34d7f2404bf686419f1f0"
+    hash47      = "01b492b8182c59a70afafaa19feea845b180cabac0d2d2ad521c49f27fad1adc"
+    hash48      = "98b91a6b332ebc2ed203371126d3cd3d93bac48ac081b89034c5f0ec2463881b"
+    hash49      = "d44060d7ad46a4d5d2188f8e0bc8fba556fa04e37e12c1f50f326e658388535b"
+    hash50      = "967bc219b5082747d668ac207eb74e5709e8dea2e90367cc9fa1005d6e922a98"
+    hash51      = "0e65458d7249bfbe69ed06ccd3df1fa33bae3e7116ce73be7bdb54273e3c4e46"
+    hash52      = "e19917dae8d6061662289a1a208f92d65fca4470d2877078030aa03c45b34f9b"
+    hash53      = "a77ed2f4544919446d8a297ae4e37ae7facb0c99e5e365312a07a3dc903f1f46"
+    hash54      = "50b177b24957883e989b3dac29bbe40b5cfe472bc6de3edccaeb0f29886ec16e"
+    hash55      = "cf5550a89e179d4323b68db3c05ed5adb7bde081ce9ac003ca33d7e113e4027a"
+    hash56      = "b806414a7bd070051a3dffcd7293f1bdbfb2c71ee411adc9f1a5e45ff7ffd9f4"
+    hash57      = "c55576f40ea4b8024a4207a3f9ffb4bfc9b082c14ba28209a5267a82094c5ba0"
+    hash58      = "93b577f722a591fd507602f50bcf47af42fecee5e4e35cfa2f508f6bb2470e3f"
+    hash59      = "70e1eb5b414ef4bbbaad7b0138f512ea191de784242b181ba19ba36a8029b35b"
+    hash60      = "2cdadf308e852d358455cb7fc0d24c7f38064a44870d4e43ade9fe9f5613d5d2"
+    hash61      = "5933ba2ab5a34ace0e12c4ca58347d4d580463e166f89b56dff7b2c99774efb9"
+    hash62      = "ce88494e7fd2276429319545ebf6aecae753a657a7052a5f70fb49951db77d24"
+    hash63      = "bc30badf005a6d51cf28d842138d881ad43bf6b4ddefae44520850dab7886417"
+    hash64      = "4fefb20f0a4476c84669615199b64b25d995d223289b3e21692a10f816a0a865"
+    hash65      = "3cfc46fcdd5afbf0bf2f8f3382214d1a1fb8e7ca62d651856b483ce21cf689da"
+    hash66      = "45f5c1b6995e2a98acdb4afe9af1c0540fc7c5e611d827e6ad03205120d09ba4"
+    hash67      = "df69d5749a84a4aa04721d70641a7d21ad7e6ff934ecbdfe260fc033c975ea83"
+    hash68      = "4b19117b7ba62897cc3edbaf3385324a245407f2ac95af78ed3ea9d5e7a138ae"
+    hash69      = "5a4498529cc20a6ac5211d69cf959d7db7e4bec2bca56d664628ce35bd901176"
+    hash70      = "02b48261d2c4adcfd4050698ee5b2dd64a3199a5a84d1d85fb26d70d8075c462"
+    hash71      = "82edababb9b54719bdea3c4bef521fa6eb1878aa811fb38614d608f4a241e1e8"
+    hash72      = "1bee9d69579942e09f2a1348df350957263215b3f959e9e2a105291f7af03d21"
+    hash73      = "9acd5650f4bd8d565acdd65b1a305f4405b0812e52a5bab48252084b07f0bd92"
+    hash74      = "ec1b64eaea3d84e9118b356a795faf9f595f15cf1c99ab0387b513830bd4b069"
+    hash75      = "96199fe3884dea712ad4faebe27b459a48e29003a7aba93c30db7963fead9241"
+    hash76      = "16a7d2496c050aed89cc0c7c6042d3a1965ee6abd79a51dea15914083da39abf"
+    hash77      = "6f6fdc056308427844117297eb48238f70d6d46e4cf654082295a7884ad560f7"
+    hash78      = "96bdac2ee36360a53c159a2019cc106e4d41701322e9b5343ee5d175fd320622"
+    hash79      = "cfd4b4e59a0029f60a5be77e4774a5221f4a30d3e9fae73cd4f2d4fc4275c6c3"
+    hash80      = "3c5e87dd359618405ad692474e0808b39729c0f5f1429fb2adc01318269b9ff4"
+
+  strings:
+    $s1  = "\\x40\";})()], \"Ut\": [3, (function f(){return \"\\x41\";})()], \"Ee\": [3, (function f(){return \"\\x42\";})()], \"Kp\": [3, (" ascii
+    $s2  = "\\x7d\";})()], \"Ht\": [3, (function f(){return \"\\x7a\";})()], \"Pw\": [3, (function f(){return \"\\x7c\";})()], \"VXz\": [3, " ascii
+    $s3  = ", (function f(){return \"\\x2a\";})()], \"Hb\": [3, (function f(){return \"5\";})()], \"KPu\": [3, (function f(){return \"3\";})" ascii
+    $s4  = "var WZf = {\"Om\": [3, (function f(){return \"\\x6b\";})()], \"CVy\": [3, (function f(){return \"\\x79\";})()], \"Ci\": [3, (fun" ascii
+    $s5  = ")], \"GQo\": [3, (function f(){return \"\\x46\";})()], \"Yi\": [3, (function f(){return \"\\x47\";})()], \"HBp\": [3, (function " ascii
+    $s6  = ")()], \"Ne\": [3, (function f(){return \"\\x58\";})()], \"Kw0\": [3, (function f(){return \"1\";})()], \"XAu\": [3, (function f(" ascii
+    $s7  = "d\": [3, (function f(){return \"8\";})()], \"NIj\": [3, (function f(){return \"\\x44\";})()], \"XUi\": [3, (function f(){return " ascii
+    $s8  = "eturn \"\\x43\";})()], \"Fy\": [3, (function f(){return \"\\x48\";})()], \"VXh\": [3, (function f(){return \"\\x49\";})()], \"Wf" ascii
+    $s9  = "turn \"\\x78\";})()], \"GEb\": [3, (function f(){return \"\\x75\";})()], \"Wx\": [3, (function f(){return \"\\x74\";})()], \"Vr" ascii
+    $s10 = "Ed\": [3, (function f(){return \"\\x20\";})()], \"KZv\": [3, (function f(){return \"\\x21\";})()], \"ISr\": [3, (function f(){re" ascii
+    $s11 = "n f(){return \"\\x77\";})()], \"LUb\": [3, (function f(){return \"\\x76\";})()], \"WCx\": [3, (function f(){return \"\\x71\";})(" ascii
+    $s12 = "Kx\": [3, (function f(){return \"\\x51\";})()], \"Gd\": [3, (function f(){return \"\\x50\";})()], \"Pg\": [3, (function f(){retu" ascii
+    $s13 = "PCp\": [3, (function f(){return \"0\";})()], \"IPx\": [3, (function f(){return \"4\";})()], \"KJq\": [3, (function f(){return \"" ascii
+    $s14 = "tion f(){return \"\\x2e\";})()], \"Fg\": [3, (function f(){return \"\\x2b\";})()], \"Cv\": [3, (function f(){return \"\\x2c\";})" ascii
+    $s15 = "n \"\\x4e\";})()], \"Ks\": [3, (function f(){return \"\\x4f\";})()], \"Ze\": [3, (function f(){return \"2\";})()], \"Pc\": [3, (" ascii
+    $s16 = "[3, (function f(){return \"7\";})()], \"Ox\": [3, (function f(){return \"\\x25\";})()], \"UXf\": [3, (function f(){return \"\\x2" ascii
+    $s17 = "on f(){return \"\\x57\";})()], \"DAa\": [3, (function f(){return \"\\x56\";})()], \"Mg\": [3, (function f(){return \"\\x55\";})(" ascii
+    $s18 = "eturn \"\\x4a\";})()], \"Fw\": [3, (function f(){return \"\\x4b\";})()], \"Ad\": [3, (function f(){return \"\\x4c\";})()], \"UTs" ascii
+    $s19 = ";})()], \"Aq\": [3, (function f(){return \"\\x29\";})()], \"BWb\": [3, (function f(){return \"\\x4d\";})()], \"Xk\": [3, (functi" ascii
+
+  condition:
+    (uint16(0) == 0x0a0a and (8 of them)
+    ) or (all of them)
+}
