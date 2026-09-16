@@ -1,0 +1,19 @@
+{
+  "uuid": "74e9fe5e-1779-4e5d-a409-e6e62ca0dae2",
+  "title": "win_asyncrat_bytecodes",
+  "format": "yara",
+  "author": "Matthew @ Embee_Research",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects bytecodes present in unobfuscated AsyncRat Samples. Rule may also pick up on other Asyncrat-derived malware (Dcrat/venom etc)",
+  "source": "https://github.com/embee-research/Yara-detection-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208914"
+}

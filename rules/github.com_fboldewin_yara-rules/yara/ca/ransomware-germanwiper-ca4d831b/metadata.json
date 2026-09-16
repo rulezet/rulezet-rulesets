@@ -1,0 +1,20 @@
+{
+  "uuid": "ca4d831b-eeab-482d-a576-e8f07068394e",
+  "title": "RansomWare_GermanWiper",
+  "format": "yara",
+  "author": "Frank Boldewin (@r3c0nst)",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects RansomWare GermanWiper in Memory or in unpacked state",
+  "source": "https://github.com/fboldewin/YARA-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/209151"
+}
