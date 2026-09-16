@@ -1,0 +1,48 @@
+rule SharpAltSecIds
+{
+    meta:
+        description = "Detection patterns for the tool 'SharpAltSecIds' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "SharpAltSecIds"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /\sadd\s\/target\:.{0,100}\s\/altsecid\:X509\:/ nocase ascii wide
+                        $string2 = /\/SharpAltSecIds\.exe/ nocase ascii wide
+                        $string3 = /\/SharpAltSecIds\.git/ nocase ascii wide
+                        $string4 = /\[\+\]\sAdded\s\{altsecid\}\sto\s\{target\}/ nocase ascii wide
+                        $string5 = /\\SharpAltSecIds\.exe/ nocase ascii wide
+                        $string6 = /\\SharpAltSecIds\.sln/ nocase ascii wide
+                        $string7 = /\\SharpAltSecIds\-master/ nocase ascii wide
+                        $string8 = ">SharpAltSecIds<" nocase ascii wide
+                        $string9 = "5e00926cb43b56a330532ce5c4f0988172d49d28840ed490526976a7b2ea2479" nocase ascii wide
+                        $string10 = "623F0079-5871-4237-B872-70FDFC2D8C52" nocase ascii wide
+                        $string11 = "bugch3ck/SharpAltSecIds" nocase ascii wide
+                        $string12 = "d6304a65276af87fe87a4cddf75f571d1c73c601710fffebe9da17d762d521d2" nocase ascii wide
+                        $string13 = "SharpAltSecIds add" nocase ascii wide
+                        $string14 = "SharpAltSecIds by @bugch3ck" nocase ascii wide
+                        $string15 = "SharpAltSecIds command" nocase ascii wide
+                        $string16 = "SharpAltSecIds l /target:" nocase ascii wide
+                        $string17 = "SharpAltSecIds list" nocase ascii wide
+                        $string18 = "SharpAltSecIds r /target:" nocase ascii wide
+                        $string19 = "SharpAltSecIds remove" nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and any of ($string*)) or
+        (filesize < 2MB and
+        (
+            any of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

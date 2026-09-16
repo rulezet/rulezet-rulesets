@@ -1,0 +1,61 @@
+rule JuicyPotato
+{
+    meta:
+        description = "Detection patterns for the tool 'JuicyPotato' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "JuicyPotato"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /\/JuicyPotato\.exe/ nocase ascii wide
+                        $string2 = /\/JuicyPotato\.git/ nocase ascii wide
+                        $string3 = /\/JuicyPotato_x32\.exe/ nocase ascii wide
+                        $string4 = /\/JuicyPotato_x64\.exe/ nocase ascii wide
+                        $string5 = "/JuicyPotato-webshell/" nocase ascii wide
+                        $string6 = /\\JuicyPotato\.exe/ nocase ascii wide
+                        $string7 = /\\JuicyPotato\.pdb/ nocase ascii wide
+                        $string8 = /\\JuicyPotato\.pdb/ nocase ascii wide
+                        $string9 = /\\JuicyPotato_x32\.exe/ nocase ascii wide
+                        $string10 = /\\JuicyPotato_x64\.exe/ nocase ascii wide
+                        $string11 = /\\JuicyPotato\-master/ nocase ascii wide
+                        $string12 = /\\JuicyPotato\-shellcode\\/ nocase ascii wide
+                        $string13 = /\]\sQueueUserAPC\sInject\sshellcode\scompleted\,\senjoy\!/ nocase ascii wide
+                        $string14 = "0212bde3715a349a6b684dd54548638b5899be8d62a1e25559937e494e3cce54" nocase ascii wide
+                        $string15 = "02cbcc3c3b79a7f81165838af0605d7238e8c5ad7a6e2d59d7795c1f137fe7a4" nocase ascii wide
+                        $string16 = "050dcd051a109b6bd8804e769242ec4e1c087bdd2fb45880c2affeebb630cf77" nocase ascii wide
+                        $string17 = "1141183bf4a5fdb8a92a4bb9ae2278ec6391e1bc96ebee10245ad8a416372bd9" nocase ascii wide
+                        $string18 = "1141183bf4a5fdb8a92a4bb9ae2278ec6391e1bc96ebee10245ad8a416372bd9" nocase ascii wide
+                        $string19 = "146ca286f362290e96eda2a0b7cd9feb4e971763ba194731d1826e12e593439d" nocase ascii wide
+                        $string20 = "4164003E-BA47-4A95-8586-D5AAC399C050" nocase ascii wide
+                        $string21 = "86b4924004cdef5e49cdc9ca7cbd2d8be156b8e8f41eceee92492cc315103eb8" nocase ascii wide
+                        $string22 = "f0761ad307781bdf8da94765abd1a2041ac12a52c7fdde85f00b2b2cab6d6ce8" nocase ascii wide
+                        $string23 = "f8c05d66a6fda535ef4e8e767c8e3ca5c93a0828ff03498b4b6cbe7e39bb617b" nocase ascii wide
+                        $string24 = "f8c05d66a6fda535ef4e8e767c8e3ca5c93a0828ff03498b4b6cbe7e39bb617b" nocase ascii wide
+                        $string25 = "fd0b9f09770685ed6f40ecabcd31bc467fa22801164b52fdc638334009b7c06f" nocase ascii wide
+                        $string26 = "JuicyPotato v%s" nocase ascii wide
+                        $string27 = /JuicyPotato\.exe/ nocase ascii wide
+                        $string28 = "Modifying JuciyPotato by Uknow to support webshell" nocase ascii wide
+                        $string29 = /MSFRottenPotatoTestHarness\.exe/ nocase ascii wide
+                        $string30 = "uknowsec/JuicyPotato" nocase ascii wide
+                        $string31 = /x64\\Debug\\JuicyPotato/ nocase ascii wide
+                        $string32 = /x64\\Release\\JuicyPotato/ nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}
