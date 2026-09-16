@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SYMANTEC-EMS] Error regrouping - expired key"; content: "error while regrouping consumer"; content: "key has expired"; default_proto: tcp; default_dst_port: 389; classtype: hardware-event; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001681; sid: 5001681; rev:3;)

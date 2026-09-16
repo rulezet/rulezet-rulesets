@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FTPD] Reverse lookup failure"; pcre: "/can't verify hostname|gethostbyaddr/"; default_proto: tcp; default_dst_port: $FTP_PORT: classtype: not-suspicious; program: ftpd|ftp|FTP|FTPD; reference: url,wiki.quadrantsec.com/bin/view/Main/5000189; sid:5000189; rev:6;)

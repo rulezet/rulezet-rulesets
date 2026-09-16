@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Firewall Rule Added"; content: "Access rule added"; classtype: configuration-change; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002614; rev:3;)

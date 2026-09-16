@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Authentication failure"; content: "LOGIN FAILED,"; parse_src_ip: 1; default_proto: tcp; classtype: unsuccessful-user; program: imapd|imapd-sslcourierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000259; sid:5000259; rev:4;)

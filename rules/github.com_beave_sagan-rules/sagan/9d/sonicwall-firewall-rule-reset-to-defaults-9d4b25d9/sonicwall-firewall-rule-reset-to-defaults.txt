@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Firewall Rule reset to defaults"; content: "Access rules restored to defaults"; classtype: configuration-change; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002617; rev:3;)

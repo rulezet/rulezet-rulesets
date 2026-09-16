@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Detected bad address len - ignored"; content: "sent bad addr len"; classtype: network-event; program: arpwatch; reference: url,wiki.quadrantsec.com/bin/view/Main/5000067; sid: 5000067; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BROINTEL] FTP file transfer from Bro Intel IP"; program: %ASA*-6-303002; bro-intel: by_src; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: successful-user; normalize; reference: url, wiki.quadrantsec.com/bin/view/Main/5002258; sid: 5002258; rev: 2;)

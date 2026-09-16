@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-GEOIP] Admin authentication success outside HOME_COUNTRY"; content: "38001 type="; content: "succeeded in authentication"; parse_src_ip: 1; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001949; sid: 5001949; rev:4;)

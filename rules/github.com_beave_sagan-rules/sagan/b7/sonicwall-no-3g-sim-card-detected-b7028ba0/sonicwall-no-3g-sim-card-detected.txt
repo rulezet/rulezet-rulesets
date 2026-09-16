@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] No 3G Sim Card Detected"; content: "3G"; content: "No SIM detected"; classtype: hardware-event; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002608; rev:3;)

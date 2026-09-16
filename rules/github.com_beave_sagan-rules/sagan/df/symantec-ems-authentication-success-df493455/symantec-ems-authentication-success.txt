@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SYMANTEC-EMS] Authentication success"; content: "authenticated internal PGP Desktop"; parse_src_ip: 2; default_proto: tcp; default_dst_port: 389; classtype: successful-user; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001675; sid: 5001675; rev:3;)

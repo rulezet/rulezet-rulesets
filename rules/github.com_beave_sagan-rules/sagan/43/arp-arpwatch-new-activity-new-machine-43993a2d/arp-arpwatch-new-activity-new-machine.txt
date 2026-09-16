@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - New activity [new machine]"; content: "new activity"; classtype: network-event; program: arpwatch; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001061; sid: 5001061; rev:4;)

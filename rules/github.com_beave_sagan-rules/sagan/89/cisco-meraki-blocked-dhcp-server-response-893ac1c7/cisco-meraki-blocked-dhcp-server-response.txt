@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Blocked DHCP server response"; content: "Blocked DHCP"; classtype: system-event; sid:5003054; rev:2;)

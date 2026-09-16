@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Firewall preferences reset to factory defaults"; content: "All preference values have been set to factory default values"; classtype: system-event; parse_src_ip: 1; parse_dst_ip: 2; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002625; rev:2;)

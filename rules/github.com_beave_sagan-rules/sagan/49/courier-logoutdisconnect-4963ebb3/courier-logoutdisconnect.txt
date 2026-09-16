@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Logout/disconnect"; meta_content: "%sagan%",LOGOUT,DISCONNECTED; default_proto: tcp; classtype: not-suspicious; parse_src_ip: 1; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000260; sid:5000260; rev:5;)

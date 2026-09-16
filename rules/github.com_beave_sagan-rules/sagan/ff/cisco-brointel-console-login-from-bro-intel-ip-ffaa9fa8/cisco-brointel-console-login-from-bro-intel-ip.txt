@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BROINTEL] Console login from Bro Intel IP"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; bro-intel: by_src; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002251; sid: 5002251; rev:3;)

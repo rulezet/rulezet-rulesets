@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FTPD] Attempted access to a disabled account"; content: "Account is disabled"; default_proto: tcp; default_dst_port: $FTP_PORT: classtype: unsuccessful-user; program: ftpd|ftp|FTP|FTPD; reference: url,wiki.quadrantsec.com/bin/view/Main/5000192; sid:5000192; rev:6;)

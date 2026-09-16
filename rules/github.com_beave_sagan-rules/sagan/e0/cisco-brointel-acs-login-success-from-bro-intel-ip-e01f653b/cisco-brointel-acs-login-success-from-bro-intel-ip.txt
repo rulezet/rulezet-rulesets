@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BROINTEL] ACS Login success from Bro Intel IP"; program: CisACS_01_PassedAuth; bro-intel: by_src; classtype: successful-user; parse_src_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002256; sid: 5002256; rev: 2;)

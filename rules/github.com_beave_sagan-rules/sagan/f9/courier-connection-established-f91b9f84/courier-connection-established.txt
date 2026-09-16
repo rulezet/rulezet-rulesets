@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] Connection established"; content: "Connection,"; classtype: not-suspicious; program: courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000258; sid:5000258; rev:1;)

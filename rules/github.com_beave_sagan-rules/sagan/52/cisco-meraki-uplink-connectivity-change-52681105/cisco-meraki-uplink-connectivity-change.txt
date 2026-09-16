@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] Uplink connectivity change"; content: "MX84 events"; content: "failover"; classtype: system-event; sid:5003044; rev:2;)

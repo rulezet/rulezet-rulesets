@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Ethernet Port Up"; content: "Ethernet Port Up"; classtype: hardware-event; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002604; rev:3;)

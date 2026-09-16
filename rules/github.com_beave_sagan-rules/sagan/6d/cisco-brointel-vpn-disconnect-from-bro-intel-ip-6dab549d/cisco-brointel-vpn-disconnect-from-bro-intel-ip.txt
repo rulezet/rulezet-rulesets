@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BROINTEL] VPN disconnect from Bro Intel IP"; program: %ASA*-4-113019; bro-intel: by_src; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002254; sid: 5002254; rev: 2;)

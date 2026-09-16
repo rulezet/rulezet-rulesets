@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SYMANTEC-EMS] Authentication failure"; content: "failed authentication for internal PGP Desktop"; parse_src_ip: 2; default_proto: tcp; default_dst_port: 389; classtype: unsuccessful-user; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001676; sid: 5001676; rev:3;)

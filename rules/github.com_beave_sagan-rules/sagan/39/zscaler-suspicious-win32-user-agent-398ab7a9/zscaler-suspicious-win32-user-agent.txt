@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[ZSCALER] Suspicious Win32 User Agent"; content:"requestClientApplication|3d|Win32"; parse_src_ip: 2; parse_dst_ip: 1; program: CEF; content: "Zscaler"; content:"act=Allowed"; default_dst_port: $HTTP_PORT; default_proto: tcp; xbits: set,exploit_attempt,track ip_src, expire 86400; classtype:trojan-activity; sid:5003149; rev:2;)

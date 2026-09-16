@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] File issued retrospective malicious disposition"; content: "malicious action=allow"; classtype: suspicious-traffic; reference: url,documentation.meraki.com/MX-Z/Content_Filtering_and_Threat_Protection/; sid:5003046; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VMWARE-BLUEDOT] User login successful from a suspicious source"; content: " logged in "; default_proto: tcp; classtype: successful-admin; program: Hostd; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002917; sid:5002917; rev:4;)

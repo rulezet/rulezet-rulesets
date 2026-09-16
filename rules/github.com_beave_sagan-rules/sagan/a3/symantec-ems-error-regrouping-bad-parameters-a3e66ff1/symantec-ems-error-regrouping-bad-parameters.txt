@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SYMANTEC-EMS] Error regrouping - bad parameters"; content: "error while regrouping consumer"; content: "bad parameters"; default_proto: tcp; default_dst_port: 389; classtype: unsuccessful-user; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001683; sid: 5001683; rev:3;)

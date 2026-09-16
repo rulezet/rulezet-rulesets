@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Multiple DHCP servers detected on network"; content: "Multiple DHCP Servers are detected on network"; classtype: network-event; parse_src_ip: 2; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002686; rev:3;)

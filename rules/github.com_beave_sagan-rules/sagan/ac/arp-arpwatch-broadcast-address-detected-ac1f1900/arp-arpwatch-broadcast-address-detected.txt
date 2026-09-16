@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Broadcast address detected"; content: "ethernet broadcast"; classtype: network-event; program: arpwatch; reference: url,wiki.quadrantsec.com/bin/view/Main/5001062; sid: 5001062; rev:2;)

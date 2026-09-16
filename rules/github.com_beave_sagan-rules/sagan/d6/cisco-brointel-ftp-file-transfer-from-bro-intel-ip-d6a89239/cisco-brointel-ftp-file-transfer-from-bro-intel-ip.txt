@@ -1,0 +1,1 @@
+alert syslog $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BROINTEL] FTP file transfer from Bro Intel IP"; program: %ASA*-6-303002; bro-intel: by_dst; classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002259; sid: 5002259; rev: 2;)

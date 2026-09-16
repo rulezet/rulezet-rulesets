@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Attempted access from host out of compliance with GSC policy"; content: "Access attempt from host out of compliance with GSC policy"; classtype: configuration-error; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002611; rev:4;)

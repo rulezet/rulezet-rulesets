@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BROINTEL] VPN login from Bro Intel IP [2]"; program: %ASA*-6-722022|%ASA*-6-722023; bro-intel: by_src; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002257; sid: 5002257; rev: 2;)

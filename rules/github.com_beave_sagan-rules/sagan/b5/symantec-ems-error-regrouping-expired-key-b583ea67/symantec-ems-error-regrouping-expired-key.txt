@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SYMANTEC-EMS] Error regrouping - expired key"; content: "error while regrouping consumer"; content: "cannot delete derived object while source object"; default_proto: tcp; default_dst_port: 389; classtype: hardware-event; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001682; sid: 5001682; rev:3;)

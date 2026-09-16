@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET $SMTP_PORT (msg:"[MILTER] Mimedefang - No response from slave"; content: "No response from slave"; classtype: program-error; program: mimedefang; reference: url,wiki.quadrantsec.com/bin/view/Main/5000039; sid: 5000039; rev:3;)

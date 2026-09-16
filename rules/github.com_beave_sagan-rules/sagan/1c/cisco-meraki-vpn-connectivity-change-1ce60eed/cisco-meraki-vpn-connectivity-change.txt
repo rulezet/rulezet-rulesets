@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-MERAKI] VPN connectivity change"; content: "type=vpn_connectivity_change"; classtype: suspicious-traffic; sid:5003042; rev:2;)

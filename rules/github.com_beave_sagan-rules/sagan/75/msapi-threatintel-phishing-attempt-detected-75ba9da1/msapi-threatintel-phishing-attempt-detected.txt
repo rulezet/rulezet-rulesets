@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-THREATINTEL] Phishing attempt detected"; json_content: ".Workload","ThreatIntelligence"; json_content:".Verdict","Phish"; classtype: phish; reference: url,wiki.quadrantsec.com/bin/view/Main/5004859; sid:5004859; rev: 1;)

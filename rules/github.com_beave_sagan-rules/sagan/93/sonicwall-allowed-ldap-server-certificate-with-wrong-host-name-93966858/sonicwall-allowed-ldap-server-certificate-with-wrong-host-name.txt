@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Allowed LDAP server certificate with wrong host name"; content: "Allowed LDAP server certificate with wrong host name"; classtype: unsuccessful-admin; parse_src_ip: 1; parse_dst_ip: 2; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002626; rev:2;)

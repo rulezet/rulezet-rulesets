@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpalert - Detected ip change"; content: "type=ip_change"; classtype: suspicious-traffic; program: arpalert; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000061; sid: 5000061; rev: 4;)

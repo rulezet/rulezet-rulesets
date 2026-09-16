@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Detected new machine on the network"; content: "new station"; classtype: suspicious-traffic; program: arpwatch; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000062; sid: 5000062; rev:5;)

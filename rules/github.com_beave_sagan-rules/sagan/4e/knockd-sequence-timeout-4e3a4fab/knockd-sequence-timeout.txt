@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[KNOCKD] Sequence timeout"; content: "sequence timeout"; classtype: unsuccessful-user; program: knockd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000384; sid:5000384; rev:2;)

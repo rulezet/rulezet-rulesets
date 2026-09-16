@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FTPD] Failed authentication"; content: "failed authentication from"; nocase; default_proto: tcp; default_dst_port: $FTP_PORT: classtype: unsuccessful-user; program: ftpd|ftp|FTP|FTPD; reference: url,wiki.quadrantsec.com/bin/view/Main/5001522; sid:5001522; rev:6;)

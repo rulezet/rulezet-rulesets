@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - Startup/Exiting message"; pcre: "/exiting|Running as/"; classtype: not-suspicious; program: arpwatch; reference: url,wiki.quadrantsec.com/bin/view/Main/5000066; sid: 5000066; rev:2;)

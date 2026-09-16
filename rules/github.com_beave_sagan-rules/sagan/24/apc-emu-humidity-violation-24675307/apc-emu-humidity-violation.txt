@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[APC-EMU] Humidity violation"; content: "humidity violation,"; classtype: hardware-event; program: EMU; reference: url,wiki.quadrantsec.com/bin/view/Main/5001057; sid: 5001057; rev:2;)

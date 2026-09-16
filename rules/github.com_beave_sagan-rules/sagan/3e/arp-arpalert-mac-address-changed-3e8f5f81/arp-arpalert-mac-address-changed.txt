@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpalert - MAC address changed"; content: "type=mac_changed"; classtype: suspicious-traffic; program: arpalert; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001082; sid: 5001082; rev:3;)

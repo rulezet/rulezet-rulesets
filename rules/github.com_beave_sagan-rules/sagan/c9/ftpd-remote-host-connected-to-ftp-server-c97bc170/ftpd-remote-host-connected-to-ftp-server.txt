@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FTPD] Remote host connected to FTP server"; pcre: "/FTP LOGIN FROM|connection from|connect from/"; default_proto: tcp; default_dst_port: $FTP_PORT: classtype: successful-user; program: ftpd|ftp|FTP|FTPD; reference: url,wiki.quadrantsec.com/bin/view/Main/5000187; sid:5000187; rev:6;)

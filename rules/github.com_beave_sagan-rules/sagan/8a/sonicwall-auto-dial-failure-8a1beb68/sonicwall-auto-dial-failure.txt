@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Auto-Dial Failure"; content: "auto-dial failed: Current Connection Model is configured as Ethernet Only"; classtype: system-event; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002602; rev:3;)

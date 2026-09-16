@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] OS Upgrade Performed"; content: "A SonicOS Standard to Enhanced Upgrade was performed"; classtype: system-event; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002610; rev:3;)

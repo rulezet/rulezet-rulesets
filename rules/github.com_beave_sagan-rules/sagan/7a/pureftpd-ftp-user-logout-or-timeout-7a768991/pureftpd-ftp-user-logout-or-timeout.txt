@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PUREFTPD] FTP user logout or timeout"; pcre: "/[INFO] Logout|[INFO] Timeout/"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: not-suspicious; program: pure-ftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000219; sid: 5000219; rev:3;)

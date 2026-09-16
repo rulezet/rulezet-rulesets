@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpalert - MAC address flood"; content: "type=flood"; classtype: suspicious-traffic; program: arpalert; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001080; sid: 5001080; rev:3;)

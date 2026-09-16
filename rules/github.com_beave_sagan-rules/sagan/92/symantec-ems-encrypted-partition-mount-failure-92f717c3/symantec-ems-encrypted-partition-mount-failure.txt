@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SYMANTEC-EMS] Encrypted partition mount failure"; content: "WDE Event"; content: "mount"; content: "failure"; default_proto: tcp; default_dst_port: 389; classtype: hardware-event; program: pgp/client; reference: url,wiki.quadrantsec.com/bin/view/Main/5001680; sid: 5001680; rev:3;)

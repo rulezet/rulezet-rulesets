@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[COURIER] User login"; content: "LOGIN,"; parse_src_ip: 1; default_proto: tcp; classtype: successful-user; program: imapd|imapd-ssl|courierlogger; reference: url,wiki.quadrantsec.com/bin/view/Main/5000261; sid:5000261; rev:3;)

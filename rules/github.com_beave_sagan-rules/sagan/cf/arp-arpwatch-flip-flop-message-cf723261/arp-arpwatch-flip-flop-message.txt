@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpwatch - 'flip flop' message."; content: "flip flop "; classtype: suspicious-traffic; program: arpwatch; reference: url,wiki.quadrantsec.com/bin/view/Main/5000063; sid: 5000063; rev:2;)

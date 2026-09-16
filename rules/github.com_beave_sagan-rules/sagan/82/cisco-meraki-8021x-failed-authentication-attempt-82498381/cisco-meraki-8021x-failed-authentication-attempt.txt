@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] 802.1x failed authentication attempt"; content: "type=8021x_eap_failure radio='0'"; content: "type=disassociation"; classtype: attempted-user; sid:5003048; rev:2;)

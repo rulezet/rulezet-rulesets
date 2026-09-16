@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[WINDOWS-GEOIP] Windows Session Disconnected from outside HOME_COUNTRY "; event_id: 4779,683; content: "Session"; country_code: track by_src, isnot $HOME_COUNTRY; program: *Security*; parse_src_ip: 1; default_proto: tcp; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002338; sid: 5002338; rev:4;)

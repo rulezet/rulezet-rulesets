@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Port status changed"; content: "MS220_8P events port"; content: "status"; classtype: system-event; sid:5003051; rev:2;)

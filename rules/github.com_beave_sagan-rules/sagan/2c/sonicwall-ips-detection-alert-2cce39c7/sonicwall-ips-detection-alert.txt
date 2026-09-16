@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SONICWALL] IPS Detection Alert"; content: "IPS Detection Alert"; content: "ICMP PING"; default_proto: icmp; classtype: network-scan; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001084; sid: 5001084; rev:3;)

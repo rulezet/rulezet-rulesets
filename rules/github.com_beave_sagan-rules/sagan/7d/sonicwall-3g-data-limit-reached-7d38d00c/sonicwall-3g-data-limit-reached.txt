@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] 3G Data Limit Reached"; content: "3G"; content: "data usage limit reached"; classtype: system-event; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002607; rev:3;)

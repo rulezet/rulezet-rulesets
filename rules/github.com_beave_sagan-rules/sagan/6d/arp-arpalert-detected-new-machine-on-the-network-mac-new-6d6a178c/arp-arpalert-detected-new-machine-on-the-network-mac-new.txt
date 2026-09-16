@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ARP] arpalert - Detected new machine on the network [mac-new]"; content: "type=new_mac"; classtype: suspicious-traffic; program: arpalert; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5001079; sid: 5001079; rev:3;)

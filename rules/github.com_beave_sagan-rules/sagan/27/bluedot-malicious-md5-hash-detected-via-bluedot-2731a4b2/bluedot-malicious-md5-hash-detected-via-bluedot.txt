@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[BLUEDOT] Malicious MD5 hash detected via Bluedot"; bluedot: type file_hash,Malicious; parse_hash: md5; classtype: suspicious-traffic; parse_src_ip: 1; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5002288; sid:5003118; rev:1;)

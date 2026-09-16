@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Intrusion Detection - Possible FIN Flood"; content: "Possible FIN Flood"; classtype: attempted-dos; parse_src_ip: 2; parse_dst_ip: 3; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002693; rev:4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] VRRP transition"; content: "VRRP"; content: "changed"; classtype: system-event; sid:5003053; rev:2;)

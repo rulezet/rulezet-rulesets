@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PUREFTPD] Authentication failed"; content: "[WARNING] Authentication failed for user"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: unsuccessful-user; program: pure-ftpd; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000217; sid: 5000217; rev:4;)

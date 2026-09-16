@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Firewall logging - Maximum events per second threshold exceeded"; content: "Maximum events per second threshold exceeded"; classtype: system-event; parse_src_ip: 1; parse_dst_ip: 2; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002683; rev:3;)

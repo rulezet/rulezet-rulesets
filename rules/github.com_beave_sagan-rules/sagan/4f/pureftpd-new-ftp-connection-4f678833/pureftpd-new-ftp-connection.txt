@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[PUREFTPD] New FTP connection"; content: "[INFO] New connection from"; default_proto: tcp; default_dst_port: $FTP_PORT; classtype: not-suspicious; program: pure-ftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000216; sid: 5000216; rev:3;)

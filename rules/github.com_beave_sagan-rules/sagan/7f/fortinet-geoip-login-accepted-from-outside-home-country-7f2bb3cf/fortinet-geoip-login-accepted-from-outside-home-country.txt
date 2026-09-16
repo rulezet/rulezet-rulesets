@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-GEOIP] Login accepted from outside HOME_COUNTRY"; content: "32006 type="; content: "login"; meta_content: "%sagan%",accepted,successfully; parse_src_ip: 1; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001947; sid: 5001947; rev:5;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg:"[SONICWALL] Registration Update Needed"; content: "Registration Update Needed"; content: "Restore your existing security service subscRIPtions by clicking"; classtype: system-event; reference: url,www.sonicwall.com/downloads/SonicOS_Log_Event_Reference_Guide.pdf; sid:5002605; rev:3;)

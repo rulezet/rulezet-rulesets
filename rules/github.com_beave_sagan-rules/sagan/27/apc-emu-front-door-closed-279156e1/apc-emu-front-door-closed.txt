@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[APC-EMU] Front door closed"; content: "Front Door' closed,"; classtype: hardware-event; program: EMU; reference: url,wiki.quadrantsec.com/bin/view/Main/5001060; sid: 5001060; rev:2;)

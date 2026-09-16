@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SYMANTEC-EMS] Failed to map user to a directory"; content: "failed to map consumer"; content: "to a directory"; default_proto: tcp; default_dst_port: 389; classtype: unsuccessful-user; program: pgp/groupd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001684; sid: 5001684; rev:3;)

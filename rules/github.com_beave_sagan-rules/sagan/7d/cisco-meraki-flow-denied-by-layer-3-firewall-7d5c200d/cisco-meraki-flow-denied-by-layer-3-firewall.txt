@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-MERAKI] Flow denied by Layer 3 firewall"; content: "MR18 flows deny"; classtype: suspicious-traffic; sid:5003050; rev:2;)
