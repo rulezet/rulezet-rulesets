@@ -1,0 +1,19 @@
+{
+  "uuid": "83b08767-a5b8-4c8c-b264-3c4b2a28d2d9",
+  "title": "PDF_Launch_Action_EXE",
+  "format": "yara",
+  "author": "InQuest Labs",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This signature detects PDF files that launch an executable upon being opened on a host machine. This action is performed by the Launch Action feature available in the PDF file format and is commonly abused by threat actors to execute delivered malware.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/711369"
+}

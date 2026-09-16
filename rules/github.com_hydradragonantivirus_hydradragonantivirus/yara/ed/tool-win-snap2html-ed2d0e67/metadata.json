@@ -1,0 +1,20 @@
+{
+  "uuid": "ed2d0e67-c0f5-4314-8d64-b637d594fce2",
+  "title": "tool_win_snap2html",
+  "format": "yara",
+  "author": "Sekoia.io",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Finds Snap2HTML samples based on specific strings. Legitimate tool used by ransomware affiliates to perform discovery",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/711208"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "999f86a4-c8a6-4b7c-9dbd-1d1e587112f2",
+  "title": "PDF_with_Launch_Action_Function",
+  "format": "yara",
+  "author": "InQuest Labs",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This signature detects the launch function within a PDF file. This function allows the document author to attach an executable file.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/711371"
+}

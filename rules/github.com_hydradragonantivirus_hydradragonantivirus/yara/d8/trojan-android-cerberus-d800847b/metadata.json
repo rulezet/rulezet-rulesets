@@ -1,0 +1,22 @@
+{
+  "uuid": "d800847b-011b-4426-a753-89788ba96c66",
+  "title": "trojan_android_cerberus",
+  "format": "yara",
+  "author": "Sekoia.io",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect samples of the Android banking trojan Cerberus, or its family",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Android\"",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/711212"
+}

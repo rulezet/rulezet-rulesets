@@ -1,0 +1,19 @@
+{
+  "uuid": "b8a73149-f7c5-479e-83a8-b7be31b766e0",
+  "title": "loader_fakebat_initial_powershell_may24",
+  "format": "yara",
+  "author": "Sekoia.io",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Finds FakeBat initial PowerShell script downloading and executing the next-stage payload.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/711030"
+}

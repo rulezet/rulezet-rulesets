@@ -1,0 +1,19 @@
+{
+  "uuid": "efa6ed18-9b43-4336-8441-8294dbfba3cb",
+  "title": "Hex_Encoded_Link_in_RTF",
+  "format": "yara",
+  "author": "InQuest Labs",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This signature detects Office documents with a link to download an executable which has been encoded in ASCII hexadecimal form. Malware authors have used this technique to obfuscate malicious payloads.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/711361"
+}

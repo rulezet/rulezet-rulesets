@@ -1,0 +1,19 @@
+{
+  "uuid": "adb2e666-cef3-4ce3-bb51-4c24f5419622",
+  "title": "RTF_with_Suspicious_File_Extension",
+  "format": "yara",
+  "author": "InQuest Labs",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This signature detects RTF files with an 'objdata' directive and a reference to a file extension deemed as executable.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/711380"
+}

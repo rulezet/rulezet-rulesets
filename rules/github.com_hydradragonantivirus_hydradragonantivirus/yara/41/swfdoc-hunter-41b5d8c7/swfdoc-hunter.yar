@@ -1,0 +1,8 @@
+rule swfdoc_hunter {
+  strings:
+    $a = { 6e db 7c d2 6d ae cf 11 96 b8 44 45 53 54 00 00 }
+    $b = "WS"
+
+  condition:
+    $a and $b and not (uint16be(0x0) == 0x4d5a)
+}
