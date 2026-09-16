@@ -1,0 +1,23 @@
+{
+  "uuid": "e26897b2-ff84-4ec6-aec6-7b9b4a99162e",
+  "title": "Trojan_Win32_Qbot_RPV_MTB_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Qbot.RPV!MTB,SIGNATURE_TYPE_PEHSTR,01 00 01 00 01 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/269379"
+}

@@ -1,0 +1,9 @@
+rule Trojan_Win32_Qbot_RTA_MTB{
+	meta:
+		description = "Trojan:Win32/Qbot.RTA!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {31 18 6a 01 e8 ?? ?? ?? ?? 8b d8 83 c3 04 6a 01 e8 ?? ?? ?? ?? 2b d8 01 1d ?? ?? ?? ?? 83 05 ?? ?? ?? ?? 04 } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}
