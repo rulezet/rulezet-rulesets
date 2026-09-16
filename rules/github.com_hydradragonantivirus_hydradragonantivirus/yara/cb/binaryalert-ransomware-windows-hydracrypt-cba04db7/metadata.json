@@ -1,0 +1,23 @@
+{
+  "uuid": "cba04db7-7275-4dd9-9a8e-8a9b2d845e41",
+  "title": "BINARYALERT_Ransomware_Windows_Hydracrypt",
+  "format": "yara",
+  "author": "@fusionrace",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "HydraCrypt encrypts a victim’s files and appends the filenames with the extension “hydracrypt_ID_*",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Angler\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707428"
+}

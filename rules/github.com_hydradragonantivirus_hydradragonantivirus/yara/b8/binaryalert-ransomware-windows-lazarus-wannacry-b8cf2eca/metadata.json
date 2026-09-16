@@ -1,0 +1,25 @@
+{
+  "uuid": "b8cf2eca-cfe5-41d7-a678-f52aad08e420",
+  "title": "BINARYALERT_Ransomware_Windows_Lazarus_Wannacry",
+  "format": "yara",
+  "author": "Costin G. Raiu, Kaspersky Lab",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Rule based on shared code between Feb 2017 Wannacry sample and Lazarus backdoor from Feb 2015 discovered by Neel Mehta",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\"",
+    "misp-galaxy:ransomware=\"WannaCry\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707431"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "57bce761-b195-419e-b4b8-7f889fe69c47",
+  "title": "FIREEYE_RT_Hunting_LNK_Win_Genericlauncher",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Signature to detect LNK files or OLE objects with embedded LNK files and generic launcher commands, except powershell which is large enough to have its own gene",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707541"
+}

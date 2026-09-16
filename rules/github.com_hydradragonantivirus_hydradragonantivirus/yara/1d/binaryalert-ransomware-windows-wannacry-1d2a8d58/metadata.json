@@ -1,0 +1,23 @@
+{
+  "uuid": "1d2a8d58-4583-4477-9451-bd75f26f43db",
+  "title": "BINARYALERT_Ransomware_Windows_Wannacry",
+  "format": "yara",
+  "author": "@fusionrace",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "wannacry ransomware for windows",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"WannaCry\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707429"
+}

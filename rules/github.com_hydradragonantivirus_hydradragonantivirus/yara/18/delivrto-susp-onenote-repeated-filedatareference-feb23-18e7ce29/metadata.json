@@ -1,0 +1,20 @@
+{
+  "uuid": "18e7ce29-6fa7-434f-b791-eedd3269605a",
+  "title": "DELIVRTO_SUSP_Onenote_Repeated_Filedatareference_Feb23",
+  "format": "yara",
+  "author": "delivr.to",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Repeated references to files embedded in OneNote file. May indicate multiple copies of file hidden under image, as leveraged by Qakbot et al.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707459"
+}

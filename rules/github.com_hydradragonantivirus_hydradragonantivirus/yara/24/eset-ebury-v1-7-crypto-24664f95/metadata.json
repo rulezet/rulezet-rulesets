@@ -1,0 +1,19 @@
+{
+  "uuid": "24664f95-aef0-46bd-ad96-93d359ec80fe",
+  "title": "ESET_Ebury_V1_7_Crypto",
+  "format": "yara",
+  "author": "ESET, spol. s r.o.",
+  "license": "BSD 2-Clause",
+  "license_verified": true,
+  "description": "This rule detects the strings decryption routine in Ebury v1.7 and v1.8",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/707501"
+}
