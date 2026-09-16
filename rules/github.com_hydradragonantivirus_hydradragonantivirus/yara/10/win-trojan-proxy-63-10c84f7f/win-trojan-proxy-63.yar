@@ -1,0 +1,9 @@
+rule Win_Trojan_Proxy_63
+{
+strings:
+	$a0 = { 41cf44e0ca19b00d49a8765cfc20598afedf57c7fe461ea624d8762f7163a26b35d49093e0c7e01d78fdb56ca851e6a618d4bc0867c066b55c39ffcd061885e44efdaaf94f20551a0e8acfaa0ec8704985043655935a35e7463b51e5 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Proxy_61
+{
+strings:
+	$a0 = { 726173df2f6581234a62f1d43b9afe24c4d80dda39492fd7a055b9c736f4f9100570744f55dcba505147085e220ebd817d55064a1e5ce5e08875eca0e595050b04d0f2c530625cd360946ea68b2ecedb0bfa5371aea8ff5cd4e7df43 }
+
+
+condition:
+	$a0
+}
