@@ -1,0 +1,9 @@
+rule Win_Trojan_Sdbot_59
+{
+strings:
+	$a0 = { 292f6aa7d4585f4951e1c75a2c275ed7bc0be8a381a574c23808ee1f9b3ab547dbfe479034e884ac60f9539285acd96ce5feda0f5520fee12796be7dafd708f892a3706793ef47c400fec85fc44cd1512d306a4929d8f41bcedf68e20a3d991fbbb23ff33eecbdfec1784fb1136a7f28b17ad2d8b86e1378 }
+
+
+condition:
+	$a0
+}

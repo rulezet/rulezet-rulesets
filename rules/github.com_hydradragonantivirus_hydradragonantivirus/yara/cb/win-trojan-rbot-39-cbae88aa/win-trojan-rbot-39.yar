@@ -1,0 +1,9 @@
+rule Win_Trojan_Rbot_39
+{
+strings:
+	$a0 = { bd234e14aa33bc799899ec588588eab6f10972a8fdc3222df574f4e13bf6ad70577d99182a0acb358a1fcdd6fb275f687b4bb95c1fdd9ab36452c09d8cef08bf6dee8e572b97cb18c5072f6b351916cd469171adfcc067246f815c5ad6cf394c489f70f9f93c434ac2773b0701f5cefacf1aeb58c1ae68e3 }
+
+
+condition:
+	$a0
+}
