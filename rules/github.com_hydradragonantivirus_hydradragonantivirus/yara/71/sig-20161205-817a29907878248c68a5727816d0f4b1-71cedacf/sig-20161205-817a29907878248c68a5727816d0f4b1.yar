@@ -1,0 +1,17 @@
+rule sig_20161205_817a29907878248c68a5727816d0f4b1 {
+  meta:
+    description = "datamaliciousorder - file 20161205_817a29907878248c68a5727816d0f4b1.js"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "2787c95df0921cc565824d8a0d6cd42ada8d4f240e4389d450b717d6124dc2ce"
+
+  strings:
+    $s1 = "function _Of3(s) {var _PVl5 = new Date();_PVl5.setUTCFullYear(\"2003\");if (_PVl5.getUTCFullYear().toString(10) == \"2003\") ret" ascii
+    $s2 = "function _Of3(s) {var _PVl5 = new Date();_PVl5.setUTCFullYear(\"2003\");if (_PVl5.getUTCFullYear().toString(10) == \"2003\") ret" ascii
+    $s3 = "function _Om9(s) {return (\"asdf\", s.split(\",\").join(\"\"));};" fullword ascii
+
+  condition:
+    uint16(0) == 0x7566 and
+    all of them
+}
