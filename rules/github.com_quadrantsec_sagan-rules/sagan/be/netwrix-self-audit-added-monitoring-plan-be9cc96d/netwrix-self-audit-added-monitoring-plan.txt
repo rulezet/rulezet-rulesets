@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Self Audit - Added Monitoring Plan"; program:Netwrix_Auditor_Integration; content:"DataSource : Self-audit"; content:"Action : Added"; content:"Message: Added Monitoring Plan"; classtype:system-event; sid:5010492; rev:1;)

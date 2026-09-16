@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] User Activity (Video) - Activated Window - Powershell"; program:Netwrix_Auditor_Integration; content:"DataSource : User Activity (Video)"; content:"Action : Activated"; content:"Message: Activated Window"; content:"What : Windows PowerShell"; classtype:successful-user; sid:5010298; rev:1;)

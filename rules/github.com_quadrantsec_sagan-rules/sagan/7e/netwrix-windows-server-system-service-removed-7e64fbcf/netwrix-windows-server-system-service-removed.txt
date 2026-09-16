@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Windows Server - System Service Removed"; program:Netwrix_Auditor_Integration; content:"DataSource : Windows Server"; content:"Message: Removed System Service"; classtype:system-event; sid:5010317; rev:1;)

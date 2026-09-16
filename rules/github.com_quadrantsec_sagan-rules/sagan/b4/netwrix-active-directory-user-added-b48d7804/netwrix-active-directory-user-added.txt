@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Active Directory User Added"; program:Netwrix_Auditor_Integration; content:"Active Directory Action : Added"; content:"Message: Added user"; distance:1; content:!"Details : Security Universal Group"; classtype:successful-user; sid:5011308; rev:1;)

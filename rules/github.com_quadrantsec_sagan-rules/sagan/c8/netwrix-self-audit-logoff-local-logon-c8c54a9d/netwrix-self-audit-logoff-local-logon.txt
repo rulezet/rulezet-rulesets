@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Self Audit - Logoff Local logon"; program:Netwrix_Auditor_Integration; content:"DataSource : Self-audit"; content:"Action : Logoff"; content:"Message: Logoff Local logon"; classtype:successful-user; sid:5010491; rev:1;)

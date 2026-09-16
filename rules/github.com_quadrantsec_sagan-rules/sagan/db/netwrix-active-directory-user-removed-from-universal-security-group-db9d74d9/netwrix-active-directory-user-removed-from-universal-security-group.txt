@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Active Directory User Removed from Universal Security Group"; program:Netwrix_Auditor_Integration; content:"Active Directory Action : Removed"; content:"Message: Removed group"; distance:1; content:"Group Type: |22|Universal Security Group|22|"; classtype:successful-user; sid:5010288; rev:1;)

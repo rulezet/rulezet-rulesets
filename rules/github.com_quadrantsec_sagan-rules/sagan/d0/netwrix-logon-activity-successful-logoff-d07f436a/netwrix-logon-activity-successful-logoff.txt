@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Logon Activity - Successful Logoff"; program:Netwrix_Auditor_Integration; content:"DataSource : Logon Activity"; content:"Action : Logoff"; content:"Message: Logoff"; classtype:successful-user; sid:5010293; rev:1;)

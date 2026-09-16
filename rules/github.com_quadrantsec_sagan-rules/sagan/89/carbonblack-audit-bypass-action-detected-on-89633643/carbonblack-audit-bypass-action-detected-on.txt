@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[CARBONBLACK] Audit - Bypass Action Detected (on)"; content:"|22|description|22 3a 20 22|Set BYPASS to on"; parse_src_ip: 1; program:carbonblack; classtype:suspicious-traffic; sid:5014939; rev: 2;)

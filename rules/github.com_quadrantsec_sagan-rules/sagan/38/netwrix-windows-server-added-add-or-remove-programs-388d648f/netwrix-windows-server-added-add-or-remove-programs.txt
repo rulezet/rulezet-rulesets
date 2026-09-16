@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Windows Server Added Add or Remove Programs"; program:Netwrix_Auditor_Integration; content:"DataSource : Windows Server"; content:"Message: Added Add or Remove Programs"; classtype:system-event; sid:55010471; rev:1;)

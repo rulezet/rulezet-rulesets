@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Active Directory msFVE-RecoveryInformation Removed"; program:Netwrix_Auditor_Integration; content:"Active Directory Action : Removed"; content:"Message: Removed msFVE-RecoveryInformation"; distance:1; content:"Details : ms-Mcs-AdmPwdExpirationTime changed"; distance:0; classtype:successful-user; sid:5011307; rev:1;)

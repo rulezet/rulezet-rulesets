@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Active Directory Security Group Added"; program:Netwrix_Auditor_Integration; content:"Active Directory Action : Added"; content:"Message: Added group"; distance:1; content:"Group Type: |22|Universal Security Group|22|"; classtype:successful-user; sid:5010287; rev:1;)

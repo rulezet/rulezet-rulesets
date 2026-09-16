@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] Active Directory Computer OS version changed"; program:Netwrix_Auditor_Integration; content:"Active Directory Action : Modified"; content:"Message: Modified computer"; distance:1; content:"Details : Computer Operating System Version changed"; distance:0; classtype:successful-user; sid:5010291; rev:1;)

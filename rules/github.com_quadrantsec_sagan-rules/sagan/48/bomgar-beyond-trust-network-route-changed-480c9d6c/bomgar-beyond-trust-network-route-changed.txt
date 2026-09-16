@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[BOMGAR] Beyond Trust network_route_changed"; program:bomgar; content:"event=network_route_changed"; classtype:system-event; reference:url,https://www.beyondtrust.com/docs/remote-support/how-to/integrations/syslog/events.htm; sid:5014821; rev:1; metadata:created_at 2024_07_01, updated_at 2024_07_01;)

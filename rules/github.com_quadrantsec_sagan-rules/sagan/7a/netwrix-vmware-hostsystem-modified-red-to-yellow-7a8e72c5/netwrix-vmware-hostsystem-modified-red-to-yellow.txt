@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETWRIX] VMware - HostSystem Modified Red to Yellow"; program:Netwrix_Auditor_Integration; content:"DataSource : VMware"; content:"Message: Modified HostSystem"; content:"|22|Red|22| to |22|Yellow|22|"; classtype:system-event; sid:5010301; rev:1;)
