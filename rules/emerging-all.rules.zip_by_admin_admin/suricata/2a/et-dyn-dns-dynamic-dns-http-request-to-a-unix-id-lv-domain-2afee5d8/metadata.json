@@ -1,0 +1,23 @@
+{
+  "uuid": "2afee5d8-f78c-452c-ae72-c33afe34f049",
+  "title": "ET DYN_DNS DYNAMIC_DNS HTTP Request to a *.unix .id .lv Domain",
+  "format": "suricata",
+  "author": "Unknown",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "No description provided",
+  "source": "emerging-all.rules.zip by admin admin",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [
+    "T1568"
+  ],
+  "cve": [],
+  "created_at": "2025-12-19",
+  "last_modified": "2025-12-19",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/164398"
+}
