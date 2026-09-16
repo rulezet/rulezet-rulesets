@@ -1,0 +1,9 @@
+import "pe"
+rule XPack_152_164: PEiD
+{
+    strings:
+        $a = { 8B EC FA 33 C0 8E D0 BC ?? ?? 2E ?? ?? ?? ?? 2E ?? ?? ?? ?? EB }
+    condition:
+        $a at pe.entry_point
+
+}

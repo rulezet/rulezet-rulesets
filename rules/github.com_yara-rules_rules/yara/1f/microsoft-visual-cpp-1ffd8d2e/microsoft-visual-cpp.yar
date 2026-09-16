@@ -1,0 +1,10 @@
+import "pe"
+rule Microsoft_Visual_Cpp: PEiD
+{
+    strings:
+        $a = { 8B 44 24 08 83 }
+        $b = { 55 8B EC 6A FF 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 A1 00 00 00 00 50 64 89 25 00 00 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}

@@ -1,0 +1,9 @@
+import "pe"
+rule FreeJoiner_Small_build_023_GlOFF_additional: PEiD
+{
+    strings:
+        $a = { E8 E1 FD FF FF 6A 00 E8 0C 00 00 00 FF 25 78 10 40 00 FF 25 7C 10 40 00 FF 25 80 10 40 00 FF 25 84 10 40 00 FF 25 88 10 40 00 FF 25 8C 10 40 00 FF 25 90 10 40 00 FF 25 94 10 40 00 FF 25 98 10 40 00 FF 25 9C 10 40 00 FF 25 A0 10 40 00 FF 25 A4 10 40 00 FF }
+    condition:
+        $a at pe.entry_point
+
+}
