@@ -1,0 +1,9 @@
+rule Win_Trojan_Autorun_228
+{
+strings:
+	$a0 = { 6c356b587264646a7333306c0d0a5b4175746f52756e5d0d0a3b3361444c443734654c3273736a446b4b646a69776f6c32 }
+
+
+condition:
+	$a0
+}

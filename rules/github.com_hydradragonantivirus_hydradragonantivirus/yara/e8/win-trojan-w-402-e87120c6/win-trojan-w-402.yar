@@ -1,0 +1,9 @@
+rule Win_Trojan_W_402
+{
+strings:
+	$a0 = { 403d2272656765646974202f65205c2225315c22[0-29]7368656c6c5c5c6f70656e5c5c636f6d6d616e6422 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Kak_1
+{
+strings:
+	$a0 = { 63757272656e7476657273696f6e5c5c5c5c72756e5d[0-49]5c73797374656d5c5c5c5c5c5c5c5c222b6669632b222e6874615c22 }
+
+
+condition:
+	$a0
+}

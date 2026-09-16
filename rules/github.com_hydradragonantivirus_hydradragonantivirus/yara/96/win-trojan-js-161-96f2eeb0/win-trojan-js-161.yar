@@ -1,0 +1,9 @@
+rule Win_Trojan_JS_161
+{
+strings:
+	$a0 = { 25753063306322293b7768696c65286e70732e6c656e6774682a322a313c6e70737a296e70732b3d6e7073 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Danom_3
+{
+strings:
+	$a0 = { 666f72202824693d313b[0-18]7b206563686f20247669725f636f6e745b24695d203e3e246e616d652e6e616d65207d }
+
+
+condition:
+	$a0
+}

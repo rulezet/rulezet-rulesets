@@ -1,0 +1,9 @@
+rule Win_Trojan_Autorun_210
+{
+strings:
+	$a0 = { 7368656c6c657865637574653d777363726970742e657865206b696c6c7662732e766273 }
+
+
+condition:
+	$a0
+}
