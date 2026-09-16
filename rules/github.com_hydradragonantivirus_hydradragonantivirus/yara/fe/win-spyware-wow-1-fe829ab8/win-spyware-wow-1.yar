@@ -1,0 +1,9 @@
+rule Win_Spyware_WOW_1
+{
+strings:
+	$a0 = { fdc7f53ed5e7f8d0f05af75f7bd5e04fa4f4ffb04b4d6f6fe6fadafa12caec6324e7d3f25813632d22fd0b7347769e766e1b9ecfdcb5f17835ada9ac2b4cecfe3b7d2e87035cdacf365a3de5f4de11103277c3bb1200b76215e3f1ee06ee563d9b3f8d1fda71f8ffae7ee31afe1d41a32a9f5020bf3ff10211a3e91d2afa2d744152e7f7162a03a80db4d42a147f7e36076c38ffe416 }
+
+
+condition:
+	$a0
+}
