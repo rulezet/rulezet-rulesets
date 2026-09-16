@@ -1,0 +1,9 @@
+rule Win_Trojan_Cake_1
+{
+strings:
+	$a0 = { 7a92f65c61ab46c0888925d11aeade7a60790bb92acc00ad83878ce55777115fa6d46ebe2fbcc99605b5d70cb2c5f65d68136c13ab316a5e3eb288bcd7d512823a947cf1df281ed39469ee1f19d1b82007ee626dbd511affd4b05e43645e758abccd09dcc2f89e7e70232dce3ea20e8b062b }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_ClockSys_1
+{
+strings:
+	$a0 = { 501e721e6f1e701e6572741e791e6f1e661e431e6c1e611e6d1e201e416e741e691e561e691e721e751e731e2d1e771e771e771e2e1e636c611e6d1e611e761e2e1e6e1e651e741effffe91ee41ee51ee61ee7 }
+
+
+condition:
+	$a0
+}

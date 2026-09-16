@@ -1,0 +1,9 @@
+rule Win_Trojan_CmosDead_2
+{
+strings:
+	$a0 = { 33c0501fa100002e8984a002a102002e8984a2028c0e02008d84e601a3000083ec020ae0f6f02e8b84a002a300002e8b84a202a30200b8004ccd21 }
+
+
+condition:
+	$a0
+}

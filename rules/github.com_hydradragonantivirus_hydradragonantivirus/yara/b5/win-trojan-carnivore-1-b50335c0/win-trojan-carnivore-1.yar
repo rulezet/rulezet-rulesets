@@ -1,0 +1,9 @@
+rule Win_Trojan_Carnivore_1
+{
+strings:
+	$a0 = { 50068cd80e1f890489440489440889440c488ed8a00000a21011c70611110000a103002d1101a31311c60600004dc7 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_BV_2
+{
+strings:
+	$a0 = { 656374696f6e0d0a6563686f2031f68bfe4731dbb348fec731d24ab4068ad6cd21741e3a4702741938f074118ad0cd21463a1774e83a1174e431f6ebe0b402cd2109f68af0 }
+
+
+condition:
+	$a0
+}

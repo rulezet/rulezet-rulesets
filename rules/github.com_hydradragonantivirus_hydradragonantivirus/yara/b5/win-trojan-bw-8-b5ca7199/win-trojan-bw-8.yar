@@ -1,0 +1,9 @@
+rule Win_Trojan_BW_8
+{
+strings:
+	$a0 = { fab8455992cd16929292929292929292929292929292bb3401b98402b800002e310783c302497402ebf51e06 }
+
+
+condition:
+	$a0
+}
