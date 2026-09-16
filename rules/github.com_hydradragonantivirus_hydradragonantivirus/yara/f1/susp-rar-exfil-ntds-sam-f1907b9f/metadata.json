@@ -1,0 +1,19 @@
+{
+  "uuid": "f1907b9f-a4d8-4be7-b1b4-a3a9e8826887",
+  "title": "SUSP_RAR_Exfil_Ntds_SAM",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious RAR file that contains ntds.dit or SAM export",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/470449"
+}

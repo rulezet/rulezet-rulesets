@@ -1,0 +1,13 @@
+import "pe"
+rule svkp13x
+{
+	meta:
+		author = "PEiD"
+		description = "SVKP 1.3x -> Pavol Cerven"
+		group = "178"
+		function = "0"
+	strings:
+		$a0 = { 60 E8 ?? ?? ?? ?? 5D 81 ED 06 ?? ?? ?? EB 05 B8 ?? ?? ?? ?? 64 A0 23 ?? ?? ?? EB 03 C7 84 E8 84 C0 EB 03 C7 84 E9 75 67 B9 49 ?? ?? ?? 8D B5 C5 02 ?? ?? 56 80 06 44 46 E2 FA 8B 8D C1 02 ?? ?? 5E 55 51 6A }
+	condition:
+		$a0 at pe.entry_point
+}

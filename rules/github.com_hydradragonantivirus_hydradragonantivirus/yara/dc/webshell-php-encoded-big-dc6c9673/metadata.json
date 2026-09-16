@@ -1,0 +1,19 @@
+{
+  "uuid": "dc6c9673-aed0-4ab5-9aed-a230ee9cc578",
+  "title": "webshell_php_encoded_big",
+  "format": "yara",
+  "author": "Arnim Rupp",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": false,
+  "description": "PHP webshell using some kind of eval with encoded blob to decode",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/470469"
+}

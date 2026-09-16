@@ -1,0 +1,13 @@
+import "pe"
+rule stealthpe101
+{
+	meta:
+		author = "PEiD"
+		description = "Ste@lth PE 1.01 -> BGCorp"
+		group = "176"
+		function = "0"
+	strings:
+		$a0 = { BA ?? ?? ?? ?? FF E2 BA ?? ?? ?? ?? B8 ?? ?? ?? ?? 89 02 83 C2 03 B8 ?? ?? ?? ?? 89 02 83 C2 FD FF E2 }
+	condition:
+		$a0 at pe.entry_point
+}

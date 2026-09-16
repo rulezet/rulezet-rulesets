@@ -1,0 +1,13 @@
+import "pe"
+rule hidepe
+{
+	meta:
+		author = "PEiD"
+		description = "Hide PE 1.0 -> BGCorp"
+		group = "124"
+		function = "0"
+	strings:
+		$a0 = { BA ?? ?? ?? ?? B8 ?? ?? ?? ?? 89 02 83 C2 04 B8 ?? ?? ?? ?? 89 02 83 C2 04 B8 ?? ?? ?? ?? 89 02 83 C2 F8 FF E2 }
+	condition:
+		$a0 at pe.entry_point
+}

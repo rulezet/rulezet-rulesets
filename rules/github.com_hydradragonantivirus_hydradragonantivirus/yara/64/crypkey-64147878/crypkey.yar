@@ -1,0 +1,12 @@
+rule crypkey
+{
+	meta:
+		author = "PEiD"
+		description = "CrypKey 5.x - 6.x -> CrypKey Inc."
+		group = "111"
+		function = "0"
+	strings:
+		$a0 = { E8 ?? ?? ?? ?? 58 83 E8 05 50 5F 57 8B F7 81 EF ?? ?? ?? ?? 83 C6 39 BA ?? ?? ?? ?? 8B DF B9 0B ?? ?? ?? 8B 06 }
+	condition:
+		$a0
+}

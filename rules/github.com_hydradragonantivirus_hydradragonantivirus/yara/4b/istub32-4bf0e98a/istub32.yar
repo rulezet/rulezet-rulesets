@@ -1,0 +1,13 @@
+import "pe"
+rule istub32
+{
+	meta:
+		author = "PEiD"
+		description = "Install Stub 32-bit -> InstallShield"
+		group = "301"
+		function = "0"
+	strings:
+		$a0 = { 55 8B EC 81 EC 14 ?? ?? ?? 53 56 57 6A ?? FF 15 ?? ?? ?? ?? 68 ?? ?? ?? ?? FF 15 ?? ?? ?? ?? 85 C0 74 29 }
+	condition:
+		$a0 at pe.entry_point
+}

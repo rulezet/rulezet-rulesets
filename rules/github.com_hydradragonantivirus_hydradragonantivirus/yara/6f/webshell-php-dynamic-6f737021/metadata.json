@@ -1,0 +1,19 @@
+{
+  "uuid": "6f737021-4382-4d91-831f-225a3983ef8e",
+  "title": "webshell_php_dynamic",
+  "format": "yara",
+  "author": "Arnim Rupp",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": false,
+  "description": "PHP webshell using function name from variable, e.g. $a='ev'.'al'; $a($code)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/470468"
+}

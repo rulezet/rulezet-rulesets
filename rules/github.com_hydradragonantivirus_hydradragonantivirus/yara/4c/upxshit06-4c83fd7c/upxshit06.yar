@@ -1,0 +1,12 @@
+rule upxshit06
+{
+	meta:
+		author = "PEiD"
+		description = "UPXShit 0.06 -> snaker"
+		group = "158"
+		function = "0"
+	strings:
+		$a0 = { B8 ?? ?? ?? ?? B9 ?? ?? ?? ?? 80 34 08 ?? E2 FA E9 ?? ?? ?? FF }
+	condition:
+		$a0
+}

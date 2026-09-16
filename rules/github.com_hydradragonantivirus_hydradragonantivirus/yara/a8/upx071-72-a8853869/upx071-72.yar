@@ -1,0 +1,13 @@
+import "pe"
+rule upx071_72
+{
+	meta:
+		author = "PEiD"
+		description = "UPX 0.71 - 0.72 -> Markus & Laszlo"
+		group = "183"
+		function = "0"
+	strings:
+		$a0 = { 60 E8 ?? ?? ?? ?? 83 CD FF 31 DB 5E 8D BE FA ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 81 C6 B3 01 ?? ?? EB 0A ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 }
+	condition:
+		$a0 at pe.entry_point
+}

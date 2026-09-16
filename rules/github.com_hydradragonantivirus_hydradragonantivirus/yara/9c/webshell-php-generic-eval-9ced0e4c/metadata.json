@@ -1,0 +1,19 @@
+{
+  "uuid": "9ced0e4c-8eab-43a8-b0d4-14d86404aee5",
+  "title": "webshell_php_generic_eval",
+  "format": "yara",
+  "author": "Arnim Rupp",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": false,
+  "description": "Generic PHP webshell which uses any eval/exec function in the same line with user input",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/470457"
+}

@@ -1,0 +1,12 @@
+rule armd26b1
+{
+	meta:
+		author = "PEiD"
+		description = "Armadillo 2.60 beta1 -> Silicon Realms Toolworks"
+		group = "104"
+		function = "4"
+	strings:
+		$a0 = { 55 8B EC 6A FF 68 50 ?? ?? ?? 68 74 ?? ?? ?? 64 A1 ?? ?? ?? ?? 50 64 89 25 ?? ?? ?? ?? 83 EC 58 53 56 57 89 65 E8 FF 15 58 ?? ?? ?? 33 D2 8A D4 89 15 FC }
+	condition:
+		$a0
+}

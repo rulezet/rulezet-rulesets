@@ -1,0 +1,13 @@
+import "pe"
+rule pec2_h
+{
+	meta:
+		author = "PEiD"
+		description = "PECompact 2.0x Heuristic Mode -> Jeremy Collake"
+		group = "139"
+		function = "0"
+	strings:
+		$a0 = { FF FF FF FF ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 6B 65 72 6E 65 6C 33 32 2E 64 6C 6C 00 00 00 4C 6F 61 64 4C 69 62 72 61 72 79 41 00 00 00 00 47 65 74 50 72 6F 63 41 64 64 72 65 73 73 00 00 00 00 56 69 72 74 75 61 6C 41 6C 6C 6F 63 00 00 00 00 56 69 72 74 75 61 6C 46 72 65 65 00 00 }
+	condition:
+		$a0 at pe.entry_point
+}
