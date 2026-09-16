@@ -1,0 +1,21 @@
+{
+  "uuid": "43fd0eb7-9334-477b-a152-d42600e6d140",
+  "title": "Trojan_Win64_Trickbot_AB_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win64/Trickbot.AB!MTB,SIGNATURE_TYPE_PEHSTR,25 00 25 00 09 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:banker=\"Trickbot\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/261041"
+}
