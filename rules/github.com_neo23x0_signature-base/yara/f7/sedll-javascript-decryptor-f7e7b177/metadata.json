@@ -1,0 +1,20 @@
+{
+  "uuid": "f7e7b177-b0bd-4435-9709-913d845a1a2a",
+  "title": "SeDLL_Javascript_Decryptor",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects SeDll - DLL is used for decrypting and executing another JavaScript backdoor such as Orz",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185451"
+}

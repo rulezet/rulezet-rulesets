@@ -1,0 +1,19 @@
+{
+  "uuid": "199bb9db-9afc-4037-a14f-333a11dcf5ea",
+  "title": "SUSP_LNK_SmallScreenSize",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "check for LNKs that have a screen buffer size and WindowSize dimensions of 1x1",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185692"
+}

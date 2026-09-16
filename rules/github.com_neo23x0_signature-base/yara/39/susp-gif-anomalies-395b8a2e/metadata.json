@@ -1,0 +1,19 @@
+{
+  "uuid": "395b8a2e-4639-42a5-b737-3d69e2867d1f",
+  "title": "SUSP_GIF_Anomalies",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects files with GIF headers and format anomalies - which means that this image could be an obfuscated file of a different type",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185654"
+}

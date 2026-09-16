@@ -1,0 +1,21 @@
+{
+  "uuid": "79a7795e-a8db-4d69-977f-c51cf5fc0d5b",
+  "title": "APT_fnv1a_plus_extra_XOR_in_MSIL_experimental",
+  "format": "yara",
+  "author": "Arnim Rupp",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "This rule detects the specific MSIL implementation of fnv1a of the SUNBURST backdoor (standard fnv1a + one final XOR before RET) independent of the XOR-string. (fnv64a_offset and fnv64a_prime are standard constants in the fnv1a hashing algorithm.)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:backdoor=\"SUNBURST\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185735"
+}

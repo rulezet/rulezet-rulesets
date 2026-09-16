@@ -1,0 +1,10 @@
+rule REDLEAVES_DroppedFile_ObfuscatedShellcodeAndRAT_handkerchief {
+    meta:
+        description = "Detects obfuscated .dat file containing shellcode and core REDLEAVES RAT"
+        author = "USG"
+        reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+        true_positive = "fb0c714cd2ebdcc6f33817abe7813c36"         id = "51a28529-1084-5f24-9369-6427e8d51d9d"
+    strings:
+        $RedleavesStringObfu = {73 64 65 5e 60 74 75 74 6c 6f 60 6d 5e 6d 64 60 77 64 72 5e 65 6d 6d 6c 60 68 6f 2f 65 6d 6d}     condition:
+        any of them
+}

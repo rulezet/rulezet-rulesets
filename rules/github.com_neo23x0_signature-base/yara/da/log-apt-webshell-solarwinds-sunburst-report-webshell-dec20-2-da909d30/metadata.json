@@ -1,0 +1,20 @@
+{
+  "uuid": "da909d30-737e-4d4d-942d-ad1bb9ca3ab1",
+  "title": "LOG_APT_WEBSHELL_Solarwinds_SUNBURST_Report_Webshell_Dec20_2",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects webshell access mentioned in FireEye's SUNBURST report",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:backdoor=\"SUNBURST\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185311"
+}

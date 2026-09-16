@@ -1,0 +1,22 @@
+{
+  "uuid": "6d265798-33e0-4a26-a27c-6243f3c92eb0",
+  "title": "Nautilus_common_strings",
+  "format": "yara",
+  "author": "NCSC UK",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Rule for detection of Nautilus based on common plaintext strings",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Turla - G0010\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185376"
+}

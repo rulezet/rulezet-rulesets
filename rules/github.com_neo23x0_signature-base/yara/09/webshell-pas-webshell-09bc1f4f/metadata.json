@@ -1,0 +1,19 @@
+{
+  "uuid": "09bc1f4f-722f-4561-9f14-3165fd941e8b",
+  "title": "WEBSHELL_PAS_webshell",
+  "format": "yara",
+  "author": "FR/ANSSI/SDO (modified by Florian Roth)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects P.A.S. PHP webshell - Based on DHS/FBI JAR-16-2029 (Grizzly  Steppe)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185728"
+}

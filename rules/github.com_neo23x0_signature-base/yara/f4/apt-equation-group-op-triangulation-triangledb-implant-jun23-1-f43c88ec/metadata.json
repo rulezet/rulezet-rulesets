@@ -1,0 +1,21 @@
+{
+  "uuid": "f43c88ec-1487-440c-a2d0-2c694b4aa13e",
+  "title": "APT_Equation_Group_Op_Triangulation_TriangleDB_Implant_Jun23_1",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects TriangleDB implant found being used in Operation Triangulation on iOS devices (maybe also used on macOS systems)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185662"
+}

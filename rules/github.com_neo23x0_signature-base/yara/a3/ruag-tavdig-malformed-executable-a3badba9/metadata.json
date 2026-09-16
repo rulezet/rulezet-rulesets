@@ -1,0 +1,19 @@
+{
+  "uuid": "a3badba9-06fb-4f19-9dd6-6e457c6f41d0",
+  "title": "RUAG_Tavdig_Malformed_Executable",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects an embedded executable with a malformed header - known from Tavdig malware",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185715"
+}

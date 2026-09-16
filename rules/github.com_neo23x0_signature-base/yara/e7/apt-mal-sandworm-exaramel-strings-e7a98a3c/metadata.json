@@ -1,0 +1,21 @@
+{
+  "uuid": "e7a98a3c-9a75-44d2-a11b-11d80d9e11d2",
+  "title": "APT_MAL_Sandworm_Exaramel_Strings",
+  "format": "yara",
+  "author": "FR/ANSSI/SDO (composed from 4 saparate rules by Florian Roth)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Strings used by Exaramel malware",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"FreeBSD\"",
+    "misp-galaxy:operating-system=\"FreeBSD\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185775"
+}
