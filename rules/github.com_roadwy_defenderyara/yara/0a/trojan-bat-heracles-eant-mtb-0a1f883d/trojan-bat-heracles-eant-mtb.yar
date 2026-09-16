@@ -1,0 +1,9 @@
+rule Trojan_BAT_Heracles_EANT_MTB{
+	meta:
+		description = "Trojan:BAT/Heracles.EANT!MTB,SIGNATURE_TYPE_PEHSTR_EXT,05 00 05 00 01 00 00 "
+		
+	strings :
+		$a_01_0 = {06 72 a5 01 00 70 7e 1d 00 00 04 16 72 a5 01 00 70 28 6e 00 00 0a 6f 6f 00 00 0a 28 70 00 00 0a 28 71 00 00 0a 6f 72 00 00 0a 08 17 58 0c 08 07 31 ce } 	condition:
+		((#a_01_0  & 1)*5) >=5
+ 
+}

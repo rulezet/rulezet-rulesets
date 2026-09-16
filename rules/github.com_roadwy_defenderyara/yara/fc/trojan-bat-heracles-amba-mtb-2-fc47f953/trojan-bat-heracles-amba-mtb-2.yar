@@ -1,0 +1,9 @@
+rule Trojan_BAT_Heracles_AMBA_MTB_2{
+	meta:
+		description = "Trojan:BAT/Heracles.AMBA!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {0a 14 0b 38 ?? 00 00 00 00 28 ?? 00 00 06 0b dd ?? 00 00 00 26 dd ?? 00 00 00 07 2c eb 07 8e 69 8d ?? 00 00 01 0c 16 0d 38 ?? 00 00 00 08 09 07 09 91 06 59 d2 9c 09 17 58 0d 09 07 8e 69 32 ed 08 2a } 		$a_01_1 = {4c 6f 61 64 00 47 65 74 54 79 70 65 00 47 65 74 4d 65 74 68 6f 64 00 54 6f 49 6e 74 33 32 } 	condition:
+		((#a_03_0  & 1)*5+(#a_01_1  & 1)*5) >=10
+ 
+}
