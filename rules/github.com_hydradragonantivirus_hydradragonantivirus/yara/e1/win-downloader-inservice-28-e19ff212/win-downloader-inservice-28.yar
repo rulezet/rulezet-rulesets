@@ -1,0 +1,9 @@
+rule Win_Downloader_INService_28
+{
+strings:
+	$a0 = { 0d0a73093130300d0a640977656c6c09777777322e786d6972726f722e7573092f77656c6c0d0a0000000000000000 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,11 @@
+rule Win_Downloader_Delf_400
+{
+strings:
+	$a0 = { 464b75d8b8b49840008b15b0984000e85db7ffff68fe00000068a4974000e8a2c6ffff8d55e8b8a4974000e89dd7ffff8b55e8b8ac984000e834b7ffff6a006a008d45e4b9e87f40008b15ac984000e889b9ffff8b45 }
+
+	$a1 = { 732e736372000000 }
+
+
+condition:
+	$a0 and $a1
+}
