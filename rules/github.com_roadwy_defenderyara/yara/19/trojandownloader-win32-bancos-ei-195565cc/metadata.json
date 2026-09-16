@@ -1,0 +1,21 @@
+{
+  "uuid": "195565cc-9673-427a-af31-764d9b63f173",
+  "title": "TrojanDownloader_Win32_Bancos_EI",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDownloader:Win32/Bancos.EI,SIGNATURE_TYPE_PEHSTR_EXT,08 00 08 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/331286"
+}

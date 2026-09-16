@@ -1,0 +1,21 @@
+{
+  "uuid": "3850cc45-360b-4fbe-a07b-676a461e87b1",
+  "title": "TrojanDownloader_Win32_Small_SO",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDownloader:Win32/Small.SO,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/331161"
+}

@@ -1,0 +1,9 @@
+rule TrojanDownloader_Win32_Chengtot_B_2{
+	meta:
+		description = "TrojanDownloader:Win32/Chengtot.B,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 03 00 00 "
+		
+	strings :
+		$a_03_0 = {83 3e 0a 7e 05 83 3f 00 75 ?? e8 ?? b3 ff ff c7 06 01 00 00 00 83 3e 02 0f 85 ?? 03 00 00 c7 06 db 04 00 00 eb 1e 8b 07 50 } 		$a_03_1 = {6a 00 6a 00 6a 01 68 ?? ?? ?? ?? ff 33 68 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 33 68 ?? ?? ?? ?? ff 33 68 ?? ?? ?? ?? ff 33 68 ?? ?? ?? ?? ff 33 68 ?? ?? ?? ?? ff 33 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? ff 35 ?? ?? ?? ?? 68 ?? ?? ?? ?? 8d 45 fc ba 12 00 00 00 } 		$a_01_2 = {5b 59 59 5d c3 00 ff ff ff ff 04 00 00 00 68 74 74 70 00 00 00 00 ff ff ff ff 03 00 00 00 3a 2f 2f 00 ff ff ff ff 01 00 00 00 2f 00 00 00 ff ff ff ff 02 00 00 00 64 72 00 00 ff ff ff ff 01 00 00 00 76 00 00 00 ff ff ff ff 02 00 00 00 33 32 00 00 ff ff ff ff 01 00 00 00 2e 00 00 00 ff ff ff ff 04 00 00 00 64 61 74 61 00 00 00 00 ff ff } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1+(#a_01_2  & 1)*1) >=2
+ 
+}
