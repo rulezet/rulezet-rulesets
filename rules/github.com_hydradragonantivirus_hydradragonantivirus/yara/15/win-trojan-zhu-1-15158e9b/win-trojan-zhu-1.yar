@@ -1,0 +1,9 @@
+rule Win_Trojan_Zhu_1
+{
+strings:
+	$a0 = { bc0050b8720150cb1a00412e4c69616e2056312e30204d61646520696e205a6875205a686f75204368696e612e }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Zdemon_2
+{
+strings:
+	$a0 = { ddd4385203265b256d5b186ed710a680ffc0375a2d64656d306e00a443588c6f9b9f0be410b1c2b7f89db7791e3224f8d8b7f80d7c090e2fab1c4d98d66376120cd2234c44e04e7881 }
+
+
+condition:
+	$a0
+}

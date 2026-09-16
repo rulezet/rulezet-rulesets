@@ -1,0 +1,9 @@
+rule Win_Trojan_Anjo_1
+{
+strings:
+	$a0 = { ffffeb0790b8004ce8bd00e2f5be27018bfeb99502e8040090eb0b90ac32062601aae2f8c300b44e33c9ba5203e898007261ba9e00b8014333c9e88b00b8023dba9e00e8820093b80057e87b0089 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_SillyOC_40
+{
+strings:
+	$a0 = { c4c4c4c4c4c4c4c4c4c4c4c4c4c4c4b900bab2436f70797269676874b23c433e504f4c414e44b232303031b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2b2ba00bab2494e46454b434a41b257b2544f4b552e2e2eb2b2b2b2b2b2b2b2b2b2b2b2 }
+
+
+condition:
+	$a0
+}

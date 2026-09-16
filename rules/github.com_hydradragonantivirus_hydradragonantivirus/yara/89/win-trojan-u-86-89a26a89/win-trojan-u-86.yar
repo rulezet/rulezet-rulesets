@@ -1,0 +1,9 @@
+rule Win_Trojan_U_86
+{
+strings:
+	$a0 = { 63686d6f64202b7820746d7020323e2f6465762f6e756c6c0d0a2e2f746d70202430202620323e2f6465762f6e756c6c }
+
+
+condition:
+	$a0
+}

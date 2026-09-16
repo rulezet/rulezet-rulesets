@@ -1,0 +1,9 @@
+rule Win_Trojan_Trojan_346
+{
+strings:
+	$a0 = { 9a000055005589e5b800029a7c02550081ec00029a2b0e5500bf24031e57bf00000e5731c0509ab60655009ae7055500 }
+
+
+condition:
+	$a0
+}
