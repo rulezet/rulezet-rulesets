@@ -1,0 +1,9 @@
+rule Win_Trojan_Juice_1
+{
+strings:
+	$a0 = { 40000d0a466f756e642063756e74206a7569636520696e20433a5c57494e444f57535c4d53442e4558450d0a436c65 }
+
+
+condition:
+	$a0
+}

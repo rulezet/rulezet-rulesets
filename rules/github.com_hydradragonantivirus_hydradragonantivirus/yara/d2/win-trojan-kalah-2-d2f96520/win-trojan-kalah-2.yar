@@ -1,0 +1,9 @@
+rule Win_Trojan_Kalah_2
+{
+strings:
+	$a0 = { 50fcbe0001b811008ec0b90a008b04263b0475064646e2f5eb29b82135cd21891e80028c068202b811008ec0be000189f7b98401f3a4b811008ed8baa601b821 }
+
+
+condition:
+	$a0
+}
