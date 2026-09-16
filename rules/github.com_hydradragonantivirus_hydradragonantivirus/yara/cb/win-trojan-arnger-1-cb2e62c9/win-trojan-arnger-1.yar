@@ -1,0 +1,9 @@
+rule Win_Trojan_Arnger_1
+{
+strings:
+	$a0 = { 7b90a7248b6affa164c697ec58f4a1240afc5ce807e6424ec08bff9de4ecffff413a5c4d6f64656c6f735f4151502e6578651b10099b7cfb466f7419323030321b3f3990ff6c615f4e6f7669615f0f5069 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Covina_1
+{
+strings:
+	$a0 = { 69742e2e2e002f43204354bf035459206e756c0ddd1583f98bc1130146b531cde32a2e3620fa4558fefe45fa4f564cfa44416e3c54e525a1596f75ff17ff4365fcff4675636b696eff8f67ff4e696767 }
+
+
+condition:
+	$a0
+}

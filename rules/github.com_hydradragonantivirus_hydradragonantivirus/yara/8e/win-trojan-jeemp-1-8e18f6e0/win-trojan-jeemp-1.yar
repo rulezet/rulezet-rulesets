@@ -1,0 +1,9 @@
+rule Win_Trojan_Jeemp_1
+{
+strings:
+	$a0 = { de1ce178f0f08945e8df838b41e82f72f3f48b053b4515a4c8f0ec0f82688cf5cec76865bbc1814ac18af0e0bdd86f2719fc8bf07f85f6751153b6ebb04212e0af2bca4ca7a5e7ebdfc90cc0830c01912c2c7516e237a4288a57c53a05468bfeebdce57bfff649eb0c25f7d81bc023c7b9c37dff7436ef9bf0bfc0174115 }
+
+
+condition:
+	$a0
+}

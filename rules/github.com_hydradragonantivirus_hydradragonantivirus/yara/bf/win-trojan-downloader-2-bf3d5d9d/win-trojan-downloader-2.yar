@@ -1,0 +1,9 @@
+rule Win_Trojan_DownLoader_2
+{
+strings:
+	$a0 = { 466c61740d536572766572006b00000000ffcc310000e06b7da71f1a4145923ea3f6e09c15645c4c94a02788a349a50f09d97b548c863a4fad339966cf11b70c }
+
+
+condition:
+	$a0
+}

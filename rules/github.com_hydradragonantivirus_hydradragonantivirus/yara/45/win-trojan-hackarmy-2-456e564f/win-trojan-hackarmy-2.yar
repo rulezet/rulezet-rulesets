@@ -1,0 +1,9 @@
+rule Win_Trojan_Hackarmy_2
+{
+strings:
+	$a0 = { 47187d91a1da82144a90c3e95e60d7090c07daeba7c18b5c195471a3ff5f13d1e9d1dbd1ead1d809c92cf7f30d2e9dbb620faf3e2244f7e6c040bbfbee720e3b28770872073b2c76014e4dbc8077a1e7acc2106ba0a27fa147e081803f2275236a2241cc8a41 }
+
+
+condition:
+	$a0
+}

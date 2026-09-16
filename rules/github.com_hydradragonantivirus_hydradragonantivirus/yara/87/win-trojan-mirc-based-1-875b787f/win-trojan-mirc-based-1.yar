@@ -1,0 +1,9 @@
+rule Win_Trojan_mIRC_based_1
+{
+strings:
+	$a0 = { 2bd9ce84c40b60b5a3614c37e0f31e8e5d48c95db862790f0b619ba7a16962d9ab93d94e8b52882187587412d06093f00fdb5aa7ddd2473829d0c15906920ac2f2023bb5eed0dc05bcc00bf1f6b43250d2204841d8cedf65944396cfe5bf806afad44b5ca7bb59 }
+
+
+condition:
+	$a0
+}

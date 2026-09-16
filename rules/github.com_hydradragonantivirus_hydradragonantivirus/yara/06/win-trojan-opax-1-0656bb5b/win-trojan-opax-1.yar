@@ -1,0 +1,9 @@
+rule Win_Trojan_Opax_1
+{
+strings:
+	$a0 = { bc1500d674dd780f81038384fb4812afff5032502e4f70617829dfb7db496e83f40100805407d0d3fb280bfe3bd735e0ab1317072a005c00410043003a9a5ab4 }
+
+
+condition:
+	$a0
+}

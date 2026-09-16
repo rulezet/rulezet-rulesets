@@ -1,0 +1,11 @@
+rule Win_Trojan_W97M_2
+{
+strings:
+	$a0 = { 273c212d2d316e7465726e616c2d2d3e }
+
+	$a1 = { 22687474703a2f2f7777772e736f757263656f666b616f732e636f6d2f686f6d65732f316e7465726e616c }
+
+
+condition:
+	$a0 and $a1
+}

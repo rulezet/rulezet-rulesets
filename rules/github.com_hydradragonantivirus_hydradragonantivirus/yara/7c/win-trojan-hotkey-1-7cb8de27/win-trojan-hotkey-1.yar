@@ -1,0 +1,9 @@
+rule Win_Trojan_Hotkey_1
+{
+strings:
+	$a0 = { c01640006a3cffb684000000ff159cef420089869800000089be940000008bc75f5ec20400565733ff8bf1397c240c741fff762089be8c000000ff1560ef42 }
+
+
+condition:
+	$a0
+}

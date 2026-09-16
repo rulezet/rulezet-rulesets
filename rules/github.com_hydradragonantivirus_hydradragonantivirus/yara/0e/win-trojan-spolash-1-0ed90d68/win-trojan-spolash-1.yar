@@ -1,0 +1,9 @@
+rule Win_Trojan_Spolash_1
+{
+strings:
+	$a0 = { 8d44240450ff3ef6cf6a00248bc88bd41f0cc0eb1e114c8bf88befdecaeed38bc70a029c337408837e034eebe9f4ffcc6d50083c5f3c6172063c7a77022c206dfbde881312894310040c568d09c6184bf7508b4308031403fc84e26bede5e9 }
+
+
+condition:
+	$a0
+}

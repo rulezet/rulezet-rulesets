@@ -1,0 +1,9 @@
+rule Win_Trojan_DSNX_2
+{
+strings:
+	$a0 = { 56bf15df8a7d735c4375e06e745665723b53bcc57369315c5275c01c44537f2fbef84e58006578b75cb2072a2e64107cf140ca00542ab602dddce35354535265 }
+
+
+condition:
+	$a0
+}

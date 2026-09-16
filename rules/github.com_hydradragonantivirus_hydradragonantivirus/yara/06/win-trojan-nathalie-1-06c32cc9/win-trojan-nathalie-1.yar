@@ -1,0 +1,9 @@
+rule Win_Trojan_Nathalie_1
+{
+strings:
+	$a0 = { 434f4d4d414e4400ffffffff040000006d49524300000000ffffffffe90000002f2f736572766572202d6d206e617468616c69652e6174682e637820 }
+
+
+condition:
+	$a0
+}

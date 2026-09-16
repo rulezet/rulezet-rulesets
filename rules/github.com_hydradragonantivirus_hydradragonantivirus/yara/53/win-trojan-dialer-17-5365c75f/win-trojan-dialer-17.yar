@@ -1,0 +1,9 @@
+rule Win_Trojan_Dialer_17
+{
+strings:
+	$a0 = { 422e7478fbff0bd6093222004d41584153414c452045c36d79fb5bae262620436f2ed0470a426aa1adf05b6b37c12c6b6c690a4c8b45f0bfddda656424b77373a0370a4348202d }
+
+
+condition:
+	$a0
+}

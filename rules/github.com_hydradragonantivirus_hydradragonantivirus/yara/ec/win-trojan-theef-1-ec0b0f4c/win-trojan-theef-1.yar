@@ -1,0 +1,9 @@
+rule Win_Trojan_Theef_1
+{
+strings:
+	$a0 = { 3820dfc3f31c4d600b83b5e43d21a6f82354080ee680695a0478676d41f6600de404500f5f29059829482bfa68c314b76f9007a3b080f33e6ebc9d59a1208557 }
+
+
+condition:
+	$a0
+}

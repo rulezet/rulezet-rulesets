@@ -1,0 +1,9 @@
+rule Win_Trojan_BlueAdept_1
+{
+strings:
+	$a0 = { 8d47a44f108b562fcd3b2339eb77cf0805147574ea52c462c7cd776e4a9d5408085f0b18e8b1ec5e264c6be20730c89ee14710a38be854e30182df1b48200c4489bfeb12541d2c3546a4ff6147b1534f }
+
+
+condition:
+	$a0
+}

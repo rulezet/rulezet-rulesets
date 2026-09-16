@@ -1,0 +1,9 @@
+rule Win_Trojan_Assasin_1
+{
+strings:
+	$a0 = { 3301047f920d077e4c4f4d7e7948404c62b73805062079335fa000fd2af8207b0388007d1a6c6567f82f4cbc0e6f666d69f179407961686f6f7f05c517 }
+
+
+condition:
+	$a0
+}

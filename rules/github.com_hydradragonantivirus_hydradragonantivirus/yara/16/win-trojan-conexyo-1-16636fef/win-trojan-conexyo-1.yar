@@ -1,0 +1,9 @@
+rule Win_Trojan_Conexyo_1
+{
+strings:
+	$a0 = { 5a59596489106857bb41008b45f0e8797afeff8b45f4e8717afeffc3e9ff81feffebe833c05a5959648910eb21e93a7ffeff8b0d48764600b201a1901c4100e840ecfeffe80f82feffe88682feff33c05a595964891068c4bb41008d45c4ba02 }
+
+
+condition:
+	$a0
+}

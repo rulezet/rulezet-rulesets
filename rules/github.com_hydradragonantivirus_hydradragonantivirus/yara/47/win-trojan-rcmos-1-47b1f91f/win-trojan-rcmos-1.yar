@@ -1,0 +1,9 @@
+rule Win_Trojan_RCmos_1
+{
+strings:
+	$a0 = { 5956d6de72b77428b6b5b6b60b6d202d584d04f8513e94200a8202b23e884485640226b5a90f4d0dcb685bccb95def379ca7e1bfc06fe1cc90b6f322ddf2d816ddd80b6ba836a406d6ea02b3e1f9c905ae016d7202d720af2e6a0b5c82f17202 }
+
+
+condition:
+	$a0
+}
