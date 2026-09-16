@@ -1,0 +1,33 @@
+rule mysql41_hashed_default_creds_amx
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for amx."
+        category = "INFO"
+        info = "MYSQL41"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="*7E682321B58D9234F716635FBDEFE8EFAAB0C6D0"
+    $a1="*4ACFE3202A5FF5CF467898FC58AAB1D615029441"
+    $a2="*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19"
+    $a3="*9F880DA1329B4B497F247AA25727CCDD5F4DD2E0"
+    $a4="*038A80AA404773E54BA74AB8BCEB438C5ADF6FAF"
+    $a5="*81F5E21E35407D884A6CD4A731AEBFB6AF209E1B"
+    $a6="*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19"
+    $a7="*C7238EAB7295E3A650AC7C07962F9D81F6CEA01C"
+    $a8="*7E682321B58D9234F716635FBDEFE8EFAAB0C6D0"
+    $a9="*D89A99106002D77C1D327FC41E005919505638B0"
+    $a10="*11DB58B0DD02E290377535868405F11E4CBEFF58"
+    $a11="*11DB58B0DD02E290377535868405F11E4CBEFF58"
+    $a12="*4ACFE3202A5FF5CF467898FC58AAB1D615029441"
+    $a13="*4ACFE3202A5FF5CF467898FC58AAB1D615029441"
+    $a14="*E0909375B6EF6F1FF017C957172CE2E8D0E068A5"
+    $a15="*A306E1FA191E2E149F608FF5E6DB287EC237CB1E"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15)
+}
