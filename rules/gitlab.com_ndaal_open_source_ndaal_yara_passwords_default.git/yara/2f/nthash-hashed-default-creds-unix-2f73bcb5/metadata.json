@@ -1,0 +1,21 @@
+{
+  "uuid": "2f73bcb5-8b4f-4f35-8562-eb473ab3d5a6",
+  "title": "nthash_hashed_default_creds_unix",
+  "format": "yara",
+  "author": "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Hashed values of default credentials for unix.",
+  "source": "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/734610"
+}
