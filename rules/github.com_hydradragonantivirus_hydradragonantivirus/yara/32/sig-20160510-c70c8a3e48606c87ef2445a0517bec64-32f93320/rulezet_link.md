@@ -1,0 +1,5 @@
+# sig_20160510_c70c8a3e48606c87ef2445a0517bec64
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/693359)
+
+Rulezet UUID: `32f93320-bafe-40d7-a146-feb6c4b05fde`
