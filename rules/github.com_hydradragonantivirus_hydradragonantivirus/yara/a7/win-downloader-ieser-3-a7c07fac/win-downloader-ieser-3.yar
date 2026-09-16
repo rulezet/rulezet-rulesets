@@ -1,0 +1,9 @@
+rule Win_Downloader_Ieser_3
+{
+strings:
+	$a0 = { adba665020b8dc1d32bf86bf6b32c12918d3f2759fc15c1b6dfc2ea27dbc71de7b2e8017e8528d3c1177543c651e00c6baeab98332bfcfb340fe24d8c3fad63cf1a70c7cd72b08e5dc0c3d27a2dd23a293f4a01757053910c12ff2349014a92e00dcf8d5f8b4a485fec5cc1cdda63e01a8bcaf38a9ac81f5c40323ba84c7ce9207f5b4ea583240cd6c79e9d2 }
+
+
+condition:
+	$a0
+}

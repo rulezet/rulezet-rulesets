@@ -1,0 +1,11 @@
+rule Win_Downloader_6366_1
+{
+strings:
+	$a0 = { e925e4ffff }
+
+	$a1 = { e62757e62757e62757e62149d91d41d27c6587fee2c6fdd7b7db978a666666000000000000000000000000000000000000000000000000e9cdb6fdfcfafdfcfa2d32 }
+
+
+condition:
+	$a0 and $a1
+}
