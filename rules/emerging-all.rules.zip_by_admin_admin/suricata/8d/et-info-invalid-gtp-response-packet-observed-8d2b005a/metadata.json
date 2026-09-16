@@ -1,0 +1,24 @@
+{
+  "uuid": "8d2b005a-ac4e-4bee-8390-ee5454d86efd",
+  "title": "ET INFO Invalid GTP Response Packet Observed",
+  "format": "suricata",
+  "author": "Unknown",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "No description provided",
+  "source": "emerging-all.rules.zip by admin admin",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1210"
+  ],
+  "cve": [],
+  "created_at": "2025-12-19",
+  "last_modified": "2025-12-19",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/179905"
+}
