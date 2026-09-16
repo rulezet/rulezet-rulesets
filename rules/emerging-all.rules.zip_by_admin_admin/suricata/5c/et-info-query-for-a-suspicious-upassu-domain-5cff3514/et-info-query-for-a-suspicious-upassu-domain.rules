@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO Query for a Suspicious *.upas.su domain"; dns.query; content:".upas.su"; fast_pattern; nocase; endswith; classtype:bad-unknown; sid:2015550; rev:5; metadata:created_at 2012_07_31, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_09_17;)

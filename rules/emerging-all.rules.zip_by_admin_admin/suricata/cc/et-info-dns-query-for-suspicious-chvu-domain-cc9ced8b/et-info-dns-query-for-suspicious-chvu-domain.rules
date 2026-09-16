@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO DNS Query for Suspicious .ch.vu Domain"; dns.query; content:".ch.vu"; fast_pattern; nocase; endswith; reference:url,google.com/safebrowsing/diagnostic?site=ch.vu; classtype:bad-unknown; sid:2014285; rev:8; metadata:created_at 2012_02_28, confidence Medium, signature_severity Informational, updated_at 2020_09_17;)

@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO Query for Suspicious .us.tf Domain"; dns.query; content:".us.tf"; fast_pattern; nocase; endswith; classtype:bad-unknown; sid:2013851; rev:5; metadata:created_at 2011_11_07, confidence High, signature_severity Informational, updated_at 2020_09_17, reviewed_at 2024_04_09;)

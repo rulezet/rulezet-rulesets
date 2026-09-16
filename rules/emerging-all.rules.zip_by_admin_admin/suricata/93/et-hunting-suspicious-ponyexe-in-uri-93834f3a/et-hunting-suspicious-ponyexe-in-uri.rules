@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET HUNTING SUSPICIOUS pony.exe in URI"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/pony."; nocase; fast_pattern; pcre:"/\/pony\.(exe|pack)$/i"; classtype:trojan-activity; sid:2017843; rev:4; metadata:created_at 2013_12_12, confidence Medium, signature_severity Major, updated_at 2020_09_22;)

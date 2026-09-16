@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO DNS Query for a Suspicious *.qc.cx domain"; dns.query; content:".qc.cx"; fast_pattern; endswith; classtype:bad-unknown; sid:2012903; rev:7; metadata:created_at 2011_05_31, confidence Medium, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_09_17;)

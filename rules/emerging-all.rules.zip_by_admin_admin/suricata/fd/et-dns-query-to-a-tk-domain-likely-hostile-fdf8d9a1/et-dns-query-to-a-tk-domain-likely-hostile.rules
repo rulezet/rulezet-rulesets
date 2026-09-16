@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET DNS Query to a .tk domain - Likely Hostile"; dns.query; content:".tk"; fast_pattern; nocase; endswith; content:!"www.google.tk"; classtype:bad-unknown; sid:2012811; rev:7; metadata:created_at 2011_05_15, confidence High, signature_severity Informational, updated_at 2020_09_17;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET SCAN w3af User-Agent 2"; flow:established,to_server; http.user_agent; content:"w3af.sf.net"; fast_pattern; classtype:attempted-recon; sid:2015484; rev:4; metadata:created_at 2012_07_18, confidence High, signature_severity Informational, updated_at 2020_09_17;)

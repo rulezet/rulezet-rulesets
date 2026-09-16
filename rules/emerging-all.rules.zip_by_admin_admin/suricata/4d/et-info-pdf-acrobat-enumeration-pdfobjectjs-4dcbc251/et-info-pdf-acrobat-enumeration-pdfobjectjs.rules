@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO PDF - Acrobat Enumeration - pdfobject.js"; flow:established,to_server; http.uri; content:"/pdfobject.js"; fast_pattern; classtype:misc-activity; sid:2016765; rev:4; metadata:created_at 2013_04_18, confidence High, signature_severity Informational, updated_at 2020_09_18;)
