@@ -1,0 +1,9 @@
+rule Win_Trojan_TrJP_1
+{
+strings:
+	$a0 = { 0603010510008ed88c0620008c1e2200c7062400b7018c1e2600ff2e2400a12000c70624000001a32600e86300 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Trivial_397
+{
+strings:
+	$a0 = { 5152565755e84d005d5f5e5a595bc30d0a5b4e754b455d20456e6372797074696f6e204465766963652076312e3030 }
+
+
+condition:
+	$a0
+}
