@@ -1,0 +1,9 @@
+rule Win_Spyware_Zbot_1255
+{
+strings:
+	$a0 = { 6a706a70e867feffff2beb2bdf6a106843f94100e857feffff33f66a00ff153ce0400003ea03cb6a006a006a006890f040006800004000ff1584e04000515a03ea03fa03f003fb2bea2bd32bc803d803d7f581fefffaffff0f85bdffffff2bef03c8ff155ce04000a3f3f140006a70e88afeffff6a7568894d4100e87efeffff }
+
+
+condition:
+	$a0
+}

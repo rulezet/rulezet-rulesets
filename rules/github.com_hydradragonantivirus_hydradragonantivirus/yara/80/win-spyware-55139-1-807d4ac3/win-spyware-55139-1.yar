@@ -1,0 +1,9 @@
+rule Win_Spyware_55139_1
+{
+strings:
+	$a0 = { 7bf4741595a6a03566a4850c78528ffffff667d7661c7852cffffff65716777c78530ffffff6c785b53c78534ffffff475d435ac78538ffffff54446965c7853cffffff595b565fc78540ffffff42416c76c78544ffffff47424757899d48ffffff89bd4cffffffc78550ffffff5c6c6 }
+
+
+condition:
+	$a0
+}
