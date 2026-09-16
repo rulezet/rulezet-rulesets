@@ -1,0 +1,9 @@
+rule Win_Spyware_Goldun_100
+{
+strings:
+	$a0 = { 6176702ee652757374b144fc0b0d65722e73796d618a63db203607f63569cc741e6ec4b37f2e6d6361666565136f77876164 }
+
+
+condition:
+	$a0
+}

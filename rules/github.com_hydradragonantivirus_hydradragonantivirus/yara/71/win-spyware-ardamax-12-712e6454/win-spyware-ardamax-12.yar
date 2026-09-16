@@ -1,0 +1,9 @@
+rule Win_Spyware_Ardamax_12
+{
+strings:
+	$a0 = { e8ebf9ffffa100d0001085c0752ea1ccab00106a005068801500106a02ff150081001085c0a3c8ab001074108b4c2404890d00d00010b801000000c3 }
+
+
+condition:
+	$a0
+}

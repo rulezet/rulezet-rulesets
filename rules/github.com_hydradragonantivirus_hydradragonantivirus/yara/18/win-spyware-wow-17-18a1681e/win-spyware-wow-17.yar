@@ -1,0 +1,9 @@
+rule Win_Spyware_WOW_17
+{
+strings:
+	$a0 = { 5ec0193c5369b5603ea0c2c6beab16ecf20719b87b4302607a76a724e445b596e40bdb6140c27741055e5726056770e736f90b9e2158af0c0c54fc4b7ff5830d24c90718 }
+
+
+condition:
+	$a0
+}
