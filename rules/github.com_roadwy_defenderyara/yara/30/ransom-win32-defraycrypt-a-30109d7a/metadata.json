@@ -1,0 +1,22 @@
+{
+  "uuid": "30109d7a-5224-4e72-b804-f317fa7f9695",
+  "title": "Ransom_Win32_DefrayCrypt_A_",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Ransom:Win32/DefrayCrypt.A!!DefrayCrypt.gen!A,SIGNATURE_TYPE_ARHSTR_EXT,0a 00 0a 00 12 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/318894"
+}

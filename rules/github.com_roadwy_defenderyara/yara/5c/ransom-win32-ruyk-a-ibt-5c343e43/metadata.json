@@ -1,0 +1,22 @@
+{
+  "uuid": "5c343e43-e5a2-40ad-b78b-182e3c4f17fa",
+  "title": "Ransom_Win32_Ruyk_A_ibt",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Ransom:Win32/Ruyk.A!ibt,SIGNATURE_TYPE_PEHSTR,02 00 02 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/318758"
+}

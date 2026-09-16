@@ -1,0 +1,22 @@
+{
+  "uuid": "de4d849e-e40f-415b-9d97-5cc2dec82428",
+  "title": "Ransom_Win32_Crowti_B_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Ransom:Win32/Crowti.B,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/318672"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "55646d54-b24e-40d3-8c29-183b7e72f74a",
+  "title": "Ransom_Win32_Locky_D",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Ransom:Win32/Locky.D,SIGNATURE_TYPE_PEHSTR_EXT,32 00 32 00 05 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/318877"
+}
