@@ -1,0 +1,42 @@
+rule Linux_Rootkit_Generic_d0c5cfe0 {
+    meta:
+        author = "Elastic Security"
+        id = "d0c5cfe0-850b-432c-924d-547252ca0dd0"
+        fingerprint = "6c005d7126485220c8ea1a7fb2a3215ade16f1b9dda7b89daf7a8cc408288efa"
+        creation_date = "2024-11-14"
+        last_modified = "2024-12-09"
+        threat_name = "Linux.Rootkit.Generic"
+        severity = 100
+        arch_context = "x86, arm64"
+        scan_context = "file, memory"
+        license = "Elastic License v2"
+        os = "linux"
+    strings:
+        $str1 = "sys_call_table"
+        $str2 = "kallsyms_lookup_name"
+        $str3 = "retpoline=Y"
+        $str4 = "kprobe"
+        $init1 = "init_module"
+        $init2 = "finit_module"
+        $hook1 = "getdents"
+        $hook2 = "seq_show_ipv4_tcp"
+        $hook3 = "seq_show_ipv4_udp"
+        $hook4 = "seq_show_ipv6_tcp"
+        $hook5 = "seq_show_ipv6_udp"
+        $hook6 = "sys_kill"
+        $hook7 = "tcp4_port"
+        $hook8 = "tcp4_seq_show"
+        $hook9 = "tcp6_port"
+        $hook10 = "tcp6_seq_show"
+        $hook11 = "udp4_port"
+        $hook12 = "udp4_seq_show"
+        $hook13 = "udp6_port"
+        $hook14 = "udp6_seq_show"
+        $rk1 = "rootkit"
+        $rk2 = "dropper"
+        $rk3 = "hide"
+        $rk4 = "hook"
+        $rk5 = "hacked"
+    condition:
+        2 of ($str*) and 1 of ($init*) and 3 of ($hook*) and 3 of ($rk*)
+}

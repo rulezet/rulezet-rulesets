@@ -1,0 +1,41 @@
+rule Linux_Rootkit_Generic_482bca48 {
+    meta:
+        author = "Elastic Security"
+        id = "482bca48-c337-45d9-9513-301909cbda73"
+        fingerprint = "a2a005777e1bc236a30f3efff8d85af360665bd9418b77aa8d0aaf72a72df88a"
+        creation_date = "2024-11-14"
+        last_modified = "2024-12-09"
+        threat_name = "Linux.Rootkit.Generic"
+        severity = 100
+        arch_context = "x86, arm64"
+        scan_context = "file, memory"
+        license = "Elastic License v2"
+        os = "linux"
+    strings:
+        $str1 = "sys_call_table"
+        $str2 = "kallsyms_lookup_name"
+        $str3 = "retpoline=Y"
+        $str4 = "kprobe"
+        $rk1 = "rootkit"
+        $rk2 = "hide_"
+        $rk3 = "hacked_"
+        $rk4 = "fake_"
+        $rk5 = "hooked_"
+        $hook1 = "_getdents"
+        $hook2 = "_kill"
+        $hook3 = "_seq_show_ipv4_tcp"
+        $hook4 = "_seq_show_ipv4_udp"
+        $hook5 = "_seq_show_ipv6_tcp"
+        $hook6 = "_seq_show_ipv6_udp"
+        $hook7 = "_tcp4_port"
+        $hook8 = "_tcp4_seq_show"
+        $hook9 = "_tcp6_port"
+        $hook10 = "_tcp6_seq_show"
+        $hook11 = "_udp4_port"
+        $hook12 = "_udp4_seq_show"
+        $hook13 = "_udp6_port"
+        $hook14 = "_udp6_seq_show"
+        $hook15 = "_unlink"
+    condition:
+        3 of ($str*) and ((all of ($rk*)) or (3 of ($rk*) and 5 of ($hook*)))
+}
