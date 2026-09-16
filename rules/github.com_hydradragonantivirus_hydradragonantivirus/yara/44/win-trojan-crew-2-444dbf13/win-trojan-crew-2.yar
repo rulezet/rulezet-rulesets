@@ -1,0 +1,9 @@
+rule Win_Trojan_Crew_2
+{
+strings:
+	$a0 = { 90e80f0000e80300e2fbc3b402cd21fec2c3ff90909090b6008bc2b11ef6f13c01eb15e96601b42acd2181f9c407720880fe067203e9fd00bfd901a1020105030101c7be970101c68cc88ed8b41a8bd6cd21b4 }
+
+
+condition:
+	$a0
+}

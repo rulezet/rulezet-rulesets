@@ -1,0 +1,9 @@
+rule Win_Trojan_Cruncher2_1
+{
+strings:
+	$a0 = { 5e83ee03bf0001fc501e065756b430cd2186e03d0a037247b8e033cd2180fca5743d8cc0488ed833db803f5a75318b47032d0a017229894703816f120a018e47 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_CooNut_1
+{
+strings:
+	$a0 = { e80f05eb59e8c300ba9e00e8db04b80043cd01890ee30533c9b80143cd01b8023dcd01727993b80057cd018916df05890ee105ba0001b440b92b05cd01b801578b0ee1058b16df05cd01b43ecd01ba9e00 }
+
+
+condition:
+	$a0
+}
