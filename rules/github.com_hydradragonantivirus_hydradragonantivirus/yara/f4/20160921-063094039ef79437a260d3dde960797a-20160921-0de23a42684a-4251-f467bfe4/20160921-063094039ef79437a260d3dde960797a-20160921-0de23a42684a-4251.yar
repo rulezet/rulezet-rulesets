@@ -1,0 +1,54 @@
+rule _20160921_063094039ef79437a260d3dde960797a_20160921_0de23a42684a_4251 {
+  meta:
+    description = "datamaliciousorder - from files 20160921_063094039ef79437a260d3dde960797a.js, 20160921_0de23a42684ac14027d562ff3e5fb6a8.js, 20160921_1b24f7151bebd3644ff0608076bd2de9.js, 20160921_20daf816cda5af37e984359023f15db2.js, 20160921_32a3b245a67cd982da1d38f57645b403.js, 20160921_35613f26ab8269650aa877fd5af3e43b.js, 20160921_35d4c12af7a9481959a41a055c396673.js, 20160921_378cbd2e27643682973c633e59454f9f.js, 20160921_3ec558d1fbbb49dae502fbac7c879ad5.js, 20160921_4bad0ae96eb9fc3a1c603846a44ffe13.js, 20160921_4fa304d7c11deb5fb9cd6514d5a983de.js, 20160921_5c25506bc44b50a0c8028dec6521139d.js, 20160921_5cabcf77c626e288d5cbd9104a914ae8.js, 20160921_6db2cb585eb933d83d07b47d979b00ec.js, 20160921_6fabf8ef6df7ba14509fab6de95d721f.js, 20160921_70d636d209e6f109a21746567376cc81.js, 20160921_8c8c9fad8af659443108d1078847a668.js, 20160921_910cd79d8583d0c6c23bd93547d341fd.js, 20160921_91734b00fd54cd3dd10c5f20c35d7864.js, 20160921_91af5c220d1ea27d72d05f472ba8fa16.js, 20160921_9b80c329004df146d978cb7b31b22c05.js, 20160921_a160e4a385807ffcdde4f99a0c57b6b2.js, 20160921_aab5fb25ea8971982ac223655d50aba2.js, 20160921_abc9044816c2455dc24ac338746b6bd5.js, 20160921_afb633ee817d9b15b91ed82a059939fc.js, 20160921_b6d1e9aee3a026c6f266b107f0b88f18.js, 20160921_b74bfd3dc7404d3d5a6512718aa52504.js, 20160921_c42fb5c75aea2648513013ad2eed9aaf.js, 20160921_c694815b18c140f34c0f79f86106d901.js, 20160921_ce3c0604d52e9dc9119cefedfee34385.js, 20160921_d72e05128386ec5185fa7c82a29fe618.js, 20160921_dbc1b5f3d0381a2cf3968267e55b6f78.js, 20160921_dc1ff053e9dd688459c33dc98e88d636.js, 20160921_e0f7b2a32a0967097baa59c67369ba3a.js, 20160921_e8d738510e4d2e0efb6c7aa18a7a58d8.js, 20160921_ee80dc6199fa2bd2aea50402a233f984.js"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "ce1eb4a08b98ec71f6759f87657e36ddf82182025b3e317c586fb55c186b9e6c"
+    hash2       = "7237be0906b854ec3890943cde0c9a731117b836078be4256fe37413dd372a66"
+    hash3       = "33f3c9ce370f10b37d492f9d2cda8602f5d90eb1573205e1a4da03da8066ff45"
+    hash4       = "a45ccf6470d4ee194ed220125c42c5ac5d7c4b8a46cce738c6d12e9cc0bafea8"
+    hash5       = "9f7e53a243b56341e3d17450083c46ba2a33141b25134577db086128321a8223"
+    hash6       = "432da9fcdf6c0d62e24e70562f7949325e57abff120248541ccbdaf091d0a7f3"
+    hash7       = "1c2412951fad30bb8b34aca279acd07c03a437936261b0d90334331b98cf1e99"
+    hash8       = "8ce016002e44e1fbf4624122138e5a8b0261aff6487c52da0d644398da46a896"
+    hash9       = "71f652a0e52aa70fe3179b7e90dff8ba55b85022fbfe5d5d2db1bf6f32a04513"
+    hash10      = "a99f235f58613323f5c58def3503d47959f4a77f0697e30c75b6d221c4b40806"
+    hash11      = "cef5a1e67f57d9f24065ff0145644e0185df6abc29113310c6782b30e0a9236b"
+    hash12      = "b6178db9a292199c6992547ad654bf7056fa7f33310f29988e468f0cad5ed707"
+    hash13      = "9493e4251106014081e4b141c6296c51b00c9ba7a799bcb978ea6226cd127d34"
+    hash14      = "b98c5953d102d77c680619bcfd3ba762b3a28a14355f65c479544c745a7c9a12"
+    hash15      = "a6962383b3793edac58fef061128f9047afb39eaa645d3f7977a775ceeb02e56"
+    hash16      = "6e26044e7a07a5a675f3b388e6309b138b9e7a1aa61556485f444025164a158e"
+    hash17      = "05c35ee4072476c50081705469d125bb2570dea942839cab58bf87874667da59"
+    hash18      = "77a08a00002fdf0cdac8ee96f3ed542c8dcd2c5851f8c2feec648c8adedf7468"
+    hash19      = "cdae8af0c395dfe20c83f759c05d2fd6ae2859606871798c6b3a7a12257c7f70"
+    hash20      = "d8a5c3b8bd7307238c3f0a133635143674d5db84b7c5615a145a8bea310c68de"
+    hash21      = "d0ec644cd7307cbd280d369539e9834d3ad2ba0909b631b5a3640f8f6a1105d1"
+    hash22      = "c3eeb2af6e453aec7ede2bba435e7dcf60f7497a94584d1908a2235d79c28a34"
+    hash23      = "0387ef653c0ac9c5d0aaf638bde80688e7b6b279a435dcab3ff679313abfab3c"
+    hash24      = "2bb53920235afb1c2d16f013bc118d1df64065eefc10c1b2b9e7a4b133850850"
+    hash25      = "7a4e330bd3ec71aa3dc8fd3d5b2fa656b04d49cb5ee4e5478a50a6336c5bf9e5"
+    hash26      = "e95dafe7c61e6b4aa30cf1d0f5e7ac22599967edab3c0a7152e74671d99054e2"
+    hash27      = "359d333ab8fc51d27349ecaec71f8baf8e8aafae5bfe2d6afd26f4ed76e802db"
+    hash28      = "5c8cdf3dbb94e197c36e5744084d12e198ecdab7243d67654934aa1cc9bf7ae9"
+    hash29      = "650c20b763cdd9e1631c1f76f67b04a911cfce7996c1e9928b9c3b7fe1f8e7e5"
+    hash30      = "27a20a400d7aa13737d230acf36a2170494c7da92e72552775d19562ba331fdc"
+    hash31      = "72502e65294651208a74590dc961703c09931d4341f59214d7303b271ca8abd5"
+    hash32      = "e37cb576da589586ca091f887f2d941f81f58c7a8c3974b4e11928357dfee825"
+    hash33      = "18a890096a5714e518b28d3f50f6487cfbc4164418daae1842b7d724e2c26bd6"
+    hash34      = "d527617da74d553b6d56b37f7b101c14280b85e5e40e1f565fe396f8b97b29a2"
+    hash35      = "e1cd4a36522d2ad8fc8435b6cb64d8e572d8b31d4203885fa375f539a3ea7891"
+    hash36      = "b51d9165093e08385081a749ef6331a3556fe2739b6c8f85b62e7f6ec1b4f662"
+
+  strings:
+    $s1 = "urn \"EHo\";})(),(function fuck(){return \"Vb\";})(),(function fuck(){return \"IPu\";})(),(function fuck(){return \"MBg\";})(),(" ascii
+    $s2 = ")(),(function fuck(){return \"IPu\";})(),(function fuck(){return \"Ot\";})(),(function fuck(){return \"XHj\";})(),(function fuck" ascii
+    $s3 = "eturn \"KVh\";})(),(function fuck(){return \"YAv\";})(),(function fuck(){return \"YAv\";})(),(function fuck(){return \"USf\";})(" ascii
+    $s4 = ";})(),(function fuck(){return \"Za\";})(),(function fuck(){return \"EHo\";})(),(function fuck(){return \"UXf\";})(),(function fu" ascii
+    $s5 = "ion fuck(){return \"LGo\";})(),(function fuck(){return \"Pc\";})(),(function fuck(){return \"Xg\";})(),(function fuck(){return " ascii
+
+  condition:
+    (uint16(0) == 0x2f0a and (all of them)
+    ) or (all of them)
+}
