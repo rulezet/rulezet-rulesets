@@ -1,0 +1,9 @@
+rule Trojan_Win32_Redline_GNC_MTB_3{
+	meta:
+		description = "Trojan:Win32/Redline.GNC!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {0f b6 14 10 03 ca 0f b6 45 ?? 03 c8 81 e1 ?? ?? ?? ?? 88 4d ?? 0f b6 4d ?? 03 4d ?? 51 0f b7 55 ?? 03 55 ?? 52 8b 4d ?? e8 ?? ?? ?? ?? 8a 45 ?? 04 ?? 88 45 ?? 0f b6 4d ?? 0f b7 55 ?? 3b ca } 	condition:
+		((#a_03_0  & 1)*10) >=10
+ 
+}

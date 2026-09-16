@@ -1,0 +1,9 @@
+rule Trojan_Win32_RedLine_CAR_MTB_2{
+	meta:
+		description = "Trojan:Win32/RedLine.CAR!MTB,SIGNATURE_TYPE_PEHSTR_EXT,06 00 06 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {03 55 f8 8a 02 88 45 fe 0f b6 4d fe 8b 45 f8 33 d2 f7 75 10 0f b6 92 [0-04] 33 ca 88 4d ff 8b 45 08 03 45 f8 8a 08 88 4d fd } 		$a_01_1 = {0f b6 4d fc 8b 55 08 03 55 f8 0f b6 02 2b c1 8b 4d 08 03 4d f8 88 01 e9 } 	condition:
+		((#a_03_0  & 1)*3+(#a_01_1  & 1)*3) >=6
+ 
+}

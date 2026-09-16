@@ -1,0 +1,9 @@
+rule Trojan_Win32_Redline_SD_MTB{
+	meta:
+		description = "Trojan:Win32/Redline.SD!MTB,SIGNATURE_TYPE_PEHSTR_EXT,14 00 14 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {89 c2 83 e2 ?? 8a 8a ?? ?? ?? ?? 30 0c 38 40 3b c6 72 } 		$a_03_1 = {03 c8 83 e1 ?? 0f b6 89 ?? ?? ?? ?? 30 88 ?? ?? ?? ?? 83 c0 ?? 3d ?? ?? ?? ?? 72 } 	condition:
+		((#a_03_0  & 1)*10+(#a_03_1  & 1)*10) >=20
+ 
+}
