@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Access profile deleted"; content: "32103|22 2c 22|type"; content: "deleted an access profile"; classtype: configuration-change; sid:5014404; rev:2;)

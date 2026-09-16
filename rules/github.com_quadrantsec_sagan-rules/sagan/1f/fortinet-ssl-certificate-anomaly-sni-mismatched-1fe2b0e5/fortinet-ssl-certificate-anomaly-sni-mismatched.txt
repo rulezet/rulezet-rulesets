@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] SSL Certificate Anomaly - SNI Mismatched"; json_content: ".logid", "1700062304"; classtype: suspicious-traffic; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014471; rev:1;)

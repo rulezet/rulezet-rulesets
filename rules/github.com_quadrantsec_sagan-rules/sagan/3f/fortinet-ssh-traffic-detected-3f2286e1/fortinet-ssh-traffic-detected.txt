@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] SSH traffic detected"; content: " service|22 3a 22|SH "; classtype: trojan-activity; parse_src_ip: 1; parse_dst_ip: 2; sid:5014447; rev:2;)

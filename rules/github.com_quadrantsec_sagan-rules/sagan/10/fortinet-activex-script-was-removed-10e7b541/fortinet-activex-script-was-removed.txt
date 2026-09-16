@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] ActiveX script was removed"; content: "91010|22 2c 22|type"; classtype: web-application-activity; sid:5014438; rev:2;)

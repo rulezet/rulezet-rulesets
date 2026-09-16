@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] IPv6 firewall inbound policy added"; json_content: ".logid", "0100032151"; classtype: configuration-change; sid:5014451; rev:1;)

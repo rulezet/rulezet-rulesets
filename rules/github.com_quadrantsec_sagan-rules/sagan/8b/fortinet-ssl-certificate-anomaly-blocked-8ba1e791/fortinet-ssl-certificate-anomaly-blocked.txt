@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] SSL Certificate Anomaly - Blocked"; json_content: ".logid", "1700062303"; classtype: suspicious-traffic; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014469; rev:1;)

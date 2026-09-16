@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Infected File Detected and Passed"; json_content: ".logid", "0211008193"; classtype: malware; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014465; rev:2; metadata: updated_on 2025_01_21;)

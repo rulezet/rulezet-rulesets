@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[FORTINET] File Hash does not match"; json_content: ".logid","0100020233"; reference:url,docs.fortinet.com/document/fortigate/7.4.0/new-features/226732/real-time-file-system-integrity-checking; classtype:malware; sid:5014484; rev:1;)

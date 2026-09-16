@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] SSL Certificate Anomaly - Blacklisted"; json_content: ".logid", "1700062300"; classtype: suspicious-traffic; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014470; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Botnet C&C Communication - Warning"; json_content: ".logid", "0402016400"; classtype: misc-attack; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014461; rev:1;)

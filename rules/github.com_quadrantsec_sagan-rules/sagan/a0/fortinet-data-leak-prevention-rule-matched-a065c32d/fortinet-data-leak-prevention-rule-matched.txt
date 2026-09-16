@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Data Leak Prevention Rule Matched"; json_content: ".logid", "0954024576"; classtype: policy-violation; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014454; rev:1;)

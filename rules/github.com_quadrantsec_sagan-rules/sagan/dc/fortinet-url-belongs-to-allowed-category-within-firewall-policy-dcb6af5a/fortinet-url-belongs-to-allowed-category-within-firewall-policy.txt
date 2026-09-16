@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] URL Belongs to Allowed Category Within Firewall Policy"; json_content: ".logid", "0317013312"; classtype: not-suspicious; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014462; rev:1;)

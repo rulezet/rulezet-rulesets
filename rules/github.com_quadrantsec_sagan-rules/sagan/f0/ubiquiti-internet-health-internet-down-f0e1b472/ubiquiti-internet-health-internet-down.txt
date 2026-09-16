@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[UBIQUITI] Internet Health - Internet Down"; content:"Internet Health"; content:"Internet Down"; parse_src_ip:1; normalize; classtype:system-event; sid:5016049; rev:1;)

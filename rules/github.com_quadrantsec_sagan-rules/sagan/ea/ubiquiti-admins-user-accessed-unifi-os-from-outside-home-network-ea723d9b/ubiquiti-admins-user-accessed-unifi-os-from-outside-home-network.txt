@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[UBIQUITI] Admins - User Accessed UniFi OS From Outside HOME_NETWORK"; content:"accessed the UniFi OS"; country_code:track by_src, isnot $HOME_COUNTRY; parse_src_ip:1; normalize; classtype:suspicious-activity; sid:5016046; rev:1;)

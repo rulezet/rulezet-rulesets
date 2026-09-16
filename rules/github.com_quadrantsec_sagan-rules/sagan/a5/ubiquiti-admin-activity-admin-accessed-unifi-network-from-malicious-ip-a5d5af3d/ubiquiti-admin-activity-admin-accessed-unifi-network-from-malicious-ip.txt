@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[UBIQUITI] Admin Activity - Admin Accessed UniFi Network From Malicious IP"; content:"Admin Accessed UniFi Network"; content:"opened UniFi Network"; bluedot:type ip_reputation, track by_src,mdate_effective_period 3 months,Malicious; parse_src_ip:1; normalize; classtype:suspicious-activity; sid:5016045; rev:1;)

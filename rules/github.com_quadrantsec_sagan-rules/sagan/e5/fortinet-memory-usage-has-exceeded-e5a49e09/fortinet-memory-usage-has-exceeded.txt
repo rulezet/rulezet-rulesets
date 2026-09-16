@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Memory usage has exceeded"; content: "32010|22 2c 22|type"; content: "reason|22 3a 22|emory-log-full"; classtype: hardware-event; sid:5014391; rev:2;)

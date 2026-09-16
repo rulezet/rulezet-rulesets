@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[FORTINET] Administrator Login from External IP address"; json_content: ".logid", "0100032001"; json_pcre: ".msg", "/from\s\w+\((\d+)(?<!10)\.(\d+)(?<!192\.168)(?<!172\.(1[6-9]|2\d|3[0-1]))\.(\d+)\.(\d+)/"; classtype:successful-admin; sid:5014485; rev:1;)

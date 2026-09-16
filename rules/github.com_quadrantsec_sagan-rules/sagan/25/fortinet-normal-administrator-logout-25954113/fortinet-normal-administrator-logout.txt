@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Normal administrator logout"; content: "32007|22 2c 22|type"; pcre: "/logs out from|is diconnected by/"; parse_src_ip: 1;  classtype: not-suspicious; sid:5014385; rev:2;)

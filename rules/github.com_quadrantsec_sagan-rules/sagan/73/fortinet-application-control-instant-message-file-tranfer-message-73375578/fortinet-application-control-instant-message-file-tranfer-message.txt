@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Application control instant message file tranfer message"; content: "116001|22 2c 22|type"; content: "kind|22 3a 22|"; classtype: policy-violation; sid:5014425; rev:2;)

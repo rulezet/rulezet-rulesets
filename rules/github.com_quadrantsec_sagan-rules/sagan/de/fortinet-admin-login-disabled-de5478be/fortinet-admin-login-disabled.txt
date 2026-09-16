@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Admin Login Disabled"; json_content: ".logid", "0100032021"; classtype: system-event; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014477; rev:1;)

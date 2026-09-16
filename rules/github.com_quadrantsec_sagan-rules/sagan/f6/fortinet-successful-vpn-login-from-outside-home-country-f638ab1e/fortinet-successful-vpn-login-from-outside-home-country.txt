@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET]  Successful VPN Login From Outside HOME_COUNTRY"; json_content: ".logid", "0101039424"; classtype: suspicious-traffic; json_map: "src_ip", ".srcip"; country_code: track by_src, isnot $HOME_COUNTRY; sid:5014463; rev:1;)

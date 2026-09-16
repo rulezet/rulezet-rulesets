@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Login from LCD"; content: "32001|22 2c 22|type"; content: "from LCD"; classtype: successful-admin; sid:5014370; rev:2;)

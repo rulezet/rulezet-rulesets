@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Corrupted MAC packet detected"; content: "32020|22 2c 22|type"; content: "Corrupted MAC packet detected"; classtype: network-event; sid:5014397; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Administrator logout"; content: "32003|22 2c 22|type"; content: "action|22 3a 22|ogout"; classtype: not-suspicious; sid:5014375; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[AZURE ACTIVITY] Service Health category Level Information"; program:azureEventHub; content:"category|22 3a 20 22|Service Health|22|"; content:"level|22 3a 20 22|Information|22|"; classtype:system-event; reference:url,learn.microsoft.com/en-us/azure/azure-monitor/essentials/activity-log-schema; sid:5011324; rev:1;)

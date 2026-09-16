@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[KEY9] Administrative - User Created"; program:k9; json_content:".event_type","administrative"; json_content:".description","User created."; json_map: "src_ip", ".ip_address"; normalize; classtype:admin-activity; sid:5015947; rev:1; metadata:created_at 2025_05_05,  updated_at 2025_06_17;)

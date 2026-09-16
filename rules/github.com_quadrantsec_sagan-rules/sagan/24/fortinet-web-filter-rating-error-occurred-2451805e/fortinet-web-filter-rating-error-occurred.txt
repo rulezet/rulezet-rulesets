@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Web Filter Rating Error Occurred"; json_content: ".logid", "0318012800"; classtype: system-error; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014473; rev:1;)

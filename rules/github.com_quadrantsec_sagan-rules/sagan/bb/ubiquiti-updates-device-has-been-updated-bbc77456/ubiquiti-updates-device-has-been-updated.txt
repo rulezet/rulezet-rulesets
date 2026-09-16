@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[UBIQUITI] Updates - Device has been updated"; content:"Updates"; content:"Device Updated"; parse_src_ip:1; normalize; classtype:system-event; sid:5016052; rev:1;)

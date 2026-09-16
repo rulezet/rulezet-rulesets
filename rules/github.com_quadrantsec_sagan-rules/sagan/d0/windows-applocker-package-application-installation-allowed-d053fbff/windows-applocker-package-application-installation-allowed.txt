@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-APPLOCKER] Package application installation allowed"; json_map:"event_id",".EventID"; json_map:"message",".RenderedDescription"; event_id: 8023; classtype: suspicious-command; program: AppLocker; sid:5008418; metadata: created_on 2022_11_22, old_sid 5002098; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Banned word was found"; content: "90000|22 2c 22|type"; classtype: policy-violation; sid:5014435; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] DNS - Domain Belongs to a Denied Category in Policy"; json_content: ".logid", "1501054803"; classtype: suspicious-traffic; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014472; rev:1;)

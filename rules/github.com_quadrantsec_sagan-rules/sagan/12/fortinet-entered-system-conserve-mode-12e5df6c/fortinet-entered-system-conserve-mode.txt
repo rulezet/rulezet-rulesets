@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Entered system conserve mode!"; content: "22802|22 2c 22|type"; content: "entered system conserve mode"; classtype: hardware-event; sid:5014443; rev:2;)

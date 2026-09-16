@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[UBIQUITI] Admin Activity - Admin Accessed UniFi Network"; content:"Admin Accessed UniFi Network"; parse_src_ip:1; normalize; classtype:system-event; sid:5016043; rev:1;)

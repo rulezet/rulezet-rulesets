@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] App-Control IPS Pass"; json_content: ".logid", "1059028704"; classtype: system-event; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014467; rev:1;)

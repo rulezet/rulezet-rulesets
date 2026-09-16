@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Support License expiring"; json_content: ".logid", "0100032014"; classtype: program-error; sid:5014453; rev:1;)

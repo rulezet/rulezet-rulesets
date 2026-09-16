@@ -1,0 +1,1 @@
+alert any any any -> any any (msg: "[SWITCH-HARDWARE] Chassis Fan Failure Event - Partial Failure"; pcre: "/chassis:  Fan OK: Fan: \d Failures: (\d)+/"; json_map: "src_ip", ".xff"; threshold: type suppress, track by_src, count 5, seconds 3600; classtype: hardware-event; sid:5015505; rev:2;)

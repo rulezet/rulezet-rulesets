@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[ESET] TCP Port Scanning attack"; program:eset; content:"event|22|:|22|TCP Port Scanning attack"; parse_dst_ip: 2; parse_src_ip:1; content:!"Blocked"; normalize; threshold: type suppress, track by_src, count 1, seconds 3600; classtype:suspicious-traffic; sid:5017055; rev:2; metadata:created_at 2025_07_25;)

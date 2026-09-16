@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Admin authentication success"; content: "38001|22 2c 22|type"; content: "succeeded in authentication"; classtype: successful-admin; sid:5014409; rev:2;)

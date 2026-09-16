@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] URL was in blacklist"; content: "93002|22 2c 22|type"; classtype: policy-violation; sid:5014439; rev:2;)

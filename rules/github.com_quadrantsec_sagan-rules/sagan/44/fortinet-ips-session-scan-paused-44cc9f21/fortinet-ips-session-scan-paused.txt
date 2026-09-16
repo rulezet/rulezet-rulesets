@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] IPS Session Scan Paused"; json_content: ".logid", "0100022700"; classtype: system-error; sid:5014449; rev:1;)

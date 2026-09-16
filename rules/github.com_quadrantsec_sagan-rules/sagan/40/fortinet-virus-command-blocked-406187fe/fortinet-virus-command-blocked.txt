@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Virus Command Blocked"; json_content: ".logid", "0206008452"; classtype: system-event; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014466; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Infected File Detected Within Email"; json_content: ".logid", "0211008194"; classtype: suspicious-traffic; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014456; rev:1;)

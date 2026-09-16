@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Attack Detected by Other Anomaly"; json_content: ".logid", "0720018434"; json_meta_content:!".severity", info,low,medium; classtype: misc-attack; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014476; rev:1;)

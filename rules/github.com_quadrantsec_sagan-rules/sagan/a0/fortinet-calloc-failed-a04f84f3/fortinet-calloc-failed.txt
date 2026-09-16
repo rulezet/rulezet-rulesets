@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] calloc failed"; content: "93007|22 2c 22|type"; content: "calloc"; content: "failed"; classtype: hardware-event; sid:5014441; rev:2;)

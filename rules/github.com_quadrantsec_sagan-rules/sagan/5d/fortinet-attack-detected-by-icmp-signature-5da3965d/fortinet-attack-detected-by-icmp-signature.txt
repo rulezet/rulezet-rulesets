@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Attack detected by ICMP Signature"; json_content: ".logid", "0419016385"; json_meta_content:!".severity", info,low,medium; classtype: misc-attack; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014458; rev:1;)

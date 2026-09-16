@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Admin has left current VDOM"; content: "32007|22 2c 22|type"; content: "has left the virtual domain"; classtype: not-suspicious; sid:5014388; rev:2;)

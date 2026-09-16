@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Access profile changed"; content: "32102|22 2c 22|type"; content: "setting of access profile"; classtype: configuration-change; sid:5014403; rev:2;)

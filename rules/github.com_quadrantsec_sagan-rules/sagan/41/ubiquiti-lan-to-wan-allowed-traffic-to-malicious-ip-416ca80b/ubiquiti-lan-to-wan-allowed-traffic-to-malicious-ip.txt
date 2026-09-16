@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[UBIQUITI] LAN to WAN Allowed Traffic To Malicious IP"; content:"LAN_WAN]Allow All Traffic"; parse_dst_ip:2; bluedot:type ip_reputation, track by_dst,mdate_effective_period 3 months,Malicious; normalize; classtype:suspicious-activity; sid:5016054; rev:1;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[UBIQUITI] Admins - An invitation email to join UniFi Identity has been sent"; content:"An invitation email to join UniFi Identity has been sent"; parse_src_ip:1; normalize; classtype:system-event; sid:5016048; rev:1;)

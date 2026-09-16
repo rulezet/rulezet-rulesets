@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Protect profile changed"; content: "32151|22 2c 22|type"; content: "changed protection profile"; classtype: configuration-change; sid:5014368; rev:2;)

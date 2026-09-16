@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Attack detected by Malicious URL"; json_content: ".logid", "0421016399"; content:!"URL blocked "; classtype: misc-attack; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014460; rev:2;)

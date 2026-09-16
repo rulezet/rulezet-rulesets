@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Attack Detected by UDP/TCP Signature"; json_content: ".logid", "0419016384"; json_content: !".action", "dropped"; json_meta_content:!".severity", info,low,medium; classtype: misc-attack; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; sid:5014457; rev:1;)

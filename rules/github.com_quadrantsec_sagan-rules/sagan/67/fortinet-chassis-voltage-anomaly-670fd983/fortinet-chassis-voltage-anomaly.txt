@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Chassis voltage anomaly"; content: "99505|22 2c 22|type"; content: "Chassis voltage anomaly"; classtype: hardware-event; sid:5014415; rev:2;)
