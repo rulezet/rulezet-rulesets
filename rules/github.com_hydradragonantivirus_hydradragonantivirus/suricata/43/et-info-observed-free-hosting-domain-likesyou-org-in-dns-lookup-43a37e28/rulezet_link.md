@@ -1,0 +1,5 @@
+# ET INFO Observed Free Hosting Domain (likesyou .org) in DNS Lookup
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/484879)
+
+Rulezet UUID: `43a37e28-62ff-4c7b-8357-b5af6c303947`
