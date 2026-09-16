@@ -1,0 +1,9 @@
+rule Win_Trojan_Dracula_1
+{
+strings:
+	$a0 = { 04d3eb43438cc801c35331db53cb90909090909090909090909090e9c8021b5b303b313b33373b34316d48617070 }
+
+
+condition:
+	$a0
+}

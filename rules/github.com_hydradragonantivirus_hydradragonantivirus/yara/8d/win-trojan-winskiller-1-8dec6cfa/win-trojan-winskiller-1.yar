@@ -1,0 +1,9 @@
+rule Win_Trojan_WINSKiller_1
+{
+strings:
+	$a0 = { 544f626a656374e82243000000000000000877696e736b696c6c00009090558bec83c4f8e83e0c00008855fb8945fc807dfb00807dfb007e088b }
+
+
+condition:
+	$a0
+}

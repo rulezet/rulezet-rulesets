@@ -1,0 +1,9 @@
+rule Win_Trojan_Zombie_2
+{
+strings:
+	$a0 = { 3c2d90900f8495fa90908bd080e6c09081fa80c090900f8483fa90903ca990900f8479fa3ce890900f840413908ad080e2f89080fab8900f8462fa90908ad0 }
+
+
+condition:
+	$a0
+}

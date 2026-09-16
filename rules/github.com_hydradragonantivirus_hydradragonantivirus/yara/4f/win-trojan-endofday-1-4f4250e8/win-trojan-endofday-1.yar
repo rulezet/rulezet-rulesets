@@ -1,0 +1,9 @@
+rule Win_Trojan_EndOfDay_1
+{
+strings:
+	$a0 = { cd21c3b003cf456e642d4f662d44617944722056697275732051756573744d616c617973696132303030 }
+
+
+condition:
+	$a0
+}
