@@ -1,0 +1,21 @@
+{
+  "uuid": "dbb2f486-20aa-4362-805c-983f795cbd97",
+  "title": "MonitoringTool_Win32_SniperSpy",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "MonitoringTool:Win32/SniperSpy,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/339499"
+}

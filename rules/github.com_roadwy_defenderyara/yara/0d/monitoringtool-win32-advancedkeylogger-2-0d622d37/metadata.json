@@ -1,0 +1,21 @@
+{
+  "uuid": "0d622d37-ef87-4164-9eb2-9bd9f0070607",
+  "title": "MonitoringTool_Win32_AdvancedKeylogger_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "MonitoringTool:Win32/AdvancedKeylogger,SIGNATURE_TYPE_PEHSTR_EXT,16 00 16 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/339440"
+}

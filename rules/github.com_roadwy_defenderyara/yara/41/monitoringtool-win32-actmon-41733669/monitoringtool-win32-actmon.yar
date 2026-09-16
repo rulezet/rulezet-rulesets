@@ -1,0 +1,9 @@
+rule MonitoringTool_Win32_Actmon{
+	meta:
+		description = "MonitoringTool:Win32/Actmon,SIGNATURE_TYPE_PEHSTR_EXT,04 00 04 00 04 00 00 "
+		
+	strings :
+		$a_02_0 = {8d 4d e4 51 68 ?? ?? ?? ?? e8 ?? ?? ?? ?? 83 c4 08 8d 4d e4 e8 ?? ?? ?? ?? 25 ff 00 00 00 85 c0 74 16 8b f4 6a 00 68 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 3b f4 e8 ?? ?? ?? ?? 8b f4 68 dc 05 00 00 ff 15 ?? ?? ?? ?? 3b f4 e8 ?? ?? ?? ?? eb b2 } 		$a_01_1 = {77 73 63 72 69 70 74 2e 65 78 65 20 62 6f 6f 74 2e 76 62 73 } 		$a_01_2 = {77 73 63 72 69 70 74 00 } 		$a_01_3 = {57 69 6e 45 78 65 63 } 	condition:
+		((#a_02_0  & 1)*1+(#a_01_1  & 1)*1+(#a_01_2  & 1)*1+(#a_01_3  & 1)*1) >=4
+ 
+}

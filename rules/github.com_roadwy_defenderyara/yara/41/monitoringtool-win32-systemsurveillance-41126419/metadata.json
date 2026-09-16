@@ -1,0 +1,21 @@
+{
+  "uuid": "41126419-4b70-4de4-92b0-7a110482aad5",
+  "title": "MonitoringTool_Win32_SystemSurveillance",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "MonitoringTool:Win32/SystemSurveillance,SIGNATURE_TYPE_PEHSTR,09 00 09 00 09 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/339425"
+}
