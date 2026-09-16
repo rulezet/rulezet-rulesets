@@ -1,0 +1,1 @@
+alert altemplate any any -> any any (msg:"TEST"; altemplate.buffer; content:"Bye"; flow:established,to_client; sid:2; rev:1;)

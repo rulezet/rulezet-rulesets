@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA HTTP multipart no filedata"; flow:established,to_server; app-layer-event:http.multipart_no_filedata; flowint:http.anomaly.count,+,1; classtype:protocol-command-decode; sid:2221023; rev:1;)

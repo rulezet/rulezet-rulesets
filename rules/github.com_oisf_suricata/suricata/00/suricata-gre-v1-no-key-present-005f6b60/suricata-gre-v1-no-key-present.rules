@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA GRE v1 no key present"; decode-event:gre.version1_no_key; classtype:protocol-command-decode; sid:2200062; rev:2;)

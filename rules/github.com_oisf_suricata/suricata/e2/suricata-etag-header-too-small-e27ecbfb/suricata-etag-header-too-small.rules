@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA ETAG header too small"; decode-event:etag.header_too_small; classtype:protocol-command-decode; sid:2200123; rev:1;)

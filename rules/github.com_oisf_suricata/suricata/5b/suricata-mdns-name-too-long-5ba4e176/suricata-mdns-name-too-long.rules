@@ -1,0 +1,1 @@
+alert mdns any any -> any any (msg:"SURICATA mDNS Name too long"; app-layer-event:mdns.name_too_long; classtype:protocol-command-decode; sid:2242006; rev:1;)

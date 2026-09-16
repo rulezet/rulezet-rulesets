@@ -1,0 +1,19 @@
+{
+  "uuid": "617f327a-0384-4693-b1b9-e453005fe927",
+  "title": "SUSP_EXE_in_ISO",
+  "format": "yara",
+  "author": "SECUINFRA Falcon Team",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects ISO files that contains an Exe file. Does not need to be malicious",
+  "source": "https://github.com/SIFalcon/Detection",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-21",
+  "last_modified": "2026-01-21",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/191086"
+}

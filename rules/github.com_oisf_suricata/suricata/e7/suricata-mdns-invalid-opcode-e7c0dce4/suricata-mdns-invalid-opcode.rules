@@ -1,0 +1,1 @@
+alert mdns any any -> any any (msg:"SURICATA mDNS Invalid opcode"; app-layer-event:mdns.invalid_opcode; classtype:protocol-command-decode; sid:2242005; rev:1;)

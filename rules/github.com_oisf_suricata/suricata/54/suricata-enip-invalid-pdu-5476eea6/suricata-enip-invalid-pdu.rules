@@ -1,0 +1,1 @@
+alert enip any any -> any any (msg:"SURICATA ENIP invalid PDU"; app-layer-event:enip.invalid_pdu; classtype:protocol-command-decode; sid:2234001; rev:1;)

@@ -1,0 +1,1 @@
+alert quic any any -> any any (msg:"SURICATA QUIC crypto fragments too long"; app-layer-event:quic.crypto_frag_too_long; classtype:protocol-command-decode; sid:2231002; rev:1;)

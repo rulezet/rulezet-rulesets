@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA GRE v1 malformed Source Route Entry header"; decode-event:gre.version1_malformed_sre_hdr; classtype:protocol-command-decode; sid:2200064; rev:2;)

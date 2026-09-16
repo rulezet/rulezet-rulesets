@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA FRAG IPv4 Fragmentation overlap"; decode-event:ipv4.frag_overlap; classtype:protocol-command-decode; sid:2200070; rev:2;)

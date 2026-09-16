@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"SURICATA STREAM urgent OOB limit reached";  stream-event:reassembly_urgent_oob_limit_reached; classtype:protocol-command-decode; sid:2210066; rev:1;)

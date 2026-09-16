@@ -1,0 +1,1 @@
+alert pgsql any any -> any any (msg:"SURICATA PGSQL Too many transactions"; app-layer-event:pgsql.too_many_transactions; sid:2241000; rev:1;)

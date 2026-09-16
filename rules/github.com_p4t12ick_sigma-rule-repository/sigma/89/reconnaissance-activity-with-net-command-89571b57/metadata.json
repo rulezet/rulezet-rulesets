@@ -1,0 +1,24 @@
+{
+  "uuid": "89571b57-b737-4a1b-9f6f-8c07f8a3af08",
+  "title": "Reconnaissance Activity with Net Command",
+  "format": "sigma",
+  "author": "Florian Roth, Markus Neis",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects a set of commands often used in recon stages by different attack groups",
+  "source": "https://github.com/P4T12ICK/Sigma-Rule-Repository",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1082",
+    "T1087"
+  ],
+  "cve": [],
+  "created_at": "2026-01-21",
+  "last_modified": "2026-01-21",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/190971"
+}

@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA MPLS unknown payload type"; decode-event:mpls.unknown_payload_type; classtype:protocol-command-decode; sid:2200101; rev:2;)

@@ -1,0 +1,1 @@
+alert ftp any any -> any any (msg:"SURICATA FTP Response command too long"; flow:to_client; app-layer-event:ftp.response_command_too_long; classtype:protocol-command-decode; sid:2232001; rev:1;)

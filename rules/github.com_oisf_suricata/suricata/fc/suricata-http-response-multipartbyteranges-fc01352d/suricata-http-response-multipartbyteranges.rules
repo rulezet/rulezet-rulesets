@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA HTTP Response multipart/byteranges"; flow:established,to_client; app-layer-event:http.response_multipart_byteranges; flowint:http.anomaly.count,+,1; classtype:protocol-command-decode; sid:2221037; rev:1;)

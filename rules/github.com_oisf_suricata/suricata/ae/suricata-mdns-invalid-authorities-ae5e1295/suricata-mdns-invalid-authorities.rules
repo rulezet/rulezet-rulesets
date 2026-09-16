@@ -1,0 +1,1 @@
+alert mdns any any -> any any (msg:"SURICATA mDNS invalid authorities"; app-layer-event:mdns.invalid_authorities; classtype:protocol-command-decode; sid:2242010; rev:1;)

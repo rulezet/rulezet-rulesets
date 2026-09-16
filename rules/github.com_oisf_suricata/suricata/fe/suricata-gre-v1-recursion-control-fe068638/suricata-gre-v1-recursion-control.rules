@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA GRE v1 recursion control"; decode-event:gre.version1_recur; classtype:protocol-command-decode; sid:2200060; rev:2;)

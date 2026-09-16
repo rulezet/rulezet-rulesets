@@ -1,0 +1,21 @@
+{
+  "uuid": "b7aec860-698e-49f7-b58a-971e5b982709",
+  "title": "CRIM_FIN7_PS_Cryptor_Jun_2021_1",
+  "format": "yara",
+  "author": "Arkbird_SOLG",
+  "license": "",
+  "license_verified": false,
+  "description": "Detect PS Cryptor used by FIN7 for Diceloader and Carbanak",
+  "source": "https://github.com/StrangerealIntel/DailyIOC",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Carbanak - G0008\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/195360"
+}

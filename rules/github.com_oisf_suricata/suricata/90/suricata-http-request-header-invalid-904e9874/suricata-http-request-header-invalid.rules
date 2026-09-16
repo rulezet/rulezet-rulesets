@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA HTTP request header invalid"; flow:established,to_server; app-layer-event:http.request_header_invalid; flowint:http.anomaly.count,+,1; classtype:protocol-command-decode; sid:2221013; rev:1;)

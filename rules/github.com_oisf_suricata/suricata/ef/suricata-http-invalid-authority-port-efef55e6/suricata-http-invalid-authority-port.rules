@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA HTTP invalid authority port"; flow:established; app-layer-event:http.invalid_authority_port; flowint:http.anomaly.count,+,1; classtype:protocol-command-decode; sid:2221012; rev:1;)

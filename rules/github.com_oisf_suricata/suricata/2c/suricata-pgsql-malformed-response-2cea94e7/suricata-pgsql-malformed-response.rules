@@ -1,0 +1,1 @@
+alert pgsql any any -> any any (msg:"SURICATA PGSQL Malformed response"; app-layer-event:pgsql.malformed_response; flow:to_client; sid:2241002; rev:1;)

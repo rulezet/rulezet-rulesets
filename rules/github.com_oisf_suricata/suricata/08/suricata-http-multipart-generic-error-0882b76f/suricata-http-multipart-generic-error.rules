@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA HTTP multipart generic error"; flow:established,to_server; app-layer-event:http.multipart_generic_error; flowint:http.anomaly.count,+,1; classtype:protocol-command-decode; sid:2221022; rev:1;)

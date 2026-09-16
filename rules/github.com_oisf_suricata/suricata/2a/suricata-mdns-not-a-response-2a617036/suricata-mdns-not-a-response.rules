@@ -1,0 +1,1 @@
+alert mdns any any -> any any (msg:"SURICATA mDNS Not a response"; flow:to_client; app-layer-event:mdns.not_response; classtype:protocol-command-decode; sid:2242003; rev:1;)

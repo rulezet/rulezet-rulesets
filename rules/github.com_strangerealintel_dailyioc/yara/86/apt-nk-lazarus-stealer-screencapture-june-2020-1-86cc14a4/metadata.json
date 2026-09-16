@@ -1,0 +1,22 @@
+{
+  "uuid": "86cc14a4-b392-49e7-aa67-69e103a5b4c0",
+  "title": "APT_NK_Lazarus_Stealer_ScreenCapture_June_2020_1",
+  "format": "yara",
+  "author": "Arkbird_SOLG, James_inthe_box",
+  "license": "",
+  "license_verified": false,
+  "description": "Detect ScreenCapture malware used by Lazarus APT",
+  "source": "https://github.com/StrangerealIntel/DailyIOC",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/195347"
+}

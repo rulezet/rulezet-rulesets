@@ -1,0 +1,1 @@
+alert quic any any -> any any (msg:"SURICATA QUIC error on data"; app-layer-event:quic.error_on_data; classtype:protocol-command-decode; sid:2231001; rev:1;)

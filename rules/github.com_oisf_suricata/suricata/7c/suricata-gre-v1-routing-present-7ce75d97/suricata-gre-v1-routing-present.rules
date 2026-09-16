@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA GRE v1 routing present"; decode-event:gre.version1_route; classtype:protocol-command-decode; sid:2200058; rev:2;)

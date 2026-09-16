@@ -1,0 +1,1 @@
+alert websocket any any -> any any (msg:"SURICATA Websocket skipped end of payload"; app-layer-event:websocket.skip_end_of_payload; classtype:protocol-command-decode; sid:2235000; rev:1;)

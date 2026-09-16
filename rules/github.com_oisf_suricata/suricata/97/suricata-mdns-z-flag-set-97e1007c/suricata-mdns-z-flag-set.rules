@@ -1,0 +1,1 @@
+alert mdns any any -> any any (msg:"SURICATA mDNS Z flag set"; app-layer-event:mdns.z_flag_set; classtype:protocol-command-decode; sid:2242004; rev:1;)

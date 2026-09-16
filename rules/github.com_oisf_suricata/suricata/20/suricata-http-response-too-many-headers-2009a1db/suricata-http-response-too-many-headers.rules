@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA HTTP response too many headers"; flow:established,to_client; app-layer-event:http.response_too_many_headers; classtype:protocol-command-decode; sid:2221057; rev:1;)

@@ -1,0 +1,1 @@
+alert nfs any any -> any any (msg:"SURICATA NFS too many transactions"; app-layer-event:nfs.too_many_transactions; classtype:protocol-command-decode; sid:2223002; rev:1;)

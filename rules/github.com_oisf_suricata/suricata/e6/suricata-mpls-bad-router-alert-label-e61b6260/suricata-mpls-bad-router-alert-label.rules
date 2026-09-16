@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA MPLS bad router alert label"; decode-event:mpls.bad_label_router_alert; classtype:protocol-command-decode; sid:2200098; rev:2;)

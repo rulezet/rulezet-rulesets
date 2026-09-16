@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA HTTP status 100-Continue already seen"; flow:established,to_client; app-layer-event:http.100_continue_already_seen; flowint:http.anomaly.count,+,1; classtype:protocol-command-decode; sid:2221009; rev:1;)

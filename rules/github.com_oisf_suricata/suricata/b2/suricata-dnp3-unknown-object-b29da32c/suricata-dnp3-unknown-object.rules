@@ -1,0 +1,1 @@
+alert dnp3 any any -> any any (msg:"SURICATA DNP3 Unknown object";       app-layer-event:dnp3.unknown_object; classtype:protocol-command-decode; sid:2270004; rev:2;)

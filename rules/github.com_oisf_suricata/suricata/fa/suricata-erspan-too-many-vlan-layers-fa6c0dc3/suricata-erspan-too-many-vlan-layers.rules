@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA ERSPAN too many vlan layers"; decode-event:erspan.too_many_vlan_layers; classtype:protocol-command-decode; sid:2200107; rev:2;)

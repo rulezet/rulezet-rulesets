@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA MPLS bad implicit null label"; decode-event:mpls.bad_label_implicit_null; classtype:protocol-command-decode; sid:2200099; rev:2;)

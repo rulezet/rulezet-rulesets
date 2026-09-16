@@ -1,0 +1,1 @@
+alert pop3 any any -> any any (msg:"SURICATA POP3 Unknown Command"; app-layer-event:pop3.unknown_command; flow:to_server; sid:2236003; rev:1;)

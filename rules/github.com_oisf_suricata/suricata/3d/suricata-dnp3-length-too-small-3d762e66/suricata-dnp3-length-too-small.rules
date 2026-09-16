@@ -1,0 +1,1 @@
+alert dnp3 any any -> any any (msg:"SURICATA DNP3 Length too small";       app-layer-event:dnp3.len_too_small; classtype:protocol-command-decode; sid:2270001; rev:3;)

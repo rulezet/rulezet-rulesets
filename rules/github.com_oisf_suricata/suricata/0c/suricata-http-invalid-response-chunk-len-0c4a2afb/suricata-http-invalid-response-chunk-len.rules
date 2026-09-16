@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA HTTP invalid response chunk len"; flow:established,to_client; app-layer-event:http.invalid_response_chunk_len; flowint:http.anomaly.count,+,1; classtype:protocol-command-decode; sid:2221004; rev:1;)

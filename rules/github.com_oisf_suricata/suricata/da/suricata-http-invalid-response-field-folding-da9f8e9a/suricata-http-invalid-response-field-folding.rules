@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA HTTP invalid response field folding"; flow:established,to_client; app-layer-event:http.invalid_response_field_folding; flowint:http.anomaly.count,+,1; classtype:protocol-command-decode; sid:2221017; rev:1;)

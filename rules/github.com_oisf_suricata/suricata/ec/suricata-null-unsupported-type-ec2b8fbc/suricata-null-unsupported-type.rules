@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA NULL unsupported type"; decode-event:ltnull.unsupported_type; classtype:protocol-command-decode; sid:2200104; rev:2;)

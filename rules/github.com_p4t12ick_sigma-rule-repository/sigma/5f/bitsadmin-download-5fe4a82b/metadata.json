@@ -1,0 +1,23 @@
+{
+  "uuid": "5fe4a82b-b492-4468-ad4c-ab6ae8db26a4",
+  "title": "Bitsadmin Download",
+  "format": "sigma",
+  "author": "Michael Haag",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Detects usage of bitsadmin downloading a file",
+  "source": "https://github.com/P4T12ICK/Sigma-Rule-Repository",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1197"
+  ],
+  "cve": [],
+  "created_at": "2026-01-21",
+  "last_modified": "2026-01-21",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/190969"
+}

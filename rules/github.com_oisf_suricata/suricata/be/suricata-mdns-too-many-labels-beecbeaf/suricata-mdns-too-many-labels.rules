@@ -1,0 +1,1 @@
+alert mdns any any -> any any (msg:"SURICATA mDNS Too many labels"; app-layer-event:mdns.too_many_labels; classtype:protocol-command-decode; sid:2242008; rev:1;)

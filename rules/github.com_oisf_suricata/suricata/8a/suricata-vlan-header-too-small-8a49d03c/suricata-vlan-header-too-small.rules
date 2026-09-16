@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA VLAN header too small "; decode-event:vlan.header_too_small; classtype:protocol-command-decode; sid:2200066; rev:2;)

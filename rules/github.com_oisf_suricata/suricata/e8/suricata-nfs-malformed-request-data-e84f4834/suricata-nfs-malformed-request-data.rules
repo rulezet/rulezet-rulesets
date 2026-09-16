@@ -1,0 +1,1 @@
+alert nfs any any -> any any (msg:"SURICATA NFS malformed request data"; flow:to_server; app-layer-event:nfs.malformed_data; classtype:protocol-command-decode; sid:2223000; rev:1;)

@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA CHDLC packet too small"; decode-event:chdlc.pkt_too_small; classtype:protocol-command-decode; sid:2200115; rev:1;)

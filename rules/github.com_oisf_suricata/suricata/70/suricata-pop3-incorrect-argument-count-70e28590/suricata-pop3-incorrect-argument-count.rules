@@ -1,0 +1,1 @@
+alert pop3 any any -> any any (msg:"SURICATA POP3 Incorrect Argument Count"; app-layer-event:pop3.incorrect_argument_count; flow:to_server; sid:2236002; rev:1;)

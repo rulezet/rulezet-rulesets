@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA HTTP unable to match response to request"; flow:established,to_client; app-layer-event:http.unable_to_match_response_to_request; flowint:http.anomaly.count,+,1; classtype:protocol-command-decode; sid:2221010; rev:1;)

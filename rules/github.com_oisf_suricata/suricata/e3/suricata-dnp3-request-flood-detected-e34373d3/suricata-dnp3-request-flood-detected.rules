@@ -1,0 +1,1 @@
+alert dnp3 any any -> any any (msg:"SURICATA DNP3 Request flood detected";       app-layer-event:dnp3.flooded; classtype:protocol-command-decode; sid:2270000; rev:2;)

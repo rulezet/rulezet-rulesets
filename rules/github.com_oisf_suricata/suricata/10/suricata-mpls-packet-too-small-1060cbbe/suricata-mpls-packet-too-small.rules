@@ -1,0 +1,1 @@
+alert pkthdr any any -> any any (msg:"SURICATA MPLS packet too small"; decode-event:mpls.pkt_too_small; classtype:protocol-command-decode; sid:2200114; rev:2;)

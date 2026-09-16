@@ -1,0 +1,1 @@
+alert pgsql any any -> any any (msg:"SURICATA PGSQL Invalid length"; app-layer-event:pgsql.invalid_length; sid:2241003; rev:1;)
