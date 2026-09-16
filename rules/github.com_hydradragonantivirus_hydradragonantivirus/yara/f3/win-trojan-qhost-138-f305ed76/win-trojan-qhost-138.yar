@@ -1,0 +1,9 @@
+rule Win_Trojan_Qhost_138
+{
+strings:
+	$a0 = { fb8e324b01698d051e87dbef4599f9af2c2aaa1513eea70ea84da7a2afebed1e7a4498a3868066d01e157e2ebbfbd7b9ac372ca12479c9605285f93e8dac40c2daa5c33546bc9a4ac6173f085bb48d04ebbfe4a3fbac8ea5b345223664c7055153ccd54ae8b117cee0cad5e1b277f1cc09f1468f515cc6cadf7cd10794ce8b5aa1aaa6ed63961765d283f219 }
+
+
+condition:
+	$a0
+}

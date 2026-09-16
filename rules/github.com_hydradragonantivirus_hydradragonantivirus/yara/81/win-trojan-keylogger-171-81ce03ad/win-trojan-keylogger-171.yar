@@ -1,0 +1,9 @@
+rule Win_Trojan_Keylogger_171
+{
+strings:
+	$a0 = { c7855cffffff080000008d955cffffff8d4dacff15d0104000eb2ac745fcb6000000c78564ffffff68224000c7855cffffff080000008d955cffffff8d4dacff15d0104000e9c1110000c745fcba0000006a6be825d5ffff66898538ffffffff1534104000668b8d38ffffff66898d64ffffffc7855cffffff020000008d955cffffff8d4d9cff1508104000 }
+
+
+condition:
+	$a0
+}

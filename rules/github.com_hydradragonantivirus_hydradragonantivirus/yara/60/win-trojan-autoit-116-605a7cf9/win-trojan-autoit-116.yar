@@ -1,0 +1,9 @@
+rule Win_Trojan_Autoit_116
+{
+strings:
+	$a0 = { 5c63757272656e7476657273696f6e5c72756e[0-25]24646972202620226e6f646c6f67696e2e657865 }
+
+
+condition:
+	$a0
+}

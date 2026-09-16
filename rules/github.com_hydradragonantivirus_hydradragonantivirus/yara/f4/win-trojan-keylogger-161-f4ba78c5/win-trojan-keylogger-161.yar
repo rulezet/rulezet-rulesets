@@ -1,0 +1,9 @@
+rule Win_Trojan_Keylogger_161
+{
+strings:
+	$a0 = { a6e58a54dce8fcb488249fdccdf9cb58c8da8bb9f30d63559d118de01d3abc5a8bccfec24ba8f13c9e068c18a58a8e163daaa2b449835299510b4bd0c5a7ced9118a91a4d47cecbaeadcfe4801e3365e0adbbb34feeccc03f27ca261869f9958cecef8bb4de9013ca78d5a52bd39ce7bcba50a1d08beae547d9473dac88f9b5a2c85ac01eb458d9122ded559 }
+
+
+condition:
+	$a0
+}
