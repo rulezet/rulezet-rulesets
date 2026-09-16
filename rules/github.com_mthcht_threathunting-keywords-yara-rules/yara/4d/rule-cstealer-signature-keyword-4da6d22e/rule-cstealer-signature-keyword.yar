@@ -1,0 +1,15 @@
+rule rule_cstealer_signature_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'cstealer' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "cstealer"
+        rule_category = "signature_keyword"
+
+    strings:
+                        $string1_cstealer_signature_keyword = /Python\.Stealer/ nocase ascii wide
+
+    condition:
+        any of them
+}

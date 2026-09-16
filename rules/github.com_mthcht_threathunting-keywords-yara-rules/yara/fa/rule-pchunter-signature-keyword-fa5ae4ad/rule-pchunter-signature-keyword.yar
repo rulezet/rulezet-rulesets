@@ -1,0 +1,16 @@
+rule rule_PCHunter_signature_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'PCHunter' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "PCHunter"
+        rule_category = "signature_keyword"
+
+    strings:
+                        $string1_PCHunter_signature_keyword = /PUA\.Win64\.PCHunter\.YACIU/ nocase ascii wide
+                        $string2_PCHunter_signature_keyword = /RiskWare\.PcHunter/ nocase ascii wide
+
+    condition:
+        any of them
+}
