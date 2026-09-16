@@ -1,0 +1,21 @@
+{
+  "uuid": "8591d138-e5b7-448a-8285-d754ec0eee4d",
+  "title": "TrojanSpy_Win32_Bancos_AHP",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanSpy:Win32/Bancos.AHP,SIGNATURE_TYPE_PEHSTR_EXT,2c 01 18 01 0d 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/326399"
+}

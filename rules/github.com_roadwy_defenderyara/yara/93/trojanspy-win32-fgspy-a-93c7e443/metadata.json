@@ -1,0 +1,21 @@
+{
+  "uuid": "93c7e443-41fc-4fe8-a96c-c7d12f9c5359",
+  "title": "TrojanSpy_Win32_Fgspy_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanSpy:Win32/Fgspy.A,SIGNATURE_TYPE_PEHSTR_EXT,22 00 22 00 08 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/326360"
+}
