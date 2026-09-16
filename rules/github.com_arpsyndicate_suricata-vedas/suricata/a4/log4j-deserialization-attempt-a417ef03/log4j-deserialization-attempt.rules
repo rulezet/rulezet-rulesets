@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"log4j deserialization attempt"; flow:established; content:"${jndi:ldap://"; sid:1001153; rev:1; reference:cve,CVE-2020-9480; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-9480;)

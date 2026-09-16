@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"OX App Suite Information Exposure Attempt"; content:"shared-drive"; sid:1001219; rev:1; reference:cve,CVE-2020-15004; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-15004;)

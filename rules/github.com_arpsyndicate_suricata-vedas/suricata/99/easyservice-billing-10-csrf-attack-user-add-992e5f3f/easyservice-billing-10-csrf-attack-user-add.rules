@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"EasyService Billing 1.0 CSRF Attack - User Add"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/EasyServiceBilling/system-settings-user-new2.php?"; nocase; distance:0; content:"type="; sid:1005745; rev:1; reference:cve,CVE-2018-11442; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-11442;)

@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Global RADAR BSA Radar XSS Attempt"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/"; nocase; distance:0; content:"<script|3e|"; nocase; sid:1004694; rev:1; reference:cve,CVE-2020-14944; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-14944;)

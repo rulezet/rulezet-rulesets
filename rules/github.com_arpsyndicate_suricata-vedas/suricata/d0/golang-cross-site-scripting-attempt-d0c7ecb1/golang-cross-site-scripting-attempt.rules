@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"golang cross-site scripting attempt"; flow:established; content:"<script>alert('XSS')</script>"; sid:1001155; rev:1; reference:cve,CVE-2020-9480; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-9480;)

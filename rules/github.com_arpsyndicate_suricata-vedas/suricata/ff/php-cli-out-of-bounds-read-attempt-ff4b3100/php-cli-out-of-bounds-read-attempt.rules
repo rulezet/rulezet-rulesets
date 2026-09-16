@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"php-cli out-of-bounds read attempt"; flow:established; content:"php://filter/convert.base64-encode/resource=/etc/passwd"; sid:1001154; rev:1; reference:cve,CVE-2020-9480; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2020-9480;)
