@@ -1,0 +1,9 @@
+rule Trojan_BAT_AgentTesla_CDL_MTB{
+	meta:
+		description = "Trojan:BAT/AgentTesla.CDL!MTB,SIGNATURE_TYPE_PEHSTR_EXT,05 00 05 00 05 00 00 "
+		
+	strings :
+		$a_02_0 = {07 02 09 18 6f ?? ?? ?? 0a 1f 10 28 ?? ?? ?? 0a 84 28 ?? ?? ?? 0a 6f ?? ?? ?? 0a 26 09 18 d6 0d 09 08 31 } 		$a_81_1 = {47 65 74 54 79 70 65 } 		$a_81_2 = {47 65 74 4d 65 74 68 6f 64 } 		$a_81_3 = {54 6f 55 49 6e 74 33 32 } 		$a_81_4 = {53 75 62 73 74 72 69 6e 67 } 	condition:
+		((#a_02_0  & 1)*1+(#a_81_1  & 1)*1+(#a_81_2  & 1)*1+(#a_81_3  & 1)*1+(#a_81_4  & 1)*1) >=5
+ 
+}
