@@ -1,0 +1,9 @@
+rule Win_Trojan_Delfiles_14
+{
+strings:
+	$a0 = { 6563686f206f6666204063747479206e756c2064656c20633a5c77696e646f77735c73797374656d5c2a2e3f3f3f20 }
+
+
+condition:
+	$a0
+}

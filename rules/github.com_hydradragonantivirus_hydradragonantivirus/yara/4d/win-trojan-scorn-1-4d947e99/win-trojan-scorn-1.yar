@@ -1,0 +1,9 @@
+rule Win_Trojan_Scorn_1
+{
+strings:
+	$a0 = { 73636f726e5d20666f722025256120696e20282a2e6261742920646f20636f707920633a5c25302e6261 }
+
+
+condition:
+	$a0
+}

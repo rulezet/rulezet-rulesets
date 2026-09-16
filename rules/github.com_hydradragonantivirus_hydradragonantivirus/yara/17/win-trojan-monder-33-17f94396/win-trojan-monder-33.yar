@@ -1,0 +1,9 @@
+rule Win_Trojan_Monder_33
+{
+strings:
+	$a0 = { b1a20effdc44fc778ba980caa120fcccaac64ea6359a988cc321c09cc3e1db53bbeea48df3b0a08738c456ee6ced11b13a9d386291f1201fd4ed79031f239d1eeef8a7af8cd7ca5ea95e92392a58efac4ab167f340fc9dcd4ca3d5ad8c06cd931c2ce1730901dfdda862dcffa2633d4a43559f44e633355808b882838323e9358f5105c5a6cc76ceffd1749b }
+
+
+condition:
+	$a0
+}
