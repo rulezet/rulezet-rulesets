@@ -1,0 +1,22 @@
+{
+  "uuid": "a0d2a387-4f33-49c9-a8c9-089a36200884",
+  "title": "Virus_Win32_Sivis_YAE_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Virus:Win32/Sivis.YAE!MTB,SIGNATURE_TYPE_PEHSTR_EXT,16 00 16 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/338358"
+}

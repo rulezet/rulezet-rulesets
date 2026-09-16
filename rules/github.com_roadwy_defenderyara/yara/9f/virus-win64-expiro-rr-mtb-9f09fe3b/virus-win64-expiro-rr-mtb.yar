@@ -1,0 +1,9 @@
+rule Virus_Win64_Expiro_RR_MTB{
+	meta:
+		description = "Virus:Win64/Expiro.RR!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_01_0 = {33 ca 41 8b d1 44 33 d1 8b 4c 24 74 45 88 57 fc 45 88 1f 4d 8d 7f 08 41 c1 ca 08 45 88 57 f3 41 c1 cb 08 45 88 5f f7 } 		$a_01_1 = {41 70 70 56 43 6c 69 65 6e 74 2e 70 64 62 } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1) >=2
+ 
+}

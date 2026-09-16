@@ -1,0 +1,22 @@
+{
+  "uuid": "6564ad77-c6ef-447c-820c-47b3fac9948b",
+  "title": "Virus_Win32_Viking_gen_dll",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Virus:Win32/Viking.gen!dll,SIGNATURE_TYPE_PEHSTR,0d 00 0c 00 0a 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/338226"
+}

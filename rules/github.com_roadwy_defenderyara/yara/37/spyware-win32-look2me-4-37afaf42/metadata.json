@@ -1,0 +1,22 @@
+{
+  "uuid": "37afaf42-fc59-4a68-a2d4-8452a01cd079",
+  "title": "Spyware_Win32_Look2Me_4",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Spyware:Win32/Look2Me,SIGNATURE_TYPE_PEHSTR_EXT,0c 00 0c 00 0c 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Spyware\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/338055"
+}

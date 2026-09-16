@@ -1,0 +1,22 @@
+{
+  "uuid": "8fc0727a-eec8-4752-bbb6-e5ba45412806",
+  "title": "Spyware_Win32_AYOSpy_A_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Spyware:Win32/AYOSpy.A,SIGNATURE_TYPE_PEHSTR,1a 00 1a 00 12 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Spyware\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/338071"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "8333842d-0386-4bd5-806b-d4234f661c63",
+  "title": "Spyware_Win32_C2Lop_B_6",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Spyware:Win32/C2Lop.B,SIGNATURE_TYPE_PEHSTR,0c 00 0a 00 06 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Spyware\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/338081"
+}

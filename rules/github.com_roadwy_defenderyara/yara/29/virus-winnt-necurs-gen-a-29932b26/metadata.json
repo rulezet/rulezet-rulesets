@@ -1,0 +1,21 @@
+{
+  "uuid": "29932b26-6d19-4368-8098-96dabec3a056",
+  "title": "Virus_WinNT_Necurs_gen_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Virus:WinNT/Necurs.gen!A.dummy,SIGNATURE_TYPE_ARHSTR_EXT,0f 00 0d 00 0d 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "misp-galaxy:botnet=\"Necurs\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/338401"
+}
