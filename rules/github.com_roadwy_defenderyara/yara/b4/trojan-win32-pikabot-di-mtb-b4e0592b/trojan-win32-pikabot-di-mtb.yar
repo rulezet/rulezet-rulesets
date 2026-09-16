@@ -1,0 +1,9 @@
+rule Trojan_Win32_Pikabot_DI_MTB{
+	meta:
+		description = "Trojan:Win32/Pikabot.DI!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0b 00 0b 00 04 00 00 "
+		
+	strings :
+		$a_03_0 = {0f b6 0c 01 8b 85 ?? ?? ?? ?? 33 d2 be ?? ?? ?? ?? f7 f6 0f b6 54 15 ?? 33 ca } 		$a_03_1 = {f7 f6 0f b6 54 15 ?? 33 ca 90 09 11 00 0f b6 8a ?? ?? ?? ?? 8b 45 ?? 33 d2 be } 		$a_01_2 = {88 0c 02 eb } 		$a_01_3 = {88 08 eb c8 } 	condition:
+		((#a_03_0  & 1)*10+(#a_03_1  & 1)*10+(#a_01_2  & 1)*1+(#a_01_3  & 1)*1) >=11
+ 
+}

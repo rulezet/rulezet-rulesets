@@ -1,0 +1,22 @@
+{
+  "uuid": "d303e60e-9345-4c97-84a3-3aac62cf67d1",
+  "title": "Trojan_Win32_SystemOwnerDiscovery_C_pwsh",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/SystemOwnerDiscovery.C!pwsh,SIGNATURE_TYPE_CMDHSTR_EXT,01 00 01 00 06 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/284169"
+}

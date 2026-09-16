@@ -1,0 +1,9 @@
+rule Trojan_Win32_Dridex_RT_MTB{
+	meta:
+		description = "Trojan:Win32/Dridex.RT!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {33 d3 c7 05 ?? ?? ?? ?? 00 00 00 00 01 15 ?? ?? ?? ?? a1 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 89 08 5b 8b e5 5d } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}
