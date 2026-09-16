@@ -1,0 +1,21 @@
+{
+  "uuid": "12fef0d7-ca96-40e2-a4d3-55509bcdce1e",
+  "title": "SANS_ICS_Cybersecurity_Challenge_400_Havex_Memdump",
+  "format": "yara",
+  "author": "Chris Sistrunk",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects Havex Windows process executable from memory dump",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/198712"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "7780f31b-cce6-4f84-91a1-c813af9cad45",
+  "title": "FE_CPE_MS17_010_RANSOMWARE",
+  "format": "yara",
+  "author": "Ian.Ahl@fireeye.com @TekDefense, Nicholas.Carr@mandiant.com @ItsReallyNick",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Probable PETYA ransomware using ETERNALBLUE, WMIC, PsExec",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:tool=\"PsExec\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/198736"
+}

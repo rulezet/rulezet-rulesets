@@ -1,0 +1,21 @@
+{
+  "uuid": "cae6ed13-3175-4fdd-aede-92810a2c4750",
+  "title": "KINS_DLL_zeus",
+  "format": "yara",
+  "author": "AlienVault Labs aortega@alienvault.com",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Match default bot in KINS leaked dropper, Zeus",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:banker=\"Zeus\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/198601"
+}
