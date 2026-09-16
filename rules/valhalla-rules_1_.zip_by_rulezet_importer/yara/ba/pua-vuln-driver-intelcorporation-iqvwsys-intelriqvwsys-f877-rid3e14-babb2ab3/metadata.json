@@ -1,0 +1,19 @@
+{
+  "uuid": "babb2ab3-7284-4c0b-8809-87ed5848db82",
+  "title": "PUA_VULN_Driver_Intelcorporation_Iqvwsys_Intelriqvwsys_F877_RID3E14",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - iQVW64.SYS",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229293"
+}

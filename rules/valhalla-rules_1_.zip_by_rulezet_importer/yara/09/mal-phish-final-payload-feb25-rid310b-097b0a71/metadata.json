@@ -1,0 +1,22 @@
+{
+  "uuid": "097b0a71-fd16-451f-a296-098fb93a9c59",
+  "title": "MAL_PHISH_Final_Payload_Feb25_RID310B",
+  "format": "yara",
+  "author": "X__Junior",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects possible final payload of phishing-delivered malware, where embedded shellcode is used to decrypt and execute the payload after user-supplied password input.",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1203",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229389"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "167ad0a8-2dcf-4b97-9718-096e688715fa",
+  "title": "MAL_EXPL_Perfctl_Oct24_RID2E9D",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects exploits used in relation with Perfctl malware campaigns",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229408"
+}

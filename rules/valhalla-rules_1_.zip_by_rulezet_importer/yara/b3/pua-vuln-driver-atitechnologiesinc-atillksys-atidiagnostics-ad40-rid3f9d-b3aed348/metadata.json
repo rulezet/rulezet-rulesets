@@ -1,0 +1,19 @@
+{
+  "uuid": "b3aed348-2ff2-4265-bf5b-e2d56b99208d",
+  "title": "PUA_VULN_Driver_Atitechnologiesinc_Atillksys_Atidiagnostics_AD40_RID3F9D",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - atillk64.sys",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229268"
+}

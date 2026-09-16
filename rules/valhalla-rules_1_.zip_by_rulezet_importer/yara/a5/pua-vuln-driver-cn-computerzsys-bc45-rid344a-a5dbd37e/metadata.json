@@ -1,0 +1,19 @@
+{
+  "uuid": "a5dbd37e-04da-48ba-86b8-92f5ab907df0",
+  "title": "PUA_VULN_Driver_Cn_Computerzsys_BC45_RID344A",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ComputerZ.Sys",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229274"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "c5984a95-6eb8-4981-aff7-62a2d946728e",
+  "title": "SUSP_BAT_OBFUSC_Jul24_1_RID2E33",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects indicators of obfuscation in Windows Batch files",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229412"
+}

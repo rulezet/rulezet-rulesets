@@ -1,0 +1,19 @@
+{
+  "uuid": "94fbf29b-7a88-4ff6-be9a-4c463f8f98b5",
+  "title": "MAL_DLL_Chrome_App_Bound_Encryption_Decryption_May25_RID3AB1",
+  "format": "yara",
+  "author": "MalGamy",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects a DLL used to decrypt App-Bound Encrypted (ABE) cookies, passwords & payment methods from Chromium-based browsers, seen being used by Kats stealer",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229383"
+}

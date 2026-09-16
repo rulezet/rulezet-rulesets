@@ -1,0 +1,19 @@
+{
+  "uuid": "2f9f1931-557b-482a-9f87-2bb95016a339",
+  "title": "SUSP_Claude_Refusal_Magic_String_Jan26_RID3530",
+  "format": "yara",
+  "author": "Marius Benthin",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects refusal magic string that cause Claude sessions to be terminated. This might indicate that a file tries to prevent being analyzed by LLM agents.",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229247"
+}

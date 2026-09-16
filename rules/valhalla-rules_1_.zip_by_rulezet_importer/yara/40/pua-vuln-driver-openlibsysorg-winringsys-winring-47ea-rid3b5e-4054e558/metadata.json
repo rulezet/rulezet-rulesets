@@ -1,0 +1,19 @@
+{
+  "uuid": "4054e558-cfad-4b77-8f4b-d30f61b51d3a",
+  "title": "PUA_VULN_Driver_Openlibsysorg_Winringsys_Winring_47EA_RID3B5E",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WinRing0.sys, WinRing0x64",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229320"
+}

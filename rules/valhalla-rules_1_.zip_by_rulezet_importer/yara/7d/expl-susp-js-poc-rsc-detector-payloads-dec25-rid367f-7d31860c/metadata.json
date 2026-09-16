@@ -1,0 +1,23 @@
+{
+  "uuid": "7d31860c-b171-4420-8c9d-53e145925d89",
+  "title": "EXPL_SUSP_JS_POC_RSC_Detector_Payloads_Dec25_RID367F",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects RCE indicators related to the proof-of-concept code for the React Server Remote Code Execution Vulnerability (CVE-2025-55182) as used in the RSC Detector browser extension but could be used in other JavaScript based PoC code as well",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.007"
+  ],
+  "cve": [
+    "CVE-2025-55182"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229250"
+}

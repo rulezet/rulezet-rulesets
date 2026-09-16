@@ -1,0 +1,19 @@
+{
+  "uuid": "13fb72f5-a804-4faa-a526-e83bdf96141c",
+  "title": "MAL_Driver_Microsoftcorporation_Wintapixsys_Microsoftwindowsoperatingsystem_8578_RID4756",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - WinTapix.sys, SRVNET2.SYS",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229357"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "9fa779c0-5a7e-4be4-a9b1-6c9bbaa25a6f",
+  "title": "PUA_VULN_Driver_Computerzsys_Ludashisystemdriver_898E_RID3B94",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - ComputerZ.Sys",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229276"
+}

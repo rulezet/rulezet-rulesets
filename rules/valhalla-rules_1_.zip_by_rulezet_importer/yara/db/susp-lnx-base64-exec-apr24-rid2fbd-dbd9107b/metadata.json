@@ -1,0 +1,27 @@
+{
+  "uuid": "dbd9107b-0948-4732-adf0-702e543a07c6",
+  "title": "SUSP_LNX_Base64_Exec_Apr24_RID2FBD",
+  "format": "yara",
+  "author": "Christian Burkard",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects suspicious base64 encoded shell commands (as seen in Palo Alto CVE-2024-3400 exploitation)",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:botnet=\"Mirai\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1132.001"
+  ],
+  "cve": [
+    "CVE-2024-3400"
+  ],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229417"
+}
