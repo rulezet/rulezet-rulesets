@@ -1,0 +1,9 @@
+rule Win_Dropper_Small_107
+{
+strings:
+	$a0 = { 905734f7fd2ba70c6a0d3be9e7b454bb0a2991cd0d2bf7e2fda57533e3a50b0a54197e55629a4d78ca4c06ed08082affb384576bb22a5feccfbe7b48d6a5d64b7244ed99924f3437f41e1e25743b7908384bb67194de5ed20ccf0d5a6a8d6b7efc155277ce30bfce604e48fd45c9074e }
+
+
+condition:
+	$a0
+}

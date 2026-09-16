@@ -1,0 +1,9 @@
+rule Win_Dropper_Juntador_3
+{
+strings:
+	$a0 = { fa7be07d20f014530d6c617afeffbf02ec546f6f6c735c50657266656374204b65796c6f676708a41dfe1b5c312e320e5fb680e300115cdf2bbf9d5d5945787035724e4945ff7f26dc504b0ee9f5405f }
+
+
+condition:
+	$a0
+}

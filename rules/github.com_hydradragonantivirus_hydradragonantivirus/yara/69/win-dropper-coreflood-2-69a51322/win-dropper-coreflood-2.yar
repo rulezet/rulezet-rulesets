@@ -1,0 +1,9 @@
+rule Win_Dropper_Coreflood_2
+{
+strings:
+	$a0 = { 2025f0df11d53d565000687474703a2f2fb823ea6f5b4e4e45435420593a2043d41609360b6e8a0b6309ec69fbb70d0a0150d32d1a0dde887a4a9f3020359e80753d603c }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Dropper_Small_211
+{
+strings:
+	$a0 = { d5f6257310948ae4770072fff67f60e821696e747230306465872364756d616872f19f2dd97500122f05706f6f6c7376 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Dropper_Exebinder_1
+{
+strings:
+	$a0 = { 414c7a0c06770bb50f0f0f8f84c4dce5f8dd2e5f0784cc505154c6cc5c3cd43612e3944f0f59587a4d676b5b4f0ff01a8b5f4f0f84f734f47b68843a875f4f0f67575b4f0f58f0d98acface3944f0f7b5f67475b4f0f58f0d9673b5b4f0f58acff944f0ff0d9acfb944f0faeff944f0f8acf7b19f0df84d78ad47b01aefb944f0f8acf7b0a5cf0df84d7f07b2b17f07b2b17f07b2b17 }
+
+
+condition:
+	$a0
+}

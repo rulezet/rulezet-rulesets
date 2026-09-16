@@ -1,0 +1,9 @@
+rule Win_Dropper_Dater_1
+{
+strings:
+	$a0 = { 70fe101138a083895058f76f40435ddf374f0eaf6eb565da806ee04e5167a71b54aa8f12960ac43729983121af27a0e9d5ff7f23c74f833350b19e1a96050415f3393d0231f8ff04bcbfb514fee78a54 }
+
+
+condition:
+	$a0
+}

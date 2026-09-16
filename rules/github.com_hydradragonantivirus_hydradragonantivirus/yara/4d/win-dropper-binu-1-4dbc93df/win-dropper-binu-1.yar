@@ -1,0 +1,9 @@
+rule Win_Dropper_Binu_1
+{
+strings:
+	$a0 = { 6a0055ff1524804000f60541bd40000174196a0068000000026a036a006a0268000000c055ff1508804000 }
+
+
+condition:
+	$a0
+}

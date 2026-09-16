@@ -1,0 +1,9 @@
+rule Win_Dropper_Dcept_1
+{
+strings:
+	$a0 = { 696f6e5c52756e000000558becb9920000006a006a004975f9535657bb5008410033c05568eae1400064ff306489208d850cfcffffe874bdffffffb50cfcffffb80a000000e88852ffff8d9508fcffffe89181ffffffb508fcffffb80a000000e86d52ffff8d9504fcffffe87681ffffffb504fcffffb80a000000e85252ffff8d9500fcffffe85b81ffffffb500fcffffb80a000000 }
+
+
+condition:
+	$a0
+}

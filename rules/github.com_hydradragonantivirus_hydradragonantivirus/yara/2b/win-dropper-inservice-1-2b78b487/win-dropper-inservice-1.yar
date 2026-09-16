@@ -1,0 +1,9 @@
+rule Win_Dropper_INService_1
+{
+strings:
+	$a0 = { 45f4750aeceb0d6a026a048df2e9fed7126d03f28bf085f669c8e7fe6fffda0f716a066a012620f88bd883f4750768d2bdddbbbc21ebdc68b80668b02d80fefced3ff675096ac704eb04668b4008666be666c745e402bdbd6d2f1e460c8b04000fe86a106de4505363e77bf7250a8d75 }
+
+
+condition:
+	$a0
+}
