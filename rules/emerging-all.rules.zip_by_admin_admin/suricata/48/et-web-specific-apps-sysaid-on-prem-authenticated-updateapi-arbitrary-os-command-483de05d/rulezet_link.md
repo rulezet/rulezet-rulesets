@@ -1,0 +1,5 @@
+# ET WEB_SPECIFIC_APPS SysAid On-Prem Authenticated updateApi Arbitrary OS Command Injection (CVE-2025-2778)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/182954)
+
+Rulezet UUID: `483de05d-d18c-45f3-b42d-208eb18f9f5e`
