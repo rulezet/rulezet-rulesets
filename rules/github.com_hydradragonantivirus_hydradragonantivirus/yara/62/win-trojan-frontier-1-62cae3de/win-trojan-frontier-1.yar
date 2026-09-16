@@ -1,0 +1,9 @@
+rule Win_Trojan_Frontier_1
+{
+strings:
+	$a0 = { f75016ee8e9bdd83b1a14ff7d0abf7726f2449d1ee2e5eee7ebeaf9e706f6f6f24dcdd6d74ff1ceaebeebed63dc0ff45977b596624d4db85af1486e801f67fb2d777e8307e97466591b5c87ac0b22e45afdffff8ff030066726f6e7469657200b60200f8ff030066726f6e74696572 }
+
+
+condition:
+	$a0
+}

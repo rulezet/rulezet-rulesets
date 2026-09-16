@@ -1,0 +1,9 @@
+rule Win_Trojan_Lugad_1
+{
+strings:
+	$a0 = { 78005589e5c606b32900b42acd218836560088165700b42ccd2188365800803e58000f7305c606b32901803e57 }
+
+
+condition:
+	$a0
+}

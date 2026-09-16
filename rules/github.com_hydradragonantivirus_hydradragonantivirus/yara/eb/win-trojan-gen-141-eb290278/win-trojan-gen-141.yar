@@ -1,0 +1,9 @@
+rule Win_Trojan_Gen_141
+{
+strings:
+	$a0 = { b2015589e5b800049a7c02b20181ec0004e854f6c606440000c606940000c606e40000c6065f2a00c606321600 }
+
+
+condition:
+	$a0
+}

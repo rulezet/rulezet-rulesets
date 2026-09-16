@@ -1,0 +1,9 @@
+rule Win_Trojan_ChSU_1
+{
+strings:
+	$a0 = { 9a000095005589e581ec0003b00050bfaa261e57b8ff00509a54079500c6062f2800c6062e2802b000509a19006b0081 }
+
+
+condition:
+	$a0
+}
