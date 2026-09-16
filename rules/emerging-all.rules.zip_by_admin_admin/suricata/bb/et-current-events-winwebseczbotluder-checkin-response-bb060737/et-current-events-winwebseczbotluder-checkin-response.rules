@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET CURRENT_EVENTS Winwebsec/Zbot/Luder Checkin Response"; flow:established,to_client; file.data; content:"ingdx.htmA{ip}"; nocase; classtype:trojan-activity; sid:2016851; rev:5; metadata:created_at 2013_05_16, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_13;)

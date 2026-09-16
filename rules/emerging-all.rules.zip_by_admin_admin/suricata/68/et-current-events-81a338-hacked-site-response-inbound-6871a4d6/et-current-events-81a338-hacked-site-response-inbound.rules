@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET CURRENT_EVENTS 81a338 Hacked Site Response (Inbound)"; flow:established,to_client; file.data; content:"<!--81a338-->"; fast_pattern; classtype:trojan-activity; sid:2017626; rev:8; metadata:created_at 2013_10_22, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_13;)

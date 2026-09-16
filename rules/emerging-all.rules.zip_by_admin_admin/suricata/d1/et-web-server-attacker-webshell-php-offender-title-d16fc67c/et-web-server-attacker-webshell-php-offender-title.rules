@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER ATTACKER WebShell - PHP Offender - Title"; flow:established,to_client; file.data; content:"<title>PHP Shell offender</title>"; nocase; classtype:web-application-attack; sid:2017951; rev:4; metadata:created_at 2014_01_11, signature_severity Major, updated_at 2024_03_13;)

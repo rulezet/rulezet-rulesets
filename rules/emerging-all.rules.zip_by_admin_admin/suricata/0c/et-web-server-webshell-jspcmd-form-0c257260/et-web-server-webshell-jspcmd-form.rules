@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER WebShell - JSPCMD - Form"; flow:established,to_client; file.data; content:"<FORM METHOD=\"GET\" NAME=\"comments\" ACTION=\"\">"; classtype:bad-unknown; sid:2016684; rev:3; metadata:created_at 2013_03_27, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_13;)

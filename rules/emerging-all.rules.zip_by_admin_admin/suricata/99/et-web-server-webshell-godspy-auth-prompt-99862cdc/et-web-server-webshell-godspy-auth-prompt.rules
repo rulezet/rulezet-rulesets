@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER WebShell - GODSpy - Auth Prompt"; flow:established,to_client; file.data; content:"name=|22|haz|22| value=|22|pasa|22|>"; classtype:trojan-activity; sid:2017087; rev:4; metadata:created_at 2013_07_02, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_13;)

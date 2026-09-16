@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER WebShell - GODSpy - GODSpy title"; flow:established,to_client; file.data; content:"GODSpy</title>"; classtype:trojan-activity; sid:2017084; rev:4; metadata:created_at 2013_07_02, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_13;)
