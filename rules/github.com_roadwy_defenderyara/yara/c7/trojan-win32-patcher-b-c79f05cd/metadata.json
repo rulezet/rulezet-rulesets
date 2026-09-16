@@ -1,0 +1,22 @@
+{
+  "uuid": "c79f05cd-73a7-42b4-869c-e1f31436dff6",
+  "title": "Trojan_Win32_Patcher_B",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Patcher.B,SIGNATURE_TYPE_PEHSTR_EXT,ffffffa2 00 ffffffa0 00 13 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/267911"
+}

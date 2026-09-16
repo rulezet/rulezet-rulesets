@@ -1,0 +1,22 @@
+{
+  "uuid": "fa3646bb-dc9a-4da1-ae20-db49eef3aeaa",
+  "title": "Trojan_Win32_LummaStealer_Z_MTB_6",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/LummaStealer.Z!MTB,SIGNATURE_TYPE_PEHSTR_EXT,08 00 08 00 08 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/267475"
+}
