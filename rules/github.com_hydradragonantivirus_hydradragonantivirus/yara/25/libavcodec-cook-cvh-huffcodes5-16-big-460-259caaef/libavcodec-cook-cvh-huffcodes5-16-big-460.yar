@@ -1,0 +1,7 @@
+rule libavcodec_COOK_cvh_huffcodes5__16_big_460_ {
+  strings:
+    $a0 = { 00 00 00 04 00 f0 00 05 00 12 01 f0 01 f1 03 e8 3f ce 00 06 00 30 07 de 00 13 00 31 0f d2 03 e9 07 df 7f b0 01 f2 07 e0 7f b1 03 ea 1f d2 7f b2 3f cf 7f b3 00 31 00 07 00 32 0f d3 00 33 00 70 0f d4 0f d5 0f d6 7f b4 00 14 00 71 1f d3 00 34 00 72 1f d4 0f d7 1f d5 7f b5 03 eb 0f d8 7f b6 07 e1 1f d6 7f b7 7f b8 7f b9 00 72 00 f1 1f d7 7f ba 07 e2 0f d9 7f bb 7f bc 7f bd 00 70 03 ec 1f d8 7f be 0f da 7f bf 7f c0 7f c1 7f c2 00 72 7f c3 7f c4 00 71 7f c5 7f c6 00 72 00 34 00 72 00 72 00 08 00 15 07 e3 00 16 00 73 0f db 07 e4 0f dc 7f c7 00 35 00 74 1f d9 00 75 00 f2 3f d0 0f dd 3f d1 7f c8 07 e5 1f da 7f c9 0f de 1f db 7f ca 7f cb 7f cc 00 f2 00 17 00 36 1f dc 00 76 00 f3 7f cd 0f df 3f d2 7f ce 00 37 00 f4 3f d3 00 77 00 f5 7f cf 3f d4 7f d0 7f d1 0f e0 0f e1 7f d2 0f e2 1f dd 7f d3 7f d4 7f d5 00 f5 01 f3 1f de 7f d6 0f e3 1f df 7f d7 7f d8 7f d9 00 f3 07 e6 1f e0 7f da 1f e1 1f e2 7f db 7f dc 7f dd 00 f5 3f d5 7f de 00 f4 7f df 7f e0 00 f5 00 77 00 f5 00 f5 00 f6 03 ed 7f e1 07 e7 0f e4 7f e2 7f e3 7f e4 00 73 03 ee 0f e5 7f e5 0f e6 1f e3 7f e6 7f e7 7f e8 00 f2 3f d6 7f e9 00 74 7f ea 7f eb 00 f2 00 75 00 f2 00 f2 00 f7 0f e7 7f ec 0f e8 1f e4 7f ed 7f ee 7f ef 00 f3 07 e8 1f e5 7f f0 1f e6 7f f1 7f f2 7f f3 7f f4 00 f5 7f f5 7f f6 00 f4 7f f7 7f f8 00 f5 00 77 00 f5 00 f5 3f d7 7f f9 00 36 7f fa 7f fb 00 f3 00 76 00 f3 00 f3 7f fc 7f fd 00 00 7f fe 7f ff }
+
+  condition:
+    $a0
+}

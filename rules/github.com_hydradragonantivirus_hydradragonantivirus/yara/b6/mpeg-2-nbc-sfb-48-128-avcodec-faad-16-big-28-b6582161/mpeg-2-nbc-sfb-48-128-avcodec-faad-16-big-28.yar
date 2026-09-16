@@ -1,0 +1,7 @@
+rule MPEG_2_NBC_sfb_48_128__avcodec___faad___16_big_28_ {
+  strings:
+    $a0 = { 00 04 00 08 00 0c 00 10 00 14 00 1c 00 24 00 2c 00 38 00 44 00 50 00 60 00 70 00 80 }
+
+  condition:
+    $a0
+}

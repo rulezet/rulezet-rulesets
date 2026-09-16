@@ -1,0 +1,7 @@
+rule libavcodec_vp5_ract_pct__8_byt_396_ {
+  strings:
+    $a0 = { e3 f6 e6 f7 f4 fe fe fe fe fe fe ca fe d1 e7 e7 f9 f9 fd fe fe fe ce fe e1 f2 f1 fb fd fe fe fe fe eb fe f1 fd fc fe fe fe fe fe fe ea fe f8 fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe f0 fe f8 fe fe fe fe fe fe fe fe ee fe f0 fd fe fe fe fe fe fe fe f4 fe fb fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe ce cb e3 ef f7 fe fd fe fe fe fe cf c7 dc ec f3 fc fc fe fe fe fe d4 db e6 f3 f4 fd fc fe fe fe fe ec ed f7 fc fd fe fe fe fe fe fe f0 f0 f8 fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe e6 e9 f9 fe fe fe fe fe fe fe fe ee ee fa fe fe fe fe fe fe fe fe f8 fb fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe e1 ef e3 e7 f4 fd f3 fe fe fd fe e8 ea e0 e4 f2 f9 f2 fc fb fb fe eb f9 ee f0 fb fe f9 fe fd fd fe f9 fd fb fa fe fe fe fe fe fe fe fb fa f9 fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe f3 f4 fa fa fe fe fe fe fe fe fe f9 f8 fa fd fe fe fe fe fe fe fe fd fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe fe }
+
+  condition:
+    $a0
+}

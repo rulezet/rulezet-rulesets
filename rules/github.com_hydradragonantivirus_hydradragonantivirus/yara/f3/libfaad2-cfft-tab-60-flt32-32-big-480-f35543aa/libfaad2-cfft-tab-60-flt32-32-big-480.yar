@@ -1,0 +1,7 @@
+rule libfaad2_cfft_tab_60__flt32___32_big_480_ {
+  strings:
+    $a0 = { 3f 80 00 00 00 00 00 00 3f 7e 98 fd 3d d6 13 05 3f 7a 67 e2 3e 54 e6 ce 3f 73 78 71 3e 9e 37 7a 3f 69 de 1d 3e d0 3f c9 3f 5d b3 d7 3f 00 00 00 3f 4f 1b bd 3f 16 79 18 3f 3e 3e bd 3f 2b 4c 25 3f 2b 4c 24 3f 3e 3e be 3f 16 79 18 3f 4f 1b bd 3e ff ff ff 3f 5d b3 d8 3e d0 3f c8 3f 69 de 1e 3e 9e 37 79 3f 73 78 71 3e 54 e6 cb 3f 7a 67 e2 3d d6 12 ff 3f 7e 98 fd b3 3b bd 2e 3f 80 00 00 bd d6 13 0b 3f 7e 98 fd be 54 e6 d1 3f 7a 67 e1 be 9e 37 7b 3f 73 78 70 be d0 3f cb 3f 69 de 1d 3f 80 00 00 00 00 00 00 3f 7a 67 e2 3e 54 e6 ce 3f 69 de 1d 3e d0 3f c9 3f 4f 1b bd 3f 16 79 18 3f 2b 4c 24 3f 3e 3e be 3e ff ff ff 3f 5d b3 d8 3e 9e 37 79 3f 73 78 71 3d d6 12 ff 3f 7e 98 fd bd d6 13 0b 3f 7e 98 fd be 9e 37 7b 3f 73 78 70 bf 00 00 01 3f 5d b3 d7 bf 2b 4c 26 3f 3e 3e bd bf 4f 1b be 3f 16 79 17 bf 69 de 1e 3e d0 3f c7 bf 7a 67 e2 3e 54 e6 c8 bf 80 00 00 b3 bb bd 2e bf 7a 67 e1 be 54 e6 d4 bf 69 de 1d be d0 3f cc bf 4f 1b bc bf 16 79 1a bf 2b 4c 23 bf 3e 3e be 3f 80 00 00 00 00 00 00 3f 73 78 71 3e 9e 37 7a 3f 4f 1b bd 3f 16 79 18 3f 16 79 18 3f 4f 1b bd 3e 9e 37 79 3f 73 78 71 3f 80 00 00 00 00 00 00 3f 4f 1b bd 3f 16 79 18 3e 9e 37 79 3f 73 78 71 be 9e 37 7b 3f 73 78 70 bf 4f 1b be 3f 16 79 17 3f 80 00 00 00 00 00 00 3f 16 79 18 3f 4f 1b bd be 9e 37 7b 3f 73 78 70 bf 73 78 72 3e 9e 37 73 bf 4f 1b bc bf 16 79 1a 3f 80 00 00 00 00 00 00 3f 80 00 00 00 00 00 00 3f 80 00 00 00 00 00 00 3f 80 00 00 00 00 00 00 3e 9e 37 7e bf 73 78 70 }
+
+  condition:
+    $a0
+}
