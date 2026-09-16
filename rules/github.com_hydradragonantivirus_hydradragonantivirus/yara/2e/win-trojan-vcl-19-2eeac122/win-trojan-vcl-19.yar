@@ -1,0 +1,9 @@
+rule Win_Trojan_VCL_19
+{
+strings:
+	$a0 = { 06018db6c10101010157a5a4c6869502011acd8d966a022172b824357411899e66028c866802b4258d965d0221 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_VCL_13
+{
+strings:
+	$a0 = { 3701808e320280808e330280808e340280808e350280808e3602808d8603019280a6ec017f }
+
+
+condition:
+	$a0
+}

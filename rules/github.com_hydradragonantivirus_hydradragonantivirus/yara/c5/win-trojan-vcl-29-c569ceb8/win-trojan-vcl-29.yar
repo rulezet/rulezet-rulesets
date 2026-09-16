@@ -1,0 +1,9 @@
+rule Win_Trojan_VCL_29
+{
+strings:
+	$a0 = { 1800e90000e800005d81ed08018db66703bf000157a5a48bfd8bec81ec8000b42fcd2153b41a8d5680cd21e8e000e8dd00e841023d17007413e851023d050074 }
+
+
+condition:
+	$a0
+}

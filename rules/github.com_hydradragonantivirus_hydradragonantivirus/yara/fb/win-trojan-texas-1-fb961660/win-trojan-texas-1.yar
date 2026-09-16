@@ -1,0 +1,9 @@
+rule Win_Trojan_Texas_1
+{
+strings:
+	$a0 = { 04181903b319140e1b2d2d474720416c6c696e202620546865205465786173204e617a697319 }
+
+
+condition:
+	$a0
+}

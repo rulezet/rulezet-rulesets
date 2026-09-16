@@ -1,0 +1,9 @@
+rule Win_Trojan_Newlove_3
+{
+strings:
+	$a0 = { 696d204d7953656c66202c4d794e65774e616d65202c436f7079546f53656e64202c4d79436f6465202c4d7946696c65 }
+
+
+condition:
+	$a0
+}

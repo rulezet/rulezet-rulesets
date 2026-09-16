@@ -1,0 +1,9 @@
+rule Win_Trojan_Error_2
+{
+strings:
+	$a0 = { 01a30701c70609019f03e88401e84500e80700e88b01e99801c3803e0c01017433e88400e8fc00803e0b01017419 }
+
+
+condition:
+	$a0
+}
