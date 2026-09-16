@@ -1,0 +1,23 @@
+{
+  "uuid": "5b171979-84e7-4794-b6ac-4588551fa218",
+  "title": "Office Macro File Download",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of a new office macro files on the system via an application (browser, mail client).\nThis can help identify potential malicious activity, such as the download of macro-enabled documents that could be used for exploitation.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344281"
+}

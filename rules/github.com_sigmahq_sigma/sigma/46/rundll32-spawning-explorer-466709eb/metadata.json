@@ -1,0 +1,23 @@
+{
+  "uuid": "466709eb-79d3-4e9e-9ca3-e1bc1e8eba41",
+  "title": "RunDLL32 Spawning Explorer",
+  "format": "sigma",
+  "author": "elhoim, CD_ROM_",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects RunDLL32.exe spawning explorer.exe as child, which is very uncommon, often observes Gamarue spawning the explorer.exe process in an unusual way",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344062"
+}

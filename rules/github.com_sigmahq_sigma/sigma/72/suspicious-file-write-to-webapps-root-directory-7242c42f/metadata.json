@@ -1,0 +1,24 @@
+{
+  "uuid": "7242c42f-4bf4-4daa-b0c8-43e7830322e8",
+  "title": "Suspicious File Write to Webapps Root Directory",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious file writes to the root directory of web applications, particularly Apache web servers or Tomcat servers.\nThis may indicate an attempt to deploy malicious files such as web shells or other unauthorized scripts.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344234"
+}

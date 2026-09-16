@@ -1,0 +1,23 @@
+{
+  "uuid": "2602c382-0155-4cbb-acb8-7799045438fd",
+  "title": "Potential Azure Browser SSO Abuse",
+  "format": "sigma",
+  "author": "Den Iuzvyk",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects abusing Azure Browser SSO by requesting OAuth 2.0 refresh tokens for an Azure-AD-authenticated Windows user (i.e. the machine is joined to Azure AD and a user logs in with their Azure AD account) wanting to perform SSO authentication in the browser.\nAn attacker can use this to authenticate to Azure AD in a browser as that user.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344347"
+}

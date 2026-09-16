@@ -1,0 +1,26 @@
+{
+  "uuid": "25b59c43-1ca6-478c-aed0-d3dc155a8f02",
+  "title": "PUA - Restic Backup Tool Execution",
+  "format": "sigma",
+  "author": "Nounou Mbeiri, Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of the Restic backup tool, which can be used for data exfiltration.\nThreat actors may leverage Restic to back up and exfiltrate sensitive data to remote storage locations, including cloud services.\nIf not legitimately used in the enterprise environment, its presence may indicate malicious activity.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"BlackCat\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1048",
+    "T1567.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343979"
+}

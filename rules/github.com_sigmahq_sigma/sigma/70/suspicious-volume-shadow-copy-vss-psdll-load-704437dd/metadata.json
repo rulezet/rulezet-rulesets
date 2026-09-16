@@ -1,0 +1,23 @@
+{
+  "uuid": "704437dd-8f52-4fb7-b242-8d75ba444b54",
+  "title": "Suspicious Volume Shadow Copy VSS_PS.dll Load",
+  "format": "sigma",
+  "author": "Markus Neis, @markus_neis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the image load of vss_ps.dll by uncommon executables. This DLL is used by the Volume Shadow Copy Service (VSS) to manage shadow copies of files and volumes.\nIt is often abused by attackers to delete or manipulate shadow copies, which can hinder forensic investigations and data recovery efforts.\nThe fact that it is loaded by processes that are not typically associated with VSS operations can indicate suspicious activity.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344355"
+}

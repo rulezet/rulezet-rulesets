@@ -1,0 +1,24 @@
+{
+  "uuid": "db369ab0-aaef-44ab-8da2-2021509e75af",
+  "title": "HackTool - EDRSilencer Execution",
+  "format": "sigma",
+  "author": "@gott_cyber",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of EDRSilencer, a tool that leverages Windows Filtering Platform (WFP) to block Endpoint Detection and Response (EDR) agents from reporting security events to the server based on PE metadata information.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343963"
+}

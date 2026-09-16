@@ -1,0 +1,25 @@
+{
+  "uuid": "63c0274c-6e10-4754-8024-9c1329221f27",
+  "title": "Diagnostic Library Sdiageng.DLL Loaded By Msdt.EXE",
+  "format": "sigma",
+  "author": "Greg (rule)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects both of CVE-2022-30190 (Follina) and DogWalk vulnerabilities exploiting msdt.exe binary to load the \"sdiageng.dll\" library",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [
+    "CVE-2022-30190"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344323"
+}

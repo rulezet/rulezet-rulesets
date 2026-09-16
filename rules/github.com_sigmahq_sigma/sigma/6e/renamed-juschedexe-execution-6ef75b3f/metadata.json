@@ -1,0 +1,23 @@
+{
+  "uuid": "6ef75b3f-1855-414d-ad93-64883f4c34ce",
+  "title": "Renamed Jusched.EXE Execution",
+  "format": "sigma",
+  "author": "Markus Neis, Swisscom",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of a renamed \"jusched.exe\" as seen used by the cobalt group",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343944"
+}

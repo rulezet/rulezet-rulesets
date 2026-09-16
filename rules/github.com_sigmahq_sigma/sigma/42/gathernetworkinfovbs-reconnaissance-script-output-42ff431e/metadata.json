@@ -1,0 +1,21 @@
+{
+  "uuid": "42ff431e-d5a9-44ee-93ad-b3b6acac3be7",
+  "title": "GatherNetworkInfo.VBS Reconnaissance Script Output",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects creation of files which are the results of executing the built-in reconnaissance script \"C:\\Windows\\System32\\gatherNetworkInfo.vbs\".",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344122"
+}

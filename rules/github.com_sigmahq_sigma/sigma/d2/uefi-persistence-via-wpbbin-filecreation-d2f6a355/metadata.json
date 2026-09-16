@@ -1,0 +1,23 @@
+{
+  "uuid": "d2f6a355-7087-4451-b1db-886dc9c9894c",
+  "title": "UEFI Persistence Via Wpbbin - FileCreation",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects creation of a file named \"wpbbin\" in the \"%systemroot%\\system32\\\" directory. Which could be indicative of UEFI based persistence method",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1542.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344153"
+}

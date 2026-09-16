@@ -1,0 +1,23 @@
+{
+  "uuid": "0f15e4f1-673a-4cf6-bda2-f25e317e6b6f",
+  "title": "Creation of WerFault.exe/Wer.dll in Unusual Folder",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of a file named \"WerFault.exe\" or \"wer.dll\" in an uncommon folder, which could be a sign of WerFault DLL hijacking.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344127"
+}

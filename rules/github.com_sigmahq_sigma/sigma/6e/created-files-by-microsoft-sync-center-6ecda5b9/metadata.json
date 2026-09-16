@@ -1,0 +1,24 @@
+{
+  "uuid": "6ecda5b9-4338-4414-b8dd-96b25b8dcedb",
+  "title": "Created Files by Microsoft Sync Center",
+  "format": "sigma",
+  "author": "elhoim",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This rule detects suspicious files created by Microsoft Sync Center (mobsync)",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344125"
+}

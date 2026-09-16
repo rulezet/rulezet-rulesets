@@ -1,0 +1,24 @@
+{
+  "uuid": "045efde7-daa6-446f-9da6-bf40144750ee",
+  "title": "Renamed PAExec Execution",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Jason Lynch",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of renamed version of PAExec. Often used by attackers",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344028"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "d5b3b723-d44e-42e1-a3be-db0614e85f71",
+  "title": "Suspicious File Created by ArcSOC.exe",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects instances where the ArcGIS Server process ArcSOC.exe, which hosts REST services running on an ArcGIS\nserver, creates a file with suspicious file type, indicating that it may be an executable, script file,\nor otherwise unusual.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1127",
+    "T1133"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344210"
+}

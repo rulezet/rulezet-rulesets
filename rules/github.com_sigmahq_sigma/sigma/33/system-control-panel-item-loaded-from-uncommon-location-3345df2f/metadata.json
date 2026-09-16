@@ -1,0 +1,23 @@
+{
+  "uuid": "3345df2f-20d5-4dff-89e0-871b2ba330aa",
+  "title": "System Control Panel Item Loaded From Uncommon Location",
+  "format": "sigma",
+  "author": "Anish Bogati",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects image load events of system control panel items (.cpl) from uncommon or non-system locations that may indicate DLL sideloading or other abuse techniques.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344329"
+}

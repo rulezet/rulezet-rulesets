@@ -1,0 +1,23 @@
+{
+  "uuid": "5bbc1e5f-0b71-4116-9d18-57cd84a9435c",
+  "title": "Windows Admin Share Mount Via Net.EXE",
+  "format": "sigma",
+  "author": "oscd.community, Teymur Kheirkhabarov @HeirhabarovT, Zach Stanford @svch0st, wagga",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when an admin share is mounted using net.exe",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1021.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344108"
+}

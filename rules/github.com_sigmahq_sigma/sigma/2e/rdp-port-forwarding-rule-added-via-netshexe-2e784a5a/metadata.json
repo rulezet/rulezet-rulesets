@@ -1,0 +1,23 @@
+{
+  "uuid": "2e784a5a-b4ed-4a52-9ee4-5c20ebfec209",
+  "title": "RDP Port Forwarding Rule Added Via Netsh.EXE",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of netsh to configure a port forwarding of port 3389 (RDP) rule",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1090"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343980"
+}

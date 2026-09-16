@@ -1,0 +1,24 @@
+{
+  "uuid": "f7ed1823-f47e-4833-a4e0-80d8ef9217f1",
+  "title": "Potential DLL Sideloading Using Coregen.exe",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect usage of the \"coregen.exe\" (Microsoft CoreCLR Native Image Generator) binary to sideload arbitrary DLLs.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344339"
+}

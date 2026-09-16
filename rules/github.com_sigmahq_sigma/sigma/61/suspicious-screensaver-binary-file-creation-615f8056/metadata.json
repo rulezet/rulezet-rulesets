@@ -1,0 +1,23 @@
+{
+  "uuid": "615f8056-a122-4eba-b145-2858549c0d74",
+  "title": "Suspicious Screensaver Binary File Creation",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Adversaries may establish persistence by executing malicious content triggered by user inactivity.\nScreensavers are programs that execute after a configurable time of user inactivity and consist of Portable Executable (PE) files with a .scr file extension\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1546.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344273"
+}

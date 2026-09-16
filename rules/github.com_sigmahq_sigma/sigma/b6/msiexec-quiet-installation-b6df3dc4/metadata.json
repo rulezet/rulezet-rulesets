@@ -1,0 +1,23 @@
+{
+  "uuid": "b6df3dc4-5e5c-4ce0-a110-840564a1f05c",
+  "title": "Msiexec Quiet Installation",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Adversaries may abuse msiexec.exe to proxy execution of malicious payloads.\nMsiexec.exe is the command-line utility for the Windows Installer and is thus commonly associated with executing installation packages (.msi)\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218.007"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344044"
+}

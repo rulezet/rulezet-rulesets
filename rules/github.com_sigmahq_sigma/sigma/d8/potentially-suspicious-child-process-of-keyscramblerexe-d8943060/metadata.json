@@ -1,0 +1,24 @@
+{
+  "uuid": "d8943060-6e97-43f5-b278-2c6ad35ae18a",
+  "title": "Potentially Suspicious Child Process of KeyScrambler.exe",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potentially suspicious child processes of KeyScrambler.exe",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1203",
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344110"
+}

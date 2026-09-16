@@ -1,0 +1,23 @@
+{
+  "uuid": "0ea5fd23-6f90-48b4-9415-03c6dbfe3d71",
+  "title": "PowerShell Core DLL Loaded By Non PowerShell Process",
+  "format": "sigma",
+  "author": "Tom Kern, oscd.community, Natalia Shornikova, Tim Shelton, Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects loading of essential DLLs used by PowerShell by non-PowerShell process.\nDetects behavior similar to meterpreter's \"load powershell\" extension.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344387"
+}

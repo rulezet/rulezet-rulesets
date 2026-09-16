@@ -1,0 +1,23 @@
+{
+  "uuid": "9dc61877-f9cf-4be4-8ec9-47effa361bc5",
+  "title": "AWL Bypass with Winrm.vbs and Malicious WsmPty.xsl/WsmTxt.xsl - File",
+  "format": "sigma",
+  "author": "Julia Fomina, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of attacker-controlled WsmPty.xsl or WsmTxt.xsl via winrm.vbs and copied cscript.exe (can be renamed)",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1216"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344205"
+}

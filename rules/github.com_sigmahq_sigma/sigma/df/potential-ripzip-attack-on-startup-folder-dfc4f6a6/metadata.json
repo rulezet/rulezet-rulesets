@@ -1,0 +1,24 @@
+{
+  "uuid": "dfc4f6a6-7fb6-4da5-8edf-bc37feb11a54",
+  "title": "Potential RipZip Attack on Startup Folder",
+  "format": "sigma",
+  "author": "Greg (rule)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a phishing attack which expands a ZIP file containing a malicious shortcut.\nIf the victim expands the ZIP file via the explorer process, then the explorer process expands the malicious ZIP file and drops a malicious shortcut redirected to a backdoor into the Startup folder.\nAdditionally, the file name of the malicious shortcut in Startup folder contains {0AFACED1-E828-11D1-9187-B532F1E9575D} meaning the folder shortcut operation.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1547"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344198"
+}

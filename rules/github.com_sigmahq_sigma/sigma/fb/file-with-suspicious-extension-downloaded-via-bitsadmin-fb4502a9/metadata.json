@@ -1,0 +1,25 @@
+{
+  "uuid": "fb4502a9-2732-4900-8fea-260988b5ccf9",
+  "title": "File With Suspicious Extension Downloaded Via Bitsadmin",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of bitsadmin downloading a file with a suspicious extension",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1036.003",
+    "T1105",
+    "T1197"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344008"
+}

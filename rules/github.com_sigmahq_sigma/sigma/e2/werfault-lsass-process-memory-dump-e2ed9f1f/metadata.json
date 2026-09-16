@@ -1,0 +1,23 @@
+{
+  "uuid": "e2ed9f1f-2445-402b-a919-292cbe3dcb71",
+  "title": "WerFault LSASS Process Memory Dump",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects WerFault creating a dump file with a name that indicates that the dump file could be an LSASS process memory, which contains user credentials",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344212"
+}

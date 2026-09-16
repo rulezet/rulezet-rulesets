@@ -1,0 +1,23 @@
+{
+  "uuid": "6ee09c85-1680-4b9e-ae3e-83b7b1d541b3",
+  "title": "Arbitrary DLL or Csproj Code Execution Via Dotnet.EXE",
+  "format": "sigma",
+  "author": "Beyu Denis, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of arbitrary DLLs or unsigned code via a \".csproj\" files via Dotnet.EXE.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343978"
+}

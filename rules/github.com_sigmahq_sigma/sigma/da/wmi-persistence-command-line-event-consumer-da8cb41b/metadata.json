@@ -1,0 +1,23 @@
+{
+  "uuid": "da8cb41b-14ea-4937-9058-a8f7c9fc3a03",
+  "title": "WMI Persistence - Command Line Event Consumer",
+  "format": "sigma",
+  "author": "Thomas Patzke",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects WMI command line event consumers",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1546.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344313"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "1603eb98-8e0e-4092-bbfd-79c5440d49ac",
+  "title": "Rclone Config File Creation",
+  "format": "sigma",
+  "author": "Aaron Greetham (@beardofbinary) - NCC Group",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Rclone config files being created",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1567.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344224"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "f00077e0-8ea9-41e8-83ff-1ce50a8cd904",
+  "title": "Trusted Path Bypass via Windows Directory Spoofing",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects DLLs loading from a spoofed Windows directory path with an extra space (e.g \"C:\\Windows \\System32\") which can bypass Windows trusted path verification.\nThis technique tricks Windows into treating the path as trusted, allowing malicious DLLs to load with high integrity privileges bypassing UAC.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1548.002",
+    "T1574.007"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344322"
+}

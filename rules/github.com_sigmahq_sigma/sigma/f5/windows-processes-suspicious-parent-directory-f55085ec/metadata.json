@@ -1,0 +1,24 @@
+{
+  "uuid": "f55085ec-ca19-4a43-9836-1858108f08d3",
+  "title": "Windows Processes Suspicious Parent Directory",
+  "format": "sigma",
+  "author": "vburov",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect suspicious parent processes of well-known Windows processes",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1036.003",
+    "T1036.005"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344090"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "0250e879-7bb5-4df4-8bbb-072bd2457882",
+  "title": "Potential DLL Sideloading Of MsCorSvc.DLL",
+  "format": "sigma",
+  "author": "Wietze Beukema",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential DLL sideloading of \"mscorsvc.dll\".",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344304"
+}

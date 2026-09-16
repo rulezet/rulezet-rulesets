@@ -1,0 +1,23 @@
+{
+  "uuid": "15cdd2a4-d9f9-472d-84b6-b935bf3d44bc",
+  "title": "WMI Persistence - Script Event Consumer",
+  "format": "sigma",
+  "author": "Thomas Patzke",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of a script event consumer. When scrcons.exe launches, it does so in response to the creation of an ActiveScriptEventConsumer instance\nand will execute registered JScript or VBScript code as a result.\nScript event consumers are a built-in Windows Management Instrumentation (WMI) class that\nautomatically executes a predefined script (in VBScript or JScript) whenever a specific system event occurs.\nAdversaries often abuse script event consumers to maintain persistence on a compromised host\nby executing a malicious script whenever a specific event occurs.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1546.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343951"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "8229cadd-c766-4992-aa8f-6fc053a0beed",
+  "title": "Suspicious PROCEXP152.sys File Created In TMP",
+  "format": "sigma",
+  "author": "xknow (@xknow_infosec), xorxes (@xor_xes)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of the PROCEXP152.sys file in the application-data local temporary folder.\nThis driver is used by Sysinternals Process Explorer but also by KDU (https://github.com/hfiref0x/KDU) or Ghost-In-The-Logs (https://github.com/bats3c/Ghost-In-The-Logs), which uses KDU.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344178"
+}

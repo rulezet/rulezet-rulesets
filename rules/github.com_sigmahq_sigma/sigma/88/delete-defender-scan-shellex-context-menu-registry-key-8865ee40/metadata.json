@@ -1,0 +1,24 @@
+{
+  "uuid": "8865ee40-ffcd-496b-8001-dd70dffcf132",
+  "title": "Delete Defender Scan ShellEx Context Menu Registry Key",
+  "format": "sigma",
+  "author": "Matt Anderson (Huntress)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects deletion of registry key that adds 'Scan with Defender' option in context menu. Attackers may use this to make it harder for users to scan files that are suspicious.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:tool=\"Empire\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344415"
+}

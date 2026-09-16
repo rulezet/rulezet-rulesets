@@ -1,0 +1,23 @@
+{
+  "uuid": "094eeb8d-87c0-4ce2-945f-dc59bd8611eb",
+  "title": "GAC DLL Loaded Via Office Applications",
+  "format": "sigma",
+  "author": "Antonlovesdnb",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects any GAC DLL being loaded by an Office Product",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344326"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "5d2fd281-410d-4190-a08b-8145b30bc0bb",
+  "title": "Rundll32 Spawned Via Explorer.EXE",
+  "format": "sigma",
+  "author": "CD_ROM_",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of \"rundll32.exe\" with a parent process of Explorer.exe. This has been observed by variants of Raspberry Robin, as first reported by Red Canary.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343956"
+}

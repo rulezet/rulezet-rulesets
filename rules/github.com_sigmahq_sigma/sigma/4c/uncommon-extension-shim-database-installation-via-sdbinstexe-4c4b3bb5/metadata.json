@@ -1,0 +1,24 @@
+{
+  "uuid": "4c4b3bb5-f1cc-4258-a78e-328fbd369e49",
+  "title": "Uncommon Extension Shim Database Installation Via Sdbinst.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects installation of a potentially suspicious new shim with an uncommon extension using sdbinst.exe.\nAdversaries may establish persistence and/or elevate privileges by executing malicious content triggered by application shims\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1546.011"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343962"
+}

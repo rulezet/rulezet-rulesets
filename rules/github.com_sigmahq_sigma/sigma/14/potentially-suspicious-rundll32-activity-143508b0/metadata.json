@@ -1,0 +1,23 @@
+{
+  "uuid": "143508b0-cc0f-433e-8475-bd882bcde44e",
+  "title": "Potentially Suspicious Rundll32 Activity",
+  "format": "sigma",
+  "author": "juju4, Jonhnathan Ribeiro, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious execution of rundll32, with specific calls to some DLLs with known LOLBIN functionalities",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344093"
+}

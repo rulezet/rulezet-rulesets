@@ -1,0 +1,25 @@
+{
+  "uuid": "0c3b0049-3f76-4709-af53-435f97cf5d12",
+  "title": "Suspicious Child Process Of BgInfo.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious child processes of \"BgInfo.exe\" which could be a sign of potential abuse of the binary to proxy execution via external VBScript",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.005",
+    "T1202",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344051"
+}

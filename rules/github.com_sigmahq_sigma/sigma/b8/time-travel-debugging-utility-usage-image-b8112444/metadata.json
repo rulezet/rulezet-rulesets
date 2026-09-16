@@ -1,0 +1,24 @@
+{
+  "uuid": "b8112444-47ef-47df-8847-c4b9e683f745",
+  "title": "Time Travel Debugging Utility Usage - Image",
+  "format": "sigma",
+  "author": "Ensar Şamil, @sblmsrsn, @oscd_initiative",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of Time Travel Debugging Utility. Adversaries can execute malicious processes and dump processes, such as lsass.exe, via tttracer.exe.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344353"
+}

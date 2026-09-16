@@ -1,0 +1,23 @@
+{
+  "uuid": "b8dd4535-4e4d-4db6-adae-8e520c786168",
+  "title": "Suspicious Files in Default GPO Folder",
+  "format": "sigma",
+  "author": "elhoim",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of copy of suspicious files (EXE/DLL) to the default GPO storage folder",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1036.005"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344187"
+}

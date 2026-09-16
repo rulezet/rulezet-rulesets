@@ -1,0 +1,26 @@
+{
+  "uuid": "9b9a2422-c0b7-4a18-9b13-8d062e38944c",
+  "title": "Potential Remote SquiblyTwo Technique Execution",
+  "format": "sigma",
+  "author": "Markus Neis, Florian Roth, Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential execution of the SquiblyTwo technique that leverages Windows Management Instrumentation (WMI)\nto execute malicious code remotely. This technique bypasses application whitelisting by using wmic.exe to process\nmalicious XSL (eXtensible Stylesheet Language) scripts that can contain embedded JScript or VBScript.\nThe attack typically works by fetching XSL content from a remote source (using HTTP/HTTPS) and executing it\nwith full trust privileges directly in memory, avoiding disk-based detection mechanisms. This is a common\nLOLBin (Living Off The Land Binary) technique used for defense evasion and code execution.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1059.005",
+    "T1059.007",
+    "T1220"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344081"
+}

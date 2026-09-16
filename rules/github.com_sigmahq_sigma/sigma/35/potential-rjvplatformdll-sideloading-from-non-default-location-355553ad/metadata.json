@@ -1,0 +1,23 @@
+{
+  "uuid": "355553ad-c3f4-4e8f-a3b5-7d69adb2aa61",
+  "title": "Potential RjvPlatform.DLL Sideloading From Non-Default Location",
+  "format": "sigma",
+  "author": "X__Junior (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential DLL sideloading of \"RjvPlatform.dll\" by \"SystemResetPlatform.exe\" located in a non-default location.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344343"
+}

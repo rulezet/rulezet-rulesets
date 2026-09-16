@@ -1,0 +1,21 @@
+{
+  "uuid": "a4721068-ec08-4af4-be06-3778dd2682b5",
+  "title": "Potential Persistence Via Notepad++ Plugins",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects creation of new \".dll\" files inside the plugins directory of a notepad++ installation by a process other than \"gup.exe\". Which could indicates possible persistence",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344169"
+}

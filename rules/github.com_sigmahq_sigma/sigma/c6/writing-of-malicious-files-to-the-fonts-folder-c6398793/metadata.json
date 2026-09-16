@@ -1,0 +1,24 @@
+{
+  "uuid": "c6398793-4090-499d-864f-675c86bb171e",
+  "title": "Writing Of Malicious Files To The Fonts Folder",
+  "format": "sigma",
+  "author": "Sreeman",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Monitors for the hiding possible malicious files in the C:\\Windows\\Fonts\\ location. This folder doesn't require admin privillege to be written and executed from.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1211"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344054"
+}

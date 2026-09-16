@@ -1,0 +1,23 @@
+{
+  "uuid": "0b6e397a-8410-45c8-b031-0a8524406da9",
+  "title": "Share And Session Enumeration Using Net.EXE",
+  "format": "sigma",
+  "author": "Endgame, JHasenbusch (ported for oscd.community)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects attempts to enumerate file shares, printer shares and sessions using \"net.exe\" with the \"view\" flag.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1018"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344038"
+}

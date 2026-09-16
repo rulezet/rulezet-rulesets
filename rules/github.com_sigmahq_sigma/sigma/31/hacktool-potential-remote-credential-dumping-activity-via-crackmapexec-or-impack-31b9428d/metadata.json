@@ -1,0 +1,25 @@
+{
+  "uuid": "31b9428d-f484-46e4-92c6-163836d38ee1",
+  "title": "HackTool - Potential Remote Credential Dumping Activity Via CrackMapExec Or Impacket-Secretsdump",
+  "format": "sigma",
+  "author": "SecurityAura",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects default filenames output from the execution of CrackMapExec and Impacket-secretsdump against an endpoint.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344200"
+}

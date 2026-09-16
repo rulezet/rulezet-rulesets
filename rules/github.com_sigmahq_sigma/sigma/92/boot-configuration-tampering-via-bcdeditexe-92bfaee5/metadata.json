@@ -1,0 +1,24 @@
+{
+  "uuid": "92bfaee5-bd2f-4ba8-8b5a-842ee2685bbf",
+  "title": "Boot Configuration Tampering Via Bcdedit.EXE",
+  "format": "sigma",
+  "author": "E.M. Anhaus (originally from Atomic Blue Detections, Endgame), oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of the bcdedit command to tamper with the boot configuration data. This technique is often times used by malware or attackers as a destructive way before launching ransomware.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344048"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "30bd6608-1ed5-463c-8e06-bb6fec1842f0",
+  "title": "Disabling Windows Defender WMI Autologger Session via Reg.exe",
+  "format": "sigma",
+  "author": "Matt Anderson (Huntress)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of reg.exe to disable the Event Tracing for Windows (ETW) Autologger session for Windows Defender API and Audit events.\nBy setting the 'Start' value to '0' for the 'DefenderApiLogger' or 'DefenderAuditLogger' session, an attacker can prevent these critical security events\nfrom being logged, effectively blinding monitoring tools that rely on this data. This is a powerful defense evasion technique.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:tool=\"Empire\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344055"
+}

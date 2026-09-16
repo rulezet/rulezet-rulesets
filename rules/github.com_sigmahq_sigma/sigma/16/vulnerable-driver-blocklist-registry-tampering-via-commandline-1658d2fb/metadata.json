@@ -1,0 +1,23 @@
+{
+  "uuid": "1658d2fb-67cb-4bb2-bc8d-093d75d1d219",
+  "title": "Vulnerable Driver Blocklist Registry Tampering Via CommandLine",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects tampering of the Vulnerable Driver Blocklist registry via command line tools such as PowerShell or REG.EXE.\nThe Vulnerable Driver Blocklist is a security feature that helps prevent the loading of known vulnerable drivers.\nDisabling this feature may indicate an attempt to bypass security controls, often targeted by threat actors\nto facilitate the installation of malicious or vulnerable drivers, particularly in scenarios involving Endpoint Detection and Response\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344001"
+}

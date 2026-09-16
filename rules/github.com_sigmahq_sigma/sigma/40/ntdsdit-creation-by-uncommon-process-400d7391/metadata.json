@@ -1,0 +1,24 @@
+{
+  "uuid": "400d7391-b2e3-4317-8b95-f1d1cf17cf97",
+  "title": "NTDS.DIT Creation By Uncommon Process",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects creation of a file named \"ntds.dit\" (Active Directory Database) by an uncommon process or a process located in a suspicious directory",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.002",
+    "T1003.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344241"
+}

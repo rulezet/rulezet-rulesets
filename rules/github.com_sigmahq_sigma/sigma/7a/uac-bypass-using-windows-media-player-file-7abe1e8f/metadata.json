@@ -1,0 +1,23 @@
+{
+  "uuid": "7abe1e8f-419e-4a75-8dc7-68a8e0bea5b4",
+  "title": "UAC Bypass Using Windows Media Player - File",
+  "format": "sigma",
+  "author": "Christian Burkard (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the pattern of UAC Bypass using Windows Media Player osksupport.dll (UACMe 32)",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344165"
+}

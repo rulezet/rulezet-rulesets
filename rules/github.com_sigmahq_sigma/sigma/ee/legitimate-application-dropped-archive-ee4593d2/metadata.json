@@ -1,0 +1,23 @@
+{
+  "uuid": "ee4593d2-998d-4c3d-b190-91346cc4ca6f",
+  "title": "Legitimate Application Dropped Archive",
+  "format": "sigma",
+  "author": "frack113, Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects programs on a Windows system that should not write an archive to disk",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344211"
+}

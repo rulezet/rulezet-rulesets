@@ -1,0 +1,23 @@
+{
+  "uuid": "ed7822ab-f24d-4f05-8bd4-54f72fffebad",
+  "title": "Python Image Load By Non-Python Process",
+  "format": "sigma",
+  "author": "Patrick St. John, OTR (Open Threat Research)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the image load of \"Python Core\" by a non-Python process. This might be indicative of a execution of executable that has been bundled from Python code.\nVarious tools like Py2Exe, PyInstaller, and cx_Freeze are used to bundle Python code into standalone executables.\nThreat actors often use these tools to bundle malicious Python scripts into executables, sometimes to obfuscate the code or to bypass security measures.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344367"
+}

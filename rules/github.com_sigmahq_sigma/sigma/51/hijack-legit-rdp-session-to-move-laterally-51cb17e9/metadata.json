@@ -1,0 +1,24 @@
+{
+  "uuid": "51cb17e9-217c-4195-a492-b2cdb8b96c21",
+  "title": "Hijack Legit RDP Session to Move Laterally",
+  "format": "sigma",
+  "author": "Samir Bousseaden",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the usage of tsclient share to place a backdoor on the RDP source machine's startup folder",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1219.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344117"
+}

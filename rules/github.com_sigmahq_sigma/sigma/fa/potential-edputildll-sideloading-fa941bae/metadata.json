@@ -1,0 +1,24 @@
+{
+  "uuid": "fa941bae-7236-413b-8646-fbc6e708b0a0",
+  "title": "Potential Edputil.DLL Sideloading",
+  "format": "sigma",
+  "author": "X__Junior (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential DLL sideloading of \"edputil.dll\"",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344363"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "c06b24b2-4690-4ebc-884a-b7da77e47f1d",
+  "title": "Potential DLL Sideloading Of Non-Existent DLLs From System Folders",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), SBousseaden",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects loading of specific system DLL files that are usually not present on the system (or at least not in system directories) but may be loaded by legitimate processes, potentially indicating phantom DLL hijacking attempts.\nPhantom DLL hijacking involves placing malicious DLLs with names of non-existent system binaries in locations where legitimate applications may search for them, leading to execution of the malicious DLLs.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344340"
+}

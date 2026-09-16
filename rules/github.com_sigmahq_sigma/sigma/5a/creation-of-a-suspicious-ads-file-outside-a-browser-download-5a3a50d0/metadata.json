@@ -1,0 +1,21 @@
+{
+  "uuid": "5a3a50d0-4da2-4470-aed5-a76ba699e2f7",
+  "title": "Creation Of a Suspicious ADS File Outside a Browser Download",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of a suspicious ADS (Alternate Data Stream) file by software other than browsers",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344406"
+}

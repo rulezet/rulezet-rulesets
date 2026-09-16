@@ -1,0 +1,23 @@
+{
+  "uuid": "4c39c85b-e587-4532-8402-189f28e69045",
+  "title": "Suspicious DotNET CLR Usage Log Artifact",
+  "format": "sigma",
+  "author": "frack113, omkar72, oscd.community, Wojciech Lesicki",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of Usage Log files by the CLR (clr.dll). These files are named after the executing process once the assembly is finished executing for the first time in the (user) session context.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344175"
+}

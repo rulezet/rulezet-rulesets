@@ -1,0 +1,28 @@
+{
+  "uuid": "9532bed3-177e-45dd-86df-17cbc3ccb7bd",
+  "title": "Suspicious File Write to SharePoint Layouts Directory",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious file writes to SharePoint layouts directory which could indicate webshell activity or post-exploitation.\nThis behavior has been observed in the exploitation of SharePoint vulnerabilities such as CVE-2025-49704, CVE-2025-49706 or CVE-2025-53770.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2025-49704",
+    "CVE-2025-49706",
+    "CVE-2025-53770"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344270"
+}

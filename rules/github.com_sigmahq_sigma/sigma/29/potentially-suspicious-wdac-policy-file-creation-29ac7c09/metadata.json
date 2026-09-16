@@ -1,0 +1,21 @@
+{
+  "uuid": "29ac7c09-3962-43a9-9058-910051dd25ed",
+  "title": "Potentially Suspicious WDAC Policy File Creation",
+  "format": "sigma",
+  "author": "X__Junior",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious Windows Defender Application Control (WDAC) policy file creation from abnormal processes that could be abused by attacker to block EDR/AV components while allowing their own malicious code to run on the system.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344149"
+}

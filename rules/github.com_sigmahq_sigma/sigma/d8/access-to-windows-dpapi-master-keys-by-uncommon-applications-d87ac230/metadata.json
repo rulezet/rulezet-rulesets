@@ -1,0 +1,24 @@
+{
+  "uuid": "d87ac230-9a9f-4a79-9e77-21272a7ce454",
+  "title": "Access To Windows DPAPI Master Keys By Uncommon Applications",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects file access requests to the the Windows Data Protection API Master keys by an uncommon application.\nThis can be a sign of credential stealing. Example case would be usage of mimikatz \"dpapi::masterkey\" function\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1555.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344277"
+}

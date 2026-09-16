@@ -1,0 +1,24 @@
+{
+  "uuid": "879bcdd1-19ab-4c7e-99e9-4d609a4fa991",
+  "title": "Access To Crypto Currency Wallets By Uncommon Applications",
+  "format": "sigma",
+  "author": "X__Junior (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects file access requests to crypto currency files by uncommon processes.\nCould indicate potential attempt of crypto currency wallet stealing.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Spyware\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344279"
+}
