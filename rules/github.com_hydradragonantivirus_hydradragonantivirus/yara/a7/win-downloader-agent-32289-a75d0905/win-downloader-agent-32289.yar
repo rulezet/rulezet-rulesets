@@ -1,0 +1,9 @@
+rule Win_Downloader_Agent_32289
+{
+strings:
+	$a0 = { e36cd2f0d0f2f14b473696a367c3fcee1f48fadb9aed23ce68b2890bf8611f9b2c4d2e7164f7f568d8f5fae547368e9dea71ebf9f1d080e9fb3d00d491f6c9f84af1abc6d98e3ee16f72fb75a23bb230b2f3fae52ceeedbd2045c1916da00cece9dc50283e3dd4ef93b52efa5d4527fba0b222e4b67913ee0b1c92a5c72fecc5e2fb158e8d3c2315d44c99ea766b441dd95e49f2 }
+
+
+condition:
+	$a0
+}
