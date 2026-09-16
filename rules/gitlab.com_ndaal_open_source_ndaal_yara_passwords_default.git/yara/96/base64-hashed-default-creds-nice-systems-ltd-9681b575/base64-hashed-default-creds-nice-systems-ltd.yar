@@ -1,0 +1,21 @@
+rule base64_hashed_default_creds_nice_systems_ltd
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for nice_systems_ltd."
+        category = "INFO"
+        info = "SHA3_512"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="QWRtaW5pc3RyYXRvcg=="
+    $a1="bmljZWN0aQ=="
+    $a2="TmljZS1hZG1pbg=="
+    $a3="bmljZWN0aQ=="
+condition:
+    ($a0 and $a1) or ($a2 and $a3)
+}
