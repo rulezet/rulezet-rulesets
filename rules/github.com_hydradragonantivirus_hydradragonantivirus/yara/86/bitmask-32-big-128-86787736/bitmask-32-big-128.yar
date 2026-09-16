@@ -1,0 +1,8 @@
+rule bitmask__32_big_128_
+{
+strings:
+	$a0 = { 0000000100000003000000070000000f0000001f0000003f0000007f000000ff000001ff000003ff000007ff00000fff00001fff00003fff00007fff0000ffff0001ffff0003ffff0007ffff000fffff001fffff003fffff007fffff00ffffff01ffffff03ffffff07ffffff0fffffff1fffffff3fffffff7fffffffffffffff }
+
+condition:
+	$a0
+}

@@ -1,0 +1,8 @@
+rule Creative_ADPCM_table__32_lil_32_
+{
+strings:
+	$a0 = { e6000000e6000000e6000000e600000033010000990100000002000066020000 }
+
+condition:
+	$a0
+}

@@ -1,0 +1,8 @@
+rule anti_debug__Debug_registers_manipulation__2___8_byt_55_
+{
+strings:
+	$a0 = { 8b4ce40c8381b800000002c7410400000000c7410800000000c7410c00000000c7411000000000c7411400000000c741180000000031c0 }
+
+condition:
+	$a0
+}

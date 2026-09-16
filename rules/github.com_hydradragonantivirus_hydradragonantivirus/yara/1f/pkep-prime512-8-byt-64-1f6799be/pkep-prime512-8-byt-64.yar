@@ -1,0 +1,8 @@
+rule Pkep_prime512__8_byt_64_
+{
+strings:
+	$a0 = { f52aff3ce1b1294018118d7c84a70a72d686c40319c807297aca950cd9969fabd00a509b0246d3083d66a45d419f9c7cbd894b221926baaba25ec355e92a055f }
+
+condition:
+	$a0
+}

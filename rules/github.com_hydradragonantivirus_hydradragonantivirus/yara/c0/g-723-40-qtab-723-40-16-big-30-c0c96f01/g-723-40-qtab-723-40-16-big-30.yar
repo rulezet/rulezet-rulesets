@@ -1,0 +1,8 @@
+rule G_723_40_qtab_723_40__16_big_30_
+{
+strings:
+	$a0 = { FF86FFF00044008B00C600FA012A0153017A019D01BD01DB01F602100229 }
+
+condition:
+	$a0
+}

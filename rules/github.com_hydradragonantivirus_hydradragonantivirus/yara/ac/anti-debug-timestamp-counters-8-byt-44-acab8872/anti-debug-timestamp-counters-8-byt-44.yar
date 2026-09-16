@@ -1,0 +1,8 @@
+rule anti_debug__Timestamp_counters__8_byt_44_
+{
+strings:
+	$a0 = { 64ff3500000000648925000000000f315031c0f7f00f312b04e483c404648f050000000083c4043d00000100 }
+
+condition:
+	$a0
+}

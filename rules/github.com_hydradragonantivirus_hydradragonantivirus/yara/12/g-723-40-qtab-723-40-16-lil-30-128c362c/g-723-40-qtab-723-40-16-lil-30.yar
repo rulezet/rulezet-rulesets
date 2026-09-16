@@ -1,0 +1,8 @@
+rule G_723_40_qtab_723_40__16_lil_30_
+{
+strings:
+	$a0 = { 86FFF0FF44008B00C600FA002A0153017A019D01BD01DB01F60110022902 }
+
+condition:
+	$a0
+}

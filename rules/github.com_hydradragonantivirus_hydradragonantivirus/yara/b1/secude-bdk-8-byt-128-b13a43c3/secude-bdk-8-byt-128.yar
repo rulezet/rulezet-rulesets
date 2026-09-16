@@ -1,0 +1,8 @@
+rule SecuDE_bdk__8_byt_128_
+{
+strings:
+	$a0 = { 0101010101010101fefefefefefefefe1f1f1f1f1f1f1f1fe0e0e0e0e0e0e0e0e0fee0fef1fef1fe1ffe1ffe0efe0efe01fe01fe01fe01fe1f0e1fe00ef10ef101e001e001f101f101e001e001f101f1fee0fee0fef1fef1fe1ffe1ffe0efe0efe01fe01fe01fe01fe1ffe1ffe0efe0ee001e001f101f1011f011f010e010e01 }
+
+condition:
+	$a0
+}
