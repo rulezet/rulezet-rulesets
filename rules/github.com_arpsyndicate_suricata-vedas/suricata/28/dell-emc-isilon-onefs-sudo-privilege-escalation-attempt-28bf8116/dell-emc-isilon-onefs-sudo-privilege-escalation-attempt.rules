@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET any (msg:"Dell EMC Isilon OneFS Sudo Privilege Escalation Attempt"; flow:established,to_server; content:"sudo"; nocase; distance:0; sid:1007437; rev:1; reference:cve,CVE-2018-1213; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-1213;)

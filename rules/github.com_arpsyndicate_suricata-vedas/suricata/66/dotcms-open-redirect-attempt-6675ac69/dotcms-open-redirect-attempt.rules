@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"dotCMS Open Redirect Attempt"; flow:established,to_server; uricontent:"/html/common/forward_js.jsp?FORWARD_URL="; nocase; sid:1001254; rev:1; reference:cve,CVE-2018-17422; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-17422;)

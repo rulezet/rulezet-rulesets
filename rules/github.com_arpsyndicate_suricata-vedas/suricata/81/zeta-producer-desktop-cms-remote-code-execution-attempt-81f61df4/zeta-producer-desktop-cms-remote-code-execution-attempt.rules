@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"Zeta Producer Desktop CMS remote code execution attempt"; flow:established,to_server; uricontent:"/assets/php/formmailer/SendEmail.php?file="; nocase; sid:1000307; rev:1; reference:cve,CVE-2018-13980; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2018-13980;)
