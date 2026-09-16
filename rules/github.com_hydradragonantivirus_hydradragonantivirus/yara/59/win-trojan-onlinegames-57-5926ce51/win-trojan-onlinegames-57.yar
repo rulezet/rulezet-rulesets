@@ -1,0 +1,9 @@
+rule Win_Trojan_OnlineGames_57
+{
+strings:
+	$a0 = { 5b1f935776be4d5560803dd36ee3914679e14a47eaef2bc3eb0879a6899563868d9beb0e1aa149fe00814df011ab7cf404aaeb02a1c223c5eb02e585eb0969aca855738cac5b62eb0470e829de51eb034a950c3d9422a247eb037ff7a6531bc7e8050000 }
+
+
+condition:
+	$a0
+}

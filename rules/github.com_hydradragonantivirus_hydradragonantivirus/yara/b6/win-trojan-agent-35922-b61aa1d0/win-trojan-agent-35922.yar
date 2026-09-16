@@ -1,0 +1,9 @@
+rule Win_Trojan_Agent_35922
+{
+strings:
+	$a0 = { 2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d0d0a2e3a3a2e634f64657246656e7269722e3a3a2e0d0a2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d2d0d0a446174612e2e2e2e2e2e2e2e2e2e2e2e2e3a }
+
+
+condition:
+	$a0
+}
