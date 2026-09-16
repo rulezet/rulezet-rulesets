@@ -1,0 +1,21 @@
+{
+  "uuid": "0a66f097-a00f-48b9-b2ef-feab370dd72a",
+  "title": "Trojan_BAT_Formbook_DS_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:BAT/Formbook.DS!MTB,SIGNATURE_TYPE_PEHSTR_EXT,08 00 08 00 08 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:stealer=\"FormBook\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/296980"
+}
