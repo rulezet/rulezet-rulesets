@@ -1,0 +1,9 @@
+import "pe"
+rule SnoopStop_v115_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? EB ?? 20 ?? ?? ?? 73 ?? 20 ?? ?? 41 1A 05 }
+    condition:
+        $a at pe.entry_point
+
+}

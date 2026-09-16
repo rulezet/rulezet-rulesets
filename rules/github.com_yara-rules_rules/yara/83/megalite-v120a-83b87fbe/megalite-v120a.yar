@@ -1,0 +1,9 @@
+import "pe"
+rule MEGALITE_v120a: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? BA ?? ?? 05 ?? ?? 3B 2D 73 ?? 72 ?? B4 09 BA ?? ?? CD 21 CD 90 }
+    condition:
+        $a at pe.entry_point
+
+}
