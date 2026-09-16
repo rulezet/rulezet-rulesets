@@ -1,0 +1,1 @@
+alert tcp $SMTP_SERVERS any -> $EXTERNAL_NET 25 (msg:"ET DELETED SMTP Payment History"; flow:to_server,established; content:"Subject|3A|"; content:"payment history"; nocase; classtype:policy-violation; sid:2002486; rev:5; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

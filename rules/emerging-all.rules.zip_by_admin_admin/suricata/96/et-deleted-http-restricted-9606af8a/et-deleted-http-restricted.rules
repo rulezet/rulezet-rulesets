@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED HTTP - Restricted"; flow:to_server,established; pcre:"/(?<!//)\Wrestricted[^\w/]/ism"; classtype:policy-violation; sid:2002543; rev:5; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

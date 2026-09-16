@@ -1,0 +1,1 @@
+alert tcp $SMTP_SERVERS any -> $EXTERNAL_NET 25 (msg:"ET DELETED SMTP Internal Use Only"; flow:to_server,established; content:"Subject|3A|"; pcre:"/\Winternal\suse\sonly\W/ism"; classtype:policy-violation; sid:2002468; rev:5; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED HTTP - Payment History"; flow:to_server,established; pcre:"/\Wpayment\shistory\W/ism"; classtype:policy-violation; sid:2002570; rev:5; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

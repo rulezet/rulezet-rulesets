@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 21 (msg:"ET INFO FTP STOR to External Network"; flow:established,to_server; content:"STOR "; depth:5; classtype:misc-activity; sid:2015016; rev:2; metadata:created_at 2012_07_04, confidence High, signature_severity Informational, updated_at 2019_07_26;)

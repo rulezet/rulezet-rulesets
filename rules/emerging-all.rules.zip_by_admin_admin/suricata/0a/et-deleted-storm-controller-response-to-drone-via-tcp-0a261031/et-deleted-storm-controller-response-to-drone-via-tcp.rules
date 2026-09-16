@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 1024:65535 -> $HOME_NET any (msg:"ET DELETED Storm Controller Response to Drone via tcp"; flowbits:isset,BE.stormtcp.init; flow:established,from_server; dsize:4; classtype:trojan-activity; sid:2007641; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

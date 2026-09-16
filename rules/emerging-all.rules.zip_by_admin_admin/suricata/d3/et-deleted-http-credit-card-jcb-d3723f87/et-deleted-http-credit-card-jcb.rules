@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED HTTP - Credit Card, JCB"; flow:to_server,established; pcre:"/\Wj(apan\s)?c(redit\s)?b(ureau)?\W[\s\w,/-]*(?=(3[12359][0-9]{14})|(1800|2131)[0-9]{11})/ism"; classtype:policy-violation; sid:2002561; rev:5; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

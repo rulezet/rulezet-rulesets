@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED MALVERTISING Malicious Advertizing URL in.cgi"; flow:to_server,established; content:"/in.cgi?"; http_uri; classtype:bad-unknown; sid:2012883; rev:6; metadata:created_at 2011_05_27, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)
