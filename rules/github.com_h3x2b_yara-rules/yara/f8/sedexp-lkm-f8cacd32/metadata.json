@@ -1,0 +1,21 @@
+{
+  "uuid": "f8cacd32-c942-4810-85ba-91296711d6fc",
+  "title": "sedexp_lkm",
+  "format": "yara",
+  "author": "@h3x2b <tracker@h3x.eu>",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects sedexp samples - 202408 - possible sedexp linux kernel module",
+  "source": "https://github.com/h3x2b/yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364231"
+}

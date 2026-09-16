@@ -1,0 +1,21 @@
+{
+  "uuid": "035e05f7-07a4-4953-9124-e5b0acce51b9",
+  "title": "zipExec",
+  "format": "yara",
+  "author": "Marius 'f0wL' Genheimer <hello@dissectingmalwa.re>",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects zipExec Golang Loader/Crypter",
+  "source": "https://github.com/f0wl/yara_rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364101"
+}

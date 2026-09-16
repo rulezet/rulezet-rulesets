@@ -1,0 +1,8 @@
+rule turla {
+    strings:
+                $xor_loop = { 8d4a05 328a ???????? 888a ???????? 42 83fa08 76eb }
+                $enc_string = { 2D72647852323138502E2930216A76 }
+
+    condition:
+        any of them
+}

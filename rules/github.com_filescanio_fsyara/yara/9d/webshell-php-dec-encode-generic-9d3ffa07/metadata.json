@@ -1,0 +1,19 @@
+{
+  "uuid": "9d3ffa07-228e-425d-ab27-bc20a1336cf7",
+  "title": "WEBSHELL_PHP_DEC_ENCODE_GENERIC",
+  "format": "yara",
+  "author": "Arnim Rupp modified by OPSWAT",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "PHP webshell are encoded in decimal blob, that can be loaded by another loader",
+  "source": "https://github.com/filescanio/fsYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364094"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "c6963a89-11b6-4cc0-8d47-8c86c03c95c9",
+  "title": "Arbitrary File Download Via GfxDownloadWrapper.EXE",
+  "format": "sigma",
+  "author": "Victor Sergeev, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects execution of GfxDownloadWrapper.exe with a URL as an argument to download file.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364295"
+}

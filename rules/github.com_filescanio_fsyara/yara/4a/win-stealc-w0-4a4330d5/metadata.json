@@ -1,0 +1,20 @@
+{
+  "uuid": "4a4330d5-0e25-495a-8b47-3ca59156ae68",
+  "title": "win_stealc_w0",
+  "format": "yara",
+  "author": "crep1x",
+  "license": "",
+  "license_verified": false,
+  "description": "Find standalone Stealc sample based on decryption routine or characteristic strings",
+  "source": "https://github.com/filescanio/fsYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"Vidar\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/363929"
+}

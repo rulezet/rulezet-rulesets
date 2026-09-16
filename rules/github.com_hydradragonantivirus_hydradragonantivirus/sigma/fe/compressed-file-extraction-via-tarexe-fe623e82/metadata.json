@@ -1,0 +1,24 @@
+{
+  "uuid": "fe623e82-26b5-43d5-b15a-7917699def37",
+  "title": "Compressed File Extraction Via Tar.EXE",
+  "format": "sigma",
+  "author": "AdmU3",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects execution of \"tar.exe\" in order to extract compressed file.\nAdversaries may abuse various utilities in order to decompress data to avoid detection.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1560",
+    "T1560.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364276"
+}

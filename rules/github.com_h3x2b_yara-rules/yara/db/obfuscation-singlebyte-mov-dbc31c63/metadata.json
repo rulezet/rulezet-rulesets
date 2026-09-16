@@ -1,0 +1,19 @@
+{
+  "uuid": "dbc31c63-5156-4bf9-9e1d-961e841b41c4",
+  "title": "obfuscation_singlebyte_mov",
+  "format": "yara",
+  "author": "Andreas Schuster",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects strings obfuscated by single-byte mov ex: mov [ebp+String+1], A",
+  "source": "https://github.com/h3x2b/yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364179"
+}

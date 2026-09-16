@@ -1,0 +1,26 @@
+{
+  "uuid": "3381d25b-262f-4c0a-9c4f-b5d912d2dea9",
+  "title": "Shadow Copies Deletion Using Operating Systems Utilities",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Michael Haag, Teymur Kheirkhabarov, Daniil Yugoslavskiy, oscd.community, Andreas Hunkeler (@Karneades)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Shadow Copies deletion using operating systems utilities",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"WannaCry\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364391"
+}

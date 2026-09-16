@@ -1,0 +1,28 @@
+rule elfiot_generic_linux_iot: malware
+{
+    meta:
+        author = "@h3x2b <tracker@h3x.eu>"
+        description = "Detects unknown linux bot - 20161009"
+                
+    strings:
+        $user_00 = "root"
+        $user_01 = "admin"
+        $user_02 = "guest"
+        $user_03 = "support"
+
+        $pass_00 = "xc3511"
+        $pass_01 = "juantech"
+        $pass_02 = "xmhdipc"
+        $pass_03 = "vizxv"
+        $pass_04 = "bayandsl"
+        $pass_05 = "123456"
+        $pass_06 = "dreambox"
+
+
+    condition:
+                uint32be(0) == 0x7f454c46 and
+
+                2 of ($user_*) and
+
+                3 of ($pass_*)
+}

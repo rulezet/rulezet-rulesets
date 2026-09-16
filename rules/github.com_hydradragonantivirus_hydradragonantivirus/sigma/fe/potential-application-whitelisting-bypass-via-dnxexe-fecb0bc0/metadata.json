@@ -1,0 +1,24 @@
+{
+  "uuid": "fecb0bc0-8825-4dfd-9494-30bf9f8f55e8",
+  "title": "Potential Application Whitelisting Bypass via Dnx.EXE",
+  "format": "sigma",
+  "author": "Beyu Denis, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of Dnx.EXE. The Dnx utility allows for the execution of C# code.\nAttackers might abuse this in order to bypass application whitelisting.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027.004",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364403"
+}

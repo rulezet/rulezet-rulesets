@@ -1,0 +1,26 @@
+{
+  "uuid": "1ca6d451-b3a8-40e3-b00a-dc10eb737bd2",
+  "title": "Virtualbox Driver Installation or Starting of VMs",
+  "format": "sigma",
+  "author": "Janantha Marasinghe",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Adversaries can carry out malicious operations using a virtual instance to avoid detection. This rule is built to detect the registration of the Virtualbox driver or start of a Virtualbox VM.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Maze\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1564",
+    "T1564.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364311"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "f225561a-d062-4619-a13e-e1bebe59720c",
+  "title": "Deployment Of The AppX Package Was Blocked By The Policy",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects an appx package deployment that was blocked by the local computer policy.\nThe following events indicate that an AppX package deployment was blocked by a policy:\n- Event ID 441: The package deployment operation is blocked by the \"Allow deployment operations in special profiles\" policy\n- Event ID 442: Deployments to non-system volumes are blocked by the \"Disable deployment of Windows Store apps to non-system volumes\" policy.\"\n- Event ID 453: Package blocked by a platform policy.\n- Event ID 454: Package blocked by a platform policy.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364271"
+}

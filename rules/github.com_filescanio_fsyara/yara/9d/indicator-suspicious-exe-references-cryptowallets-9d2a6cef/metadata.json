@@ -1,0 +1,19 @@
+{
+  "uuid": "9d2a6cef-59d2-4ff3-984b-88621887c387",
+  "title": "INDICATOR_SUSPICIOUS_EXE_References_CryptoWallets",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects executables referencing many cryptocurrency mining wallets or apps. Observed in information stealers",
+  "source": "https://github.com/filescanio/fsYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/363979"
+}

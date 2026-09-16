@@ -1,0 +1,19 @@
+{
+  "uuid": "21fa0a3a-d2a0-47dc-b576-2b0cb0e90bda",
+  "title": "pe_overlay_single_byte_xor_PE",
+  "format": "yara",
+  "author": "filescanio",
+  "license": "",
+  "license_verified": false,
+  "description": "Try the 3rd byte as a XOR key, since typically that byte is zero in a PE, meaning in encoded form it will contain the XOR key",
+  "source": "https://github.com/filescanio/fsYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/363988"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "a422b43c-b784-4383-bc0f-ac29cb8a6269",
+  "title": "Potential Excel.EXE DCOM Lateral Movement Via ActivateMicrosoftApp",
+  "format": "sigma",
+  "author": "Aaron Stratton",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious child processes of Excel which could be an indicator of lateral movement leveraging the \"ActivateMicrosoftApp\" Excel DCOM object.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364275"
+}

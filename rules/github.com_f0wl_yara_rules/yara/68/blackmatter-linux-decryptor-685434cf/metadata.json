@@ -1,0 +1,22 @@
+{
+  "uuid": "685434cf-ece6-4a95-af06-09bd98e80da7",
+  "title": "blackmatter_linux_decryptor",
+  "format": "yara",
+  "author": "Marius 'f0wL' Genheimer <https://dissectingmalwa.re>",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects BlackMatter Linux Ransomware Version 1.6.0.2 to 1.6.0.4 with ESXI capabilities (Decryptor)",
+  "source": "https://github.com/f0wl/yara_rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364098"
+}

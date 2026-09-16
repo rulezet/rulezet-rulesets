@@ -1,0 +1,22 @@
+{
+  "uuid": "2df9eac6-5c50-4ff5-9e3a-acfa7e9e13e3",
+  "title": "Actor_APT_CN_Multiple_MAL_LNX_ELF_Backdoor_VoidLink_Strings_Jan26",
+  "format": "yara",
+  "author": "Rustynoob619",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects VoidLink Linux Backdoor used by Chinese Nexus Threat Actors based on strings",
+  "source": "https://github.com/filescanio/fsYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/363954"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "97ea0e47-cb43-4bbb-bece-9d82ce8615aa",
+  "title": "dll_injection_thread",
+  "format": "yara",
+  "author": "h3x2b",
+  "license": "",
+  "license_verified": false,
+  "description": "Injection using kernel32.dll:VirtualAllocEx",
+  "source": "https://github.com/h3x2b/yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364167"
+}

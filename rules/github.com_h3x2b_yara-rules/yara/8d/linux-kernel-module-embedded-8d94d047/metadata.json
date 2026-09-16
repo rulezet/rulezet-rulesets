@@ -1,0 +1,21 @@
+{
+  "uuid": "8d94d047-917e-49c1-86b7-ec6d7c6aac59",
+  "title": "linux_kernel_module_embedded",
+  "format": "yara",
+  "author": "@h3x2b <tracker@h3x.eu>",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects LKM - Linux kernel module embedded within the file which is not elf itself",
+  "source": "https://github.com/h3x2b/yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364168"
+}

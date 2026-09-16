@@ -1,0 +1,23 @@
+{
+  "uuid": "6d3c76b2-98e1-4e11-b43c-17f81ba4c215",
+  "title": "Unmount Share Via Net.EXE",
+  "format": "sigma",
+  "author": "oscd.community, @redcanary, Zach Stanford @svch0st",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects when when a mounted share is removed. Adversaries may remove share connections that are no longer useful in order to clean up traces of their operation",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364345"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "30dd5ffc-dc48-4427-b8b9-a531356edb62",
+  "title": "Execution of Powershell Script in Public Folder",
+  "format": "sigma",
+  "author": "Max Altgelt (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This rule detects execution of PowerShell scripts located in the \"C:\\Users\\Public\" folder",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364348"
+}

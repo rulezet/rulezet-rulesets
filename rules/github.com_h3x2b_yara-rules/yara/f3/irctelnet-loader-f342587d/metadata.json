@@ -1,0 +1,22 @@
+{
+  "uuid": "f342587d-8ff0-4fbe-ac07-e5db71ca9823",
+  "title": "irctelnet__loader",
+  "format": "yara",
+  "author": "@h3x2b <tracker@h3x.eu>",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects dropper of the irctelnet - 20161102",
+  "source": "https://github.com/h3x2b/yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364219"
+}

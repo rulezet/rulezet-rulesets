@@ -1,0 +1,29 @@
+{
+  "uuid": "e7072a3e-3295-49fd-b98a-e0f906ee3160",
+  "title": "Renamed AdFind Execution",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of a renamed Adfind.exe. AdFind continues to be seen across majority of breaches. It is used to domain trust discovery to plan out subsequent steps in the attack chain.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:backdoor=\"SUNBURST\"",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN6 - G0037\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1018",
+    "T1069.002",
+    "T1087.002",
+    "T1482"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364291"
+}
