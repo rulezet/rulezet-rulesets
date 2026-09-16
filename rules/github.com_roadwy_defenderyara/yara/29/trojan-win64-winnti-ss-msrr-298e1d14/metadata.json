@@ -1,0 +1,21 @@
+{
+  "uuid": "298e1d14-b181-4804-85fa-0c6993be2339",
+  "title": "Trojan_Win64_Winnti_SS_MSRR",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win64/Winnti.SS!MSRR,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Winnti Group - G0044\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/259500"
+}

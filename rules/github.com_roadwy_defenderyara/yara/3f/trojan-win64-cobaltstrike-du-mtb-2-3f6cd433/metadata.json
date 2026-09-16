@@ -1,0 +1,21 @@
+{
+  "uuid": "3f6cd433-cc1b-44fb-9e37-c8cab89c8aee",
+  "title": "Trojan_Win64_Cobaltstrike_DU_MTB_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win64/Cobaltstrike.DU!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:tool=\"Cobalt Strike\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/259920"
+}

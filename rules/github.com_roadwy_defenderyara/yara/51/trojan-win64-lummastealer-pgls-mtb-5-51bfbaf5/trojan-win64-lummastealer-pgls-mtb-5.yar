@@ -1,0 +1,9 @@
+rule Trojan_Win64_LummaStealer_PGLS_MTB_5{
+	meta:
+		description = "Trojan:Win64/LummaStealer.PGLS!MTB,SIGNATURE_TYPE_PEHSTR_EXT,05 00 05 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {01 c1 0f b6 c1 48 8b 4d ?? 0f b6 04 01 48 63 4d ?? 41 30 04 0e 44 8b 75 ?? 41 83 c6 01 b8 ?? ?? ?? ?? 3d ?? ?? ?? ?? 0f 8f } 		$a_03_1 = {01 c1 0f b6 c1 0f b6 84 04 ?? ?? ?? ?? 48 63 4c 24 ?? 48 8b 54 24 ?? 30 04 0a 8b 74 24 ?? 83 c6 01 b8 ?? ?? ?? ?? 3d ?? ?? ?? ?? 0f 8f } 	condition:
+		((#a_03_0  & 1)*5+(#a_03_1  & 1)*5) >=5
+ 
+}

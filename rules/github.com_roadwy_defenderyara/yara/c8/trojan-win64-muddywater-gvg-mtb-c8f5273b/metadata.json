@@ -1,0 +1,21 @@
+{
+  "uuid": "c8f5273b-6a2d-4336-8a4b-34f02a144c3e",
+  "title": "Trojan_Win64_MuddyWater_GVG_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win64/MuddyWater.GVG!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"MuddyWater - G0069\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/259531"
+}
