@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] IAM Policy Change"; content: "cloudaudit.googleapis.com"; content: "SetIamPolicy"; json_map: "src_ip", ".protoPayload.requestMetadata.c"; classtype: system-event; sid: 5005998; rev:3;)

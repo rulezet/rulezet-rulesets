@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MSSQL] Login Failure"; json_map:"event_id",".EventID"; json_map:"message",".RenderedDescription"; event_id: 18456; default_proto: tcp; default_dst_port: $MSSQL_PORT; classtype: unsuccessful-user; program: MSSQL*|Application; sid:5009302; metadata: created_on 2022_11_22, old_sid 5001640; rev:7;)

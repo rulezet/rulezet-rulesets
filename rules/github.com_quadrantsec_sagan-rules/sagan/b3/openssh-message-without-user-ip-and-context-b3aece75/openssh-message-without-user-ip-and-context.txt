@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Message without user-IP and context"; content: "Could not get shadow information for NOUSER"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: misc-attack; program: sshd; sid: 5000072; rev:3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Account Recovery Email Change"; content: "cloudaudit.googleapis.com"; content: "google.login.LoginService.recoveryEmailEdit"; content:!"sid|3a|"; flexbits:set,GCP_Event,10; classtype: system-event; parse_src_ip: 1; sid: 5006019; rev:3; metadata: updatedOn 2026_04_08;)

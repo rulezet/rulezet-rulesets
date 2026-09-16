@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Usage Billing Metric"; content: "cloudaudit.googleapis.com"; content: "usage_billing_metric"; flexbits:set,GCP_Event,10; classtype: system-event; sid: 5005996; rev:2;)

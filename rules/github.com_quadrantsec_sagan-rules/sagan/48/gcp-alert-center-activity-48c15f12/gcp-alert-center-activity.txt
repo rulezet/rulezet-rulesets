@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Alert Center Activity"; content: "cloudaudit.googleapis.com"; content: "|22|eventType|22|:|22|ALERT_CENTER|22|"; flexbits:set,GCP_Event,10; classtype: system-event; sid: 5006000; rev:2;)

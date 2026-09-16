@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Suspicious Login"; content: "cloudaudit.googleapis.com"; content: "google.login.LoginService.suspiciousLogin"; flexbits:set,GCP_Event,10; classtype: system-event; parse_src_ip: 1; sid: 5005999; rev:3;)

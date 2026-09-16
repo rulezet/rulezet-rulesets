@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Corrupted traffic"; content: "Corrupted check bytes on"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: network-event; program: sshd; sid: 5000073; rev:3;)

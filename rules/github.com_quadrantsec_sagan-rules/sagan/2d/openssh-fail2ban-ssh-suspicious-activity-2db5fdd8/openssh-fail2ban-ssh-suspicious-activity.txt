@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Fail2Ban SSH Suspicious Activity"; content: "Fail2Ban"; content:!"Fail2Ban Service"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: brute-force; parse_src_ip: 1; sid: 5001974; rev:5;)

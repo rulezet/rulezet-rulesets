@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[MCAS] Activity from Infrequent Country"; program: MCAS; json_content: ".Operation", "MCAS_ALERT_ANUBIS_DETECTION_NEW_COUNTRY"; classtype: suspicious-traffic; sid: 5007203; rev: 2; metadata: mitre_technique_id T1078, mitre_technique_id T1102;)

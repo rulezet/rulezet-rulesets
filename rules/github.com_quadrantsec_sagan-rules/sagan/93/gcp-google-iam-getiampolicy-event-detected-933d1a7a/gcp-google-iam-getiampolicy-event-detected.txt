@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[GCP] Google IAM GetIamPolicy event detected"; program:gcp; json_content:".protoPayload.methodName","google.iam.v1.IAMPolicy.GetIamPolicy"; flexbits:set,GCP_Event,10; classtype:system-event; reference:url,https://www.datadoghq.com/blog/monitoring-gcp-audit-logs/; sid:991022; rev:1;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] User Disabled"; content: "cloudaudit.googleapis.com"; content: "google.login.LoginService.accountDisabled"; content:!"sid|3a|"; flexbits:set,GCP_Event,10; classtype: system-event; sid: 5006021; rev:3; metadata: updatedOn 2026_04_08;)

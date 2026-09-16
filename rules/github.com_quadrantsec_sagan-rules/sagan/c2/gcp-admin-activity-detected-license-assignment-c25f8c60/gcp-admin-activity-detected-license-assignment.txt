@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Admin activity Detected - License Assignment"; content: "cloudaudit.googleapis.com"; content: "google.admin.AdminService.userLicenseAssignment"; flexbits:set,GCP_Event,10; classtype: system-event; parse_src_ip: 1; sid: 5006026; rev:2;)

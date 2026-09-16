@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Firewall Policy - Rule Patched"; content: "cloudaudit.googleapis.com"; content: "|22|method|22|:|22|compute.firewallPolicies.patchRule|22|"; flexbits:set,GCP_Event,10; classtype: system-event; sid: 5006005; rev:2;)

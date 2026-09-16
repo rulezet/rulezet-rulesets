@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[GCP] Google Admin deleteGroup event detected"; program:gcp; json_content:".protoPayload.methodName","google.admin.AdminService.deleteGroup"; flexbits:set,GCP_Event,10; classtype:system-event; reference:url,https://www.datadoghq.com/blog/monitoring-gcp-audit-logs/; sid:991011; rev:1;)

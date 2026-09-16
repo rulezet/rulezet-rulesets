@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[GCP] Google Suspicious Login Detected"; program:gcp; json_content:".protoPayload.methodName","google.login.LoginService.loginSuccess"; content:"|22|boolValue|22 3a|true,|22|label|22 3a 22|LABEL_OPTIONAL|22|,|22|name|22 3a 22|is_suspicious|22|"; parse_src_ip:1; classtype:system-event; sid:5017820; rev:2;)

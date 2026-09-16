@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[MCAS] Repeated Failed Logins"; program: MCAS; json_content: ".Operation", "MCAS_ALERT_ANUBIS_DETECTION_REPEATED_ACTIVITY_FAILED_LOGIN"; classtype: brute-force; sid: 5007205; rev: 2; metadata: mitre_technique_id T1078, mitre_technique_id T1110;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[GCP] Google Mailer Daemon Blocked"; program:gcp; json_content:".protoPayload.methodName","google.login.LoginService.blockedSender"; content:"mailer-daemon@googlemail.com"; classtype:system-event; sid:5017815; rev:1;)

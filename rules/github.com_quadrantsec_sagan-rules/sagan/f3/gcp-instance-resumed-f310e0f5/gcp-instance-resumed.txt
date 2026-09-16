@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Instance Resumed"; content: "cloudaudit.googleapis.com"; content: "|22|method|22|:|22|compute.instances.resume|22|"; flexbits:set,GCP_Event,10; classtype: system-event; sid: 5006015; rev:2;)

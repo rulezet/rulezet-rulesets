@@ -1,0 +1,1 @@
+drop any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Authentication failure - Brute force [40/5]"; content: "authentication failure"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: brute-force; program: sshd; after: track by_src, count 40, seconds 300; threshold: type suppress, track by_src, count 5, seconds 300; normalize; sid: 5001631; rev:7;)

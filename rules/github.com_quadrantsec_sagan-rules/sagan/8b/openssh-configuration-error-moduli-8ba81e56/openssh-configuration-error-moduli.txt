@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] configuration error [moduli]"; content: "Bad prime description in line"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: program-error; program: sshd; sid: 5000076; rev:3;)

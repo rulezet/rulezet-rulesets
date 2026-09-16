@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] User was Created"; content: "cloudaudit.googleapis.com"; content: "google.admin.AdminService.createUser"; content:!"sid|3a|"; flexbits:set,GCP_Event,10; classtype: system-event; parse_src_ip: 1; sid: 5006025; rev:3; metadata: updatedOn 2026_04_08;)

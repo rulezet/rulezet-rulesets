@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Admin activity Detected - Rule Updated"; content: "cloudaudit.googleapis.com"; content: "google.admin.AdminService.updateRule"; flexbits:set,GCP_Event,10; classtype: system-event; parse_src_ip: 1; sid: 5007685; rev:2;)

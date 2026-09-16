@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[JAMF-PROTECT] Audit User Events remove from group"; program:jamf_protect; json_content:".header.event_name","AUE_remove_from_group"; classtype:system-event; reference:url,https://learn.jamf.com/bundle/compliance-reporter-documentation/page/Audit_User_Events_Log_Data.html; sid:5014253; rev:1;)

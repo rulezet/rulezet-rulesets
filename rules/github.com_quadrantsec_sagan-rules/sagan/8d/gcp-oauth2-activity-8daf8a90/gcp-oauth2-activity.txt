@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] OAuth2 Activity"; content: "cloudaudit.googleapis.com"; content: "oauth2.googleapis.com"; flexbits:set,GCP_Event,10; classtype: system-event; sid: 5005997; rev:2;)

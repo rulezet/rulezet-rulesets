@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Admin activity Detected - Group Setting Changed"; content: "cloudaudit.googleapis.com"; content: "google.admin.AdminService.changeGroupSetting"; flexbits:set,GCP_Event,10; classtype: system-event; parse_src_ip: 1; sid:5006527; rev:3;)

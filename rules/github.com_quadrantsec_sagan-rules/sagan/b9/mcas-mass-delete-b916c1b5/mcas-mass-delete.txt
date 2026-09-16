@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[MCAS] Mass Delete"; program: MCAS; json_content: ".Operation", "MCAS_ALERT_ANUBIS_DETECTION_REPEATED_ACTIVITY_DELETE"; classtype: system-event; sid: 5007204; rev: 2; metadata: mitre_technique_id T1070, mitre_technique_id T1107;)

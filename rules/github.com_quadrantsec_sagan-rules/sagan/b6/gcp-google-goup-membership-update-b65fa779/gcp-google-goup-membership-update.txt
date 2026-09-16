@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[GCP] Google Goup Membership Update"; program:gcp; json_content:".protoPayload.methodName","google.apps.cloudidentity.groups.v1.MembershipsService.UpdateMembership"; flexbits:set,GCP_Event,10; classtype:system-event; reference:url,https://www.datadoghq.com/blog/monitoring-gcp-audit-logs/; sid:991066; rev:1;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[GCP] Google Login From Bluedot Flagged IP"; program:gcp; json_content:".protoPayload.methodName","google.login.LoginService.loginSuccess"; parse_src_ip:1; bluedot:type ip_reputation, track by_src, mdate_effective_period 3 months, Malicious,Tor,Proxy; classtype:system-event; sid:5017821; rev:3;)

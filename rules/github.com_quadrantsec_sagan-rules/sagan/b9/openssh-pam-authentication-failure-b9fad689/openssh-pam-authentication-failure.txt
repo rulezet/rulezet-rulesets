@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] PAM Authentication failure"; content: "Authentication failure"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-user; normalize; program: sshd; sid: 5001523; rev:3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[GCP] Google Logging AggregateLogs event detected"; program:gcp; json_content:".protoPayload.methodName","google.logging.v2.LoggingServiceV2.AggregateLogs"; flexbits:set,GCP_Event,10; classtype:system-event; reference:url,https://www.datadoghq.com/blog/monitoring-gcp-audit-logs/; sid:991035; rev:1;)

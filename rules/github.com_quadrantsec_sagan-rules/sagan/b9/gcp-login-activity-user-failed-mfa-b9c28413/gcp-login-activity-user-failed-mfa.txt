@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Login activity - User Failed MFA"; content: "cloudaudit.googleapis.com"; content: "google.login.LoginService.loginVerification"; content: "login_challenge_status"; content: "|22|value|22|:|22|failed|22|"; flexbits:set,GCP_Event,10; classtype: system-event; parse_src_ip: 1; sid: 5006017; rev:2;)

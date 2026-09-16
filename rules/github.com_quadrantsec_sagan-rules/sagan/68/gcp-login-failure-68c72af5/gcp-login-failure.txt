@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[GCP] Login Failure"; content: "cloudaudit.googleapis.com"; content: "google.login.LoginService.loginFailure"; threshold: type limit, track by_src&by_username, count 1, seconds 3600; flexbits:set,GCP_Event,10; classtype: system-event; parse_src_ip: 1; sid: 5006524; rev:2;)

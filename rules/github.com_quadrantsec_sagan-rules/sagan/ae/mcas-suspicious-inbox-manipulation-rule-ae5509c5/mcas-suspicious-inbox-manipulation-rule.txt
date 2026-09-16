@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[MCAS] Suspicious Inbox Manipulation Rule"; program: MCAS; json_content: ".Operation", "MCAS_ALERT_ANUBIS_DETECTION_INBOX_HIDING"; classtype: configuration-change; sid: 5007208; rev: 2; metadata: mitre_technique_id T1078, mitre_technique_id T1564;)

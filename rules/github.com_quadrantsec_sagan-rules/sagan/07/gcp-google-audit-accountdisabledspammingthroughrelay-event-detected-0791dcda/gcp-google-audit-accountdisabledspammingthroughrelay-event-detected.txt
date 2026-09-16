@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[GCP] Google Audit accountDisabledSpammingThroughRelay event detected"; program:gcp; json_content:".protoPayload.methodName","google.login.LoginService.accountDisabledSpammingThroughRelay"; flexbits:set,GCP_Event,10; classtype:system-event; reference:url,https://www.datadoghq.com/blog/monitoring-gcp-audit-logs/; sid:991052; rev:1;)

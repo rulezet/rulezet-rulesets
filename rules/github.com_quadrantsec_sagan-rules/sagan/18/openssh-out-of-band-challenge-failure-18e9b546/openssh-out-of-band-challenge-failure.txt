@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[OPENSSH] Out-of-Band challenge failure"; content: "Failed auth"; content: "out-of-band challenge"; content: "pam_obc"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-user;program: sshd; sid: 5000023; rev:4;)

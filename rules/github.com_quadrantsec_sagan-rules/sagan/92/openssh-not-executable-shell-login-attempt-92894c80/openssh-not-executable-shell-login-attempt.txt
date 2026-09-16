@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Not executable shell - login attempt"; content: "is not executable"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-user; program: sshd; parse_src_ip: 1; sid: 5000020; rev:4;)

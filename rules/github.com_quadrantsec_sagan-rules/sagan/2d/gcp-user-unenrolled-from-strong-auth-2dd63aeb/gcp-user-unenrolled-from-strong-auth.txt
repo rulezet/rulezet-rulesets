@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[GCP] User Unenrolled from Strong Auth"; program:gcp; json_content:".protoPayload.methodName","google.admin.AdminService.unenrollUserFromStrongAuth"; parse_src_ip:1; classtype:system-event; sid:5017824; rev:2;)

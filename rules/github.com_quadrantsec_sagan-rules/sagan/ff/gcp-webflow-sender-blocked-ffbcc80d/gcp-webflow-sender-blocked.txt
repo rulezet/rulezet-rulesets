@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[GCP] WebFlow Sender Blocked"; program:gcp; json_content:".protoPayload.methodName","google.login.LoginService.blockedSender"; content:"webflow.com"; classtype:system-event; sid:5017816; rev:1;)
