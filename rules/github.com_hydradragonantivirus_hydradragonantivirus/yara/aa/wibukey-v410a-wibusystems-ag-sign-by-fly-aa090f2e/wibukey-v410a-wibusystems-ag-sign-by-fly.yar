@@ -1,0 +1,10 @@
+import "pe"
+rule _WIBUKey_V410A__WIBUSYSTEMS_AG__Sign_by_fly_
+{
+	meta:
+		description = "WIBU-Key V4.10A -> WIBU-SYSTEMS AG ! Sign by fly"
+	strings:
+		$0 = {F7 05 ?? ?? ?? ?? FF 00 00 00 75 12}
+	condition:
+		$0 at pe.entry_point
+}

@@ -1,0 +1,10 @@
+import "pe"
+rule _Microsoft_Visual_Cpp_70_MFC_
+{
+	meta:
+		description = "Microsoft Visual C++ 7.0 MFC"
+	strings:
+		$0 = {6A 60 68 ?? ?? ?? ?? E8 ?? ?? ?? ?? BF 94 00 00 00 8B C7 E8 ?? ?? ?? ?? 89}
+	condition:
+		$0 at pe.entry_point
+}
