@@ -1,0 +1,20 @@
+{
+  "uuid": "6bca773f-e273-43ff-8a06-b6a5d67fd7ce",
+  "title": "MAL_vGet_ELF_Downloader_Rust_Oct25",
+  "format": "yara",
+  "author": "CSIRT Synacktiv, Théo Letailleur",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vGet Downloader, observed to load vShell",
+  "source": "https://github.com/synacktiv/synacktiv-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"TrojanDownloader\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210983"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "bfbda300-3671-4e0e-aae1-5dd81e8cb991",
+  "title": "single_load_rwe",
+  "format": "yara",
+  "author": "tenable",
+  "license": "BSD-3-Clause",
+  "license_verified": true,
+  "description": "Flags binaries with a single LOAD segment marked as RWE.",
+  "source": "https://github.com/tenable/yara-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/211060"
+}

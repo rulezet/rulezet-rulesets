@@ -1,0 +1,23 @@
+{
+  "uuid": "0bd09029-8a12-468b-88d6-5544f3c1eaa8",
+  "title": "atexec-pro - Suspicious PowerShell script",
+  "format": "sigma",
+  "author": "Synacktiv, Maxence Fossat [@cybiosity]",
+  "license": "DRL-1.1",
+  "license_verified": false,
+  "description": "Suspicious PowerShell script contents related to execution of atexec-pro remote execution tool",
+  "source": "https://github.com/synacktiv/synacktiv-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1053"
+  ],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210978"
+}

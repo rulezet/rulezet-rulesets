@@ -1,0 +1,22 @@
+title: FortiManager FlatUI Login Success
+id: f4f2111e-ff70-4b1b-a452-fce8632df20e
+status: experimental
+description: Login Success via FlatUI on FortiManager
+license: DRL-1.1
+author: Synacktiv, Maxence Fossat [@cybiosity]
+date: 2025-02-03
+modified: 2025-02-03
+tags:
+    - tlp.clear
+    - pap.clear
+logsource:
+    product: apache
+    service: access
+    definition: Apache access logs from FortiManager
+detection:
+    selection:
+        cs-method: 'POST'
+        cs-uri-stem|startswith: '/cgi-bin/module/flatui_auth'
+        sc-status: 200
+    condition: selection
+level: informational

@@ -1,0 +1,21 @@
+{
+  "uuid": "0a84e3b7-88d5-4eaf-9840-c813cdcd4d64",
+  "title": "Windows_VulnDriver_MtcBsv_7f6d642e",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Name: mtcBSv64.sys, Version: 21.2.0.0",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/211292"
+}

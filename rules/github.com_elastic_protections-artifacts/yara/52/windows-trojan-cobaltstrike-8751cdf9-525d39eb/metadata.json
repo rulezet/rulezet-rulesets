@@ -1,0 +1,23 @@
+{
+  "uuid": "525d39eb-4cbf-476e-a9b1-78a680bb3366",
+  "title": "Windows_Trojan_CobaltStrike_8751cdf9",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies Cobalt Strike wininet reverse shellcode along with XOR implementation by Cobalt Strike.",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/211389"
+}

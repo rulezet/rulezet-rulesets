@@ -1,0 +1,21 @@
+{
+  "uuid": "2dd7d4f2-0715-4f7c-808a-cef08b8e7959",
+  "title": "Linux_Ransomware_KillDisk",
+  "format": "yara",
+  "author": "ReversingLabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Yara rule that detects KillDisk ransomware.",
+  "source": "https://github.com/reversinglabs/reversinglabs-yara-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:wiper=\"KillDisk\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210907"
+}
