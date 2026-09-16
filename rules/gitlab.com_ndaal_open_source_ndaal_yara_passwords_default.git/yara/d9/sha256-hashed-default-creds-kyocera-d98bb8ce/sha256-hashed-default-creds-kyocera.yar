@@ -1,0 +1,23 @@
+rule sha256_hashed_default_creds_kyocera
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for kyocera."
+        category = "INFO"
+        info = "SHA256"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+    $a1="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+    $a2="4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2"
+    $a3="4813494d137e1631bba301d5acab6e7bb7aa74ce1185d456565ef51d737677b2"
+    $a4="19d62f0f54e0697f2532ba0897789728805b4cb6bafb4e212d268a54058440af"
+    $a5="19d62f0f54e0697f2532ba0897789728805b4cb6bafb4e212d268a54058440af"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5)
+}
