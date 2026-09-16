@@ -1,0 +1,9 @@
+import "pe"
+rule ASPack_v107b_DLL_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D ?? ?? ?? ?? ?? ?? B8 ?? ?? ?? ?? 03 C5 }
+    condition:
+        $a at pe.entry_point
+
+}

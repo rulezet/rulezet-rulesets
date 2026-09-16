@@ -1,0 +1,9 @@
+import "pe"
+rule Unknown_Protected_Mode_compiler_1_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { FA BC ?? ?? 8C C8 8E D8 E8 ?? ?? E8 ?? ?? E8 ?? ?? 66 B8 ?? ?? ?? ?? 66 C1 }
+    condition:
+        $a at pe.entry_point
+
+}

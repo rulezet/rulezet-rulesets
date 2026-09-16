@@ -1,0 +1,10 @@
+import "pe"
+rule Spalsher_10_30_Amok: PEiD
+{
+    strings:
+        $a = { 31 ED 9A ?? ?? ?? ?? 55 89 E5 81 EC ?? ?? B8 ?? ?? 0E 50 9A ?? ?? ?? ?? BE ?? ?? 1E 0E BF ?? ?? 1E 07 1F FC }
+        $b = { 9C 60 8B 44 24 24 E8 00 00 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}

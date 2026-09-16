@@ -1,0 +1,9 @@
+import "pe"
+rule JDPack_V200_JDPack: PEiD
+{
+    strings:
+        $a = { 55 8B EC 6A FF 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 A1 00 00 00 00 50 64 89 25 00 00 00 00 ?? ?? ?? E8 01 00 00 00 ?? ?? ?? ?? ?? ?? 05 00 00 00 00 83 C4 0C 5D 60 E8 00 00 00 00 5D 8B D5 64 FF 35 00 00 00 00 EB }
+    condition:
+        $a at pe.entry_point
+
+}

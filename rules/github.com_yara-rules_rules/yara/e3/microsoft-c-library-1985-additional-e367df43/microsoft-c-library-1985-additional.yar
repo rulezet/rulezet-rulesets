@@ -1,0 +1,9 @@
+import "pe"
+rule Microsoft_C_Library_1985_additional: PEiD
+{
+    strings:
+        $a = { BF ?? ?? 8B 36 ?? ?? 2B F7 81 FE ?? ?? 72 ?? BE ?? ?? FA 8E D7 81 C4 ?? ?? FB 73 }
+    condition:
+        $a at pe.entry_point
+
+}

@@ -1,0 +1,10 @@
+import "pe"
+rule Crunch_V50_Bitarts: PEiD
+{
+    strings:
+        $a = { 03 05 C0 1B B8 ?? ?? 8C CA 03 D0 8C C9 81 C1 ?? ?? 51 B9 ?? ?? 51 06 06 B1 ?? 51 8C D3 }
+        $b = { EB 15 03 00 00 00 06 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}

@@ -1,0 +1,9 @@
+import "pe"
+rule CrypteXeC_v101_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { FD 25 ?? ?? E8 ?? ?? 3E BA ?? ?? EC 0C ?? 26 EE ?? B9 ?? ?? 51 51 ?? 87 C9 }
+    condition:
+        $a at pe.entry_point
+
+}

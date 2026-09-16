@@ -1,0 +1,9 @@
+import "pe"
+rule BobSoft_Mini_Delphi_BoB_BobSoft: PEiD
+{
+    strings:
+        $a = { 55 8B EC 83 C4 F0 53 56 B8 ?? ?? ?? ?? E8 ?? ?? ?? ?? 33 C0 55 68 ?? ?? ?? ?? 64 FF 30 64 89 20 B8 }
+    condition:
+        $a at pe.entry_point
+
+}

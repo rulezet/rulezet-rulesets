@@ -1,0 +1,10 @@
+import "pe"
+rule RCryptor_v13_v14_Vaska: PEiD
+{
+    strings:
+        $a = { 55 8B EC 8B 44 24 04 83 E8 4F 68 ?? ?? ?? ?? FF D0 58 59 50 }
+        $b = { 55 8B EC 8B 44 24 04 83 E8 4F 68 ?? ?? ?? ?? FF D0 58 59 50 B8 ?? ?? ?? ?? 3D ?? ?? ?? ?? 74 06 80 30 ?? 40 EB F3 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
