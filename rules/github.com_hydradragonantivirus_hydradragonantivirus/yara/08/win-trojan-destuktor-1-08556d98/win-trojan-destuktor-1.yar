@@ -1,0 +1,9 @@
+rule Win_Trojan_Destuktor_1
+{
+strings:
+	$a0 = { 8b45f8508b83340300008b4dfcba94f14900e82acaffff8b45f88378040074548b831403000083c03c8b55f88b5204e81957f6ff8d45a4bac0d34a00b905010000e82359f6ff }
+
+
+condition:
+	$a0
+}

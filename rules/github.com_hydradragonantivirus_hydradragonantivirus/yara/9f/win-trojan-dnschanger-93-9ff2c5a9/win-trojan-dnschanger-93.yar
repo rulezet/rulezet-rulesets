@@ -1,0 +1,9 @@
+rule Win_Trojan_DNSChanger_93
+{
+strings:
+	$a0 = { c72640e5d3d17f7dc6323c7ddcc04fbdc712aa85c694907c9abc758de9fc3f08bf143f9307cd7f7d52f26b8d07bda7b9ddfc3fd4c6933fb3dbde7f7d1ebc16d5c6d26f8d07bd7fcd1e2741e7c7244c9207bd3ef3c3bc558dd7fc3f7c3cb93f93cfcc7f7d261b9baf878603d352a9c369e74985751df035ce2ffc3f8cc712a839ddfc }
+
+
+condition:
+	$a0
+}
