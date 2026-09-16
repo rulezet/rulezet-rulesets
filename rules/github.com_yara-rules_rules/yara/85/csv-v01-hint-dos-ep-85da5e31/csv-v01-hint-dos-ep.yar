@@ -1,0 +1,9 @@
+import "pe"
+rule CSV_v01_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? FC BE ?? ?? 8B FE B9 ?? ?? 51 56 57 B4 ?? 04 ?? AC ?? ?? 2A C4 32 C4 AA E2 ?? 5F 5E 59 }
+    condition:
+        $a at pe.entry_point
+
+}
