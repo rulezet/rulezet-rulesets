@@ -1,0 +1,21 @@
+{
+  "uuid": "7bb2c6d1-a92e-4bb0-bfed-e6e3ca6f9061",
+  "title": "TrojanDropper_Win32_CryptInject_DH_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDropper:Win32/CryptInject.DH!MTB,SIGNATURE_TYPE_PEHSTR_EXT,04 00 04 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/340714"
+}

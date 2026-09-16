@@ -1,0 +1,21 @@
+{
+  "uuid": "b2563552-e2a1-4d61-8441-3057f2f19286",
+  "title": "TrojanDropper_Win32_Safadrew_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDropper:Win32/Safadrew.A,SIGNATURE_TYPE_PEHSTR_EXT,0f 00 0c 00 06 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/340881"
+}

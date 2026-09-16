@@ -1,0 +1,21 @@
+{
+  "uuid": "72b828f3-9cc1-4f36-ae49-60b642414036",
+  "title": "TrojanDropper_Win32_Sharer_B",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDropper:Win32/Sharer.B,SIGNATURE_TYPE_PEHSTR_EXT,52 00 52 00 15 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/340661"
+}
