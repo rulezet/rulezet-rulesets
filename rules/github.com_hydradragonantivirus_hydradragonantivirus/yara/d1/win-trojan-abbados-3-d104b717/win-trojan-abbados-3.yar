@@ -1,0 +1,9 @@
+rule Win_Trojan_Abbados_3
+{
+strings:
+	$a0 = { 36546869722070736f6773616d3662616f6e6f752062642072747921686e20454f53216d6f656539 }
+
+
+condition:
+	$a0
+}

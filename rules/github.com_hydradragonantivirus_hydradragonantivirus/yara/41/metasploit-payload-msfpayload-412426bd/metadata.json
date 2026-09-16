@@ -1,0 +1,20 @@
+{
+  "uuid": "412426bd-3a7b-4c23-bfbe-21ffc8972663",
+  "title": "metasploit_payload_msfpayload",
+  "format": "yara",
+  "author": "HydraDragonAntivirus",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This rule detects generic metasploit callback payloads generated with msfpayload",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"metasploit\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/465243"
+}

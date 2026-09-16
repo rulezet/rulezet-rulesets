@@ -1,0 +1,9 @@
+rule Win_Trojan_Autorunner_2
+{
+strings:
+	$a0 = { FEFFFFFF34463945383630432D394245392D343734622D384644312D46304545444232 }
+
+
+condition:
+	$a0
+}

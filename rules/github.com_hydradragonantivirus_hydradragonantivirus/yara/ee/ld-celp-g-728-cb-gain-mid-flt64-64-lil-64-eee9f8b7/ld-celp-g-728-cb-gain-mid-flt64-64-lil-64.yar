@@ -1,0 +1,8 @@
+rule LD_CELP_G_728_cb_gain_mid__flt64___64_lil_64_
+{
+strings:
+	$a0 = { 0000000000b0e63ff4d1eeffffd9f33fcd531300c05e014000000000000000000000000000b0e6bff4d1eeffffd9f3bfcd531300c05e01c00000000000000000 }
+
+condition:
+	$a0
+}

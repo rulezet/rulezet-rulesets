@@ -1,0 +1,19 @@
+{
+  "uuid": "41d21d5e-51fb-4ccd-9102-d5c67e501fa9",
+  "title": "sakula_packed_v2_1",
+  "format": "yara",
+  "author": "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Sakula packer v2.1 - The bytes string matchs a specific decryption routine. It starts by xoring the payload many times (an even number) with 0x32. It is cryptographically useless, but it simulates a Sleep. Then, it decrypts the payload with a xor 0x33",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/465247"
+}

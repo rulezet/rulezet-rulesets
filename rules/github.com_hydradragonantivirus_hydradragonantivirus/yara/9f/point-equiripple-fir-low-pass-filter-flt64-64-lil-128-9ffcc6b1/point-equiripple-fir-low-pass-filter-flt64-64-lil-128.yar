@@ -1,0 +1,8 @@
+rule _Point_Equiripple_FIR_Low_Pass_Filter__flt64___64_lil_128_
+{
+strings:
+	$a0 = { 9227a7ff2ee883bfb30d0de0758a85bf02eb6edebc1881bf27d209a25f34433f4a833fe183ce8a3f5c7e2fdfe439963f17b8873faddb923ffe12b92c9b43363fc5a4d29fa3b49abf0c5644202a53a7bf94290fa019a3a4bf102c6ad7547b403f0a6bdb1f4cabb23fb96700a0281fc43f8d9df95feac3cc3f2f650900c808d03f }
+
+condition:
+	$a0
+}

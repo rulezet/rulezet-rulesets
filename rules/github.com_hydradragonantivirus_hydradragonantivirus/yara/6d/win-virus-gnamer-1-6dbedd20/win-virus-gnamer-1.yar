@@ -1,0 +1,9 @@
+rule Win_Virus_Gnamer_1
+{
+strings:
+	$a0 = { ff33c05a5959648910eb0ae9d47bfaffe8df7ffaff33c05a5959648910682acd45008b45f8e8da76faffc3e9687efaffebf00fb645ff5f5e5b59595dc3000000ffffffff0f000000536f6674776172655c47726f756e6400ffffffff060000004772 }
+
+
+condition:
+	$a0
+}

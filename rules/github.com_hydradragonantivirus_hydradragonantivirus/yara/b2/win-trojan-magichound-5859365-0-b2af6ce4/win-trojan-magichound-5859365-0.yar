@@ -1,0 +1,11 @@
+rule Win_Trojan_MagicHound_5859365_0
+{
+strings:
+	$a0 = { 636D642E657865 }
+
+	$a1 = { 2f6320706f7765727368656c6c202d77696e646f772068696464656e202d456e636f646564436f6d6d616e64 }
+
+
+condition:
+	$a0 and $a1
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_VB_73722
+{
+strings:
+	$a0 = { 508d8514feffff508d8524feffff508d8534feffff508d8544feffff508d8554feffff508d8564feffff508d8574feffff508d8584feffff508d8594feffff508d85a4feffff508d85b4feffff508d85c4feffff508d85d4feffff508d85e4feffff508d85f4feffff508d8504ffffff508d8514ffffff508d8524ffffff508d8534ffffff508d8544ffffff50 }
+
+
+condition:
+	$a0
+}

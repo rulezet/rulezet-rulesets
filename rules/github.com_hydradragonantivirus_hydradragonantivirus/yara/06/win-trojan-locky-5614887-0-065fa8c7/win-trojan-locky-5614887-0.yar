@@ -1,0 +1,9 @@
+rule Win_Trojan_Locky_5614887_0
+{
+strings:
+	$a0 = { F51A5B38A8AF95760C8CF179CB43474580A5E48E2D74EF4E56660CA4A2A1407D }
+
+
+condition:
+	$a0
+}

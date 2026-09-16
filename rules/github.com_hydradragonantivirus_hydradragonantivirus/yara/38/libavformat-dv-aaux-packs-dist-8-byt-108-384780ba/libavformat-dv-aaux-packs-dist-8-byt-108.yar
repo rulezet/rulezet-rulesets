@@ -1,0 +1,8 @@
+rule libavformat_dv_aaux_packs_dist__8_byt_108_
+{
+strings:
+	$a0 = { ffffff50515253ffff50515253ffffffffffffffff50515253ffff50515253ffffffffffffffff50515253ffff50515253ffffffffffffffff50515253ffff50515253ffffffffffffffff50515253ffff50515253ffffffffffffffff50515253ffff50515253ffffffffff }
+
+condition:
+	$a0
+}

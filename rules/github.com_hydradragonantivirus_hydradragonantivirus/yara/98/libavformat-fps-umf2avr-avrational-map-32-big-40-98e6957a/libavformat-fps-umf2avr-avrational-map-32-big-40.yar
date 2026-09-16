@@ -1,0 +1,8 @@
+rule libavformat_fps_umf2avr_AVRational_map__32_big_40_
+{
+strings:
+	$a0 = { 00000032000000010000ea60000003e90000001800000001000000190000000100007530000003e9 }
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Virus_Ramnit_7867
+{
+strings:
+	$a0 = { 83ec046031????c1??06????000400006b??04 }
+
+
+condition:
+	$a0
+}

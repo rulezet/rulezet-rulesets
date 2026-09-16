@@ -1,0 +1,19 @@
+{
+  "uuid": "b348ae9e-c36c-4fc9-9615-901fe96278bb",
+  "title": "vx_protector",
+  "format": "yara",
+  "author": "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "vx protector (used as a protection layer by Sakula) - The bytes string match a specific layer of protection inserted manually before the real code. It decrypts the real code and jumps on it.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/465250"
+}

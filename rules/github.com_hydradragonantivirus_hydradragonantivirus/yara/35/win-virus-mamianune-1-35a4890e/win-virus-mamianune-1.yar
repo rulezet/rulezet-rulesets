@@ -1,0 +1,9 @@
+rule Win_Virus_Mamianune_1
+{
+strings:
+	$a0 = { e8280000006a005980c13aba8e18000003c2508bd88a5b3a863032f3863040eb0085c9740349ebf0909040c34840414a589050c3 }
+
+
+condition:
+	$a0
+}
