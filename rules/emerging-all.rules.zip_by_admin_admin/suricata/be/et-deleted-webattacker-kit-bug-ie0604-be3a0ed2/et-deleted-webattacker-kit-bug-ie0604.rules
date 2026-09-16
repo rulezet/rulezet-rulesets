@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"ET DELETED WebAttacker kit (bug ie0604)"; flow:established,to_server; content:"ie0604.cgi?bug="; http_uri; nocase; classtype:web-application-attack; sid:2002871; rev:9; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_08_22;)

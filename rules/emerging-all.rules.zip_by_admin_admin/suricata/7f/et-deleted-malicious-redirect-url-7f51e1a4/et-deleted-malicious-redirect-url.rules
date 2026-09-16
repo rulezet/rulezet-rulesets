@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Malicious Redirect URL"; flow:established,to_server; content:"/8gcf744Waxolp752.php"; http_uri; classtype:trojan-activity; sid:2016919; rev:9; metadata:created_at 2013_05_24, signature_severity Unknown, updated_at 2019_09_09;)

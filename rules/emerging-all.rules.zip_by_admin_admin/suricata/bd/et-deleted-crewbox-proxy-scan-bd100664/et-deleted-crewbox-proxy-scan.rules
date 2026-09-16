@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"ET DELETED Crewbox Proxy Scan"; flow:established,to_server; content:".php?"; http_uri; nocase; content:"crewbox.by.ru/crew/"; http_uri; nocase; classtype:attempted-recon; sid:2003156; rev:7; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_08_22;)

@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"GPL DELETED IISProtect globaladmin.asp access"; flow:to_server,established; content:"/iisprotect/admin/GlobalAdmin.asp"; http_uri; nocase; reference:nessus,11661; classtype:web-application-activity; sid:2102157; rev:4; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2019_08_22;)

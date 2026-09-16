@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET DELETED Karagany encrypted binary (1)"; flow:established,to_client; file_data; content:"|81 f2 90 00 cf a8 00 00|"; within:8; flowbits:set,et.exploitkitlanding; classtype:exploit-kit; sid:2016663; rev:3; metadata:created_at 2013_03_26, signature_severity Unknown, updated_at 2019_09_10;)

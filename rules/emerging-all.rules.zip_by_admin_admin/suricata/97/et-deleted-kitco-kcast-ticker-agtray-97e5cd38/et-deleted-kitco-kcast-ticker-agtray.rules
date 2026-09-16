@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED KitCo Kcast Ticker (agtray)"; flow: to_server,established; content:"/pr/agtray.txt"; http_uri; nocase; classtype:policy-violation; sid:2000569; rev:7; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_08_22;)

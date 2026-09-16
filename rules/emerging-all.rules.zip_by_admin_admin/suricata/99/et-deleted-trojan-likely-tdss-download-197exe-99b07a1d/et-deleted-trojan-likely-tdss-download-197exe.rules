@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED TROJAN Likely TDSS Download (197.exe)"; flow:established,to_server; content:"GET "; depth:4; nocase; content:"/codec/197.exe"; http_uri; nocase; classtype:trojan-activity; sid:2010056; rev:5; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_08_22;)

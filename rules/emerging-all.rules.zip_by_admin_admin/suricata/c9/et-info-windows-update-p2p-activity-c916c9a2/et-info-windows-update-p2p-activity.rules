@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> any [!$HTTP_PORTS,1024:] (msg:"ET INFO Windows Update P2P Activity"; flow:established,to_server; dsize:<100; content:"Swarm|20|protocol"; depth:20; classtype:not-suspicious; sid:2027766; rev:2; metadata:created_at 2019_07_31, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_31;)

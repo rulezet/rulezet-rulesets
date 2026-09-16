@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HTTP_SERVERS $HTTP_PORTS (msg:"GPL DELETED SGI InfoSearch fname access"; flow:to_server,established; content:"/infosrch.cgi"; http_uri; reference:arachnids,290; reference:bugtraq,1031; reference:cve,2000-0207; classtype:web-application-activity; sid:2101727; rev:9; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2019_08_22;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED Buzus Posting Data"; flow:established,to_server; content:"POST "; nocase; depth:5; content:"/fdsupdate"; http_uri; nocase; content:"|0d 0a 0d 0a|PUTF"; classtype:trojan-activity; sid:2010064; rev:7; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_08_22;)

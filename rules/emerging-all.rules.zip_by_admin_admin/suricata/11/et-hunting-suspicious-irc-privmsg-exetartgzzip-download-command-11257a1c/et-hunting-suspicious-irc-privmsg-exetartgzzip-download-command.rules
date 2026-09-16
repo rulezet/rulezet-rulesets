@@ -1,0 +1,1 @@
+alert tcp any ![445,138,80] -> any any (msg:"ET HUNTING SUSPICIOUS IRC - PRIVMSG *.(exe|tar|tgz|zip)  download command"; flow:established,to_client; content:"PRIVMSG|20|"; pcre:"/^[^\r\n]+\.(?:t(?:ar|gz)|exe|zip)/Ri"; classtype:bad-unknown; sid:2017318; rev:5; metadata:created_at 2013_08_13, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)

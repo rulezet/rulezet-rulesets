@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any <> $EXTERNAL_NET 1863 (msg:"GPL DELETED MSN message"; flow:established; content:"MSG "; depth:4; content:"Content-Type|3A|"; nocase; content:"text/plain"; distance:1; classtype:policy-violation; sid:2100540; rev:13; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2019_07_26;)

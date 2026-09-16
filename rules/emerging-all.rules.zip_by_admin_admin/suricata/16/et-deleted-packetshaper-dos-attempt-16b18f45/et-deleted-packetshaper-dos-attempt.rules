@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS (msg:"ET DELETED PacketShaper DoS attempt"; flow:to_server,established; content:"/rpttop.htm"; http_uri; pcre:"/MEAS\.TYPE=(?!(link|class)&)/U"; classtype:denial-of-service; sid:2004449; rev:7; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_08_22;)

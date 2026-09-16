@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED Likely FAKEAV scanner page encountered - i1000000.gif"; flow:established,to_server; content:"/i1000000.gif"; http_uri; nocase; classtype:bad-unknown; sid:2011760; rev:7; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_08_22;)

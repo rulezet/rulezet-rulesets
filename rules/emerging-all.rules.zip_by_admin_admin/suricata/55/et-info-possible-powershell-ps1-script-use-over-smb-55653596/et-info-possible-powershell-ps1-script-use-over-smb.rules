@@ -1,0 +1,1 @@
+alert smb any any -> $HOME_NET 445 (msg:"ET INFO Possible Powershell .ps1 Script Use Over SMB"; flow:established,to_server; content:"SMB"; depth:8; content:".ps1"; nocase; distance:0; classtype:bad-unknown; sid:2027203; rev:2; metadata:created_at 2019_04_16, confidence Medium, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)
