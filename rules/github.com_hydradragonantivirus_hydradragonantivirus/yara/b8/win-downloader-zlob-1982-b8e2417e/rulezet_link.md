@@ -1,0 +1,5 @@
+# Win_Downloader_Zlob_1982
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/387018)
+
+Rulezet UUID: `b8e2417e-5caf-4b19-b2ba-5a2d305f7759`
