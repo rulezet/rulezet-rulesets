@@ -1,0 +1,21 @@
+{
+  "uuid": "74bc7b7f-643d-4c82-8848-ca8cfa7db772",
+  "title": "Misleading_Win32_Winfixer_8",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Misleading:Win32/Winfixer,SIGNATURE_TYPE_PEHSTR,2a 00 2a 00 08 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/336046"
+}
