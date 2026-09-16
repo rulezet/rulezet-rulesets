@@ -1,0 +1,20 @@
+rule Virus_Infector_Win32_Expiro_Gen_7_144_1 {
+  meta:
+    description = "datamaliciousorder - file Virus.Infector_Win32.Expiro.Gen.7_144_1.vir"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "5946ba986d7e8ce6ca18f60492ec369138c0287b956356beeb90b2e4c0b5b1a8"
+
+  strings:
+    $s1 = "wareAgent=\"Adobe Photoshop CC 2018 (Windows)\" stEvt:changed=\"/\"/> <rdf:li stEvt:action=\"converted\" stEvt:parameters=\"from" ascii
+    $s2 = "p.iid:d5974899-ca88-7f42-9516-8e7635808df3\" stEvt:when=\"2019-01-07T19:44:27+08:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2" ascii
+    $s3 = "p.iid:d5974899-ca88-7f42-9516-8e7635808df3\" stEvt:when=\"2019-01-07T19:44:27+08:00\" stEvt:softwareAgent=\"Adobe Photoshop CC 2" ascii
+    $s4 = "(Windows)\" stEvt:changed=\"/\"/> </rdf:Seq> </xmpMM:History> <xmpMM:DerivedFrom stRef:instanceID=\"xmp.iid:d9d77401-7124-ed42-8" ascii
+    $s5 = "4014b651f934\" stRef:documentID=\"adobe:docid:photoshop:ee396c7e-5800-2842-91eb-924792347dc3\" stRef:originalDocumentID=\"xmp.di" ascii
+    $s6 = "317eb3-7085-4449-8680-030e5a0890d3\"/> </rdf:Description> </rdf:RDF> </x:xmpmeta>                                               " ascii
+
+  condition:
+    uint16(0) == 0x5a4d and
+    all of them
+}
