@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MSDNS] Record Delete"; program:msdns; json_content:".EventID","516"; json_content:".SourceName","Microsoft-Windows-DNSServer/Audit"; classtype:system-event; sid:5006670; rev:1;)

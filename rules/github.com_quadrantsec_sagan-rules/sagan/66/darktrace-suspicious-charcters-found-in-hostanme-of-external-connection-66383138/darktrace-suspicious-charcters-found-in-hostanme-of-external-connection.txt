@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] Suspicious charcters found in hostanme of external connection"; program: darktrace; content: "Anomalous Connection"; content: "Possible IDN Homograph Attack"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005861; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MSDNS] Record Create"; program:msdns; json_content:".EventID","515"; json_content:".SourceName","Microsoft-Windows-DNSServer/Audit"; classtype:system-event; sid:5006669; rev:1;)

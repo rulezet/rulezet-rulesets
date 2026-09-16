@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is persistently causing unexpected event"; program: darktrace; content: "Antigena"; content: "Network"; content: "Significant Anomaly"; content: "Antigena Breaches Over Time Block"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005878; rev:2;)

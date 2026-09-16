@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MSDNS] Record Scavenge"; program:msdns; json_content:".EventID","521"; json_content:".SourceName","Microsoft-Windows-DNSServer/Audit"; classtype:system-event; sid:5006675; rev:1;)

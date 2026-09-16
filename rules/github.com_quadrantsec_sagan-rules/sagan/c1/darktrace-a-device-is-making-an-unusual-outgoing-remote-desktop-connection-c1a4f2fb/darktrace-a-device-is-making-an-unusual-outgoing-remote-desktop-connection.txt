@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is making an unusual outgoing Remote Desktop connection"; program: darktrace; content: "Anomalous Connection"; content: "Unusual Internal Remote Desktop"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005868; rev:2;)

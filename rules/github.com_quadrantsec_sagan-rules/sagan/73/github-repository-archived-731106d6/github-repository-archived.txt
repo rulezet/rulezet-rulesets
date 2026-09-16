@@ -1,0 +1,1 @@
+alert any any any -> any any (msg: "[GITHUB] Repository Archived"; program: github; json_content: ".action", "archived"; classtype: configuration-change; sid:5010946; rev:1;)

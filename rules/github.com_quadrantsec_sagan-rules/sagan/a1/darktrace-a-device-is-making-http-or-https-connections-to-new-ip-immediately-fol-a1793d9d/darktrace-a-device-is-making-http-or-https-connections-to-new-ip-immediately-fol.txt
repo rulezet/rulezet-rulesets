@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is making HTTP or HTTPS connections to new IP immediately following a new User-Agent"; program: darktrace; content: "Device"; content: "New User Agent and New IP"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005899; rev:2;)

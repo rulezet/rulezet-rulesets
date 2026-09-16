@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is posting data out out of the network to a rare external location without a hostname"; program: darktrace; content: "Anomalous Connection"; content: "Posting HTTP to IP Without Hostname"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005862; rev:2;)

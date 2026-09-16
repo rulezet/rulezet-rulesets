@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is requesting DNS from a rare external location"; program: darktrace; content: "Device"; content: "Unusual External DNS"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005903; rev:2;)

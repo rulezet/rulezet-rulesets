@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is initiating multiple connections to a rare external endpoint in a regular manner"; program: darktrace; content: "Compromise"; content: "Agent Beacon"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005887; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is transferring an abnormally large volume of data internally"; program: darktrace; content: "Anomalous Connection"; content: "Unusual Incoming Data Volume"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005867; rev:2;)

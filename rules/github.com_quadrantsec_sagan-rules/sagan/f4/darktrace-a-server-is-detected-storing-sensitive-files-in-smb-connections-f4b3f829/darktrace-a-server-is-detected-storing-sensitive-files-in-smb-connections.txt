@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A server is detected storing sensitive files in SMB connections"; program: darktrace; content: "Compliance"; content: "Sensitive Terms in New or Unusual SMB Connection"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005885; rev:2;)

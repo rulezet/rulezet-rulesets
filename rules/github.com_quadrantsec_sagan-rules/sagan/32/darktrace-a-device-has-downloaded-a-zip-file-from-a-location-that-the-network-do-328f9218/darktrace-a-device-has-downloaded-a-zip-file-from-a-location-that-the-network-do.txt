@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device has downloaded a ZIP file from a location that the network does not normally visit"; program: darktrace; content: "Anomalous File"; content: "Zip or Gzip from Rare External Location"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005873; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device has deleted an anomalous volume of files from a network share"; program: darktrace; content: "Unusual Activity"; content: "Anomalous SMB Delete Volume"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005906; rev:2;)

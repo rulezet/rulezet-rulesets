@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is communicating with a server using a suspicious self signed certificate"; program: darktrace; content: "Anomalous Connection"; content: "Suspicious Self-Signed SSL"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005865; rev:2;)

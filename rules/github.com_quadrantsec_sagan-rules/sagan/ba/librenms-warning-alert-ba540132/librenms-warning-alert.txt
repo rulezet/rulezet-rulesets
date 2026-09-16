@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[LibreNMS] - Warning Alert"; content: " [Warning] "; classtype: system-event; program: librenms; sid: 5008385; rev:1;)

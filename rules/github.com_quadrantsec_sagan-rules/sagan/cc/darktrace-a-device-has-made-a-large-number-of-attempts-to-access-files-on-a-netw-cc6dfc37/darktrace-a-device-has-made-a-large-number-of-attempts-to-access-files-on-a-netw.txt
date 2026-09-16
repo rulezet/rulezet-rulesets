@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device has made a large number of attempts to access files on a network share that it is not authorised to access"; program: darktrace; content: "Unusual Activity"; content: "SMB Access Failures"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005909; rev:2;)

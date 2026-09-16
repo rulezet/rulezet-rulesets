@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is making an outbound VPN connection to a rare external location"; program: darktrace; content: "Anomalous Connection"; content: "IPSec VPN to Rare IP"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005855; rev:2;)

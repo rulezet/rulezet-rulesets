@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is connecting directly to an IP address without a hostname using a new user agent"; program: darktrace; content: "Anomalous Connection"; content: "New User Agent to IP Without Hostname"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005860; rev:2;)

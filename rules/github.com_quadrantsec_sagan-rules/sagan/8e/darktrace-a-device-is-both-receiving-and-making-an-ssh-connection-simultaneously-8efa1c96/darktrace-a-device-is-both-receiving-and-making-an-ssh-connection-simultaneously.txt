@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is both receiving and making an SSH connection simultaneously creating a potential tunnel"; program: darktrace; content: "System"; content: "Internal Domain Name Change"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005905; rev:2;)

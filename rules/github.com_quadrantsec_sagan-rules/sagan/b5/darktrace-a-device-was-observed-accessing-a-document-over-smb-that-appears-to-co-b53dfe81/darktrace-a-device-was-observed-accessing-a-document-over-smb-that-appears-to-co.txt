@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device was observed accessing a document over SMB that appears to contain sensitive information"; program: darktrace; content: "Compliance"; content: "Possible Unencrypted Password File On Server"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005884; rev:2;)

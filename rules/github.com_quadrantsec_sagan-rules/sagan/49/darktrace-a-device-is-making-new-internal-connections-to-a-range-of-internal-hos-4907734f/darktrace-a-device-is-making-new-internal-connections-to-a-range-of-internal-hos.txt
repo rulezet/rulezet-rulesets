@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is making new internal connections to a range of internal hosts consistent with network scanning"; program: darktrace; content: "Device"; content: "Network Scan - Low Anomaly Score"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005898; rev:2;)

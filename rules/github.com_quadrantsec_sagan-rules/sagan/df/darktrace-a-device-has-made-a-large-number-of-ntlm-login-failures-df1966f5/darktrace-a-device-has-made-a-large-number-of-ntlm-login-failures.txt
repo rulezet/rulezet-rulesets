@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device has made a large number of NTLM login failures"; program: darktrace; content: "Device"; content: "Anomalous NTLM Bruteforce"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005893; rev:2;)

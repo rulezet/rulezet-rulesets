@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is communicating with the Tor network privacy service"; program: darktrace; content: "Antigena"; content: "Network"; content: "Compliance"; content: "Antigena Tor Block"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005876; rev:2;)

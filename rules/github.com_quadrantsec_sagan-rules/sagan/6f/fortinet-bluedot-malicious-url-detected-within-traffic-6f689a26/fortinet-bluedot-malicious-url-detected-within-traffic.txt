@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-BLUEDOT] Malicious URL detected within Traffic"; content: "logid=|22|0316013056|22|"; content: "type="; content: "subtype="; classtype: suspicious-traffic; normalize; parse_src_ip: 1; parse_dst_ip: 2; bluedot: type url, Malicious; sid: 5006613; rev:1;)

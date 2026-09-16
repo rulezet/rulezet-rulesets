@@ -1,0 +1,1 @@
+alert any any any -> any any (msg: "[GITHUB] Item Added To Repository"; program: github; json_content: ".action", "added_to_repository"; classtype: configuration-change; sid:5010958; rev:1;)

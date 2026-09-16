@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device has been observed receiving a number of SIP requests from a rare external endpoint"; program: darktrace; content: "Compliance"; content: "Multiple SIP Requests From Rare"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005882; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[MSEXCHANGE-MANAGEMENT] unified-messaging Cmdlet Get-UMDialPlan Successfully Executed"; program:MSExchange_Management; event_id:1; content:"Cmdlet suceeded"; content:"Cmdlet Get-UMDialPlan"; reference:url,learn.microsoft.com/en-us/powershell/module/exchange/?view=exchange-ps; classtype:suspicious-command; sid:5013451; rev:1;)

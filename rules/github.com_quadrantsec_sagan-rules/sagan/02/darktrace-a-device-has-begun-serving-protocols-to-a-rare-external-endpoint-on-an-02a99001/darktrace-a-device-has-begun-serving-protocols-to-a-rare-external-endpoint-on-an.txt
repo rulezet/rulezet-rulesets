@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device has begun serving protocols to a rare external endpoint, on an unusual port"; program: darktrace; content: "Anomalous Server Activity"; content: "Server Activity on New Non-Standard Port"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005875; rev:2;)

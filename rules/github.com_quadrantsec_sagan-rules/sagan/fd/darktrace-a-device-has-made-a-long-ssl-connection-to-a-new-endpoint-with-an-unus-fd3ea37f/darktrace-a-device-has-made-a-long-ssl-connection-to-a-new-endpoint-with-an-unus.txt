@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device has made a long SSL connection to a new endpoint, with an unusual SSL client"; program: darktrace; content: "Device"; content: "Long Agent Connection to New Endpoint"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005897; rev:2;)

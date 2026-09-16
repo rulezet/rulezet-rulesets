@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device has made an external encrypted connection to a rare endpoint on a port associated with DoT"; program: darktrace; content: "Compliance"; content: "Possible DNS Over HTTPS/TLS"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005883; rev:2;)

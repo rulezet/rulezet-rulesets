@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CHECKPOINT] Action Reject"; content: "[action|3a 22|Reject|22 3b|"; parse_dst_ip: 1; parse_src_ip: 3; parse_proto; classtype: suspicious-traffic; sid:5005705; rev:1;)

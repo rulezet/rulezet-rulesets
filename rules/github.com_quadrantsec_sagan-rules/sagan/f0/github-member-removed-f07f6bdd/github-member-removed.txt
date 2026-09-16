@@ -1,0 +1,1 @@
+alert any any any -> any any (msg: "[GITHUB] Member Removed"; program: github; json_content: ".action", "member_removed"; classtype: configuration-change; sid:5010949; rev:1;)

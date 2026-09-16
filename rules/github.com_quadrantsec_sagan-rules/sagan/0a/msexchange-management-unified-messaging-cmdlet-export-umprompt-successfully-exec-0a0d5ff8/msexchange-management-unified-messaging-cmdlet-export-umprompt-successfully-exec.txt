@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[MSEXCHANGE-MANAGEMENT] unified-messaging Cmdlet Export-UMPrompt Successfully Executed"; program:MSExchange_Management; event_id:1; content:"Cmdlet suceeded"; content:"Cmdlet Export-UMPrompt"; reference:url,learn.microsoft.com/en-us/powershell/module/exchange/?view=exchange-ps; classtype:suspicious-command; sid:5013443; rev:1;)

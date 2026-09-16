@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] Possible beaconing to a rare external location"; program: darktrace; content: "Compromise"; content: "High Volume of Connections with Beacon Score"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005890; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is being remotely controlled from outside the network"; program: darktrace; content: "Compliance"; content: "Incoming Remote Desktop"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005881; rev:2;)

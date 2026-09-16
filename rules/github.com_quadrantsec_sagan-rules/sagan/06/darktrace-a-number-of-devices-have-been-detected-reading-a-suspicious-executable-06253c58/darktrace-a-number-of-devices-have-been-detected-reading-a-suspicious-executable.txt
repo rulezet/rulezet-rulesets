@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A number of devices have been detected reading a suspicious executable file from an internal server"; program: darktrace; content: "Device"; content: "EXE Files Distributed to Multiple Devices"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005895; rev:2;)

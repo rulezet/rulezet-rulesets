@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device has begun communicating on a UDP port it has never used before"; program: darktrace; content: "Anomalous Connection"; content: "Multiple Connections to New External UDP Port"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005858; rev:2;)

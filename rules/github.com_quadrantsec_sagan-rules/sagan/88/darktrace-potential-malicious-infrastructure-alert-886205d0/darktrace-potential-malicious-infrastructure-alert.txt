@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] Potential Malicious Infrastructure Alert"; program: darktrace; content: "Infrastructure|3a 3a|"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005848; rev:2;)

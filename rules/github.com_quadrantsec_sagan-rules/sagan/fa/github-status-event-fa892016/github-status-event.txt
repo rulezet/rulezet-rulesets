@@ -1,0 +1,1 @@
+alert any any any -> any any (msg: "[GITHUB] Status Event"; program: github; json_content: ".status", "cancelled"; classtype: configuration-change; sid:5010960; rev:1;)

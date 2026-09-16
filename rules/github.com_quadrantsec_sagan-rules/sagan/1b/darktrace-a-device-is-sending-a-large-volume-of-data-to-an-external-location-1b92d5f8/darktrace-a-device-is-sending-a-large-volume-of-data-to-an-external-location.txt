@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device is sending a large volume of data to an external location"; program: darktrace; content: "Anomalous Connection"; content: "Data Sent to Rare Domain"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005854; rev:2;)

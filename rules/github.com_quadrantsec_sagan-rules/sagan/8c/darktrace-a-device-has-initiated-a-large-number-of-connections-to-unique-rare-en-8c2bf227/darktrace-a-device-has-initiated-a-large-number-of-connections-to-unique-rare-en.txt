@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A device has initiated a large number of connections to unique, rare endpoints"; program: darktrace; content: "Device"; content: "Large Number of Connections to New Endpoints"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005896; rev:2;)

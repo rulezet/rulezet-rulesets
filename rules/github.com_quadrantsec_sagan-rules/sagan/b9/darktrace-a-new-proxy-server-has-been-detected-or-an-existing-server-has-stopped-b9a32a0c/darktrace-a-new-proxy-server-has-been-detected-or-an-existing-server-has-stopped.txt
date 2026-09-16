@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DARKTRACE] A new proxy server has been detected, or an existing server has stopped"; program: darktrace; content: "Infrastructure"; content: "Proxy Server Change"; parse_src_ip: 1; xbits: set,exploit_attempt,track ip_src,expire 21600; classtype: bad-unknown; sid:5005904; rev:2;)
