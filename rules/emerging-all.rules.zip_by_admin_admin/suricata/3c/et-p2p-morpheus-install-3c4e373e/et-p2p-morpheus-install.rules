@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET P2P Morpheus Install"; flow:established,to_server; http.uri; content:"/morpheus/morpheus.exe"; nocase; reference:url,www.morpheus.com; classtype:policy-violation; sid:2001035; rev:12; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_07;)

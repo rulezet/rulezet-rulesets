@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 2234 -> $HOME_NET any (msg:"ET P2P Soulseek Filesearch Results"; flow:established,to_client; content:"|09 00 00 00 78|"; reference:url,www.slsknet.org; classtype:policy-violation; sid:2001187; rev:7; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_07;)

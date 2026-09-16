@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO Pingdom.com Monitoring Node Active"; flow:established,to_server; http.user_agent; content:"Pingdom"; startswith; reference:url,royal.pingdom.com/?p=46; classtype:attempted-recon; sid:2003215; rev:6; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_07;)

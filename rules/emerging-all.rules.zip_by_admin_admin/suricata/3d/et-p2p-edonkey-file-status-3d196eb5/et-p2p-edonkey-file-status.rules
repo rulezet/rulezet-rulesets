@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 4660:4799 (msg:"ET P2P eDonkey File Status"; flow:established,to_server; content:"|e3 14|"; depth: 2; reference:url,www.edonkey.com; classtype:policy-violation; sid:2001296; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_07;)

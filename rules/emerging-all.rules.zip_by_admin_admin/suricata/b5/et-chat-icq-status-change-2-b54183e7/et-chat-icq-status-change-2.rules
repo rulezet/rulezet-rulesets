@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 5190 (msg:"ET CHAT ICQ Status Change (2)"; flow:established,to_server; content:"|2A02|"; depth: 2; content:"|00120001001E|"; offset: 4; depth: 6; classtype:policy-violation; sid:2001803; rev:7; metadata:created_at 2010_07_30, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_07;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Casino on Net Reporting Data"; flow:established,to_server; http.uri; content:"/logs.asp?MSGID=100"; nocase; reference:url,www.888casino.net; classtype:pup-activity; sid:2001031; rev:12; metadata:created_at 2010_07_30, signature_severity Minor, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_07;)

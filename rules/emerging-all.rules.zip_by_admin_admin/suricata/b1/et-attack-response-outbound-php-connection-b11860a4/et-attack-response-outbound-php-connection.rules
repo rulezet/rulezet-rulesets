@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ATTACK_RESPONSE Outbound PHP Connection"; flow:established,to_server; content:"From|3a 20|anon@anon.com"; fast_pattern; depth:19; nocase; content:"User-Agent|3a 20|PHP"; nocase; classtype:web-application-activity; sid:2001628; rev:10; metadata:created_at 2010_07_30, signature_severity Informational, updated_at 2024_03_07;)

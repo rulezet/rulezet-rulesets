@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Gator/Clarian Agent"; flow:established,to_server; http.uri; content:"/gbsf/"; nocase; content:"gtrg2ze"; nocase; reference:url,malware.wikia.com/wiki/Claria_Corporation; classtype:pup-activity; sid:2001306; rev:15; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_07;)
