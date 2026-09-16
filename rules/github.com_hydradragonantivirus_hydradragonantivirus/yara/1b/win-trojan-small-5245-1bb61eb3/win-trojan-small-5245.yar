@@ -1,0 +1,9 @@
+rule Win_Trojan_Small_5245
+{
+strings:
+	$a0 = { 7127ddbfc497fbed618cd0484b143224aebbb28e7ba51bf22b55bfb28a7a76bae6f89c9e2f1807253ad632d8acbb40d20e96a3d716d8216f4865e45c73dadd0e0f7d4e92edc1b38eadbbdfd6d1a1c69911a30b1c13ecce5dd19442fa8a398899cd7d890b0cbbb2aefe5d3dee7b7fb43fa27b1a9431b3e59d647d0941d8a101afd3c05aabacbb0a792b35 }
+
+
+condition:
+	$a0
+}

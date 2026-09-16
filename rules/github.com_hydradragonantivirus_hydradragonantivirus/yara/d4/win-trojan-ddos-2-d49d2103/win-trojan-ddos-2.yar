@@ -1,0 +1,9 @@
+rule Win_Trojan_DDOS_2
+{
+strings:
+	$a0 = { 4180a8412d1107a48fa230e8840226fddc0d80dd6ae5173f0c6e6b9cd61f867e03ce7e302dccd44b9d2456dd40adaee06549072d7720a90e957520daea036ba815e3a91af335b82dbad8b575b83d340b72ea42daea0dd6735b8db5d00db750bcd5bab6fffffeff3e74fbe79f7dfbf7cfbe7be7f03f3bfc0cc9b08b29315a2d167b258b832817c8ffd73c1419 }
+
+
+condition:
+	$a0
+}

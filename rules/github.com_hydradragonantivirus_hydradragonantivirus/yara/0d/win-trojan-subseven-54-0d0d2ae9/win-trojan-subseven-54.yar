@@ -1,0 +1,9 @@
+rule Win_Trojan_SubSeven_54
+{
+strings:
+	$a0 = { a8c05a90f4a820fa48f82910108422739c83e102e5f45ee6e6d6f7337b4dfe61bbb9dc90addc817bb7bc856f4815edbce0da920dade482a422b5ce41b6e482d724175c82bdb9c83e99c8357202f5c835eb9216f77216f77b922f6dc8b777305bb9dcb6eef6e6fa7fffffadbf3d3efdfdf7f7efde7dfbfbcff03f3dfe112c602209f5ab7dbedad969b70e0be4 }
+
+
+condition:
+	$a0
+}

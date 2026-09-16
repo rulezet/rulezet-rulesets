@@ -1,0 +1,9 @@
+rule Win_Trojan_Ciadoor_250
+{
+strings:
+	$a0 = { 6f16d2f639d8e5a5b8629d78cc4cbd0ec71249efbf66cd9eeea26c91eca28dbc90b9d73242dfc26979cc9b7b2b7746f0c856f3ba0bc480ff89b00e24168f6c443360f2e6c057207299b041cd044c928264450c8355c50ee317b9eb9d9972fe1d9732fffffff1df3e79f3e7cf3cfbf7cf7efbbefbf86fe7efcf3fbcf3e7f790572a75c0cb7d32e1c7bed364ee }
+
+
+condition:
+	$a0
+}

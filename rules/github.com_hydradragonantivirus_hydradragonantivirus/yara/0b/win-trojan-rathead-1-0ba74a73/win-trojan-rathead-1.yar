@@ -1,0 +1,9 @@
+rule Win_Trojan_Rathead_1
+{
+strings:
+	$a0 = { 1ddcbba8ed2c931497973ceebce54b9e1495c895dccb525cccc4a5565e289da5894aaccb893a8b3c254553c2aa44ad3c56a2558afc6a949e157e757e315dcf2abbbf1bc4a785e7ffffff139fbe5ce7de1cf0e717deff7dfbee73ef817f852bebe3937ec3b2983dc93420224057a729609b0e87e0faf107dc118ec7ff11ac401f03eb16c03804580b9a8df432 }
+
+
+condition:
+	$a0
+}
