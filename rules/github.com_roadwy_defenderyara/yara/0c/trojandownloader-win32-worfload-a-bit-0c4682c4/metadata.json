@@ -1,0 +1,21 @@
+{
+  "uuid": "0c4682c4-8e12-4831-9c49-2297a400b7fe",
+  "title": "TrojanDownloader_Win32_Worfload_A_bit",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDownloader:Win32/Worfload.A!bit,SIGNATURE_TYPE_PEHSTR_EXT,6f 00 6f 00 04 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/329723"
+}
