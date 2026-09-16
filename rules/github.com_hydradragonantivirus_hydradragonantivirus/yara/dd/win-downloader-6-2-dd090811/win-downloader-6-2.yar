@@ -1,0 +1,9 @@
+rule Win_Downloader_6_2
+{
+strings:
+	$a0 = { 2f75702f63616c63322e62696e000000446f776e6c6f616465723a2073746172746564003231 }
+
+
+condition:
+	$a0
+}
