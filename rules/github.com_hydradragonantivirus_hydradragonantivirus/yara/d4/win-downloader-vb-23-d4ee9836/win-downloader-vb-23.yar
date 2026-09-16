@@ -1,0 +1,9 @@
+rule Win_Downloader_VB_23
+{
+strings:
+	$a0 = { 747261206f2076ed72757320576f726d406264612e3236372000004d657373656e676572 }
+
+
+condition:
+	$a0
+}

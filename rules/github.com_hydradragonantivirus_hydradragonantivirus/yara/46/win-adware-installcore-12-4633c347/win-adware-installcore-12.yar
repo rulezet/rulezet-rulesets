@@ -1,0 +1,9 @@
+rule Win_Adware_InstallCore_12
+{
+strings:
+	$a0 = { 6f6e6920323131153013060355040a0c0c496e7374616c6c20436f72653115301306035504030c0c496e7374 }
+
+
+condition:
+	$a0
+}

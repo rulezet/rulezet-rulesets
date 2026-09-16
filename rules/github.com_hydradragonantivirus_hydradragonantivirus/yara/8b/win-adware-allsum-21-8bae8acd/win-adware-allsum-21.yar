@@ -1,0 +1,9 @@
+rule Win_Adware_Allsum_21
+{
+strings:
+	$a0 = { 33871daa38bf6fd9f397b3d30b2a5426e7845ff6b5ecf3f3fefc99e6e16e854dfc3495dddd29e99319ccdcd6653b776cf0ca5d7e747ad9e357f18f9f0cb4647d5858e6c6707034f6c870db68fbf158bf47476f6d59577aa374447e81edc0c5436fddd9f1a579d38697da76dfb2aac733 }
+
+
+condition:
+	$a0
+}

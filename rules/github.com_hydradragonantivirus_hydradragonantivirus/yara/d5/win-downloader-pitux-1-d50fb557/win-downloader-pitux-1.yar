@@ -1,0 +1,9 @@
+rule Win_Downloader_Pitux_1
+{
+strings:
+	$a0 = { 436f6e74726f6c2050616e656c5c217465726e5263ad2d69151dbf0110320845402e03388a2201c1fdfc37408080000400c000c080023b0121ddcdff }
+
+
+condition:
+	$a0
+}

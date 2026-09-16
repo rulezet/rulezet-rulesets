@@ -1,0 +1,9 @@
+rule Win_Downloader_Wintrim_6
+{
+strings:
+	$a0 = { 500cd171e6ba80ff00687474703a2f2f004c26036eb516deb7196d70743df7c546ccb7560bb6013a23e42419732eddde681d006e67db76332ea76d2fd1e07ebb84625f74662e706870b1e0450bd96ba1 }
+
+
+condition:
+	$a0
+}

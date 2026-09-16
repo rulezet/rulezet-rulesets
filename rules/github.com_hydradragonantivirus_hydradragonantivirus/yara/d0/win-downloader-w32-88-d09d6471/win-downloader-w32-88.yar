@@ -1,0 +1,9 @@
+rule Win_Downloader_W32_88
+{
+strings:
+	$a0 = { c3000000ffffffff3a000000466972652048656c6c205620302e31202046696c6520446f776e6c6f616420616e64206f }
+
+
+condition:
+	$a0
+}

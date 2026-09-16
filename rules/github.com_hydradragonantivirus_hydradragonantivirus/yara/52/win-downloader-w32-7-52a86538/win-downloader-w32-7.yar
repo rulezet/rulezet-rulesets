@@ -1,0 +1,9 @@
+rule Win_Downloader_W32_7
+{
+strings:
+	$a0 = { 2f30ee712e636f6d2f7570646174652f77696e73686ffdd625fb772e646c6c23136c026b2e62697a853dc0920b1f77731eb0031bd8004c195c18ffbdf75e870b }
+
+
+condition:
+	$a0
+}

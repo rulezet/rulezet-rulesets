@@ -1,0 +1,9 @@
+rule Win_Adware_PlaySushi_1
+{
+strings:
+	$a0 = { 77616e7420746f2063616e63656c20584f424e49204f75746c6f6f6b20506c7567696e20496e7374616c6c6174696f6e }
+
+
+condition:
+	$a0
+}

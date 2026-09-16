@@ -1,0 +1,9 @@
+rule Win_Adware_Amonetize_2
+{
+strings:
+	$a0 = { e8??5b0000e989feffff8bff558bec83ec208b450856576a0859be7c??41008d7de0f3a58945f88b450c5f8945fc5e85c0740cf600087407c745f4004099018d45f450ff75f0ff75e4ff75e0ff1580??4100c9c20800 }
+
+
+condition:
+	$a0
+}

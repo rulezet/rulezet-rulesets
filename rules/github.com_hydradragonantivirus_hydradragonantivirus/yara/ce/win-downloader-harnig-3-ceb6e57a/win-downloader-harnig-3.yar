@@ -1,0 +1,9 @@
+rule Win_Downloader_Harnig_3
+{
+strings:
+	$a0 = { 67696e732e636f6d2f70726f67732f1f7065746974ffbb7fb2652162697a2f646c2f4f72656733336c6f6c2e74f6ed63cf78745c102e6578650b7365 }
+
+
+condition:
+	$a0
+}

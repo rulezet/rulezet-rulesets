@@ -1,0 +1,9 @@
+rule Win_Adware_Delf_2348
+{
+strings:
+	$a0 = { ffffffff26000000687474703a2f2f76656c6c792e636f2e6b722f6e6f772f74696d652e7068703f676e616d653d0000ffffffff0300000024242400 }
+
+
+condition:
+	$a0
+}
