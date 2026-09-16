@@ -1,0 +1,9 @@
+rule Trojan_BAT_AgentTesla_JJ_MTB{
+	meta:
+		description = "Trojan:BAT/AgentTesla.JJ!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {00 00 01 25 16 72 ?? ?? 00 70 a2 25 17 72 ?? ?? 00 70 a2 14 14 14 7e } 	condition:
+		((#a_03_0  & 1)*2) >=2
+ 
+}
