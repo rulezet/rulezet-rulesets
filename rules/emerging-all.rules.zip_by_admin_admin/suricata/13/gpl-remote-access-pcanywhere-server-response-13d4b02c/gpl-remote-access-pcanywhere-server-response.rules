@@ -1,0 +1,1 @@
+alert udp $EXTERNAL_NET any -> $HOME_NET 5632 (msg:"GPL REMOTE_ACCESS PCAnywhere server response"; content:"ST"; depth:2; classtype:misc-activity; sid:2100566; rev:6; metadata:created_at 2010_09_23, former_category INFO, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_06_27;)

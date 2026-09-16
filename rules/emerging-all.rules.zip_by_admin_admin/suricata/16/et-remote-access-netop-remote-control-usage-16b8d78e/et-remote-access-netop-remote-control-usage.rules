@@ -1,0 +1,1 @@
+alert udp any any -> any any (msg:"ET REMOTE_ACCESS Netop Remote Control Usage"; content:"|554b30303736305337473130|"; reference:url,www.netop.com; classtype:policy-violation; sid:2001597; rev:6; metadata:created_at 2010_07_30, former_category INFO, signature_severity Unknown, updated_at 2024_06_27;)
