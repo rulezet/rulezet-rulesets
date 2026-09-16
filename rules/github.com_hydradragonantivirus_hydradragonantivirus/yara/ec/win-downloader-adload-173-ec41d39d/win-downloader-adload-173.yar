@@ -1,0 +1,9 @@
+rule Win_Downloader_Adload_173
+{
+strings:
+	$a0 = { ee9866d7fc54b7f2315cbd94ffb69d2adfc1ed8fa6db6b93c7afd2180261bdae50b213fed55481dced5d1dec5bde02df5694a9c720bb45aede00ea79655dba0cbf60395cdabe5f5ca8fe293cc80d844dd9264ebb91a74f4cb1b2c633b74615e061aa750bfa4c8a959258cda2e504c20bad188250835ecf3ff7e65215f3ac067c6a139ada89a218e29a3afc45 }
+
+
+condition:
+	$a0
+}

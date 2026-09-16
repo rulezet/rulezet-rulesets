@@ -1,0 +1,9 @@
+rule Win_Downloader_Dadobra_233
+{
+strings:
+	$a0 = { f0891847f3662fd96d6840bc55f34e3ded59ca7ad6c2a1f104f0ea0da28dc77aafb0e556680d406f61baa85971c578262794beee472a00af12d2d3e51c85961c9bc70dbf3120a8d1232c6773c68c9d99ce225d9111e1c78077199ae7b3733dbef1dcc59d75d73cd6e1e65cb6 }
+
+
+condition:
+	$a0
+}

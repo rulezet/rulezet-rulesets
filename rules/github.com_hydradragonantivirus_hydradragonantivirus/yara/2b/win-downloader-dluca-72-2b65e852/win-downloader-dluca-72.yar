@@ -1,0 +1,9 @@
+rule Win_Downloader_Dluca_72
+{
+strings:
+	$a0 = { e4dcbbbcdab4b4d3ffdf603c84333b08bf755243308b3b17569eb56b280e28ff6c5fa88a7e6efc05a6adf4d7ebb439108c0a0b77b70962dedf49bc60afa24149c339e72e3c7f2df9e9d138dc4b2ffafa14aff90bafe4cda92c84a7e0a3767f059ec4d7b1eca665a24aba1c4176c1dee9fff134a6650ef9d33b9704d41e76407917da33809cc8e30e500118db }
+
+
+condition:
+	$a0
+}

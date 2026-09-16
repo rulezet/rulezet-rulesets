@@ -1,0 +1,9 @@
+rule Win_Downloader_Banload_1905
+{
+strings:
+	$a0 = { 7c7cec0000007a0000001f0000000100000000e3e3e348d9b3abffffffdfffffffdeffffffdcffffffdaffffffd9ffffffd7ffffffd6ffffffd5ffd9b3a8ffe9d2cafffffff0ffffffeeffffffebffffffe9ffffffe7ffffffe4ffffffe2ffffffe0ffecd9c3ffdcb5a5ffffefbcffffebb8ffffe9b6ffffe6b3ffffe2afffa57c7cec0000007a0000001f00 }
+
+
+condition:
+	$a0
+}

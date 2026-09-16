@@ -1,0 +1,9 @@
+rule Win_Downloader_Banload_2024
+{
+strings:
+	$a0 = { 0109e76bff25481040cecece626c8438cececece309c1cb4cececece40b0a078cececece58742404cecececec800d890cececece4464d4d0cececece543cac60cececece181434e0cececece9808dcc0cececece8ccc50a4cececece2ca87028cecececebc209410cececece8088e4c4cececece7c0c684c3506cfce5cb8686c2f4058ccae1002d13000f8bd }
+
+
+condition:
+	$a0
+}
