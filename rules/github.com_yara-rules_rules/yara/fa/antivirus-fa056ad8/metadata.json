@@ -1,0 +1,23 @@
+{
+  "uuid": "fa056ad8-5492-48c0-b77d-b698dfb12c2e",
+  "title": "Antivirus",
+  "format": "yara",
+  "author": "Jerome Athias",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Contains references to security software",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:tool=\"ProcDump\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "false-positive:risk=\"low\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/195477"
+}

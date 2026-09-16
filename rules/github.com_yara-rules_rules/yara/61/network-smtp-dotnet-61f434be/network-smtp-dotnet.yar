@@ -1,0 +1,11 @@
+rule network_smtp_dotNet {
+    meta:
+        author = "x0r"
+        description = "Communications smtp"
+	version = "0.1"
+    strings:
+	$f1 = "System.Net.Mail" nocase
+        $p1 = "SmtpClient" nocase
+    condition:
+        all of them
+}

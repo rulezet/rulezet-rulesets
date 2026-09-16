@@ -1,0 +1,21 @@
+{
+  "uuid": "df000027-463b-493a-8728-c5e34ecad206",
+  "title": "email_Ukraine_power_attack_attachment",
+  "format": "yara",
+  "author": " @yararules",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a possible .eml used in the Ukraine BE power attack",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/195667"
+}
