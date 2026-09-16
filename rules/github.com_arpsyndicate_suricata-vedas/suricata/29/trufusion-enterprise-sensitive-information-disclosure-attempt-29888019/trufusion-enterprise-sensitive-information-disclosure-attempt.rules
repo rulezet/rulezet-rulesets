@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TRUfusion Enterprise sensitive information disclosure attempt"; flow:established,to_server; uricontent:"/trufusionPortal/jsp/internal_admin_contact_login.jsp"; sid:1000348; rev:1; reference:cve,CVE-2025-27225; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2025-27225;)
