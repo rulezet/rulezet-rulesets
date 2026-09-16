@@ -1,0 +1,11 @@
+rule PEiD_03412_Vx__Predator_2448_ {
+  meta:
+    description = "[Vx: Predator.2448]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 0E 1F BF ?? ?? B8 ?? ?? B9 ?? ?? 49 ?? ?? ?? ?? 2A C1 4F 4F ?? ?? F9 CC }
+
+  condition:
+    $a
+}

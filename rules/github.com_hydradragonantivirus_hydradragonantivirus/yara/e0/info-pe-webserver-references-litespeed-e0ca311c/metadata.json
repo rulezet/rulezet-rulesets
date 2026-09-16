@@ -1,0 +1,19 @@
+{
+  "uuid": "e0ca311c-82db-4414-9c9b-cbe85938deb8",
+  "title": "INFO_PE_WebServer_References_LiteSpeed",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "track executable files that reference the LiteSpeed web server, which might be a fake response page to being probed ",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/370346"
+}

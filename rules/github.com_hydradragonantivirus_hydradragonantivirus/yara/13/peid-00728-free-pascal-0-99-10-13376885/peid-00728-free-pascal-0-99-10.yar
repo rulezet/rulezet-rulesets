@@ -1,0 +1,11 @@
+rule PEiD_00728_Free_Pascal_0_99_10_ {
+  meta:
+    description = "[Free Pascal 0.99.10]"
+    ep_only     = "false"
+
+  strings:
+    $a = { E8 00 6E 00 00 55 89 E5 8B 7D 0C 8B 75 08 89 F8 8B 5D 10 29 }
+
+  condition:
+    $a
+}

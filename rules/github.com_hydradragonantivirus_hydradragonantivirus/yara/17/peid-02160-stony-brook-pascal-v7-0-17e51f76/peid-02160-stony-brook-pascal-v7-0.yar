@@ -1,0 +1,12 @@
+import "pe"
+rule PEiD_02160_Stony_Brook_Pascal__v7_0_ {
+  meta:
+    description = "[Stony Brook Pascal+ v7.0]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 31 ED 9A ?? ?? ?? ?? 55 89 E5 81 EC ?? ?? B8 ?? ?? 0E 50 9A ?? ?? ?? ?? BE ?? ?? 1E 0E BF ?? ?? 1E 07 1F FC }
+
+  condition:
+    $a at pe.entry_point
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "1d12514a-cca4-464f-b1b4-a1d0f835b9ae",
+  "title": "INFO_PE_WebServer_References_Microsoft_IIS",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "track executable files that reference the Microsoft-IIS web server, which might be a fake response page to being probed ",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/370344"
+}

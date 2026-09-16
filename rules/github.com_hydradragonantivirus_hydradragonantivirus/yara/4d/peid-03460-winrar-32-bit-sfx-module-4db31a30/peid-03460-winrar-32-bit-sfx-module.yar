@@ -1,0 +1,11 @@
+rule PEiD_03460_WinRAR_32_bit_SFX_Module_ {
+  meta:
+    description = "[WinRAR 32-bit SFX Module]"
+    ep_only     = "true"
+
+  strings:
+    $a = { E9 ?? ?? 00 00 00 00 00 00 90 90 90 ?? ?? ?? ?? ?? ?? 00 ?? 00 ?? ?? ?? ?? ?? FF }
+
+  condition:
+    $a
+}
