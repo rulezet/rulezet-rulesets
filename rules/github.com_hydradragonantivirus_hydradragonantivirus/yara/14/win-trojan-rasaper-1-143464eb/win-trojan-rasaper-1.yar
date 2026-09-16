@@ -1,0 +1,9 @@
+rule Win_Trojan_Rasaper_1
+{
+strings:
+	$a0 = { 92679d146f49adfd16fa99b4fc136dc068c5c7e31030443dddc87cdba44fb323da32a85f484083a07e92b1c8b901083da837e05cf6b23db11edecc47ee11bf83dc03dc91fba0e001ee81eec1ef2492e847bdb3e43df11efc17505d88ff7838107040f800fde148fdfc978323e0c77fc1255f081c211ff0b811fc20fe }
+
+
+condition:
+	$a0
+}

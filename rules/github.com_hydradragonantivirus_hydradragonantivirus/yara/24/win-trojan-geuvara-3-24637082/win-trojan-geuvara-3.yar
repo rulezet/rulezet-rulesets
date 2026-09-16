@@ -1,0 +1,9 @@
+rule Win_Trojan_Geuvara_3
+{
+strings:
+	$a0 = { 6f645370794561737900004d69633100000000f8d675dec1a06446b7a6fc4e73b150d39aa1e0f775a1e7448ece3c83f5ce63b2b218af92c90bea4d8dec96a57634155e5e1ca4f34b487c40affad7bc29a129b53a4f }
+
+
+condition:
+	$a0
+}

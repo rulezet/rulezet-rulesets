@@ -1,0 +1,9 @@
+rule Win_Trojan_HTML_2
+{
+strings:
+	$a0 = { 21687474703a2f2f3231332e3135392e3131372e3233362f62756b612e63686d3a3a2f6c61756e63682e68746d6c223e3c2f }
+
+
+condition:
+	$a0
+}

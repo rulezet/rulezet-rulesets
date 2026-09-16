@@ -1,0 +1,9 @@
+rule Win_Trojan_Beast_9
+{
+strings:
+	$a0 = { 385d868f5a73716ecd462d222b92f226bd2aea254cdcbe1f09beb4173146ad71bf1c436b06b6d9d5cd996303e60b3488e28d44e2b6d15711138ba869a86ce303f5c36b4457cc67207951751852bfed35e5b285f0ded829ba3fa8bb }
+
+
+condition:
+	$a0
+}

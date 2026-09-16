@@ -1,0 +1,9 @@
+rule Win_Trojan_Webser_1
+{
+strings:
+	$a0 = { 813f9413000073c856e813f7ffff33c05a5959648910683e4440008d8554ecffffba03000000e852edffff8d45f4e826edffff8d45fce81eedffffc3e938e7ffffebd85f5e5b8be55dc3000000ffffffff010000002e000000ffffffff0a0000002f696e6465782e68746d0000ffffffff3700 }
+
+
+condition:
+	$a0
+}

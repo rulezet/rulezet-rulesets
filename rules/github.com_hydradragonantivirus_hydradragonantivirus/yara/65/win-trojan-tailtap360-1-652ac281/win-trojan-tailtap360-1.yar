@@ -1,0 +1,9 @@
+rule Win_Trojan_Tailtap360_1
+{
+strings:
+	$a0 = { 4d61726b65722e696e6465784f6628223c4a532e3336305461696c7461703e2229203d3d202d3129207b }
+
+
+condition:
+	$a0
+}

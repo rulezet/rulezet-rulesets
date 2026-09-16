@@ -1,0 +1,9 @@
+rule Win_Trojan_Bboost_1
+{
+strings:
+	$a0 = { 6f6f737465722e62697a2f7461726765742f646f776e6c6f6164732f646f75626c657370792e65786500 }
+
+
+condition:
+	$a0
+}

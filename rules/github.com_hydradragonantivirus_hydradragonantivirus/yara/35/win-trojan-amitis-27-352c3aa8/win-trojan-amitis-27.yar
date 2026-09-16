@@ -1,0 +1,9 @@
+rule Win_Trojan_Amitis_27
+{
+strings:
+	$a0 = { 354ef980f5c81bfaf2c5837a6484b777bd5f991817ed9754132dd55a12b162b9daaf0a97bb75b6e8a3612d84ab776809568bb2e5e576d6a0927fde55ce922ca9f695a524eb823d74ab765c595e46554c4c4bb7d90f4b0bbbc2f37afab5c6cf7157af9b178a2aaf8e4f0f8f0e }
+
+
+condition:
+	$a0
+}

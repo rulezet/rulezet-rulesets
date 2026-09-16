@@ -1,0 +1,9 @@
+rule Win_Trojan_Amitis_5
+{
+strings:
+	$a0 = { 4db858a865fbe20872bc272c8bd390c00317f240a1d42c0596ecc091b214c47572d7dac47d1ca58408e17083009e4d0c947613ca9546a0379e416d69c9ed010291342712 }
+
+
+condition:
+	$a0
+}

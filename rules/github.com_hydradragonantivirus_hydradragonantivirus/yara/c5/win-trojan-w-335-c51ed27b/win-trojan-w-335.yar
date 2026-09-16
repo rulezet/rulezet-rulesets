@@ -1,0 +1,9 @@
+rule Win_Trojan_W_335
+{
+strings:
+	$a0 = { 1706531e07b41a8d9600040000ff17b44e33c98d979c000000ff1772658d961e0400006066b8023dff17724d938bd633 }
+
+
+condition:
+	$a0
+}

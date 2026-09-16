@@ -1,0 +1,9 @@
+rule Win_Trojan_ProRat_3
+{
+strings:
+	$a0 = { af3410a20999a4001026065b5981f0ff5fddcd0e5350454349414c205448414e4b535aa1a080690609a32e658b8cb406818f736ab08904386c1ca676 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Tsui_2
+{
+strings:
+	$a0 = { 267bde068a4ead8db42f21e2703f08f5c3861d3ac108b079cbf46d61543795d5dd9e35818cb6c264c1788602c2907b1c5515c3808e167f56e5e57e810fb45aaf88ba3f119abd1cbb8f5159ff8e4ced83e414afe2bdee861f5063d1d0517e234b }
+
+
+condition:
+	$a0
+}

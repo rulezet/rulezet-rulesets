@@ -1,0 +1,9 @@
+rule Win_Trojan_Lolaweb_1
+{
+strings:
+	$a0 = { 7777772e6c6f6c69746134616c6c2e636f6d2f636f756e742e6a733e3c2f7363726970743e00616d6174657572000000 }
+
+
+condition:
+	$a0
+}
