@@ -1,0 +1,9 @@
+import "pe"
+rule EXEPACK_LINK_v360_v364_v365_or_50121_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { 8C C0 05 ?? ?? 0E 1F A3 ?? ?? 03 ?? ?? ?? 8E C0 8B ?? ?? ?? 8B ?? 4F 8B F7 FD F3 A4 50 B8 ?? ?? 50 CB }
+    condition:
+        $a at pe.entry_point
+
+}

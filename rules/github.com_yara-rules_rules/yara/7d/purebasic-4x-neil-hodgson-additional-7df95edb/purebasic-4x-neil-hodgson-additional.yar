@@ -1,0 +1,9 @@
+import "pe"
+rule PureBasic_4x_Neil_Hodgson_additional: PEiD
+{
+    strings:
+        $a = { 68 ?? ?? 00 00 68 00 00 00 00 68 ?? ?? ?? 00 E8 ?? ?? ?? 00 83 C4 0C 68 00 00 00 00 E8 ?? ?? ?? 00 A3 ?? ?? ?? 00 68 00 00 00 00 68 00 10 00 00 68 00 00 00 00 E8 ?? ?? ?? 00 A3 }
+    condition:
+        $a at pe.entry_point
+
+}

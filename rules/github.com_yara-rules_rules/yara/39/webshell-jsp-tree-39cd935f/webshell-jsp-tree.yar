@@ -1,0 +1,13 @@
+rule webshell_jsp_tree {
+	meta:
+		description = "Web Shell - file tree.jsp"
+		author = "Florian Roth"
+		date = "2014/01/28"
+		score = 70
+		hash = "bcdf7bbf7bbfa1ffa4f9a21957dbcdfa"
+	strings:
+		$s5 = "$('#tt2').tree('options').url = \"selectChild.action?checki"
+		$s6 = "String basePath = request.getScheme()+\"://\"+request.getServerName()+\":\"+requ"
+	condition:
+		all of them
+}

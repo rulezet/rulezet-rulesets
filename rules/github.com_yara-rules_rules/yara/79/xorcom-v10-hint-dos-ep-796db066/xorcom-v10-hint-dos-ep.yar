@@ -1,0 +1,9 @@
+import "pe"
+rule XorCom_v10_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? FC BE ?? ?? BF ?? ?? 57 B9 ?? ?? AC 34 ?? AA E2 ?? C3 }
+    condition:
+        $a at pe.entry_point
+
+}
