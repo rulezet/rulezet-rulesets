@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] Ping of Death Attack"; content: "SID: 2154 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: icmp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6102154; sid: 6102154; rev: 4;)

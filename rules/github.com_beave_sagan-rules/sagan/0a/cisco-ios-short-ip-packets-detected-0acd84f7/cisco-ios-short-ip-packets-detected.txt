@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Short IP Packets Detected"; content: "MLS_STAT-4-IP_TOO_SHRT"; classtype: network-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob8; sid: 5001489; rev:2;)

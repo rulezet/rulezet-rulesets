@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] VPN Login from suspicious source"; program: %ASA*-6-716038; bluedot: type ip_reputation, track all, none, Malicious,Tor,Honeypot,Proxy; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002870; sid:5002870; rev: 5;)

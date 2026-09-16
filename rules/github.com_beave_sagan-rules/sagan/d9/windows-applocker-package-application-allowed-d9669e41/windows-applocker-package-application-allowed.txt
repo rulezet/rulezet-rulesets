@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-APPLOCKER] Package application allowed"; event_id: 8020; classtype: suspicious-command; program: AppLocker; reference: url,wiki.quadrantsec.com/bin/view/Main/5002095; sid:5002095; rev:3;)

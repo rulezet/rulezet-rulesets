@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Device - System Security"; content: "Event Name|3a| SystemSecurity"; content: "Device"; content: "CylancePROTECT"; threshold: type suppress, count 1, seconds 300, track by_src; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002573; parse_src_ip: 1; sid:5002573; rev:4;)

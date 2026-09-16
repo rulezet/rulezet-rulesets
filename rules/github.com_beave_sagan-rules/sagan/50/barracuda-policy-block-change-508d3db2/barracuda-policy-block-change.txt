@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Policy Block Change"; content: "policy_block"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002793; classtype: system-event; sid:5002793; rev:3;)

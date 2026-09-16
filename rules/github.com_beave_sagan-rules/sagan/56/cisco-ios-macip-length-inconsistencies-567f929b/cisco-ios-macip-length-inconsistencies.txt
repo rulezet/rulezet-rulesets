@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] MAC/IP length inconsistencies"; content: "MLS_STAT-SP-4-IP_LEN_ERR"; classtype: network-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1; sid: 5001483; rev:2;)

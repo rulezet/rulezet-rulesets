@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Starting wireless AP service"; content: "msg_id=|22|3100-0052|22|"; classtype: system-event; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003078; rev:3;)

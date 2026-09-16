@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SYSLOG] rmclomv - Power Supply FAULT!"; program: rmclomv; content: "PSU"; content: "has FAULTED"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000405; sid: 5000405; rev:2;)

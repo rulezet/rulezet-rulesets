@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Module Firmware error detected"; content: "PM_SCP-1-LCP_FW_ERR"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob9; sid: 5001491; rev:2;)

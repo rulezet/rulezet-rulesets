@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Last Auto Backup Time Changed"; content: "CHANGE last_auto_backup_time"; content: "debug|8f"; program: web; reference: url,wiki.quadrantsec.com/bin/view/Main/5002782; classtype: system-event; sid:5002782; rev:3;)

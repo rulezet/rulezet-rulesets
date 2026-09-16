@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] IP Packet with probable bad checksum Dropped"; content: "EARL_L3_ASIC-SP-3-INTR_WARN"; classtype: network-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#EARL; sid: 5001478; rev:2;)

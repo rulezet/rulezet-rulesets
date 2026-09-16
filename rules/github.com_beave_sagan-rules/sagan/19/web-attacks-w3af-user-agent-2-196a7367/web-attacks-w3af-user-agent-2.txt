@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WEB-ATTACKS] w3af User-Agent 2"; content: "User-Agent"; content:"w3af.sf.net"; parse_src_ip: 1; parse_dst_ip: 2; xbits: set,recon,track ip_src,expire 86400; default_proto:tcp; default_dst_port: $HTTP_PORT; classtype:attempted-recon; sid:5001845; rev:3;)

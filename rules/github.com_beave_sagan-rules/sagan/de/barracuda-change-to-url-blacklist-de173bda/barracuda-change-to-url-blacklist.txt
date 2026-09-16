@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Change to URL Blacklist"; content: "spy_url_blacklist"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002792; classtype: system-event; sid:5002792; rev:3;)

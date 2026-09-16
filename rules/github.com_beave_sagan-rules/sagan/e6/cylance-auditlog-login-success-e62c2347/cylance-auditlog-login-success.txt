@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] AuditLog - Login Success"; content: "Event Name|3a| LoginSuccess"; content: "AuditLog; content: "CylancePROTECT"; threshold: type suppress, count 1, seconds 300, track by_src; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5002568; parse_src_ip: 1; sid:5002568; rev:4;)

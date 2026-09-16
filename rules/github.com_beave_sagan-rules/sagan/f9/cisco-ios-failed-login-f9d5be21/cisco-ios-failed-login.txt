@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Failed login"; content: "SEC_LOGIN-4-LOGIN_FAILED"; classtype: unsuccessful-admin; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001520; sid:5001520; rev:2;)

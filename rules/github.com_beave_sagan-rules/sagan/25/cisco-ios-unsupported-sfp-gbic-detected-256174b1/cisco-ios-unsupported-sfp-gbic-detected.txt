@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Unsupported SFP GBIC Detected"; content: "PM_SCP-SP-3-TRANSCEIVER_BAD_EEPROM"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#badkey; sid: 5001494; rev:2;)

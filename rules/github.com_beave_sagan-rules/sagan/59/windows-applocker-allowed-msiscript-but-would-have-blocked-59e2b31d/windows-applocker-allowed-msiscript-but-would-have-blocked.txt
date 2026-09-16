@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-APPLOCKER] Allowed MSI/Script, but would have blocked"; event_id: 8006; classtype: suspicious-command; program: AppLocker; reference: url,wiki.quadrantsec.com/bin/view/Main/5002093; sid:5002093; rev:3;)

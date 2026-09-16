@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] High CPU usage detected"; content: "HIGH CPU DETECTED"; threshold: type suppress, track by_src, count 1, seconds 3600; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001626; sid: 5001626; rev:3;)

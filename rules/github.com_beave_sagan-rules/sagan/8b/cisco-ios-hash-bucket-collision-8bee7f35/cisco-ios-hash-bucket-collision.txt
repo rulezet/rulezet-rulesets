@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Hash Bucket Collision"; content: "MCAST-6-L2_HASH_BUCKET_COLLISION"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#l2hash; sid: 5001512; rev:2;)

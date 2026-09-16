@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] AuditLog - Syslog Settings Saved"; content: "Event Name|3a| SyslogSettingsSave"; content: "AuditLog; content: "CylancePROTECT"; threshold: type suppress, count 1, seconds 300, track by_src; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5002569; parse_src_ip: 1; sid:5002569; rev:4;)

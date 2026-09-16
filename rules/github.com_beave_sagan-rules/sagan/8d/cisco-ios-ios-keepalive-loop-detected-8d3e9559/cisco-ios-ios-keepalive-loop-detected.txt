@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] IOS Keepalive Loop Detected"; content: "ETHCNTR-3-LOOP_BACK_DETECTED"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1b; sid: 5001480; rev:2;)

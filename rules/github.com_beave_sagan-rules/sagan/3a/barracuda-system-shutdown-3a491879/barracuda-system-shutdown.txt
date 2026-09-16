@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] System Shutdown"; content: "set_set_shutdown"; content: "CHANGE"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002796; classtype: system-event; sid:5002796; rev:3;)

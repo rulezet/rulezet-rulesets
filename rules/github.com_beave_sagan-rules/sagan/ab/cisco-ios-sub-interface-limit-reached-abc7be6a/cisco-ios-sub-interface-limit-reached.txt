@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Sub-interface Limit Reached"; content: "SW_VLAN-4-MAX_SUB_INT"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#subint; sid: 5001511; rev:2;)

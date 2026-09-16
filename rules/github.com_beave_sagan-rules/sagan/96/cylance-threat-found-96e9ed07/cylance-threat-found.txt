@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Threat - Found"; content: "threat_found"; content: "Threat"; content: "CylancePROTECT"; threshold: type suppress, count 1, seconds 300, track by_src; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002577; parse_src_ip: 1; sid:5002577; rev:4;)

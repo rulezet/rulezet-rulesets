@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Maximum Number of L2 Multicast Group Entries Created"; content: "MCAST-SP-6-GC_LIMIT_EXCEEDED"; classtype: system-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob6; sid: 5001487; rev:2;)

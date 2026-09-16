@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CYLANCE] Threat - Removed"; content: "threat_removed"; content: "Threat"; content: "CylancePROTECT"; threshold: type suppress, count 1, seconds 300, track by_src; classtype: misc-attack; reference: url,wiki.quadrantsec.com/bin/view/Main/5002579; parse_src_ip: 1; sid:5002579; rev:4;)

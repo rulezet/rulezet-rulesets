@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Flow Mask Request Failed"; content: "FM_EARL7-4-FLOW_FEAT_FLOWMASK_REQ_FAIL"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#flowmask; sid: 5001505; rev:2;)

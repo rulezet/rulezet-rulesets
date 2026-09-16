@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] TCP NULL Host Sweep"; content: "SID: 3034 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: tcp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6103034; sid: 6103034; rev: 4;)

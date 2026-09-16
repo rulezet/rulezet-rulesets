@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Illegal User SSH"; content: "%DAEMON-3-SYSTEM_MSG|3a|"; content: "sshd["; parse_src_ip: 1; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001669; sid: 5001669; rev:6;)

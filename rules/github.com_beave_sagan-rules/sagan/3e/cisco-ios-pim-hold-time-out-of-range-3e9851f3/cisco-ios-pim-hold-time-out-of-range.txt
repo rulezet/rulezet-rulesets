@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] PIM Hold Time Out of range"; content: "MROUTE-3-TWHEEL_DELAY_ERR"; classtype: network-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob5; sid: 5001486; rev:2;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLUEDOT] ACS Login success from suspicious source"; program: CisACS_01_PassedAuth; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy; classtype: successful-user; parse_src_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002876; sid:5002876; rev: 4;)

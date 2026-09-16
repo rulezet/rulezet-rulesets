@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Line protocol changed state up/down"; content: "LINK-3-UPDOWN"; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000053; sid: 5000053; rev:3;)

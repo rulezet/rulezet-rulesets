@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] IP Packet recieved to short"; content: "EARL_L3_ASIC-SP-4-INTR_THROTTLE: Throttling"; classtype: network-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1abb; sid: 5001477; rev:3;)

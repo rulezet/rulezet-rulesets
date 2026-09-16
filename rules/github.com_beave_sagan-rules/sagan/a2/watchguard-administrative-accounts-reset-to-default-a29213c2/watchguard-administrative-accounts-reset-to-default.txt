@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Administrative accounts reset to default"; content: "msg_id=|22|0101-0002|22|"; classtype: configuration-change; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003088; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Port Channel Flow Control Mismatch"; content: "EC-SP-5-CANNOT_BUNDLE2"; content: "flow control"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#port; sid: 5001515; rev:2;)

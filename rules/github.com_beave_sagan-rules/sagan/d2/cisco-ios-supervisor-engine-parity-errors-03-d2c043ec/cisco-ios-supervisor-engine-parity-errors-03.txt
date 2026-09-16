@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Supervisor Engine Parity Errors [0/3]"; content: "SYSTEM_CONTROLLER-SP-3-ERROR"; threshold: type suppress, track by_src, count 3, seconds 300; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#tmparity; sid: 5001496; rev:3;)

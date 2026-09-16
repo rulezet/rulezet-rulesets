@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] Failed Login"; content: "FAILED_LOGIN"; program: web; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5002786; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: unsuccessful-admin; sid:5002786; rev:3;)

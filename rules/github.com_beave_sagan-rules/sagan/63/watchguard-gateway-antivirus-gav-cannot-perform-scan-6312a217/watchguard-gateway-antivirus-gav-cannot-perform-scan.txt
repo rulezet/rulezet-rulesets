@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg: "[WATCHGUARD] Gateway AntiVirus (GAV) cannot perform scan"; content: "msg_id=|22|1BFF-000E|22|"; classtype: program-error; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003083; rev:3;)

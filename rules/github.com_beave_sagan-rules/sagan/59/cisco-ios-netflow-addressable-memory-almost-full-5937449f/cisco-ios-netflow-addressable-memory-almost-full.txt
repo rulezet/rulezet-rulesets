@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] NetFlow addressable memory almost full"; content: "EARL_NETFLOW-SP-4-TCAM_THRLD"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob1a; sid: 5001479; rev:2;)

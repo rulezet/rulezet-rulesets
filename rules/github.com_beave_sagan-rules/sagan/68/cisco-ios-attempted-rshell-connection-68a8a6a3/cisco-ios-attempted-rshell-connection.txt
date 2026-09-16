@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Attempted RSHELL connection"; content: "RCMD-4-RSHPORTATTEMPT"; default_proto: tcp; default_dst_port: 514; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5000052; sid: 5000052; rev:4;)

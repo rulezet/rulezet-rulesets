@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Fan failure - Fan not rotating [0/2]"; content: "ENVMON-3-FAN_FAILED"; classtype: hardware-event; threshold: type suppress, track by_src, count 2, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5000388; sid:5000388; rev:5;)

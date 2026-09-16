@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Linecard Endpoint Lost Sync"; content: "SP: Linecard endpoint of Channel 14 lost Sync"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#sp141; sid: 5001498; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Error in Layer 3 Forwarding ASIC [0/2]"; content: "L3_ASIC-DFC3-4-ERR_INTRPT"; threshold: type suppress, track by_src, count 2, seconds 300; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#ASIC; sid: 5001482; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] TCP Frag FIN High Port Sweep"; content: "SID: 3012 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: tcp;  reference: url,wiki.quadrantsec.com/bin/view/Main/6103012; sid: 6103012; rev: 4;)

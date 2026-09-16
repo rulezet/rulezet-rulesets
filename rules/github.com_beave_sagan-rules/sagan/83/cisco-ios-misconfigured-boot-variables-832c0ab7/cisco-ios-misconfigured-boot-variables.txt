@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Misconfigured Boot Variables"; content: "SYSTEM-1-INITFAIL: Network boot is not supported"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#nwboot; sid: 5001499; rev:2;)

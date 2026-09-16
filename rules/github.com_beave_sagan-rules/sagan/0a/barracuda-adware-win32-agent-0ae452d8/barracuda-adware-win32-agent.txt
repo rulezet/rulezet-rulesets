@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] AdWare Win32 Agent"; content: "AdWare.Win32.Agent.bjx"; content: "pcaptor"; program: pcaptor; parse_src_ip: 1; parse_dst_ip: 2; reference: url,wiki.quadrantsec.com/bin/view/Main/5002784; classtype: suspicious-traffic; sid:5002784; rev:3;)

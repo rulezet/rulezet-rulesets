@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Switching Bus Recovered"; content: "C6KERRDETECT-SP-4-SWBUSSTALL_RECOVERED"; classtype: hardware-event; reference: url,www.cisco.com/en/US/products/hw/switches/ps708/products_tech_note09186a00801b42bf.shtml#prob-3sec; sid: 5001509; rev:2;)

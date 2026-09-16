@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CACTI] CPU restored to normal"; content: "CPU restored to normal"; classtype: system-event; program: CactiTholdLog; reference: url,wiki.quadrantsec.com/bin/view/Main/5001077; sid: 5001077; rev:2;)

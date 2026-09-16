@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Auth to privilege 15 failed"; content: "%SYS-5-PRIV_AUTH_FAIL"; parse_src_ip: 1; classtype: unsuccessful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001672; sid: 5001672; rev:3;)

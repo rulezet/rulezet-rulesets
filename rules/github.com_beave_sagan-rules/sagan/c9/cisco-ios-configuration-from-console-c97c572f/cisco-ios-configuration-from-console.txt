@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Configuration from console"; content: "SYS-5-CONFIG_I"; parse_src_ip: 1; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000055; sid: 5000055; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] Sophos E-Mail Security Virtual Appliance Remote Code Execution Vulnerability"; content: "SID: 1908 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6101908; sid: 6101908; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WATCHGUARD] APT threat detected"; content: "msg_id=|22|1BFF-0028|22|"; parse_proto; parse_src_ip: 1; parse_dst_ip: 2; classtype: suspicious-traffic; reference:url,www.watchguard.com/help/docs/wsm/XTM_11/en-US/log_catalog/index.html; sid:5003084; rev:3;)
