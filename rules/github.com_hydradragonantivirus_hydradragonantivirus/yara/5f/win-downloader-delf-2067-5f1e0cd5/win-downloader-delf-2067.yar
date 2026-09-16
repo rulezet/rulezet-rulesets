@@ -1,0 +1,9 @@
+rule Win_Downloader_Delf_2067
+{
+strings:
+	$a0 = { 8576ce54600715e1e9cbd5c5648ef42d337afe2c7c14d1abed727d003364bd1ce65a8411db73c6ef0e6a26ce5561f0bed887836ae21706f0b5ad2f93d6b15a96b057ff3f17bcd17246cbd0d6dbe0c1f282d6ad03bc5ec3e04fae4bdbe93571b55cd4056ad024fbc045dd668b2fd08bead246700361765015bcbdb812cdbcd4b7 }
+
+
+condition:
+	$a0
+}

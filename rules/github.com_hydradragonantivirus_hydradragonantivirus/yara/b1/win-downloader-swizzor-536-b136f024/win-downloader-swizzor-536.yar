@@ -1,0 +1,9 @@
+rule Win_Downloader_Swizzor_536
+{
+strings:
+	$a0 = { fceab94092781499152e6cee29c933bb42c121f62e1426da0cec389b049dea156e1f19de58b1f94021ff0bd8361c89bd16b8583435dba6d2ad61de914a3aad46a54fed0782076bbb4a093fba0267fa4aca66adecdacf8663f8b05e578f6dbd9f4a818965676bd64b8b363dfc601b67f577d58dd02c024a1b }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Downloader_VB_886
+{
+strings:
+	$a0 = { e4d4b0a1c9c646dbe7bff7ef6fab062b15bd3e23258ece0c9e43522c6d6e4761be1c792721d239f2e91f07ad05f7f46ba5a04fdecdd0a6c60ff61b1c977093b1dd043db9e9e5f5be48c1f0fd0f3db9879508d5e7c7ae42808e9aa905aaa2f3c2255849ca7f0fc2b7ad20581cfbde6bfe8c440dae826d7e1ebf284014b460c9a55c220571e5e31fdbf2d5b542 }
+
+
+condition:
+	$a0
+}
