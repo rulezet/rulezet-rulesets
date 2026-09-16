@@ -1,0 +1,10 @@
+import "pe"
+rule Stelth_PE_101_BGCorp: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? BA ?? ?? ?? 00 }
+        $b = { BA ?? ?? ?? 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}

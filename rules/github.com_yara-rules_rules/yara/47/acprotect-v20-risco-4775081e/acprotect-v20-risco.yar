@@ -1,0 +1,9 @@
+import "pe"
+rule ACProtect_V20_risco: PEiD
+{
+    strings:
+        $a = { 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}

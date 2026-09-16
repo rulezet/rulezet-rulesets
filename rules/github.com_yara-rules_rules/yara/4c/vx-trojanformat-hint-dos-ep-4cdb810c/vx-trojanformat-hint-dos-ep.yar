@@ -1,0 +1,9 @@
+import "pe"
+rule Vx_TrojanFormat_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? B4 2A CD 21 81 F9 ?? ?? 72 ?? 80 FE ?? 72 ?? 80 FA ?? 72 ?? B8 ?? ?? BB }
+    condition:
+        $a at pe.entry_point
+
+}

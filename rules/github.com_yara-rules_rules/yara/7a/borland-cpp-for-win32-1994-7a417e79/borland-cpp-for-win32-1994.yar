@@ -1,0 +1,10 @@
+import "pe"
+rule Borland_Cpp_for_Win32_1994: PEiD
+{
+    strings:
+        $a = { A1 C1 A3 57 51 33 C0 BF B9 3B CF }
+        $b = { A1 ?? ?? ?? ?? C1 ?? ?? A3 ?? ?? ?? ?? 83 ?? ?? ?? ?? 75 ?? 57 51 33 C0 BF }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}

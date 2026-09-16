@@ -1,0 +1,9 @@
+import "pe"
+rule PolyCrypt_PE_214b215_JLab_Software_Creations_h_signed: PEiD
+{
+    strings:
+        $a = { 50 6F 6C 79 43 72 79 70 74 20 50 45 20 28 63 29 20 32 30 30 34 2D 32 30 30 35 2C 20 4A 4C 61 62 53 6F 66 74 77 61 72 65 2E 00 50 00 43 00 50 00 45 }
+    condition:
+        $a at pe.entry_point
+
+}
