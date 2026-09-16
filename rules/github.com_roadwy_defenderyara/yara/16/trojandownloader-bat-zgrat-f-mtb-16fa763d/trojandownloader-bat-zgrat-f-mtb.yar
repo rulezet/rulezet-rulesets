@@ -1,0 +1,9 @@
+rule TrojanDownloader_BAT_ZgRAT_F_MTB{
+	meta:
+		description = "TrojanDownloader:BAT/ZgRAT.F!MTB,SIGNATURE_TYPE_PEHSTR_EXT,06 00 06 00 04 00 00 "
+		
+	strings :
+		$a_03_0 = {06 11 02 72 ?? 00 00 70 28 ?? 00 00 06 28 ?? 00 00 2b 28 ?? 00 00 06 26 20 } 		$a_01_1 = {04 03 04 58 11 } 		$a_01_2 = {52 65 76 65 72 73 65 } 		$a_01_3 = {54 6f 41 72 72 61 79 } 	condition:
+		((#a_03_0  & 1)*2+(#a_01_1  & 1)*2+(#a_01_2  & 1)*1+(#a_01_3  & 1)*1) >=6
+ 
+}
