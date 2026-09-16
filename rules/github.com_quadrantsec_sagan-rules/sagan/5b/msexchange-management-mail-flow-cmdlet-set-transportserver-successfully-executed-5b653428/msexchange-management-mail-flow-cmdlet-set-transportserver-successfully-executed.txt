@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[MSEXCHANGE-MANAGEMENT] mail-flow Cmdlet Set-TransportServer Successfully Executed"; program:MSExchange_Management; event_id:1; content:"Cmdlet suceeded"; content:"Cmdlet Set-TransportServer"; reference:url,learn.microsoft.com/en-us/powershell/module/exchange/?view=exchange-ps; classtype:suspicious-command; sid:5012829; rev:1;)

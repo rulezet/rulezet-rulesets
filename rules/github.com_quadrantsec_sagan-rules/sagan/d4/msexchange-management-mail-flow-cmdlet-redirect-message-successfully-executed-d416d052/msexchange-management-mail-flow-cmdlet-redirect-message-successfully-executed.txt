@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[MSEXCHANGE-MANAGEMENT] mail-flow Cmdlet Redirect-Message Successfully Executed"; program:MSExchange_Management; event_id:1; content:"Cmdlet suceeded"; content:"Cmdlet Redirect-Message"; reference:url,learn.microsoft.com/en-us/powershell/module/exchange/?view=exchange-ps; classtype:suspicious-command; sid:5012792; rev:1;)
