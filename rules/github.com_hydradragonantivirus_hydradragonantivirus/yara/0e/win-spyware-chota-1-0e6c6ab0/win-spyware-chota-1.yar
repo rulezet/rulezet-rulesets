@@ -1,0 +1,9 @@
+rule Win_Spyware_Chota_1
+{
+strings:
+	$a0 = { 0e1fba0e00b409cd21b8014ccd21284329204a756e6b436f64652c20687474703a2f2f7777772e6a756e6b636f64652e636a622e6e6574240000 }
+
+
+condition:
+	$a0
+}

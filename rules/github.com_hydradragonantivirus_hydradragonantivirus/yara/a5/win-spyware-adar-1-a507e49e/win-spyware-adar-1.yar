@@ -1,0 +1,9 @@
+rule Win_Spyware_adar_1
+{
+strings:
+	$a0 = { 77735c43757272656e7456657273696f6e5c52756e000000558bec81c4bcfeffff5356578945fc8b45fce8e9e9ffff33c055686453400064ff3064892033db6a }
+
+
+condition:
+	$a0
+}
