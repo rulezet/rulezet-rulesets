@@ -1,0 +1,9 @@
+rule Win_Spyware_Bandra_15
+{
+strings:
+	$a0 = { eadc0b9c55e302f7f167a6a9a68b9aa6db744ff72ba5bb46a6aba128cd945218dd94a64445e13008217408a95c0ed1744148451dca35e428e244393a347bf654c83d8adeff5acf33b3d79e368ef735f5f9bc9fdf97ff5efb597bdd9f673d6bedcb54d9249ac92fe599fb94e9caf1a69ae9b335cf04b5484a3303356cb5 }
+
+
+condition:
+	$a0
+}
