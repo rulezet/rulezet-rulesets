@@ -1,0 +1,9 @@
+rule Win_Trojan_House_2
+{
+strings:
+	$a0 = { 726f6a616e20486f72736520436f6e737472756374656420776974682e2e2e0d0a3b205468652054726f6a616e }
+
+
+condition:
+	$a0
+}

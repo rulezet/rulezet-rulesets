@@ -1,0 +1,9 @@
+rule Win_Trojan_Italian_4
+{
+strings:
+	$a0 = { e800005e83ee03b801f2cd213df201744e530657568cc34b8edb33ff8b450383e838894503836d12384303c38ec00e1fb94202f3a45e5f075b83e81050b84201 }
+
+
+condition:
+	$a0
+}

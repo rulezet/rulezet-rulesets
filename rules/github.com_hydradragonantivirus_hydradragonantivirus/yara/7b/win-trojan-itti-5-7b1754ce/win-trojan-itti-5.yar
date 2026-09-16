@@ -1,0 +1,9 @@
+rule Win_Trojan_Itti_5
+{
+strings:
+	$a0 = { 8bf6b44eb92700ba8102cd217209e83a017504b44febf3b42acd2180fa1e750580fe097402cd20c606870200b400b003cd10b408cd10a28902803e8902007505 }
+
+
+condition:
+	$a0
+}

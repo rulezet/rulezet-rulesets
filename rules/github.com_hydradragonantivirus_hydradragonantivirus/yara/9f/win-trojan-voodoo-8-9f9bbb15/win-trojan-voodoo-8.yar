@@ -1,0 +1,9 @@
+rule Win_Trojan_Voodoo_8
+{
+strings:
+	$a0 = { 9a000091005589e5b800039a3005910081ec0003bf12271e57bf14271e57bf16271e57bf18271e579a00007800833e14 }
+
+
+condition:
+	$a0
+}

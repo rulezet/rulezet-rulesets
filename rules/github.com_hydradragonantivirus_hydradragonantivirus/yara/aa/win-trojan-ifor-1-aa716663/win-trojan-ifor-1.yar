@@ -1,0 +1,9 @@
+rule Win_Trojan_Ifor_1
+{
+strings:
+	$a0 = { 8cc88ed8be2200ba2a97bb0002b43ecd21720190b90c0231144646e2fa90c2972a1cc61c5c97a9790b7ed59671d545f353d445e244e377b75cf258e443f844b76ff949e553e7 }
+
+
+condition:
+	$a0
+}

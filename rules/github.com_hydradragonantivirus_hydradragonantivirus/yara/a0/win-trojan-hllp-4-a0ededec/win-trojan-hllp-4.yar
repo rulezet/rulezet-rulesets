@@ -1,0 +1,9 @@
+rule Win_Trojan_HLLP_4
+{
+strings:
+	$a0 = { 5cb58907c78692b400008b9e90b4d1e3039e5cb58b1f039e92b4803f00752e8b9e90b4d1e3039e5cb58b1f039e92b4807fff5c75188b9e90b4d1e3039e5cb58b1f039e92b4c647ff00eb1feb178b9e90b4d1 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Inaw_1
+{
+strings:
+	$a0 = { e800005d9081ed080190b9f20fbe280103f52e8a0432c2902e88044680c211f990e2efa8a1defe4ae3f4e8177a3a030e89779fa1c86c310703241b47d17069065ba9adcef1f38706331ace }
+
+
+condition:
+	$a0
+}

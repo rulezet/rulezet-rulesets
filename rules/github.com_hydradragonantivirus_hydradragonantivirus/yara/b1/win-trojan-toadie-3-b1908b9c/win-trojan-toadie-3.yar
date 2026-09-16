@@ -1,0 +1,9 @@
+rule Win_Trojan_Toadie_3
+{
+strings:
+	$a0 = { 3fd426fa3d8e9602def22fbf5468f784969df2f2a3f5f2f27403c1f2bddf09c87c2b85b09bd9db295086f409087923549389969443f6f29a3765de9a9694a27d628c57c0a4497d3996f738c246a9db }
+
+
+condition:
+	$a0
+}

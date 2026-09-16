@@ -1,0 +1,9 @@
+rule Win_Trojan_Satyricon_2
+{
+strings:
+	$a0 = { 9a0000b5005589e5b800069a3005b50081ec000668901e9a8a02b500a386028916880268901e9a8a02b500a38a028916 }
+
+
+condition:
+	$a0
+}

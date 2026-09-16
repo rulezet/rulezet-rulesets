@@ -1,0 +1,9 @@
+rule Win_Trojan_Innox_1
+{
+strings:
+	$a0 = { 0e1feb8f1fa303008a160000c60600004d9303c34026a302008ed888160000c70603006100c7060100080040502d11 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_I13_7
+{
+strings:
+	$a0 = { 30f277413dc800723c508b440689850100588985f900b440b97c018d950000cd21b8004233c999 }
+
+
+condition:
+	$a0
+}
