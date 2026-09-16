@@ -1,0 +1,9 @@
+rule Win_Trojan_Dumador_83
+{
+strings:
+	$a0 = { 8757644d274047706c022bf4dcf8ccfcfffceafce3fc88febafcb1fcaafc543967473a747fec1df022f4dbf8effce5fc91fc97fc553966453a733b633c183d3a3ece3f873fbd3faa54e179baec84ef5869e13a1e3b043c343d2d3ed43ff33f953fa80e76686d4e1b8e06cf2a0fdb4fcf8fc4cfe5cfbdcfaec3516b40937fa374b6027a677c137e0f7ef17eef7ee27f947e837ea61c44 }
+
+
+condition:
+	$a0
+}

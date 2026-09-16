@@ -1,0 +1,9 @@
+rule Win_Trojan_Robobot_81
+{
+strings:
+	$a0 = { aed7f425eaafa072ad69e63979a5aeba7f165fcb04c1f0143a9992457c3395bbd996cc1aad2de85fb087bcadea6d34814f812916e5c0637f4ee5781f0aa4f230d8a213e59fffe07584d6dcdb61f0a4efdd609cbc3f2e4e7d7f963d0f56a57691bee8a075d2ff343f0e19b90dedee90380ca40c9cfc4931d270885cbb8bdd0fd2fba701fd2f26f917e30deebd8624b6db7d57852ebd6d }
+
+
+condition:
+	$a0
+}
