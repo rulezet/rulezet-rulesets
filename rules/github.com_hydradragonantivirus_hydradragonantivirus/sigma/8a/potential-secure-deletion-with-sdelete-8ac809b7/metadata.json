@@ -1,0 +1,26 @@
+{
+  "uuid": "8ac809b7-76a1-4f61-a2d4-ca1d01c42b10",
+  "title": "Potential Secure Deletion with SDelete",
+  "format": "sigma",
+  "author": "Thomas Patzke",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects files that have extensions commonly seen while SDelete is used to wipe files.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027.005",
+    "T1070.004",
+    "T1485",
+    "T1553.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366420"
+}

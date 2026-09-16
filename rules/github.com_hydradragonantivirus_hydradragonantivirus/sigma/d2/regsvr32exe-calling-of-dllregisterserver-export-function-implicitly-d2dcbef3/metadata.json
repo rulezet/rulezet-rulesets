@@ -1,0 +1,24 @@
+{
+  "uuid": "d2dcbef3-23ab-4da8-b51b-18b7765696e1",
+  "title": "Regsvr32.EXE Calling of DllRegisterServer Export Function Implicitly",
+  "format": "sigma",
+  "author": "Andreas Braathen (mnemonic.io), Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects execution of regsvr32 with the silent flag and no other flags on a DLL located in an uncommon or potentially suspicious location.\nWhen Regsvr32 is called in such a way, it implicitly calls the DLL export function 'DllRegisterServer'.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366338"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "cd448888-c33d-4029-96cd-78a5a625e77e",
+  "title": "Remove Exported Mailbox from Exchange Webserver",
+  "format": "sigma",
+  "author": "Christian Burkard (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects removal of an exported Exchange mailbox which could be to cover tracks from ProxyShell exploit",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"metasploit\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366358"
+}

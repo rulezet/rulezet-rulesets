@@ -1,0 +1,23 @@
+{
+  "uuid": "4d9368af-0d93-4aec-be41-2e4398e82da6",
+  "title": "bXOR Operator Usage In PowerShell Command Line - PowerShell Classic",
+  "format": "sigma",
+  "author": "Teymur Kheirkhabarov, Harish Segar",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects powershell execution with that make use of to the bxor (Bitwise XOR).\nAttackers might use as an alternative obfuscation method to Base64 encoded commands.\nInvestigate the CommandLine and process tree to determine if the activity is malicious.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366275"
+}

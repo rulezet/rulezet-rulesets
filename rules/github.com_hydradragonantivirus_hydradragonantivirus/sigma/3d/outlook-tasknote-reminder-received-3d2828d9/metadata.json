@@ -1,0 +1,25 @@
+{
+  "uuid": "3d2828d9-831c-437e-8b11-17aaaed43b05",
+  "title": "Outlook Task/Note Reminder Received",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects changes to the registry values related to outlook that indicates that a reminder was triggered for a Note or Task item. This could be a sign of exploitation of CVE-2023-23397. Further investigation is required to determine the success of an exploitation.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1137"
+  ],
+  "cve": [
+    "CVE-2023-23397"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365978"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "5d343826-79dd-4e00-a2d1-8563b16bbb80",
+  "title": "Successful MSIX/AppX Package Installation",
+  "format": "sigma",
+  "author": "Michael Haag, Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects successful MSIX/AppX package installations on Windows systems by monitoring EventID 854 in the Microsoft-Windows-AppXDeployment-Server/Operational log.\nWhile most installations are legitimate, this can help identify unauthorized or suspicious package installations.\nIt is crucial to monitor such events as threat actors may exploit MSIX/AppX packages to deliver and execute malicious payloads.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366290"
+}

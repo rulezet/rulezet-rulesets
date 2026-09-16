@@ -1,0 +1,22 @@
+{
+  "uuid": "0d24474e-a950-4612-ac1b-a11376390a28",
+  "title": "Command Executed Via Run Dialog Box - Registry",
+  "format": "sigma",
+  "author": "Ahmed Farouk, Nasreddine Bencherchali",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects execution of commands via the run dialog box on Windows by checking values of the \"RunMRU\" registry key.\nThis technique was seen being abused by threat actors to deceive users into pasting and executing malicious commands, often disguised as CAPTCHA verification steps.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366346"
+}

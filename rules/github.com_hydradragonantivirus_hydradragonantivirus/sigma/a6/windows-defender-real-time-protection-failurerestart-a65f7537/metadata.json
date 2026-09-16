@@ -1,0 +1,23 @@
+{
+  "uuid": "a65f7537-addc-4d65-aebe-ad4d57c75b56",
+  "title": "Windows Defender Real-Time Protection Failure/Restart",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Christopher Peacock '@securepeacock' (Update)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects issues with Windows Defender Real-Time Protection features",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366367"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "86e7affd-cb15-463e-8e88-1b7046a07937",
+  "title": "NotPetya Ransomware Activity",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Tom Ueltschi",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects NotPetya ransomware activity in which the extracted passwords are passed back to the main module via named pipe, the file system journal of drive C is deleted and Windows eventlogs are cleared using wevtutil",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"NotPetya\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.001",
+    "T1218.011",
+    "T1685.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366110"
+}

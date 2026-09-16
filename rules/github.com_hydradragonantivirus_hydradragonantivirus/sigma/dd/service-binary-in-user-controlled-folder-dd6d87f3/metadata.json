@@ -1,0 +1,24 @@
+{
+  "uuid": "dd6d87f3-6bb2-4ad7-8a79-a20e23982605",
+  "title": "Service Binary in User Controlled Folder",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Florian Roth (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the setting of the \"ImagePath\" value of a service registry key to a path controlled by a non-administrator user such as \"\\AppData\\\" or \"\\ProgramData\\\".\nAttackers often use such directories for staging purposes.\nThis rule might also trigger on badly written software, where if an attacker controls an auto starting service, they might achieve persistence or privilege escalation.\nNote that while ProgramData is a user controlled folder, software might apply strict ACLs which makes them only accessible to admin users. Remove such folders via filters if you experience a lot of noise.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366349"
+}

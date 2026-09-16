@@ -1,0 +1,25 @@
+{
+  "uuid": "da49c4fb-47be-4898-bd9b-ec7c38f00ac9",
+  "title": "Suspicious Rejected SMB Guest Logon From IP",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), KevTheHermit, fuzzyf10w",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect Attempt PrintNightmare (CVE-2021-1675) Remote code execution in Windows Spooler Service",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1110.001"
+  ],
+  "cve": [
+    "CVE-2021-1675"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366366"
+}

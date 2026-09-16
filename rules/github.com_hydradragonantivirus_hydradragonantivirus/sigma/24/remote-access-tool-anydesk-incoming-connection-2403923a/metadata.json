@@ -1,0 +1,24 @@
+{
+  "uuid": "2403923a-2c8a-4ca2-907b-da27874b3332",
+  "title": "Remote Access Tool - AnyDesk Incoming Connection",
+  "format": "sigma",
+  "author": "@d4ns4n_ (Wuerth-Phoenix)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects incoming connections to AnyDesk. This could indicate a potential remote attacker trying to connect to a listening instance of AnyDesk and use it as potential command and control channel.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219",
+    "T1219.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365968"
+}

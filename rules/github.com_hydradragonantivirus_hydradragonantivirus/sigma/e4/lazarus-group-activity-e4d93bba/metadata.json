@@ -1,0 +1,24 @@
+{
+  "uuid": "e4d93bba-5956-45f8-99fe-246216b36170",
+  "title": "Lazarus Group Activity",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), wagga",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects different process execution behaviors as described in various threat reports on Lazarus group activity",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366080"
+}

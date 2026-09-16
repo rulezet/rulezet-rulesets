@@ -1,0 +1,33 @@
+{
+  "uuid": "6fb1fe8c-ab75-45bc-8b2e-bdb0c7b06075",
+  "title": "Relevant Anti-Virus Signature Keywords In Application Log",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Arnim Rupp",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects potentially highly relevant antivirus events in the application log based on known virus signature names and malware keywords.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Ryuk ransomware\"",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "misp-galaxy:tool=\"Lazagne\"",
+    "misp-galaxy:tool=\"metasploit\"",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "ms-caro-malware-full:malware-type=\"PWS\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1588"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366225"
+}

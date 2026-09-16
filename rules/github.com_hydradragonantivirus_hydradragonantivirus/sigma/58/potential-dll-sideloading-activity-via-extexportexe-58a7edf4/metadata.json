@@ -1,0 +1,24 @@
+{
+  "uuid": "58a7edf4-4bac-4e6d-9286-4463cfb6478f",
+  "title": "Potential DLL Sideloading Activity Via ExtExport.EXE",
+  "format": "sigma",
+  "author": "frack113, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of \"Extexport.exe\".A utility that is part of the Internet Explorer browser and is used to export and import various settings and data, particularly when switching between Internet Explorer and other web browsers like Firefox. It allows users to transfer bookmarks, browsing history, and other preferences from Internet Explorer to Firefox or vice versa.\nIt can be abused as a tool to side load any DLL. If a folder is provided in the command line it'll load any DLL with one of the following names \"mozcrt19.dll\", \"mozsqlite3.dll\", or \"sqlite.dll\".\nArbitrary DLLs can also be loaded if a specific number of flags was provided.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366314"
+}

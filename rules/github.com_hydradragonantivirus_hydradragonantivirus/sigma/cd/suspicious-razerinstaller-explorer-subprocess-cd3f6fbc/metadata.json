@@ -1,0 +1,23 @@
+{
+  "uuid": "cd3f6fbc-0106-4dba-9294-98936241e030",
+  "title": "Suspicious RazerInstaller Explorer Subprocess",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Maxime Thiebaut",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a explorer.exe sub process of the RazerInstaller software which can be invoked from the installer to select a different installation folder but can also be exploited to escalate privileges to LOCAL SYSTEM",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1553"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366174"
+}

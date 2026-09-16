@@ -1,0 +1,23 @@
+{
+  "uuid": "35155739-2d19-4d06-9e50-3c5f4e6994e7",
+  "title": "New Self Extracting Package Created Via IExpress.EXE",
+  "format": "sigma",
+  "author": "Joseliyo Sanchez, @Joseliyo_Jstnk",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the \"iexpress.exe\" utility creating self-extracting packages.\nAttackers where seen leveraging \"iexpress\" to compile packages on the fly via \".sed\" files.\nInvestigate the command line options provided to \"iexpress\" and in case of a \".sed\" file, check the contents and legitimacy of it.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366345"
+}

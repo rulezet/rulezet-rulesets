@@ -1,0 +1,24 @@
+{
+  "uuid": "af959b8c-9c9a-49d0-896f-12e393f2d909",
+  "title": "HTML File Opened From Download Folder",
+  "format": "sigma",
+  "author": "Joseph Kamau",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects web browser process opening an HTML file from a user's Downloads folder.\nThis behavior is could be associated with phishing attacks where threat actors send HTML attachments to users.\nWhen a user opens such an attachment, it can lead to the execution of malicious scripts or the download of malware.\nDuring investigation, analyze the HTML file for embedded scripts or links, check for any subsequent downloads or process executions, and investigate the source of the email or message containing the attachment.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.001",
+    "T1598.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366299"
+}

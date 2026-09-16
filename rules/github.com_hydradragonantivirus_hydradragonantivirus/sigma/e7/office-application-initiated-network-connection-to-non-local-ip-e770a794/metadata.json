@@ -1,0 +1,25 @@
+{
+  "uuid": "e770a794-b97c-4e8e-9b51-636f2d96130f",
+  "title": "Office Application Initiated Network Connection To Non-Local IP",
+  "format": "sigma",
+  "author": "Christopher Peacock '@securepeacock', SCYTHE '@scythe_io', Florian Roth (Nextron Systems), Tim Shelton, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects an office application (Word, Excel, PowerPoint)  that initiate a network connection to a non-private IP addresses.\nThis rule aims to detect traffic similar to one seen exploited in CVE-2021-42292.\nThis rule will require an initial baseline and tuning that is specific to your organization.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1203"
+  ],
+  "cve": [
+    "CVE-2021-42292"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365947"
+}

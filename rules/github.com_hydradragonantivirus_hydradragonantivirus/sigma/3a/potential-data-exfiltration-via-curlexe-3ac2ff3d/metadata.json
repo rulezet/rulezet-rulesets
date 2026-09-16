@@ -1,0 +1,24 @@
+{
+  "uuid": "3ac2ff3d-9732-4b95-9d00-5f6be6d70688",
+  "title": "Potential Data Exfiltration Via Curl.EXE",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), Cedric MAURUGEON (Update)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of the \"curl\" process with \"upload\" flags. Which might indicate potential data exfiltration",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1567"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366333"
+}

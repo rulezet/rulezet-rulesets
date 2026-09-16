@@ -1,0 +1,23 @@
+{
+  "uuid": "cdbb54df-c64f-4bab-a424-96e190d54bdb",
+  "title": "Potential KamiKakaBot Activity - Winlogon Shell Persistence",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), X__Junior",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects changes to the \"Winlogon\" registry key where a process will set the value of the \"Shell\" to a value that was observed being used by KamiKakaBot samples in order to achieve persistence.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1547.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366045"
+}

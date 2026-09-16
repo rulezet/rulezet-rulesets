@@ -1,0 +1,23 @@
+{
+  "uuid": "75d3e39a-d897-4971-866c-3a82ac43c6ae",
+  "title": "Failed Code Integrity Checks",
+  "format": "sigma",
+  "author": "Thomas Patzke",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects code integrity failures such as missing page hashes or corrupted drivers due unauthorized modification. This could be a sign of tampered binaries.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366419"
+}

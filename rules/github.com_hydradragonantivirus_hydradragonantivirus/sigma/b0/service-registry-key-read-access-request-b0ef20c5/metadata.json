@@ -1,0 +1,23 @@
+{
+  "uuid": "b0ef20c5-6fd0-4bca-a349-c08935310d6a",
+  "title": "Service Registry Key Read Access Request",
+  "format": "sigma",
+  "author": "Center for Threat Informed Defense (CTID) Summiting the Pyramid Team",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects \"read access\" requests on the services registry key.\nAdversaries may execute their own malicious payloads by hijacking the Registry entries used by services.\nAdversaries may use flaws in the permissions for Registry keys related to services to redirect from the originally specified executable to one that they control, in order to launch their own code when a service starts.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366412"
+}

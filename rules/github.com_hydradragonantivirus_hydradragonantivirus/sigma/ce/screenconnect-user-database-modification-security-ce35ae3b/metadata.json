@@ -1,0 +1,23 @@
+{
+  "uuid": "ce35ae3b-bd67-4bb3-a873-0c4dc2be70a9",
+  "title": "ScreenConnect User Database Modification - Security",
+  "format": "sigma",
+  "author": "Matt Anderson, Kris Luzadre, Andrew Schwartz, Huntress",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This detects file modifications to the temporary xml user database file indicating local user modification in the ScreenConnect server.\nThis will occur during exploitation of the ScreenConnect Authentication Bypass vulnerability (CVE-2024-1709) in versions <23.9.8, but may also be observed when making legitimate modifications to local users or permissions.\nThis requires an Advanced Auditing policy to log a successful Windows Event ID 4663 events and with a SACL set on the directory.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2024-1709"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366032"
+}

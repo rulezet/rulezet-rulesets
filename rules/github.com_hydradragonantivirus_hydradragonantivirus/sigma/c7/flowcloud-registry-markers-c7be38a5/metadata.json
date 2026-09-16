@@ -1,0 +1,23 @@
+{
+  "uuid": "c7be38a5-5021-4bcf-a2ae-a5da5debbde4",
+  "title": "FlowCloud Registry Markers",
+  "format": "sigma",
+  "author": "NVISO",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects FlowCloud malware registry markers from threat group TA410.\nThe malware stores its configuration in the registry alongside drivers utilized by the malware's keylogger components.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366075"
+}

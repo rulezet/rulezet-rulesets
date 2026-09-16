@@ -1,0 +1,25 @@
+{
+  "uuid": "374fca09-c46d-4a20-b91f-d838dd642b6d",
+  "title": "Process Execution From WebDAV Share",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects execution of processes with image paths starting with WebDAV shares (\\\\), which might indicate malicious file execution from remote web shares.\nExecution of processes from WebDAV shares can be a sign of lateral movement or exploitation attempts, especially if the process is not a known legitimate application.\nExploitation Attempt of vulnerabilities like CVE-2025-33053 also involves executing processes from WebDAV paths.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [
+    "CVE-2025-33053"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366327"
+}

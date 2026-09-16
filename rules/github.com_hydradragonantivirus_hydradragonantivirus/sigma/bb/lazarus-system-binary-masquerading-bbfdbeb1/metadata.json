@@ -1,0 +1,24 @@
+{
+  "uuid": "bbfdbeb1-d44f-4cd9-977f-54841e075354",
+  "title": "Lazarus System Binary Masquerading",
+  "format": "sigma",
+  "author": "Trent Liffick (@tliffick), Bartlomiej Czyz (@bczyz1)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects binaries used by the Lazarus group which use system names but are executed and launched from non-default location",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366115"
+}

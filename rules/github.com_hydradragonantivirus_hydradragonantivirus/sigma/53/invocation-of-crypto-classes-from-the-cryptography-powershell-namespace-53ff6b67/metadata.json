@@ -1,0 +1,24 @@
+{
+  "uuid": "53ff6b67-b4b2-4c11-aa2a-d35f4d4bee5e",
+  "title": "Invocation Of Crypto-Classes From The \"Cryptography\" PowerShell Namespace",
+  "format": "sigma",
+  "author": "Andreas Braathen (mnemonic.io)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the invocation of PowerShell commands with references to classes from the \"System.Security.Cryptography\" namespace.\nThe PowerShell namespace \"System.Security.Cryptography\" provides classes for on-the-fly encryption and decryption.\nThese can be used for example in decrypting malicious payload for defense evasion.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027.010",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366343"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "594c9414-cfe8-4d40-9865-bce8ddb08980",
+  "title": "Protected Storage Service Access",
+  "format": "sigma",
+  "author": "Roberto Rodriguez @Cyb3rWard0g",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects access to a protected_storage service over the network. Potential abuse of DPAPI to extract domain backup keys from Domain Controllers",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366405"
+}

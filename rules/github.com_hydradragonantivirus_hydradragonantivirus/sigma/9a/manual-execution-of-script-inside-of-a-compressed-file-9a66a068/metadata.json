@@ -1,0 +1,23 @@
+{
+  "uuid": "9a66a068-30ce-49c4-a5a7-f5f46e71fc8f",
+  "title": "Manual Execution of Script Inside of a Compressed File",
+  "format": "sigma",
+  "author": "@kostastsale",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This is a threat-hunting query to collect information related to the interactive execution of a script from inside a compressed file (zip/rar). Windows will automatically run the script using scripting interpreters such as wscript and cscript binaries.\n\nFrom the query below, the child process is the script interpreter that will execute the script. The script extension is also a set of standard extensions that Windows OS recognizes. Selections 1-3 contain three different execution scenarios.\n    1. Compressed file opened using 7zip.\n    2. Compressed file opened using WinRar.\n    3. Compressed file opened using native windows File Explorer capabilities.\n\nWhen the malicious script is double-clicked, it will be extracted to the respected directories as signified by the CommandLine on each of the three Selections. It will then be executed using the relevant script interpreter.\"\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366318"
+}

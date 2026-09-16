@@ -1,0 +1,24 @@
+{
+  "uuid": "7f8b17ba-c883-479d-8aaa-f2f41b94b4bd",
+  "title": "Rhadamanthys Stealer Module Launch Via Rundll32.EXE",
+  "format": "sigma",
+  "author": "TropChaud",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of Rundll32 to launch an NSIS module that serves as the main stealer capability of Rhadamanthys infostealer, as observed in reports and samples in early 2023",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"Rhadamanthys\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366016"
+}

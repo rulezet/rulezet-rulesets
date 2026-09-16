@@ -1,0 +1,24 @@
+{
+  "uuid": "48da9f66-bccd-457b-bbb8-a944f1f8e576",
+  "title": "Microsoft Sync Center Suspicious Network Connections",
+  "format": "sigma",
+  "author": "elhoim",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious connections from Microsoft Sync Center to non-private IPs.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365970"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "bf7990f6-09db-45f5-91e3-96baae327aa5",
+  "title": "System Information Discovery Via Wmic.EXE",
+  "format": "sigma",
+  "author": "Joseliyo Sanchez, @Joseliyo_Jstnk",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of the WMI command-line (WMIC) utility to identify and display various system information,\nincluding OS, CPU, GPU, disk drive names, memory capacity, display resolution, baseboard, BIOS,\nand GPU driver products/versions.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366322"
+}

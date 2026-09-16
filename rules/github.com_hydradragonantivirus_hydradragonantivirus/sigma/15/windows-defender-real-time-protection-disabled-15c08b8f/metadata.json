@@ -1,0 +1,24 @@
+{
+  "uuid": "15c08b8f-ea33-44e1-9252-481443dd89ef",
+  "title": "Windows Defender Real-time Protection Disabled",
+  "format": "sigma",
+  "author": "Ján Trenčanský, frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects disabling of Windows Defender Real-time Protection. As this event doesn't contain a lot of information on who initiated this action you might want to reduce it to a \"medium\" level if this occurs too many times in your environment\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562.001",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366376"
+}

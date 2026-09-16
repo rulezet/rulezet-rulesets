@@ -1,0 +1,22 @@
+{
+  "uuid": "2ca547d9-b7fe-44d6-b160-74f435eb2c09",
+  "title": "Potential Goofy Guineapig GoolgeUpdate Process Anomaly",
+  "format": "sigma",
+  "author": "X__Junior (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects \"GoogleUpdate.exe\" spawning a new instance of itself in an uncommon location as seen used by the Goofy Guineapig backdoor",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366205"
+}

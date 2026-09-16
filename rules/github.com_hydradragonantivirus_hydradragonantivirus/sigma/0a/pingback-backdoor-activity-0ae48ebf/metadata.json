@@ -1,0 +1,24 @@
+{
+  "uuid": "0ae48ebf-6252-4243-9f5e-98fab8b5363c",
+  "title": "Pingback Backdoor Activity",
+  "format": "sigma",
+  "author": "Bhabesh Raj",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of Pingback backdoor that creates ICMP tunnel for C2 as described in the trustwave report",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366193"
+}

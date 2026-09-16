@@ -1,0 +1,24 @@
+{
+  "uuid": "2ff21374-0eb7-45ef-b46d-84b39254ef46",
+  "title": "Inbox Rules Creation Or Update Activity Via ExchangePowerShell Cmdlet",
+  "format": "sigma",
+  "author": "Marco Pedrinazzi (@pedrinazziM) (InTheCyber)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects inbox rule creation or update via ExchangePowerShell cmdlet, a technique commonly observed in Business Email Compromise (BEC) attacks to hide emails.\nThe usage of inbox rules can be a sign of a compromised mailbox, where an attacker is attempting to evade detections by suppressing or redirecting incoming emails.\nAnalysts should review these rules in context, validate whether they reflect normal user behavior, and correlate with other indicators such as unusual login activity or recent mailbox rule modifications.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1114.003",
+    "T1564.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366276"
+}

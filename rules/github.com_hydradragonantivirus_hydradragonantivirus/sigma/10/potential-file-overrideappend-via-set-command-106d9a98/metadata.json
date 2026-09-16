@@ -1,0 +1,22 @@
+{
+  "uuid": "106d9a98-37c8-45ff-8f5f-fb9b66056b2a",
+  "title": "Potential File Override/Append Via SET Command",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), MahirAli Khan (in/mahiralikhan)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of the \"SET\" internal command of Cmd.EXE with the /p flag followed directly by an \"=\" sign.\nAttackers used this technique along with an append redirection operator \">>\" in order to update the content of a file indirectly.\nEx: cmd /c >> example.txt set /p=\"test data\". This will append \"test data\" to contents of \"example.txt\".\nThe typical use case of the \"set /p=\" command is to prompt the user for input.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/366300"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "540e0295-43be-4368-bf62-74eecda5704d",
+  "title": "Lace Tempest PowerShell Launcher",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a PowerShell script used by Lace Tempest APT to launch their malware loader by exploiting CVE-2023-47246 as reported by SysAid Team\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [
+    "CVE-2023-47246"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365982"
+}
