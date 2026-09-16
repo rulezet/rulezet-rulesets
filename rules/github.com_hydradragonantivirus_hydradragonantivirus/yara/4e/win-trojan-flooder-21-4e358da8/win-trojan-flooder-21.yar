@@ -1,0 +1,11 @@
+rule Win_Trojan_Flooder_21
+{
+strings:
+	$a0 = { 5589e583ec1c538b5d0c66895dfe0fbf45fe508b4508506838880408e847feffff83c40c8b450850e8abfeffff83c40489c08945e8837de80075258b4508506850880408e81ffeffff }
+
+	$a1 = { 652d6020616e64207c77306c }
+
+
+condition:
+	$a0 and $a1
+}

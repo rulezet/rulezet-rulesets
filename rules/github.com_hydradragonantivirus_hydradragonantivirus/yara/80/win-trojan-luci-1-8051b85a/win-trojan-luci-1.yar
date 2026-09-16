@@ -1,0 +1,11 @@
+rule Win_Trojan_Luci_1
+{
+strings:
+	$a0 = { 5589e583ec1c8b450c668945fee8baffffffa1949b0408500fbf45fe508b4508506820890408e839feffff83c4108b450850e84dfeffff83c40489c08945e8837de800751b }
+
+	$a1 = { 7368696e6720796f757220616e6772 }
+
+
+condition:
+	$a0 and $a1
+}

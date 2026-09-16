@@ -1,0 +1,11 @@
+rule Win_Trojan_Arang_1
+{
+strings:
+	$a0 = { 6a006a016a02e819feffff83c40c89c0a3149a0408833d149a0408007d176894880408e88cfdffff83c4046affe8b2fdffff83c40466c745f002008b450c50e8b0fdffff83c40489c00fb7d052e8b2fdffff }
+
+	$a1 = { 65746420446f53206279204172 }
+
+
+condition:
+	$a0 and $a1
+}

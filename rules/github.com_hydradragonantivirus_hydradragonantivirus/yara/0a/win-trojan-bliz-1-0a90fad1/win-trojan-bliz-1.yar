@@ -1,0 +1,11 @@
+rule Win_Trojan_Bliz_1
+{
+strings:
+	$a0 = { 688c9a04088b450c508b450850e832fdffff83c40c89c08945fc837dfcff7508e99b0000008d76008b45fc83f86e744c83f86e7f0783f866745aeb70 }
+
+	$a1 = { 7a7a617264204b69636b73204173 }
+
+
+condition:
+	$a0 and $a1
+}

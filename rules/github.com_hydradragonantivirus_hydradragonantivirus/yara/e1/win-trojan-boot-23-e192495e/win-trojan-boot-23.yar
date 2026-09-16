@@ -1,0 +1,9 @@
+rule Win_Trojan_Boot_23
+{
+strings:
+	$a0 = { 3ccd75??803c2175??2e800e????02be007c????fa8ed08be6fb8ed8ff0e????a1????b106d3e08ec033ffb90001fcf3a506b8750050cb }
+
+
+condition:
+	$a0
+}

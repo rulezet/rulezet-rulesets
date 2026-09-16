@@ -1,0 +1,9 @@
+rule Win_Trojan_PoisonIvy_8
+{
+strings:
+	$a0 = { 6e204976790000ffffffff10000000506f69736f6e20497679206677622b2000000000ffffffff7a000000416c65782044656d636865 }
+
+
+condition:
+	$a0
+}

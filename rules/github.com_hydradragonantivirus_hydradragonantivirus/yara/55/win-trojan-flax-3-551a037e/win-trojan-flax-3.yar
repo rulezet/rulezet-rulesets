@@ -1,0 +1,11 @@
+rule Win_Trojan_Flax_3
+{
+strings:
+	$a0 = { 0fb745e4500fb745e6508b45e8508b45ec508b45f050e85d00000083c41c68cf9104086858a30408e8f3f9ffff83c40868f4010000e876f9ffff83c404ff45f4eba9 }
+
+	$a1 = { 617468206f6e20666c6178656e20 }
+
+
+condition:
+	$a0 and $a1
+}

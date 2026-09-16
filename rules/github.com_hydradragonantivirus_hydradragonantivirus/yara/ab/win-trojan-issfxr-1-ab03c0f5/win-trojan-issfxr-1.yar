@@ -1,0 +1,11 @@
+rule Win_Trojan_ISSFxr_1
+{
+strings:
+	$a0 = { 83c4f46885890408e898fdffff83c41083c4f8689c8904088d858c5fffff50e871fdffff83c41083c4f88b450c83c0088b10528d858c5fffff50e856fdffff83c41083c4f868a18904088d858c5fffff50e83ffdffff83c410c785885fffff00000000 }
+
+	$a1 = { 736675783072207c }
+
+
+condition:
+	$a0 and $a1
+}

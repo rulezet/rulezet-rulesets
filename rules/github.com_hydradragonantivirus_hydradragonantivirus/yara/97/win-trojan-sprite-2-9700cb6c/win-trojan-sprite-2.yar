@@ -1,0 +1,11 @@
+rule Win_Trojan_Sprite_2
+{
+strings:
+	$a0 = { e8e7f6ffff83c40489c050e81cf7ffff83c40468ff0000006a036a02e83bf6ffff83c40c89c0a3d8a60408833dd8a60408007d186807950408e8fef5ffff83c4046a01e804f7ffff }
+
+	$a1 = { 72676574206f6620746865206174746163 }
+
+
+condition:
+	$a0 and $a1
+}

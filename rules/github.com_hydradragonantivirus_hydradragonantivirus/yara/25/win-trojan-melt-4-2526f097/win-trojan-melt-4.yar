@@ -1,0 +1,11 @@
+rule Win_Trojan_Melt_4
+{
+strings:
+	$a0 = { 83c40c6a208d459c50e87afdffff83c40889c08b55bc668942106a108d45f0508b45088b9018010000526a288d45c4508b45ec50e81beeffff83c41889c083f8ff7515 }
+
+	$a1 = { 64206279206d336c742c2046 }
+
+
+condition:
+	$a0 and $a1
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Broser_1
+{
+strings:
+	$a0 = { 50687480400057e83806000083c41083f80175205353538d85c0bfffff50686c804000ff35208b4000ff15dc704000 }
+
+
+condition:
+	$a0
+}

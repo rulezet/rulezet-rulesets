@@ -1,0 +1,9 @@
+rule Win_Trojan_Y3K_9
+{
+strings:
+	$a0 = { 703a2f2f79336b3b6c602e64652f69545a06de702e356d4f64b624be1f732eb36f23c5bf3fba73e1323030332e0f2e66756e702110695bb0771f5f5a415e2bcc0d1779f0 }
+
+
+condition:
+	$a0
+}

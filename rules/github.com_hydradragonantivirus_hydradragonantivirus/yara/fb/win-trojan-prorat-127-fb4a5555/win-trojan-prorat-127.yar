@@ -1,0 +1,9 @@
+rule Win_Trojan_Prorat_127
+{
+strings:
+	$a0 = { 596dd5bbde596b2f19cb6779617673aebcb395dedb037cf37c377ec7d2ee95bdeae7333b99cbfd1efa7f003bde660b7b7990871524b4ac80db0855e124127a055335159912f032056cc385acc43b4301bc262154c82a190796cc16de9856b5cbc15304bd4cbe875ccbd79d331ae61fc7bdffffff17bf7e7df4f9f7e7efbe7efdbbe6ec9bb3033e7bfc4e5772 }
+
+
+condition:
+	$a0
+}

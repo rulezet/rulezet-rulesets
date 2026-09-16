@@ -1,0 +1,11 @@
+rule Win_Trojan_Smurf_3
+{
+strings:
+	$a0 = { 68fff70000e8ccf1ffff83c40489c08b55f8668942026a108b4508506a008b45f0508b45f4508b45088b501052e884f0ffff83c41889c083f8ff751768b89f0408e820f0ffff }
+
+	$a1 = { 706129736d7572 }
+
+
+condition:
+	$a0 and $a1
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_IRC_Script_140
+{
+strings:
+	$a0 = { 0a25737061636520a0a0a0a0a00d0a257370616d2e6d73677320300d0a257370616d2e7061676520687474703a2f2f }
+
+
+condition:
+	$a0
+}
