@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"INDICATOR-SUSPICIOUS User-Agent detected - Fake/deprecated UA"; flow:to_server,established; http_header:field user-agent; content:"Mozilla/5.0 (MSIE 10.0|3B| Windows NT 6.1|3B| Trident/5.0)",fast_pattern; metadata:ruleset community, service http; classtype:policy-violation; sid:940076; rev:1; )

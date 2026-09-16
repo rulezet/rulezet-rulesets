@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"INDICATOR-SUSPICIOUS User-Agent detected - EXE"; flow:to_server,established; http_header:field user-agent; content:"EXE",nocase, fast_pattern; metadata:ruleset community, service http; classtype:policy-violation; sid:940073; rev:1; )

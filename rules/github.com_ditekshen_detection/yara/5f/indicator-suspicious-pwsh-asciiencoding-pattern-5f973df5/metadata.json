@@ -1,0 +1,19 @@
+{
+  "uuid": "5f973df5-a119-4bcd-936d-7969b2e6a346",
+  "title": "INDICATOR_SUSPICIOUS_PWSH_AsciiEncoding_Pattern",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects PowerShell scripts containing ASCII encoded files",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362256"
+}

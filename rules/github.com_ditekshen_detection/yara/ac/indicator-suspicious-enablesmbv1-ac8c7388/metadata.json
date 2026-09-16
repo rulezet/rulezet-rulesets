@@ -1,0 +1,19 @@
+{
+  "uuid": "ac8c7388-7ab7-4d24-8b71-58c46ba12861",
+  "title": "INDICATOR_SUSPICIOUS_EnableSMBv1",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects binaries with PowerShell command enabling SMBv1",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362305"
+}

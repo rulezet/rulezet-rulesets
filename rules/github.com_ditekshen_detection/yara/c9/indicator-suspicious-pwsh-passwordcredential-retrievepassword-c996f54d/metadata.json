@@ -1,0 +1,21 @@
+{
+  "uuid": "c996f54d-dc73-4ee1-889e-7b7de520021d",
+  "title": "INDICATOR_SUSPICIOUS_PWSH_PasswordCredential_RetrievePassword",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects PowerShell content designed to retrieve passwords from host",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362270"
+}

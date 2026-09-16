@@ -1,0 +1,1 @@
+alert file ( msg:"INDICATOR-SUSPICIOUS FOMB binary managed object format file magic detected"; file_data; content:"|46 4F 4D 42|",depth 4; flowbits:set,file.fomb; service:http, smtp; reference:url,www.fireeye.com/blog/threat-research/2019/10/certutil-qualms-they-came-to-drop-fombs.html; classtype:policy-violation; sid:940064; rev:1; )

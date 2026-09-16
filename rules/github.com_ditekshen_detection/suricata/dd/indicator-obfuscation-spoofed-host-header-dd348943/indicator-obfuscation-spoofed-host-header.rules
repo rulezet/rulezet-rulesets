@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET $HTTP_PORTS ( msg:"INDICATOR-OBFUSCATION Spoofed Host header"; flow:to_server,established; http_header:field host; content:"127.0.0.1",fast_pattern; metadata:ruleset community, service http; classtype:misc-activity; sid:940060; rev:1; )

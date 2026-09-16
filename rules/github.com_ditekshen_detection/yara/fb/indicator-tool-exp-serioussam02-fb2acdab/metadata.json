@@ -1,0 +1,23 @@
+{
+  "uuid": "fb2acdab-a72f-40f9-a328-d861846777c3",
+  "title": "INDICATOR_TOOL_EXP_SeriousSAM02",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect tool variants potentially exploiting SeriousSAM / HiveNightmare CVE-2021-36934",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2021-36934"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362389"
+}

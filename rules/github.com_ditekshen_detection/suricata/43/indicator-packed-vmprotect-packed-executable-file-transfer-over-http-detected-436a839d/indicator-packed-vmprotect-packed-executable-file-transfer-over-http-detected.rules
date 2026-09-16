@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET $FILE_DATA_PORTS -> $HOME_NET any (msg:"INDICATOR-PACKED VMProtect packed executable file transfer over HTTP detected"; flow:to_client,established; flowbits:isset,file.exe; file_data; content:".vmp"; fast_pattern:only; metadata:ruleset community, service http, yara INDICATOR_EXE_Packed_VMProtect; classtype:policy-violation; sid:930050; rev:1;)

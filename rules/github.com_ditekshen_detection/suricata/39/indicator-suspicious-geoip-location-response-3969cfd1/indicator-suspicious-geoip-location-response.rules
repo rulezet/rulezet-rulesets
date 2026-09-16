@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any ( msg:"INDICATOR-SUSPICIOUS GeoIP location response"; flow:to_client,established; http_header; content:"Server: Jino.ru/mod_pizza"; content:"Content-Type: application/json"; file_data; content:"|0A 7B 22|city",fast_pattern; metadata:ruleset community, service http; classtype:trojan-activity; sid:940072; rev:1; )

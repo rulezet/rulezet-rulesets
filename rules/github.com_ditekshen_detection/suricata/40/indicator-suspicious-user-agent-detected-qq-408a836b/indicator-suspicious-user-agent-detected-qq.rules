@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"INDICATOR-SUSPICIOUS User-Agent detected - QQ____"; flow:to_server,established; http_header:field user-agent; content:"QQ____",fast_pattern; metadata:ruleset community, service http; classtype:policy-violation; sid:940066; rev:1; )

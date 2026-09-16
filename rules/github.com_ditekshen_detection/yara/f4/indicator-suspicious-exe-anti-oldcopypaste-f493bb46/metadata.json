@@ -1,0 +1,20 @@
+{
+  "uuid": "f493bb46-6b47-459d-a9ba-d8c8cca53c1f",
+  "title": "INDICATOR_SUSPICIOUS_EXE_Anti_OldCopyPaste",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects executables potentially checking for WinJail sandbox window",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Virus\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362291"
+}

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"INDICATOR-SUSPICIOUS User-Agent detected - TeZengMa"; flow:to_server,established; http_header:field user-agent; content:"TeZengMa",nocase,fast_pattern; metadata:ruleset community, service http; rem:"yara:MALWARE_Win_TYRAT"; classtype:policy-violation; sid:940075; rev:1; )

@@ -1,0 +1,1 @@
+alert file ( msg:"INDICATOR-PACKED Nate packed executable file transfer detected"; file_type:"MSEXE"; file_data; content:".nate",fast_pattern; service:http, smtp; rem:"yara:INDICATOR_EXE_Packed_Nate"; classtype:policy-violation; sid:930012; rev:1; )

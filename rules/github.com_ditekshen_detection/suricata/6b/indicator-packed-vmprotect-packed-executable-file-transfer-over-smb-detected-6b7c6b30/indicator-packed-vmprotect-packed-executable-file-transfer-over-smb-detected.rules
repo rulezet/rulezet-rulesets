@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET 445 (msg:"INDICATOR-PACKED VMProtect packed executable file transfer over SMB detected"; flow:to_server,established; flowbits:isset,file.exe; file_data; content:".vmp"; fast_pattern:only; metadata:ruleset community, service netbios-ssn, yara INDICATOR_EXE_Packed_VMProtect; classtype:policy-violation; sid:930051; rev:1;)

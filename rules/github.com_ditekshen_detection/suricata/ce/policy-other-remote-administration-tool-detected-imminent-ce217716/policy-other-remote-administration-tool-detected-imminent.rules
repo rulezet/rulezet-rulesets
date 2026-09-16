@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any ( msg:"POLICY-OTHER Remote Administration Tool detected - Imminent"; flow:to_client,established; dsize:48; content:"|2C 00 00 00 02 00 00 00 01|",fast_pattern; content:"$",distance 2; metadata:ruleset community; classtype:policy-violation; sid:950003; rev:1;)

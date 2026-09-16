@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"INDICATOR-SUSPICIOUS User-Agent detected - AutoIt"; flow:to_server,established; http_header:field user-agent; content:"AutoIt",fast_pattern; metadata:ruleset community, service http; classtype:policy-violation; sid:940074; rev:1; )

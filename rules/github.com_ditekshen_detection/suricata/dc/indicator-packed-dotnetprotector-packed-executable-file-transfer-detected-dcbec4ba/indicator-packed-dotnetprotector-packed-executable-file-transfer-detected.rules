@@ -1,0 +1,1 @@
+alert file ( msg:"INDICATOR-PACKED dotNetProtector packed executable file transfer detected"; file_type:"MSEXE"; file_data; content:"dotNetProtector",fast_pattern; metadata:ruleset community, service:ftp-data, http, imap, pop3; rem:"yara:INDICATOR_EXE_Packed_dotNetProtector"; classtype:trojan-activity; sid:930039; rev:1;)

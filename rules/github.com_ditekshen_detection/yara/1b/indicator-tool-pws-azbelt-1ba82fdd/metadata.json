@@ -1,0 +1,19 @@
+{
+  "uuid": "1ba82fdd-1fd0-4d83-9327-d77813351265",
+  "title": "INDICATOR_TOOL_PWS_azbelt",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects azbelt for enumerating Azure related credentials primarily on AAD joined machines",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362401"
+}

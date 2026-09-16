@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET 445 (msg:"INDICATOR-PACKED RLPack packed executable file transfer over SMB detected"; flow:to_server,established; flowbits:isset,file.exe; file_data; content:"|2E 52 4C 50 61 63 6B 00|"; fast_pattern:only; metadata:ruleset community, service netbios-ssn, yara INDICATOR_EXE_Packed_RLPack; classtype:policy-violation; sid:930066; rev:1;)

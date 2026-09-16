@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any ( msg:"INDICATOR-OBFUSCATION Encoded executable download detected - AlienCrypter"; flow:to_client,established; file_data; content:"</p><p>@@@HH,JA,",fast_pattern; metadata:ruleset community, service http; classtype:trojan-activity; sid:940062; rev:1; )

@@ -1,0 +1,19 @@
+{
+  "uuid": "b21b03e1-f0b2-44bc-8c6f-47c4bff6ff67",
+  "title": "INDICATOR_SUSPICIOUS_WMIC_Downloader",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects files utilizing WMIC for whitelisting bypass and downloading second stage payloads",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362259"
+}

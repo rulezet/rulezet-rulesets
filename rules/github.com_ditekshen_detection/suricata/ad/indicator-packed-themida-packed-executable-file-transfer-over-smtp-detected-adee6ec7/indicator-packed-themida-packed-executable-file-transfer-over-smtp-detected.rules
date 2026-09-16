@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $SMTP_SERVERS 25 (msg:"INDICATOR-PACKED Themida packed executable file transfer over SMTP detected"; flow:to_server,established; flowbits:isset,file.exe; file_data; content:"|2E 74 68 65 6D 69 64 61 00|"; fast_pattern:only; metadata:ruleset community, service smtp, yara INDICATOR_EXE_Packed_Themida; classtype:policy-violation; sid:930068; rev:1;)

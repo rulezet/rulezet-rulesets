@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"PUA-ADWARE Win.Adware.ZoomInfoContactContributer swapper download attempt"; flow:to_server,established; http_uri; content:"/swapper-"; http_header:field user-agent; content:"NSISDL/"; metadata:ruleset community; classtype:trojan-activity; sid:920281; rev:1; )

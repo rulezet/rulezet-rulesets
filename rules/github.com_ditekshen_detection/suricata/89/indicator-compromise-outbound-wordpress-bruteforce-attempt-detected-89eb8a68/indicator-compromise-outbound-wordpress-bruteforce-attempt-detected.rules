@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"INDICATOR-COMPROMISE outbound WordPress bruteforce attempt detected"; flow:to_server; http_uri; bufferlen:13; content:"/wp-login.php",fast_pattern; detection_filter:track by_src, count 10, seconds 1; metadata:ruleset community, service http; classtype:trojan-activity; sid:920192; rev:1; )

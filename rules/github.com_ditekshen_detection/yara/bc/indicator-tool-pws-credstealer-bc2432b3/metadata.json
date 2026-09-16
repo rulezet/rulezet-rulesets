@@ -1,0 +1,20 @@
+{
+  "uuid": "bc2432b3-8e1c-4f72-81d3-60abfb3f3839",
+  "title": "INDICATOR_TOOL_PWS_Credstealer",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Python executable for stealing credentials including domain environments. Observed in MuddyWater.",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"MuddyWater - G0069\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362332"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "c6aea357-4ce7-49ad-a043-14311fef3055",
+  "title": "INDICATOR_TOOL_ENUM_SharpShares",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects SharpShares multithreaded C# .NET Assembly to enumerate accessible network shares in a domain",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362399"
+}

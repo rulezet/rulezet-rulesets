@@ -1,0 +1,1 @@
+alert file ( msg:"INDICATOR-PACKED Spices.Net packed executable file transfer detected"; file_type:"MSEXE"; file_data; content:"protected by 9Rays.Net Spices.Net Obfuscator",fast_pattern; service:http, smtp; rem:"yara:INDICATOR_EXE_Packed_Spices"; classtype:policy-violation; sid:930000; rev:1; )

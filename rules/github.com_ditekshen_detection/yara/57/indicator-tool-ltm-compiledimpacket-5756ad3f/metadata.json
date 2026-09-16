@@ -1,0 +1,20 @@
+{
+  "uuid": "5756ad3f-52e7-4e4f-9453-3b13a48c210a",
+  "title": "INDICATOR_TOOL_LTM_CompiledImpacket",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects executables of compiled Impacket's python scripts",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"IMPACKET\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362352"
+}

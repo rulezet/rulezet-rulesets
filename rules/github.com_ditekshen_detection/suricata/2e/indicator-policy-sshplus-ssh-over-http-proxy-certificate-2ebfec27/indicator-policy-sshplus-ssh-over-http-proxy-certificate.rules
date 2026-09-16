@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any ( msg:"INDICATOR-POLICY SSHPLUS SSH-over-HTTP proxy certificate"; flow:to_client,established; content:".sshplus.net"; metadata:ruleset community, service http; classtype:policy-violation; sid:940079; rev:1; )

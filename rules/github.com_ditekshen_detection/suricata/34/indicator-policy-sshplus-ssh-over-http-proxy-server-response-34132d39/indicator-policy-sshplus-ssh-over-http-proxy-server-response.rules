@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any ( msg:"INDICATOR-POLICY SSHPLUS SSH-over-HTTP proxy server response"; flow:to_client,established; http_stat_code; content:"101"; http_stat_msg; content:"SSHPLUS"; metadata:ruleset community, service http; classtype:policy-violation; sid:940077; rev:1; )

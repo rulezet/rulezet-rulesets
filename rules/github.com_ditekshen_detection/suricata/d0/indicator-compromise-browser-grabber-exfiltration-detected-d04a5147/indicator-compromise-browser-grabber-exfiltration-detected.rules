@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"INDICATOR-COMPROMISE Browser grabber exfiltration detected"; flow:to_server; http_client_body; content:"Grabber/Desktop/",nocase; http_method; content:"POST"; metadata:ruleset community, service http; classtype:trojan-activity; sid:920173; rev:1; )

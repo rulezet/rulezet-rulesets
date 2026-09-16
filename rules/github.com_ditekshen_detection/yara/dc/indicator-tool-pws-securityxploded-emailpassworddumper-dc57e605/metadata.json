@@ -1,0 +1,21 @@
+{
+  "uuid": "dc57e605-0647-40fa-96a8-ab929577873d",
+  "title": "INDICATOR_TOOL_PWS_SecurityXploded_EmailPasswordDumper",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects SecurityXploded Email Password Dumper tool",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362372"
+}

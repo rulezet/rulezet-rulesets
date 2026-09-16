@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any ( msg:"POLICY-OTHER Remote Administration Tool detected - RemoteUtilities"; flow:to_client,established; content:"<rman_message version=",fast_pattern; content:"<code>3</code>"; content:"</rman_message>",distance 0; metadata:ruleset community; classtype:policy-violation; sid:950001; rev:1;)

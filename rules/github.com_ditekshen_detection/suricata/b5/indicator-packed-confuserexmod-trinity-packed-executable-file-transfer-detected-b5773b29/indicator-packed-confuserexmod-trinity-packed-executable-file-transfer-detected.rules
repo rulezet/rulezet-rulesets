@@ -1,0 +1,1 @@
+alert file ( msg:"INDICATOR-PACKED ConfuserExMod Trinity packed executable file transfer detected"; file_type:"MSEXE"; file_data; content:"TrinityProtector",nocase,fast_pattern; service:http, smtp; rem:"yara:INDICATOR_EXE_Packed_ConfuserExMod_Trinity"; classtype:policy-violation; sid:930009; rev:1; )

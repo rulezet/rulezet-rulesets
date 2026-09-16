@@ -1,0 +1,19 @@
+{
+  "uuid": "363994e8-a2d7-41a1-bcf6-d46ebae9c365",
+  "title": "INDICATOR_SUSPICIOUS_EXE_B64_Artifacts",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects executables embedding bas64-encoded APIs, command lines, registry keys, etc.",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362284"
+}

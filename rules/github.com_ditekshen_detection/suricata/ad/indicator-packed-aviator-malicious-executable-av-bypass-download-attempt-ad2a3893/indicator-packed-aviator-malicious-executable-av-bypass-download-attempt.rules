@@ -1,0 +1,1 @@
+alert file ( msg:"INDICATOR-PACKED AVIator malicious executable AV bypass download attempt"; flow:to_client,established; file_type:"MSEXE"; file_data; content:"|00|APCInjection",fast_pattern; content:"|00|threadHijackin_"; metadata:ruleset community, service:ftp-data, http, imap, pop3; rem:"yara:INDICATOR_TOOL_AVBypass_AVIator"; classtype:trojan-activity; sid:930028; rev:1;)

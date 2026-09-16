@@ -1,0 +1,19 @@
+{
+  "uuid": "8c6b14c3-e51e-4b1f-9a80-3e15b7fe8f8e",
+  "title": "INDICATOR_TOOL_PPLBLade",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects PPLBlade Protected Process Dumper Tool that support obfuscating memory dump and transferring it on remote workstations without dropping it onto the disk",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362419"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "5e40bf4d-6e05-426c-84c8-c73bcb31b012",
+  "title": "INDICATOR_SUSPICIOUS_EXE_Crypto_Wallet_Regex",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects executables referencing cryptocurrency wallet regular expressions",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362330"
+}

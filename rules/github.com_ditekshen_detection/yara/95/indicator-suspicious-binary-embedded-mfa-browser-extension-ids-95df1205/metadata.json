@@ -1,0 +1,19 @@
+{
+  "uuid": "95df1205-da2a-4be4-9d1f-11ff58dfce8c",
+  "title": "INDICATOR_SUSPICIOUS_Binary_Embedded_MFA_Browser_Extension_IDs",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect binaries embedding considerable number of MFA browser extension IDs.",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362315"
+}

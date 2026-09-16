@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"POLICY-OTHER Iluminati proxy/anonymizer download/upgrade detected"; flow:to_server,established; http_uri; content:"/admin/rmt/luminati.io/",fast_pattern; metadata:ruleset community, service http; classtype:trojan-activity; sid:950004; rev:1;)

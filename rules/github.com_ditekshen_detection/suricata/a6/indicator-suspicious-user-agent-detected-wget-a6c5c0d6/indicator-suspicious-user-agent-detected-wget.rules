@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"INDICATOR-SUSPICIOUS User-Agent detected - wget"; flow:to_server,established; http_header; content:"User-Agent: wget|0D 0A|",fast_pattern; content:"Accept-Language: zh-cn"; metadata:ruleset community, service http; rem:"yara:MALWARE_Win_TYRAT"; classtype:policy-violation; sid:940067; rev:1; )

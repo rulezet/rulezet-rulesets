@@ -1,0 +1,1 @@
+alert file ( msg:"INDICATOR-PACKED NoobyProtect packed executable file transfer detected"; file_type:"MSEXE"; file_data; content:"NoobyProtect SE",fast_pattern; metadata:ruleset community, service:ftp-data, http, imap, pop3; rem:"yara:INDICATOR_EXE_Packed_NoobyProtect"; classtype:trojan-activity; sid:930038; rev:1;)

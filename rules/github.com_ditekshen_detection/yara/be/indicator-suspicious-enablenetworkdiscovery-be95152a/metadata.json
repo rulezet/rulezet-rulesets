@@ -1,0 +1,21 @@
+{
+  "uuid": "be95152a-f8ba-41bf-93b0-9e98fab23200",
+  "title": "INDICATOR_SUSPICIOUS_EnableNetworkDiscovery",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects binaries manipulating Windows firewall to enable permissive network discovery",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362306"
+}

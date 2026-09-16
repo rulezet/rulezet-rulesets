@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"INDICATOR-COMPROMISE Screenshot exfiltration detected"; flow:to_server; http_client_body; content:"Screenshots/PK",nocase; content:"Screenshots/",nocase,distance 0; http_method; content:"POST"; metadata:ruleset community, service http; classtype:trojan-activity; sid:920144; rev:1; )

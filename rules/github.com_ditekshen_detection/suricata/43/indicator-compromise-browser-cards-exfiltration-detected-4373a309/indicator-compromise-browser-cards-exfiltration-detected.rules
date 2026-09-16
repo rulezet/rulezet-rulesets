@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS ( msg:"INDICATOR-COMPROMISE Browser cards exfiltration detected"; flow:to_server; http_client_body; content:"Browsers/Cards/PK",nocase; http_method; content:"POST"; metadata:ruleset community, service http; classtype:trojan-activity; sid:920174; rev:1; )

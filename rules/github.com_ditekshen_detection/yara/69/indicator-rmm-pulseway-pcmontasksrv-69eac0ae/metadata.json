@@ -1,0 +1,19 @@
+{
+  "uuid": "69eac0ae-7fd2-4654-9a52-06a4d26b8926",
+  "title": "INDICATOR_RMM_PulseWay_PCMonTaskSrv",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Pulseway pcmontask and service user agent responsible for Remote Control, Screens View, Computer Lock, etc",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362216"
+}

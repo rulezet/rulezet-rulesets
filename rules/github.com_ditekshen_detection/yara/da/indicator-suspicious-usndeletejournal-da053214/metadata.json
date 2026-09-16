@@ -1,0 +1,20 @@
+{
+  "uuid": "da053214-ed53-4a37-81b9-081f9cfc3768",
+  "title": "INDICATOR_SUSPICIOUS_USNDeleteJournal",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects executables containing anti-forensic artifacts of deleting USN change journal. Observed in ransomware",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/362252"
+}
