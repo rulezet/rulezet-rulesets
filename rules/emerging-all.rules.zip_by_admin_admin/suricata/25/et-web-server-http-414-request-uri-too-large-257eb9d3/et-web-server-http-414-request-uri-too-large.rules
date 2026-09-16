@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER HTTP 414 Request URI Too Large"; flow:established,to_client; http.stat_code; content:"414"; classtype:web-application-attack; sid:2012708; rev:4; metadata:created_at 2011_04_22, signature_severity Unknown, updated_at 2024_04_09;)
