@@ -1,0 +1,9 @@
+rule Trojan_Win32_Redline_GKF_MTB{
+	meta:
+		description = "Trojan:Win32/Redline.GKF!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {0f b6 84 3c ?? ?? ?? ?? 03 44 24 14 0f b6 c0 8a 84 04 ?? ?? ?? ?? 30 86 ?? ?? ?? ?? 46 81 fe ?? ?? ?? ?? 0f 82 } 	condition:
+		((#a_03_0  & 1)*10) >=10
+ 
+}

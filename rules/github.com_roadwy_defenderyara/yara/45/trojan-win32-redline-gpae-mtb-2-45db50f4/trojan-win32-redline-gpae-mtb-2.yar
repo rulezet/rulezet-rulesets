@@ -1,0 +1,9 @@
+rule Trojan_Win32_Redline_GPAE_MTB_2{
+	meta:
+		description = "Trojan:Win32/Redline.GPAE!MTB,SIGNATURE_TYPE_PEHSTR_EXT,04 00 04 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {18 00 00 80 b6 60 ?? ?? ?? ?? ?? ?? ?? ?? ?? 8b d8 8b 0b 8b 49 04 } 		$a_03_1 = {13 00 00 80 86 60 ?? ?? ?? ?? 46 81 fe 00 } 	condition:
+		((#a_03_0  & 1)*2+(#a_03_1  & 1)*2) >=4
+ 
+}
