@@ -1,0 +1,21 @@
+{
+  "uuid": "8d2b56d7-363f-4f88-bcc3-cb17b103fc1a",
+  "title": "TrojanSpy_Win32_Bancos_AMY",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanSpy:Win32/Bancos.AMY,SIGNATURE_TYPE_PEHSTR_EXT,06 00 06 00 0a 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/326524"
+}

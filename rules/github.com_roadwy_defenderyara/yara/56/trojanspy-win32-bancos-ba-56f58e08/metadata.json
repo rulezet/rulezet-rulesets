@@ -1,0 +1,21 @@
+{
+  "uuid": "56f58e08-b370-413b-a4d9-bbd172820623",
+  "title": "TrojanSpy_Win32_Bancos_BA",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanSpy:Win32/Bancos.BA,SIGNATURE_TYPE_PEHSTR,ffffffb9 01 ffffffb9 01 0c 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/326710"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "b7e2c27e-3f86-4f1f-acbf-95c43e590083",
+  "title": "TrojanSpy_Win32_Banker_AGW",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanSpy:Win32/Banker.AGW,SIGNATURE_TYPE_PEHSTR,05 00 05 00 0b 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/326876"
+}
