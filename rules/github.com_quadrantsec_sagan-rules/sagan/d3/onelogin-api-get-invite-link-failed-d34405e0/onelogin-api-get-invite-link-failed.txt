@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_GET_INVITE_LINK_FAILED"; json_content: ".event_type_id", "525"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006386; rev: 3;)

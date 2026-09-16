@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] SANDBOX_SYNC_STARTED"; json_content: ".event_type_id", "1500"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006478; rev: 3;)

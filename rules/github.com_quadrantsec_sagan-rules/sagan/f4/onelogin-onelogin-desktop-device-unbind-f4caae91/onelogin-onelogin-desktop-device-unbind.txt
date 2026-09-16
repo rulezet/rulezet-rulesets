@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] ONELOGIN_DESKTOP_DEVICE_UNBIND"; json_content: ".event_type_id", "903"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006431; rev: 3;)

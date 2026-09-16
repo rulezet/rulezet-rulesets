@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_RECENTLY_REMOVED"; json_content: ".event_type_id", "28"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006135; rev: 3;)

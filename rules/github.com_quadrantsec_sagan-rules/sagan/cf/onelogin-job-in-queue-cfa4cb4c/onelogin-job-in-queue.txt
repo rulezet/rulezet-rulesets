@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] JOB_IN_QUEUE"; json_content: ".event_type_id", "216"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006309; rev: 3;)

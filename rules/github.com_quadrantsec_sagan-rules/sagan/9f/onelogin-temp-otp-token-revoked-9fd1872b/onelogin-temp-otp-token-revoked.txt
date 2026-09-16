@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] TEMP_OTP_TOKEN_REVOKED"; json_content: ".event_type_id", "1101"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006444; rev: 3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] ENTITLEMENTS_CACHE_ACTION"; json_content: ".event_type_id", "124"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006220; rev: 3;)

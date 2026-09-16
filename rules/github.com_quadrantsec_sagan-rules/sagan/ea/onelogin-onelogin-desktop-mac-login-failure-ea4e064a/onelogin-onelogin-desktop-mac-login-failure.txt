@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] ONELOGIN_DESKTOP_MAC_LOGIN_FAILURE"; json_content: ".event_type_id", "901"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006429; rev: 3;)

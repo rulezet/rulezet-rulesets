@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] IMPORT_USER_FAILED"; json_content: ".event_type_id", "239"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006332; rev: 3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] RADIUS_ATTRIBUTE_CREATED"; json_content: ".event_type_id", "1700"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006503; rev: 3;)

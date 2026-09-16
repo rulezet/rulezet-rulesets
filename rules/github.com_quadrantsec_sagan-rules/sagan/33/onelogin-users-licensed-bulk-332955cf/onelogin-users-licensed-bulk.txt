@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USERS_LICENSED_BULK"; json_content: ".event_type_id", "228"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006321; rev: 3;)

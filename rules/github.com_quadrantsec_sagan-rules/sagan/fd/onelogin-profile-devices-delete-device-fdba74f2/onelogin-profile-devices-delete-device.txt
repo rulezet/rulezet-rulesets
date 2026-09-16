@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] PROFILE_DEVICES_DELETE_DEVICE"; json_content: ".event_type_id", "1600"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006493; rev: 3;)

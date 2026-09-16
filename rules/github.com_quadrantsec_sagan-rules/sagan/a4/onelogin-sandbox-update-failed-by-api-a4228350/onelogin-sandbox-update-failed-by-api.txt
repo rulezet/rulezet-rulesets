@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] SANDBOX_UPDATE_FAILED_BY_API"; json_content: ".event_type_id", "1514"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006492; rev: 3;)

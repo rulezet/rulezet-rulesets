@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[PURE_STORAGE] Multiple File Writes From A Single Source"; program:fileaudit; json_content:".op_data","write"; json_content:".result","success"; after:track by_src, count 50, seconds 300; json_map:"src_ip",".client_ip"; normalize; classtype:suspicious-activity; sid:5017219; rev:1;)

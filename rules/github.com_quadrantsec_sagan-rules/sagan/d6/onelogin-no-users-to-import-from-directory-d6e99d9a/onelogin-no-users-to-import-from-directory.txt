@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] NO_USERS_TO_IMPORT_FROM_DIRECTORY"; json_content: ".event_type_id", "66"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006173; rev: 3;)

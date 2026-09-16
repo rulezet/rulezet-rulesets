@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] CREATE_USER_FAILED"; json_content: ".event_type_id", "116"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006212; rev: 3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] APP_CREATED_BY_USER"; json_content: ".event_type_id", "600"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006412; rev: 3;)

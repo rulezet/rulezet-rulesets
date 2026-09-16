@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_FAILED_OTP_CHALLENGE From Outside HOME_COUNTRY"; json_content: ".event_type_id", "1002"; content:"Authentication method|3a| OTP"; country_code:track by_src,isnot $HOME_COUNTRY; json_map: "src_ip", ".ipaddr"; json_map: "username", ".user_name"; classtype:system-event; program: onelogin; sid:5014683; rev:1;)

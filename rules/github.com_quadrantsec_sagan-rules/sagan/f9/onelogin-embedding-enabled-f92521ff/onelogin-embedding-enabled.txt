@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] EMBEDDING_ENABLED"; json_content: ".event_type_id", "167"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006260; rev: 3;)

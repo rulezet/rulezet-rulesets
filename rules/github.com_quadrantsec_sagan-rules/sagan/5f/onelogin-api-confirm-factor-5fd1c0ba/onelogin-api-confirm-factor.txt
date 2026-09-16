@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_CONFIRM_FACTOR"; json_content: ".event_type_id", "537"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006398; rev: 3;)

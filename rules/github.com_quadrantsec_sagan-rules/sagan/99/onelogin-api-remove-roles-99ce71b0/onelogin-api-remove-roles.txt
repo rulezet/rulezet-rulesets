@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_REMOVE_ROLES"; json_content: ".event_type_id", "514"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006375; rev: 3;)

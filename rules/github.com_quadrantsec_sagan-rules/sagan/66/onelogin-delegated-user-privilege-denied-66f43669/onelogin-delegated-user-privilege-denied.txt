@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] DELEGATED_USER_PRIVILEGE_DENIED"; json_content: ".event_type_id", "1201"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006446; rev: 3;)

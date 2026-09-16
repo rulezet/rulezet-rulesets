@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CITRIX] Possible Privilege Escalation - Restricted Shell Bypass"; content:"CLI CMD_EXECUTED"; content:"Command |22|man|20|"; reference:url,www.resillion.com/wp-content/uploads/2023/07/Resillion-Citrix-Vulnerability-Report-1.pdf; classtype:trojan-activity; sid:5013581; rev:1;)

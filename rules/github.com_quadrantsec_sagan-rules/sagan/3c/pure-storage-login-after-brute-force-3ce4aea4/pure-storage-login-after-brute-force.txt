@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[PURE_STORAGE] Login After Brute Force"; program:purity.audit; content:"(login"; content:"Result|3a| Success"; xbits:isset, brute-force, track ip_src; parse_src_ip:1; normalize; classtype:suspicious-activity; sid:5017216; rev:1;)

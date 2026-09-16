@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_LOGIN_OTP_CHALLENGE_FAILED High Risk Score"; json_content: ".event_type_id", "1002"; parse_src_ip:2; pcre:"/risk_score\x22:\x22(?:7[6-9]|[8-9]\d|\d{3,})\x22/"; classtype:system-event; program: onelogin; sid:5010908; rev:1;)

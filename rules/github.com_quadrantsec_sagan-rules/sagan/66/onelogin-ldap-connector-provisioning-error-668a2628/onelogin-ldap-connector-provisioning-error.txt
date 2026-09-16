@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] LDAP_CONNECTOR_PROVISIONING_ERROR"; json_content: ".event_type_id", "307"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006357; rev: 3;)

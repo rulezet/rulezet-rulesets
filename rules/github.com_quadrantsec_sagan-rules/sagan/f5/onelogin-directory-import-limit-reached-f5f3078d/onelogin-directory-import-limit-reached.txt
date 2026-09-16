@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] DIRECTORY_IMPORT_LIMIT_REACHED"; json_content: ".event_type_id", "217"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006310; rev: 3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_INITIATED_WORKFLOW"; json_content: ".event_type_id", "9002"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006508; rev: 3;)

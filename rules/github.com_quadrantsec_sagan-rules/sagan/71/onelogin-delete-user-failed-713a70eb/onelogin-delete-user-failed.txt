@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] DELETE_USER_FAILED"; json_content: ".event_type_id", "237"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006330; rev: 3;)

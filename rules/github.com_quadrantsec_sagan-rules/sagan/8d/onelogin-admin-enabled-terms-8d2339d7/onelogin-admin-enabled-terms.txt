@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] ADMIN_ENABLED_TERMS"; json_content: ".event_type_id", "234"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006327; rev: 3;)

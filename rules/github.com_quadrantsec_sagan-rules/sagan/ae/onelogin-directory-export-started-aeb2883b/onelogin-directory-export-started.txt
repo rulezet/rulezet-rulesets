@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] DIRECTORY_EXPORT_STARTED"; json_content: ".event_type_id", "131"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006227; rev: 3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[PURE_STORAGE] Multiple Login Failures"; program:purity.audit; content:"(login"; content:"Result|3a| Failed"; after:track by_src,count 3, seconds 600; xbits:set, brute-force, track ip_src, expire 3600; parse_src_ip:1; normalize; classtype:suspicious-activity; sid:5017215; rev:1;)

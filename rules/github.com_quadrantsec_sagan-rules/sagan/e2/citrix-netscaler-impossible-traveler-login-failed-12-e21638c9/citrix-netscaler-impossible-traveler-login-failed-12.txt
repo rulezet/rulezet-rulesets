@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CITRIX] Netscaler - Impossible Traveler Login Failed [1/2]"; content:"-PPE-"; normalize; event_id:LOGIN_FAILED; classtype:unsuccessful-user; flexbits:set,VPN.Login.Failed,28800; flexbits:noalert; sid:5007211; rev:1;)

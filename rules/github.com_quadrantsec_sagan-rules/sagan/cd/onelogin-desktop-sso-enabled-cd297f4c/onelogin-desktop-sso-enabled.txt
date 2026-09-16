@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] DESKTOP_SSO_ENABLED"; json_content: ".event_type_id", "175"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006268; rev: 3;)

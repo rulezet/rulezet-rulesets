@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_SET_PWD_SALT"; json_content: ".event_type_id", "510"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006371; rev: 3;)

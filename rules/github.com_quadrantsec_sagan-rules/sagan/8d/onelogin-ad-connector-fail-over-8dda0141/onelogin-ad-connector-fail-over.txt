@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] AD_CONNECTOR_FAIL_OVER"; json_content: ".event_type_id", "46"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006153; rev: 3;)

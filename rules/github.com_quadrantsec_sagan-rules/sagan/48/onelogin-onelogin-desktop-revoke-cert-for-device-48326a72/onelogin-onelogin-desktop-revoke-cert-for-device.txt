@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] ONELOGIN_DESKTOP_REVOKE_CERT_FOR_DEVICE"; json_content: ".event_type_id", "912"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006437; rev: 3;)

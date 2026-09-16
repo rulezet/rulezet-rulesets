@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] REPORT_GENERATION_TERMINATED"; json_content: ".event_type_id", "246"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006341; rev: 3;)

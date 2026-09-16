@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] PROFILE_SETTINGS_UPDATE_SHOW_TABS"; json_content: ".event_type_id", "1609"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006502; rev: 3;)

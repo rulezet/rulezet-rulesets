@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_AUTO_REMOVED_FROM_ROLE"; json_content: ".event_type_id", "150"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006243; rev: 3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] SECURITY_QUESTIONS_UPDATED"; json_content: ".event_type_id", "173"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006266; rev: 3;)

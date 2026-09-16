@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] SELF_REGISTRATION_REQUEST"; json_content: ".event_type_id", "100"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006199; rev: 3;)

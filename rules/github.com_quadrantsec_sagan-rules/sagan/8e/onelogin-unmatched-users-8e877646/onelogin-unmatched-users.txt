@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] UNMATCHED_USERS"; json_content: ".event_type_id", "56"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006163; rev: 3;)

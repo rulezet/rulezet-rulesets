@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] DIRECTORY_LOCKED"; json_content: ".event_type_id", "212"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006305; rev: 3;)

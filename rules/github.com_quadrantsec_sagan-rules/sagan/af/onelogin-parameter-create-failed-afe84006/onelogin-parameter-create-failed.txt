@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] PARAMETER_CREATE_FAILED"; json_content: ".event_type_id", "801"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006423; rev: 3;)

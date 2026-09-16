@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_INITIATED_OFFBOARDING"; json_content: ".event_type_id", "9011"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006517; rev: 3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_SEND_INVITE_LINK"; json_content: ".event_type_id", "546"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006405; rev: 3;)

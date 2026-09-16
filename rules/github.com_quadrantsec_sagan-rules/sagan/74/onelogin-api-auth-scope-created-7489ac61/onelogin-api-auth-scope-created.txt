@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_AUTH_SCOPE_CREATED"; json_content: ".event_type_id", "1406"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006459; rev: 3;)

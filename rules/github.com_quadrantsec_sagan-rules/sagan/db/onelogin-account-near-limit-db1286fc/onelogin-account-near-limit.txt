@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] ACCOUNT_NEAR_LIMIT"; json_content: ".event_type_id", "229"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006322; rev: 3;)

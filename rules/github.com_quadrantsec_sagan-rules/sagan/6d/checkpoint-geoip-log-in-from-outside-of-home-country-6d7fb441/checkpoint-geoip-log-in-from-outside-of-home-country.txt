@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CHECKPOINT-GEOIP] Log In from outside of HOME_COUNTRY"; content: "[action|3a 22|Log In|22 3b|"; parse_dst_ip: 1; parse_src_ip: 3; parse_proto; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; sid:5005720; rev:1;)

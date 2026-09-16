@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_ADDED_OTP_DEVICE"; json_content: ".event_type_id", "540"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006401; rev: 3;)

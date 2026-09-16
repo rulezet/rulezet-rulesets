@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_ROLE_MANAGEMENT_GRANTED"; json_content: ".event_type_id", "151"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006244; rev: 3;)

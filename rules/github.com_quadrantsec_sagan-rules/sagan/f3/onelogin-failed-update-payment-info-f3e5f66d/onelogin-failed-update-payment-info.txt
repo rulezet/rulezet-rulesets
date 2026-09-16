@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] FAILED_UPDATE_PAYMENT_INFO"; json_content: ".event_type_id", "31"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006138; rev: 3;)

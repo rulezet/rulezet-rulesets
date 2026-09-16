@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] WORKDAY_REAL_TIME_NOTIFICATION"; json_content: ".event_type_id", "219"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006312; rev: 3;)

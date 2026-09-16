@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] SMS_FAILURE"; json_content: ".event_type_id", "105"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006204; rev: 3;)

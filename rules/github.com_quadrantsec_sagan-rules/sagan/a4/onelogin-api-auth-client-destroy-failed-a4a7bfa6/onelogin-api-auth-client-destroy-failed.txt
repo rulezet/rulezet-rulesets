@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_AUTH_CLIENT_DESTROY_FAILED"; json_content: ".event_type_id", "1423"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006476; rev: 3;)

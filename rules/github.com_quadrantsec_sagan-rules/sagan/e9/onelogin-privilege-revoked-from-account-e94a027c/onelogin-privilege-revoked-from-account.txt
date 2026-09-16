@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] PRIVILEGE_REVOKED_FROM_ACCOUNT"; json_content: ".event_type_id", "71"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006178; rev: 3;)

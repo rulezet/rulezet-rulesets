@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] TRUSTED_IDP_REMOVED_AS_DEFAULT"; json_content: ".event_type_id", "119"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006215; rev: 3;)

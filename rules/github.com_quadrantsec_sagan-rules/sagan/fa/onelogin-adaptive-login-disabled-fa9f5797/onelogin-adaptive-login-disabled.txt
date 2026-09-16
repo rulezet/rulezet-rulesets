@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] ADAPTIVE_LOGIN_DISABLED"; json_content: ".event_type_id", "932"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006439; rev: 3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] PROVISIONING_EXCEPTION"; json_content: ".event_type_id", "25"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006132; rev: 3;)

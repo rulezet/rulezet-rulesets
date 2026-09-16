@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_FAILED_PROXY_LOGIN"; json_content: ".event_type_id", "77"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006184; rev: 3;)

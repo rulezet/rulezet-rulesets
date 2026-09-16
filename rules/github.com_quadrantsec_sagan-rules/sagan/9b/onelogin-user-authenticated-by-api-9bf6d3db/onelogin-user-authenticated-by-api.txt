@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_AUTHENTICATED_BY_API"; json_content: ".event_type_id", "122"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006218; rev: 3;)

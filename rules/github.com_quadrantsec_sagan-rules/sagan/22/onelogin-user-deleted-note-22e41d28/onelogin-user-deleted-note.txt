@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_DELETED_NOTE"; json_content: ".event_type_id", "89"; parse_src_ip: 1; classtype: system-event; program: onelogin; sid:5006196; rev: 3;)
