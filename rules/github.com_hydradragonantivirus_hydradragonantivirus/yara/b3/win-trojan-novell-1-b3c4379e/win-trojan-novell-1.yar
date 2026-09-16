@@ -1,0 +1,9 @@
+rule Win_Trojan_Novell_1
+{
+strings:
+	$a0 = { 44656661756c740007627572676c6172005589e5683200000068a4010000ff7528ff7524ff7520ff751cff7518ff75 }
+
+
+condition:
+	$a0
+}

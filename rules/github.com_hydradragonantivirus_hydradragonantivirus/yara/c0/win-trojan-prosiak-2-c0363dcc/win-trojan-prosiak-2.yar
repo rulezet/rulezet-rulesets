@@ -1,0 +1,9 @@
+rule Win_Trojan_Prosiak_2
+{
+strings:
+	$a0 = { f8c292ecaca1c8eb35be5840ebf667c6be0506a01c9337f0ffd63418197b8bbef0eb0b337c09d03728b6bcbae83b4de0772972d60adf054f60297b04ba968713e3924f89f9b52d64966e5f1f5040ace0adbb114ebd03e9fba7b7017b5babb7dbb70036b3002347743f360645adbb }
+
+
+condition:
+	$a0
+}

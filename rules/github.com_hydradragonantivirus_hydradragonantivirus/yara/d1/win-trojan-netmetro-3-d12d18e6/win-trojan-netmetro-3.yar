@@ -1,0 +1,9 @@
+rule Win_Trojan_NetMetro_3
+{
+strings:
+	$a0 = { ff1540c44200c745fc0000000068fe894200eb278d55e48d45e852506a02ff15c8c3420083c40c8d4ddc8d55e051526a02ff157cc2420083c40cc3c38b450850 }
+
+
+condition:
+	$a0
+}

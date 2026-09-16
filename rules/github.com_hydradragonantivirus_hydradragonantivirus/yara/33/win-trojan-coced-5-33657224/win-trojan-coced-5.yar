@@ -1,0 +1,9 @@
+rule Win_Trojan_Coced_5
+{
+strings:
+	$a0 = { 8b4510480f8429020000480f851d020000578b3d4064400068d22f000056ffd783c40c8d85fcf1ffff566a1e50ff150064400083c40c8d85fcf1ffff50e8b210 }
+
+
+condition:
+	$a0
+}

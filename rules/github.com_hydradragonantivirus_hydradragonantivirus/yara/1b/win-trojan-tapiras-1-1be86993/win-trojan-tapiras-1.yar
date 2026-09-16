@@ -1,0 +1,9 @@
+rule Win_Trojan_Tapiras_1
+{
+strings:
+	$a0 = { 0c33c08dbd20a1ffff83c9fff2aef7d12bf98db5c0c0ffff87f78bd18bc7c1e902f3a58bca83e103f3a40fb74304508d8d60e0ffff0fb7530203d383c2085251e85f1600000fb7430483c40c8d9560e0ffffc6840560e0ffff00528d8d20a1ffff68a4f0400051e8345c000083c4 }
+
+
+condition:
+	$a0
+}

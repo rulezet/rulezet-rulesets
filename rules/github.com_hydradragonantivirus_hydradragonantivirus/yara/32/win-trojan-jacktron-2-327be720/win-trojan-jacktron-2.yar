@@ -1,0 +1,9 @@
+rule Win_Trojan_Jacktron_2
+{
+strings:
+	$a0 = { 6c9e85574bbdc68d3c07c346ef70191003c68a50ccc251af5777409bdc65f400ab8a17681bedcb746217155d04fc2280fa0b5be378050a0a348ae305ff4d1088036608523b004b0144f81d5aa118b4a3 }
+
+
+condition:
+	$a0
+}

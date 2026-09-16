@@ -1,0 +1,9 @@
+rule Win_Trojan_Pompos_1
+{
+strings:
+	$a0 = { 9afe05c643fb91bcb88403eda8fcffda89ec5dc206000f633a5c6175ff87746f657865632e6261740940f8ffe1686f206f666609696620ea69731f3e74200920676fde2066756e3cffffe32092eb20ada520afe0a8adefabc3ff20aca5fa20a220e1a5e0ecf1a7108f2ce7aeeee1 }
+
+
+condition:
+	$a0
+}

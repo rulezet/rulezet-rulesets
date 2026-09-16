@@ -1,0 +1,9 @@
+rule Win_Trojan_Rsbot_1
+{
+strings:
+	$a0 = { fb8aa71a399658e3c8a7c2584eb1598be97eb3e88d9585ebe7cbde2f4ca2fda7014597a4aeb8571c3b32fa854b829222d940c4b1745374617274544350436c6f6e650000000c46f517bfe2b94f9a08a7 }
+
+
+condition:
+	$a0
+}

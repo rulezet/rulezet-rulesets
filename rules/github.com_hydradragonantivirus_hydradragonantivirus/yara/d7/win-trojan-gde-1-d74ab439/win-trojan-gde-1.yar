@@ -1,0 +1,9 @@
+rule Win_Trojan_GDE_1
+{
+strings:
+	$a0 = { 9b049a000039045589e5b001509a730239049ac2013904b00150b019509a15023904bf72021e57bfa23d0e5731 }
+
+
+condition:
+	$a0
+}

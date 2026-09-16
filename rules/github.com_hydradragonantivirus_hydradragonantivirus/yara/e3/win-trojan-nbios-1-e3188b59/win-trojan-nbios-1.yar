@@ -1,0 +1,9 @@
+rule Win_Trojan_Nbios_1
+{
+strings:
+	$a0 = { 5ba4a1f15f494351426f6d62b03b10f6a4a10806f74d61036ff05aff00636865636b73a717e46f6b757a51f6fa7041646472a5005365d56a2fdf5753796e }
+
+
+condition:
+	$a0
+}

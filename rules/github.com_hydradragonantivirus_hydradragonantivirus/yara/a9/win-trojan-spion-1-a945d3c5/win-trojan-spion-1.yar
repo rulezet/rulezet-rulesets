@@ -1,0 +1,9 @@
+rule Win_Trojan_Spion_1
+{
+strings:
+	$a0 = { 732773683d270000002564000020000000656c6c6f00000000e5e9e1e4a8eefae7e5b2a8eae7eac8e5fbe6a6ebe7e524004365727a7573642a3000000048cdc4c7a8c4c9c5cddad22400000000f4f8f0f5b7faf6f4e9eceafcebeffcb7faf6f400f7e6f5f1a5f1eabfa5f5f7e4 }
+
+
+condition:
+	$a0
+}

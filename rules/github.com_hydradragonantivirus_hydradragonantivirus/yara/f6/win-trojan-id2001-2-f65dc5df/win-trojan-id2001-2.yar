@@ -1,0 +1,9 @@
+rule Win_Trojan_id2001_2
+{
+strings:
+	$a0 = { 446f204e6f7468696e670004901548039f06ef01110400ff032f000000030800436f6d6d616e64 }
+
+
+condition:
+	$a0
+}

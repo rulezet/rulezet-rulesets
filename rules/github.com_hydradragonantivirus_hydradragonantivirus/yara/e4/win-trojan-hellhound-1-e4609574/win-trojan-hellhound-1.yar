@@ -1,0 +1,9 @@
+rule Win_Trojan_HellHound_1
+{
+strings:
+	$a0 = { 48454c4c20202020484f554e440004ffff000005f00f7800af05ff001228001f00ff03290000002706004c696e653138 }
+
+
+condition:
+	$a0
+}

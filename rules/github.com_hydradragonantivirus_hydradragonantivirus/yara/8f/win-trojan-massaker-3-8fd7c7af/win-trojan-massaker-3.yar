@@ -1,0 +1,9 @@
+rule Win_Trojan_Massaker_3
+{
+strings:
+	$a0 = { 054d182b1f536572760d959809e42a4703a816b279587f2f30e0b18617f2e11e0e0c4cc0312f724006b9070c2c1060da5b7bf84b4f92548703d4d9274eeff840 }
+
+
+condition:
+	$a0
+}
