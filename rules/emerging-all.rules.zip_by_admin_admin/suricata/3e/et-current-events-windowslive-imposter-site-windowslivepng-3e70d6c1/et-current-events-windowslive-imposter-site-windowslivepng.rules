@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET CURRENT_EVENTS WindowsLive Imposter Site WindowsLive.png"; flow:established,to_server; http.uri; content:"/images/WindowsLive.png"; startswith; classtype:bad-unknown; sid:2012529; rev:5; metadata:created_at 2011_03_21, signature_severity Unknown, updated_at 2024_04_14;)

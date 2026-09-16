@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP NewWeb User-Agent (Lobo Lunar)"; flow:established,to_server; http.user_agent; content:"Lobo Lunar"; startswith; classtype:pup-activity; sid:2009222; rev:12; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_04_14;)

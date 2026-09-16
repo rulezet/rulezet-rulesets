@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Suspicious User Agent EXE2"; flow:established,to_server; http.user_agent; content:"EXE2"; nocase; startswith; reference:md5,112c6db4fb8a9aa18d0cc105662af5a4; classtype:pup-activity; sid:2018049; rev:7; metadata:created_at 2014_01_31, confidence High, signature_severity Minor, updated_at 2024_04_14;)

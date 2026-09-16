@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Suspicious User Agent Mozi11a"; flow:established,to_server; http.user_agent; content:"Mozi11a"; startswith; reference:md5,3cf3d4d5de51a8c37e11595159179571; classtype:pup-activity; sid:2018051; rev:8; metadata:created_at 2014_01_31, confidence High, signature_severity Minor, updated_at 2024_04_14;)

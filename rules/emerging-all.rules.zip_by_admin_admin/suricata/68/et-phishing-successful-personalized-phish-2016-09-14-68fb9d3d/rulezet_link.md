@@ -1,0 +1,5 @@
+# ET PHISHING Successful Personalized Phish 2016-09-14
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/158109)
+
+Rulezet UUID: `68fb9d3d-9ec7-4e41-ad30-6a55220b7c19`
