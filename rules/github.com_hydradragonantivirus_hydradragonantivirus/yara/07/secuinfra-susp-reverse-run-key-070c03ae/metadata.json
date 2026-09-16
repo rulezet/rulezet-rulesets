@@ -1,0 +1,21 @@
+{
+  "uuid": "070c03ae-f820-4438-94e7-94bf16f86d85",
+  "title": "SECUINFRA_SUSP_Reverse_Run_Key",
+  "format": "yara",
+  "author": "SECUINFRA Falcon Team",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a Reversed Run Key",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709344"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "26c4975e-5812-4439-ac03-216d89a8874c",
+  "title": "ARKBIRD_SOLG_Ran_Egregor_Oct_2020_1",
+  "format": "yara",
+  "author": "Arkbird_SOLG",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect Egregor / Maze ransomware by Maze blocks",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Maze\"",
+    "misp-galaxy:ransomware=\"Egregor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709151"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "1eba61e6-de2f-4944-a53c-9b7cca5f1527",
+  "title": "SECUINFRA_OBFUS_Powershell_Execution",
+  "format": "yara",
+  "author": "SECUINFRA Falcon Team",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects some variations of obfuscated PowerShell code to execute further PowerShell code",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709363"
+}

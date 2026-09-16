@@ -1,0 +1,20 @@
+{
+  "uuid": "c40095e8-9ef5-426a-aa72-a87012247623",
+  "title": "ARKBIRD_SOLG_APT_Lazarus_HTA_Apr_2021_1",
+  "format": "yara",
+  "author": "Arkbird_SOLG",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect HTA with the fake picture header as decoy used by Lazarus",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709163"
+}

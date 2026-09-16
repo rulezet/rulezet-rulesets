@@ -1,0 +1,20 @@
+{
+  "uuid": "ee120ad2-d2d9-4d90-aef5-88b509b58d1d",
+  "title": "TELEKOM_SECURITY_Crylock_Binary",
+  "format": "yara",
+  "author": "Thomas Barabosch, Telekom Security",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects CryLock ransomware v2.3.0.0",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709233"
+}

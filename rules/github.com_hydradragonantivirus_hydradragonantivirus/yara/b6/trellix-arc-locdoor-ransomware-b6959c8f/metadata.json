@@ -1,0 +1,22 @@
+{
+  "uuid": "b6959c8f-e6a8-409b-af96-159f3a62843c",
+  "title": "TRELLIX_ARC_Locdoor_Ransomware",
+  "format": "yara",
+  "author": "Marc Rivero | McAfee ATR Team",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Rule to detect Locdoor/DryCry",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/708988"
+}

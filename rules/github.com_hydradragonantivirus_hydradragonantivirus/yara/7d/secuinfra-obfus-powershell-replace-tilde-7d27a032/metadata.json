@@ -1,0 +1,19 @@
+{
+  "uuid": "7d27a032-7290-4f32-b780-187d55d0d5e0",
+  "title": "SECUINFRA_OBFUS_Powershell_Replace_Tilde",
+  "format": "yara",
+  "author": "SECUINFRA Falcon Team",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects usage of Replace to replace tilde. Often observed in obfuscation",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709364"
+}

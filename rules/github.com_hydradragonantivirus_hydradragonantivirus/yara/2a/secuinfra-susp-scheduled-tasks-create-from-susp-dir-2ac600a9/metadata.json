@@ -1,0 +1,21 @@
+{
+  "uuid": "2ac600a9-65ce-4dbe-8779-534b458ade7d",
+  "title": "SECUINFRA_SUSP_Scheduled_Tasks_Create_From_Susp_Dir",
+  "format": "yara",
+  "author": "SECUINFRA Falcon Team",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a PowerShell Script that creates a Scheduled Task that runs from an suspicious directory",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709343"
+}

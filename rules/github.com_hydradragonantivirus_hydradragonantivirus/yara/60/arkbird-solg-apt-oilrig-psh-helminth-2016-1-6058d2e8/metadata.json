@@ -1,0 +1,20 @@
+{
+  "uuid": "6058d2e8-b4e2-4bfd-bfcd-ea7f773e57db",
+  "title": "ARKBIRD_SOLG_APT_Oilrig_PSH_Helminth_2016_1",
+  "format": "yara",
+  "author": "Arkbird_SOLG",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect Powershell script Helminth in base 64 used by OilRig (2016)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"OilRig - G0049\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709095"
+}

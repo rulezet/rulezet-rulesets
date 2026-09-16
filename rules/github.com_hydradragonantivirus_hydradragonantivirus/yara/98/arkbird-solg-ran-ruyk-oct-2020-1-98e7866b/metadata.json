@@ -1,0 +1,23 @@
+{
+  "uuid": "98e7866b-d386-40d1-831d-30abddc80034",
+  "title": "ARKBIRD_SOLG_Ran_Ruyk_Oct_2020_1",
+  "format": "yara",
+  "author": "Arkbird_SOLG",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect RYUK ransomware (Sept_2020_V1)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Ryuk ransomware\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709135"
+}

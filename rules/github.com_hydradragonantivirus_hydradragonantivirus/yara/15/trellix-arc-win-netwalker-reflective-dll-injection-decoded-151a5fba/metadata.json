@@ -1,0 +1,20 @@
+{
+  "uuid": "151a5fba-eee6-4cf3-9a53-94d0489cc0a4",
+  "title": "TRELLIX_ARC_Win_Netwalker_Reflective_Dll_Injection_Decoded",
+  "format": "yara",
+  "author": "McAfee ATR Team",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Rule to detect Reflective DLL Injection Powershell Script dropping Netwalker, after hexadecimal decoded and xor decrypted ",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/708967"
+}

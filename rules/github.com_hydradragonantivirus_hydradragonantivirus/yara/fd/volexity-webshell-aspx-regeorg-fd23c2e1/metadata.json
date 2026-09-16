@@ -1,0 +1,19 @@
+{
+  "uuid": "fd23c2e1-17dc-4e00-9150-b4b972696a26",
+  "title": "VOLEXITY_Webshell_Aspx_Regeorg",
+  "format": "yara",
+  "author": "threatintel@volexity.com",
+  "license": "See license at https://github.com/volexity/threat-intel/blob/main/LICENSE.txt",
+  "license_verified": false,
+  "description": "Detects the reGeorg webshell based on common strings in the webshell. May also detect other webshells which borrow code from ReGeorg.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709266"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "45292b8b-d55e-4849-89b9-07827026a01c",
+  "title": "VOLEXITY_Hacktool_Golang_Reversessh_Fahrj",
+  "format": "yara",
+  "author": "threatintel@volexity.com",
+  "license": "See license at https://github.com/volexity/threat-intel/blob/main/LICENSE.txt",
+  "license_verified": false,
+  "description": "Detects a reverse SSH utility available on GitHub. Attackers may use this tool or similar tools in post-exploitation activity.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709276"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "7fb39015-4c64-4687-8383-098458027381",
+  "title": "TRELLIX_ARC_Ransom_Maze",
+  "format": "yara",
+  "author": "McAfee ATR",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detecting MAZE Ransomware",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Maze\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/708996"
+}

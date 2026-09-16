@@ -1,0 +1,19 @@
+{
+  "uuid": "8b76433a-1332-42af-8f59-86b214e74fcb",
+  "title": "VOLEXITY_General_Php_Fileinput_Eval",
+  "format": "yara",
+  "author": "threatintel@volexity.com",
+  "license": "See license at https://github.com/volexity/threat-intel/blob/main/LICENSE.txt",
+  "license_verified": false,
+  "description": "Look for PHP files which use file_get_contents and then shortly afterwards use an eval statement.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709295"
+}

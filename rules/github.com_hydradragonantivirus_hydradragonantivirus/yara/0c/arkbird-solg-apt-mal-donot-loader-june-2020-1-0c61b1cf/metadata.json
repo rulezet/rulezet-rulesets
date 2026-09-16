@@ -1,0 +1,21 @@
+{
+  "uuid": "0c61b1cf-d404-43b2-94be-34eabb8cddd5",
+  "title": "ARKBIRD_SOLG_APT_MAL_Donot_Loader_June_2020_1",
+  "format": "yara",
+  "author": "Arkbird_SOLG",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect loader malware used by APT Donot for drops the final stage",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/709171"
+}
