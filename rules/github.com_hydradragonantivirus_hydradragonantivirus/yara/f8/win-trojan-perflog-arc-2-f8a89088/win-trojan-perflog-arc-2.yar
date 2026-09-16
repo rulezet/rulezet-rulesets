@@ -1,0 +1,11 @@
+rule Win_Trojan_Perflog_arc_2
+{
+strings:
+	$a0 = { 09002000000062706b686b2e646c6c1a01d1150c891a1c14220490828a42 }
+
+	$a1 = { 09002000000062706b77622e646c6c1825d554c88d198016664aad1b }
+
+
+condition:
+	$a0 and $a1
+}

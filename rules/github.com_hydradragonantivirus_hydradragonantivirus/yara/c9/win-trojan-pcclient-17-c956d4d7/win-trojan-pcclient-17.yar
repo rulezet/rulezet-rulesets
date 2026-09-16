@@ -1,0 +1,9 @@
+rule Win_Trojan_PcClient_17
+{
+strings:
+	$a0 = { 75058b5e3ceb038b5d0cff75085152ff700453ff7008576a01ff7018e8cffeffff5b32d28bceff155c0301005f33c05e5dc20800558bec81ec300200005356576a3f5933c08dbdd2fdfffff3ab66ab6a3f5933c08dbdd2fefffff3ab66ab6a075933c08d7ddaf3ab6a5c5966ab6a6558ff750866898dd0feffff66c785d2feffff440066c785d4feffff6f0066c785d6fe }
+
+
+condition:
+	$a0
+}

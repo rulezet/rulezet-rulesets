@@ -1,0 +1,9 @@
+rule Win_Trojan_Worm_54
+{
+strings:
+	$a0 = { bef023757e73f95a207d7801e945a6bbabfa0da37e65537c2cd3764a59027faf60a85fdd99cc8205c276e41f4ce17cb1e12a72cddd69c39a837237a9fe6afd970ae3135a7014c495e948b9a07078b32d96bc26f9f92aac34a059c39d1dab1155 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Brepibot_20
+{
+strings:
+	$a0 = { 35f44639de7ce31ccfd8f1c6441df466f450b119c09bfdb5f6eb7fc96881ec83126b85dcfbde3ed6b169f0a5ff098d85ecfd055068074b43ecd7c1f41ac8621041b96bff3ed984036864578dbd295768af43190b9f852773f3fe17c45d146a02 }
+
+
+condition:
+	$a0
+}

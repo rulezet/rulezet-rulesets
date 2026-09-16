@@ -1,0 +1,9 @@
+rule Win_Trojan_OptixPro_13
+{
+strings:
+	$a0 = { a769a38310f347e59453646a41ce0d0405c21adb9c540fede24a0a49feb64b9946e4dc7f0031149abd6b57c83ea589c8d8260d3b7afd22bb0a5bf55c15bfd685069edaac846bad75eaa129f19ba6b8df326bb39a8ba9c8c7169c908c4219d63346d7ba55338991c460cd36e8a4ac3afb }
+
+
+condition:
+	$a0
+}
