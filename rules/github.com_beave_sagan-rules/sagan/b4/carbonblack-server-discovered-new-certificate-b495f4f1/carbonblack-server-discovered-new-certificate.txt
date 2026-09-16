@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Server discovered new certificate"; content: "Server discovered new certificate"; content: "event"; parse_src_ip: 1; program: 1|bit9|carbonblack; classtype: system-event; sid: 5002926; rev:3;)

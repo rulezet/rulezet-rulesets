@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Server detected revocation of certificate"; content: "Server detected revocation of certificate"; content: "event"; parse_src_ip: 1; program: 1|bit9|carbonblack; classtype: system-event; sid: 5002934; rev:3;)

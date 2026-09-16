@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Agent failed a health check"; content: "Agent failed a health check"; parse_src_ip: 1; program: 1|bit9|carbonblack; classtype: system-event; sid: 5002932; rev:3;)

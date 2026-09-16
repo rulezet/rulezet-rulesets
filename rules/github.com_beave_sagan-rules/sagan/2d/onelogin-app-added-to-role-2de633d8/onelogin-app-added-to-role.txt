@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] APP_ADDED_TO_ROLE"; content: "event|5f|type|5f|id|22 3a| 1"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004728; sid: 5004728; rev: 1;)

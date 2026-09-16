@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Non-System Filemods to system32"; content: "Carbon Black process watchlist |27|Non-System Filemods to system32|27|"; parse_src_ip: 1; program: 1|bit9|carbonblack; classtype: system-event; sid: 5002921; rev:3;)

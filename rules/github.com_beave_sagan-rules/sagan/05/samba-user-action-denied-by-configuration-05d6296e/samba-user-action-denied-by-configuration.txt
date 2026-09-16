@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] User action denied by configuration"; content: "Permission denied"; classtype: unsuccessful-user; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000375; sid: 5000375; rev:2;)

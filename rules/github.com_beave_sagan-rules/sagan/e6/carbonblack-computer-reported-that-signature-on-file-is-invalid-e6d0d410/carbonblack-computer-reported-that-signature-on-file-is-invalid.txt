@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Computer reported that signature on file is invalid"; content: "reported that signature on file"; content: "is invalid"; content: "event"; parse_src_ip: 1; program: 1|bit9|carbonblack; classtype: system-event; sid: 5002925; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Session closed"; content: "session closed for" ; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: not-suspicious; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000407; sid:5000407; rev:2;)

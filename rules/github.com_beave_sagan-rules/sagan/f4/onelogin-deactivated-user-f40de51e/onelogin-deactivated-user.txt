@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] DEACTIVATED_USER"; content: "event|5f|type|5f|id|22 3a| 15"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004742; sid: 5004742; rev: 1;)

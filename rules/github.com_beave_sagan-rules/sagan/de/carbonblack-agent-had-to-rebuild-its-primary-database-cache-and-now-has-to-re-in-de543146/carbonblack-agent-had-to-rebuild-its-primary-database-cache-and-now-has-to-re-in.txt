@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Agent had to rebuild its primary database cache and now has to re-initialize"; content: "Agent had to rebuild its primary database cache and now has to re-initialize"; parse_src_ip: 1; program: 1|bit9|carbonblack; classtype: system-event; sid: 5002937; rev:3;)

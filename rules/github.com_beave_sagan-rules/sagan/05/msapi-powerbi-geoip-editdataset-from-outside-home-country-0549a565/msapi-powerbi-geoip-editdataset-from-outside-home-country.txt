@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] EditDataset from outside HOME_COUNTRY"; json_content: ".Workload","PowerBI"; json_content: ".Operation", "EditDataset"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005027; sid:5005027; rev: 1;)

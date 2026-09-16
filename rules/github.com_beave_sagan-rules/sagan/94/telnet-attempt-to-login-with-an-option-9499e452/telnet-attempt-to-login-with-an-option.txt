@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[TELNET] Attempt to login with an option"; content: "Attempt to login with an option"; default_proto: tcp; default_dst_port: $TELNET_PORT; classtype: exploit-attempt; program: telnetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000392; sid: 5000392; rev:3;)

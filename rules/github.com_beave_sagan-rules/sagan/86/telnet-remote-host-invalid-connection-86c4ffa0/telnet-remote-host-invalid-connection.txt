@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[TELNET] Remote host invalid connection"; content: "ttloop"; pcre: "/peer died|read/i"; default_proto: tcp; default_dst_port: $TELNET_PORT; classtype: network-event; program: telnetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000245; sid: 5000245; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD] Authentication successful"; content: "OK LOGIN"; default_proto:tcp; default_dst_port: $FTP_PORT; classtype: successful-user; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000195; sid: 5000195; rev:3;)

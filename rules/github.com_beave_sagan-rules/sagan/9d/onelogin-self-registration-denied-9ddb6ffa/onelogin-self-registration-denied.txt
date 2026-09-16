@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] SELF_REGISTRATION_DENIED"; content: "event|5f|type|5f|id|22 3a| 102"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004409; sid: 5004409; rev: 1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] Connection denied"; pcre: "/denied connection from|connection denied from/i"; nocase; classtype:  unsuccessful-user; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000146; sid: 5000146; rev:2;)

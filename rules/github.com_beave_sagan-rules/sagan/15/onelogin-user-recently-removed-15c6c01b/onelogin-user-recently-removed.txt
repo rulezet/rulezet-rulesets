@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_RECENTLY_REMOVED"; content: "event|5f|type|5f|id|22 3a| 28"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004343; sid: 5004343; rev: 1;)

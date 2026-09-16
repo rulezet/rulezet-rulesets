@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] APP_COULD_NOT_AUTHENTICATE"; content: "event|5f|type|5f|id|22 3a| 85"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004400; sid: 5004400; rev: 1;)

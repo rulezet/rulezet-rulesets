@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] CA BrightStor Backup Products Tape Engine Service RPC Request Arbitrary Code Execution Vulnerability"; content: "SID: 1067 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6101067; sid: 6101067; rev: 4;)

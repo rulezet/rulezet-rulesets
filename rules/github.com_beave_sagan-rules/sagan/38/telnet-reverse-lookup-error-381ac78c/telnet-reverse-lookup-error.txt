@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[TELNET] Reverse lookup error"; content: "can't verify hostname"; default_proto: tcp; default_dst_port: $TELNET_PORT; classtype: network-event; program: telnetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000246; sid: 5000246; rev:3;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-POWERBI-GEOIP] Catch all from outside HOME_COUNTRY"; json_content: ".Workload","PowerBI"; country_code: track by_src, isnot $HOME_COUNTRY; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5005015; sid:5005015; rev: 1;)

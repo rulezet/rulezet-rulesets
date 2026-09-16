@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD] Session opened"; content: "CONNECT"; default_proto:tcp; default_dst_port: $FTP_PORT; classtype: not-suspicious; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000194; sid: 5000194; rev:3;)

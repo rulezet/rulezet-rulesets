@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Computer failed to receive Notifier Logo"; content: "Computer failed to receive Notifier Logo"; content: "event"; parse_src_ip: 1; program: 1|bit9|carbonblack; classtype: system-event; sid: 5002938; rev:3;)

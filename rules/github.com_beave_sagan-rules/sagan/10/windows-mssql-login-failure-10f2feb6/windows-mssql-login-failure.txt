@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-MSSQL] Login Failure"; event_id: 18456; default_proto: tcp; default_dst_port: $MSSQL_PORT; classtype: unsuccessful-user; program: MSSQL*|Application; reference: url,wiki.quadrantsec.com/bin/view/Main/5001640; sid: 5001640; rev:7;)

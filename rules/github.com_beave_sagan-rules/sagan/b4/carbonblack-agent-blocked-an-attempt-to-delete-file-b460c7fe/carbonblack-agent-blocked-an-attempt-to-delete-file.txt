@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] Agent blocked an attempt to delete file"; content: "Agent blocked an attempt to delete"; content: "because of tamper protection"; parse_src_ip: 1; program: 1|bit9|carbonblack; classtype: system-event; sid: 5002929; rev:3;)

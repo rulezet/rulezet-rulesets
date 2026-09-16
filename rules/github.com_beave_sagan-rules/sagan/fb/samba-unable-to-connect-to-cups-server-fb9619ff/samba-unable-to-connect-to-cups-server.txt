@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SAMBA] Unable to connect to CUPS server"; content: "Unable to connect to CUPS server"; classtype: program-error; program: smbd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000148; sid: 5000148; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[VSFTPD] Login failed"; content: "FAIL LOGIN"; default_proto:tcp; default_dst_port: $FTP_PORT; classtype: unsuccessful-user; program: vsftpd; reference: url,wiki.quadrantsec.com/bin/view/Main/5001530; sid: 5001530; rev:3;)

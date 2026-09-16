@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_LOCKED"; content: "event|5f|type|5f|id|22 3a| 19"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004746; sid: 5004746; rev: 1;)

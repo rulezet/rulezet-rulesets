@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CARBONBLACK] File was identified by Software Reputation Service as a potential risk"; content: "Software Reputation Service as a potential risk"; parse_src_ip: 1; program: 1|bit9|carbonblack; classtype: system-event; sid: 5002933; rev:3;)

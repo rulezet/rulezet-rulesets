@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[TELNET] Remote host established a telnet connection"; content: "connection from"; default_proto: tcp; default_dst_port: $TELNET_PORT; classtype: not-suspicious; program: telnetd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000244; sid: 5000244; rev:3;)

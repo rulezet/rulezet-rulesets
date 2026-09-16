@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] PHP File Upload GLOBAL Variable Overwrite"; content: "SID: 1077 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: tcp; default_dst_port: $HTTP_PORT; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6101077; sid: 6101077; rev: 5;)

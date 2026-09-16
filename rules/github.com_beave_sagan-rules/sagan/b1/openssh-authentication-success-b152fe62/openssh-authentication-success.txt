@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[OPENSSH] Authentication success"; pcre: "/accepted|authenticated/i"; default_proto: tcp; default_dst_port: $SSH_PORT; classtype: successful-user; normalize; program: sshd; reference: url,wiki.quadrantsec.com/bin/view/Main/5000075; sid: 5000075; rev:5;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] DIRECTORY_SYNC_RUN_ID"; content: "event|5f|type|5f|id|22 3a| 117"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004421; sid: 5004421; rev: 1;)

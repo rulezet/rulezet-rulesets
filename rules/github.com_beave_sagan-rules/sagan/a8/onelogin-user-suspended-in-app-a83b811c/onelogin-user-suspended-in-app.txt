@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] USER_SUSPENDED_IN_APP"; content: "event|5f|type|5f|id|22 3a| 53"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004368; sid: 5004368; rev: 1;)
