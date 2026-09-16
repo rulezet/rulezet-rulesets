@@ -1,0 +1,19 @@
+{
+  "uuid": "99ddbe34-58fc-4f6f-a707-eb2d3f854355",
+  "title": "Potential F5 Config or Backup File Download",
+  "format": "sigma",
+  "author": "Alexandre",
+  "license": "0BSD",
+  "license_verified": true,
+  "description": "Detects large HTTP responses containing F5 config, backup, or UCS file names.",
+  "source": "Alexandre Dulaunoy",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2025-10-16",
+  "last_modified": "2025-10-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/122586"
+}

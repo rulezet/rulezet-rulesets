@@ -1,0 +1,1 @@
+alert udp $HOME_NET any -> $EXTERNAL_NET 8247 (msg:"ET P2P Octoshape P2P streaming media"; content:"POST / HTTP/1."; depth:64; content:"Oshtcp-streamtype|3a|"; threshold: type limit, track by_src, count 1, seconds 600; classtype:policy-violation; sid:2010008; rev:4; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

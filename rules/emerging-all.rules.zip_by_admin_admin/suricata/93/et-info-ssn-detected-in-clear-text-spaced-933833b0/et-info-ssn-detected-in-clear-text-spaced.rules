@@ -1,0 +1,1 @@
+alert ip any any -> any any (msg:"ET INFO SSN Detected in Clear Text (spaced)"; pcre:"/ ([0-6]\d\d|7[0-256]\d|73[0-3]|77[0-2]) \d{2} \d{4} /"; classtype:policy-violation; sid:2001384; rev:13; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

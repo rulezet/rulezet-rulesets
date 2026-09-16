@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET DELETED Fake AV Related CSS Download"; flow:established,from_server; content:"#hello_nod32_guys_how_u_doing"; nocase; classtype:trojan-activity; sid:2011670; rev:3; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

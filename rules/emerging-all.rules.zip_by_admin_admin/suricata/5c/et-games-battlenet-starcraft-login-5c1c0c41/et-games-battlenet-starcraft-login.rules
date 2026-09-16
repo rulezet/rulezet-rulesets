@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 6112 (msg:"ET GAMES Battle.net Starcraft login"; flow:established,to_server; content:"|FF 50|"; depth:2; content:"RATS"; offset:12; depth:12; classtype:policy-violation; sid:2002101; rev:6; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ET INFO MSI (microsoft installer file) download"; flow:established; content:"|D0 CF 11 E0 A1 B1 1A E1|"; classtype:bad-unknown; sid:2001115; rev:7; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

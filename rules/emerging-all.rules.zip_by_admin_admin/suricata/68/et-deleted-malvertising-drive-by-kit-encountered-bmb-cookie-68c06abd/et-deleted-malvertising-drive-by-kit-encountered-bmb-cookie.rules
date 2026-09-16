@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET DELETED Malvertising drive by kit encountered - bmb cookie"; flow:established,to_client; content:"HTTP/1"; depth:6; content:"Set-Cookie|3a| bmb="; nocase; classtype:bad-unknown; sid:2011222; rev:3; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

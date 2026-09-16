@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED Sality Virus User Agent Detected (SPM_ID=)"; flow:established,to_server; content:"User-Agent|3a| SPM_ID="; nocase; classtype:trojan-activity; sid:2003651; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

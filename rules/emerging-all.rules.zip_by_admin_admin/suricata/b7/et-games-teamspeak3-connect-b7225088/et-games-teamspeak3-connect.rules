@@ -1,0 +1,1 @@
+alert udp $HOME_NET 1024: -> $EXTERNAL_NET 1024: (msg:"ET GAMES TeamSpeak3 Connect"; content:"|00 00 00 00 02 9d 74 8b 45 aa 7b ef b9 9e fe ad 08 19 ba cf 41 e0 16 a2|"; offset:8; depth:24; reference:url,teamspeak.com; classtype:policy-violation; sid:2011733; rev:3; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

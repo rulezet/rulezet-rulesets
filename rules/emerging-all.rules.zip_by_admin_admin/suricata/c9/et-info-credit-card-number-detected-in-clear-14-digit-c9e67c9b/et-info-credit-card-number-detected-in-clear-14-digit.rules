@@ -1,0 +1,1 @@
+alert ip any any -> any any (msg:"ET INFO Credit Card Number Detected in Clear (14 digit)"; pcre:"/ (30[0-5]\d|36\d{2}|38\d{2})\d{10} /"; reference:url,www.beachnet.com/~hstiles/cardtype.html; classtype:policy-violation; sid:2001381; rev:12; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

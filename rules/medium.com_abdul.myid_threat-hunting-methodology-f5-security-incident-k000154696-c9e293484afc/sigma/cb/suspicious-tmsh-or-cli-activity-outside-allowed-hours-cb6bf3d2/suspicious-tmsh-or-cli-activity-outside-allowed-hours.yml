@@ -1,0 +1,19 @@
+title: Suspicious TMSH or CLI Activity Outside Allowed Hours
+id: f5-tmsh-anomaly-2025
+description: Detects tmsh or tmm process executions outside scheduled admin periods.
+author: abdulmyid@gmail.com
+status: experimental
+logsource:
+  product: linux
+  service: sysmon
+detection:
+  selection:
+    process_name|contains:
+      - 'tmsh'
+      - 'tmm'
+  filter_allowed_hours:
+    event_hour|between: [8, 18]
+  condition: selection
+level: medium
+falsepositives:
+  - Emergency maintenance. Verify against change management logs.

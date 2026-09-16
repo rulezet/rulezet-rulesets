@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 3724 (msg:"ET GAMES World of Warcraft connection"; flow:established,to_server; content:"|00|"; depth:1; content:"|25 00|WoW|00|"; distance:1; within:7; classtype:policy-violation; sid:2002138; rev:9; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

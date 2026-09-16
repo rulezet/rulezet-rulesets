@@ -1,0 +1,1 @@
+alert udp $EXTERNAL_NET any -> $HOME_NET 5060 (msg:"ET VOIP REGISTER Message Flood UDP"; content:"REGISTER"; depth:8; threshold: type both , track by_src, count 100, seconds 60; classtype:attempted-dos; sid:2009699; rev:1; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

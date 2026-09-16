@@ -1,0 +1,26 @@
+title: Suspicious F5 iControl REST Access from Non-Management IP
+id: f5-icontrol-rest-access-2025
+description: Detects HTTP access to /mgmt or /mgmt/tm endpoints from unauthorized IPs.
+author: abdulmyid@gmail.com
+status: experimental
+logsource:
+  product: webproxy
+  service: http
+detection:
+  selection:
+    url|contains:
+      - '/mgmt'
+      - '/mgmt/tm'
+    http.method|in:
+      - POST
+      - PUT
+      - DELETE
+  filter:
+    src_ip:
+      - '10.0.0.0/8'
+      - '172.16.0.0/12'
+      - '192.168.0.0/16'
+  condition: selection and not filter
+level: high
+falsepositives:
+  - Legitimate automation from whitelisted orchestrators.

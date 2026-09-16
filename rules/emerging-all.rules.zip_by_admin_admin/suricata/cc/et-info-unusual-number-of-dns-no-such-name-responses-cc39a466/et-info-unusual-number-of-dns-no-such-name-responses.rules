@@ -1,0 +1,1 @@
+alert udp any 53 -> ![$DNS_SERVERS,$SMTP_SERVERS] any (msg:"ET INFO Unusual number of DNS No Such Name Responses"; content:"|83|"; offset:3; depth:1; threshold: type both , track by_dst, count 50, seconds 300; classtype:bad-unknown; sid:2003195; rev:5; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

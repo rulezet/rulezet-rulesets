@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 1024: (msg:"ET DELETED Juicopotomous to Controller"; flow:established,to_server; dsize:1; content:"|7c|"; flowbits:set,ET.unknown.setup; flowbits:noalert; classtype:trojan-activity; sid:2008245; rev:5; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

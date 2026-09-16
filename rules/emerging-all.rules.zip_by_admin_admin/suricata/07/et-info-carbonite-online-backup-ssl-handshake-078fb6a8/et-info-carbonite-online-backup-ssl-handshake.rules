@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> 38.97.75.0/24 443 (msg:"ET INFO Carbonite Online Backup SSL Handshake"; flow:established,to_server; content:"CarboniteInc"; offset:56; classtype:policy-violation; sid:2009798; rev:2; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

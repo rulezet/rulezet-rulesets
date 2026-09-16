@@ -1,0 +1,1 @@
+alert udp $HOME_NET any -> $EXTERNAL_NET 3544 (msg:"ET INFO Microsoft TEREDO IPv6 tunneling"; content:"|FE 80 00 00 00 00 00 00 80 00|TEREDO"; offset:21; depth:16; classtype:misc-activity; sid:2003155; rev:4; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

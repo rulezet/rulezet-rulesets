@@ -1,0 +1,22 @@
+title: Potential F5 Config or Backup File Download
+id: f5-config-download-2025
+description: Detects large HTTP responses containing F5 config, backup, or UCS file names.
+author: abdulmyid@gmail.com
+status: experimental
+logsource:
+  product: webproxy
+  service: http
+detection:
+  selection:
+    url|contains:
+      - 'backup'
+      - 'config'
+      - '.ucs'
+      - '.tar'
+      - '.zip'
+      - '.tgz'
+    response_size|gte: 50000
+  condition: selection
+level: high
+falsepositives:
+  - Scheduled backups or authorized maintenance jobs.

@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"ET INFO ZIPPED EXE in transit"; flow:established; content:"|50 4B 03 04|"; content:"|00|"; content:".exe"; nocase; classtype:not-suspicious; sid:2001404; rev:5; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 20000 (msg:"ET INFO Club World Casino Client in Use"; flow:established,to_server; dsize:23; content:"Club World Casinos"; classtype:policy-violation; sid:2007754; rev:4; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

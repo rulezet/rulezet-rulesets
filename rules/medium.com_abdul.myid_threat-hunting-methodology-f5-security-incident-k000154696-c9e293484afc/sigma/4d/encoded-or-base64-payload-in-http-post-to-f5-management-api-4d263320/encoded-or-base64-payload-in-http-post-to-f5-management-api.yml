@@ -1,0 +1,19 @@
+title: Encoded or Base64 Payload in HTTP POST to F5 Management API
+id: f5-base64-upload-2025
+description: Detects long base64 strings in HTTP POST body to management or shared endpoints.
+author: abdulmyid@gmail.com
+status: experimental
+logsource:
+  product: webproxy
+  service: http
+detection:
+  selection:
+    http.method: POST
+    url|contains:
+      - '/mgmt'
+      - '/shared'
+    http.request.body|contains_regexp: '[A-Za-z0-9+/]{200,}={0,2}'
+  condition: selection
+level: medium
+falsepositives:
+  - Legitimate encoded payloads (token exchanges, APIs).

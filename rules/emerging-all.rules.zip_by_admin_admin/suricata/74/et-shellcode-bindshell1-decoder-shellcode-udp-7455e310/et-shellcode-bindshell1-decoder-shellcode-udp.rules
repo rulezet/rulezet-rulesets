@@ -1,0 +1,1 @@
+alert udp any any -> any any (msg:"ET SHELLCODE Bindshell1 Decoder Shellcode (UDP)"; content:"|58 99 89 E1 CD 80 96 43 52 66 68|"; content:"|66 53 89 E1 6A 66 58 50 51 56|"; distance:0; classtype:shellcode-detect; sid:2009266; rev:2; metadata:created_at 2010_07_30, confidence High, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

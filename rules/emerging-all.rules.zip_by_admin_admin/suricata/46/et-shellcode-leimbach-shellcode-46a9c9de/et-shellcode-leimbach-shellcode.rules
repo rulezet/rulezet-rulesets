@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"ET SHELLCODE Leimbach Shellcode"; flow:established; content:"|5b 31 c9 b1|"; content:"|80 73|"; distance:0; content:"|43 e2|"; distance:0; classtype:shellcode-detect; sid:2009257; rev:3; metadata:created_at 2010_07_30, confidence High, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

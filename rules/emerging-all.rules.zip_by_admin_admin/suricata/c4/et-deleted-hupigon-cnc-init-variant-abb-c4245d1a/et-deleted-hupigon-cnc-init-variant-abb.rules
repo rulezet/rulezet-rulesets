@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 1024: (msg:"ET DELETED Hupigon CnC init (variant abb)"; flow:established,to_server; dsize:4; flowbits:isnotset,ET.hupa.init; flowbits:noalert; content:"|00 00 00 00|"; flowbits:set,ET.hupa.init; classtype:command-and-control; sid:2008041; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED Proxy.Win32.Wopla.ag Check-In"; flow:established,to_server; dsize:12; content:"|0a 00 00 00 00 00 00 00 00 00 00 00|"; classtype:trojan-activity; sid:2007603; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

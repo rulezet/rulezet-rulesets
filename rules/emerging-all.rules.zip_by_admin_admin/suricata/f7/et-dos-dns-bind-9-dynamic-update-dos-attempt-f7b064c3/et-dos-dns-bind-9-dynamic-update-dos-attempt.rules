@@ -1,0 +1,1 @@
+alert udp any any -> any 53 (msg:"ET DOS DNS BIND 9 Dynamic Update DoS attempt"; byte_test:1,&,40,2; byte_test:1,>,0,5; byte_test:1,>,0,1; content:"|00 00 06|"; offset:8; content:"|c0 0c 00 ff|"; distance:2; reference:cve,2009-0696; classtype:attempted-dos; sid:2009701; rev:2; metadata:created_at 2010_07_30, confidence Medium, signature_severity Major, updated_at 2024_01_03;)

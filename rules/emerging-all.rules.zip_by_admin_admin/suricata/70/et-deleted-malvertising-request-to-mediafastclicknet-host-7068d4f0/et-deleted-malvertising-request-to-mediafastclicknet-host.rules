@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED MALVERTISING request to media.fastclick.net.* host"; flow:established,to_server; content:"Host|3a| media.fastclick.net."; http_header; classtype:bad-unknown; sid:2011302; rev:3; metadata:created_at 2010_09_28, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 25 (msg:"ET HUNTING Suspicious SMTP handshake outbound"; flow:established,to_server; content:"001 RUTHERE"; depth:11; classtype:unknown; sid:2008562; rev:3; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

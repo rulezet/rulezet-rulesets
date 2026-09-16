@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> any !$HTTP_PORTS (msg:"ET DELETED PCMesh Anonymous Proxy client connect"; flow: from_client,established; content:"http|3a|//www.pcmesh.com|3a|80/ip-check.cgi"; depth:37; offset:4; classtype:policy-violation; sid:2003040; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

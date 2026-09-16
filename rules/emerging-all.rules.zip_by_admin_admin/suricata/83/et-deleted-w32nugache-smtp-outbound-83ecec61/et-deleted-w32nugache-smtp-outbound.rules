@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 25 (msg:"ET DELETED W32.Nugache SMTP Outbound"; flow:to_server,established; content:"RE9TIG1v"; content:"GUuDQ0KJ"; distance:1; within:9; reference:url,www.symantec.com/avcenter/venc/data/w32.nugache.a@mm.html; classtype:trojan-activity; sid:2002895; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

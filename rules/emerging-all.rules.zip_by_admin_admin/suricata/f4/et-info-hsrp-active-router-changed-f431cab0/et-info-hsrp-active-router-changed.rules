@@ -1,0 +1,1 @@
+alert udp any 1985 -> 224.0.0.2 1985 (msg:"ET INFO HSRP Active Router Changed"; content:"|00 04|"; depth:3; reference:url,packetlife.net/blog/2008/oct/27/hijacking-hsrp/; classtype:bad-unknown; sid:2009243; rev:2; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

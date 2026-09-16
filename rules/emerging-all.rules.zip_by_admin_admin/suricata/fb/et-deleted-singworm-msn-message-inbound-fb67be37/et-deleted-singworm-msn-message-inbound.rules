@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 1863 -> $HOME_NET any (msg:"ET DELETED Singworm MSN message Inbound"; flow:established; content:"Here are the new smiles for MSN, they are incredible!"; classtype:trojan-activity; sid:2007606; rev:3; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

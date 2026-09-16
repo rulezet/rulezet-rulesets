@@ -1,0 +1,1 @@
+alert udp $HOME_NET 1024: -> $EXTERNAL_NET 1024: (msg:"ET GAMES TeamSpeak2 Standard/Login End"; content:"|f0 be 08 00|"; depth:4; reference:url,teamspeak.com; classtype:policy-violation; sid:2011741; rev:3; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

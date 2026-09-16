@@ -1,0 +1,1 @@
+alert ip any any -> any any (msg:"ET INFO Credit Card Number Detected in Clear (15 digit spaced)"; pcre:"/ (3[4|7]\d{2}|2014|2149|2131|1800) \d{4} \d{4} \d{3} /"; reference:url,www.beachnet.com/~hstiles/cardtype.html; classtype:policy-violation; sid:2001379; rev:12; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)
