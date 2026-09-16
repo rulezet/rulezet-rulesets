@@ -1,0 +1,9 @@
+rule Trojan_BAT_AgentTesla_IG_MTB{
+	meta:
+		description = "Trojan:BAT/AgentTesla.IG!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0c 00 0c 00 03 00 00 "
+		
+	strings :
+		$a_02_0 = {38 88 02 00 00 [0-40] 38 ?? ?? ?? 00 02 7b ?? ?? ?? 04 02 7b ?? ?? ?? 04 02 7b ?? ?? ?? 04 9e 38 ?? ?? ?? 00 02 7b ?? ?? ?? 04 02 7b ?? ?? ?? 04 02 7b ?? ?? ?? 04 02 7b ?? ?? ?? 04 94 9e 38 } 		$a_80_1 = {49 6e 76 6f 6b 65 4d 65 6d 62 65 72 } 		$a_80_2 = {43 6c 61 73 73 4c 69 62 72 61 72 79 } 	condition:
+		((#a_02_0  & 1)*10+(#a_80_1  & 1)*1+(#a_80_2  & 1)*1) >=12
+ 
+}
