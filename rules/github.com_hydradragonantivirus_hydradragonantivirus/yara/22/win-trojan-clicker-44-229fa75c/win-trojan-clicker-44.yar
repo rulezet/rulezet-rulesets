@@ -1,0 +1,11 @@
+rule Win_Trojan_Clicker_44
+{
+strings:
+	$a0 = { 6e6765723a20737079776172 }
+
+	$a1 = { 6f6e6c6f61643d22737461727428293b223e3c696672616d65207372633d22687474703a2f2f }
+
+
+condition:
+	$a0 and $a1
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Lineage_368
+{
+strings:
+	$a0 = { 04f87adbf7913e983775b0bb49fb9e04415cb268ed4df120bb5a0b55fb0c5b65acb5e36b2bb55ee79fb4d1dc35977e9eabe6fbbfd7e3e00ddf34bba756a9f1293ba886ce874675d6cc86f02db25c1d57fb2befec3f9ef8235fa9ea28402a010ba53658d815570ce843228dbcf09f4a605380a3b5f5f3b15c277a4877cb34f598f619ed802faa08 }
+
+
+condition:
+	$a0
+}

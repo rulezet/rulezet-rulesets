@@ -1,0 +1,9 @@
+rule Win_Trojan_Killav_103
+{
+strings:
+	$a0 = { 6808644000e862ffffff8b1d7c4040008b35804040008b2da840400083c40485c07419506a006801041000ffd38bf86a0157ffd66a0057ffd657ffd5 }
+
+
+condition:
+	$a0
+}
