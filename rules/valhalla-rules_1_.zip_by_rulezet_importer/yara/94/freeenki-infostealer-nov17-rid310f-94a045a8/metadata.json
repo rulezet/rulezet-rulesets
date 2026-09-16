@@ -1,0 +1,22 @@
+{
+  "uuid": "94a045a8-4404-4b39-a2f6-9259519e139f",
+  "title": "Freeenki_Infostealer_Nov17_RID310F",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects Freenki infostealer malware",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230025"
+}

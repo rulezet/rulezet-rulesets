@@ -1,0 +1,22 @@
+{
+  "uuid": "6e7d2743-1d6c-4b83-ae37-afeaefc2a784",
+  "title": "SeDLL_Javascript_Decryptor_RID3136",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects SeDll - DLL is used for decrypting and executing another JavaScript backdoor such as Orz",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1218.010"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230053"
+}

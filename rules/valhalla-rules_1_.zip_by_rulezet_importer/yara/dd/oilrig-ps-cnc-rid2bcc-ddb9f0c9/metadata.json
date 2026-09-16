@@ -1,0 +1,22 @@
+{
+  "uuid": "ddb9f0c9-39dd-47be-8196-70a7a86e52df",
+  "title": "Oilrig_PS_CnC_RID2BCC",
+  "format": "yara",
+  "author": "Markus Neis",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Powershell CnC using DNS queries",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"OilRig - G0049\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229925"
+}

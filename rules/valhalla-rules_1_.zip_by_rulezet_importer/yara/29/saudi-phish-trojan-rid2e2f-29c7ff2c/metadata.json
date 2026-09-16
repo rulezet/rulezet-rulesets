@@ -1,0 +1,23 @@
+{
+  "uuid": "29c7ff2c-1cb6-498b-b4fe-b049dd8c2261",
+  "title": "Saudi_Phish_Trojan_RID2E2F",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects a trojan used in Saudi Aramco Phishing",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\""
+  ],
+  "attack_techniques": [
+    "T1203",
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230065"
+}

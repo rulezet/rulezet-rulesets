@@ -1,0 +1,23 @@
+{
+  "uuid": "80b32b34-96cf-4095-b20e-889a25f43c38",
+  "title": "SUSP_RANSOM_WannaCry_Gen_May17_RID3174",
+  "format": "yara",
+  "author": "Florian Roth (based on rule by US CERT)",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects WannaCry ransomware indicators",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"WannaCry\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230244"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "44d8ece0-003d-4e55-b1de-b49a7a06bfa6",
+  "title": "PowerShell_Suite_Eidolon_RID30A8",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects PowerShell Suite Eidolon script - file Start-Eidolon.ps1",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230004"
+}

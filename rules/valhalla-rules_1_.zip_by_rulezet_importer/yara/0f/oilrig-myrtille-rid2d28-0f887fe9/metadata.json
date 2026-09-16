@@ -1,0 +1,22 @@
+{
+  "uuid": "0f887fe9-a9b3-484f-bff4-655585120b52",
+  "title": "Oilrig_Myrtille_RID2D28",
+  "format": "yara",
+  "author": "Markus Neis",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects Oilrig Myrtille RDP Browser",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"OilRig - G0049\""
+  ],
+  "attack_techniques": [
+    "T1021.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229923"
+}

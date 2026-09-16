@@ -1,0 +1,23 @@
+{
+  "uuid": "2a6a717d-aeb8-4868-8882-0be699ac71d8",
+  "title": "Lazagne_PW_Dumper_RID2DA5",
+  "format": "yara",
+  "author": "Markus Neis, Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects Lazagne PW Dumper",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"IMPACKET\"",
+    "misp-galaxy:tool=\"Lazagne\""
+  ],
+  "attack_techniques": [
+    "T1003"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/229920"
+}

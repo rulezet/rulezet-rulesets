@@ -1,0 +1,21 @@
+{
+  "uuid": "04b11842-43e2-4f2e-8d10-63c1a82eebfa",
+  "title": "Webshell_FOPO_Obfuscation_APT_ON_Nov17_1_RID3580",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects malware from NK APT incident DE",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230030"
+}
