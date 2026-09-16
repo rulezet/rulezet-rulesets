@@ -1,0 +1,22 @@
+{
+  "uuid": "80e6d683-c109-4c77-9ebc-3fec6ca85c1e",
+  "title": "Worm_Win32_Agent_AB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Worm:Win32/Agent.AB,SIGNATURE_TYPE_PEHSTR,ffffff8d 00 ffffff8d 00 0a 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/314522"
+}

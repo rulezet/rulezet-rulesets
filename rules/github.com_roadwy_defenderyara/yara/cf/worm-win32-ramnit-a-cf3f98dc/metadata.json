@@ -1,0 +1,23 @@
+{
+  "uuid": "cf3f98dc-2a42-4bf1-a33f-d2ae7645aeda",
+  "title": "Worm_Win32_Ramnit_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Worm:Win32/Ramnit.A,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:banker=\"Ramnit\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/314428"
+}

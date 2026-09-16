@@ -1,0 +1,22 @@
+{
+  "uuid": "0af5b49c-55bb-4bee-b2c5-58e26cb9ede4",
+  "title": "Worm_Win32_Licu",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Worm:Win32/Licu,SIGNATURE_TYPE_PEHSTR_EXT,1e 00 1c 00 21 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/314831"
+}

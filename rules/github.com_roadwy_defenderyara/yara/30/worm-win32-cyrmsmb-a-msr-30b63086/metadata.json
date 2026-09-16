@@ -1,0 +1,22 @@
+{
+  "uuid": "30b63086-92c9-455f-9497-d5373cda3613",
+  "title": "Worm_Win32_Cyrmsmb_A_MSR",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Worm:Win32/Cyrmsmb.A!MSR,SIGNATURE_TYPE_PEHSTR,02 00 02 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/314556"
+}

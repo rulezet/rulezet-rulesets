@@ -1,0 +1,9 @@
+rule Worm_Win32_Bainoc_B{
+	meta:
+		description = "Worm:Win32/Bainoc.B,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {8a 45 f8 04 62 e8 ?? ?? ?? ?? 88 45 f7 8d 45 d8 8a 55 f7 e8 ?? ?? ?? ?? 8d 45 d8 ba ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 45 d8 e8 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8b d8 80 fb 02 74 09 80 fb 03 0f 85 } 		$a_01_1 = {49 6e 66 65 63 74 20 50 65 6e 44 72 69 76 65 72 3a } 	condition:
+		((#a_03_0  & 1)*1+(#a_01_1  & 1)*1) >=2
+ 
+}
