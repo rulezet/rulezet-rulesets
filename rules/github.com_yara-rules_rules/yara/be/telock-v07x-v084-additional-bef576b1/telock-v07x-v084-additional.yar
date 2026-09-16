@@ -1,0 +1,9 @@
+import "pe"
+rule tElock_v07x_v084_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 83 CD FF 31 DB 5E 8D BE FA ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 81 C6 B3 01 ?? ?? EB 0A ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 }
+    condition:
+        $a at pe.entry_point
+
+}
