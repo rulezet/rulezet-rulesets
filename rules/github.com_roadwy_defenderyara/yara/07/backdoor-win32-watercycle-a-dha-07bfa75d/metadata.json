@@ -1,0 +1,22 @@
+{
+  "uuid": "07bfa75d-019a-479b-b85a-1b6f188ff39f",
+  "title": "Backdoor_Win32_WaterCycle_A_dha",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/WaterCycle.A!dha,SIGNATURE_TYPE_PEHSTR_EXT,07 00 07 00 0b 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/324079"
+}

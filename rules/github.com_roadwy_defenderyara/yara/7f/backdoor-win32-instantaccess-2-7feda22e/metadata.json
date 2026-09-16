@@ -1,0 +1,22 @@
+{
+  "uuid": "7feda22e-5146-4d58-9005-7cad851d69c1",
+  "title": "Backdoor_Win32_InstantAccess_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/InstantAccess,SIGNATURE_TYPE_PEHSTR_EXT,0b 00 0b 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/324008"
+}

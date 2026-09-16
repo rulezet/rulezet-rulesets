@@ -1,0 +1,22 @@
+{
+  "uuid": "cf777f9b-c424-47b3-a401-ee9641e36dda",
+  "title": "Backdoor_Win32_Drixed_C",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/Drixed.C,SIGNATURE_TYPE_PEHSTR_EXT,0a 00 0a 00 1b 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/324291"
+}

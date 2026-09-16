@@ -1,0 +1,22 @@
+{
+  "uuid": "0d518151-8cc6-469e-9ea3-f3e20aa63ef1",
+  "title": "Backdoor_Win32_Delf_IM",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/Delf.IM,SIGNATURE_TYPE_PEHSTR,4a 00 49 00 0d 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/324129"
+}

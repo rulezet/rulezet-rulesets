@@ -1,0 +1,22 @@
+{
+  "uuid": "dbc671a4-ff3d-4251-9ce9-f4df9c004a2c",
+  "title": "Backdoor_Win32_Ceckno_I",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/Ceckno.I,SIGNATURE_TYPE_PEHSTR,22 00 18 00 0a 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/324295"
+}

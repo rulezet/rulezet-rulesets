@@ -1,0 +1,22 @@
+{
+  "uuid": "b0f50313-3825-47b0-a4d3-a1d1092d9336",
+  "title": "Backdoor_Win32_Remcos_GA_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Backdoor:Win32/Remcos.GA!MTB,SIGNATURE_TYPE_PEHSTR_EXT,11 00 11 00 10 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/324014"
+}
