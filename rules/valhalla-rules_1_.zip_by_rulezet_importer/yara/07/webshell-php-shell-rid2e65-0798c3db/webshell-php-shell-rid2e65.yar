@@ -1,0 +1,21 @@
+rule Webshell_php_shell_RID2E65 : DEMO SCRIPT T1505_003 WEBSHELL {
+   meta:
+      description = "Laudanum Injector Tools - file shell.php"
+      author = "Florian Roth"
+      reference = "http://laudanum.inguardians.com/"
+      date = "2015-06-22 11:12:41"
+      score = 75
+      customer = "demo"
+      license = "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/"
+      
+      tags = "DEMO, SCRIPT, T1505_003, WEBSHELL"
+      minimum_yara = "3.5.0"
+      
+   strings:
+      $s1 = "command_hist[current_line] = document.shell.command.value;" fullword ascii
+      $s2 = "if (e.keyCode == 38 && current_line < command_hist.length-1) {" fullword ascii
+      $s3 = "array_unshift($_SESSION['history'], $command);" fullword ascii
+      $s4 = "if (preg_match('/^[[:blank:]]*cd[[:blank:]]*$/', $command)) {" fullword ascii
+   condition: 
+      filesize < 40KB and all of them
+}

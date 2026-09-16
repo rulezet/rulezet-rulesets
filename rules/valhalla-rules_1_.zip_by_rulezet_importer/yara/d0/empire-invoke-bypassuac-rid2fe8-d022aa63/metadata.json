@@ -1,0 +1,22 @@
+{
+  "uuid": "d022aa63-a1cd-4f8f-b07f-3bdbdbb033d5",
+  "title": "Empire_Invoke_BypassUAC_RID2FE8",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Empire - a pure PowerShell post-exploitation agent - file Invoke-BypassUAC.ps1",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Empire\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230930"
+}

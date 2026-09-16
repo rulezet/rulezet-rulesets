@@ -1,0 +1,22 @@
+{
+  "uuid": "20111ca8-ab69-4962-92f5-e2c624311cdb",
+  "title": "Binary_Drop_Certutil_RID2F15",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Drop binary as base64 encoded cert trick",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1132.001",
+    "T1140"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230951"
+}

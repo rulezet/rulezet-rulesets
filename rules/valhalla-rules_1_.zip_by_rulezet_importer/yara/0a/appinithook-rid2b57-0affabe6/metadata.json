@@ -1,0 +1,25 @@
+{
+  "uuid": "0affabe6-2da9-4d23-8259-2b218b26531c",
+  "title": "AppInitHook_RID2B57",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "AppInitGlobalHooks-Mimikatz - Hide Mimikatz From Process Lists - file AppInitHook_RID2B57.dll",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1134.005",
+    "T1550.002",
+    "T1550.003"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230952"
+}
