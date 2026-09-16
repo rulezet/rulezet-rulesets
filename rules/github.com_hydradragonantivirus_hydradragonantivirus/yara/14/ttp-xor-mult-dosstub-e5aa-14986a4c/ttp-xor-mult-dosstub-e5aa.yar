@@ -1,0 +1,7 @@
+rule TTP_XOR_MULT_DOSStub_e5aa {
+  strings:
+    $key_e5aa = { b1 c2 [2] c5 da [2] 82 d8 [2] c5 c9 [2] 8b c5 [2] 87 cf [2] 90 c4 [2] 8b 8a [2] b6 }
+
+  condition:
+    any of them
+}
