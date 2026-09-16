@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Device updated from outside HOME_COUNTRY"; json_content: ".Workload", "AzureActiveDirectory"; json_content: ".Operation", "Update device."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004817; sid:5004817; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Fail to delete crypto map for peer"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+5-718079|%PIX[-]+5-718079/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000819; sid: 5000819; rev: 4;)

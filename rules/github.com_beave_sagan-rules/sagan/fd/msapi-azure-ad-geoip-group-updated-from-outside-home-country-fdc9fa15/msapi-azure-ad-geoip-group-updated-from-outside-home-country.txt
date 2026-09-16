@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Group updated from outside HOME_COUNTRY"; json_content: ".Workload", "AzureActiveDirectory"; json_content: ".Operation", "Update group."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004818; sid:5004818; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Create of secure tunnel failure"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+5-718048|%PIX[-]+5-718048/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000809; sid: 5000809; rev: 4;)

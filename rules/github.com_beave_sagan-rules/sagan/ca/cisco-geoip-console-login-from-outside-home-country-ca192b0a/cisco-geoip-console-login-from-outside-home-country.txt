@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] Console login from outside HOME_COUNTRY"; program: %SEC_LOGIN-5-LOGIN_SUCCESS; country_code: track by_src, isnot $HOME_COUNTRY; default_proto: tcp; default_dst_port: $SSH_PORT;  classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001869; sid: 5001869; rev: 2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] Three failed attempts to run sudo"; content: "3 incorrect password attempts"; classtype: unsuccessful-admin;program: sudo; reference: url,wiki.quadrantsec.com/bin/view/Main/5000132; sid: 5000132; rev:2;)

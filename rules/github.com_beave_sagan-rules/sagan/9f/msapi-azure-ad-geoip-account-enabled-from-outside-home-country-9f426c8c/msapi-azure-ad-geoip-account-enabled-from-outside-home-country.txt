@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] Account enabled from outside HOME_COUNTRY"; json_content: ".Workload", "AzureActiveDirectory"; json_content: ".Operation", "Enable account."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004809; sid:5004809; rev:1;)

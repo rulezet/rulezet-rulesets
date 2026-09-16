@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Socket open failure"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+5-718007|%PIX[-]+5-718007|%FWSM[-]+5-718007/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000802; sid: 5000802; rev: 5;)

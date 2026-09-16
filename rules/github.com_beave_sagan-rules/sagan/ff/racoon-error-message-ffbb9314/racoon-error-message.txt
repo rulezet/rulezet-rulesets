@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Error message"; content: "ERROR"; classtype: program-error; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000270; sid: 5000270; rev:2;)

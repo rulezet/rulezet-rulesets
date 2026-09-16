@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] Hard drive/RAID - FAILED abort on device"; content: "hpsa "; content: "FAILED abort on device"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002278; program: kernel; sid:5002278; rev:2;)

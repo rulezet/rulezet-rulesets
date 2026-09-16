@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] Login permitted from outside HOME_COUNTRY"; program: %ASA*-6-605005; country_code: track by_src, isnot $HOME_COUNTRY; default_proto: tcp; classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5001879; sid: 5001879; rev: 1;)

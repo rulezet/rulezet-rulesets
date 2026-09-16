@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Create peer failure, already at maximum of number of peers"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+5-718002|%PIX[-]+5-718002/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000800; sid: 5000800; rev: 4;)

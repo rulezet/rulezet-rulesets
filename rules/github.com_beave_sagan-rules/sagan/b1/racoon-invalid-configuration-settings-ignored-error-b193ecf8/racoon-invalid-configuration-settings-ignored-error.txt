@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - Invalid configuration settings [ignored error]"; content: "ERROR"; pcre: "/invalid attribute|rejected/i"; classtype: program-error; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000275; sid: 5000275; rev:2;)

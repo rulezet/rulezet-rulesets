@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Inbound socket select fail"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSMpcre: "/%ASA[-]+5-718060|%PIX[-]+5-718060|%FWSM[-]+5-718060/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000812; sid: 5000812; rev: 5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[POSTGRESQL] Database shutdown message"; pcre: "/terminating connection due|aborting any active transactions|shutting down/i"; default_proto: tcp; default_dst_port: 5432; classtype: not-suspicious; program: postgres; reference: url,wiki.quadrantsec.com/bin/view/Main/5000235; sid: 5000235; rev:2;)

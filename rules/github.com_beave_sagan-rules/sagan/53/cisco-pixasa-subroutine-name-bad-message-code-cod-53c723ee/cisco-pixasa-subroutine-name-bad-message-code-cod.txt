@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] subroutine name Bad message code Cod"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+7-715005|%PIX[-]+7-715005|%FWSM[-]+7-715005/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000869; sid: 5000869; rev: 5;)

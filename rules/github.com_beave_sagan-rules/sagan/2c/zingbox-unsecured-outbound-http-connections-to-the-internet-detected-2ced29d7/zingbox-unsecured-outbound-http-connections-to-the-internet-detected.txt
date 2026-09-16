@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Unsecured outbound HTTP connections to the Internet detected"; content: "Unsecured outbound HTTP connections to the Internet"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004313; sid:5004313; rev: 2;)

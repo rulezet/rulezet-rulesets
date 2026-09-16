@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Misc Attack"; program: snort; content: "Classification|3a| Misc Attack"; classtype: misc-attack; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001006; sid: 5001006; rev:5;)

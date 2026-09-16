@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-AMP] Cloud Recall Restore from Quarantine"; program: CISCO-AMP; content: "|22|event_type_id|22 3A|553648154"; parse_src_ip: 1; parse_dst_ip: 1; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5003890; sid:5003890; rev:1;)

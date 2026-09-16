@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Anonymous netbios-ssn login attempt detected"; content: "Anonymous netbios-ssn login attempt"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004305; sid:5004305; rev: 2;)

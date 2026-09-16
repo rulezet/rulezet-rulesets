@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RSYNC] Connection closed stats"; program: rsync|rsyncd; content: "sent"; content: "received"; content: "total size"; default_proto: tcp; default_dst_port: $RSYNC_PORT; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001053; sid: 5001053; rev:4;)

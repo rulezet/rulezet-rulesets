@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Queue send failure from ISR"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+5-718057|%PIX[-]+5-718057/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000811; sid: 5000811; rev: 4;)

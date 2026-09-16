@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Generic ICMP event"; program: snort; content: "Classification: Generic ICMP event"; classtype: icmp-event; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001007; sid: 5001007; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] AS400 logs detect via message"; dynamic_load: $RULE_PATH/as400.rules; meta_content: " %sagan% ",MPW1600,MPW1800,MVP1600,MPW2100,MAF1100,MPW1700,MAF0100,MAD2100;classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003931; sid:5003931; rev:1;)

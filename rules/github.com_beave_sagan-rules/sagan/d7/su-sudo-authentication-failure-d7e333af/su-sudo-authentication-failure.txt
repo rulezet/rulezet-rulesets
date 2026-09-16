@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[SU] SUDO authentication failure"; content: "authentication failure"; classtype: unsuccessful-admin; normalize; program: sudo; reference: url,wiki.quadrantsec.com/bin/view/Main/5001526; sid: 5001526; rev:3;)

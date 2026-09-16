@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Weak Basic Authentication over HTTP detected"; content: "Weak Basic Authentication over HTTP"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004315; sid:5004315; rev: 2;)

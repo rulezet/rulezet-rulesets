@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Notice message"; content: "NOTICE"; classtype: program-error; program: asterisk; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000178; sid:5000178; rev:3;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Authorization failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+6-610101|%PIX[-]+6-610101|%FWSM[-]+6-610101/"; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5000843; sid: 5000843; rev: 5;)

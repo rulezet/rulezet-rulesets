@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx Initial 401 authentication request"; content: "no user/password was provided for basic authentication"; classtype: unsuccessful-user; program: nginx; reference: url,wiki.quadrantsec.com/bin/view/Main/5000173; sid:5000173; rev:1;)

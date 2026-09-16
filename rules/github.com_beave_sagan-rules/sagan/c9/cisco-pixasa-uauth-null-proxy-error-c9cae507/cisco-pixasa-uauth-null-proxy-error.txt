@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Uauth null proxy error"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+7-109021|%PIX[-]+7-109021|%FWSM[-]+7-109021/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000859; sid: 5000859; rev: 5;)

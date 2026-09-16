@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-AMP] Failed to Delete From Quarantine"; program: CISCO-AMP; content: "|22|event_type_id|22 3A|2164260889"; parse_src_ip: 1; parse_dst_ip: 1; classtype: system-error; reference: url,wiki.quadrantsec.com/bin/view/Main/5003888; sid:5003888; rev:1;)

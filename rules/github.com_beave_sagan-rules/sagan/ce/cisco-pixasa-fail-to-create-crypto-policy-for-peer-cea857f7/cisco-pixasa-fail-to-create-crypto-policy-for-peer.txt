@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Fail to create crypto policy for peer"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+5-718080|%PIX[-]+5-718080/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000820; sid: 5000820; rev: 4;)

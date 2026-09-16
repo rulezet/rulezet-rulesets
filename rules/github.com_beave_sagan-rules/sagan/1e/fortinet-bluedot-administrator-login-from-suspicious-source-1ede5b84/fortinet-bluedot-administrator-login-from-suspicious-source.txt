@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET-BLUEDOT] Administrator Login from suspicious source"; content: "32001 type="; content: "logged in"; parse_src_ip: 1; classtype: successful-admin; bluedot: type ip_reputation, track by_src, none, Malicious,Tor,Honeypot,Proxy;  reference: url,wiki.quadrantsec.com/bin/view/Main/5002882; sid:5002882; rev:4;)

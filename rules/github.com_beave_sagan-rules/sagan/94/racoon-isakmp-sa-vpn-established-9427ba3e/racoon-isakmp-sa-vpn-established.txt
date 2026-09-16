@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RACOON] - ISAKMP-SA - VPN established"; content: "ISAKMP-SA established"; classtype: successful-user ; program: racoon; reference: url,wiki.quadrantsec.com/bin/view/Main/5000272; sid: 5000272; rev:2;)

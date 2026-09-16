@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-GEOIP] VPN login from outside HOME_COUNTRY"; program: %ASA*-6-716001|%ASA*-6-716038; country_code: track by_src, isnot $HOME_COUNTRY; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001950; sid: 5001950; rev: 3;)

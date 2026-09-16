@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] TCP access denied by ACL"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-710003/"; default_proto: tcp; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5001715; parse_src_ip: 1; parse_dst_ip: 2; parse_port; sid: 5001715; rev: 3;)

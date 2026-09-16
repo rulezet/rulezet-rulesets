@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] subroutine Q Send failure RetCode"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+7-715004|%PIX[-]+7-715004|%FWSM[-]+7-715004/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000868; sid: 5000868; rev: 5;)

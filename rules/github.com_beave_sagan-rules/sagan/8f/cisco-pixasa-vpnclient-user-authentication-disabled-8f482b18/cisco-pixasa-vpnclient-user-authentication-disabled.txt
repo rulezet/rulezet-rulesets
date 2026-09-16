@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] VPNClient User Authentication Disabled"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+6-611319|%PIX[-]+6-611319/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000847; sid: 5000847; rev: 4;)

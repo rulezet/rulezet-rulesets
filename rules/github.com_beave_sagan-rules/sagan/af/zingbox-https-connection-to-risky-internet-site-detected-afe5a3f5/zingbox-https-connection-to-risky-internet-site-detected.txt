@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] https connection to risky Internet site detected"; content: "https connection to risky Internet site detected"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004307; sid:5004307; rev: 2;)

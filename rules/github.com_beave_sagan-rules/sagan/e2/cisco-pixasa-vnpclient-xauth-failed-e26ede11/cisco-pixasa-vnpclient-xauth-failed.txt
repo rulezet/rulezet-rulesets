@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] VNPClient XAUTH Failed"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+6-611311|%PIX[-]+6-611311/"; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5000845; sid: 5000845; rev: 4;)

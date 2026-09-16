@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ORACLE] Authentication Failure"; content: "RETURNCODE|3a|[4] |22|1017|22|"; default_proto: tcp; default_dst_port: 1521; classtype: unsuccessful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5001717; sid:5001717; rev: 4;)

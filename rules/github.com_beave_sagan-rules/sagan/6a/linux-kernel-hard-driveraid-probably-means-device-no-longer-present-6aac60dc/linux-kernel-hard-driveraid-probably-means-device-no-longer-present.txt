@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] Hard drive/RAID - probably means device no longer present"; content: "hpsa "; content: "probably means device no longer present"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5002279; program: kernel; sid:5002279; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA-GEOIP] SASL Authentication from outside HOME_COUNTRY"; content: "sasl_method="; content: "sasl_username="; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003034; parse_src_ip: 1; program: zimbra; country_code: track by_src, isnot $HOME_COUNTRY; sid:5003034; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Cannot continue to run"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+5-718065|%PIX[-]+5-718065|%FWSM[-]+5-718065/"; classtype: hardware-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000814; sid: 5000814; rev: 6;)

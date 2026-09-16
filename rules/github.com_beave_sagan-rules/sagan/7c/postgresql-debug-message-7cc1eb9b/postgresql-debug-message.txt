@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[POSTGRESQL] Debug message"; content: "DEBUG"; default_proto: tcp; default_dst_port: 5432; classtype: program-error; program: postgres; reference: url,wiki.quadrantsec.com/bin/view/Main/5000232; sid: 5000232; rev:2;)

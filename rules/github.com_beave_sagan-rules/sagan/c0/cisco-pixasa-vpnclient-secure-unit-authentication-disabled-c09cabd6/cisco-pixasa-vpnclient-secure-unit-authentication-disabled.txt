@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] VPNClient Secure Unit Authentication Disabled"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+6-611317|%PIX[-]+6-611317/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000846; sid: 5000846; rev: 4;)

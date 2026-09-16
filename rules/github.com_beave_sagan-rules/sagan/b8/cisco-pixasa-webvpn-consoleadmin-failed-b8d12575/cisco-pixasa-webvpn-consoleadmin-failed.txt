@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] WebVPN console/admin failed"; append_program; content: "%ASA"; pcre: "/%ASA[-]+3-113021/"; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: unsuccessful-admin; reference: url, wiki.quadrantsec.com/bin/view/Main/5001963; sid: 5001963; rev: 3;)

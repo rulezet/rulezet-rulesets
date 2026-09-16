@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx Web authentication failed"; pcre: "/password mismatch, client|was not found in/i"; classtype: unsuccessful-user; program: nginx; reference: url,wiki.quadrantsec.com/bin/view/Main/5000174; sid:5000174; rev:1;)

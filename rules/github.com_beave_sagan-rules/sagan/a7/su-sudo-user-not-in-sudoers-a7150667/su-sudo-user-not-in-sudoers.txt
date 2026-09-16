@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] SUDO user NOT in sudoers"; content:"user NOT in sudoers"; classtype: unsuccessful-admin;program: sudo; reference: url,wiki.quadrantsec.com/bin/view/Main/5000024; sid: 5000024; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[POSTGRESQL] Fatal error message"; content: "FATAL"; default_proto: tcp; default_dst_port: 5432; classtype: program-error; program: postgres; reference: url,wiki.quadrantsec.com/bin/view/Main/5000231; sid: 5000231; rev:2;)

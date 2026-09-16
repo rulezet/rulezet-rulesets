@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] access to a potentially vulnerable web application"; program: snort; content: "Classification|3a| access to a potentially vulnerable web application"; classtype: web-application-activity; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001003; sid: 5001003; rev:5;)

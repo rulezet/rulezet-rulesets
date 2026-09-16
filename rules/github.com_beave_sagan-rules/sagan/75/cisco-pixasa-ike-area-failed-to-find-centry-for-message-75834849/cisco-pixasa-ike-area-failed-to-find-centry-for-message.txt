@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] IKE area failed to find centry for message"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+5-713010|%PIX[-]+5-713010/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000796; sid: 5000796; rev: 4;)

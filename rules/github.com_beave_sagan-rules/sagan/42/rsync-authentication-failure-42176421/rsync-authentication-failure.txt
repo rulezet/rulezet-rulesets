@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RSYNC] Authentication failure"; program: rsync|rsyncd; content: "auth failed on module"; parse_port; default_proto: tcp; default_dst_port: $RSYNC_PORT; classtype: attempted-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5001054; sid: 5001054; rev:5;)

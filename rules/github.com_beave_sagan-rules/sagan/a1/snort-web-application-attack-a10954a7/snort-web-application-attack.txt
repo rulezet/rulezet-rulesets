@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Web Application Attack"; program: snort; content: "Classification|3a| Web Application Attack"; classtype: web-application-activity; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001004; sid: 5001004; rev:5;)

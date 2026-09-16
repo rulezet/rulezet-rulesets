@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Detection of a non-standard protocol or event"; program: snort; content: "Classification|3a| Detection of a non-standard protocol or event"; classtype: non-standard-protocol; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001001; sid: 5001001; rev:5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Auth from inside to outside failed [all servers failed] on interface"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+6-109003|%PIX[-]+6-109003|%FWSM[-]+6-109002/"; classtype: unsuccessful-user; reference: url, wiki.quadrantsec.com/bin/view/Main/5000830; sid: 5000830; rev: 5;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx Incomplete client request"; content: "Software caused connection abort"; classtype: suspicious-traffic; program: nginx; reference: url,wiki.quadrantsec.com/bin/view/Main/5000172; sid:5000172; rev:1;)

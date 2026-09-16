@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] VPNClient Device Pass Thru Disabled"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+6-611321|%PIX[-]+6-611321/"; classtype: system-eventn; reference: url, wiki.quadrantsec.com/bin/view/Main/5000848; sid: 5000848; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Detection of a Network Scan"; program: snort; content: "Classification: Detection of a Network Scan"; classtype: network-scan; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5000999; sid: 5000999; rev:5;)

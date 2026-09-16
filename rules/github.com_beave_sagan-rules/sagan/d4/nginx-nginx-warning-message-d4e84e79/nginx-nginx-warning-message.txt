@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[NGINX] Nginx warning message"; pcre: "/^\S+ \S+ [warn]/i"; classtype: program-error; program: nginx; reference: url,wiki.quadrantsec.com/bin/view/Main/5000169; sid:5000169; rev:1;)

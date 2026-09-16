@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] IKE state_machine subtype FSM error history"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+7-715065|%PIX[-]+7-715065|%FWSM[-]+7-715065/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000875; sid: 5000875; rev: 5;)

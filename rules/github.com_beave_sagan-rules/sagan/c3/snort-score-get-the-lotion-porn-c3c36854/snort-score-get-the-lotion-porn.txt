@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] SCORE! Get the lotion! [Porn]"; program: snort; content: "Classification|3a| SCORE! Get the lotion!"; classtype: kickass-porn; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001008; sid: 5001008; rev:5;)

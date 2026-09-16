@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA-GEOIP] EWS Authentication from outside HOME_COUNTRY"; content: "is on local server"; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003036; parse_src_ip: 1; program: ews; country_code: track by_src, isnot $HOME_COUNTRY; sid:5003036; rev:2;)

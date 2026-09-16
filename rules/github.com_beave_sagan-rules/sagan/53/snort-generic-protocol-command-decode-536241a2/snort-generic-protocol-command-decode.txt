@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Generic Protocol Command Decode"; program: snort; content: "Classification|3a| Generic Protocol Command Decode"; classtype: protocol-command-decode; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001002; sid: 5001002; rev:5;)

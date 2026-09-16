@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-AMP] Microsoft Notepad compromise"; program: CISCO-AMP; content: "|22|event_type_id|22 3A|1107296276"; parse_src_ip: 1; parse_dst_ip: 1; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5003839; sid: 5003839; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[ZINGBOX] Unencrypted sensitive information in HTTP request detected"; content: "Unencrypted sensitive information in HTTP request"; parse_src_ip:1; classtype: suspicious-traffic; program: zws; reference: url,wiki.quadrantsec.com/bin/view/Main/5004311; sid:5004311; rev: 2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] su as 'root' suceeded"; content: "su root"; content: "succeeded for root"; classtype: successful-admin; program: su; reference: url,wiki.quadrantsec.com/bin/view/Main/5000409; normalize; sid: 5000409; rev:4;)

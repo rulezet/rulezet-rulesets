@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[RSYNC] Inbound rsync connection"; program: rsync|rsyncd; content: "rsync to"; content: "from"; default_proto: tcp; default_dst_port: $RSYNC_PORT; classtype: not-suspicious; reference: url, wiki.quadrantsec.com/bin/view/Main/5001052; sid: 5001052; rev:4;)

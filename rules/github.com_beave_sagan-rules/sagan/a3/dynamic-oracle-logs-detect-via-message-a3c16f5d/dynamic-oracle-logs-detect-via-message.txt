@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Oracle logs detect via message"; dynamic_load: $RULE_PATH/oracle.rules; content: "RETURNCODE|3a|["; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003935; sid:5003935; rev:1;)

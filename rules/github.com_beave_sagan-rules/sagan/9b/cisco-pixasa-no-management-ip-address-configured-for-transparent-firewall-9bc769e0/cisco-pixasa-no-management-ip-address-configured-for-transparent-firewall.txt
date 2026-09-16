@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] No management IP address configured for transparent firewall"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+6-322004|%PIX[-]+6-322004|%FWSM[-]+6-322004/"; classtype: network-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000840; sid: 5000840; rev: 5;)

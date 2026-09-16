@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Potential Corporate Privacy Violation"; program: snort; content: "Classification|3a| Potential Corporate Privacy Violation"; classtype: policy-violation; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001009; sid: 5001009; rev:5;)

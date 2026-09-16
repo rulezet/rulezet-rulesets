@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[POSTGRESQL] Database authentication success"; content: "connection authorized"; default_proto: tcp; default_dst_port: 5432; classtype: successful-user; program: postgres; reference: url,wiki.quadrantsec.com/bin/view/Main/5000233; sid: 5000233; rev:2;)

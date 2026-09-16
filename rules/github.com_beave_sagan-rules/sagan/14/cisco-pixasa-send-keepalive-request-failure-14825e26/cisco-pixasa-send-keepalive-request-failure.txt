@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Send KEEPALIVE request failure"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+7-718018|%PIX[-]+7-718018|%FWSM[-]+7-718018/"; classtype: system-error; reference: url, wiki.quadrantsec.com/bin/view/Main/5000877; sid: 5000877; rev: 5;)

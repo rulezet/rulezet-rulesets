@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[MSAPI-AZURE-AD-GEOIP] User deleted from outside HOME_COUNTRY"; json_content: ".Workload", "AzureActiveDirectory"; json_content: ".Operation", "Delete user."; country_code: track by_src, isnot $HOME_COUNTRY; classtype: successful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5004806; sid:5004806; rev:1;)

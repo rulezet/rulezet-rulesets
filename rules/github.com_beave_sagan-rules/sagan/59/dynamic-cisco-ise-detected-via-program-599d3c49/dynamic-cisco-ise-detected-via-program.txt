@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Cisco ISE detected via program"; program: CISE_Passed_Authentications|CISE_Failed_Attempts|CSCOacs_Failed_Attempts; dynamic_load: $RULE_PATH/cisco-ise.rules; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003785; sid:5003785; rev:1;)

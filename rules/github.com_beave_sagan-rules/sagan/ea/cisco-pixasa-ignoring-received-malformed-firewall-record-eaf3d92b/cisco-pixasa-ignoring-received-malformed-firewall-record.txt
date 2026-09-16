@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Ignoring received malformed firewall record"; append_program; meta_content: ""%sagan%", %ASA,%PIX,%FWSM; pcre: "/%ASA[-]+5-713144|%PIX[-]+5-713144|%FWSM[-]+5-713144/"; classtype: bad-unknown; reference: url, wiki.quadrantsec.com/bin/view/Main/5000798; sid: 5000798; rev: 5;)

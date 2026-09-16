@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] IPTABLES TCP"; content: "IN="; content: "OUT="; content: "PROTO=TCP"; default_proto: tcp; classtype: bad-unknown; reference: url,wiki.quadrantsec.com/bin/view/Main/5001104; normalize; program: kernel; sid: 5001104; rev:3;)

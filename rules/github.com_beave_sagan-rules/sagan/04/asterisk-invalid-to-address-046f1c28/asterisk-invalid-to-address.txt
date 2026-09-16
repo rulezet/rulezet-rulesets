@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ASTERISK] Invalid to address"; content: "Invalid to address"; classtype: unsuccessful-user; program: asterisk; reference: url,wiki.quadrantsec.com/bin/view/Main/5001065; sid: 5001065; rev:2;)

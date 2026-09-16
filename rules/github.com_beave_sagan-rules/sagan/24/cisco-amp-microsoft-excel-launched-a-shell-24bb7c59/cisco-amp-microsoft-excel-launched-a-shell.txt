@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-AMP] Microsoft Excel launched a shell"; program: CISCO-AMP; content: "|22|event_type_id|22 3A|1107296268"; parse_src_ip: 1; parse_dst_ip: 1; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/5003829; sid: 5003829; rev:1;)

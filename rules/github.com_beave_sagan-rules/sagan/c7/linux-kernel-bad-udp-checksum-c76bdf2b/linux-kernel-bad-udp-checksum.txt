@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] Bad UDP checksum"; program: UDP; content: "bad checksum.""; classtype: network-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5003115; sid:5003115; rev:1;)

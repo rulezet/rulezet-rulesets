@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[ZIMBRA] SASLAUTHD - Brute force [5/3]"; content: "auth failure"; content: "saslauthd"; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5003028; program: zimbra; after: track by_src, count 5, seconds 900; threshold: type suppress, track by_src, count 3, seconds 900; sid:5003028; rev:2;)

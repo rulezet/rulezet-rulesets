@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SU] Successful sudo to user ROOT executed"; content: "USER=root"; content: "COMMAND="; content:!"incorrect password attempts"; content:!"NOT in sudoers"; content: "su - root"; classtype: successful-admin; program: sudo; reference: url,wiki.quadrantsec.com/bin/view/Main/5003928; sid:5003928; rev:1;)

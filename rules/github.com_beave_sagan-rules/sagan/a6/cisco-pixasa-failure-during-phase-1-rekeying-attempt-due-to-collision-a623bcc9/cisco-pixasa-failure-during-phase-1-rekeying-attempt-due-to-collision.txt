@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] Failure during phase 1 rekeying attempt due to collision"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+5-713092|%PIX[-]+5-713092; parse_src_ip: 1/"; classtype: bad-unknown; reference: url, wiki.quadrantsec.com/bin/view/Main/5000797; sid: 5000797; rev: 5;)

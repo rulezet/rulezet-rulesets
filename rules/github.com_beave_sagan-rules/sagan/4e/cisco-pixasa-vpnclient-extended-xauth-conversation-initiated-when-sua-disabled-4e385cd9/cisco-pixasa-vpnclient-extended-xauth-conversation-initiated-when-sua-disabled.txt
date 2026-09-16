@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-PIXASA] VPNClient Extended XAUTH conversation initiated when SUA disabled"; append_program; meta_content: ""%sagan%", %ASA,%PIX; pcre: "/%ASA[-]+6-611322|%PIX[-]+6-611322/"; classtype: system-event; reference: url, wiki.quadrantsec.com/bin/view/Main/5000849; sid: 5000849; rev: 4;)

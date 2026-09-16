@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[LINUX-KERNEL] I/O error"; content: "I/O error, dev"; content:!"dev fd"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5001945; program: kernel; threshold: type suppress, track by_src, count 5, seconds 300; sid: 5001945; rev:3;)

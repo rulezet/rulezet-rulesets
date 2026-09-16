@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Watchguard logs detect via program"; dynamic_load: $RULE_PATH/watchguard.rules; program: WatchGuard*; classtype: dynamic-rules; reference: url,wiki.quadrantsec.com/bin/view/Main/5003934; sid:5003934; rev:1;)

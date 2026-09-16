@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[SNORT] Misc activity"; program: snort; content: "Classification|3a| Misc activity"; classtype: misc-activity; normalize; reference: url,wiki.quadrantsec.com/bin/view/Main/5001005; sid: 5001005; rev:5;)

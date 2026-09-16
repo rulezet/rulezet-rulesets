@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-AMP] Email Confirmation"; program: CISCO-AMP; content: "|22|event_type_id|22 3A|1003"; parse_src_ip: 1; parse_dst_ip: 1; classtype: system-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5003898; sid:5003898; rev:1;)

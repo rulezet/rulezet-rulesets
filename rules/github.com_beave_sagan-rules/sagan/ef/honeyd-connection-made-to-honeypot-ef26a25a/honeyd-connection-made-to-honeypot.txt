@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[HONEYD] Connection made to honeypot"; content: "tcp"; program: honeydconnect; parse_src_ip: 1; parse_dst_ip: 2; default_proto: tcp; classtype: suspicious-traffic; xbits: set,honeypot, track ip_src, expire 86400; reference: url,wiki.quadrantsec.com/bin/view/Main/5001846; sid: 5001846; rev:5;)
