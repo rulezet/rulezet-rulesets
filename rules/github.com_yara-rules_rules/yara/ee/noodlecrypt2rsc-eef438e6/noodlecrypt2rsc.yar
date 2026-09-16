@@ -1,0 +1,11 @@
+import "pe"
+rule Noodlecrypt2rsc
+{
+      meta:
+		author="malware-lu"
+strings:
+		$a0 = { EB 01 9A E8 76 00 00 00 }
+
+condition:
+		$a0 at pe.entry_point
+}

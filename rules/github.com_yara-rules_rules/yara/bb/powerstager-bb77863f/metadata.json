@@ -1,0 +1,21 @@
+{
+  "uuid": "bb77863f-0cf1-487d-a5c2-cd5a276fb68f",
+  "title": "Powerstager",
+  "format": "yara",
+  "author": "Jeff White - jwhite@paloaltonetworks.com @noottrak",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects PowerStager Windows executable, both x86 and x64",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/197298"
+}

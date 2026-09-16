@@ -1,0 +1,9 @@
+import "pe"
+rule Unknown_by_SMT_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 83 ?? ?? 57 EB }
+    condition:
+        $a at pe.entry_point
+
+}

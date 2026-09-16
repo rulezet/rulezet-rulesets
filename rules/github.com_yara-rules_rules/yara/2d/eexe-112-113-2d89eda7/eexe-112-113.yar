@@ -1,0 +1,9 @@
+import "pe"
+rule EEXE_112_113: PEiD
+{
+    strings:
+        $a = { B4 30 CD 21 3C 03 73 00 BA 1F 00 0E 1F B4 09 CD 21 B8 FF 4C CD 21 }
+    condition:
+        $a at pe.entry_point
+
+}
