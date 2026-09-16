@@ -1,0 +1,9 @@
+rule Trojan_Win32_Zenpak_RC_MTB_4{
+	meta:
+		description = "Trojan:Win32/Zenpak.RC!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {31 c2 40 89 1d ?? ?? ?? ?? 8d 05 ?? ?? ?? ?? 89 28 83 c0 02 31 3d ?? ?? ?? ?? ba 06 00 00 00 89 d0 48 89 f0 50 8f 05 ?? ?? ?? ?? e8 ?? ?? ff ff c3 } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}
