@@ -1,0 +1,19 @@
+{
+  "uuid": "f7345f67-369a-414a-ae15-3f99009da6d3",
+  "title": "PUA_VULN_Driver_Realtek_Rtkiowxsys_Realtekiodriver_32E1",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - rtkio.sys, rtkio64.sys, rtkiow8x64.sys, rtkiow10x64.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188360"
+}

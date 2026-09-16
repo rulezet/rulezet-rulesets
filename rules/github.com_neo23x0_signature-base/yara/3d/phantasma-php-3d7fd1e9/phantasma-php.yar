@@ -1,0 +1,14 @@
+rule PHANTASMA_php {
+	meta:
+		description = "Semi-Auto-generated  - file PHANTASMA.php.txt"
+		author = "Neo23x0 Yara BRG + customization by Stefan -dfate- Molls"
+		hash = "52779a27fa377ae404761a7ce76a5da7"
+		id = "21ff4cee-9cdc-57d1-9c43-e033fdb47de0"
+	strings:
+		$s0 = ">[*] Safemode Mode Run</DIV>"
+		$s1 = "$file1 - $file2 - <a href=$SCRIPT_NAME?$QUERY_STRING&see=$file>$file</a><br>"
+		$s2 = "[*] Spawning Shell"
+		$s3 = "Cha0s"
+	condition:
+		2 of them
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "91fe3591-9abe-429e-bb7a-55a0e4264328",
+  "title": "PUA_VULN_Driver_Getactechnologycorporation_Mtcbsvsys_Getacsystemserviceprovider_E6D1",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - GtcKmdfBs.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188327"
+}

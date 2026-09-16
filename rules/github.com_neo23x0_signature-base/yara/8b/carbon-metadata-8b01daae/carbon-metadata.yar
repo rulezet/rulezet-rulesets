@@ -1,0 +1,19 @@
+import "pe"
+rule carbon_metadata
+{
+  meta:
+    author      = "ESET Research"
+    date        = "2017-03-30"
+    description = "Turla Carbon malware"
+    reference   = "https://www.welivesecurity.com/2017/03/30/carbon-paper-peering-turlas-second-stage-backdoor/"
+    source = "https://github.com/eset/malware-ioc/"
+    contact = "github@eset.com"
+    license = "BSD 2-Clause"
+
+    id = "976b6a7d-00bf-5d0f-baf9-84fc5dbd21a2"
+   condition:
+      (pe.version_info["InternalName"] contains "SERVICE.EXE" or
+       pe.version_info["InternalName"] contains "MSIMGHLP.DLL" or
+       pe.version_info["InternalName"] contains "MSXIML.DLL")
+       and pe.version_info["CompanyName"] contains "Microsoft Corporation"
+}

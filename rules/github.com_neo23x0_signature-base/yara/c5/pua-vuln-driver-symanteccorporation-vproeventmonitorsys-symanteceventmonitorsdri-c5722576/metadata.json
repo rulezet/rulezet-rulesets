@@ -1,0 +1,19 @@
+{
+  "uuid": "c5722576-2803-49dc-992b-1c9f9b7f4ff6",
+  "title": "PUA_VULN_Driver_Symanteccorporation_Vproeventmonitorsys_Symanteceventmonitorsdriverdevelopmentedition_7877",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - VProEventMonitor.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188467"
+}

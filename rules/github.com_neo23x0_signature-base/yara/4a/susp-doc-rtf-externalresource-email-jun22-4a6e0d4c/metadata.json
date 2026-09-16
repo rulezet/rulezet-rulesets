@@ -1,0 +1,21 @@
+{
+  "uuid": "4a6e0d4c-c473-4a01-acc0-cebdbce69918",
+  "title": "SUSP_DOC_RTF_ExternalResource_EMAIL_Jun22",
+  "format": "yara",
+  "author": "Christian Burkard",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a suspicious pattern in RTF files which downloads external resources as seen in CVE-2022-30190 / Follina exploitation inside e-mail attachment",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2022-30190"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188780"
+}

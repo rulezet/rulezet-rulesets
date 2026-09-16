@@ -1,0 +1,17 @@
+rule WebShell_indexer_asp_php {
+	meta:
+		description = "PHP Webshells Github Archive - file indexer.asp.php.txt"
+		license = "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
+		author = "Florian Roth (Nextron Systems)"
+		hash = "e9a7aa5eb1fb228117dc85298c7d3ecd8e288a2d"
+		id = "d6e17429-1b58-5a1b-846d-f5dbfd74cf3a"
+	strings:
+		$s0 = "<meta http-equiv=\"Content-Language\" content=\"tr\">" fullword
+		$s1 = "<title>WwW.SaNaLTeRoR.OrG - inDEXER And ReaDer</title>" fullword
+		$s2 = "<form action=\"?Gonder\" method=\"post\">" fullword
+		$s4 = "<form action=\"?oku\" method=\"post\">" fullword
+		$s7 = "var message=\"SaNaLTeRoR - " fullword
+		$s8 = "nDexEr - Reader\"" fullword
+	condition:
+		3 of them
+}

@@ -1,0 +1,12 @@
+rule WebShell_cgi {
+	meta:
+		description = "Semi-Auto-generated  - file WebShell.cgi.txt"
+		author = "Neo23x0 Yara BRG + customization by Stefan -dfate- Molls"
+		hash = "bc486c2e00b5fc3e4e783557a2441e6f"
+		id = "b768bb72-64e8-545a-9123-3d5889b58a82"
+	strings:
+		$s0 = "WebShell.cgi"
+		$s2 = "<td><code class=\"entry-[% if entry.all_rights %]mine[% else"
+	condition:
+		all of them
+}

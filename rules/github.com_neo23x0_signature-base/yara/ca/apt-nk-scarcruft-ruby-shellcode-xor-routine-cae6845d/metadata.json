@@ -1,0 +1,20 @@
+{
+  "uuid": "cae6845d-e81c-4ac0-ade3-98c0e9366f6a",
+  "title": "APT_NK_Scarcruft_RUBY_Shellcode_XOR_Routine",
+  "format": "yara",
+  "author": "S2WLAB_TALON_JACK2",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Ruby ShellCode XOR routine used by ScarCruft APT group",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188452"
+}

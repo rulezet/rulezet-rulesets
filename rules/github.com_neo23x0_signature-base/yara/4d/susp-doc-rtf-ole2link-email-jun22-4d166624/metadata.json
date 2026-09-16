@@ -1,0 +1,19 @@
+{
+  "uuid": "4d166624-0645-4baa-9f78-8a44aaaf6f92",
+  "title": "SUSP_Doc_RTF_OLE2Link_EMAIL_Jun22",
+  "format": "yara",
+  "author": "Christian Burkard",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a suspicious pattern in RTF files which downloads external resources inside e-mail attachments",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188776"
+}
