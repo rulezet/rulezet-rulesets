@@ -1,0 +1,25 @@
+{
+  "uuid": "4d2dd577-e586-4a60-ae9a-8f8a775025b4",
+  "title": "ET INFO Observed RMM Domain in DNS Lookup (gerwconline .blob .core .windows .net)",
+  "format": "suricata",
+  "author": "Unknown",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "No description provided",
+  "source": "emerging-all.rules.zip by admin admin",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Android\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2025-12-19",
+  "last_modified": "2025-12-19",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/181864"
+}
