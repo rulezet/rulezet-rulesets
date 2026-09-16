@@ -1,0 +1,9 @@
+rule Trojan_Win32_Zbot_RG_MTB_3{
+	meta:
+		description = "Trojan:Win32/Zbot.RG!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {68 00 00 40 00 ff d6 6a 40 68 00 30 00 00 ff b5 70 ff ff ff 6a 00 ff 55 d4 8b d0 33 c0 eb 1f [0-20] 8a 0c 0b 8b b5 74 ff ff ff 32 0c 06 88 0c 02 40 } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}

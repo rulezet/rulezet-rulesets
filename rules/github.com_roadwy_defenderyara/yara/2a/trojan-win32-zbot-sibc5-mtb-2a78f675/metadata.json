@@ -1,0 +1,22 @@
+{
+  "uuid": "2a78f675-ea32-463d-ab79-badb571eb501",
+  "title": "Trojan_Win32_Zbot_SIBC5_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Zbot.SIBC5!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/288432"
+}

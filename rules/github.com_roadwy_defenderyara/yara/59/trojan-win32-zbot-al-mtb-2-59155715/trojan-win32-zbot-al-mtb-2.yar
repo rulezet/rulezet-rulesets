@@ -1,0 +1,9 @@
+rule Trojan_Win32_Zbot_AL_MTB_2{
+	meta:
+		description = "Trojan:Win32/Zbot.AL!MTB,SIGNATURE_TYPE_PEHSTR,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_01_0 = {8a 5c 0d a8 8b 45 d4 30 1c 10 41 83 f9 13 76 02 33 c9 42 3b 56 04 72 e8 } 		$a_01_1 = {8a 14 39 88 14 31 41 3b c8 72 f5 83 65 e4 00 33 c0 66 3b 43 06 73 3f } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1) >=2
+ 
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "b305b891-c815-4300-8b2f-9047d12a4775",
+  "title": "Trojan_Win32_DarkGate_ZY",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/DarkGate.ZY,SIGNATURE_TYPE_PEHSTR_EXT,fffffff1 00 fffffff1 00 07 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/288894"
+}

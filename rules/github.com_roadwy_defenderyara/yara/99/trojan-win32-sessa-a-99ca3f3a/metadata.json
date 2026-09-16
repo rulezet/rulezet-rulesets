@@ -1,0 +1,22 @@
+{
+  "uuid": "99ca3f3a-70b0-4be7-8f7a-1e148b88f963",
+  "title": "Trojan_Win32_Sessa_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Sessa.A,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/288875"
+}

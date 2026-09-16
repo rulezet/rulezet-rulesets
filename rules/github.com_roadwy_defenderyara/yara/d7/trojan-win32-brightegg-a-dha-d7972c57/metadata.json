@@ -1,0 +1,22 @@
+{
+  "uuid": "d7972c57-41a9-4ae4-947f-18cae91d2055",
+  "title": "Trojan_Win32_BrightEgg_A_dha",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/BrightEgg.A!dha,SIGNATURE_TYPE_PEHSTR_EXT,03 00 02 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/288788"
+}

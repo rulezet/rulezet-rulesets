@@ -1,0 +1,9 @@
+rule Trojan_Win32_RisePro_RP_MTB_4{
+	meta:
+		description = "Trojan:Win32/RisePro.RP!MTB,SIGNATURE_TYPE_PEHSTR_EXT,0f 00 0f 00 08 00 00 "
+		
+	strings :
+		$a_01_0 = {57 4c 4e 75 6d 44 4c 4c 73 50 72 6f 74 } 		$a_01_1 = {5c 5c 2e 5c 47 6c 6f 62 61 6c 5c 6f 72 65 61 6e 73 78 36 34 } 		$a_01_2 = {58 70 72 6f 74 45 76 65 6e 74 } 		$a_01_3 = {53 6f 66 74 77 61 72 65 5c 57 69 6e 4c 69 63 65 6e 73 65 } 		$a_01_4 = {52 65 73 74 61 72 74 41 70 70 2e 65 78 65 } 		$a_01_5 = {2a 52 e4 13 6e 33 8a 40 6e 33 8a 40 6e 33 8a 40 35 5b 89 41 60 33 8a 40 35 5b 8f 41 f0 33 8a 40 bb 5e 8e 41 7c 33 8a 40 bb 5e 89 41 7a 33 8a 40 bb 5e 8f 41 1b 33 8a 40 35 5b 8e 41 7a 33 8a 40 35 5b 8b 41 7d 33 8a 40 6e 33 8b 40 ba 33 8a 40 f5 5d 83 41 6f 33 8a 40 f5 5d 75 40 6f 33 8a 40 f5 5d 88 41 6f 33 8a 40 52 69 63 68 6e 33 8a 40 } 		$a_01_6 = {04 64 a0 59 40 05 ce 0a 40 05 ce 0a 40 05 ce 0a 1b 6d cd 0b 51 05 ce 0a 1b 6d cb 0b e0 05 ce 0a 95 68 ca 0b 52 05 ce 0a 95 68 cd 0b 57 05 ce 0a 95 68 cb 0b 35 05 ce 0a 1b 6d ca 0b 55 05 ce 0a 1b 6d cf 0b 53 05 ce 0a 40 05 cf 0a 94 05 ce 0a db 6b c7 0b 41 05 ce 0a db 6b 31 0a 41 05 ce 0a db 6b cc 0b 41 05 ce 0a 52 69 63 68 40 05 ce 0a } 		$a_01_7 = {6a 99 1d e4 2e f8 73 b7 2e f8 73 b7 2e f8 73 b7 65 80 70 b6 25 f8 73 b7 65 80 76 b6 ee f8 73 b7 65 80 74 b6 2f f8 73 b7 ec 79 8e b7 2a f8 73 b7 ec 79 77 b6 3d f8 73 b7 ec 79 70 b6 34 f8 73 b7 ec 79 76 b6 75 f8 73 b7 65 80 77 b6 36 f8 73 b7 65 80 75 b6 2f f8 73 b7 65 80 72 b6 35 f8 73 b7 2e f8 72 b7 0e f9 73 b7 dd 7a 7a b6 32 f8 73 b7 dd 7a 8c b7 2f f8 73 b7 2e f8 e4 b7 2f f8 73 b7 dd 7a 71 b6 2f f8 73 b7 52 69 63 68 2e f8 73 b7 } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1+(#a_01_2  & 1)*1+(#a_01_3  & 1)*1+(#a_01_4  & 1)*1+(#a_01_5  & 1)*10+(#a_01_6  & 1)*10+(#a_01_7  & 1)*10) >=15
+ 
+}
