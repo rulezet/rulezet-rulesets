@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET RETIRED Bifrose Client Checkin"; flow:established,to_server; content:"|00 00 99 4F B9 74 E2 75 94 0A 5A|"; offset:2; depth:11; classtype:command-and-control; sid:2013338; rev:3; metadata:created_at 2011_08_02, former_category MALWARE, confidence Medium, signature_severity Major, updated_at 2024_12_03;)
