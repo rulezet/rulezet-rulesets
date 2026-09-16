@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[IMAPD] Exessive login failures"; content: "Login excessive login"; default_proto: tcp; default_dst_port: $IMAP_PORT; classtype: unsuccessful-user; program: imapd*; normalize; parse_src_ip: 1; xbits: set,brute_force,track ip_src, expire 21600; reference: url,wiki.quadrantsec.com/bin/view/Main/5001078; sid: 5001078; rev:8;)

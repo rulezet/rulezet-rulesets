@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Node exceeds maximum nodes per message"; content: "APPFW_XML_DOS_ERR_MAX_NODES"; classtype: attempted-dos; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001255; sid: 5001255; rev:2;)

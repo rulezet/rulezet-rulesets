@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLACKLIST] FTP file transfer from blacklisted IP"; program: %ASA*-6-303002; blacklist: by_src; classtype: successful-user; normalize; reference: url, wiki.quadrantsec.com/bin/view/Main/5002248; sid: 5002248; rev: 3;)

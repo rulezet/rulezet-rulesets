@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Port in address is greater than 65535"; content: "APPFW_XML_ERR_UNSUPPORTED_PORT"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001283; sid: 5001283; rev:2;)

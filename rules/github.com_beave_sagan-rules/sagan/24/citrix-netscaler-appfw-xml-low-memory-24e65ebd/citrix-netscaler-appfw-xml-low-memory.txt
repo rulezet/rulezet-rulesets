@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - AppFw XML Low memory"; content: "APPFW_XML_ERR_LOW_MEMORY"; classtype: hardware-event; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001272; sid: 5001272; rev:2;)

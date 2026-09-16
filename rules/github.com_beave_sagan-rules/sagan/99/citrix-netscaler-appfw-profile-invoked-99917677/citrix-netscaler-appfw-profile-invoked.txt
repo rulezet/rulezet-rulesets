@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - AppFw profile invoked"; content: "APPFW_POLICY_HIT"; classtype: not-suspicious; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001223; sid: 5001223; rev:2;)

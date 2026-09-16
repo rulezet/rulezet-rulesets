@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Action reboot or shutdown"; content: "32095 type="; meta_content: "%sagan%",action=reboot,action=shutdown"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000928; sid: 5000928; rev:4;)

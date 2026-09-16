@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Compiled WSDL file is corrupt"; content: "APPFW_XML_VALIDATION_ERR_COMPILED_WSDL"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001296; sid: 5001296; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Memory allocation request failed"; content: "AF_MEMORY_ERR"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001208; sid: 5001208; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Reason unknown error"; content: "32010 type="; content: "reason=unknown"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000922; sid: 5000922; rev:2;)

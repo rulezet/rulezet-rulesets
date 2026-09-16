@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Remove a confidential field"; content: "AF_RM_CFFIELD"; classtype: configuration-change; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001209; sid: 5001209; rev:2;)

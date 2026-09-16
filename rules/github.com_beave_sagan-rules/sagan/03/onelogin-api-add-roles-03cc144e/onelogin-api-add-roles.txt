@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_ADD_ROLES"; content: "event|5f|type|5f|id|22 3a| 513"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004582; sid: 5004582; rev: 1;)

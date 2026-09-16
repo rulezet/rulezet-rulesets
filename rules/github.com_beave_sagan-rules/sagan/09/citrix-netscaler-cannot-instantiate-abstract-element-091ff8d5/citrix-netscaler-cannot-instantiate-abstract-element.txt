@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Cannot instantiate abstract element"; content: "APPFW_XML_VALIDATION_ERR_ABSTRACT_ELEMENT"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001291; sid: 5001291; rev:2;)

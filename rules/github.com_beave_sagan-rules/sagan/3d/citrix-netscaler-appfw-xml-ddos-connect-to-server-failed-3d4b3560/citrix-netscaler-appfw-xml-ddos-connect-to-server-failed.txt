@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - AppFw XML DDoS Connect to Server Failed"; content: "APPFW_XML_ERR_DDOS_CONNECT_TO_SERVER_FAILED"; classtype: attempted-dos; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001259; sid: 5001259; rev:2;)

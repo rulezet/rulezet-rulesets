@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Problems during pop of the node out of the XML stream"; content: "APPFW_XML_ERR_STREAM_POP"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001281; sid: 5001281; rev:2;)

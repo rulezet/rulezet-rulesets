@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - AppFw XML DDoS Failure to Open Config File"; content: "APPFW_XML_ERR_DDOS_OPEN_CONFIG_FILE_FAIL"; classtype: attempted-dos; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001263; sid: 5001263; rev:2;)

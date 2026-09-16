@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - AppFw Request error. Generated 400 Response"; content: "AF_400_RESP"; classtype: suspicious-traffic; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001202; sid: 5001202; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] ICMPv6 Neighbor Advertisement"; content: "SID: 1622 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: icmp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6101622; sid: 6101622; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Additional soap header present in soap message"; content: "APPFW_XML_VALIDATION_ERR_ADDHEADERS"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001293; sid: 5001293; rev:2;)

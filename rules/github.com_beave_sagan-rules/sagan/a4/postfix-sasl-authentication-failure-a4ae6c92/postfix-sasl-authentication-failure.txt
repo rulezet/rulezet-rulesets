@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[POSTFIX] SASL authentication failure"; content: "authentication failed"; default_proto: tcp; default_dst_port: $SMTP_PORT; default_proto: tcp; default_dst_port: $SMTP_PORT; classtype: unsuccessful-user; program: postfix; reference: url,wiki.quadrantsec.com/bin/view/Main/5000227; sid: 5000227; rev:3;)

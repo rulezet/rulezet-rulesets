@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - External entities present in the XML message"; content: "APPFW_XML_DOS_ERR_EXT_ENTITY"; classtype: attempted-dos; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001241; sid: 5001241; rev:2;)

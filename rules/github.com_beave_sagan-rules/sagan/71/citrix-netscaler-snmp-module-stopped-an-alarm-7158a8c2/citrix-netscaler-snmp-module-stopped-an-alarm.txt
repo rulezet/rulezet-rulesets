@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - SNMP module stopped an alarm"; content: "ALERTENDED"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001213; sid: 5001213; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Prefix length exceeded"; content: "APPFW_XML_ERR_PREFIX_LENGTH_EXCEEDED"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001278; sid: 5001278; rev:2;)

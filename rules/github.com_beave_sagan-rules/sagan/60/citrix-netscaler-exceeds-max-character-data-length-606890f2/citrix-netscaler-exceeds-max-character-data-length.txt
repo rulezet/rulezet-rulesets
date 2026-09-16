@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Exceeds max character data length"; content: "APPFW_XML_DOS_ERR_CHAR_DATA_LENGTH"; classtype: attempted-dos; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001239; sid: 5001239; rev:2;)

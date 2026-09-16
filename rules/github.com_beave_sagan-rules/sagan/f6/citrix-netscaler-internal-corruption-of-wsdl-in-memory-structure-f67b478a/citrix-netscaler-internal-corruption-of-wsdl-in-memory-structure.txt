@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Internal corruption of WSDL in-memory structure"; content: "APPFW_XML_VALIDATION_ERR_INTERNAL"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001301; sid: 5001301; rev:2;)

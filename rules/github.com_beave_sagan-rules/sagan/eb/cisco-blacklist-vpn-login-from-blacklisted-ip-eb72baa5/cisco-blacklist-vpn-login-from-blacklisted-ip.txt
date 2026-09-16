@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLACKLIST] VPN login from blacklisted IP"; program: %ASA*-6-734001; blacklist: by_src; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: successful-user; parse_src_ip: 1; reference: url, wiki.quadrantsec.com/bin/view/Main/5002245; sid: 5002245; rev: 2;)

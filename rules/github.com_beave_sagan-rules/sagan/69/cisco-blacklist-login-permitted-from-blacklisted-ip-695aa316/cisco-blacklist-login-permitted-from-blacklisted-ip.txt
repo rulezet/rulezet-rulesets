@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLACKLIST] Login permitted from blacklisted IP"; program: %ASA*-6-605005; blacklist: by_src; classtype: successful-user; parse_src_ip: 1; parse_dst_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002242; sid: 5002242; rev: 2;)

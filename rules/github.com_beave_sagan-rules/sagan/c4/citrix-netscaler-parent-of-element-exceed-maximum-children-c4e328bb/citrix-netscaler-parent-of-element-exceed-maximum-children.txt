@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Parent of element exceed maximum children"; content: "APPFW_XML_DOS_ERR_MAX_ELEMENT_CHILDREN"; classtype: attempted-dos; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001247; sid: 5001247; rev:2;)

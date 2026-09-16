@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Administrator session timeout"; content: "32007 type="; content: "session timed out"; parse_src_ip: 1; classtype: not-suspicious; reference: url,wiki.quadrantsec.com/bin/view/Main/5000913; sid: 5000913; rev:3;)

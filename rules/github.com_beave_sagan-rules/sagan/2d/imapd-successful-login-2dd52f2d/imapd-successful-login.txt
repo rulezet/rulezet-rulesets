@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[IMAPD] Successful login"; content: "Authenticated user="; default_proto: tcp; default_dst_port: $IMAP_PORT; classtype: successful-user; program: imapd*; parse_src_ip: 1; reference: url,wiki.quadrantsec.com/bin/view/Main/5000262; sid: 5000262; rev:6;)

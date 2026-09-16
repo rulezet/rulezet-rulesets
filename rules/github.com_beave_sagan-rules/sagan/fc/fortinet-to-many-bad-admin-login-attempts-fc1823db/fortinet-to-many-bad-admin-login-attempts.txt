@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] To many bad admin login attempts"; content: "32002 type="; content: "bad attempts"; parse_src_ip: 1; classtype: attempted-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5000904; sid: 5000904; rev:3;)

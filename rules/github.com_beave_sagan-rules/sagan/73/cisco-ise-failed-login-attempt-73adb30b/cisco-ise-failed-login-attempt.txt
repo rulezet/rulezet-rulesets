@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CISCO-ISE] Failed Login Attempt"; program: CISE_Failed_Attempts|CSCOacs_Failed_Attempts; parse_src_ip: 1; parse_dst_ip: 2; classtype: unsuccessful-user; reference: url,wiki.quadrantsec.com/bin/view/Main/5001655; sid: 5001655; rev:4;)

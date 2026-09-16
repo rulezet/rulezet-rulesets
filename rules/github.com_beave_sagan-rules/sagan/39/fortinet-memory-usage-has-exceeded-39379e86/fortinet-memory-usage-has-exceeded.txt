@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Memory usage has exceeded"; content: "32010 type="; content: "reason=memory-log-full"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000921; sid: 5000921; rev:2;)

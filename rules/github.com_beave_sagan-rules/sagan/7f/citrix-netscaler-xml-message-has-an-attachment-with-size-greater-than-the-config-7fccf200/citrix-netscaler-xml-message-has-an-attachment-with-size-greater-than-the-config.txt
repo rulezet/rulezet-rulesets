@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - XML Message has an Attachment with size greater than the Configured Max Attachment Size"; content: "APPFW_XML_ATTACHMENT_ERR_MAX_SIZE"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001236; sid: 5001236; rev:2;)

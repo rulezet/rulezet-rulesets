@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Problems getting the key of a namespace from the hash table"; content: "APPFW_XML_ERR_HASH_LOOKUP"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001267; sid: 5001267; rev:2;)

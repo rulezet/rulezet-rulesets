@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Log disk is full"; content: "32015 type="; content: "Log disk is"; content: "full"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000926; sid: 5000926; rev:2;)

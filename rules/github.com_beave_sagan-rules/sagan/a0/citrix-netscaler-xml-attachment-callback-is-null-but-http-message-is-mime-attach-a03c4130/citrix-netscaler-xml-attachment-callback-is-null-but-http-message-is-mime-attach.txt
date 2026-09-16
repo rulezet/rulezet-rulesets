@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - XML Attachment CallBack is NULL but HTTP message is MIME Attachment message"; content: "APPFW_XML_ATTACHMENT_ERR_CALLBACK_NULL"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001232; sid: 5001232; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Abnormal Admin session drop"; content: "32007 type="; content: "terminates the sessions"; parse_src_ip: 1; classtype: not-suspicious; reference: url,wiki.quadrantsec.com/bin/view/Main/5000914; sid: 5000914; rev:2;)

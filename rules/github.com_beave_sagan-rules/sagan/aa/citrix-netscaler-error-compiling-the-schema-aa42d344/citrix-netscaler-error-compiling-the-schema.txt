@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Error compiling the schema"; content: "APPFW_XML_VALIDATION_ERR_CORRUPT_SCHEMA"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001299; sid: 5001299; rev:2;)

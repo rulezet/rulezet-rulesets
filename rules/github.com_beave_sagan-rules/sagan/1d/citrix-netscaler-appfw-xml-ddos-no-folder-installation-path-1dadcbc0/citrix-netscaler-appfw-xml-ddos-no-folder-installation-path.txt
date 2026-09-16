@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - AppFw XML DDoS No Folder Installation Path"; content: "APPFW_XML_ERR_DDOS_NO_FOLDER_INSTALLATION_PATH"; classtype: attempted-dos; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001262; sid: 5001262; rev:2;)

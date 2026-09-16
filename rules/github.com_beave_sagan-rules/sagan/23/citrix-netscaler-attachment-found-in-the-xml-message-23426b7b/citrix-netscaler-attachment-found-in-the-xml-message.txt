@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Attachment Found in the XML Message"; content: "APPFW_XML_ATTACHMENT_FOUND"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001237; sid: 5001237; rev:2;)

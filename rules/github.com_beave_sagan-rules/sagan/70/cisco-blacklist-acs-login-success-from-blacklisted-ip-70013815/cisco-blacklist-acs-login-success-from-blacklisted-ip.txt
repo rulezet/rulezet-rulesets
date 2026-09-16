@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CISCO-BLACKLIST] ACS Login success from blacklisted IP"; program: CisACS_01_PassedAuth; blacklist: by_src; classtype: successful-user; parse_src_ip: 2; reference: url, wiki.quadrantsec.com/bin/view/Main/5002246; sid: 5002246; rev: 2;)

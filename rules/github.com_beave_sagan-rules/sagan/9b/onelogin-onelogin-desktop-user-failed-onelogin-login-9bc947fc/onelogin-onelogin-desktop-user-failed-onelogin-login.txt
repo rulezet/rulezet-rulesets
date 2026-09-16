@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] ONELOGIN_DESKTOP_USER_FAILED_ONELOGIN_LOGIN"; content: "event|5f|type|5f|id|22 3a| 906"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004642; sid: 5004642; rev: 1;)

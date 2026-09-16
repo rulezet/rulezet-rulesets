@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Login accepted"; content: "32006 type="; content: "login"; meta_content: "%sagan%",accepted,successfully; parse_src_ip: 1; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5000908; sid: 5000908; rev:4;)

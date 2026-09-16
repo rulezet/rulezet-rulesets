@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Remove an AppFw profile"; content: "AF_RM_PROFILE"; classtype: configuration-change; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001211; sid: 5001211; rev:2;)

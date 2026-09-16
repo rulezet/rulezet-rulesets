@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Problems inserting a namespace into the hash table"; content: "APPFW_XML_ERR_HASH_INSERT"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001266; sid: 5001266; rev:2;)

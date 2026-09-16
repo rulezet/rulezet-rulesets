@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] IPS error mode"; content: "32004 type="; content: "error mode"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000906; sid: 5000906; rev:2;)

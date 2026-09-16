@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Administrator removed logs"; content: "32013 type="; meta_content: "%sagan%",cleared,deleted,removed; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000924; sid: 5000924; rev:4;)

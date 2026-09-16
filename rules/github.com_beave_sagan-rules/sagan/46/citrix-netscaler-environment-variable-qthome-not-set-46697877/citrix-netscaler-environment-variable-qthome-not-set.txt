@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Environment variable QTHOME not set"; content: "APPFW_XML_ERR_ENV_NOT_SET"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001265; sid: 5001265; rev:2;)

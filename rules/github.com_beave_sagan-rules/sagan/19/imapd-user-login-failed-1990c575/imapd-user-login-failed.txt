@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[IMAPD] User login failed"; pcre: "/Login failed user=|AUTHENTICATE LOGIN failure/i"; default_proto: tcp; default_dst_port: $IMAP_PORT; classtype: unsuccessful-user; parse_src_ip: 1; program: imapd*; reference: url,wiki.quadrantsec.com/bin/view/Main/5000367; sid: 5000367; rev:7;)

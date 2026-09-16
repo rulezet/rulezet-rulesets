@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Protect profile changed"; content: "32151 type="; content: "changed protection profile"; classtype: configuration-change; reference: url,wiki.quadrantsec.com/bin/view/Main/5000898; sid: 5000898; rev:2;)

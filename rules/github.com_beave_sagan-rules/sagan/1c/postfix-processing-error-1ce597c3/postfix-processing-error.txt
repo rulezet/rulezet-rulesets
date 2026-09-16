@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[POSTFIX] Processing error"; pcre: "/defer service failure|resource temporarily unavailable/i"; default_proto: tcp; default_dst_port: $SMTP_PORT; default_proto: tcp; default_dst_port: $SMTP_PORT; classtype: program-error; program: postfix; reference: url,wiki.quadrantsec.com/bin/view/Main/5000226; sid: 5000226; rev:3;)

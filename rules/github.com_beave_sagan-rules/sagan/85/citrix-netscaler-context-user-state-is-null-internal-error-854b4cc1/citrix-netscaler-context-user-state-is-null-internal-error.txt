@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Context user state is NULL - Internal error"; content: "APPFW_XML_PACKET_PROCESSING_ERR_CONTEXT_STATE_NULL"; classtype: web-application-attack; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001287; sid: 5001287; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Message size exceeds max size"; content: "APPFW_XML_DOS_ERR_MAX_FILE_SIZE"; classtype: attempted-dos; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001252; sid: 5001252; rev:2;)

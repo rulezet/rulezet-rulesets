@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Unable to initialize XML tokenizer"; content: "APPFW_XML_ERR_INITIALIZING_TOKENIZER"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001268; sid: 5001268; rev:2;)

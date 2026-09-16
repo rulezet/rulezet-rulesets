@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] Microsoft SQL Server Report Manager Reflected Cross Site Scripting Vulnerability"; content: "SID: 1498 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6101498; sid: 6101498; rev: 4;)

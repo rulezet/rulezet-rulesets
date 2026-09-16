@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - URL Transformation action matched URL"; content: "ACTION_MATCH"; classtype: not-suspicious; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001200; sid: 5001200; rev:2;)

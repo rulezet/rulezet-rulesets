@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Disk logs usage have exceeded"; content: "32010 type="; pcre: "/Disk logs|error mode|Log disk|reason=disk-log-full/"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000920; sid: 5000920; rev:3;)

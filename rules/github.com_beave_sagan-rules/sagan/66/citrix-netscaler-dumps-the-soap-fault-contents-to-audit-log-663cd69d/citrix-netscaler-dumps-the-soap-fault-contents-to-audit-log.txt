@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Dumps the SOAP Fault contents to Audit log"; content: "APPFW_XML_SOAP_FAULT_CONTENTS"; classtype: program-error; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001289; sid: 5001289; rev:2;)

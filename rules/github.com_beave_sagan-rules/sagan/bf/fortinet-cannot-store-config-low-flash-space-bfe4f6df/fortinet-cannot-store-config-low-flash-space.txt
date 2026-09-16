@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Cannot store config.  Low flash space"; content: "32007 type="; content: "Cannot store config"; content: "flash space"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000917; sid: 5000917; rev:2;)

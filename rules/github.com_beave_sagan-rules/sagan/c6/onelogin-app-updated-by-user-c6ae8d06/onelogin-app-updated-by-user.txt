@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] APP_UPDATED_BY_USER"; content: "event|5f|type|5f|id|22 3a| 601"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004621; sid: 5004621; rev: 1;)

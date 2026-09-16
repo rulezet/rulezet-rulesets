@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_AUTH_CLAIM_UPDATE_FAILED"; content: "event|5f|type|5f|id|22 3a| 1415"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004676; sid: 5004676; rev: 1;)

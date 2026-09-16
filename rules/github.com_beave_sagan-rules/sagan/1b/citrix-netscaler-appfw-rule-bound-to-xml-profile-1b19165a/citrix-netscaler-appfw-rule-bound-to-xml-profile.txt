@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - AppFw rule bound to XML profile"; content: "AF_BIND_XML_TO_PROFILE"; classtype: configuration-change; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001207; sid: 5001207; rev:2;)

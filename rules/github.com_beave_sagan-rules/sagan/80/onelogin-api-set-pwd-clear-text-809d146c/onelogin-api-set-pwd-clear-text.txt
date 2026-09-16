@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] API_SET_PWD_CLEAR_TEXT"; content: "event|5f|type|5f|id|22 3a| 511"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004580; sid: 5004580; rev: 1;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg: "[ONELOGIN] ONELOGIN_DESKTOP_REVOKE_CERT_FOR_USER"; content: "event|5f|type|5f|id|22 3a| 911"; parse_src_ip: 1; classtype: system-event; program: onelogin; reference: url,wiki.quadrantsec.com/bin/view/Main/5004644; sid: 5004644; rev: 1;)

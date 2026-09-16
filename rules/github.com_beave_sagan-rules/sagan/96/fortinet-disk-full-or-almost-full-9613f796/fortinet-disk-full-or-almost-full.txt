@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Disk full or almost full"; content: "32006 type="; content: "disk"; nocase; content: "log "; nocase; meta_content: "%sagan%",exceeds,full; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000909; sid: 5000909; rev:3;)

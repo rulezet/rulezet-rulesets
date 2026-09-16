@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Administrator logout"; content: "32003 type="; content: "action=logout"; classtype: not-suspicious; reference: url,wiki.quadrantsec.com/bin/view/Main/5000905; sid: 5000905; rev:2;)

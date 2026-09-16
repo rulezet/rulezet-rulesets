@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[MYSQL] Database startup or restart"; pcre: "/mysqld started|mysqld restarted/i"; default_proto: tcp; default_dst_port: $MYSQL_PORT; classtype: system-event; program: mysqld|MySQL; reference:quadrantsec,5000152; sid:5000152; rev:4;)

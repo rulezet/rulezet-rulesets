@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] HP Operations Agent for NonStop Server HEALTH Packet Parsing Stack Buffer"; content: "SID: 1572 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6101572; sid: 6101572; rev: 4;)

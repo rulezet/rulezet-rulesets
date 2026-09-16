@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Element exceeds maximum element depth"; content: "APPFW_XML_DOS_ERR_MAX_ELEMENT_DEPTH"; classtype: attempted-dos; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001248; sid: 5001248; rev:2;)

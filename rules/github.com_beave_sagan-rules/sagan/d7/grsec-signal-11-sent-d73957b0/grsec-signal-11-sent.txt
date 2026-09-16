@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[GRSEC] Signal 11 sent"; content:"signal 11 sent";classtype: program-error; parse_src_ip: 1; program: grsec; reference: url,wiki.quadrantsec.com/bin/view/Main/5000030; sid: 5000030; rev:6;)

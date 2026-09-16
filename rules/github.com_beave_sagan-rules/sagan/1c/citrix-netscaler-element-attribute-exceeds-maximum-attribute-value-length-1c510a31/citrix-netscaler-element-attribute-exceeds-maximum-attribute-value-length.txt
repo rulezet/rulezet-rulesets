@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Element attribute exceeds maximum attribute value length"; content: "APPFW_XML_DOS_ERR_MAX_ATTRIBUTE_VALUE_LENGTH"; classtype: attempted-dos; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001245; sid: 5001245; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Fortigate has left error mode"; content: "32006 type="; content: "out of error mode"; classtype: configuration-error; reference: url,wiki.quadrantsec.com/bin/view/Main/5000912; sid: 5000912; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Out of error mode"; content: "32012 type="; content: "out of error mode"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000923; sid: 5000923; rev:2;)

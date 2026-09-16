@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Admin login failure"; content: "32009 type="; content: "login failed from"; classtype: attempted-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5000919; sid: 5000919; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CITRIX] Netscaler - Add an AppFw Field Type"; content: "AF_ADD_FIELDTYPE"; classtype: suspicious-traffic; reference: url,support.citrix.com/article/CTX123875; reference: url,wiki.quadrantsec.com/bin/view/Main/5001204; sid: 5001204; rev:2;)

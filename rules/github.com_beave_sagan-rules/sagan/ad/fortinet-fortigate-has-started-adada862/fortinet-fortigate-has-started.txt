@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[FORTINET] Fortigate has started"; content: "32006 type="; content: "Fortigate started"; classtype: hardware-event; reference: url,wiki.quadrantsec.com/bin/view/Main/5000910; sid: 5000910; rev:2;)
