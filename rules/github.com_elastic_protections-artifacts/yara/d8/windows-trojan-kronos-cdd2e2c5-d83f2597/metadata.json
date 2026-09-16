@@ -1,0 +1,23 @@
+{
+  "uuid": "d83f2597-41e0-4e64-a783-39639d1acfcb",
+  "title": "Windows_Trojan_Kronos_cdd2e2c5",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Strings used by the Kronos banking trojan and variants.",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:banker=\"Kronos\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/213118"
+}
