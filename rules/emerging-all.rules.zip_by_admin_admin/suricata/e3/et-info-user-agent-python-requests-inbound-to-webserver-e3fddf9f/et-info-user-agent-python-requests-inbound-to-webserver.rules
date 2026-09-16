@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET INFO User-Agent (python-requests) Inbound to Webserver"; flow:established,to_server; http.user_agent; content:"python-requests/"; classtype:misc-activity; sid:2017515; rev:8; metadata:created_at 2013_09_25, confidence High, signature_severity Informational, updated_at 2022_12_01;)
