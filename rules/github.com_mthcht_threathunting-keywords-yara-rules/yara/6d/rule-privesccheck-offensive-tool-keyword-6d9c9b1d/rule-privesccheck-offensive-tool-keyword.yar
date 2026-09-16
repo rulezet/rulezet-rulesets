@@ -1,0 +1,107 @@
+rule rule_PrivescCheck_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'PrivescCheck' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "PrivescCheck"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_PrivescCheck_offensive_tool_keyword = " Get-ServiceFromRegistry -Name Spooler" nocase ascii wide
+                        $string2_PrivescCheck_offensive_tool_keyword = " -Report PrivescCheck_" nocase ascii wide
+                        $string3_PrivescCheck_offensive_tool_keyword = " -Report PrivescCheck_" nocase ascii wide
+                        $string4_PrivescCheck_offensive_tool_keyword = /\$LolDriversVulnerable/ nocase ascii wide
+                        $string5_PrivescCheck_offensive_tool_keyword = "/PrivescCheck" nocase ascii wide
+                        $string6_PrivescCheck_offensive_tool_keyword = /\\PrivescCheck/ nocase ascii wide
+                        $string7_PrivescCheck_offensive_tool_keyword = /\\PrivescCheck_/ nocase ascii wide
+                        $string8_PrivescCheck_offensive_tool_keyword = /\\PrivescCheck_/ nocase ascii wide
+                        $string9_PrivescCheck_offensive_tool_keyword = /\\src\\check\\Credentials\.ps1/ nocase ascii wide
+                        $string10_PrivescCheck_offensive_tool_keyword = "<title>PrivescCheck Report</title>" nocase ascii wide
+                        $string11_PrivescCheck_offensive_tool_keyword = "Find-ProtectionSoftware" nocase ascii wide
+                        $string12_PrivescCheck_offensive_tool_keyword = "Get-AclModificationRights" nocase ascii wide
+                        $string13_PrivescCheck_offensive_tool_keyword = "Get-DecodedPassword" nocase ascii wide
+                        $string14_PrivescCheck_offensive_tool_keyword = "Get-DecryptedPassword" nocase ascii wide
+                        $string15_PrivescCheck_offensive_tool_keyword = "Get-ExploitableUnquotedPath" nocase ascii wide
+                        $string16_PrivescCheck_offensive_tool_keyword = "Get-LolDrivers" nocase ascii wide
+                        $string17_PrivescCheck_offensive_tool_keyword = "Get-RemoteDesktopUserSessionList" nocase ascii wide
+                        $string18_PrivescCheck_offensive_tool_keyword = /Get\-RemoteDesktopUserSessionList\./ nocase ascii wide
+                        $string19_PrivescCheck_offensive_tool_keyword = "Get-SccmCacheFolder" nocase ascii wide
+                        $string20_PrivescCheck_offensive_tool_keyword = "Get-ShadowCopies" nocase ascii wide
+                        $string21_PrivescCheck_offensive_tool_keyword = "Get-VaultCreds" nocase ascii wide
+                        $string22_PrivescCheck_offensive_tool_keyword = "Invoke-AirstrikeAttackCheck" nocase ascii wide
+                        $string23_PrivescCheck_offensive_tool_keyword = "Invoke-AirstrikeAttackCheck" nocase ascii wide
+                        $string24_PrivescCheck_offensive_tool_keyword = "Invoke-ApplicationsOnStartupCheck" nocase ascii wide
+                        $string25_PrivescCheck_offensive_tool_keyword = "Invoke-BitlockerCheck" nocase ascii wide
+                        $string26_PrivescCheck_offensive_tool_keyword = "Invoke-CcmNaaCredentialsCheck" nocase ascii wide
+                        $string27_PrivescCheck_offensive_tool_keyword = "Invoke-CredentialFilesCheck" nocase ascii wide
+                        $string28_PrivescCheck_offensive_tool_keyword = "Invoke-CredentialGuardCheck" nocase ascii wide
+                        $string29_PrivescCheck_offensive_tool_keyword = "Invoke-DefenderExclusionsCheck" nocase ascii wide
+                        $string30_PrivescCheck_offensive_tool_keyword = "Invoke-DllHijackingCheck" nocase ascii wide
+                        $string31_PrivescCheck_offensive_tool_keyword = "Invoke-DriverCoInstallersCheck" nocase ascii wide
+                        $string32_PrivescCheck_offensive_tool_keyword = "Invoke-EndpointProtectionCheck" nocase ascii wide
+                        $string33_PrivescCheck_offensive_tool_keyword = "Invoke-ExploitableLeakedHandlesCheck" nocase ascii wide
+                        $string34_PrivescCheck_offensive_tool_keyword = "Invoke-GPPPasswordCheck" nocase ascii wide
+                        $string35_PrivescCheck_offensive_tool_keyword = "Invoke-HardenedUNCPathCheck" nocase ascii wide
+                        $string36_PrivescCheck_offensive_tool_keyword = "Invoke-HijackableDllsCheck" nocase ascii wide
+                        $string37_PrivescCheck_offensive_tool_keyword = "Invoke-HotFixVulnCheck" nocase ascii wide
+                        $string38_PrivescCheck_offensive_tool_keyword = "Invoke-InstalledProgramsCheck" nocase ascii wide
+                        $string39_PrivescCheck_offensive_tool_keyword = "Invoke-InstalledServicesCheck" nocase ascii wide
+                        $string40_PrivescCheck_offensive_tool_keyword = "Invoke-LapsCheck" nocase ascii wide
+                        $string41_PrivescCheck_offensive_tool_keyword = "Invoke-LocalAdminGroupCheck" nocase ascii wide
+                        $string42_PrivescCheck_offensive_tool_keyword = "Invoke-LsaProtectionCheck" nocase ascii wide
+                        $string43_PrivescCheck_offensive_tool_keyword = "Invoke-MachineRoleCheck" nocase ascii wide
+                        $string44_PrivescCheck_offensive_tool_keyword = "Invoke-ModifiableProgramsCheck" nocase ascii wide
+                        $string45_PrivescCheck_offensive_tool_keyword = "Invoke-NamedPipePermissionsCheck" nocase ascii wide
+                        $string46_PrivescCheck_offensive_tool_keyword = "Invoke-NetworkAdaptersCheck" nocase ascii wide
+                        $string47_PrivescCheck_offensive_tool_keyword = "Invoke-PowerShellHistoryCheck" nocase ascii wide
+                        $string48_PrivescCheck_offensive_tool_keyword = "Invoke-PowershellTranscriptionCheck" nocase ascii wide
+                        $string49_PrivescCheck_offensive_tool_keyword = "Invoke-PrintNightmareCheck" nocase ascii wide
+                        $string50_PrivescCheck_offensive_tool_keyword = "Invoke-PrivescCheck" nocase ascii wide
+                        $string51_PrivescCheck_offensive_tool_keyword = "Invoke-RegistryAlwaysInstallElevatedCheck" nocase ascii wide
+                        $string52_PrivescCheck_offensive_tool_keyword = "Invoke-RegistryAlwaysInstallElevatedCheck" nocase ascii wide
+                        $string53_PrivescCheck_offensive_tool_keyword = "Invoke-RunningProcessCheck" nocase ascii wide
+                        $string54_PrivescCheck_offensive_tool_keyword = "Invoke-SccmCacheFolderCheck" nocase ascii wide
+                        $string55_PrivescCheck_offensive_tool_keyword = "Invoke-ScheduledTasksImagePermissionsCheck" nocase ascii wide
+                        $string56_PrivescCheck_offensive_tool_keyword = "Invoke-ScheduledTasksUnquotedPathCheck" nocase ascii wide
+                        $string57_PrivescCheck_offensive_tool_keyword = "Invoke-SCMPermissionsCheck" nocase ascii wide
+                        $string58_PrivescCheck_offensive_tool_keyword = "Invoke-SensitiveHiveFileAccessCheck" nocase ascii wide
+                        $string59_PrivescCheck_offensive_tool_keyword = "Invoke-SensitiveHiveShadowCopyCheck" nocase ascii wide
+                        $string60_PrivescCheck_offensive_tool_keyword = "Invoke-ServicesImagePermissionsCheck" nocase ascii wide
+                        $string61_PrivescCheck_offensive_tool_keyword = "Invoke-ServicesPermissionsCheck" nocase ascii wide
+                        $string62_PrivescCheck_offensive_tool_keyword = "Invoke-ServicesPermissionsRegistryCheck" nocase ascii wide
+                        $string63_PrivescCheck_offensive_tool_keyword = "Invoke-ServicesUnquotedPathCheck" nocase ascii wide
+                        $string64_PrivescCheck_offensive_tool_keyword = "Invoke-SystemStartupCheck" nocase ascii wide
+                        $string65_PrivescCheck_offensive_tool_keyword = "Invoke-SystemStartupHistoryCheck" nocase ascii wide
+                        $string66_PrivescCheck_offensive_tool_keyword = "Invoke-TcpEndpointsCheck" nocase ascii wide
+                        $string67_PrivescCheck_offensive_tool_keyword = "Invoke-ThirdPartyDriversCheck" nocase ascii wide
+                        $string68_PrivescCheck_offensive_tool_keyword = "Invoke-UacCheck" nocase ascii wide
+                        $string69_PrivescCheck_offensive_tool_keyword = "Invoke-UdpEndpointsCheck" nocase ascii wide
+                        $string70_PrivescCheck_offensive_tool_keyword = "Invoke-UnattendFilesCheck" nocase ascii wide
+                        $string71_PrivescCheck_offensive_tool_keyword = "Invoke-UserCheck" nocase ascii wide
+                        $string72_PrivescCheck_offensive_tool_keyword = "Invoke-UserEnvCheck" nocase ascii wide
+                        $string73_PrivescCheck_offensive_tool_keyword = "Invoke-UserGroupsCheck" nocase ascii wide
+                        $string74_PrivescCheck_offensive_tool_keyword = "Invoke-UserPrivilegesCheck" nocase ascii wide
+                        $string75_PrivescCheck_offensive_tool_keyword = "Invoke-UserRestrictedSidsCheck" nocase ascii wide
+                        $string76_PrivescCheck_offensive_tool_keyword = "Invoke-UserSessionListCheck" nocase ascii wide
+                        $string77_PrivescCheck_offensive_tool_keyword = "Invoke-UsersHomeFolderCheck" nocase ascii wide
+                        $string78_PrivescCheck_offensive_tool_keyword = "Invoke-VaultCredCheck" nocase ascii wide
+                        $string79_PrivescCheck_offensive_tool_keyword = "Invoke-VaultListCheck" nocase ascii wide
+                        $string80_PrivescCheck_offensive_tool_keyword = "Invoke-WindowsUpdateCheck" nocase ascii wide
+                        $string81_PrivescCheck_offensive_tool_keyword = "Invoke-WinlogonCheck" nocase ascii wide
+                        $string82_PrivescCheck_offensive_tool_keyword = "Invoke-WlanProfilesCheck" nocase ascii wide
+                        $string83_PrivescCheck_offensive_tool_keyword = "itm4n/PrivescCheck" nocase ascii wide
+                        $string84_PrivescCheck_offensive_tool_keyword = /Microsoft\\Windows\\Recent\\PrivescCheck/ nocase ascii wide
+                        $string85_PrivescCheck_offensive_tool_keyword = "MISC_HIJACKABLE_DLL" nocase ascii wide
+                        $string86_PrivescCheck_offensive_tool_keyword = /Password.{0,1000}S0urce0fThePr0blem/ nocase ascii wide
+                        $string87_PrivescCheck_offensive_tool_keyword = /Password.{0,1000}S3cr3tS3rvic3/ nocase ascii wide
+                        $string88_PrivescCheck_offensive_tool_keyword = /PointAndPrint\.ps1/ nocase ascii wide
+                        $string89_PrivescCheck_offensive_tool_keyword = /PrivescCheck\.ps1/ nocase ascii wide
+                        $string90_PrivescCheck_offensive_tool_keyword = /PrivescCheck_.{0,1000}\./ nocase ascii wide
+                        $string91_PrivescCheck_offensive_tool_keyword = "PrivescCheckAsciiReport" nocase ascii wide
+                        $string92_PrivescCheck_offensive_tool_keyword = "Test-DllExists" nocase ascii wide
+                        $string93_PrivescCheck_offensive_tool_keyword = "Test-HijackableDll" nocase ascii wide
+
+    condition:
+        any of them
+}

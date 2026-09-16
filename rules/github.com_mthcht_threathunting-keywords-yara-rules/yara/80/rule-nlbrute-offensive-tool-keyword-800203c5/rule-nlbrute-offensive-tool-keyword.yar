@@ -1,0 +1,23 @@
+rule rule_NLBrute_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'NLBrute' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "NLBrute"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_NLBrute_offensive_tool_keyword = /\/NLBrute.{0,1000}\.rar/ nocase ascii wide
+                        $string2_NLBrute_offensive_tool_keyword = /\/NLBrute.{0,1000}\.zip/ nocase ascii wide
+                        $string3_NLBrute_offensive_tool_keyword = /\/NLBrute\.exe/ nocase ascii wide
+                        $string4_NLBrute_offensive_tool_keyword = /\[Reflection\.Assembly\]\:\:Load\(.{0,1000}\[Char\]\(.{0,1000}\)\+\[Char\]\(.{0,1000}\)\+.{0,1000}\+\[Char\]\(.{0,1000}\)/ nocase ascii wide
+                        $string5_NLBrute_offensive_tool_keyword = /\\NLBrute.{0,1000}\.rar/ nocase ascii wide
+                        $string6_NLBrute_offensive_tool_keyword = /\\NLBrute.{0,1000}\.zip/ nocase ascii wide
+                        $string7_NLBrute_offensive_tool_keyword = /\\NLBrute\.exe/ nocase ascii wide
+                        $string8_NLBrute_offensive_tool_keyword = "2f40452382f378c481ce9622ea6f10cfb0275cad138c6a45fe16144111fdfa77" nocase ascii wide
+                        $string9_NLBrute_offensive_tool_keyword = "4781b10d0dae27a772518c9167b3a654c46017897bc73ce4540f4bfca33e9b58" nocase ascii wide
+
+    condition:
+        any of them
+}
