@@ -1,0 +1,9 @@
+rule Win_Downloader_Small_1822
+{
+strings:
+	$a0 = { ff6ec68573ffffff73c68574ffffff4ac68575ffffff81c68576ffffff94c68577ffffff81889d78ffffffc685bcfeffff82c685bdfeffff8fc685befeffff8fc685bffeffff89c685c0feffff4fc685c1feffff4ec685c2feffff4ac685c3feffff81c685c4feffff94c685c5feffff81889dc6feffffc68578fdffff6fc68579fdffff61c6857afdffff6ec6857bfdffff72c6857c }
+
+
+condition:
+	$a0
+}
