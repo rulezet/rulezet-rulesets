@@ -1,0 +1,9 @@
+rule Win_Trojan_RPS2_1
+{
+strings:
+	$a0 = { 01757381fa8000743883fa0075683d01027563601e0e1f60e8600073056160e859006126837f }
+
+
+condition:
+	$a0
+}

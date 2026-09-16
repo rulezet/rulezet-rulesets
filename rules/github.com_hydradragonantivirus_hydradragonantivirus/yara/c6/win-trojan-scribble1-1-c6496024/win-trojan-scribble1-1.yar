@@ -1,0 +1,9 @@
+rule Win_Trojan_Scribble1_1
+{
+strings:
+	$a0 = { ec5633f6e891000bc0740ae8520046fe061803eb08ba5d03b43bcd21463b3615037ce1803e180300740ab8da0250e8480159eb27803e170306761833f6eb }
+
+
+condition:
+	$a0
+}

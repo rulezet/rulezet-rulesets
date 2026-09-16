@@ -1,0 +1,9 @@
+rule Win_Trojan_SillyC_125
+{
+strings:
+	$a0 = { e835007421bf0002be0001b9e700f3a4bb8400268747028bc8b85402268707bf5002ab8bc1ab1e078bf581c6e400bf000157b90500f3a4c333c08ec0bf54028b }
+
+
+condition:
+	$a0
+}
