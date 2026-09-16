@@ -1,0 +1,23 @@
+{
+  "uuid": "546a0b5b-664e-4be2-851a-69320bcb4186",
+  "title": "MAL_Backdoor_DLL_Nov23_1",
+  "format": "yara",
+  "author": "X__Junior",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a backdoor DLL, that was seen being used by LockBit 3.0 affiliates exploiting CVE-2023-4966",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:ransomware=\"LockBit\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-4966"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188854"
+}

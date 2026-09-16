@@ -1,0 +1,19 @@
+{
+  "uuid": "6f68b41b-c31e-4e12-9d0b-e8a9ae7c2527",
+  "title": "PUA_VULN_Renamed_Driver_Advancedmicrodevices_Amdryzenmasterdriversys_Amdryzenmasterservicedriver_A130",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AMDRyzenMasterDriver.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188959"
+}

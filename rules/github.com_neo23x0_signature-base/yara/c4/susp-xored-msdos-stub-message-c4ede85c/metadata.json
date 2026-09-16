@@ -1,0 +1,21 @@
+{
+  "uuid": "c4ede85c-6426-4bae-b7c1-0e4e32cdc0bc",
+  "title": "SUSP_XORed_MSDOS_Stub_Message",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious XORed MSDOS stub message",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188853"
+}

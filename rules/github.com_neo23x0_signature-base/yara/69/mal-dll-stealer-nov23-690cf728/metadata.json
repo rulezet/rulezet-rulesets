@@ -1,0 +1,22 @@
+{
+  "uuid": "690cf728-5bc5-4a48-852b-0e7e45f5f05c",
+  "title": "MAL_DLL_Stealer_Nov23",
+  "format": "yara",
+  "author": "X__Junior",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a DLL that steals authentication credentials - was seen being used by LockBit 3.0 affiliates exploiting CVE-2023-4966",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:ransomware=\"LockBit\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-4966"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188862"
+}

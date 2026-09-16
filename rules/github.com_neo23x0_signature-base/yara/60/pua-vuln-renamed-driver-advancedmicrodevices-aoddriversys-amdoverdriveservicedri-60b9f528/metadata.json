@@ -1,0 +1,19 @@
+{
+  "uuid": "60b9f528-23d5-40e9-a2a6-809575b9cb80",
+  "title": "PUA_VULN_Renamed_Driver_Advancedmicrodevices_Aoddriversys_Amdoverdriveservicedriver_3C11",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - AODDriver.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/189268"
+}

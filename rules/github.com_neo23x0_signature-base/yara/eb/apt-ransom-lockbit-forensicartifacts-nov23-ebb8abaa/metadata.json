@@ -1,0 +1,22 @@
+{
+  "uuid": "ebb8abaa-0deb-447a-bd1c-25cf2b3c88d5",
+  "title": "APT_RANSOM_Lockbit_ForensicArtifacts_Nov23",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects patterns found in Lockbit TA attacks exploiting Citrixbleed vulnerability CVE 2023-4966",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:ransomware=\"LockBit\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-4966"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188873"
+}

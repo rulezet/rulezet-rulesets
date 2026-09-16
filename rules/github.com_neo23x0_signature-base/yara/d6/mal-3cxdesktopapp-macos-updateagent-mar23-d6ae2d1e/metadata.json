@@ -1,0 +1,22 @@
+{
+  "uuid": "d6ae2d1e-dd72-4454-ae4d-dee25ee2660f",
+  "title": "MAL_3CXDesktopApp_MacOS_UpdateAgent_Mar23",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects 3CXDesktopApp MacOS UpdateAgent backdoor component",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188806"
+}

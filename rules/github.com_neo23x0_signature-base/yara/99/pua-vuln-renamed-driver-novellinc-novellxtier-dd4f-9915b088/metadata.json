@@ -1,0 +1,19 @@
+{
+  "uuid": "9915b088-038d-4e80-b7a9-f11c4d228586",
+  "title": "PUA_VULN_Renamed_Driver_Novellinc_Novellxtier_DD4F",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - NICM.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188989"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "de6c54ea-5eec-49ad-97da-7de53d882594",
+  "title": "PUA_VULN_Renamed_Driver_Novellinc_Novellxtier_B50F",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - libnicm.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/189021"
+}

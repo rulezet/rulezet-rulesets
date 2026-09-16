@@ -1,0 +1,22 @@
+{
+  "uuid": "0c453c3f-396f-4e87-b934-9b9b8af31108",
+  "title": "Casper_EXE_Dropper",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "Casper French Espionage Malware - Win32/ProxyBot.B - Dropper http://goo.gl/VRJNLo",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188855"
+}

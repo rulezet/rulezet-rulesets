@@ -1,0 +1,23 @@
+{
+  "uuid": "22ec8fd0-aaeb-4229-b550-c55578ab4a2c",
+  "title": "MAL_Python_Backdoor_Script_Nov23",
+  "format": "yara",
+  "author": "X__Junior",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a trojan (written in Python) that communicates with c2 - was seen being used by LockBit 3.0 affiliates exploiting CVE-2023-4966",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:ransomware=\"LockBit\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2023-4966"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/188868"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "4af65bdf-ee19-4567-bb2d-5a3273e45f40",
+  "title": "PUA_VULN_Renamed_Driver_Iobit_Monitorsys_Advancedsystemcare_E4A7",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - Monitor_win10_x64.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/189055"
+}

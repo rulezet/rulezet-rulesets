@@ -1,0 +1,19 @@
+{
+  "uuid": "83d0d5cf-6ab1-457d-b571-bd610662f2a5",
+  "title": "PUA_VULN_Renamed_Driver_Panyazilimbilisimteknolojileriticltdsti_Panioxsys_Paniolibrary_6B83",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects renamed vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - PanIOx64.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/189241"
+}
