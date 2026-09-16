@@ -1,0 +1,9 @@
+rule Win_Trojan__0523_0001_001_1
+{
+strings:
+	$a0 = { 33c9e85200b002e84300b4408d96960359cd21b8024233c999cd21b4408d960301b92202cd21b8 }
+
+
+condition:
+	$a0
+}
