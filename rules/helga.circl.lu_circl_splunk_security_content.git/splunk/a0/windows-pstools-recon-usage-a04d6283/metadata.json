@@ -1,0 +1,26 @@
+{
+  "uuid": "a04d6283-81ee-4844-aa50-d16447131255",
+  "title": "Windows PsTools Recon Usage",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies execution of Sysinternals PsTools and Sysinternals Suit binaries that are commonly used for reconnaissance and information gathering on\nWindows endpoints.\nPsTools (PsExec, PsFile, PsGetSid, PsInfo, PsPing, etc.) or Sysinternals Suit tools, are frequently used by administrators for legitimate maintenance but are also leveraged by threat actors to collect system, account, network and service information during discovery and lateral movement.\nThis detection focuses on process execution and PE metadata telemetry (OriginalFileName).\nIf confirmed malicious, this activity can indicate targeted reconnaissance and foothold escalation, enabling subsequent lateral movement or credential abuse.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1018",
+    "T1046",
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350979"
+}

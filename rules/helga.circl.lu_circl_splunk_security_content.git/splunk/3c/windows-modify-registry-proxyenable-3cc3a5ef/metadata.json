@@ -1,0 +1,23 @@
+{
+  "uuid": "3cc3a5ef-ab7d-4ca0-9a88-6e52898c5480",
+  "title": "Windows Modify Registry ProxyEnable",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows registry key \"ProxyEnable\" to enable proxy settings. It leverages data from the Endpoint.Registry datamodel, specifically monitoring changes to the \"Internet Settings\\ProxyEnable\" registry path. This activity is significant as it is commonly exploited by malware and adversaries to establish proxy communication, potentially connecting to malicious Command and Control (C2) servers. If confirmed malicious, this could allow attackers to redirect network traffic through a proxy, facilitating unauthorized communication and data exfiltration, thereby compromising the security of the affected host.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351028"
+}

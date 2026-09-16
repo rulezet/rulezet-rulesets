@@ -1,0 +1,24 @@
+{
+  "uuid": "2cb2ce9e-674a-415b-8f50-5d6e24f8dbe1",
+  "title": "Windows Archived Collected Data In TEMP Folder",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of archived files in a temporary folder, which may contain collected data. This behavior is often associated with malicious activity, where attackers compress sensitive information before exfiltration. The detection focuses on monitoring specific directories, such as temp folders, for the presence of newly created archive files (e.g., .zip, .rar, .tar). By identifying this pattern, security teams can quickly respond to potential data collection and exfiltration attempts, minimizing the risk of data breaches and improving overall threat detection.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1560"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351082"
+}

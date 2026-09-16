@@ -1,0 +1,26 @@
+{
+  "uuid": "081f18d0-2983-46b6-8ed2-8ae40d6621ae",
+  "title": "Java Writing JSP File",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the Java process writing a .jsp file to disk, which may indicate a web shell being deployed. It leverages data from the Endpoint datamodel, specifically monitoring process and filesystem activities. This activity is significant because web shells can provide attackers with remote control over the compromised server, leading to further exploitation. If confirmed malicious, this could allow unauthorized access, data exfiltration, or further compromise of the affected system, posing a severe security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1133",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2022-22965"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351270"
+}

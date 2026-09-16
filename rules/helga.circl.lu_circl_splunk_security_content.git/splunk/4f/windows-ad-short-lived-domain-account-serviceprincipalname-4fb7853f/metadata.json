@@ -1,0 +1,24 @@
+{
+  "uuid": "4fb7853f-dab3-4a6d-8c85-9560f28b16fc",
+  "title": "Windows AD Short Lived Domain Account ServicePrincipalName",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the addition and quick deletion of a Service Principal Name (SPN) to a domain account within 5 minutes. This detection leverages EventCode 5136 from the Windows Security Event Log, focusing on changes to the servicePrincipalName attribute. This activity is significant as it may indicate an attempt to perform Kerberoasting, a technique used to crack the cleartext password of a domain account offline. If confirmed malicious, this could allow an attacker to gain unauthorized access to sensitive information or escalate privileges within the domain environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351153"
+}

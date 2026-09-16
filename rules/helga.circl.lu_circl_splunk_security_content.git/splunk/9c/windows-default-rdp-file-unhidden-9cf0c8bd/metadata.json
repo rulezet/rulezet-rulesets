@@ -1,0 +1,23 @@
+{
+  "uuid": "9cf0c8bd-aec5-431e-828e-8faebc4362a5",
+  "title": "Windows Default Rdp File Unhidden",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies the use of attrib.exe to remove hidden (-h) or system (-s) attributes from the Default.rdp file, which is automatically created in a user's Documents folder when a Remote Desktop Protocol (RDP) session is initiated using mstsc.exe. The Default.rdp file stores session configuration details such as the remote host address and screen settings. Unhiding this file is uncommon in normal user behavior and may indicate that an attacker or red team operator is attempting to access or manipulate RDP connection history that was previously hidden—either by default or as part of an earlier anti-forensics effort. This activity may represent part of a broader pattern of reconnaissance or staging for credential reuse, lateral movement, or forensic analysis evasion. Monitoring for this behavior can help uncover suspicious manipulation of user artifacts and highlight interactive attacker activity on a compromised host.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350972"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "eb038192-28ea-4b9f-aabc-6fc17fef276f",
+  "title": "Windows Impair Defense Change Win Defender Tracing Level",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows registry specifically targeting the \"WppTracingLevel\" setting within Windows Defender. This detection leverages data from the Endpoint.Registry data model to identify changes in the registry path associated with Windows Defender tracing levels. Such modifications are significant as they can impair the diagnostic capabilities of Windows Defender, potentially hiding malicious activities. If confirmed malicious, this activity could allow an attacker to evade detection and maintain persistence within the environment, leading to further compromise and data exfiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351372"
+}

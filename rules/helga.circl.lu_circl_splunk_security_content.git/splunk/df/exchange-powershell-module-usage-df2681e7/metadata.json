@@ -1,0 +1,24 @@
+{
+  "uuid": "df2681e7-263f-4fc5-9ab1-3ebdaf754831",
+  "title": "Exchange PowerShell Module Usage",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the usage of specific Exchange PowerShell modules, such as New-MailboxExportRequest, New-ManagementRoleAssignment, New-MailboxSearch, and Get-Recipient. It leverages PowerShell Script Block Logging (EventCode 4104) to identify these commands. This activity is significant because these modules can be exploited by adversaries who have gained access via ProxyShell or ProxyNotShell vulnerabilities. If confirmed malicious, attackers could export mailbox contents, assign management roles, conduct mailbox searches, or view recipient objects, potentially leading to data exfiltration, privilege escalation, or unauthorized access to sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351348"
+}

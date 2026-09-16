@@ -1,0 +1,24 @@
+{
+  "uuid": "076df763-76c3-4b41-ba6e-2b72b2043ccd",
+  "title": "Windows PowerView Constrained Delegation Discovery",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of PowerView commandlets to discover Windows endpoints with Kerberos Constrained Delegation. It leverages PowerShell Script Block Logging (EventCode=4104) to identify specific commandlets like `Get-DomainComputer` or `Get-NetComputer` with the `-TrustedToAuth` parameter. This activity is significant as it indicates potential reconnaissance efforts by adversaries or Red Teams to map out privileged delegation settings in Active Directory. If confirmed malicious, this could allow attackers to identify high-value targets for further exploitation, potentially leading to privilege escalation or lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1018"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351409"
+}

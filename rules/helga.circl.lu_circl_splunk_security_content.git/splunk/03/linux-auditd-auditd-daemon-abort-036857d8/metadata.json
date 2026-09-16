@@ -1,0 +1,25 @@
+{
+  "uuid": "036857d8-469a-4ab9-92e7-b5e2e8b3de3d",
+  "title": "Linux Auditd Auditd Daemon Abort",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the abnormal termination of the Linux audit daemon (auditd) by identifying DAEMON_ABORT events in audit logs. These terminations suggest a serious failure of the auditing subsystem, potentially due to resource exhaustion, corruption, or malicious interference. Unlike a clean shutdown, DAEMON_ABORT implies that audit logging may have been disabled without system administrator intent. Alerts should be generated on detection and correlated with DAEMON_START, DAEMON_END, and system logs to determine root cause. If no DAEMON_START follows soon after, or this pattern repeats, it indicates a high-severity issue that impacts log integrity and should be immediately investigated.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1685.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351368"
+}

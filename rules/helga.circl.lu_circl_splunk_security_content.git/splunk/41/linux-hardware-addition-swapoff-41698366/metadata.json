@@ -1,0 +1,23 @@
+{
+  "uuid": "41698366-d047-4f42-aa0b-5c5f644b9111",
+  "title": "Linux Hardware Addition SwapOff",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the \"swapoff\" command, which disables the swapping of paging devices on a Linux system. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs. This activity is significant because disabling swap can be a tactic used by malware, such as Awfulshred, to evade detection and hinder forensic analysis. If confirmed malicious, this action could allow an attacker to manipulate system memory management, potentially leading to data corruption, system instability, or evasion of memory-based detection mechanisms.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1200"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351136"
+}

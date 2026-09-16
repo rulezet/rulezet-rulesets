@@ -1,0 +1,23 @@
+{
+  "uuid": "f169b9b0-5c11-44a1-aacc-80edb89f5ee3",
+  "title": "Windows Hosts File Access",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This Analytic detects the execution of a process attempting to access the hosts file.\nThe hosts file is a critical file for network configuration and DNS resolution.\nIf an attacker gains access to it, they can redirect traffic to malicious websites, serve fake content or block legitimate security websites.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1012"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351017"
+}

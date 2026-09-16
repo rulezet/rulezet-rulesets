@@ -1,0 +1,23 @@
+{
+  "uuid": "8b38c761-ae27-4146-b8e4-446f8a27c7a6",
+  "title": "Elevated Group Discovery With Wmic",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of `wmic.exe` with command-line arguments querying specific elevated domain groups. It leverages Endpoint Detection and Response (EDR) telemetry to identify processes that access the LDAP namespace and search for groups like \"Domain Admins\" or \"Enterprise Admins.\" This activity is significant as it indicates potential reconnaissance efforts by adversaries to identify high-privilege accounts within Active Directory. If confirmed malicious, this behavior could lead to privilege escalation, allowing attackers to gain elevated access and control over critical network resources.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351320"
+}

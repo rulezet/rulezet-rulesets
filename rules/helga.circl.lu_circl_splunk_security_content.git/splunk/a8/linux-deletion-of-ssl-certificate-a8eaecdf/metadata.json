@@ -1,0 +1,25 @@
+{
+  "uuid": "a8eaecdf-41b7-4225-a4f6-db645d6990c9",
+  "title": "Linux Deletion of SSL Certificate",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the deletion of SSL certificates on a Linux machine. It leverages filesystem event logs to identify when files with extensions .pem or .crt are deleted from the /etc/ssl/certs/ directory. This activity is significant because attackers may delete or modify SSL certificates to disable security features or evade defenses on a compromised system. If confirmed malicious, this behavior could indicate an attempt to disrupt secure communications, evade detection, or execute a destructive payload, potentially leading to significant security breaches and data loss.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"AcidRain\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1070.004",
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351245"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "402b75a9-ad83-43f9-8805-717c29fca5b4",
+  "title": "Windows Disable LogOff Button Through Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a suspicious registry modification that disables the logoff feature on a Windows host. It leverages data from the Endpoint.Registry data model to identify changes to specific registry values associated with logoff functionality. This activity is significant because it can indicate ransomware attempting to make the compromised host unusable and hinder remediation efforts. If confirmed malicious, this action could prevent users from logging off, complicate incident response, and allow attackers to maintain persistence and control over the affected system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351022"
+}

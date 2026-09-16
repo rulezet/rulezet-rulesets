@@ -1,0 +1,27 @@
+{
+  "uuid": "f5cb2c5b-0199-4cae-bf51-c4718a1fd14f",
+  "title": "Windows Short Lived DNS Record",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the creation and quick deletion of a DNS object within 300 seconds in an Active Directory environment, indicative of a potential attack abusing DNS. This detection leverages Windows Security Event Codes 5136 and 5137, analyzing the duration between these events. This activity is significant as temporary DNS entries allows attackers to cause unexpecting network trafficking, leading to potential compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1071.004",
+    "T1187",
+    "T1557.001"
+  ],
+  "cve": [
+    "CVE-2025-33073"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351215"
+}

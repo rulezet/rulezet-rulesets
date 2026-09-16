@@ -1,0 +1,23 @@
+{
+  "uuid": "c8ea6284-929e-48a1-bcc1-4338b2ba6b73",
+  "title": "Windows KrbRelayUp Service Creation",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of a service with the default name \"KrbSCM\" associated with the KrbRelayUp tool. It leverages Windows System Event Logs, specifically EventCode 7045, to identify this activity. This behavior is significant as KrbRelayUp is a known tool used for privilege escalation attacks. If confirmed malicious, this activity could allow an attacker to escalate privileges, potentially gaining unauthorized access to sensitive systems and data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351146"
+}

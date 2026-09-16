@@ -1,0 +1,24 @@
+{
+  "uuid": "7c7d54a1-22fe-4bcf-906b-b9b69a8709c6",
+  "title": "Windows EFI Bootloader File Modification",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects where a process writes to critical EFI bootloader files (bootmgfw.efi or bootx64.efi) within the \\EFI\\Boot\\ directory.\nThese files are responsible for initializing the Windows Boot Manager during system startup.\nModification or replacement of these files is highly unusual in normal operations and may indicate an attempt to install a bootkit, persist malicious code at the firmware level, or otherwise tamper with the system boot process.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1542.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351232"
+}

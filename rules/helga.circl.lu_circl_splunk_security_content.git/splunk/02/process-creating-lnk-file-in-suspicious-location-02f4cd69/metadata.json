@@ -1,0 +1,27 @@
+{
+  "uuid": "02f4cd69-f17c-49db-8206-f75b21676751",
+  "title": "Process Creating LNK file in Suspicious Location",
+  "format": "splunk",
+  "author": "Jose Hernandez, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a process creating a `.lnk` file in suspicious locations such as `C:\\User*` or `*\\Local\\Temp\\*`.\nIt leverages filesystem and process activity data from the Endpoint data model to identify this behavior.\nThis activity can be significant because creating `.lnk` files in these directories is a common indicator of spear phishing tools to establish persistence or execute malicious payloads.\nIf confirmed malicious, this could allow an attacker to maintain persistence, execute arbitrary code, or further compromise the system.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:banker=\"Gozi\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351367"
+}

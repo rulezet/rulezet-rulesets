@@ -1,0 +1,26 @@
+{
+  "uuid": "fb1b8b4e-a8ab-4dd7-abd5-8de5d6cec3bf",
+  "title": "Suspicious Copy on System32",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potentially suspicious file copy operations targeting the\nSystem32 or SysWow64 directories as source, often indicative of malicious activity.\nIt leverages data from Endpoint Detection and Response (EDR) agents,\nfocusing on activity initiated by command-line tools like cmd.exe or PowerShell.\nThis behavior is significant as it may indicate an attempt to evade defenses by copying\nan existing binary from the system directory and renaming it.\nIf confirmed malicious, this activity could allow an attacker to execute\ncode undetected and potentially leading to system compromise or further lateral movement\nwithin the network.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:banker=\"IcedID\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Sandworm Team - G0034\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351188"
+}

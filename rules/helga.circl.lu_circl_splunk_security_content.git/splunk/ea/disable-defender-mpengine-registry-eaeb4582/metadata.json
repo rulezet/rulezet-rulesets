@@ -1,0 +1,25 @@
+{
+  "uuid": "eaeb4582-afa8-415e-acb1-38d22e3fcb6c",
+  "title": "Disable Defender MpEngine Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the modification of the Windows Defender MpEngine registry value, specifically setting MpEnablePus to 0x00000000. This detection leverages endpoint registry logs, focusing on changes within the path \"*\\\\Policies\\\\Microsoft\\\\Windows Defender\\\\MpEngine*\". This activity is significant as it indicates an attempt to disable key Windows Defender features, potentially allowing malware to evade detection. If confirmed malicious, this could lead to undetected malware execution, persistence, and further system compromise. Immediate investigation and endpoint isolation are recommended.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"IcedID\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351129"
+}

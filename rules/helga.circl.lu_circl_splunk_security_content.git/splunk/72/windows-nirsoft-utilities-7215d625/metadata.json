@@ -1,0 +1,24 @@
+{
+  "uuid": "7215d625-b6cb-4773-b33e-93280a3f1427",
+  "title": "Windows NirSoft Utilities",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of commonly used NirSoft utilities on Windows systems.\nIt leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution details such as process name, parent process, and command-line arguments.\nThis activity is significant for a SOC because NirSoft utilities, while legitimate, can be used by adversaries for malicious purposes like credential theft or system reconnaissance.\nIf confirmed malicious, this activity could lead to unauthorized access, data exfiltration, or further system compromise.\nNote that this search does not use a where clause to filter out known benign paths, as NirSoft utilities can be executed from various locations. This might hinder performance in environments with high data volumes.\nApply additional filtering as necessary to enhance this.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"WhisperGate\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1588.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351222"
+}

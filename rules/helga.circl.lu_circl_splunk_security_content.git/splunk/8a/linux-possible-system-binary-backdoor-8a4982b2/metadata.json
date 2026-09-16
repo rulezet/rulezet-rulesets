@@ -1,0 +1,25 @@
+{
+  "uuid": "8a4982b2-e7d2-429c-9095-5a01ef95ffcc",
+  "title": "Linux Possible System Binary Backdoor",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation or overwrite of commonly targeted Linux system binaries such as cat, ls, cp, ps, mv, netstat, ss, and lsof.\nAdversaries may replace these utilities with backdoored versions to hide malicious activity, harvest credentials, or maintain persistence while appearing to use legitimate system tools.\nThis technique is associated with rootkit deployment and post-exploitation frameworks such as PANIX.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1059.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351010"
+}

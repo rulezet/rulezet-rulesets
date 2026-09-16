@@ -1,0 +1,30 @@
+{
+  "uuid": "c960a2b2-cb85-43a6-84b3-b9aea9671cad",
+  "title": "Scheduled Task Deleted Or Created via CMD",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation or deletion of scheduled tasks via schtasks.exe when invoked with create or delete flags, specifically focusing on those executions where the process includes additional parameters such as /tr, /sc, or /ru. The detection uses Endpoint Detection and Response (EDR) telemetry mapped to the Endpoint data model, and filters out events originating from trusted system paths like C:\\Windows\\System32 or C:\\Program Files. It further narrows results to cases where schtasks.exe is launched by potentially suspicious parent processes such as cmd.exe, wscript.exe, or cscript.exe, and excludes service accounts. This behavior may indicate adversary efforts to gain persistence or evade detection by manipulating scheduled tasks using scripts or command shells. If confirmed malicious, such activity could lead to unauthorized code execution or the removal of monitoring mechanisms on endpoints.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Sandworm Team - G0034\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351313"
+}

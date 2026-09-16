@@ -1,0 +1,25 @@
+{
+  "uuid": "acf62bf1-9184-445d-993b-727aae037a74",
+  "title": "PetitPotam Network Share Access Request",
+  "format": "splunk",
+  "author": "Michael Haag, Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects network share access requests indicative of the PetitPotam attack (CVE-2021-36942). It leverages Windows Event Code 5145, which logs attempts to access network share objects. This detection is significant as PetitPotam can coerce authentication from domain controllers, potentially leading to unauthorized access. If confirmed malicious, this activity could allow attackers to escalate privileges or move laterally within the network, posing a severe security risk. Ensure Event Code 5145 is enabled via Group Policy to utilize this analytic effectively.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1187"
+  ],
+  "cve": [
+    "CVE-2021-36942"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351383"
+}

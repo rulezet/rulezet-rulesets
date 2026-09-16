@@ -1,0 +1,25 @@
+{
+  "uuid": "9ca16294-339c-4aa9-84dd-d4d12ee7f3ad",
+  "title": "Linux Apparmor Bypass Via Aaexec",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects aa-exec being used to launch a binary under the trinity, chrome, or flatpak AppArmor profiles where the executed target is not the legitimate application those profiles are intended to confine. This behavior is consistent with abuse of userns,-carrying AppArmor profiles to bypass Ubuntu's unprivileged user namespace restrictions as seen in the CVE-2026-46331 privilege escalation exploit. The analytic flags execution when the target command following -- is invoked via a relative path, resolves outside standard trusted  install directories for these applications, or shares the same binary name as the calling parent process. Adversaries and red teams may abuse this technique to escalate privileges by tricking aa-exec into granting a namespace-creation capability to an arbitrary binary rather than the trusted application the profile was written for.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2026-46331"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351392"
+}

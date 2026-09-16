@@ -1,0 +1,25 @@
+{
+  "uuid": "1bce1bfc-ea06-41bd-ad24-8479a6ba565f",
+  "title": "Windows Suspicious VMWare Tools Child Process",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies child processes spawned by vmtoolsd.exe, the VMWare Tools service in Windows, which typically runs with SYSTEM privileges. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process and parent process relationships. Monitoring this activity is crucial as it can indicate exploitation attempts, such as CVE-2023-20867. If confirmed malicious, attackers could gain SYSTEM-level access, allowing them to execute arbitrary code, escalate privileges, and potentially compromise the entire system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2023-20867"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351150"
+}

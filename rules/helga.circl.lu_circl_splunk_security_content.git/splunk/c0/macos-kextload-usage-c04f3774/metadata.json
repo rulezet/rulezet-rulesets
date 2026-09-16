@@ -1,0 +1,25 @@
+{
+  "uuid": "c04f3774-291b-4757-9f37-be5b4a677aa1",
+  "title": "MacOS Kextload Usage",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects execution of the kextload command on macOS systems. The kextload utility is used to manually load kernel extensions (KEXTs) into the macOS kernel, which can introduce privileged code at the kernel level.\nWhile legitimate for driver installation and system administration, misuse may indicate attempts to install unauthorized, malicious, or persistence-enabling kernel extensions.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1543"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351271"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "b97f20b5-6b34-4583-98a2-68908a5be287",
+  "title": "Windows MSHTA Writing to World Writable Path",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances of `mshta.exe` writing files to world-writable directories. It leverages Sysmon EventCode 11 logs to detect file write operations by `mshta.exe` to directories like `C:\\Windows\\Tasks` and `C:\\Windows\\Temp`. This activity is significant as it often indicates an attempt to establish persistence or execute malicious code, deviating from the utility's legitimate use. If confirmed malicious, this behavior could lead to the execution of multi-stage payloads, potentially resulting in full system compromise and unauthorized access to sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350966"
+}

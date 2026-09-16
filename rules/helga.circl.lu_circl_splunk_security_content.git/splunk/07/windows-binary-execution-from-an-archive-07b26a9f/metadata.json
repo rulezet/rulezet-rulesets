@@ -1,0 +1,25 @@
+{
+  "uuid": "07b26a9f-3f75-4c18-b66f-a35396746696",
+  "title": "Windows Binary Execution from an Archive",
+  "format": "splunk",
+  "author": "Raven Tait, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of a binary from archive-related paths in the user's Temp directory.\nIt looks for binaries launched by `explorer.exe`, `winrar.exe`, or `7zFM.exe`, where the executed process path includes Temp and archive markers such as RAR, 7z, or ZIP.\nThis was abused by attackers to bypass Mark-of-the-Web (MOTW) such as CVE-2025-0411 or exploit certain vulnerabilities.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204.002"
+  ],
+  "cve": [
+    "CVE-2025-0411"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351385"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "d5eaf5b0-3eec-460a-ab02-6b7aa96b73c9",
+  "title": "Domain Group Discovery With Dsquery",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of `dsquery.exe` with command-line arguments used to query for domain groups. It leverages Endpoint Detection and Response (EDR) data, focusing on process names and command-line arguments. This activity is significant because both Red Teams and adversaries use `dsquery.exe` to enumerate domain groups, gaining situational awareness and facilitating further Active Directory discovery. If confirmed malicious, this behavior could allow attackers to map out the domain structure, identify high-value targets, and plan subsequent attacks, potentially leading to privilege escalation or data exfiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351071"
+}

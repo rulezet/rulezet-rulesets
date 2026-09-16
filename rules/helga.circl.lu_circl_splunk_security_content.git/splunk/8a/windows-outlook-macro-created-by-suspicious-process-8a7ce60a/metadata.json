@@ -1,0 +1,26 @@
+{
+  "uuid": "8a7ce60a-772e-47b5-9908-7fc557f6ef7e",
+  "title": "Windows Outlook Macro Created by Suspicious Process",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of an Outlook Macro (VbaProject.OTM) by a suspicious process. This file is normally created when you create a macro from within Outlook. If this file is created by a process other than Outlook.exe it may be maliciously created. This detection leverages data from the Filesystem datamodel, specifically looking for the file creation event for VbaProject.OTM. This activity is significant as it is commonly associated with some malware infections, indicating potential malicious intent to harvest email information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT28 - G0007\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.005",
+    "T1137"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351350"
+}

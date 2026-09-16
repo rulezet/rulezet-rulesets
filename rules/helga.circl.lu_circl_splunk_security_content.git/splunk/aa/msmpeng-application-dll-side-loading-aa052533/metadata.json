@@ -1,0 +1,25 @@
+{
+  "uuid": "aa052533-ceda-49cd-b908-1bc6ee13000c",
+  "title": "Msmpeng Application DLL Side Loading",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Sanjay Govind",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the suspicious creation of msmpeng.exe or mpsvc.dll in non-default Windows Defender folders. It leverages the Endpoint.Filesystem datamodel to identify instances where these files are created outside their expected directories. This activity is significant because it is associated with the REvil ransomware, which uses DLL side-loading to execute malicious payloads. If confirmed malicious, this could lead to ransomware deployment, resulting in data encryption, system compromise, and potential data loss or extortion.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351172"
+}

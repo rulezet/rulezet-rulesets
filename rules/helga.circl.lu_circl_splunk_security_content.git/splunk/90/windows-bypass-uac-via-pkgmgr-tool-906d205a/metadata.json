@@ -1,0 +1,24 @@
+{
+  "uuid": "906d205a-e594-4709-9698-fa2980e02d32",
+  "title": "Windows Bypass UAC via Pkgmgr Tool",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the deprecated 'pkgmgr.exe' process with an XML input file, which is unusual and potentially suspicious. This detection leverages Endpoint Detection and Response (EDR) telemetry, focusing on process execution details and command-line arguments. The significance lies in the deprecated status of 'pkgmgr.exe' and the use of XML files, which could indicate an attempt to bypass User Account Control (UAC). If confirmed malicious, this activity could allow an attacker to execute commands with elevated privileges, leading to potential system compromise and unauthorized changes.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351005"
+}

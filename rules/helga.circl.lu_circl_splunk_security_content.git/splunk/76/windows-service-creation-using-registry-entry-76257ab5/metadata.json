@@ -1,0 +1,24 @@
+{
+  "uuid": "76257ab5-36f0-4385-a696-68049c760631",
+  "title": "Windows Service Creation Using Registry Entry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the modification of registry keys that define Windows services using reg.exe. This detection leverages Splunk to search for specific keywords in the registry path, value name, and value data fields. This activity is significant because it indicates potential unauthorized changes to service configurations, a common persistence technique used by attackers. If confirmed malicious, this could allow an attacker to maintain access, escalate privileges, or move laterally within the network, leading to data theft, ransomware, or other damaging outcomes.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351098"
+}

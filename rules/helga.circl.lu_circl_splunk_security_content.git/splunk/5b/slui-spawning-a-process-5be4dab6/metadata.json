@@ -1,0 +1,25 @@
+{
+  "uuid": "5be4dab6-bd92-41bd-9045-2c0510725795",
+  "title": "SLUI Spawning a Process",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the Microsoft Software Licensing User Interface Tool (`slui.exe`) spawning a child process. This behavior is identified using Endpoint Detection and Response (EDR) telemetry, focusing on process creation events where `slui.exe` is the parent process. This activity is significant because `slui.exe` should not typically spawn child processes, and doing so may indicate a UAC bypass attempt, leading to elevated privileges. If confirmed malicious, an attacker could leverage this to execute code with elevated privileges, potentially compromising the system's security and gaining unauthorized access.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351401"
+}

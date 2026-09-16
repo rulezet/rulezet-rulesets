@@ -1,0 +1,23 @@
+{
+  "uuid": "8a724f1b-7db9-4c81-be96-760fd030999e",
+  "title": "Windows Njrat Fileless Storage via Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious registry modifications indicative of NjRat's fileless storage technique. It leverages the Endpoint.Registry data model to identify specific registry paths and values commonly used by NjRat for keylogging and executing DLL plugins. This activity is significant as it helps evade traditional file-based detection systems, making it crucial for SOC analysts to monitor. If confirmed malicious, this behavior could allow attackers to persist on the host, execute arbitrary code, and capture sensitive keystrokes, leading to potential data breaches and further system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351206"
+}

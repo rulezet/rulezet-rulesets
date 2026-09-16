@@ -1,0 +1,26 @@
+{
+  "uuid": "b5c55f14-15fe-4718-87c6-9ffc7a3bd64f",
+  "title": "Windows SCCM Smsexec Spawned a Suspicious Child Process",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects shells, scripting engines, and common post-exploitation utilities spawned as child processes of smsexec.exe.\nsmsexec.exe is the core SCCM SMS Executive service process and has no legitimate reason to launch interactive shells or scripting interpreters.\nAn attacker who plants a malicious adsource.dll in the SCCMProvider bin\\X64 directory will obtain code execution in the SCCM service context, typically resulting in a SYSTEM-level child process being spawned under smsexec.exe.\nIf confirmed malicious, this activity represents successful exploitation of the SCCM SMS Executive service and should be treated as a full host compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1574.001"
+  ],
+  "cve": [
+    "CVE-2026-47301"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351154"
+}

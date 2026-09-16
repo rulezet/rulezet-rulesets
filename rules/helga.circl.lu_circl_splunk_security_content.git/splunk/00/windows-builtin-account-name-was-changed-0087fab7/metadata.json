@@ -1,0 +1,24 @@
+{
+  "uuid": "0087fab7-e715-40fe-bd81-9cd6f3ebf78c",
+  "title": "Windows Builtin Account Name Was Changed",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects renaming of Windows built-in accounts via Event ID 4781.\nIt identifies renames targeting accounts with well-known reserved RIDs (500-504): Administrator, Guest, krbtgt, DefaultAccount, and WDAGUtilityAccount, by matching the TargetSid field against the S-1-5-21-*-50[0-4] pattern.\nAttackers commonly rename the built-in Administrator account to evade detections that alert on the literal account name, while retaining the full privileges of the RID-500 account.\nRenaming Guest, krbtgt, or other reserved accounts is highly unusual in any legitimate environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.010",
+    "T1078.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351324"
+}

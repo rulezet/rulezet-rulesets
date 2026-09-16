@@ -1,0 +1,24 @@
+{
+  "uuid": "339ceaf7-5fec-4caa-8aea-2f67a3eb0ef6",
+  "title": "Windows Multiple Account Passwords Changed",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects instances where more than five unique Windows account passwords are changed within a 10-minute interval. It leverages Event Code 4724 from the Windows Security Event Log, using the wineventlog_security dataset to monitor and count distinct TargetUserName values. This behavior is significant as rapid password changes across multiple accounts are unusual and may indicate unauthorized access or internal compromise. If confirmed malicious, this activity could lead to widespread account compromise, unauthorized access to sensitive information, and potential disruption of services.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351406"
+}

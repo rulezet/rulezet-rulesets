@@ -1,0 +1,26 @@
+{
+  "uuid": "ac144a78-54c5-4f6a-b5de-10ada1fd4646",
+  "title": "Windows Cobalt Strike PowerShell Loader",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the PowerShell pattern used at the end of a Cobalt Strike PowerShell loader to perform the decompression of the executable.\nThis loader is used in attacks such as scripted web delivery.\nCobalt Strike is a legitimate, commercial penetration testing tool that has been largely co-opted by ransomware gangs to launch attacks.\nCobalt Strike's popularity is mainly due to its beacons or payload being stealthy, and easily customizable.\nCobalt Strike Beacon provides encrypted communication with the C&C server to send information and receive commands.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1608"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350960"
+}

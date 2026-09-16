@@ -1,0 +1,24 @@
+{
+  "uuid": "4166101a-7bc6-4682-8981-0a5aa4998b75",
+  "title": "Python Network Traffic During Package Build",
+  "format": "splunk",
+  "author": "Onur Mustafa Erdogan, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a Python process making an outbound network connection during package installation.\nAdversaries can abuse `setup.py` build scripts by leveraging `distutils`/`setuptools` command classes to execute arbitrary code, including network beacons to third-party domains, the moment a malicious Python package is installed.\nThis activity is significant because it allows adversaries to establish a foothold or exfiltrate data without any direct interaction from the victim beyond running `pip install`.\nIf confirmed malicious, this could indicate a successful software supply chain compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.006",
+    "T1195.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351404"
+}

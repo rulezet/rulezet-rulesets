@@ -1,0 +1,23 @@
+{
+  "uuid": "2be5f3c8-4614-435d-a9dd-c707d1b9875c",
+  "title": "Windows Impair Defense Disable Win Defender Gen reports",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications in the Windows registry to disable Windows Defender generic reports. It leverages data from the Endpoint.Registry data model, specifically monitoring changes to the \"DisableGenericRePorts\" registry value. This activity is significant as it can prevent the transmission of error reports to Microsoft's Windows Error Reporting service, potentially hiding malicious activities. If confirmed malicious, this action could allow attackers to bypass Windows Defender detections, reducing the visibility of their activities and increasing the risk of undetected system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351295"
+}

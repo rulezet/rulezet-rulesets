@@ -1,0 +1,24 @@
+{
+  "uuid": "3eceb33a-bc07-4701-ad19-de2586c5463f",
+  "title": "Windows Phishing PDF File Executes URL Link",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious PDF viewer processes spawning browser application child processes. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process and parent process names. This activity is significant as it may indicate a PDF spear-phishing attempt where a malicious URL link is executed, leading to potential payload download. If confirmed malicious, this could allow attackers to execute code, escalate privileges, or persist in the environment by exploiting the user's browser to connect to a malicious site.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"MuddyWater - G0069\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351097"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "92ffe5bf-9aa0-4ab3-aaca-1d6cc51fe2d4",
+  "title": "Elevated Group Discovery with PowerView",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the `Get-DomainGroupMember` cmdlet from PowerView, identified through PowerShell Script Block Logging (EventCode=4104). This cmdlet is used to enumerate members of elevated domain groups such as Domain Admins and Enterprise Admins. Monitoring this activity is crucial as it indicates potential reconnaissance efforts by adversaries to identify high-privileged users within the domain. If confirmed malicious, this activity could lead to targeted attacks on privileged accounts, facilitating further compromise and lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351096"
+}

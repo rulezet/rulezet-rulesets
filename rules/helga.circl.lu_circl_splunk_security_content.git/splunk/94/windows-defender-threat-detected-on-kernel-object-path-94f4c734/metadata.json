@@ -1,0 +1,24 @@
+{
+  "uuid": "94f4c734-40ac-4572-a566-8f39677e813f",
+  "title": "Windows Defender Threat Detected on Kernel Object Path",
+  "format": "splunk",
+  "author": "Onur Mustafa Erdogan, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a Windows Defender malware detection or remediation event where the scanned path resolves through the NT object manager namespace (\\globalroot\\).\nIt leverages Windows Defender Operational log EventCodes 1116 and 1117 to identify this activity.\nIn the ShieldBreak exploit, this is how Defender is coerced into hydrating a cloud file placeholder and copying attacker content through a symbolic link chain that ultimately writes into C:\\Windows\\System32.\nIf confirmed malicious, this activity indicates an attempt to weaponize Windows Defender's own scanning pipeline for local privilege escalation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1211"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350953"
+}

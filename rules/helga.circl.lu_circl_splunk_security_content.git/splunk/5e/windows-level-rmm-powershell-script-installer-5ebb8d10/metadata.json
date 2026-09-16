@@ -1,0 +1,23 @@
+{
+  "uuid": "5ebb8d10-ee5f-418b-8c08-e95facb6bea8",
+  "title": "Windows Level RMM PowerShell Script Installer",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the PowerShell installer for the Level tool.\nLevel is a commercial remote management tool from Level.io.\nRemote management tools, when used for legitimate purposes, can help IT professionals and system administrators remotely access and manage computer systems.\nHowever, threat actors may exploit these tools for malicious purposes.\nIt can be used to maintain persistence and execution on a host by a malicious actor.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351072"
+}

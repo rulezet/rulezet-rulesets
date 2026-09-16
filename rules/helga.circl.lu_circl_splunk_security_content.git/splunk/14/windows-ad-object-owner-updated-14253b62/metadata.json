@@ -1,0 +1,24 @@
+{
+  "uuid": "14253b62-274b-453c-a4eb-7c067266276b",
+  "title": "Windows AD Object Owner Updated",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "AD Object Owner Updated. The owner provides Full control level privileges over the target AD Object. This event has significant impact alone and is also a precursor activity for hiding an AD object.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1222.001",
+    "T1484"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351018"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "b8b23ad8-b161-4a57-8145-ac2860c16b9c",
+  "title": "Execute Javascript With Jscript COM CLSID",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of JavaScript using the JScript.Encode CLSID (COM Object) by cscript.exe. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names, command-line executions, and parent processes. This activity is significant as it is a known technique used by ransomware, such as Reddot, to execute malicious scripts and potentially disable AMSI (Antimalware Scan Interface). If confirmed malicious, this behavior could allow attackers to execute arbitrary code, evade detection, and maintain persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351134"
+}

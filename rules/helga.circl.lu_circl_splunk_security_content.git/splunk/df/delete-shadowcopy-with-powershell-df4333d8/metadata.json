@@ -1,0 +1,26 @@
+{
+  "uuid": "df4333d8-2f38-480a-836a-c65740d240ce",
+  "title": "Delete ShadowCopy With PowerShell",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of PowerShell to delete shadow copies via the WMIC PowerShell module. It leverages EventCode 4104 and searches for specific keywords like \"ShadowCopy,\" \"Delete,\" or \"Remove\" within the ScriptBlockText. This activity is significant because deleting shadow copies is a common tactic used by ransomware, such as DarkSide, to prevent data recovery. If confirmed malicious, this action could lead to irreversible data loss and hinder recovery efforts, significantly impacting business continuity and data integrity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351149"
+}

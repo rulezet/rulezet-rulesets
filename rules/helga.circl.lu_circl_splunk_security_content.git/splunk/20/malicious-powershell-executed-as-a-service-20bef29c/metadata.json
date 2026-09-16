@@ -1,0 +1,25 @@
+{
+  "uuid": "20bef29c-6d21-4208-b20f-df6be5bf4b07",
+  "title": "Malicious Powershell Executed As A Service",
+  "format": "splunk",
+  "author": "Ryan Becwar",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of malicious PowerShell commands or payloads via the Windows SC.exe utility. It detects this activity by analyzing Windows System logs (EventCode 7045) and filtering for specific PowerShell-related patterns in the ImagePath field. This behavior is significant because it indicates potential abuse of the Windows Service Control Manager to run unauthorized or harmful scripts, which could lead to system compromise. If confirmed malicious, this activity could allow attackers to execute arbitrary code, escalate privileges, or maintain persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"PsExec\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351135"
+}

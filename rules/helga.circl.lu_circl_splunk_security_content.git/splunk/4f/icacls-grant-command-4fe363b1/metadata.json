@@ -1,0 +1,24 @@
+{
+  "uuid": "4fe363b1-1046-4b44-8a3e-257aa4cac261",
+  "title": "ICACLS Grant Command",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the ICACLS command to grant\nadditional access permissions to files or directories. It leverages data from Endpoint\nDetection and Response (EDR) agents, focusing on specific process names and command-line\narguments. This activity is significant because it is commonly used by Advanced\nPersistent Threats (APTs) and coinminer scripts to evade detection and maintain\ncontrol over compromised systems. If confirmed malicious, this behavior could allow\nattackers to manipulate file permissions, potentially leading to unauthorized access,\ndata exfiltration, or further system compromise.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1222"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351224"
+}

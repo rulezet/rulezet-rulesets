@@ -1,0 +1,24 @@
+{
+  "uuid": "ee9c7d28-cdac-41c7-94ed-c4b5c60cea89",
+  "title": "Windows Wermgr Spawning System Integrity Process",
+  "format": "splunk",
+  "author": "Onur Mustafa Erdogan, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects WerMgr.exe (Windows Error Reporting) spawning a child process running at SYSTEM integrity level.\nWerMgr.exe normally runs at the integrity level of the reporting user or as a background SYSTEM-owned service that does not launch interactive children.\nIn the ShieldBreak exploit, WerMgr.exe is manually triggered via the QueueReporting scheduled task and loads an attacker-planted phantom DLL (phoneinfo.dll), which then spawns an elevated shell.\nIf confirmed malicious, this activity indicates successful local privilege escalation to SYSTEM.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1134.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350965"
+}

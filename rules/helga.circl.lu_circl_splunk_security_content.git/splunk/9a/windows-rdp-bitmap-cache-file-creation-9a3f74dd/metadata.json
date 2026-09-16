@@ -1,0 +1,23 @@
+{
+  "uuid": "9a3f74dd-cbac-4ff4-b343-c308452d1633",
+  "title": "Windows RDP Bitmap Cache File Creation",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies the creation of Remote Desktop Protocol (RDP) bitmap cache files on a Windows system, typically located in the user’s profile under the Terminal Server Client cache directory. These files (*.bmc, cache*.bin) are generated when a user initiates an RDP session using the built-in mstsc.exe client. Their presence can indicate interactive remote access activity and may be useful in detecting lateral movement or unauthorized RDP usage. Monitoring this behavior is especially important, as attackers may attempt to delete or suppress these artifacts to evade forensic analysis.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350983"
+}

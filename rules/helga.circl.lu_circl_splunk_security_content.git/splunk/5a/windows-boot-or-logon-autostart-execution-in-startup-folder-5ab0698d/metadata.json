@@ -1,0 +1,26 @@
+{
+  "uuid": "5ab0698d-9f7d-4ddc-81d7-cf42bf3e5d18",
+  "title": "Windows Boot or Logon Autostart Execution In Startup Folder",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of files in the Windows %startup% folder, a common persistence technique. It leverages the Endpoint.Filesystem data model to identify file creation events in this specific directory. This activity is significant because adversaries often use the startup folder to ensure their malicious code executes automatically upon system boot or user logon. If confirmed malicious, this could allow attackers to maintain persistence on the host, potentially leading to further system compromise and unauthorized access to sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Gozi\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1547.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351229"
+}

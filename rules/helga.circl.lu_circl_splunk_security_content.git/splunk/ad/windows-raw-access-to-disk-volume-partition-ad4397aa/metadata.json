@@ -1,0 +1,25 @@
+{
+  "uuid": "ad4397aa-44d5-44ea-adb3-4d8ac44a38d2",
+  "title": "Windows Raw Access To Disk Volume Partition",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious raw access reads to the device disk partition of a host machine. It leverages Sysmon EventCode 9 logs to identify processes attempting to read or write to the boot sector, excluding legitimate system processes. This activity is significant as it is commonly associated with destructive actions by adversaries, such as wiping, encrypting, or overwriting the boot sector, as seen in attacks involving malware like HermeticWiper. If confirmed malicious, this behavior could lead to severe impacts, including system inoperability, data loss, or compromised boot integrity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"HermeticWiper\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1561.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351343"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "17b8bfb4-e4ff-407f-bd67-17f51db6d28d",
+  "title": "Control Loading from World Writable Directory",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies instances of control.exe loading a .cpl or .inf file from a writable directory, which is related to CVE-2021-40444. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line executions mapped to the `Processes` node of the `Endpoint` data model. This activity is significant as it may indicate an attempt to exploit a known vulnerability, potentially leading to unauthorized code execution. If confirmed malicious, this could allow an attacker to gain control over the affected system, leading to further compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.002"
+  ],
+  "cve": [
+    "CVE-2021-40444"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351113"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "23f1d306-07ee-455a-8c6a-2fce6e06cc7e",
+  "title": "Crowdstrike Privilege Escalation For Non-Admin User",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects CrowdStrike alerts for privilege escalation attempts by non-admin users. These alerts indicate unauthorized efforts by regular users to gain elevated permissions, posing a significant security risk. Detecting and addressing these attempts promptly helps prevent potential breaches and ensures that user privileges remain properly managed, maintaining the integrity of the organization's security protocols.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1110"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351202"
+}

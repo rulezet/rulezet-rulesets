@@ -1,0 +1,25 @@
+{
+  "uuid": "dc09fb1e-932d-4981-bb4f-38cb715aff3a",
+  "title": "Windows Disable Memory Crash Dump",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to disable the memory crash dump feature on Windows systems by setting the registry value to 0. It leverages data from the Endpoint.Registry datamodel, specifically monitoring changes to the CrashDumpEnabled registry key. This activity is significant because disabling crash dumps can hinder forensic analysis and incident response efforts. If confirmed malicious, this action could be part of a broader attack strategy, such as data destruction or system destabilization, as seen with HermeticWiper, potentially leading to significant operational disruptions and data loss.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"HermeticWiper\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351319"
+}

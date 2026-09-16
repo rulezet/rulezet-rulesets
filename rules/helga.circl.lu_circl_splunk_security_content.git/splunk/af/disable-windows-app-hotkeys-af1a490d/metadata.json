@@ -1,0 +1,24 @@
+{
+  "uuid": "af1a490d-07e4-45ca-af7f-342fa4216dc2",
+  "title": "Disable Windows App Hotkeys",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a suspicious registry modification aimed at disabling Windows hotkeys for native applications. It leverages data from the Endpoint.Registry data model, focusing on specific registry paths and values indicative of this behavior. This activity is significant as it can impair an analyst's ability to use essential tools like Task Manager and Command Prompt, hindering incident response efforts. If confirmed malicious, this technique can allow an attacker to maintain persistence and evade detection, complicating the remediation process.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351053"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "4a165071-8323-4ce0-8bc2-b594d70530f0",
+  "title": "Get ADUserResultantPasswordPolicy with Powershell Script Block",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the `Get-ADUserResultantPasswordPolicy` PowerShell cmdlet, which is used to obtain the password policy in a Windows domain. It leverages PowerShell Script Block Logging (EventCode=4104) to identify this activity. Monitoring this behavior is significant as it may indicate an attempt to enumerate domain policies, a common tactic used by adversaries for situational awareness and Active Directory discovery. If confirmed malicious, this activity could allow attackers to understand password policies, aiding in further attacks such as password guessing or policy exploitation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1201"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350992"
+}

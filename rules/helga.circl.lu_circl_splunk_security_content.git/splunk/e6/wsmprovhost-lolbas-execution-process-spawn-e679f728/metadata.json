@@ -1,0 +1,24 @@
+{
+  "uuid": "e679f728-5c42-4f3e-8c06-6bf7e356bcfa",
+  "title": "Wsmprovhost LOLBAS Execution Process Spawn",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies `Wsmprovhost.exe` spawning a LOLBAS execution process. It leverages Endpoint Detection and Response (EDR) data to detect when `Wsmprovhost.exe` spawns child processes that are known LOLBAS (Living Off the Land Binaries and Scripts) executables. This activity is significant because it may indicate an adversary using Windows Remote Management (WinRM) to execute code on remote endpoints, a common technique for lateral movement. If confirmed malicious, this could allow attackers to execute arbitrary code, escalate privileges, or maintain persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351120"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "4a79fac4-6866-4861-96b8-a721dc7e734c",
+  "title": "Detect MSHTA Url in Command Line",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of Microsoft HTML Application Host (mshta.exe) to make remote HTTP or HTTPS connections. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line arguments containing URLs. This activity is significant because adversaries often use mshta.exe to download and execute remote .hta files, bypassing security controls. If confirmed malicious, this behavior could allow attackers to execute arbitrary code, potentially leading to system compromise, data exfiltration, or further network infiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351086"
+}

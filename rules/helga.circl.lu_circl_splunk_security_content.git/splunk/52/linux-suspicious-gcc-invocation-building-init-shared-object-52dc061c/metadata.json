@@ -1,0 +1,28 @@
+{
+  "uuid": "52dc061c-09bd-4ae2-a832-747452cd398d",
+  "title": "Linux Suspicious GCC Invocation Building Init Shared Object",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects compiler usage with flags commonly used to create shared libraries that auto-run initialization functions, which are often associated with local privilege escalation exploits.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1027.004",
+    "T1068",
+    "T1129",
+    "T1608"
+  ],
+  "cve": [
+    "CVE-2025-32463"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351166"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "57e147f8-beea-4366-b9e2-1f43a9b7a8b0",
+  "title": "Linux Service Started Or Enabled",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation or enabling of services on Linux platforms using the systemctl or service tools. It leverages Endpoint Detection and Response (EDR) logs, focusing on process names, parent processes, and command-line executions. This activity is significant as adversaries may create or modify services to maintain persistence or execute malicious payloads. If confirmed malicious, this behavior could lead to persistent access, data theft, ransomware deployment, or other damaging outcomes. Monitoring and investigating such activities are crucial for maintaining the security and integrity of the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1053.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351001"
+}

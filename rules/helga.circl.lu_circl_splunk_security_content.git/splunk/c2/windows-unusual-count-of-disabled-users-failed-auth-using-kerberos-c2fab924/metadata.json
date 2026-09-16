@@ -1,0 +1,23 @@
+{
+  "uuid": "c2fab924-45c4-4302-a57b-0e671512f039",
+  "title": "Windows Unusual Count Of Disabled Users Failed Auth Using Kerberos",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a source endpoint failing to authenticate with multiple disabled domain users using the Kerberos protocol. It leverages EventCode 4768, which is generated when the Key Distribution Center issues a Kerberos Ticket Granting Ticket (TGT) and detects failure code `0x12` (credentials revoked). This behavior is significant as it may indicate a Password Spraying attack targeting disabled accounts, potentially leading to initial access or privilege escalation. If confirmed malicious, attackers could gain unauthorized access or elevate privileges within the Active Directory environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351411"
+}

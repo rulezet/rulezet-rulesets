@@ -1,0 +1,24 @@
+{
+  "uuid": "78552fe8-9401-4e2e-b7ca-06d9b8f88ac7",
+  "title": "Windows Increase in User Modification Activity",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects an increase in modifications to AD user objects. A large volume of changes to user objects can indicate potential security risks, such as unauthorized access attempts, impairing defences or establishing persistence. By monitoring AD logs for unusual modification patterns, this detection helps identify suspicious behavior that could compromise the integrity and security of the AD environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351197"
+}

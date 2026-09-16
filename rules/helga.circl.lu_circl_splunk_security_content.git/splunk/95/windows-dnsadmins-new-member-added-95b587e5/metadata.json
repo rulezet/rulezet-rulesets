@@ -1,0 +1,23 @@
+{
+  "uuid": "95b587e5-9971-4d9d-92f5-8746f790729c",
+  "title": "Windows DnsAdmins New Member Added",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the addition of a new member to the DnsAdmins group in Active Directory by leveraging Event ID 4732. This detection uses security event logs to identify changes to this high-privilege group. Monitoring this activity is crucial because members of the DnsAdmins group can manage the DNS service, often running on Domain Controllers, and potentially execute malicious code with SYSTEM privileges. If confirmed malicious, this activity could allow an attacker to escalate privileges and gain control over critical domain services, posing a significant security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351059"
+}

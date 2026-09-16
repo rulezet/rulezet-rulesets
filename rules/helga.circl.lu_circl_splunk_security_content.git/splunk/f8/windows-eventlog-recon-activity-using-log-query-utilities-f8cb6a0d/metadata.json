@@ -1,0 +1,24 @@
+{
+  "uuid": "f8cb6a0d-e169-4717-b8bc-28a111842742",
+  "title": "Windows EventLog Recon Activity Using Log Query Utilities",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects EventLog reconnaissance activity using utilities such as `wevtutil.exe`, `wmic.exe`, PowerShell cmdlets like `Get-WinEvent`, or WMI queries targeting `Win32_NTLogEvent`. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line arguments. These tools are often used by adversaries to extract usernames, IP addresses, session data, and event information for credential access or situational awareness during lateral movement. While these utilities are legitimate, execution with specific arguments or targeting sensitive logs like `Security`, `PowerShell`, or specific EventIDs (e.g., 4624, 4778) can indicate malicious intent. If confirmed malicious, this behavior could allow an attacker to extract sensitive info and potentially have leveraged access or move laterally.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1654"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351256"
+}

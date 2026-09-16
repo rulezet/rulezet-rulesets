@@ -1,0 +1,24 @@
+{
+  "uuid": "f78c805c-8e1a-4c99-8b35-cbbdaa542507",
+  "title": "Windows Gather Victim Host Information Camera",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a PowerShell script that enumerates camera devices on the targeted host. This detection leverages PowerShell Script Block Logging, specifically looking for commands querying Win32_PnPEntity for camera-related information. This activity is significant as it is commonly observed in DCRat malware, which collects camera data to send to its command-and-control server. If confirmed malicious, this behavior could indicate an attempt to gather sensitive visual information from the host, potentially leading to privacy breaches or further exploitation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1592.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351196"
+}

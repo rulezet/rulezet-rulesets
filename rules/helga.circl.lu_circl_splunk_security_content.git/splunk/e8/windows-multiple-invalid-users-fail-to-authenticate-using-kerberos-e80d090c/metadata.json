@@ -1,0 +1,23 @@
+{
+  "uuid": "e80d090c-d8ed-4fb4-b604-9fe720e8e9db",
+  "title": "Windows Multiple Invalid Users Fail To Authenticate Using Kerberos",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a source endpoint failing to authenticate with 30 unique invalid domain users using the Kerberos protocol. This detection leverages EventCode 4768, specifically looking for failure code 0x6, indicating the user is not found in the Kerberos database. This activity is significant as it may indicate a Password Spraying attack, where an adversary attempts to gain initial access or elevate privileges. If confirmed malicious, this could lead to unauthorized access or privilege escalation within the Active Directory environment, posing a significant security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350930"
+}

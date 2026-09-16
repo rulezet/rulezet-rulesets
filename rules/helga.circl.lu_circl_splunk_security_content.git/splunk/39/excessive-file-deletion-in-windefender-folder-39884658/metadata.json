@@ -1,0 +1,25 @@
+{
+  "uuid": "39884658-727c-47fb-9f74-aee930a0b1ab",
+  "title": "Excessive File Deletion In WinDefender Folder",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects excessive file deletion events in the Windows Defender folder. It leverages Sysmon EventCodes 23 and 26 to identify processes deleting multiple files within this directory. This behavior is significant as it may indicate an attempt to corrupt or disable Windows Defender, a key security component. If confirmed malicious, this activity could allow an attacker to disable endpoint protection, facilitating further malicious actions without detection.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:wiper=\"WhisperGate\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350980"
+}

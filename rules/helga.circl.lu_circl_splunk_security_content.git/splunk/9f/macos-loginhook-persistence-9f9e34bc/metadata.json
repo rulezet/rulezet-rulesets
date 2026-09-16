@@ -1,0 +1,23 @@
+{
+  "uuid": "9f9e34bc-8c13-43b2-a77d-4d23da6cb98a",
+  "title": "MacOS LoginHook Persistence",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Identifies attempts to configure a macOS LoginHook via the defaults utility. LoginHooks enable automatic execution of a script or program upon user login and have historically been abused for persistence.\nCreation or modification of this setting may indicate an attempt to establish startup execution outside standard LaunchAgent mechanisms.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1037.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351253"
+}

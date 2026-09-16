@@ -1,0 +1,25 @@
+{
+  "uuid": "94d4fef4-74b5-412d-8619-2e846981c48e",
+  "title": "Linux Telnet Authentication Bypass",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects an authentication bypass in telnet tracked as CVE-2026-24061. An attacker can supply a specifically crafted USER environment variable (-f root) that is passed to /usr/bin/login. Because this input isn't sanitized an attacker can force the system to skip authentication and login directly as root.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [
+    "CVE-2026-24061"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351268"
+}

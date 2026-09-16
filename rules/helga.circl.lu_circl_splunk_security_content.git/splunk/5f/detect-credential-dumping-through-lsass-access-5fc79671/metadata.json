@@ -1,0 +1,24 @@
+{
+  "uuid": "5fc79671-1e71-4c9f-a60e-1fe4dd70779b",
+  "title": "Detect Credential Dumping through LSASS access",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to read LSASS memory, indicative of credential dumping. It leverages Sysmon EventCode 10, filtering for specific access permissions (0x1010 and 0x1410) on the lsass.exe process. This activity is significant because it suggests an attacker is trying to extract credentials from LSASS memory, potentially leading to unauthorized access, data breaches, and compromise of sensitive information. If confirmed malicious, this could enable attackers to escalate privileges, move laterally within the network, or exfiltrate data. Extensive triage is necessary to differentiate between malicious and benign activities.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351217"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "28d8faba-020f-44d6-ad29-0f0164488f86",
+  "title": "Windows Wmic Systeminfo Discovery",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of Windows Management Instrumentation Command-line (WMIC) commands used for computer system discovery on a Windows system. Specifically, it monitors for commands such as “wmic computersystem” that retrieve detailed information about the computer’s model, manufacturer, name, domain, and other system attributes. While these commands are commonly used by administrators for inventory and troubleshooting, they may also be exploited by adversaries to gain insight into the target environment during the reconnaissance phase of an attack. Identifying and alerting on WMIC computer system queries helps security teams recognize unauthorized information gathering and take steps to mitigate potential threats.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351093"
+}

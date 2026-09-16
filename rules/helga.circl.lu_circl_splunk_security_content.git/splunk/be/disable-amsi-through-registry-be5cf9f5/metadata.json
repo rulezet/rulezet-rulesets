@@ -1,0 +1,25 @@
+{
+  "uuid": "be5cf9f5-475e-4a0c-80f6-f0a22bab30c4",
+  "title": "Disable AMSI Through Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows registry that disable the Antimalware Scan Interface (AMSI) by setting the \"AmsiEnable\" value to \"0x00000000\". This detection leverages data from the Endpoint.Registry data model, specifically monitoring changes to the registry path \"*\\\\SOFTWARE\\\\Microsoft\\\\Windows Script\\\\Settings\\\\AmsiEnable\". Disabling AMSI is significant as it is a common technique used by ransomware, Remote Access Trojans (RATs), and Advanced Persistent Threats (APTs) to evade detection and impair defenses. If confirmed malicious, this activity could allow attackers to execute payloads with minimal alerts, leading to potential system compromise and data exfiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350925"
+}

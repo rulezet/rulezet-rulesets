@@ -1,0 +1,25 @@
+{
+  "uuid": "fc62748b-0012-4144-9826-8d4a978f9526",
+  "title": "Malicious PowerShell Process With Obfuscation Techniques",
+  "format": "splunk",
+  "author": "David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects PowerShell processes launched with command-line arguments indicative of obfuscation techniques. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names, parent processes, and complete command-line executions. This activity is significant because obfuscated PowerShell commands are often used by attackers to evade detection and execute malicious scripts. If confirmed malicious, this activity could lead to unauthorized code execution, privilege escalation, or persistent access within the environment, posing a significant security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351239"
+}

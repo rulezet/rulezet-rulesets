@@ -1,0 +1,24 @@
+{
+  "uuid": "a1513376-c018-4f4a-8067-06e6de616e35",
+  "title": "Windows AD Privileged Object Access Activity",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects access attempts to privileged Active Directory objects, such as Domain Admins or Enterprise Admins. It leverages Windows Security Event Code 4662 to identify when these sensitive objects are accessed. This activity is significant because such objects should rarely be accessed by normal users or processes, and unauthorized access attempts may indicate attacker enumeration or lateral movement within the domain. If confirmed malicious, this activity could allow attackers to escalate privileges, persist in the environment, or gain control over critical domain resources.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1087.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351422"
+}

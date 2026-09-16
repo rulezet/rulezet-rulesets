@@ -1,0 +1,26 @@
+{
+  "uuid": "6d9b3fb8-a950-462f-8764-bbe3620c92c3",
+  "title": "Windows Non-System Process Querying Definition Update",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects DNS queries to definitionupdates.microsoft.com or the go.microsoft.com fwlink redirect used for WD update downloads, when the querying process is not a Windows system component. BlueHammer utilizes these definition updates as part of its exploit chain.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1071.001"
+  ],
+  "cve": [
+    "CVE-2026-33825"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351119"
+}

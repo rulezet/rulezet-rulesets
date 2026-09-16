@@ -1,0 +1,23 @@
+{
+  "uuid": "f3538525-8b74-424c-8ad2-329ae893233a",
+  "title": "Modify ACL permission To Files Or Folder",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the modification of ACL permissions to files or folders, making them accessible to everyone or to system account. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on processes like \"cacls.exe,\" \"icacls.exe,\" and \"xcacls.exe\" with specific command-line arguments. This activity is significant as it may indicate an adversary attempting to evade ACLs or access protected files. If confirmed malicious, this could allow unauthorized access to sensitive data, potentially leading to data breaches or further system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1222"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351231"
+}

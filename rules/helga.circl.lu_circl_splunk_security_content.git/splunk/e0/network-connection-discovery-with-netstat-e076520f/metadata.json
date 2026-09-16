@@ -1,0 +1,25 @@
+{
+  "uuid": "e076520f-5e53-4c72-b94e-8180b89bde10",
+  "title": "Network Connection Discovery With Netstat",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of `netstat.exe` with command-line arguments to list network connections on a system. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names, command-line executions, and parent processes. This activity is significant as both Red Teams and adversaries use `netstat.exe` for situational awareness and Active Directory discovery. If confirmed malicious, this behavior could allow attackers to map network connections, identify critical systems, and plan further lateral movement or data exfiltration.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1049"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350997"
+}

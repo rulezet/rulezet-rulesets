@@ -1,0 +1,23 @@
+{
+  "uuid": "d5753412-aa01-4850-a9cd-e1f95ce7b4d4",
+  "title": "Execution of File with Multiple Extensions",
+  "format": "splunk",
+  "author": "Rico Valdez, Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of files with multiple extensions, such as \".doc.exe\" or \".pdf.exe\". This behavior is identified using Endpoint Detection and Response (EDR) telemetry, focusing on process creation events where the file name contains double extensions. This activity is significant because attackers often use double extensions to disguise malicious executables as benign documents, increasing the likelihood of user execution. If confirmed malicious, this technique can lead to unauthorized code execution, potentially compromising the endpoint and allowing further malicious activities.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351395"
+}

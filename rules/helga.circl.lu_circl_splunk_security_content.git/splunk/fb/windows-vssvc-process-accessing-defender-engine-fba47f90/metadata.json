@@ -1,0 +1,25 @@
+{
+  "uuid": "fba47f90-072c-40aa-949e-c3c1676a191e",
+  "title": "Windows VSSVC Process Accessing Defender Engine",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects vssvc.exe opening a handle to MsMpEng.exe.\nIn the RedSun exploit, VSS participates in the cloud-file restore race that directs WD to write through the NTFS junction.\nThis handle acquisition is observed at the exact moment of exploitation.\nvssvc querying MsMpEng is not expected in normal operation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2026-33825"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351223"
+}

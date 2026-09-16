@@ -1,0 +1,25 @@
+{
+  "uuid": "d3addf02-463f-4f7e-a954-5be3f73051b1",
+  "title": "Windows Software Discovery Via PowerShell",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the use of PowerShell based registry queries to pull installed software information from the Uninstall key.\nThis will give an attacker version information on installed software which could be used to identify further vulnerabilities.\nFalse positives are unlikely as this is an unusual key to query with PowerShell.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1012",
+    "T1059.001",
+    "T1518"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351099"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "e0be6337-618e-4b6e-b64e-f53e88546bb1",
+  "title": "Windows PowerShell Export PfxCertificate",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the PowerShell cmdlet `export-pfxcertificate` by leveraging Script Block Logging. This activity is significant as it may indicate an adversary attempting to exfiltrate certificates from the Windows Certificate Store. Monitoring this behavior is crucial for identifying potential certificate theft, which can lead to unauthorized access and impersonation attacks. If confirmed malicious, this activity could allow attackers to compromise secure communications, authenticate as legitimate users, and escalate their privileges within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1552.004",
+    "T1649"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351390"
+}

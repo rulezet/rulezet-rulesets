@@ -1,0 +1,23 @@
+{
+  "uuid": "dde7e433-cad3-4a6f-bf80-06fc9ebb94b3",
+  "title": "Windows Privilege Escalation Attempt Via MSI Rollback",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects an attacker abusing the Windows Installer rollback mechanism to escalate privileges from a standard user to SYSTEM without triggering a UAC prompt, using a technique known as FolderContentsDeleteToFolderDelete.\nWindows Installer (msiexec.exe) creates rollback scripts during software installation to undo changes if an installation fails.\nThese rollback scripts are generated and executed by the Windows Installer service, which runs as SYSTEM.\nThe FolderContentsDeleteToFolderDelete technique abuses this trusted mechanism by crafting a malicious rollback script that instructs the SYSTEM-level Installer service to delete attacker-chosen files or directories — effectively giving a low-privileged attacker the ability to make SYSTEM-level filesystem modifications without any privilege prompt.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351289"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "0b5f3010-845c-4419-8feb-2e2d6a238d93",
+  "title": "Linux High Frequency Of File Deletion In Boot Folder",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a high frequency of file deletions in the /boot/ folder on Linux systems. It leverages filesystem event logs to identify when 200 or more files are deleted within an hour by the same process. This behavior is significant as it may indicate the presence of wiper malware, such as Industroyer2, which targets critical system directories. If confirmed malicious, this activity could lead to system instability or failure, hindering the boot process and potentially causing a complete system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1070.004",
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351333"
+}

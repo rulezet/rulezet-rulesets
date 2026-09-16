@@ -1,0 +1,23 @@
+{
+  "uuid": "58322e7a-8d0c-47ee-aeb4-651c180cdb1d",
+  "title": "Windows Dir Piped to Findstr Activity",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the `dir` command piped to `findstr` on Windows systems.\nThis technique is commonly used by attackers during the reconnaissance phase to enumerate files, directories, or sensitive data by filtering directory listings for specific strings or patterns.\nWhile this command combination can have legitimate administrative uses, adversaries frequently leverage it to locate credentials, configuration files, or other high-value targets on a compromised system.\nIf confirmed malicious, this activity could indicate an attacker is actively mapping the file system in preparation for data exfiltration, lateral movement, or further exploitation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1119"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351054"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "e91ef9d9-66d8-4285-b875-2456dd278a04",
+  "title": "Linux Suspicious React or Next.js Child Process",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects Linux processes such as sh, bash, and common Linux LOLBINs being spawned by React or Next.js application servers.\nIn the context of CVE-2025-55182 / React2Shell / CVE-2025-66478 for Next.js, successful exploitation can lead to arbitrary JavaScript execution on the server, which in turn is commonly used to invoke Node's child_process APIs (for example child_process.execSync) to run OS-level commands.\nPublic proof-of-concept payloads and observed in-the-wild exploit traffic show patterns where the vulnerable React Server Components handler triggers process.mainModule.require('child_process').execSync() to execute binaries such as ping, curl, or arbitrary shells on the underlying host.\nThis detection focuses on suspicious child processes where a Next/React server process spawns an uncommon process.\nSuch activity might be a strong indicator of exploitation of the aforementioned vulnerability.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059.004",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-55182",
+    "CVE-2025-66478"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351182"
+}

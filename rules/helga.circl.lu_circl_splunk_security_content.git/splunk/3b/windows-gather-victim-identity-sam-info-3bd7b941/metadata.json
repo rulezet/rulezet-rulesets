@@ -1,0 +1,23 @@
+{
+  "uuid": "3bd7b941-8123-4bc6-87cc-cc0ce6515371",
+  "title": "Windows Gather Victim Identity SAM Info",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects processes loading the samlib.dll or samcli.dll modules, which are often abused to access Security Account Manager (SAM) objects or credentials on domain controllers. This detection leverages Sysmon EventCode 7 to identify these DLLs being loaded outside typical system directories. Monitoring this activity is crucial as it may indicate attempts to gather sensitive identity information. If confirmed malicious, this behavior could allow attackers to obtain credentials, escalate privileges, or further infiltrate the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1589.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350996"
+}

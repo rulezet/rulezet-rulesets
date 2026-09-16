@@ -1,0 +1,23 @@
+{
+  "uuid": "52d2e513-3916-4990-9865-423e45edae6e",
+  "title": "Windows COM Hijacking InprocServer32 Modification",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the modification of the InProcServer32 registry key by reg.exe, indicative of potential COM hijacking. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process and command-line execution logs. COM hijacking is significant as it allows adversaries to insert malicious code that executes in place of legitimate software, providing a means for persistence. If confirmed malicious, this activity could enable attackers to execute arbitrary code, disrupt legitimate system components, and maintain long-term access to the compromised environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.015"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351262"
+}

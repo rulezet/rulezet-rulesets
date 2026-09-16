@@ -1,0 +1,23 @@
+{
+  "uuid": "3a760e86-9de5-428c-bb97-1c0f4a1795c5",
+  "title": "Windows Devtunnels Execution",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of Microsoft devtunnels.exe.\nMicrosoft Devtunnels is a feature within Visual Studio that allows developers to expose their local development environment to the internet via secure, temporary tunnels, enabling external access for testing webhooks, APIs, and other services.\nWhile designed for legitimate development purposes, an attacker could exploit this feature to expose a compromised system or service to the internet, creating a covert communication channel that bypasses network security measures.\nBy using Dev Tunnels, the attacker can establish a remote connection to the compromised environment, facilitate data exfiltration, or maintain command-and-control communications while avoiding detection by blending their activities with legitimate development traffic.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1090"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351218"
+}

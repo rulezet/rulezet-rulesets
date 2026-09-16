@@ -1,0 +1,25 @@
+{
+  "uuid": "875bdacc-97ed-48f2-8bfd-75a01792f03f",
+  "title": "Linux Auditd Possible Append Cronjob Entry On Existing Cronjob File",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potential tampering with cronjob files on a Linux system.\nIt leverages logs from Linux Auditd, focusing on events of type PATH or CWD.\nThis activity could be significant because adversaries often use it for persistence or privilege escalation.\nCorrelate this with related EXECVE or PROCTITLE events to identify the process or user responsible for the access or modification.\nIf confirmed malicious, this could allow attackers to execute unauthorized code automatically, leading to system compromises and unauthorized data access, thereby impacting business operations and data integrity.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1053.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351328"
+}

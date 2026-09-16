@@ -1,0 +1,23 @@
+{
+  "uuid": "83850c9b-9e57-498b-aa05-53e283e1a5db",
+  "title": "MacOS Account Created",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of a new local user account on a MacOS system. It leverages osquery logs to identify this activity.\nMonitoring the creation of local accounts is crucial for a SOC as it can indicate unauthorized access or lateral movement within the network.\nIf confirmed malicious, this activity could allow an attacker to establish persistence, escalate privileges, or gain unauthorized access to sensitive systems and data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1136"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351160"
+}

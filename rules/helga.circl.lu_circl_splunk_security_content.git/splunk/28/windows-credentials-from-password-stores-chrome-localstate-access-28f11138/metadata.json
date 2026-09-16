@@ -1,0 +1,24 @@
+{
+  "uuid": "28f11138-f63c-4343-a1f8-e34bf5ac578a",
+  "title": "Windows Credentials from Password Stores Chrome LocalState Access",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects non-Chrome processes accessing the Chrome \"Local State\" file, which contains critical settings and information. It leverages Windows Security Event logs, specifically event code 4663, to identify this behavior.\nThis activity is significant because threat actors can exploit this file to extract the encrypted master key used for decrypting saved passwords in Chrome.\nIf confirmed malicious, this could lead to unauthorized access to sensitive information, posing a severe security risk.\nMonitoring this anomaly helps identify potential threats and safeguard browser-stored data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"Vidar\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1012"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351221"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "9fd8accb-3927-4054-8c8a-8b455ed33f27",
+  "title": "Windows Bluetooth Service Installed From Uncommon Location",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Identifies the creation of a Windows service named \"BluetoothService\" with a binary path in user-writable directories, particularly %AppData%\\Bluetooth.\nThis technique was observed in the Lotus Blossom Chrysalis backdoor campaign, where attackers created a service named \"BluetoothService\" pointing to a malicious binary (renamed Bitdefender Submission Wizard) in a hidden AppData directory.\nWhile legitimate Bluetooth services exist in Windows, they are system services with binaries in System32.\nAny BluetoothService created with a binary path in user directories (AppData, Temp, Downloads) is highly suspicious and indicates potential malware persistence.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351364"
+}

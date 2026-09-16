@@ -1,0 +1,24 @@
+{
+  "uuid": "c289589c-d91e-41d8-aef8-dd87c2cf6d4f",
+  "title": "Disabling SystemRestore In Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the modification of registry keys to disable System Restore on a machine. It leverages data from the Endpoint.Registry data model, specifically monitoring changes to registry paths associated with System Restore settings. This activity is significant because disabling System Restore can hinder recovery efforts and is a tactic often used by Remote Access Trojans (RATs) to maintain persistence on an infected system. If confirmed malicious, this action could prevent system recovery, allowing the attacker to sustain their foothold and potentially cause further damage or data loss.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351103"
+}

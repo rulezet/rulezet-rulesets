@@ -1,0 +1,26 @@
+{
+  "uuid": "ea9a2d61-03c5-40ce-a932-4f6888ff3774",
+  "title": "Powershell Execute COM Object",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of a COM CLSID through PowerShell. It leverages EventCode 4104 and searches for specific script block text indicating the creation of a COM object. This activity is significant as it is commonly used by adversaries and malware, such as the Conti ransomware, to execute commands, potentially for privilege escalation or bypassing User Account Control (UAC). If confirmed malicious, this technique could allow attackers to gain elevated privileges or persist within the environment, posing a significant security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Conti\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1546.015"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351264"
+}

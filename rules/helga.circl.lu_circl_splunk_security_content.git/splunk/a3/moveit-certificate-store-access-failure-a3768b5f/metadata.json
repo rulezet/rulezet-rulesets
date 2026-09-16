@@ -1,0 +1,23 @@
+{
+  "uuid": "a3768b5f-9aca-456d-a8e3-e17bbb111c3e",
+  "title": "MOVEit Certificate Store Access Failure",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies potential exploitation attempts of the CVE-2024-5806 vulnerability in Progress MOVEit Transfer. It looks for log entries indicating failures to access the certificate store, which can occur when an attacker attempts to exploit the authentication bypass vulnerability. This behavior is a key indicator of attempts to impersonate valid users without proper credentials. While certificate store access failures can occur during normal operations, an unusual increase in such events, especially from unexpected sources, may indicate malicious activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2024-5806"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351314"
+}

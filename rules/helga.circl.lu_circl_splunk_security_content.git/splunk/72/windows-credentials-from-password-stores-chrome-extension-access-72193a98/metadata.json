@@ -1,0 +1,24 @@
+{
+  "uuid": "72193a98-d19e-4558-bab1-707b906ef46e",
+  "title": "Windows Credentials from Password Stores Chrome Extension Access",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects non-Chrome processes attempting to access the Chrome extensions file.\nIt leverages Windows Security Event logs, specifically event code 4663, to identify this behavior.\nThis activity is significant because adversaries may exploit this file to extract sensitive information from the Chrome browser, posing a security risk.\nIf confirmed malicious, this could lead to unauthorized access to stored credentials and other sensitive data, potentially compromising the security of the affected system and broader network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"Vidar\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1012"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350950"
+}

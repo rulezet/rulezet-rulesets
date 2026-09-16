@@ -1,0 +1,25 @@
+{
+  "uuid": "dee830a9-18cb-4f8e-9fc0-381c5c016c03",
+  "title": "Windows Firewall Rule Added",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies instances where a Windows Firewall rule is added by monitoring Event ID 4946 in the Windows Security Event Log. Firewall rule modifications can indicate legitimate administrative actions, but they may also signal unauthorized changes, misconfigurations, or malicious activity such as attackers allowing traffic for backdoors or persistence mechanisms. By analyzing fields like RuleName, RuleId, Computer, and ProfileChanged, security teams can determine whether the change aligns with expected behavior. Correlating with user activity and process execution can help distinguish false positives from real threats, ensuring better visibility into potential security risks.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1686"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350999"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "4a57a467-cf6a-4330-a2eb-544a635ae33e",
+  "title": "Linux Netcat Outbound Connection",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects outbound network connections originating from Netcat or Netcat-like binaries on Linux systems.\nNetcat is a versatile networking utility that, while legitimate in some contexts, is frequently abused by attackers to establish reverse shells, exfiltrate data, or create persistent backdoor connections to remote systems.\nThis activity is significant because outbound connections from these binaries often indicate an active compromise, where an attacker may be maintaining command-and-control communication or tunneling malicious traffic.\nIf confirmed malicious, this could lead to unauthorized data exfiltration, lateral movement, or persistent remote access to the compromised system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351090"
+}

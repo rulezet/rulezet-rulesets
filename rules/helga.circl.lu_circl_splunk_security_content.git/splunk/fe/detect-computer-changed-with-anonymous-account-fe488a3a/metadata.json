@@ -1,0 +1,25 @@
+{
+  "uuid": "fe488a3a-a467-4539-bc12-eb570e202d9a",
+  "title": "Detect Computer Changed with Anonymous Account",
+  "format": "splunk",
+  "author": "Rod Soto, Jose Hernandez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects changes to computer accounts using an anonymous logon.\nIt leverages Windows Security Event Codes 4742 (Computer Change) with a SubjectUserName of a value \"ANONYMOUS LOGON\".\nThis activity can be significant because anonymous logons should not typically be modifying computer accounts, indicating potential unauthorized access or misconfiguration.\nIf confirmed malicious, this could allow an attacker to alter computer accounts, potentially leading to privilege escalation or persistent access within the network.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1210"
+  ],
+  "cve": [
+    "CVE-2020-1472"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351352"
+}

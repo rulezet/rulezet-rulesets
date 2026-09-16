@@ -1,0 +1,26 @@
+{
+  "uuid": "1c13e6b9-2406-4931-b819-664bec298f8c",
+  "title": "Windows CAB File on Disk",
+  "format": "splunk",
+  "author": "Michael Haag, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects .cab files being written to disk.\nIt leverages data from Endpoint Detection and Response (EDR) agents, focusing on events where the file name is '*.cab' and the action is 'write'.\nThis activity can be significant as .cab files can be used to deliver malicious payloads, including embedded .url files that execute harmful code.\nIf confirmed malicious, this behavior could lead to unauthorized code execution and potential system compromise.\nAnalysts should review the file path and associated artifacts for further investigation.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1566.001"
+  ],
+  "cve": [
+    "CVE-2026-47301"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350987"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "dcdd7fcf-12a9-42dd-a844-dc05fe4b1c9c",
+  "title": "Windows IIS Components New Module Added",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the addition of new IIS modules on a Windows IIS server. It leverages the Windows Event log - Microsoft-IIS-Configuration/Operational, specifically EventCode 29, to identify this activity. This behavior is significant because IIS modules are rarely added to production servers, and unauthorized modules could indicate malicious activity. If confirmed malicious, an attacker could use these modules to execute arbitrary code, escalate privileges, or maintain persistence within the environment, potentially compromising the server and sensitive data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"OilRig - G0049\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1505.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350931"
+}

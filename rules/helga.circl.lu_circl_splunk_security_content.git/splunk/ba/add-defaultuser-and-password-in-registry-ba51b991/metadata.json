@@ -1,0 +1,25 @@
+{
+  "uuid": "ba51b991-6548-4da1-9fc3-ed841ea49c1e",
+  "title": "Add DefaultUser And Password In Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects suspicious registry modifications that implement auto admin logon by adding DefaultUserName and DefaultPassword values. It leverages data from the Endpoint.Registry data model, specifically monitoring changes to the \"SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" registry path. This activity is significant because it is associated with BlackMatter ransomware, which uses this technique to automatically log on to compromised hosts and continue encryption after a safe mode boot. If confirmed malicious, this could allow attackers to maintain persistence and further encrypt the network, leading to significant data loss and operational disruption.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1552.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351084"
+}

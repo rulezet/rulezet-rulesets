@@ -1,0 +1,25 @@
+{
+  "uuid": "dd4a9e14-0436-4cfd-b1df-146fd8d6ef6c",
+  "title": "Windows Access Token Manipulation SeDebugPrivilege",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a process enabling the \"SeDebugPrivilege\" privilege token. It leverages Windows Security Event Logs with EventCode 4703, filtering out common legitimate processes. This activity is significant because SeDebugPrivilege allows a process to inspect and modify the memory of other processes, potentially leading to credential dumping or code injection. If confirmed malicious, an attacker could gain extensive control over system processes, enabling them to escalate privileges, persist in the environment, or access sensitive information.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"Vidar\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1134.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351315"
+}

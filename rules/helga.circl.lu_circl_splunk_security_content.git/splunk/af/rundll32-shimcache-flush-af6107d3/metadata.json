@@ -1,0 +1,23 @@
+{
+  "uuid": "af6107d3-e178-4c4a-915f-35afe09bcc43",
+  "title": "Rundll32 Shimcache Flush",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of a suspicious rundll32 command line used to clear the shim cache. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process execution logs and command-line arguments. This activity is significant because clearing the shim cache is an anti-forensic technique aimed at evading detection and removing forensic artifacts. If confirmed malicious, this action could hinder incident response efforts, allowing an attacker to cover their tracks and maintain persistence on the compromised machine.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351336"
+}

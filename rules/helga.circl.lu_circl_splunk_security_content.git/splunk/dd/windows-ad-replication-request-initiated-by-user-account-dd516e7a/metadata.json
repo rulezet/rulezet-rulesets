@@ -1,0 +1,24 @@
+{
+  "uuid": "dd516e7a-23ce-411f-b4f0-f40bc44b513c",
+  "title": "Windows AD Replication Request Initiated by User Account",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a user account initiating an Active Directory replication request, indicative of a DCSync attack. It leverages EventCode 4662 from the Windows Security Event Log, focusing on specific object types and replication permissions. This activity is significant because it can allow an attacker with sufficient privileges to request password hashes for any or all users within the domain. If confirmed malicious, this could lead to unauthorized access, privilege escalation, and potential compromise of the entire domain.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350939"
+}

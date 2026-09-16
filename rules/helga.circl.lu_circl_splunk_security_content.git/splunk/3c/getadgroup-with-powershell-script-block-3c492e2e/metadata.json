@@ -1,0 +1,23 @@
+{
+  "uuid": "3c492e2e-67d3-4c0c-8f99-817b227efb54",
+  "title": "GetAdGroup with PowerShell Script Block",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the `Get-AdGroup` PowerShell cmdlet using PowerShell Script Block Logging (EventCode=4104). This cmdlet is used to enumerate all domain groups, which adversaries may exploit for situational awareness and Active Directory discovery. Monitoring this activity is crucial as it can indicate reconnaissance efforts within the network. If confirmed malicious, this behavior could lead to further exploitation, such as privilege escalation or lateral movement, by providing attackers with detailed information about the domain's group structure.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1069.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350991"
+}

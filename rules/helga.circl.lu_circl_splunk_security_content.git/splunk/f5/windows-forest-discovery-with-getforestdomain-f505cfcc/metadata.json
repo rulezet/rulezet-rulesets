@@ -1,0 +1,23 @@
+{
+  "uuid": "f505cfcc-aa28-4a1d-bb42-f5454da86701",
+  "title": "Windows Forest Discovery with GetForestDomain",
+  "format": "splunk",
+  "author": "Gowthamaraj Rajendran, Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the `Get-ForestDomain` cmdlet, a component of the PowerView toolkit used for Windows domain enumeration. It leverages PowerShell Script Block Logging (EventCode=4104) to identify this activity. Detecting `Get-ForestDomain` is significant because adversaries and Red Teams use it to gather detailed information about Active Directory forest and domain configurations. If confirmed malicious, this activity could enable attackers to understand the domain structure, facilitating lateral movement or privilege escalation within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1087.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351105"
+}

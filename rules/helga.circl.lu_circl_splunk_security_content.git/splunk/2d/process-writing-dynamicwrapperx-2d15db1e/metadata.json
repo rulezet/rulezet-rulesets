@@ -1,0 +1,24 @@
+{
+  "uuid": "2d15db1e-f13a-43e2-aafd-46783c3180a4",
+  "title": "Process Writing DynamicWrapperX",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a process writing the dynwrapx.dll file to disk and registering it in the registry. It leverages data from the Endpoint datamodel, specifically monitoring process and filesystem events. This activity is significant because DynamicWrapperX is an ActiveX component often used in scripts to call Windows API functions, and its presence in non-standard locations is highly suspicious. If confirmed malicious, this could allow an attacker to execute arbitrary code, escalate privileges, or maintain persistence within the environment. Immediate investigation of parallel processes and registry modifications is recommended.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1559.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350978"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "195861c5-efd1-4fb6-849c-215a5195556f",
+  "title": "Suspicious Linux Discovery Commands",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of suspicious bash commands commonly used in scripts like AutoSUID, LinEnum, and LinPeas for system discovery on a Linux host. It leverages Endpoint Detection and Response (EDR) data, specifically looking for a high number of distinct commands executed within a short time frame. This activity is significant as it often precedes privilege escalation or other malicious actions. If confirmed malicious, an attacker could gain detailed system information, identify vulnerabilities, and potentially escalate privileges, posing a severe threat to the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351027"
+}

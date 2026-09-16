@@ -1,0 +1,24 @@
+{
+  "uuid": "7be74d06-f281-4e14-b6bc-b935ad01a8c4",
+  "title": "Windows New Default File Association Value Set",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects registry changes to the default file association value. It leverages data from the Endpoint data model, specifically monitoring registry paths under \"HKCR\\\\*\\\\shell\\\\open\\\\command\\\\*\". This activity can be significant because, attackers might alter the default file associations in order to execute arbitrary scripts or payloads when a user opens a file, leading to potential code execution. If confirmed malicious, this technique can enable attackers to persist on the compromised host and execute further malicious commands, posing a severe threat to the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351292"
+}

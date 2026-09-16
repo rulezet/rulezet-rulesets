@@ -1,0 +1,23 @@
+{
+  "uuid": "bd0062c4-c886-48b5-8c4d-9a3f6086dec8",
+  "title": "Windows SQL Server Critical Procedures Enabled",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk, sidoyle from Splunk Community",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies when critical SQL Server configuration options are modified, including \"Ad Hoc Distributed Queries\", \"external scripts enabled\", \"Ole Automation Procedures\", \"clr enabled\", and \"clr strict security\". These features can be abused by attackers for various malicious purposes - Ad Hoc Distributed Queries enables Active Directory reconnaissance through ADSI provider, external scripts and Ole Automation allow execution of arbitrary code, and CLR features can be used to run custom assemblies. Enabling these features could indicate attempts to gain code execution or perform reconnaissance through SQL Server.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1505.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351284"
+}

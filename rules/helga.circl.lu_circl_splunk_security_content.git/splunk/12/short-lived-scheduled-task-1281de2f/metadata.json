@@ -1,0 +1,23 @@
+{
+  "uuid": "1281de2f-29f1-40a0-bbb8-69cf40db7d13",
+  "title": "Short Lived Scheduled Task",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation and deletion of scheduled tasks within a short time frame (less than 30 seconds) using Windows Security EventCodes 4698 and 4699.\nThis behavior is identified by analyzing Windows Security Event Logs and leveraging the Windows TA for parsing.\nSuch activity may indicate lateral movement or remote code execution attempts by adversaries.\nIf confirmed malicious, this could lead to unauthorized access, data exfiltration, or execution of malicious payloads, necessitating prompt investigation and response by security analysts.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351388"
+}

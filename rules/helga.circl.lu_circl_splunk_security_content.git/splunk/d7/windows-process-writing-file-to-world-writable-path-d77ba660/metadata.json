@@ -1,0 +1,24 @@
+{
+  "uuid": "d77ba660-3578-417e-8e67-d13126403598",
+  "title": "Windows Process Writing File to World Writable Path",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a process writing a .txt file to a world writable path. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on file creation events within specific directories. This activity is significant as adversaries often use such techniques to deliver payloads to a system, which is uncommon for legitimate processes. If confirmed malicious, this behavior could allow attackers to execute arbitrary code, escalate privileges, or maintain persistence within the environment, posing a significant security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351311"
+}

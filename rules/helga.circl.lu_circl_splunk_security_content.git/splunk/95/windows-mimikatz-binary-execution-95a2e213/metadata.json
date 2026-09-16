@@ -1,0 +1,25 @@
+{
+  "uuid": "95a2e213-4f91-4cd8-a826-192d713a3f2c",
+  "title": "Windows Mimikatz Binary Execution",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of the native mimikatz.exe binary on Windows systems, including instances where the binary is renamed. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and original file names. This activity is significant because Mimikatz is a widely used tool for extracting authentication credentials, posing a severe security risk. If confirmed malicious, this activity could allow attackers to obtain sensitive credentials, escalate privileges, and move laterally within the network, leading to potential data breaches and system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Sandworm Team - G0034\"",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351019"
+}

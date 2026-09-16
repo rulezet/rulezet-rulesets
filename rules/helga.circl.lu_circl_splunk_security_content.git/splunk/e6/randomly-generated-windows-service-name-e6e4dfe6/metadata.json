@@ -1,0 +1,24 @@
+{
+  "uuid": "e6e4dfe6-be29-4648-98bf-d2ed06a7ef27",
+  "title": "Randomly Generated Windows Service Name",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the installation of a Windows Service with a suspicious, high-entropy name, indicating potential malicious activity. It leverages Event ID 7045 and the `ut_shannon` function from the URL ToolBox Splunk application to identify services with random names. This behavior is significant as adversaries often use randomly named services for lateral movement and remote code execution. If confirmed malicious, this activity could allow attackers to execute arbitrary code, escalate privileges, or maintain persistence within the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351111"
+}

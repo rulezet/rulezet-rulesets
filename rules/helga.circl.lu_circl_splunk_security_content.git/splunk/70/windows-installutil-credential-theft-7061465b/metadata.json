@@ -1,0 +1,24 @@
+{
+  "uuid": "7061465b-93e7-4085-979b-cdd99c6279ba",
+  "title": "Windows InstallUtil Credential Theft",
+  "format": "splunk",
+  "author": "Michael Haag, Mauricio Velazo, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects instances where the Windows InstallUtil.exe binary loads `vaultcli.dll` and `Samlib.dll`. This detection leverages Sysmon EventCode 7 to identify these specific DLL loads. This activity is significant because it can indicate an attempt to execute code that bypasses application control and captures credentials using tools like Mimikatz. If confirmed malicious, this behavior could allow an attacker to steal credentials, potentially leading to unauthorized access and further compromise of the system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351000"
+}

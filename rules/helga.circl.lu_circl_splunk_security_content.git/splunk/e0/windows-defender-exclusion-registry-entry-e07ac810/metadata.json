@@ -1,0 +1,25 @@
+{
+  "uuid": "e07ac810-8430-4aba-a34b-e588a00c41fd",
+  "title": "Windows Defender Exclusion Registry Entry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk, Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows Defender exclusion registry entries. It leverages endpoint registry data to identify changes in the registry path \"*\\\\SOFTWARE\\\\Policies\\\\Microsoft\\\\Windows Defender\\\\Exclusions\\\\*\". This activity is significant because adversaries often modify these entries to bypass Windows Defender, allowing malicious code to execute without detection. If confirmed malicious, this behavior could enable attackers to evade antivirus defenses, maintain persistence, and execute further malicious activities undetected.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351176"
+}

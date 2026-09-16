@@ -1,0 +1,24 @@
+{
+  "uuid": "7d2b7b47-20d4-4d29-963c-f58d3752a534",
+  "title": "Windows Process Injection Wermgr Child Process",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a suspicious instance of wermgr.exe spawning a child process unrelated to error or fault handling. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process relationships and command-line executions. This activity is significant as it can indicate Qakbot malware, which injects malicious code into wermgr.exe to evade detection and execute malicious actions. If confirmed malicious, this behavior could allow an attacker to conduct reconnaissance, execute arbitrary code, and persist within the network, posing a severe security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351398"
+}

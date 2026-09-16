@@ -1,0 +1,27 @@
+{
+  "uuid": "a5f6308b-f1a8-457d-866a-fdc36ed1ff4b",
+  "title": "Windows Possible Credential Dumping",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potential credential dumping by identifying specific GrantedAccess permission requests and CallTrace DLLs targeting the LSASS process. It leverages Sysmon EventCode 10 logs, focusing on access requests to lsass.exe and call traces involving debug and native API DLLs like dbgcore.dll, dbghelp.dll, and ntdll.dll. This activity is significant as credential dumping can lead to unauthorized access to sensitive credentials. If confirmed malicious, attackers could gain elevated privileges and persist within the environment, posing a severe security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350984"
+}

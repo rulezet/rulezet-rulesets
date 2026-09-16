@@ -1,0 +1,23 @@
+{
+  "uuid": "1b6b93e8-ccbe-43c7-9b93-aae7ec849191",
+  "title": "Windows Cisco Secure Endpoint Uninstall Immunet Service Via Sfc",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the sfc.exe utility with the \"-u\" parameter, which is part of the Cisco Secure Endpoint installation. The \"-u\" flag allows the uninstallation of Cisco Secure Endpoint components. This detection leverages endpoint telemetry to monitor command-line executions that include the \"-u\" parameter. The use of this flag is significant as it could indicate an attempt to disable or remove endpoint protection, potentially leaving the system vulnerable to further exploitation. If identified as malicious, this action may be part of a broader effort to disable security mechanisms and avoid detection.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351157"
+}

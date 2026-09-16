@@ -1,0 +1,23 @@
+{
+  "uuid": "3afe708e-d384-4028-9540-a41cd5b08882",
+  "title": "Linux Impair Defenses Process Kill",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of the 'pkill' command, which is used to terminate processes on a Linux system. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process names and command-line executions. This activity is significant because threat actors often use 'pkill' to disable security defenses or terminate critical processes, facilitating further malicious actions. If confirmed malicious, this behavior could lead to the disruption of security applications, enabling attackers to evade detection and potentially corrupt or destroy files on the targeted system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351240"
+}

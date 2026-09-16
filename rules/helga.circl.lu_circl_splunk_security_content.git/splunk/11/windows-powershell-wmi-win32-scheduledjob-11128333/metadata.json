@@ -1,0 +1,23 @@
+{
+  "uuid": "11128333-d5ab-47df-8a02-b053fd1de540",
+  "title": "Windows PowerShell WMI Win32 ScheduledJob",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the Win32_ScheduledJob WMI class via PowerShell script block logging. This class, which manages scheduled tasks, is disabled by default due to security concerns and must be explicitly enabled through registry modifications. The detection leverages PowerShell event code 4104 and script block text analysis. Monitoring this activity is crucial as it may indicate malicious intent, especially if the class was enabled by an attacker. If confirmed malicious, this could allow attackers to persist in the environment by creating scheduled tasks.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351415"
+}

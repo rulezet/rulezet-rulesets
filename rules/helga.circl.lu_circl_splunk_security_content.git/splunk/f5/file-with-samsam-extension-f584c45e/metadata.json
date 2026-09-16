@@ -1,0 +1,22 @@
+{
+  "uuid": "f584c45e-a9a6-4dd4-be4f-d23e71c2b079",
+  "title": "File with Samsam Extension",
+  "format": "splunk",
+  "author": "Rico Valdez, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects file writes with extensions indicative of a SamSam ransomware attack.\nIt leverages file-system activity data to identify file names ending in .stubbin, .berkshire, .satoshi, .sophos, or .keyxml.\nThis activity is significant because SamSam ransomware is highly destructive, leading to file encryption and ransom demands.\nIf confirmed malicious, the impact includes significant financial losses, operational disruptions, and reputational damage.\nImmediate actions should include isolating affected systems, restoring files from backups, and investigating the attack source to prevent further incidents.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351363"
+}

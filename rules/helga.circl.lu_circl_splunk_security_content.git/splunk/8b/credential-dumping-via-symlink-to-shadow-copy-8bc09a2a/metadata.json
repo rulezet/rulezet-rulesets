@@ -1,0 +1,23 @@
+{
+  "uuid": "8bc09a2a-eac4-4f99-b334-c73ed0a768e3",
+  "title": "Credential Dumping via Symlink to Shadow Copy",
+  "format": "splunk",
+  "author": "Patrick Bareiss, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of a symlink to a shadow copy, which may indicate credential dumping attempts. It leverages the Endpoint.Processes data model in Splunk to identify processes executing commands containing \"mklink\" and \"HarddiskVolumeShadowCopy\". This activity is significant because attackers often use this technique to manipulate or delete shadow copies, hindering system backup and recovery efforts. If confirmed malicious, this could prevent data restoration, complicate incident response, and lead to data loss or compromise. Analysts should review the process details, user, parent process, and any related artifacts to identify the attack source.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351400"
+}

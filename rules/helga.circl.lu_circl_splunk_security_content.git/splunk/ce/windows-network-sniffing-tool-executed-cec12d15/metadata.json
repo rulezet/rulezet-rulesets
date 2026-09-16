@@ -1,0 +1,23 @@
+{
+  "uuid": "cec12d15-e40c-4585-87e8-848c1f3b1514",
+  "title": "Windows Network Sniffing Tool Executed",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of common network sniffing tools on Windows systems, including Wireshark, WinPcap, tcpdump, and similar utilities.\nThis activity is significant because attackers use packet capture tools to intercept and analyze network traffic, enabling credential theft, sensitive data harvesting, and reconnaissance of internal network communications.\nWhile these tools have legitimate administrative uses, their presence in unexpected environments may indicate an adversary conducting man-in-the-middle attacks or exfiltrating sensitive information traversing the network.\nIf confirmed malicious, this could lead to the exposure of credentials, session tokens, and confidential data, facilitating lateral movement and further compromise of the environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1040"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351085"
+}

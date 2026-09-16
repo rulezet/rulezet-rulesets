@@ -1,0 +1,23 @@
+{
+  "uuid": "79fb9cfe-43ee-454b-9b0c-39545ae9b4be",
+  "title": "Windows AD Privileged Group Modification",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies when users are added to privileged Active Directory\ngroups by leveraging the Windows Security Event Code 4728 along with a lookup\nof privileged AD groups provided by Splunk Enterprise Security.\nAttackers often add user accounts to privileged AD groups to escalate privileges\nor maintain persistence within an Active Directory environment.\nMonitoring for modifications to privileged groups can help identify potential security breaches\nand unauthorized access attempts.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351208"
+}

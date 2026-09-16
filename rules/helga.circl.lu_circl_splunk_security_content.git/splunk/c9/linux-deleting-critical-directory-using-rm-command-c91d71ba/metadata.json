@@ -1,0 +1,23 @@
+{
+  "uuid": "c91d71ba-7307-46a5-b49f-bc6adc6c468a",
+  "title": "Linux Deleting Critical Directory Using RM Command",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the deletion of critical directories on a Linux machine using the `rm` command with argument rf. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions targeting directories like /boot, /var/log, /etc, and /dev. This activity is significant because deleting these directories can severely disrupt system operations and is often associated with destructive campaigns like Industroyer2. If confirmed malicious, this action could lead to system instability, data loss, and potential downtime, making it crucial for immediate investigation and response.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351186"
+}

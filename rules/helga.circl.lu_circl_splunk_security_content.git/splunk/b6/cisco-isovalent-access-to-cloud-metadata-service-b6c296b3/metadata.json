@@ -1,0 +1,23 @@
+{
+  "uuid": "b6c296b3-c191-432d-876e-35213d8630d2",
+  "title": "Cisco Isovalent - Access To Cloud Metadata Service",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects workloads accessing the cloud instance metadata service at 169.254.169.254. This IP is used by AWS, GCP and Azure metadata endpoints and is frequently abused in SSRF or lateral movement scenarios to obtain credentials and sensitive environment details. Monitor unexpected access to this service from application pods or namespaces where such behavior is atypical.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1552.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351185"
+}

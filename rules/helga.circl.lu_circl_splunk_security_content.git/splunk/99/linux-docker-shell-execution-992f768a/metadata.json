@@ -1,0 +1,23 @@
+{
+  "uuid": "992f768a-34d9-482b-a746-a6db7565fe47",
+  "title": "Linux Docker Shell Execution",
+  "format": "splunk",
+  "author": "Gowthamaraj Rajendran, Splunk, Emil Elsetrønning",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This detection identifies shell execution activity associated with Docker containers on Linux systems.\nSpecifically, it monitors for interactive or non-interactive shell processes (e.g., `/bin/bash`, `/bin/sh`, `/bin/zsh`) launched via Docker commands such as `docker exec`,  or through container entrypoint overrides.\nShell execution inside a container may indicate administrative troubleshooting activity.\nHowever, it can also represent post-exploitation behavior, where an attacker gains access to a container and spawns a shell to execute arbitrary commands, establish persistence, or pivot to the host.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059.013"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351316"
+}

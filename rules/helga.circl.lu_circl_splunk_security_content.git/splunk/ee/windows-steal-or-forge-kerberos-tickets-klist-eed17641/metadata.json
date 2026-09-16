@@ -1,0 +1,24 @@
+{
+  "uuid": "eed17641-c5dc-4cba-9b5e-717f03618a5a",
+  "title": "Windows Steal or Forge Kerberos Tickets Klist",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the execution of the Windows OS tool klist.exe, often used by post-exploitation tools like winpeas. This detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on process and parent process details. Monitoring klist.exe is significant as it can indicate attempts to list or gather cached Kerberos tickets, which are crucial for lateral movement or privilege escalation. If confirmed malicious, this activity could enable attackers to move laterally within the network or escalate privileges, posing a severe security risk.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1558"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351359"
+}

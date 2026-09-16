@@ -1,0 +1,23 @@
+{
+  "uuid": "3a6678bc-dafe-4b63-995f-53bd0e7f0cc8",
+  "title": "Linux Make Privilege Escalation",
+  "format": "splunk",
+  "author": "Gowthamaraj Rajendran, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of the 'make' command with elevated privileges to execute system commands as root, potentially leading to a root shell. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions that include 'make', '--eval', and 'sudo'. This activity is significant because it indicates a possible privilege escalation attempt, allowing a user to gain root access. If confirmed malicious, an attacker could achieve full control over the system, execute arbitrary commands, and compromise the entire environment.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1548.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350990"
+}

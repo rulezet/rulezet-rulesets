@@ -1,0 +1,21 @@
+{
+  "uuid": "7d86ff80-ef84-4d70-b0dd-bcfa979d1d28",
+  "title": "Active Directory Privilege Escalation Identified",
+  "format": "splunk",
+  "author": "Mauricio Velazco, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies potential privilege escalation activities within an organization's Active Directory (AD) environment. It detects this activity by correlating multiple analytics from the Active Directory Privilege Escalation analytic story within a specified time frame. This is significant for a SOC as it helps identify coordinated attempts to gain elevated privileges, which could indicate a serious security threat. If confirmed malicious, this activity could allow attackers to gain unauthorized access to sensitive systems and data, leading to potential data breaches and further compromise of the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1484"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351397"
+}

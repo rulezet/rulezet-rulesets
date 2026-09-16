@@ -1,0 +1,24 @@
+{
+  "uuid": "e0cfd183-b2cb-480b-aee2-78e4db9da3db",
+  "title": "Windows Hidden Schedule Task Settings",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of hidden scheduled tasks on Windows systems, which are not visible in the UI. It leverages Windows Security EventCode 4698 to identify tasks where the 'Hidden' setting is enabled. This behavior is significant as it may indicate malware activity, such as Industroyer2, or the use of living-off-the-land binaries (LOLBINs) to download additional payloads. If confirmed malicious, this activity could allow attackers to execute code stealthily, maintain persistence, or further compromise the system by downloading additional malicious payloads.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351179"
+}

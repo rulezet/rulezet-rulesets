@@ -1,0 +1,24 @@
+{
+  "uuid": "11621854-f0b1-4dde-b0e2-d781a21bc6ca",
+  "title": "Windows Modify Registry Disable Windows Security Center Notif",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects modifications to the Windows registry aimed at disabling Windows Security Center notifications. It leverages data from the Endpoint.Registry datamodel, specifically monitoring changes to the registry path \"*\\\\Windows\\\\CurrentVersion\\\\ImmersiveShell\\\\UseActionCenterExperience*\" with a value of \"0x00000000\". This activity is significant as it can indicate an attempt by adversaries or malware, such as Azorult, to evade defenses by suppressing critical update notifications. If confirmed malicious, this could allow attackers to persist undetected, potentially leading to further exploitation and compromise of the host system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:stealer=\"AZORult\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351091"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "485c6eb4-842d-49e1-99fe-8641c5b7e5df",
+  "title": "Windows Mshta Execution In Registry",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of mshta.exe via registry entries to run malicious scripts. It leverages registry activity logs to identify entries containing \"mshta,\" \"javascript,\" \"vbscript,\" or \"WScript.Shell.\" This behavior is significant as it indicates potential fileless malware, such as Kovter, which uses encoded scripts in the registry to persist and execute without files. If confirmed malicious, this activity could allow attackers to maintain persistence, execute arbitrary code, and evade traditional file-based detection methods, posing a significant threat to system integrity and security.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351026"
+}

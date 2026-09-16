@@ -1,0 +1,23 @@
+{
+  "uuid": "30d22dbc-41f3-4075-8e69-72a44f7e7f4c",
+  "title": "Windows Computer Account Changed to Domain Controller",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects a modification to the User Account Control flags for a computer account where the `SERVER_TRUST_ACCOUNT` flag is set.\nThis flag is normally associated with domain controller computer accounts.\nThis activity may indicate a legitimate domain controller promotion or, if unexpected, an attempt to grant a computer account domain controller-like trust within Active Directory.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1136.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351165"
+}

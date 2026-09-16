@@ -1,0 +1,24 @@
+{
+  "uuid": "e5dd3198-5cda-471d-aa7b-77ab7bbe95bd",
+  "title": "Windows AD add Self to Group",
+  "format": "splunk",
+  "author": "Dean Luxton",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects instances where a user adds themselves to an Active Directory (AD) group. This activity is a common indicator of privilege escalation, where a user attempts to gain unauthorized access to higher privileges or sensitive resources. By monitoring AD logs, this detection identifies such suspicious behavior, which could be part of a larger attack strategy aimed at compromising critical systems and data.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351058"
+}

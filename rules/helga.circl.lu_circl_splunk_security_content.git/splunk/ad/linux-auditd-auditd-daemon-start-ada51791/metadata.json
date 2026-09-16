@@ -1,0 +1,25 @@
+{
+  "uuid": "ada51791-9180-4458-9ccb-1edcc14fa7d9",
+  "title": "Linux Auditd Auditd Daemon Start",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the (re)initialization of the Linux audit daemon (auditd) by identifying log entries of type DAEMON_START. This event indicates that the audit subsystem has resumed logging after being stopped or has started during system boot. While DAEMON_START may be expected during reboots or legitimate configuration changes, it can also signal attempts to re-enable audit logging after evasion, or restarts with modified or reduced rule sets. Monitoring this event in correlation with DAEMON_END, DAEMON_ABORT, and auditctl activity provides visibility into the continuity and integrity of audit logs. Frequent or unexplained DAEMON_START events should be investigated, especially if they are not accompanied by valid administrative or system activity.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1685.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351007"
+}

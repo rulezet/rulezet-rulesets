@@ -1,0 +1,23 @@
+{
+  "uuid": "b5e5b17e-4f8b-453d-b5b1-3e6d02807e4e",
+  "title": "Windows Executable Masquerading as Benign File Types",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the presence of executable files masquerading as benign file types on Windows systems. Adversaries employ this technique to evade defenses and trick users into executing malicious code by renaming executables with extensions commonly associated with documents, images, or other non-executable formats (e.g., .pdf, .jpg, .doc, .png).\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.008"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/350955"
+}

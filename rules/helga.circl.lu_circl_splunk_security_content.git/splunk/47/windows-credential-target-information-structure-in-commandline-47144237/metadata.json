@@ -1,0 +1,27 @@
+{
+  "uuid": "47144237-02b9-4806-b256-5f4baa03b9b8",
+  "title": "Windows Credential Target Information Structure in Commandline",
+  "format": "splunk",
+  "author": "Raven Tait, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects DNS-based Kerberos coercion attacks where adversaries inject marshaled credential structures into DNS records to spoof SPNs and redirect authentication such as in CVE-2025-33073. This detection leverages process creation events looking for specific CREDENTIAL_TARGET_INFORMATION structures.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1071.004",
+    "T1187",
+    "T1557.001"
+  ],
+  "cve": [
+    "CVE-2025-33073"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351037"
+}

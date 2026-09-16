@@ -1,0 +1,24 @@
+{
+  "uuid": "c764a573-a68b-4906-9ea4-ed99dbac4279",
+  "title": "Windows Remote Host Computer Management Access",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of mmc.exe to launch Computer Management (compmgmt.msc) and connect to a remote machine. This technique allows administrators to access system management tools, including Event Viewer, Services, Shared Folders, and Local Users & Groups, without initiating a full remote desktop session. While commonly used for legitimate administrative purposes, adversaries may leverage this method for remote reconnaissance, privilege escalation, or persistence. Monitoring the execution of mmc.exe with the /computer:{hostname/ip} argument can help detect unauthorized system administration attempts or lateral movement within a network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351371"
+}

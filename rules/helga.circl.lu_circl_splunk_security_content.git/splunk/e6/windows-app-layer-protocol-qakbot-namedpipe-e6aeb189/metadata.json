@@ -1,0 +1,25 @@
+{
+  "uuid": "e6aeb189-d4ee-4b5b-9462-d3dbbd1b587b",
+  "title": "Windows App Layer Protocol Qakbot NamedPipe",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects a suspicious process creating or connecting to a potential Qakbot named pipe. It leverages Sysmon EventCodes 17 and 18, focusing on specific processes known to be abused by Qakbot and identifying randomly generated named pipes in GUID form. This activity is significant as Qakbot malware uses named pipes for inter-process communication after code injection, facilitating data theft. If confirmed malicious, this behavior could indicate a Qakbot infection, leading to unauthorized data access and potential exfiltration from the compromised host.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:botnet=\"Qbot\"",
+    "misp-galaxy:banker=\"Qakbot\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1071"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351254"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "6948cdbd-2d8a-430a-b9c1-b735fdcc6f62",
+  "title": "Windows Scheduled Task Created Via XML",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the creation of scheduled tasks in Windows using schtasks.exe with the \"XML\" parameter.\nThis detection leverages data from Endpoint Detection and Response (EDR) agents, focusing on command-line executions and process details.\nThis activity is significant as it is a common technique for establishing persistence or achieving privilege escalation, often used by malware like Trickbot and Winter-Vivern. While creating a scheduled task via XML may be legitimate, it can also be abused by attackers. If confirmed malicious, this could allow attackers to maintain access, execute additional payloads, and potentially lead to data theft or ransomware deployment.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351353"
+}

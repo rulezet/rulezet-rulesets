@@ -1,0 +1,24 @@
+{
+  "uuid": "cdc5cd4e-d386-4c36-a0f3-4de8488e9aeb",
+  "title": "Windows ClipBoard Data via Get-ClipBoard",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of the PowerShell command 'Get-Clipboard' to retrieve clipboard data.\nIt leverages PowerShell Script Block Logging (EventCode 4104) to identify instances where this command is used.\nThis activity is significant because it can indicate an attempt to steal sensitive information such as usernames, passwords, or other confidential data copied to the clipboard.\nIf confirmed malicious, this behavior could lead to unauthorized access to sensitive information, potentially compromising user accounts and other critical assets.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1115"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351031"
+}

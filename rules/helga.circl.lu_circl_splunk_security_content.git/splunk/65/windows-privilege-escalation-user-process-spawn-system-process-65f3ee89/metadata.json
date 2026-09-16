@@ -1,0 +1,27 @@
+{
+  "uuid": "65f3ee89-f41f-43f6-8610-a48d9ce73691",
+  "title": "Windows Privilege Escalation User Process Spawn System Process",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects when a process with low, medium, or high integrity spawns a system integrity process from a user-controlled location.\nThis behavior is indicative of privilege escalation attempts where attackers elevate their privileges to SYSTEM level from a user-controlled process or service.\nThe detection leverages Sysmon data, specifically Event ID 15, to identify such transitions.\nMonitoring this activity is crucial as it can signify an attacker gaining SYSTEM-level access, potentially leading to full control over the affected system, unauthorized access to sensitive data, and further malicious activities.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1134",
+    "T1548"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351403"
+}

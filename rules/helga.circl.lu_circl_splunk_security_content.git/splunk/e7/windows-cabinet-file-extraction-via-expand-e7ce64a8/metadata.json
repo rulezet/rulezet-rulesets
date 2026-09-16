@@ -1,0 +1,25 @@
+{
+  "uuid": "e7ce64a8-2dd3-4f38-9d6c-9362a4805da8",
+  "title": "Windows Cabinet File Extraction Via Expand",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detects usage of expand.exe to extract Microsoft Cabinet (CAB) archives, with\nemphasis on extractions into `C:\\\\ProgramData` or similar staging locations. In\nrecent APT37 activity, a CAB payload (e.g., wonder.cab) was expanded into\nProgramData prior to persistence and execution. This behavior is a strong signal\nfor ingress tool transfer and staging of payloads.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351076"
+}

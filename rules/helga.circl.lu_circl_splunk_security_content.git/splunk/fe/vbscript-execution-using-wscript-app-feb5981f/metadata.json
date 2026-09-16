@@ -1,0 +1,24 @@
+{
+  "uuid": "feb5981f-f21a-4977-9c4a-85719c325a47",
+  "title": "Vbscript Execution Using Wscript App",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of VBScript using the wscript.exe application. It leverages data from Endpoint Detection and Response (EDR) agents, focusing on process and command-line telemetry. This activity is significant because wscript.exe is typically not used to execute VBScript, which is usually associated with cscript.exe. This deviation can indicate an attempt to evade traditional process monitoring and antivirus defenses. If confirmed malicious, this technique could allow attackers to execute arbitrary code, potentially leading to system compromise, data exfiltration, or further lateral movement within the network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/351116"
+}
