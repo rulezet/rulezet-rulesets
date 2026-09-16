@@ -1,0 +1,10 @@
+import "pe"
+rule _SEAAXE_v22_
+{
+	meta:
+		description = "SEA-AXE v2.2"
+	strings:
+		$0 = {FC BC ?? ?? 0E 1F A3 ?? ?? E8 ?? ?? A1 ?? ?? 8B ?? ?? ?? 2B C3 8E C0 B1 03 D3 E3 8B CB BF ?? ?? 8B F7 F3 A5}
+	condition:
+		$0 at pe.entry_point
+}

@@ -1,0 +1,10 @@
+import "pe"
+rule _Armadillo_v19x_
+{
+	meta:
+		description = "Armadillo v1.9x"
+	strings:
+		$0 = {55 8B EC 6A FF 68 98 ?? ?? ?? 68 10 ?? ?? ?? 64 A1 ?? ?? ?? ?? 50 64 89 25 ?? ?? ?? ?? 83 EC 58 53 56 57 89 65 E8 FF 15}
+	condition:
+		$0 at pe.entry_point
+}

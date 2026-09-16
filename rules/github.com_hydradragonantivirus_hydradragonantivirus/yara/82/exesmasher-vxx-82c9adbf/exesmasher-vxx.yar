@@ -1,0 +1,10 @@
+import "pe"
+rule _ExeSmasher_vxx_
+{
+	meta:
+		description = "ExeSmasher vx.x"
+	strings:
+		$0 = {E9 19 32 ?? ?? E9 7C 2A ?? ?? E9 19 24 ?? ?? E9 FF 23 ?? ?? E9 1E 2E ?? ?? E9 88 2E ?? ?? E9}
+	condition:
+		$0 at pe.entry_point
+}
