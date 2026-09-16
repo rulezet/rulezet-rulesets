@@ -1,0 +1,9 @@
+rule Win_Trojan_Fakealert_24
+{
+strings:
+	$a0 = { d8a8f858dbf3719a59667f7432879b0a4b7c804d1bf2c4f9d24c8de506f0b6a6d861872f0cdc75f4daba6a29d917250bde8ac61f6dfc0fb59b67bac245186f44332521db5230b7c147d27ea5da4cb32ce5055325fe61620e5254fd614078d4bef9f0c5a4 }
+
+
+condition:
+	$a0
+}

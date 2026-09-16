@@ -1,0 +1,9 @@
+rule Win_Trojan_Ginwui_3
+{
+strings:
+	$a0 = { 68ac13011068a0130110b9e85d0210e83602000068841301106874130110b9e85d0210e862020000 }
+
+
+condition:
+	$a0
+}

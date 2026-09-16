@@ -1,0 +1,9 @@
+rule Win_Trojan_IRCBot_226
+{
+strings:
+	$a0 = { 96265ddc34b66439f43d1fa41fece8a7ad864ded31ed91a8417bde126d66842e7752734ca7ec9f84bc2c0aee4c9c63bfbc05a15f2dc58cd54f662caea84f3c7284caef65e38f025647c0e8cbcc1946fc0cd1a1f65a1b7c63bfc2a850b2bc6c8f9bbbaf0582cb9b381d3c90c358ad5489cfcfec010c050ca4f711a2cc9c5b80ad232c669b963ff4f16f91adbdadba1d7198c25ef54727 }
+
+
+condition:
+	$a0
+}

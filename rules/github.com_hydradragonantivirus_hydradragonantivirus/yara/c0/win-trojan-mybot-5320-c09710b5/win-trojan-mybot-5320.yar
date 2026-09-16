@@ -1,0 +1,9 @@
+rule Win_Trojan_Mybot_5320
+{
+strings:
+	$a0 = { 6827d362763f2de7eaebeb5e6647eeecec959b24a6338fdca7eb24a613eaebebeb85626e0fecd67bcba9eb5e6643edecec959b94ecd69bcba9eb5ea6fb9b5ea63f9b5e6647eeecec9b9481c381ea945e6643edecec949b94ecd647cba9eb662b77d78187ec18ec76fb60b673cba9ebec15ec76f7ec1560a6db246b3bebebeb53dca7eb60e7c78748ebebebeb6827e394ecd64bcba9eb }
+
+
+condition:
+	$a0
+}

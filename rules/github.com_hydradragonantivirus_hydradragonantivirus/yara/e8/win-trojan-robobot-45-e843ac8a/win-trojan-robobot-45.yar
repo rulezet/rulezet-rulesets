@@ -1,0 +1,9 @@
+rule Win_Trojan_Robobot_45
+{
+strings:
+	$a0 = { 9530c83b4bebaade7c9a73aa412adf7cedbd7d80d97c917427f06305d5c388df50e594af2d13632f08cf38b8e46db55c03b6a61aba10ea6e6fed70714dd0b8fd1cbbbb6acf4b2492137a8202b0520340adcad887eb25d9c574e0d0c3085b22c7a92dcd18d24d4c2c710e4dc7a2a000d13eb6a0b3c014bc77da9b9c3f0da8ec3c82966f11cddfbf9032777ea4541c6793da }
+
+
+condition:
+	$a0
+}
