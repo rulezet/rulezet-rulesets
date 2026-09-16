@@ -1,0 +1,22 @@
+{
+  "uuid": "f52b70bc-b67e-4ae8-9e25-5d6e18e60861",
+  "title": "Trojan_MacOS_SuspAmosExec_G",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:MacOS/SuspAmosExec.G,SIGNATURE_TYPE_CMDHSTR_EXT,07 00 07 00 07 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/262285"
+}

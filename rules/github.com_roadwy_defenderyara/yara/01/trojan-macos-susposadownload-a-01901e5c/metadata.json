@@ -1,0 +1,22 @@
+{
+  "uuid": "01901e5c-2932-4691-934b-9de630af90e3",
+  "title": "Trojan_MacOS_SuspOsaDownload_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:MacOS/SuspOsaDownload.A,SIGNATURE_TYPE_MACHOHSTR_EXT,09 00 09 00 07 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/262297"
+}
