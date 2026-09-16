@@ -1,0 +1,9 @@
+rule Win_Spyware_Webmoner_1
+{
+strings:
+	$a0 = { 802920454105191ec562050e01139dc81c22df2d75dbbf8b773cf32bf879f80eee66e40b737205bbbbc06ddd81ad5e45b8b05f2b7920ba401bb72116dc805d7380db72456b901adce0badc920a6406f97205dbb906ddf320b6ee41db7722be6e657cf3377fffff6fcebaebe75df7f3efcfbdfcf9dfdef9cfdbaf7e822c607114c61b55aad3bdd977e1e3be57 }
+
+
+condition:
+	$a0
+}

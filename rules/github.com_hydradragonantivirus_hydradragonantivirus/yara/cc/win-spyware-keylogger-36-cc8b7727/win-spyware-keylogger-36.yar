@@ -1,0 +1,9 @@
+rule Win_Spyware_Keylogger_36
+{
+strings:
+	$a0 = { fa7504dace1a139d9a3121f7dbadf4ea10225ede43f7eef4072a4615e44b3d751d4b2db28c4339208806b942e896221624d76ffebcf9d45a07aae34f9213e5df45abe89e01733cde4136d7779d53e3f767610c4c11dfa5d3c6ceac8d84a0779502f0b7d12f6e1a9ca0d99271acf571439abb4c0eae6b99c03def9adba0ab88a81417ebb095fadfd7dae5bad3 }
+
+
+condition:
+	$a0
+}

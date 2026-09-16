@@ -1,0 +1,9 @@
+rule Win_Spyware_W32_104
+{
+strings:
+	$a0 = { 847d060168408a820ad91d0ac40a1b0226f5b81b902f2d52de779de2fe1dcebf873f08f3b99dc80dbdc817bcef760dbcb02b6bb82d580e5b7720b4901f4c905ae40b7ae4836b923c78e6e0b5cdc5adcdc1f4c80fa6491e5ee4179cb922f5b906f6f705ade6372e77fffff73be79e7cf5fbf7e6be7cd6b5fc079efe065d8c228a4c970b85bedb6bdf0905d17f }
+
+
+condition:
+	$a0
+}
