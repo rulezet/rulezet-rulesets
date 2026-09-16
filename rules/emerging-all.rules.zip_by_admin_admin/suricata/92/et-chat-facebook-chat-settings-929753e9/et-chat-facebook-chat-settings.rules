@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET CHAT Facebook Chat (settings)"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/ajax/chat/settings.php"; http.header; content:"facebook.com|0d 0a|"; classtype:policy-violation; sid:2010786; rev:7; metadata:created_at 2010_07_30, signature_severity Informational, updated_at 2020_11_19;)
