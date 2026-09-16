@@ -1,0 +1,20 @@
+{
+  "uuid": "8edc85e2-a25d-476a-8b2e-a96fa1824236",
+  "title": "Hacktool_This_Cruft",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects string 'This cruft' often used in hack tools like netcat or cryptcat and also mentioned in Project Sauron report",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Netcat\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/198946"
+}

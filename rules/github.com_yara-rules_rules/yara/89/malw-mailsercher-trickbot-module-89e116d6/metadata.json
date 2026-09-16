@@ -1,0 +1,21 @@
+{
+  "uuid": "89e116d6-2949-48c3-814e-bcd217a2af80",
+  "title": "MALW_mailsercher_trickbot_module",
+  "format": "yara",
+  "author": "Marc Salinas @Bondey_m",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": " Detects mailsearcher module from Trickbot Trojan",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:banker=\"Trickbot\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/199226"
+}

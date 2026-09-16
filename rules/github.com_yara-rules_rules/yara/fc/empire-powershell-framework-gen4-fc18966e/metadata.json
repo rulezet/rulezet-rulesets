@@ -1,0 +1,22 @@
+{
+  "uuid": "fc18966e-aca9-4e34-8ae3-764d1d8e6971",
+  "title": "Empire_PowerShell_Framework_Gen4",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects Empire component - from files Invoke-BypassUAC.ps1, Invoke-CredentialInjection.ps1, Invoke-CredentialInjection.ps1, Invoke-DCSync.ps1, Invoke-DllInjection.ps1, Invoke-Mimikatz.ps1, Invoke-PsExec.ps1, Invoke-PSInject.ps1, Invoke-ReflectivePEInjection.ps1, Invoke-Shellcode.ps1",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:tool=\"Empire\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/199086"
+}

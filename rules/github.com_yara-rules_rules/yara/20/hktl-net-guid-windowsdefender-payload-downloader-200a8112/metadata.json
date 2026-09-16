@@ -1,0 +1,20 @@
+{
+  "uuid": "200a8112-62df-491d-ba6d-7ffb566855bd",
+  "title": "HKTL_NET_GUID_WindowsDefender_Payload_Downloader",
+  "format": "yara",
+  "author": "Arnim Rupp",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects c# red/black-team tools via typelibguid",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"TrojanDownloader\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/199367"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "d81027a9-8280-40f9-97d9-63be490bd8e1",
+  "title": "MALW_trickbot_bankBot",
+  "format": "yara",
+  "author": "Marc Salinas @Bondey_m",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects Trickbot Banking Trojan",
+  "source": "https://github.com/Yara-Rules/rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:banker=\"Trickbot\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-11",
+  "last_modified": "2026-03-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/199215"
+}
