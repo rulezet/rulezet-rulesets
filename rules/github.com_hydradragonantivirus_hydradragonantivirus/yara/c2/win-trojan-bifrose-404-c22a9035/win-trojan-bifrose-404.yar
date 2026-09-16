@@ -1,0 +1,9 @@
+rule Win_Trojan_Bifrose_404
+{
+strings:
+	$a0 = { adab9eaf63b0144f8f6cb227563fe3b24fa2a354fc5376b1a657a42b266432b0968b0d49f3e3364d65535a21ea0f02aa98c5f13ec63d05e7dbdaa90a63860250adcfc2ac92ada37baec3307e827dfb7872e2abb35abbc46f4e7cfef2955b1eb26290045571dc013f3eaa875099ea03bc10bb117d77ada86b33d1adb555dfb34df4a2174e1d8e06bcaaffc41f }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Zori_2
+{
+strings:
+	$a0 = { 558bec6a006a00535657bea8a47300bf9ca4730033c055687061450064ff30648920a10cc345008b00e84634feff8bc6b9886145008b15a0a47300e8a0e9faffb341 }
+
+
+condition:
+	$a0
+}

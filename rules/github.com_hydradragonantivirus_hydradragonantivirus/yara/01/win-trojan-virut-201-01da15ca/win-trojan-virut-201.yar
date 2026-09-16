@@ -1,0 +1,11 @@
+rule Win_Trojan_Virut_201
+{
+strings:
+	$a0 = { e8??000000 }
+
+	$a1 = { 558b6c2404816c2404????????e8??ffffff8bc8e8??ffffff2bc13d0001000073458b5c240881e300f0ffff81ed051040008b0b????6681f9????7408????00f0ffffebed }
+
+
+condition:
+	$a0 and $a1
+}
