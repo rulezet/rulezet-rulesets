@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP TopMoxie Reporting Data to External Host"; flow:established,to_server; http.uri; content:"/downloads/record_download.asp"; nocase; reference:url,www.topmoxie.com; classtype:pup-activity; sid:2000588; rev:14; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_04_11;)

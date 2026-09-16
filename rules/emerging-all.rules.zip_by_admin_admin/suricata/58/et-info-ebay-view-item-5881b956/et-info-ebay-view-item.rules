@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO eBay View Item"; flow:established,to_server; http.uri; content:"/ws/eBayISAPI.dll"; nocase; content:"ViewItem"; nocase; http.host; content:".ebay.com"; classtype:policy-violation; sid:2001908; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_04_11;)

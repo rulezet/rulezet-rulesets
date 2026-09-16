@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO eBay Bid Placed"; flow:established,to_server; http.uri; content:"/ws/eBayISAPI.dll/"; nocase; content:"maxbid="; nocase; http.host; content:"offer.ebay.com"; classtype:policy-violation; sid:2001898; rev:8; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_04_11;)

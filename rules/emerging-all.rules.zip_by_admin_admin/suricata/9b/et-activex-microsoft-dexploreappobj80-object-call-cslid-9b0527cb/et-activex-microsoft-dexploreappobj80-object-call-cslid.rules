@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET ACTIVEX Microsoft DExplore.AppObj.8.0 object call CSLID"; flow:established,to_client; file.data; content:"639F725F-1B2D-4831-A9FD-874847682010"; fast_pattern; nocase; classtype:attempted-user; sid:2003160; rev:12; metadata:created_at 2010_07_30, confidence Medium, signature_severity Unknown, updated_at 2024_04_11;)

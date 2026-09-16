@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET INAPPROPRIATE masturbation"; flow:established,to_client; file.data; content:"masturbat"; nocase; threshold: type threshold, track by_dst,count 5, seconds 360; classtype:policy-violation; sid:2001351; rev:11; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2024_04_11;)

@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS $HTTP_PORTS -> $EXTERNAL_NET any (msg:"ET ATTACK_RESPONSE ALBANIA id.php detected"; flow:established,to_client; file.data; content:"UNITED ALBANIANS aka ALBOSS PARADISE"; reference:url,www.rfxn.com/vdb.php; classtype:web-application-activity; sid:2007656; rev:8; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2024_04_11;)

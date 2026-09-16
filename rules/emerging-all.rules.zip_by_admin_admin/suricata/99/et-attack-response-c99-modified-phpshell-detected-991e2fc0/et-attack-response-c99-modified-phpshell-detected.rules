@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS $HTTP_PORTS -> $EXTERNAL_NET any (msg:"ET ATTACK_RESPONSE C99 Modified phpshell detected"; flow:established,to_client; file.data; content:"C99 Modified"; reference:url,www.rfxn.com/vdb.php; classtype:web-application-activity; sid:2007654; rev:8; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2024_04_11;)
