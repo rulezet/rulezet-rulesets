@@ -1,0 +1,70 @@
+rule _20160624_035d58ed8df9800800eaacc923943d6e_20160624_0a81eeed58a1_1018 {
+  meta:
+    description = "datamaliciousorder - from files 20160624_035d58ed8df9800800eaacc923943d6e.js, 20160624_0a81eeed58a19d6273200781f248a919.js, 20160624_0b59b5ae5575fe1beb26c8251f205044.js, 20160624_0fa19227a0136ffb893bd2f9b86b3f48.js, 20160624_105da93f53edd4406bb34e48a539bea5.js, 20160624_1215ebb20694532a8bdce11f997d5580.js, 20160624_141b1d5ac5af1e993e71905da52d293c.js, 20160624_15cb5aeb0337a9dbf6b455b424a140df.js, 20160624_188bccf398ea98ada27032fef753dc49.js, 20160624_1b87f4f67324fa25a8b99df07fb82516.js, 20160624_1bf66bc2d98b64ecffb4642876a111d3.js, 20160624_1c32ad54b9775c2555fea04c2df657a6.js, 20160624_1f12253c481ccf28fa64846bce75add7.js, 20160624_1f98c29911ea6ed46e12c476e60eead9.js, 20160624_2a21d2298e0bc44732659977d493d258.js, 20160624_2c139d909b012a9e24270bea8f8414ce.js, 20160624_2d4bec0cb4c367b09dbb686f88a41c3c.js, 20160624_321ac0cbce7182d664453d71268f2131.js, 20160624_4a5bbd07c67ec6c9b476fd319ee8bba3.js, 20160624_50fe2db8690a6582c9bb3eead6f68f55.js, 20160624_548c2312f3077a4a4eef73a8ce95c22d.js, 20160624_669bfa210aad9f017a158c5ba6be471a.js, 20160624_677550169b94721e3f7671c0f1f33f40.js, 20160624_68677c8724078c6ebfb007433a4bcb3e.js, 20160624_6eaeadb6d11d45d014520282dc855776.js, 20160624_7298c5cacdf326dcec88fbbbea27351c.js, 20160624_7583103dc87f45f864a49b0127b4b9b9.js, 20160624_7844f5427eb9896324281c15e466b7ed.js, 20160624_7b7b830cedb0b20618ecc0bbb867b3c7.js, 20160624_7fe98cce6571af0a90bf937466c984a6.js, 20160624_82a07617644e2b0ea31affed06d166cd.js, 20160624_9f6f912b65489504637256c52e932601.js, 20160624_b0f4be5d2aec073b8bb9096b0622e599.js, 20160624_ba06ce2eff307072945b0eba68f307a0.js, 20160624_c4e332367eb822cc38f5a73a4f8ecc0e.js, 20160624_ce9e603d2e4e8b9de8591e774cbc8352.js, 20160624_cecdd995223734812cf25838bb311a96.js, 20160624_d1a8f97452ddb3bd92081ba99c6f3cc1.js, 20160624_d333e324e83689a4a522f7b3ebaf462b.js, 20160624_d82e4386ae9b885476f5e7ed3c5403b6.js, 20160624_d9cb32361d54faf4e224b453139646df.js, 20160624_ecd0afb66bfdf0c46ed61d68f28a673b.js, 20160624_f1573e046b0b68661100289d8c26987d.js, 20160624_f60e01983bbee14d0360e117c6f4e479.js, 20160624_fa719c5dab17207f13f3646f658a6a4a.js, 20160624_fa76b9f5d2ca861805e039d246743421.js"
+    author      = "HydraDragonAntivirus"
+    reference   = "https://github.com/HydraDragonAntivirus"
+    date        = "2026-04-26"
+    hash1       = "591021af36951bee3266243663b791eb9fd6b7c382092558f3c2048aeec520d6"
+    hash2       = "d20b756886d5e41319b07c1dc7ba882edfd5edc425208715712b884d3f354109"
+    hash3       = "209839852f1e909a12a215fea5c9451fab233864ee843129b1cfc057caa1f7bf"
+    hash4       = "75a255c05adb6d1831cfcc82cd2563f739ae69922de909ce256a4f5b68eabc56"
+    hash5       = "46c10e0181b3d59a1a328e3a5c94b762e9ea82b5552b3f2c3b5d85a5794f0eca"
+    hash6       = "6e52260c5986a44fd2b91f096ac8652c2a64035158d77b2adb017dbce99148aa"
+    hash7       = "7a0a082907c1be48022c1463248be860959a94e71615c332527c3c9307f0559a"
+    hash8       = "53be5a29f06496cec0a7f08f53f346a779b4a0e2d103021655fdc3daaaa542a9"
+    hash9       = "43891eda090e55646d4881703b862ac3b9cf8a7c19a2f39cf4cef51e3ec4c127"
+    hash10      = "87bafa36f3768ed0dea4c3478d1736cdf576c0d9c53e80e0779e15b083911d0a"
+    hash11      = "54ceeeff233db7a6fceed6df6e6f1b576393db083c1cb42bf9e2a2605374b357"
+    hash12      = "5280b1b3315ab9b6e5908cb7e0aca8150590596517a9ca159e7f3e31366fc627"
+    hash13      = "7bb1e8e039d222a51a71599af75b56151a878cf8bbe1f9d3ad5be18200b2286b"
+    hash14      = "b86c0ec35e950f0a1c58c2444eef3272e3f4bbe4ca57eb23e81d3ae65431e2cc"
+    hash15      = "ffc23f9fc025b38861428ed42c89b2c70375b1334265614c6dd18f26888c52bd"
+    hash16      = "d859f13888cf8029b141d3a3e24559588da20f1aaa84ad23cf42f91678b328a2"
+    hash17      = "a5048c337288f9c04fb9ca4a0f772a2036b975fbfdc0de90764456e835b363dc"
+    hash18      = "cf50d9c7e3b8222a580dc3a8f1ef369574c6476832970dd1bd797670f92645eb"
+    hash19      = "88c134090c13bfad8633472ebe6e9360940bc53f26611d84165edba9fd5e9231"
+    hash20      = "34ccea5776d9755ab97981f6c0c43ebcc3f64c963b22de6b817cac5d3a064b0f"
+    hash21      = "58ed7629e79a9748ef7f12de2421420d47876577068f74792be5a1e9034faf70"
+    hash22      = "2f6f0b4b25506c39402f33be4ec91c4f2bd55ce6c3477b6ff8ddf739a977bf3a"
+    hash23      = "1cb36585e4cd1effb08c02d3479a4161b061691362aeba47f91bad33bcc374b3"
+    hash24      = "f3d740475a8b3c230799e254f542822d9866f5d571525ee11e669ecdae9ab59e"
+    hash25      = "ea5818cba08c03220fadbc20c8d531f90a95b7cbeb17078221e44c362554d3fc"
+    hash26      = "259e69c14ad9ed31e98091ec404eecbf21bef22a8f318d606f20df682f30f757"
+    hash27      = "0f525c0a5a246fc71af643acc5875a42bca8e8a6eef88b08422042954c983a87"
+    hash28      = "6c1e02f365a689882270e21896790d17bbf068be0c30804d123bfaa6cb073dd2"
+    hash29      = "aae04be07a4f0d8288fa16ef43b84b8ed2f2a92cd80d5a1211305e727fb39197"
+    hash30      = "909eaa4c7af286148693e7918e12e1cf40ee1fa74aed5c6bfe2064e711fe8fdf"
+    hash31      = "2d854456a064ddd97dd4a918d1eeaf51643029f1e673e7c8050d8eba6dec7139"
+    hash32      = "133eb7390214d947e1e91c40a926b03ffeb6ee05fdcc40db736137c455f4590c"
+    hash33      = "ecb46256a51f9d2c3698c80703e108af2e16eadfd6ba52d24eb089c412a37add"
+    hash34      = "7fba27e0038df06dfcec1a3b6956e2332ad0621f811aaaa1506bf68342f21db3"
+    hash35      = "132fa04d805537ab0bd8cc089de63c0f740f654e1369bb7405835f8f48680a32"
+    hash36      = "aa3c2b0a51d233bc6a1bda43867ea9c4a4bafb8dae21f86ebec47c3ecf4870c2"
+    hash37      = "1470ba757ca40fb9c4e481cecccf7d6bd4c6519f05c3e8aa292ce4ce2731a977"
+    hash38      = "26becf7c7a7df041224dc41e00b604e767818bebe8d2bdc7ee823dad43f81a6b"
+    hash39      = "18e93670bea577be7350b63bd4fcbe0c38d2a95a3fb7bc5aec219618731e132e"
+    hash40      = "e8a4e8838b412dd5f2f04173d859577b0f9abc5695dba8f1c671a9f97b47be4d"
+    hash41      = "8edce6037f7ac55caa1fa4ef324542c5ed5f385967bb74f2607c5adfa8c90d85"
+    hash42      = "9cfecd12532d2b9a9b59f950ea50dafbbcd46974af066aac375e844f626c2115"
+    hash43      = "2805944b65b18ec31c794eb3774a01a8cb2411e5f03187a3d15fb564a9d1b70e"
+    hash44      = "ffe06a65eeefc8086f48a8fb05e23f3545305df17430391499f4620df871555b"
+    hash45      = "2f8fd08a232340487dd4e1d4a0bc626f682c5fd9b267749ba231b1ed2ea97cb0"
+    hash46      = "760af22b37b3cc7c978abba7c527cef60b6ebd10c6a47e329ee48281b9ca51ae"
+
+  strings:
+    $s1  = "var logan = this[unrestrained.shift()];" fullword ascii
+    $s2  = "var terrifying = unrestrained.pop().split(\">\");" fullword ascii
+    $s3  = "String.prototype.miami2 = function () {" fullword ascii
+    $s4  = "String.prototype.miami4 = function() {" fullword ascii
+    $s5  = "var ranger =\"archivesarchivesJVarchivesRFTVarchivesAl\".miami4();" fullword ascii
+    $s6  = " function miami(rivulet) {" fullword ascii
+    $s7  = "var vulture = rampart[unrestrained.shift()](unrestrained.shift());" fullword ascii
+    $s8  = "var ungodly = \"archivesarchivesQWarchivesN0aXZarchiveslWE9iaarchivesmVjdA=archives=\".miami4();" fullword ascii
+    $s9  = "var workroom =\"archivesRXhwYW5archiveskRW52aXarchivesJvbm1lbnRTdHJarchivespbmdz\".miami4();" fullword ascii
+    $s10 = "var amalgamation = unrestrained.shift();" fullword ascii
+    $s11 = "architectural = \"b3Blbg==\".miami4();" fullword ascii
+
+  condition:
+    (uint16(0) == 0x0a0d and (8 of them)
+    ) or (all of them)
+}
