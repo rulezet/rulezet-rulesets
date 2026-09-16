@@ -1,0 +1,11 @@
+rule PEiD_00338_Borland_Delphi_DLL_ {
+  meta:
+    description = "[Borland Delphi DLL]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 55 8B EC 83 C4 B4 B8 ?? ?? ?? ?? E8 ?? ?? ?? ?? E8 ?? ?? ?? ?? 8D 40 }
+
+  condition:
+    $a
+}

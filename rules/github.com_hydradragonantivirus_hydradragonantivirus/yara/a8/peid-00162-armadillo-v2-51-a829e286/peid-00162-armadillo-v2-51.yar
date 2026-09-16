@@ -1,0 +1,11 @@
+rule PEiD_00162_Armadillo_v2_51_ {
+  meta:
+    description = "[Armadillo v2.51]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 55 8B EC 6A FF 68 B8 ?? ?? ?? 68 D0 ?? ?? ?? 64 A1 ?? ?? ?? ?? 50 64 89 25 ?? ?? ?? ?? 83 EC 58 53 56 57 89 65 E8 FF 15 20 }
+
+  condition:
+    $a
+}

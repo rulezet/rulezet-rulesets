@@ -1,0 +1,11 @@
+rule PEiD_00258_ASProtect_v1_1_ {
+  meta:
+    description = "[ASProtect v1.1]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 60 E9 ?? 04 ?? ?? E9 ?? ?? ?? ?? ?? ?? ?? EE }
+
+  condition:
+    $a
+}

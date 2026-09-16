@@ -1,0 +1,11 @@
+rule PEiD_00349_Borland_Delphi_v6_0___v7_0_ {
+  meta:
+    description = "[Borland Delphi v6.0 - v7.0]"
+    ep_only     = "true"
+
+  strings:
+    $a = { BA ?? ?? ?? ?? 83 7D 0C 01 75 ?? 50 52 C6 05 ?? ?? ?? ?? ?? 8B 4D 08 89 0D ?? ?? ?? ?? 89 4A 04 }
+
+  condition:
+    $a
+}

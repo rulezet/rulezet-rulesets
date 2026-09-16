@@ -1,0 +1,11 @@
+rule PEiD_00434_CRYPT_Version_1_7__c__Dismember__COM__ {
+  meta:
+    description = "[CRYPT Version 1.7 (c) Dismember (COM)]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 0E 17 9C 58 F6 C4 01 ?? ?? ?? ?? ?? B4 01 BE ?? ?? BF ?? ?? B9 ?? ?? 68 ?? ?? 68 ?? ?? 68 ?? ?? 57 F3 A4 C3 B0 02 E6 21 60 }
+
+  condition:
+    $a
+}

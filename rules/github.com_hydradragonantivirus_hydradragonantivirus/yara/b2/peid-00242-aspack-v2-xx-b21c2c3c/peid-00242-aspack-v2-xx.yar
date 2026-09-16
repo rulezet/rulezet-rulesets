@@ -1,0 +1,11 @@
+rule PEiD_00242_ASPack_v2_xx_ {
+  meta:
+    description = "[ASPack v2.xx]"
+    ep_only     = "true"
+
+  strings:
+    $a = { A8 03 ?? ?? 61 75 08 B8 01 ?? ?? ?? C2 0C ?? 68 ?? ?? ?? ?? C3 8B 85 26 04 ?? ?? 8D 8D 3B 04 ?? ?? 51 50 FF 95 }
+
+  condition:
+    $a
+}
