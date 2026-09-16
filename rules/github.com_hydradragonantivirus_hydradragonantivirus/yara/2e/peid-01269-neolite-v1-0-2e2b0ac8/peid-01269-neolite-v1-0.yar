@@ -1,0 +1,11 @@
+rule PEiD_01269_NeoLite_v1_0_ {
+  meta:
+    description = "[NeoLite v1.0]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 8B 44 24 04 8D 54 24 FC 23 05 ?? ?? ?? ?? E8 ?? ?? ?? ?? FF 35 ?? ?? ?? ?? 50 FF 25 }
+
+  condition:
+    $a
+}

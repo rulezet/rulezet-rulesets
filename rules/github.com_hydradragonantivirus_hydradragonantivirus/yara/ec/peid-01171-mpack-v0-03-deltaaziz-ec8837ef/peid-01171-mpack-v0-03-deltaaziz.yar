@@ -1,0 +1,11 @@
+rule PEiD_01171_mPack_V0_03____DeltaAziz_ {
+  meta:
+    description = "[mPack V0.03 -> DeltaAziz]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 55 8B EC 83 ?? ?? 33 C0 89 45 F0 B8 ?? ?? ?? ?? E8 67 C4 FF FF 33 C0 55 68 ?? ?? ?? ?? 64 FF 30 64 89 20 8D 55 F0 33 C0 E8 93 C8 FF FF 8B 45 F0 E8 87 CB FF FF A3 ?? ?? ?? ?? 33 C0 55 68 ?? ?? ?? ?? 64 FF 30 64 89 20 A1 ?? ?? ?? ?? E8 FA C9 FF FF 83 F8 FF }
+
+  condition:
+    $a
+}

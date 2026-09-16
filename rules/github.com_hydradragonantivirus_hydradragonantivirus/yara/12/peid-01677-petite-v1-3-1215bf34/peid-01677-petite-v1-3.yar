@@ -1,0 +1,11 @@
+rule PEiD_01677_PEtite_v1_3_ {
+  meta:
+    description = "[PEtite v1.3]"
+    ep_only     = "true"
+
+  strings:
+    $a = { ?? ?? ?? ?? ?? 66 9C 60 50 8D 88 ?? F0 ?? ?? 8D 90 04 16 ?? ?? 8B DC 8B E1 68 ?? ?? ?? ?? 53 50 80 04 24 08 50 80 04 24 42 }
+
+  condition:
+    $a
+}

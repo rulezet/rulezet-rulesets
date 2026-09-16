@@ -1,0 +1,11 @@
+rule PEiD_01297_nPack_V1_1_200_2006_Beta____NEOx__uinC_ {
+  meta:
+    description = "[nPack V1.1.200.2006.Beta -> NEOx/[uinC]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 83 3D 40 ?? ?? ?? 00 75 05 E9 01 00 00 00 C3 E8 41 00 00 00 B8 80 ?? ?? ?? 2B 05 08 ?? ?? ?? A3 3C ?? ?? ?? E8 5E 00 00 00 E8 EC 01 00 00 E8 F8 06 00 00 E8 03 06 00 00 A1 3C ?? ?? ?? C7 05 40 ?? ?? ?? 01 00 00 00 01 05 00 ?? ?? ?? FF 35 00 ?? ?? ?? C3 C3 }
+
+  condition:
+    $a
+}

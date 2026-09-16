@@ -1,0 +1,11 @@
+rule PEiD_01636_PEShit_ {
+  meta:
+    description = "[PEShit]"
+    ep_only     = "true"
+
+  strings:
+    $a = { B8 ?? ?? ?? ?? B9 ?? ?? ?? ?? 83 F9 00 7E 06 80 30 ?? 40 E2 F5 E9 ?? ?? ?? FF }
+
+  condition:
+    $a
+}

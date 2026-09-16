@@ -1,0 +1,11 @@
+rule PEiD_01176_MS_Run_Time_Library_1987_ {
+  meta:
+    description = "[MS Run-Time Library 1987]"
+    ep_only     = "true"
+
+  strings:
+    $a = { B4 30 CD 21 3C 02 73 ?? 9A ?? ?? ?? ?? B8 ?? ?? 50 9A ?? ?? ?? ?? 92 }
+
+  condition:
+    $a
+}

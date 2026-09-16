@@ -1,0 +1,11 @@
+rule PEiD_01313_NsPack_3_1____Liu_Xing_Ping_ {
+  meta:
+    description = "[NsPack 3.1 -> Liu Xing Ping]"
+    ep_only     = "false"
+
+  strings:
+    $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? ?? ?? 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 }
+
+  condition:
+    $a
+}

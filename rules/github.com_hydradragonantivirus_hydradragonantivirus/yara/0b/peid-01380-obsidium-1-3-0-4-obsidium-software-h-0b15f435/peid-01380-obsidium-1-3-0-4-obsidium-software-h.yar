@@ -1,0 +1,11 @@
+rule PEiD_01380_Obsidium_1_3_0_4____Obsidium_Software__h__ {
+  meta:
+    description = "[Obsidium 1.3.0.4 -> Obsidium Software (h)]"
+    ep_only     = "false"
+
+  strings:
+    $a = { EB 02 ?? ?? E8 25 00 00 00 EB 04 ?? ?? ?? ?? EB 01 ?? 8B 54 24 0C EB 01 ?? 83 82 B8 00 00 00 23 EB 01 ?? 33 C0 EB 02 ?? ?? C3 EB 02 ?? ?? EB 04 ?? ?? ?? ?? 64 67 FF 36 00 00 EB 03 ?? ?? ?? 64 67 89 26 00 00 EB 02 ?? ?? EB 01 ?? 50 EB 01 ?? 33 C0 EB 01 }
+
+  condition:
+    $a
+}

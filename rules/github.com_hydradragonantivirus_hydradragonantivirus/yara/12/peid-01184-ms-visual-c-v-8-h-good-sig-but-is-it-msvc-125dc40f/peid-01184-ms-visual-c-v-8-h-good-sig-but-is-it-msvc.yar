@@ -1,0 +1,11 @@
+rule PEiD_01184_MS_Visual_C___v_8__h_good_sig__but_is_it_MSVC___ {
+  meta:
+    description = "[MS Visual C++ v.8 (h-good sig, but is it MSVC?)]"
+    ep_only     = "false"
+
+  strings:
+    $a = { E8 ?? ?? ?? ?? E9 8D FE FF FF CC CC CC CC CC 66 81 3D 00 00 00 01 4D 5A 74 04 33 C0 EB 51 A1 3C 00 00 01 81 B8 00 00 00 01 50 45 00 00 75 EB 0F B7 88 18 00 00 01 81 F9 0B 01 00 00 74 1B 81 F9 0B 02 00 00 75 D4 83 B8 84 00 00 01 0E 76 CB 33 C9 39 88 F8 00 }
+
+  condition:
+    $a
+}
