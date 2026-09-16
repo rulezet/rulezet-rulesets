@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER WebShell Generic - ELF File Uploaded"; flow:established,to_server; http.request_body; content:"|7F|ELF"; classtype:bad-unknown; sid:2017054; rev:3; metadata:created_at 2013_06_22, confidence Medium, signature_severity Informational, updated_at 2020_04_24;)

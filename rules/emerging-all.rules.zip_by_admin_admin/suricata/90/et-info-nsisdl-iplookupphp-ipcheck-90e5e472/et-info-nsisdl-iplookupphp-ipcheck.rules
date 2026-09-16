@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO NSISDL Iplookup.php IPCheck"; flow:established,to_server; http.uri; content:"/iplookup.php"; fast_pattern; http.user_agent; content:"NSISDL/1.2 (Mozilla)"; classtype:policy-violation; sid:2016744; rev:6; metadata:created_at 2013_04_09, confidence High, signature_severity Informational, updated_at 2020_04_24;)

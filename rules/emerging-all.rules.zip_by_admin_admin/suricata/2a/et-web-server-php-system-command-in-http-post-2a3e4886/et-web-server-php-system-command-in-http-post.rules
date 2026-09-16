@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER PHP System Command in HTTP POST"; flow:established,to_server; http.method; content:"POST"; http.request_body; content:"<?"; content:"system|28|"; distance:0; classtype:web-application-attack; sid:2020102; rev:5; metadata:created_at 2015_01_07, signature_severity Major, updated_at 2020_05_14;)

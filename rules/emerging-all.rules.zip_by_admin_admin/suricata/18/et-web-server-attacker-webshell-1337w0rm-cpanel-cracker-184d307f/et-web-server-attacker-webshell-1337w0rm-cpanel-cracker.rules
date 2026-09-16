@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"ET WEB_SERVER ATTACKER WebShell - 1337w0rm - cPanel Cracker"; flow:established,to_server; http.request_body; content:"user=CRACKER"; classtype:trojan-activity; sid:2020097; rev:3; metadata:created_at 2015_01_06, signature_severity Major, updated_at 2020_05_14;)

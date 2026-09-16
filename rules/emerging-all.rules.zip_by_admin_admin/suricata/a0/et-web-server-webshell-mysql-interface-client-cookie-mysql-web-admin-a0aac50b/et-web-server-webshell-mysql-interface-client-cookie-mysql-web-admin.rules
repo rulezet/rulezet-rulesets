@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER WebShell - MySQL Interface - Client Cookie mysql_web_admin*="; flow:established,to_server; http.cookie; content:"mysql_web_admin_"; classtype:bad-unknown; sid:2016575; rev:4; metadata:created_at 2013_03_14, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_04_23;)

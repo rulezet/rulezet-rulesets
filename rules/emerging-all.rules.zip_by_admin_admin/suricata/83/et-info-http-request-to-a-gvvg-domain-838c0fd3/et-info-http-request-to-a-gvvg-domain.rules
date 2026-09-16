@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO HTTP Request to a *.gv.vg domain"; flow:established,to_server; http.host; content:".gv.vg"; endswith; classtype:bad-unknown; sid:2012542; rev:6; metadata:created_at 2011_03_24, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_05_06;)

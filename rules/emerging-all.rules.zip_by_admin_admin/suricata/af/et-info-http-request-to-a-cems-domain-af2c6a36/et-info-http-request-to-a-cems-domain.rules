@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO HTTP Request to a *.ce.ms domain"; flow:established,to_server; http.host; content:".ce.ms"; endswith; classtype:bad-unknown; sid:2012593; rev:6; metadata:created_at 2011_03_29, confidence High, signature_severity Informational, updated_at 2020_05_06;)

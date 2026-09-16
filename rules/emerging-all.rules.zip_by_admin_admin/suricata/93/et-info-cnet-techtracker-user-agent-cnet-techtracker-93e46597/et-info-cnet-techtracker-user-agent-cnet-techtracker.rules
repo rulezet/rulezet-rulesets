@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO CNET TechTracker User-Agent (CNET TechTracker)"; flow:established,to_server; http.user_agent; content:"CNET TechTracker"; reference:url,www.cnet.com/techtracker-free/; classtype:policy-violation; sid:2014574; rev:5; metadata:created_at 2012_04_16, confidence High, signature_severity Informational, updated_at 2020_04_24;)

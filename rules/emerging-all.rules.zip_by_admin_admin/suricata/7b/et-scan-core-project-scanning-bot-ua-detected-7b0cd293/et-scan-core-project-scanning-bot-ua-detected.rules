@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET SCAN Core-Project Scanning Bot UA Detected"; flow:established,to_server; http.user_agent; content:"core-project/1.0"; classtype:web-application-activity; sid:2008529; rev:7; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, updated_at 2020_04_23;)

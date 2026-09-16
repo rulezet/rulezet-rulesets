@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET CHAT Facebook Chat (buddy list)"; flow:established,to_server; http.method; content:"POST"; http.uri; content:"/ajax/chat/buddy_list.php"; http.header; content:"facebook.com"; classtype:policy-violation; sid:2010785; rev:7; metadata:created_at 2010_07_30, signature_severity Informational, updated_at 2020_04_22;)
