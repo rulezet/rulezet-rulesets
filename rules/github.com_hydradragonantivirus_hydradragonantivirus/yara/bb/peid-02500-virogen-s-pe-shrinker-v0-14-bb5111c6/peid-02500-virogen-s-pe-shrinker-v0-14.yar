@@ -1,0 +1,11 @@
+rule PEiD_02500_Virogen_s_PE_Shrinker_v0_14_ {
+  meta:
+    description = "[Virogen`s PE Shrinker v0.14]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 9C 55 E8 ?? ?? ?? ?? 87 D5 5D 60 87 D5 8D ?? ?? ?? ?? ?? 8D ?? ?? ?? ?? ?? 57 56 AD 0B C0 74 }
+
+  condition:
+    $a
+}

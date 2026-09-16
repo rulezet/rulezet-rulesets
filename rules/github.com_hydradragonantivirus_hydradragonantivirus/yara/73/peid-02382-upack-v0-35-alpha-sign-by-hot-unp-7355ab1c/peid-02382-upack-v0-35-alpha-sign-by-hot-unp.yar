@@ -1,0 +1,11 @@
+rule PEiD_02382_Upack_v0_35_alpha____Sign_by_hot_UNP_ {
+  meta:
+    description = "[Upack v0.35 alpha -> Sign by hot_UNP]"
+    ep_only     = "false"
+
+  strings:
+    $a = { 8B F2 8B CA 03 4C 19 1C 03 54 1A 20 }
+
+  condition:
+    $a
+}

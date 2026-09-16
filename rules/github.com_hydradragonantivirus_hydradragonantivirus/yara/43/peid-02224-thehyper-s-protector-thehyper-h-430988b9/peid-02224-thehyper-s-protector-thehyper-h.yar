@@ -1,0 +1,11 @@
+rule PEiD_02224_TheHyper_s_protector____TheHyper__h__ {
+  meta:
+    description = "[TheHyper's protector -> TheHyper (h)]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 55 8B EC 83 EC 14 8B FC E8 14 00 00 00 ?? ?? 01 01 ?? ?? 01 01 ?? ?? ?? 00 ?? ?? 01 01 ?? ?? ?? 01 5E E8 0D 00 00 00 6B 65 72 6E 65 6C 33 32 2E 64 6C 6C 00 8B 46 04 FF 10 8B D8 E8 0D 00 00 00 56 69 72 74 75 61 6C 41 6C 6C 6F 63 00 53 8B 06 FF 10 89 07 E8 0C 00 00 00 56 69 72 74 75 61 6C 46 72 65 65 00 53 8B 06 FF 10 89 47 04 E8 0F 00 00 00 47 65 74 50 72 6F 63 65 73 73 48 65 61 70 00 53 8B 06 FF 10 89 47 08 E8 0A 00 00 00 48 65 61 70 41 6C 6C 6F 63 00 53 8B 06 FF 10 89 47 0C E8 09 00 00 00 48 65 61 70 46 72 65 65 00 53 8B 06 FF 10 89 47 10 57 FF 76 08 FF 76 0C FF 56 10 8B E5 5D }
+
+  condition:
+    $a
+}

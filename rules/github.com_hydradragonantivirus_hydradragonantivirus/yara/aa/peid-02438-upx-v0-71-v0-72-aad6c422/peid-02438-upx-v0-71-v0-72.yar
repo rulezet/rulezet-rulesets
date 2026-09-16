@@ -1,0 +1,11 @@
+rule PEiD_02438_UPX_v0_71___v0_72_ {
+  meta:
+    description = "[UPX v0.71 - v0.72]"
+    ep_only     = "true"
+
+  strings:
+    $a = { 60 E8 00 00 00 00 83 CD FF 31 DB 5E 8D BE FA ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 81 C6 B3 01 ?? ?? EB 0A ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 }
+
+  condition:
+    $a
+}
