@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"GPL P2P GNUTella client request"; flow:established,to_server; content:"GNUTELLA"; depth:8; classtype:policy-violation; sid:2101432; rev:8; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_08;)

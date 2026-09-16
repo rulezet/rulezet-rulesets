@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 513 -> $EXTERNAL_NET any (msg:"GPL RPC rlogin login failure"; flow:established,to_client; content:"|01|rlogind|3A| Permission denied."; reference:arachnids,392; classtype:unsuccessful-user; sid:2100611; rev:9; metadata:created_at 2010_09_23, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_08;)
