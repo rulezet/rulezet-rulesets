@@ -1,0 +1,20 @@
+{
+  "uuid": "384161eb-2a5d-49ee-9dec-bd673ef6c23b",
+  "title": "apt_win_powerstar_lnk",
+  "format": "yara",
+  "author": "threatintel@volexity.com",
+  "license": "See license at https://github.com/volexity/threat-intel/blob/main/LICENSE.txt",
+  "license_verified": false,
+  "description": "Detects LNK command line used to install PowerStar.",
+  "source": "https://github.com/volexity/threat-intel",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Charming Kitten - G0058\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210495"
+}

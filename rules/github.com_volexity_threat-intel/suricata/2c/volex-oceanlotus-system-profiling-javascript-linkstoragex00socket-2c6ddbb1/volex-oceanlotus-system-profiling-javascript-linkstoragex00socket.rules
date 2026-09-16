@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"Volex - OceanLotus System Profiling JavaScript (linkStorage.x00SOCKET)"; flow:to_client,established; file_data; content:"linkStorage.x00SOCKET"; sid:2017083003;)

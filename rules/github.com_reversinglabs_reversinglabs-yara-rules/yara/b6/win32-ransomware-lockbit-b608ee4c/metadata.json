@@ -1,0 +1,21 @@
+{
+  "uuid": "b608ee4c-3683-49d5-97d8-9f7907d29ed6",
+  "title": "Win32_Ransomware_LockBit",
+  "format": "yara",
+  "author": "ReversingLabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Yara rule that detects LockBit ransomware.",
+  "source": "https://github.com/reversinglabs/reversinglabs-yara-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"LockBit\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210782"
+}

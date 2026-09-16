@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"Volex - Suspected 3CX Payload Downloaded Attempt (Windows)"; flow:to_server,established; http.header.raw; content:"cookie: __tutma="; sid:2023033001;)

@@ -1,0 +1,21 @@
+{
+  "uuid": "3b1678f0-c936-4c99-ac12-d5af81ac5b46",
+  "title": "ByteCode_MSIL_Backdoor_LimeRAT",
+  "format": "yara",
+  "author": "ReversingLabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Yara rule that detects LimeRAT backdoor.",
+  "source": "https://github.com/reversinglabs/reversinglabs-yara-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDownloader\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210556"
+}

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"Volex - OceanLotus JavaScript Fake Page URL Builder Response"; flow:to_client,established; file_data;content:"{|22|link|22|:|22|http"; depth:13; file_data; content:"|22|load|22|"; sid:2017083002; rev:1;)

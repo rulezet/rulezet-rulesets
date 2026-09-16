@@ -1,0 +1,21 @@
+{
+  "uuid": "9f2ce686-9cd8-4db5-a66e-9212548accb1",
+  "title": "webshell_jsp_converge",
+  "format": "yara",
+  "author": "threatintel@volexity.com",
+  "license": "See license at https://github.com/volexity/threat-intel/blob/main/LICENSE.txt",
+  "license_verified": false,
+  "description": "Detects CONVERGE - a file upload webshell observed in incident involving compromise of Confluence server via CVE-2022-26134.",
+  "source": "https://github.com/volexity/threat-intel",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2022-26134"
+  ],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210412"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "06db8170-8e09-4139-bc1f-9784a3b4ee27",
+  "title": "susp_any_jarischf_user_path",
+  "format": "yara",
+  "author": "threatintel@volexity.com",
+  "license": "See license at https://github.com/volexity/threat-intel/blob/main/LICENSE.txt",
+  "license_verified": false,
+  "description": "Detects paths embedded in samples in released projects written by Ferdinand Jarisch, a pentester in AISEC. These tools are sometimes used by attackers in real world intrusions.",
+  "source": "https://github.com/volexity/threat-intel",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210455"
+}

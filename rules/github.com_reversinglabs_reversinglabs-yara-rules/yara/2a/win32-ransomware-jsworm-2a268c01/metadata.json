@@ -1,0 +1,20 @@
+{
+  "uuid": "2a268c01-7a61-4393-a3a0-b8d607cc0e44",
+  "title": "Win32_Ransomware_JSWorm",
+  "format": "yara",
+  "author": "ReversingLabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Yara rule that detects JSWorm ransomware.",
+  "source": "https://github.com/reversinglabs/reversinglabs-yara-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210750"
+}

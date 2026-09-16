@@ -1,0 +1,21 @@
+{
+  "uuid": "eabbb773-dbbf-412d-b889-1bee9de51416",
+  "title": "susp_jsp_possible_tiny_fileuploader",
+  "format": "yara",
+  "author": "threatintel@volexity.com",
+  "license": "See license at https://github.com/volexity/threat-intel/blob/main/LICENSE.txt",
+  "license_verified": false,
+  "description": "Detects small .jsp files which likely have a capability to handle file uploads. These may or may not be malicious, but are often the initial webshell of choice when initially breaching a webserver.",
+  "source": "https://github.com/volexity/threat-intel",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210416"
+}

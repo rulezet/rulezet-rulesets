@@ -1,0 +1,20 @@
+{
+  "uuid": "3a07305b-5036-401d-96aa-adf84381554f",
+  "title": "Win32_Ransomware_CryptoFortress",
+  "format": "yara",
+  "author": "ReversingLabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Yara rule that detects CryptoFortress ransomware.",
+  "source": "https://github.com/reversinglabs/reversinglabs-yara-rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/210785"
+}
