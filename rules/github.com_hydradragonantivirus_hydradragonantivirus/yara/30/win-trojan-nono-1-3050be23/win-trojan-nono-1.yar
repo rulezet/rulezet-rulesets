@@ -1,0 +1,9 @@
+rule Win_Trojan_Nono_1
+{
+strings:
+	$a0 = { 8cc82e03061101502ea10f0150cbb40600009c8640acd2e4625c60000000000000000000000000000000009c80fc02 }
+
+
+condition:
+	$a0
+}

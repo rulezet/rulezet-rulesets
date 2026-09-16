@@ -1,0 +1,9 @@
+rule Win_Trojan_Nina_2
+{
+strings:
+	$a0 = { e8d10373358dbce2012e807dff0075178b35893600018b750289360201c7451400018c5d16eb0f8cde83c6102e0175162e03750e8ed62eff6d148b3e2c }
+
+
+condition:
+	$a0
+}

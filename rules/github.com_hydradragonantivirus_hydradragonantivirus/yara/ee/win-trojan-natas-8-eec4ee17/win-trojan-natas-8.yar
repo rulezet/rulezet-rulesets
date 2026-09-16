@@ -1,0 +1,9 @@
+rule Win_Trojan_Natas_8
+{
+strings:
+	$a0 = { 128b043d4d5a74143d5a4d740fb90c00bf00010657fcf3a5061f91cb8cc005100001441603440e061ffa8ed02e8b641033c0fb2eff6c140e1fc6453801b80200e8610da23f0ac60674042eb0eaaa }
+
+
+condition:
+	$a0
+}

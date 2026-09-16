@@ -1,0 +1,9 @@
+rule Win_Trojan_Orchid_1
+{
+strings:
+	$a0 = { be03018bfeac3419aae2fac373206669636865726f7327293b0d0a202020202020202020202020202020205772 }
+
+
+condition:
+	$a0
+}

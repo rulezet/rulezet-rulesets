@@ -1,0 +1,9 @@
+rule Win_Trojan_NJH_1
+{
+strings:
+	$a0 = { 903412456833c08ed88ed0bcf0fffbbb13048b0748488907b106d3e08ec0be007cbf0001b90002fcf3a406b8330150cbbb4c008b0f8b5702b8840189078cc88947028ed889 }
+
+
+condition:
+	$a0
+}
