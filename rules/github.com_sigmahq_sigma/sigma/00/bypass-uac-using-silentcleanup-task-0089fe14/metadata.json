@@ -1,0 +1,24 @@
+{
+  "uuid": "0089fe14-fe68-4873-8c6c-2ac987e89732",
+  "title": "Bypass UAC Using SilentCleanup Task",
+  "format": "sigma",
+  "author": "frack113, Nextron Systems",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the setting of the environement variable \"windir\" to a non default value.\nAttackers often abuse this variable in order to trigger a UAC bypass via the \"SilentCleanup\" task.\nThe SilentCleanup task located in %windir%\\system32\\cleanmgr.exe is an auto-elevated task that can be abused to elevate any file with administrator privileges without prompting UAC.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344609"
+}

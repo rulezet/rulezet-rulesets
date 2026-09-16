@@ -1,0 +1,24 @@
+{
+  "uuid": "66fde3c9-52f6-44ac-9069-248b36ab0c15",
+  "title": "Suspicious Curl File Upload - Linux",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Cedric MAURUGEON (Update)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a suspicious curl process start the adds a file to a web request",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1567"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344805"
+}

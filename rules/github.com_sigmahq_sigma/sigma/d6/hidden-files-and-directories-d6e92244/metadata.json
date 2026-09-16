@@ -1,0 +1,23 @@
+{
+  "uuid": "d6e92244-9b05-4ffb-9f70-edd6f0b69096",
+  "title": "Hidden Files and Directories",
+  "format": "sigma",
+  "author": "Pawel Mazur",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects adversary creating hidden file or directory, by detecting directories or files with . as the first character",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1564.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344892"
+}

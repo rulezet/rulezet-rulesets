@@ -1,0 +1,23 @@
+{
+  "uuid": "a52db8ae-6195-4914-ab88-63adcaa85e9b",
+  "title": "Wannacry Killswitch Domain",
+  "format": "sigma",
+  "author": "Mike Wade",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects wannacry killswitch domain dns queries",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"WannaCry\""
+  ],
+  "attack_techniques": [
+    "T1071.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344692"
+}

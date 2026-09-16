@@ -1,0 +1,24 @@
+{
+  "uuid": "ea9ca2b6-35eb-4e22-8fac-7cdb43f3ed5b",
+  "title": "ETW Logging Disabled For rpcrt4.dll",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects changes to the \"ExtErrorInformation\" key in order to disable ETW logging for rpcrt4.dll",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344632"
+}

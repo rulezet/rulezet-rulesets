@@ -1,0 +1,29 @@
+{
+  "uuid": "58c9aab0-073c-4709-b30a-8a4eb83a65c4",
+  "title": "Cisco Discovery",
+  "format": "sigma",
+  "author": "Austin Clark",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Find information about network devices that is not stored in config files",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1016",
+    "T1018",
+    "T1033",
+    "T1049",
+    "T1057",
+    "T1082",
+    "T1083",
+    "T1124",
+    "T1201"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344699"
+}

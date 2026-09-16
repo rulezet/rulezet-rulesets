@@ -1,0 +1,23 @@
+{
+  "uuid": "f53c0df7-df56-4768-bd11-212b757f4d70",
+  "title": "Cisco Collect Data",
+  "format": "sigma",
+  "author": "Austin Clark",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Collect pertinent data from the configuration files",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1087.001",
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344706"
+}

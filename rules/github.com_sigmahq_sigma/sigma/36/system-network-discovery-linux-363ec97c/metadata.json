@@ -1,0 +1,23 @@
+{
+  "uuid": "363ec97c-db97-48b3-90d9-9b4eef3ec58e",
+  "title": "System Network Discovery - Linux",
+  "format": "sigma",
+  "author": "Ömer Günal and remotephone, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects enumeration of local network configuration",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1016"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344800"
+}

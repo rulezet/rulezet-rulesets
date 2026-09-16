@@ -1,0 +1,23 @@
+{
+  "uuid": "a125ff6c-8b63-4a37-8307-75a95ae01a37",
+  "title": "RestrictedAdminMode Registry Value Tampering",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects changes to the \"DisableRestrictedAdmin\" registry value in order to disable or enable RestrictedAdmin mode.\nRestrictedAdmin mode prevents the transmission of reusable credentials to the remote system to which you connect using Remote Desktop.\nThis prevents your credentials from being harvested during the initial connection process if the remote server has been compromise\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344576"
+}

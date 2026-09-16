@@ -1,0 +1,23 @@
+{
+  "uuid": "8a2b17d9-f33c-4866-a639-200a6a44962c",
+  "title": "Suspicious Invocation of Shell via AWK - Linux",
+  "format": "sigma",
+  "author": "Li Ling, Andy Parkidomo, Robert Rakowski, Blake Hartstein (Bloomberg L.P.)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of \"awk\" or it's sibling commands, to invoke a shell using the system() function.\nThis behavior is commonly associated with attempts to execute arbitrary commands or escalate privileges, potentially leading to unauthorized access or further exploitation.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344783"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "938cc729-1c12-48b2-bc04-9ec7c033b288",
+  "title": "Clipboard Collection of Image Data with Xclip Tool",
+  "format": "sigma",
+  "author": "Pawel Mazur",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects attempts to collect image data stored in the clipboard from users with the usage of xclip tool.\nXclip has to be installed.\nHighly recommended using rule on servers, due to high usage of clipboard utilities on user workstations.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1115"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344890"
+}

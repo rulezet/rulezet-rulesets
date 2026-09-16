@@ -1,0 +1,23 @@
+{
+  "uuid": "fcd8f642-e24a-4e6f-99ce-ebe836efa7eb",
+  "title": "Cisco File Deletion",
+  "format": "sigma",
+  "author": "Austin Clark",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "See what files are being deleted from flash file systems",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1070.004",
+    "T1561.001",
+    "T1561.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344709"
+}

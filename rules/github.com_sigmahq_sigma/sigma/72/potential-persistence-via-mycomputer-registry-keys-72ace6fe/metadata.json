@@ -1,0 +1,21 @@
+{
+  "uuid": "72ace6fe-5244-4542-b826-9ccfd7f29be2",
+  "title": "Potential Persistence Via MyComputer Registry Keys",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects modification to the \"Default\" value of the \"MyComputer\" key and subkeys to point to a custom binary that will be launched whenever the associated action is executed (see reference section for example)",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344581"
+}

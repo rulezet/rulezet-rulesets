@@ -1,0 +1,24 @@
+{
+  "uuid": "15b5eebd-3e34-4be9-a023-8272ee7ed72a",
+  "title": "Audit Rules Deleted Via Auditctl",
+  "format": "sigma",
+  "author": "Mohamed LAKRI",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of 'auditctl' with the '-D' command line parameter, which deletes all configured audit rules and watches on Linux systems.\nThis technique is commonly used by attackers to disable audit logging and cover their tracks by removing monitoring capabilities.\nRemoval of audit rules can significantly impair detection of malicious activities on the affected system.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1562.012",
+    "T1685.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344772"
+}

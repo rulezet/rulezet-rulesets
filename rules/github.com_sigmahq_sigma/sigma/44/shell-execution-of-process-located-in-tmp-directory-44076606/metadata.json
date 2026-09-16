@@ -1,0 +1,21 @@
+{
+  "uuid": "44076606-f63d-46a2-b7bb-8b3a9bdc8a64",
+  "title": "Shell Execution Of Process Located In Tmp Directory",
+  "format": "sigma",
+  "author": "Joseliyo Sanchez, @Joseliyo_Jstnk",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of shells from a parent process located in a temporary (/tmp) directory",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344780"
+}

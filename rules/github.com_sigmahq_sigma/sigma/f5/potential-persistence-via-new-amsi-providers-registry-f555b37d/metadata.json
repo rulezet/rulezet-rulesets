@@ -1,0 +1,21 @@
+{
+  "uuid": "f555b37d-75b3-42ca-bdc4-ed2fbeb6c782",
+  "title": "Potential Persistence Via New AMSI Providers - Registry",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when an attacker adds a new AMSI provider via the Windows Registry to bypass AMSI (Antimalware Scan Interface) protections.\nAttackers may add custom AMSI providers to persist on the system and evade detection by security software that relies on AMSI for scanning scripts and other content.\nThis technique is often used in conjunction with fileless malware and script-based attacks to maintain persistence while avoiding detection.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344614"
+}

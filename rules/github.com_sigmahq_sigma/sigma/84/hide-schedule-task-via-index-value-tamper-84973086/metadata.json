@@ -1,0 +1,23 @@
+{
+  "uuid": "84973086-cbad-477e-b29e-3974f48facb4",
+  "title": "Hide Schedule Task Via Index Value Tamper",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when the \"index\" value of a scheduled task is modified from the registry\nWhich effectively hides it from any tooling such as \"schtasks /query\" (Read the referenced link for more information about the effects of this technique)\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344462"
+}

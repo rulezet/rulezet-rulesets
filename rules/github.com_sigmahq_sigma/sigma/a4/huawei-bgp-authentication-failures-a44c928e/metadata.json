@@ -1,0 +1,23 @@
+{
+  "uuid": "a44c928e-fb26-45f8-b0f0-52578e37d8c0",
+  "title": "Huawei BGP Authentication Failures",
+  "format": "sigma",
+  "author": "Tim Brown",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects BGP failures which may be indicative of brute force attacks to manipulate routing.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1110",
+    "T1557"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344696"
+}

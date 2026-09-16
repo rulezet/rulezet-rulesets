@@ -1,0 +1,24 @@
+{
+  "uuid": "9622c7d3-294a-4f25-98dc-131c97096902",
+  "title": "Security Support Provider (SSP) Added to LSA Configuration",
+  "format": "sigma",
+  "author": "iwillkeepwatch",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the addition of a SSP to the registry. Upon a reboot or API call, SSP DLLs gain access to encrypted and plaintext passwords stored in Windows.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Empire\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1547.005"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344444"
+}

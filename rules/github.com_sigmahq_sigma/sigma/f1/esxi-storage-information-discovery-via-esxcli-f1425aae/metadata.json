@@ -1,0 +1,27 @@
+{
+  "uuid": "f1425aae-baa4-4a2a-91e9-81a7293672cd",
+  "title": "ESXi Storage Information Discovery Via ESXCLI",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Cedric Maurugeon",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of the \"esxcli\" command with the \"storage\" flag in order to retrieve information about the storage status and other related information. Seen used by malware such as DarkSide and LockBit.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1007",
+    "T1033",
+    "T1059.012"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344856"
+}

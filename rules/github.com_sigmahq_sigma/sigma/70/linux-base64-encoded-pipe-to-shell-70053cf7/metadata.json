@@ -1,0 +1,23 @@
+{
+  "uuid": "70053cf7-34a5-4d19-b2c8-e1a641925b29",
+  "title": "Linux Base64 Encoded Pipe to Shell",
+  "format": "sigma",
+  "author": "pH-T (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious process command line that uses base64 encoded input for execution with a shell",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1140"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344747"
+}

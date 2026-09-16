@@ -1,0 +1,21 @@
+{
+  "uuid": "736476fa-ee42-464b-ab90-a4855d447820",
+  "title": "Potential Ruby Reverse Shell",
+  "format": "sigma",
+  "author": "@d4ns4n_",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of ruby with the \"-e\" flag and calls to \"socket\" related functions. This could be an indication of a potential attempt to setup a reverse shell",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344797"
+}

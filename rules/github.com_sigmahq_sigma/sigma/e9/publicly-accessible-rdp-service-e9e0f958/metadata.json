@@ -1,0 +1,21 @@
+{
+  "uuid": "e9e0f958-9b1a-4a21-b369-ab61077fc958",
+  "title": "Publicly Accessible RDP Service",
+  "format": "sigma",
+  "author": "Josh Brower @DefensiveDepth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects connections from routable IPs to an RDP listener. Which is indicative of a publicly-accessible RDP service.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1021.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344677"
+}

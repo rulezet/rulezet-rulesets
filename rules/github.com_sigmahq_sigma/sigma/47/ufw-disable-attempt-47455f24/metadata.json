@@ -1,0 +1,23 @@
+{
+  "uuid": "47455f24-7754-4731-aa8e-949a4deaea06",
+  "title": "UFW Disable Attempt",
+  "format": "sigma",
+  "author": "Joseliyo Sanchez, @Joseliyo_Jstnk",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects attempts to disable the Uncomplicated Firewall (UFW) on Linux systems.\nUFW is a popular firewall management tool that provides an easy-to-use interface for configuring firewall rules.\nDisabling UFW can leave a system vulnerable to attacks, as it may allow unauthorized access to network services and resources.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1686"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344763"
+}

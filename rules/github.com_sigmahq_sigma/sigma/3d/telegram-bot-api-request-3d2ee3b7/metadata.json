@@ -1,0 +1,26 @@
+{
+  "uuid": "3d2ee3b7-dd88-4756-863e-5886612c0c07",
+  "title": "Telegram Bot API Request",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious DNS queries to api.telegram.org used by Telegram Bots of any kind",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:wiper=\"KillDisk\"",
+    "misp-galaxy:operating-system=\"Android\""
+  ],
+  "attack_techniques": [
+    "T1102.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344691"
+}

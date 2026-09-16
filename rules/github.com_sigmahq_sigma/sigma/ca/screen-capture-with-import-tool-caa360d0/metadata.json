@@ -1,0 +1,23 @@
+{
+  "uuid": "caa360d0-ff73-44e2-988a-b801d6fd7341",
+  "title": "Screen Capture with Import Tool",
+  "format": "sigma",
+  "author": "Pawel Mazur",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects adversary creating screen capture of a desktop with Import Tool.\nHighly recommended using rule on servers, due to high usage of screenshot utilities on user workstations.\nImageMagick must be installed.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1113"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344910"
+}

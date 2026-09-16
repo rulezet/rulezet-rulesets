@@ -1,0 +1,23 @@
+{
+  "uuid": "fd7ede65-1b16-4ffa-a76f-e8e19813a6ce",
+  "title": "Narrator's Feedback-Hub Persistence",
+  "format": "sigma",
+  "author": "Dmitriy Lifanov, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects abusing Windows 10 Narrator's Feedback-Hub",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1547.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344432"
+}

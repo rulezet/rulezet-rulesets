@@ -1,0 +1,23 @@
+{
+  "uuid": "dd5f21a6-5463-4849-80da-28c7f5443305",
+  "title": "Potential Container Discovery Via Inodes Listing",
+  "format": "sigma",
+  "author": "Seth Hanford",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects listing of the inodes of the \"/\" directory to determine if the we are running inside of a container.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344769"
+}

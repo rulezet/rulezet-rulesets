@@ -1,0 +1,23 @@
+{
+  "uuid": "ae589426-a78c-4cc0-93de-0b97bd64ca25",
+  "title": "Python Spawning Pretty TTY Via PTY Module",
+  "format": "sigma",
+  "author": "Nextron Systems",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a python process calling to the PTY module in order to spawn a pretty tty which could be indicative of potential reverse shell activity.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344813"
+}

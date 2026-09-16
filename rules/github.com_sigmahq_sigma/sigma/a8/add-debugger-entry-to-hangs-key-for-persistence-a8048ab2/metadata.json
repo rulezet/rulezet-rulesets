@@ -1,0 +1,21 @@
+{
+  "uuid": "a8048ab2-a405-4731-9222-23526b66f970",
+  "title": "Add Debugger Entry To Hangs Key For Persistence",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when an attacker adds a new \"Debugger\" value to the \"Hangs\" key in order to achieve persistence which will get invoked when an application crashes",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344552"
+}

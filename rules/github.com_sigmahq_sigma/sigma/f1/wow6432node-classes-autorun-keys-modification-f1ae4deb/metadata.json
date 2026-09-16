@@ -1,0 +1,23 @@
+{
+  "uuid": "f1ae4deb-351c-4110-8485-8a7fb95f1bf6",
+  "title": "Wow6432Node Classes Autorun Keys Modification",
+  "format": "sigma",
+  "author": "Victor Sergeev, Daniil Yugoslavskiy, Gleb Sukhodolskiy, Timur Zinniatullin, oscd.community, Tim Shelton, frack113 (split)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects modification of autostart extensibility point (ASEP) in registry.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1547.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344651"
+}

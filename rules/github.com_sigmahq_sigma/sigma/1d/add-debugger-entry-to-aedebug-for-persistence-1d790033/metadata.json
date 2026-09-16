@@ -1,0 +1,21 @@
+{
+  "uuid": "1d790033-f70c-4340-88a3-9f62cf5b1b0c",
+  "title": "Add Debugger Entry To AeDebug For Persistence",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when an attacker adds a new \"Debugger\" value to the \"AeDebug\" key in order to achieve persistence which will get invoked when an application crashes",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344583"
+}

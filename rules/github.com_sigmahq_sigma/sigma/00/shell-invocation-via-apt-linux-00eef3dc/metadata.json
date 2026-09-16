@@ -1,0 +1,23 @@
+{
+  "uuid": "00eef3dc-2709-4797-9e3e-d3ff0234ab38",
+  "title": "Shell Invocation via Apt - Linux",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of the \"apt\" and \"apt-get\" commands to execute a shell or proxy commands.\nSuch behavior may be associated with privilege escalation, unauthorized command execution, or to break out from restricted environments.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1083"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344739"
+}

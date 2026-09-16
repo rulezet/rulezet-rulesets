@@ -1,0 +1,23 @@
+{
+  "uuid": "68953b05-00fe-44b2-89a5-77cf80bf3c29",
+  "title": "Macos Remote System Discovery",
+  "format": "sigma",
+  "author": "Alejandro Ortuno, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the enumeration of other remote systems.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1018"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344919"
+}

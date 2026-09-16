@@ -1,0 +1,23 @@
+{
+  "uuid": "1249047a-ef0e-43b3-aeab-ce63b6f073d8",
+  "title": "File and Directory Discovery - Linux",
+  "format": "sigma",
+  "author": "Daniil Yugoslavskiy, oscd.community, CheraghiMilad",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of system utilities such as \"find\", \"tree\", \"findmnt\", etc, to discover files, directories and network shares.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1083"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344803"
+}

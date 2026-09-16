@@ -1,0 +1,21 @@
+{
+  "uuid": "3455c720-a8f6-4e95-ac4d-d7b5cb4c7776",
+  "title": "HTTP Request to Low Reputation TLD or Suspicious File Extension",
+  "format": "sigma",
+  "author": "@signalblur, Corelight",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects HTTP requests to low reputation TLDs (e.g. .xyz, .top, .ru) or ending in suspicious file extensions (.exe, .dll, .hta), which may indicate malicious activity.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344665"
+}

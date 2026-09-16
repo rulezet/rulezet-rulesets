@@ -1,0 +1,21 @@
+{
+  "uuid": "be1e04c1-1251-4710-9f27-45d7f79baf34",
+  "title": "Winget Admin Settings Modification",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects changes to the AppInstaller (winget) admin settings. Such as enabling local manifest installations or disabling installer hash checks",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344497"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "91440a3e-77a2-4aca-87dd-2ae1ef7e7feb",
+  "title": "Disable Macro Runtime Scan Scope",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects tampering with the MacroRuntimeScanScope registry key to disable runtime scanning of enabled macros",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344655"
+}

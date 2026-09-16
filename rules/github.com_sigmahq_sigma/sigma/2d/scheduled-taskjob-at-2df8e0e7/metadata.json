@@ -1,0 +1,23 @@
+{
+  "uuid": "2df8e0e7-ae93-4bd0-b444-3d96fb8e5fec",
+  "title": "Scheduled Task/Job At",
+  "format": "sigma",
+  "author": "Ömer Günal, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of at/atd which are utilities that are used to schedule tasks.\nThey are often abused by adversaries to maintain persistence or to perform task scheduling for initial or recurring execution of malicious code\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1053.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344832"
+}

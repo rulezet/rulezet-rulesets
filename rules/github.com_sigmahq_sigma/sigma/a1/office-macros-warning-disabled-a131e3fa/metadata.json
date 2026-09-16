@@ -1,0 +1,23 @@
+{
+  "uuid": "a131e3fa-28ff-4566-af0e-92857e18fc81",
+  "title": "Office Macros Warning Disabled",
+  "format": "sigma",
+  "author": "Trent Liffick (@tliffick), Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects registry changes to Microsoft Office \"VBAWarning\" to a value of \"1\" which enables the execution of all macros, whether signed or unsigned.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344560"
+}

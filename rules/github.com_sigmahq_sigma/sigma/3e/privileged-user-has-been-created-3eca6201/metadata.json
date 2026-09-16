@@ -1,0 +1,24 @@
+{
+  "uuid": "3eca6201-3ac9-4fb7-903b-3641fc9c9750",
+  "title": "Privileged User Has Been Created",
+  "format": "sigma",
+  "author": "Pawel Mazur",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the addition of a new user to a privileged group such as \"root\" or \"sudo\"",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1136.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344730"
+}

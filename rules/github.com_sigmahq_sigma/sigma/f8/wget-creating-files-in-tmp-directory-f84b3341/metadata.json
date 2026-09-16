@@ -1,0 +1,23 @@
+{
+  "uuid": "f84b3341-a874-4636-a053-17f28f3bfed7",
+  "title": "Wget Creating Files in Tmp Directory",
+  "format": "sigma",
+  "author": "Joseliyo Sanchez, @Joseliyo_Jstnk",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of wget to download content in a temporary directory such as \"/tmp\" or \"/var/tmp\"",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344921"
+}

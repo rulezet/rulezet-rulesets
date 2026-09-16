@@ -1,0 +1,25 @@
+{
+  "uuid": "2f0294d6-b58c-4fcd-af42-3da99e1d9341",
+  "title": "COM Object Hijacking Via Modification Of Default System CLSID Default Value",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential COM object hijacking via modification of default system CLSID.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Spyware\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Darkhotel - G0012\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1546.015"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344464"
+}

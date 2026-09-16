@@ -1,0 +1,25 @@
+{
+  "uuid": "0530ce10-29ce-44c1-a318-e998a34027dc",
+  "title": "Linux Setgid Capability Set on a Binary via Setcap Utility",
+  "format": "sigma",
+  "author": "Luc Génaux",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of the 'setcap' utility to set the 'setgid' capability (cap_setgid) on a binary file.\nThis capability allows a non privileged process to make arbitrary manipulations of group IDs (GIDs), including setting its current GID to a value that would otherwise be restricted (i.e. GID 0, the root group).\nThis behavior can be used by adversaries to backdoor a binary in order to escalate privileges again in the future if needed.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1548",
+    "T1554"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344771"
+}

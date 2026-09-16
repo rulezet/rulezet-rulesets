@@ -1,0 +1,27 @@
+{
+  "uuid": "0315916a-025c-4b59-b648-35891efecbc9",
+  "title": "OMIGOD SCX RunAsProvider ExecuteShellCommand",
+  "format": "sigma",
+  "author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research), MSTIC",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Rule to detect the use of the SCX RunAsProvider Invoke_ExecuteShellCommand to execute any UNIX/Linux command using the /bin/sh shell.\nSCXcore, started as the Microsoft Operations Manager UNIX/Linux Agent, is now used in a host of products including\nMicrosoft Operations Manager, Microsoft Azure, and Microsoft Operations Management Suite.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1190",
+    "T1203"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344850"
+}

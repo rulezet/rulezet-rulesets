@@ -1,0 +1,24 @@
+{
+  "uuid": "d2ed77cd-1b38-4145-8798-1225e5f0b897",
+  "title": "Special File Creation via Mknod Syscall",
+  "format": "sigma",
+  "author": "Milad Cheraghi",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of the `mknod` syscall to create special files (e.g., character or block devices).\nAttackers or malware might use `mknod` to create fake devices, interact with kernel interfaces,\nor establish covert channels in Linux systems.\nMonitoring the use of `mknod` is important because this syscall is rarely used by legitimate applications,\nand it can be abused to bypass file system restrictions or create backdoors.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344873"
+}

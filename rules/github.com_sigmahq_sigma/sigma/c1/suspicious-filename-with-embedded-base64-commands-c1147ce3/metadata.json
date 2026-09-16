@@ -1,0 +1,24 @@
+{
+  "uuid": "c1147ce3-b919-4ee0-bb44-3fc6102548c2",
+  "title": "Suspicious Filename with Embedded Base64 Commands",
+  "format": "sigma",
+  "author": "@kostastsale",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects files with specially crafted filenames that embed Base64-encoded bash payloads designed to execute when processed by shell scripts.\nThese filenames exploit shell interpretation quirks to trigger hidden commands, a technique observed in VShell malware campaigns.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344915"
+}

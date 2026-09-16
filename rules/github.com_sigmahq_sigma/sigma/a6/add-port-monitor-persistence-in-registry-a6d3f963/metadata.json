@@ -1,0 +1,23 @@
+{
+  "uuid": "a6d3f963-cc1b-4370-80cc-cf45b321b851",
+  "title": "Add Port Monitor Persistence in Registry",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Adversaries may use port monitors to run an attacker supplied DLL during system boot for persistence or privilege escalation.\nA port monitor can be set through the AddMonitor API call to set a DLL to be loaded at startup.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1547.010"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344546"
+}

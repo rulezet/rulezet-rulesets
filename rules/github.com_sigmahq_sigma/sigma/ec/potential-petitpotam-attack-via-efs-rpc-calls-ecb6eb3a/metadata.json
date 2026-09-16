@@ -1,0 +1,24 @@
+{
+  "uuid": "ecb6eb3a-b2b5-43fe-b317-d20da4c07a78",
+  "title": "Potential PetitPotam Attack Via EFS RPC Calls",
+  "format": "sigma",
+  "author": "@neu5ron, @Antonlovesdnb, Mike Remen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of the windows RPC library Encrypting File System Remote Protocol (MS-EFSRPC). Variations of this RPC are used within the attack refereed to as PetitPotam.\nThe usage of this RPC function should be rare if ever used at all.\nThus usage of this function is uncommon enough that any usage of this RPC function should warrant further investigation to determine if it is legitimate.\n View surrounding logs (within a few minutes before and after) from the Source IP to. Logs from from the Source IP would include dce_rpc, smb_mapping, smb_files, rdp, ntlm, kerberos, etc..'\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1187",
+    "T1557.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344679"
+}

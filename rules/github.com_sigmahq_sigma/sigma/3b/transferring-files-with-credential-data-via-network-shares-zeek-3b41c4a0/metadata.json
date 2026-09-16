@@ -1,0 +1,25 @@
+{
+  "uuid": "3b41c4a0-683f-4a55-8e03-999dfc90a551",
+  "title": "Transferring Files with Credential Data via Network Shares - Zeek",
+  "format": "sigma",
+  "author": "@neu5ron, Teymur Kheirkhabarov, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Transferring files with well-known filenames (sensitive files with credential data) using network shares",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001",
+    "T1003.002",
+    "T1003.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344673"
+}

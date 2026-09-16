@@ -1,0 +1,23 @@
+{
+  "uuid": "9f80ef1d-ca7e-4231-a504-7c3b30370c90",
+  "title": "Password Policy Discovery - Linux",
+  "format": "sigma",
+  "author": "Ömer Günal, oscd.community, Pawel Mazur",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects password policy discovery commands",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1201"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344871"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "36d47099-8726-428d-a66f-a66a5cab506f",
+  "title": "Local System Accounts Discovery - Linux",
+  "format": "sigma",
+  "author": "Alejandro Ortuno, oscd.community, CheraghiMilad",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects enumeration of local system accounts. This information can help adversaries determine which local accounts exist on a system to aid in follow-on behavior.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"FreeBSD\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"FreeBSD\""
+  ],
+  "attack_techniques": [
+    "T1087.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344775"
+}

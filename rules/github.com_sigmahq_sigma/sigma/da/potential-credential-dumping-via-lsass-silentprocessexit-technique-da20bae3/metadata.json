@@ -1,0 +1,23 @@
+{
+  "uuid": "da20bae3-5a61-4a20-9f24-8a031c139642",
+  "title": "Potential Credential Dumping Via LSASS SilentProcessExit Technique",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects changes to the Registry in which a monitor program gets registered to dump the memory of the lsass.exe process",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344441"
+}

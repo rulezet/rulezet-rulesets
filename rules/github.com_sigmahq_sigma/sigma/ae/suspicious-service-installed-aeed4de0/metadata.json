@@ -1,0 +1,23 @@
+{
+  "uuid": "aeed4de0-802a-471a-b742-f3175ffd6bee",
+  "title": "Suspicious Service Installed",
+  "format": "sigma",
+  "author": "xknow (@xknow_infosec), xorxes (@xor_xes)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects installation of NalDrv or PROCEXP152 services via registry-keys to non-system32 folders.\nBoth services are used in the tool Ghost-In-The-Logs (https://github.com/bats3c/Ghost-In-The-Logs), which uses KDU (https://github.com/hfiref0x/KDU)\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344525"
+}

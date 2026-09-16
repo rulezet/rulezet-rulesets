@@ -1,0 +1,21 @@
+{
+  "uuid": "8790bb2b-e5f4-4d69-ba40-0beae86ed4a7",
+  "title": "Cisco Clear Logs",
+  "format": "sigma",
+  "author": "Austin Clark",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Clear command history in network OS which is used for defense evasion",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1070.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344703"
+}

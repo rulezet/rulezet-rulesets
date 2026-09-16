@@ -1,0 +1,24 @@
+{
+  "uuid": "a33ab154-b763-4111-9588-8c6f87e98e2e",
+  "title": "Linux Network Service Scanning Tools Execution",
+  "format": "sigma",
+  "author": "Alejandro Ortuno, oscd.community, Georg Lauenstein (sure[secure])",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of network scanning and reconnaisance tools. These tools can be used for the enumeration of local or remote network services for example.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1046"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344818"
+}

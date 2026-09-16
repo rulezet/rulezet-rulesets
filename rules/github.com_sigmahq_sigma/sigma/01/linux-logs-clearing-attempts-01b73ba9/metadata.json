@@ -1,0 +1,24 @@
+{
+  "uuid": "01b73ba9-cd27-4833-958a-e6a456718706",
+  "title": "Linux Logs Clearing Attempts",
+  "format": "sigma",
+  "author": "Ömer Günal, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects logs clearing attempts on Linux systems via utilities such as 'rm', 'rmdir', 'shred', and 'unlink' targeting log files and directories.\nAdversaries often try to clear logs to cover their tracks after performing malicious activities.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1070.002",
+    "T1685.006"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344830"
+}

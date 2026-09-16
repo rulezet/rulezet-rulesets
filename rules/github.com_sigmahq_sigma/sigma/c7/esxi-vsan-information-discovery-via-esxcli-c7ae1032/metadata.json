@@ -1,0 +1,27 @@
+{
+  "uuid": "c7ae1032-7b7b-4d01-9071-5c2f2cb72b19",
+  "title": "ESXi VSAN Information Discovery Via ESXCLI",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Cedric Maurugeon",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of the \"esxcli\" command with the \"vsan\" flag in order to retrieve information about virtual storage. Seen used by malware such as DarkSide.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1007",
+    "T1033",
+    "T1059.012"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344785"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "1ad64d83-6614-425c-afdf-95f6e5ddd00e",
+  "title": "Shell Execution via Rsync - Linux",
+  "format": "sigma",
+  "author": "Li Ling, Andy Parkidomo, Robert Rakowski, Blake Hartstein (Bloomberg L.P.), Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of the \"rsync\" utility to execute a shell. Such behavior may be associated with privilege escalation, unauthorized command execution, or to break out from restricted environments.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344784"
+}

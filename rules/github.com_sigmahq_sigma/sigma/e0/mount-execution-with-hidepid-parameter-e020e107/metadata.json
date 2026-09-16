@@ -1,0 +1,23 @@
+{
+  "uuid": "e020e107-8089-4e7b-aeb8-aa9901e104e3",
+  "title": "Mount Execution With Hidepid Parameter",
+  "format": "sigma",
+  "author": "Joseliyo Sanchez, @Joseliyo_Jstnk",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of the \"mount\" command with \"hidepid\" parameter to make invisible processes to other users from the system",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1564"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344768"
+}

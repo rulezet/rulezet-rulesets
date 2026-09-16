@@ -1,0 +1,24 @@
+{
+  "uuid": "38de4e30-e84a-4178-afcb-e18354ede5d9",
+  "title": "AMSI Disabled via Registry Modification",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects attempts to disable AMSI (Anti-Malware Scan Interface) by modifying the AmsiEnable registry value.\nAnti-Malware Scan Interface (AMSI) is a security feature in Windows that allows applications and services to integrate with anti-malware products for enhanced protection against malicious content.\nAdversaries may attempt to disable AMSI to evade detection by security software, allowing them to execute malicious scripts or code without being scanned.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1562.001",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344496"
+}

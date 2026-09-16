@@ -1,0 +1,23 @@
+{
+  "uuid": "6be461b0-3e93-4581-a52f-b474dd1b85d6",
+  "title": "Potential Persistence Via Outlook Today Page",
+  "format": "sigma",
+  "author": "Tobias Michalski (Nextron Systems), David Bertho (@dbertho) & Eirik Sveen (@0xSV1), Storebrand",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential persistence activity via outlook today page.\nAn attacker can set a custom page to execute arbitrary code and link to it via the registry values \"URL\" and \"UserDefinedUrl\".\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344474"
+}

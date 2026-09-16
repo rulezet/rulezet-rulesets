@@ -1,0 +1,25 @@
+{
+  "uuid": "fe078863-5ff7-4810-8d61-e9f1c50d1c7e",
+  "title": "Suspicious Execution Of Renamed Sysinternals Tools - Registry",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the creation of the \"accepteula\" key related to the Sysinternals tools being created from executables with the wrong name (e.g. a renamed Sysinternals tool)",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:tool=\"ProcDump\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1588.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344578"
+}

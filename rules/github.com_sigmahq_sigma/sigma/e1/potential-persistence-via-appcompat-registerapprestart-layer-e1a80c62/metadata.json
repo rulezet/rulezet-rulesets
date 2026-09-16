@@ -1,0 +1,23 @@
+{
+  "uuid": "e1a80c62-74b2-43b7-9666-8b4e28e5476e",
+  "title": "Potential Persistence Via AppCompat RegisterAppRestart Layer",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the setting of the REGISTERAPPRESTART compatibility layer on an application.\nThis compatibility layer allows an application to register for restart using the \"RegisterApplicationRestart\" API.\nThis can be potentially abused as a persistence mechanism.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1546.011"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344490"
+}

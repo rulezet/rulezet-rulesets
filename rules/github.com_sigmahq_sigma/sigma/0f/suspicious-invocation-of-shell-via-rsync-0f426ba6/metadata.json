@@ -1,0 +1,26 @@
+{
+  "uuid": "0f426ba6-01bc-477d-9e07-99d0c0941141",
+  "title": "Suspicious Invocation of Shell via Rsync",
+  "format": "sigma",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of a shell as sub process of \"rsync\" without the expected command line flag \"-e\" being used, which could be an indication of exploitation as described in CVE-2024-12084. This behavior is commonly associated with attempts to execute arbitrary commands or escalate privileges, potentially leading to unauthorized access or further exploitation.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1203"
+  ],
+  "cve": [
+    "CVE-2024-12084"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344766"
+}

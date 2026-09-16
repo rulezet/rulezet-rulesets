@@ -1,0 +1,23 @@
+{
+  "uuid": "3e417f62-5e82-4bc0-a38d-856eb2960603",
+  "title": "Linux Package Uninstall",
+  "format": "sigma",
+  "author": "Tuan Le (NCSGroup), Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects linux package removal using builtin tools such as \"yum\", \"apt\", \"apt-get\" or \"dpkg\".",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1070"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344792"
+}

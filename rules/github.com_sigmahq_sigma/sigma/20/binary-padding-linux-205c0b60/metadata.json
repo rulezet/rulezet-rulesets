@@ -1,0 +1,25 @@
+{
+  "uuid": "205c0b60-5bcb-42b8-b6eb-33ae7608d869",
+  "title": "Binary Padding - Linux",
+  "format": "sigma",
+  "author": "Igor Fits, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Adversaries may use binary padding to add junk data and change the on-disk representation of malware.\nThis rule detect using dd and truncate to add a junk data to file.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [
+    "T1027.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344898"
+}

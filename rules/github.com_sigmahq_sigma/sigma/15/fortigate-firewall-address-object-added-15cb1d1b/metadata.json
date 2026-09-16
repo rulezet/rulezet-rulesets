@@ -1,0 +1,21 @@
+{
+  "uuid": "15cb1d1b-8d7f-4a58-a9b9-f3c009b8101b",
+  "title": "FortiGate - Firewall Address Object Added",
+  "format": "sigma",
+  "author": "Marco Pedrinazzi (@pedrinazziM) (InTheCyber)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the addition of firewall address objects on a Fortinet FortiGate Firewall.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1686.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344664"
+}

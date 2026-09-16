@@ -1,0 +1,24 @@
+{
+  "uuid": "90c42731-ab96-4df7-8fd2-e9167916504c",
+  "title": "Chmod Targeting Sensitive Directories",
+  "format": "sigma",
+  "author": "Christopher Peacock @SecurePeacock, SCYTHE @scythe_io",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects chmod targeting files in sensitive directory paths on Linux systems.\nAttackers may use chmod to change permissions of files in these directories to maintain persistence, escalate privileges, or disrupt system operations.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1222.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344793"
+}

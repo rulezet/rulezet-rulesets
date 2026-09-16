@@ -1,0 +1,23 @@
+{
+  "uuid": "7eb2d828-288b-4ec7-bb7a-09df9eeb9523",
+  "title": "Masquerading as Linux Crond Process",
+  "format": "sigma",
+  "author": "Timur Zinniatullin, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Masquerading occurs when the name or location of an executable, legitimate or malicious, is manipulated or abused for the sake of evading defenses and observation.\nSeveral different variations of this technique have been observed.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344905"
+}

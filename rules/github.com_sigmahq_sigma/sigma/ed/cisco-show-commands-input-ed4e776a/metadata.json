@@ -1,0 +1,21 @@
+{
+  "uuid": "ed4e776a-8300-436e-b5e8-a2424059dd0c",
+  "title": "Cisco Show Commands Input",
+  "format": "sigma",
+  "author": "Austin Clark",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "See what commands are being input into the device by other people, full credentials can be in the history",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344705"
+}

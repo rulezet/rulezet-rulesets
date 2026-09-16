@@ -1,0 +1,23 @@
+{
+  "uuid": "651fc213-49fd-4f19-9005-b44fc2427c17",
+  "title": "Disable Tamper Protection on Windows Defender",
+  "format": "sigma",
+  "author": "Austin Songer @austinsonger",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects disabling Windows Defender Tamper Protection",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344642"
+}

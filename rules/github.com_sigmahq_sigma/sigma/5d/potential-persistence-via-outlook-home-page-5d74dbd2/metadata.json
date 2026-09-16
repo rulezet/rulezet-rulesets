@@ -1,0 +1,23 @@
+{
+  "uuid": "5d74dbd2-91ad-426e-878b-3b23d1bfd196",
+  "title": "Potential Persistence Via Outlook Home Page",
+  "format": "sigma",
+  "author": "Tobias Michalski (Nextron Systems), David Bertho (@dbertho) & Eirik Sveen (@0xSV1), Storebrand",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential persistence activity via outlook home page.\nAn attacker can set a home page to achieve code execution and persistence by editing the WebView registry keys.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344523"
+}

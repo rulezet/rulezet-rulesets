@@ -1,0 +1,23 @@
+{
+  "uuid": "b789f3d9-04b8-43b0-ad80-092c3f564714",
+  "title": "Audio Capture",
+  "format": "sigma",
+  "author": "Pawel Mazur, Milad Cheraghi",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects attempts to record audio using the arecord and ecasound utilities.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1123"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344864"
+}

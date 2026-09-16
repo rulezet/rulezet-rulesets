@@ -1,0 +1,24 @@
+{
+  "uuid": "6efc7c5b-d563-4921-8787-d139e3911058",
+  "title": "Process Execution From Shared Memory Directory",
+  "format": "sigma",
+  "author": "Stan Beukers",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of a binary from the Linux shared memory directory /dev/shm.\nThis directory is a tmpfs mount backed entirely by RAM and is abused by attackers for fileless malware staging because files written there never touch physical disk and may evade disk-based detection.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:backdoor=\"BPFDoor\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1027.011"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344776"
+}

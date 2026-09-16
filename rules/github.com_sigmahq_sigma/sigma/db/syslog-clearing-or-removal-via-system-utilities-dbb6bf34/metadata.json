@@ -1,0 +1,24 @@
+{
+  "uuid": "dbb6bf34-e394-40fe-9b48-ca913a55f5dc",
+  "title": "Syslog Clearing or Removal Via System Utilities",
+  "format": "sigma",
+  "author": "Max Altgelt (Nextron Systems), Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research), MSTIC",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects specific commands commonly used to remove or empty the syslog. Which is a technique often used by attacker as a method to hide their tracks\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1070.002",
+    "T1685.006"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344853"
+}

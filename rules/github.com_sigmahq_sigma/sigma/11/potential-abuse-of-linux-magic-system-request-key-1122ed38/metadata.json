@@ -1,0 +1,26 @@
+{
+  "uuid": "1122ed38-5cbd-45d4-9189-01508b3347be",
+  "title": "Potential Abuse of Linux Magic System Request Key",
+  "format": "sigma",
+  "author": "Milad Cheraghi",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the potential abuse of the Linux Magic SysRq (System Request) key by adversaries with root or sufficient privileges\nto silently manipulate or destabilize a system. By writing to /proc/sysrq-trigger, they can crash the system, kill processes,\nor disrupt forensic analysis—all while bypassing standard logging. Though intended for recovery and debugging, SysRq can be\nmisused as a stealthy post-exploitation tool. It is controlled via /proc/sys/kernel/sysrq or permanently through /etc/sysctl.conf.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059.004",
+    "T1489",
+    "T1499",
+    "T1529"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344880"
+}

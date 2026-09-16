@@ -1,0 +1,23 @@
+{
+  "uuid": "b38fc2a5-5639-40af-b957-81a8f91ebbfc",
+  "title": "Hiding User Account Via SpecialAccounts Registry Key",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects modifications to the registry key \"HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\Userlist\" where the value is set to \"0\" in order to hide user account from being listed on the logon screen.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1564.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344527"
+}

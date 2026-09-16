@@ -1,0 +1,22 @@
+{
+  "uuid": "720e54f4-5841-47ad-8795-c76ce7a08e9b",
+  "title": "Cisco Dot1x Disabled",
+  "format": "sigma",
+  "author": "Luc Génaux",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the manual disablement of IEEE 802.1X (dot1x) on a Cisco network device interface.\nDisabling dot1x bypasses Network Access Control (NAC) mechanisms, potentially allowing unauthorized devices to gain access to the internal network.\nThis activity is a common technique used by attackers or malicious insiders to establish persistence or perform lateral movement via rogue devices.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1556.004",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344697"
+}

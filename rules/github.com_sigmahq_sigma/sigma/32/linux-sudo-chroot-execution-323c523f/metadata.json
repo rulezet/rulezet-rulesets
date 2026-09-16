@@ -1,0 +1,25 @@
+{
+  "uuid": "323c523f-f01f-4ec5-9fd6-75123b293e57",
+  "title": "Linux Sudo Chroot Execution",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawn Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of 'sudo' command with '--chroot' option, which is used to change the root directory for command execution.\nAttackers may use this technique to evade detection and execute commands in a modified environment.\nThis can be part of a privilege escalation strategy, as it allows the execution of commands with elevated privileges in a controlled environment as seen in CVE-2025-32463.\nWhile investigating, look out for unusual or unexpected use of 'sudo --chroot' in conjunction with other commands or scripts such as execution from temporary directories or unusual user accounts.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [
+    "CVE-2025-32463"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344736"
+}

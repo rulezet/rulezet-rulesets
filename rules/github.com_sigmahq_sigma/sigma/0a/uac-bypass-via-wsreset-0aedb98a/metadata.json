@@ -1,0 +1,24 @@
+{
+  "uuid": "0aedb98a-61b7-47e4-870d-592cb62dde63",
+  "title": "UAC Bypass Via Wsreset",
+  "format": "sigma",
+  "author": "oscd.community, Dmitry Uchakin",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Unfixed method for UAC bypass from Windows 10. WSReset.exe file associated with the Windows Store. It will run a binary file contained in a low-privilege registry.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:banker=\"Trickbot\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344436"
+}

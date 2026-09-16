@@ -1,0 +1,23 @@
+{
+  "uuid": "1954a024-c951-4f0f-85c5-d9a4c7857fa3",
+  "title": "Suspicious DNS Z Flag Bit Set",
+  "format": "sigma",
+  "author": "@neu5ron, SOC Prime Team, Corelight",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "The DNS Z flag is bit within the DNS protocol header that is, per the IETF design, meant to be used reserved (unused).\nAlthough recently it has been used in DNSSec, the value being set to anything other than 0 should be rare.\nOtherwise if it is set to non 0 and DNSSec is being used, then excluding the legitimate domains is low effort and high reward.\nDetermine if multiple of these files were accessed in a short period of time to further enhance the possibility of seeing if this was a one off or the possibility of larger sensitive file gathering.\nThis Sigma query is designed to accompany the Corelight Threat Hunting Guide, which can be found here: https://www3.corelight.com/corelights-introductory-guide-to-threat-hunting-with-zeek-bro-logs'\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:backdoor=\"SUNBURST\""
+  ],
+  "attack_techniques": [
+    "T1095",
+    "T1571"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344678"
+}

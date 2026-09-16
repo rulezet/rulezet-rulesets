@@ -1,0 +1,21 @@
+{
+  "uuid": "1270ae3d-a491-4261-8817-9abe2ebebcfa",
+  "title": "Potential Suspicious BPF Activity - Linux",
+  "format": "sigma",
+  "author": "Red Canary (idea), Nasreddine Bencherchali",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the presence of \"bpf_probe_write_user\" BPF helper-generated warning messages. Which could be a sign of suspicious eBPF activity on the system.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344718"
+}

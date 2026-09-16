@@ -1,0 +1,24 @@
+{
+  "uuid": "10ab6d71-5242-4479-a243-7de5ca476f35",
+  "title": "ASLR Disabled Via Sysctl or Direct Syscall - Linux",
+  "format": "sigma",
+  "author": "Milad Cheraghi",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects actions that disable Address Space Layout Randomization (ASLR) in Linux, including:\n  - Use of the `personality` syscall with the ADDR_NO_RANDOMIZE flag (0x0040000)\n  - Modification of the /proc/sys/kernel/randomize_va_space file\n  - Execution of the `sysctl` command to set `kernel.randomize_va_space=0`\nDisabling ASLR is often used by attackers during exploit development or to bypass memory protection mechanisms.\nA successful use of these methods can reduce the effectiveness of ASLR and make memory corruption attacks more reliable.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1055.009",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344861"
+}

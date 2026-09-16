@@ -1,0 +1,23 @@
+{
+  "uuid": "36e263e2-2e5d-48e3-802c-32acbef2db1e",
+  "title": "Cobalt Strike DNS Beaconing",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious DNS queries known from Cobalt Strike beacons",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\""
+  ],
+  "attack_techniques": [
+    "T1071.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344689"
+}

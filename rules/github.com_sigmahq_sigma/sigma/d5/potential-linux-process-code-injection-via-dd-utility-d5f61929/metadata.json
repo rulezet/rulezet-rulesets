@@ -1,0 +1,23 @@
+{
+  "uuid": "d5f61929-35bf-45fd-b7d6-0d115b5c583a",
+  "title": "Potential Linux Process Code Injection Via DD Utility",
+  "format": "sigma",
+  "author": "Joseph Kamau",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the injection of code by overwriting the memory map of a Linux process using the \"dd\" Linux command.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1055.009"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344765"
+}

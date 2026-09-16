@@ -1,0 +1,23 @@
+{
+  "uuid": "367a6ec2-1105-4d58-9050-be87e9e45b8a",
+  "title": "Potential Persistence Via App Paths Default Property",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects changes to the \"Default\" property for keys located in the \\Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\ registry. Which might be used as a method of persistence\nThe entries found under App Paths are used primarily for the following purposes.\nFirst, to map an application's executable file name to that file's fully qualified path.\nSecond, to prepend information to the PATH environment variable on a per-application, per-process basis.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1546.012"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344654"
+}

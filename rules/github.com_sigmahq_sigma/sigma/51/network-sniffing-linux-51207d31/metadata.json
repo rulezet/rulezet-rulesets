@@ -1,0 +1,23 @@
+{
+  "uuid": "51207d31-d45b-489e-a44a-834dfde28986",
+  "title": "Network Sniffing - Linux",
+  "format": "sigma",
+  "author": "Timur Zinniatullin, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection.\nAn adversary may place a network interface into promiscuous mode to passively access data in transit over the network, or use span ports to capture a larger amount of data.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1040"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344896"
+}

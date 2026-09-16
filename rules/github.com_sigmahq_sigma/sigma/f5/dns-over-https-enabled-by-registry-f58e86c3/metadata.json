@@ -1,0 +1,24 @@
+{
+  "uuid": "f58e86c3-014a-4aaf-b6d5-a65c33587bad",
+  "title": "DNS-over-HTTPS Enabled by Registry",
+  "format": "sigma",
+  "author": "Austin Songer",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when a user enables DNS-over-HTTPS.\nThis can be used to hide internet activity or be used to hide the process of exfiltrating data.\nWith this enabled organization will lose visibility into data such as query type, response and originating IP that are used to determine bad actors.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1112",
+    "T1140"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/344466"
+}
