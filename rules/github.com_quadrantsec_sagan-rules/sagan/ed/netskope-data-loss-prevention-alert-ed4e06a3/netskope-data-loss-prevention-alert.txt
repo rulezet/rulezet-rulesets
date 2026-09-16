@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETSKOPE] Data Loss Prevention alert"; json_content: ".event_type", "DLP"; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; json_map: "username", ".user"; json_map: "flow_id", ".transaction_id"; json_map: "md5", ".md5"; classtype: suspicious-traffic; sid:5005677; rev:2;)

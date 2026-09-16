@@ -1,0 +1,1 @@
+alert any [$HOME_NET,!127.0.0.1] any -> $HOME_NET any (msg:"[TENABLE] The system received and processed an audit-log request"; program:tenable_io_data; content:"|22|action|22 3a 20 22|audit.log.view|22|"; classtype:system-event; reference:url,developer.tenable.com/reference/audit-log-events; sid:5010891; rev:1;)

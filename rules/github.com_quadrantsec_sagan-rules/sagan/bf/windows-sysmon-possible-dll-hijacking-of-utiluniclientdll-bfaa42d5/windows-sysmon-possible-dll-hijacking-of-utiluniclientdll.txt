@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[WINDOWS-SYSMON] Possible DLL Hijacking of utiluniclient.dll"; program:*Sysmon*; event_id:7; content:"ImageLoaded"; content:"\utiluniclient.dll"; nocase; reference:url,hijacklibs.net/entries/3rd_party/trendmicro/utiluniclient.html; classtype:suspicious-command; sid:5007748; rev:1;)

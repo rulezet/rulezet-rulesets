@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[TENABLE] An administrator created a new user account"; program:tenable_io_data; content:"|22|action|22 3a 20 22|user.create|22|"; classtype:system-event; reference:url,developer.tenable.com/reference/audit-log-events; sid:5010898; rev:1;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[NETSKOPE] Policy alert"; json_content: ".event_type", "policy"; json_map: "src_ip", ".srcip"; json_map: "dest_ip", ".dstip"; json_map: "username", ".user"; json_map: "flow_id", ".transaction_id"; json_map: "md5", ".md5"; classtype: policy-violation; sid:5005679; rev:2;)

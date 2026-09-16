@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[TENABLE] An administrator ended a session where they impersonated another user"; program:tenable_io_data; content:"|22|action|22 3a 20 22|session.impersonation.end|22|"; classtype:system-event; reference:url,developer.tenable.com/reference/audit-log-events; sid:5010894; rev:1;)
