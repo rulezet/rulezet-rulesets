@@ -1,0 +1,9 @@
+rule Win_Downloader_Banload_1237
+{
+strings:
+	$a0 = { 02920450105091f15220508044dd90348379ceb5e5cee771bccef329fc39fc06f733b9216f79903979dbb06de640e5abb16f160b95bb20b480978e405ae00de39b06d720dbd72416dc826372416b901b8e407b7b906f3bdcd16dee037bcee0b6f3b95cb9cbffffffb7dff7cf9f7eef9f7f7dfde7dfde79bbbfdbe7bfc0cb990881263dff7fb1ef75fdf8705f }
+
+
+condition:
+	$a0
+}

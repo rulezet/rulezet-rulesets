@@ -1,0 +1,9 @@
+rule Win_Downloader_Banload_1268
+{
+strings:
+	$a0 = { 025a820fa48f829149430089999230c0bce5746fcadddf86bcdf90df9485aef205ddbb905bac85db5c82e8e40aae48529088b799225390169cc82a72456bc922d3991781c9015e641bc792475de4577778036ef06df8edddbcdffffff8f7fbaebaefcf3f7eefcf3befcefe79f1cebdfa3946e9ee2c4101c602c4bffd07f767fe91fdd5fde9ffa17fbfbfdf9f }
+
+
+condition:
+	$a0
+}

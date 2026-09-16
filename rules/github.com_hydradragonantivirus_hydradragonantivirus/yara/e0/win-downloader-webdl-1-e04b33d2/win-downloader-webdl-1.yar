@@ -1,0 +1,9 @@
+rule Win_Downloader_Webdl_1
+{
+strings:
+	$a0 = { 7d2a922d918ad946792c848b14548f39c09c391b996d65fe1dd96ef7375b99b9b83bfc85b6ee0b6f7bde0c9d905be938126c4167a701b14059668325b80c9660b259812cecce0cb1ce1275b80ad9812cdb80ced980cdb705b6e62b733b924bbbb9deef7fffffdedf9e9f7f7dfbfbd3efef3ce679cfebf3dfe1ba4aeb5ac840707e970f2c9eaa9ea91ea79e56 }
+
+
+condition:
+	$a0
+}
