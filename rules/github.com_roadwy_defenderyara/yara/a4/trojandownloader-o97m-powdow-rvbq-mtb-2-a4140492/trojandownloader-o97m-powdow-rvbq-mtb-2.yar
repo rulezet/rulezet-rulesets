@@ -1,0 +1,9 @@
+rule TrojanDownloader_O97M_Powdow_RVBQ_MTB_2{
+	meta:
+		description = "TrojanDownloader:O97M/Powdow.RVBQ!MTB,SIGNATURE_TYPE_MACROHSTR_EXT,03 00 03 00 03 00 00 "
+		
+	strings :
+		$a_01_0 = {61 75 74 6f 5f 6f 70 65 6e 5f 28 29 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 3a 63 61 6c 6c 76 62 61 2e 73 68 65 6c 6c 21 28 2b 2c 76 62 68 69 64 65 29 65 6e 64 66 75 6e 63 74 69 6f 6e } 		$a_01_1 = {63 68 72 28 6f 63 74 32 64 65 63 28 61 73 63 28 6d 69 64 28 73 73 74 72 69 6e 67 2c 69 2c 31 29 29 29 29 6e 65 78 74 } 		$a_01_2 = {76 62 61 2e 72 65 70 6c 61 63 65 28 2c 64 65 63 72 79 70 74 65 70 69 28 22 6a 22 29 2c 64 65 63 72 79 70 74 65 70 69 28 22 74 22 29 29 65 6e 64 66 75 6e 63 74 69 6f 6e } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1+(#a_01_2  & 1)*1) >=3
+ 
+}
