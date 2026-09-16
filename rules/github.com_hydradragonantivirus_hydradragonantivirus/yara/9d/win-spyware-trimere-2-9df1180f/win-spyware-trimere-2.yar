@@ -1,0 +1,9 @@
+rule Win_Spyware_Trimere_2
+{
+strings:
+	$a0 = { 6808400010ff156091001085c0741a680040001050ff155c91001085c0740a6a01e83310000083c404 }
+
+
+condition:
+	$a0
+}
