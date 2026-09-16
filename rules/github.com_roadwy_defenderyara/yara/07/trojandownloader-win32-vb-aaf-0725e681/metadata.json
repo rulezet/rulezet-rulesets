@@ -1,0 +1,21 @@
+{
+  "uuid": "0725e681-76ae-49e1-ae43-5050d0f82c87",
+  "title": "TrojanDownloader_Win32_VB_AAF",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDownloader:Win32/VB.AAF,SIGNATURE_TYPE_PEHSTR_EXT,12 02 fffffff4 01 0e 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/331474"
+}

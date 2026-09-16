@@ -1,0 +1,21 @@
+{
+  "uuid": "d0aa0e79-e524-44b7-b9ed-29aa2b9a014e",
+  "title": "TrojanDownloader_Win32_Agent_WQ",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDownloader:Win32/Agent.WQ,SIGNATURE_TYPE_PEHSTR,0b 00 0a 00 0a 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/331529"
+}
