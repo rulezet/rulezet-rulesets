@@ -1,0 +1,19 @@
+{
+  "uuid": "e0506d43-de17-4fc9-9a52-8a216c5dac08",
+  "title": "modbus-discover",
+  "format": "nse",
+  "author": "Alexander Rudakov",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Enumerates SCADA Modbus slave ids (sids) and collects their device information.\n\nModbus is one of the popular SCADA protocols. This script does Modbus device\ninformation disclosure. It tries to find legal sids (slave ids) of Modbus\ndevices and to get additional information about the vendor and firmware. This\nscript is improvement of modscan python utility written by Mark Bristow.\n\nInformation about MODBUS protocol and security issues:\n* MODBUS application protocol specification:  http://www.modbus.org/docs/Modbus_Application_Protocol_V1_1b.pdf\n* Defcon 16 Modscan presentation: https://www.defcon.org/images/defcon-16/dc16-presentations/defcon-16-bristow.pdf\n* Modscan utility is hosted at google code: http://code.google.com/p/modscan/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223461"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "8f18a9ad-c53a-4b42-a749-d4c04e5ae22d",
+  "title": "VBS_Gamaredon_GamaWiper_Cleanup_Disruption_2025_12",
+  "format": "yara",
+  "author": "Robin Dost",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects VBScript cleanup/disruption tool wiping HKCU persistence, deleting C:\\\\Users recursively, deleting scheduled tasks, and killing script processes",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223722"
+}

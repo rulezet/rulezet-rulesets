@@ -1,0 +1,19 @@
+{
+  "uuid": "1b7b51bc-bbf2-4c13-bec1-3a568e3257e4",
+  "title": "RTF_LNK_InternetExplorer_IDLIST_Suspicious",
+  "format": "yara",
+  "author": "node5",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects RTF with hex-encoded OLE LNK containing IE IDLIST with suspicious URI items",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223655"
+}

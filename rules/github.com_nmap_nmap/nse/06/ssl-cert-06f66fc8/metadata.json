@@ -1,0 +1,19 @@
+{
+  "uuid": "06f66fc8-9b96-489e-b2a7-722b4421cee5",
+  "title": "ssl-cert",
+  "format": "nse",
+  "author": "David Fifield",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Retrieves a server's SSL certificate. The amount of information printed about\nthe certificate depends on the verbosity level. With no extra verbosity, the\nscript prints the validity period and the commonName, organizationName,\nstateOrProvinceName, and countryName of the subject. When present, it also\noutputs all the subject alternative names.\n\n<code>\n443/tcp open  https\n| ssl-cert: Subject: commonName=www.paypal.com/organizationName=PayPal, Inc.\n/stateOrProvinceName=California/countryName=US\n| Subject Alternative Name: DNS:www.paypal.com, DNS:fastlane.paypal.com,\nDNS:secure.paypal.com, DNS:www-st.paypal.com, DNS:connect.paypal.com,\n...\nDNS:es.paypal-qrc.com, DNS:www.fastlane.paypal.com\n| Not valid before: 2024-02-08T00:00:00\n|_Not valid after:  2025-02-08T23:59:59\n</code>\n\nWith <code>-v</code> it adds the issuer name and fingerprints.\n\n<code>\n443/tcp open  https\n| ssl-cert: Subject: commonName=www.paypal.com/organizationName=PayPal, Inc.\n/stateOrProvinceName=California/countryName=US\n| Subject Alternative Name: DNS:www.paypal.com, DNS:fastlane.paypal.com,\nDNS:secure.paypal.com, DNS:www-st.paypal.com, DNS:connect.paypal.com,\n...\nDNS:es.paypal-qrc.com, DNS:www.fastlane.paypal.com\n| Issuer: commonName=DigiCert SHA2 Extended Validation Server CA\n/organizationName=DigiCert Inc/countryName=US/organizationalUnitName=www.digicert.com\n| Public Key type: rsa\n| Public Key bits: 2048\n| Signature Algorithm: sha256WithRSAEncryption\n| Not valid before: 2024-02-08T00:00:00\n| Not valid after:  2025-02-08T23:59:59\n| MD5:     7cc7 a345 a164 dfb1 4690 0277 a540 f636\n| SHA-1:   9269 a100 8f61 aa60 1706 fc85 fd47 d277 66c0 f591\n|_SHA-256: d76b 791c e89c 043a c25d 19f3 97b2 91d5 5d94 b1c2 72df 8d1f 4bab fdc1 91a7 413b\n</code>\n\nWith <code>-vv</code> it adds the PEM-encoded contents of the entire\ncertificate.\n\n<code>\n443/tcp open  https\n| ssl-cert: Subject: commonName=www.paypal.com/organizationName=PayPal, Inc.\n/stateOrProvinceName=California/countryName=US\n| Subject Alternative Name: DNS:www.paypal.com, DNS:fastlane.paypal.com,\nDNS:secure.paypal.com, DNS:www-st.paypal.com, DNS:connect.paypal.com,\n...\nDNS:es.paypal-qrc.com, DNS:www.fastlane.paypal.com\n| Issuer: commonName=DigiCert SHA2 Extended Validation Server CA\n/organizationName=DigiCert Inc/countryName=US/organizationalUnitName=www.digicert.com\n| Public Key type: rsa\n| Public Key bits: 2048\n| Signature Algorithm: sha256WithRSAEncryption\n| Not valid before: 2024-02-08T00:00:00\n| Not valid after:  2025-02-08T23:59:59\n| MD5:     7cc7 a345 a164 dfb1 4690 0277 a540 f636\n| SHA-1:   9269 a100 8f61 aa60 1706 fc85 fd47 d277 66c0 f591\n|_SHA-256: d76b 791c e89c 043a c25d 19f3 97b2 91d5 5d94 b1c2 72df 8d1f 4bab fdc1 91a7 413b\n| -----BEGIN CERTIFICATE-----\n| MIINmjCCDIKgAwIBAgIQDSuPFewZcdj2USYg2ZUIJzANBgkqhkiG9w0BAQsFADB1\n...\n| 6BlCzB65H3ngMIyKoeBQJyV9skuM/mHY/hUsQVIE\n|_-----END CERTIFICATE-----\n</code>",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223411"
+}

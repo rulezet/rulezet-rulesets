@@ -1,0 +1,22 @@
+{
+  "uuid": "059f85e7-b2a9-4bb9-baa5-e088182414e8",
+  "title": "HellsUchecker_MSI_Dropper",
+  "format": "yara",
+  "author": "kirkderp",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "HellsUchecker MSI dropper - WiX-built installer masquerading as Microsoft Update. Drops BAT/MSBuild polyglot + VBS launcher to SvcUpdate directory.",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\""
+  ],
+  "attack_techniques": [
+    "T1218.007"
+  ],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223836"
+}

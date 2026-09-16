@@ -1,0 +1,19 @@
+{
+  "uuid": "dd7a42f5-e8bb-45b9-ad52-80bd95f62877",
+  "title": "daap-get-library",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Retrieves a list of music from a DAAP server. The list includes artist\nnames and album and song titles.\n\nOutput will be capped to 100 items if not otherwise specified in the\n<code>daap_item_limit</code> script argument. A\n<code>daap_item_limit</code> below zero outputs the complete contents of\nthe DAAP library.\n\nBased on documentation found here:\nhttp://www.tapjam.net/daap/.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223558"
+}

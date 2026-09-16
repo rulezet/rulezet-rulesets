@@ -1,0 +1,23 @@
+{
+  "uuid": "318326f2-9ebb-4371-8406-98a03d931d10",
+  "title": "http-vuln-cve2014-8877",
+  "format": "nse",
+  "author": "Mariusz Ziulek <mzet()owasp org>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Exploits a remote code injection vulnerability (CVE-2014-8877) in Wordpress CM\nDownload Manager plugin. Versions <= 2.0.0 are known to be affected.\n\nCM Download Manager plugin does not correctly sanitise the user input which\nallows remote attackers to execute arbitrary PHP code via the CMDsearch\nparameter to cmdownloads/, which is processed by the PHP 'create_function'\nfunction.\n\nThe script injects PHP system() function into the vulnerable target in order to\nexecute specified shell command.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2014-8877"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223574"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "c9f8c61e-14d3-4dc3-9905-0e65b896a9ce",
+  "title": "tso-enum",
+  "format": "nse",
+  "author": "Philip Young aka Soldier of Fortran",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "TSO User ID enumerator for IBM mainframes (z/OS). The TSO logon panel\ntells you when a user ID is valid or invalid with the message:\n <code>IKJ56420I Userid <user ID> not authorized to use TSO</code>.\n\nThe TSO logon process can work in two ways:\n1) You get prompted with <code>IKJ56700A ENTER USERID -</code>\n   to which you reply with the user you want to use.\n   If the user ID is valid it will give you a normal\n   TSO logon screen. Otherwise it will give you the\n   screen logon error above.\n2) You're given the TSO logon panel and enter your user ID\n   at the <code>Userid    ===></code> prompt. If you give\n   it an invalid user ID you receive the error message above.\n\nThis script relies on the NSE TN3270 library which emulates a\nTN3270 screen for NMAP.\n\nTSO user IDs have the following rules:\n - it cannot begin with a number\n - only contains alpha-numeric characters and @, #, $.\n - it cannot be longer than 7 chars",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223620"
+}

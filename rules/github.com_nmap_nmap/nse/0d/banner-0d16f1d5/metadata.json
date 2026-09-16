@@ -1,0 +1,19 @@
+{
+  "uuid": "0d16f1d5-7d8a-49b5-815e-53d17cacfea2",
+  "title": "banner",
+  "format": "nse",
+  "author": "jah",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "A simple banner grabber which connects to an open TCP port and prints out anything sent by the listening service within five seconds.\n\nThe banner will be truncated to fit into a single line, but an extra line may be printed for every\nincrease in the level of verbosity requested on the command line.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223536"
+}

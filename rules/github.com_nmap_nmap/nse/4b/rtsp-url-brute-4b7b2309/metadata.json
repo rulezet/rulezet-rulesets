@@ -1,0 +1,19 @@
+{
+  "uuid": "4b7b2309-8eed-4bde-a1c7-0db413a98cdf",
+  "title": "rtsp-url-brute",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to enumerate RTSP media URLS by testing for common paths on devices such as surveillance IP cameras.\n\nThe script attempts to discover valid RTSP URLs by sending a DESCRIBE\nrequest for each URL in the dictionary. It then parses the response, based\non which it determines whether the URL is valid or not.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223523"
+}

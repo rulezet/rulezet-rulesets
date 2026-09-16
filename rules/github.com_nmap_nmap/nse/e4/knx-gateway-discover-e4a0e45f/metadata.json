@@ -1,0 +1,19 @@
+{
+  "uuid": "e4a0e45f-4bae-4eaf-a5ea-a8de754b75a9",
+  "title": "knx-gateway-discover",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Discovers KNX gateways by sending a KNX Search Request to the multicast address\n224.0.23.12 including a UDP payload with destination port 3671. KNX gateways\nwill respond with a KNX Search Response including various information about the\ngateway, such as KNX address and supported services.\n\nFurther information:\n  * DIN EN 13321-2\n  * http://www.knx.org/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223463"
+}

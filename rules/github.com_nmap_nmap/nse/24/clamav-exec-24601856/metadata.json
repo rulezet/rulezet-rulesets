@@ -1,0 +1,19 @@
+{
+  "uuid": "24601856-bd55-4284-9ed2-696c1a2232bd",
+  "title": "clamav-exec",
+  "format": "nse",
+  "author": "Paulino Calderon <calderon()websec.mx>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Exploits ClamAV servers vulnerable to unauthenticated clamav comand execution.\n\nClamAV server 0.99.2, and possibly other previous versions, allow the execution\nof dangerous service commands without authentication. Specifically, the command 'SCAN'\nmay be used to list system files and the command 'SHUTDOWN' shut downs the\nservice. This vulnerability was discovered by Alejandro Hernandez (nitr0us).\n\nThis script without arguments test the availability of the command 'SCAN'.\n\nReference:\n* https://twitter.com/nitr0usmx/status/740673507684679680\n* https://bugzilla.clamav.net/show_bug.cgi?id=11585",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223551"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "73bd4160-569e-4f0b-9a29-58f09bcaf465",
+  "title": "hostmap-crtsh",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Finds subdomains of a web server by querying Google's Certificate Transparency\nlogs database (https://crt.sh).\n\nThe script will run against any target that has a name, either specified on the\ncommand line or obtained via reverse-DNS.\n\nNSE implementation of ctfr.py (https://github.com/UnaPibaGeek/ctfr.git) by Sheila Berta.\n\nReferences:\n* www.certificate-transparency.org",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223506"
+}

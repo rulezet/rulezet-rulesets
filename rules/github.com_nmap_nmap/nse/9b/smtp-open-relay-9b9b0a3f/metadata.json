@@ -1,0 +1,19 @@
+{
+  "uuid": "9b9b0a3f-19b8-409a-a38e-24b9d45b9e28",
+  "title": "smtp-open-relay",
+  "format": "nse",
+  "author": "Arturo",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to relay mail by issuing a predefined combination of SMTP commands. The goal\nof this script is to tell if a SMTP server is vulnerable to mail relaying.\n\nAn SMTP server that works as an open relay, is a email server that does not verify if the\nuser is authorised to send email from the specified email address. Therefore, users would\nbe able to send email originating from any third-party email address that they want.\n\nThe checks are done based in combinations of MAIL FROM and RCPT TO commands. The list is\nhardcoded in the source file. The script will output all the working combinations that the\nserver allows if nmap is in verbose mode otherwise the script will print the number of\nsuccessful tests. The script will not output if the server requires authentication.\n\nIf debug is enabled and an error occurs while testing the target host, the error will be\nprinted with the list of any combinations that were found prior to the error.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223495"
+}

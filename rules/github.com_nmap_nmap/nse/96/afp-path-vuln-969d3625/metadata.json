@@ -1,0 +1,23 @@
+{
+  "uuid": "969d3625-7d49-4a5b-9e4b-27c4f25d6ac4",
+  "title": "afp-path-vuln",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects the Mac OS X AFP directory traversal vulnerability, CVE-2010-0533.\n\nThis script attempts to iterate over all AFP shares on the remote\nhost. For each share it attempts to access the parent directory by\nexploiting the directory traversal vulnerability as described in\nCVE-2010-0533.\n\nThe script reports whether the system is vulnerable or not. In\naddition it lists the contents of the parent and child directories to\na max depth of 2.\nWhen running in verbose mode, all items in the listed directories are\nshown.  In non verbose mode, output is limited to the first 5 items.\nIf the server is not vulnerable, the script will not return any\ninformation.\n\nFor additional information:\n* http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0533\n* http://www.cqure.net/wp/2010/03/detecting-apple-mac-os-x-afp-vulnerability-cve-2010-0533-with-nmap\n* http://support.apple.com/kb/HT1222",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2010-0533"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223522"
+}

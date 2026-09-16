@@ -1,0 +1,19 @@
+{
+  "uuid": "1d58b226-2586-433b-9174-71b51854ca30",
+  "title": "sip-call-spoof",
+  "format": "nse",
+  "author": "Hani Benhabiles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Spoofs a call to a SIP phone and detects the action taken by the target (busy, declined, hung up, etc.)\n\nThis works by sending a fake sip invite request to the target phone and checking\nthe responses. A response with status code 180 means that the phone is ringing.\nThe script waits for the next responses until timeout is reached or a special\nresponse is received.  Special responses include:  Busy (486), Decline (603),\nTimeout (408) or Hang up (200).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223518"
+}

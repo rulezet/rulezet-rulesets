@@ -1,0 +1,19 @@
+{
+  "uuid": "6e63d4fe-9772-4b1d-b3f6-65a90d50d712",
+  "title": "impress-remote-discover",
+  "format": "nse",
+  "author": "Jer Hiebert",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tests for the presence of the LibreOffice Impress Remote server.\nChecks if a PIN is valid if provided and will bruteforce the PIN\nif requested.\n\nWhen a remote first contacts Impress and sends a client name and PIN, the user\nmust open the \"Slide Show -> Impress Remote\" menu and enter the matching PIN at\nthe prompt, which shows the client name. Subsequent connections with the same\nclient name may then use the same PIN without user interaction.  If no PIN has\nbeen set for the session, each PIN attempt will result in a new prompt in the\n\"Impress Remote\" menu. Brute-forcing the PIN, therefore, requires that the user\nhas entered a PIN for the same client name, and will result in lots of extra\nprompts in the \"Impress Remote\" menu.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223563"
+}

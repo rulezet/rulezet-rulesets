@@ -1,0 +1,19 @@
+{
+  "uuid": "d7792cd1-c89b-45e5-99fa-d8f06fcadaee",
+  "title": "http-domino-enum-passwords",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to enumerate the hashed Domino Internet Passwords that are (by\ndefault) accessible by all authenticated users. This script can also download\nany Domino ID Files attached to the Person document.  Passwords are presented\nin a form suitable for running in John the Ripper.\n\nThe passwords may be stored in two forms (http://comments.gmane.org/gmane.comp.security.openwall.john.user/785):\n\n1. Saltless (legacy support?)\n   Example: 355E98E7C7B59BD810ED845AD0FD2FC4\n   John's format name: lotus5\n2. Salted (also known as \"More Secure Internet Password\")\n   Example: (GKjXibCW2Ml6juyQHUoP)\n   John's format name: dominosec\n\nIt appears as if form based authentication is enabled, basic authentication\nstill works. Therefore the script should work in both scenarios. Valid\ncredentials can either be supplied directly using the parameters username\nand password or indirectly from results of http-brute or http-form-brute.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223470"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "837674e1-7584-4141-9487-90eec1472bf7",
+  "title": "mmouse-exec",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Connects to an RPA Tech Mobile Mouse server, starts an application and\nsends a sequence of keys to it. Any application that the user has\naccess to can be started and the key sequence is sent to the\napplication after it has been started.\n\nThe Mobile Mouse server runs on OS X, Windows and Linux and enables remote\ncontrol of the keyboard and mouse from an iOS device. For more information:\nhttp://mobilemouse.com/\n\nThe script has only been tested against OS X and will detect the remote OS\nand abort unless the OS is detected as Mac.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223447"
+}

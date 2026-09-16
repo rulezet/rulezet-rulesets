@@ -1,0 +1,19 @@
+{
+  "uuid": "106a0b78-e1fc-4d81-8573-7b12a78c5a92",
+  "title": "ssh2-enum-algos",
+  "format": "nse",
+  "author": "Kris Katterjohn",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Reports the number of algorithms (for encryption, compression, etc.) that\nthe target SSH2 server offers. If verbosity is set, the offered algorithms\nare each listed by type.\n\nIf the \"client to server\" and \"server to client\" algorithm lists are identical\n(order specifies preference) then the list is shown only once under a combined\ntype.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223412"
+}

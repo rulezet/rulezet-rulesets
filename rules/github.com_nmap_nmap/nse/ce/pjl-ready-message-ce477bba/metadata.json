@@ -1,0 +1,19 @@
+{
+  "uuid": "ce477bba-b19c-4ea1-9b6e-c531729e690f",
+  "title": "pjl-ready-message",
+  "format": "nse",
+  "author": "Aaron Leininger",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Retrieves or sets the ready message on printers that support the Printer\nJob Language. This includes most PostScript printers that listen on port\n9100. Without an argument, displays the current ready message. With the\n<code>pjl_ready_message</code> script argument, displays the old ready\nmessage and changes it to the message given.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223476"
+}

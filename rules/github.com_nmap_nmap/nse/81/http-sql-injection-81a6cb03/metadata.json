@@ -1,0 +1,19 @@
+{
+  "uuid": "81a6cb03-c2bc-4b60-8757-d129c4846ffa",
+  "title": "http-sql-injection",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Spiders an HTTP server looking for URLs containing queries vulnerable to an SQL\ninjection attack. It also extracts forms from found websites and tries to identify\nfields that are vulnerable.\n\nThe script spiders an HTTP server looking for URLs containing queries. It then\nproceeds to combine crafted SQL commands with susceptible URLs in order to\nobtain errors. The errors are analysed to see if the URL is vulnerable to\nattack. This uses the most basic form of SQL injection but anything more\ncomplicated is better suited to a standalone tool.\n\nWe may not have access to the target web server's true hostname, which can prevent access to\nvirtually hosted sites.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223580"
+}

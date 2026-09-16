@@ -1,0 +1,21 @@
+{
+  "uuid": "a2b85fc7-295e-41f2-88a7-3a571b547c28",
+  "title": "Kramer_PYC_Obfuscator",
+  "format": "yara",
+  "author": "kirkderp",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Kramer Python bytecode obfuscator used by SERPENTINE#CLOUD -- encodes source via CJK Unicode offsets, eval at runtime",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [
+    "T1027.013"
+  ],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223781"
+}

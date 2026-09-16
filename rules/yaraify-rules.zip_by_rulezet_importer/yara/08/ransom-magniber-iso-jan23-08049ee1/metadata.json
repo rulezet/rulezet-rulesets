@@ -1,0 +1,22 @@
+{
+  "uuid": "08049ee1-837c-42df-aa4a-dcc319db11fc",
+  "title": "RANSOM_Magniber_ISO_Jan23",
+  "format": "yara",
+  "author": "SECUINFRA Falcon Team",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects Magniber Ransomware ISO files from fake Windows Update delivery method",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223854"
+}

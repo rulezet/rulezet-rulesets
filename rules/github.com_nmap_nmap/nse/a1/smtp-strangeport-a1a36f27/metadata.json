@@ -1,0 +1,20 @@
+{
+  "uuid": "a1a36f27-a112-4f06-94d6-35fbce42a80f",
+  "title": "smtp-strangeport",
+  "format": "nse",
+  "author": "Diman Todorov",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks if SMTP is running on a non-standard port.\n\nThis may indicate that crackers or script kiddies have set up a backdoor on the\nsystem to send spam or control the machine.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223472"
+}

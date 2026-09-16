@@ -1,0 +1,21 @@
+{
+  "uuid": "e2a8c31d-7e76-4d52-981d-f7839a45a14c",
+  "title": "ganglia-info",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Retrieves system information (OS version, available memory, etc.) from\na listening Ganglia Monitoring Daemon or Ganglia Meta Daemon.\n\nGanglia is a scalable distributed monitoring system for high-performance\ncomputing systems such as clusters and Grids. The information retrieved\nincludes HDD size, available memory, OS version, architecture (and more) from\neach of the systems in each of the clusters in the grid.\n\nFor more information about Ganglia, see:\n* http://ganglia.sourceforge.net/\n* http://en.wikipedia.org/wiki/Ganglia_(software)#Ganglia_Monitoring_Daemon_.28gmond.29\n* http://en.wikipedia.org/wiki/Ganglia_(software)#Ganglia_Meta_Daemon_.28gmetad.29",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223619"
+}

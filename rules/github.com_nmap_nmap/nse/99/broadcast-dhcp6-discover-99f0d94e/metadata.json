@@ -1,0 +1,19 @@
+{
+  "uuid": "99f0d94e-cc61-4aab-95c4-a433c482b94c",
+  "title": "broadcast-dhcp6-discover",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Sends a DHCPv6 request (Solicit) to the DHCPv6 multicast address,\nparses the response, then extracts and prints the address along with\nany options returned by the server.\n\nThe script requires Nmap to be run in privileged mode as it binds the socket\nto a privileged port (udp/546).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223587"
+}

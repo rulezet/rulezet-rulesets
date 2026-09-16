@@ -1,0 +1,20 @@
+{
+  "uuid": "3bc74845-c781-4a3c-ac0a-cd3cdde10a96",
+  "title": "http-vhosts",
+  "format": "nse",
+  "author": "Carlos Pantelides",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Searches for web virtual hostnames by making a large number of HEAD requests against http servers using common hostnames.\n\nEach HEAD request provides a different\n<code>Host</code> header. The hostnames come from a built-in default\nlist. Shows the names that return a document. Also shows the location of\nredirections.\n\nThe domain can be given as the <code>http-vhosts.domain</code> argument or\ndeduced from the target's name. For example when scanning www.example.com,\nvarious names of the form <name>.example.com are tried.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"metasploit\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223566"
+}

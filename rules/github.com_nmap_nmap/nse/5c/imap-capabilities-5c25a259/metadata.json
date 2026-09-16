@@ -1,0 +1,19 @@
+{
+  "uuid": "5c25a259-c0af-461b-979e-c5b93289fc1a",
+  "title": "imap-capabilities",
+  "format": "nse",
+  "author": "Brandon Enright",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Retrieves IMAP email server capabilities.\n\nIMAP4rev1 capabilities are defined in RFC 3501. The CAPABILITY command\nallows a client to ask a server what commands it supports and possibly\nany site-specific policy.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223623"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "377fdfe2-6a16-46d7-aeb7-711c6c55a1ab",
+  "title": "smb-vuln-webexec",
+  "format": "nse",
+  "author": "Ron Bowes",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks whether the WebExService is installed and allows us to run code.\n\nNote: Requires a user account (local or domain).\n\nReferences:\n* https://www.webexec.org\n* https://blog.skullsecurity.org/2018/technical-rundown-of-webexec\n* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15442",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2018-15442"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223485"
+}

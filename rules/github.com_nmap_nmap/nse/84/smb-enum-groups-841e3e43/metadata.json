@@ -1,0 +1,21 @@
+{
+  "uuid": "841e3e43-b8f8-4742-ab85-2c1c39586434",
+  "title": "smb-enum-groups",
+  "format": "nse",
+  "author": "Ron Bowes",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Obtains a list of groups from the remote Windows system, as well as a list of the group's users.\nThis works similarly to <code>enum.exe</code> with the <code>/G</code> switch.\n\nThe following MSRPC functions in SAMR are used to find a list of groups and the RIDs of their users. Keep\nin mind that MSRPC refers to groups as \"Aliases\".\n\n* <code>Bind</code>: bind to the SAMR service.\n* <code>Connect4</code>: get a connect_handle.\n* <code>EnumDomains</code>: get a list of the domains.\n* <code>LookupDomain</code>: get the RID of the domains.\n* <code>OpenDomain</code>: get a handle for each domain.\n* <code>EnumDomainAliases</code>: get the list of groups in the domain.\n* <code>OpenAlias</code>: get a handle to each group.\n* <code>GetMembersInAlias</code>: get the RIDs of the members in the groups.\n* <code>Close</code>: close the alias handle.\n* <code>Close</code>: close the domain handle.\n* <code>Close</code>: close the connect handle.\n\nOnce the RIDs have been termined, the\n* <code>Bind</code>: bind to the LSA service.\n* <code>OpenPolicy2</code>: get a policy handle.\n* <code>LookupSids2</code>: convert SIDs to usernames.\n\nI (Ron Bowes) originally looked into the possibility of using the SAMR function <code>LookupRids2</code>\nto convert RIDs to usernames, but the function seemed to return a fault no matter what I tried. Since\nenum.exe also switches to LSA to convert RIDs to usernames, I figured they had the same issue and I do\nthe same thing.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223432"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "3f704274-469f-4411-b011-48dd7ca0ea6e",
+  "title": "smb-system-info",
+  "format": "nse",
+  "author": "Ron Bowes",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Pulls back information about the remote system from the registry. Getting all\nof the information requires an administrative account, although a user account\nwill still get a lot of it. Guest probably won't get any, nor will anonymous.\nThis goes for all operating systems, including Windows 2000.\n\nWindows Vista disables remote registry access by default, so unless it was enabled,\nthis script won't work.\n\nIf you know of more information stored in the Windows registry that could be interesting,\npost a message to the nmap-dev mailing list and I (Ron Bowes) will add it to my todo list.\nAdding new checks to this is extremely easy.\n\nWARNING: I have experienced crashes in <code>regsvc.exe</code> while making registry calls\nagainst a fully patched Windows 2000 system; I've fixed the issue that caused it,\nbut there's no guarantee that it (or a similar vuln in the same code) won't show\nup again. Since the process automatically restarts, it doesn't negatively impact\nthe system, besides showing a message box to the user.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223475"
+}

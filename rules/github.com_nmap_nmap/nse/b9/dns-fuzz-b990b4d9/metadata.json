@@ -1,0 +1,19 @@
+{
+  "uuid": "b990b4d9-8e4a-4ee2-b53a-d3be6572ade8",
+  "title": "dns-fuzz",
+  "format": "nse",
+  "author": "Michael Pattrick",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Launches a DNS fuzzing attack against DNS servers.\n\nThe script induces errors into randomly generated but valid DNS packets.\nThe packet template that we use includes one uncompressed and one\ncompressed name.\n\nUse the <code>dns-fuzz.timelimit</code> argument to control how long the\nfuzzing lasts. This script should be run for a long time. It will send a\nvery large quantity of packets and thus it's pretty invasive, so it\nshould only be used against private DNS servers as part of a software\ndevelopment lifecycle.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223596"
+}

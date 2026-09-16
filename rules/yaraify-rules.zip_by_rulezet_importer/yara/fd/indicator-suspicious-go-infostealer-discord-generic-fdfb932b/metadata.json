@@ -1,0 +1,19 @@
+{
+  "uuid": "fdfb932b-a797-4f63-8e07-89b2b0794cdd",
+  "title": "INDICATOR_SUSPICIOUS_Go_Infostealer_Discord_Generic",
+  "format": "yara",
+  "author": "Yara Rule Generator",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a Go-based infostealer that targets Discord tokens by locating the 'Local State' file, decrypting the master key with DPAPI, and exfiltrating tokens.",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223689"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "5b8653da-9105-4ec1-965e-1d2ce16ff939",
+  "title": "http-vuln-cve2017-1001000",
+  "format": "nse",
+  "author": "Vinamra Bhatia",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to detect a privilege escalation vulnerability in Wordpress 4.7.0 and 4.7.1 that\nallows unauthenticated users to inject content in posts.\n\nThe script connects to the Wordpress REST API to obtain the list of published posts and\ngrabs the user id and date from there. Then it attempts to update the date field in the\npost with the same date information we just obtained. If the request doesn’t return an\nerror, we mark the server as vulnerable.\n\nReferences:\nhttps://blog.sucuri.net/2017/02/content-injection-vulnerability-wordpress-rest-api.html",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223497"
+}

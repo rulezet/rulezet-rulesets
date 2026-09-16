@@ -1,0 +1,19 @@
+{
+  "uuid": "04c1aa02-8fdf-4816-ae92-c6d1e1e087cb",
+  "title": "dns-update",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to perform a dynamic DNS update without authentication.\n\nEither the <code>test</code> or both the <code>hostname</code> and\n<code>ip</code> script arguments are required. Note that the <code>test</code>\nfunction will probably fail due to using a static zone name that is not the\nzone configured on your target.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223477"
+}

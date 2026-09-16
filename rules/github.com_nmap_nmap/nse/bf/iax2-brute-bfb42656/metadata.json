@@ -1,0 +1,19 @@
+{
+  "uuid": "bfb42656-7cb6-4d2e-8ebd-9af713be3d8d",
+  "title": "iax2-brute",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Performs brute force password auditing against the Asterisk IAX2 protocol.\nGuessing fails when a large number of attempts is made due to the maxcallnumber limit (default 2048).\nIn case your getting \"ERROR: Too many retries, aborted ...\" after a while, this is most likely what's happening.\nIn order to avoid this problem try:\n  - reducing the size of your dictionary\n  - use the brute delay option to introduce a delay between guesses\n  - split the guessing up in chunks and wait for a while between them",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223410"
+}

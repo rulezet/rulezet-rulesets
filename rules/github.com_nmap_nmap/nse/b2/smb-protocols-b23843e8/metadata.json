@@ -1,0 +1,19 @@
+{
+  "uuid": "b23843e8-4ae2-4ec1-9b1f-3c2f92129ccf",
+  "title": "smb-protocols",
+  "format": "nse",
+  "author": "Paulino Calderon",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to list the supported protocols and dialects of a SMB server.\n\nThe script attempts to initiate a connection using the dialects:\n* NT LM 0.12 (SMBv1)\n* 2.0.2      (SMBv2)\n* 2.1        (SMBv2)\n* 3.0        (SMBv3)\n* 3.0.2      (SMBv3)\n* 3.1.1      (SMBv3)\n\nAdditionally if SMBv1 is found enabled, it will mark it as insecure. This\nscript is the successor to the (removed) smbv2-enabled script.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223427"
+}

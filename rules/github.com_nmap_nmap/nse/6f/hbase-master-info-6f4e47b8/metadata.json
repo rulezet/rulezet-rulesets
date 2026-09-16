@@ -1,0 +1,19 @@
+{
+  "uuid": "6f4e47b8-a3fa-4788-a49a-2512d97a1020",
+  "title": "hbase-master-info",
+  "format": "nse",
+  "author": "John R. Bond",
+  "license": "Simplified (2-clause) BSD license--See https://nmap.org/svn/docs/licenses/BSD-simplified",
+  "license_verified": true,
+  "description": "Retrieves information from an Apache HBase (Hadoop database) master HTTP status page.\n\nInformation gathered:\n* Hbase version\n* Hbase compile date\n* Hbase root directory\n* Hadoop version\n* Hadoop compile date\n* Average load\n* Zookeeper quorum server\n* Associated region servers",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223481"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "ab129b0f-978e-4d8d-add4-92b6737495ff",
+  "title": "ShadowOpCode_RustMe_Keylogger_STRICT_v1",
+  "format": "yara",
+  "author": "ShadowOpCode",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "RustMe keylogger x64: WH_KEYBOARD_LL via imports + libcurl SMTP to Gmail + US layout + DebugConfig persistence",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223894"
+}

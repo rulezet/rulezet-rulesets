@@ -1,0 +1,23 @@
+{
+  "uuid": "4298ba9f-642b-4b39-ac9e-b23bd482f352",
+  "title": "http-mobileversion-checker",
+  "format": "nse",
+  "author": "George Chatzisofroniou",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks if the website holds a mobile version.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"AndroidOS\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"Android\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223479"
+}

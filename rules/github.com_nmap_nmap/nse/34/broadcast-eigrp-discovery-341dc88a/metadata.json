@@ -1,0 +1,19 @@
+{
+  "uuid": "341dc88a-9877-4126-9aa4-0c249d7b76d8",
+  "title": "broadcast-eigrp-discovery",
+  "format": "nse",
+  "author": "Hani Benhabiles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Performs network discovery and routing information gathering through\nCisco's Enhanced Interior Gateway Routing Protocol (EIGRP).\n\nThe script works by sending an EIGRP Hello packet with the specified Autonomous\nSystem value to the 224.0.0.10 multicast address and listening for EIGRP Update\npackets. The script then parses the update responses for routing information.\n\nIf no A.S value was provided by the user, the script will listen for multicast\nHello packets to grab an A.S value. If no interface was provided as a script\nargument or through the -e option, the script will send packets and listen\nthrough all valid ethernet interfaces simultaneously.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223465"
+}

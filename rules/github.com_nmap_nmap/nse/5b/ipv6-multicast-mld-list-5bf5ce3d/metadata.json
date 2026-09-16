@@ -1,0 +1,19 @@
+{
+  "uuid": "5bf5ce3d-8383-4df5-a2f4-bf0255df2bf5",
+  "title": "ipv6-multicast-mld-list",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Uses Multicast Listener Discovery to list the multicast addresses subscribed to\nby IPv6 multicast listeners on the link-local scope. Addresses in the IANA IPv6\nMulticast Address Space Registry have their descriptions listed.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223508"
+}

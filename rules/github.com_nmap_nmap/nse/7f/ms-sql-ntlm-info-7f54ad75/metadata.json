@@ -1,0 +1,19 @@
+{
+  "uuid": "7f54ad75-a97e-4c8e-a49e-e8cd8c504ecd",
+  "title": "ms-sql-ntlm-info",
+  "format": "nse",
+  "author": "Justin Cacak",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "This script enumerates information from remote Microsoft SQL services with NTLM\nauthentication enabled.\n\nSending a MS-TDS NTLM authentication request with an invalid domain and null\ncredentials will cause the remote service to respond with a NTLMSSP message\ndisclosing information to include NetBIOS, DNS, and OS build version.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223446"
+}

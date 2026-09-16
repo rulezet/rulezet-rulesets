@@ -1,0 +1,19 @@
+{
+  "uuid": "4118c680-0006-409d-8a14-a383102e23b4",
+  "title": "ldap-novell-getpass",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to retrieve the Novell Universal Password for a user. You\nmust already have (and include in script arguments) the username and password for an eDirectory server\nadministrative account.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223467"
+}

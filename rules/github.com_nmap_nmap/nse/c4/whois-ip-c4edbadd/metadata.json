@@ -1,0 +1,19 @@
+{
+  "uuid": "c4edbadd-b1dc-46c9-8922-f3f35c55842c",
+  "title": "whois-ip",
+  "format": "nse",
+  "author": "jah",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Queries the WHOIS services of Regional Internet Registries (RIR) and attempts to retrieve information about the IP Address\nAssignment which contains the Target IP Address.\n\nThe fields displayed contain information about the assignment and the organisation responsible for managing the address\nspace. When output verbosity is requested on the Nmap command line (<code>-v</code>) extra information about the assignment will\nbe displayed.\n\nTo determine which of the RIRs to query for a given Target IP Address this script utilises Assignments Data hosted by IANA.\nThe data is cached locally and then parsed for use as a lookup table.  The locally cached files are refreshed periodically\nto help ensure the data is current.  If, for any reason, these files are not available to the script then a default sequence\nof Whois services are queried in turn until: the desired record is found; or a referral to another (defined) Whois service is\nfound; or until the sequence is exhausted without finding either a referral or the desired record.\n\nThe script will recognize a referral to another Whois service if that service is defined in the script and will continue by\nsending a query to the referred service.  A record is assumed to be the desired one if it does not contain a referral.\n\nTo reduce the number unnecessary queries sent to Whois services a record cache is employed and the entries in the cache can be\napplied to any targets within the range of addresses represented in the record.\n\nIn certain circumstances, the ability to cache responses prevents the discovery of other, smaller IP address assignments\napplicable to the target because a cached response is accepted in preference to sending a Whois query.  When it is important\nto ensure that the most accurate information about the IP address assignment is retrieved the script argument <code>whodb</code>\nshould be used with a value of <code>\"nocache\"</code> (see script arguments).  This reduces the range of addresses that may use a\ncached record to a size that helps ensure that smaller assignments will be discovered.  This option should be used with caution\ndue to the potential to send large numbers of whois queries and possibly be banned from using the services.\n\nIn using this script your IP address will be sent to iana.org. Additionally\nyour address and the address of the target of the scan will be sent to one of\nthe RIRs.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223616"
+}

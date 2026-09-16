@@ -1,0 +1,24 @@
+{
+  "uuid": "a3b90c5d-1260-4a2d-8cf0-8d3b80d0aee9",
+  "title": "rdp-vuln-ms12-020",
+  "format": "nse",
+  "author": "Aleksandar Nikolic",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks if a machine is vulnerable to MS12-020 RDP vulnerability.\n\nThe Microsoft bulletin MS12-020 patches two vulnerabilities: CVE-2012-0152\nwhich addresses a denial of service vulnerability inside Terminal Server, and\nCVE-2012-0002 which fixes a vulnerability in Remote Desktop Protocol. Both are\npart of Remote Desktop Services.\n\nThe script works by checking for the CVE-2012-0152 vulnerability. If this\nvulnerability is not patched, it is assumed that CVE-2012-0002 is not patched\neither. This script can do its check without crashing the target.\n\nThe way this works follows:\n* Send one user request. The server replies with a user id (call it A) and a channel for that user.\n* Send another user request. The server replies with another user id (call it B) and another channel.\n* Send a channel join request with requesting user set to A and requesting channel set to B. If the server replies with a success message, we conclude that the server is vulnerable.\n* In case the server is vulnerable, send a channel join request with the requesting user set to B and requesting channel set to B to prevent the chance of a crash.\n\nReferences:\n* http://technet.microsoft.com/en-us/security/bulletin/ms12-020\n* http://support.microsoft.com/kb/2621440\n* http://zerodayinitiative.com/advisories/ZDI-12-044/\n* http://aluigi.org/adv/termdd_1-adv.txt\n\nOriginal check by by Worawit Wang (sleepya).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2012-0002",
+    "CVE-2012-0152"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223491"
+}

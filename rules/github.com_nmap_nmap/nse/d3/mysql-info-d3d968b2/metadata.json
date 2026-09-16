@@ -1,0 +1,19 @@
+{
+  "uuid": "d3d968b2-9b0c-4efa-9c6b-9234d98e8c57",
+  "title": "mysql-info",
+  "format": "nse",
+  "author": "Kris Katterjohn",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Connects to a MySQL server and prints information such as the protocol and\nversion numbers, thread ID, status, capabilities, and the password salt.\n\nIf service detection is performed and the server appears to be blocking\nour host or is blocked because of too many connections, then this script\nisn't run (see the portrule).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223568"
+}

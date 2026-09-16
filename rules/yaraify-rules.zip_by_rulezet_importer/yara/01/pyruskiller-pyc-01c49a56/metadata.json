@@ -1,0 +1,22 @@
+{
+  "uuid": "01c49a56-a64f-422c-b3b1-51a32a646109",
+  "title": "PyrusKiller_PYC",
+  "format": "yara",
+  "author": "kirkderp",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "PyrusKiller ransomware - Python bytecode (extracted pyc or in-memory)",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223852"
+}

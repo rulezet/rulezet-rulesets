@@ -1,0 +1,21 @@
+{
+  "uuid": "ec0ff59d-486d-4d8a-8d5a-0675069f2ae0",
+  "title": "http-vuln-cve2017-8917",
+  "format": "nse",
+  "author": "Wong Wai Tuck",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "An SQL Injection vulnerability affecting Joomla! 3.7.x before 3.7.1 allows for\nunauthenticated users to execute arbitrary SQL commands. This vulnerability was\ncaused by a new component, <code>com_fields</code>, which was introduced in\nversion 3.7. This component is publicly accessible, which means this can be\nexploited by any malicious individual visiting the site.\n\nThe script attempts to inject an SQL statement that runs the <code>user()</code>\ninformation function on the target website. A successful injection will return\nthe current MySQL user name and host name in the extra_info table.\n\nThis script is based on a Python script written by brianwrf.\n\nReferences:\n* https://blog.sucuri.net/2017/05/sql-injection-vulnerability-joomla-3-7.html\n* https://github.com/brianwrf/Joomla3.7-SQLi-CVE-2017-8917",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2017-8917"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223572"
+}

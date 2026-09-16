@@ -1,0 +1,20 @@
+{
+  "uuid": "cf605208-a5f0-4311-9169-ef3dd9435c01",
+  "title": "http-barracuda-dir-traversal",
+  "format": "nse",
+  "author": "Brendan Coles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to retrieve the configuration settings from a Barracuda\nNetworks Spam & Virus Firewall device using the directory traversal\nvulnerability described at\nhttp://seclists.org/fulldisclosure/2010/Oct/119.\n\nThis vulnerability is in the \"locale\" parameter of\n\"/cgi-mod/view_help.cgi\" or \"/cgi-bin/view_help.cgi\", allowing the\ninformation to be retrieved from a MySQL database dump.  The web\nadministration interface runs on port 8000 by default.\n\nBarracuda Networks Spam & Virus Firewall <= 4.1.1.021 Remote Configuration Retrieval\nOriginal exploit by ShadowHatesYou <Shadow@SquatThis.net>\nFor more information, see:\nhttp://seclists.org/fulldisclosure/2010/Oct/119\nhttp://www.exploit-db.com/exploits/15130/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Virus\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223595"
+}

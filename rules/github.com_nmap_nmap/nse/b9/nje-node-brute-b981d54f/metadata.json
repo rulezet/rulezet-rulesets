@@ -1,0 +1,19 @@
+{
+  "uuid": "b981d54f-a671-46e7-a888-f8c3fbe57084",
+  "title": "nje-node-brute",
+  "format": "nse",
+  "author": "Soldier of Fortran",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "z/OS JES Network Job Entry (NJE) target node name brute force.\n\nNJE node communication is made up of an OHOST and an RHOST. Both fields\nmust be present when conducting the handshake. This script attemtps to\ndetermine the target systems NJE node name.\n\nTo initiate NJE the client sends a 33 byte record containing the type of\nrecord, the hostname (RHOST), IP address (RIP), target (OHOST),\ntarget IP (OIP) and a 1 byte response value (R) as outlined below:\n\n<code>\n0 1 2 3 4 5 6 7 8 9 A B C D E F\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n|  TYPE       |     RHOST     |\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n|  RIP  |  OHOST      | OIP   |\n+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\n| R |\n+-+-+\n</code>\n\n* TYPE: Can either be 'OPEN', 'ACK', or 'NAK', in EBCDIC, padded by spaces to make 8 bytes. This script always send 'OPEN' type.\n* RHOST: Node name of the local machine initiating the connection. Set to 'FAKE'.\n* RIP: Hex value of the local systems IP address. Set to '0.0.0.0'\n* OHOST: The value being enumerated to determine the targets NJE node name.\n* OIP: IP address, in hex, of the target system. Set to '0.0.0.0'.\n* R: The response. NJE will send an 'R' of 0x01 if the OHOST is wrong or 0x04 if the OHOST is correct.\n\nBy default this script will attempt the brute force a mainframes OHOST. If supplied with\nthe argument <code>nje-node-brute.ohost</code> this script will attempt the bruteforce\nthe RHOST, setting OHOST to the value supplied to the argument.\n\nSince most systems will only have one OHOST name, it is recommended to use the\n<code>brute.firstonly</code> script argument.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223420"
+}

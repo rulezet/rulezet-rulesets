@@ -1,0 +1,19 @@
+{
+  "uuid": "13051b15-1ee6-44ae-a0b9-96e968d51cd3",
+  "title": "http-cross-domain-policy",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks the cross-domain policy file (/crossdomain.xml) and the client-acces-policy file (/clientaccesspolicy.xml)\nin web applications and lists the trusted domains. Overly permissive settings enable Cross Site Request Forgery\nattacks and may allow attackers to access sensitive data. This script is useful to detect permissive\nconfigurations and possible domain names available for purchase to exploit the application.\n\nThe script queries instantdomainsearch.com to lookup the domains. This functionality is\nturned off by default, to enable it set the script argument http-cross-domain-policy.domain-lookup.\n\nReferences:\n* http://sethsec.blogspot.com/2014/03/exploiting-misconfigured-crossdomainxml.html\n* http://gursevkalra.blogspot.com/2013/08/bypassing-same-origin-policy-with-flash.html\n* https://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html\n* https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf\n* https://www.owasp.org/index.php/Test_RIA_cross_domain_policy_%28OTG-CONFIG-008%29\n* http://acunetix.com/vulnerabilities/web/insecure-clientaccesspolicy-xml-file",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223436"
+}

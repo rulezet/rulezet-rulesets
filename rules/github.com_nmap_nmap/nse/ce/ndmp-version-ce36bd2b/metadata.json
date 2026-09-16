@@ -1,0 +1,19 @@
+{
+  "uuid": "ce36bd2b-975a-4f43-9a61-9becce0702f5",
+  "title": "ndmp-version",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Retrieves version information from the remote Network Data Management Protocol\n(ndmp) service. NDMP is a protocol intended to transport data between a NAS\ndevice and the backup device, removing the need for the data to pass through\nthe backup server. The following products are known to support the protocol:\n* Amanda\n* Bacula\n* CA Arcserve\n* CommVault Simpana\n* EMC Networker\n* Hitachi Data Systems\n* IBM Tivoli\n* Quest Software Netvault Backup\n* Symantec Netbackup\n* Symantec Backup Exec",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223459"
+}

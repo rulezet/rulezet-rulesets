@@ -1,0 +1,19 @@
+{
+  "uuid": "e923d43a-d17b-4546-8067-0373b223847b",
+  "title": "http-avaya-ipoffice-users",
+  "format": "nse",
+  "author": "Paulino Calderon <calderon@websec.mx>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to enumerate users in Avaya IP Office systems 7.x.\n\nAvaya IP Office systems allow unauthenticated access to the URI '/system/user/scn_user_list'\nwhich returns a XML file containing user information such as display name, full name and\nextension number.\n\n* Tested on Avaya IP Office 7.0(27).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223529"
+}

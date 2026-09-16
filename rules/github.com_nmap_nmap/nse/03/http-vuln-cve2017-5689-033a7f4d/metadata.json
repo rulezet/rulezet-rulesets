@@ -1,0 +1,19 @@
+{
+  "uuid": "033a7f4d-f5a9-4373-9620-284334d9f58b",
+  "title": "http-vuln-cve2017-5689",
+  "format": "nse",
+  "author": "Andrew Orr",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects if a system with Intel Active Management Technology is vulnerable to the INTEL-SA-00075\nprivilege escalation vulnerability (CVE2017-5689).\n\nThis script determines if a target is vulnerable by attempting to perform digest authentication\nwith a blank response parameter. If the authentication succeeds, a HTTP 200 response is received.\n\nReferences:\n* https://www.tenable.com/blog/rediscovering-the-intel-amt-vulnerability",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223494"
+}

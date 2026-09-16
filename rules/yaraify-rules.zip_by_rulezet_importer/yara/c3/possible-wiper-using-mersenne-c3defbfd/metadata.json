@@ -1,0 +1,21 @@
+{
+  "uuid": "c3defbfd-c43f-4267-b455-ccbdacd93a03",
+  "title": "possible_wiper_using_mersenne",
+  "format": "yara",
+  "author": "Nicklas Keijser",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Windows PE < 500 KB containing MT19937 constants and wiper-like imports",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223775"
+}

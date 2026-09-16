@@ -1,0 +1,22 @@
+{
+  "uuid": "2ae3b010-4d7f-4b33-845a-0e93d65c64b1",
+  "title": "p2p-conficker",
+  "format": "nse",
+  "author": "Ron Bowes (with research from Symantec Security Response)",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks if a host is infected with Conficker.C or higher, based on\nConficker's peer to peer communication.\n\nWhen Conficker.C or higher infects a system, it opens four ports: two TCP\nand two UDP. The ports are random, but are seeded with the current week and\nthe IP of the infected host. By determining the algorithm, one can check if\nthese four ports are open, and can probe them for more data.\n\nOnce the open ports are found, communication can be initiated using\nConficker's custom peer to peer protocol.  If a valid response is received,\nthen a valid Conficker infection has been found.\n\nThis check won't work properly on a multihomed or NATed system because the\nopen ports will be based on a nonpublic IP.  The argument\n<code>checkall</code> tells Nmap to attempt communication with every open\nport (much like a version check) and the argument <code>realip</code> tells\nNmap to base its port generation on the given IP address instead of the\nactual IP.\n\nBy default, this will run against a system that has a standard Windows port\nopen (445, 139, 137). The arguments <code>checkall</code> and\n<code>checkconficker</code> will both perform checks regardless of which\nport is open, see the args section for more information.\n\nNote: Ensure your clock is correct (within a week) before using this script!\n\nThe majority of research for this script was done by Symantec Security\nResponse, and some was taken from public sources (most notably the port\nblacklisting was found by David Fifield). A big thanks goes out to everybody\nwho contributed!",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:botnet=\"Conficker\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223524"
+}

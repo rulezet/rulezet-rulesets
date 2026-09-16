@@ -1,0 +1,21 @@
+{
+  "uuid": "2c638b47-a07a-470d-a18b-231de0b17818",
+  "title": "citrix-brute-xml",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to guess valid credentials for the Citrix PN Web Agent XML\nService. The XML service authenticates against the local Windows server\nor the Active Directory.\n\nThis script makes no attempt of preventing account lockout. If the\npassword list contains more passwords than the lockout-threshold\naccounts will be locked.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223601"
+}

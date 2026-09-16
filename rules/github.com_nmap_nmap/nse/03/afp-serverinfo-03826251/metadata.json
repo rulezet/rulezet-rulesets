@@ -1,0 +1,21 @@
+{
+  "uuid": "03826251-e16d-4be9-8433-83b4b27fbc05",
+  "title": "afp-serverinfo",
+  "format": "nse",
+  "author": "Andrew Orr",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Shows AFP server information. This information includes the server's\nhostname, IPv4 and IPv6 addresses, and hardware type (for example\n<code>Macmini</code> or <code>MacBookPro</code>).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223519"
+}

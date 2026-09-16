@@ -1,0 +1,19 @@
+{
+  "uuid": "434fa889-62d8-4705-a9be-69dacdbb11e6",
+  "title": "omp2-enum-targets",
+  "format": "nse",
+  "author": "Henri Doreau",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to retrieve the list of target systems and networks from an OpenVAS Manager server.\n\nThe script authenticates on the manager using provided or previously cracked\ncredentials and gets the list of defined targets for each account.\n\nThese targets will be added to the scanning queue in case\n<code>newtargets</code> global variable is set.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223483"
+}

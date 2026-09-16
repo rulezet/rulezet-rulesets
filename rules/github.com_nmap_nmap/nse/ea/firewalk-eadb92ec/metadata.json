@@ -1,0 +1,19 @@
+{
+  "uuid": "eadb92ec-e5c1-4b2a-9394-318964b19600",
+  "title": "firewalk",
+  "format": "nse",
+  "author": "Henri Doreau",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tries to discover firewall rules using an IP TTL expiration technique known\nas firewalking.\n\nTo determine a rule on a given gateway, the scanner sends a probe to a metric\nlocated behind the gateway, with a TTL one higher than the gateway. If the probe\nis forwarded by the gateway, then we can expect to receive an ICMP_TIME_EXCEEDED\nreply from the gateway next hop router, or eventually the metric itself if it is\ndirectly connected to the gateway. Otherwise, the probe will timeout.\n\nIt starts with a TTL equals to the distance to the target. If the probe timeout,\nthen it is resent with a TTL decreased by one. If we get an ICMP_TIME_EXCEEDED,\nthen the scan is over for this probe.\n\nEvery \"no-reply\" filtered TCP and UDP ports are probed. As for UDP scans, this\nprocess can be quite slow if lots of ports are blocked by a gateway close to the\nscanner.\n\nScan parameters can be controlled using the <code>firewalk.*</code>\noptional arguments.\n\nFrom an original idea of M. Schiffman and D. Goldsmith, authors of the\nfirewalk tool.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223612"
+}

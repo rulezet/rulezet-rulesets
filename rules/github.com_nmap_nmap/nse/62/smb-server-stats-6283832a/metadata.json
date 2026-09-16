@@ -1,0 +1,21 @@
+{
+  "uuid": "6283832a-644d-4a93-a5ad-53f95440a3c4",
+  "title": "smb-server-stats",
+  "format": "nse",
+  "author": "Ron Bowes",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to grab the server's statistics over SMB and MSRPC, which uses TCP\nports 445 or 139.\n\nAn administrator account is required to pull these statistics on most versions\nof Windows, and Vista and above require UAC to be turned down.\n\nSome of the numbers returned here don't feel right to me, but they're definitely\nthe numbers that Windows returns. Take the values here with a grain of salt.\n\nThese statistics are found using a single call to a SRVSVC function,\n<code>NetServerGetStatistics</code>. This packet is parsed incorrectly by Wireshark,\nup to version 1.0.3 (and possibly higher).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223543"
+}

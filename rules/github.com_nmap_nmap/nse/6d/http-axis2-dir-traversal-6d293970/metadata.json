@@ -1,0 +1,19 @@
+{
+  "uuid": "6d293970-fe45-4f28-aded-88638a3dc6ea",
+  "title": "http-axis2-dir-traversal",
+  "format": "nse",
+  "author": "Paulino Calderon <calderon@websec.mx>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Exploits a directory traversal vulnerability in Apache Axis2 version 1.4.1 by\nsending a specially crafted request to the parameter <code>xsd</code>\n(BID 40343). By default it will try to retrieve the configuration file of the\nAxis2 service <code>'/conf/axis2.xml'</code> using the path\n<code>'/axis2/services/'</code> to return the username and password of the\nadmin account.\n\nTo exploit this vulnerability we need to detect a valid service running on the\ninstallation so we extract it from <code>/listServices</code> before exploiting\nthe directory traversal vulnerability.  By default it will retrieve the\nconfiguration file, if you wish to retrieve other files you need to set the\nargument <code>http-axis2-dir-traversal.file</code> correctly to traverse to\nthe file's directory. Ex. <code>../../../../../../../../../etc/issue</code>\n\nTo check the version of an Apache Axis2 installation go to:\nhttp://domain/axis2/services/Version/getVersion\n\nReference:\n* https://www.securityfocus.com/bid/40343\n* https://www.exploit-db.com/exploits/12721/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223435"
+}

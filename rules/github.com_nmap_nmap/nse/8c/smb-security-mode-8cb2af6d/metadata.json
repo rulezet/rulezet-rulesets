@@ -1,0 +1,21 @@
+{
+  "uuid": "8cb2af6d-3464-4242-96c8-0716d6751fe9",
+  "title": "smb-security-mode",
+  "format": "nse",
+  "author": "Ron Bowes",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Returns information about the SMB security level determined by SMB.\n\nHere is how to interpret the output:\n\n* User-level authentication: Each user has a separate username/password that\n  is used to log into the system. This is the default setup of pretty much\n  everything these days.\n* Share-level authentication: The anonymous account should be used to log\n  in, then the password is given (in plaintext) when a share is accessed.\n  All users who have access to the share use this password. This was the\n  original way of doing things, but isn't commonly seen, now. If a server\n  uses share-level security, it is vulnerable to sniffing.\n* Challenge/response passwords supported: If enabled, the server can accept\n  any type of password (plaintext, LM and NTLM, and LMv2 and NTLMv2).  If it\n  isn't set, the server can only accept plaintext passwords. Most servers\n  are configured to use challenge/response these days. If a server is\n  configured to accept plaintext passwords, it is vulnerable to sniffing. LM\n  and NTLM are fairly secure, although there are some brute-force attacks\n  against them.  Additionally, LM and NTLM can fall victim to\n  man-in-the-middle attacks or relay attacks (see MS08-068 or my writeup of\n  it: http://www.skullsecurity.org/blog/?p=110.\n* Message signing: If required, all messages between the client and server\n  must be signed by a shared key, derived from the password and the server\n  challenge. If supported and not required, message signing is negotiated\n  between clients and servers and used if both support and request it. By\n  default, Windows clients don't sign messages, so if message signing isn't\n  required by the server, messages probably won't be signed; additionally,\n  if performing a man-in-the-middle attack, an attacker can negotiate no\n  message signing. If message signing isn't required, the server is\n  vulnerable to man-in-the-middle attacks or SMB-relay attacks.\n\nThis script will allow you to use the <code>smb*</code> script arguments (to\nset the username and password, etc.), but it probably won't ever require\nthem.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223613"
+}

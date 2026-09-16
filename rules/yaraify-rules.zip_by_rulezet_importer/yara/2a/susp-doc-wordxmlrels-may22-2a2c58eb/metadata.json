@@ -1,0 +1,21 @@
+{
+  "uuid": "2a2c58eb-496b-4766-96e1-e05c0262547a",
+  "title": "SUSP_Doc_WordXMLRels_May22",
+  "format": "yara",
+  "author": "Tobias Michalski, Christian Burkard, Wojciech Cieslak",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a suspicious pattern in docx document.xml.rels file as seen in CVE-2022-30190 / Follina exploitation",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2022-30190"
+  ],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223660"
+}

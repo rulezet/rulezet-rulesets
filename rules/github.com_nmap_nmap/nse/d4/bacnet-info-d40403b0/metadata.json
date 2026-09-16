@@ -1,0 +1,21 @@
+{
+  "uuid": "d40403b0-0967-45e7-b06b-db185a432d10",
+  "title": "bacnet-info",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Discovers and enumerates BACNet Devices collects device information based off\nstandard requests. In some cases, devices may not strictly follow the\nspecifications, or may comply with older versions of the specifications, and\nwill result in a BACNET error response. Presence of this error positively\nidentifies the device as a BACNet device, but no enumeration is possible.\n\nNote: Requests and responses are via UDP 47808, ensure scanner will receive UDP\n47808 source and destination responses.\n\nhttp://digitalbond.com",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223565"
+}

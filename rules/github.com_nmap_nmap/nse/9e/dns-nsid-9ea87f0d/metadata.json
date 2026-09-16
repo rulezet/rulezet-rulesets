@@ -1,0 +1,19 @@
+{
+  "uuid": "9ea87f0d-45af-4539-8a2e-a62cbd8cec7f",
+  "title": "dns-nsid",
+  "format": "nse",
+  "author": "John R. Bond",
+  "license": "Simplified (2-clause) BSD license--See https://nmap.org/svn/docs/licenses/BSD-simplified",
+  "license_verified": true,
+  "description": "Retrieves information from a DNS nameserver by requesting\nits nameserver ID (nsid) and asking for its id.server and\nversion.bind values. This script performs the same queries as the following\ntwo dig commands:\n  - dig CH TXT bind.version @target\n  - dig +nsid CH TXT id.server @target\n\nReferences:\n[1]http://www.ietf.org/rfc/rfc5001.txt\n[2]http://www.ietf.org/rfc/rfc4892.txt",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223599"
+}

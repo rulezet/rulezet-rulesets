@@ -1,0 +1,19 @@
+{
+  "uuid": "030fdacf-bd3d-42e8-ab6e-afca33ec5257",
+  "title": "http-favicon",
+  "format": "nse",
+  "author": "Vlatko Kosturjak",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Gets the favicon (\"favorites icon\") from a web page and matches it against a\ndatabase of the icons of known web applications. If there is a match, the name\nof the application is printed; otherwise the MD5 hash of the icon data is\nprinted.\n\nIf the script argument <code>favicon.uri</code> is given, that relative URI is\nalways used to find the favicon. Otherwise, first the page at the root of the\nweb server is retrieved and parsed for a <code><link rel=\"icon\"></code>\nelement. If that fails, the icon is looked for in <code>/favicon.ico</code>. If\na <code><link></code> favicon points to a different host or port, it is ignored.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223557"
+}

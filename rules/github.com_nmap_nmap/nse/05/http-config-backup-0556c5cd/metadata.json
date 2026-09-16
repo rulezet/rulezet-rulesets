@@ -1,0 +1,23 @@
+{
+  "uuid": "0556c5cd-1e1f-4ba8-902e-957b5d82d9d0",
+  "title": "http-config-backup",
+  "format": "nse",
+  "author": "Riccardo Cecolin",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Checks for backups and swap files of common content management system\nand web server configuration files.\n\nWhen web server files are edited in place, the text editor can leave\nbackup or swap files in a place where the web server can serve them. The\nscript checks for these files:\n\n* <code>wp-config.php</code>: WordPress\n* <code>config.php</code>: phpBB, ExpressionEngine\n* <code>configuration.php</code>: Joomla\n* <code>LocalSettings.php</code>: MediaWiki\n* <code>/mediawiki/LocalSettings.php</code>: MediaWiki\n* <code>mt-config.cgi</code>: Movable Type\n* <code>mt-static/mt-config.cgi</code>: Movable Type\n* <code>settings.php</code>: Drupal\n* <code>.htaccess</code>: Apache\n\nAnd for each of these file applies the following transformations (using\n<code>config.php</code> as an example):\n\n* <code>config.bak</code>: Generic backup.\n* <code>config.php.bak</code>: Generic backup.\n* <code>config.php~</code>: Vim, Gedit.\n* <code>#config.php#</code>: Emacs.\n* <code>config copy.php</code>: Mac OS copy.\n* <code>Copy of config.php</code>: Windows copy.\n* <code>config.php.save</code>: GNU Nano.\n* <code>.config.php.swp</code>: Vim swap.\n* <code>config.php.swp</code>: Vim swap.\n* <code>config.php.old</code>: Generic backup.\n\nThis script is inspired by the CMSploit program by Feross Aboukhadijeh:\nhttp://www.feross.org/cmsploit/.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"macOS\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223504"
+}

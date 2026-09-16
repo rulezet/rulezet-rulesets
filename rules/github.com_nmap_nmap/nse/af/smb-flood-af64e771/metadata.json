@@ -1,0 +1,21 @@
+{
+  "uuid": "af64e771-2f91-4e23-ac52-2647a73b853e",
+  "title": "smb-flood",
+  "format": "nse",
+  "author": "Ron Bowes",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Exhausts a remote SMB server's connection limit by by opening as many\nconnections as we can.  Most implementations of SMB have a hard global\nlimit of 11 connections for user accounts and 10 connections for\nanonymous. Once that limit is reached, further connections are\ndenied. This script exploits that limit by taking up all the\nconnections and holding them.\n\nThis works better with a valid user account, because Windows reserves\none slot for valid users. So, no matter how many anonymous connections\nare taking up spaces, a single valid user can still log in.\n\nThis is *not* recommended as a general purpose script, because a) it\nis designed to harm the server and has no useful output, and b) it\nnever ends (until timeout).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223419"
+}

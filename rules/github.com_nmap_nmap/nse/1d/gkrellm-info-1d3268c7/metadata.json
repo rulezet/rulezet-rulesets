@@ -1,0 +1,21 @@
+{
+  "uuid": "1d3268c7-ec8f-4718-b508-91d7be7a095e",
+  "title": "gkrellm-info",
+  "format": "nse",
+  "author": "Patrik Karlsson",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Queries a GKRellM service for monitoring information. A single round of\ncollection is made, showing a snapshot of information at the time of the\nrequest.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223421"
+}

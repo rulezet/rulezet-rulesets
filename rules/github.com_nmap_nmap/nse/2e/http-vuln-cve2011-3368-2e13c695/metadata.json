@@ -1,0 +1,21 @@
+{
+  "uuid": "2e13c695-f876-40b4-8af6-619c31b89fb7",
+  "title": "http-vuln-cve2011-3368",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tests for the CVE-2011-3368 (Reverse Proxy Bypass) vulnerability in Apache HTTP server's reverse proxy mode.\nThe script will run 3 tests:\n* the loopback test, with 3 payloads to handle different rewrite rules\n* the internal hosts test. According to Contextis, we expect a delay before a server error.\n* The external website test. This does not mean that you can reach a LAN ip, but this is a relevant issue anyway.\n\nReferences:\n* http://www.contextis.com/research/blog/reverseproxybypass/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2011-3368"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223545"
+}

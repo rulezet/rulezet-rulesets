@@ -1,0 +1,20 @@
+{
+  "uuid": "2438c5ba-2a1f-4ccf-a3b1-f6b0fca8ae6a",
+  "title": "EXE_gh0st_RootKit_first_stage_March2024",
+  "format": "yara",
+  "author": "Yashraj Solanki - Cyber Threat Intelligence Analyst at Bridewell",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects gh0st Root Kit malware Dropper which contains an embedded second stage payload based on PE properties",
+  "source": "yaraify-rules.zip by Rulezet Importer",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-23",
+  "last_modified": "2026-04-23",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223853"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "ee150adf-b078-4cae-bf54-cb052f152810",
+  "title": "ssh-auth-methods",
+  "format": "nse",
+  "author": "Devin Bjelland",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Returns authentication methods that a SSH server supports.\n\nThis is in the \"intrusive\" category because it starts an authentication with a\nusername which may be invalid. The abandoned connection will likely be logged.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223478"
+}

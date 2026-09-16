@@ -1,0 +1,19 @@
+{
+  "uuid": "78b78403-4bdc-4e7e-a630-8c3e45db68a3",
+  "title": "mikrotik-routeros-version",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects MikroTik RouterOS version from devices running the Winbox service on port 8291.\n\nThis script attempts to send a specific payload to elicit a response containing the version information.\n\nThe provided payload can be used for all RouterOs versions until 6.49.17. Though version 7.1+ are not supported",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223505"
+}

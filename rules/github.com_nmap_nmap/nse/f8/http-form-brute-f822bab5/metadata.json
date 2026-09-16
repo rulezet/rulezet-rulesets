@@ -1,0 +1,19 @@
+{
+  "uuid": "f822bab5-d314-464c-bbfe-d08116f23383",
+  "title": "http-form-brute",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Performs brute force password auditing against http form-based authentication.\n\nThis script uses the unpwdb and brute libraries to perform password\nguessing. Any successful guesses are stored in the nmap registry, using\nthe creds library, for other scripts to use.\n\nThe script automatically attempts to discover the form method, action, and\nfield names to use in order to perform password guessing. (Use argument\npath to specify the page where the form resides.) If it fails doing so\nthe form components can be supplied using arguments method, path, uservar,\nand passvar. The same arguments can be used to selectively override\nthe detection outcome.\n\nThe script contains a small database of known web apps' form information. This\nimproves form detection and also allows for form mangling and custom success\ndetection functions. If the script arguments aren't expressive enough, users\nare encouraged to edit the database to fit.\n\nAfter attempting to authenticate using a HTTP GET or POST request the script\nanalyzes the response and attempts to determine whether authentication was\nsuccessful or not. The script analyzes this by checking the response using\nthe following rules:\n\n1. If the response was empty the authentication was successful.\n2. If the onsuccess argument was provided then the authentication either\n   succeeded or failed depending on whether the response body contained\n   the message/pattern passed in the onsuccess argument.\n3. If no onsuccess argument was passed, and if the onfailure argument\n   was provided then the authentication either succeeded or failed\n   depending on whether the response body does not contain\n   the message/pattern passed in the onfailure argument.\n4. If neither the onsuccess nor onfailure argument was passed and the\n   response contains a form field named the same as the submitted\n   password parameter then the authentication failed.\n5. Authentication was successful.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223609"
+}

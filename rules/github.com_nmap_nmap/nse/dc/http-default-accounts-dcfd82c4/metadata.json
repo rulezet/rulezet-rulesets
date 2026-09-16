@@ -1,0 +1,20 @@
+{
+  "uuid": "dcfd82c4-0d0e-4428-a2ad-4b413ace9290",
+  "title": "http-default-accounts",
+  "format": "nse",
+  "author": "Unknown",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Tests for access with default credentials used by a variety of web applications\nand devices. It detects applications by matching web responses of known paths\nand launching a login routine using default credentials when found.\n\nThis script depends on a fingerprint file containing the target's information:\nname, category, location paths, default credentials, and detection and login\nlogic routines.\n\nYou may select a category if you wish to reduce the number of requests.\nWe have categories like:\n* <code>web</code> - Web applications\n* <code>routers</code> - Routers\n* <code>security</code> - CCTVs and other security devices\n* <code>industrial</code> - Industrial systems\n* <code>printer</code> - Network-attached printers and printer servers\n* <code>storage</code> - Storage devices\n* <code>virtualization</code> - Virtualization systems\n* <code>console</code> - Remote consoles\n\nYou can also select a specific fingerprint or a brand, such as BIG-IQ or\nSiemens. This matching is based on case-insensitive words in the fingerprint\nname. This means that \"nas\" will select fingerprint \"Seagate BlackArmor NAS\",\nbut not \"Netgear ReadyNAS\".\n\nFor a fingerprint to be used, it needs to satisfy both the category and name\ncriteria.\n\nBy default, the script produces output only when default credentials are found,\nwhile staying silent when the target only matches some fingerprints (but no\ncredentials are found). With increased verbosity (option -v), the script will\nalso report all matching fingerprints.\n\nPlease help improve this script by adding new entries to\nnselib/data/http-default-accounts-fingerprints.lua\n\nRemember each fingerprint must have:\n* <code>name</code> - Descriptive name\n* <code>category</code> - Category\n* <code>login_combos</code> - Table of login combinations\n* <code>paths</code> - Table containing possible path locations of the target\n* <code>login_check</code> - Login function of the target\n\nIn addition, a fingerprint should have:\n* <code>target_check</code> - Target validation function. If defined, it will\n  be called to validate the target before attempting any logins.\n* <code>cpe</code> - Official CPE Dictionary entry (see https://nvd.nist.gov/cpe.cfm)\n\nDefault fingerprint file: /nselib/data/http-default-accounts-fingerprints.lua\nThis script was based on http-enum.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:exploit-kit=\"Nuclear\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223549"
+}

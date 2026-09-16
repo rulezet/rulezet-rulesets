@@ -1,0 +1,21 @@
+{
+  "uuid": "5fabdca3-a5a4-4d07-bcdb-99abc7785c9a",
+  "title": "http-vuln-cve2014-2126",
+  "format": "nse",
+  "author": "Patrik Karlsson <patrik@cqure.net>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects whether the Cisco ASA appliance is vulnerable to the Cisco ASA ASDM\nPrivilege Escalation Vulnerability (CVE-2014-2126).",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2014-2126"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223531"
+}

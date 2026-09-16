@@ -1,0 +1,21 @@
+{
+  "uuid": "565ef008-9299-41b8-bc4e-8a0c6c80cd3c",
+  "title": "http-vuln-cve2011-3192",
+  "format": "nse",
+  "author": "Duarte Silva <duarte.silva@serializing.me>",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Detects a denial of service vulnerability in the way the Apache web server\nhandles requests for multiple overlapping/simple ranges of a page.\n\nReferences:\n* https://seclists.org/fulldisclosure/2011/Aug/175\n* https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192\n* https://www.tenable.com/plugins/nessus/55976",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2011-3192"
+  ],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223591"
+}

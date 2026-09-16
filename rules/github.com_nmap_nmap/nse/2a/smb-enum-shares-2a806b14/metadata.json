@@ -1,0 +1,22 @@
+{
+  "uuid": "2a806b14-92c3-4caa-bd12-aec43f68aa64",
+  "title": "smb-enum-shares",
+  "format": "nse",
+  "author": "Ron Bowes",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Attempts to list shares using the <code>srvsvc.NetShareEnumAll</code> MSRPC function and\nretrieve more information about them using <code>srvsvc.NetShareGetInfo</code>. If access\nto those functions is denied, a list of common share names are checked.\n\nFinding open shares is useful to a penetration tester because there may be private files\nshared, or, if it's writable, it could be a good place to drop a Trojan or to infect a file\nthat's already there. Knowing where the share is could make those kinds of tests more useful,\nexcept that determining where the share is requires administrative privileges already.\n\nRunning <code>NetShareEnumAll</code> will work anonymously against Windows 2000, and\nrequires a user-level account on any other Windows version. Calling <code>NetShareGetInfo</code>\nrequires an administrator account on all versions of Windows up to 2003, as well as Windows Vista\nand Windows 7, if UAC is turned down.\n\nEven if <code>NetShareEnumAll</code> is restricted, attempting to connect to a share will always\nreveal its existence. So, if <code>NetShareEnumAll</code> fails, a pre-generated list of shares,\nbased on a large test network, are used. If any of those succeed, they are recorded.\n\nAfter a list of shares is found, the script attempts to connect to each of them anonymously,\nwhich divides them into \"anonymous\", for shares that the NULL user can connect to, or \"restricted\",\nfor shares that require a user account.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223550"
+}

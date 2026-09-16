@@ -1,0 +1,19 @@
+{
+  "uuid": "7c899184-603b-4ebb-a32f-a504df69a92a",
+  "title": "hostmap-robtex",
+  "format": "nse",
+  "author": "Arturo",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Discovers hostnames that resolve to the target's IP address by querying the online Robtex service at http://ip.robtex.com/.\n\n*TEMPORARILY DISABLED* due to changes in Robtex's API. See https://www.robtex.com/api/",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223562"
+}

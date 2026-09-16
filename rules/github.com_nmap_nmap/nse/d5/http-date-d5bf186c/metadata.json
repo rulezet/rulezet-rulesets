@@ -1,0 +1,19 @@
+{
+  "uuid": "d5bf186c-bab0-428c-9e9d-2b26c5ff656e",
+  "title": "http-date",
+  "format": "nse",
+  "author": "David Fifield",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Gets the date from HTTP-like services. Also prints how much the date\ndiffers from local time. Local time is the time the HTTP request was\nsent, so the difference includes at least the duration of one RTT.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223559"
+}

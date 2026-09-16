@@ -1,0 +1,19 @@
+{
+  "uuid": "b965a1d0-a6c7-49f4-ae88-13d1629bec53",
+  "title": "sip-enum-users",
+  "format": "nse",
+  "author": "Hani Benhabiles",
+  "license": "Same as Nmap--See https://nmap.org/book/man-legal.html",
+  "license_verified": false,
+  "description": "Enumerates a SIP server's valid extensions (users).\n\nThe script works by sending REGISTER SIP requests to the server with the\nspecified extension and checking for the response status code in order\nto know if an extension is valid. If a response status code is 401 or\n407, it means that the extension is valid and requires authentication. If the\nresponse status code is 200, it means that the extension exists and doesn't\nrequire any authentication while a 403 response status code means that\nextension exists but access is forbidden. To skip false positives, the script\nbegins by sending a REGISTER request for a random extension and checking for\nresponse status code.",
+  "source": "https://github.com/nmap/nmap",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-04-07",
+  "last_modified": "2026-04-07",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/223449"
+}
