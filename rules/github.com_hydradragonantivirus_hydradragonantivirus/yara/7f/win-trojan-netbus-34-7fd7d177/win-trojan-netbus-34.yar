@@ -1,0 +1,9 @@
+rule Win_Trojan_Netbus_34
+{
+strings:
+	$a0 = { a358f8f2659106c3375de8ab81cdd87ffcc2ab1842e6f0dee2a4215accd05c7499a769d1dfcbbf18805ab97743cbec3a33230573b0ee020023bc4cc38e64fb48a7a8972a126b5ea2140e36717fecefa8bb05d663848eb313e9757c1799717fd194303e97 }
+
+
+condition:
+	$a0
+}
