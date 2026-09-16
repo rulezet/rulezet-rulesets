@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"WordPress Sniplets RCE attempt"; flow:established,to_server; uricontent:"/wp-content/plugins/sniplets/modules/execute.php?text="; nocase; sid:1003073; rev:1; reference:cve,CVE-2008-1059; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2008-1059;)

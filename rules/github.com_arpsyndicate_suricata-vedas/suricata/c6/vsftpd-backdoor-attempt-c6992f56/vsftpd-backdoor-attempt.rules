@@ -1,0 +1,1 @@
+alert tcp any any -> any 21 (msg:"VSFTPD backdoor attempt"; content:"USER nergal:"; sid:1002608; rev:1; reference:cve,CVE-2011-2523; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2011-2523;)

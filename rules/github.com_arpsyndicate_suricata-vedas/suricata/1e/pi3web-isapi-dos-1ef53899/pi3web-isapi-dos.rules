@@ -1,0 +1,1 @@
+alert http any any -> $HOME_NET any (msg:"Pi3Web ISAPI DoS"; flow:established,to_server; http.method; content:"GET"; http.uri; content:"/isapi/"; nocase; distance:0; content:"users.txt"; sid:1007052; rev:1; reference:cve,CVE-2008-6938; reference:url,https://vedas.arpsyndicate.io/?vuln=CVE-2008-6938;)
