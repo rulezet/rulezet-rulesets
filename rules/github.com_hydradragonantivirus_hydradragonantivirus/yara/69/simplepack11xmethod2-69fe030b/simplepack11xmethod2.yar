@@ -1,0 +1,13 @@
+rule SimplePack11XMethod2 : bagie
+{
+	meta:
+		author="_pusher_"
+		date = "2015-11"
+	strings:
+		$a0 = { 4D 5A 90 EB 01 00 52 E9 ?? 01 00 00 50 45 00 00 4C 01 02 00 00 00 00 00 00 00 00 00 00 00 00 00 E0 00 0F 03 0B 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0C 00 00 00 00 ?? ?? ?? 00 10 00 00 00 02 00 00 01 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00 }
+		$a1 = { EB 01 CD 64 A1 30 00 00 00 EB 01 CD 8B 48 0C E3 6F EB 01 CD 05 AC 00 00 00 EB 01 CD 66 81 38 93 08 EB 01 CD 75 0A EB 01 CD B8 38 FF FF FF EB 14 EB 01 CD 66 81 38 28 0A 75 4A EB 01 CD B8 1A FF FF FF }
+
+	condition:
+										$a0 at 0 and
+		$a1
+}

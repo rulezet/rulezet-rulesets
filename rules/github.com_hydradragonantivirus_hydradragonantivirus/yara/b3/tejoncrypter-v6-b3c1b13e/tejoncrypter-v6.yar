@@ -1,0 +1,14 @@
+import "pe"
+rule TejonCrypter_v6 : RDG
+{
+	meta:
+		author="_pusher_"
+		date = "2016-07"
+	strings:
+		$a0 = { 68 3B 4A 73 AD 73 48 73 E4 73 48 73 16 9B 47 73 6B 62 49 73 81 D9 47 73 51 CB 47 73 86 CB 47 73 4D D1 47 73 51 DF 46 73 65 74 48 73 26 6E 48 73 73 6E 48 73 FD 7B 48 73 3F 7C 48 73 CF 99 46 73 EE 7D 48 73 8E 5B 47 73 E5 A0 3A 73 51 C9 47 73 E2 99 46 73 13 3A 4A 73 E0 98 46 73 24 46 48 73 1B 7C 49 73 04 88 49 73 6A 7C 48 73 91 7D 48 73 93 0D 48 73 2D 8E 48 73 5D D0 49 73 A9 C6 47 73 E5 DC 47 73 FB 0C 48 73 5C 54 48 73 C2 40 47 73 CD 10 48 73 BA ED 47 73 45 60 47 73 A4 35 3A 73 DE 6B 48 73 F1 6B 48 73 E2 6C 48 73 A7 30 47 73 }
+		$aa0 = { E8 90 90 45 65 76 2F B0 ?? C8 ?? 72 AC 60 C7 05 ?? 92 3E C2 32 DC 53 8E E6 D8 97 4F 75 B4 F9 B4 ?? 26 2B 3A 5E 03 A1 75 46 B4 68 20 B3 31 93 1E 2B B2 DE 62 78 59 5F 76 1F CC DE 49 07 7B }
+		$aa1 = { 0D 0A E8 90 90 45 65 76 2F B0 ?? C8 ?? 72 AC 60 C7 05 ?? 92 3E C2 32 DC 53 8E E6 D8 97 4F 75 B4 B8 B4 ?? 26 2B 3A 5E 03 A1 75 46 B4 68 20 B3 31 93 1E 2B B2 DE 62 78 59 5F 76 1F CC DE 49 07 7B }
+	condition:
+		$a0 or
+				for any of ($aa*) : ($ at (pe.sections[pe.number_of_sections-1].raw_data_offset+pe.sections[pe.number_of_sections-1].raw_data_size))
+}

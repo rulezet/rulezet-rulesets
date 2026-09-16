@@ -1,0 +1,13 @@
+import "pe"
+rule Themida_WinLicense1_XNoCompressionSecureEngine__OreansTechnologies
+{
+	meta:
+		author = "PEiD"
+		description = "Themida/WinLicense 1.X NoCompression SecureEngine -> Oreans Technologies"
+		group = "Auto"
+		function = "0"
+	strings:
+		$a0 = { 8B C5 8B D4 60 E8 00 00 00 00 5D 81 ED ?? ?? ?? ?? 89 95 ?? ?? ?? ?? 89 B5 ?? ?? ?? ?? 89 85 ?? ?? ?? ?? 83 BD ?? ?? ?? ?? ?? 74 0C 8B E8 8B E2 B8 01 00 00 00 C2 0C 00 8B 44 24 24 89 85 ?? ?? ?? ?? 6A 45 E8 A3 00 00 00 68 9A 74 83 07 E8 DF 00 00 00 68 25 4B 89 0A E8 D5 00 00 00 E9 ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+	condition:
+		$a0 at pe.entry_point
+}

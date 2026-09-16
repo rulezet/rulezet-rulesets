@@ -1,0 +1,12 @@
+rule eXPressor_PacK1_5_0_X__CGSoftLabs
+{
+	meta:
+		author = "PEiD"
+		description = "eXPressor.PacK 1.5.0.X -> CGSoftLabs"
+		group = "Auto"
+		function = "0"
+	strings:
+		$a0 = { 55 8B EC 81 EC ?? ?? ?? ?? 53 56 57 83 A5 ?? ?? ?? ?? ?? F3 EB 0C 65 58 50 72 2D 76 2E 31 2E 35 2E 00 83 7D 0C ?? 75 23 8B 45 08 A3 ?? ?? ?? ?? 6A 04 68 00 10 00 00 68 20 03 00 00 6A 00 FF 15 ?? ?? ?? ?? A3 ?? ?? ?? ?? EB 04 }
+	condition:
+		$a0
+}
