@@ -1,0 +1,21 @@
+{
+  "uuid": "ac5e4e0a-817a-4d16-b39b-1ae079491c8b",
+  "title": "TrojanDownloader_Win32_Banload_BGV",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "TrojanDownloader:Win32/Banload.BGV,SIGNATURE_TYPE_PEHSTR_EXT,04 00 04 00 05 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/330436"
+}
