@@ -1,0 +1,9 @@
+rule Trojan_BAT_Bodegun_MBJZ_MTB{
+	meta:
+		description = "Trojan:BAT/Bodegun.MBJZ!MTB,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 03 00 00 "
+		
+	strings :
+		$a_03_0 = {08 09 17 20 00 10 00 00 6f ?? 00 00 0a fe 01 13 10 11 10 2c b9 } 		$a_01_1 = {65 66 2d 37 37 62 32 2d 34 33 31 66 2d 39 33 65 30 2d 66 33 31 33 64 34 38 66 65 63 34 65 } 		$a_01_2 = {76 69 72 75 73 74 68 69 6e 67 32 2e 65 78 65 } 	condition:
+		((#a_03_0  & 1)*1+(#a_01_1  & 1)*1+(#a_01_2  & 1)*1) >=3
+ 
+}

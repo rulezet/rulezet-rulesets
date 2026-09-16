@@ -1,0 +1,21 @@
+{
+  "uuid": "2fccee04-8351-4b0d-b581-db5559a4ab7f",
+  "title": "Trojan_BAT_CobaltStrike_CSZ_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:BAT/CobaltStrike.CSZ!MTB,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:tool=\"Cobalt Strike\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/290649"
+}
