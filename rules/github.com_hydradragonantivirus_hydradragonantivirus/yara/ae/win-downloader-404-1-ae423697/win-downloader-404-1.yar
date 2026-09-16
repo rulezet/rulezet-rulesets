@@ -1,0 +1,9 @@
+rule Win_Downloader_404_1
+{
+strings:
+	$a0 = { 8f5ab9577f5491a7286061f6830f3a6b2b6bb6f5b2f17dfcf2a9277c7a14edb9ecad4f0ea4f0769a85409089d4b9ca62b6b26eb9b13e916870815eaecf4a99c6896756ba0e6051f689ff0840da16a1fbffe0cc797a6ab690d55cf7f251acaa1627ed8934 }
+
+
+condition:
+	$a0
+}

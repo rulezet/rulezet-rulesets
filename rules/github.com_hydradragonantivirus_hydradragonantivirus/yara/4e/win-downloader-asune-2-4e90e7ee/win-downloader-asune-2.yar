@@ -1,0 +1,9 @@
+rule Win_Downloader_Asune_2
+{
+strings:
+	$a0 = { 3851f13144cd56d94b6b7e1d3b9bd374893f8dac2b2ad87db153d60ff410434266b78ad2c885d4de8c6bab3f8aac33e5976464461ae4bce336e2fefded58f8a3361a24ebee3412ab2e8731b1d910f0f224df09d95ff4a7eb66edda9e8979f1ec8ec158a4caa347c998ee26f8de577e718c78c83327e607d1 }
+
+
+condition:
+	$a0
+}
