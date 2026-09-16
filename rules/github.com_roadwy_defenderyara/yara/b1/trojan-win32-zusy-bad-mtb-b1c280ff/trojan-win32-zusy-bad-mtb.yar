@@ -1,0 +1,9 @@
+rule Trojan_Win32_Zusy_BAD_MTB{
+	meta:
+		description = "Trojan:Win32/Zusy.BAD!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {33 c1 88 85 ?? ?? ?? ?? 0f b7 95 ?? ?? ?? ?? 0f b6 85 ?? ?? ?? ?? 03 95 ?? ?? ?? ?? 8d 4c 10 2b 88 8d } 	condition:
+		((#a_03_0  & 1)*2) >=2
+ 
+}

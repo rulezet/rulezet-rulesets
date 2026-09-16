@@ -1,0 +1,9 @@
+rule Trojan_Win32_Raccrypt_GV_MTB_2{
+	meta:
+		description = "Trojan:Win32/Raccrypt.GV!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {bd a3 53 78 c7 84 24 ?? ?? ?? ?? ?? ?? c4 0d c7 84 24 ?? ?? ?? ?? c5 00 1d 75 c7 84 24 ?? ?? ?? ?? 84 50 74 21 c7 84 24 ?? ?? ?? ?? 08 d3 e3 58 } 	condition:
+		((#a_02_0  & 1)*1) >=1
+ 
+}

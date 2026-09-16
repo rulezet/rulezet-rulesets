@@ -1,0 +1,9 @@
+rule Trojan_Win32_FoggyWeb_A_dha{
+	meta:
+		description = "Trojan:Win32/FoggyWeb.A!dha,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 04 00 00 "
+		
+	strings :
+		$a_03_0 = {48 83 f9 40 72 75 66 0f 6f 15 ?? ?? ?? ?? 48 8b d1 48 83 e2 c0 66 0f 1f 44 00 00 f3 0f 6f 44 04 ?? 66 0f 6f ca 66 0f ef c8 f3 0f 7f 4c 04 ?? f3 0f 6f 44 05 ?? 66 0f 6f ca 66 0f ef c8 } 		$a_03_1 = {66 0f 6f ca 66 0f ef c8 f3 0f 7f 4c 05 ?? f3 0f 6f 44 05 ?? 66 0f 6f ca 66 0f ef c8 f3 0f 7f 4c 05 ?? 48 83 c0 40 48 3b c2 72 ?? 48 3b c1 73 ?? 66 90 90 80 74 04 70 ?? 48 ff c0 48 3b c1 } 		$a_03_2 = {44 89 03 4d 8d 5b f0 41 8b c9 41 8b d2 41 8b c5 44 8b d1 44 8b ?? 41 c1 c2 05 41 8b 43 0c 45 8b e8 41 33 c0 41 c1 c9 09 44 2b c8 44 8b c2 } 		$a_03_3 = {45 33 4b 10 44 89 4b 04 41 8b 43 14 41 33 c1 41 c1 c0 03 44 2b d0 45 33 53 10 44 89 53 08 41 8b ?? 41 33 43 18 44 2b c0 45 33 43 10 49 83 ef 01 44 89 43 0c } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1+(#a_03_2  & 1)*1+(#a_03_3  & 1)*1) >=2
+ 
+}
