@@ -1,0 +1,9 @@
+rule Win_Trojan_Andromeda_4
+{
+strings:
+	$a0 = { 050090490300e84500eb0100be2a02468bfeeb01008a0430e45030e03a060501740758fec4ebf200008af4588b0e0601eb0100ac30f0aae2fae9eb000000b42ccd21c300e8f7ffd0e28ac2c30000a00401e8f0ff }
+
+
+condition:
+	$a0
+}

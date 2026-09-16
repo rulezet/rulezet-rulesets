@@ -1,0 +1,9 @@
+rule Win_Trojan_Alfons_1
+{
+strings:
+	$a0 = { 431e651e621e631e7265671e6c1e621e731e501e791e6e1e7a1e201e4e61671e761e491e761e651e681e661e2d1e6a1e6a1e6a1e2e1e70796e1e7a1e6e1e691e2e1e611e721e671effffe91ee41ee51ee61ee7 }
+
+
+condition:
+	$a0
+}
