@@ -1,0 +1,23 @@
+{
+  "uuid": "4f246ded-10cc-4c50-b213-512a7eae8e09",
+  "title": "Suspicious VBoxDrvInst.exe Parameters",
+  "format": "sigma",
+  "author": "Konstantin Grishchenko, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect VBoxDrvInst.exe run with parameters allowing processing INF file.\nThis allows to create values in the registry and install drivers.\nFor example one could use this technique to obtain persistence via modifying one of Run or RunOnce registry keys\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365319"
+}

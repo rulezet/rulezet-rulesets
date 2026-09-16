@@ -1,0 +1,24 @@
+{
+  "uuid": "0140a584-4f73-4445-a699-fb6da594bfda",
+  "title": "Invoke-Obfuscation Via Stdin",
+  "format": "sigma",
+  "author": "Nikita Nazarov, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects Obfuscated Powershell via Stdin in Scripts",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365122"
+}

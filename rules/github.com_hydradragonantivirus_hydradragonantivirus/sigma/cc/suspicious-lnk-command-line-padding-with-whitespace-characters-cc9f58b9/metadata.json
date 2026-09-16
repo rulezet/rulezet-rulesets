@@ -1,0 +1,23 @@
+{
+  "uuid": "cc9f58b9-91cf-4b9d-80cd-b18093683a44",
+  "title": "Suspicious LNK Command-Line Padding with Whitespace Characters",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects exploitation of LNK file command-line length discrepancy, where attackers hide malicious commands beyond the 260-character UI limit while the actual command-line argument field supports 4096 characters using whitespace padding (e.g., 0x20, 0x09-0x0D).\nAdversaries insert non-printable whitespace characters (e.g., Line Feed \\x0A, Carriage Return \\x0D) to pad the visible section of the LNK file, pushing malicious commands past the UI-visible boundary.\nThe hidden payload, executed at runtime but invisible in Windows Explorer properties, enables stealthy execution and evasion—commonly used for social engineering attacks.\nThis rule flags suspicious use of such padding observed in real-world attacks.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365011"
+}

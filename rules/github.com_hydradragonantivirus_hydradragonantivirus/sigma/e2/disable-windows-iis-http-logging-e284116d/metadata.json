@@ -1,0 +1,24 @@
+{
+  "uuid": "e284116d-10e8-4eb1-a9e3-1e5fb9b7c60c",
+  "title": "Disable Windows IIS HTTP Logging",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Disables HTTP logging on a Windows IIS web server as seen by Threat Group 3390 (Bronze Union)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562.002",
+    "T1685.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364932"
+}

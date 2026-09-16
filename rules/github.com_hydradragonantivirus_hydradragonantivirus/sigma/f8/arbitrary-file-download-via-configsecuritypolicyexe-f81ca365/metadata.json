@@ -1,0 +1,23 @@
+{
+  "uuid": "f81ca365-1f52-454d-928d-31c2b0c2195f",
+  "title": "Arbitrary File Download Via ConfigSecurityPolicy.EXE",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of \"ConfigSecurityPolicy.EXE\", a binary part of Windows Defender used to manage settings in Windows Defender.\nUsers can configure different pilot collections for each of the co-management workloads.\nIt can be abused by attackers in order to upload or download files.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1567"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364945"
+}

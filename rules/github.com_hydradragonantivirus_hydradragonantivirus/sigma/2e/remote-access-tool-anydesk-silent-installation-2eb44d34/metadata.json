@@ -1,0 +1,23 @@
+{
+  "uuid": "2eb44d34-aa13-450d-a493-35d1e11a33ad",
+  "title": "Remote Access Tool - AnyDesk Silent Installation",
+  "format": "sigma",
+  "author": "Ján Trenčanský",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects AnyDesk Remote Desktop silent installation. Which can be used by attackers to gain remote access.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365046"
+}

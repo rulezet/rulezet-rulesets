@@ -1,0 +1,24 @@
+{
+  "uuid": "2c139bc8-2078-421b-a8d4-293b269854c4",
+  "title": "Potentially Suspicious Usage Of Qemu",
+  "format": "sigma",
+  "author": "Muhammad Faisal (@faisalusuf), Hunter Juhan (@threatHNTR)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects potentially suspicious execution of the Qemu utility in a Windows environment.\nThreat actors have leveraged this utility and this technique for achieving network access as reported by Kaspersky.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1090",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364925"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "65ea3967-539e-4384-8176-ee2048bcc2bb",
+  "title": "PowerShell Base64 Encoded WMI Classes",
+  "format": "sigma",
+  "author": "Christian Burkard (Nextron Systems), Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects calls to base64 encoded WMI class such as \"Win32_ShadowCopy\", \"Win32_ScheduledJob\", etc.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365262"
+}

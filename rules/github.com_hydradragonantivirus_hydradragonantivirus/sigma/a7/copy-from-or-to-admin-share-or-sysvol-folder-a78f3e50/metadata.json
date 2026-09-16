@@ -1,0 +1,26 @@
+{
+  "uuid": "a78f3e50-d3bb-4f40-9532-f10de7bf49fb",
+  "title": "Copy From Or To Admin Share Or Sysvol Folder",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), oscd.community, Teymur Kheirkhabarov @HeirhabarovT, Zach Stanford @svch0st, Nasreddine Bencherchali",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a copy command or a copy utility execution to or from an Admin share or remote",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.002",
+    "T1039",
+    "T1048"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365312"
+}

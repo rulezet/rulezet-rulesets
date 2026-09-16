@@ -1,0 +1,23 @@
+{
+  "uuid": "113a0ae5-7555-44a8-a09d-c5f95caffe9e",
+  "title": "Process Memory Dump via RdrLeakDiag.EXE",
+  "format": "sigma",
+  "author": "Cedric MAURUGEON, Florian Roth (Nextron Systems), Swachchhanda Shrawan Poudel, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of the Microsoft Windows Resource Leak Diagnostic tool \"rdrleakdiag.exe\" to dump process memory",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365295"
+}

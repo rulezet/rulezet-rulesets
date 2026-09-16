@@ -1,0 +1,23 @@
+{
+  "uuid": "e14ce992-1473-40d3-b48d-32e5d8da948b",
+  "title": "Arbitrary MSI Download Via Devinit.EXE",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a certain command line flag combination used by \"devinit.exe\", which can be abused as a LOLBIN to download arbitrary MSI packages on a Windows system",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365310"
+}

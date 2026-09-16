@@ -1,0 +1,25 @@
+{
+  "uuid": "017cd4bc-cfc6-4bb1-a5c4-bbeb861848ea",
+  "title": "Remote Access Tool - Renamed MeshAgent Execution - Windows",
+  "format": "sigma",
+  "author": "Norbert Jaśniewicz (AlphaSOC)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of a renamed instance of the Remote Monitoring and Management (RMM) tool, MeshAgent.\nRMM tools such as MeshAgent are commonly utilized by IT administrators for legitimate remote support and system management.\nHowever, malicious actors may exploit these tools by renaming them to bypass detection mechanisms, enabling unauthorized access and control over compromised systems.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.003",
+    "T1219.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365351"
+}

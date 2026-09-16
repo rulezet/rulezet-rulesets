@@ -1,0 +1,23 @@
+{
+  "uuid": "854e41e2-a96f-4f1e-a26f-f37304097d40",
+  "title": "Files Added To An Archive Using Rar.EXE",
+  "format": "sigma",
+  "author": "Timur Zinniatullin, E.M. Anhaus, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects usage of \"rar\" to add files to an archive for potential compression. An adversary may compress data (e.g. sensitive documents) that is collected prior to exfiltration in order to make it portable and minimize the amount of data sent over the network.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1560.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364966"
+}

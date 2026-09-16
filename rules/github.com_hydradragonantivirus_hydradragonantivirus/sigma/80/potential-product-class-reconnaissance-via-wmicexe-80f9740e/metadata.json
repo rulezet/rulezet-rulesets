@@ -1,0 +1,25 @@
+{
+  "uuid": "80f9740e-87ec-4671-bde4-b93f3bd3da17",
+  "title": "Potential Product Class Reconnaissance Via Wmic.EXE",
+  "format": "sigma",
+  "author": "Michael Haag, Florian Roth (Nextron Systems), juju4, oscd.community, Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of WMIC in order to get a list of firewall, antivirus and antispywware products.\nAdversaries often enumerate security products installed on a system to identify security controls and potential ways to evade detection or disable protection mechanisms.\nThis information helps them plan their next attack steps and choose appropriate techniques to bypass security measures.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1082"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364930"
+}

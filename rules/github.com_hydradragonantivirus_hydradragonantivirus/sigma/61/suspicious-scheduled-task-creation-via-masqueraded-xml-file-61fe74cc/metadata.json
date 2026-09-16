@@ -1,0 +1,24 @@
+{
+  "uuid": "61fe74cc-4d95-4673-bbd0-3bc4257513fd",
+  "title": "Suspicious Scheduled Task Creation via Masqueraded XML File",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel, Elastic (idea)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the creation of a scheduled task using the \"-XML\" flag with a file without the '.xml' extension. This behavior could be indicative of potential defense evasion attempt during persistence",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036.005",
+    "T1053.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365154"
+}

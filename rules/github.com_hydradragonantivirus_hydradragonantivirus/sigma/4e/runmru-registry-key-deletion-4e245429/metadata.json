@@ -1,0 +1,23 @@
+{
+  "uuid": "4e245429-85e4-474b-8ca9-b14f3b9ae390",
+  "title": "RunMRU Registry Key Deletion",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects deletion of the RunMRU registry key, which stores the history of commands executed via the Run dialog.\nIn the clickfix techniques, the phishing lures instruct users to open a run dialog through (Win + R) and execute malicious commands.\nAdversaries may delete this key to cover their tracks after executing commands.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365005"
+}

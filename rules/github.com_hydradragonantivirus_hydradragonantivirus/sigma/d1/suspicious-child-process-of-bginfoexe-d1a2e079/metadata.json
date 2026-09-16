@@ -1,0 +1,25 @@
+{
+  "uuid": "d1a2e079-1e93-4f63-a991-d035ee430b8b",
+  "title": "Suspicious Child Process Of BgInfo.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious child processes of \"BgInfo.exe\" which could be a sign of potential abuse of the binary to proxy execution via external VBScript",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.005",
+    "T1202",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364956"
+}

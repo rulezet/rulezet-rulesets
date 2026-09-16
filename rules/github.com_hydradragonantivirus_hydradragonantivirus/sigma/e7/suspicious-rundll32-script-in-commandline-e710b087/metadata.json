@@ -1,0 +1,23 @@
+{
+  "uuid": "e710b087-51cd-4236-afb1-c5403f3949f3",
+  "title": "Suspicious Rundll32 Script in CommandLine",
+  "format": "sigma",
+  "author": "frack113, Zaw Min Htun (ZETA)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious process related to rundll32 based on arguments",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365391"
+}

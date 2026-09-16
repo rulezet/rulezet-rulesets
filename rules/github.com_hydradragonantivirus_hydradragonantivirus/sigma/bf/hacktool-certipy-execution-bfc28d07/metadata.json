@@ -1,0 +1,24 @@
+{
+  "uuid": "bfc28d07-97bd-424d-9b15-3b40be61a146",
+  "title": "HackTool - Certipy Execution",
+  "format": "sigma",
+  "author": "pH-T (Nextron Systems), Sittikorn Sangrattanapitak",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects Certipy execution, a tool for Active Directory Certificate Services enumeration and abuse based on PE metadata characteristics and common command line arguments.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1649"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365305"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "369595b1-9c74-4d18-b544-33140fc1ee15",
+  "title": "Winrs Local Command Execution",
+  "format": "sigma",
+  "author": "Liran Ravich, Nasreddine Bencherchali",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of Winrs.exe where it is used to execute commands locally.\nCommands executed this way are launched under Winrshost.exe and can represent proxy execution used for defense evasion or lateral movement.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.006",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365177"
+}

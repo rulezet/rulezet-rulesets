@@ -1,0 +1,23 @@
+{
+  "uuid": "4c89dfbe-5b14-4627-9c1e-d24536e979cb",
+  "title": "Security Event Log Cleared",
+  "format": "sigma",
+  "author": "Saw Winn Naung",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Checks for event id 1102 which indicates the security event log was cleared.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365408"
+}

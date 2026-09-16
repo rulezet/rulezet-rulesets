@@ -1,0 +1,25 @@
+{
+  "uuid": "4903cd25-f1a3-4fc4-8559-c809ca9070ea",
+  "title": "LSASS Dump Keyword In CommandLine",
+  "format": "sigma",
+  "author": "E.M. Anhaus, Tony Lambert, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the presence of the keywords \"lsass\" and \".dmp\" in the commandline, which could indicate a potential attempt to dump or create a dump of the lsass process.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:tool=\"ProcDump\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365086"
+}

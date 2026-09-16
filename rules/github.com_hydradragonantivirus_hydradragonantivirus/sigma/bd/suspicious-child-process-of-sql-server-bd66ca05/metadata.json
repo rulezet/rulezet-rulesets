@@ -1,0 +1,24 @@
+{
+  "uuid": "bd66ca05-651d-4c36-b853-d4aaea76375a",
+  "title": "Suspicious Child Process Of SQL Server",
+  "format": "sigma",
+  "author": "FPT.EagleEye Team, wagga",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious child processes of the SQLServer process. This could indicate potential RCE or SQL Injection.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365253"
+}

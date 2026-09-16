@@ -1,0 +1,24 @@
+{
+  "uuid": "8de06344-e40c-4f48-885a-bc874a343536",
+  "title": "Process Creation Using Sysnative Folder",
+  "format": "sigma",
+  "author": "Max Altgelt (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects process creation events that use the Sysnative folder (common for CobaltStrike spawns)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1055"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365284"
+}

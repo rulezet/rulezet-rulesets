@@ -1,0 +1,23 @@
+{
+  "uuid": "7cf510d5-f398-49bb-9fbd-6d414a3c4bf1",
+  "title": "DSInternals Suspicious PowerShell Cmdlets",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Nounou Mbeiri",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects execution and usage of the DSInternals PowerShell module. Which can be used to perform what might be considered as suspicious activity such as dumping DPAPI backup keys or manipulating NTDS.DIT files.\nThe DSInternals PowerShell Module exposes several internal features of Active Directory and Azure Active Directory. These include FIDO2 and NGC key auditing, offline ntds.dit file manipulation, password auditing, DC recovery from IFM backups and password hash calculation.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365125"
+}

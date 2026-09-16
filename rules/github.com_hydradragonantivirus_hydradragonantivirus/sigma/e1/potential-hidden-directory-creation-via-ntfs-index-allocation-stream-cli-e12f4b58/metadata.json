@@ -1,0 +1,23 @@
+{
+  "uuid": "e12f4b58-4f36-4b5c-ad22-d5b5b163a298",
+  "title": "Potential Hidden Directory Creation Via NTFS INDEX_ALLOCATION Stream - CLI",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Scoubi (@ScoubiMtl)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects command line containing reference to the \"::$index_allocation\" stream, which can be used as a technique to prevent access to folders or files from tooling such as \"explorer.exe\" or \"powershell.exe\"\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1564.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365224"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "66c7cc32-9264-4f44-8de8-fbd43c3abba0",
+  "title": "Suspicious File Download Using Office Application",
+  "format": "sigma",
+  "author": "Beyu Denis, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the usage of one of three Microsoft office applications (Word, Excel, PowerPoint) to download arbitrary files",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365386"
+}

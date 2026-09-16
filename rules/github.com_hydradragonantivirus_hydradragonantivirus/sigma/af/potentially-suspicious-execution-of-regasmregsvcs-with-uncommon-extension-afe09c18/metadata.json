@@ -1,0 +1,23 @@
+{
+  "uuid": "afe09c18-19a6-4e51-8f91-490e00b47e79",
+  "title": "Potentially Suspicious Execution Of Regasm/Regsvcs With Uncommon Extension",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects potentially suspicious execution of the Regasm/Regsvcs utilities with an uncommon extension.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.009"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365127"
+}

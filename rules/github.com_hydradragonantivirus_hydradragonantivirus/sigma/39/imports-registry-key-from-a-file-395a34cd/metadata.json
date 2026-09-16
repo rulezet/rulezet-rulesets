@@ -1,0 +1,23 @@
+{
+  "uuid": "395a34cd-225b-4196-bd2b-78f20de3e72f",
+  "title": "Imports Registry Key From a File",
+  "format": "sigma",
+  "author": "Oddvar Moe, Sander Wiebing, oscd.community",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the import of the specified file to the registry with regedit.exe.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364958"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "3a2b2eb7-f45a-446f-85dc-4b2cd0579bb6",
+  "title": "Office Applications Spawning Wmi Cli Alternate",
+  "format": "sigma",
+  "author": "Vadim Khrykov (ThreatIntel), Cyb3rEng (Rule)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Initial execution of malicious document calls wmic to execute the file with regsvr32",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047",
+    "T1204.002",
+    "T1218.010"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365389"
+}

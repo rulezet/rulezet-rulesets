@@ -1,0 +1,21 @@
+{
+  "uuid": "f50db2fc-2c56-481f-b103-1274c3626e9c",
+  "title": "Remote Access Tool - AnyDesk Execution With Known Revoked Signing Certificate",
+  "format": "sigma",
+  "author": "Sai Prashanth Pulisetti, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of an AnyDesk binary with a version prior to 8.0.8.\nPrior to version 8.0.8, the Anydesk application used a signing certificate that got compromised by threat actors.\nUse this rule to detect instances of older versions of Anydesk using the compromised certificate\nThis is recommended in order to avoid attackers leveraging the certificate and signing their binaries to bypass detections.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365256"
+}

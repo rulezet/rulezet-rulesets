@@ -1,0 +1,23 @@
+{
+  "uuid": "52edcf9d-ba2e-4658-9ff4-70561aa8e338",
+  "title": "Tasks Folder Evasion",
+  "format": "sigma",
+  "author": "Sreeman",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "The Tasks folder in system32 and syswow64 are globally writable paths.\nAdversaries can take advantage of this and load or influence any script hosts or ANY .NET Application\nin Tasks to load and execute a custom assembly into cscript, wscript, regsvr32, mshta, eventvwr\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1574.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365347"
+}

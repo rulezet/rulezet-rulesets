@@ -1,0 +1,21 @@
+{
+  "uuid": "3d8115b2-1538-4953-88e2-9ff067f307f0",
+  "title": "Copy .DMP/.DUMP Files From Remote Share Via Cmd.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects usage of the copy builtin cmd command to copy files with the \".dmp\"/\".dump\" extension from a remote share",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364998"
+}

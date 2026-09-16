@@ -1,0 +1,26 @@
+{
+  "uuid": "505865fe-8790-474a-8e55-119b978b348a",
+  "title": "Attempts of Kerberos Coercion Via DNS SPN Spoofing",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the presence of \"UWhRC....AAYBAAAA\" pattern in command line.\nThe pattern \"1UWhRCAAAAA..BAAAA\" is a base64-encoded signature that corresponds to a marshaled CREDENTIAL_TARGET_INFORMATION structure.\nAttackers can use this technique to coerce authentication from victim systems to attacker-controlled hosts.\nIt is one of the strong indicators of a Kerberos coercion attack, where adversaries manipulate DNS records\nto spoof Service Principal Names (SPNs) and redirect authentication requests like in CVE-2025-33073.\nIf you see this pattern in the command line, it is likely an attempt to add spoofed Service Principal Names (SPNs) to DNS records,\nor checking for the presence of such records through the `nslookup` command.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1187",
+    "T1557.001"
+  ],
+  "cve": [
+    "CVE-2025-33073"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365187"
+}

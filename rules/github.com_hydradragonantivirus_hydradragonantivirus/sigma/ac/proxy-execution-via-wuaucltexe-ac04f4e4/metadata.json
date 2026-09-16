@@ -1,0 +1,24 @@
+{
+  "uuid": "ac04f4e4-7c4e-4754-abda-b1b12a59fb12",
+  "title": "Proxy Execution Via Wuauclt.EXE",
+  "format": "sigma",
+  "author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research), Florian Roth (Nextron Systems), Sreeman, FPT.EagleEye Team",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the use of the Windows Update Client binary (wuauclt.exe) for proxy execution.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365077"
+}

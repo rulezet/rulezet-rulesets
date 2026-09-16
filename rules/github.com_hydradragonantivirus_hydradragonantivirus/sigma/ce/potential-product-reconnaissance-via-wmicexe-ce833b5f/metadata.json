@@ -1,0 +1,23 @@
+{
+  "uuid": "ce833b5f-ad55-43bb-93fb-07b2055a7136",
+  "title": "Potential Product Reconnaissance Via Wmic.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of WMIC in order to get a list of firewall and antivirus products",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1047"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/364931"
+}

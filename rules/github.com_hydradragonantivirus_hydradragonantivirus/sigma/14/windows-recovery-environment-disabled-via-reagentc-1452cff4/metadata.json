@@ -1,0 +1,23 @@
+{
+  "uuid": "1452cff4-56b1-4132-809b-9293be0ac823",
+  "title": "Windows Recovery Environment Disabled Via Reagentc",
+  "format": "sigma",
+  "author": "Daniel Koifman (KoifSec), Michael Vilshin",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects attempts to disable windows recovery environment using Reagentc.\nReAgentc.exe is a command-line tool in Windows used to manage the Windows Recovery Environment (WinRE).\nIt allows users to enable, disable, and configure WinRE, which is used for troubleshooting and repairing common boot issues.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365257"
+}

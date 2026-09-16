@@ -1,0 +1,23 @@
+{
+  "uuid": "dd3da37d-d507-428b-8ed5-7a93e580bfd5",
+  "title": "Potential Suspicious Browser Launch From Document Reader Process",
+  "format": "sigma",
+  "author": "Joseph Kamau",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects when a browser process or browser tab is launched from an application that handles document files such as Adobe, Microsoft Office, etc. And connects to a web application over http(s), this could indicate a possible phishing attempt.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365025"
+}

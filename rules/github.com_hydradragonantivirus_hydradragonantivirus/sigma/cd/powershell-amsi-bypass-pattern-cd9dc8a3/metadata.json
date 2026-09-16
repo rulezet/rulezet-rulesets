@@ -1,0 +1,23 @@
+{
+  "uuid": "cd9dc8a3-3060-4a5e-8c60-9156d6e62ea9",
+  "title": "PowerShell AMSI Bypass Pattern",
+  "format": "sigma",
+  "author": "@Kostastsale",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects attempts to disable AMSI in the command line. It is possible to bypass AMSI by disabling it before loading the main payload.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365418"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "bc0e5b28-42ae-4a74-bfc8-e9716ab66ef1",
+  "title": "UAC Bypass WSReset",
+  "format": "sigma",
+  "author": "Christian Burkard (Nextron Systems)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the pattern of UAC Bypass via WSReset usable by default sysmon-config",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365293"
+}

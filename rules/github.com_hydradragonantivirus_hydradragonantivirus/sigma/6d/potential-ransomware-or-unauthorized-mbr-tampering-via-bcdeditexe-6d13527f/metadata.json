@@ -1,0 +1,25 @@
+{
+  "uuid": "6d13527f-94c5-4506-b56a-60c6529fd123",
+  "title": "Potential Ransomware or Unauthorized MBR Tampering Via Bcdedit.EXE",
+  "format": "sigma",
+  "author": "@neu5ron",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects potential malicious and unauthorized usage of bcdedit.exe",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1542.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365354"
+}

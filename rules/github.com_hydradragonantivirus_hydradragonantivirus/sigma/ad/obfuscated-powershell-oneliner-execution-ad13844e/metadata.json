@@ -1,0 +1,24 @@
+{
+  "uuid": "ad13844e-e73d-4566-8182-453bf22bebd9",
+  "title": "Obfuscated PowerShell OneLiner Execution",
+  "format": "sigma",
+  "author": "@Kostastsale, TheDFIRReport",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of a specific OneLiner to download and execute powershell modules in memory.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365263"
+}

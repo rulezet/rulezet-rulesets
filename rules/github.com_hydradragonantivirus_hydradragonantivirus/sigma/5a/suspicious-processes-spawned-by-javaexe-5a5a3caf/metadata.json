@@ -1,0 +1,21 @@
+{
+  "uuid": "5a5a3caf-61ca-40a0-9370-95b3fc533ba3",
+  "title": "Suspicious Processes Spawned by Java.EXE",
+  "format": "sigma",
+  "author": "Andreas Hunkeler (@Karneades), Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious processes spawned from a Java host process which could indicate a sign of exploitation (e.g. log4j)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365035"
+}

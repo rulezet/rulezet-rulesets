@@ -1,0 +1,23 @@
+{
+  "uuid": "e2df4f9f-e9fd-4f19-a255-05678e1a0f8a",
+  "title": "RegAsm.EXE Execution Without CommandLine Flags or Files",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the execution of \"RegAsm.exe\" without a commandline flag or file, which might indicate potential process injection activity.\nUsually \"RegAsm.exe\" should point to a dedicated DLL file or call the help with the \"/?\" flag.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.009"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365121"
+}

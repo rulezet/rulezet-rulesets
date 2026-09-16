@@ -1,0 +1,25 @@
+{
+  "uuid": "a9f77519-a7ca-4361-9de5-a77a2ae2dbf5",
+  "title": "Execute MSDT.EXE Using Diagcab File",
+  "format": "sigma",
+  "author": "GossiTheDog, frack113",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects diagcab leveraging the \"ms-msdt\" handler or the \"msdt.exe\" binary to execute arbitrary commands as seen in CVE-2022-30190",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [
+    "CVE-2022-30190"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365419"
+}

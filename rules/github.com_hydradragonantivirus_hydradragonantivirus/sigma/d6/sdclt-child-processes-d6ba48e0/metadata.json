@@ -1,0 +1,24 @@
+{
+  "uuid": "d6ba48e0-0a92-4a01-b28a-de74d553bd22",
+  "title": "Sdclt Child Processes",
+  "format": "sigma",
+  "author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "A General detection for sdclt spawning new processes. This could be an indicator of sdclt being used for bypass UAC techniques.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365135"
+}

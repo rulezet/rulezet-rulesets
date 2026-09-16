@@ -1,0 +1,23 @@
+{
+  "uuid": "07f066f8-dec1-4ea4-acca-765c5e91971d",
+  "title": "Run Once Task Execution as Configured in Registry",
+  "format": "sigma",
+  "author": "Avneet Singh @v3t0_, oscd.community, Christopher Peacock @SecurePeacock (updated)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This rule detects the execution of Run Once task as configured in the registry",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365277"
+}

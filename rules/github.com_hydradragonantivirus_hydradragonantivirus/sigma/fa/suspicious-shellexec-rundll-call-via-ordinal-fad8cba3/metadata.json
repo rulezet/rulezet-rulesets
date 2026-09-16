@@ -1,0 +1,25 @@
+{
+  "uuid": "fad8cba3-a4cf-4ba4-9c26-b0ea6d446d07",
+  "title": "Suspicious ShellExec_RunDLL Call Via Ordinal",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects suspicious call to the \"ShellExec_RunDLL\" exported function of SHELL32.DLL through the ordinal number to launch other commands.\nAdversary might only use the ordinal number in order to bypass existing detection that alert on usage of ShellExec_RunDLL on CommandLine.\n",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/365043"
+}
