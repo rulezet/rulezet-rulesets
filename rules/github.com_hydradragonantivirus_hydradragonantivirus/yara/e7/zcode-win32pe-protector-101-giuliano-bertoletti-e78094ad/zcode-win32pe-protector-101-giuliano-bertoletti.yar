@@ -1,0 +1,10 @@
+import "pe"
+rule _ZCode_Win32PE_Protector_101__Giuliano_Bertoletti_
+{
+	meta:
+		description = "ZCode Win32/PE Protector 1.01 -> Giuliano Bertoletti"
+	strings:
+		$0 = {E9 12 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? E9 FB FF FF FF C3 68 ?? ?? ?? ?? 64 FF 35}
+	condition:
+		$0 at pe.entry_point
+}

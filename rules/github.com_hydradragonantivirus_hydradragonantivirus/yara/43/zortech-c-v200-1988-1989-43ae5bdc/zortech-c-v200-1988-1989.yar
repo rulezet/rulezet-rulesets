@@ -1,0 +1,10 @@
+import "pe"
+rule _Zortech_C_v200_1988_1989_
+{
+	meta:
+		description = "Zortech C v2.00 1988, 1989"
+	strings:
+		$0 = {FA B8 ?? ?? 8E D8 8C ?? ?? ?? 26 8B ?? ?? ?? 89 1E ?? ?? 8B D8 2B 1E ?? ?? 89 1E}
+	condition:
+		$0 at pe.entry_point
+}

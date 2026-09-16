@@ -1,0 +1,10 @@
+import "pe"
+rule _Exact_Audio_Copy__UnknownCompiler_
+{
+	meta:
+		description = "Exact Audio Copy -> (UnknownCompiler)"
+	strings:
+		$0 = {E8 ?? ?? ?? 00 31 ED 55 89 E5 81 EC ?? 00 00 00 8D BD ?? FF FF FF B9 ?? 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? 00}
+	condition:
+		$0 at pe.entry_point
+}

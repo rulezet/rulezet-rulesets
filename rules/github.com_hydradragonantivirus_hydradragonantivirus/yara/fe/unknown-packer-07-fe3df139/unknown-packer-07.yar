@@ -1,0 +1,10 @@
+import "pe"
+rule _Unknown_packer_07_
+{
+	meta:
+		description = "Unknown packer (07)"
+	strings:
+		$0 = {8C C8 05 ?? ?? 50 B8 ?? ?? 50 B0 ?? 06 8C D2 06 83}
+	condition:
+		$0 at pe.entry_point
+}
