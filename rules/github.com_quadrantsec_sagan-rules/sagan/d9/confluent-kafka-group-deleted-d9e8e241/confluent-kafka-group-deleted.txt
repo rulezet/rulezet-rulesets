@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[CONFLUENT] Kafka Group Deleted"; json_content: ".data.methodName", "kafka.DeleteGroups"; json_content: ".data.authorizationInfo.granted", "true"; classtype: configuration-change; reference: url,docs.confluent.io/cloud/current/access-management/audit-logging/cloud-audit-log-concepts.html; sid:5005939; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[CLOUDGENIX] Major severity Alarm for Not Cleared Status"; content: "STATUS|3d 22|Not cleared"; content: "SEVERITY|3d 22|major; normalize; flexbits: isnotset,not_cleared,track ip_username; flexbits_pause: 600; classtype: program-error; sid:5005778; rev: 1;)
