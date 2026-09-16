@@ -1,0 +1,9 @@
+rule Win_Trojan_Docadd_3
+{
+strings:
+	$a0 = { 587f0eb2b708da1be335eccc256256c2e4a2662d24ab57e577489a5420e84a5dde627a3e44ecfafe1fb1edf91f13c1f79f0fc1f4636ddefc5f93f0bc1f47603faca4dffdffa7eb4f14c029d818586cebee7dca6b697bcf3efa134f8f279acde36d2d9b3949b1d21374b13aea1d0e966b18919c292e12a65e80d47022fab9aa7d4cb13f394c24c943ca51c502a88ca1acf2998c4ce040 }
+
+
+condition:
+	$a0
+}
