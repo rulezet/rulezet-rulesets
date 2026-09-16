@@ -1,0 +1,22 @@
+{
+  "uuid": "20431436-5609-43da-baf6-0e967d9583e5",
+  "title": "Trojan_Win32_ClickFix_AF_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/ClickFix.AF!MTB,SIGNATURE_TYPE_CMDHSTR_EXT,ffffffd4 00 ffffffd4 00 14 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/278391"
+}

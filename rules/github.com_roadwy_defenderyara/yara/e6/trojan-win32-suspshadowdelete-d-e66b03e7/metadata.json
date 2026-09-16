@@ -1,0 +1,22 @@
+{
+  "uuid": "e66b03e7-2141-4a6e-882e-3c86d1ecb62f",
+  "title": "Trojan_Win32_SuspShadowDelete_D",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/SuspShadowDelete.D,SIGNATURE_TYPE_CMDHSTR_EXT,02 00 02 00 01 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/277926"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "cbcb95b9-0ecc-4b06-8cb3-ad24d4bb223b",
+  "title": "Trojan_Win32_Rpdactaele_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Rpdactaele.A,SIGNATURE_TYPE_PEHSTR_EXT,ffffff83 00 ffffff83 00 07 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/278138"
+}
