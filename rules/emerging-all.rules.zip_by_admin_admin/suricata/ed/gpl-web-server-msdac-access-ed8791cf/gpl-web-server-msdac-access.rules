@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER msdac access"; flow:established,to_server; http.uri; content:"/msdac/"; nocase; reference:nessus,11032; classtype:web-application-activity; sid:2101285; rev:11; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_16;)

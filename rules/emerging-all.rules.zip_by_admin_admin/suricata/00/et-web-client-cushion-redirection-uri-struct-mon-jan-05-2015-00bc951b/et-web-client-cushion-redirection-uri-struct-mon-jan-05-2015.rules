@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET WEB_CLIENT Cushion Redirection URI Struct Mon Jan 05 2015"; flow:established,to_server; urilen:13; http.uri; content:"/get_gift.php"; fast_pattern; classtype:trojan-activity; sid:2020091; rev:4; metadata:created_at 2015_01_05, signature_severity Major, updated_at 2024_03_17;)

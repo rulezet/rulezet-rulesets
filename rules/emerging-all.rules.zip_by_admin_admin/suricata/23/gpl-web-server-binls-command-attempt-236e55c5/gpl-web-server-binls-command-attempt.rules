@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER /bin/ls| command attempt"; flow:established,to_server; http.uri; content:"/bin/ls|7C|"; nocase; classtype:web-application-attack; sid:2101368; rev:10; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_16;)

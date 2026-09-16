@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET CURRENT_EVENTS RedDotv2 Jar March 18 2013"; flow:established,to_server; http.uri; content:"/sexy.jar"; fast_pattern; classtype:trojan-activity; sid:2016594; rev:8; metadata:created_at 2013_03_19, signature_severity Major, updated_at 2024_03_17;)

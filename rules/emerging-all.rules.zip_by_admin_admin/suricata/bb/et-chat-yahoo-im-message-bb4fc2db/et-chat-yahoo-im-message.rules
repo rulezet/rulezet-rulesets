@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any <> $EXTERNAL_NET any (msg:"ET CHAT Yahoo IM message"; flow:established; content:"YMSG"; depth: 4; classtype:policy-violation; sid:2001260; rev:7; metadata:created_at 2010_07_30, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_17;)

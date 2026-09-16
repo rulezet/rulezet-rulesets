@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 5222 (msg:"GPL CHAT Google Talk Startup"; flow:established,to_server; content:"google.com"; nocase; content:"jabber|3A|client"; nocase; threshold: type limit, track by_src, count 1, seconds 300; classtype:policy-violation; sid:2100877; rev:4; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_17;)

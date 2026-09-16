@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 23 -> any any (msg:"ET INFO Cisco Device New Config Built"; flow:established; content:"Building configuration..."; nocase; classtype:not-suspicious; sid:2001240; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_17;)

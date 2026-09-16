@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET P2P Gnutella Connect"; flow:established,to_server; content:"GNUTELLA CONNECT/"; nocase; depth:17; reference:url,www.gnutella.com; classtype:policy-violation; sid:2001664; rev:8; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_17;)

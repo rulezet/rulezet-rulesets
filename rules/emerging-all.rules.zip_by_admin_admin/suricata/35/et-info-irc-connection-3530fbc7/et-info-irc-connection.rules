@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ET INFO IRC connection"; flow:established; content:"Welcome to the "; content:"IRC Network"; nocase; classtype:misc-activity; sid:2000356; rev:6; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_17;)

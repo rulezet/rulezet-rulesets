@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER /usr/bin/perl execution attempt"; flow:established,to_server; http.uri; content:"/usr/bin/perl"; nocase; classtype:web-application-attack; sid:2101355; rev:9; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_16;)

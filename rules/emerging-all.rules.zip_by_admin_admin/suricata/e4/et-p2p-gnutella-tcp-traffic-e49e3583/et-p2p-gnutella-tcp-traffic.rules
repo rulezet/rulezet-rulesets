@@ -1,0 +1,1 @@
+alert tcp any 1024: -> any 1024: (msg:"ET P2P Gnutella TCP Traffic"; flow:established,to_server; content:"GNUTELLA"; depth:8; content:"200 OK|0d 0a|"; within:15; threshold: type both,track by_src,count 5,seconds 360; classtype:policy-violation; sid:2007801; rev:5; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_17;)

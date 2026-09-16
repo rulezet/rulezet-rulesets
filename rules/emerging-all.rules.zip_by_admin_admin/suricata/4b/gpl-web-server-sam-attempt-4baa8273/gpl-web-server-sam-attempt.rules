@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER SAM Attempt"; flow:established,to_server; http.uri; content:"sam._"; nocase; reference:url,www.ciac.org/ciac/bulletins/h-45.shtml; classtype:web-application-attack; sid:2100988; rev:10; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_16;)

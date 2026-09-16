@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Incredisearch.com Spyware Ping"; flow:established,to_server; http.uri; content:"/ping.asp"; nocase; http.host; content:"incredisearch.com"; fast_pattern; classtype:pup-activity; sid:2001793; rev:11; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_17;)

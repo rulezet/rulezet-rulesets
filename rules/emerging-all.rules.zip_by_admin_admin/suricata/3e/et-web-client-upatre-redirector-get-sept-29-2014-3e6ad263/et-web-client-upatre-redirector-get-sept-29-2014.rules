@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET WEB_CLIENT Upatre redirector GET Sept 29 2014"; flow:established,to_server; flowbits:set,et.exploitkitlanding; http.uri; content:".php?h="; fast_pattern; pcre:"/^\d+&w=\d+&ua=.+&e=1$/R"; classtype:trojan-activity; sid:2019311; rev:5; metadata:created_at 2014_09_29, signature_severity Major, updated_at 2024_03_17;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET P2P Soulseek"; flow:established; content:"slsknet"; reference:url,www.slsknet.org; classtype:policy-violation; sid:2001188; rev:10; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_17;)

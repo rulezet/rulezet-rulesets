@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP MyWaySearch Products Spyware User Agent"; flow:established,to_server; http.user_agent; content:"MyWay"; reference:url,www.funwebproducts.com; classtype:pup-activity; sid:2002079; rev:20; metadata:created_at 2010_07_30, confidence High, signature_severity Minor, updated_at 2024_03_17;)

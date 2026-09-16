@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER /usr/bin/id command attempt"; flow:established,to_server; http.uri; content:"/usr/bin/id"; nocase; classtype:web-application-attack; sid:2101332; rev:9; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_16;)

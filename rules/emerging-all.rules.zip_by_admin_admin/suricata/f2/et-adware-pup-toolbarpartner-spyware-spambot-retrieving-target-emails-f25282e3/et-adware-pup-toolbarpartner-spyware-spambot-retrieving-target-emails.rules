@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP ToolbarPartner Spyware Spambot Retrieving Target Emails"; flow:established,to_server; http.uri; content:"/mailz.php?id="; nocase; reference:url,toolbarpartner.com; classtype:pup-activity; sid:2001895; rev:10; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_17;)

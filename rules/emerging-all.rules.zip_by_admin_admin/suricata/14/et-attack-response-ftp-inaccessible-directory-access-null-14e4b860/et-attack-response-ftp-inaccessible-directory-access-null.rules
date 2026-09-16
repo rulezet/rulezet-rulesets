@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET 21 (msg:"ET ATTACK_RESPONSE FTP inaccessible directory access NULL"; flow:established; content:"/NULL/"; nocase; classtype:string-detect; sid:2000508; rev:9; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_17, reviewed_at 2024_09_16;)

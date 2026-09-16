@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL SCAN cybercop scan"; flow:established,to_server; http.uri; content:"/cybercop"; nocase; reference:arachnids,374; classtype:web-application-activity; sid:2101099; rev:10; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2024_03_16;)

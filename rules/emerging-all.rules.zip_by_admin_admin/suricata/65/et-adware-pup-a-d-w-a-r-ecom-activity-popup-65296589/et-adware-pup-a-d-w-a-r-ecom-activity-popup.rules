@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP A-d-w-a-r-e.com Activity (popup)"; flow:established,to_server; http.uri; content:"/cgi-bin/PopupV"; fast_pattern; nocase; content:"?ID={"; nocase; reference:url,www.a-d-w-a-r-e.com; classtype:pup-activity; sid:2001730; rev:11; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_17;)

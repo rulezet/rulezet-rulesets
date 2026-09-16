@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL WEB_SERVER msadcs.dll access"; flow:established,to_server; http.uri; content:"/msadcs.dll"; nocase; reference:bugtraq,529; reference:cve,1999-1011; reference:nessus,10357; classtype:web-application-activity; sid:2101023; rev:14; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2024_03_16;)
