@@ -1,0 +1,9 @@
+rule Trojan_Win64_CryptInject_AY_MTB_2{
+	meta:
+		description = "Trojan:Win64/CryptInject.AY!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {48 63 c8 b8 ?? ?? ?? ?? 48 03 cb 48 03 cd 48 83 c5 ?? 42 0f b6 8c 21 ?? ?? ?? ?? f7 ee c1 fa 03 8b c2 c1 e8 1f 03 d0 48 63 c6 83 c6 01 4c 63 c2 4d 6b c0 ?? 4c 03 c0 48 8b 44 24 ?? 43 32 8c 20 ?? ?? ?? ?? 88 4c 28 ?? 48 8d 0d ?? ?? ?? ?? e8 } 		$a_03_1 = {4c 63 c0 b8 ?? ?? ?? ?? 4c 03 c3 4c 03 c5 f7 ee c1 fa 03 8b c2 c1 e8 1f 03 c2 48 98 48 8d 0c c0 48 63 c6 83 c6 01 48 8d 14 88 41 8a 8c 38 ?? ?? ?? ?? 48 8b 44 24 ?? 32 8c 3a ?? ?? ?? ?? 88 0c 28 48 8d 0d ?? ?? ?? ?? 48 83 c5 01 e8 } 	condition:
+		((#a_03_0  & 1)*2+(#a_03_1  & 1)*2) >=2
+ 
+}

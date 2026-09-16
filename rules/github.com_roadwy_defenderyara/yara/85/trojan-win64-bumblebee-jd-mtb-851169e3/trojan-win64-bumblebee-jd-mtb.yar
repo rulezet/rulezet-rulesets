@@ -1,0 +1,9 @@
+rule Trojan_Win64_Bumblebee_JD_MTB{
+	meta:
+		description = "Trojan:Win64/Bumblebee.JD!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_03_0 = {41 8b 0c 80 41 31 0c ?? 8b 8b ?? ?? ?? ?? 81 e1 ?? ?? ?? ?? 7d ?? 2b cf 83 c9 ?? 03 cf 48 8b 93 ?? ?? ?? ?? 48 63 83 ?? ?? ?? ?? 44 8b 04 82 85 c9 } 	condition:
+		((#a_03_0  & 1)*1) >=1
+ 
+}
