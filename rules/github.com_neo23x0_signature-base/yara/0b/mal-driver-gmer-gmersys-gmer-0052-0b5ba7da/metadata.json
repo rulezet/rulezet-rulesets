@@ -1,0 +1,19 @@
+{
+  "uuid": "0b5ba7da-4db8-4b39-a829-b4abee664cad",
+  "title": "MAL_Driver_Gmer_Gmersys_Gmer_0052",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - gmer64.sys, superman.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184985"
+}

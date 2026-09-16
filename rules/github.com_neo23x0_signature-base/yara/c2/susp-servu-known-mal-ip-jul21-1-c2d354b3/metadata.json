@@ -1,0 +1,21 @@
+{
+  "uuid": "c2d354b3-7299-4eca-8e0e-12c78965e64d",
+  "title": "SUSP_ServU_Known_Mal_IP_Jul21_1",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious IP addresses used in exploitation of ServU services CVE-2021-35211 and reported by Solarwinds",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2021-35211"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184916"
+}

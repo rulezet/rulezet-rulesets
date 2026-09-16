@@ -1,0 +1,19 @@
+{
+  "uuid": "646950d0-cde5-4131-89e3-9e28135f2fa0",
+  "title": "HvS_APT27_HyperBro_Encrypted_Stage2",
+  "format": "yara",
+  "author": "Moritz Oettle",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": false,
+  "description": "HyperBro Encrypted Stage 2 detection. Looks for all possible one byte shifts of the lznt1 compressed PE header",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185258"
+}

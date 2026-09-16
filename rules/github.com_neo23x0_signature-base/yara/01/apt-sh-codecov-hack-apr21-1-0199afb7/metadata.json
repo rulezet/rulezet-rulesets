@@ -1,0 +1,19 @@
+{
+  "uuid": "0199afb7-51ed-4fa2-a61b-d5fd944d7528",
+  "title": "APT_SH_CodeCov_Hack_Apr21_1",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects manipulated Codecov bash uploader tool that has been manipulated by an unknown actor during March / April 2021",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185065"
+}

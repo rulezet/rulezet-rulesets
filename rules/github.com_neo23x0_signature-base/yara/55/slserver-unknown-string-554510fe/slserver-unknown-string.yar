@@ -1,0 +1,19 @@
+rule SLServer_unknown_string
+{
+	meta:
+		author = "Matt Brooks, @cmatthewbrooks"
+		date = "2016/04/18"
+		score = 75
+		description = "Searches for a unique string."
+
+		id = "00341604-480f-59aa-9c18-009e7b53928e"
+	strings:
+		$string = "test-b7fa835a39"
+
+	condition:
+				uint16(0) == 0x5A4D and
+
+				uint32(uint32(0x3C)) == 0x00004550 and
+
+		$string
+}

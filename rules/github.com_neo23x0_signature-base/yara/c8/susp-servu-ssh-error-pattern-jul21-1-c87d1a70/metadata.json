@@ -1,0 +1,21 @@
+{
+  "uuid": "c87d1a70-7980-43ec-b55c-cb039a9f1572",
+  "title": "SUSP_ServU_SSH_Error_Pattern_Jul21_1",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious SSH component exceptions that could be an indicator of exploitation attempts as described in advisory addressing CVE-2021-35211 in ServU services",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2021-35211"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184912"
+}

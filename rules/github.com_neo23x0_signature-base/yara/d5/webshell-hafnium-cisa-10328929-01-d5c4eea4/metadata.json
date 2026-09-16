@@ -1,0 +1,22 @@
+{
+  "uuid": "d5c4eea4-9777-45f7-86ad-22b8cffee27a",
+  "title": "WEBSHELL_HAFNIUM_CISA_10328929_01",
+  "format": "yara",
+  "author": "CISA Code & Media Analysis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects CVE-2021-27065 Webshellz",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Trojan\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2021-27065"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185218"
+}

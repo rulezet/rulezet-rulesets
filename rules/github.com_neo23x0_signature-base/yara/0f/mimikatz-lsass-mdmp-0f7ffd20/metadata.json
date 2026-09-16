@@ -1,0 +1,20 @@
+{
+  "uuid": "0f7ffd20-d27f-44e0-9cfb-076d7916b811",
+  "title": "mimikatz_lsass_mdmp",
+  "format": "yara",
+  "author": "Benjamin DELPY (gentilkiwi)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "LSASS minidump file for mimikatz",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Mimikatz\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184904"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "ff6baab8-21b2-4aed-afa6-7d1799169050",
+  "title": "VULN_Linux_Sudoers_Commands",
+  "format": "yara",
+  "author": "Arnim Rupp",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "Detects sudoers config with commands which might allow privilege escalation to root",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184953"
+}

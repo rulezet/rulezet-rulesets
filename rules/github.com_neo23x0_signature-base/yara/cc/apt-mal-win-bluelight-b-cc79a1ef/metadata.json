@@ -1,0 +1,21 @@
+{
+  "uuid": "cc79a1ef-f6a4-459b-a31c-f46180501739",
+  "title": "APT_MAL_Win_BlueLight_B",
+  "format": "yara",
+  "author": "threatintel@volexity.com",
+  "license": "See license at https://github.com/volexity/threat-intel/LICENSE.txt",
+  "license_verified": false,
+  "description": "North Korean origin malware which uses a custom Google App for c2 communications.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184942"
+}

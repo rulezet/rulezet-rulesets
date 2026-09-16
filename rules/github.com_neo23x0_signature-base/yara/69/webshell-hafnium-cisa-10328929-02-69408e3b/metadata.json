@@ -1,0 +1,22 @@
+{
+  "uuid": "69408e3b-fbcd-43f8-859b-089f8b9f6237",
+  "title": "WEBSHELL_HAFNIUM_CISA_10328929_02",
+  "format": "yara",
+  "author": "CISA Code & Media Analysis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects CVE-2021-27065 Exchange OAB VD MOD",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Trojan\""
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2021-27065"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185222"
+}

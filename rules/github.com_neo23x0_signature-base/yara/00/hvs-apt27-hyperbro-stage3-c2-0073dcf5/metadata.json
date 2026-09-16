@@ -1,0 +1,21 @@
+{
+  "uuid": "0073dcf5-aa06-4ba9-9646-a0dca5016871",
+  "title": "HvS_APT27_HyperBro_Stage3_C2",
+  "format": "yara",
+  "author": "Marc Stroebel",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": false,
+  "description": "HyperBro Stage 3 C2 path and user agent detection - also tested in memory",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185250"
+}

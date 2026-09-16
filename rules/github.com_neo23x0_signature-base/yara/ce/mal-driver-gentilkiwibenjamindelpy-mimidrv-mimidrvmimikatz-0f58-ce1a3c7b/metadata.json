@@ -1,0 +1,19 @@
+{
+  "uuid": "ce1a3c7b-9cd8-4ca9-a147-0d36cf51285b",
+  "title": "MAL_Driver_Gentilkiwibenjamindelpy_Mimidrv_Mimidrvmimikatz_0F58",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects malicious driver mentioned in LOLDrivers project using VersionInfo values from the PE header - mimidrv.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/184962"
+}

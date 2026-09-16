@@ -1,0 +1,21 @@
+{
+  "uuid": "25eb3bc8-793d-474e-bc8a-746da9d7440c",
+  "title": "APT_NK_Lazarus_Network_Backdoor_Unpacked",
+  "format": "yara",
+  "author": "f-secure",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects unpacked variant of Lazarus Group network backdoor",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185041"
+}

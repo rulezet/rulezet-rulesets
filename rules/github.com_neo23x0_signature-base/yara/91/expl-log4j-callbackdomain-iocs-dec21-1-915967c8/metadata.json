@@ -1,0 +1,21 @@
+{
+  "uuid": "915967c8-3cb1-41a0-aba3-8ded9f2d4187",
+  "title": "EXPL_Log4j_CallBackDomain_IOCs_Dec21_1",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects IOCs found in Log4Shell incidents that indicate exploitation attempts of CVE-2021-44228",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2021-44228"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/185300"
+}
