@@ -1,0 +1,10 @@
+rule PEiD_03450_Werus_Crypter_1_0____Kas_
+{
+    meta:
+        description = "[Werus Crypter 1.0 -> Kas]"
+        ep_only = "false"
+    strings:
+        $a = {68 98 11 40 00 6A 00 E8 50 00 00 00 C9 C3 ED B3 FE FF FF 6A 00 E8 0C 00 00 00 FF 25 80 10 40 00 FF 25 84 10 40 00 FF 25 88 10 40 00 FF 25 8C 10 40 00 FF 25 90 10 40 00 FF 25 94 10 40 00 FF 25 98 10 40 00 FF 25 9C 10 40 00 FF 25 A0 10 40 00 FF 25 A4 10 40}
+    condition:
+        $a
+}

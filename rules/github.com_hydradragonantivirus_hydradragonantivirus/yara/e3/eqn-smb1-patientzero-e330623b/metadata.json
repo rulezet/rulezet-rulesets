@@ -1,0 +1,20 @@
+{
+  "uuid": "e330623b-74bb-45fe-b07f-22b23e0b3b90",
+  "title": "EQN_SMB1_PatientZero",
+  "format": "yara",
+  "author": "Kiran Bandla - iDefense",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detection of network traffic towards the 1st sinkholes domain - kill switch",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/466111"
+}

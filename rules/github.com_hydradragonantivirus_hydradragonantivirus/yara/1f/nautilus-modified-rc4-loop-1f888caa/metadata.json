@@ -1,0 +1,20 @@
+{
+  "uuid": "1f888caa-71e8-453a-a58f-30edfff049fe",
+  "title": "nautilus_modified_rc4_loop",
+  "format": "yara",
+  "author": "NCSC UK",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Rule for detection of Nautilus based on assembly code for a modified RC4 loop",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Turla - G0010\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/466238"
+}
