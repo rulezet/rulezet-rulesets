@@ -1,0 +1,46 @@
+rule nthash_hashed_default_creds_weblogic_web
+{
+    meta:
+        id = "7ONAyq8gw9mUWHtw6EIYCw"
+        fingerprint = "d48321d5e70efa26199971cb9fc4560ebc370c6075488779b9066a42dca77fba"
+        version = "1.0"
+        modified = "2024-02-15"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for weblogic_web."
+        category = "INFO"
+        info = "NTHASH"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="ebc80cff752fb3620983276f95ecf12f"
+    $a1="ebc80cff752fb3620983276f95ecf12f"
+    $a2="8846f7eaee8fb117ad06bdd830b7586c"
+    $a3="3b6be948d1d1b370bdefe5d6c74142a6"
+    $a4="8846f7eaee8fb117ad06bdd830b7586c"
+    $a5="e337e31aa4c614b2895ad684a51156df"
+    $a6="50838b21bdef4bbe69c770f8ee7169fb"
+    $a7="e337e31aa4c614b2895ad684a51156df"
+    $a8="800c5b3102f620e84a292d4cedc56721"
+    $a9="800c5b3102f620e84a292d4cedc56721"
+    $a10="f938b53b982f22cd6b1c14ae10665480"
+    $a11="f441f41aa59214cccc3d4ba5ed1550cc"
+    $a12="a87f3a337d73085c45f9416be5787d86"
+    $a13="f441f41aa59214cccc3d4ba5ed1550cc"
+    $a14="8846f7eaee8fb117ad06bdd830b7586c"
+    $a15="f441f41aa59214cccc3d4ba5ed1550cc"
+    $a16="ee267849092e2c28e1fae40a1a45cf49"
+    $a17="f441f41aa59214cccc3d4ba5ed1550cc"
+    $a18="50838b21bdef4bbe69c770f8ee7169fb"
+    $a19="50838b21bdef4bbe69c770f8ee7169fb"
+    $a20="d9c6d00eea93b3b3bac3df7566daac1c"
+    $a21="d9c6d00eea93b3b3bac3df7566daac1c"
+    $a22="dd6afbfe4683c8ffc24e16b13332d79d"
+    $a23="50838b21bdef4bbe69c770f8ee7169fb"
+    $a24="ee267849092e2c28e1fae40a1a45cf49"
+    $a25="50838b21bdef4bbe69c770f8ee7169fb"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25)
+}
