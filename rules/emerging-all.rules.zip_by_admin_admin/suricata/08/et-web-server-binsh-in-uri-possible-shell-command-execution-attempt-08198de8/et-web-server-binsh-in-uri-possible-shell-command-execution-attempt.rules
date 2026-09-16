@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER /bin/sh In URI Possible Shell Command Execution Attempt"; flow:established,to_server; http.uri; content:"/bin/sh"; nocase; classtype:web-application-attack; sid:2011465; rev:8; metadata:created_at 2010_10_13, confidence Medium, signature_severity Major, updated_at 2020_04_21;)

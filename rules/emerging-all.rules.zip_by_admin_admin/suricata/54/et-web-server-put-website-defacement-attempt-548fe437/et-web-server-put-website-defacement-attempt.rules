@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER PUT Website Defacement Attempt"; flow:established,to_server; http.method; content:"PUT"; http.request_body; content:"<title>.|3a 3a|[+] Defaced by "; nocase; classtype:web-application-attack; sid:2013365; rev:3; metadata:created_at 2011_08_05, signature_severity Informational, updated_at 2020_04_20;)

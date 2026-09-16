@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO Internal Host Getting External IP Address - ip2city.asp"; flow:established,to_server; http.uri; content:"/ip2city.asp"; classtype:external-ip-check; sid:2014761; rev:3; metadata:created_at 2012_05_17, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_04_21;)
