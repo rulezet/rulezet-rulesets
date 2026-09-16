@@ -1,0 +1,15 @@
+rule rule_cut_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'cut' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "cut"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+                        $string1_cut_greyware_tool_keyword = "cut -d: -f1 /etc/passwd"
+
+    condition:
+        any of them
+}

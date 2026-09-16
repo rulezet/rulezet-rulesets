@@ -1,0 +1,16 @@
+rule rule_procmon_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'procmon' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "procmon"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+                        $string1_procmon_greyware_tool_keyword = /\\AppData\\Local\\Temp\\Procmon\.exe/ nocase ascii wide
+                        $string2_procmon_greyware_tool_keyword = /\\AppData\\Local\\Temp\\Procmon64\.exe/ nocase ascii wide
+
+    condition:
+        any of them
+}

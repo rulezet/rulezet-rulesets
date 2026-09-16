@@ -1,0 +1,15 @@
+rule rule_privatebin_net_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'privatebin.net' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "privatebin.net"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+                        $string1_privatebin_net_greyware_tool_keyword = /https\:\/\/privatebin\.net\// nocase ascii wide
+
+    condition:
+        any of them
+}

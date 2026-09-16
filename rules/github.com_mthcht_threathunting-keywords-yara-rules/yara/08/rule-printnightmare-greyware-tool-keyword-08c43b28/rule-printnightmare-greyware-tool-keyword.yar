@@ -1,0 +1,15 @@
+rule rule_PrintNightmare_greyware_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'PrintNightmare' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "PrintNightmare"
+        rule_category = "greyware_tool_keyword"
+
+    strings:
+                        $string1_PrintNightmare_greyware_tool_keyword = /C\:\\Windows\\System32\\spool\\drivers\\x64\\3\\old\\1\\.{0,1000}\.dll/ nocase ascii wide
+
+    condition:
+        any of them
+}
