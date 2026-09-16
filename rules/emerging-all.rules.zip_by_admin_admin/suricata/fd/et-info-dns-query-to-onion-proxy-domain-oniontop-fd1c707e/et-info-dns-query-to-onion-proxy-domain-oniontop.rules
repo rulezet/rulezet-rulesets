@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO DNS Query to .onion proxy Domain (onion.top)"; dns.query; content:".onion.top"; fast_pattern; nocase; endswith; classtype:policy-violation; sid:2024665; rev:7; metadata:created_at 2017_09_06, confidence Medium, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_04_19;)

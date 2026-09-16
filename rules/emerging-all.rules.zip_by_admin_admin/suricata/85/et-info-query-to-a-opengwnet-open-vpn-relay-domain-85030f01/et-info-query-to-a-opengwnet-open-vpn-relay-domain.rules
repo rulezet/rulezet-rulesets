@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO Query to a *.opengw.net Open VPN Relay Domain"; dns.query; content:".opengw.net"; endswith; nocase; fast_pattern; reference:url,www.vpngate.net; classtype:bad-unknown; sid:2016586; rev:9; metadata:created_at 2013_03_15, confidence High, signature_severity Informational, updated_at 2024_04_19;)
