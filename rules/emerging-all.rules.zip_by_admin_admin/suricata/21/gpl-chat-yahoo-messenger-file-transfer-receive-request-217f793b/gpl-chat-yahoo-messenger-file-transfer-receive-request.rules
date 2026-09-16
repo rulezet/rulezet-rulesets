@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 5050 -> $HOME_NET any (msg:"GPL CHAT Yahoo Messenger File Transfer Receive Request"; flow:established; content:"YMSG"; depth:4; content:"|00|M"; depth:2; offset:10; classtype:policy-violation; sid:2102456; rev:5; metadata:created_at 2010_09_23, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

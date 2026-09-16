@@ -1,0 +1,1 @@
+alert udp $EXTERNAL_NET 53 -> $HOME_NET any (msg:"GPL DNS SPOOF query response with TTL of 1 min. and no authority"; content:"|81 80 00 01 00 01 00 00 00 00|"; content:"|C0 0C 00 01 00 01 00 00 00|<|00 04|"; classtype:bad-unknown; sid:2100254; rev:5; metadata:created_at 2010_09_23, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)

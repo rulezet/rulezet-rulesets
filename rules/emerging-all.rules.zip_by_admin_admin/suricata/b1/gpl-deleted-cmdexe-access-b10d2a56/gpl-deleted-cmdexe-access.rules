@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL DELETED cmd.exe access"; flow:to_server,established; content:"cmd.exe"; nocase; http_uri; classtype:web-application-attack; sid:2101002; rev:10; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2019_07_26;)

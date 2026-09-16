@@ -1,0 +1,1 @@
+alert udp $HOME_NET 6345:6349 -> $EXTERNAL_NET 6345:6349 (msg:"ET DELETED UDP traffic - Likely Limewire"; threshold: type threshold,track by_src,count 40, seconds 300; reference:url,www.limewire.com; classtype:policy-violation; sid:2001841; rev:8; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

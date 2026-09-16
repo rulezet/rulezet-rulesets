@@ -1,0 +1,1 @@
+alert ip $EXTERNAL_NET $SHELLCODE_PORTS -> $HOME_NET any (msg:"GPL SHELLCODE sparc NOOP"; content:"|13 C0 1C A6 13 C0 1C A6 13 C0 1C A6 13 C0 1C A6|"; reference:arachnids,345; classtype:shellcode-detect; sid:2100644; rev:6; metadata:created_at 2010_09_23, confidence High, signature_severity Minor, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> any 139 (msg:"ET DELETED BugBear@MM virus in Network share"; flow: established; content:"|24 48 fb bb ff e6 63 02 3a 20 41 70 61 63 68 65|"; reference:url,www.symantec.com/avcenter/venc/data/w32.bugbear@mm.html; classtype:misc-activity; sid:2001765; rev:7; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

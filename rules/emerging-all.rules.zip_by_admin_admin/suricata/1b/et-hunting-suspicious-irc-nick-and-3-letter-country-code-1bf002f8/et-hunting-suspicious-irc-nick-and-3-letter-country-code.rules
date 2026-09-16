@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET HUNTING SUSPICIOUS IRC - NICK and 3 Letter Country Code"; flow:established,to_server; content:"NICK "; depth:5; pcre:"/^[^\r\n]*[\[\|\{][A-Z]{3}[\]\|\}]/R"; classtype:bad-unknown; sid:2017319; rev:6; metadata:created_at 2013_08_13, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert udp $EXTERNAL_NET 447 -> $HOME_NET 1024: (msg:"ET DELETED Possible Bobax/Kraken/Oderoor UDP 447 CnC Channel Inbound"; threshold:type threshold, track by_src, count 5, seconds 60; classtype:command-and-control; sid:2008107; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

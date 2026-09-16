@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 1024: -> $HOME_NET any (msg:"ET DELETED RevProxy ServerRespone"; flow:established,to_client; dsize:9; content:"|04 00 00 01 01 00 00 00 04|"; reference:md5,5d6f186f10acf5f21a3498601465cf40; classtype:trojan-activity; sid:2014349; rev:2; metadata:created_at 2012_03_09, signature_severity Unknown, updated_at 2019_07_26;)

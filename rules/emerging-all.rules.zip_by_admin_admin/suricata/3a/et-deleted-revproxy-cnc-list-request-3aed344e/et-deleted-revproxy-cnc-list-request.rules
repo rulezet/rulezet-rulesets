@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED RevProxy CnC List Request"; flow:established,to_server; content:"?net=gnutella2&get=1&client=RAZA2.5.0.0"; http_uri; reference:md5,5d6f186f10acf5f21a3498601465cf40; classtype:command-and-control; sid:2014351; rev:3; metadata:created_at 2012_03_09, signature_severity Unknown, updated_at 2019_07_26;)

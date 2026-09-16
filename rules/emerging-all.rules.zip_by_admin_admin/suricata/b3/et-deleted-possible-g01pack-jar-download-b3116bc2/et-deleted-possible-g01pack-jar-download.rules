@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET DELETED Possible g01pack Jar download"; flow:established,from_server; flowbits:isset,ET.g01pack.Java.Image; file_data; content:"PK"; depth:2; content:".class"; fast_pattern:only; classtype:exploit-kit; sid:2016321; rev:3; metadata:created_at 2013_01_31, signature_severity Unknown, updated_at 2019_07_26;)

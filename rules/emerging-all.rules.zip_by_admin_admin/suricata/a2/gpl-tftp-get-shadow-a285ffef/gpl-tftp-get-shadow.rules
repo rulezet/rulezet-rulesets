@@ -1,0 +1,1 @@
+alert udp any any -> any 69 (msg:"GPL TFTP GET shadow"; content:"|00 01|"; depth:2; content:"shadow"; offset:2; nocase; classtype:successful-admin; sid:2101442; rev:5; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2019_07_26;)

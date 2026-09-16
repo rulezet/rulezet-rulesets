@@ -1,0 +1,1 @@
+alert udp $EXTERNAL_NET any -> $HOME_NET 5060 (msg:"ET DELETED Possible Open SIP Relay scanner Fake Eyebeam User-Agent Detected"; content:"User-Agent|3A| eyeBeam release"; nocase; reference:url,honeynet.org.au/?q=open_sip_relay_scanner; classtype:attempted-recon; sid:2012183; rev:3; metadata:created_at 2011_01_15, signature_severity Unknown, updated_at 2019_07_26;)

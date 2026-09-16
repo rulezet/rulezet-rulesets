@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 10101 -> $HOME_NET any (msg:"GPL SCAN myscan"; flow:stateless; ack:0; flags:S; ttl:>220; reference:arachnids,439; classtype:attempted-recon; sid:2100613; rev:7; metadata:created_at 2010_09_23, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

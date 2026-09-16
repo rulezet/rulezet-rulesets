@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED PHISH Gateway POST to gateway-p"; flow:established,to_server; content:"POST"; http_method; content:"/gateway-p"; http_uri; classtype:bad-unknown; sid:2015973; rev:2; metadata:created_at 2012_11_30, signature_severity Unknown, updated_at 2019_07_26;)

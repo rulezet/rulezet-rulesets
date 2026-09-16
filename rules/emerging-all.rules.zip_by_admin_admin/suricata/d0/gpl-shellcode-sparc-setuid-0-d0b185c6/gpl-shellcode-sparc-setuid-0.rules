@@ -1,0 +1,1 @@
+alert ip $EXTERNAL_NET $SHELLCODE_PORTS -> $HOME_NET any (msg:"GPL SHELLCODE sparc setuid 0"; content:"|82 10| |17 91 D0| |08|"; reference:arachnids,282; classtype:system-call-detect; sid:2100647; rev:7; metadata:created_at 2010_09_23, signature_severity Minor, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"GPL DELETED /etc/shadow access"; flow:to_server,established; content:"/etc/shadow"; http_uri; nocase; classtype:web-application-activity; sid:2101372; rev:7; metadata:created_at 2010_09_23, signature_severity Unknown, updated_at 2019_07_26;)

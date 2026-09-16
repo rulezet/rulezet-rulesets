@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 1024: -> $EXTERNAL_NET 447 (msg:"ET DELETED Bobax/Kraken/Oderoor TCP 447 CnC Channel Initial Packet Outbound"; flow:established; dsize:24; threshold:type threshold, track by_src, count 2, seconds 360; classtype:command-and-control; sid:2008103; rev:4; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

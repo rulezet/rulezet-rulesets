@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Gator/Clarian Spyware Posting Data"; flow: to_server,established; content:"/gs_med"; nocase; http_uri; reference:url,www3.ca.com/securityadvisor/pest/content.aspx?q=67999; classtype:trojan-activity; sid:2003575; rev:7; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

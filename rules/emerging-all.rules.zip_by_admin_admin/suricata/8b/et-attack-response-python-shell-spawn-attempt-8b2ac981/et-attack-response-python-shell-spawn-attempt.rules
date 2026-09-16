@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"ET ATTACK_RESPONSE python shell spawn attempt"; flow:established,to_client; content:"pty|2e|spawn|2822|/bin/sh|2229|"; depth:64; classtype:trojan-activity; sid:2017317; rev:2; metadata:created_at 2013_08_12, signature_severity Major, updated_at 2019_07_26;)
