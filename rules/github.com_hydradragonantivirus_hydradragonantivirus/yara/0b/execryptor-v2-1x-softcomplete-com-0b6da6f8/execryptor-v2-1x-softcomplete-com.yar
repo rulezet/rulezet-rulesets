@@ -1,0 +1,8 @@
+import "pe"
+rule EXECryptor_V2_1X____softcomplete_com {
+  strings:
+    $a0 = { E9 ?? ?? ?? ?? 66 9C 60 50 8D 88 ?? ?? ?? ?? 8D 90 04 16 ?? ?? 8B DC 8B E1 }
+
+  condition:
+    $a0 at pe.entry_point
+}

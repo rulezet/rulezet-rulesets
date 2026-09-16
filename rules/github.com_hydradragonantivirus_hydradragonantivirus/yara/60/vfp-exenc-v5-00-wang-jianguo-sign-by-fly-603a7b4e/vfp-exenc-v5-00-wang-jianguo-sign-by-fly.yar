@@ -1,0 +1,8 @@
+import "pe"
+rule vfp_exeNc_V5_00____Wang_JianGuo_____Sign_By_fly {
+  strings:
+    $a0 = { 60 E8 00 00 00 00 5D ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 50 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 CC }
+
+  condition:
+    $a0 at pe.entry_point
+}

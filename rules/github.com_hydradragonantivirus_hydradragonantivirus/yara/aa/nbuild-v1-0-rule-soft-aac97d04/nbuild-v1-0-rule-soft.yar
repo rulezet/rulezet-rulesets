@@ -1,0 +1,8 @@
+import "pe"
+rule nbuild_v1_0_rule__soft_ {
+  strings:
+    $a0 = { B9 ?? ?? BB ?? ?? C0 ?? ?? 80 ?? ?? 43 E2 }
+
+  condition:
+    $a0 at pe.entry_point
+}

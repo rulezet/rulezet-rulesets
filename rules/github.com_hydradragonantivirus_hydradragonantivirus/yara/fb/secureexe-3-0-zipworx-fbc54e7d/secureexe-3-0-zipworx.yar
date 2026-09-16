@@ -1,0 +1,8 @@
+import "pe"
+rule SecureEXE_3_0____ZipWorx {
+  strings:
+    $a0 = { E9 B8 00 00 00 ?? ?? ?? 00 ?? ?? ?? 00 ?? ?? ?? 00 00 00 00 00 00 }
+
+  condition:
+    $a0 at pe.entry_point
+}

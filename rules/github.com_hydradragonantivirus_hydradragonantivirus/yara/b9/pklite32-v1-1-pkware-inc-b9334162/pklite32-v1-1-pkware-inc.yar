@@ -1,0 +1,8 @@
+import "pe"
+rule PKLITE32_V1_1____PKWARE_Inc_ {
+  strings:
+    $a0 = { 68 ?? ?? ?? 00 68 ?? ?? ?? 00 68 00 00 00 00 E8 ?? ?? ?? ?? E9 }
+
+  condition:
+    $a0 at pe.entry_point
+}

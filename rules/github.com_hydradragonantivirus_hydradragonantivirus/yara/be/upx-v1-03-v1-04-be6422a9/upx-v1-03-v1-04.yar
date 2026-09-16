@@ -1,0 +1,8 @@
+import "pe"
+rule UPX_v1_03___v1_04 {
+  strings:
+    $a0 = { 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 8A 07 72 EB B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 ?? 75 ?? 8B 1E 83 EE FC }
+
+  condition:
+    $a0 at pe.entry_point
+}

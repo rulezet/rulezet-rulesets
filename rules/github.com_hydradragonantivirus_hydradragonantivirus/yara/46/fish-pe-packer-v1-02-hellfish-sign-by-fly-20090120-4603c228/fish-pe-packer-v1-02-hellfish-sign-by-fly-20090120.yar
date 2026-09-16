@@ -1,0 +1,8 @@
+import "pe"
+rule Fish_Pe_Packer_V1_02____hellfish_____Sign_By_fly___20090120 {
+  strings:
+    $a0 = { 60 E8 07 00 00 00 61 68 ?? ?? ?? ?? C3 5E 56 8B 56 02 ?? ?? ?? AD 01 D0 5B 36 89 43 02 66 3E C7 43 FA EB 05 53 AD 01 D0 89 C3 C7 43 FC 00 10 00 00 C7 43 F8 00 80 00 00 89 53 F4 AD 01 D0 89 43 F0 AD 01 D0 89 43 10 52 6A 04 FF 73 FC AD 50 6A 00 3E FF 53 08 89 C5 6A 04 FF 73 FC AD 50 6A 00 3E FF 53 08 89 C1 5A 83 EE 08 AD 50 55 AD AD 50 AD 01 D0 50 6A 02 6A 00 6A ?? 51 89 CF FF 53 10 83 C4 20 FF 73 F8 6A 00 57 FF 53 0C }
+
+  condition:
+    $a0 at pe.entry_point
+}

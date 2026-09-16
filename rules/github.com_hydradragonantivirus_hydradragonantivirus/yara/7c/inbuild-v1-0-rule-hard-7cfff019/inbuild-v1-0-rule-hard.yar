@@ -1,0 +1,8 @@
+import "pe"
+rule Inbuild_v1_0_rule__hard_ {
+  strings:
+    $a0 = { B9 ?? ?? BB ?? ?? 2E ?? ?? 2E ?? ?? 43 E2 }
+
+  condition:
+    $a0 at pe.entry_point
+}

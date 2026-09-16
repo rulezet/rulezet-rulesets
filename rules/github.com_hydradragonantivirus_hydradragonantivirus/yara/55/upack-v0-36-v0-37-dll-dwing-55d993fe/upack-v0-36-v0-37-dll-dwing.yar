@@ -1,0 +1,8 @@
+import "pe"
+rule Upack_V0_36_V0_37__DLL_____Dwing {
+  strings:
+    $a0 = { 60 E8 09 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? 33 C9 5E 87 0E }
+
+  condition:
+    $a0 at pe.entry_point
+}
