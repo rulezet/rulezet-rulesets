@@ -1,0 +1,9 @@
+import "pe"
+rule Turbo_C_1990_or_Turbo_C_1988_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { BA ?? ?? 2E 89 ?? ?? ?? B4 30 CD 21 8B ?? ?? ?? 8B ?? ?? ?? 8E DA }
+    condition:
+        $a at pe.entry_point
+
+}

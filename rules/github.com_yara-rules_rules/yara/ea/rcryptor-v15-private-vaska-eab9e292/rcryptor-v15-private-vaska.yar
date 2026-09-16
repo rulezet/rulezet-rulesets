@@ -1,0 +1,9 @@
+import "pe"
+rule RCryptor_v15_Private_Vaska: PEiD
+{
+    strings:
+        $a = { 83 2C 24 4F 68 ?? ?? ?? ?? FF 54 24 04 83 44 24 04 4F B8 ?? ?? ?? ?? 3D ?? ?? ?? ?? 74 06 80 30 ?? 40 EB F3 }
+    condition:
+        $a at pe.entry_point
+
+}

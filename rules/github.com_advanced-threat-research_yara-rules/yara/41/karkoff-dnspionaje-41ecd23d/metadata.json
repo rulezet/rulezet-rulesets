@@ -1,0 +1,22 @@
+{
+  "uuid": "41ecd23d-811d-4e5b-93e6-9ffec91736c6",
+  "title": "karkoff_dnspionaje",
+  "format": "yara",
+  "author": "Marc Rivero | McAfee ATR Team",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Rule to detect the Karkoff malware",
+  "source": "https://github.com/advanced-threat-research/Yara-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208277"
+}

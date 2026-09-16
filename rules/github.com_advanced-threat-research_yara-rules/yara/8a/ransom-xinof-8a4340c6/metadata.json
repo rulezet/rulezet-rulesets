@@ -1,0 +1,22 @@
+{
+  "uuid": "8a4340c6-d682-43e0-aad4-72fac3d32ed0",
+  "title": "ransom_xinof",
+  "format": "yara",
+  "author": "Thomas Roccia | McAfee ATR team",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detect Xinof ransomware",
+  "source": "https://github.com/advanced-threat-research/Yara-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208383"
+}

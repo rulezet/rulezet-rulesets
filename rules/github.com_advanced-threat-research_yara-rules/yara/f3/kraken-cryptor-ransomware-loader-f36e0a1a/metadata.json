@@ -1,0 +1,21 @@
+{
+  "uuid": "f36e0a1a-0697-45bf-9d48-66217dee0131",
+  "title": "kraken_cryptor_ransomware_loader",
+  "format": "yara",
+  "author": "Marc Rivero | McAfee ATR Team",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Rule to detect the Kraken Cryptor Ransomware loader",
+  "source": "https://github.com/advanced-threat-research/Yara-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:exploit-kit=\"Fallout\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208391"
+}

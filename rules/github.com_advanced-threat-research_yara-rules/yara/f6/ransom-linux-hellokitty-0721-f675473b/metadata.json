@@ -1,0 +1,22 @@
+{
+  "uuid": "f675473b-3f85-406c-b550-3e62d95a8a47",
+  "title": "ransom_Linux_HelloKitty_0721",
+  "format": "yara",
+  "author": "Christiaan @ ATR",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "rule to detect Linux variant of the Hello Kitty Ransomware",
+  "source": "https://github.com/advanced-threat-research/Yara-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208340"
+}

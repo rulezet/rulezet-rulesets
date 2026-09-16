@@ -1,0 +1,22 @@
+{
+  "uuid": "da738cb8-6baf-49c7-b834-539295006dbe",
+  "title": "apt_nix_elf_Derusbi_Linux_Strings",
+  "format": "yara",
+  "author": "Marc Rivero | McAfee ATR Team",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Rule to detect APT Derusbi Linux Strings",
+  "source": "https://github.com/advanced-threat-research/Yara-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208304"
+}

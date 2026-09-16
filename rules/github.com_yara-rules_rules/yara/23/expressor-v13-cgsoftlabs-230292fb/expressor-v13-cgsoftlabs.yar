@@ -1,0 +1,9 @@
+import "pe"
+rule eXPressor_V13_CGSoftLabs: PEiD
+{
+    strings:
+        $a = { 55 8B EC 83 EC ?? 53 56 57 EB 0C 45 }
+    condition:
+        $a at pe.entry_point
+
+}
