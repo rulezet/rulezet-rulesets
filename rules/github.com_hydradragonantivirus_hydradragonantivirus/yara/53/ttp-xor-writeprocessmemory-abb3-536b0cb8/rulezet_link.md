@@ -1,0 +1,5 @@
+# TTP_XOR_WriteProcessMemory_abb3
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/664393)
+
+Rulezet UUID: `536b0cb8-dfa2-45dd-8f36-9522237e41de`
