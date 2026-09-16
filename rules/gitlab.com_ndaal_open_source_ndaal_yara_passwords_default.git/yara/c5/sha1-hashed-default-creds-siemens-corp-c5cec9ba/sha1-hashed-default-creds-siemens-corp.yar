@@ -1,0 +1,47 @@
+rule sha1_hashed_default_creds_siemens_corp
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for siemens_corp."
+        category = "INFO"
+        info = "SHA1"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="b5ebd8ce723498a21ef6194bcf2250d272f38a2f"
+    $a1="b5ebd8ce723498a21ef6194bcf2250d272f38a2f"
+    $a2="efedcfae139e9ed4184e72b4ac86b6890cf94a6c"
+    $a3="efedcfae139e9ed4184e72b4ac86b6890cf94a6c"
+    $a4="6610ab0add316b20f1153d1072ef5af776ee12d0"
+    $a5="d033e22ae348aeb5660fc2140aec35850c4da997"
+    $a6="8d7050ffcf7a2ee29cd7692080e8c9e5baf3d6ff"
+    $a7="a4cd2ab840e08a5cbee3bd3d914e8c4145dd58e5"
+    $a8="824f601c2a81ee6bab79ccd4792304c738d17630"
+    $a9="824f601c2a81ee6bab79ccd4792304c738d17630"
+    $a10="fe96dd39756ac41b74283a9292652d366d73931f"
+    $a11="824f601c2a81ee6bab79ccd4792304c738d17630"
+    $a12="4b687891382fd658f594cdeb711503f3e099afae"
+    $a13="4b687891382fd658f594cdeb711503f3e099afae"
+    $a14="c95ee47689a0aaec70c3eb950244657722c69b1f"
+    $a15="4b687891382fd658f594cdeb711503f3e099afae"
+    $a16="8451ba8a14d79753d34cb33b51ba46b4b025eb81"
+    $a17="363eb224f6ff8d3c5163a8805222acbf939a65b3"
+    $a18="a159b7ae81ba3552af61e9731b20870515944538"
+    $a19="a159b7ae81ba3552af61e9731b20870515944538"
+    $a20="2da0b68df8841752bb747a76780679bcd87c6215"
+    $a21="317f1e761f2faa8da781a4762b9dcc2c5cad209a"
+    $a22="317f1e761f2faa8da781a4762b9dcc2c5cad209a"
+    $a23="317f1e761f2faa8da781a4762b9dcc2c5cad209a"
+    $a24="c95ee47689a0aaec70c3eb950244657722c69b1f"
+    $a25="c95ee47689a0aaec70c3eb950244657722c69b1f"
+    $a26="d0302d7e4e9120013335b43352f54816fa6a107d"
+    $a27="ed26100c29a9a3a1523a78769c70efd2f4b38324"
+    $a28="875c7cfead3dd740d82aa2975d759cc0a6ca3a5b"
+    $a29="8ff08b82d7a1e62fd1dcbed1614f85b132cb76c7"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

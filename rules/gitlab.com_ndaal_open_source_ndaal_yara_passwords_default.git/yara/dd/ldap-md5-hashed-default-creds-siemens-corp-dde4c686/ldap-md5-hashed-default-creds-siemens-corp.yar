@@ -1,0 +1,47 @@
+rule ldap_md5_hashed_default_creds_siemens_corp
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for siemens_corp."
+        category = "INFO"
+        info = "LDAP_MD5"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="{MD5}/35PfHuGIjdlOPrXiU7UgA=="
+    $a1="{MD5}/35PfHuGIjdlOPrXiU7UgA=="
+    $a2="{MD5}J1XtYzC0mA6iT6oQgRg9xw=="
+    $a3="{MD5}J1XtYzC0mA6iT6oQgRg9xw=="
+    $a4="{MD5}l42C8YomsO6mxnE4zUCOhQ=="
+    $a5="{MD5}ISMvKXpXpadDiUoOSoAfww=="
+    $a6="{MD5}nRJ/84PVlSYsZwNvUEkxMw=="
+    $a7="{MD5}dOaosRHqfaGn0KWW9MNSCA=="
+    $a8="{MD5}EdjCimRJCph2EvIzJQJGfw=="
+    $a9="{MD5}EdjCimRJCph2EvIzJQJGfw=="
+    $a10="{MD5}S1gzdrJ2e5I8Ph2mDRDeWQ=="
+    $a11="{MD5}EdjCimRJCph2EvIzJQJGfw=="
+    $a12="{MD5}sPbftC+oDK7mglv+zTDwlA=="
+    $a13="{MD5}sPbftC+oDK7mglv+zTDwlA=="
+    $a14="{MD5}2fkTP7EgzWCWhwvCtJaAWw=="
+    $a15="{MD5}sPbftC+oDK7mglv+zTDwlA=="
+    $a16="{MD5}GzIxZVzrt6H3g+3fJ9JUyg=="
+    $a17="{MD5}CxgAeNmUyyte2J186Ofuog=="
+    $a18="{MD5}SKNltM4eMipVrpAX89rwwA=="
+    $a19="{MD5}SKNltM4eMipVrpAX89rwwA=="
+    $a20="{MD5}BuPTb6MM6glVRROYVK0fuQ=="
+    $a21="{MD5}VLUwclQO7rj46TQ+cfKBdg=="
+    $a22="{MD5}VLUwclQO7rj46TQ+cfKBdg=="
+    $a23="{MD5}VLUwclQO7rj46TQ+cfKBdg=="
+    $a24="{MD5}2fkTP7EgzWCWhwvCtJaAWw=="
+    $a25="{MD5}2fkTP7EgzWCWhwvCtJaAWw=="
+    $a26="{MD5}CacANA1aNppgkKdrlI0EHg=="
+    $a27="{MD5}1Wsc4wx1Ql8lviv+9xsPrg=="
+    $a28="{MD5}NMdUe6n8PRDgWHuHc2hd2g=="
+    $a29="{MD5}PZLnJgFGNV5BnApb8N1B4w=="
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

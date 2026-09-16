@@ -1,0 +1,47 @@
+rule sha256_hashed_default_creds_siemens_corp
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for siemens_corp."
+        category = "INFO"
+        info = "SHA256"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="88bcc2871d70e247d357adfe94a9ec9d9e37c91d5416a00e1c81d2e38e5f02b7"
+    $a1="88bcc2871d70e247d357adfe94a9ec9d9e37c91d5416a00e1c81d2e38e5f02b7"
+    $a2="e0027c922e0a8c24e759088c294a44ffb1ddc0cd48b39a4c48fcdef8eef31c13"
+    $a3="e0027c922e0a8c24e759088c294a44ffb1ddc0cd48b39a4c48fcdef8eef31c13"
+    $a4="af5f269ddf697cd26239e7f7e6853e1d3e8fdcd213b9f0ffe825f7725582643f"
+    $a5="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+    $a6="7826b958b79c70626801b880405eb5111557dadceb2fee2b1ed69a18eed0c6dc"
+    $a7="82fe032bd9337b5dfb99b28717cf8651daac73f2d319e6d6213544660b961ee7"
+    $a8="037aeaeaf4bbf26ddabe7256a8294dc52da48d575a1247b5c2598c47de7aebab"
+    $a9="037aeaeaf4bbf26ddabe7256a8294dc52da48d575a1247b5c2598c47de7aebab"
+    $a10="06e55b633481f7bb072957eabcf110c972e86691c3cfedabe088024bffe42f23"
+    $a11="037aeaeaf4bbf26ddabe7256a8294dc52da48d575a1247b5c2598c47de7aebab"
+    $a12="707165e9984b51dcdf1ca7cc9b6fe7a5ec98ab6f71457e9ba25cf6d2924b8a8e"
+    $a13="707165e9984b51dcdf1ca7cc9b6fe7a5ec98ab6f71457e9ba25cf6d2924b8a8e"
+    $a14="fe9bbd400bb6cb314531e3462507661401959afc69aae96bc6aec2c213b83bc1"
+    $a15="707165e9984b51dcdf1ca7cc9b6fe7a5ec98ab6f71457e9ba25cf6d2924b8a8e"
+    $a16="73d1b1b1bc1dabfb97f216d897b7968e44b06457920f00f2dc6c1ed3be25ad4c"
+    $a17="0a64ce10853f25cb3dc3f7d498f62d72b406be37ba8caf5aa7671414d9696049"
+    $a18="d577adc54e95f42f15de2e7c134669888b7d6fb74df97bd62cb4f5b73c281db4"
+    $a19="d577adc54e95f42f15de2e7c134669888b7d6fb74df97bd62cb4f5b73c281db4"
+    $a20="c0d2856b74d0df05b9d4456b177950351bd88e98b77f12574dfb7a911acee0d0"
+    $a21="bbc5e661e106c6dcd8dc6dd186454c2fcba3c710fb4d8e71a60c93eaf077f073"
+    $a22="bbc5e661e106c6dcd8dc6dd186454c2fcba3c710fb4d8e71a60c93eaf077f073"
+    $a23="bbc5e661e106c6dcd8dc6dd186454c2fcba3c710fb4d8e71a60c93eaf077f073"
+    $a24="fe9bbd400bb6cb314531e3462507661401959afc69aae96bc6aec2c213b83bc1"
+    $a25="fe9bbd400bb6cb314531e3462507661401959afc69aae96bc6aec2c213b83bc1"
+    $a26="64c2e32f56cf224f996d10585b9f3895806bb0af8c7f96e8a07b608c650eb084"
+    $a27="787157e8392df15054594c516e9104a49d141a9a91e6b320d7ff17a0c4a74638"
+    $a28="68bc00e5d5705f1f569a77346988baa8dbec20dd1f7cbaab4a3c31c200f22a16"
+    $a29="ba19bf0415f12c77b31968f893616c6c524133522a54c21cf99fce95676aba83"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

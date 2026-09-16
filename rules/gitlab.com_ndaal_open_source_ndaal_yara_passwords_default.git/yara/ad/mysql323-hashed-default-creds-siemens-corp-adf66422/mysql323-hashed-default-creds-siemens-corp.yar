@@ -1,0 +1,47 @@
+rule mysql323_hashed_default_creds_siemens_corp
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for siemens_corp."
+        category = "INFO"
+        info = "MYSQL323"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="1b5ae8ca424e07fe"
+    $a1="1b5ae8ca424e07fe"
+    $a2="0806166022fdbd37"
+    $a3="0806166022fdbd37"
+    $a4="78a33511267f4c78"
+    $a5="43e9a4ab75570f5b"
+    $a6="6b0c4d377f62cc21"
+    $a7="7bb6f9b02155b579"
+    $a8="077f622149267fc3"
+    $a9="077f622149267fc3"
+    $a10="4297dfd67bfb01dd"
+    $a11="077f622149267fc3"
+    $a12="2f3f44617b0bc93d"
+    $a13="2f3f44617b0bc93d"
+    $a14="37bd7c4221e8a247"
+    $a15="2f3f44617b0bc93d"
+    $a16="60c033095644bd16"
+    $a17="077fe1f649259428"
+    $a18="5f7bee3e78957ef2"
+    $a19="5f7bee3e78957ef2"
+    $a20="6d6608be5e6f7fa3"
+    $a21="6a77f1277b51f67f"
+    $a22="6a77f1277b51f67f"
+    $a23="6a77f1277b51f67f"
+    $a24="37bd7c4221e8a247"
+    $a25="37bd7c4221e8a247"
+    $a26="6005d05e68b2220d"
+    $a27="568489575aefdf3b"
+    $a28="65d4ad6440a8c271"
+    $a29="56e926784f4f0a1d"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

@@ -1,0 +1,47 @@
+rule md5_hashed_default_creds_siemens_corp
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for siemens_corp."
+        category = "INFO"
+        info = "MD5"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="ff7e4f7c7b8622376538fad7894ed480"
+    $a1="ff7e4f7c7b8622376538fad7894ed480"
+    $a2="2755ed6330b4980ea24faa1081183dc7"
+    $a3="2755ed6330b4980ea24faa1081183dc7"
+    $a4="978d82f18a26b0eea6c67138cd408e85"
+    $a5="21232f297a57a5a743894a0e4a801fc3"
+    $a6="9d127ff383d595262c67036f50493133"
+    $a7="74e6a8b111ea7da1a7d0a596f4c35208"
+    $a8="11d8c28a64490a987612f2332502467f"
+    $a9="11d8c28a64490a987612f2332502467f"
+    $a10="4b583376b2767b923c3e1da60d10de59"
+    $a11="11d8c28a64490a987612f2332502467f"
+    $a12="b0f6dfb42fa80caee6825bfecd30f094"
+    $a13="b0f6dfb42fa80caee6825bfecd30f094"
+    $a14="d9f9133fb120cd6096870bc2b496805b"
+    $a15="b0f6dfb42fa80caee6825bfecd30f094"
+    $a16="1b3231655cebb7a1f783eddf27d254ca"
+    $a17="0b180078d994cb2b5ed89d7ce8e7eea2"
+    $a18="48a365b4ce1e322a55ae9017f3daf0c0"
+    $a19="48a365b4ce1e322a55ae9017f3daf0c0"
+    $a20="06e3d36fa30cea095545139854ad1fb9"
+    $a21="54b53072540eeeb8f8e9343e71f28176"
+    $a22="54b53072540eeeb8f8e9343e71f28176"
+    $a23="54b53072540eeeb8f8e9343e71f28176"
+    $a24="d9f9133fb120cd6096870bc2b496805b"
+    $a25="d9f9133fb120cd6096870bc2b496805b"
+    $a26="09a700340d5a369a6090a76b948d041e"
+    $a27="d56b1ce30c75425f25be2bfef71b0fae"
+    $a28="34c7547ba9fc3d10e0587b8773685dda"
+    $a29="3d92e7260146355e419c0a5bf0dd41e3"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

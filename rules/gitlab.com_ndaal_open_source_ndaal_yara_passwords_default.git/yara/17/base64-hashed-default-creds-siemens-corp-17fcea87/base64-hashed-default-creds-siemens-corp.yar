@@ -1,0 +1,47 @@
+rule base64_hashed_default_creds_siemens_corp
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for siemens_corp."
+        category = "INFO"
+        info = "SHA3_512"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="MTgxNDA4MTU="
+    $a1="MTgxNDA4MTU="
+    $a2="MzE5OTQ="
+    $a3="MzE5OTQ="
+    $a4="YWRtaW4="
+    $a5="cHdw"
+    $a6="ZW5n"
+    $a7="ZW5naW5lZXI="
+    $a8="b3A="
+    $a9="b3A="
+    $a10="b3A="
+    $a11="b3BlcmF0b3I="
+    $a12="cG9sbA=="
+    $a13="cG9sbA=="
+    $a14="cG9sbA=="
+    $a15="dGVjaA=="
+    $a16="c3U="
+    $a17="c3VwZXI="
+    $a18="c3lzYWRtaW4="
+    $a19="c3lzYWRtaW4="
+    $a20="c3lzdGVt"
+    $a21="ZmllbGQ="
+    $a22="c3lzdGVt"
+    $a23="c3lzdGVt"
+    $a24="dGVjaA=="
+    $a25="dGVjaA=="
+    $a26="V2luQ0NBZG1pbg=="
+    $a27="MldTWGNkZQ=="
+    $a28="V2luQ0NDb25uZWN0"
+    $a29="MldTWGNkZXI="
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}
