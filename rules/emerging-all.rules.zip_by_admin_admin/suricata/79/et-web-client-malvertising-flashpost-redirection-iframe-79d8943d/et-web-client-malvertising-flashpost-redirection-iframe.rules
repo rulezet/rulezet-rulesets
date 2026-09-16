@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET WEB_CLIENT MALVERTISING FlashPost - Redirection IFRAME"; flow:established,to_client; file.data; content:"{|22|iframe|22 3a|true,|22|url|22|"; within:20; classtype:bad-unknown; sid:2016022; rev:3; metadata:created_at 2012_12_13, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_13;)

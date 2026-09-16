@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER WebShell - JSP File Admin"; flow:established,to_client; file.data; content:"<h2>(L)aunch external program</h2>"; classtype:attempted-user; sid:2016152; rev:5; metadata:created_at 2013_01_04, signature_severity Major, updated_at 2024_03_13;)

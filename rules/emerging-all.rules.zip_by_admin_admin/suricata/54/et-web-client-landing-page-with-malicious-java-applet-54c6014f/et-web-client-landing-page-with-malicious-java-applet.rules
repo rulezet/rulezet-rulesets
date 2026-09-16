@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET WEB_CLIENT landing page with malicious Java applet"; flow:established,to_client; file.data; content:"code="; distance:0; content:"xploit.class"; distance:2; within:18; classtype:bad-unknown; sid:2014561; rev:7; metadata:created_at 2012_04_13, signature_severity Major, updated_at 2024_03_13;)

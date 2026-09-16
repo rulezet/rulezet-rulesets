@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER WebShell - JSP RAT"; flow:established,to_client; file.data; content:"<table id=\"filetable\" class=\"filelist\" cellspacing=\"1px\" cellpadding=\"0px\">"; classtype:attempted-user; sid:2016151; rev:4; metadata:created_at 2013_01_04, signature_severity Major, updated_at 2024_03_13;)

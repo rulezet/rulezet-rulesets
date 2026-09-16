@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_CLIENT Drupal Mass Injection Campaign Outbound"; flow:established,to_client; file.data; content:"if (i5463 == null) { var i5463 = 1|3b|"; classtype:bad-unknown; sid:2016099; rev:3; metadata:created_at 2012_12_28, signature_severity Major, updated_at 2024_03_13;)

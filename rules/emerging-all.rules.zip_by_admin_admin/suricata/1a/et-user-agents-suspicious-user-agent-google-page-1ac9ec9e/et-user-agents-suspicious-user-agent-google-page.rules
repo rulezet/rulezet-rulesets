@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET USER_AGENTS Suspicious user agent (Google page)"; flow:established,to_server; http.user_agent; content:"Google page"; startswith; classtype:trojan-activity; sid:2017067; rev:8; metadata:created_at 2011_05_31, confidence High, signature_severity Major, updated_at 2024_03_12;)

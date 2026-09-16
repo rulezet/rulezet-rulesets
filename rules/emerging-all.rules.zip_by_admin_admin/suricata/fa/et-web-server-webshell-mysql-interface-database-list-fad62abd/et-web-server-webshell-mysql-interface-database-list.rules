@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER WebShell - MySQL Interface - Database List"; flow:established,to_client; file.data; content:"<h1>Databases List</h1>"; classtype:bad-unknown; sid:2016574; rev:3; metadata:created_at 2013_03_14, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_13;)

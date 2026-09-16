@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ATTACK_RESPONSE Possible /etc/passwd via HTTP (linux style)"; flow:established,to_client; file.data; content:"root|3a|x|3a|0|3a|0|3a|root|3a|/root|3a|/"; nocase; classtype:successful-recon-limited; sid:2002034; rev:13; metadata:created_at 2010_07_30, confidence Medium, signature_severity Unknown, updated_at 2024_03_13;)

@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER WebShell - Symlink_Sa"; flow:established,to_client; file.data; content:"<title>Symlink_Sa"; classtype:bad-unknown; sid:2016244; rev:3; metadata:created_at 2013_01_22, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_13;)

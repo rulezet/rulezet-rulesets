@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER WebShell - Romanian Webshell"; flow:established,to_client; file.data; content:"Incarca fisier|3a|"; content:"Exeuta comada|3a|"; classtype:bad-unknown; sid:2016577; rev:5; metadata:created_at 2013_03_14, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_13;)
