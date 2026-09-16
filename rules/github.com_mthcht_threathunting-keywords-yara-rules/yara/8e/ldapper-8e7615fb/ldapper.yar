@@ -1,0 +1,22 @@
+rule LDAPPER
+{
+    meta:
+        description = "Detection patterns for the tool 'LDAPPER' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "LDAPPER"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = /\sldapper\.py/ nocase ascii wide
+                        $string2 = /\/LDAPPER\.git/ nocase ascii wide
+                        $string3 = /\/ldapper\.py/ nocase ascii wide
+                        $string4 = "/LDAPPER-master" nocase ascii wide
+                        $string5 = /\\ldapper\.py/ nocase ascii wide
+                        $string6 = /\\LDAPPER\-master/ nocase ascii wide
+                        $string7 = /AD\sLDAP\sCommand\sLine\sSearching\sthat\sdoesn\'t\ssuck\./ nocase ascii wide
+                        $string8 = "shellster/LDAPPER" nocase ascii wide
+
+    condition:
+        any of them
+}

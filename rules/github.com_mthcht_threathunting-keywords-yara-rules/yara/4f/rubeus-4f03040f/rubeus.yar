@@ -1,0 +1,136 @@
+rule Rubeus
+{
+    meta:
+        description = "Detection patterns for the tool 'Rubeus' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Rubeus"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1 = " /altservice:ldap " nocase ascii wide
+                        $string2 = " /asrepkey" nocase ascii wide
+                        $string3 = /\s\/createnetonly\:.{0,1000}cmd\.exe/ nocase ascii wide
+                        $string4 = /\s\/createnetonly\:.{0,1000}cmd\.exe/ nocase ascii wide
+                        $string5 = " /credpassword" nocase ascii wide
+                        $string6 = /\s\/creduser\:.{0,1000}\s\/credpassword\:/ nocase ascii wide
+                        $string7 = /\s\/impersonateuser\:.{0,1000}\s\/msdsspn\:.{0,1000}\s\/ptt/ nocase ascii wide
+                        $string8 = /\s\/ldap\s.{0,1000}\s\/printcmd/ nocase ascii wide
+                        $string9 = " /ldapfilter:'admincount=1'" nocase ascii wide
+                        $string10 = " /nofullpacsig " nocase ascii wide
+                        $string11 = /\s\/outfile\:.{0,1000}\s\/spn\:/ nocase ascii wide
+                        $string12 = /\s\/outfile\:.{0,1000}\s\/spns\:/ nocase ascii wide
+                        $string13 = " /pwdsetafter:" nocase ascii wide
+                        $string14 = " /pwdsetbefore:" nocase ascii wide
+                        $string15 = " /rc4opsec " nocase ascii wide
+                        $string16 = " /s4uproxytarget" nocase ascii wide
+                        $string17 = " /s4utransitedservices" nocase ascii wide
+                        $string18 = " /service:krbtgt " nocase ascii wide
+                        $string19 = /\s\/simple\s.{0,1000}\s\/spn/ nocase ascii wide
+                        $string20 = /\s\/ticket\s.{0,1000}\.kirbi/ nocase ascii wide
+                        $string21 = /\s\/ticket\:.{0,1000}\s\/autoenterprise\s/ nocase ascii wide
+                        $string22 = /\s\/ticket\:.{0,1000}\.kirbi/ nocase ascii wide
+                        $string23 = " /usetgtdeleg " nocase ascii wide
+                        $string24 = /\sasktgs\s.{0,1000}\s\/ticket\:/ nocase ascii wide
+                        $string25 = /\sasktgs\s.{0,1000}\.kirbi/ nocase ascii wide
+                        $string26 = " asktgs /ticket:" nocase ascii wide
+                        $string27 = /\sasktgt\s.{0,1000}\s\/service\:/ nocase ascii wide
+                        $string28 = " asktgt /user " nocase ascii wide
+                        $string29 = " asktht /user:" nocase ascii wide
+                        $string30 = " asreproast " nocase ascii wide
+                        $string31 = /\sbrute\s.{0,1000}\s\/password/ nocase ascii wide
+                        $string32 = /\schangepw\s.{0,1000}\s\/ticket\:/ nocase ascii wide
+                        $string33 = /\sdiamond\s.{0,1000}\s\/certificate\:/ nocase ascii wide
+                        $string34 = " diamond /tgtdeleg " nocase ascii wide
+                        $string35 = " diamond /user:" nocase ascii wide
+                        $string36 = /\sdump\s.{0,1000}\s\/service\:/ nocase ascii wide
+                        $string37 = /\sgolden\s.{0,1000}\s\/badpwdcount/ nocase ascii wide
+                        $string38 = /\sgolden\s.{0,1000}\s\/ldap\s/ nocase ascii wide
+                        $string39 = /\sgolden\s.{0,1000}\s\/user\:/ nocase ascii wide
+                        $string40 = /\sharvest\s.{0,1000}\s\/monitorinterval\:/ nocase ascii wide
+                        $string41 = " kerberoast " nocase ascii wide
+                        $string42 = " kerberoast " nocase ascii wide
+                        $string43 = /\sklist\s.{0,1000}\s\/service\:/ nocase ascii wide
+                        $string44 = /\smonitor\s\/interval\:.{0,1000}\s\/filteruser\:/ nocase ascii wide
+                        $string45 = " preauthscan /users:" nocase ascii wide
+                        $string46 = " ptt /ticket:" nocase ascii wide
+                        $string47 = /\srenew\s.{0,1000}\.kirbi/ nocase ascii wide
+                        $string48 = /\srenew\s.{0,1000}\/ticket\:/ nocase ascii wide
+                        $string49 = /\sRubeus\.dll/ nocase ascii wide
+                        $string50 = /\sRubeus\.ps1/ nocase ascii wide
+                        $string51 = /\ss4u\s.{0,1000}\s\/bronzebit/ nocase ascii wide
+                        $string52 = /\ss4u\s.{0,1000}\s\/nopac/ nocase ascii wide
+                        $string53 = /\ss4u\s.{0,1000}\s\/ticket\:/ nocase ascii wide
+                        $string54 = /\ss4u\s.{0,1000}\.kirbi/ nocase ascii wide
+                        $string55 = /\ss4u\s.{0,1000}\/rc4\:.{0,1000}\s/ nocase ascii wide
+                        $string56 = /\ssilver\s.{0,1000}\s\/domain/ nocase ascii wide
+                        $string57 = /\ssilver\s.{0,1000}\s\/ldap\s/ nocase ascii wide
+                        $string58 = /\ssilver\s.{0,1000}\s\/passlastset\s/ nocase ascii wide
+                        $string59 = /\ssilver\s.{0,1000}\s\/service\:/ nocase ascii wide
+                        $string60 = /\stgssub\s.{0,1000}\s\/ticket\:/ nocase ascii wide
+                        $string61 = " tgtdeleg /nowrap" nocase ascii wide
+                        $string62 = " tgtdeleg /target:" nocase ascii wide
+                        $string63 = "\"User32LogonProcesss\"" nocase ascii wide
+                        $string64 = /\(msds\-supportedencryptiontypes\=0\)\(msds\-supportedencryptiontypes\:1\.2\.840\.113556\.1\.4\.803\:\=4\)\)\)/ nocase ascii wide
+                        $string65 = /\.exe\sdump\s\/luid\:.{0,1000}\s\/service\:krbtgt/ nocase ascii wide
+                        $string66 = /\.exe\shash\s\/password\:/ nocase ascii wide
+                        $string67 = /\.exe\sptt\s\/ticket\:.{0,1000}\.kirbi/ nocase ascii wide
+                        $string68 = /\/Bruteforcer\./ nocase ascii wide
+                        $string69 = "/format:hashcat" nocase ascii wide
+                        $string70 = "/Rubeus" nocase ascii wide
+                        $string71 = /\/Rubeus\.dll/ nocase ascii wide
+                        $string72 = /\/Rubeus\.exe/ nocase ascii wide
+                        $string73 = /\/Rubeus\.git/ nocase ascii wide
+                        $string74 = /\/Rubeus\.ps1/ nocase ascii wide
+                        $string75 = "/Rubeus/" nocase ascii wide
+                        $string76 = /\/Rubeus\-Rundll32\.git/ nocase ascii wide
+                        $string77 = "/Rubeus-Rundll32/" nocase ascii wide
+                        $string78 = /\\Bruteforcer\./ nocase ascii wide
+                        $string79 = /\\Rubeus\./ nocase ascii wide
+                        $string80 = /\\Rubeus\.dll/ nocase ascii wide
+                        $string81 = /\\Rubeus\.exe/ nocase ascii wide
+                        $string82 = /\\Rubeus\.ps1/ nocase ascii wide
+                        $string83 = /\\Rubeus\\/ nocase ascii wide
+                        $string84 = /\\Rubeus\-Rundll32\\/ nocase ascii wide
+                        $string85 = ">User32LogonProcesss<" nocase ascii wide
+                        $string86 = "3ae0b0ec554f725076ca89389d9a3523e503a24248ee8a9b342f68c156e77b12" nocase ascii wide
+                        $string87 = "658C8B7F-3664-4A95-9572-A3E5871DFC06" nocase ascii wide
+                        $string88 = "658C8B7F-3664-4A95-9572-A3E5871DFC06" nocase ascii wide
+                        $string89 = "658C8B7F-3664-4A95-9572-A3E5871DFC06" nocase ascii wide
+                        $string90 = "66e0681a500c726ed52e5ea9423d2654" nocase ascii wide
+                        $string91 = "asrep2kirbi" nocase ascii wide
+                        $string92 = /Asreproast\./ nocase ascii wide
+                        $string93 = /cmd\.exe\'\ssuccessfully\screated\swith\sLOGON_TYPE\s\=\s9/ nocase ascii wide
+                        $string94 = /Commands\/Brute\./ nocase ascii wide
+                        $string95 = /Commands\/Createnetonly\./ nocase ascii wide
+                        $string96 = /Commands\/Logonsession\./ nocase ascii wide
+                        $string97 = /Commands\/Preauthscan\./ nocase ascii wide
+                        $string98 = /Commands\/Silver\./ nocase ascii wide
+                        $string99 = "Domain/CommandCollection" nocase ascii wide
+                        $string100 = "e415296f956351bc4060d03fa52512415f353e26236b7fd97642f7ef608ca4e9" nocase ascii wide
+                        $string101 = "e8ddad70f68375dbf38d0e8550acf1e53f5382e0bf9a0ee8f02f8b1c6222db81" nocase ascii wide
+                        $string102 = "GhostPack/Rubeus" nocase ascii wide
+                        $string103 = "kerberoast /" nocase ascii wide
+                        $string104 = /Kerberoast\./ nocase ascii wide
+                        $string105 = /lib\/ForgeTicket\./ nocase ascii wide
+                        $string106 = /lib\/S4U\./ nocase ascii wide
+                        $string107 = "namespace Rubeus" nocase ascii wide
+                        $string108 = /Rubeus.{0,1000}currentluid/ nocase ascii wide
+                        $string109 = /Rubeus.{0,1000}harvest/ nocase ascii wide
+                        $string110 = /Rubeus.{0,1000}logonsession/ nocase ascii wide
+                        $string111 = /Rubeus.{0,1000}monitor/ nocase ascii wide
+                        $string112 = /Rubeus\.Commands/ nocase ascii wide
+                        $string113 = /Rubeus\.exe/ nocase ascii wide
+                        $string114 = /Rubeus\.git/ nocase ascii wide
+                        $string115 = /Rubeus\.Kerberos/ nocase ascii wide
+                        $string116 = /Rubeus\.lib/ nocase ascii wide
+                        $string117 = "Rubeus-master" nocase ascii wide
+                        $string118 = /rundll32\s.{0,1000}RunRubeus/ nocase ascii wide
+                        $string119 = "rvrsh3ll/Rubeus-Rundll32" nocase ascii wide
+                        $string120 = /Temp\\\\rubeus/ nocase ascii wide
+                        $string121 = /ticket\.kirbi/ nocase ascii wide
+                        $string122 = /using\sRubeus\.Domain\;/ nocase ascii wide
+
+    condition:
+        any of them
+}
