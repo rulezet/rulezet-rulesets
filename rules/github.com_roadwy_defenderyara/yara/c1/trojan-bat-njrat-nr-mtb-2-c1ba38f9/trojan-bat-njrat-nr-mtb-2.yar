@@ -1,0 +1,9 @@
+rule Trojan_BAT_NjRAT_NR_MTB_2{
+	meta:
+		description = "Trojan:BAT/NjRAT.NR!MTB,SIGNATURE_TYPE_PEHSTR_EXT,06 00 06 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {0a 06 72 10 4a 01 70 28 ?? ?? ?? 06 28 ?? ?? ?? 0a 28 ?? ?? ?? 0a 0b 07 28 ?? ?? ?? 0a 0c 08 6f ?? ?? ?? 0a 14 14 6f ?? ?? ?? 0a } 		$a_01_1 = {73 76 63 68 6f 73 74 2e 4d 79 2e 52 65 73 6f 75 72 63 65 73 } 	condition:
+		((#a_03_0  & 1)*5+(#a_01_1  & 1)*1) >=6
+ 
+}
