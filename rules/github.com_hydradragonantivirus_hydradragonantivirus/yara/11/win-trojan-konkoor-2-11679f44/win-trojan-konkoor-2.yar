@@ -1,0 +1,9 @@
+rule Win_Trojan_Konkoor_2
+{
+strings:
+	$a0 = { 515256575506bf840033c08ec0268b05268b5d02073b06750675093b1e77067503e96001b430cd213d060074263d05 }
+
+
+condition:
+	$a0
+}
