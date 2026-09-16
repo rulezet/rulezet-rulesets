@@ -1,0 +1,21 @@
+{
+  "uuid": "9be77f2c-3a1b-4ec0-b662-17c820b9fce9",
+  "title": "rule_mimidogz_offensive_tool_keyword",
+  "format": "yara",
+  "author": "@mthcht",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detection patterns for the tool 'mimidogz' taken from the ThreatHunting-Keywords github project",
+  "source": "https://github.com/mthcht/ThreatHunting-Keywords-yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "misp-galaxy:tool=\"Mimikatz\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/248782"
+}

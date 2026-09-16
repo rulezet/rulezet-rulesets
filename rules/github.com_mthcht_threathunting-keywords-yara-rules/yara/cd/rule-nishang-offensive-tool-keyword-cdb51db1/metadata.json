@@ -1,0 +1,21 @@
+{
+  "uuid": "cdb51db1-9b59-4352-8392-05b8f46713a7",
+  "title": "rule_nishang_offensive_tool_keyword",
+  "format": "yara",
+  "author": "@mthcht",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detection patterns for the tool 'nishang' taken from the ThreatHunting-Keywords github project",
+  "source": "https://github.com/mthcht/ThreatHunting-Keywords-yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:tool=\"Mimikatz\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/248869"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "48098819-46d5-4f3a-a558-725e29f92cd7",
+  "title": "rule_LaZagne_offensive_tool_keyword",
+  "format": "yara",
+  "author": "@mthcht",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detection patterns for the tool 'LaZagne' taken from the ThreatHunting-Keywords github project",
+  "source": "https://github.com/mthcht/ThreatHunting-Keywords-yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:tool=\"Lazagne\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/248682"
+}

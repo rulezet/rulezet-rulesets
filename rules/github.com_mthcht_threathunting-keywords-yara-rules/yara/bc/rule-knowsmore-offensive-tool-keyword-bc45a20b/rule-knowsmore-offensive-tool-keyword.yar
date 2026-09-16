@@ -1,0 +1,126 @@
+rule rule_knowsmore_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'knowsmore' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "knowsmore"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_knowsmore_offensive_tool_keyword = " --bloodhound --import-data " nocase ascii wide
+                        $string2_knowsmore_offensive_tool_keyword = " --bloodhound --mark-owned " nocase ascii wide
+                        $string3_knowsmore_offensive_tool_keyword = " --bloodhound --sync " nocase ascii wide
+                        $string4_knowsmore_offensive_tool_keyword = /\sbloodhoundsync\.py/ nocase ascii wide
+                        $string5_knowsmore_offensive_tool_keyword = /\sknowsmore\.cmd\.wordlist/ nocase ascii wide
+                        $string6_knowsmore_offensive_tool_keyword = /\sknowsmore\.cmdbase/ nocase ascii wide
+                        $string7_knowsmore_offensive_tool_keyword = /\sknowsmore\.config/ nocase ascii wide
+                        $string8_knowsmore_offensive_tool_keyword = /\sknowsmore\.knowsmore/ nocase ascii wide
+                        $string9_knowsmore_offensive_tool_keyword = /\sknowsmore\.libs\.bloodhoundsync/ nocase ascii wide
+                        $string10_knowsmore_offensive_tool_keyword = /\sknowsmore\.libs\.exporterbase/ nocase ascii wide
+                        $string11_knowsmore_offensive_tool_keyword = /\sknowsmore\.libs\.ntdsuseraccount/ nocase ascii wide
+                        $string12_knowsmore_offensive_tool_keyword = /\sknowsmore\.module/ nocase ascii wide
+                        $string13_knowsmore_offensive_tool_keyword = /\sknowsmore\.password/ nocase ascii wide
+                        $string14_knowsmore_offensive_tool_keyword = /\sknowsmore\.py/ nocase ascii wide
+                        $string15_knowsmore_offensive_tool_keyword = /\sknowsmore\.util\.color/ nocase ascii wide
+                        $string16_knowsmore_offensive_tool_keyword = /\sknowsmore\.util\.database/ nocase ascii wide
+                        $string17_knowsmore_offensive_tool_keyword = /\sknowsmore\.util\.knowsmoredb/ nocase ascii wide
+                        $string18_knowsmore_offensive_tool_keyword = /\sknowsmore\.util\.logger/ nocase ascii wide
+                        $string19_knowsmore_offensive_tool_keyword = /\sknowsmore\.util\.process/ nocase ascii wide
+                        $string20_knowsmore_offensive_tool_keyword = /\sknowsmore\.util\.tools/ nocase ascii wide
+                        $string21_knowsmore_offensive_tool_keyword = /\sntdsuseraccount\.py/ nocase ascii wide
+                        $string22_knowsmore_offensive_tool_keyword = /\s\-\-ntlm\-hash\s\-\-company\s.{0,100}\s\-\-import\-cracked\s/ nocase ascii wide
+                        $string23_knowsmore_offensive_tool_keyword = " --ntlm-hash --export-hashes " nocase ascii wide
+                        $string24_knowsmore_offensive_tool_keyword = /\s\-\-ntlm\-hash\s\-\-import\-ntds\s.{0,100}\.ntds/ nocase ascii wide
+                        $string25_knowsmore_offensive_tool_keyword = " --secrets-dump -target " nocase ascii wide
+                        $string26_knowsmore_offensive_tool_keyword = /\ssecretsdump\.py/ nocase ascii wide
+                        $string27_knowsmore_offensive_tool_keyword = /\/bloodhoundsync\.py/ nocase ascii wide
+                        $string28_knowsmore_offensive_tool_keyword = /\/decrypting\-lsa\-secrets\.html/ nocase ascii wide
+                        $string29_knowsmore_offensive_tool_keyword = /\/knowsmore\.cmd/ nocase ascii wide
+                        $string30_knowsmore_offensive_tool_keyword = /\/knowsmore\.db/ nocase ascii wide
+                        $string31_knowsmore_offensive_tool_keyword = /\/knowsmore\.git/ nocase ascii wide
+                        $string32_knowsmore_offensive_tool_keyword = /\/knowsmore\.py/ nocase ascii wide
+                        $string33_knowsmore_offensive_tool_keyword = /\/ntdsuseraccount\.py/ nocase ascii wide
+                        $string34_knowsmore_offensive_tool_keyword = /\/secretsdump\.py/ nocase ascii wide
+                        $string35_knowsmore_offensive_tool_keyword = /\\bloodhoundsync\.py/ nocase ascii wide
+                        $string36_knowsmore_offensive_tool_keyword = /\\knowsmore\.py/ nocase ascii wide
+                        $string37_knowsmore_offensive_tool_keyword = /\\ntdsuseraccount\.py/ nocase ascii wide
+                        $string38_knowsmore_offensive_tool_keyword = /\\secretsdump\.py/ nocase ascii wide
+                        $string39_knowsmore_offensive_tool_keyword = "087c26613e0a27bccb09de333278fb55c2b9cf3cf7600e36615353e67c1baaf9" nocase ascii wide
+                        $string40_knowsmore_offensive_tool_keyword = "0af6b417e2069876a8530e9ca0056ddc12b24f348e1d4a531add0760b8d11236" nocase ascii wide
+                        $string41_knowsmore_offensive_tool_keyword = "11ddcce3f411ffc78725cd4487998eb819324a19a502cd86852c9d8e2cc9659d" nocase ascii wide
+                        $string42_knowsmore_offensive_tool_keyword = "13d035ab6eb82b5527186ca674d8e17a018fd7389320d0df32c8fa2551df45d8" nocase ascii wide
+                        $string43_knowsmore_offensive_tool_keyword = "16a6b0fa183e54c07a78cdcea63df1d177aaafe8cf5737df9073e63fb03388a4" nocase ascii wide
+                        $string44_knowsmore_offensive_tool_keyword = "1af1c92c7a9a60a740d6351d935cb24d5c8ba7bde5a54bff8931a40bb6a2aa28" nocase ascii wide
+                        $string45_knowsmore_offensive_tool_keyword = "1aff544e58c3eda489ae9b59f32a10175d95e1aac12a4fbf25a40c40a1cc6c74" nocase ascii wide
+                        $string46_knowsmore_offensive_tool_keyword = "1e0d1441d6cc702501cd4fa67abc59887a1afedb25dc0b2aeda80cf168469883" nocase ascii wide
+                        $string47_knowsmore_offensive_tool_keyword = "2242362e7144103ecd965687227503de0483d4e7636218b1dd28cc01752bdb0f" nocase ascii wide
+                        $string48_knowsmore_offensive_tool_keyword = "23ef7c9571eb00b307253eafdd5821d52ccfa9a4a7225e328c450d9f6657be16" nocase ascii wide
+                        $string49_knowsmore_offensive_tool_keyword = "34b1b9b6a69e55a9a8ee08e26eb932ea6e8823c4a93c2d95e0e7b33376492827" nocase ascii wide
+                        $string50_knowsmore_offensive_tool_keyword = "387416cccea393e9e9eb2c069edabbf7297226037cc374d9a358ce1020696a5d" nocase ascii wide
+                        $string51_knowsmore_offensive_tool_keyword = "391d4825efd725d2deed4dd7d2addc62f38c3c8f15e84ada070aabc2303b4ab4" nocase ascii wide
+                        $string52_knowsmore_offensive_tool_keyword = "3b45f3db658c4628a97d2d8efa567415cb2e4cfc8a397570f0d33cc97c1aa78c" nocase ascii wide
+                        $string53_knowsmore_offensive_tool_keyword = "3c40fcf023afe126e8cc67593d21bc3ee9af7c56e3f1b8e9614cfd58030c29af" nocase ascii wide
+                        $string54_knowsmore_offensive_tool_keyword = "4243bea295573ba62e1bf4b685804539bab0286331a11e390f7e46abdc8ee785" nocase ascii wide
+                        $string55_knowsmore_offensive_tool_keyword = "46aee0547844dab640a8f982d4fb71207da42c0e00e214f2012680d3822adb85" nocase ascii wide
+                        $string56_knowsmore_offensive_tool_keyword = "553783ac96602dadd391b657eec078f7ab768c1b06bc04373e9fe9068f113041" nocase ascii wide
+                        $string57_knowsmore_offensive_tool_keyword = "5b095728389373e05a038fea724aa2dd66c3ff68b830cc651fd92177afe8c8b3" nocase ascii wide
+                        $string58_knowsmore_offensive_tool_keyword = "5e438cc32aa2a58190adc379d070d815afd1b03284eb7922b8daed40014ad1ef" nocase ascii wide
+                        $string59_knowsmore_offensive_tool_keyword = "61573b0cc19ea7bfb6ebe0ad6285d490710a1a09db5e32ab7e029ee466874bcc" nocase ascii wide
+                        $string60_knowsmore_offensive_tool_keyword = "6936c267e3cbb3bb7f418e26594bbf7367b7d2c8de6ad5d0e88c2cb3485dfcd9" nocase ascii wide
+                        $string61_knowsmore_offensive_tool_keyword = "6ed65758ecfa41680c567082d18526278b6e446b37046b578c6b1bf531d81f59" nocase ascii wide
+                        $string62_knowsmore_offensive_tool_keyword = "71e42659e0e9e225d76c33796093aaf32bc1f29359a6f8a4105b6e07c1c10df6" nocase ascii wide
+                        $string63_knowsmore_offensive_tool_keyword = "72d57c0c42ccd4ec3a220ac3c91cbb49b25cfcabebd30e36539980b52cfd49a4" nocase ascii wide
+                        $string64_knowsmore_offensive_tool_keyword = "7331b5c04c58757162a4448cc22df3483cbc4c38823a0e11026830f6cdfabf75" nocase ascii wide
+                        $string65_knowsmore_offensive_tool_keyword = "7d2dfbf053a420ad3857171642cbec5738196a0ead931f93737d16e14b7faec4" nocase ascii wide
+                        $string66_knowsmore_offensive_tool_keyword = "7da54ac68e35d2604980ef414a6ec8b696bf6ec5df2b32ad7596bee48db883c6" nocase ascii wide
+                        $string67_knowsmore_offensive_tool_keyword = "8a3bfd492f149d5c83675dd30e6ad94160534c980665609d6142f246552ac684" nocase ascii wide
+                        $string68_knowsmore_offensive_tool_keyword = "9e415352dda775398d02d9dd203367ce365c562da6227f72b77fb2916550345f" nocase ascii wide
+                        $string69_knowsmore_offensive_tool_keyword = "a6fe51ded3889aaf77c7b55814220c6e2ba19fac731f4387c472713d3b454dca" nocase ascii wide
+                        $string70_knowsmore_offensive_tool_keyword = "a78b41d1e1383a0aefbaba58881d1aa5b4a76457828ab5d60cb3b10ab075ca49" nocase ascii wide
+                        $string71_knowsmore_offensive_tool_keyword = "b350e1226b7d00487b47bec0f48320e85e3fb2546dc359cba3f2d77c75b5c599" nocase ascii wide
+                        $string72_knowsmore_offensive_tool_keyword = "BloodHound ZIP File identified, extracting" nocase ascii wide
+                        $string73_knowsmore_offensive_tool_keyword = "c1a30c8a226a6099fa0fc3d39e1fe4e83763ad52c41675b607ab569b7957f8a7" nocase ascii wide
+                        $string74_knowsmore_offensive_tool_keyword = "c7d3092d358e4828259d3b137eec1edeab112e2a70920c5912c76724e956ba47" nocase ascii wide
+                        $string75_knowsmore_offensive_tool_keyword = "c8808822c7f2fb60db3809d0700f739e39dca8c3d4918d01daa696ef8ed6a819" nocase ascii wide
+                        $string76_knowsmore_offensive_tool_keyword = "ca8e5157e4c093be717f36225fc1fb1fb4ffb1cf404cc9738c9a9fb7d41da29d" nocase ascii wide
+                        $string77_knowsmore_offensive_tool_keyword = "cb4490df575c59cc338804d8401be9782981fa7a5e9785a03781a3c135a8d837" nocase ascii wide
+                        $string78_knowsmore_offensive_tool_keyword = "cc81272307a9b746b67a9e9a52fbe5bc1f70f75c869480b517e16f34e20b80f5" nocase ascii wide
+                        $string79_knowsmore_offensive_tool_keyword = "cf0ef69e85418ec61f9200a26553738987c546710243bfae6c86b25edfdb5651" nocase ascii wide
+                        $string80_knowsmore_offensive_tool_keyword = "d83b72b8147d812d79c480142f74fa123115349052ab1d88df742c0cc8c1aca5" nocase ascii wide
+                        $string81_knowsmore_offensive_tool_keyword = "daa60ab697e9a8cd8ec70c7cc31de5692de1c878c425514788229e791c746e6b" nocase ascii wide
+                        $string82_knowsmore_offensive_tool_keyword = "Dumping cached domain logon information " nocase ascii wide
+                        $string83_knowsmore_offensive_tool_keyword = /Dumping\sDomain\sCredentials\s\(/ nocase ascii wide
+                        $string84_knowsmore_offensive_tool_keyword = "e1ed880a56c4cbe995035969850bb409996edba8e31c05d654f525112026633f" nocase ascii wide
+                        $string85_knowsmore_offensive_tool_keyword = "e5285e73892bee5dd811a25cc0f2848fbe995c0aebfa2fd4ac533a8f2a619cec" nocase ascii wide
+                        $string86_knowsmore_offensive_tool_keyword = "e98bb5dcf6f202575e80431612a35d072adca1f57cb74d9e198dd51e6fe6a483" nocase ascii wide
+                        $string87_knowsmore_offensive_tool_keyword = "fbe35bdcceb19b3c20e8a212a5a6fa853e9d452321b75da7bbbb7666631c6dc4" nocase ascii wide
+                        $string88_knowsmore_offensive_tool_keyword = /from\s\.\simport\sknowsmore/ nocase ascii wide
+                        $string89_knowsmore_offensive_tool_keyword = "from knowsmore import knowsmore" nocase ascii wide
+                        $string90_knowsmore_offensive_tool_keyword = "helviojunior/knowsmore" nocase ascii wide
+                        $string91_knowsmore_offensive_tool_keyword = "knowsmore --create-db" nocase ascii wide
+                        $string92_knowsmore_offensive_tool_keyword = "New password cracked! MTLM: " nocase ascii wide
+                        $string93_knowsmore_offensive_tool_keyword = /NTDSHashes\.dump/ nocase ascii wide
+                        $string94_knowsmore_offensive_tool_keyword = "pip install knowsmore" nocase ascii wide
+                        $string95_knowsmore_offensive_tool_keyword = "pip3 install --upgrade knowsmore" nocase ascii wide
+                        $string96_knowsmore_offensive_tool_keyword = "Policy SPN target name validation might be restricting full DRSUAPI dump" nocase ascii wide
+                        $string97_knowsmore_offensive_tool_keyword = "vssadmin delete shadows /shadow=" nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

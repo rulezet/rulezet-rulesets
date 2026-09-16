@@ -1,0 +1,21 @@
+{
+  "uuid": "95a0ee45-c3d6-4fc7-90b5-f98d00163851",
+  "title": "rule_koadic_offensive_tool_keyword",
+  "format": "yara",
+  "author": "@mthcht",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detection patterns for the tool 'koadic' taken from the ThreatHunting-Keywords github project",
+  "source": "https://github.com/mthcht/ThreatHunting-Keywords-yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:tool=\"IMPACKET\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/248659"
+}

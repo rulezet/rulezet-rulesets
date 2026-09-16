@@ -1,0 +1,58 @@
+rule rule_jackdaw_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'jackdaw' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "jackdaw"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_jackdaw_offensive_tool_keyword = /\/jackdaw\.exe/ nocase ascii wide
+                        $string2_jackdaw_offensive_tool_keyword = /\/jackdaw\.git/ nocase ascii wide
+                        $string3_jackdaw_offensive_tool_keyword = /\/jackdaw\.zip/ nocase ascii wide
+                        $string4_jackdaw_offensive_tool_keyword = /\/well_known_sids\.py/ nocase ascii wide
+                        $string5_jackdaw_offensive_tool_keyword = /\\jackdaw\.exe/ nocase ascii wide
+                        $string6_jackdaw_offensive_tool_keyword = /\\jackdaw\.zip/ nocase ascii wide
+                        $string7_jackdaw_offensive_tool_keyword = "01c79370958be0cd2c8c9dddd793556e37d0edf80f9ffd1f368c5440e5ef9666" nocase ascii wide
+                        $string8_jackdaw_offensive_tool_keyword = "06c92c9a18667e8d0d624f3de3dac6d3db96f3ce5f3e738a0c49ffa92d32c068" nocase ascii wide
+                        $string9_jackdaw_offensive_tool_keyword = "29b4ba00c47acb9059e19dd1acd4c6e83dfbd0af2e4cf0447892de04c6d1e8e4" nocase ascii wide
+                        $string10_jackdaw_offensive_tool_keyword = "3bf103c2c2f275c75c34f519c26b72143b038f4b31ae7c2d99e9ffd30bb07761" nocase ascii wide
+                        $string11_jackdaw_offensive_tool_keyword = "4d6d37ca48cd2999f2362975d0ede5f28dec0780d6815db75ff450aef1aabf12" nocase ascii wide
+                        $string12_jackdaw_offensive_tool_keyword = "4f2a713d98aedd080e4cda63a75f4057997d1aa87903649a921cadeed54463aa" nocase ascii wide
+                        $string13_jackdaw_offensive_tool_keyword = "59ce9c0deee4a9514bca45b542d680baa7d7b927fef94c54ac5a0433db480629" nocase ascii wide
+                        $string14_jackdaw_offensive_tool_keyword = "5f54bd1d5ca340f7276bce27fe649e8465aaec2482a8db998de5b069d17633b3" nocase ascii wide
+                        $string15_jackdaw_offensive_tool_keyword = "6185f2b2dfd6000213f93bbea91b80af670ced8825626656a61e23a8d5780dcb" nocase ascii wide
+                        $string16_jackdaw_offensive_tool_keyword = "8d792ce2918767066d9de241a7479094ff84a7234957840fda5381298be9af21" nocase ascii wide
+                        $string17_jackdaw_offensive_tool_keyword = "92ecee084ef8dd59561826895fd8aef0e5db918ad05940aabba3999be223ba4f" nocase ascii wide
+                        $string18_jackdaw_offensive_tool_keyword = "94c1e9fde90bb271016a5a6bc05f6cfc8caa1acc18336aa864de5431ac52c7a4" nocase ascii wide
+                        $string19_jackdaw_offensive_tool_keyword = "9b7e4c777b2fed27f94d05d195c52bdc036482820274dfa345eb9bbd557d4ac7" nocase ascii wide
+                        $string20_jackdaw_offensive_tool_keyword = "9c887d5a9f4522a35749c9c91863c12d3e69b22f24ebfac41b3d6290c503a460" nocase ascii wide
+                        $string21_jackdaw_offensive_tool_keyword = "a20a99c4f1693911d793608704b7b50c69fea98c091ff2cfd936227374d3d83d" nocase ascii wide
+                        $string22_jackdaw_offensive_tool_keyword = "b950b16b3e207f829f926b62cd1e75e774d57f9e676dcf01191d054fac7dd2f5" nocase ascii wide
+                        $string23_jackdaw_offensive_tool_keyword = "e3b8202dd0e456299e6c11495357e0e540ad0c73ff73723783b968d3d28c02ac" nocase ascii wide
+                        $string24_jackdaw_offensive_tool_keyword = "e65ca194ca5dd3606ca5c0b67b2cf3df4cc38283e4aa11933002b430fc5be17b" nocase ascii wide
+                        $string25_jackdaw_offensive_tool_keyword = "ecebdd54145e9987d9ae0f389369e33571bbbad53970f990423902bdb2cc59d2" nocase ascii wide
+                        $string26_jackdaw_offensive_tool_keyword = /gatherer\/gatherer\.py/ nocase ascii wide
+                        $string27_jackdaw_offensive_tool_keyword = "jackdaw --" nocase ascii wide
+                        $string28_jackdaw_offensive_tool_keyword = /jackdaw\.py/ nocase ascii wide
+                        $string29_jackdaw_offensive_tool_keyword = "skelsec/jackdaw" nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}
