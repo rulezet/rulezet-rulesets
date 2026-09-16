@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET DYN_DNS DYNAMIC_DNS Query to *.passinggas.net Domain (Sitelutions)"; dns.query; content:".passinggas.net"; nocase; fast_pattern; endswith; classtype:bad-unknown; sid:2018810; rev:6; metadata:created_at 2014_07_30, former_category INFO, confidence Medium, signature_severity Informational, updated_at 2024_06_11;)

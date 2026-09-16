@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER Possible bash shell piped to dev tcp Inbound to WebServer M1"; flow:established,to_server; http.uri; content:"/dev/tcp/"; fast_pattern; nocase; classtype:bad-unknown; sid:2019285; rev:5; metadata:created_at 2014_09_26, confidence Medium, signature_severity Major, updated_at 2024_05_21;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DYN_DNS Dyndns Client IP Check"; flow:established,to_server; http.user_agent; content:"DynDNS-Client"; startswith; http.host; content:"checkip.dyndns."; classtype:not-suspicious; sid:2014091; rev:6; metadata:created_at 2012_01_03, former_category POLICY, signature_severity Informational, updated_at 2024_06_11;)
