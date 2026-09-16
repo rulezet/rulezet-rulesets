@@ -1,0 +1,9 @@
+rule Win_Downloader_Adload_90
+{
+strings:
+	$a0 = { b8fe1e33f05c7a7335d2c87c27cbf2d26864ee812992ac22e8402702ca9bb9babdcff84a0c4e3197de646788c2ba2b2fbec637b950eb1f25f26be9cdc18b44d3aa9a5d79a4922926b92dce5864e838cdc9c01bba9d34cba51e8e9f619df7a86802cdb5b34c5ca34b61c52dede5718873cadbfc6c95538c41d8c1e164be3ed4b2d0cdb90cbe3ee39d5052c083 }
+
+
+condition:
+	$a0
+}
