@@ -1,0 +1,9 @@
+rule Trojan_Win32_Gozi_GB_MTB{
+	meta:
+		description = "Trojan:Win32/Gozi.GB!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_02_0 = {83 c4 08 8b 4d f0 8b 55 fc 8d 84 0a [0-15] 89 45 ?? 8b 0d ?? ?? ?? ?? 89 0d ?? ?? ?? ?? 8b 55 ?? 89 15 } 		$a_02_1 = {8b ff c7 05 [0-20] 01 05 ?? ?? ?? ?? 8b ff 8b 0d ?? ?? ?? ?? 8b 15 ?? ?? ?? ?? 89 11 } 	condition:
+		((#a_02_0  & 1)*1+(#a_02_1  & 1)*1) >=2
+ 
+}

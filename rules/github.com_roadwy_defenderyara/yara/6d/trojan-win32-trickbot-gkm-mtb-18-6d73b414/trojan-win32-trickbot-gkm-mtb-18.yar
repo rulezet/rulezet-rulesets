@@ -1,0 +1,9 @@
+rule Trojan_Win32_Trickbot_GKM_MTB_18{
+	meta:
+		description = "Trojan:Win32/Trickbot.GKM!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {0f bf fa 3b bd ?? ?? ?? ?? 7f ?? 8b 41 ?? 8b 51 ?? 2b c2 33 d2 8a 14 38 03 c7 89 85 ?? ?? ?? ?? 8b 45 ?? 8a 14 02 8b 85 ?? ?? ?? ?? 88 10 8b 85 ?? ?? ?? ?? 03 f8 eb } 	condition:
+		((#a_02_0  & 1)*1) >=1
+ 
+}
