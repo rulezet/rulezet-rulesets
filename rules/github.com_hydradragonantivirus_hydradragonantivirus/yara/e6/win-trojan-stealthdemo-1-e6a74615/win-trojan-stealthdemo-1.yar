@@ -1,0 +1,9 @@
+rule Win_Trojan_Stealthdemo_1
+{
+strings:
+	$a0 = { 429cfa2eff1ec202c3202d20537465616c74682064656d6f206279204461726b20536c61796572206f66205450564f }
+
+
+condition:
+	$a0
+}
