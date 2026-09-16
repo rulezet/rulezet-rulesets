@@ -1,0 +1,9 @@
+rule Win_Trojan_Hackarmy_44
+{
+strings:
+	$a0 = { 87ff9184eaa77c10c87c5e8180c2aa00bf0077696e564e432e396578700e6861636b63726d7983238b3170067b67fa6e7364e5c0746f7875f9 }
+
+
+condition:
+	$a0
+}

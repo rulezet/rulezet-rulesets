@@ -1,0 +1,9 @@
+rule Win_Trojan_TDS_2
+{
+strings:
+	$a0 = { 57ef7503838e6aae6be6c745f3673a13dd9cd9eecfb63cfba0bff3bffb615d17340c10f7cdc4c8bdba33abb9542a36f397b1137e45cacdc16a72e35cdc345d0ef55dada8115bd3bdf597765e9f160aa14ea126aaa21ff875636bb6be14d4c92b90330b0e3c57e21d4fa294a682a6ace7d6af67d7aa6bf3a29db99ba315bbea1dd0f4ab170c9a7b45036810e27bb730dc29f42d6c3b }
+
+
+condition:
+	$a0
+}

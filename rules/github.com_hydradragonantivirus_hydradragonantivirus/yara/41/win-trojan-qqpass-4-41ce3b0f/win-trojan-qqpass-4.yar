@@ -1,0 +1,11 @@
+rule Win_Trojan_QQPass_4
+{
+strings:
+	$a0 = { 7431000204a005b301e7090e010b0e00633a5c71716c6f67696e2e7478740012010030 }
+
+	$a1 = { 73657471710051514b696c6c000051514b }
+
+
+condition:
+	$a0 and $a1
+}

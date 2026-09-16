@@ -1,0 +1,11 @@
+rule Win_Trojan_Zachpast_10
+{
+strings:
+	$a0 = { 7772697465202566696c65746f626f6f7420242b28224761746f7220436f }
+
+	$a1 = { 02751f2003342c30461f7563026b1f20791f6f02 }
+
+
+condition:
+	$a0 and $a1
+}
