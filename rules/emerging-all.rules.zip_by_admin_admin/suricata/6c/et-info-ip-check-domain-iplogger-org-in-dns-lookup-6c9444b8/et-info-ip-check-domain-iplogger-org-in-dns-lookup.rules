@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO IP Check Domain (iplogger .org in DNS Lookup)"; dns.query; content:"iplogger.org"; endswith; classtype:policy-violation; sid:2035948; rev:4; metadata:created_at 2017_11_27, confidence Medium, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_09_15;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET P2P BTWebClient UA uTorrent in use"; flow:established,to_server; http.user_agent; content:"BTWebClient"; classtype:policy-violation; sid:2012247; rev:6; metadata:created_at 2011_01_27, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_09_14;)

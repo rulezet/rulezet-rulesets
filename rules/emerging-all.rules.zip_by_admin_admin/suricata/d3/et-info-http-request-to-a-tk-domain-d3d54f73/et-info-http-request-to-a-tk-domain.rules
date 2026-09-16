@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO HTTP Request to a *.tk domain"; flow:established,to_server; http.host; content:".tk"; fast_pattern; endswith; content:!".tcl.tk"; content:!"tcl.tk"; depth:6; endswith; classtype:bad-unknown; sid:2012810; rev:12; metadata:created_at 2011_05_15, confidence High, signature_severity Informational, updated_at 2020_09_15;)

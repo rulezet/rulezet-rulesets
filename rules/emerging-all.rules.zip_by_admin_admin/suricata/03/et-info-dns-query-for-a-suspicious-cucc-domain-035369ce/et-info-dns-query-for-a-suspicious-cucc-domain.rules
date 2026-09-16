@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO DNS Query for a Suspicious *.cu.cc domain"; dns.query; content:".cu.cc"; nocase; endswith; classtype:bad-unknown; sid:2013172; rev:5; metadata:created_at 2011_07_02, confidence Medium, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2020_09_15;)

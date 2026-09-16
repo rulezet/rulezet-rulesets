@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO DNS Query for a Suspicious *.co.tv domain"; dns.query; content:".co.tv"; nocase; endswith; classtype:bad-unknown; sid:2012956; rev:6; metadata:created_at 2011_06_08, confidence Medium, signature_severity Informational, updated_at 2020_09_15;)

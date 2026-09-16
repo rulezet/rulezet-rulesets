@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO request to .xxx TLD"; flow:established,to_server; http.host; content:".xxx"; endswith; reference:url,en.wikipedia.org/wiki/.xxx; classtype:policy-violation; sid:2012694; rev:6; metadata:created_at 2011_04_20, confidence High, signature_severity Informational, updated_at 2020_09_15;)
