@@ -1,0 +1,9 @@
+rule Win_Trojan_Sinister_2
+{
+strings:
+	$a0 = { 723a73696e2e707570732e6e65742e72753a3535353535[0-168]2f6463632073656e642024312024322d }
+
+
+condition:
+	$a0
+}

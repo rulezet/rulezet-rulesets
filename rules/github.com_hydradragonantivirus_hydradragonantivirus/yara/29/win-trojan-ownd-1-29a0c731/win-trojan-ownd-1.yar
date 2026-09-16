@@ -1,0 +1,9 @@
+rule Win_Trojan_Ownd_1
+{
+strings:
+	$a0 = { 6e303d2f6a6f696e2023215b30776e336420246368722833362920242b206e756c6c[0-22]23215b30776e3364 }
+
+
+condition:
+	$a0
+}

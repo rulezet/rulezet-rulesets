@@ -1,0 +1,9 @@
+rule Win_Trojan_Kernel_2
+{
+strings:
+	$a0 = { 6966202820256b65726e656c6820256b65726e656c6520256b65726e656c692920256b65726e656c62 }
+
+
+condition:
+	$a0
+}

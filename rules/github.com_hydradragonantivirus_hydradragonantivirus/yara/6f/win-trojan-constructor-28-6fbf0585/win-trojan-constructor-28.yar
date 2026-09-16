@@ -1,0 +1,9 @@
+rule Win_Trojan_Constructor_28
+{
+strings:
+	$a0 = { 64656c20633a5c223b2064656c6176243b20227e315c6176706572736f6e616c5c616e74697669722e766466 }
+
+
+condition:
+	$a0
+}

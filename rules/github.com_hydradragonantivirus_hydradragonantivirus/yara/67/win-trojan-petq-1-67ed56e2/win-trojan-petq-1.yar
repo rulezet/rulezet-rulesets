@@ -1,0 +1,9 @@
+rule Win_Trojan_Petq_1
+{
+strings:
+	$a0 = { 633a5c77696e616d6f642e646174[0-153]2e636f707966696c6564756d6d797461672c6f7461672c74727565 }
+
+
+condition:
+	$a0
+}

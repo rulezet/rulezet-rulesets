@@ -1,0 +1,9 @@
+rule Win_Trojan_PPT97_1
+{
+strings:
+	$a0 = { 2e4f70656e282e466f756e6446696c6573284d79416d7929[0-26]42436f6d706f6e656e7473284f7572416d7929 }
+
+
+condition:
+	$a0
+}

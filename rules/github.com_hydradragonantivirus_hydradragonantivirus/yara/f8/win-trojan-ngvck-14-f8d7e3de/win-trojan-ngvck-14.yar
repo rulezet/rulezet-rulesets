@@ -1,0 +1,9 @@
+rule Win_Trojan_NGVCK_14
+{
+strings:
+	$a0 = { e800000000812c240510400033d28b2c24648b024a391074048b00ebf88b40046633c06681384d5a74072d }
+
+
+condition:
+	$a0
+}

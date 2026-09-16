@@ -1,0 +1,9 @@
+rule Win_Trojan_VBS_176
+{
+strings:
+	$a0 = { 3c212d2d68746d6c2e6d622e622d2d3e22646f7768696c65686f73742e6174656e646f6673747265616d3c3e74727565 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Madafa_1
+{
+strings:
+	$a0 = { 5c72756e5c222026202278656e646e692068746d6c222c202822633a5c78656e646e692e68746d6c2e7662732229 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Symbo_1
+{
+strings:
+	$a0 = { 652e6174746163686d656e74732e616464202822633a5c73796d6269306e742e6261742229 }
+
+
+condition:
+	$a0
+}

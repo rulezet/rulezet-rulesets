@@ -1,0 +1,9 @@
+rule Win_Trojan_Realplay_2
+{
+strings:
+	$a0 = { 676c6965646f776e2e6965646f776e2e315c2229[0-146]3a6e6f6e657372633d687474703a2f2f[0-142]2e73746f726d706c617965722e315c }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Nemo_1
+{
+strings:
+	$a0 = { 64a100000000558bec6aff683027000168a21c0001506489250000000083ec2c5356578965e8c745fc0000 }
+
+
+condition:
+	$a0
+}
