@@ -1,0 +1,21 @@
+{
+  "uuid": "2177b7af-5f17-49c4-8396-022db007317f",
+  "title": "XWorm_Loader_TaskScheduler_Trojan",
+  "format": "yara",
+  "author": "Lenard-Code",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects XWorm .NET loader trojanized as Microsoft.Win32.TaskScheduler.dll with 205 injected malicious namespaces including HackForums.gigajew.Mandark RunPE, VirtualMachineDetector, and CMSTP UAC bypass",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/380059"
+}

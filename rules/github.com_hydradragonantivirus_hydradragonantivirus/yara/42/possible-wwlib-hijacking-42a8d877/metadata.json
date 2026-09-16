@@ -1,0 +1,20 @@
+{
+  "uuid": "42a8d877-47c4-43ea-a794-feb9da9fcdef",
+  "title": "possible_wwlib_hijacking",
+  "format": "yara",
+  "author": "Lucas Acha (http://www.lukeacha.com)",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "observed with campaigns such as APT32, this attempts to look for the archive files such as RAR.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT32 - G0050\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/379956"
+}
