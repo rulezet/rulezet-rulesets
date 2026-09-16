@@ -1,0 +1,22 @@
+{
+  "uuid": "5055c0b7-90f9-4576-a941-76c15671891a",
+  "title": "Trojan_Win32_Injector_PAQD_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Injector.PAQD!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 01 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/279838"
+}
