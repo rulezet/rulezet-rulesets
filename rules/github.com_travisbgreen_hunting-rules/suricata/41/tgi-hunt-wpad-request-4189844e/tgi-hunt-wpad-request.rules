@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"TGI HUNT WPAD Request"; dns_query; content:"wpad"; nocase; startswith; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610328; rev:1;)

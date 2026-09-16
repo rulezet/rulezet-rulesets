@@ -1,0 +1,1 @@
+alert tcp any any -> any [25,587] (msg:"TGI HUNT Suspicious x-mailer Blat"; flow:established; content:"X-Mailer|3a 20|Blat v"; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610322; rev:6;)

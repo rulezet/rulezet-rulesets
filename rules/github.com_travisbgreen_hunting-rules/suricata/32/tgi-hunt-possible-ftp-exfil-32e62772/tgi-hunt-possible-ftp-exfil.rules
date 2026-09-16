@@ -1,0 +1,1 @@
+alert ftp any any -> any any (msg:"TGI HUNT Possible FTP Exfil"; flow:established,to_server; content:"STOR"; flowbits:isset,ftp_exfil; classtype:bad-unknown; sid:2610616; rev:1;)

@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"TGI HUNT honeytokens.org in SNI"; flow:established,to_server; tls_sni; content:"honeytokens.org"; endswith; classtype:bad-unknown; sid:2610534;)

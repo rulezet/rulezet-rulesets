@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Double Encoded Characters in HTTP URI"; flow:to_server,established; content:"%2525"; http_uri; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610394; rev:1;)

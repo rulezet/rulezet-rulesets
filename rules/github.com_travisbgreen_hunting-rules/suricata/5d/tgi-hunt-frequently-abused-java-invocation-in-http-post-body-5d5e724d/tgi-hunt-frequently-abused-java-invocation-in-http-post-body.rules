@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Frequently Abused Java Invocation in HTTP POST Body"; flow:established,to_server; content:"java.lang.ProcessBuilder"; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; reference:url,blog.talosintelligence.com/2019/04/sodinokibi-ransomware-exploits-weblogic.html; sid:2610460; rev:1;)

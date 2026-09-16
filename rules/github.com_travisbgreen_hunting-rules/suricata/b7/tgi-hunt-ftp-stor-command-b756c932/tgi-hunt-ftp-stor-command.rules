@@ -1,0 +1,1 @@
+alert ftp any any -> any any (msg:"TGI HUNT FTP STOR Command"; flow:established; content:"STOR|20|"; classtype:bad-unknown; sid:2610376; rev:1;)

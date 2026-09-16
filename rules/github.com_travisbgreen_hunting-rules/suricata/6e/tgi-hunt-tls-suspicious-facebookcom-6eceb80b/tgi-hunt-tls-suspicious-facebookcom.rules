@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"TGI HUNT TLS Suspicious facebook.com"; tls_cert_subject; content:"facebook.com"; tls_cert_fingerprint; content:!"98:e4:dd:9d:21:83:d5:29:9e:80:43:73:ff:f2:a7:e1:c4:87:9f:5e"; classtype:bad-unknown; sid:2610384; rev:1;)

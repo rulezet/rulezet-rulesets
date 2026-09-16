@@ -1,0 +1,21 @@
+{
+  "uuid": "23fc7ba9-4ccf-4eb1-9d07-100687247db7",
+  "title": "Windows_VulnDriver_PCTCore_d1f75b1a",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Name: PCTCore.sys, Version: <= 2.0.0.37",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-22",
+  "last_modified": "2026-08-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346694"
+}

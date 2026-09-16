@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT HTTP uncommon version Response"; flow:established,to_client; content:"HTTP/"; depth:5; content:!"1.1"; within:3; content:!"1.0"; within:3; flowbits:isnotset,hunt.entrust_entelligence; content:!"BigIP"; http_header; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610366; rev:1;)

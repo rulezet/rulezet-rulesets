@@ -1,0 +1,8 @@
+// Visualize device compliance (compliant, non-compliant, managed by Config Manager, not evaluated or in grace period) per week over time
+IntuneDevices
+| where TimeGenerated > ago (30d)
+| summarize arg_max(DeviceName, *) by DeviceName
+| where isnotempty(CompliantState)
+| summarize ComplianceCount=count()by CompliantState
+| render piechart 
+    with (title="Device compliance")

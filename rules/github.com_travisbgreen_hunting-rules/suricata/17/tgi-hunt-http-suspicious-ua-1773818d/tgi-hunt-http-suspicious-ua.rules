@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT HTTP suspicious UA"; flow:established; content:"bot"; nocase; http_user_agent; content:!"YandexBot/"; http_user_agent; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610364; rev:1;)

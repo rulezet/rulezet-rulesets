@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"TGI HUNT BurpSuite string in TLS"; flow:established; content:"|0b|PortSwigger"; distance:1; within:12; reference:url,portswigger.net/burp/proxy.html; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610316; rev:1;)

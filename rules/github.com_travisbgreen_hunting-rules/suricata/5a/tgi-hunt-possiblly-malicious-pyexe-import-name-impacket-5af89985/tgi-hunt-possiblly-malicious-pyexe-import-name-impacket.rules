@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET any (msg:"TGI HUNT Possiblly Malicious PyExe Import Name (impacket)"; flow:established; content:"impacket("; classtype:attempted-user; sid:2610592; rev:1;)

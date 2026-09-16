@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"TGI HUNT sc.exe Output"; flow:established; content:"SERVICE_NAME|3a|"; pcre:"/\s*([ -~]+?) *TYPE *\x3a *(\d+)/iR"; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610338; rev:1;)

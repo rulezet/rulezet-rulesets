@@ -1,0 +1,1 @@
+alert smtp any any -> $HOME_NET any (msg:"TGI HUNT SMB URI in Inbound SMTP"; flow:established; content:"smb://"; classtype:bad-unknown; sid:2610562; rev:1;)

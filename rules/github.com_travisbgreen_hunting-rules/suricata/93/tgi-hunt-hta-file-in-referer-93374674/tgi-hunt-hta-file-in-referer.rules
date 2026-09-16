@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT .hta File in Referer"; flow:established,to_server; http_referer; content:".hta"; endswith; fast_pattern; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610464; rev:1;)

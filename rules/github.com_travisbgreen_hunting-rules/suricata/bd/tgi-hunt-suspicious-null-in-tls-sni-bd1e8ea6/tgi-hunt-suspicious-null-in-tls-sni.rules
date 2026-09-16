@@ -1,0 +1,1 @@
+alert tls any any -> any [465,25,587] (msg:"TGI HUNT Suspicious Null in TLS SNI"; tls_sni; content:"|00|"; flow:established,to_server; ssl_state:client_hello; classtype:attempted-admin; sid:2610528; rev:1;)

@@ -1,0 +1,21 @@
+{
+  "uuid": "4a4b69c8-fb21-4243-b66a-9490e2c79bfa",
+  "title": "Windows_Rootkit_Generic_16e8136e",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Subject: Microsoft Windows Hardware Compatibility Publisher, Version: <= 0.0.243.0",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-22",
+  "last_modified": "2026-08-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346624"
+}

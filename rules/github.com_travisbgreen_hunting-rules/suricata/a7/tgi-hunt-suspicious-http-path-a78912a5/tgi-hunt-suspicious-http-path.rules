@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Suspicious HTTP Path"; flow:to_server,established; content:"/Panel/"; http_uri; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610396; rev:1;)

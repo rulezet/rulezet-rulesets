@@ -1,0 +1,1 @@
+alert tcp any any -> $HOME_NET any (msg:"TGI HUNT PS Execution Policy Registry Key Name in B64"; content:"SEtFWV9MT0NBTF9NQUNISU5FXFNvZnR3YXJlXFBvbGljaWVzXE1pY3Jvc29mdFxXaW5kb3dzXFBvd2VyU2hlbGxc"; classtype:attempted-user; sid:2610536; rev:1;)

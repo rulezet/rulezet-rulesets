@@ -1,0 +1,1 @@
+alert tls $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT VulnTesting Domain (service .exfil .site in TLS SNI)"; flow:established,to_server; tls_sni; content:"service.exfil.site"; isdataat:!1,relative; nocase; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:2610272; rev:1;)

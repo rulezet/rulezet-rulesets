@@ -1,0 +1,1 @@
+alert tcp-pkt any any -> any any (msg:"TGI HUNT Too many \x41"; flow:established; content:"|41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41 41|"; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610324; rev:1;)

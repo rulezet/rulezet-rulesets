@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"TGI HUNT VulnTesting Domain (bingsearchlib.com in DNS Lookup)"; dns_query; content:"bingsearchlib.com"; isdataat:!1,relative; reference:url,gist.github.com/travisbgreen/3f7ddcd5841d802e536d5854e2218e8c; classtype:trojan-activity; sid:2610242; rev:1;)

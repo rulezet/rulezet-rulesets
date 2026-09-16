@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT Unencrypted HTTP Authorization Header Outbound"; flow:established,to_server; http.header; content:"Authorization|3a 20|Basic"; http.user_agent; content:!"DVTelHAL"; classtype:bad-unknown; sid:2610608; rev:2;)

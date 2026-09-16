@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Possible Cobalt Strike Malleable C2 Null Response"; flow:established,to_client; content:"200"; http_stat_code; depth:3; content:"Content-Length:|20|0|0d 0a|"; fast_pattern; flowbits:isset,hunt.cs_null_response; threshold:type limit, track by_src, seconds 60, count 1; classtype:trojan-activity; sid:2610520; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Graves Accent (backtick) in HTTP Header"; flow:established,to_server; content:"`"; http_header; content:!"`"; http_client_body; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610282; rev:2;)

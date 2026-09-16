@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT POST Without Referer Header"; flow:established,to_server; content:"POST"; http_method; http_header_names; content:!"Referer"; threshold:type limit, track by_src, seconds 180, count 1; http_content_type; content:!"application/ocsp-response"; classtype:bad-unknown; sid:2610380; rev:1;)

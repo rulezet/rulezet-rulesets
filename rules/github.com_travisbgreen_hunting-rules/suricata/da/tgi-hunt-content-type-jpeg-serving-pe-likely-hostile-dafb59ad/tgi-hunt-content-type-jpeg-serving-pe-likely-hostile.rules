@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Content-Type jpeg serving PE likely hostile"; flow:established,from_server; content:"200"; http_stat_code; content:"Content-Type|3a 20|image/jpeg"; http_header; file_data; content:"MZ"; depth:2; byte_jump:4,58,relative,little; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610284; rev:1;)

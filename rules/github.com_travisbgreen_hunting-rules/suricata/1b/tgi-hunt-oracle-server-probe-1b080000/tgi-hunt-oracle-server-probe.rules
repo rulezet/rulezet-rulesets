@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET any -> any any (msg:"TGI HUNT Oracle Server Probe"; flow:to_server,established; content:"(DESCRIPTION=(CONNECT_DATA=(SID=";threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610314; rev:1;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Phishing Simulation HTTP Header Inbound"; flow:established,to_client; http.header; content:"Server|3a 20|ThreatSim-Web-Server|0d 0a|"; classtype:misc-activity; sid:2610620; rev:1;)

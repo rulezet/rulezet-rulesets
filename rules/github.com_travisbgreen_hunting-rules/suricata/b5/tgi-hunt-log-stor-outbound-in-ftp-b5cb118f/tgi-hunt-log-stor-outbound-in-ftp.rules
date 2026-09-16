@@ -1,0 +1,1 @@
+alert ftp $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT log STOR Outbound in FTP"; flow:established,to_server; content:"STOR|20|"; depth:5; content:"log"; nocase; distance:0; fast_pattern; pcre:"/\blog\b/i"; classtype:trojan-activity; sid:2610446; rev:1;)

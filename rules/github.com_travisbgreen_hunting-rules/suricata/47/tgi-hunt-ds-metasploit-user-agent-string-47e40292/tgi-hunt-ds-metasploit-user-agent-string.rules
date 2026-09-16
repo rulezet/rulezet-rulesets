@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT DS Metasploit User Agent String"; flow:to_server,established; content:"Mozilla/5.0 (compatible\; Googlebot/2.1\; +http://www.google.com/bot.html)|0d 0a|"; http_user_agent; classtype:trojan-activity; reference:url,blog.didierstevens.com/2015/03/16/quickpost-metasploit-user-agent-strings/; sid:2610554; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT MimiKatz String in HTTP Response x86 1"; flow:to_client,established; file_data; content:"|89 71 04 89|"; content:"|30 8d 04 bd|"; within:8; threshold:type limit,track by_src,seconds 60,count 1; reference:url,github.com/gentilkiwi/mimikatz/releases; classtype:bad-unknown; sid:2610404; rev:1;)

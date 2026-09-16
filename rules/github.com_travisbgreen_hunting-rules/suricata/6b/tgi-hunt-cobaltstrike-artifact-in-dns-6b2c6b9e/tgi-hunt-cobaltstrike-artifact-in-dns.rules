@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT CobaltStrike Artifact in DNS"; flow:established,to_server; dns_query; content:".resources.123456."; reference:url,threatexpress.com/blogs/2018/a-deep-dive-into-cobalt-strike-malleable-c2/; classtype:trojan-activity; sid:2610450; rev:1;)

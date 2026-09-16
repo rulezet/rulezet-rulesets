@@ -1,0 +1,1 @@
+alert smb any any -> $HOME_NET any (msg:"TGI HUNT SMB Administrator Brute Force"; flow:to_server,established; content:"NTLMSSP|00|"; content:"A|00|d|00|m|00|i|00|n|00|i|00|s|00|t|00|r|00|a|00|t|00|o|00|r"; distance:0; threshold:type both, track by_src, seconds 60, count 5; classtype:bad-unknown; sid:2610580; rev:1;)

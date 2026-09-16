@@ -1,0 +1,1 @@
+alert udp $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT Anomalous DNS >512 bytes over UDP"; dsize:>512; prefilter; content:"|01 00 00 01 00 00 00 00 00 00|"; offset:2; depth:10; reference:url,tools.ietf.org/html/rfc5966; classtype:trojan-activity; sid:2610454; rev:1;)

@@ -1,0 +1,23 @@
+{
+  "uuid": "94ef22c7-4ff8-4f54-b583-1a21ed42ac33",
+  "title": "Blackbasta Wallpaperchange",
+  "format": "kql",
+  "author": "reversinglabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects changes to the desktop wallpaper via the registry to the Black Basta ransom note",
+  "source": "https://github.com/reversinglabs/reversinglabs-siem-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1491"
+  ],
+  "cve": [],
+  "created_at": "2026-08-10",
+  "last_modified": "2026-08-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346481"
+}

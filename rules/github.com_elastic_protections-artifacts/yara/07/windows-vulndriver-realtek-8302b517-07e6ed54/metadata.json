@@ -1,0 +1,21 @@
+{
+  "uuid": "07e6ed54-50a5-4a5e-b0dd-c9e864563b55",
+  "title": "Windows_VulnDriver_Realtek_8302b517",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Subject: Realtek Semiconductor Corp., Version: <= 1.8.823.2017",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-22",
+  "last_modified": "2026-08-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346601"
+}

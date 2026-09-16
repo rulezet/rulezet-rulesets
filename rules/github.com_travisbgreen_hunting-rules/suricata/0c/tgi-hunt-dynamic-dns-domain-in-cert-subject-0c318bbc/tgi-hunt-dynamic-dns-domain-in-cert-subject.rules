@@ -1,0 +1,1 @@
+alert tls $EXTERNAL_NET any -> $HOME_NET any (msg:"TGI HUNT Dynamic DNS Domain in Cert Subject"; flow:established,to_client; tls_cert_subject; content:"duckdns.org"; nocase; endswith; classtype:bad-unknown; sid:2610558; rev:1;)

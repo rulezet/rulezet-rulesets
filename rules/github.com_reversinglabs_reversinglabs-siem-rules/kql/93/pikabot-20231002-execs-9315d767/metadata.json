@@ -1,0 +1,21 @@
+{
+  "uuid": "9315d767-17e5-4a9e-8b2a-d5d4847678e2",
+  "title": "Pikabot 20231002 Execs",
+  "format": "kql",
+  "author": "reversinglabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "this query identifies process execution and DNS queryes relating to the latest pikabot samples credit to https://twitter.com/Cryptolaemus1 for initial research",
+  "source": "https://github.com/reversinglabs/reversinglabs-siem-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-10",
+  "last_modified": "2026-08-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346518"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "e0ca68ec-a246-4ee8-a5e7-f4dd4adfc625",
+  "title": "Set Black Basta Wallpaper Registry Key",
+  "format": "sigma",
+  "author": "Aaron Hoffmann",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects setting the desktop wallpaper registry key to the Black Basta ransom note",
+  "source": "https://github.com/reversinglabs/reversinglabs-siem-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1491"
+  ],
+  "cve": [],
+  "created_at": "2026-08-10",
+  "last_modified": "2026-08-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346488"
+}

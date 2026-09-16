@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Invoke-ReflectivePEInjection Likely Malicious PS Inbound"; flow:from_server,established; content:"Write-BytesToMemory"; content:"Invoke-CreateRemoteThread"; content:"VirtualAllocEx"; content:"WriteProcessMemory"; classtype:bad-unknown; sid:2610428; rev:1;)

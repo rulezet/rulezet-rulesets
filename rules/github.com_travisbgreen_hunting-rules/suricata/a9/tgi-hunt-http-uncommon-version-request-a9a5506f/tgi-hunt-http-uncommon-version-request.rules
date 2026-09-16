@@ -1,0 +1,1 @@
+alert http any any -> !$HOME_NET any (msg:"TGI HUNT HTTP uncommon version Request"; flow:established,to_server; content:"|20|HTTP/"; content:!"1.1"; within:3; content:!"1.0"; within:3; flowbits:isnotset,hunt.entrust_entelligence; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610362; rev:1;)

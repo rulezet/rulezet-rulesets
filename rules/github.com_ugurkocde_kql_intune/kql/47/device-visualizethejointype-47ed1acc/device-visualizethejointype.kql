@@ -1,0 +1,14 @@
+// Visualize the join type (Azure AD joined, Azure AD registered or Hybrid joined) of your MEM/Intune devices per week
+// See here: https://github.com/reprise99/Sentinel-Queries/blob/main/Intune/IntuneDevices-VisualizeDeviceJoinTypebyWeek.kql
+IntuneDevices
+| where todatetime(LastContact) > ago (30d) // Filter only devices the have contacted Intune in the last 30 days
+| summarize arg_max(TimeGenerated, *) by DeviceName, startofweek(TimeGenerated)
+| where OS == "Windows"
+| summarize JoinSummary=count()by JoinType, startofweek(TimeGenerated)
+| where isnotempty(JoinType)
+| render columnchart
+    with (
+    kind=unstacked,
+    ytitle="Device Count",
+    xtitle="Week",
+    title="Device Number by join type per week")

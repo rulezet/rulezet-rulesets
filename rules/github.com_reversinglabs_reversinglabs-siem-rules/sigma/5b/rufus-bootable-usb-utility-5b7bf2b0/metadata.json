@@ -1,0 +1,25 @@
+{
+  "uuid": "5b7bf2b0-7f3f-4ff2-b6f7-19550b5e9589",
+  "title": "Rufus Bootable USB Utility",
+  "format": "sigma",
+  "author": "Aaron Hoffmann",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects the use of Rufus, a utility used to create bootable USB drives. The threat actor Black Basta has been known to use a droper that mimics the legitimate Rufus software.",
+  "source": "https://github.com/reversinglabs/reversinglabs-siem-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [],
+  "created_at": "2026-08-10",
+  "last_modified": "2026-08-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346489"
+}

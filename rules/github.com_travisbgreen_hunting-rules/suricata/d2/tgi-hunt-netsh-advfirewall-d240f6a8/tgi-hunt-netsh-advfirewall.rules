@@ -1,0 +1,1 @@
+alert ip any any -> any any (msg:"TGI HUNT netsh advfirewall"; flow:established; content:"netsh advfirewall"; content:!"This example shows  how to disable Wmi fixed port"; distance:-730; within: 50; content:!"from administrator command prompt window"; distance:22; within:45; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610332; rev:1;)

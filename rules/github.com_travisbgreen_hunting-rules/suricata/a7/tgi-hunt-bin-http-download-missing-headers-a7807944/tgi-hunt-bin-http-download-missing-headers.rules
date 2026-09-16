@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT .bin HTTP download missing headers"; flow:established,to_server; content:".bin"; http_uri; endswith; http_header_names; content:"|0d 0a|Host|0d 0a|Connection|0d 0a 0d 0a|"; classtype:bad-unknown; sid:2610370; rev:1;)

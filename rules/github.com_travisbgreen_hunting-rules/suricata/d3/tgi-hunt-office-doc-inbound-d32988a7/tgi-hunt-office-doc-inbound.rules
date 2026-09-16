@@ -1,0 +1,1 @@
+alert smtp any any -> $HOME_NET any (msg:"TGI HUNT Office Doc Inbound"; flow:established; content:"0M8R4KGxGuE"; sid:2610566; rev:1;)

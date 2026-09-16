@@ -1,0 +1,1 @@
+alert tcp any any -> any [25,587] (msg:"TGI HUNT Suspicious x-library Indy"; flow:established,to_server; content:"|0d 0a|X-Library|3a| Indy|20|"; nocase; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610318; rev:6;)

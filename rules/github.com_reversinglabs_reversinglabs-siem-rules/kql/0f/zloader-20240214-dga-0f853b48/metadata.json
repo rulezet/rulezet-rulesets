@@ -1,0 +1,19 @@
+{
+  "uuid": "0f853b48-39be-4567-ac38-81a824798ca6",
+  "title": "Zloader 20240214 Dga",
+  "format": "kql",
+  "author": "reversinglabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Slightly modified version of https://github.com/Azure/Azure-Sentinel/blob/master/Detections/CommonSecurityLog/MultiVendor-PossibleDGAContacts.yaml this query attempts to detect network traffic relating to the latest ZLoader domain generation algorithm (20 characters, .com TLD)",
+  "source": "https://github.com/reversinglabs/reversinglabs-siem-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-10",
+  "last_modified": "2026-08-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346510"
+}

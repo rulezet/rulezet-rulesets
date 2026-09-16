@@ -1,0 +1,1 @@
+alert udp $HOME_NET any -> any 53 (msg:"TGI HUNT Large DNS Query not TCP"; content:"|01 00 00 01 00 00 00 00 00 00|"; fast_pattern; depth:10; offset:2; dsize:>512; classtype:bad-unknown; sid:2610390; rev:8;)

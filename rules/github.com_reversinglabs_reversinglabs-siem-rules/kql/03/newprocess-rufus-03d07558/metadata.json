@@ -1,0 +1,21 @@
+{
+  "uuid": "03d07558-227b-4cb8-93d3-d50b67742f50",
+  "title": "Newprocess Rufus",
+  "format": "kql",
+  "author": "reversinglabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "look for new processes relating to rufus, the usb creation tool",
+  "source": "https://github.com/reversinglabs/reversinglabs-siem-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [],
+  "created_at": "2026-08-10",
+  "last_modified": "2026-08-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346482"
+}

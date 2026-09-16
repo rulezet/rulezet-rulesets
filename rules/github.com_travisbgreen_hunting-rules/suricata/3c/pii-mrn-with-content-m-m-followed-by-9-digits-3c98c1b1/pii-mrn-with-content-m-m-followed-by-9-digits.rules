@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"PII MRN with content (M) (M followed by 9 digits)"; dsize:>65; content:"M"; nocase; pcre:"/([m]\d{9}[^\d]*){6}/si";content:!"|20|HTTP/1.1|0d 0a|"; classtype:misc-activity; sid:2619929; rev:1;)

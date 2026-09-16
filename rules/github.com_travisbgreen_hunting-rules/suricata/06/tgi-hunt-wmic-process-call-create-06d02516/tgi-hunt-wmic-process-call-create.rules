@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"TGI HUNT wmic process call create"; flow:established; content:"wmic process call create"; classtype:bad-unknown; sid:2610372; rev:1;)

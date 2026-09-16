@@ -1,0 +1,23 @@
+{
+  "uuid": "c9b5ea46-a896-474f-be9e-c17e76041d09",
+  "title": "AntiDebugging_StringCopyAccessViolation_2",
+  "format": "yara",
+  "author": "Malware Utkonos",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects an anti-debugging technique which uses lstrcpyA to write a junk string to a read-only section raising an access violation",
+  "source": "https://github.com/reversinglabs/reversinglabs-siem-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1622"
+  ],
+  "cve": [],
+  "created_at": "2026-08-10",
+  "last_modified": "2026-08-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346491"
+}

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT CS4 Default User-Agent"; flow:established; content:"Mozilla/5.0 (compatible|3b| MSIE 9.0|3b| Windows NT 6.1|3b| Trident/5.0|3b| BOIE9|3b|ENAU)"; http_user_agent; endswith; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610596; rev:1;)

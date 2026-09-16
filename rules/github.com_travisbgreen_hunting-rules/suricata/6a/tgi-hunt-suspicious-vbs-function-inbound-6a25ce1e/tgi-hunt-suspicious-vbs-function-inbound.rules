@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Suspicious vbs Function Inbound"; flow:established,from_server; content:"200"; http_stat_code; file_data; content:"new-object -com|20|"; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610388; rev:1;)

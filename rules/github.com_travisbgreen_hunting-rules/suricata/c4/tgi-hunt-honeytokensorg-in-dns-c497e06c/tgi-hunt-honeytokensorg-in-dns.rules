@@ -1,0 +1,1 @@
+alert dns any any -> any any (msg:"TGI HUNT honeytokens.org in DNS"; flow:established; dns_query; content:"honeytokens.org"; endswith; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610530; rev:1;)

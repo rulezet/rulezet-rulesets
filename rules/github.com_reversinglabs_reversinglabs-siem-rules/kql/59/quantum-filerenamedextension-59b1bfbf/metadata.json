@@ -1,0 +1,21 @@
+{
+  "uuid": "59b1bfbf-8589-4e86-8c83-8831f8d7a7a2",
+  "title": "Quantum Filerenamedextension",
+  "format": "kql",
+  "author": "reversinglabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "files encrypted by QuantumLocker result in the .qunatum extension being appended to the original file",
+  "source": "https://github.com/reversinglabs/reversinglabs-siem-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-08-10",
+  "last_modified": "2026-08-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346501"
+}

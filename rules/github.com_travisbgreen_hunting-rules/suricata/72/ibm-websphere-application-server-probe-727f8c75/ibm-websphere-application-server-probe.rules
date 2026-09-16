@@ -1,0 +1,1 @@
+alert tcp any any -> any any (msg:"IBM WebSphere Application Server probe"; flow:established; content:"SOAPAction: urn:AdminService|0d 0a|"; http_header; reference:url,github.com/breenmachine/JavaUnserializeExploits/blob/master/websphere-soap-exploit.request; classtype:bad-unknown; sid:2610374; rev:1;)

@@ -1,0 +1,23 @@
+{
+  "uuid": "753cd4c3-303d-49f1-be2f-1ae63353e19d",
+  "title": "TGI HUNT DS Metasploit User Agent String",
+  "format": "suricata",
+  "author": "travisbgreen",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "Suricata rules for network anomaly detection",
+  "source": "https://github.com/travisbgreen/hunting-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"metasploit\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-28",
+  "last_modified": "2026-08-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346899"
+}

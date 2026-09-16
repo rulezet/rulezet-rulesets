@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT Non Browser HTTP to Pastebin"; flow:to_server,established; content:"pastebin.com"; http_host; content:!"Mozilla"; nocase; http_user_agent; classtype:bad-unknown; sid:2610430; rev:1;)

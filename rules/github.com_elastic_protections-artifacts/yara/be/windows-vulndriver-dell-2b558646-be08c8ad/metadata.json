@@ -1,0 +1,21 @@
+{
+  "uuid": "be08c8ad-37a0-43ac-9c31-ea472143196d",
+  "title": "Windows_VulnDriver_Dell_2b558646",
+  "format": "yara",
+  "author": "Elastic Security",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Subject: Microsoft Windows Hardware Compatibility Publisher, Version: <= 2.8.9.4",
+  "source": "https://github.com/elastic/protections-artifacts",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-22",
+  "last_modified": "2026-08-22",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346663"
+}

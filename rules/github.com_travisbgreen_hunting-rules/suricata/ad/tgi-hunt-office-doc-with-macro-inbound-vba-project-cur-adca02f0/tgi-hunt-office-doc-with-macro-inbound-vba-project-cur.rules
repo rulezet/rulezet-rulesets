@@ -1,0 +1,1 @@
+alert smtp any any -> $HOME_NET any (msg:"TGI HUNT Office Doc With Macro Inbound (_VBA_PROJECT_CUR)"; flow:established; file_data; content:"_VBA_PROJECT_CUR"; nocase; classtype:bad-unknown; sid:2610574; rev:1;)

@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"PII SSN with content (SSN) M1"; dsize:>65; content:"SSN"; nocase; pcre:"/[^\r\n]*\b((?!219[\s\x2d]?09[\s\x2d]?9999|078[\s\x2d]?05[\s\x2d]?1120)(?!666|000|9\d{2})\d{3}[\s\x2d]?(?!00)\d{2}[\s\x2d]?(?!0{4})\d{4})\b/R"; reference:url,regexr.com/7viff; content:!"|20|HTTP/1.1|0d 0a|"; classtype:misc-activity; sid:2619920; rev:1;)

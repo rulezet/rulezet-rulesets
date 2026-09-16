@@ -1,0 +1,1 @@
+alert ip any any -> any any (msg:"TGI HUNT sameip Keyword Test Rule"; flow:established,to_server; sameip; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610382; rev:1;)

@@ -1,0 +1,1 @@
+alert smtp any any -> $HOME_NET any (msg:"TGI HUNT Office Doc With Macro Inbound (ActiveMime)"; flow:established; file_data; content:"ActiveMime"; nocase; classtype:bad-unknown; sid:2610572; rev:1;)

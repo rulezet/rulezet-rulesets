@@ -1,0 +1,23 @@
+{
+  "uuid": "4d5a7e37-65b6-4e0f-8ec4-f6adbcd1dac5",
+  "title": "Vhdmp Isomounted",
+  "format": "kql",
+  "author": "reversinglabs",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "checks for ISO files that have been mounted; requires the Microsoft-Windows-VHDMP-Operational event log channel",
+  "source": "https://github.com/reversinglabs/reversinglabs-siem-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-08-10",
+  "last_modified": "2026-08-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346496"
+}

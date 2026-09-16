@@ -1,0 +1,1 @@
+alert ftp $HOME_NET any -> $EXTERNAL_NET any (msg:"TGI HUNT Cookie STOR Outbound in FTP"; flow:established,to_server; content:"STOR|20|"; depth:5; content:"cookies"; nocase; distance:0; fast_pattern; pcre:"/\bcookies\b/i"; classtype:trojan-activity; sid:2610444; rev:1;)

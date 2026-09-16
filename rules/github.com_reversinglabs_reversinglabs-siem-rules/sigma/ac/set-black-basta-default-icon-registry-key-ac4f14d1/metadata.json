@@ -1,0 +1,25 @@
+{
+  "uuid": "ac4f14d1-76fa-48ea-a346-494024c74283",
+  "title": "Set Black Basta Default Icon Registry Key",
+  "format": "sigma",
+  "author": "Aaron Hoffmann",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects setting the value for the registry key made by Black Basta ransomware that associates an icon with the .basta extension (V1) or the generated 9-character alphanumeric extension (V2) for encrypted files",
+  "source": "https://github.com/reversinglabs/reversinglabs-siem-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-08-10",
+  "last_modified": "2026-08-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346492"
+}

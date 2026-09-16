@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT HTTP POST to wp-.* Path Without Referer"; flow:established,to_server; content:"POST"; http_method; content:"/wp-"; http_uri; http_header_names; content:!"Referer"; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown;sid:2610312; rev:1;)

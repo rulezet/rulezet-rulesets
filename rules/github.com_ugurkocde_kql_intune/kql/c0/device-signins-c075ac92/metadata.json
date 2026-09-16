@@ -1,0 +1,21 @@
+{
+  "uuid": "c075ac92-3f17-45d4-bfa5-05f2be37af5c",
+  "title": "Device Signins",
+  "format": "kql",
+  "author": "ugurkocde",
+  "license": "",
+  "license_verified": false,
+  "description": "This query uses logs from Azure. Show Device Logins for Azure joined devices. Result will show success, failure, login status, error codes as well as the location (Country, State, City) of the device.",
+  "source": "https://github.com/ugurkocde/KQL_Intune",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346458"
+}

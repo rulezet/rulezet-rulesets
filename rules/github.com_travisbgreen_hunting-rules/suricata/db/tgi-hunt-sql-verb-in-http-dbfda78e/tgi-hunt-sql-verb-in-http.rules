@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"TGI HUNT SQL verb in HTTP"; flow:established,to_server; content:"INSERT"; http_header; content:"INTO"; http_header; distance:0; threshold:type limit, track by_src, seconds 60, count 1; classtype:bad-unknown; sid:2610352; rev:1;)

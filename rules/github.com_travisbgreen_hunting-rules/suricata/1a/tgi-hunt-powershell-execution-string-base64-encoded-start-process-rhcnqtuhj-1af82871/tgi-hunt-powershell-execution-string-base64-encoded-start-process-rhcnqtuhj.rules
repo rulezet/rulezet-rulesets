@@ -1,0 +1,1 @@
+alert ip any any -> $HOME_NET any (msg:"TGI HUNT PowerShell Execution String Base64 Encoded Start-Process (RhcnQtUHJ)"; flow:established; content:"RhcnQtUHJ"; reference:url,github.com/no0be/DNSlivery; threshold:type limit, track by_src, seconds 60, count 1; classtype:attempted-admin; sid:2610506; rev:2;)

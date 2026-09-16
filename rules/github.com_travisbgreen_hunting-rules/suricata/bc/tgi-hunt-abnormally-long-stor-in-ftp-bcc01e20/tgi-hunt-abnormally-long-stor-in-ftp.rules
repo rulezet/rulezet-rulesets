@@ -1,0 +1,1 @@
+alert tcp-pkt any any -> any !2049 (msg:"TGI HUNT abnormally long STOR in FTP"; flow:established,to_server; content:"STOR|20|"; depth:5; isdataat:256,relative; classtype:bad-unknown; sid:2610456; rev:1;)

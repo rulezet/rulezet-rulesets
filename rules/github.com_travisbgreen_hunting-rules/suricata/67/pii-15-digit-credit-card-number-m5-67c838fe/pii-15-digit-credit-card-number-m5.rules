@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET any (msg:"PII 15 Digit Credit Card Number M5"; dsize:>65; content:"2131"; pcre:"/^\d{4}[\s\x2d]\d{4}[\s\x2d]\d{4}[\s\x2d]\d{3}\b/R"; content:!"|20|HTTP/1.1|0d 0a|"; classtype:misc-activity; sid:2619912; rev:1;)
