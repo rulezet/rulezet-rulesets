@@ -1,0 +1,14 @@
+import "pe"
+rule specb2 {
+  meta:
+    author      = "PEiD"
+    description = "SPEC b2 -> Hayras"
+    group       = "169"
+    function    = "0"
+
+  strings:
+    $a0 = { 55 57 51 53 E8 ?? ?? ?? ?? 5D 8B C5 81 ED ?? ?? ?? ?? 2B 85 ?? ?? ?? ?? 83 E8 09 89 85 ?? ?? ?? ?? 0F B6 }
+
+  condition:
+    $a0 at pe.entry_point
+}

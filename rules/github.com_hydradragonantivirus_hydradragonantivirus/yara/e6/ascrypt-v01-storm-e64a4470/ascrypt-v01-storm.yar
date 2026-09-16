@@ -1,0 +1,10 @@
+rule _AsCrypt_V01__SToRM_ {
+  meta:
+    description = "AsCrypt V0.1 -> SToRM"
+
+  strings:
+    $0 = { B9 ?? ?? ?? ?? 81 ?? ?? ?? ?? ?? ?? 83 04 24 04 ?? 90 90 90 83 E9 03 E2 EC EB ?? 00 00 00 00 00 00 00 00 00 00 }
+
+  condition:
+    $0
+}

@@ -1,0 +1,14 @@
+import "pe"
+rule petite21 {
+  meta:
+    author      = "PEiD"
+    description = "PEtite 2.x [Level 0] -> Ian Luck"
+    group       = "159"
+    function    = "0"
+
+  strings:
+    $a0 = { B8 ?? ?? ?? ?? 6A ?? 68 ?? ?? ?? ?? 64 FF 35 ?? ?? ?? ?? 64 89 25 ?? ?? ?? ?? 66 9C 60 50 }
+
+  condition:
+    $a0 at pe.entry_point
+}

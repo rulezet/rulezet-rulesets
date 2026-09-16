@@ -1,0 +1,12 @@
+import "pe"
+rule UPXShit006_ren: snaker {
+  meta:
+    author = "_pusher_"
+    date   = "2015-11"
+
+  strings:
+    $a0 = { B8 ?? ?? ?? ?? B9 ?? ?? ?? ?? 80 34 08 ?? E2 FA E9 ?? ?? ?? FF }
+
+  condition:
+    $a0 at pe.entry_point
+}

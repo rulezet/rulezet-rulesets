@@ -1,0 +1,14 @@
+import "pe"
+rule softwrap {
+  meta:
+    author      = "PEiD"
+    description = "Softwrap (encrypted) main stub / XLok"
+    group       = "167"
+    function    = "0"
+
+  strings:
+    $a0 = { 52 53 51 56 57 55 E8 ?? ?? ?? ?? 5D 81 ED 36 ?? ?? ?? E8 ?? 01 ?? ?? 60 BA ?? ?? ?? ?? E8 ?? ?? ?? ?? 5F }
+
+  condition:
+    $a0 at pe.entry_point
+}
