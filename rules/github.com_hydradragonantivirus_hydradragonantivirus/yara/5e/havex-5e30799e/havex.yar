@@ -1,0 +1,199 @@
+import "hash"
+rule Havex {
+  meta:
+    Author    = "Intezer Analyze"
+    Reference = "https://apt-ecosystem.com"
+
+  strings:
+    $block_0  = { 8B ?? ?? 03 ?? 0F AF ?? 5? 5? 8D ?? ?? E8 ?? ?? ?? ?? 83 ?? ?? ?? 8B ?? ?? 89 ?? ?? 8B ?? ?? 72 }
+    $block_1  = { 5? 8D ?? ?? 5? E8 ?? ?? ?? ?? 8A ?? 5? F6 ?? 5? 1A ?? 8D ?? ?? FE ?? E8 ?? ?? ?? ?? 84 ?? 0F 84 }
+    $block_2  = { 8D ?? ?? C6 ?? ?? ?? E8 ?? ?? ?? ?? 8B ?? ?? 2B ?? ?? 6A ?? 99 5? F7 ?? 4? 83 ?? ?? 3B ?? 0F 82 }
+    $block_3  = { 8D ?? ?? 5? 8B ?? E8 ?? ?? ?? ?? 8B ?? E8 ?? ?? ?? ?? 0F B7 ?? 5? E8 ?? ?? ?? ?? 5? 84 ?? 75 }
+    $block_4  = { 6A ?? 8D ?? ?? 5? 5? E8 ?? ?? ?? ?? 83 ?? ?? 6A ?? 8D ?? ?? 5? FF 1? ?? ?? ?? ?? 85 ?? 0F 85 }
+    $block_5  = { 07 E8 ?? ?? ?? ?? 5? 89 ?? ?? E8 ?? ?? ?? ?? 89 ?? ?? 8D ?? ?? 5? E8 ?? ?? ?? ?? 5? 3B ?? 74 }
+    $block_6  = { 8D ?? ?? E8 ?? ?? ?? ?? 0F B6 ?? 8B ?? ?? 5? 6A ?? E8 ?? ?? ?? ?? 8D ?? ?? E8 ?? ?? ?? ?? EB }
+    $block_7  = { 8B ?? ?? 03 ?? 0F AF ?? 8D ?? ?? E8 ?? ?? ?? ?? 83 ?? ?? ?? 8B ?? ?? 89 ?? ?? 8B ?? ?? 72 }
+    $block_8  = { 8B ?? ?? 33 ?? 66 ?? ?? ?? 8B ?? ?? 0F B6 ?? ?? C1 ?? ?? C1 ?? ?? 0B ?? FF 0? ?? 4? 79 }
+    $block_9  = { 66 ?? ?? 66 ?? ?? ?? 66 ?? 33 ?? 4? 5? 0F B7 ?? 8B ?? 66 ?? ?? 0F B7 ?? 4? 83 ?? ?? 7D }
+    $block_10 = { 5? 8D ?? ?? ?? 5? E8 ?? ?? ?? ?? 33 ?? 89 ?? ?? ?? ?? ?? ?? 39 ?? ?? ?? ?? ?? ?? 0F 84 }
+    $block_11 = { 8B ?? ?? 8D ?? ?? 8B ?? 2B ?? D1 ?? 5? 5? 5? E8 ?? ?? ?? ?? 83 ?? ?? 5? 8B ?? 5? C9 C3 }
+    $block_12 = { 80 B? ?? ?? ?? ?? ?? 8D ?? ?? 0F 94 ?? 0F B6 ?? 5? 5? E8 ?? ?? ?? ?? 33 ?? 8B ?? 4? EB }
+    $block_13 = { 8B ?? ?? 2B ?? ?? 89 ?? ?? 8B ?? ?? 8B ?? ?? 8B ?? 2B ?? 89 ?? ?? 89 ?? ?? 3B ?? 0F 83 }
+    $block_14 = { 5? 8B ?? 0F B7 ?? ?? 83 ?? ?? 33 ?? 4? 5? 8B ?? 66 ?? ?? 0F B7 ?? 4? 83 ?? ?? 7D }
+    $block_15 = { E8 ?? ?? ?? ?? 2B ?? ?? 8B ?? C1 ?? ?? 89 ?? ?? 8B ?? ?? 89 ?? ?? 83 ?? ?? 0F 83 }
+    $block_16 = { 33 ?? 6A ?? 5? 8B ?? F7 ?? 0F 90 ?? F7 ?? 0B ?? 5? E8 ?? ?? ?? ?? 5? 89 ?? 8B }
+    $block_17 = { 8D ?? ?? 83 ?? ?? ?? 5? 33 ?? 8B ?? AB AB AB AB 33 ?? 8D ?? ?? AB AB AB AB 5? }
+    $block_18 = { 6A ?? B8 ?? ?? ?? ?? E8 ?? ?? ?? ?? 8B ?? ?? 89 ?? ?? 83 ?? ?? ?? 0F B7 ?? 72 }
+    $block_19 = { 8B ?? ?? BB ?? ?? ?? ?? BE ?? ?? ?? ?? 5? 8D ?? ?? E8 ?? ?? ?? ?? 85 ?? 0F 84 }
+    $block_20 = { 8B ?? ?? 33 ?? 89 ?? ?? 89 ?? ?? 89 ?? ?? 89 ?? ?? ?? ?? ?? 38 ?? ?? 0F 84 }
+    $block_21 = { 8B ?? ?? 8D ?? ?? A5 A5 A5 A5 FF 1? ?? ?? ?? ?? 8B ?? ?? E8 ?? ?? ?? ?? C3 }
+    $block_22 = { 5? FF 7? ?? 5? E8 ?? ?? ?? ?? 5? E8 ?? ?? ?? ?? BB ?? ?? ?? ?? 3B ?? 0F 84 }
+    $block_23 = { 33 ?? 66 ?? ?? 0F B7 ?? ?? ?? 4? 5? 8B ?? 66 ?? ?? 0F B7 ?? 4? 83 ?? ?? 7D }
+    $block_24 = { 6A ?? E8 ?? ?? ?? ?? CC 8B ?? ?? ?? 0F AF ?? ?? ?? 5? E8 ?? ?? ?? ?? 5? C3 }
+    $block_25 = { 8A ?? ?? 88 ?? ?? 8A ?? ?? 88 ?? ?? 8A ?? ?? 88 ?? ?? 8B ?? ?? 5? 5? C9 C3 }
+    $block_26 = { E8 ?? ?? ?? ?? 8B ?? ?? 2B ?? ?? 6A ?? 99 5? F7 ?? FF 7? ?? 3B ?? 0F 83 }
+    $block_27 = { 8D ?? ?? 5? 8B ?? E8 ?? ?? ?? ?? 0F B7 ?? 5? E8 ?? ?? ?? ?? 5? 84 ?? 74 }
+    $block_28 = { 80 B? ?? ?? ?? ?? ?? 8D ?? ?? 0F 94 ?? 0F B6 ?? 5? 5? E8 ?? ?? ?? ?? EB }
+    $block_29 = { 8D ?? ?? ?? ?? ?? 5? 5? FF 1? ?? ?? ?? ?? 89 ?? ?? ?? ?? ?? 3B ?? 0F 84 }
+    $block_30 = { E8 ?? ?? ?? ?? 8B ?? 2B ?? ?? 6A ?? 99 5? F7 ?? FF 7? ?? 83 ?? ?? 0F 83 }
+    $block_31 = { 66 ?? ?? ?? 8B ?? ?? ?? ?? ?? 66 ?? ?? ?? 4? 83 ?? ?? 0F B7 ?? 0F 8C }
+    $block_32 = { 8B ?? ?? ?? ?? ?? 5? 33 ?? 5? E8 ?? ?? ?? ?? 81 C? ?? ?? ?? ?? C9 C3 }
+    $block_33 = { 5? FF 7? ?? 5? E8 ?? ?? ?? ?? 5? E8 ?? ?? ?? ?? 3D ?? ?? ?? ?? 0F 84 }
+    $block_34 = { FF 8? ?? ?? ?? ?? 8B ?? ?? ?? ?? ?? 8B ?? ?? C1 ?? ?? 39 ?? ?? 0F 85 }
+    $block_35 = { 5? FF B? ?? ?? ?? ?? 8D ?? ?? ?? ?? ?? 5? E8 ?? ?? ?? ?? 3B ?? 0F 85 }
+    $block_36 = { 8B ?? ?? 8B ?? ?? 8D ?? ?? A5 A5 A5 6A ?? A5 0F B6 ?? ?? 5? 2B ?? 5? }
+    $block_37 = { 5? 8B ?? 83 ?? ?? 83 ?? ?? 8A ?? ?? 5? 5? 5? 89 ?? ?? ?? 84 ?? 0F 85 }
+    $block_38 = { 8A ?? 88 ?? 8A ?? ?? 88 ?? ?? 8A ?? ?? 88 ?? ?? 8B ?? ?? 5? 5? C9 C3 }
+    $block_39 = { 6A ?? 8B ?? E8 ?? ?? ?? ?? 0F B7 ?? 5? E8 ?? ?? ?? ?? 5? 84 ?? 74 }
+    $block_40 = { 2B ?? ?? 8B ?? C1 ?? ?? 89 ?? ?? 8B ?? ?? 89 ?? ?? 83 ?? ?? 0F 83 }
+    $block_41 = { 0F BE ?? ?? ?? FF 7? ?? 5? 5? E8 ?? ?? ?? ?? 83 ?? ?? 85 ?? 0F 84 }
+    $block_42 = { 8B ?? ?? BE ?? ?? ?? ?? 5? 8D ?? ?? E8 ?? ?? ?? ?? 85 ?? 0F 84 }
+    $block_43 = { 68 ?? ?? ?? ?? FF 1? ?? ?? ?? ?? 8A ?? ?? ?? ?? ?? 3C ?? 0F 84 }
+    $block_44 = { 68 ?? ?? ?? ?? 8D ?? ?? ?? ?? ?? ?? E8 ?? ?? ?? ?? 85 ?? 0F 85 }
+    $block_45 = { 8B ?? ?? 4? 4? 83 ?? ?? 89 ?? ?? 8A ?? ?? 8A ?? ?? 3A ?? 0F 85 }
+    $block_46 = { 8A ?? ?? ?? ?? ?? 8D ?? ?? ?? 30 ?? 0F B6 ?? 4? 83 ?? ?? 72 }
+    $block_47 = { 0F B6 ?? ?? 33 ?? 8A ?? ?? ?? ?? ?? 30 ?? 0F B6 ?? 4? 4? 75 }
+    $block_48 = { 33 ?? 83 ?? ?? ?? 0F 95 ?? 4? 83 ?? ?? 83 ?? ?? 89 ?? ?? EB }
+    $block_49 = { 8B ?? ?? 0F B6 ?? ?? 8D ?? ?? ?? ?? ?? ?? FF 0? 4? 3B ?? 7C }
+    $block_50 = { 8B ?? ?? C1 ?? ?? ?? 83 ?? ?? 83 ?? ?? 89 ?? ?? 3B ?? 0F 84 }
+    $block_51 = { 8B ?? ?? 2B ?? ?? 6A ?? 99 5? F7 ?? FF 7? ?? 3B ?? 0F 83 }
+    $block_52 = { 6A ?? FF 1? ?? ?? ?? ?? 8B ?? ?? ?? 8A ?? ?? 84 ?? 0F 84 }
+    $block_53 = { 8B ?? E8 ?? ?? ?? ?? 0F B7 ?? 0F B7 ?? 83 ?? ?? 3B ?? 7F }
+    $block_54 = { 8A ?? ?? 88 ?? ?? 8A ?? ?? 88 ?? ?? 8B ?? ?? 5? 5? C9 C3 }
+    $block_55 = { 8B ?? 2B ?? ?? 6A ?? 99 5? F7 ?? FF 7? ?? 83 ?? ?? 0F 83 }
+    $block_56 = { BE ?? ?? ?? ?? 5? 8D ?? ?? E8 ?? ?? ?? ?? 85 ?? 0F 84 }
+    $block_57 = { 5? 5? E8 ?? ?? ?? ?? 83 ?? ?? 0F 94 ?? 5? 5? 3C ?? 74 }
+    $block_58 = { 8B ?? ?? ?? ?? ?? 68 ?? ?? ?? ?? 5? FF D? 85 ?? 0F 84 }
+    $block_59 = { FF 7? ?? 6A ?? 5? E8 ?? ?? ?? ?? 83 ?? ?? 85 ?? 0F 84 }
+    $block_60 = { 8B ?? ?? 2B ?? ?? 6A ?? 99 5? F7 ?? 39 ?? ?? 0F 83 }
+    $block_61 = { 0F B6 ?? 8B ?? ?? ?? ?? ?? C1 ?? ?? 4? 83 ?? ?? 7C }
+    $block_62 = { 8B ?? ?? 5? 33 ?? 5? E8 ?? ?? ?? ?? 83 ?? ?? C9 C3 }
+    $block_63 = { 8A ?? 88 ?? 8A ?? ?? 88 ?? ?? 8B ?? ?? 5? 5? C9 C3 }
+    $block_64 = { 5? 8B ?? 83 ?? ?? 5? 5? 8B ?? 8B ?? 3B ?? 0F 84 }
+    $block_65 = { 8D ?? ?? 5? FF 1? ?? ?? ?? ?? 8B ?? 3B ?? 0F 84 }
+    $block_66 = { 6A ?? 5? 5? E8 ?? ?? ?? ?? 83 ?? ?? 5? 5? C9 C3 }
+
+  condition:
+    hash.sha256(0, filesize) == "2221c2323fb6e30b9c10ee68d60b7d7be823911540bb115f75b2747d015e35f9" or
+    hash.sha256(0, filesize) == "358da2c5bb5fbd9c9cf791536054bbb387ce37253c31555f5afa544f38de2a3f" or
+    hash.sha256(0, filesize) == "61969cd978cd2de3a13a10510d0dea5d0d3b212209804563ed3d42033a9d0f54" or
+    hash.sha256(0, filesize) == "224e8349ba128f0ab57bdebef5287f4b84b9dccbc2d8503f53f6333efd5f9265" or
+    hash.sha256(0, filesize) == "778568b44e13751800bf66c17606dfdfe35bebbb94c8e6e2a2549c7482c33f7a" or
+    hash.sha256(0, filesize) == "ce99e5f64f2d1e58454f23b4c1de33d71ee0b9fcd52c9eb69569f1c420332235" or
+    hash.sha256(0, filesize) == "4f3ceab96fb55d0b05380a1d95bb494ca44d7a9d7f10ded02d5b6fc27c92cb05" or
+    hash.sha256(0, filesize) == "85d3f636b515f0729c47f66e3fc0c9a0aacf3ec09c4acf8bf20a1411edcdc40a" or
+    hash.sha256(0, filesize) == "cb58396d40e69d5c831f46aed93231ed0b7d41fee95f8da7c594c9dbd06ee111" or
+    hash.sha256(0, filesize) == "2f24c7ccbd7a9e830ed3f9b3b7be7856e0cc8c1580082433cbe9bf33c86193c6" or
+    hash.sha256(0, filesize) == "d5687b5c5cec11c851e84a1d40af3ef52607575487a70224f63458c24481076c" or
+    hash.sha256(0, filesize) == "ec48b131612ef5637b387d9c2b0907d68a080fb77c6168e779fb7f3a0efa04dc" or
+    hash.sha256(0, filesize) == "4cf75059f2655ca95b4eba11f1ce952d8e08bb4dbcb12905f6f37cf8145a538d" or
+    hash.sha256(0, filesize) == "e3a7fa8636d040c9c3a8c928137d24daa15fc6982c002c5dd8f1c552f11cbcad" or
+    hash.sha256(0, filesize) == "7c1136d6f5b10c22698f7e049dbc493be6e0ce03316a86c422ca9b670cb133aa" or
+    hash.sha256(0, filesize) == "b139829440aabe33071aa34604f739d70f9a0a3b06051f3190aabf839df2d408" or
+    hash.sha256(0, filesize) == "c43ce82560cea125f65c7701c733c61ae3faa782c8b00efcb44fd7dbd32a5c4b" or
+    hash.sha256(0, filesize) == "43608e60883304c1ea389c7bad244b86ff5ecf169c3b5bca517a6e7125325c7b" or
+    hash.sha256(0, filesize) == "6b2a438e0233fe8e7ba8774e2e5c59bf0b7c12679d52d6783a0010ecad11978c" or
+    hash.sha256(0, filesize) == "6e92c2d298e25bcff17326f69882b636150d2a1af494ef8186565544f0d04d3d" or
+    hash.sha256(0, filesize) == "0c20ffcdf2492ccad2e53777a0885c579811f91c05d076ff160684082681fe68" or
+    hash.sha256(0, filesize) == "269ea4b883de65f235a04441144519cf6cac80ef666eccf073eedd5f9319be0f" or
+    hash.sha256(0, filesize) == "0e34262813677090938983039ba9ff3ade0748a3aba25e28d19e2831c036b095" or
+    hash.sha256(0, filesize) == "ee53e509d0f2a3c888232f2232b603463b421b9c08fe7f44ed4eead0643135d3" or
+    hash.sha256(0, filesize) == "a3a6f0dc5558eb93afa98434020a8642f7b29c41d35fa34809d6801d99d8c4f3" or
+    hash.sha256(0, filesize) == "2efd5355651db8e07613e74b1bf85b50273c1f3bce5e4edbedea0ccdff023754" or
+    hash.sha256(0, filesize) == "9517a412633b8ebeac875a2da7fe119b72efad62859dc1719b84d561792a9033" or
+    hash.sha256(0, filesize) == "94d4e4a8f2d53426154c41120b4f3cf8105328c0cc5d4bd9126a54c14b296093" or
+    hash.sha256(0, filesize) == "0c9b20f4cb0b3206f81c2afbb2ee4d995c28f74f38216f7d35454af624af8876" or
+    hash.sha256(0, filesize) == "abdb2da30435430f808b229f8b6856fafc154a386ef4f7c5e8de4a746e350e0c" or
+    hash.sha256(0, filesize) == "8d343be0ea83597f041f9cbc6ea5b63773affc267c6ad99d31badee16d2c86e5" or
+    hash.sha256(0, filesize) == "f1d6e8b07ac486469e09c876c3e267db2b2d651299c87557cbf4eafb861cf79c" or
+    hash.sha256(0, filesize) == "101e70a5455212b40406fe70361995a3a346264eabd4029200356565d2bacd6a" or
+    hash.sha256(0, filesize) == "c25c1455dcab2f17fd6a25f8af2f09ca31c8d3773de1cb2a55acd7aeaa6963c8" or
+    hash.sha256(0, filesize) == "0ea750a8545252b73f08fe87db08376f789fe7e58a69f5017afa2806046380a5" or
+    hash.sha256(0, filesize) == "b3b01b36b6437c624da4b28c4c8f773ae8133fca9dd10dc17742e956117f5759" or
+    hash.sha256(0, filesize) == "698ec413986dc7fc761b1a17624ffffb1590902020b9d0cd5d9a6013c67d9100" or
+    hash.sha256(0, filesize) == "02e5191078497be1e6ea8bac93b6cfb9b3ee36a58e4f7dd343ac1762e7f9301e" or
+    hash.sha256(0, filesize) == "f6aab09e1c52925fe599246dfdb4c1d06bea5c380c4c3e9c33661c869d41a23a" or
+    hash.sha256(0, filesize) == "439e5617d57360f76f24daed3fe0b59f20fc9dade3008fd482260ba58b739a23" or
+    hash.sha256(0, filesize) == "4ff5f102f0f1284a189485fc4c387c977dd92f0bc6a30c4d837e864aed257129" or
+    hash.sha256(0, filesize) == "e38aa99eff1f9fedd99cf541c3255e99f3276839a883cadb6e916649522729e3" or
+    hash.sha256(0, filesize) == "c987f8433c663c9e8600a7016cdf63cd14590a019118c52238c24c39c9ec02ad" or
+    hash.sha256(0, filesize) == "066346170856972f6769705bc6ff4ad21e88d2658b4cacea6f94564f1856ed18" or
+    hash.sha256(0, filesize) == "b647f883911ff20f776e0a42564b13ef961fa584ebd5cfce9dd2990bca5df24e" or
+    hash.sha256(0, filesize) == "5a13d0c954280b4c65af409376de86ac43eb966f25b85973a20d330a34cdd9a6" or
+    hash.sha256(0, filesize) == "4b547b3992838cfb3b61cb25f059c0b56c2f7caaa3b894dbc20bf7b33dadc5a1" or
+    hash.sha256(0, filesize) == "2dc296eb532097ac1808df7a16f7740ef8771afda3ac339d144d710f9cefceb4" or
+    hash.sha256(0, filesize) == "bb3529aa5312abbee0cfbd00f10c3f2786f452a2ca807f0acbd336602a13ac79" or
+    hash.sha256(0, filesize) == "dc612882987fab581155466810f87fd8f0f2da5c61ad8fc618cef903c9650fcd" or
+    hash.sha256(0, filesize) == "b0faba6156c7b0cd59b94eeded37d8c1041d4b8dfa6aacd6520a6d28c3f02a5e" or
+    hash.sha256(0, filesize) == "a2fe7a346b39a062c60c50167be7dd4f6a8175df054faa67bff33ec42b1072d9" or
+    hash.sha256(0, filesize) == "bcdcb4b5e9aaaee2c46d5b0ed16aca629de9faa5e787c672191e0bdf64619a95" or
+    hash.sha256(0, filesize) == "9d530e2254580842574a740698d2348b68b46fd88312c9325321ad0d986f523d" or
+    hash.sha256(0, filesize) == "aef82593822a934b77b81ebc461c496c4610474727539b0b6e1499ca836f0dee" or
+    hash.sha256(0, filesize) == "e42badd8fb20f1bc72b1cec65c42a96ee60a4b52d19e8f5a7248afee03646ace" or
+    hash.sha256(0, filesize) == "edb7caa3dce3543d65f29e047ea789a9e429e46bed5c29c4748e656285a08050" or
+    hash.sha256(0, filesize) == "6296d95b49d795fa10ae6e9c4e4272ea4e1444105bddbf45b34ee067b2603b38" or
+    hash.sha256(0, filesize) == "13da3fe28302a8543dd527d9e09723caeed98006c3064c5ed7b059d6d7f36554" or
+    hash.sha256(0, filesize) == "d3ee530abe41705a819ee9220aebb3ba01531e16df7cded050ba2cf051940e46" or
+    hash.sha256(0, filesize) == "2f593c22a8fd0de3bbb57d26320446a9c7eed755ae354957c260908c93d8cf79" or
+    hash.sha256(0, filesize) == "da3c1a7b63a6a7cce0c9ef01cf95fd4a53ba913bab88a085c6b4b8e4ed40d916" or
+    hash.sha256(0, filesize) == "170596e88b26f04d349f6014d17a88026ec55eab44888e2a9bb4dd90a79f6878" or
+    hash.sha256(0, filesize) == "d71da8a59f3e474c3bcd3f2f00fae0b235c4e01cd9f465180dd0ab19d6af5526" or
+    hash.sha256(0, filesize) == "ecb097f3367f0155887dde9f891ff823ff54ddfe5217cdbb391ea5b10c5a08dc" or
+    hash.sha256(0, filesize) == "59af70f71cdf933f117ab97d6f1c1bab82fd15dbe654ba1b27212d7bc20cec8c" or
+    hash.sha256(0, filesize) == "f65d767afd198039d044b17b96ebad54390549c6e18ead7e19e342d60b70a2c3" or
+    hash.sha256(0, filesize) == "d588e789f0b5914bd6f127950c5daf6519c78b527b0ed7b323e42b0613f6566f" or
+    hash.sha256(0, filesize) == "69b555a37e919c3e6c24cfe183952cdb695255f9458b25d00d15e204d96c737b" or
+    hash.sha256(0, filesize) == "022da314d1439f779364aba958d51b119ac5fda07aac8f5ced77146dbf40c8ac" or
+    hash.sha256(0, filesize) == "8e222cb1a831c407a3f6c7863f3faa6358b424e70a041c196e91fb7989735b68" or
+    hash.sha256(0, filesize) == "31db22caf480c471205a7608545370c1b3c0c9be5285a9ef2264e856052b66b4" or
+    hash.sha256(0, filesize) == "0850c39a7fcaa7091aaea333d33c71902b263935df5321edcd5089d10e4bbebb" or
+    hash.sha256(0, filesize) == "b8514bff04e8f4e77430202db61ec5c206d3ec0f087a65ee72c9bb94a058b685" or
+    hash.sha256(0, filesize) == "2c37e0504b98413e0308e44fd84f98e968f6f62399ea06bc38d3f314ee94b368" or
+    hash.sha256(0, filesize) == "56a1513bcf959d5df3ff01476ddb4b158ce533658ab7d8dd439324b16f193ac2" or
+    hash.sha256(0, filesize) == "aafbf4bba99c47e7d05c951ad964ce09493db091ba5945e89df916c6fa95d101" or
+    hash.sha256(0, filesize) == "8da93bc4d20e5f38d599ac89db26fc2f1eecbf36c14209302978d46fc4ce5412" or
+    hash.sha256(0, filesize) == "c66525285707daff30fce5d79eb1bdf30519586dfec4edf73e4a0845fd3d0e1c" or
+    hash.sha256(0, filesize) == "49c1c5e8a71f488a7b560c6751752363389f6272d8c310fee78307dc9dcd3ee2" or
+    hash.sha256(0, filesize) == "6122db2cdac0373cc8513c57786088a5548721d01e7674e78082774044e92980" or
+    hash.sha256(0, filesize) == "bee9f2a01e0049d4cf94016284b16849136233366d1509489797084672e5448f" or
+    hash.sha256(0, filesize) == "684ea2083f2f7099f0a611c81f26f30127ad297fcac8988cabb60fcf56979dfc" or
+    hash.sha256(0, filesize) == "92c959c36617445a35e6f4f2ee2733861aa1b3baf8728d19a4fd5176f3c80401" or
+    hash.sha256(0, filesize) == "593849098bd288b7bed9646e877fa0448dcb25ef5b4482291fdf7123de867911" or
+    hash.sha256(0, filesize) == "66ec58b4bdcb30d1889972c1ee30af7ff213deece335f798e57ff51fe28752e3" or
+    hash.sha256(0, filesize) == "b8f2fdddf7a9d0b813931e0efe4e6473199688320d5e8289928fe87ce4b1d068" or
+    hash.sha256(0, filesize) == "d755904743d48c31bdff791bfa440e79cfe1c3fc9458eb708cf8bb78f117dd07" or
+    hash.sha256(0, filesize) == "98bd5e8353bc9b70f8a52786365bcdb28bd3aef164d62c38dae8df33e04ac11a" or
+    hash.sha256(0, filesize) == "6606dd9a5d5182280c12d009a03b8ed6179872fcb08be9aa16f098250cc5b7a7" or
+    hash.sha256(0, filesize) == "bacac71fcc61db9b55234d1ccf45d5fffd9392c430cdd25ee7a5cea4b24c7128" or
+    hash.sha256(0, filesize) == "e73f8b394e51348ef3b6cea7c5e5ecc2ee06bb395c5ac30f6babb091080c1e74" or
+    hash.sha256(0, filesize) == "83e57d8f3810a72a772742d4b786204471a7607e02fa445c3cd083f164cc4af3" or
+    hash.sha256(0, filesize) == "60f86898506f0fdf6d997f31deff5b6200a6969b457511cc00446bd22dd1f0a4" or
+    hash.sha256(0, filesize) == "1d768ebfbdf97ad5282e7f85da089e174b1db760f1cbdca1a815e8e6245f155a" or
+    hash.sha256(0, filesize) == "fd689fcdcef0f1198b9c778b4d93adfbf6e80118733c94e61a450aeb701750b4" or
+    hash.sha256(0, filesize) == "7081455301e756d6459ea7f03cd55f7e490622d36a5a019861e6b17141f69bd0" or
+    hash.sha256(0, filesize) == "e029db63346c513be42242e268559174f6b00d818e00d93c14bd443314f65fe5" or
+    hash.sha256(0, filesize) == "6e5f4296bffa7128b6e8fa72ad1924d2ff19b9d64775bd1e0a9ce9c5944bd419" or
+    hash.sha256(0, filesize) == "d89a80a3fbb0a4a40157c6752bd978bc113b0c413e3f73eb922d4e424edeb8a7" or
+    hash.sha256(0, filesize) == "487eaf5cc52528b5f3bb27ba53afffb6d534068b364a41fc887b8c1e1485795a" or
+    hash.sha256(0, filesize) == "24be375f0e11d88210e53f15cc08d72ab6c6287676c3fe3c6f70b513e5f442ed" or
+    hash.sha256(0, filesize) == "fb30c3bb1b25b3d4cca975f2e0c45b95f3eb57a765267271a9689dd526658b43" or
+    hash.sha256(0, filesize) == "65a4332dfe474a8bb9b5fa35495aade453da7a03eb0049211e57b5660d08d75c" or
+    hash.sha256(0, filesize) == "59c4cba96dbab5d8aa7779eac18b67b2e6f8b03066eb092415d50dff55e43b72" or
+    hash.sha256(0, filesize) == "6367cb0663c2898aff64440176b409c1389ca7834e752b350a87748bef3a878b" or
+    hash.sha256(0, filesize) == "0a0a5b68a8a7e4ed4b6d6881f57c6a9ac55b1a50097588e462fe8d3c486158bf" or
+    hash.sha256(0, filesize) == "ebb16c9536e6387e7f6988448a3142d17ab695b2894624f33bd591ceb3e46633" or
+    hash.sha256(0, filesize) == "3a88ff66f4eb675f0c3e6c5f947c012945c4e15b77a2cd195de8a8aba23ccb29" or
+    hash.sha256(0, filesize) == "0f4046be5de15727e8ac786e54ad7230807d26ef86c3e8c0e997ea76ab3de255" or
+    hash.sha256(0, filesize) == "646c94a0194ca70fbe68c444a0c9b444e195280f9a0d19f12393421311653552" or
+    hash.sha256(0, filesize) == "a05b53260c2855829226dffd814022b7ff4750d278d6c46f2e8e0dc58a36a1f9" or
+    hash.sha256(0, filesize) == "837e68be35c2f0ab9e2b3137d6f9f7d16cc387f3062a21dd98f436a4bcceb327" or
+    hash.sha256(0, filesize) == "7e0dafedd01d09e66524f2345d652b29d3f634361c0a69e8d466dcbdfd0e3001" or
+    hash.sha256(0, filesize) == "45abd87da6a584ab2a66a06b40d3c84650f2a33f5f55c5c2630263bc17ec4139" or
+    hash.sha256(0, filesize) == "cd019e717779e2d2b1f4c27f75e940b5f98d4ebb48de604a6cf2ab911220ae50" or
+    hash.sha256(0, filesize) == "2c109406998723885cf04c3ced7af8010665236459d6fe610e678065994154d4" or
+    hash.sha256(0, filesize) == "170e5eb004357dfce6b41de8637e1dbeb87fa58e8b54a2031aac33afb930f3c8" or
+    hash.sha256(0, filesize) == "72ff91b3f36ccf07e3daf6709db441d2328cecab366fd5ff81fc70dd9eb45db8" or
+    hash.sha256(0, filesize) == "c4e2e341689799281eaef47de75f59edceaba281398b41fe7616436f247ab93d" or
+    hash.sha256(0, filesize) == "1ef47da67f783f8cc8cda7481769647b754874c91e0c666f741611decd878c19" or
+    12 of them
+}

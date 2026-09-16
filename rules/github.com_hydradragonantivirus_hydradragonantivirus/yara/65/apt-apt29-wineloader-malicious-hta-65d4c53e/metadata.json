@@ -1,0 +1,20 @@
+{
+  "uuid": "65d4c53e-7ea5-413f-a90c-f25a71cc36cb",
+  "title": "apt_apt29_wineloader_malicious_hta",
+  "format": "yara",
+  "author": "Sekoia.io",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects malicious HTA used by APT29 to drop Wineloader",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710581"
+}

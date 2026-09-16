@@ -1,0 +1,20 @@
+{
+  "uuid": "1dfaa45a-2e90-45e6-ba35-35851c2b8792",
+  "title": "apt_blackwood_nspx30_plugin",
+  "format": "yara",
+  "author": "Sekoia.io",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects plugins of NSPX30 backdoor based on RTTI and rundll32 string",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710619"
+}

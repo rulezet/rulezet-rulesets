@@ -1,0 +1,20 @@
+{
+  "uuid": "abe2577a-8924-4457-8dbf-1602f25d6651",
+  "title": "backdoor_win_rollsling",
+  "format": "yara",
+  "author": "Sekoia.io",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect Lazarus' RollSling malware (aka LazarLoader)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Lazarus Group - G0032\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710835"
+}

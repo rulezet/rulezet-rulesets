@@ -1,0 +1,19 @@
+{
+  "uuid": "df459399-5ef3-4c6a-8678-9c91b08091ba",
+  "title": "PUA_VULN_Driver_Pctools_Tfsysmon_Threatfire_1C1A",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - TfSysMon.sys",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710426"
+}

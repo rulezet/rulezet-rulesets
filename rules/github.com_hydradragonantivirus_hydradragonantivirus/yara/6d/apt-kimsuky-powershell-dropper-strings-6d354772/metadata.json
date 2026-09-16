@@ -1,0 +1,20 @@
+{
+  "uuid": "6d354772-d3c2-4fc0-bd08-68d5e2ba4d24",
+  "title": "apt_kimsuky_powershell_dropper_strings",
+  "format": "yara",
+  "author": "Sekoia.io",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects a PowerShell dropper used by Kimsuky",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710683"
+}

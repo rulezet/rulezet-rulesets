@@ -1,0 +1,20 @@
+{
+  "uuid": "0ff73e2b-3f35-4fe2-b4ab-d6d3620df324",
+  "title": "apt_apt28_powershell_ntlm_stealer",
+  "format": "yara",
+  "author": "Sekoia.io",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects the NTLM Stealer used by APT28 against UA energy sector",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT28 - G0007\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/710577"
+}
