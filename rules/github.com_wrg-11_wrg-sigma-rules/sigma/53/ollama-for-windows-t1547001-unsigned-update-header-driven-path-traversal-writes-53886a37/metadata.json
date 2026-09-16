@@ -1,0 +1,26 @@
+{
+  "uuid": "53886a37-9f41-4f6d-9203-4a59cb36824b",
+  "title": "Ollama for Windows -- T1547.001 unsigned update + header-driven path traversal writes to Startup",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detection for the chained CVE-2026-42248 + CVE-2026-42249 (cert.pl,\n2026-04-29), affecting Ollama for Windows versions 0.12.10 through\n0.17.5 (maintainers did not confirm the full vulnerable range when\nnotified).\n\nTwo independent bugs chain into unattended, persistent code execution.\nFirst (CVE-2026-42248): unlike other platforms, Ollama for Windows'\nupdate-verification routine unconditionally returns success -- no\ndigital signature or trust validation runs before an update payload is\nstaged or executed. Second (CVE-2026-42249): when downloading an\nupdate, the client builds the local staging file path using values\ntaken from HTTP response headers, passed directly to `filepath.Join`\nwith no validation, so a header containing `../` traversal sequences\nresolves outside the intended staging directory -- an attacker who can\ninfluence the update response (e.g. positioned on the network path, or\ncontrolling/spoofing the update endpoint) can write an arbitrary\nexecutable to any location the current user can reach, including the\nWindows Startup folder. Because Ollama for Windows performs SILENT\nautomatic updates with no user interaction, the two bugs together\ndeliver a malicious executable straight into Startup and it runs on\nthe next login with no signature check and no prompt.\n\nDetection logic flags the resulting host-level artifact: a new\nexecutable file created inside a user's Startup folder\n(`...\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\`) by a process\nattributed to Ollama's updater -- Ollama's own update mechanism has no\nlegitimate reason to place a NEW executable directly in Startup as part\nof an ordinary in-place version update.\n\nAggregated from 1 independent technical write-up (cert.pl, a\nCERT-affiliated vulnerability coordination body), citing both CVE\nentries. No patched version was confirmed by the maintainers as of the\nwrite-up's publication -- stated explicitly, not assumed.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1547.001"
+  ],
+  "cve": [
+    "CVE-2026-42248",
+    "CVE-2026-42249"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739716"
+}

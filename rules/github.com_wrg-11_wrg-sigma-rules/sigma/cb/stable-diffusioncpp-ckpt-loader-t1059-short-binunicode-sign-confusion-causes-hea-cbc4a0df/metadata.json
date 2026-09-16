@@ -1,0 +1,26 @@
+{
+  "uuid": "cbc4a0df-c23c-46df-91b9-ce20cbd2194d",
+  "title": "stable-diffusion.cpp .ckpt loader -- T1059 SHORT_BINUNICODE sign confusion causes heap corruption",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-47749 (GHSA-2c29-5hxg-fv9g,\nCVSS 7.8 HIGH), affecting stable-diffusion.cpp prior to\nmaster-584-0a7ae07.\n\nThe pickle `.ckpt` parser in `src/model.cpp` handles the\n`SHORT_BINUNICODE` opcode's length field with a SIGN CONFUSION bug: the\nlength is read as if unsigned but the underlying storage permits a\nnegative signed value, which a crafted `.ckpt` file can supply. That\nnegative-interpreted-as-huge length is passed directly to `memcpy`,\ncausing immediate heap corruption -- a process crash at minimum, with\nthe advisory noting potential for code execution depending on heap\nlayout. Any application loading untrusted `.ckpt` checkpoint files\nthrough affected stable-diffusion.cpp releases is exposed; the\nadvisory's own workaround (pending upgrade) is to load only trusted\n`.safetensors` files instead of `.ckpt`, since `.safetensors` has no\npickle-based parsing path to exploit.\n\nDetection logic flags a `.ckpt` model file whose SHORT_BINUNICODE\nopcode (byte value `0x8c` in the pickle protocol) is immediately\nfollowed by a length byte with its high bit set -- the specific\nbit pattern that a correctly-signed parser would reject as invalid but\nthe vulnerable sign-confused one accepts and forwards to `memcpy`.\n\nAggregated from 1 first-party vendor security advisory (leejet, via\nGHSA and NVD, citing the exact source file, opcode name, and root\ncause), fixed in master-584-0a7ae07.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-47749",
+    "GHSA-2C29-5HXG-FV9G"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739665"
+}

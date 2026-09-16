@@ -1,0 +1,23 @@
+{
+  "uuid": "7d9ed2db-4b15-4fe9-b07a-6d2491d213dd",
+  "title": "Template -- File and Directory Discovery (recon commands)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Canonical sigma detection template for MITRE ATT&CK T1083 (File and Directory Discovery (recon commands)). Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1083"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739721"
+}

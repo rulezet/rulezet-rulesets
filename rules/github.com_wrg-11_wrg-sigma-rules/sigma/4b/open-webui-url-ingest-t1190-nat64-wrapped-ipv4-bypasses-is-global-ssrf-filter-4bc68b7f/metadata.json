@@ -1,0 +1,26 @@
+{
+  "uuid": "4bc68b7f-821a-4a29-8b4f-01b3c89014f7",
+  "title": "Open WebUI URL ingest -- T1190 NAT64-wrapped IPv4 bypasses is_global SSRF filter",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70485 (GHSA-8x5v-cpv7-8jjp,\nCVSS 7.1 HIGH), affecting Open WebUI from 0.9.0 until 0.11.0.\n\nOpen WebUI checked whether a user-supplied URL destination was globally\nroutable by applying Python's `ipaddress.is_global` to the LITERAL\nIPv6 address -- without examining IPv4 addresses embedded inside IPv6\nTRANSITION encodings. On a deployment with a NAT64 gateway (common in\nIPv6-only or dual-stack-with-NAT64 setups, including some Kubernetes\nclusters), any verified user can wrap an internal or cloud-metadata\nIPv4 address inside the NAT64 well-known prefix (`64:ff9b::/96`); the\nwrapped address passes `is_global` as a seemingly-ordinary global IPv6\nliteral, but the NAT64 gateway unwraps it back to the internal IPv4\ntarget at connection time -- reaching it through RAG URL ingestion,\nURL-to-markdown conversion, or web-search content retrieval, with the\ninternal response body returned to the requesting user.\n\nThis corpus already carries a Pydantic AI rule for a structurally\nidentical class of bug (`CVE-2026-46678`/`CVE-2026-48782`-style IPv6\ntransition-encoding blocklist bypass is NOT yet in this corpus, but the\nunderlying pattern -- checking the wrapper form instead of the\nunwrapped target -- recurs across multiple SSRF-protection\nimplementations); this rule is Open WebUI's own specific instance.\n\nDetection logic flags a URL-ingestion request whose target hostname is\nan IPv6 literal within the NAT64 well-known prefix\n(`64:ff9b::/96`) -- a legitimate public URL has no reason to be\nexpressed in NAT64-wrapped form rather than a plain IPv4/IPv6 address\nor hostname.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact fix commit), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-46678",
+    "CVE-2026-48782",
+    "CVE-2026-70485",
+    "GHSA-8X5V-CPV7-8JJP"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739581"
+}

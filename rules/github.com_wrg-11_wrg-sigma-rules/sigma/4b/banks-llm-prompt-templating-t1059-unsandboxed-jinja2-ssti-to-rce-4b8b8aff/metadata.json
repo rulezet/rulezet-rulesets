@@ -1,0 +1,24 @@
+{
+  "uuid": "4b8b8aff-e611-47a8-9461-2aed9b95d02c",
+  "title": "banks (LLM prompt templating) -- T1059 unsandboxed Jinja2 SSTI to RCE",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-44209 (GHSA-gphh-9q3h-jgpp),\na self-reported advisory for `banks`, a library for generating LLM\nprompts with a template language.\n\nPrior to 2.4.2, `banks` rendered prompt templates with a plain\n`jinja2.Environment()` -- unsandboxed, permitting Jinja2's dunder-\nattribute object-graph traversal. Any application that passes a\nuser-supplied string as the `template` argument to `Prompt()` is\nvulnerable to Server-Side Template Injection. The advisory's own PoC:\n`{{ self.__init__.__globals__.__builtins__.__import__('os').popen('id').read() }}`\npassed to `Prompt(user_input)` then `.text()`, with a captured output of\n`uid=1000(ak) gid=1000(ak) groups=1000(ak),27(sudo),...` demonstrating\nfull command execution. Templates loaded from a database, an external\nAPI, or a user config file are all realistic vectors for reaching this\ncode path in a downstream application.\n\nThis corpus already carries `observed_ragflow_canvas_jinja2_ssti_t1059`\nfor a mechanistically identical bug class in a different product\n(RAGFlow's citation-prompt generator); this rule targets the same\nobject-graph-traversal idiom, filed separately because the vulnerable\nlibrary, reachable code path, and affected downstream applications are\ndistinct.\n\nDetection logic flags the same sandbox-escape idioms as the sibling\nRAGFlow rule -- `__globals__`, `__builtins__`, `__import__`,\n`__subclasses__`, `__mro__` -- appearing in content passed to a prompt-\ntemplate renderer, since these have no legitimate reason to appear in\nordinary prompt text.\n\nAggregated from 1 first-party vendor security advisory (masci, via\nGHSA and NVD; also tracked as RHSA via Red Hat/Bugzilla 2481713 for\ndistributions bundling `banks`), fixed in 2.4.2 (switches to\n`jinja2.sandbox.SandboxedEnvironment`).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-44209",
+    "GHSA-GPHH-9Q3H-JGPP"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739682"
+}

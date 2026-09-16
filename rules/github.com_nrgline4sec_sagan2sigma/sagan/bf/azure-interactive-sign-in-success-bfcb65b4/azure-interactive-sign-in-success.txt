@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[AZURE] Interactive sign-in success"; program: azureEventHub; json_content:".resultType","0"; classtype: user-activity; sid:9000007; rev:1;)

@@ -1,0 +1,24 @@
+{
+  "uuid": "227886cb-86ea-4706-b18b-ce499941014e",
+  "title": "Open WebUI OAuth token exchange -- T1528 raw provider token accepted with no audience check",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70482 (GHSA-rq84-p6rr-vf89,\nCVSS 8.1 HIGH), affecting Open WebUI from 0.8.0 until 0.11.0.\n\nWhen `ENABLE_OAUTH_TOKEN_EXCHANGE=True`,\n`/oauth/{provider}/token/exchange` accepted a raw OAuth provider access\ntoken and validated it by calling the provider's userinfo endpoint --\nWITHOUT confirming which OAuth CLIENT the token was originally issued\nto. Any party holding an access token minted for ANY client registered\nwith the same provider -- including applications the Open WebUI\noperator never authorized and does not control -- could exchange that\ntoken for a live Open WebUI session as the token's owner. This is a\nclassic audience-confusion bug: the endpoint checks \"is this token\nvalid for this provider\" instead of \"was this token issued to MY\nclient\".\n\nThis corpus already carries `observed_librechat_mcp_oauth_resource_mismatch_t1528`\nfor a similarly-shaped OAuth trust bug in a different product; that one\nis a resource-metadata redirect, this one is missing audience/client\nvalidation on token exchange -- distinct mechanisms, same\nbroader class of \"the OAuth trust boundary was assumed rather than\nchecked\".\n\nDetection logic flags a token-exchange request whose provider userinfo\nresponse succeeds but whose token was NOT issued to Open WebUI's own\nregistered client id -- the exact check the vulnerable endpoint skipped.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing both fix commits), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1528"
+  ],
+  "cve": [
+    "CVE-2026-70482",
+    "GHSA-RQ84-P6RR-VF89"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739639"
+}

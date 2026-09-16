@@ -1,0 +1,24 @@
+{
+  "uuid": "068329fb-0be9-4044-a871-ce950e8826ee",
+  "title": "Open WebUI calendar event update -- T1565.001 unchecked destination calendar_id moves events across owners",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54006 (GHSA-f3g7-59qc-pqg6,\nCVSS 4.3 MEDIUM), affecting Open WebUI prior to 0.9.6.\n\n`POST /api/v1/calendars/events/{event_id}/update` correctly validates\nthat the caller has write access to the calendar the event CURRENTLY\nbelongs to -- but never validates the DESTINATION `calendar_id`\nsupplied in the request body. The model layer then persists the new\n`calendar_id` unconditionally. A regular user-role account can create\nan event in their own calendar (a legitimate action) and then, through\nthis same update endpoint, move that event into ANY other user's\ncalendar whose id they know -- bypassing the authorization check that\nthe sibling `create_event` endpoint correctly performs.\n\nDetection logic flags an event-update request whose `calendar_id`\nfield differs from the event's CURRENT calendar and whose destination\ncalendar does not belong to the requesting user -- the exact\nauthorization gap this advisory describes.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD), fixed in 0.9.6.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1565.001"
+  ],
+  "cve": [
+    "CVE-2026-54006",
+    "GHSA-F3G7-59QC-PQG6"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739613"
+}

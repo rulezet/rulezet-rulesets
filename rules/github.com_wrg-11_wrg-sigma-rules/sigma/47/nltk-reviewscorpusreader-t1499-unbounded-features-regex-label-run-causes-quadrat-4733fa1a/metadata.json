@@ -1,0 +1,24 @@
+{
+  "uuid": "4733fa1a-f561-4e7e-84ba-c0b25b85409b",
+  "title": "NLTK ReviewsCorpusReader -- T1499 unbounded FEATURES regex label run causes quadratic backtracking on a bracket-less line",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-12061 (GHSA-fg7f-2386-8897,\nCVSS 7.5 HIGH), affecting NLTK's `ReviewsCorpusReader`.\n\nThe module-level `FEATURES` regex in `nltk/corpus/reader/reviews.py`\nextracts feature annotations (a label followed by a bracketed signed\ndigit, e.g. `battery life[+1]`) using an unbounded, unanchored label\nsub-pattern: a greedy run of word-plus-whitespace groups followed by\na word, which must then be followed by a literal `[`. On a long line\nwith NO bracket at all, the engine greedily extends the label\ncandidate from every one of the line's *n* starting positions to the\nend of the line, fails to find the bracket, and backtracks the whole\nway -- `re.findall` repeating this from every position gives O(n²)\ntotal work. A single crafted bracket-less line of roughly 100,000\nwords hangs `reviews()`, `features()`, and `sents()` for tens of\nseconds to minutes, with no authentication and no privileges\nrequired beyond the ability to supply a reviews corpus the reader\nwill load.\n\nDetection logic flags a corpus line reachable through\n`ReviewsCorpusReader` that exceeds a long word-count threshold with\nno `[+N]`/`[-N]` bracketed annotation anywhere in it -- the exact\nbracket-less-long-line shape this advisory's proof of concept\nmeasures at O(n²) growth (a 100,000-word line consumes CPU for tens\nof seconds to minutes).\n\nAggregated from 1 first-party vendor security advisory (nltk, via\nGHSA and NVD, citing the exact regex, source file and line numbers,\nand a runnable proof of concept comparing vulnerable vs. bounded-fix\ngrowth curves), fixed in NLTK 3.10.0 (PR #3583, verified via live GitHub changelog lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [
+    "CVE-2026-12061",
+    "GHSA-FG7F-2386-8897"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739620"
+}

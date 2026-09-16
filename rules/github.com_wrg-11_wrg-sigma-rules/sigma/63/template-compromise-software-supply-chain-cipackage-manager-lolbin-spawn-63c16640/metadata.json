@@ -1,0 +1,23 @@
+{
+  "uuid": "63c16640-c93a-4587-9c7c-cfd3fb822a55",
+  "title": "Template -- Compromise Software Supply Chain (CI/package-manager LOLBin spawn)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Canonical sigma detection template for MITRE ATT&CK T1195.002 (Compromise Software Supply Chain (CI/package-manager LOLBin spawn)). Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1195.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739592"
+}

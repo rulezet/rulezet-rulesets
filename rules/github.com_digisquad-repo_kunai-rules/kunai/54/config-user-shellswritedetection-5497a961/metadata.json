@@ -1,0 +1,21 @@
+{
+  "uuid": "5497a961-e01f-4dad-aa92-82f61fab48a6",
+  "title": "config_user_shells.write.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify config_user_shells_list.write.dependency",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1546.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739905"
+}

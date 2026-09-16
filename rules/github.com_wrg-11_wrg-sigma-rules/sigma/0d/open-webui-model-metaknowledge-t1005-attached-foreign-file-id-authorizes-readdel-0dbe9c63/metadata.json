@@ -1,0 +1,24 @@
+{
+  "uuid": "0dbe9c63-ab1b-4eb8-bfd4-17dcac0cd351",
+  "title": "Open WebUI model meta.knowledge -- T1005 attached foreign file_id authorizes read/delete via model metadata",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54012 (GHSA-vjqm-6gcc-62cr,\nCVSS 7.1 HIGH), affecting Open WebUI prior to 0.9.6.\n\nAny user who can create, update, or import a workspace model can store\narbitrary `meta.knowledge` entries on that model without Open WebUI\nchecking whether they own or can read the referenced files. Two\nDOWNSTREAM code paths then trust those entries as an authorization\nsource: the built-in `view_file` tool reads the referenced file's\nextracted text when the model is used, and `has_access_to_file()`'s\nMODEL branch authorizes the file-content and file-delete endpoints\nbased on the same metadata. A malicious model owner can therefore\nattach another user's `file_id` to their own model's `meta.knowledge`\nand both read and DELETE that private file -- a mechanistically\ndistinct sibling of `observed_open_webui_shared_chat_file_ownership_bypass_t1005`\n(which reaches the same class of bug through chat sharing rather than\nmodel metadata).\n\nDetection logic flags a model create/update/import request whose\n`meta.knowledge` array references a `file_id` NOT owned by the\nrequesting user -- the exact check both downstream authorization paths\nneeded and neither performed.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD), fixed in 0.9.6.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-54012",
+    "GHSA-VJQM-6GCC-62CR"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739714"
+}

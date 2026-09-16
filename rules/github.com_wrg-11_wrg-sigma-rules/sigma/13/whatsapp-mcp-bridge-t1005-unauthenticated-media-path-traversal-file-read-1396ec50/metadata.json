@@ -1,0 +1,24 @@
+{
+  "uuid": "1396ec50-5bcc-4c4c-ba90-c84f4024411c",
+  "title": "WhatsApp MCP bridge -- T1005 unauthenticated media_path traversal file read",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-46555 (GHSA-7jj9-4qqq-4xc4,\nCVSS 7.7 HIGH), a self-reported advisory for `whatsapp-mcp` -- a Model\nContext Protocol server that lets Claude read/send WhatsApp messages.\n\nPrior to 0.2.1, the `whatsapp-bridge` HTTP API listened on\n`127.0.0.1:8080` with no authentication and no Host-header validation,\nand its `/api/send` endpoint accepted an absolute `media_path` parameter\nwithout confining it to a safe directory. The advisory names the\ndisclosed impact directly: an unauthenticated local caller (which, per\nthe advisory, \"extends beyond processes the user explicitly launched\" to\nsibling MCP servers, IDE extensions, and tool-triggered flows sharing the\nsession) could read arbitrary files the user account can access -- SSH\nprivate keys, browser session data, source code, dotfiles -- and\nexfiltrate them as WhatsApp document attachments to the paired account.\nThe missing Host-header check additionally lets a remote attacker trigger\nthe same request via DNS rebinding from a webpage the victim visits.\n\nDetection logic flags a request to `/api/send` whose `media_path` field\nis an absolute path (or contains a `..` traversal segment) rather than a\nfilename confined to the bridge's own media directory -- the fix\nspecifically introduces path confinement, so a request the fixed version\nwould reject is the discriminator.\n\nAggregated from 1 first-party vendor security advisory (verygoodplugins,\nvia GHSA and NVD), fixed in v0.2.1.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-46555",
+    "GHSA-7JJ9-4QQQ-4XC4"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739711"
+}

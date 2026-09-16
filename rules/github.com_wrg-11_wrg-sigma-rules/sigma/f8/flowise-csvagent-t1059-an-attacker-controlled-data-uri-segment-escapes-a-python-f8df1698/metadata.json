@@ -1,0 +1,24 @@
+{
+  "uuid": "f8df1698-bfb4-4267-9800-596135563133",
+  "title": "Flowise CSVAgent -- T1059 an attacker-controlled data URI segment escapes a Python string literal and reaches Pyodide's js bridge",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-69264 (GHSA-4j8x-x6v7-w9rq,\nCVSS 9.9 CRITICAL), affecting Flowise's `CSVAgent` node.\n\n`CSVAgent.run()` extracts a segment of the `csvFile` data URI by\nsplitting on `,` and interpolates it VERBATIM into a Python\nbootstrap template (`base64_string = \"${base64String}\"`) before\nhanding the assembled string to `pyodide.runPythonAsync()`. Neither\nof the two validators guarding this code path\n(`validatePythonCodeForDataFrame`, `validateCustomReadCSVFunction`)\nis ever applied to the bootstrap template itself. An attacker crafts\na comma-free segment that closes the Python string literal early,\nimports the `js` module, and calls `js.eval()` -- which on Node.js\nbridges to `globalThis`, exposing dynamic `import()` of Node built-in\nmodules (`fs`, `child_process`). This escapes Pyodide's WASM sandbox\nentirely and executes as the Flowise host process. The trigger route\n`POST /api/v1/prediction/:id` is whitelisted from auth when the\nchatflow has no `apikeyid` set (the default for new chatflows), so\none authenticated plant reaches unauthenticated RCE on every\nsubsequent prediction request.\n\nDetection logic flags a chatflow prediction request whose CSVAgent\n`csvFile` data-URI segment contains a Python string-literal\nterminator (`\";`) followed by an `import js` statement -- the exact\nstring-escape-then-bridge-import shape this advisory's verified\nend-to-end proof of concept (against a stock `flowise@3.1.2`)\ndemonstrates writes a proof file on the Node host.\n\nAggregated from 1 first-party vendor security advisory (FlowiseAI, via\nGHSA, citing the exact source file and line numbers, a standalone\nreproduction against real Pyodide, and independent verification\nagainst a live `flowise@3.1.2` install with owner-uid confirmation),\nfixed in Flowise 3.1.3 (verified via live GHSA lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-69264",
+    "GHSA-4J8X-X6V7-W9RQ"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739688"
+}

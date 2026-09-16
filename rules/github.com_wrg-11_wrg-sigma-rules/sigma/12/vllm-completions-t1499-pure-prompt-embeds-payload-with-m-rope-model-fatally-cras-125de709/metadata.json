@@ -1,0 +1,24 @@
+{
+  "uuid": "125de709-0354-4573-a716-25013f86b765",
+  "title": "vLLM completions -- T1499 pure prompt-embeds payload with M-RoPE model fatally crashes EngineCore",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-55514 (GHSA-33cg-gxv8-3p8g,\nCVSS 7.1 HIGH), affecting vLLM from 0.12.0 before 0.24.0.\n\nSending a pure prompt-embeds payload in a `/v1/completions` request,\nagainst a model configured to use M-RoPE (multimodal rotary position\nembeddings), causes `EngineCore` to fail an internal assertion and\nFATALLY CRASH -- shutting down the entire server process, not just the\noffending request. Unlike vLLM's typical request-level error handling,\nthis specific combination reaches an unrecoverable assertion failure at\nthe engine level. Any remote user merely AUTHORIZED to make a normal\n`/v1/completions` request (no special privilege needed beyond ordinary\nAPI access) can induce the crash and take down the service for every\nother user.\n\nDetection logic flags a `/v1/completions` request carrying a\nprompt-embeds payload with no accompanying text prompt (the \"pure\"\nshape the advisory specifies) directed at a model configured for\nM-RoPE -- the exact combination that reaches the unguarded assertion.\n\nAggregated from 1 first-party vendor security advisory (vllm-project,\nvia GHSA and NVD, citing the exact fix commit, PR, and release),\nfixed in 0.24.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [
+    "CVE-2026-55514",
+    "GHSA-33CG-GXV8-3P8G"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739624"
+}

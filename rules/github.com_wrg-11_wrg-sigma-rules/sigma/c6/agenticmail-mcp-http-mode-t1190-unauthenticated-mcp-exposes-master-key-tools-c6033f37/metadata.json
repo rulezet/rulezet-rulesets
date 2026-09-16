@@ -1,0 +1,24 @@
+{
+  "uuid": "c6033f37-1a25-4330-837e-a726b47b8cde",
+  "title": "AgenticMail MCP HTTP mode -- T1190 unauthenticated /mcp exposes master-key tools",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-50287 (GHSA-63gr-g7jc-v8rg,\nCVSS 8.7 HIGH), a self-reported advisory for `@agenticmail/mcp`, prior\nto 0.9.27.\n\nWhen started with `--http` or `MCP_HTTP=1`, `packages/mcp/src/index.ts`\nlaunches an HTTP server for the `/mcp` endpoint with no Authorization\nheader validation. An unauthenticated client can send an `initialize`\nJSON-RPC request, receive an `mcp-session-id` in response with no\ncredential exchanged, and then invoke `tools/call` directly. Separately,\n`packages/mcp/src/tools.ts` marks certain gateway/admin operations as\nrequiring the operator's `AGENTICMAIL_MASTER_KEY`, but the server\nexecutes them with its OWN server-side master key regardless of caller\nauthentication -- a confused-deputy shape, same class as this corpus's\n`observed_mcp_pinot_unauth_confused_deputy_t1190`. The exposed\nmaster-key tools include `setup_email_relay`, `setup_email_domain`,\n`delete_agent`, `cleanup_agents`, and `send_test_email`.\n\nThis is the SAME product family as\n`observed_agenticmail_bridge_wake_unverified_sender_t1566` already in\nthis corpus, but a distinct vulnerability and code path -- that rule\ntargets the email-triggered bridge-wake flow (`dispatcher.ts`), this\none targets the MCP HTTP transport's own auth gap (`index.ts`).\n\nDetection logic flags an unauthenticated `tools/call` request naming\none of the master-key-protected tools -- the tool name plus missing\nAuthorization header is the discriminator, since the same tool names\nlegitimately appear in authenticated traffic once the fix is deployed.\n\nAggregated from 1 first-party vendor security advisory (agenticmail,\nvia GHSA and NVD), fixed in 0.9.27 (requires bearer tokens/shared\nsecrets for `/mcp` HTTP requests and disables master-key tools over\nunauthenticated transports).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-50287",
+    "GHSA-63GR-G7JC-V8RG"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739573"
+}

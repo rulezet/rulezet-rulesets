@@ -1,0 +1,23 @@
+{
+  "uuid": "eb3567f6-dbcb-4825-a88a-8d2e8e341e93",
+  "title": "agno ClickHouse vector store -- T1059 unsafe f-string metadata SQL injection in delete_by_metadata",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-10105 (CVSS 8.7 HIGH), a\nself-reported issue for agno (2.6.5), an AI-agent framework, in its\nClickHouse vector-database backend.\n\n`clickhousedb.py`'s `delete_by_metadata()` built its `WHERE` clause with\nunsafe f-string interpolation of caller-supplied metadata keys and\nvalues directly into the SQL text:\n`f\"JSONExtractString(toString(filters), '{key}') = '{value}'\"`. Neither\n`key` nor `value` was escaped or parameterized. An attacker who controls\neither -- for example, metadata attached to agent-ingested content --\ncan supply a `value` like `1' OR '1'='1` to turn the intended equality\ncheck into a tautology, producing\n`JSONExtractString(toString(filters), 'user_id') = '1' OR '1'='1'` and\nmatching every row rather than the intended one: mass deletion, targeted\nrow deletion, or error-based/blind data extraction, per the advisory.\n\nDetection logic flags the resulting query-log artifact: a\n`JSONExtractString` predicate whose value operand contains a SQL\nboolean-tautology or comment idiom (`' OR '`, `'='`, `--`, `/*`) rather\nthan an ordinary metadata value -- this is the specific function this\nvulnerable code path builds, so its presence with an injection idiom is\na tight signal, not a generic \"SQL keyword in a query\" heuristic.\n\nAggregated from 1 first-party vendor disclosure (agno-agi, via the\nlinked issue and merged fix PR, corroborated by VulnCheck's independent\nwrite-up), fixed via ClickHouse named-parameter binding (indexed\n`meta_key_N`/`meta_val_N` parameters handled by the driver's own\nescaping layer, matching the secure pattern already used elsewhere in\nthe same file).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-10105"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739684"
+}

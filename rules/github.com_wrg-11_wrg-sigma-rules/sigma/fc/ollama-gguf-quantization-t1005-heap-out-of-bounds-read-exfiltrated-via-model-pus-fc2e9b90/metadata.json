@@ -1,0 +1,23 @@
+{
+  "uuid": "fc2e9b90-70d5-4e8f-9a65-7e184061ba67",
+  "title": "Ollama GGUF quantization -- T1005 heap out-of-bounds read exfiltrated via model push",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-7482 (CVSS 8.8 HIGH), affecting\nOllama before 0.17.1.\n\nThe `/api/create` endpoint accepts an attacker-supplied GGUF model file.\nDuring quantization (`fs/ggml/gguf.go` and `server/quantization.go`'s\n`WriteTo()`), the server trusted the file's declared tensor offset and\nsize fields without validating them against the file's actual length.\nA GGUF file whose declared offset/size exceeds the real file causes the\nquantization path to read past the allocated heap buffer -- the leaked\nmemory can contain environment variables, API keys, system prompts, and\nOTHER CONCURRENT USERS' conversation data. Because `/api/create` and\n`/api/push` both ship with no authentication in the upstream\ndistribution, an attacker can chain the two: upload a malicious GGUF to\n`/api/create` to trigger the overread, then push the resulting model\nartifact -- now carrying the leaked heap bytes baked into it -- via\n`/api/push` to an attacker-controlled registry, exfiltrating the memory\ncontents as an ordinary-looking model file. Default deployments bind to\nloopback, but the documented `OLLAMA_HOST=0.0.0.0` configuration is\nwidely used in practice.\n\nDetection logic flags the two-endpoint sequence this exfiltration\nchain depends on: a `/api/create` call carrying a GGUF payload followed\nby a `/api/push` call targeting a registry host outside an\noperator-approved allowlist, from the same source in a short window --\na legitimate model-authoring workflow rarely pushes to an unfamiliar\nregistry immediately after a fresh create call.\n\nAggregated from 1 first-party vendor fix (ollama/ollama, via the merged\nPR and NVD's technical summary, which quotes the specific vulnerable\nfiles and functions), fixed in 0.17.1 (validates tensor size against\nthe shape-derived expected size before quantization).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-7482"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739710"
+}

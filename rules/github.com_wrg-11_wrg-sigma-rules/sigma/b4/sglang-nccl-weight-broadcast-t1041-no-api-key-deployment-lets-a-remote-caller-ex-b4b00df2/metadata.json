@@ -1,0 +1,24 @@
+{
+  "uuid": "b4b00df2-f7bd-44f6-8a7d-1daed2d5ac8f",
+  "title": "SGLang NCCL weight broadcast -- T1041 no-API-key deployment lets a remote caller exfiltrate all model weights",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-15978 (GHSA-cpqq-22v3-2wfm,\nCVSS 7.5 HIGH), affecting SGLang.\n\nWhen no API key is configured, SGLang exposes TWO endpoints that,\ncalled in sequence by a remote caller, trigger DISTRIBUTED weight\nbroadcasting over NCCL (the GPU-to-GPU collective communication\nlibrary normally used internally for multi-GPU inference) and then\ntrigger a data transfer -- letting an attacker exfiltrate the entire\nserved model's weights over what is meant to be an internal,\ntrusted-cluster communication channel. This is a distinct failure mode\nfrom the pickle-deserialization RCEs in the same disclosure series:\nno deserialization bug is needed, only the absence of the API-key\ngate that was meant to protect these two endpoints.\n\nDetection logic flags the specific two-call sequence this exfiltration\npath depends on: a request to the weight-broadcast-trigger endpoint\nfollowed shortly by a request to the corresponding data-transfer\nendpoint, from the same caller, on a deployment where no API key\nauthentication is configured -- either call alone is unremarkable\ninternal-cluster traffic, but the pairing from an external caller is\nthe exfiltration chain this advisory describes.\n\nAggregated from 2 independent sources (SGLang's own GHSA advisory + an\nindependent security researcher's corroborating disclosure write-up,\npart of the same coordinated multi-CVE SGLang research series), no\npatched version confirmed in the summary available at authoring time --\noperators should always configure an API key even on deployments\nbelieved to be internal-only.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1041"
+  ],
+  "cve": [
+    "CVE-2026-15978",
+    "GHSA-CPQQ-22V3-2WFM"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739563"
+}

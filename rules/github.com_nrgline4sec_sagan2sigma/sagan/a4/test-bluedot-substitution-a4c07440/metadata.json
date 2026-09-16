@@ -1,0 +1,20 @@
+{
+  "uuid": "a4c07440-3418-45ac-a168-47c5909c1404",
+  "title": "[TEST] Bluedot substitution",
+  "format": "sagan",
+  "author": "NRGLine4Sec",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Convert Sagan rules (Snort/Suricata syntax) into Sigma rules, with a report explaining every rule that did not convert and why. Ports the engine's own matching semantics rather than approximating them, and verifies the result against rsigma.",
+  "source": "https://github.com/NRGLine4Sec/sagan2sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739751"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "2da1c72b-19b5-42e1-a163-78aa645cab64",
+  "title": "AutoGPT Platform -- T1059 Redis cache pickle deserialization RCE",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-33233 (GHSA-rfg2-37xq-w4m9,\nCVSS 7.6 HIGH), a self-reported advisory for AutoGPT Platform, versions\n0.6.34 through 0.6.51.\n\nThe backend's cache layer (`cache.py`, near line 192) writes values to\nRedis with `pickle.dumps(...)` and reads them back with a bare\n`pickle.loads(cached_bytes)` -- no HMAC/signature check and no strict\nschema validation gates the deserialization. Python's `pickle` protocol\nexecutes arbitrary code during unpickling via an object's `__reduce__`\nmethod; the advisory's own PoC uses a crafted class that, when\ndeserialized, creates the file `/tmp/autogpt_pickle_rce_official` as\nproof of command execution. Any attacker able to write to the shared\nRedis cache key -- whether through a separate Redis-access\nvulnerability, a misconfigured/exposed Redis instance, or another\nservice sharing the same cache -- can trigger arbitrary command\nexecution in the backend container simply by having their poisoned\nbytes read back through the normal cache-read path.\n\nDetection logic flags the resulting host-level artifact: a Python\nprocess attributed to the AutoGPT backend spawning a child process as a\ndirect consequence of a cache read -- since legitimate cache reads\nnever spawn subprocesses, any subprocess creation immediately following\na `cache.py` read call in the same process is the anomaly this bug\nmakes possible.\n\nAggregated from 1 first-party vendor security advisory\n(Significant-Gravitas, via GHSA and NVD), fixed in 0.6.52 (moves to a\nnon-code-executing serialization format with schema validation; the\nadvisory also recommends HMAC-signing cached values and hardening the\nRedis deployment itself -- auth, TLS, network isolation).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-33233",
+    "GHSA-RFG2-37XQ-W4M9"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739679"
+}

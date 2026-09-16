@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] by_string correlation"; program: test; content:"x"; parse_src_ip: 1; after: track by_src&by_string, count 3, seconds 60; classtype: user-activity; sid:9000027; rev:1;)

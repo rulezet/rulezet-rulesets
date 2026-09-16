@@ -1,0 +1,24 @@
+{
+  "uuid": "21164053-5961-4cdc-9807-91909603a00e",
+  "title": "Open WebUI SafePlaywrightURLLoader -- T1190 redirect-following bypasses initial-URL-only SSRF validation",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54018 (GHSA-jrfp-m64g-pcwv,\nCVSS 7.7 HIGH), affecting Open WebUI prior to 0.9.6.\n\n`SafePlaywrightURLLoader` implements `validate_url` to block SSRF by\nchecking the IP address a submitted URL resolves to -- but this check\nruns ONLY on the initial URL. Playwright follows HTTP redirects\n(301/302) automatically by default, so a submitted URL that is itself\nsafe -- and passes validation -- can redirect to a restricted internal\naddress (localhost, a Docker container's internal network, or cloud\nmetadata) that the loader then fetches without re-validating. This\nreaches internal services even when `ENABLE_RAG_LOCAL_WEB_FETCH` is set\nto `False`, since that setting governs a different code path than the\nPlaywright loader's own redirect-following.\n\nThis corpus already carries `observed_open_webui_playwright_subresource_ssrf_t1190`\nfor a mechanistically DIFFERENT Playwright-related bug (unvalidated\nSUB-RESOURCE requests from the loaded page's own JS); this rule is the\nsimpler, earlier case: an HTTP-level REDIRECT the loader itself follows\nwithout re-checking, no page JavaScript involved.\n\nDetection logic flags a Playwright-loader fetch whose FINAL resolved\nURL (after redirects) targets a private, loopback, or link-local\naddress that DIFFERS from the initially-submitted URL's own address --\na same-target redirect is unremarkable, but a redirect landing on an\ninternal range the initial validation would itself have blocked is the\nexact bypass this advisory describes.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD), fixed in 0.9.6.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-54018",
+    "GHSA-JRFP-M64G-PCWV"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739578"
+}

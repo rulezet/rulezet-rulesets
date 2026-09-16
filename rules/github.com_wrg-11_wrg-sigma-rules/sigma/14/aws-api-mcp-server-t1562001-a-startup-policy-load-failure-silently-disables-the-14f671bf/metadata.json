@@ -1,0 +1,24 @@
+{
+  "uuid": "14f671bf-24b0-4b78-b6e2-968e737dd85f",
+  "title": "AWS API MCP Server -- T1562.001 a startup policy-load failure silently disables the per-request security-policy gate for the process lifetime",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-16584 (GHSA-29w2-fq35-v728),\naffecting `awslabs.aws-api-mcp-server` >= 0.2.13 and < 1.3.47.\n\n`SecurityPolicy._load_policy()` in\n`awslabs/aws_api_mcp_server/core/security/policy.py` reads the\noperator-configured deny/gate policy file at startup inside a\ntry/except that, on any parse or read failure, calls\n`logger.error('Failed to load security policy from {}: {}',\npolicy_path, e)` and then simply continues -- the denylist and elicit\nlist stay at their empty initial values, and nothing downstream\nchecks whether the load actually succeeded. The per-request policy\ncheck that consults these lists is then silently skipped for the\nentire lifetime of the process: configured deny and gate rules are\nnever enforced, and AWS API operations the operator intended to\nrestrict execute without that gate. The underlying IAM permissions on\nthe configured credentials remain in effect and continue to bound\nwhat the server can do -- this is specifically a bypass of the\npolicy-file gate layered on top of IAM, not of IAM itself.\n\nDetection logic flags the exact logged failure message\n`Failed to load security policy from` at MCP server startup -- the\nliteral signal this advisory's source confirms is emitted when the\nvulnerable version enters the silently-unenforced state -- as a\nprecondition alert requiring operator investigation into whether the\ndegraded process is still serving requests.\n\nAggregated from 1 first-party vendor security advisory (AWS, via\nGHSA and NVD) plus the actual current source\n(`awslabs/mcp:src/aws-api-mcp-server/.../core/security/policy.py`)\nconfirming the exact log message text this rule matches on, fixed in\n1.3.47.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562.001"
+  ],
+  "cve": [
+    "CVE-2026-16584",
+    "GHSA-29W2-FQ35-V728"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739633"
+}

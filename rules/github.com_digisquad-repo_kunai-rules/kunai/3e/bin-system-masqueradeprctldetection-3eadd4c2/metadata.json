@@ -1,0 +1,21 @@
+{
+  "uuid": "3eadd4c2-cd5c-4bbb-a789-7a73bfa962ce",
+  "title": "bin_system_masquerade.prctl.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify PRCTL PR_SET_NAME (process name masquerading)",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739879"
+}

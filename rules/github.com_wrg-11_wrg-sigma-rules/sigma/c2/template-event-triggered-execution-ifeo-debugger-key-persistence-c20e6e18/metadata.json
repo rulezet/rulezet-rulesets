@@ -1,0 +1,23 @@
+{
+  "uuid": "c20e6e18-5e05-428c-bbae-441c3f8a7266",
+  "title": "Template -- Event Triggered Execution (IFEO Debugger-key persistence)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Canonical sigma detection template for MITRE ATT&CK T1546 (Event Triggered Execution (IFEO Debugger-key persistence)). Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739720"
+}

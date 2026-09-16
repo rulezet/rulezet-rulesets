@@ -1,0 +1,21 @@
+{
+  "uuid": "f2a03bcd-ee82-468c-ba25-4106679d67a9",
+  "title": "Import of a documented AI-hallucinated (slopsquatting) package name",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin ai-fingerprint observed rules",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects an `import`/`from...import` statement naming a specific, independently-documented package name that LLM coding assistants are known to hallucinate (e.g. huggingface_cli -- the real package is huggingface_hub). Curated seed list, not a heuristic: each entry traces to a cited, confirmed-nonexistent-at-discovery package. A hit means the code names a package with no legitimate reason to exist, which is exactly the shape of a supply-chain compromise (slopsquatting: an attacker registers the invented name and ships malware to whoever installs it). Per-hit confidence is high without requiring co-occurrence, same reasoning as ai_provenance -- a literal match against a definitively-known-fake name is near-zero-FP by construction.\n\nAggregated from 1 fingerprint hit(s) across 1 file(s). Sample paths: apps/foo/corge.py.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739658"
+}

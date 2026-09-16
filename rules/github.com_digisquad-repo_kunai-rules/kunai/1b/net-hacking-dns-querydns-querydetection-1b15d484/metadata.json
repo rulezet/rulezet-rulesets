@@ -1,0 +1,21 @@
+{
+  "uuid": "1b15d484-1b2a-467a-97a5-2aba65dc19ad",
+  "title": "net_hacking_dns_query.dns_query.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify DNS_QUERY from offensive hacking tools (C2 beacon / recon)",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1071.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739913"
+}

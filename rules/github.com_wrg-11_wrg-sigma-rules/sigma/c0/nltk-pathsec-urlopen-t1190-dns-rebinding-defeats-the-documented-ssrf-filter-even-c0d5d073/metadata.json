@@ -1,0 +1,26 @@
+{
+  "uuid": "c0d5d073-86a3-4b97-8c7c-464aefa1ff15",
+  "title": "NLTK pathsec urlopen -- T1190 DNS rebinding defeats the documented SSRF filter even under strict ENFORCE mode",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-12075 (GHSA-qvv7-cg9c-w4x3,\nCVSS 8.6 HIGH), affecting NLTK's `nltk.pathsec` SSRF filter used by\n`nltk.download` / `nltk.data.load`.\n\n`nltk.pathsec.urlopen()` validates a URL's hostname by resolving it\nand checking the returned IPs against loopback/private/link-local/\nmulticast ranges, then hands the RAW hostname to\n`build_opener(...).open(url)`, which makes `urllib` resolve the\nhostname a SECOND time, independently, deep in\n`http.client.HTTPConnection.connect`. The validation-side resolution\nand the connection-side resolution share no cache and no state. An\nattacker controlling DNS for a hostname (a TTL-0 rebinding record)\nserves a public IP for the validation lookup and an internal or\nloopback IP for the connection lookup -- the IP that passed\nvalidation is never the IP actually connected to, and this defeats\nthe filter even with `nltk.pathsec.ENFORCE = True`, the strict mode\nNLTK's own security documentation recommends for environments where\nuntrusted input may reach it. The `lru_cache` decorator on the\nresolver's docstring claims to mitigate rebinding; it only memoizes\nthe validation-side lookup and provides no protection at all.\n\nDetection logic flags two DNS resolutions for the same hostname\nwithin a short window that return DIFFERENT IP address classes (a\npublic/global address followed by a private, loopback, or link-local\naddress) immediately preceding an `nltk.pathsec.urlopen` /\n`nltk.download` call -- the exact validate-then-rebind sequence this\nadvisory's proof of concept demonstrates against `ENFORCE = True`.\n\nAggregated from 1 first-party vendor security advisory (nltk, via\nGHSA and NVD, citing the exact function names, the two independent\nresolution code paths, and a runnable proof of concept with a\nloopback-only secret marker), fixed in NLTK 3.10.0 (PR #3582, verified via live GitHub changelog lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-12075",
+    "GHSA-QVV7-CG9C-W4X3"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739568"
+}

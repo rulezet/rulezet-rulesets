@@ -1,0 +1,27 @@
+name: config_user_shells.write.detection
+type: detection
+meta:
+  tags:
+  - config_user_shells
+  - type_detection
+  - event_write
+  - event_write_close
+  - event_write_config
+  - T1546.004
+  - event_triggered_execution:_unix_shell_configuration_modification
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  attack:
+  - T1546.004
+  comments:
+  - detection rule - identify config_user_shells_list.write.dependency
+match-on:
+  events:
+    kunai:
+    - write
+    - write_close
+    - write_config
+matches:
+  $dep_01: rule( config_user_shells_list.write.dependency)
+condition: $dep_01
+severity: 8

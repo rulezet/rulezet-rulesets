@@ -1,0 +1,24 @@
+{
+  "uuid": "a8d7755b-8973-4d6c-9308-24f73a909cc1",
+  "title": "SGLang LoRA adapter loader -- T1059 SafeUnpickler denylist bypass unauthenticated RCE",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-15969 (GHSA-2wvm-gjg7-5jfm,\nCVSS 9.8 CRITICAL), affecting SGLang, a high-performance LLM/VLM\nserving engine.\n\n`/load_lora_adapter_from_tensors` accepts a caller-supplied,\nbase64-encoded pickle payload representing LoRA adapter tensors. The\nendpoint's `SafeUnpickler` is meant to restrict which classes a pickle\nstream can reconstruct, but its denylist is incomplete -- a crafted\npayload using a class the denylist does not cover reaches arbitrary\ncode execution during deserialization, with no authentication required\nto reach the endpoint at all. This is SGLang's first of several\npickle-deserialization RCEs disclosed the same week (see sibling rules\nfor `/update_weights_from_disk` and the dumper subsystem), each a\ndistinct code path sharing the same root cause class: trusting a\ndenylist-based unpickler instead of avoiding `pickle` for\nnetwork-reachable input entirely.\n\nDetection logic flags a request to this endpoint carrying a\nbase64-encoded body whose decoded content begins with pickle's protocol\nopcodes (`\\x80\\x04` / `\\x80\\x05` for protocol 4/5, or the ASCII\nprotocol-0 opcode sequence) -- LoRA adapter tensors submitted through\nthe intended, safe path do not require raw pickle framing at the HTTP\nlayer.\n\nAggregated from 2 independent sources (SGLang's own GHSA advisory + an\nindependent security researcher's corroborating disclosure write-up,\npart of a coordinated multi-CVE SGLang security research series), no\npatched version confirmed in the summary available at authoring time --\noperators should restrict network reachability to this endpoint until\na fix is confirmed.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-15969",
+    "GHSA-2WVM-GJG7-5JFM"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739692"
+}

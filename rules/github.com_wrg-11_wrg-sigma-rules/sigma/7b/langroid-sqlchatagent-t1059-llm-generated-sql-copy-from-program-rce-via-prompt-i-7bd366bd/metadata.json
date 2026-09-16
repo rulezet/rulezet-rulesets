@@ -1,0 +1,24 @@
+{
+  "uuid": "7bd366bd-eaf2-4872-b274-dee62e7a3d62",
+  "title": "Langroid SQLChatAgent -- T1059 LLM-generated SQL COPY-FROM-PROGRAM RCE via prompt injection",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-25879 (GHSA-mxfr-6hcw-j9rq,\nCVSS 9.8 CRITICAL), a self-reported advisory for Langroid, a framework\nfor building LLM-powered applications.\n\nPrior to 0.63.0, `SQLChatAgent` executed SQL produced by an LLM\n(`run_query()`, `sql_chat_agent.py:474`) with no sanitization or\nvalidation of what the model chose to emit. Because an LLM's output is\ninfluenceable by prompt injection -- including INDIRECTLY, via data the\nagent reads back from elsewhere -- an attacker who can shape any input\nthe agent later processes can coerce it into emitting a\n`RunQueryTool` call carrying a dialect-specific dangerous primitive\nrather than a plain query. When the configured database role holds\nexecute-adjacent privileges (`pg_execute_server_program` on Postgres,\n`FILE` on MySQL, `xp_cmdshell` on MSSQL), this reaches full RCE on the\ndatabase host -- the advisory's own example is PostgreSQL's\n`COPY log(content) FROM PROGRAM 'id';`. This is command execution\nreached through a SQL interface, not a credential-theft primitive, so it\nis filed under `execution` (T1059, command and scripting interpreter)\nrather than `credential_access`.\n\nDetection logic flags exactly the primitive that turns \"the LLM ran a\nquery\" into \"the LLM ran a command\": a `COPY ... FROM PROGRAM`\n(Postgres), `LOAD_FILE`/`INTO OUTFILE` (MySQL), or `xp_cmdshell`\n(MSSQL) statement appearing in database query-log content -- these\nprimitives have no reason to originate from a normal chat-agent query\nworkload, regardless of which application layer emitted them.\n\nAggregated from 1 first-party vendor security advisory (langroid, via\nGHSA and NVD), fixed in 0.63.0 (SELECT-only sqlglot-parsed allowlist\nwith a dialect-aware dangerous-pattern blocklist;\n`allow_dangerous_operations=True` restores the old behavior for\ndeployments that accept the risk deliberately).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-25879",
+    "GHSA-MXFR-6HCW-J9RQ"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739669"
+}

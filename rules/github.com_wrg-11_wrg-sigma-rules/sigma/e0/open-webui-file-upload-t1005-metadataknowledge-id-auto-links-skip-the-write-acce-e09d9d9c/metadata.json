@@ -1,0 +1,24 @@
+{
+  "uuid": "e09d9d9c-7874-445a-bc48-f5c2b5c1dc04",
+  "title": "Open WebUI file upload -- T1005 metadata.knowledge_id auto-links skip the write-access check",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59217 (GHSA-7r7x-gjvr-448g,\nCVSS 4.3 MEDIUM), affecting Open WebUI prior to 0.10.0.\n\nThe file-upload path accepts a `metadata.knowledge_id` field and\nauto-links the uploaded file to that target knowledge base -- WITHOUT\napplying the same write-access check that the dedicated\n`/api/v1/knowledge/{id}/file/add` endpoint correctly enforces. A user\nwho holds only READ access to a knowledge base (not write) can\ntherefore add arbitrary files to it simply by uploading through the\ngeneral file-upload path and specifying that knowledge base's id in\n`metadata.knowledge_id` -- reaching the same effective outcome as the\nwrite-gated endpoint while going around its gate entirely.\n\nDetection logic flags a file-upload request whose\n`metadata.knowledge_id` field references a knowledge base the caller\nholds only read (not write) access to -- the exact permission-level\nmismatch this advisory describes, distinguishable from the\nlegitimately-gated `/file/add` endpoint's own correct behavior.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact fix commit and PR), fixed in 0.10.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-59217",
+    "GHSA-7R7X-GJVR-448G"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739701"
+}

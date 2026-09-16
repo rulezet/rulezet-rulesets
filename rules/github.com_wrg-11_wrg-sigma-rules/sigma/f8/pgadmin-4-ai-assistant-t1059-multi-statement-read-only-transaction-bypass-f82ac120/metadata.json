@@ -1,0 +1,23 @@
+{
+  "uuid": "f82ac120-bf51-4369-ae48-6b189419d8df",
+  "title": "pgAdmin 4 AI Assistant -- T1059 multi-statement READ ONLY transaction bypass",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-12045 (CVSS 9.4 CRITICAL), a\nread-only-transaction bypass in pgAdmin 4's AI Assistant, affecting\nversions 9.13 through 9.16 (fixed in 9.16, commit `bf4792444`).\n\nThe AI Assistant's `execute_sql_query` tool runs LLM-generated SQL\ninside a `BEGIN TRANSACTION READ ONLY` wrapper specifically to prevent\ndata modification. The LLM-supplied query, however, was forwarded to the\ndatabase driver without being restricted to a single statement or to\nread-only verbs. A multi-statement payload beginning with a\ntransaction-control keyword (`COMMIT`, `END`, `ROLLBACK`, or `ABORT`)\nterminates the wrapping READ ONLY transaction early; every statement\nafter it then runs in ordinary autocommit mode, and the trailing\n`ROLLBACK` the wrapper issues at the end has no effect since the\ntransaction it was meant to roll back is already gone. Delivery is via\nprompt injection: content the AI Assistant later reads (a row, a column\nvalue, a comment) can steer the LLM into emitting exactly this\nmulti-statement shape as its tool call. With ordinary write privileges\nthis yields unauthorized data modification; with a superuser role or\n`pg_execute_server_program`, the chain extends to RCE via\n`COPY ... TO PROGRAM`.\n\nDetection logic flags the specific structural signature the fix's own\nvalidation targets: a query submitted to `execute_sql_query` that is NOT\na single, non-empty statement whose leading token is one of\n`SELECT`/`WITH`/`EXPLAIN`/`SHOW`/`VALUES`/`TABLE` -- concretely, one\ncontaining a transaction-control keyword anywhere before a trailing\nwrite statement, rather than as the query's own sole content.\n\nAggregated from 1 first-party vendor disclosure (pgAdmin project, via\nthe public GitHub issue and fix commit), fixed in 9.16.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-12045"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739664"
+}

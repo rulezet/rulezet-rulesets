@@ -1,0 +1,26 @@
+{
+  "uuid": "b675ea23-a51e-4ec5-a894-c8ca9445acfb",
+  "title": "Flowise Python code validator -- T1027 mathematical bold Unicode homoglyphs slip past an ASCII-only word-boundary blacklist",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70470 (GHSA-52fh-8v99-63c2),\naffecting `validatePythonCodeForDataFrame` in\n`pythonCodeValidator.ts`, which gates every call to\n`pyodide.runPythonAsync` in `CSVAgent` and `AirtableAgent`.\n\nThe validator is a regex blacklist using `\\b__class__\\b`-style\npatterns. JavaScript's `\\b` word boundary is computed against the\nASCII word class only, so a Unicode letter such as U+1D41A\n(mathematical bold small a) is treated as a non-word character and\nnever matches. Python 3 (PEP 3131) NFKC-normalizes every identifier\nat parse time, so `__cl𝐚ss__` parses identically to `__class__`. The\nattacker writes `obj.__cl𝐚ss__.__b𝐚se__.__subcl𝐚sses__()` to reach\n`catch_warnings`, then assembles `__import__` from `chr()` calls to\ndodge the literal-string blacklist entries, obtains the `js` module,\nand calls `child_process.execSync` on the host -- reopening the exact\nRCE class two prior advisories (GHSA-3hjv-c53m-58jj,\nGHSA-v38x-c887-992f) patched, because both patches relied entirely on\nthis bypassable validator.\n\nDetection logic flags Python source submitted to the CSVAgent /\nAirtableAgent code path containing a dunder-style identifier\n(`__word__`) where at least one character is outside the ASCII range\n-- the exact homoglyph-substitution shape this advisory's proof of\nconcept confirms the validator's `\\b`-anchored regex cannot see.\n\nAggregated from 1 first-party vendor security advisory (FlowiseAI, via\nGHSA, citing the exact validator source file, the ASCII-only `\\b`\nroot cause, PEP 3131 NFKC normalization as the mechanism, and a\nrunnable proof of concept confirming `validate() === true` on the\nmalicious payload before it achieves host RCE), fixed in Flowise 3.1.3 (verified via live GHSA lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027"
+  ],
+  "cve": [
+    "CVE-2026-70470",
+    "GHSA-3HJV-C53M-58JJ",
+    "GHSA-52FH-8V99-63C2",
+    "GHSA-V38X-C887-992F"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739631"
+}

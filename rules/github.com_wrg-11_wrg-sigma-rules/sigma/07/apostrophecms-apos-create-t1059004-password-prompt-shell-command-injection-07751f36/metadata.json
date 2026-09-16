@@ -1,0 +1,26 @@
+{
+  "uuid": "07751f36-59be-47cb-b8bc-095ff9c64904",
+  "title": "ApostropheCMS apos create -- T1059.004 password-prompt shell command injection",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-42853 (GHSA-hcwq-x9fw-8cfq,\nCVSS 6.5 MEDIUM), a self-reported advisory for `@apostrophecms/cli`\n(up to and including 3.6.0), a Node.js CMS scaffolding tool.\n\n`lib/commands/create.js:186` collects a password via an interactive\nprompt and interpolates it directly into a shell command string passed\nto `exec()` (a full-shell-interpreter call, not `execFile()`):\n`exec(\\`echo \"${response.pw}\" | ${createUserCommand}\\`)`. The advisory's\nown PoC password value -- `\"; id > /tmp/apos_rce_proof.txt; echo \"` --\nbreaks out of the intended `echo \"<password>\"` string and appends an\narbitrary shell command, with a captured proof-of-execution output of\n`uid=1000(vboxuser) gid=1000(vboxuser) groups=1000(vboxuser),27(sudo),984(docker)`.\nNo patched version exists at authoring time (advisory lists \"Patched\nversions: None\"); the advisory's own recommended fix is switching to\n`execFile()`, which does not invoke a shell and therefore cannot\ninterpret injected metacharacters.\n\nDetection logic flags the resulting host-level artifact: a shell\nprocess spawned as a child of the `apos create` command whose command\nline contains shell metacharacters immediately after an `echo` segment\n-- the specific `echo \"<value>\" | <command>` construction the vulnerable\ncode builds is what makes a semicolon or backtick in the password value\nbecome a new command rather than inert text.\n\nAggregated from 1 first-party vendor security advisory (apostrophecms,\nvia GHSA and NVD). No fix available at authoring time -- deployers\nshould avoid running `apos create` with untrusted password input until\na patch ships.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059.004"
+  ],
+  "cve": [
+    "CVE-2026-42853",
+    "GHSA-HCWQ-X9FW-8CFQ"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739667"
+}

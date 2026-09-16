@@ -1,0 +1,25 @@
+{
+  "uuid": "4a91b50f-a380-4cdf-9e2e-58a9ce393ddb",
+  "title": "Open WebUI automation recurrence -- T1499 fixed-epoch minutely rule walks ~25 years synchronously",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70489 (GHSA-73cq-mcgh-379c,\nCVSS 6.5 MEDIUM), affecting Open WebUI from 0.9.0 until 0.11.0.\n\nAutomation recurrence parsing (`backend/open_webui/utils/automations.py`)\nanchored MINUTELY and HOURLY rules at a fixed epoch date of\n`2000-01-01` and walked forward one interval at a time to find the next\nrun relative to now. A single user-submitted `FREQ=MINUTELY` automation\nrule therefore enumerates roughly a QUARTER-CENTURY of occurrences,\none minute at a time, SYNCHRONOUSLY on the same event loop that also\nserves scheduler, HTTP, and WebSocket traffic for every other user of\nthe instance. Worse, the scheduler recomputes this same walk for every\nclaimed row on each poll cycle -- a single malicious automation rule\ndegrades or blocks the entire instance's responsiveness for all users,\nnot just its own creator.\n\nDetection logic flags the creation of an automation with a\n`FREQ=MINUTELY` or `FREQ=HOURLY` recurrence rule -- the specific rule\ngranularity the fixed-epoch walk makes catastrophically expensive; a\n`FREQ=DAILY` or coarser rule does not trigger the same magnitude of\nenumeration.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact source file), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:exploit-kit=\"Magnitude\""
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [
+    "CVE-2026-70489",
+    "GHSA-73CQ-MCGH-379C"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739614"
+}

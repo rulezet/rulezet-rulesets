@@ -1,0 +1,26 @@
+{
+  "uuid": "d8df72c4-1cca-406e-991e-acf2cdcd1b29",
+  "title": "Claude Code worktree \".git\" naming -- T1546.004 sandbox-escaping shell config overwrite",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-55607 (GHSA-7835-87q9-rgvv,\nCVSS 7.7 HIGH), a self-reported advisory for Claude Code (versions\n`>= 2.1.38, < 2.1.163`), fixed in 2.1.163.\n\nClaude Code's worktree handling allowed creating a git worktree literally\nnamed `.git` and navigating to worktrees outside the sandbox context --\n\"git directory confusion\". Combined with symlink manipulation and git\nfsmonitor execution during worktree operations, this let an attacker\noverwrite files in the user's home directory (the advisory names\n`.zshenv` as the example), achieving code execution outside the macOS\nseatbelt sandbox's restrictions the next time a shell starts. The\nadvisory is explicit that reliable exploitation required the user to\nclone a malicious repository containing prompt-injection content and run\nClaude Code against it -- this is a chained attack (prompt injection ->\nsandbox-scoped tool misuse -> host-level persistence), not a\nnetwork-reachable exploit on its own.\n\nDetection logic flags the specific, near-never-legitimate act at the\ncenter of the chain: a `git worktree add` invocation whose target name is\nliterally `.git` -- ordinary worktree usage never names a worktree this\nway, since it collides with git's own internal directory name, so this is\na high-precision signal rather than a heuristic on worktree usage in\ngeneral.\n\nAggregated from 1 first-party vendor security advisory (Anthropic, via\nGHSA and NVD), fixed in 2.1.163.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1546.004"
+  ],
+  "cve": [
+    "CVE-2026-55607",
+    "GHSA-7835-87Q9-RGVV"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739718"
+}

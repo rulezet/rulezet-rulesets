@@ -1,0 +1,19 @@
+{
+  "uuid": "80131bcb-ff0d-4c99-8a06-81d51ad1f8e7",
+  "title": "Suspicious_PYC_Base85_v2",
+  "format": "yara",
+  "author": "Luke Acha (@luke92881)",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects suspicious Python bytecode containing marshal/zlib/base64 artifacts and a characteristic encoded data marker",
+  "source": "https://github.com/securitymagic/yara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739427"
+}

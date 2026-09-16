@@ -1,0 +1,24 @@
+{
+  "uuid": "c18af2b4-4c80-4bff-a983-d14065f6181b",
+  "title": "SGLang update_weights_from_disk -- T1059 torch.load weights_only=False fallback enables pickle RCE",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-15976 (GHSA-wf98-gv64-5wrf,\nCVSS 9.8 CRITICAL), affecting SGLang.\n\n`/update_weights_from_disk` loads model weight files\n(`.bin`) that a caller can direct SGLang to fetch from a HuggingFace\nrepository. When loading, SGLang falls back to\n`torch.load(..., weights_only=False)` -- PyTorch's own documentation\nis explicit that this mode is UNSAFE for untrusted input, since it\nenables full pickle deserialization rather than the restricted\ntensor-only loading `weights_only=True` provides. A `.bin` file crafted\nas a malicious pickle stream (disguised as model weights) therefore\nachieves remote code execution the moment SGLang loads it -- the third\ndistinct pickle-deserialization RCE in the same coordinated disclosure\nseries alongside `observed_sglang_lora_adapter_safeunpickler_bypass_rce_t1059`\nand `observed_sglang_dumper_subsystem_sandbox_escape_t1059`, this one\nreached via a HuggingFace-repository weight-loading path rather than a\ndirect tensor-upload or debug-port path.\n\nDetection logic flags a request to `/update_weights_from_disk` (or\n`/update_weights_from_huggingface`, the equivalent repository-source\npath) whose target file has a `.bin` extension and originates from a\nrepository outside an operator-curated allowlist -- the specific\nartifact-loading path this bug reaches, distinct from the\nalready-trusted, operator-provisioned model repository.\n\nAggregated from 2 independent sources (SGLang's own GHSA advisory + an\nindependent security researcher's corroborating disclosure write-up,\npart of the same coordinated multi-CVE SGLang research series), no\npatched version confirmed in the summary available at authoring time.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-15976",
+    "GHSA-WF98-GV64-5WRF"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739677"
+}

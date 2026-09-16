@@ -1,0 +1,25 @@
+{
+  "uuid": "6f03ea13-4145-450f-a4a1-9d8d2e04b34e",
+  "title": "Open WebUI terminal proxy -- T1027 9x percent-encoding survives an 8-round decode cap and reaches a traversal path",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59221 (GHSA-frvj-c5qp-xj4w,\nCVSS 7.7 HIGH -- corrected 2026-09-04 via live GHSA lookup, the rule's\noriginal authoring understated this score), an incomplete fix for the\nearlier GHSA-r2wg-2mcr-66rv terminal proxy traversal, present in Open\nWebUI v0.9.6 and prior main.\n\n`_sanitize_proxy_path()` in `backend/open_webui/routers/terminals.py`\ndecodes a caller-supplied path parameter for up to 8 `unquote()`\nrounds, then applies `posixpath.normpath()` and a `..`-prefix check to\nthe result. A path parameter encoded 9 times still contains one layer\nof percent-encoded dot/slash bytes after those 8 rounds, so the\ntraversal check runs against literal `%2E%2E%2F...` text rather than\n`../...` and passes. The sanitized-but-still-encoded value is\nforwarded to the configured terminal server, which decodes it itself\nand turns it back into a traversal (`/base/../admin/system`) --\nreaching upstream paths outside the intended normalized proxy path\nwith the connection's forwarded credentials and `X-User-Id` header.\n\nDetection logic flags a terminal-proxy path parameter carrying 9 or\nmore literal `%25` sequences (the escaped-`%` signature of a\nmultiply-encoded payload surviving into the request) -- the exact\nover-encoding depth this advisory's fixed 8-round decode cap fails to\nunwind.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact function, source file, and a\nreproduction script demonstrating the 8-vs-9-round boundary), fixed in\nOpen WebUI 0.10.0+ (verified via live GHSA lookup, 2026-09-04 -- the\nrule's original authoring predates the vendor's patch release; this\nnote corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027"
+  ],
+  "cve": [
+    "CVE-2026-59221",
+    "GHSA-FRVJ-C5QP-XJ4W",
+    "GHSA-R2WG-2MCR-66RV"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739637"
+}

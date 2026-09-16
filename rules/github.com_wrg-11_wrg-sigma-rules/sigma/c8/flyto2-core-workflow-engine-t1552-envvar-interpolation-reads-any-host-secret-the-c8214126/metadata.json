@@ -1,0 +1,24 @@
+{
+  "uuid": "c8214126-66f6-4cfe-aa45-c8f120c9f0da",
+  "title": "Flyto2 Core workflow engine -- T1552 ${env.VAR} interpolation reads any host secret the env.get denylist was meant to block",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-67427 (GHSA-hr7p-wg7r-hg9m,\nCVSS 8.6 HIGH), affecting Flyto2 Core (`flyto-core`)'s workflow\nengine.\n\nFlyto2's capability policy denies the `env.get` and\n`env.load_dotenv` modules by default, stating inline that they read\narbitrary host environment variables and are a secret-exfiltration\nrisk. But `VariableResolver` in\n`src/core/engine/variable_resolver.py` expands `${env.VAR}` template\nsyntax for ANY environment variable, with no allowlist and no policy\ncheck -- the interpolation happens earlier in the engine than\n`enforce_module_policy`, so it is never subject to the module\ndenylist at all. A workflow parameter containing\n`${env.AWS_SECRET_ACCESS_KEY}` resolves to the operator's live\nsecret in plaintext, and interpolating it into an outbound request\nhandled by any allowed module (the SSRF guard permits public hosts)\nexfiltrates it to an attacker's server -- reachable via the workflow\nAPI and the MCP agent surface, meaning the caller supplying the\ntemplate string is an LLM processing untrusted content, not the\ntrusted operator.\n\nDetection logic flags a workflow step parameter containing the\n`${env.` interpolation syntax -- the exact denylist-bypassing\ntemplate form this advisory's reproduction confirms resolves live\nsecrets even while the equivalent `env.get` module call is denied.\n\nAggregated from 1 first-party vendor security advisory (flyto-core, via\nGHSA and NVD, citing the exact resolver source file, a standalone\nreproduction script, and confirmation through the running workflow\nAPI), fixed in flyto-core 2.26.7+ (verified via live GHSA lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552"
+  ],
+  "cve": [
+    "CVE-2026-67427",
+    "GHSA-HR7P-WG7R-HG9M"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739648"
+}

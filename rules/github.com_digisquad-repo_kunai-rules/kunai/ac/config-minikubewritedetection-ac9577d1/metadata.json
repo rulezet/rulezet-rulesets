@@ -1,0 +1,21 @@
+{
+  "uuid": "ac9577d1-3a90-427a-86a1-e647131c9a48",
+  "title": "config_minikube.write.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify config_minikube_list.write.dependency",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1610"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739842"
+}

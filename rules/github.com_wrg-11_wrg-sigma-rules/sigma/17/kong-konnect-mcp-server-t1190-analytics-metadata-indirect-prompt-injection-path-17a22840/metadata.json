@@ -1,0 +1,24 @@
+{
+  "uuid": "17a22840-1bd2-44d9-8223-4ab06c869605",
+  "title": "Kong Konnect MCP server -- T1190 analytics-metadata indirect prompt injection + path manipulation",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-13341 (GHSA-7767-3m3w-2p44), a\nself-reported advisory for Kong's `mcp-konnect` server, prior to 1.0.0.\n\nTwo combined weaknesses. First: when a caller used the MCP server's\nanalytics tools to retrieve request data, gateway-side metadata (e.g.\nUser-Agent and other HTTP header content an attacker fully controls, by\nsending it as a normal request to the gateway) was returned to the AI\nagent WITHOUT sufficient neutralization -- the model could interpret\nattacker-supplied header content as instructions or markup rather than\ninert data (indirect prompt injection). Second: path manipulation in\ncertain control-plane and group identifiers meant these IDs were not\nvalidated, so a crafted identifier could redirect the resulting API\nrequest to unintended Konnect endpoints, exposing plugin configuration\ndata, internal hostnames, or other operational metadata using the\ncalling user's own token. The fix neutralizes untrusted analytics\nfields, enforces UUID validation on control-plane/group identifiers,\nencodes path segments and pagination values, and disables raw\nplugin-config output by default.\n\nDetection logic flags the first-order, host-observable half of this\nchain: a request to the Kong Gateway (whose header content later feeds\nKonnect's analytics-to-MCP pipeline) whose User-Agent or other captured\nheader contains instruction-shaped content -- imperative phrasing\naimed at an AI agent rather than a browser/client identifier string --\nsince that header is the actual delivery vector for the prompt\ninjection an MCP client would otherwise ingest downstream.\n\nAggregated from 1 first-party vendor security advisory (Kong, via GHSA),\nfixed in 1.0.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-13341",
+    "GHSA-7767-3M3W-2P44"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739607"
+}

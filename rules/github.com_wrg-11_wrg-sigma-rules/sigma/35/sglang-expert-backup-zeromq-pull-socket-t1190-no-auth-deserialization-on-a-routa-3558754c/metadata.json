@@ -1,0 +1,25 @@
+{
+  "uuid": "3558754c-0396-4a76-8eda-55972e69434e",
+  "title": "SGLang expert-backup ZeroMQ PULL socket -- T1190 no-auth deserialization on a routable interface",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-14890 (CVSS 9.1 CRITICAL),\naffecting SGLang's expert-parallel backup subsystem.\n\n`python/sglang/srt/elastic_ep/expert_backup_manager.py` opens a ZeroMQ\nPULL socket bound to a ROUTABLE network interface (not loopback):\n`self.recv_from_expert_backup_client.bind(f\"tcp://{get_local_ip_auto()}:\n{PORT_BASE + server_args.node_rank * 2}\")`, where `PORT_BASE` comes\nfrom the `SGLANG_BACKUP_PORT_BASE` environment variable. The only gate\nbefore the socket accepts and processes incoming data is a plain\ncount of connected clients against `server_args.tp_size` (verified\ndirectly in the source: `while num_ready_clients < server_args.tp_size`)\n-- no authentication, and no deserialization safeguard on what it\nreceives. When this feature is enabled and the port is reachable over\nthe network, a remote attacker can send a malicious pickle payload to\nthe PULL socket and achieve unauthenticated RCE. This is mechanistically\ndistinct from the other SGLang pickle RCEs in this corpus (HTTP-endpoint\ntriggered): this one is reached over a raw ZeroMQ TCP socket with no\nHTTP framing at all.\n\nDetection logic flags an inbound TCP connection to the computed\nexpert-backup port (`SGLANG_BACKUP_PORT_BASE` plus an even offset for\nthe node rank) from a source address outside the deployment's known\ncluster-node range -- the expert-backup channel is designed for\nintra-cluster communication only, so any external source reaching it\nis the anomaly.\n\nAggregated from 2 independent sources (CERT/CC's vulnerability note +\ndirect verification against the cited source file, which was read to\nconfirm the bind address, port formula, and absence of authentication\nquoted above), no patched version confirmed in the summary available\nat authoring time.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-14890"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739602"
+}

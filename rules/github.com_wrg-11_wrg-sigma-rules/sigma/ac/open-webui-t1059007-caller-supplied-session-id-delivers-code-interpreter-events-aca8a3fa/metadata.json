@@ -1,0 +1,23 @@
+{
+  "uuid": "aca8a3fa-fff0-47c4-a2c7-01187b38b9f3",
+  "title": "Open WebUI -- T1059.007 caller-supplied session_id delivers code-interpreter events to another user",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59216 (CVSS 7.7 HIGH), affecting\nOpen WebUI prior to 0.10.0.\n\n`get_event_call()` delivers `execute:python` and `execute:tool`\nSocket.IO events to whatever `session_id` a caller supplies, checking\nonly that the session is currently CONNECTED --\n`if session_id not in SESSION_POOL: return {'error': ...}` -- never\nwhether the session belongs to the requesting caller. A victim's live\n`session_id` is separately disclosed to any read-access participant of\na shared document via the `ydoc:document:join` event. Chained: an\nattacker (1) shares a document with the victim to learn the victim's\n`session_id` via `ydoc:document:join`, then (2) sends\n`POST /api/v1/chat/completions` with the victim's `session_id` embedded\nin the request body, causing the server to deliver an\n`execute:python`/`execute:tool` event to the VICTIM's browser session --\nrunning the attacker's code interpreter payload as the victim (full RCE\nif the victim holds admin privileges).\n\nDetection logic flags the discriminating half of this chain that a log\nsource can actually observe: a chat-completions request whose body\ncarries a `session_id` value that does NOT match the session the\nHTTP/WebSocket connection itself authenticated as -- the fix's own\nremediation is exactly this ownership check\n(`session.get('id') != request_info.get('user_id')`), so a mismatch on\nan unpatched deployment is the vulnerability's precise trigger.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, which quotes both the vulnerable code and the fix's\nownership-check logic), fixed in 0.10.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.007"
+  ],
+  "cve": [
+    "CVE-2026-59216"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739663"
+}

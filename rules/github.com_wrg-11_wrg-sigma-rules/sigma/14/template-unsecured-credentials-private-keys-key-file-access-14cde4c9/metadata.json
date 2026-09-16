@@ -1,0 +1,23 @@
+{
+  "uuid": "14cde4c9-4ae8-4d41-988f-30f855d2eb6f",
+  "title": "Template -- Unsecured Credentials Private Keys (key-file access)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Canonical sigma detection template for MITRE ATT&CK T1552.004 (Unsecured Credentials Private Keys (key-file access)). Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1552.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739641"
+}

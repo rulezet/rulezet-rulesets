@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Raw search on a JSON event"; program: test; json_content:".a","b"; content:"unreachable"; classtype: user-activity; sid:9000022; rev:1;)

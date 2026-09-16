@@ -1,0 +1,26 @@
+{
+  "uuid": "5427c144-0029-486c-856e-337c2dac010c",
+  "title": "Microsoft APM -- T1195.002 symlinked prompt/agent file dereferenced into deploy directories",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-45539 (GHSA-q5pp-gvjg-h7v4), a\nself-reported advisory for Microsoft APM, an open-source dependency\nmanager for AI agents.\n\nFrom 0.5.4 to 0.12.4, two file-discovery integrators\n(`PromptIntegrator.find_prompt_files`, `AgentIntegrator.find_agent_files`)\nenumerate package files with bare `Path.glob()`/`Path.rglob()` and read\neach match with `Path.read_text()`, which transparently follows\nsymbolic links. A remote APM dependency can commit a symlink inside its\nown package -- the advisory's own PoC:\n`ln -s /tmp/poc_secret .apm/agents/notes.agent.md` and\n`ln -s /tmp/poc_secret .apm/prompts/welcome.prompt.md`. The symlink is\npreserved verbatim into `apm_modules/` on `apm install`/clone, then\nDEREFERENCED during integration -- the resolved target's content is\nwritten as an ordinary file into the project's deploy directories\n(`.github/`, `.claude/`, `.codex/`, etc.). Three independent controls\nall miss this: `content_hash` is computed BEFORE the symlink is\nresolved, `SecurityGate.scan_files` walks with `followlinks=False` (so\nit never inspects the symlink's actual target), and the auto-generated\n`.gitignore` covers only `apm_modules/`, not the deploy directories the\ndereferenced content lands in -- so the resulting files get `git add`ed\nby default.\n\nDetection logic flags the structural artifact this chain produces: a\nfile created under one of the deploy directories (`.github/`,\n`.claude/`, `.codex/`) whose SOURCE, per the file-system event, was a\nsymlink under `apm_modules/.apm/agents/` or `apm_modules/.apm/prompts/`\n-- an ordinary APM package install never needs a symlink there, since\nlegitimate prompt/agent files are plain text.\n\nAggregated from 1 first-party vendor security advisory (Microsoft, via\nGHSA and NVD), fixed in 0.13.0 (routes finders through\n`BaseIntegrator.find_files_by_glob()`, which checks\n`f.is_symlink()`/`f.stat().st_nlink > 1` before reading).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1195.002"
+  ],
+  "cve": [
+    "CVE-2026-45539",
+    "GHSA-Q5PP-GVJG-H7V4"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739571"
+}

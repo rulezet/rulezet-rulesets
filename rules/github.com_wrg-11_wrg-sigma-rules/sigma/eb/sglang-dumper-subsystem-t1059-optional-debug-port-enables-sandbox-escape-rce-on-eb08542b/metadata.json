@@ -1,0 +1,26 @@
+{
+  "uuid": "eb08542b-74f0-494d-98b3-d0faa1e05a7d",
+  "title": "SGLang dumper subsystem -- T1059 optional debug port enables sandbox-escape RCE on inference requests",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-15971 (GHSA-h6rf-77vv-9mvj,\nCVSS 9.8 CRITICAL), affecting SGLang.\n\nSGLang's optional \"dumper\" subsystem, activated by setting the\n`DUMPER_SERVER_PORT` environment variable, exposes debug/introspection\nfunctionality that allows a sandbox escape reachable through ordinary\ninference requests once enabled -- code execution as a side effect of\ncontent the dumper subsystem processes, not a separate authenticated\nadmin action. Sibling disclosure in the same coordinated research\nseries as `observed_sglang_lora_adapter_safeunpickler_bypass_rce_t1059`\nand `observed_sglang_weights_from_disk_pickle_rce_t1059`; distinct\ntrigger (an opt-in debug feature) from either.\n\nDetection logic flags the resulting host-observable configuration\nstate: SGLang running with `DUMPER_SERVER_PORT` set at all, combined\nwith a listening TCP socket on that port reachable from a\nnon-loopback origin -- since the vulnerability requires the feature to\nbe enabled in the first place, its mere activation on a\nnetwork-exposed deployment is the actionable signal, independent of\nany specific exploitation attempt.\n\nAggregated from 2 independent sources (SGLang's own GHSA advisory + an\nindependent security researcher's corroborating disclosure write-up,\npart of the same coordinated multi-CVE SGLang research series as the\nsibling rules above), no patched version confirmed in the summary\navailable at authoring time -- operators should disable the dumper\nsubsystem (unset `DUMPER_SERVER_PORT`) in production unless actively\ndebugging.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-15971",
+    "GHSA-H6RF-77VV-9MVJ"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739671"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "afc16130-3dd6-48c6-8301-f5ddccdd0d05",
+  "title": "Claude Code /copy -- T1552 predictable-path symlink pre-creation local disclosure/overwrite",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-46406 (GHSA-4vp2-6q8c-pvq2,\nCVSS 4.4 MEDIUM), a self-reported advisory for Claude Code.\n\nFrom 2.1.59 until 2.1.128, the `/copy` command wrote its response to a\nhardcoded, predictable path -- `/tmp/claude/response.md` -- with no UID\nisolation, no randomness, and no symlink protection. The file was created\nworld-readable (`0644`) inside a world-traversable directory (`0755`).\nThis enables two distinct local attacks by any unprivileged user on the\nsame host: (1) simply reading the file after a privileged user runs\n`/copy`, disclosing whatever the response contained (potentially secrets\nor credentials); (2) pre-creating the directory and planting a symlink at\nthe expected file path BEFORE the privileged user runs `/copy`, causing\nthe privileged process to follow the symlink and overwrite an\nattacker-chosen file with the response text instead.\n\nDetection logic flags the second, more severe attack: a symlink present\nat the exact expected path (`/tmp/claude/response.md`) at the moment a\nClaude Code process opens it for writing -- the pre-creation-then-victim-\nwrites sequence is the discriminator, not merely \"a symlink exists in\n/tmp\" (routine and noisy on its own). Detecting the read-disclosure half\nof this advisory (case 1) from a host log is not attempted here: a\nworld-readable file being read by another local user is, without\nadditional context, indistinguishable from countless benign file reads,\nso this rule does not claim coverage it cannot support.\n\nAggregated from 1 first-party vendor security advisory (Anthropic, via\nGHSA and NVD), fixed in 2.1.128.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1552"
+  ],
+  "cve": [
+    "CVE-2026-46406",
+    "GHSA-4VP2-6Q8C-PVQ2"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739702"
+}

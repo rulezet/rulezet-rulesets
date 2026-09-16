@@ -1,0 +1,25 @@
+{
+  "uuid": "1ba2f85d-3100-44eb-9b67-77e392cadaa4",
+  "title": "vLLM multimodal embeddings -- T1499 unvalidated sparse tensor indices crash or corrupt memory",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-56340 (GHSA-mcmc-2m55-j8jj,\nCVSS 8.7 HIGH), affecting vLLM >= 0.10.2 and < 0.13.0.\n\nvLLM's multimodal embeddings processing (the `prompt-embeds` feature)\nis missing sparse tensor validation. Because PyTorch disables sparse\ntensor invariant checks by default, an attacker who submits a crafted\nembedding request with MALFORMED tensor indices (negative or\nout-of-bounds) reaches the tensor operations unchecked -- triggering\ncrashes or resource exhaustion at minimum, with the advisory noting\nPOTENTIAL for out-of-bounds/write-what-where memory corruption beyond\ndenial of service. This is explicitly a continuation of an EARLIER bug\n(CVE-2025-62164), whose prior fix only disabled the `prompt-embeds`\nfeature by default rather than fixing the missing validation itself --\nany deployment that re-enables the feature (a documented, supported\nconfiguration) is exposed again.\n\nDetection logic flags a request to a prompt-embeds-enabled endpoint\nwhose embedding payload declares sparse tensor indices outside the\nexpected non-negative, in-bounds range -- the specific malformed-index\nshape this advisory's root cause requires, distinct from an ordinary\nwell-formed embedding request.\n\nAggregated from 2 independent sources (vLLM's own GHSA advisory +\nVulnCheck's corroborating write-up, both citing the prior\nCVE-2025-62164 the incomplete fix stems from), fixed with root-cause\nindex validation (not merely a feature-default flip this time).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [
+    "CVE-2025-62164",
+    "CVE-2026-56340",
+    "GHSA-MCMC-2M55-J8JJ"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739623"
+}

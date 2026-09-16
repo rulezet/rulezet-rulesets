@@ -1,0 +1,24 @@
+{
+  "uuid": "d795302c-424a-44a4-85c5-cabd1736f218",
+  "title": "MaxKB code sandbox -- T1036 frame-introspected UUID forges tool-execution result via fd 1",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-39419 (GHSA-f3c8-p474-xwfv), a\nself-reported advisory for MaxKB, affecting versions 2.7.1 and below.\n\nMaxKB's sandbox wrapper embeds a per-execution UUID (as a bytecode\nconstant) that it prefixes to its legitimate result line, so the host\nservice can identify which line in mixed stdout is the genuine tool\nresult. An authenticated user can defeat this: using\n`sys._getframe(1).f_code.co_consts` (Python frame introspection), code\nrunning inside the sandbox reads the wrapper's own compiled bytecode\nconstants to recover that UUID at runtime -- a value that was never\nmeant to be readable from inside the sandboxed code. It then writes a\nFORGED result line, carrying the same UUID prefix, directly to file\ndescriptor 1 via `os.write` -- bypassing any stdout redirection the\nwrapper itself might otherwise rely on -- and calls `sys.exit(0)` to\nterminate the wrapper before it ever emits its own legitimate output.\nThe host service, which trusts the LAST line matching the UUID prefix,\nparses and acts on the attacker's forged result as if it were genuine.\n\nDetection logic flags the structural pattern this bypass depends on:\na sandboxed process whose captured output shows a `sys.exit(0)` call\noccurring immediately after a raw `os.write` to file descriptor 1 --\nthe specific write-then-exit sequence that lets a forged line become\nthe wrapper's apparent final output.\n\nAggregated from 1 first-party vendor security advisory (1Panel-dev, via\nGHSA and NVD), fixed in 2.8.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1036"
+  ],
+  "cve": [
+    "CVE-2026-39419",
+    "GHSA-F3C8-P474-XWFV"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739636"
+}

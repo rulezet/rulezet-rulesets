@@ -1,0 +1,24 @@
+{
+  "uuid": "9a4a7f90-7a45-4e31-8bfa-5814e5f17013",
+  "title": "TanStack npm supply chain worm -- 'Pwn Request' pull_request_target + Actions cache poisoning (2026-05-11)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Real npm supply chain compromise, first published by TanStack's own official postmortem and independently technically confirmed by Orca Security, InfoQ, and others -- all agreeing on the same specific attack chain, not just the same narrative. Between 2026-05-11 19:20-19:26 UTC, an attacker published 84 malicious versions across 42 @tanstack/* npm packages (later expanded, per Orca's tracking, to 373 malicious versions across 169 npm packages and 2 PyPI packages).\n\nAttack chain (cross-source confirmed by TanStack's postmortem + Orca Security): (1) attacker opens a pull request from a fork against a workflow configured with the dangerous 'pull_request_target' trigger (the well-known 'Pwn Request' class of GitHub Actions misconfiguration, which runs with the base repository's elevated permissions and secrets even though triggered by untrusted fork content); (2) the attacker poisons the GitHub Actions cache with a malicious pnpm store; (3) when a legitimate maintainer's later merge triggers the release workflow, the poisoned cache is restored and attacker-controlled code extracts the workflow's OIDC token directly from the runner process's own memory (/proc/<pid>/mem); (4) the stolen OIDC token -- never a stolen long-lived credential -- is used to publish malicious package versions with valid npm provenance attestations, meaning provenance verification alone would not have caught this.\n\nThis rule targets the initiating, detectable event: a pull_request_target-triggered workflow run whose pull request originates from a fork rather than the base repository -- the precondition every source agrees the attack chain requires.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\""
+  ],
+  "attack_techniques": [
+    "T1195",
+    "T1195.002",
+    "T1552"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739589"
+}

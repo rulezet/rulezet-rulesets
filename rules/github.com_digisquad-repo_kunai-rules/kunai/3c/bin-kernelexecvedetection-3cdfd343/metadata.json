@@ -1,0 +1,21 @@
+{
+  "uuid": "3cdfd343-71b3-4849-b2ad-3861e8ef84a9",
+  "title": "bin_kernel.execve.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify EXECVE EXECVE_SCRIPT bin_kernel_list.dependency",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1547.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739877"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "72ec2e1b-77b5-438c-a351-a42c8c383d8b",
+  "title": "Windows-MCP -- T1059.001 wildcard-CORS reachable PowerShell tool execution",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-48989 (GHSA-vrxg-gm77-7q5g,\nCVSS 8.9 HIGH), a self-reported advisory for Windows-MCP, an open-source\nproject integrating AI agents with Windows via MCP.\n\nPrior to 0.7.5, the SSE and Streamable-HTTP transport modes (the default\n`stdio` mode is unaffected) configured `_http_middleware()` with wildcard\nCORS -- `allow_origins=[\"*\"]`, `allow_methods=[\"*\"]`, `allow_headers=[\"*\"]`\n-- and exposed the MCP control plane without authentication at\n`http://localhost:8000/mcp`. The same server registers a `PowerShell`\ntool (`src/windows_mcp/tools/shell.py`) that forwards a caller-controlled\n`command` argument to `PowerShellExecutor.execute_command`\n(`src/windows_mcp/desktop/powershell.py`), which runs it via\n`powershell -EncodedCommand`. Combined, any origin -- browser or\nnon-browser -- could reach the control plane and run arbitrary\nPowerShell as the Windows user running Windows-MCP. The advisory's own\nexample call: `{\"jsonrpc\":\"2.0\",\"id\":2,\"method\":\"tools/call\",\"params\":\n{\"name\":\"PowerShell\",\"arguments\":{\"command\":\"calc.exe\",\"timeout\":30}}}`.\n\nDetection logic flags the resulting HOST-side signal: a `powershell.exe`\nprocess invoked with `-EncodedCommand`, whose parent process is the\nWindows-MCP server rather than an interactive user shell or a scheduled\ntask -- the `-EncodedCommand` flag is the specific artifact of this\nserver's own execution path (base64-encoding the caller's command before\ninvocation), not a generic \"PowerShell ran\" heuristic.\n\nAggregated from 1 first-party vendor security advisory (CursorTouch, via\nGHSA and NVD), fixed in 0.7.5.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [
+    "CVE-2026-48989",
+    "GHSA-VRXG-GM77-7Q5G"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739672"
+}

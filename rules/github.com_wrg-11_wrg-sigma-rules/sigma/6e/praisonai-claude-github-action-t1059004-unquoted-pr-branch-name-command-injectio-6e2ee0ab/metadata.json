@@ -1,0 +1,26 @@
+{
+  "uuid": "6e2ee0ab-f869-49dc-8d02-3e0b80427f7a",
+  "title": "PraisonAI Claude GitHub Action -- T1059.004 unquoted PR branch name command injection",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-48168 (GHSA-xp85-6wwf-r67c,\nCVSS 10.0 CRITICAL), a self-reported advisory for PraisonAI, a\nmulti-agent teams system.\n\nPrior to 4.6.40, the bundled `.github/workflows/claude.yml` (job\n`claude-response`) interpolated an attacker-controlled PR branch name\ndirectly into an unquoted Bash `run:` block --\n`git fetch origin pull/${{ github.event.issue.number }}/head:${{\nsteps.check_fork.outputs.pr_branch }}` -- with no validation that the\nbranch name is a plausible git ref. Additionally, the workflow triggered\non any `@claude` comment without checking\n`github.event.comment.author_association`, so a fork contributor could\nopen a PR whose branch name contained shell metacharacters and simply\ncomment `@claude` to run it -- no trusted-collaborator gate. The\nadvisory's own proof-of-concept branch name\n(`poc;mkdir${IFS}-p${IFS}/tmp/p0canary;cp${IFS}/bin/echo${IFS}/tmp/p0canary/gh;echo${IFS}/tmp/p0canary>>$GITHUB_PATH`)\nuses `${IFS}` to smuggle spaces past naive filtering and writes to\n`$GITHUB_PATH`, poisoning which binaries later privileged steps resolve\n-- the job held `contents: write`, `pull-requests: write`, `issues:\nwrite`, and `id-token: write`.\n\nSame root shape as this corpus's existing GitHub Actions PR-content rules\n(`observed_megalodon_github_actions_base64_payload_t1195_002`,\n`observed_tanstack_pwn_request_actions_cache_poisoning_t1195_002`,\n`observed_claude_code_action_mcp_json_pr_rce_t1195_002`) -- attacker PR\ncontent reaching a privileged CI execution context -- but the specific\ninjection vector here is the branch NAME itself rather than a file the PR\nships, which is why it is filed under `execution` (T1059.004, command\ninterpreter abuse) rather than `initial_access`: the artifact under\nattack is the shell interpreting the ref string, not a config file being\ntrusted.\n\nAggregated from 1 first-party vendor security advisory (MervinPraison, via\nGHSA and NVD), fixed in 4.6.40.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059.004"
+  ],
+  "cve": [
+    "CVE-2026-48168",
+    "GHSA-XP85-6WWF-R67C"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739676"
+}

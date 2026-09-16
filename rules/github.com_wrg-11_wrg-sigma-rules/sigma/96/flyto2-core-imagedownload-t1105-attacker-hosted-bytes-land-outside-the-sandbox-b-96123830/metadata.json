@@ -1,0 +1,24 @@
+{
+  "uuid": "96123830-4f18-4f1b-af85-a82bc9158f23",
+  "title": "Flyto2 Core image.download -- T1105 attacker-hosted bytes land outside the sandbox because the path check's base is caller-controlled",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-67429 (GHSA-2956-977x-2w3r,\nCVSS 10.0 CRITICAL), affecting Flyto2 Core (`flyto-core`)'s\n`image.download` module and its file-writing siblings.\n\n`image.download` in `src/core/modules/atomic/image/download.py`\nfetches a caller-supplied URL and writes the response to disk. Unlike\n`file.write`, which uses the central `validate_path_with_env_config()`\nguard confining writes to `FLYTO_SANDBOX_DIR`, `image.download`\nchecks its target path against `output_dir` -- a parameter the SAME\ncaller also controls. Setting `output_dir` to `/` makes\n`os.path.commonpath()` accept any absolute target, so the check is\nself-defeating: the attacker chooses both the value being validated\nand the base it is validated against. The HTTP response body --\nfully attacker-controlled bytes, since the URL is only SSRF-checked,\nnot content-checked -- is then written verbatim to that path.\n`image.convert`, `image.resize`, `document.excel_write`,\n`document.pdf_fill_form` and several other file-writing modules share\nthe same caller-controlled-base pattern, though their content is\nformat-constrained; `image.download` is the strongest because the\nwritten bytes are arbitrary.\n\nDetection logic flags an `image.download` (or sibling file-writing\nmodule) invocation whose `output_dir` parameter is a filesystem root\nor a path outside the module's own default sandbox prefix -- the\nexact caller-controlled-base pattern this advisory's proof of concept\ndemonstrates writes attacker bytes outside `FLYTO_SANDBOX_DIR` while\nthe guarded `file.write` sibling correctly refuses the identical\nescape.\n\nAggregated from 1 first-party vendor security advisory (flyto-core, via\nGHSA and NVD, citing the exact source file, a runnable reproduction\nscript contrasting `file.write` vs. `image.download` on the same\nescape target, and a list of every other affected file-writing\nmodule), fixed in flyto-core 2.26.7+ (verified via live GHSA lookup,\n2026-09-04 -- the rule's original authoring predates the vendor's\npatch release and understated the CVSS score; this note corrects both\nstale claims, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [
+    "CVE-2026-67429",
+    "GHSA-2956-977X-2W3R"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739695"
+}

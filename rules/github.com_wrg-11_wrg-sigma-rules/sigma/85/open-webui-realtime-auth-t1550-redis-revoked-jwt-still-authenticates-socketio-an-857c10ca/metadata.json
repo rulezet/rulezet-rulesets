@@ -1,0 +1,24 @@
+{
+  "uuid": "857c10ca-155c-4469-8465-0a1af6182259",
+  "title": "Open WebUI realtime auth -- T1550 Redis-revoked JWT still authenticates Socket.IO and terminal WebSocket connections",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59219 (GHSA-855v-hq7w-jmjw,\nCVSS 7.1 HIGH -- corrected 2026-09-04 via live GHSA lookup, the rule's\noriginal authoring understated this score), affecting Open WebUI's\nrealtime authentication surfaces from v0.9.0 until v0.10.0, when Redis\nis configured.\n\nHTTP auth (`get_current_user` in `utils/auth.py`) rejects a JWT\nwhose `jti` is recorded as revoked in Redis (via sign-out or OIDC\nback-channel logout) with 401. The realtime authentication paths --\nSocket.IO `connect`, `user-join`, `join-channels`, `join-note` in\n`socket/main.py`, and the terminal WebSocket first-message auth in\n`terminals.py` -- validate the token with `decode_token()` only,\nwhich checks signature and expiry but never consults the Redis\nrevocation keys. A token revoked by the exact action meant to kill\nit -- the user signing out, or the identity provider's back-channel\nlogout -- therefore continues to authenticate NEW realtime\nconnections: it can join the victim's user/channel/note rooms,\nreceive realtime messages and collaborative-note updates, and pass\nterminal WebSocket auth where terminal servers are configured. HTTP\nremains correctly protected throughout.\n\nDetection logic flags a Socket.IO or terminal-WebSocket connection\nauthenticated with a JWT `jti` that a `POST /api/v1/auths/signout`\nor OIDC back-channel logout event for the same `jti` preceded -- the\nexact revoked-but-still-authenticating sequence this advisory\ndescribes.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact functions, source files, and a\nreporter proof-of-concept demonstrating HTTP 401 alongside a\nsuccessful realtime connection on the same revoked token), fixed in\nv0.10.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1550"
+  ],
+  "cve": [
+    "CVE-2026-59219",
+    "GHSA-855V-HQ7W-JMJW"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739647"
+}

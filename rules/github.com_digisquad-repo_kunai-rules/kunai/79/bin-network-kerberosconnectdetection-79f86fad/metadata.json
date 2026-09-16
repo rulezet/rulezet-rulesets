@@ -1,0 +1,21 @@
+{
+  "uuid": "79f86fad-34d5-42fc-8d6a-051ea3ab850a",
+  "title": "bin_network_kerberos.connect.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify CONNECT from Kerberos tools (kinit, klist, ktutil connecting to KDC)",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1558"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739843"
+}

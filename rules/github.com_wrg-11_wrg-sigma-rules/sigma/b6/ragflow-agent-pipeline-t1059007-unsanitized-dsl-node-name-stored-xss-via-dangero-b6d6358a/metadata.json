@@ -1,0 +1,23 @@
+{
+  "uuid": "b6d6358a-0c48-4d48-b790-25e0635c196f",
+  "title": "RAGFlow agent pipeline -- T1059.007 unsanitized DSL node name stored XSS via dangerouslySetInnerHTML",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-58579 (CVSS 5.1 MEDIUM),\naffecting RAGFlow before 0.26.3.\n\nThe agent-update endpoint normalizes a submitted agent pipeline (DSL)\nvia `normalize_dsl`, which performs only JSON serialization validation\nand preserves the submitted NODE NAME verbatim -- no HTML\nencoding/escaping. The `dataflow-result` web UI later renders that node\nname into its \"Rerun from current step\" confirmation modal via\n`dangerouslySetInnerHTML`, and the frontend's i18next configuration sets\n`escapeValue: false`, so the unsanitized value is inserted straight\ninto the DOM. An authenticated workspace user who can create or edit an\nagent can therefore store arbitrary JavaScript in a node name; it\nexecutes in the session of ANY OTHER workspace member who opens that\ndataflow result and clicks rerun -- a stored cross-user-trust-boundary\nXSS enabling session/token theft and account takeover, not merely a\nself-XSS. The advisory does not quote a specific payload string; the\nvulnerable mechanism (unsanitized field -> `dangerouslySetInnerHTML` ->\n`escapeValue: false`) is what this rule keys on, not a literal example.\n\nDetection logic flags an agent-DSL update whose node-name field\ncontains HTML/JS-injection markup (an opening tag with an event-handler\nattribute, or a `<script>` tag) -- ordinary node names are short,\nhuman-chosen labels with no legitimate reason to contain markup.\n\nAggregated from 1 first-party vendor fix (infiniflow/ragflow, via the\nmerged fix commit and VulnCheck's corroborating write-up), fixed in\n0.26.3.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.007"
+  ],
+  "cve": [
+    "CVE-2026-58579"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739662"
+}

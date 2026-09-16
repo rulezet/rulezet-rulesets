@@ -1,0 +1,24 @@
+{
+  "uuid": "124b6701-4185-4756-a5a1-d28dc427725d",
+  "title": "Open WebUI Playwright web loader -- T1190 unvalidated sub-resource requests reach blocked internals",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70479 (GHSA-w2rx-84hp-gg95,\nCVSS 7.7 HIGH), affecting Open WebUI from 0.9.6 until 0.11.0.\n\nWith `WEB_LOADER_ENGINE=playwright`, the Playwright web loader validated\nonly the TOP-LEVEL page request against the blocked-address policy,\nletting SUB-RESOURCE requests the loaded page issues (via its own\nJavaScript) pass entirely unvalidated. An authenticated user supplying\na URL can have that page's script reach internal addresses the\ntop-level check would have refused, and the returned DOM -- including\ndata read from those internal addresses -- flows into web-search or RAG\noutput that the requesting user then sees.\n\nDetection logic flags a Playwright-rendered page fetch whose CAPTURED\nsub-resource requests (network requests the browser context issued\nwhile rendering) target a private/loopback/link-local address the\ntop-level URL itself did not -- since the top-level check already\npassed by definition, only a sub-resource mismatch indicates the gap\nthis advisory describes.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact PR), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-70479",
+    "GHSA-W2RX-84HP-GG95"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739586"
+}

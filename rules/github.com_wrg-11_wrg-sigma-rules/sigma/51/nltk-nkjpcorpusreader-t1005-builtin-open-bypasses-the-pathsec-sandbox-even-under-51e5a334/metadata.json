@@ -1,0 +1,24 @@
+{
+  "uuid": "51e5a334-09cf-4374-adad-4452d73dc4b4",
+  "title": "NLTK NKJPCorpusReader -- T1005 builtin open() bypasses the pathsec sandbox even under ENFORCE mode",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-12072 (GHSA-6hm5-jgcp-p838,\nCVSS 7.5 HIGH), affecting NLTK's `NKJPCorpusReader`.\n\nNLTK's `SECURITY.md` promises that file access is validated against\nallowed data directories and that `nltk.pathsec.ENFORCE = True`\nraises `PermissionError` on unauthorized access -- a guarantee\nenforced through `FileSystemPathPointer.open()` calling\n`nltk.pathsec.validate_path()`. `NKJPCorpusReader` never routes\nthrough that protected path: `add_root()` builds the file path by\nplain string concatenation (`self.root + fileid`, no `..`\nstripping), and both `NKJPCorpus_Header_View` and `XML_Tool` open the\nresulting path with the builtin `open()` rather than\n`PathPointer.open()` -- so `pathsec`'s sentinel is never invoked and\n`ENFORCE = True` provides no protection at all. A `fileids` argument\ncontaining `../` sequences reaches `header()`, `raw()`, `words()`,\n`sents()`, or `tagged_words()` and returns the parsed content of a\nfile outside the corpus root to the caller.\n\nDetection logic flags an `NKJPCorpusReader` read invocation whose\n`fileids` argument contains a `../` path-traversal sequence -- the\nexact escape this advisory's proof of concept uses to read a\nsecret-marked `header.xml` planted outside a legitimate, empty corpus\nroot.\n\nAggregated from 1 first-party vendor security advisory (nltk, via\nGHSA and NVD, citing the exact source file, line numbers for\n`add_root()`/`XML_Tool`, and a runnable proof of concept with an\nout-of-root secret marker), fixed in NLTK 3.10.0 (PR #3579, verified via live GitHub changelog lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-12072",
+    "GHSA-6HM5-JGCP-P838"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739708"
+}

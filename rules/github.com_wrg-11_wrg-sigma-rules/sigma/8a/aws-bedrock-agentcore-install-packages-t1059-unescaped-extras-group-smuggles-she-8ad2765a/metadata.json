@@ -1,0 +1,24 @@
+{
+  "uuid": "8ad2765a-47ed-42cf-8358-2b1451a9cbeb",
+  "title": "AWS Bedrock AgentCore install_packages -- T1059 unescaped extras group smuggles shell metacharacters into a pip install command",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-16796 (GHSA-j6g5-3hh3-pgw8),\naffecting the AWS Bedrock AgentCore Python SDK (`bedrock-agentcore`)\nCode Interpreter client prior to 1.18.1.\n\n`install_packages()` in `code_interpreter_client.py` validated each\npackage specifier against `VALID_PACKAGE_NAME`, but the extras-group\nportion of that regex was `(\\[.*\\])?` -- any characters at all inside\nthe brackets. A specifier like `requests[$(id)]` or\n`` flask[`whoami`] `` passed validation, and because the vulnerable\ncode joined the accepted specifiers with plain `\" \".join(packages)`\n(no shell quoting) before building `pip install <specifiers>` and\nhanding it to `executeCommand`, the bracket content reached a shell\nintact -- command substitution inside the extras group executes\narbitrary commands inside the Code Interpreter sandbox. The fix\ntightened the extras-group pattern to `[a-zA-Z0-9._,\\-]*` (valid pip\nextra names only) and added `shlex.quote()` around every specifier\nbefore joining.\n\nDetection logic flags an `install_packages` / `executeCommand`\ninvocation whose package specifier's extras-group brackets contain a\nshell metacharacter -- `$(`, a backtick, a semicolon, or a bare space\n-- the exact injection shape the fix's regression tests\n(`requests[$(id)]`, `` flask[`whoami`] ``, `pandas[a b c]`) name.\n\nAggregated from 1 first-party vendor security advisory (AWS, via\nGHSA and NVD) plus the actual pre/post-fix source diff (commit\n`3c4b4ee6`, PR #581) confirming the exact vulnerable regex and the\nmissing `shlex.quote()`, fixed in 1.18.1.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-16796",
+    "GHSA-J6G5-3HH3-PGW8"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739675"
+}

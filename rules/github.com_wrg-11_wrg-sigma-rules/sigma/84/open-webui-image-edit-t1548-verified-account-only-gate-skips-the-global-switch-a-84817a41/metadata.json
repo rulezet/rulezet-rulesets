@@ -1,0 +1,24 @@
+{
+  "uuid": "84817a41-5e65-484f-ad19-94459c59e706",
+  "title": "Open WebUI image edit -- T1548 verified-account-only gate skips the global switch and per-user permission",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59227 (GHSA-rqj7-6wrp-6g2g,\nCVSS 4.3 MEDIUM), affecting Open WebUI from 0.8.11 before 0.10.0.\n\n`POST /api/v1/images/edit` required only that the caller hold a\nVERIFIED account -- it never checked either the deployment's global\nimage-edit feature switch (which an administrator may have turned off\nentirely) or the per-user image-generation permission (which an\nadministrator may have denied to specific users or roles). Any\nnon-admin user who is merely verified -- the lowest bar for\nauthentication in the system -- can therefore invoke server-side\nimage editing using the administrator-configured provider credentials\n(API keys for the image-editing backend), regardless of either\ncontrol the operator believed was gating the feature.\n\nDetection logic flags a request to `/api/v1/images/edit` from a\nnon-admin, non-image-generation-permitted user -- the exact\npermission-check gap this advisory describes; the endpoint's own\naccess model was \"any verified account\", not the operator's intended\n\"global switch AND per-user permission\".\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact fix commit and PR), fixed in 0.10.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [
+    "CVE-2026-59227",
+    "GHSA-RQJ7-6WRP-6G2G"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739726"
+}

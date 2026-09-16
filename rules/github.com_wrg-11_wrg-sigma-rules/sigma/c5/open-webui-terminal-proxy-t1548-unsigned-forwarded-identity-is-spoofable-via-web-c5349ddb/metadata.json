@@ -1,0 +1,24 @@
+{
+  "uuid": "c5349ddb-3850-48e6-8a72-29803ba0a827",
+  "title": "Open WebUI terminal proxy -- T1548 unsigned forwarded identity is spoofable via WebSocket session_id query injection",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59224 (GHSA-j657-m4c4-24jq,\nCVSS 8.0 HIGH -- corrected 2026-09-04 via live GHSA lookup, the rule's\noriginal authoring understated this score), affecting Open WebUI's\nterminal proxy.\n\nThe terminal proxy forwards the caller's identity to the upstream\nterminal server as an unsigned claim, with no cryptographic binding\nto the session that produced it. On the WebSocket path,\n`ws_terminal()` in `backend/open_webui/routers/terminals.py`\ninterpolates the path parameter `session_id` directly into the\nupstream URL before appending `?user_id=<caller>` -- and unlike its\nHTTP sibling `proxy_terminal`, this path runs no `_sanitize_proxy_path`\nor URL-encoding on `session_id`. An attacker-controlled `session_id`\ncontaining an encoded `?`/`&` survives Open WebUI's single decode,\nis re-decoded by the upstream, and injects an attacker-chosen\n`user_id` ahead of the one Open WebUI appended -- and because query\nparsing binds the first occurrence, the backend coordinator resolves\nthe spoofed user's terminal scope instead of the caller's own.\n\nDetection logic flags a terminal WebSocket connect whose `session_id`\npath segment contains a percent-encoded query delimiter (`%3F` or\n`%26`) -- the exact injection primitive this advisory's unvalidated,\nunencoded `session_id` concatenation makes possible.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact router functions and consolidating two\nindependent reports of the same root cause), fixed in Open WebUI\n0.10.0+ (verified via live GHSA lookup, 2026-09-04 -- the rule's\noriginal authoring predates the vendor's patch release; this note\ncorrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [
+    "CVE-2026-59224",
+    "GHSA-J657-M4C4-24JQ"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739724"
+}

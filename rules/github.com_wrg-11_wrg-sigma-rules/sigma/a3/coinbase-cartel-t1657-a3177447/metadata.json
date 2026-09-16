@@ -1,0 +1,25 @@
+{
+  "uuid": "a3177447-67d9-4714-b7b5-21ad4e273c3c",
+  "title": "Coinbase Cartel -- T1657",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Breach intel signature for actor coinbase_cartel, MITRE technique T1657. Derived from 1 observed incident(s) in the WRG breach catalog.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1567",
+    "T1657"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739616"
+}

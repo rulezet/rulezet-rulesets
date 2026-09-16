@@ -1,0 +1,26 @@
+{
+  "uuid": "174c7276-678a-4398-87ae-a001a46b7b3b",
+  "title": "stable-diffusion.cpp .ckpt loader -- T1059 GLOBAL opcode missing-newline yields -1 copy length",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-47750 (GHSA-v37x-jwp7-mcvc,\nCVSS 7.8 HIGH), affecting stable-diffusion.cpp prior to\nmaster-584-0a7ae07.\n\nThe pickle `.ckpt` parser in `src/model.cpp` -- the same file as the\nsibling `SHORT_BINUNICODE` bug\n(`observed_stable_diffusion_cpp_ckpt_sign_confusion_heap_overflow_t1059`)\n-- contains a SECOND, independent heap buffer overflow in its `GLOBAL`\nopcode handler. The parser searches for newline-delimited fields when\nprocessing `GLOBAL` opcode data but performs no validation that the\nexpected newline is actually present. A crafted `.ckpt` file that\nOMITS the expected newline causes the field-length computation to\nproduce `-1`, which is then used directly as a `memcpy` copy length --\nimmediate heap corruption, with the same code-execution potential\n(depending on heap layout) as the sibling bug.\n\nDetection logic flags a `.ckpt` model file being loaded by a\nstable-diffusion.cpp process -- the same coarse file-event signal as\nthe sibling rule, since both bugs live in the same untrusted-file-load\ncode path and neither can be distinguished from host-level file-event\nlogging alone.\n\nAggregated from 1 first-party vendor security advisory (leejet, via\nGHSA and NVD, citing the exact source file, opcode name, and root\ncause -- disclosed alongside the sibling `SHORT_BINUNICODE` bug in the\nsame advisory round), fixed in master-584-0a7ae07 (same commit as the\nsibling rule).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-47750",
+    "GHSA-V37X-JWP7-MCVC"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739674"
+}

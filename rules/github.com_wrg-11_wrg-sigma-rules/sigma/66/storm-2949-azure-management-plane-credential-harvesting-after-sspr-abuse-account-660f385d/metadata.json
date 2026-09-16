@@ -1,0 +1,24 @@
+{
+  "uuid": "660f385d-0c93-42a9-96f7-f4f471c5f197",
+  "title": "Storm-2949 -- Azure management-plane credential harvesting after SSPR-abuse account takeover (2026-05-18)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Real, actively-tracked cloud-identity campaign disclosed by Microsoft Threat Intelligence on 2026-05-18 (Storm-2949 -- temporary designation, not yet attributed to a named actor), cross-verified against independent secondary write-ups (SC Media, TheCyberExpress, SOCPrime, Specops).\n\nConfirmed by BOTH the primary source and at least one independent source: initial access via abuse of Microsoft Entra ID's Self-Service Password Reset (SSPR) flow -- the actor initiates an SSPR request against a targeted account and social-engineers the victim (posing as internal IT support) into approving the resulting MFA prompt, letting the actor reset the password and strip existing authentication methods, eliminating MFA as a control. The actor then uses the Microsoft Graph API plus custom Python (Azure SDK) scripts to enumerate users, roles, service principals, and applications, searches OneDrive/SharePoint for IT-ops files and VPN configs, and installs ScreenConnect (renamed to resemble a legitimate Windows component per the independent write-ups, exact string not disclosed) for persistent remote access.\n\nThis rule targets the credential-harvesting stage, using the exact Azure Resource Manager operation names published directly in Microsoft's own advisory: publishing-profile retrieval (publishxml/action, which returns FTP/WebDeploy cleartext credentials), SQL server firewall-rule creation (opening external database access), and storage-account key listing (listkeys/action, harvesting long-lived access keys). Each is individually a real Azure admin action, so this rule flags on any single occurrence (level: high, not critical) -- true correlation (same caller identity, multiple of these operations, short window) needs a Sigma correlation document, which this corpus's rule format does not yet render; reviewers should cross-check CallerIpAddress/Caller across hits before escalating.\n\nVerification discipline: the exact Defender-disabling PowerShell cmdlets and the exact renamed ScreenConnect service name are described narratively by the sources but no verbatim command/string was published by either -- deliberately left out of this rule's detection logic rather than guessed.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078.004",
+    "T1552"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739650"
+}

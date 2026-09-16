@@ -1,0 +1,24 @@
+{
+  "uuid": "e3a21964-fd6b-48d6-b326-714c91ee4387",
+  "title": "Open WebUI terminal WebSocket -- T1548 pending-role account reaches terminal despite unapproved status",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70490 (GHSA-5gpj-vj23-vhhv,\nCVSS 6.3 MEDIUM), affecting Open WebUI from 0.8.8 until 0.11.0.\n\n`backend/open_webui/routers/terminals.py`'s terminal WebSocket route\nauthenticates its own first-message JWT but never applies the\nverified-user role gate that `get_verified_user` enforces on the\nequivalent HTTP terminal routes. An account whose role is `pending` --\na registered-but-not-yet-approved signup, or an account an\nadministrator deactivated back to pending -- can open an interactive\nterminal session over WebSocket as long as at least one terminal\nserver is configured and its access grants cover that account. This\nquietly loses the account-approval boundary specifically for terminal\naccess, while the HTTP terminal routes on the same feature correctly\nreject the identical account.\n\nDetection logic flags a successful terminal WebSocket connection whose\nauthenticating JWT belongs to a `pending`-role account -- the same\naccount the HTTP terminal routes would reject, reaching an interactive\nshell through the one code path that forgot to check.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact router file), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [
+    "CVE-2026-70490",
+    "GHSA-5GPJ-VJ23-VHHV"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739732"
+}

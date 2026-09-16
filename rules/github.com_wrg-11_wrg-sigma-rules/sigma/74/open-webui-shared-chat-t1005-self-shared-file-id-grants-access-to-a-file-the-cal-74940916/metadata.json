@@ -1,0 +1,24 @@
+{
+  "uuid": "74940916-e836-41be-b310-08f9c86a3b48",
+  "title": "Open WebUI shared chat -- T1005 self-shared file_id grants access to a file the caller never owned",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54010 (GHSA-vrhc-3fr6-pc3c,\nCVSS 8.3 HIGH), affecting Open WebUI prior to 0.9.6.\n\nOpen WebUI lets an authenticated user attach an arbitrary `file_id`\nvalue to their OWN chat message without checking whether they actually\nown or can read that file -- the attachment step trusts the caller's\nclaim. An attacker who knows (or guesses) a victim's file id can attach\nit to their own message, then SHARE that chat and grant themselves read\naccess to their own shared copy. At that point, `has_access_to_file()`\ntreats the victim's file as accessible THROUGH the shared chat -- and\nthe file endpoints then read or DELETE the victim's file, all without\never having had legitimate access to it in the first place. The\nownership check that should have blocked the initial attachment never\nran; the shared-chat access-grant machinery downstream simply trusted\nthat the attachment was legitimate.\n\nDetection logic flags a chat-share-then-file-access sequence: a chat\ncontaining a `file_id` attachment, followed by that chat being shared,\nfollowed by a file endpoint request against the same `file_id` from\nthe sharing user -- the specific ownership-bypass chain this advisory\ndescribes, distinct from ordinary legitimate file sharing where the\nattaching user actually owned the file to begin with.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD), fixed in 0.9.6.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-54010",
+    "GHSA-VRHC-3FR6-PC3C"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739707"
+}

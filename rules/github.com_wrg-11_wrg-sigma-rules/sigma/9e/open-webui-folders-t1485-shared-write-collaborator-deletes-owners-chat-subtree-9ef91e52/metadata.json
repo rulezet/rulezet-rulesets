@@ -1,0 +1,24 @@
+{
+  "uuid": "9ef91e52-ebf9-4987-b4d6-4600a1700abc",
+  "title": "Open WebUI folders -- T1485 shared-write collaborator deletes owner's chat subtree",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70494 (GHSA-3cg5-48j3-v4gv,\nCVSS 8.1 HIGH), affecting Open WebUI from 0.10.0 until 0.11.0.\n\nThe `DELETE /api/v1/folders/{id}` handler\n(`backend/open_webui/routers/folders.py`) allowed a user granted WRITE\naccess to a shared chat folder to permanently delete chats and messages\nbelonging to the folder OWNER -- not merely their own contribution. The\ndeletion cascade is correctly bound to the folder owner's id, but the\nSUBFOLDER check accepted any inherited write grant instead of requiring\nactual ownership or administrator status. A collaborator with nothing\nmore than write access can therefore destroy the owner's entire\nsubtree, or force-move chats out of it when `delete_contents=false`.\n\nDetection logic flags a `DELETE /api/v1/folders/{id}` request whose\ncaller is NOT the folder's owner -- the endpoint's own authorization\ngap is precisely this: any write-grant holder passes where only\nownership/admin should.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact router file and PR), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [
+    "CVE-2026-70494",
+    "GHSA-3CG5-48J3-V4GV"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739625"
+}

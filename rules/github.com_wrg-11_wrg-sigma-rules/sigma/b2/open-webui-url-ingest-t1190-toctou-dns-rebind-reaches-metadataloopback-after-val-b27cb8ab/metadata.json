@@ -1,0 +1,24 @@
+{
+  "uuid": "b27cb8ab-0bb4-4143-8d30-335999f5b6c2",
+  "title": "Open WebUI URL ingest -- T1190 TOCTOU DNS-rebind reaches metadata/loopback after validation",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54020 (GHSA-h6x2-583h-x99r),\naffecting Open WebUI prior to 0.11.0.\n\nOpen WebUI's URL-validation step resolved a submitted hostname and\ncorrectly rejected private, loopback, and link-local addresses at that\npoint. The actual HTTP client, however, resolved the SAME hostname\nAGAIN at connection time -- a classic time-of-check/time-of-use gap. An\nauthenticated attacker who controls authoritative DNS for a hostname\nthey submit can answer with a PUBLIC address during the validation\nlookup and an INTERNAL one during the connection lookup (DNS rebinding),\nreaching cloud instance-metadata, loopback admin APIs, or other internal\nservices through multiple ingest paths: general URL ingest, chat\n`image_url` fetches, image editing, and OAuth profile-picture fetches.\nMost paths return the fetched response directly to the attacker; the\nOAuth profile-picture path is worse -- it forwards the victim's OAuth\nACCESS TOKEN to whatever host the second DNS answer points at.\n\nDetection logic flags the TOCTOU pattern this bug depends on: two DNS\nresolutions for the same attacker-controlled hostname within a short\nwindow returning DIFFERENT address classes (one public, one\nprivate/loopback/link-local) -- a single resolution alone cannot\ndistinguish this from ordinary DNS load-balancing or CDN behavior, but\na public-then-private flip on the same name in one request's lifecycle\nis the specific rebind this vulnerability requires.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-54020",
+    "GHSA-H6X2-583H-X99R"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739566"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "c71bd9c2-cbbe-45ef-8432-959183b1273b",
+  "title": "Network-AI MCP SSE server -- T1190 empty-default-secret always-authorized bypass",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-48814 (GHSA-r78r-rwrf-rjwp, CVSS\n9.1 CRITICAL), a self-reported advisory for Network-AI, a TypeScript/\nNode.js multi-agent orchestrator.\n\nThis is a \"the previous fix was incomplete\" case: an earlier advisory\n(CVE-2026-46701, fixed in 5.4.5) closed a CORS flaw by restricting\n`Access-Control-Allow-Origin` to localhost origins, but the DEEPER bug\nsurvived that fix untouched. The SSE MCP server's secret defaults to an\nempty string (`secret: process.env['NETWORK_AI_MCP_SECRET'] ?? ''`), and\nthe authorization check itself treats an empty secret as \"always\nauthorized\" (`if (!this._opts.secret) return true;`). A non-loopback bind\nstill only logged a warning rather than refusing to start. The CORS fix\nonly stops a BROWSER from making the request cross-origin -- it does\nnothing for curl, SSRF, or any other non-browser caller reaching a\n`0.0.0.0` bind directly, so all 22 MCP tools (`config_set`, `agent_spawn`,\n`blackboard_write`, `token_*`, and others) remained invocable with zero\ncredentials.\n\nThis corpus already carries two other unauthenticated-MCP-endpoint rules\nunder T1190 (`observed_ruflo_mcp_bridge_unauth_terminal_execute_t1190`,\n`observed_mcp_pinot_unauth_confused_deputy_t1190`); this one is\nmechanistically distinct from both -- not a missing check (Ruflo) and\nnot a working-but-off-by-default toggle (mcp-pinot), but a check that\nLOOKS present in the code yet is logically a no-op whenever its own\nconfiguration default is used.\n\nDetection logic flags a `tools/call` JSON-RPC request against one of the\nhigher-privilege tool names, arriving with no `secret`/bearer credential\nfield at all -- the empty-secret failure mode means \"credential absent\"\nand \"credential present but wrong\" are NOT equivalent signals here; only\nthe former exploits this specific bug.\n\nAggregated from 1 first-party vendor security advisory (Jovancoding, via\nGHSA and NVD), fixed in 5.7.2.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-46701",
+    "CVE-2026-48814",
+    "GHSA-R78R-RWRF-RJWP"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739597"
+}

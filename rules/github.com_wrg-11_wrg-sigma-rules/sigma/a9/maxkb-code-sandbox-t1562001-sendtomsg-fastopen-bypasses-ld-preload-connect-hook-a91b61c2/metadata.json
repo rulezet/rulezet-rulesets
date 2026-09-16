@@ -1,0 +1,26 @@
+{
+  "uuid": "a91b61c2-8ec4-4a7d-8c5b-03f7b1688d4a",
+  "title": "MaxKB code sandbox -- T1562.001 sendto()+MSG_FASTOPEN bypasses LD_PRELOAD connect() hook",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-39418 (GHSA-w9g4-q3gm-6q6w), a\nself-reported advisory for MaxKB, an open-source enterprise AI\nassistant, affecting versions 2.7.1 and below.\n\nMaxKB's code sandbox enforces its banned-hosts network policy by using\n`LD_PRELOAD` to intercept `connect()` -- every outbound connection\nattempt is checked against the blocklist before the real syscall runs.\nThe advisory identifies the gap: Linux's `sendto()` with the\n`MSG_FASTOPEN` flag establishes a TCP connection entirely at the kernel\nlevel, without userspace ever calling `connect()`. Because glibc's\n`sendto()` invokes the kernel via an inline syscall instruction rather\nthan routing through the hooked `syscall()` wrapper, the `LD_PRELOAD`\ninterception never fires, and an authenticated user with tool-editing\npermissions can reach internal services the sandbox's IP-blocklist was\nsupposed to make unreachable.\n\nDetection logic flags the specific syscall pattern this bypass depends\non: a `sendto()` invocation carrying the `MSG_FASTOPEN` flag from a\nprocess running inside the sandbox's execution context -- ordinary\nsandboxed code has no legitimate reason to use TCP Fast Open, since the\nsandbox's own network policy assumes every connection goes through\n`connect()` first.\n\nAggregated from 1 first-party vendor security advisory (1Panel-dev, via\nGHSA and NVD), fixed in 2.8.0. The advisory's own stated fix direction:\napply the same IP-validation pattern already used for `connect()` to\n`sendto()` and `sendmsg()` as well.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1562.001"
+  ],
+  "cve": [
+    "CVE-2026-39418",
+    "GHSA-W9G4-Q3GM-6Q6W"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739629"
+}

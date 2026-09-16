@@ -1,0 +1,24 @@
+{
+  "uuid": "6a2d3fc6-fa8c-443f-b136-3017d935a6b9",
+  "title": "Ruflo MCP bridge -- T1190 unauthenticated tools/call to terminal_execute",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59726 (GHSA-c4hm-4h84-2cf3,\nCVSS 10.0 CRITICAL), a self-reported advisory from Ruflo -- an agent\nmeta-harness for Claude Code and Codex.\n\nPrior to 3.16.3, Ruflo's default `docker-compose` deployment bound the\nMCP bridge to all network interfaces (not loopback-only) and exposed\n`POST /mcp` and `POST /mcp/:group` without authentication. The advisory\nstates the tool blocklist that was supposed to cover `terminal_execute`\n\"was enforced only in the autopilot flow\" -- these two HTTP endpoints\nbypassed it entirely, so any unauthenticated network caller could invoke\n`tools/call` against `terminal_execute`, obtain a shell in the bridge\ncontainer as the `node` user, read provider API keys from the container\nenvironment, and poison the AgentDB learning-store with attacker-chosen\npatterns.\n\nDetection logic flags a JSON-RPC `tools/call` request whose `params.name`\nis `terminal_execute`, arriving over HTTP without the bearer-token header\nthe fix later requires -- the MCP protocol's tool-invocation envelope is\nthe discriminator, not a generic \"suspicious HTTP POST\" heuristic. This is\nthe first rule in this corpus targeting the MCP protocol's own request\nshape rather than a downstream OS-level effect, since this plugin is\nitself an MCP server and the technique is directly relevant to its own\nthreat model.\n\nAggregated from 1 first-party vendor security advisory (Ruflo, via GHSA\nand NVD), fixed in 3.16.3.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-59726",
+    "GHSA-C4HM-4H84-2CF3"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739604"
+}

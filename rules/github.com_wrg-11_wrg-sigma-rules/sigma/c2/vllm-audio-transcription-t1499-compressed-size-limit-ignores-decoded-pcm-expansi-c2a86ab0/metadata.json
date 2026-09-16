@@ -1,0 +1,24 @@
+{
+  "uuid": "c2a86ab0-0072-452e-a1af-23f9b3f46b9d",
+  "title": "vLLM audio transcription -- T1499 compressed-size limit ignores decoded PCM expansion",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54233 (GHSA-6pr9-rp53-2pmc,\nCVSS 6.5 MEDIUM), affecting vLLM prior to 0.23.1rc0.\n\n`/v1/audio/transcriptions` limits the COMPRESSED upload size but never\nbounds the DECODED PCM output size -- a classic decompression-bomb\nshape. The advisory's own measured ratio: a 25MB OPUS file (within the\ncompressed limit) expands to approximately 14.9GB of float32 PCM at\ndecode time. A caller submitting an ordinary, size-compliant compressed\naudio file can therefore still cause the server to allocate gigabytes\nof decoded audio data, exhausting memory regardless of the compressed\nupload staying comfortably under the documented limit -- the same\noutcome as `observed_vllm_audio_upload_pre_limit_memory_exhaustion_t1499`\n(buffer-before-check), but reached through a completely different\nmechanism: high compression ratio rather than a missing check ordering.\n\nDetection logic flags an audio-transcription upload using a\nhigh-compression-ratio codec (OPUS, or other codecs with similarly\nextreme compressed:decoded ratios) at or near the compressed-size\nlimit -- since the vulnerable code path bounds only the compressed\nsize, a request maximizing that size while using a high-ratio codec is\nthe specific shape that triggers the largest possible decoded\nallocation.\n\nAggregated from 1 first-party vendor security advisory (vllm-project,\nvia GHSA and NVD, citing the exact fix PR and the measured 25MB->14.9GB\nexpansion ratio), fixed in 0.23.1rc0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [
+    "CVE-2026-54233",
+    "GHSA-6PR9-RP53-2PMC"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739615"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "4eff002e-463c-4263-a24e-d0d3099d28b9",
+  "title": "NVIDIA Triton Inference Server MLflow plugin -- T1005 model-name path traversal escapes model repository",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-47487 (CVSS 4.4 MEDIUM),\naffecting NVIDIA Triton Inference Server for Linux's MLflow plugin.\n\nThe Triton MLflow plugin accepts a caller-supplied model name that is\nused to construct a filesystem path under the configured model\nrepository, without confining the resulting path to stay within it. A\nmodel name containing traversal sequences lets a caller cause files\nOUTSIDE the model repository to be read, written to, or modified,\nreachable via the MLflow plugin's model-management interface --\nNVIDIA's own advisory frames the impact as denial of service and\ninformation disclosure.\n\nDetection logic flags an MLflow-plugin model-registration/load request\nwhose model-name parameter contains a path-traversal sequence (`../`)\nor resolves outside the configured model repository -- the specific\nartifact that turns an ordinary model-name string into a filesystem\nescape.\n\nAggregated from 1 first-party vendor security advisory (NVIDIA, via\nNVIDIA's own product-security bulletin and NVD).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-47487"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739703"
+}

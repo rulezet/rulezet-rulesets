@@ -1,0 +1,24 @@
+{
+  "uuid": "8eba03f2-6bb9-4228-b3b0-1cf64b029fe0",
+  "title": "Open WebUI knowledge search -- T1499 unbounded backtracking regex pins a worker for as long as the attacker wants",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70493 (GHSA-2f54-p244-32q6,\nCVSS 6.5 MEDIUM), affecting Open WebUI's default-enabled built-in\n`grep_knowledge_files` tool.\n\n`build_matcher()` in `backend/open_webui/tools/knowledge_fs.py`\ntreats any caller-supplied pattern containing regex metacharacters as\na regex, compiles it with Python's backtracking `re` engine, and\nreturns an unbounded match function with no time limit anywhere on\nthe path. `grep_knowledge_files()` in `builtin.py` -- the default\nhandler an LLM reaches with `ENABLE_KB_EXEC` at its default `False` --\nruns that matcher over every line of every reachable file\nsynchronously inside the event loop. A pattern like `(x|x)*y` against\na crafted subject line grows exponentially with subject length --\nmeasured on the vulnerable code, 24 characters takes 1.2s, 28 takes\n19s, 30 takes 74s -- and because it runs on the shared event loop, one\ncrafted search pins a CPU core and starves every other request the\nworker is serving, not just the attacker's own.\n\nDetection logic flags a knowledge-search tool invocation whose pattern\nargument contains alternation combined with a repetition quantifier\napplied to a group -- the exact overlapping-construct shape (e.g.\n`(x|x)*`) this advisory's catastrophic-backtracking finding\ndemonstrates, against the tool this corpus's `builtin.py` handler\nreaches by default.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact function names, source files, and a\nreproducible growth table), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [
+    "CVE-2026-70493",
+    "GHSA-2F54-P244-32Q6"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739617"
+}

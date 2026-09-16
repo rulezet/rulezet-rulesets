@@ -1,0 +1,24 @@
+{
+  "uuid": "e647a96a-0495-4105-b07e-cf744834c5b1",
+  "title": "SGLang /server_info -- T1552 admin-api-key-only config returns API keys and SSL keyfile paths",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-15977 (GHSA-jx7q-p32r-7wx8,\nCVSS 7.5 HIGH), affecting SGLang.\n\nThe `/server_info` diagnostic endpoint returns API keys and SSL\nkeyfile information in its response when a deployment is configured\nwith ONLY `--admin-api-key` set (a common configuration for\nadmin-gated deployments that otherwise expect the regular inference\nAPI to remain open or separately secured). The endpoint's information\ndisclosure was not gated on the same admin credential it was meant to\nprotect, so a caller who can reach `/server_info` at all -- not\nnecessarily one holding the admin key -- receives secrets that should\nnever leave the server process.\n\nDetection logic flags a response from `/server_info` whose body\ncontains fields recognizable as API-key or keyfile-path material\n-- the exact leak surface this advisory describes, distinct from the\nendpoint's intended (non-secret) diagnostic content.\n\nAggregated from 2 independent sources (SGLang's own GHSA advisory + an\nindependent security researcher's corroborating disclosure write-up,\npart of the same coordinated multi-CVE SGLang research series as the\nsibling execution rules above), no patched version confirmed in the\nsummary available at authoring time.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552"
+  ],
+  "cve": [
+    "CVE-2026-15977",
+    "GHSA-JX7Q-P32R-7WX8"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739652"
+}

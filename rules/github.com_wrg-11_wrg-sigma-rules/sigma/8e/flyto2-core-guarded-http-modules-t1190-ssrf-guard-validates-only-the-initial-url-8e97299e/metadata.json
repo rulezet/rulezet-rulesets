@@ -1,0 +1,27 @@
+{
+  "uuid": "8e97299e-b372-497d-b592-0f03c30ee4de",
+  "title": "Flyto2 Core guarded HTTP modules -- T1190 SSRF guard validates only the initial URL, aiohttp follows the 302 into internal space",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-67424 (GHSA-c9hr-64h3-gxpc,\nCVSS 8.5 HIGH), affecting Flyto2 Core (`flyto-core`) <= 2.26.6.\n\nFlyto2's `http.get`, `http.request`, and `http.batch` modules call\n`validate_url_with_env_config()` before issuing a request -- the\nproject's own SSRF guard, correctly applied here unlike the modules\nin the sibling advisory GHSA-pgwh-4jj4-qm8v. But the guard validates\nonly the URL the caller supplied, and the subsequent\n`session.get(url, ...)` call carries no `allow_redirects=False`, so\naiohttp's default `allow_redirects=True` transparently follows any\nredirect the response returns -- with no re-validation of the\n`Location` target. An attacker hosts a public URL that 302-redirects\nto an internal or cloud-metadata address; the guard passes on the\npublic host, aiohttp follows the redirect, and the internal response\nbody is returned to the caller through a module the project believed\nwas SSRF-protected.\n\nDetection logic flags a Flyto2 `http.get`/`http.request`/`http.batch`\nmodule invocation whose target URL is a public host that responds\nwith a 3xx redirect to a private, loopback, or cloud-metadata\naddress -- the exact guard-then-redirect sequence this advisory's\nproof of concept demonstrates against a live instance.\n\nAggregated from 1 first-party vendor security advisory (flyto-core, via\nGHSA and NVD, citing the exact source files, line numbers, and a live\nproof of concept confirming the redirect-to-loopback bypass), fixed in flyto-core 2.26.7+ (verified via live GHSA lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-67424",
+    "GHSA-C9HR-64H3-GXPC",
+    "GHSA-PGWH-4JJ4-QM8V"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739591"
+}

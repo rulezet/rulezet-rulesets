@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Subroutine pcre"; program: test; pcre:"/ip=(10|172)(?1)/"; classtype: user-activity; sid:9000024; rev:1;)

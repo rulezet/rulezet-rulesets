@@ -1,0 +1,24 @@
+{
+  "uuid": "255fd2a6-c07a-4c1a-8d8b-3d2c77a2cb93",
+  "title": "Flowise OAuth2 credential routes -- T1552 three handlers look up credentials by id alone, two are whitelisted from auth entirely",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70474 (GHSA-wch5-xp77-fxg4),\naffecting Flowise's OAuth2 credential `authorize`/`callback`/`refresh`\nroutes.\n\nAll three handlers in `routes/oauth2/index.ts` query the `Credential`\ntable with `findOneBy({ id: credentialId })` -- no `workspaceId`\nfilter -- unlike the standard credential service elsewhere in the\nsame codebase, which correctly scopes by both `id` and `workspaceId`.\nTwo of the three (`callback`, `refresh`) are additionally listed in\n`WHITELIST_URLS`, skipping authentication entirely. Combined, this\nallows: (1) any authenticated user to initiate an OAuth2 authorize\nflow against another workspace's credential, leaking its `client_id`\nand `scope`; (2) an unauthenticated attacker who knows a credential\nUUID to forge a callback using the credential's UUID as the `state`\nparameter, injecting attacker-controlled tokens into that credential;\nand (3) an unauthenticated attacker to refresh any credential's\ntokens and receive a live `access_token` in the response.\n\nDetection logic flags a request to `/api/v1/oauth2-credential/callback`\nor `/api/v1/oauth2-credential/authorize/:id` /\n`/api/v1/oauth2-credential/refresh/:id` where the credential id in\nthe path does not belong to the requesting session's own workspace\n-- the exact cross-workspace lookup gap this advisory's three-vector\nproof of concept confirms end-to-end.\n\nAggregated from 1 first-party vendor security advisory (FlowiseAI, via\nGHSA, citing the exact source lines for all three handlers, the\ncontrasting correctly-scoped service, and a full automated PoC\nscript exercising all three vectors), fixed in Flowise 3.1.3 (verified via live GHSA lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552"
+  ],
+  "cve": [
+    "CVE-2026-70474",
+    "GHSA-WCH5-XP77-FXG4"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739643"
+}

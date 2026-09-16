@@ -1,0 +1,24 @@
+{
+  "uuid": "0310c96e-8218-4908-b226-8cf422367d4a",
+  "title": "Open WebUI knowledge sync cleanup -- T1485 write-access-to-one-KB deletes files from another",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70488 (GHSA-jxc9-xmc4-gr23,\nCVSS 4.3 MEDIUM), affecting Open WebUI from 0.9.6 until 0.11.0.\n\nThe sync cleanup endpoint authorized WRITE access to the knowledge base\nnamed in the URL, then acted on directory and file ids supplied in the\nREQUEST BODY without checking that those objects actually belonged to\nthat same knowledge base. A user with write access to knowledge base A\ncould therefore delete directories and remove file embeddings from\nknowledge base B, breaking retrieval and chat-with-file for the\ntargeted documents in a knowledge base they had no legitimate access\nto -- a targeted-availability attack rather than a content-disclosure\none.\n\nDetection logic flags a sync-cleanup request whose body-supplied\ndirectory/file ids resolve to a DIFFERENT knowledge base than the one\nnamed in the URL path and authorized against -- the specific\ncross-object mismatch the vulnerable endpoint failed to check.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact fix commit and PR), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1485"
+  ],
+  "cve": [
+    "CVE-2026-70488",
+    "GHSA-JXC9-XMC4-GR23"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739627"
+}

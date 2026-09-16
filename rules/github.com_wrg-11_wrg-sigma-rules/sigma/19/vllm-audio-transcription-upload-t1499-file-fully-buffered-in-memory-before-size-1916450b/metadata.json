@@ -1,0 +1,24 @@
+{
+  "uuid": "1916450b-b725-42b4-bcaf-d400239faa3f",
+  "title": "vLLM audio transcription upload -- T1499 file fully buffered in memory before size-limit check",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-55646 (GHSA-v82g-2437-67m2,\nCVSS 6.5 MEDIUM), affecting vLLM from 0.22.0 to 0.23.0.\n\n`/v1/audio/transcriptions` and `/v1/audio/translations` call\n`request.file.read()` to fully materialize an uploaded audio file INTO\nMEMORY before the documented `VLLM_MAX_AUDIO_CLIP_FILESIZE_MB` size\nlimit (default 25 MB) is checked -- the check happens later, in the\nspeech-to-text preprocessing step. An API caller who can reach these\nroutes can submit a multipart upload far larger than the configured\nlimit and cause vLLM to allocate memory proportional to the FULL\nuploaded size before the request is ever rejected as too large --\nmemory pressure or process termination depending on the deployment's\nresource limits, entirely from a request that is ultimately going to\nbe refused anyway.\n\nDetection logic flags a multipart upload to either audio endpoint whose\n`Content-Length` exceeds the configured `VLLM_MAX_AUDIO_CLIP_FILESIZE_MB`\nlimit by a wide margin -- the size-limit check existing at all means a\nrequest this oversized was never going to succeed, so its presence on\nthe wire is itself the signal, independent of whether the request\neventually completes or the process survives it.\n\nAggregated from 1 first-party vendor security advisory (vllm-project,\nvia GHSA and NVD, citing the exact fix commit and PR), fixed in 0.24.0\n(checks size before buffering, not after).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [
+    "CVE-2026-55646",
+    "GHSA-V82G-2437-67M2"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739611"
+}

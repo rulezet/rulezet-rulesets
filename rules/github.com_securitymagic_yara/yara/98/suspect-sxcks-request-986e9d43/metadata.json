@@ -1,0 +1,19 @@
+{
+  "uuid": "986e9d43-8326-45dc-8458-611c3dc53980",
+  "title": "suspect_sxcks_request",
+  "format": "yara",
+  "author": "Luke Acha (blog.lukeacha.com)",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects PE files containing char-swapped sxcks.Request style strings observed in proxyware (GhostSocks) style campaigns",
+  "source": "https://github.com/securitymagic/yara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739428"
+}

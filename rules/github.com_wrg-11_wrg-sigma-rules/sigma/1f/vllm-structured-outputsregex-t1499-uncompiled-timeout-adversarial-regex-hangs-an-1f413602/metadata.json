@@ -1,0 +1,24 @@
+{
+  "uuid": "1f413602-fd9a-48d6-9728-22244175f3c1",
+  "title": "vLLM structured_outputs.regex -- T1499 uncompiled-timeout adversarial regex hangs an inference worker",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-55574 (GHSA-rwxx-mrjm-wc2m,\nCVSS 8.7 HIGH), affecting vLLM prior to 0.24.0.\n\nThe `structured_outputs.regex` API parameter passes a user-supplied\nregular expression string directly to the grammar-compiler backends\nwith NO COMPILATION TIMEOUT. In the `xgrammar` backend, the string\nreaches the regex compiler with no guard at all. In the `outlines`\nbackend, the validation step blocks structurally-unsafe constructs\n(lookarounds, backreferences) but performs NO COMPLEXITY ANALYSIS -- so\na pattern built from nested quantifiers (classic ReDoS shape) passes\nevery structural check while still causing exponential state-space\nexpansion during compilation. A single request carrying such an\nadversarial regex hangs the inference worker that compiles it\nINDEFINITELY, denying service to every other request queued behind it.\n\nDetection logic flags a `structured_outputs.regex` request whose\npattern contains nested quantifiers -- e.g. `(a+)+`, `(a*)*`,\n`(a+){2,}` shapes -- the specific construction that defeats the\n`outlines` backend's structural-only check while still exploding\ncombinatorially.\n\nAggregated from 1 first-party vendor security advisory (vllm-project,\nvia GHSA and NVD, citing the exact fix commit and PR), fixed in 0.24.0\n(adds a compilation timeout).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [
+    "CVE-2026-55574",
+    "GHSA-RWXX-MRJM-WC2M"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739619"
+}

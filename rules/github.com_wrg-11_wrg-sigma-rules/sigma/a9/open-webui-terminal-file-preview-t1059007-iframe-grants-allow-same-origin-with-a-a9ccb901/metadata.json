@@ -1,0 +1,24 @@
+{
+  "uuid": "a9ccb901-d75a-4de0-99eb-2f1682565e35",
+  "title": "Open WebUI terminal file-preview -- T1059.007 iframe grants allow-same-origin with allow-scripts",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70486 (GHSA-3xpf-xq7r-v8c5,\nCVSS 8.2 HIGH), affecting Open WebUI from 0.9.0 until 0.11.0.\n\nThe terminal file-preview feature's `serveUrl` iframe branch always\ngranted BOTH `allow-same-origin` and `allow-scripts` sandbox attributes\nfor HTML files served from the application's own origin -- a\ncombination the iframe sandbox specification itself warns defeats\norigin isolation, since script running with `allow-same-origin` can\nread/manipulate the parent origin's storage. Any authenticated user\nwith access to a configured terminal server could preview a\nself-crafted HTML file through this path, causing embedded script to\nexecute IN THE OPEN WEBUI ORIGIN -- reading the victim's session token\nfrom `localStorage` and taking over their account, with the\npossibility of server-side code execution if the victim held\nadministrator privileges or `workspace.functions` access.\n\nDetection logic flags the resulting host-observable artifact: a\nterminal file-preview request whose target is an HTML file (by\nextension or content-type) served through the `serveUrl` path -- the\nvulnerable code granted the dangerous sandbox combination\nunconditionally for exactly this file type, so any HTML preview through\nthis route on an unpatched deployment IS the exposure, not merely a\nprecursor to it.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact PR), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.007"
+  ],
+  "cve": [
+    "CVE-2026-70486",
+    "GHSA-3XPF-XQ7R-V8C5"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739673"
+}

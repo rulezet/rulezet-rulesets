@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Recurring time window"; program: test; content:"x"; alert_time: days 0123456, hours 0800-1800; classtype: user-activity; sid:9000016; rev:1;)

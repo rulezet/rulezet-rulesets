@@ -1,0 +1,23 @@
+{
+  "uuid": "e0b014a1-377d-4bca-943f-dfb7eec7eb3d",
+  "title": "Code Runner MCP Server -- T1059 unauthenticated run-code tool executes arbitrary source",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detection for CVE-2026-5029 (cert.pl, 2026-05), affecting Code Runner\nMCP Server \"in all versions\" -- no patch exists at authoring time.\n\nWhen started with `--transport http`, the server exposes its `/mcp`\nJSON-RPC endpoint on port 3088 with no authentication. An unauthenticated\nremote caller can invoke the `run-code` MCP tool, supplying arbitrary\nsource code and a target language; the server executes it via\n`child_process.exec()` using the corresponding language interpreter --\nwith the privileges of whatever user is running the MCP server process.\nUnlike most rules in this corpus, there is no version cutoff to key a\nnegative case on: the source states this affects the project in all\nversions and remains unfixed.\n\nDetection logic flags a `tools/call` JSON-RPC request naming the\n`run-code` tool arriving without an Authorization header -- the tool\nname itself is the discriminator this vulnerable server exposes with no\ngate at all, so its presence on the wire without credentials is the\nvulnerability's exact trigger condition, not a heuristic approximation\nof it.\n\nAggregated from 1 independent technical write-up (cert.pl, a\nCERT-affiliated vulnerability coordination body). No patched version\nexists -- operators should place this server behind an authenticating\nreverse proxy or restrict network reachability until upstream ships a\nfix, per the source's own recommendation.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-5029"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739681"
+}

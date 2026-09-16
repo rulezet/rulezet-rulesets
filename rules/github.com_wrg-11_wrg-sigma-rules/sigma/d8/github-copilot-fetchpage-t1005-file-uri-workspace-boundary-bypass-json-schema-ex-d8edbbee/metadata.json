@@ -1,0 +1,25 @@
+{
+  "uuid": "d8edbbee-df2f-4447-b4f1-34092a72ca0d",
+  "title": "GitHub Copilot fetchPage -- T1005 file:// URI workspace-boundary bypass + JSON-schema exfiltration",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detection for CVE-2025-66389, GitHub Copilot 1.372.0's `fetchPage` tool\naccepting `file://` URIs without the workspace-boundary check its own\n`readFile` tool enforces (per `fetchPageTool.ts:152`,\nmicrosoft/vscode-copilot-chat).\n\nVS Code's `fetchPage` tool is designed for fetching web pages and is\nshared between HTTP(S) and `file://` schemes; Copilot invokes it as a\nthin wrapper without re-applying its own `readFile` tool's explicit\nworkspace/open-tab containment check. This lets an indirect prompt\ninjection (content the agent reads from elsewhere, not a direct user\ninstruction) steer Copilot into fetching a local path outside the\nworkspace -- the write-up's example target is `file:///etc/passwd` --\nwithout the user-approval gate this action would otherwise require for\nuntrusted web URLs. The documented exfiltration path chains this with a\nsecond VS Code behavior: content written into a JSON file's `$schema`\nfield triggers an automatic IntelliSense fetch of that schema URL, so an\nattacker-controlled schema endpoint receives file content appended to\nthe request as a side effect of normal editor behavior.\n\nDetection logic flags the disclosure vector this write-up documents:\na `fetchPage`-tool-attributed process reading a `file://`-scheme target\noutside the current workspace root -- since a legitimate web-page fetch\nnever uses this scheme, any `file://` target reaching this specific tool\npath is itself the anomaly, not merely a sensitive-path heuristic.\n\nAggregated from 1 independent technical write-up (blindcyber.com,\nciting the specific `fetchPageTool.ts` source line), corroborated by\nMicrosoft's own confirmation and fix of the reported behavior. No\nspecific patched version number is stated in the available sources.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2025-66389"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739713"
+}

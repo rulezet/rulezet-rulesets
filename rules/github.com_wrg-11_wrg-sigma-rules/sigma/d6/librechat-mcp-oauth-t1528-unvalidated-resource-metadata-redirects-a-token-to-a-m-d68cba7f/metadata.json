@@ -1,0 +1,24 @@
+{
+  "uuid": "d68cba7f-ff3a-47c2-bfbe-de9df8515beb",
+  "title": "LibreChat MCP OAuth -- T1528 unvalidated resource-metadata redirects a token to a malicious server",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54030 (GHSA-gvpj-vm2f-2m23,\nCVSS 8.0 HIGH), a self-reported advisory for LibreChat, an\nenhanced ChatGPT-clone supporting multiple AI providers.\n\nPrior to 0.8.5, LibreChat's MCP OAuth implementation\n(`packages/api/src/mcp/oauth/handler.ts:542-548`) fetched OAuth\nProtected Resource metadata (RFC 9728) from the configured MCP server\nand used its `resource` field to build the authorization URL --\nWITHOUT verifying that field matches the server the operator actually\nconfigured. RFC 9728 section 7.3 requires exactly this check\n(the metadata's `resource` value must match the URL it was requested\nfrom) and section 3.3 says data must be discarded on mismatch; LibreChat\nimplemented neither. A malicious MCP server hosted at\n`fake-mcp.com/mcp` can therefore publish resource metadata claiming\n`resource: real-mcp.com/mcp`, causing a victim who configured LibreChat\nto point at the attacker's server to complete an OAuth consent flow that\nLOOKS like it authorizes the legitimate server, while the resulting\naccess token is delivered to the attacker's server instead.\n\nDetection logic flags the structural mismatch the fix specifically\nvalidates against: an OAuth authorization request whose `resource`\nparameter's origin differs from the MCP server origin the client\nactually connected to, to fetch the metadata.\n\nAggregated from 1 first-party vendor security advisory (danny-avila, via\nGHSA and NVD), fixed in 0.8.5 (compares the metadata's resource origin\nagainst the configured server's origin and rejects a mismatch).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1528"
+  ],
+  "cve": [
+    "CVE-2026-54030",
+    "GHSA-GVPJ-VM2F-2M23"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739640"
+}

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Dead country_code"; program: test; content:"x"; country_code: track by_src, isnot US; classtype: user-activity; sid:9000028; rev:1;)

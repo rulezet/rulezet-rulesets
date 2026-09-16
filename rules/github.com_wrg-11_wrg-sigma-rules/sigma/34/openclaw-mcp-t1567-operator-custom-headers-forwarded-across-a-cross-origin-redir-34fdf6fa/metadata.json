@@ -1,0 +1,24 @@
+{
+  "uuid": "34fdf6fa-c210-4d84-a4ab-6bae3c325aeb",
+  "title": "OpenClaw MCP -- T1567 operator custom headers forwarded across a cross-origin redirect",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-53840 (GHSA-rjxq-qqhf-8hwh,\nCVSS 7.1 HIGH), a self-reported advisory for OpenClaw.\n\nPrior to 2026.5.12, an MCP server configured with\n`transportType: \"streamable-http\"` and operator-set custom headers\nunder `mcp.servers.*.headers` (e.g. an API key or tenant-routing\ncredential the operator needs the legitimate server to see) had those\nheaders forwarded automatically whenever the application followed an\nHTTP redirect -- including a cross-origin one. A malicious, compromised,\nor simply misbehaving MCP endpoint can respond to a request with a 3xx\nredirect to an attacker-controlled origin; the client library follows\nit and re-sends the SAME custom headers to the new destination,\nexfiltrating the operator's configured secret to a domain it was never\nmeant to reach. The advisory notes this does not expose other,\nunrelated OpenClaw credentials -- only the specific custom headers\nconfigured for that MCP server.\n\nDetection logic flags the PRECONDITION this advisory's chain depends\non, since neither the specific custom header name nor the legitimate\nMCP server's host is fixed by the vulnerable code (both are\nper-deployment operator configuration, and the advisory names neither\nas a literal example) -- an MCP `streamable-http` connection whose\nresponse is a cross-origin redirect (a 3xx status with a `Location`\npointing at a different host than the one the client connected to) is\nthe one host-observable, deployment-independent signal the vulnerable\nclient library acts on before forwarding headers. This is a narrower,\nmore honest claim than \"headers were exfiltrated\" -- it flags \"the\nexact condition this bug turns dangerous\" fired, not confirmed leakage.\n\nAggregated from 1 first-party vendor security advisory (openclaw, via\nGHSA and VulnCheck's corroborating write-up), fixed in 2026.5.12.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1567"
+  ],
+  "cve": [
+    "CVE-2026-53840",
+    "GHSA-RJXQ-QQHF-8HWH"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739564"
+}

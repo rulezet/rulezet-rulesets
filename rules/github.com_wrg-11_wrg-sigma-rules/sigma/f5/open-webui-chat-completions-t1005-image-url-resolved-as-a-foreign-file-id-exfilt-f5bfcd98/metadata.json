@@ -1,0 +1,24 @@
+{
+  "uuid": "f5bfcd98-d5c0-486a-b478-b95079309691",
+  "title": "Open WebUI chat completions -- T1005 image_url resolved as a foreign file id, exfiltrated via LLM OCR",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54009 (GHSA-wch8-mhj5-9frg,\nCVSS 6.5 MEDIUM), affecting Open WebUI prior to 0.9.6.\n\n`POST /api/chat/completions` accepts an `image_url.url` value that,\nwhen it does NOT start with `http://`, `https://`, or `data:image/`,\nis interpreted as a raw FILE ID and resolved against the global file\ntable -- with NO OWNERSHIP CHECK. An authenticated user can set\n`image_url.url` to another user's file id; the server reads that\nfile from disk, base64-encodes it, and injects it into the LLM\nrequest as if it were a legitimately-supplied image. The attacker\nthen simply prompts the model to describe or OCR the \"image\" and\nreads the victim's private file content back through the model's own\nresponse -- an indirect, LLM-mediated exfiltration channel for a file\nthe attacker never had legitimate access to.\n\nDetection logic flags a chat-completions request whose `image_url.url`\nfield is a bare identifier (matching a file-id shape rather than an\n`http(s)://` or `data:image/` URI) that does not belong to the\nrequesting user -- the exact ambiguity the vulnerable code exploited\nby treating \"not a URL\" as \"must be my own file id\".\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD), fixed in 0.9.6.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-54009",
+    "GHSA-WCH8-MHJ5-9FRG"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739705"
+}

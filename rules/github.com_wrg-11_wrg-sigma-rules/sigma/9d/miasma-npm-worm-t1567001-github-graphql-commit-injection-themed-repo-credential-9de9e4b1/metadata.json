@@ -1,0 +1,24 @@
+{
+  "uuid": "9de9e4b1-a21e-45f1-9e19-e56d1c58993e",
+  "title": "Miasma npm worm -- T1567.001 GitHub GraphQL commit injection + themed-repo credential exfiltration",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Campaign-bound sigma detection for the propagation and exfiltration stage\nof the \"Miasma\" / \"Phantom Gyp\" npm supply-chain worm (StepSecurity + Snyk\ndisclosure, 2026-06-03). After the `binding.gyp` code-execution stage\n(sister rule `observed_miasma_binding_gyp_command_substitution_t1195_002`)\nharvests npm/GitHub/cloud credentials, the worm uses the stolen GitHub\ntoken two ways:\n\n(1) Self-propagation: injects a commit into any reachable GitHub Actions\nworkflow via the GitHub GraphQL API's `createCommitOnBranch` mutation\n(POST to `api.github.com/graphql`) -- not a plain `git push`, which is\nthe detection-relevant distinction, since it lets the worm commit through\nthe API using only a stolen token, without a local git working tree.\n\n(2) Exfiltration: stolen secrets are RSA-encrypted and uploaded as JSON\n(`results/results-{timestamp}.json`) to newly created private GitHub\nrepos under a single controller account (`liuende501`, ~236 repos\nobserved), named from two fixed theme sets that StepSecurity documents\nverbatim: Dune terms (`atreides`, `fedaykin`, `sardaukar`, `tleilaxu`) and\nGreek-mythology terms (`nemean-hydra`, `cerberus`, `chimera`), several\nsuffixed with a random numeric ID (e.g. `nemean-hydra-34343`) -- a naming\nconvention distinctive enough to key on, not a generic \"random repo name\"\nclaim.\n\nDetection logic requires BOTH an npm-install-lineage process (so a\ndeveloper's own unrelated GitHub scripting does not fire this alone) AND\none of the two campaign-specific signals (the GraphQL mutation name, or\nthe exfil path/repo-naming pattern) -- the naming-pattern half is\ninherently weaker evidence than the mutation-name half (a coincidental\nhit on \"cerberus\" as a legitimate repo name is plausible on its own),\nwhich is why this rule is `level: medium` rather than `high` unlike its\ntwo sibling rules in this cluster, and why the process-lineage condition\nis required rather than optional.\n\nAggregated from 2 independent technical disclosures, 2026-06-03/04\n(StepSecurity, Snyk).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1567.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739562"
+}

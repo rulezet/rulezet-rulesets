@@ -1,0 +1,24 @@
+{
+  "uuid": "4d0b8f35-942c-49a8-9436-4b78f5f63989",
+  "title": "AgenticMail bridge-wake -- T1566 unverified-sender inbound email resumes a privileged agent session",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-57495 (GHSA-fq4x-789w-jg5h,\nCVSS 8.2 HIGH), a self-reported advisory for AgenticMail, which gives AI\nagents real email addresses.\n\nPrior to the patched versions, `handleBridgeMail` (`dispatcher.ts:2045`)\nacted on any inbound email routed to the bridge inbox WITHOUT verifying\nthe sender is the operator, then called `planBridgeWake()` and\n`composeBridgeWakePrompt` (`host-bridge.ts:141`), which embeds the\nattacker-controlled `from`/`subject`/`preview` fields VERBATIM into the\nprompt a resumed agent session reads. `resumeBridgeSession`\n(`bridge-wake.ts:103`) then runs that prompt with\n`permissionMode: 'bypassPermissions'` -- an indirect prompt injection\ninto a fully-privileged agent (Bash/Write/Edit/WebFetch plus the\nagenticmail MCP toolbelt) running as the operator's own OAuth identity.\nThe advisory notes a sibling handler in the same codebase\n(`inbound.ts:102`, the operator-query email-reply hook) DOES gate on\n`isOperatorReplySender(replyFrom, config.operatorEmail)` -- the\nhigher-privilege bridge-wake path had no equivalent check, which is the\nprecise asymmetry the fix closes.\n\nDetection logic flags an AgenticMail bridge-wake event whose own log\noutput shows `resumeBridgeSession`/`bypassPermissions` firing without a\ncorresponding `isOperatorReplySender` gate having run first -- on an\nunpatched install this condition is systemic (every inbound email to the\nbridge triggers it, not only attacker-sent ones), which is stated plainly\nin falsepositives below rather than implied as attack-specific.\n\nAggregated from 1 first-party vendor security advisory (agenticmail, via\nGHSA and NVD), fixed in @agenticmail/claudecode 0.2.39,\n@agenticmail/codex 0.1.33, @agenticmail/core 0.9.43,\n@agenticmail/openclaw 0.5.71.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1566"
+  ],
+  "cve": [
+    "CVE-2026-57495",
+    "GHSA-FQ4X-789W-JG5H"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739577"
+}

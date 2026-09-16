@@ -1,0 +1,24 @@
+{
+  "uuid": "e7c1024c-7645-4900-8c56-fd3fc8e1378e",
+  "title": "Open WebUI cache file serving -- T1005 startswith containment check without trailing separator",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54014 (GHSA-j2c8-v969-8r5c,\nCVSS 4.3 MEDIUM), affecting Open WebUI prior to 0.9.6.\n\n`serve_cache_file()` in `open_webui/main.py` validates a requested\npath against the cache directory with\n`file_path.startswith(os.path.abspath(CACHE_DIR))` -- WITHOUT\nappending `os.sep` to the comparison prefix. This is the classic\n\"prefix containment without a trailing separator\" bug: a resolved path\nlanding in a SIBLING directory whose name merely begins with the same\ncharacters as `CACHE_DIR` (the advisory's own examples: `cache_sibling`,\n`cache_backup`, `cached_models`) passes the `startswith` check even\nthough it is not actually inside `CACHE_DIR` at all. Any authenticated\nuser can therefore read files from these sibling directories through\nthe cache-file endpoint.\n\nDetection logic flags a cache-file-serving request whose resolved path\ntargets a directory sharing `CACHE_DIR`'s name PREFIX but not equal to\nit followed by a path separator -- the exact shape the unpatched\n`startswith` check incorrectly accepts.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact function, file, and vulnerable\ncomparison), fixed in 0.9.6 (adds the trailing separator to the\ncontainment check).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-54014",
+    "GHSA-J2C8-V969-8R5C"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739715"
+}

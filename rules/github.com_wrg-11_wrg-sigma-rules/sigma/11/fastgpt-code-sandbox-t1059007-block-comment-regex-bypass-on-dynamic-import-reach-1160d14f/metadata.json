@@ -1,0 +1,24 @@
+{
+  "uuid": "1160d14f-e3a3-4e99-9137-e79dc28750e2",
+  "title": "FastGPT code sandbox -- T1059.007 block-comment regex bypass on dynamic import() reaches child_process",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-44287 (GHSA-f5mq-qxm4-5mvc), a\nself-reported advisory for FastGPT, an AI Agent building platform.\n\nPrior to 4.15.0-beta1, the JavaScript sandbox worker\n(`projects/code-sandbox/src/pool/worker.ts:356`) blocks dynamic\n`import()` with `/\\bimport\\s*\\(/.test(code)`. The regex's `\\s` class\nmatches only ASCII whitespace; a block comment\n(`/* ... */`, whose delimiter bytes `/`, `*`, `*`, `/` are NOT in `\\s`)\nis valid JavaScript grammar between `import` and `(` but invisible to\nthe regex. The payload `import/**/(\"child_process\")` therefore parses\nas a syntactically valid dynamic import the filter never sees. Because\nthe sandbox's `safeRequire` Proxy wraps only `require()` -- not\n`import()` -- the loaded `child_process` module is fully unrestricted,\nand `execSync(...)` runs arbitrary commands as `uid=100(sandbox)` inside\nthe sandbox container. The advisory's own PoC: `const cp = await\nimport/**/(\"child_process\"); cp.execSync(\"id\")`.\n\nDetection logic flags exactly the bypass idiom rather than a generic\n\"import used\" heuristic: the literal sequence `import` immediately\nfollowed by a `/*...*/`-style comment and then `(` -- a syntactically\nodd construction with no ordinary reason to appear in submitted code\nother than evading a whitespace-only filter.\n\nAggregated from 1 first-party vendor security advisory (labring, via\nGHSA and NVD), fixed in 4.15.0-beta1.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.007"
+  ],
+  "cve": [
+    "CVE-2026-44287",
+    "GHSA-F5MQ-QXM4-5MVC"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739668"
+}

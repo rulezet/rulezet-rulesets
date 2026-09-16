@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Bluedot substitution"; program: test; content:"x"; parse_src_ip: 1; bluedot: type ip_reputation, track by_src, none, Malicious,Tor; classtype: trojan-activity; sid:9000029; rev:1;)

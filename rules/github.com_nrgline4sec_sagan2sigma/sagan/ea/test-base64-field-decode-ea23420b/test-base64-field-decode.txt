@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Base64 field decode"; program: test; json_content:".payload","BOB"; json_decode_base64; classtype: user-activity; sid:9000019; rev:1;)

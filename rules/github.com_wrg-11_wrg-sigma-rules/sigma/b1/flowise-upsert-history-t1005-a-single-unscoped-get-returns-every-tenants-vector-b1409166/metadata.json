@@ -1,0 +1,24 @@
+{
+  "uuid": "b1409166-1adb-440a-aa63-817ba0099682",
+  "title": "Flowise upsert-history -- T1005 a single unscoped GET returns every tenant's vector-store configuration in one response",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70473 (GHSA-fr6g-7cq8-fg82),\naffecting Flowise's upsert-history endpoint.\n\n`GET /api/v1/upsert-history` returns the entire SERVER-WIDE upsert\nhistory rather than scoping the response to the requesting user's\nworkspace or tenant. The vendor's own proof of concept against a\nproduction instance produced a response over 100MB, containing\nintegration parameters and infrastructure details for every\nworkspace's vector stores -- Qdrant server URLs, collection names,\nvector dimensions, content/metadata payload keys -- with no\npagination and no authorization scoping.\n\nDetection logic flags a `GET /api/v1/upsert-history` response whose\nbody size exceeds a threshold far larger than any single workspace's\nhistory should produce -- the exact `>100MB` disproportionate-response\nsignal this advisory's proof of concept measured against a live,\nmulti-tenant production instance.\n\nAggregated from 1 first-party vendor security advisory (FlowiseAI, via\nGHSA, citing the affected endpoint, a response excerpt showing\nconcrete leaked Qdrant configuration, and a reproducible curl-based\nproof of concept with an observed response size), fixed in Flowise 3.1.3 (verified via live GHSA lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-70473",
+    "GHSA-FR6G-7CQ8-FG82"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739698"
+}

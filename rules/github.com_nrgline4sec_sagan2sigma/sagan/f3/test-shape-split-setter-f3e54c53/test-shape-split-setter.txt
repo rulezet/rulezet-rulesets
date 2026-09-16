@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Shape split setter"; program: test; content:"shape split seen"; xbits: set,shape_split,track ip_src, expire 300; classtype: misc-activity; sid:9000030; rev:1;)

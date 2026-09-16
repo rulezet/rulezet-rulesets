@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Group-by from regex extraction"; program: test; content:"x"; parse_src_ip: 1; after: track by_src, count 5, seconds 300; classtype: user-activity; sid:9000018; rev:1;)

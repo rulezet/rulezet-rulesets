@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Tempered negation pcre"; program: test; pcre:"/^((?!denied).)*$/"; classtype: user-activity; sid:9000025; rev:1;)

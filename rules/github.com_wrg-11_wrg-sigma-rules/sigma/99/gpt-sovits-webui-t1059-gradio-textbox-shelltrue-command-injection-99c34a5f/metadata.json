@@ -1,0 +1,25 @@
+{
+  "uuid": "99c34a5f-bbb0-45c5-a433-f654aecd19ab",
+  "title": "GPT-SoVITS webui -- T1059 Gradio textbox shell=True command injection",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detection for CVE-2026-63766 (CVSS 9.3 CRITICAL), affecting GPT-SoVITS\nthrough version 20250606v2pro.\n\n`webui.py`'s ASR, slice, denoise, and uvr5 handlers (the ASR path,\napproximately lines 376-395) build shell command strings by directly\ninterpolating Gradio textbox values -- e.g.\n`cmd = '\"%s\" -s tools/asr/funasr/funasr_asr.py -i \"%s\" -o \"%s\" ...' %\n(python_exec, asr_inp_dir, asr_opt_dir)` -- and execute them with\n`Popen(cmd, shell=True)`. The project's own sanitization helper,\n`clean_path()` (`tools/my_utils.py`, near line 39), strips only\nwhitespace and quote characters; it does not remove shell\nmetacharacters (`;`, `` ` ``, `$()`), so an attacker who can reach the\nwebui (no authentication by default) can supply a crafted path value\nsuch as `\"; touch /tmp/pwned; \"` to break out of the intended quoted\nargument and run an arbitrary trailing command as the server process\nuser -- the same underlying flaw repeats across all four affected\nhandlers.\n\nDetection logic flags the resulting host-level artifact: a `Popen`/\nshell child process spawned as a descendant of the GPT-SoVITS webui\nprocess whose command line contains a shell metacharacter immediately\nfollowing a quoted path-like argument -- the specific\n`\"<path>\" ... \"; <injected>\"` construction `clean_path()`'s incomplete\nfiltering makes possible.\n\nAggregated from 1 first-party GitHub issue with maintainer/community\ndiscussion (RVC-Boss/GPT-SoVITS, via VulnCheck's corroborating\nwrite-up), quoting the vulnerable code and confirming the injection\nbehavior.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-63766"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739686"
+}

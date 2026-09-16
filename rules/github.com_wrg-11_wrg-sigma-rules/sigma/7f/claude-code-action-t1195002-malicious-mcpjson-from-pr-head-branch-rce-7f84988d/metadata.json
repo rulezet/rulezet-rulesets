@@ -1,0 +1,24 @@
+{
+  "uuid": "7f84988d-b229-4c58-b246-bc04b21de149",
+  "title": "Claude Code Action -- T1195.002 malicious .mcp.json from PR head branch RCE",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-47751 (GHSA-8q5r-mmjf-575q,\nCVSS 5.3 MEDIUM), a self-reported advisory for `claude-code-action`, the\ngeneral-purpose GitHub Action that runs Claude Code on pull requests and\nissues.\n\nPrior to 1.0.74, the action checked out the attacker-controlled PR head\nbranch, read `.mcp.json` from the working directory via default setting\nsources, and unconditionally enabled every project MCP server via\n`enableAllProjectMcpServers`. An attacker who opened a pull request\ncontaining a malicious `.mcp.json` could achieve arbitrary code execution\non the GitHub Actions runner and exfiltrate secrets available to the\nworkflow (API keys, tokens) whenever a privileged user or an automatic\ntrigger invoked the Claude action on that PR. The fix (1.0.74) restores\n`.claude/` and `.mcp.json` from the PULL REQUEST'S BASE BRANCH before the\nCLI runs, rather than trusting whatever the PR head branch shipped.\n\nThis shares its root shape with two rules already in this corpus for\ndifferent GitHub Actions supply-chain attacks\n(`observed_megalodon_github_actions_base64_payload_t1195_002`,\n`observed_tanstack_pwn_request_actions_cache_poisoning_t1195_002`):\nattacker-controlled PR content reaching a privileged CI execution context.\nThis rule is distinct in the specific artifact abused (`.mcp.json`'s\nserver-command field, not a workflow YAML or cache key).\n\nDetection logic flags a `.mcp.json` file present in a PR's changed-file\nset (or the runner's working directory during a `claude-code-action` job)\nwhose `mcpServers.*.command` field is an interpretive shell (`bash`,\n`sh`, `powershell`) rather than a fixed, known tool binary -- the\nadvisory's own example attack shape is a shell command that reads\nworkflow secrets, so this is the artifact actually exploited, not a\ngeneric \"PR content is scary\" heuristic.\n\nAggregated from 1 first-party vendor security advisory (Anthropic, via\nGHSA and NVD), fixed in 1.0.74.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195.002"
+  ],
+  "cve": [
+    "CVE-2026-47751",
+    "GHSA-8Q5R-MMJF-575Q"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739572"
+}

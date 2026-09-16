@@ -1,0 +1,24 @@
+{
+  "uuid": "32d425ef-207e-495a-b99a-a4cbce2ba3e2",
+  "title": "Open WebUI Mermaid preview -- T1059.007 securityLevel:'loose' + innerHTML renders attacker SVG/JS",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54011 (GHSA-v8qj-hxv7-mgvv,\nCVSS 8.7 HIGH), affecting Open WebUI prior to 0.9.6.\n\nOpen WebUI renders Mermaid diagram blocks from Markdown files in the\nfile-preview panel and inserts the generated SVG into the DOM via\n`innerHTML`. Because Mermaid is configured with `securityLevel: 'loose'`\n-- the setting that permits Mermaid diagram syntax to include raw\nclickable links and script-capable constructs -- attacker-controlled\nMermaid content reaching this render path executes as JavaScript in the\napplication's own origin. The advisory notes a working payload was\nvalidated specifically through the Markdown FILE PREVIEW path (not\nchat rendering), giving an attacker who can get a victim to preview a\nmalicious Markdown file full script execution under the victim's\nauthenticated session.\n\nDetection logic flags a Markdown file preview request whose content\ncontains a Mermaid fenced code block with embedded HTML/script markup\n-- ordinary Mermaid diagram syntax (nodes, edges, flowchart directives)\nhas no legitimate reason to contain `<script>` tags or event-handler\nattributes.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD), fixed in 0.9.6.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.007"
+  ],
+  "cve": [
+    "CVE-2026-54011",
+    "GHSA-V8QJ-HXV7-MGVV"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739678"
+}

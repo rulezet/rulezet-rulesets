@@ -1,0 +1,24 @@
+{
+  "uuid": "27a1fe4c-1696-466b-b281-d1c92205b887",
+  "title": "Open WebUI tools API -- T1552 response-model field readmission leaks tool source + embedded credentials",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70491 (GHSA-3r7g-q6cg-q2vx,\nCVSS 6.5 MEDIUM), affecting Open WebUI 0.10.2 and earlier.\n\n`GET /api/v1/tools/`, `GET /api/v1/tools/list`, and\n`GET /api/v1/tools/id/{id}` (`backend/open_webui/routers/tools.py`)\nreturned full Python tool source to authenticated NON-ADMIN,\nread-only users. The response model `ToolResponse` deliberately omits\n`source` and `specs` fields -- but a sibling model, `ToolUserResponse`,\npermits EXTRA fields, and the route handlers spread a full tool model\ndump into the response, re-admitting the fields `ToolResponse` was\nbuilt to omit. A non-admin user with nothing more than a read grant on\na tool can therefore pull another user's server-side tool source code\n-- which commonly embeds hard-coded API keys, credentials, and\ninternal service URLs directly in the Python source.\n\nDetection logic flags a response from one of the three affected\nendpoints whose body contains a `source` field with non-empty Python\ncontent -- the exact field `ToolResponse` was designed to omit, whose\npresence in the response IS the vulnerability manifesting, not merely\na precursor to it.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact router file, the two response models by\nname, and the PR), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552"
+  ],
+  "cve": [
+    "CVE-2026-70491",
+    "GHSA-3R7G-Q6CG-Q2VX"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739644"
+}

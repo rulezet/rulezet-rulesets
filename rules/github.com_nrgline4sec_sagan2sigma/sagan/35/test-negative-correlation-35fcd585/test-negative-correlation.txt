@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Negative correlation"; program: test; content:"x"; xbits: isnotset,windows_reboot,track ip_src; classtype: user-activity; sid:9000017; rev:1;)

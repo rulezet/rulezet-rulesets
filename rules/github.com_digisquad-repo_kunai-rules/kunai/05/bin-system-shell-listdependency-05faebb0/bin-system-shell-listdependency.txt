@@ -1,0 +1,15 @@
+name: bin_system_shell_list.dependency
+type: dependency
+meta:
+  tags:
+  - bin_system_shell
+  - type_dependency
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  comments:
+  - dependency - bin_system_shell_list.dependency
+matches:
+  $bin_dep_01: .data.exe.path ~= "/[^/]*/(sh|bash|dash|ash|zsh|csh|tcsh|fish|ksh|mksh|yash|xonsh|rbash|tclsh|wish)(-[a-zA-Z0-9._]+)?$"
+  $bin_dep_02: .data.ancestors ~= "/[^/]*/(sh|bash|dash|ash|zsh|csh|tcsh|fish|ksh|mksh|yash|xonsh|rbash|tclsh|wish)(-[a-zA-Z0-9._]+)?$"
+  $common_exclusions: rule(bin_exclusion_common)
+condition: (any of $bin_dep_) and (not $common_exclusions)

@@ -1,0 +1,25 @@
+{
+  "uuid": "7881511e-4d82-4492-9028-6f4da3cfebe1",
+  "title": "vLLM NemotronVL/KimiK25 -- T1195.002 hardcoded trust_remote_code bypasses the operator's own flag",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-4944 (CVSS 8.8 HIGH), affecting\nvllm-project/vllm 0.14.1.\n\nTwo model implementation files --\n`vllm/model_executor/models/nemotron_vl.py` and\n`vllm/model_executor/models/kimi_k25.py` -- hardcode\n`trust_remote_code=True` internally, silently overriding an operator's\nexplicit `--trust-remote-code=False` startup flag. Since\n`trust_remote_code` controls whether HuggingFace Hub model repositories\nare allowed to ship and execute their own custom Python code alongside\nweights, this hardcoding means an operator who believes they have\ndisabled arbitrary-code-execution-on-load is still exposed the moment a\nNemotronVL or KimiK25 model is loaded -- a malicious HuggingFace\nrepository masquerading as either architecture achieves RCE regardless\nof the operator's own configuration. The advisory notes this is an\nINCOMPLETE fix for two PRIOR CVEs (CVE-2025-66448, CVE-2026-22807) --\nthose closed other code paths, but these two model files were missed.\n\nDetection logic flags a model-load event whose model architecture\nmatches NemotronVL or KimiK25 on a vLLM instance that was started with\n`--trust-remote-code=False` (or the flag omitted, since `False` is the\ndefault) -- the exact configuration the operator believed protected\nthem.\n\nAggregated from 1 first-party vendor bounty disclosure (huntr.com,\ncross-referencing vllm-project's own two prior CVEs this one is an\nincomplete fix for).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195.002"
+  ],
+  "cve": [
+    "CVE-2025-66448",
+    "CVE-2026-22807",
+    "CVE-2026-4944"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739596"
+}

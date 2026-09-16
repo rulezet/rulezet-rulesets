@@ -1,0 +1,24 @@
+{
+  "uuid": "be579a00-583c-487b-a1ca-968ba424300f",
+  "title": "Open WebUI legacy chat completions -- T1548 client-supplied features flag bypasses the revoked image-generation permission",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70484 (GHSA-g423-grf7-98rv,\nCVSS 4.3 MEDIUM), affecting Open WebUI's legacy chat-completions\npath.\n\nThe two direct image routes (`/images/generations`, `/images/edit`)\nand the native function-calling path all re-check the caller's\n`features.image_generation` permission before reaching an image\nprovider. The legacy chat-completions path -- reached by setting\n`params.function_calling` to `legacy` -- does not: it stores the\nrequest's client-supplied `features` object into request metadata and\n`process_chat_payload` dispatches to the image handler purely on that\nflag's truthiness, never re-checking it against the caller's actual\npermission. A user an administrator has explicitly revoked image\ngeneration from can still trigger it by sending\n`features.image_generation: true` on a legacy chat-completions\nrequest, spending the operator's provider credits and quota.\n\nDetection logic flags a chat-completions request body carrying\n`features.image_generation: true` together with legacy function-\ncalling mode -- the exact unchecked-flag combination this advisory\ndescribes.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact commit and PR), fixed in commit\n`897d69a` (PR #26703).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [
+    "CVE-2026-70484",
+    "GHSA-G423-GRF7-98RV"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739730"
+}

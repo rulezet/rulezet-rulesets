@@ -1,0 +1,24 @@
+{
+  "uuid": "402d6f64-4a8c-4409-8734-9c87a052f2df",
+  "title": "RAGFlow Canvas -- T1059 unsandboxed Jinja2 SSTI in citation prompt generator",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-45312 (GHSA-wpg4-h5g2-jxm6,\nCVSS 9.9 CRITICAL), a self-reported advisory for RAGFlow, an\nopen-source Retrieval-Augmented Generation engine.\n\nIn 0.24.0 and earlier, `rag/prompts/generator.py:185` constructs prompt\ntemplates with an unsandboxed Jinja2 environment\n(`PROMPT_JINJA_ENV = jinja2.Environment(autoescape=False, ...)`).\n`citation_prompt()` (line 189) renders a `user_defined_prompts` value\npopulated from the LLM component's `sys_prompt`\n`<CITATION_GUIDELINES>` field through this environment. Any authenticated\nuser (self-registration is open by default, so this includes a brand-new\nlow-privilege account) can create a Canvas workflow chaining a\nDuckDuckGo search component (no API key required) into an LLM component\nwith `cite=true` (the default) to reach this code path via\n`POST /v1/canvas/set` (save the workflow) and `POST /v1/canvas/completion`\n(execute it). The advisory's own PoC payload escapes the template\nsandbox entirely via Jinja2's object-graph traversal:\n`{% set g = cycler.__init__.__globals__ %}{% set bl = g.__builtins__ %}\n{% set os = bl.__import__('os') %}{{ os.popen('id > /tmp/pwned').read() }}`\n-- placed inside `<CITATION_GUIDELINES>` tags in the `sys_prompt` field.\nNo patched version exists as of this rule's authoring (advisory lists\n\"Patched versions: None\").\n\nDetection logic flags the specific object-graph-traversal primitives\nthat make Jinja2 SSTI payloads work regardless of exact payload wording\n-- `__globals__`, `__builtins__`, `__import__`, `__subclasses__`, and\n`__mro__` are Jinja2/Python sandbox-escape idioms with no legitimate\nreason to appear inside a citation-guidelines prompt field.\n\nAggregated from 1 first-party vendor security advisory (infiniflow, via\nGHSA and NVD). No fix available at authoring time -- deployers should\nrestrict Canvas creation to trusted users or disable self-registration\nuntil a patch ships.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-45312",
+    "GHSA-WPG4-H5G2-JXM6"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739691"
+}

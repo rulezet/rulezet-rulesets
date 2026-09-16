@@ -1,0 +1,25 @@
+{
+  "uuid": "52d83f61-573f-4c69-a7b5-43ce457d820f",
+  "title": "Flowise MCP launcher -- T1562.001 npm_config_yes environment variable reproduces the --yes flag the patched blocklist only checks by name",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-69263 (GHSA-xc48-889x-5qmw),\naffecting Flowise's MCP server launcher security check, an\nincomplete fix for the earlier CVE-2025-8943.\n\nThe CVE-2025-8943 patch blocks the `-y`/`--yes` flags on `npx` to\nstop auto-installation of arbitrary packages, and\n`validateEnvironmentVariables()` in `MCP/core.ts` denies exactly four\nhardcoded variable names by exact string match (`PATH`,\n`LD_LIBRARY_PATH`, `DYLD_LIBRARY_PATH`, `NODE_OPTIONS`). `npm` reads\nits configuration directly from `npm_config_*` environment variables,\nand `npm_config_yes=true` reproduces the exact `--yes` behavior the\nflag filter exists to block -- it is not in the four-item blocklist,\nso it passes through untouched. On a default Flowise deployment\n(no authentication), an attacker-supplied MCP server config with\n`env: {\"npm_config_yes\": \"true\"}` causes `npx` to auto-install and\nexecute an arbitrary named package as the Flowise process, even with\n`CUSTOM_MCP_SECURITY_CHECK=true` enabled.\n\nDetection logic flags an MCP server configuration whose `env` object\nsets `npm_config_yes` (or the advisory's sibling bypass variables\n`npm_config_prefix`, `npm_config_userconfig`, `NODE_PATH`,\n`PYTHONPATH`, `PYTHONSTARTUP`) -- the exact denylist-by-name-only gap\nthis advisory's proof of concept exploits against a mitigation that\nwas believed closed.\n\nAggregated from 1 first-party vendor security advisory (FlowiseAI, via\nGHSA, citing the exact four-item blocklist source, the\n`npm_config_yes` mechanism by name, a working PoC MCP config, and a\ntable of five additional untreated bypass variables across the other\npermitted interpreters), fixed in Flowise 3.1.3 (verified via live GHSA lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1562.001"
+  ],
+  "cve": [
+    "CVE-2025-8943",
+    "CVE-2026-69263",
+    "GHSA-XC48-889X-5QMW"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739630"
+}

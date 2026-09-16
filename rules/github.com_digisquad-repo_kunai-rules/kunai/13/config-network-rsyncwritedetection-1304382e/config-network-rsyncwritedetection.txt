@@ -1,0 +1,27 @@
+name: config_network_rsync.write.detection
+type: detection
+meta:
+  tags:
+  - config_network_rsync
+  - type_detection
+  - event_write
+  - event_write_close
+  - event_write_config
+  - T1048.002
+  - exfiltration_over_alternative_protocol:_exfiltration_over_asymmetric_encrypted_non-c2_protocol
+  authors:
+  - ' hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com'
+  attack:
+  - T1048.002
+  comments:
+  - detection rule - identify config_network_rsync_list.write.dependency
+match-on:
+  events:
+    kunai:
+    - write
+    - write_close
+    - write_config
+matches:
+  $dep_01: rule( config_network_rsync_list.write.dependency)
+condition: $dep_01
+severity: 8

@@ -1,0 +1,25 @@
+{
+  "uuid": "6d07dd4c-c3a3-4614-9590-708c220a572d",
+  "title": "Miasma npm worm -- T1546 AI-assisted IDE config poisoning (Claude Code/Cursor/Gemini/VS Code)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Campaign-bound sigma detection for the persistence stage of the \"Miasma\"\n/ \"Phantom Gyp\" npm supply-chain worm (StepSecurity + Snyk disclosure,\n2026-06-03). This is the standout TTP of the campaign and, as of this\nrule's authoring, not covered by any other rule in this corpus: instead\nof (or in addition to) classic host persistence, the worm writes\nauto-executing configuration files into every AI-assisted IDE/agent\nintegration it can find in the poisoned project tree, so the backdoor\nre-fires the next time a developer opens the project with an AI coding\ntool:\n\n- Claude Code: `.claude/setup.mjs` (session-start hook) and\n  `.claude/settings.json`\n- Cursor: `.cursor/rules/setup.mdc` (fires on project-open)\n- Google Gemini: `.gemini/settings.json`\n- VS Code: `.vscode/tasks.json` (`runOn: folderOpen`) and\n  `.vscode/setup.mjs`\n- GitHub Actions: `.github/setup.js`\n\nBoth source blogs independently list this same file-path set (StepSecurity\nnames all six; Snyk corroborates the Claude/Cursor/VS Code subset). The\nsocial-engineering cover text embedded in the poisoned project reads\n\"This is required for proper IDE integration and dependency setup.\" The\npayload files execute via the Bun runtime rather than Node, for the same\nprocess-tree evasion reason as the initial `binding.gyp` stage (sister\nrule: `observed_miasma_binding_gyp_command_substitution_t1195_002`).\n\nDetection logic flags the creation of any of these six specific,\nauto-executing AI-tool config paths inside a project directory,\nattributed to a process descending from an npm-family package manager\n(i.e. written during/after `npm install`, not hand-authored by the\ndeveloper in an editor) -- a developer manually adding one of these files\nthemselves is a normal, high-volume event this rule must not fire on,\nso the process-lineage condition is load-bearing, not decorative.\n\nMapped to T1546 (Event Triggered Execution) at the parent-technique level:\nnone of the existing sub-techniques (change-default-file-association,\nscreensaver, etc.) describes \"an AI coding assistant's own project-open\nhook\", so this rule does not force a sub-technique that does not fit\nrather than making one up.\n\nAggregated from 2 independent technical disclosures, 2026-06-03/04\n(StepSecurity, Snyk).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1546"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739719"
+}

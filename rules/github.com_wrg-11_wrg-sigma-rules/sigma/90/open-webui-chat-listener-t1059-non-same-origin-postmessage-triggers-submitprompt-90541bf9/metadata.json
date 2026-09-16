@@ -1,0 +1,24 @@
+{
+  "uuid": "90541bf9-85b4-4b27-99f2-4d54715d255b",
+  "title": "Open WebUI chat listener -- T1059 non-same-origin postMessage triggers submitPrompt() in victim session",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54007 (GHSA-3vv5-8xxp-4f55,\nCVSS 7.1 HIGH), affecting Open WebUI prior to 0.9.6.\n\nOpen WebUI's chat message listener accepted `input:prompt` and\n`action:submit` `postMessage` events regardless of the sending\nwindow's origin -- no same-origin check. An external, ATTACKER-CONTROLLED\nweb page can therefore set arbitrary prompt text and trigger\n`submitPrompt()` inside an authenticated victim's Open WebUI tab simply\nby having the victim visit the attacker's page while logged in\nelsewhere. The advisory's own validation: a cross-origin attacker page\nthat auto-posts these messages causes unauthorized\n`POST /api/v1/chats/new` and `POST /api/chat/completions` requests\ncarrying attacker-controlled prompt content -- cross-site forced model/\ntool execution under the victim's own privileges, entirely without\ntheir consent or awareness.\n\nDetection logic flags a `POST /api/chat/completions` or\n`POST /api/v1/chats/new` request whose Referer/Origin header is ABSENT\nor does not match the Open WebUI deployment's own origin, combined with\ntiming consistent with a `postMessage`-triggered auto-submission rather\nthan direct user interaction -- since the vulnerable listener has no\norigin gate, any successful cross-origin trigger reaches these\nendpoints as if it were a same-origin request.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, describing the researcher's own cross-origin\nattacker-page validation), fixed in 0.9.6.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059"
+  ],
+  "cve": [
+    "CVE-2026-54007",
+    "GHSA-3VV5-8XXP-4F55"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739687"
+}

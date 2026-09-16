@@ -1,0 +1,21 @@
+{
+  "uuid": "9af8f5eb-e84b-40e6-8af9-a1128938984c",
+  "title": "bin_system_timestomp.execve.detection",
+  "format": "kunai",
+  "author": " hyde - Benjamin Collas - DIGISQUAD - https://www.digisquad.com",
+  "license": "GPL-3.0",
+  "license_verified": true,
+  "description": "detection rule - identify touch -t (specific timestamp) or debugfs set_inode_field mtime/atime/ctime",
+  "source": "https://github.com/digisquad-repo/kunai-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1070.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739886"
+}

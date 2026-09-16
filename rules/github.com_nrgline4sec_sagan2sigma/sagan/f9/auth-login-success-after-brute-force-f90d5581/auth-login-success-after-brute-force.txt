@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[AUTH] Login success after brute force"; program: sshd; json_content:".msg","Accepted password"; json_map:"src_ip",".ip"; xbits: isset,brute_force,track ip_src; classtype: correlated-attack; sid:9000011; rev:1;)

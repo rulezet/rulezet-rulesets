@@ -1,0 +1,26 @@
+{
+  "uuid": "2343680b-e182-4c43-bb08-c05e4123367d",
+  "title": "stable-diffusion.cpp .ckpt loader -- T1005 missing bounds check reads past the metadata buffer",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-47748 (GHSA-rx4w-x86j-vx57,\nCVSS 5.5 MEDIUM), affecting stable-diffusion.cpp prior to\nmaster-584-0a7ae07.\n\nUnlike the sign-confusion write bugs in this corpus's other\n`stable_diffusion_cpp_ckpt_*` rules, this is an OUT-OF-BOUNDS READ with\na different root cause: throughout the pickle `.ckpt` parser in\n`src/model.cpp`, opcode handlers advance the parser position with\nexpressions like `buffer += N` WITHOUT first checking that\n`buffer + N <= buffer_end`. A truncated `.ckpt` file -- simply cut\nshort, no sign-confusion trickery needed -- causes reads past the end\nof the metadata buffer. The advisory notes LibFuzzer found crashes in\nunder one second of fuzzing against malformed checkpoint inputs, which\nis itself a signal of how shallow this bug class is to trigger.\n\nDetection logic flags the same coarse file-event signal as this\ncorpus's sibling `.ckpt`-loading rules -- a `.ckpt` file loaded by a\nstable-diffusion.cpp process -- since host-level logging cannot\ndistinguish this specific opcode-advancement bug from the sign-\nconfusion bugs in the same file; all three are named as separate CVEs\nbecause each is a distinct code defect, even though the detectable\nartifact (a `.ckpt` load) is identical.\n\nAggregated from 1 first-party vendor security advisory (leejet, via\nGHSA and NVD, citing the exact source file, the general opcode-\nadvancement pattern, and the LibFuzzer finding), fixed in\nmaster-584-0a7ae07 (same commit as the sibling rules).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-47748",
+    "GHSA-RX4W-X86J-VX57"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739697"
+}

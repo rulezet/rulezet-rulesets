@@ -1,0 +1,25 @@
+{
+  "uuid": "cfc0fbe9-5292-4f1d-bcd1-374f3f17c1c4",
+  "title": "NLTK FramenetCorpusReader -- T1005 caller-supplied frame name reaches builtin open(), same pathsec-bypass class as NKJPCorpusReader",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-12074 (GHSA-xh95-f55m-82fw,\nCVSS 7.5 HIGH), affecting NLTK's `FramenetCorpusReader.frame()`.\n\n`frame_by_name` builds an XML file path by joining the corpus root,\nthe frame directory, and a caller-supplied frame name with a fixed\n`.xml` extension -- no containment check -- then constructs an\n`XMLCorpusView` from that STRING path rather than a `PathPointer`.\nBecause the view is built from a string, it reads with the builtin\n`open()`, so `nltk.pathsec.validate_path()` is never invoked and\n`ENFORCE = True` does not block a `../` sequence in the name. This is\nthe same builtin-open-bypasses-the-sandbox class as this corpus's\nsibling `NKJPCorpusReader` rule (CVE-2026-12072), but in a distinct\nreader class and code path: `frame_by_name` never goes through\n`CorpusReader.open()` at all, so that reader's protection does not\nextend to it. The same string-path pattern additionally exists in\n`doc()` (using an index-entry `filename` field) and the lexical-unit\nfile loader (using a `lexUnit` ID attribute), both reachable through\na malicious or attacker-modified FrameNet corpus index rather than a\ndirect caller argument.\n\nDetection logic flags a `FramenetCorpusReader.frame()` invocation\nwhose frame-name argument contains a `../` path-traversal sequence --\nthe exact escape this advisory's proof of concept uses, with\n`nltk.pathsec.ENFORCE = True` set before import, to read a\nsecret-marked frame XML file planted outside a minimal valid FrameNet\ncorpus root.\n\nAggregated from 1 first-party vendor security advisory (nltk, via\nGHSA and NVD, citing the exact function, the string-vs-PathPointer\ndistinction, the two sibling reachable code paths, and a runnable\nproof of concept with `ENFORCE = True` explicitly enabled), fixed in NLTK 3.10.0 (PR #3581, verified via live GitHub changelog lookup, 2026-09-04 -- the rule's original authoring predates the vendor's patch release; this note corrects a stale claim, not the detection logic itself).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-12072",
+    "CVE-2026-12074",
+    "GHSA-XH95-F55M-82FW"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739706"
+}

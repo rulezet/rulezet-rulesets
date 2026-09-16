@@ -1,0 +1,21 @@
+{
+  "uuid": "4b735962-dd80-4061-b84a-381fc9fabd1d",
+  "title": "Template -- Account Manipulation (AWS IAM wildcard-admin policy created)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects creation of an AWS IAM policy granting unrestricted administrative\naccess (Effect=Allow, Action=*, Resource=*) via CloudTrail CreatePolicy /\nCreatePolicyVersion events. This is stage 1 of a well-known cloud\nprivilege-escalation pattern: create a wildcard-admin policy, then attach\nit (AttachUserPolicy / AttachRolePolicy / AttachGroupPolicy) to a\nlow-privilege role, user, or group to elevate access -- T1098.003\n(Account Manipulation: Additional Cloud Roles).\n\nWildcard-admin policy creation is genuinely rare in legitimate\noperations -- AWS best practice is least-privilege, scoped policies -- so\nthe creation event alone is a strong, low-noise indicator; treat as HIGH\npriority if followed within the same lookback window by an attach event\nfor the same PolicyName.\n\nMethod-transfer note: this rule's detection LOGIC is derived\nfrom Microsoft Azure-Sentinel's public analytic-rule content\n(Detections/AWSCloudTrail -> Solutions/Amazon Web Services, MIT licensed),\nre-authored natively as Sigma (no KQL retained) per WRG's\nmethod-transfer-not-code-copy convention. Fills a genuine corpus gap:\nprior to this rule the WRG sigma corpus had ZERO privilege_escalation\ntactic coverage and ZERO aws/cloudtrail logsource coverage.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1098.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739728"
+}

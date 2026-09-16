@@ -1,0 +1,23 @@
+{
+  "uuid": "19e75101-42d4-4dc0-86c2-b50a4ebba2d5",
+  "title": "foreman-mcp-server -- T1563 session-ID logged + never re-validated enables hijacking",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-12112, a Red Hat security\nadvisory (Bugzilla 2488031, RHSA-2026:28405 / RHSA-2026:28438) for the\nforeman-mcp-server MCP server.\n\nThe server caches the fully-authenticated Foreman API client connection\nobject in an in-memory dictionary (`user_map`), keyed by the\n`mcp-session-id` -- which the advisory states plainly is NOT a secret.\nTwo compounding facts make this exploitable rather than merely sloppy:\n(1) the server logs every newly-created session ID at INFO level (the\nadvisory's own classification: \"F-32 MCP Server: Insecure Sensitive HTTP\nHeader Sanitization\"), so a session ID that should function like a\ncredential ends up in ordinary application logs; (2) although the\n`foreman_token` header is required to establish a session, it is NEVER\nRE-VALIDATED on subsequent requests -- once a session ID is known, any\ncaller presenting it (with any token value, or none) is served through\nthe cached, already-authenticated connection. An attacker who reads a\nlegitimate session ID out of application logs can hijack that user's\nauthenticated Foreman session indefinitely, no valid token required\nafter the first request.\n\nDetection logic flags the disclosure half of this chain, since it is the\nhalf a log source can actually observe: an `mcp-session-id` value\nappearing in an application log line at INFO level. This is\ndeliberately NOT a claim that every such log line is an active attack --\nthe vulnerability is systemic on an unpatched install (every session\ncreation logs its ID by design), so this rule's honest scope is \"is this\ndeployment still exposing session IDs the way the advisory describes\",\nnot \"here is a confirmed hijacking in progress\" -- stated in\nfalsepositives rather than implied.\n\nAggregated from 1 first-party vendor security advisory (Red Hat, via\nBugzilla and the linked RHSA errata).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1563"
+  ],
+  "cve": [
+    "CVE-2026-12112"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739655"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "73abeab2-7312-40e5-a155-72cefc577153",
+  "title": "vLLM activation function loading -- T1195.002 assert-based security check disabled by python -O",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-41523 (GHSA-q8gq-377p-jq3r,\nCVSS 7.5 HIGH), affecting vLLM prior to 0.22.0.\n\nvLLM's activation-function loading path uses a plain Python `assert`\nstatement as its security check against malicious HuggingFace model\ncontent. Python's `-O` (optimized mode) or `PYTHONOPTIMIZE=1`\nenvironment variable STRIPS ALL ASSERT STATEMENTS from the running\ninterpreter -- a documented, common production-performance practice --\nwhich silently removes this specific security check along with every\nother assert in the process, with no error or warning that protection\nwas lost. On a vLLM deployment run in optimized mode, publishing a\nmalicious HuggingFace model achieves unauthenticated arbitrary code\nexecution the moment the model loads, purely because the interpreter\nflag chosen for performance also happened to disable the one line\nstanding between untrusted model content and RCE.\n\nDetection logic flags the PRECONDITION this bug depends on: vLLM\nstarted with `-O` or `PYTHONOPTIMIZE=1` set -- since the vulnerability\nis unreachable without it, this configuration state is itself the\nactionable signal to review, independent of any specific malicious\nmodel having been observed yet.\n\nAggregated from 2 independent sources (vLLM's own GHSA advisory + the\nhuntr.com bounty report that discovered it), fixed in 0.22.0 (replaces\nthe assert with an unconditional check that survives optimized mode).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1195.002"
+  ],
+  "cve": [
+    "CVE-2026-41523",
+    "GHSA-Q8GQ-377P-JQ3R"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739599"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "5d0cb746-07cc-449b-b1a7-41be13ac0ebc",
+  "title": "mem0 config API -- T1552 unauthenticated plaintext API-key disclosure + Ollama-URL SSRF",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59706 (CVSS 9.2 CRITICAL),\ndocumented by VulnCheck for mem0, an LLM memory-layer library.\n\nmem0's config API exposes two unauthenticated endpoints with no\ncredential check. `GET /api/v1/config/` returns stored LLM provider\nconfiguration, including API keys (e.g. OpenAI) in PLAINTEXT -- any\nnetwork caller can read them with no authentication. Separately,\n`PUT /api/v1/config/mem0/llm` accepts a caller-controlled\n`ollama_base_url` parameter that the server later uses to reach the\nconfigured Ollama backend with no destination-address validation --\nsetting it to an internal address (e.g. a cloud instance-metadata\nservice) turns this into an SSRF primitive, letting an attacker pivot\nfrom a public-facing mem0 deployment into the host's internal network\nor cloud IAM credential endpoint.\n\nDetection logic covers both halves of this advisory as two independent\nselections: (1) a `GET /api/v1/config/` request with no Authorization\nheader, and (2) a `PUT /api/v1/config/mem0/llm` request whose\n`ollama_base_url` value targets a private/link-local/metadata address\nrange -- each is exploitable on its own, so either alone is a hit\nworth investigating.\n\nStatus correction (2026-09-04, live verification): the commit this rule\noriginally cited as \"the fix\" (`a3154d59e52386d4e1189c1f5f44819868f76514`)\nis NOT a fix for this vulnerability -- its own commit message reads\n\"fix(docs): fix broken metadata filtering examples (#5317)\", an unrelated\ndocumentation change. The actual tracking issue, GitHub #6081, was closed\n2026-07-06 with the maintainers' own comment: \"we have sunsetted\nopenmemory, so we won't be taking issue or pr.\" This is WONTFIX-BY-\nDEPRECATION, not a patched vulnerability -- the affected OpenMemory\ncomponent has been discontinued rather than fixed, so there is no\nversion number to check a deployment against; any still-running\nOpenMemory instance remains exposed indefinitely by the vendor's own\nchoice not to patch a sunset product.\n\nAggregated from 2 independent sources (VulnCheck's write-up + the\nproject's own GitHub issue tracker, corroborating the wontfix status).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1552"
+  ],
+  "cve": [
+    "CVE-2026-59706"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739651"
+}

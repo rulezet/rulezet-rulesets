@@ -1,0 +1,24 @@
+{
+  "uuid": "7638c403-ce00-4bb3-8b4d-5efe95f7e32e",
+  "title": "mcp-pinot -- T1190 unauthenticated 0.0.0.0 bind confused-deputy Pinot cluster access",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-49257 (GHSA-73cv-556c-w3g6,\nCVSS 10.0 CRITICAL), a self-reported advisory for `mcp-pinot`, a\nPython-based MCP server for Apache Pinot.\n\nVersions 3.0.1 and below defaulted `oauth_enabled` to `False` and bound\nthe HTTP MCP server to `0.0.0.0:8080` -- reachable from any\nnetwork-adjacent caller, not just localhost. With OAuth disabled, FastMCP\nregisters every tool with no authentication check at all. The server then\nproxies each call using its OWN server-side Pinot credentials\n(`PINOT_TOKEN` or `PINOT_USERNAME`/`PINOT_PASSWORD`) rather than any\ncaller identity -- a textbook confused-deputy: the unauthenticated\nnetwork caller inherits the SERVER's privileges against the Pinot\ncluster, not their own (they have none). Reachable tools include\n`read_query` (arbitrary SELECT against any table), `create_schema` /\n`update_schema`, and `create_table_config` / `update_table_config` --\nfull read/write access to the configured cluster.\n\nThis is a different failure shape than this corpus's other unauthenticated-\nMCP-endpoint rules (`observed_ruflo_mcp_bridge_unauth_terminal_execute_t1190`,\n`observed_whatsapp_mcp_bridge_path_traversal_t1005`): those exploit a\nMISSING check on an otherwise-scoped API; this one exploits a working\nauth toggle that is simply OFF by default, combined with a non-loopback\nbind -- the server was never confused about auth existing, it just never\nrequired it. Detection logic therefore keys on the specific mutation-tool\nnames reaching the wire without an Authorization header, rather than a\ngeneric \"MCP endpoint hit\".\n\nAggregated from 1 first-party vendor security advisory (startreedata, via\nGHSA and NVD), fixed in 3.1.0 (binds to `127.0.0.1` and rejects\nnon-loopback access without OAuth).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-49257",
+    "GHSA-73CV-556C-W3G6"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739588"
+}

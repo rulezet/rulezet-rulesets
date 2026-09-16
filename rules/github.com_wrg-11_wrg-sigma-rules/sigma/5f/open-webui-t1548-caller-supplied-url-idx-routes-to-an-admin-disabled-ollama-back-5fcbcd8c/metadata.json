@@ -1,0 +1,23 @@
+{
+  "uuid": "5fcbcd8c-5338-4c33-86cd-75590b3dff5f",
+  "title": "Open WebUI -- T1548 caller-supplied url_idx routes to an admin-disabled Ollama backend",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54021 (CVSS 6.3 MEDIUM),\naffecting Open WebUI prior to 0.9.6.\n\nSeveral direct, index-addressed Ollama proxy routes accept a\ncaller-supplied `url_idx` path parameter and use it as a raw index into\nthe admin-configured `OLLAMA_BASE_URLS` list --\n`url = request.app.state.config.OLLAMA_BASE_URLS[url_idx]`, with no\nauthorization check on the index itself. Access control on these routes\nvalidates only whether the caller may use the requested MODEL, never\nwhich BACKEND the request is routed to -- and an admin-disabled\nbackend's disabled state is checked only during model discovery, never\nre-checked at request time. Any authenticated user can therefore append\nan arbitrary `url_idx` to reach an internal, higher-privilege, or\nexplicitly admin-disabled Ollama backend they were never authorized to\nuse -- e.g. `POST /ollama/api/chat/3` reaches\n`OLLAMA_BASE_URLS[3]` directly even if an admin disabled that backend.\n\nDetection logic flags a request to one of these indexed Ollama proxy\nroutes carrying a `url_idx` (or equivalent trailing numeric path\nsegment) whose target backend is outside the caller's model-permitted\nset -- the index itself is the vulnerable artifact, since the route's\nown authorization never inspects it.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD), fixed in 0.9.6 (adds `validate_ollama_backend_idx()`,\nreturning 403 for any non-admin caller-supplied `url_idx` not in the\nrequested model's allowed URLs).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [
+    "CVE-2026-54021"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739733"
+}

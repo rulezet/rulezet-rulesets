@@ -1,0 +1,24 @@
+{
+  "uuid": "72c6ee40-c296-4b86-b122-76930e1900e2",
+  "title": "Open WebUI model profile image -- T1059.007 missing SVG validator on ModelMeta enables account takeover",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-54013 (GHSA-v2qm-5wxj-qhj7,\nCVSS 7.6 HIGH), affecting Open WebUI prior to 0.9.6.\n\nOpen WebUI previously patched SVG-based XSS in user profile images and\nwebhook profile images, but the same fix was never applied to MODEL\nprofile images. `ModelMeta` has no `validate_profile_image_url` field\nvalidator, and the model-image serving endpoint enforces no MIME\nallowlist and sets no `X-Content-Type-Options: nosniff` header. Any\nauthenticated user holding the default-enabled `workspace.models`\npermission can therefore store a `data:image/svg+xml;base64,...`\npayload as a model's profile image; anyone -- including an\nadministrator -- who merely NAVIGATES to that image URL (no click, no\ninteraction beyond viewing) executes the embedded script under the\napplication origin, achieving full account takeover.\n\nDetection logic flags a model profile-image field whose value is a\n`data:image/svg+xml` URI -- the specific artifact class this advisory\ndescribes; legitimate model profile images are ordinary raster formats\n(PNG/JPEG) or hosted URLs, not inline base64 SVG.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD), fixed in 0.9.6.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059.007"
+  ],
+  "cve": [
+    "CVE-2026-54013",
+    "GHSA-V2QM-5WXJ-QHJ7"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739685"
+}

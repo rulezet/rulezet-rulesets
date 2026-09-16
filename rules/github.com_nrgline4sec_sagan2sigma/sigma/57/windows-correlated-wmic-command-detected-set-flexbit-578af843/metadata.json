@@ -1,0 +1,24 @@
+{
+  "uuid": "578af843-1e9c-41c1-968f-af7b0d2c7327",
+  "title": "[WINDOWS-CORRELATED] WMIC Command Detected [Set Flexbit]",
+  "format": "sigma",
+  "author": "sagan2sigma",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Converted from Sagan rule SID 5003385 (rev 7), file windows-correlated.rules.",
+  "source": "https://github.com/NRGLine4Sec/sagan2sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-16",
+  "last_modified": "2026-09-16",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739793"
+}

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Inert pcre flag"; program: test; pcre:"/failed/iH"; classtype: user-activity; sid:9000026; rev:1;)

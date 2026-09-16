@@ -1,0 +1,24 @@
+{
+  "uuid": "f0bea6ea-bd8d-47aa-a58e-6c3d15d7524b",
+  "title": "Open WebUI inline model metadata -- T1005 known file id returns another user's knowledge chunks",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-70487 (GHSA-6xhv-rxhv-pwm4,\nCVSS 5.3 MEDIUM), affecting Open WebUI from 0.8.8 until 0.11.0.\n\nInline direct model metadata accepted client-supplied knowledge\nattachments without filtering them against the CALLER's read access.\nAny authenticated user who simply knew another user's file id -- ids\nthat are often sequential or otherwise guessable -- could have the\nbuilt-in knowledge tools return indexed chunks from that file, a\nread-only cross-user confidentiality loss. Knowledge-base-level\npermissions and saved-workspace model validation were unaffected; the\ngap was specifically in the inline-attachment path bypassing the\nper-file read check the rest of the system enforces.\n\nDetection logic flags a chat/completion request whose inline knowledge\nattachment references a file id NOT owned by (or shared with) the\nauthenticated caller -- the exact authorization check the vulnerable\npath skipped.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact fix commit), fixed in 0.11.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1005"
+  ],
+  "cve": [
+    "CVE-2026-70487",
+    "GHSA-6XHV-RXHV-PWM4"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739699"
+}

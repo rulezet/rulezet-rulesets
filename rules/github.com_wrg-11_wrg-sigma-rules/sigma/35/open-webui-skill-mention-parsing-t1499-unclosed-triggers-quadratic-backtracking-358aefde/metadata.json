@@ -1,0 +1,24 @@
+{
+  "uuid": "358aefde-4b80-4140-8e09-d5e8060b672e",
+  "title": "Open WebUI skill mention parsing -- T1499 unclosed <$ triggers quadratic backtracking, blocks event loop",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59220 (GHSA-ffpj-xv5c-p3gw,\nCVSS 6.5 MEDIUM), affecting Open WebUI from 0.9.2 before 0.10.0.\n\n`SKILL_MENTION_RE` and `strip_re` in\n`backend/open_webui/utils/middleware.py` parse `<$skillId|label>`\nskill-mention syntax in chat messages using OVERLAPPING QUANTIFIERS.\nAn authenticated chat message containing `<$` with NO closing `>`\ntriggers quadratic (or worse) backtracking in these regexes -- and\nbecause Open WebUI processes this parsing on the shared `asyncio`\nevent loop, one such message BLOCKS the loop for every other request\nthe server is handling, not just the sender's own.\n\nDetection logic flags a chat message body containing the literal\nsequence `<$` with no corresponding closing `>` within a reasonable\nspan -- the exact malformed-but-plausible-looking syntax this\nadvisory's regex bug reacts catastrophically to.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact regex names and source file), fixed in\n0.10.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1499"
+  ],
+  "cve": [
+    "CVE-2026-59220",
+    "GHSA-FFPJ-XV5C-P3GW"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739612"
+}

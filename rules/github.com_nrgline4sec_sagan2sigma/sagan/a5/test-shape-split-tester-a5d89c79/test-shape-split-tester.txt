@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[TEST] Shape split tester"; program: test; json_content:".stage","second"; xbits: isset,shape_split,track ip_src; classtype: correlated-attack; sid:9000031; rev:1;)

@@ -1,0 +1,24 @@
+{
+  "uuid": "1aff122f-9443-49ef-a9a3-5b1510b59dd2",
+  "title": "Open WebUI chat completions -- T1565.001 channel-prefixed chat_id overwrites a message in a channel the caller cannot access",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59714 (GHSA-x2ff-v5v8-m75m,\nCVSS 7.1 HIGH -- corrected 2026-09-04 via live GHSA lookup, the rule's\noriginal authoring understated this score), affecting Open WebUI chat\ncompletions from v0.9.5 until v0.10.0.\n\nSubmitting a chat completion request with a `channel:`-prefixed\n`chat_id` skipped the entire ownership/membership verification block\nin `main.py` -- the code path was written to treat channel chats as\nnot requiring the check, with no channel membership/write check\nsubstituted in its place. The caller-supplied `message_id` (or, for\nmultimodel requests, each value of the `message_ids` map) then flows\nunchecked into `_make_channel_emitter()` in `socket/main.py`, which\nperforms a direct primary-key `Messages.update_message_by_id()` write\nwith no `channel_id`/`user_id` validation. Any authenticated user can\ntherefore overwrite a message in a private or DM channel they do not\nbelong to, with the model's (or a provider-error) content replacing\nit while the original author attribution is preserved --\nimpersonation via message-integrity destruction. A v0.9.6 partial fix\nvalidated only the first entry of the multimodel `message_ids` map,\nleaving the fan-out variant exploitable until v0.10.0.\n\nDetection logic flags a chat-completions request whose `chat_id`\ncarries the `channel:` prefix together with a caller-supplied\n`message_id` (or `message_ids` map) -- the exact unauthenticated\nwrite path this advisory describes, on the endpoint whose sibling\nREST channel routes correctly return 403 for the same caller.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, consolidating two independent reports and citing the\nexact functions and source files for both the single-model and\nmultimodel variants), fixed in v0.10.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1565.001"
+  ],
+  "cve": [
+    "CVE-2026-59714",
+    "GHSA-X2FF-V5V8-M75M"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739622"
+}

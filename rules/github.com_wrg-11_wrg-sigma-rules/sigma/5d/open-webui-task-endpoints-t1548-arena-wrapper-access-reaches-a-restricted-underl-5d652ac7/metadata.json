@@ -1,0 +1,24 @@
+{
+  "uuid": "5d652ac7-383c-4670-9cc2-73fed6dc19c5",
+  "title": "Open WebUI task endpoints -- T1548 arena wrapper access reaches a restricted underlying model via bypass_filter",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-59225 (GHSA-m3qf-58wf-w979,\nCVSS 5.4 MEDIUM), affecting Open WebUI from 0.8.12 before 0.10.0.\n\nAn \"arena\" model in Open WebUI is a wrapper that randomly routes a\nrequest to one of several underlying models. The normal chat route\nresolves which underlying model an arena request landed on BEFORE the\nfinal dispatch, and re-checks that resolved model's own access\npermission -- so a user with only arena-wrapper access cannot reach a\nrestricted underlying model through ordinary chat. Task endpoints such\nas `/api/v1/tasks/moa/completions`, however, call\n`utils.chat.generate_chat_completion()` DIRECTLY, a different code\npath where arena-fallback resolution happens AFTER the wrapper's own\naccess check and then recurses with `bypass_filter=True` -- skipping\nthe underlying submodel's access check entirely. An authenticated\nnon-admin user with read access only to the arena wrapper can reach a\nrestricted model behind it, purely by using the task endpoint instead\nof the normal chat route.\n\nDetection logic flags a request to a task-completion endpoint\n(`/api/v1/tasks/*/completions`) whose resolved model, after arena\nfallback, is one the requesting user has NO direct access grant for --\nthe exact submodel-access-check skip this advisory describes.\n\nAggregated from 1 first-party vendor security advisory (open-webui, via\nGHSA and NVD, citing the exact function and the `bypass_filter=True`\nmechanism by name), fixed in 0.10.0.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1548"
+  ],
+  "cve": [
+    "CVE-2026-59225",
+    "GHSA-M3QF-58WF-W979"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739727"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "460cb6ed-db1b-4f78-ad5a-23e82107c7e8",
+  "title": "GitLab MCP Server -- T1190 no-host-bind unauthenticated PAT-backed mutation endpoint",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Vendor-disclosed detection for CVE-2026-44895 (GHSA-8jr5-6gvj-rfpf,\nCVSS 9.2 CRITICAL), a self-reported advisory for `mcp-gitlab-server`,\nwhich lets an AI agent talk directly to GitLab.\n\nPrior to 0.6.0, `src/transport.ts`'s HTTP transport shipped with no\nauthentication layer and a wildcard `Access-Control-Allow-Origin: *` on\nevery response. The `httpServer.listen(port)` call at line 97 passes no\nhost argument, so Node.js defaults the bind to `0.0.0.0` -- exposed on\nevery interface, not just loopback. Any unauthenticated caller reaching\n`/sse` or `/messages?sessionId=<id>` could invoke mutation-capable\nGitLab operations (the advisory's own PoC reaches `delete_repository`\nand `push_files`) backed by the operator's own\n`GITLAB_PERSONAL_ACCESS_TOKEN` -- with the wildcard CORS header,\neven a malicious web page the operator merely visits in a browser could\nreach it cross-origin.\n\nDetection logic flags a request to either affected endpoint invoking one\nof the destructive/mutating tool names, with no bearer credential\npresent -- the specific combination of endpoint + mutation-capable\noperation + missing auth is what distinguishes this from routine,\nauthenticated agent traffic once the fix's auth requirement is active.\n\nAggregated from 1 first-party vendor security advisory (yoda-digital,\nvia GHSA and NVD), fixed in 0.6.0 (requires `MCP_GITLAB_AUTH_TOKEN` when\n`USE_SSE=true`, binds to `127.0.0.1` by default, restricts CORS to\nlocalhost, and validates the Authorization header).\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-44895",
+    "GHSA-8JR5-6GVJ-RFPF"
+  ],
+  "created_at": "2026-09-11",
+  "last_modified": "2026-09-11",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/739601"
+}
