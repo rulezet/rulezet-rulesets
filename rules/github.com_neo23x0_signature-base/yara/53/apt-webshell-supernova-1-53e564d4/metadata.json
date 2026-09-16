@@ -1,0 +1,21 @@
+{
+  "uuid": "53e564d4-a42f-4a63-aeb8-e2a3a5853b7a",
+  "title": "APT_Webshell_SUPERNOVA_1",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "SUPERNOVA is a .NET web shell backdoor masquerading as a legitimate SolarWinds web service handler. SUPERNOVA inspects and responds to HTTP requests with the appropriate HTTP query strings, Cookies, and/or HTML form values (e.g. named codes, class, method, and args). This rule is looking for specific strings and attributes related to SUPERNOVA.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:backdoor=\"SUNBURST\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186813"
+}

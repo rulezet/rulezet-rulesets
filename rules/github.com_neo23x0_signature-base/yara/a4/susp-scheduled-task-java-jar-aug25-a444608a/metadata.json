@@ -1,0 +1,21 @@
+{
+  "uuid": "a444608a-1ee2-4aa6-8343-b0d939c1dd49",
+  "title": "SUSP_Scheduled_Task_Java_JAR_Aug25",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects scheduled tasks that execute Java JAR files, which is suspicious but not necessarily malicious",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187040"
+}

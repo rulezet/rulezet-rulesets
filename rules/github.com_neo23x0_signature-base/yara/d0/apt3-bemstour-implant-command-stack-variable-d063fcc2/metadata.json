@@ -1,0 +1,20 @@
+{
+  "uuid": "d063fcc2-4d31-4d23-8f40-57adae61c007",
+  "title": "apt3_bemstour_implant_command_stack_variable",
+  "format": "yara",
+  "author": "Mark Lechtik",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detecs an implant used by Bemstour exploitation tool (APT3)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT3 - G0022\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186960"
+}

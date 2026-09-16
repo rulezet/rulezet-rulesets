@@ -1,0 +1,13 @@
+rule WaterBug_turla_dropper {
+	meta:
+		description = "Symantec Waterbug Attack - Trojan Turla Dropper"
+		author = "Symantec Security Response"
+		date = "22.01.2015"
+		reference = "http://t.co/rF35OaAXrl"
+		id = "f9683ac7-36f3-5a2a-8b76-e8e2527f4e0d"
+	strings:
+		$a = {0F 31 14 31 20 31 3C 31 85 31 8C 31 A8 31 B1 31 D1 31 8B 32 91 32 B6 32 C4 32 6C 33 AC 33 10 34}
+		$b = {48 41 4C 2E 64 6C 6C 00 6E 74 64 6C 6C 00 00 00 57 8B F9 8B 0D ?? ?? ?? ?? ?? C9 75 26 56 0F 20 C6 8B C6 25 FF FF FE FF 0F 22 C0 E8}
+	condition:
+		all of them
+}

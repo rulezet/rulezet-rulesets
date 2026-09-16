@@ -1,0 +1,19 @@
+{
+  "uuid": "f1fa29c6-1d7d-41b2-badb-987cfffe1659",
+  "title": "Methodology_Suspicious_Shortcut_IconRemote_SMBorLocal",
+  "format": "yara",
+  "author": "@itsreallynick (Nick Carr)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This is the syntax used for NTLM hash stealing via Responder - https://www.securify.nl/nl/blog/SFY20180501/living-off-the-land_-stealing-netntlm-hashes.html",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186836"
+}

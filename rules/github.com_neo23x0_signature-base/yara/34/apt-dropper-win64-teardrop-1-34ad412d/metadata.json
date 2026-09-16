@@ -1,0 +1,25 @@
+{
+  "uuid": "34ad412d-8294-49be-93df-622389aae669",
+  "title": "APT_Dropper_Win64_TEARDROP_1",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This rule is intended match specific sequences of opcode found within TEARDROP, including those that decode the embedded payload. TEARDROP is a memory only dropper that can read files and registry keys, XOR decode an embedded payload, and load the payload into memory. TEARDROP persists as a Windows service and has been observed dropping Cobalt Strike BEACON into memory. (comment by Nextron: prone to False Positives)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:backdoor=\"SUNBURST\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186830"
+}

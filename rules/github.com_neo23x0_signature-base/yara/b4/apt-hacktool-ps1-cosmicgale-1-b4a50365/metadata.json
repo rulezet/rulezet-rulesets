@@ -1,0 +1,21 @@
+{
+  "uuid": "b4a50365-a282-42d1-83fd-c3c6bd0b73fb",
+  "title": "APT_HackTool_PS1_COSMICGALE_1",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This rule detects various unique strings related to COSMICGALE. COSMICGALE is a credential theft and reconnaissance PowerShell script that collects credentials using the publicly available Get-PassHashes routine. COSMICGALE clears log files, writes acquired data to a hard coded path, and encrypts the file with a password.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:backdoor=\"SUNBURST\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186821"
+}

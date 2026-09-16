@@ -1,0 +1,21 @@
+{
+  "uuid": "3936bf8e-0d99-4116-b646-5ecaf1444b6a",
+  "title": "EXPL_macOS_Switcharoo_Indicator_Dec22",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects indicators found after exploitations of CVE-2022-46689",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2022-46689"
+  ],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187282"
+}

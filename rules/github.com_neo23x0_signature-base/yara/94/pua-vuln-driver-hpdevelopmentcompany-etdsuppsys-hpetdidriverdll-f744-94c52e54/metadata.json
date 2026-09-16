@@ -1,0 +1,19 @@
+{
+  "uuid": "94c52e54-d38c-4dbb-8aa9-411b3295126f",
+  "title": "PUA_VULN_Driver_Hpdevelopmentcompany_Etdsuppsys_Hpetdidriverdll_F744",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - etdsupp.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187114"
+}

@@ -1,0 +1,12 @@
+rule BypassUacDll_6 {
+   meta:
+      description = "Auto-generated rule - file BypassUacDll.aps"
+      author = "yarGen Yara Rule Generator"
+      hash = "58d7b24b6870cb7f1ec4807d2f77dd984077e531"
+      id = "5be27053-446f-5ea3-a242-2661aeffa3df"
+   strings:
+      $s3 = "BypassUacDLL.dll" fullword wide
+      $s4 = "AFX_IDP_COMMAND_FAILURE" fullword ascii
+   condition:
+      all of them
+}

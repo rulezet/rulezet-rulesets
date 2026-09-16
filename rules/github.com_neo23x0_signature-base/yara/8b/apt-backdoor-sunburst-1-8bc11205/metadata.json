@@ -1,0 +1,21 @@
+{
+  "uuid": "8bc11205-5ff3-4e22-a574-ff0d0b0d8563",
+  "title": "APT_Backdoor_SUNBURST_1",
+  "format": "yara",
+  "author": "FireEye",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This rule is looking for portions of the SUNBURST backdoor that are vital to how it functions. The first signature fnv_xor matches a magic byte xor that the sample performs on process, service, and driver names/paths. SUNBURST is a backdoor that has the ability to spawn and kill processes, write and delete files, set and create registry keys, gather system information, and disable a set of forensic analysis tools and services.",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:backdoor=\"SUNBURST\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186807"
+}

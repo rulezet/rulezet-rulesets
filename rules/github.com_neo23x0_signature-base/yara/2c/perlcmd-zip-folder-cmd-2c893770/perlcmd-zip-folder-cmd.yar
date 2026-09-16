@@ -1,0 +1,21 @@
+rule perlcmd_zip_Folder_cmd {
+   meta:
+      description = "Disclosed hacktool set (old stuff) - file cmd.cgi"
+      license = "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE"
+      author = "Florian Roth (Nextron Systems)"
+      date = "23.11.14"
+      score = 60
+      hash = "21b5dc36e72be5aca5969e221abfbbdd54053dd8"
+      id = "19e4eca0-bd56-57af-afd2-ee2fc5c7c0df"
+   strings:
+      $s0 = "syswrite(STDOUT, \"Content-type: text/html\\r\\n\\r\\n\", 27);" fullword ascii
+      $s1 = "s/%20/ /ig;" fullword ascii
+      $s2 = "syswrite(STDOUT, \"\\r\\n</PRE></HTML>\\r\\n\", 17);" fullword ascii
+      $s4 = "open(STDERR, \">&STDOUT\") || die \"Can't redirect STDERR\";" fullword ascii
+      $s5 = "$_ = $ENV{QUERY_STRING};" fullword ascii
+      $s6 = "$execthis = $_;" fullword ascii
+      $s7 = "system($execthis);" fullword ascii
+      $s12 = "s/%2f/\\//ig;" fullword ascii
+   condition:
+      6 of them
+}

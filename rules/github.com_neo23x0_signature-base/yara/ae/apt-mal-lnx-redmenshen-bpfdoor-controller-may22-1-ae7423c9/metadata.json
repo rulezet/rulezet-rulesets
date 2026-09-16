@@ -1,0 +1,22 @@
+{
+  "uuid": "ae7423c9-f474-4be4-932a-3db4e9c79e30",
+  "title": "APT_MAL_LNX_RedMenshen_BPFDoor_Controller_May22_1",
+  "format": "yara",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects unknown Linux implants (uploads from KR and MO)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "misp-galaxy:backdoor=\"BPFDoor\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187251"
+}

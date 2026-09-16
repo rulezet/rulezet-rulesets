@@ -1,0 +1,19 @@
+{
+  "uuid": "0ea37b70-b367-49d9-bb7b-30b3c4a11417",
+  "title": "HKTL_Solarwinds_credential_stealer",
+  "format": "yara",
+  "author": "Arnim Rupp",
+  "license": "Detection Rule License 1.1 https://github.com/Neo23x0/signature-base/blob/master/LICENSE",
+  "license_verified": false,
+  "description": "Detects solarwinds credential stealers like e.g. solarflare via the touched certificate, files and database columns",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186913"
+}

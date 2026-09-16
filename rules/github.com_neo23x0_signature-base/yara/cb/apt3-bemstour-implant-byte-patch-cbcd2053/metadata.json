@@ -1,0 +1,20 @@
+{
+  "uuid": "cbcd2053-40ed-46fa-8c58-43fb7cb669ed",
+  "title": "apt3_bemstour_implant_byte_patch",
+  "format": "yara",
+  "author": "Mark Lechtik",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects an implant used by Bemstour exploitation tool (APT3)",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT3 - G0022\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186957"
+}

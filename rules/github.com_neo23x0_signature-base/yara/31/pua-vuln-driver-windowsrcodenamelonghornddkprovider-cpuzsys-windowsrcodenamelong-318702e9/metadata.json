@@ -1,0 +1,19 @@
+{
+  "uuid": "318702e9-c46e-47f9-997e-1ee489df571f",
+  "title": "PUA_VULN_Driver_Windowsrcodenamelonghornddkprovider_Cpuzsys_Windowsrcodenamelonghornddkdriver_EAA5",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - cpuz.sys",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/186992"
+}

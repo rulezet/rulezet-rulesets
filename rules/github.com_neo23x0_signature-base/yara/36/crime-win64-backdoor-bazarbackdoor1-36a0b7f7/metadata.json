@@ -1,0 +1,20 @@
+{
+  "uuid": "36a0b7f7-2417-434a-a69e-b656bd8f9c57",
+  "title": "crime_win64_backdoor_bazarbackdoor1",
+  "format": "yara",
+  "author": "@VK_Intel",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects BazarBackdoor injected 64-bit malware",
+  "source": "https://github.com/Neo23x0/signature-base",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:backdoor=\"BazarBackdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-01-20",
+  "last_modified": "2026-01-20",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/187243"
+}
