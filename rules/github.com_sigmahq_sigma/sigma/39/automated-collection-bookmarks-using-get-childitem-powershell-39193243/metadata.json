@@ -1,0 +1,23 @@
+{
+  "uuid": "39193243-f712-4385-ad55-db3a23b44c9f",
+  "title": "Automated Collection Bookmarks Using Get-ChildItem PowerShell",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Adversaries may enumerate browser bookmarks to learn more about compromised hosts.\nBrowser bookmarks may reveal personal information about users (ex: banking sites, interests, social media, etc.) as well as details about\ninternal network resources such as servers, tools/dashboards, or other related infrastructure.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1217"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342441"
+}

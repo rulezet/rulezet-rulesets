@@ -1,0 +1,26 @@
+{
+  "uuid": "aab10853-368d-4e18-82ae-89b16f0969ec",
+  "title": "Suspicious DNS Query Indicating Kerberos Coercion via DNS Object SPN Spoofing",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects DNS queries containing patterns associated with Kerberos coercion attacks via DNS object spoofing.\nThe pattern \"1UWhRCAAAAA..BAAAA\" is a base64-encoded signature that corresponds to a marshaled CREDENTIAL_TARGET_INFORMATION structure.\nAttackers can use this technique to coerce authentication from victim systems to attacker-controlled hosts.\nIt is one of the strong indicators of a Kerberos coercion attack, where adversaries manipulate DNS records\nto spoof Service Principal Names (SPNs) and redirect authentication requests like CVE-2025-33073.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1187",
+    "T1557.001"
+  ],
+  "cve": [
+    "CVE-2025-33073"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342592"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "74c12d78-7ea1-4083-89ab-cfc59934a0e8",
+  "title": "Network Connection Initiated To DevTunnels Domain",
+  "format": "sigma",
+  "author": "Kamran Saifullah",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects network connections to Devtunnels domains initiated by a process on a system. Attackers can abuse that feature to establish a reverse shell or persistence on a machine.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1567.001",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342540"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "ec75ddbf-0923-4f83-8a3a-28c1f7f56c6d",
+  "title": "ISATAP Router Address Was Set",
+  "format": "sigma",
+  "author": "hamid",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the configuration of a new ISATAP router on a Windows host. While ISATAP is a legitimate Microsoft technology for IPv6 transition, unexpected or unauthorized ISATAP router configurations could indicate a potential IPv6 DNS Takeover attack using tools like mitm6.\nIn such attacks, adversaries advertise themselves as DHCPv6 servers and set malicious ISATAP routers to intercept traffic.\nThis detection should be correlated with network baselines and known legitimate ISATAP deployments in your environment.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1557",
+    "T1565.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342668"
+}

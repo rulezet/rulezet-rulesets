@@ -1,0 +1,23 @@
+{
+  "uuid": "33dfd006-c669-405e-a2d7-497f527c9c63",
+  "title": "Possible Shadow Credentials Added",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Elastic (idea)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects possible addition of shadow credentials to an active directory object.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1556"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342824"
+}

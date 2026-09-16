@@ -1,0 +1,23 @@
+{
+  "uuid": "7530f01d-56f1-4710-a781-7a470ac5e893",
+  "title": "Outbound RDP Connections Over Non-Standard Tools",
+  "format": "sigma",
+  "author": "Markus Neis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Non-Standard tools initiating a connection over port 3389 indicating possible lateral movement.\nAn initial baseline is required before using this utility to exclude third party RDP tooling that you might use.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1021.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342571"
+}

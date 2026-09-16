@@ -1,0 +1,23 @@
+{
+  "uuid": "12fd4122-2727-4809-831c-88415be914d2",
+  "title": "Suspicious Non-Browser Network Communication With Google API",
+  "format": "sigma",
+  "author": "Gavin Knapp",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a non-browser process interacting with the Google API which could indicate the use of a covert C2 such as Google Sheet C2 (GC2-sheet)\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1102"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342568"
+}

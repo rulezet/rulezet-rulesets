@@ -1,0 +1,23 @@
+{
+  "uuid": "f62e091c-a39f-464c-b8cd-9c75f6cf6107",
+  "title": "Group Policy Abuse for Privilege Addition",
+  "format": "sigma",
+  "author": "Elastic, Josh Nickels, Marius Rothenbücher",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the first occurrence of a modification to Group Policy Object Attributes to add privileges to user accounts or use them to add users as local admins.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1484.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342766"
+}

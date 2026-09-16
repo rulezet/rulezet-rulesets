@@ -1,0 +1,23 @@
+{
+  "uuid": "d89f5a78-80d7-406d-8e40-5b28fffdaa3e",
+  "title": "A New Trust Was Created To A Domain",
+  "format": "sigma",
+  "author": "Thomas Patzke",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Addition of domains is seldom and should be verified for legitimacy.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342825"
+}

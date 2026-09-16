@@ -1,0 +1,23 @@
+{
+  "uuid": "948b33cf-7853-44f9-a7fd-8e81b3d7f541",
+  "title": "SysKey Registry Keys Access",
+  "format": "sigma",
+  "author": "Roberto Rodriguez @Cyb3rWard0g",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects handle requests and access operations to specific registry keys to calculate the SysKey",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1012"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342757"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "8524a460-0f36-45ee-9826-048b6b793396",
+  "title": "HackTool - Potential CobaltStrike Process Injection",
+  "format": "sigma",
+  "author": "Olaf Hartong, Florian Roth (Nextron Systems), Aleksey Potapov, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a potential remote threat creation with certain characteristics which are typical for Cobalt Strike beacons",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1055.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342582"
+}

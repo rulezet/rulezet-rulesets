@@ -1,0 +1,23 @@
+{
+  "uuid": "16fce1af-7b44-4f88-8a06-8f732a464ada",
+  "title": "Outbound Network Connection Initiated By Cmstp.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a network connection initiated by Cmstp.EXE\nIts uncommon for \"cmstp.exe\" to initiate an outbound network connection. Investigate the source of such requests to determine if they are malicious.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342570"
+}

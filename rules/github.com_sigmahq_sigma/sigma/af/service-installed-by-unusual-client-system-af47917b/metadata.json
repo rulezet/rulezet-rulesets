@@ -1,0 +1,23 @@
+{
+  "uuid": "af47917b-8e19-42a6-ade1-2aa7527688fc",
+  "title": "Service Installed By Unusual Client - System",
+  "format": "sigma",
+  "author": "Tim Rauch (Nextron Systems), Elastic (idea)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a service installed by a client which has PID 0 or whose parent has PID 0",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1543"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342702"
+}

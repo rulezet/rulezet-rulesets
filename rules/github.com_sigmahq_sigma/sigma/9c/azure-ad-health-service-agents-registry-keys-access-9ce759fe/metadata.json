@@ -1,0 +1,23 @@
+{
+  "uuid": "9ce759fe-79a8-4763-ad16-f5e8caa8c07d",
+  "title": "Azure AD Health Service Agents Registry Keys Access",
+  "format": "sigma",
+  "author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research), MSTIC",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "This detection uses Windows security events to detect suspicious access attempts to the registry key values and sub-keys of Azure AD Health service agents (e.g AD FS).\nInformation from AD Health service agents can be used to potentially abuse some of the features provided by those services in the cloud (e.g. Federation).\nThis detection requires an access control entry (ACE) on the system access control list (SACL) of the following securable object: HKLM:\\SOFTWARE\\Microsoft\\ADHealthAgent.\nMake sure you set the SACL to propagate to its sub-keys.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1012"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342750"
+}

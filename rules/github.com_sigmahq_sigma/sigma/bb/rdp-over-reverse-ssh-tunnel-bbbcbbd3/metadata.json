@@ -1,0 +1,24 @@
+{
+  "uuid": "bbbcbbd3-fa24-44b0-9bfe-801e0683b79d",
+  "title": "RDP Over Reverse SSH Tunnel",
+  "format": "sigma",
+  "author": "Samir Bousseaden",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects svchost hosting RDP termsvcs communicating with the loopback address and on TCP port 3389",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1021.001",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342533"
+}

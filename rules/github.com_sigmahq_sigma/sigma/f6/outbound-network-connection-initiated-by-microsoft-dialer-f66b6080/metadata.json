@@ -1,0 +1,24 @@
+{
+  "uuid": "f66b6080-76b9-4b82-ac24-920760537e6e",
+  "title": "Outbound Network Connection Initiated By Microsoft Dialer",
+  "format": "sigma",
+  "author": "CertainlyP",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects outbound network connection initiated by Microsoft Dialer.\nThe Microsoft Dialer, also known as Phone Dialer, is a built-in utility application included in various versions of the Microsoft Windows operating system. Its primary function is to provide users with a graphical interface for managing phone calls via a modem or a phone line connected to the computer.\nThis is an outdated process in the current conext of it's usage and is a common target for info stealers for process injection, and is used to make C2 connections, common example is \"Rhadamanthys\"\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:stealer=\"Rhadamanthys\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1071.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342560"
+}

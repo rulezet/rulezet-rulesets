@@ -1,0 +1,23 @@
+{
+  "uuid": "e87c900c-bc0c-40fe-b979-bbe3050f18ae",
+  "title": "SyncAppvPublishingServer Bypass Powershell Restriction - PS Module",
+  "format": "sigma",
+  "author": "Ensar Şamil, @sblmsrsn, OSCD Community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects SyncAppvPublishingServer process execution which usually utilized by adversaries to bypass PowerShell execution restrictions.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342496"
+}

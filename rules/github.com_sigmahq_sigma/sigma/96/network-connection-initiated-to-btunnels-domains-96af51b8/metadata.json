@@ -1,0 +1,24 @@
+{
+  "uuid": "96af51b8-a8d5-4a42-b187-5f48993409e1",
+  "title": "Network Connection Initiated To BTunnels Domains",
+  "format": "sigma",
+  "author": "Kamran Saifullah",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects network connections to BTunnels domains initiated by a process on the system.\nAttackers can abuse that feature to establish a reverse shell or persistence on a machine.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1567",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342535"
+}

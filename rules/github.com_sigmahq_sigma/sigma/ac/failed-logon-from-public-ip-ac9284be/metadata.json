@@ -1,0 +1,25 @@
+{
+  "uuid": "ac9284be-7ea1-4a9b-8b32-7a30d6d4af06",
+  "title": "Failed Logon From Public IP",
+  "format": "sigma",
+  "author": "NVISO",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a failed logon attempt from a public IP. A login from a public IP can indicate a misconfigured firewall or network boundary.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1133",
+    "T1190"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342856"
+}

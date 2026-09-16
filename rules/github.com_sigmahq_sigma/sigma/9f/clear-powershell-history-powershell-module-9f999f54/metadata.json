@@ -1,0 +1,23 @@
+{
+  "uuid": "9f999f54-3a86-4871-ae03-6cd69bde3cf2",
+  "title": "Clear PowerShell History - PowerShell Module",
+  "format": "sigma",
+  "author": "Ilyas Ochkov, Jonhnathan Ribeiro, Daniil Yugoslavskiy, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects keywords that could indicate clearing PowerShell history",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1070.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342498"
+}

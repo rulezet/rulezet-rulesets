@@ -1,0 +1,25 @@
+{
+  "uuid": "d51837e6-ae3f-4d34-b691-896c44c87796",
+  "title": "Admin User Remote Logon",
+  "format": "sigma",
+  "author": "juju4",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect remote login by Administrator user (depending on internal pattern).",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1078.001",
+    "T1078.002",
+    "T1078.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342852"
+}

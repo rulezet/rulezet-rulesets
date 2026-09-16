@@ -1,0 +1,23 @@
+{
+  "uuid": "656af368-5e2d-4cc9-869d-a9b260ce966a",
+  "title": "Disable Powershell Command History",
+  "format": "sigma",
+  "author": "Ali Alwashali",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects scripts or commands that disabled the Powershell command history by removing psreadline module",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1070.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342455"
+}

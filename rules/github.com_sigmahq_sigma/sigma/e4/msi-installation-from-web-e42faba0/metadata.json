@@ -1,0 +1,24 @@
+{
+  "uuid": "e42faba0-7dff-4c65-b32e-d28c1555e388",
+  "title": "MSI Installation From Web",
+  "format": "sigma",
+  "author": "Stamatis Chatzimangou",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects installation of a remote msi file from web.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218",
+    "T1218.007"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342653"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "40eb03cb-cd2b-4076-aeb7-79eeb4944218",
+  "title": "User Added to Local Administrator Group",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the addition of a new member to the local administrator group, which could be legitimate activity or a sign of privilege escalation activity",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342827"
+}

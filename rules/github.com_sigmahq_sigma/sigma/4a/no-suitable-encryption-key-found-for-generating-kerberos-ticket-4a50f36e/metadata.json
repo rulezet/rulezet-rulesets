@@ -1,0 +1,23 @@
+{
+  "uuid": "4a50f36e-105b-44db-b681-e6b81616b9a2",
+  "title": "No Suitable Encryption Key Found For Generating Kerberos Ticket",
+  "format": "sigma",
+  "author": "@SerkinValery",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects errors when a target server doesn't have suitable keys for generating kerberos tickets.\nThis issue can occur for example when a service uses a user account or a computer account that is configured for only DES encryption on a computer that is running Windows 7 which has DES encryption for Kerberos authentication disabled.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1558.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342716"
+}

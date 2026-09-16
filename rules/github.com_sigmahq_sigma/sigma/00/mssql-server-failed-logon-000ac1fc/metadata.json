@@ -1,0 +1,23 @@
+{
+  "uuid": "000ac1fc-fd15-4c66-81f8-02908ca1ade4",
+  "title": "MSSQL Server Failed Logon",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), j4son",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects failed logon attempts from clients to MSSQL server.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1110"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342641"
+}

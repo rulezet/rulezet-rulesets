@@ -1,0 +1,21 @@
+{
+  "uuid": "16950109-e799-46b8-8193-f84dfc15d4a6",
+  "title": "Locked Workstation",
+  "format": "sigma",
+  "author": "Alexandr Yampolskyi, SOC Prime",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects locked workstation session events that occur automatically after a standard period of inactivity.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342787"
+}

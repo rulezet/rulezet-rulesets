@@ -1,0 +1,24 @@
+{
+  "uuid": "fd9af031-3c71-4557-a976-74ff51a78e56",
+  "title": "Remote PowerShell Session (PS Classic)",
+  "format": "sigma",
+  "author": "Roberto Rodriguez @Cyb3rWard0g",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects remote PowerShell sessions",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1021.006",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342478"
+}

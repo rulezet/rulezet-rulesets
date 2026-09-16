@@ -1,0 +1,21 @@
+{
+  "uuid": "3c4e73a2-1323-486b-a260-cbbbfac48338",
+  "title": "Remote Thread Creation In Mstsc.Exe From Suspicious Location",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects remote thread creation in the \"mstsc.exe\" process by a process located in a potentially suspicious location.\nThis technique is often used by attackers in order to hook some APIs used by DLLs loaded by \"mstsc.exe\" during RDP authentications in order to steal credentials.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342575"
+}

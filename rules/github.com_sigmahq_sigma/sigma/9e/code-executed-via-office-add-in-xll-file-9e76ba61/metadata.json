@@ -1,0 +1,23 @@
+{
+  "uuid": "9e76ba61-1b8f-4b0d-92bc-2b81000cfe76",
+  "title": "Code Executed Via Office Add-in XLL File",
+  "format": "sigma",
+  "author": "frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Adversaries may abuse Microsoft Office add-ins to obtain persistence on a compromised system.\nOffice add-ins can be used to add functionality to Office programs\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1137.006"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342466"
+}

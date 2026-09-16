@@ -1,0 +1,22 @@
+{
+  "uuid": "36472e94-43b8-4bdd-90cd-efe2654527c2",
+  "title": "DNS Query To Put.io - DNS Client",
+  "format": "sigma",
+  "author": "Omar Khaled (@beacon_exe)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects DNS queries for subdomains related to \"Put.io\" sharing website.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342904"
+}

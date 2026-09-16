@@ -1,0 +1,23 @@
+{
+  "uuid": "c1d98c3a-8d61-45c5-9171-be0e4d68cf24",
+  "title": "Unsigned or Unencrypted SMB Connection to Share Established",
+  "format": "sigma",
+  "author": "Mohamed Abdelghani",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects SMB server connections to shares without signing or encryption enabled.\nThis could indicate potential lateral movement activity using unsecured SMB shares.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1021.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342616"
+}

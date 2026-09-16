@@ -1,0 +1,23 @@
+{
+  "uuid": "cb701f67-79b7-484f-9017-86183db4aca7",
+  "title": "PowerShell Deleted Mounted Share",
+  "format": "sigma",
+  "author": "oscd.community, @redcanary, Zach Stanford @svch0st",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects when when a mounted share is removed. Adversaries may remove share connections that are no longer useful in order to clean up traces of their operation",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1070.005"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342440"
+}

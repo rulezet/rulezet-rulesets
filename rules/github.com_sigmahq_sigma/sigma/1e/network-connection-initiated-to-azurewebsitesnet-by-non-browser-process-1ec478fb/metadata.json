@@ -1,0 +1,26 @@
+{
+  "uuid": "1ec478fb-cf2f-4fc6-a448-c1f14e83d934",
+  "title": "Network Connection Initiated To AzureWebsites.NET By Non-Browser Process",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects an initiated network connection by a non browser process on the system to \"azurewebsites.net\". The latter was often used by threat actors as a malware hosting and exfiltration site.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"Winnti Group - G0044\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1102",
+    "T1102.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342549"
+}

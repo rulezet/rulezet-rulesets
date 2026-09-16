@@ -1,0 +1,23 @@
+{
+  "uuid": "161489f8-14cd-40f7-be23-bed8afa3b541",
+  "title": "A Security-Enabled Global Group Was Deleted",
+  "format": "sigma",
+  "author": "Alexandr Yampolskyi, SOC Prime",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects activity when a security-enabled global group is deleted",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1098"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342871"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "06f845fe-5f5c-4d17-b31f-4c25120e1c5d",
+  "title": "Active Directory Certificate Services Denied Certificate Enrollment Request",
+  "format": "sigma",
+  "author": "@SerkinValery",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects denied requests by Active Directory Certificate Services.\nExample of these requests denial include issues with permissions on the certificate template or invalid signatures.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1553.004"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342719"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "87a5e981-890c-434b-951a-0cd1674252fa",
+  "title": "Process Initiated Network Connection To Ngrok Domain",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects an executable initiating a network connection to \"ngrok\" domains.\nAttackers were seen using this \"ngrok\" in order to store their second stage payloads and malware.\nWhile communication with such domains can be legitimate, often times is a sign of either data exfiltration by malicious actors or additional download.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT29 - G0016\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1102",
+    "T1567",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342542"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "49711f79-715e-43e4-86d8-a0e5eebb3022",
+  "title": "Invoke-Obfuscation VAR++ LAUNCHER OBFUSCATION - System",
+  "format": "sigma",
+  "author": "Timur Zinniatullin, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Obfuscated Powershell via VAR++ LAUNCHER",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342676"
+}

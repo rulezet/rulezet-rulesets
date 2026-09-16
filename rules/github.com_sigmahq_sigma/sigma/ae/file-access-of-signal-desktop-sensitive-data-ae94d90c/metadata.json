@@ -1,0 +1,23 @@
+{
+  "uuid": "ae94d90c-803e-4882-b16e-91f3fa7c48fc",
+  "title": "File Access Of Signal Desktop Sensitive Data",
+  "format": "sigma",
+  "author": "Andreas Braathen (mnemonic.io)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects access to Signal Desktop's sensitive data files: db.sqlite and config.json.\nThe db.sqlite file in Signal Desktop stores all locally saved messages in an encrypted SQLite database, while the config.json contains the decryption key needed to access that data.\nSince the key is stored in plain text, a threat actor who gains access to both files can decrypt and read sensitive messages without needing the users credentials.\nCurrently the rule only covers the default Signal installation path in AppData\\Roaming. Signal Portable installations may use different paths based on user configuration. Additional paths can be added to the selection as needed.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342784"
+}
