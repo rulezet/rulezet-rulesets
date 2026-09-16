@@ -1,0 +1,9 @@
+rule Trojan_Win32_DelfInject_RT_MTB_4{
+	meta:
+		description = "Trojan:Win32/DelfInject.RT!MTB,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {8b 06 8b 00 25 ff ff 00 00 50 a1 ?? ?? ?? ?? 50 e8 ?? ?? ?? ?? 8b 16 89 02 eb } 		$a_03_1 = {8b 06 83 c0 04 89 ?? 8b ?? 8b ?? 85 ?? 75 ?? a1 ?? ?? ?? ?? 83 c0 14 a3 ?? ?? ?? ?? a1 } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1) >=2
+ 
+}

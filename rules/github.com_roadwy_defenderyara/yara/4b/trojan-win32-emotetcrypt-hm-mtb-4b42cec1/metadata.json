@@ -1,0 +1,22 @@
+{
+  "uuid": "4b42cec1-c088-4389-bd90-f2b9ae117d68",
+  "title": "Trojan_Win32_Emotetcrypt_HM_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Emotetcrypt.HM!MTB,SIGNATURE_TYPE_PEHSTR_EXT,3f 00 3f 00 0f 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/279383"
+}
