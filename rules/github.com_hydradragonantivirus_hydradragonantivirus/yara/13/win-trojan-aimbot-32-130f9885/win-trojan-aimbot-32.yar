@@ -1,0 +1,9 @@
+rule Win_Trojan_Aimbot_32
+{
+strings:
+	$a0 = { 4cd727a1318fde297ffd2c0a3d6678a59e54df46ff542f7778b2783d0678d024314d417270ddf6b128f4ae16410efb559ee4bac801acacc7ff3f04146e978c0580d4609b9ee4f25361dd4495d72e93e8b782e0181b0baaa76ff35fd6ac30e616fa3fc87b4ed54bddb27480bfed94b36df11be0ddb8ef09eda3ee44 }
+
+
+condition:
+	$a0
+}

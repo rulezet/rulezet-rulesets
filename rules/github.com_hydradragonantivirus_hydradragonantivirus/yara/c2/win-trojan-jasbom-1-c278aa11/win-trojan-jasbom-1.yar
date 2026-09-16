@@ -1,0 +1,9 @@
+rule Win_Trojan_Jasbom_1
+{
+strings:
+	$a0 = { 222d274db8b0261f535c9b8f64cf9ee921e977154253cbeb3fda6ccfa9e0378a2f9a39d7381aaf44d392e8d7fe0940c3be8853fbd942f2780224d699af9985351d9da676b9b2e2705f6287d6423c39d918d39cefbaa18f06a559958a2d62babfa2b3dc2e2e6d3d3d92cb0fff4fafffd06cff130f9b1bb7a6c5d3e8 }
+
+
+condition:
+	$a0
+}

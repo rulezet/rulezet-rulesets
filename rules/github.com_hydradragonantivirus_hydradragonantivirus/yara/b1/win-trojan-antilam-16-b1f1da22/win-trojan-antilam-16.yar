@@ -1,0 +1,9 @@
+rule Win_Trojan_Antilam_16
+{
+strings:
+	$a0 = { 23eb84826f8cb90afcece48297ae0f18d2471b65ea46a5fd3e9d752a628060f9b00de1ac120e9d24d543ce9ad618bf22da1f7276b0985cbc398dece1fd730734353bcfe7ea682fe553df7dc968cd1c47d19201cea3230b944f060ede279a5ab12a222bc9020e8f0feb03292246ca23608ff98bda8930aeeceefbeb08b271f6124a17c6ae5e4fcceb2fc2a640 }
+
+
+condition:
+	$a0
+}

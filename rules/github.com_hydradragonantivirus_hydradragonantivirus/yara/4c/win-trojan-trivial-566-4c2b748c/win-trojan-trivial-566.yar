@@ -1,0 +1,9 @@
+rule Win_Trojan_Trivial_566
+{
+strings:
+	$a0 = { e800005db824258d??????????23258d????cd21b44eb9 }
+
+
+condition:
+	$a0
+}
