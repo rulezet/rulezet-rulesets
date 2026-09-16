@@ -1,0 +1,9 @@
+rule Win_Downloader_Conhook_1
+{
+strings:
+	$a0 = { 558bec81ec3001000068886500106a006800001000ff15f460001085c08945fc750fff158460001083f8050f85cb000000 }
+
+
+condition:
+	$a0
+}
