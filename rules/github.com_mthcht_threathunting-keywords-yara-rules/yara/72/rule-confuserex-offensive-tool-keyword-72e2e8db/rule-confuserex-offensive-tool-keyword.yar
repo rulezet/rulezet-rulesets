@@ -1,0 +1,116 @@
+rule rule_ConfuserEx_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'ConfuserEx' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "ConfuserEx"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_ConfuserEx_offensive_tool_keyword = /\sConfuserEx\.exe/ nocase ascii wide
+                        $string2_ConfuserEx_offensive_tool_keyword = /\/AntiTamper\.exe/ nocase ascii wide
+                        $string3_ConfuserEx_offensive_tool_keyword = /\/ConfuserEx\.exe/ nocase ascii wide
+                        $string4_ConfuserEx_offensive_tool_keyword = /\/ConfuserEx\.git/ nocase ascii wide
+                        $string5_ConfuserEx_offensive_tool_keyword = /\/ConfuserEx_bin\.zip/ nocase ascii wide
+                        $string6_ConfuserEx_offensive_tool_keyword = /\\AntiTamper\.exe/ nocase ascii wide
+                        $string7_ConfuserEx_offensive_tool_keyword = /\\ConfuserEx\.exe/ nocase ascii wide
+                        $string8_ConfuserEx_offensive_tool_keyword = /\\ConfuserEx\\/ nocase ascii wide
+                        $string9_ConfuserEx_offensive_tool_keyword = /\\ConfuserEx_bin\.zip/ nocase ascii wide
+                        $string10_ConfuserEx_offensive_tool_keyword = "02948DD6-47BD-4C82-9B4B-78931DB23B8A" nocase ascii wide
+                        $string11_ConfuserEx_offensive_tool_keyword = "034B1C28-96B9-486A-B238-9C651EAA32CA" nocase ascii wide
+                        $string12_ConfuserEx_offensive_tool_keyword = "055BC73F-FCAE-4361-B035-2E156A101EA9" nocase ascii wide
+                        $string13_ConfuserEx_offensive_tool_keyword = "0C8F49D8-BD68-420A-907D-031B83737C50" nocase ascii wide
+                        $string14_ConfuserEx_offensive_tool_keyword = "13431429-2DB6-480F-B73F-CA019FE759E3" nocase ascii wide
+                        $string15_ConfuserEx_offensive_tool_keyword = "1B52A3D9-014C-4CBF-BB98-09080D9A8D16" nocase ascii wide
+                        $string16_ConfuserEx_offensive_tool_keyword = "211A4598-B46E-4CD3-BA5A-1EC259D4DB5A" nocase ascii wide
+                        $string17_ConfuserEx_offensive_tool_keyword = "2B914EE7-F206-4A83-B435-460D054315BB" nocase ascii wide
+                        $string18_ConfuserEx_offensive_tool_keyword = "2C059FE7-C868-4C6D-AFA0-D62BA3C1B2E1" nocase ascii wide
+                        $string19_ConfuserEx_offensive_tool_keyword = "2f67f590cabb9c79257d27b578d8bf9d1a278afa96b205ad2b4704e7b9a87ca7" nocase ascii wide
+                        $string20_ConfuserEx_offensive_tool_keyword = "30B8883F-A0A2-4256-ADCF-A790525D3696" nocase ascii wide
+                        $string21_ConfuserEx_offensive_tool_keyword = "32223BE8-3E78-489C-92ED-7900B26DFF43" nocase ascii wide
+                        $string22_ConfuserEx_offensive_tool_keyword = "32CE1CB1-B7D9-416F-8EFE-6A0055867537" nocase ascii wide
+                        $string23_ConfuserEx_offensive_tool_keyword = "3504F678-95FA-4DB2-8437-31A927CABC16" nocase ascii wide
+                        $string24_ConfuserEx_offensive_tool_keyword = "382B6332-4A57-458D-96EB-B312688A7604" nocase ascii wide
+                        $string25_ConfuserEx_offensive_tool_keyword = "3ADB8BB1-AE14-49DA-A7E1-1C0D9BEB76E9" nocase ascii wide
+                        $string26_ConfuserEx_offensive_tool_keyword = "3B85D7A9-6BD0-4CD8-9009-36554EF24D32" nocase ascii wide
+                        $string27_ConfuserEx_offensive_tool_keyword = "3EAB01B5-9B49-48D8-BFA1-5493B26CCB71" nocase ascii wide
+                        $string28_ConfuserEx_offensive_tool_keyword = "3F5558BD-7B94-4CB0-A46C-A7252B5BCA17" nocase ascii wide
+                        $string29_ConfuserEx_offensive_tool_keyword = "40C6A1BB-69AA-4869-81EE-41917D0B009A" nocase ascii wide
+                        $string30_ConfuserEx_offensive_tool_keyword = "4EF73752-78B0-4E0D-A33B-B6637B6C2177" nocase ascii wide
+                        $string31_ConfuserEx_offensive_tool_keyword = "4FB03AD0-96FF-4730-801A-4F997795D920" nocase ascii wide
+                        $string32_ConfuserEx_offensive_tool_keyword = "5D10ED0A-6C52-49FE-90F5-CFAAECA8FABE" nocase ascii wide
+                        $string33_ConfuserEx_offensive_tool_keyword = "5E9715AB-CAF7-4FFF-8E14-A8727891DA93" nocase ascii wide
+                        $string34_ConfuserEx_offensive_tool_keyword = "630BF262-768C-4085-89B1-9FEF7375F442" nocase ascii wide
+                        $string35_ConfuserEx_offensive_tool_keyword = "6A2BA6F7-3399-4890-9453-2D5BE8EEBBA9" nocase ascii wide
+                        $string36_ConfuserEx_offensive_tool_keyword = "6C8ECB51-EECE-49C3-89EC-CB0AAECCFF7E" nocase ascii wide
+                        $string37_ConfuserEx_offensive_tool_keyword = "73226E13-1701-424E-A4F2-3E4D575A1DD0" nocase ascii wide
+                        $string38_ConfuserEx_offensive_tool_keyword = "73F11EE8-F565-479E-8366-BD74EE467CE8" nocase ascii wide
+                        $string39_ConfuserEx_offensive_tool_keyword = "75E5F9A0-8D69-4426-9F16-4A65E941974D" nocase ascii wide
+                        $string40_ConfuserEx_offensive_tool_keyword = "7C6D1CCD-D4DF-426A-B5D6-A6B5F13D0091" nocase ascii wide
+                        $string41_ConfuserEx_offensive_tool_keyword = "8489A9CE-AB1A-4D8D-8824-D9E18B9945FE" nocase ascii wide
+                        $string42_ConfuserEx_offensive_tool_keyword = "862DA0DA-52E1-47CD-B9C2-46B106031B28" nocase ascii wide
+                        $string43_ConfuserEx_offensive_tool_keyword = "87BEF4D7-813E-48BA-96FE-E3A24BF2DC34" nocase ascii wide
+                        $string44_ConfuserEx_offensive_tool_keyword = "91B12706-DC6A-45DE-97F1-FAF0901FF6AF" nocase ascii wide
+                        $string45_ConfuserEx_offensive_tool_keyword = "9B823D93-BF1B-407B-A4CD-231347F656AD" nocase ascii wide
+                        $string46_ConfuserEx_offensive_tool_keyword = "9EB8DC3B-60DC-451E-8C18-3D7E38D463FD" nocase ascii wide
+                        $string47_ConfuserEx_offensive_tool_keyword = "A1F54816-3FBA-4A71-9D26-D31C6BE9CF01" nocase ascii wide
+                        $string48_ConfuserEx_offensive_tool_keyword = "A45C184F-F98F-4258-A928-BFF437034791" nocase ascii wide
+                        $string49_ConfuserEx_offensive_tool_keyword = "A5B912EC-D588-401C-A84F-D01F98142B9E" nocase ascii wide
+                        $string50_ConfuserEx_offensive_tool_keyword = "AB2E1440-7EC2-45A2-8CF3-2975DE8A57AD" nocase ascii wide
+                        $string51_ConfuserEx_offensive_tool_keyword = "B1CB9A30-FEA6-4467-BEC5-4803CCE9BF78" nocase ascii wide
+                        $string52_ConfuserEx_offensive_tool_keyword = "B5205EBA-EC32-4C53-86A0-FAEEE7393EC0" nocase ascii wide
+                        $string53_ConfuserEx_offensive_tool_keyword = "B7FF0EE8-6C68-46C6-AADB-58C0E3309FB2" nocase ascii wide
+                        $string54_ConfuserEx_offensive_tool_keyword = "BA9D2748-1342-41A3-87F2-343E82D99813" nocase ascii wide
+                        $string55_ConfuserEx_offensive_tool_keyword = "BEB67A6E-4C54-4DE5-8C6B-2C12F44A7B92" nocase ascii wide
+                        $string56_ConfuserEx_offensive_tool_keyword = "C10599E3-5A79-484F-940B-E4B61F256466" nocase ascii wide
+                        $string57_ConfuserEx_offensive_tool_keyword = "CD257C0A-9071-42B4-A2FF-180622DBCA96" nocase ascii wide
+                        $string58_ConfuserEx_offensive_tool_keyword = "CE61ADEE-C032-43EC-ACD8-E4A742F894A3" nocase ascii wide
+                        $string59_ConfuserEx_offensive_tool_keyword = /ConfuserEx\s\(CLI\)/ nocase ascii wide
+                        $string60_ConfuserEx_offensive_tool_keyword = "ConfuserEx Command-line" nocase ascii wide
+                        $string61_ConfuserEx_offensive_tool_keyword = "ConfuserEx Core" nocase ascii wide
+                        $string62_ConfuserEx_offensive_tool_keyword = "ConfuserEx Dynamic Cipher Library" nocase ascii wide
+                        $string63_ConfuserEx_offensive_tool_keyword = "ConfuserEx Protections" nocase ascii wide
+                        $string64_ConfuserEx_offensive_tool_keyword = "ConfuserEx Renamer" nocase ascii wide
+                        $string65_ConfuserEx_offensive_tool_keyword = "ConfuserEx Runtime" nocase ascii wide
+                        $string66_ConfuserEx_offensive_tool_keyword = /ConfuserEx\.CLI\:\s/ nocase ascii wide
+                        $string67_ConfuserEx_offensive_tool_keyword = "D1CCDA5D-E460-4ACC-B51A-730DE8F0ECF3" nocase ascii wide
+                        $string68_ConfuserEx_offensive_tool_keyword = "D5C4F5A2-5713-4A0A-A833-F9466AE5A339" nocase ascii wide
+                        $string69_ConfuserEx_offensive_tool_keyword = "D8BDABF6-6A96-4B48-8C1C-B6E78CBBF50E" nocase ascii wide
+                        $string70_ConfuserEx_offensive_tool_keyword = "DA7DF89C-447D-4C2D-9C75-933037BF245E" nocase ascii wide
+                        $string71_ConfuserEx_offensive_tool_keyword = "DAE3997B-D51B-4D9F-9F11-2EBC6FDDF57C" nocase ascii wide
+                        $string72_ConfuserEx_offensive_tool_keyword = "DB234158-233E-4EC4-A2CE-EF02699563A2" nocase ascii wide
+                        $string73_ConfuserEx_offensive_tool_keyword = "DEED6795-9EC9-4B2C-95E0-9E465DA61755" nocase ascii wide
+                        $string74_ConfuserEx_offensive_tool_keyword = "E17B7339-C788-4DBE-B382-3AEDB024073D" nocase ascii wide
+                        $string75_ConfuserEx_offensive_tool_keyword = "E7F99164-F00F-4B2A-86A9-8EB5F659F34C" nocase ascii wide
+                        $string76_ConfuserEx_offensive_tool_keyword = "E832E9B8-2158-4FC0-89A1-56C6ECC10F6B" nocase ascii wide
+                        $string77_ConfuserEx_offensive_tool_keyword = "E9D90B2A-F563-4A5E-9EFB-B1D6B1E7F8CB" nocase ascii wide
+                        $string78_ConfuserEx_offensive_tool_keyword = "EC62CE1D-ADD7-419A-84A9-D6A04E866197" nocase ascii wide
+                        $string79_ConfuserEx_offensive_tool_keyword = "F233D36D-B64A-4F14-A9F9-B8557C2D4F5D" nocase ascii wide
+                        $string80_ConfuserEx_offensive_tool_keyword = "F2378C48-D441-49E7-B094-1E8642A7E7C0" nocase ascii wide
+                        $string81_ConfuserEx_offensive_tool_keyword = "F602DAFE-E8A2-4CB2-AF0E-656CD357D821" nocase ascii wide
+                        $string82_ConfuserEx_offensive_tool_keyword = "F7581FB4-FAF5-4CD0-888A-B588F5BC69CD" nocase ascii wide
+                        $string83_ConfuserEx_offensive_tool_keyword = "FD93D181-2EC5-4863-8A8F-5F8C84C06B35" nocase ascii wide
+                        $string84_ConfuserEx_offensive_tool_keyword = "FE068381-F170-4C37-82C4-11A81FE60F1A" nocase ascii wide
+                        $string85_ConfuserEx_offensive_tool_keyword = /karing\.martin\+confusercoc\@gmail\.com/ nocase ascii wide
+                        $string86_ConfuserEx_offensive_tool_keyword = /MessageDeobfuscation\.exe/ nocase ascii wide
+                        $string87_ConfuserEx_offensive_tool_keyword = "yck1509/ConfuserEx" nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

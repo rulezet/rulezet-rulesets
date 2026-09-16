@@ -1,0 +1,43 @@
+rule rule_BackHAck_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'BackHAck' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "BackHAck"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_BackHAck_offensive_tool_keyword = /\sbackhack\.py/
+                        $string2_BackHAck_offensive_tool_keyword = /\/BackHAck\.git/
+                        $string3_BackHAck_offensive_tool_keyword = /\/backhack\.py/
+                        $string4_BackHAck_offensive_tool_keyword = /\\backhack\.py/
+                        $string5_BackHAck_offensive_tool_keyword = "48c4df943d19bc547c6cab3a3c802dbcf13af3b7880b3977aef74f452c831a95"
+                        $string6_BackHAck_offensive_tool_keyword = "93df885410ce2b2ea1428127077bcf574e56838ce8ccf4ea410a1f120544f9b8"
+                        $string7_BackHAck_offensive_tool_keyword = "AngelSecurityTeam/BackHAck"
+                        $string8_BackHAck_offensive_tool_keyword = "AngelSecurityTeam-BackdoorLinux"
+                        $string9_BackHAck_offensive_tool_keyword = /AngelSecurityTeam\-BackdoorWindows\.exe/
+                        $string10_BackHAck_offensive_tool_keyword = /AngelSecurityTeam\-BackdoorWindows\.exe/
+                        $string11_BackHAck_offensive_tool_keyword = /curl\s\-s\s\-N\shttp\:\/\/127\.0\.0\.1\:4040\/api\/tunnels/
+                        $string12_BackHAck_offensive_tool_keyword = /https\:\/\/bin\.equinox\.io\/c\/4VmDzA7iaHb\//
+                        $string13_BackHAck_offensive_tool_keyword = /ngrok\-stable\-linux\-arm\.zip/
+                        $string14_BackHAck_offensive_tool_keyword = /python3\s\-m\shttp\.server\s80\s\>\s\.server\s2\>\s\/dev\/null/
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and any of ($string*)) or
+        (filesize < 2MB and
+        (
+            any of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

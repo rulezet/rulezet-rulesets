@@ -1,0 +1,21 @@
+{
+  "uuid": "94c538f5-746f-407a-84b3-f55da72484a7",
+  "title": "rule_FruityC2_offensive_tool_keyword",
+  "format": "yara",
+  "author": "@mthcht",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detection patterns for the tool 'FruityC2' taken from the ThreatHunting-Keywords github project",
+  "source": "https://github.com/mthcht/ThreatHunting-Keywords-yara-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:tool=\"Empire\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/248389"
+}

@@ -1,0 +1,41 @@
+rule rule_Browser_Data_Grabber_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'Browser Data Grabber' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "Browser Data Grabber"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_Browser_Data_Grabber_offensive_tool_keyword = /\/BrowserDataGrabber\.git/ nocase ascii wide
+                        $string2_Browser_Data_Grabber_offensive_tool_keyword = /\\BrowserDataGrabber\.pdb/ nocase ascii wide
+                        $string3_Browser_Data_Grabber_offensive_tool_keyword = /\\BrowserDataGrabber\\/ nocase ascii wide
+                        $string4_Browser_Data_Grabber_offensive_tool_keyword = ">BrowserDataGrabber<" nocase ascii wide
+                        $string5_Browser_Data_Grabber_offensive_tool_keyword = "1830c05bde7c4d7b795968d4e3c25ecb3dd98763662b1d85fd4abfbbf8e5b660" nocase ascii wide
+                        $string6_Browser_Data_Grabber_offensive_tool_keyword = "1d389e53c658a3919dfcd0d1e3dd08c34a2e875eb1520ec0b9648e43e25eaabc" nocase ascii wide
+                        $string7_Browser_Data_Grabber_offensive_tool_keyword = "8173d4d17cb728e6f2c5e2ce8124ce7eb0f459dc62085bcaab786abf1f6b37a7" nocase ascii wide
+                        $string8_Browser_Data_Grabber_offensive_tool_keyword = "a9d6d8e1051e28d933a3979f20e8fd7eb85611d2014502d093aa879681bbbc26" nocase ascii wide
+                        $string9_Browser_Data_Grabber_offensive_tool_keyword = /BrowserDataGrabber\.exe/ nocase ascii wide
+                        $string10_Browser_Data_Grabber_offensive_tool_keyword = /BrowserDataGrabber\-master\.zip/ nocase ascii wide
+                        $string11_Browser_Data_Grabber_offensive_tool_keyword = "f2691b74-129f-4ac2-a88a-db4b0f36b609" nocase ascii wide
+                        $string12_Browser_Data_Grabber_offensive_tool_keyword = "n37sn4k3/BrowserDataGrabber" nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and any of ($string*)) or
+        (filesize < 2MB and
+        (
+            any of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

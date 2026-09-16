@@ -1,0 +1,135 @@
+rule rule_cstealer_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'cstealer' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "cstealer"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_cstealer_offensive_tool_keyword = /\scstealer\.py/ nocase ascii wide
+                        $string2_cstealer_offensive_tool_keyword = /\sNiceRAT\.py/ nocase ascii wide
+                        $string3_cstealer_offensive_tool_keyword = /\/cstealer\.git/ nocase ascii wide
+                        $string4_cstealer_offensive_tool_keyword = /\/cstealer\.py/ nocase ascii wide
+                        $string5_cstealer_offensive_tool_keyword = /\/NiceRAT\.git/ nocase ascii wide
+                        $string6_cstealer_offensive_tool_keyword = /\/NiceRAT\.py/ nocase ascii wide
+                        $string7_cstealer_offensive_tool_keyword = /\/NiceRAT\-1\.0\.0\.zip/ nocase ascii wide
+                        $string8_cstealer_offensive_tool_keyword = /\/t\.me\/NicestRAT/ nocase ascii wide
+                        $string9_cstealer_offensive_tool_keyword = /\\cstealer\.py/ nocase ascii wide
+                        $string10_cstealer_offensive_tool_keyword = /\\NiceRAT\.py/ nocase ascii wide
+                        $string11_cstealer_offensive_tool_keyword = /\\NiceRAT\-1\.0\.0\.zip/ nocase ascii wide
+                        $string12_cstealer_offensive_tool_keyword = /\\NiceRAT\-main\\/ nocase ascii wide
+                        $string13_cstealer_offensive_tool_keyword = "0x00G/NiceRAT" nocase ascii wide
+                        $string14_cstealer_offensive_tool_keyword = "3ec41c041f4c5b1c1c781ddcd9d0286a0a920253783edb27a8fc8085d9ecb6f8" nocase ascii wide
+                        $string15_cstealer_offensive_tool_keyword = "7f5ac429cd84d6ac935855b8a7656b830a6eefa1884f7fddd8c7c893c6b09ca4" nocase ascii wide
+                        $string16_cstealer_offensive_tool_keyword = "aeachknmefphepccionboohckonoeemg" nocase ascii wide
+                        $string17_cstealer_offensive_tool_keyword = "afbcbjpbpfadlkmhmclhkeeodmamcflc" nocase ascii wide
+                        $string18_cstealer_offensive_tool_keyword = "agoakfejjabomempkjlepdflaleeobhb" nocase ascii wide
+                        $string19_cstealer_offensive_tool_keyword = "aholpfdialjgjfhomihkjbmgjidlcdno" nocase ascii wide
+                        $string20_cstealer_offensive_tool_keyword = "aiifbnbfobpmeekipheeijimdpnlpgpp" nocase ascii wide
+                        $string21_cstealer_offensive_tool_keyword = "amkmjjmmflddogmhpjloimipbofnfjih" nocase ascii wide
+                        $string22_cstealer_offensive_tool_keyword = "aodkkagnadcbobfpggfnjeongemjbjca" nocase ascii wide
+                        $string23_cstealer_offensive_tool_keyword = "bfnaelmomeimhlpmgjnjophhpkkoljpa" nocase ascii wide
+                        $string24_cstealer_offensive_tool_keyword = "bhghoamapcdpbohphigoooaddinpkbai" nocase ascii wide
+                        $string25_cstealer_offensive_tool_keyword = "bhhhlbepdkbapadjdnnojkbgioiodbic" nocase ascii wide
+                        $string26_cstealer_offensive_tool_keyword = /C4RD\sN4M3\:\s.{0,100}\|\sNUMB3R\:/ nocase ascii wide
+                        $string27_cstealer_offensive_tool_keyword = "can-kat/cstealer" nocase ascii wide
+                        $string28_cstealer_offensive_tool_keyword = "cgeeodpfagjceefieflmdfphplkenlfk" nocase ascii wide
+                        $string29_cstealer_offensive_tool_keyword = /CH3CK70K3N\(/ nocase ascii wide
+                        $string30_cstealer_offensive_tool_keyword = "cjelfplplebdjjenllpjcblmjkfcffne" nocase ascii wide
+                        $string31_cstealer_offensive_tool_keyword = /crcreditcards\.txt/ nocase ascii wide
+                        $string32_cstealer_offensive_tool_keyword = /CrealPasswords\.txt/ nocase ascii wide
+                        $string33_cstealer_offensive_tool_keyword = /crpasswords\.txt/ nocase ascii wide
+                        $string34_cstealer_offensive_tool_keyword = "CStealer Builder ~ " nocase ascii wide
+                        $string35_cstealer_offensive_tool_keyword = /CStealer_assets\\/ nocase ascii wide
+                        $string36_cstealer_offensive_tool_keyword = /curl\s\-F\s.{0,100}\shttps\:\/\/.{0,100}\.gofile\.io\/uploadFile/ nocase ascii wide
+                        $string37_cstealer_offensive_tool_keyword = /D3CrYP7V41U3\(/ nocase ascii wide
+                        $string38_cstealer_offensive_tool_keyword = "db7d3e12a58a102b76c1f6e041d0a464ccbffc346dbc338a8cb4a7e5ec508b6c" nocase ascii wide
+                        $string39_cstealer_offensive_tool_keyword = "dngmlblcodfobpdpecaadgfbcggfjfnm" nocase ascii wide
+                        $string40_cstealer_offensive_tool_keyword = "ebfidpplhabeedpnhjnobghokpiioolj" nocase ascii wide
+                        $string41_cstealer_offensive_tool_keyword = "efbglgofoippbgcjepnhiblaibcnclgk" nocase ascii wide
+                        $string42_cstealer_offensive_tool_keyword = "egjidjbpglichdcondbcbdnbeeppgdph" nocase ascii wide
+                        $string43_cstealer_offensive_tool_keyword = "eigblbgjknlfbajkfhopmcojidlgcehm" nocase ascii wide
+                        $string44_cstealer_offensive_tool_keyword = "ejbalbakoplchlghecdalmeeeajnimhm" nocase ascii wide
+                        $string45_cstealer_offensive_tool_keyword = "ejjladinnckdgjemekebdpeokbikhfci" nocase ascii wide
+                        $string46_cstealer_offensive_tool_keyword = "ffnbelfdoeiohenkjibnmadjiehjhajb" nocase ascii wide
+                        $string47_cstealer_offensive_tool_keyword = "fhbohimaelbohpjbbldcngcnapndodjp" nocase ascii wide
+                        $string48_cstealer_offensive_tool_keyword = "fhilaheimglignddkjgofkcbgekhenbh" nocase ascii wide
+                        $string49_cstealer_offensive_tool_keyword = "fnjhmkhhmkbjkkabndcnnogagogbneec" nocase ascii wide
+                        $string50_cstealer_offensive_tool_keyword = "fnnegphlobjdpkhecapkijjdkgcjhkib" nocase ascii wide
+                        $string51_cstealer_offensive_tool_keyword = /G374U70F111\(/ nocase ascii wide
+                        $string52_cstealer_offensive_tool_keyword = /G3770K3N\(/ nocase ascii wide
+                        $string53_cstealer_offensive_tool_keyword = /G3770K3N1NF0\(/ nocase ascii wide
+                        $string54_cstealer_offensive_tool_keyword = /G37800KM4rK5\(/ nocase ascii wide
+                        $string55_cstealer_offensive_tool_keyword = /G3781111N6\(/ nocase ascii wide
+                        $string56_cstealer_offensive_tool_keyword = /G3784D63\(/ nocase ascii wide
+                        $string57_cstealer_offensive_tool_keyword = /G378r0W53r5\(br0W53rP47H5\)/ nocase ascii wide
+                        $string58_cstealer_offensive_tool_keyword = /G37C00K13\(/ nocase ascii wide
+                        $string59_cstealer_offensive_tool_keyword = /G37C0D35\(/ nocase ascii wide
+                        $string60_cstealer_offensive_tool_keyword = /G37CC5\(/ nocase ascii wide
+                        $string61_cstealer_offensive_tool_keyword = /G37D15C0rD\(/ nocase ascii wide
+                        $string62_cstealer_offensive_tool_keyword = /G37D474\(/ nocase ascii wide
+                        $string63_cstealer_offensive_tool_keyword = /G37H1570rY\(/ nocase ascii wide
+                        $string64_cstealer_offensive_tool_keyword = /G37P455W\(/ nocase ascii wide
+                        $string65_cstealer_offensive_tool_keyword = /G37UHQ6U11D5\(/ nocase ascii wide
+                        $string66_cstealer_offensive_tool_keyword = /G37UHQFr13ND5\(/ nocase ascii wide
+                        $string67_cstealer_offensive_tool_keyword = /G37W3851735\(/ nocase ascii wide
+                        $string68_cstealer_offensive_tool_keyword = /G47H3rZ1P5\(/ nocase ascii wide
+                        $string69_cstealer_offensive_tool_keyword = "hmeobnfnfcmdkdcmlblgagmfpfboieaf" nocase ascii wide
+                        $string70_cstealer_offensive_tool_keyword = "hnfanknocfeofbddgcijnmhnfnkdnaad" nocase ascii wide
+                        $string71_cstealer_offensive_tool_keyword = "hpglfhgfnhbgpjdenjgmdgoeiappafln" nocase ascii wide
+                        $string72_cstealer_offensive_tool_keyword = /https\:\/\/ptb\.discord\.com\/api\/webhooks\/1226217588959215726\/AZaNnD4TIN\-9sV\-t0rsveiQxcROYaCVziI8BUa6CNPsUxdnW9mdHu7HnuQ55kQPXZ8_5/ nocase ascii wide
+                        $string73_cstealer_offensive_tool_keyword = "ibnejdfjmmkpcnlpebklmnkoeoihofec" nocase ascii wide
+                        $string74_cstealer_offensive_tool_keyword = "jblndlipeogpafnldhgmapagcccfchpi" nocase ascii wide
+                        $string75_cstealer_offensive_tool_keyword = /K1W1F01D3r\(/ nocase ascii wide
+                        $string76_cstealer_offensive_tool_keyword = /K1W1F113\(/ nocase ascii wide
+                        $string77_cstealer_offensive_tool_keyword = "kncchdigobghenbbaddojjnnaogfppfj" nocase ascii wide
+                        $string78_cstealer_offensive_tool_keyword = "kpfopkelmapcoipemfendmdcghnegimn" nocase ascii wide
+                        $string79_cstealer_offensive_tool_keyword = /L04DUr118\(h00k/ nocase ascii wide
+                        $string80_cstealer_offensive_tool_keyword = "lgmpcpglpngdoalbgeoldeajfclnhafa" nocase ascii wide
+                        $string81_cstealer_offensive_tool_keyword = "lpfcbjknijpeeillifnkikgncikgfhdo" nocase ascii wide
+                        $string82_cstealer_offensive_tool_keyword = "mfgccjchihfkkindfppnaooecgfneiii" nocase ascii wide
+                        $string83_cstealer_offensive_tool_keyword = "mgffkfbidihjpoaomajlbgchddlicgpn" nocase ascii wide
+                        $string84_cstealer_offensive_tool_keyword = "nanjmdknhkinifnkgdcggcfnhdaammmj" nocase ascii wide
+                        $string85_cstealer_offensive_tool_keyword = /NiceRAT\s\|\s.{0,100}\sStealer/ nocase ascii wide
+                        $string86_cstealer_offensive_tool_keyword = /NiceRAT\-main\.zip/ nocase ascii wide
+                        $string87_cstealer_offensive_tool_keyword = "nkbihfbeogaeaoehlefnkodbefgpgknn" nocase ascii wide
+                        $string88_cstealer_offensive_tool_keyword = "nkddgncdjgjfcddamfgcmfnlhccnimig" nocase ascii wide
+                        $string89_cstealer_offensive_tool_keyword = "nlbmnnijcnlegkjjpcfjclmcfggfefdm" nocase ascii wide
+                        $string90_cstealer_offensive_tool_keyword = "ojggmchlghnjlapmfbnjholfjkiidbch" nocase ascii wide
+                        $string91_cstealer_offensive_tool_keyword = "ookjlbkiijinhpmnjffcofjonbfbgaoc" nocase ascii wide
+                        $string92_cstealer_offensive_tool_keyword = "opcgpfmipidbgpenhmajoajpbobppdil" nocase ascii wide
+                        $string93_cstealer_offensive_tool_keyword = "pdadjkfkgcafgbceimcpbkalnfnepbnk" nocase ascii wide
+                        $string94_cstealer_offensive_tool_keyword = "phkbamefinggmakgklpkljjmgibohnba" nocase ascii wide
+                        $string95_cstealer_offensive_tool_keyword = /r3F0rM47\(listt/ nocase ascii wide
+                        $string96_cstealer_offensive_tool_keyword = /S74r77Hr34D\(/ nocase ascii wide
+                        $string97_cstealer_offensive_tool_keyword = /s74r787Hr34D\(/ nocase ascii wide
+                        $string98_cstealer_offensive_tool_keyword = /SQ17H1N6\(/ nocase ascii wide
+                        $string99_cstealer_offensive_tool_keyword = /TrU57\(C00K13s\)/ nocase ascii wide
+                        $string100_cstealer_offensive_tool_keyword = /UP104D7060F113\(/ nocase ascii wide
+                        $string101_cstealer_offensive_tool_keyword = /UP104D70K3N\(/ nocase ascii wide
+                        $string102_cstealer_offensive_tool_keyword = /Wr173F0rF113\(/ nocase ascii wide
+                        $string103_cstealer_offensive_tool_keyword = /www\.nicerat\.com/ nocase ascii wide
+                        $string104_cstealer_offensive_tool_keyword = /Z1P73136r4M\(/ nocase ascii wide
+                        $string105_cstealer_offensive_tool_keyword = /Z1P7H1N65\(/ nocase ascii wide
+                        $string106_cstealer_offensive_tool_keyword = /Z1PF01D3r\(/ nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and 2 of ($string*)) or
+        (filesize < 2MB and
+        (
+            2 of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}

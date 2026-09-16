@@ -1,0 +1,42 @@
+rule rule_blackvision_offensive_tool_keyword
+{
+    meta:
+        description = "Detection patterns for the tool 'blackvision' taken from the ThreatHunting-Keywords github project"
+        author = "@mthcht"
+        reference = "https://github.com/mthcht/ThreatHunting-Keywords"
+        tool = "blackvision"
+        rule_category = "offensive_tool_keyword"
+
+    strings:
+                        $string1_blackvision_offensive_tool_keyword = /\/blackvision\.git/ nocase ascii wide
+                        $string2_blackvision_offensive_tool_keyword = /\/blackvision_c\.cpp/ nocase ascii wide
+                        $string3_blackvision_offensive_tool_keyword = "31abb963d6b98c0d5068bb32c6d13c98694a45a4cd9af738b215d7ff96944140" nocase ascii wide
+                        $string4_blackvision_offensive_tool_keyword = "4527ed46e39c8486c0f9d7f48fa7c4ae58a980db49ebcb881c174d88925a551b" nocase ascii wide
+                        $string5_blackvision_offensive_tool_keyword = /agent\/blackvision\.cpp/ nocase ascii wide
+                        $string6_blackvision_offensive_tool_keyword = "d56d56e534a399f0130e77ee424fc4c0c81e296a9c3a3560a97500a970119c1a" nocase ascii wide
+                        $string7_blackvision_offensive_tool_keyword = "e4ce017fd52b2dab10d33e9fbe51dcb8e5b74b496121d8d121d228d5fbdb58e8" nocase ascii wide
+                        $string8_blackvision_offensive_tool_keyword = "e7e397ee350cadf7f2b49b85c440a340a090881e58e3238d266164b095a4a82d" nocase ascii wide
+                        $string9_blackvision_offensive_tool_keyword = "ea1f91ef5b0a9befefc831e9c1093cc202e214673b7fbbb1b737fab9f5326c53" nocase ascii wide
+                        $string10_blackvision_offensive_tool_keyword = /from\sserver\.changehostnPort\simport\s/ nocase ascii wide
+                        $string11_blackvision_offensive_tool_keyword = "lynxmk/blackvision" nocase ascii wide
+                        $string12_blackvision_offensive_tool_keyword = /Remote\sAccess\.\\n\\nA\swrapper\saround\scommands\sto\smake\sagent\sgeneration\seasy4u\./ nocase ascii wide
+                        $string13_blackvision_offensive_tool_keyword = /server\.sin_port\s\=\shtons\(3567\)/ nocase ascii wide
+        $metadata_regex_import = /\bimport\s+[a-zA-Z0-9_.]+\b/ nocase
+        $metadata_regex_function = /function\s+[a-zA-Z_][a-zA-Z0-9_]*\(/ nocase ascii
+        $metadata_regex_php = /<\?php/ nocase ascii
+        $metadata_regex_createobject = /(CreateObject|WScript\.)/ nocase ascii
+        $metadata_regex_script = /<script\b/ nocase ascii
+        $metadata_regex_javascript = /(let\s|const\s|function\s|document\.|console\.)/ nocase ascii
+        $metadata_regex_powershell = /(Write-Host|Get-[a-zA-Z]+|Invoke-|param\(|\.SYNOPSIS)/ nocase ascii
+        $metadata_regex_batch = /@(echo\s|call\s|set\s|goto\s|if\s|for\s|rem\s)/ nocase ascii
+        $metadata_regex_shebang = /^#!\// nocase ascii
+
+    condition:
+        ((filesize < 20MB and (
+            uint16(0) == 0x5a4d or             uint16(0) == 0x457f or             uint32be(0) == 0x7f454c46 or uint16(0) == 0xfeca or uint16(0) == 0xfacf or uint32(0) == 0xbebafeca or             uint32(0) == 0x504B0304 or             uint32(0) == 0xCAFEBABE or             uint32(0) == 0x4D534346 or             uint32(0) == 0xD0CF11E0 or             uint16(0) == 0x2321 or             uint16(0) == 0x3c3f         )) and any of ($string*)) or
+        (filesize < 2MB and
+        (
+            any of ($string*) and
+            for any of ($metadata_regex_*) : ( @ <= 20000 )
+        ))
+}
