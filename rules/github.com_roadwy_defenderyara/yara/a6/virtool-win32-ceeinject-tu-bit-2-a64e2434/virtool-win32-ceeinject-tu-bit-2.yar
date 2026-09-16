@@ -1,0 +1,9 @@
+rule VirTool_Win32_CeeInject_TU_bit_2{
+	meta:
+		description = "VirTool:Win32/CeeInject.TU!bit,SIGNATURE_TYPE_PEHSTR_EXT,02 00 02 00 02 00 00 "
+		
+	strings :
+		$a_03_0 = {ff d7 8b d6 b9 ?? ?? ?? ?? e8 ?? ?? ?? ?? 8b 0d ?? ?? ?? ?? 88 04 0e 46 3b 74 24 0c 72 } 		$a_03_1 = {6a 00 ff 15 ?? ?? ?? ?? ff 15 ?? ?? ?? ?? 8b cf 8b c7 c1 e9 05 03 4d ?? c1 e0 04 03 45 ?? 33 c8 8d 04 3e 33 c8 2b d9 8b cb 8b c3 c1 e9 05 03 4d ?? c1 e0 04 03 45 ?? 33 c8 8d 04 1e 33 c8 8d b6 ?? ?? ?? ?? 2b f9 83 6d fc 01 75 } 	condition:
+		((#a_03_0  & 1)*1+(#a_03_1  & 1)*1) >=2
+ 
+}
