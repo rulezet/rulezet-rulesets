@@ -1,0 +1,9 @@
+rule Win_Trojan_Rootkit_34
+{
+strings:
+	$a0 = { 568b35b80e01005768de0c0100bfc80f010057ffd668fe0c010068e00f0100ffd68b75088d45fc5053536a15576a1056ff15c00e01003bc3894508750f57 }
+
+
+condition:
+	$a0
+}

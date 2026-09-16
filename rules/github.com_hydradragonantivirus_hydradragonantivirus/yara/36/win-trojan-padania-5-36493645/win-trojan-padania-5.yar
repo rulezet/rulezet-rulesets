@@ -1,0 +1,9 @@
+rule Win_Trojan_Padania_5
+{
+strings:
+	$a0 = { 6e036775007394010c6a066974616c69611273cd000c6a07506164616e69611273ce000c6c01001273e00164 }
+
+
+condition:
+	$a0
+}

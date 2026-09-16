@@ -1,0 +1,9 @@
+rule Win_Trojan_IRC_Script_35
+{
+strings:
+	$a0 = { 736f636b75647020676e756d63[0-12]2b415448302b202b202b415448302b202b202b415448302b202b202b415448302b }
+
+
+condition:
+	$a0
+}
