@@ -1,0 +1,22 @@
+{
+  "uuid": "61e87356-91b4-44c0-a5fe-348360675b88",
+  "title": "Trojan_Win32_Iniriror_A_dll",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Iniriror.A!dll,SIGNATURE_TYPE_PEHSTR_EXT,39 00 39 00 0c 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/284693"
+}
