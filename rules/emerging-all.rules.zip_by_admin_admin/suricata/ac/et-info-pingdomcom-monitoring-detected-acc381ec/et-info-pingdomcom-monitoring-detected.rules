@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET INFO Pingdom.com Monitoring detected"; flow:established,to_server; http.user_agent; content:"Pingdom"; startswith; nocase; reference:url,royal.pingdom.com/?p=46; classtype:attempted-recon; sid:2003214; rev:7; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_06;)

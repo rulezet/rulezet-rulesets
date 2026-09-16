@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET SCAN Paros Proxy Scanner Detected"; flow:established,to_server; http.user_agent; content:"Paros/"; startswith; reference:url,www.parosproxy.org; classtype:attempted-recon; sid:2008187; rev:10; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, updated_at 2024_03_06;)

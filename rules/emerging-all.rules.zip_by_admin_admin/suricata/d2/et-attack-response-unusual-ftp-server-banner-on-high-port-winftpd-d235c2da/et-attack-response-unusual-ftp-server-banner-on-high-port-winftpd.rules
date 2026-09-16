@@ -1,0 +1,1 @@
+alert tcp any 1024: -> $HOME_NET any (msg:"ET ATTACK_RESPONSE Unusual FTP Server Banner on High Port (WinFtpd)"; flow:established,to_client; dsize:<18; content:"220 WinFtpd"; depth:11; offset:0; nocase; classtype:trojan-activity; sid:2007725; rev:7; metadata:created_at 2010_07_30, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_06;)

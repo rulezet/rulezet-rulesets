@@ -1,0 +1,1 @@
+alert tcp any 21 -> $HOME_NET any (msg:"ET ATTACK_RESPONSE Hostile FTP Server Banner (StnyFtpd)"; flow:established,to_client; content:"220 StnyFtpd 0wns j0"; offset:0; nocase; classtype:trojan-activity; sid:2002809; rev:6; metadata:created_at 2010_07_30, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_06;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER /etc/shadow Detected in URI"; flow:established,to_server; http.uri; content:"/etc/shadow"; nocase; reference:url,en.wikipedia.org/wiki/Shadow_password; classtype:attempted-recon; sid:2009485; rev:8; metadata:created_at 2010_07_30, signature_severity Major, updated_at 2024_03_06;)

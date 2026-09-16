@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 23 -> $EXTERNAL_NET any (msg:"ET TELNET External Telnet Login Prompt from Cisco Device"; flow:established,to_client; pcre:"/^(\r\n)*/"; content:"User Access Verification"; within:24; classtype:attempted-admin; sid:2008861; rev:7; metadata:created_at 2010_07_30, signature_severity Informational, updated_at 2024_03_06;)

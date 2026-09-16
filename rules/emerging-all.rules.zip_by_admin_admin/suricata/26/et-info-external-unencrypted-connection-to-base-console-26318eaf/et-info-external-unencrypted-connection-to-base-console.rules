@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET INFO External Unencrypted Connection to BASE Console"; flow:established,to_server; http.uri; content:"/base_main.php"; reference:url,base.secureideas.net; classtype:misc-activity; sid:2008570; rev:6; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_06;)

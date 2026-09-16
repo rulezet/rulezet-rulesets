@@ -1,0 +1,1 @@
+alert tcp $EXTERNAL_NET 2240 -> $HOME_NET 1024: (msg:"ET P2P SoulSeek P2P Login Response"; flow:established,to_client; content:"|5c 01 00 00 01 00 00 00|"; depth:8; reference:url,www.slsknet.org; classtype:policy-violation; sid:2008611; rev:6; metadata:created_at 2010_07_30, confidence Medium, signature_severity Informational, updated_at 2024_03_06;)

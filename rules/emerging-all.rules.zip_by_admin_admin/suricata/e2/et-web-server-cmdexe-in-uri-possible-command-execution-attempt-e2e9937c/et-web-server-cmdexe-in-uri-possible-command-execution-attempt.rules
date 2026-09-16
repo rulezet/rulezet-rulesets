@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER cmd.exe In URI - Possible Command Execution Attempt"; flow:established,to_server; http.uri; content:"/cmd.exe"; nocase; classtype:attempted-recon; sid:2009361; rev:9; metadata:created_at 2010_07_30, confidence Medium, signature_severity Major, updated_at 2024_03_06;)

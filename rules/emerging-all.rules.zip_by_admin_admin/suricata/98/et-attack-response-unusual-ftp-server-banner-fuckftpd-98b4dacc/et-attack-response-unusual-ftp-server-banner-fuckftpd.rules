@@ -1,0 +1,1 @@
+alert tcp any [21,1024:] -> $HOME_NET any (msg:"ET ATTACK_RESPONSE Unusual FTP Server Banner (fuckFtpd)"; flow:established,to_client; dsize:<18; content:"220 fuckFtpd"; depth:12; offset:0; nocase; classtype:trojan-activity; sid:2009210; rev:4; metadata:created_at 2010_07_30, signature_severity Major, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_06;)
