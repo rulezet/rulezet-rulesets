@@ -1,0 +1,8 @@
+rule Generic_bitmask_table__32_lil_128_
+{
+strings:
+	$a0 = { 000000000100000003000000070000000f0000001f0000003f0000007f000000ff000000ff010000ff030000ff070000ff0f0000ff1f0000ff3f0000ff7f0000ffff0000ffff0100ffff0300ffff0700ffff0f00ffff1f00ffff3f00ffff7f00ffffff00ffffff01ffffff03ffffff07ffffff0fffffff1fffffff3fffffff7f }
+
+condition:
+	$a0
+}

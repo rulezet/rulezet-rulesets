@@ -1,0 +1,8 @@
+import "pe"
+rule AINEXE_v2_30 {
+  strings:
+    $a0 = { 0E 07 B9 ?? ?? BE ?? ?? 33 FF FC F3 A4 A1 ?? ?? 2D ?? ?? 8E D0 BC ?? ?? 8C D8 }
+
+  condition:
+    $a0 at pe.entry_point
+}

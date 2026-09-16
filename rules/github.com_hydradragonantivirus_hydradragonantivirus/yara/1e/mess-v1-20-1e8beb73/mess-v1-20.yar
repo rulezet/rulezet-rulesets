@@ -1,0 +1,8 @@
+import "pe"
+rule MESS_v1_20 {
+  strings:
+    $a0 = { FA B9 ?? ?? F3 ?? ?? E3 ?? EB ?? EB ?? B6 }
+
+  condition:
+    $a0 at pe.entry_point
+}

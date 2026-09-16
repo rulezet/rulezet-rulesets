@@ -1,0 +1,19 @@
+{
+  "uuid": "c4425534-38c3-4b86-b5d5-d1d48494e122",
+  "title": "PUA_VULN_Driver_Powertool_Kevpsys_Powertool_8E63",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detects vulnerable driver mentioned in LOLDrivers project using VersionInfo values from the PE header - kEvP64.sys",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/370532"
+}

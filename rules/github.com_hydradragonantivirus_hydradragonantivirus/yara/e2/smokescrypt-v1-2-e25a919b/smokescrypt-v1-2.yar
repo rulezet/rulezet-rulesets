@@ -1,0 +1,8 @@
+import "pe"
+rule SmokesCrypt_v1_2 {
+  strings:
+    $a0 = { 60 B8 ?? ?? ?? ?? B8 ?? ?? ?? ?? 8A 14 08 80 F2 ?? 88 14 08 41 83 F9 ?? 75 F1 }
+
+  condition:
+    $a0 at pe.entry_point
+}

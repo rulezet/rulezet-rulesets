@@ -1,0 +1,23 @@
+rule Win_Downloader_Agent_37009
+{
+strings:
+	$a0 = { 6a0d68????400068????4000ff15 }
+
+	$a1 = { 6a0d68????400068????4000ff15 }
+
+	$a2 = { 6a0d68????400068????4000ff15 }
+
+	$a3 = { 6a0d68????400068????4000ff15 }
+
+	$a4 = { 6a0d68????400068????4000ff15 }
+
+	$a5 = { be0000000056b8ffffffff508d15????4000ff12 }
+
+	$a6 = { 89e2 }
+
+	$a7 = { ff22 }
+
+
+condition:
+	$a0 and $a1 and $a2 and $a3 and $a4 and $a5 and $a6 and $a7
+}

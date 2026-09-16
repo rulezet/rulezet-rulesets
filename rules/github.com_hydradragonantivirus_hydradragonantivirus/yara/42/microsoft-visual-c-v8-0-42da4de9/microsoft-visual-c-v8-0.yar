@@ -1,0 +1,8 @@
+rule Microsoft_Visual_C___v8_0
+{
+strings:
+		$a0 = { E8 ?? ?? ?? ?? E9 ?? ?? FF FF  }
+
+condition:
+		$a0 at entrypoint
+}

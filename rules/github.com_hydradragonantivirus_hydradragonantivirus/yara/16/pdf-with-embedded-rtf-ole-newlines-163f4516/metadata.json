@@ -1,0 +1,19 @@
+{
+  "uuid": "163f4516-f1f2-4805-a5a1-17daaa28c11d",
+  "title": "PDF_with_Embedded_RTF_OLE_Newlines",
+  "format": "yara",
+  "author": "InQuest Labs",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "This signature detects suspicious PDF files embedded with RTF files that contain embedded OLE content that injects newlines into embedded OLE contents as a means of payload obfuscation and detection evasion.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/370838"
+}

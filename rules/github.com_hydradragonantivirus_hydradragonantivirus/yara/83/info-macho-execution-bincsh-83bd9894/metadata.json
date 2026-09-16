@@ -1,0 +1,21 @@
+{
+  "uuid": "83bd9894-b1cf-4e83-a4aa-cdc5eed64ef8",
+  "title": "INFO_Macho_Execution_Bincsh",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "checking Macho files for additional execution strings like csh shell",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/370447"
+}

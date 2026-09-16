@@ -1,0 +1,8 @@
+rule _Second_Oakley_Default_Group___1024_bit__from_RFC2409__8_byt_128_
+{
+strings:
+	$a0 = { ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece65381ffffffffffffffff }
+
+condition:
+	$a0
+}

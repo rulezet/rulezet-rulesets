@@ -1,0 +1,8 @@
+rule AsCryptv01SToRM5
+	{
+	strings:
+			$a0 = { 83 ?? ?? E2 ?? ?? E2 ?? FF }
+
+	condition:
+			$a0
+	}
