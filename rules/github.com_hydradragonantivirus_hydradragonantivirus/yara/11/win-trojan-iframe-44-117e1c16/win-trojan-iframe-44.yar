@@ -1,0 +1,9 @@
+rule Win_Trojan_Iframe_44
+{
+strings:
+	$a0 = { 3c696672616d65207372633d2267616d652d65[0-51]2532302d5f66696c65732f696e6465785f3030342e68746d6c }
+
+
+condition:
+	$a0
+}

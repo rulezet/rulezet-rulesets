@@ -1,0 +1,9 @@
+rule Win_Trojan_FakeAV_89
+{
+strings:
+	$a0 = { 3944eca612db3fefba04103595bfce84c1bd933da96fdac6d363d4292f5aff9a8e0ff5199bf5004c12b455799cca3447aa334940adfa04eae648050618e8cfe0ab3d9ca4d7cb82c3ac00fc2d6ca254c10d87df42dc19847ecf014300cadce5613e15e1fdd3b05c3b8fa1fb0a40d9eae9f42c2e36a3cee370b430c061c4c0e2fca4c99f78afa17e6a7153bd70 }
+
+
+condition:
+	$a0
+}

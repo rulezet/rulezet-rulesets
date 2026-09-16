@@ -1,0 +1,9 @@
+rule Win_Trojan_Script_7
+{
+strings:
+	$a0 = { 3132372e302e302e312063612e636f6d203132372e302e302e31206c6976657570646174652e73796d61 }
+
+
+condition:
+	$a0
+}

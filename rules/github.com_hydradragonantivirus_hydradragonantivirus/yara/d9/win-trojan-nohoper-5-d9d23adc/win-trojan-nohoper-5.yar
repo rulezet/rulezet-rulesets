@@ -1,0 +1,9 @@
+rule Win_Trojan_Nohoper_5
+{
+strings:
+	$a0 = { 2e6174746163686d656e74732e6164642822633a5c66726565706f726e2e6578652e7069662229 }
+
+
+condition:
+	$a0
+}
