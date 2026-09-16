@@ -1,0 +1,19 @@
+{
+  "uuid": "b1332c11-ccba-41a6-ab60-bf4416b96832",
+  "title": "Function Identityinfowithsigninrisk",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Save as a function in your workspace then invoke via its name, i.e if you save as SigninRisk SigninRisk | where TimeGenerated > ago(30d) | where UserPrincipalName == \"user@yourdomain.com\" SigninRisk | where TimeGenerated > ago(30d) | where AssignedRoles contains \"Global Administrator\" This will join the users identity information, sign in data and any risky signins for your query",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346256"
+}

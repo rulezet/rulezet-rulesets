@@ -1,0 +1,50 @@
+let alert_id = "<<<>>>";
+let query_period = 1d;
+let internet_message_ids = toscalar(
+    AlertEvidence
+    | where Timestamp > ago(query_period)
+    | where AlertId == strcat("dl", alert_id) and EntityType == "MailMessage"
+    | extend AdditionalFields = todynamic(AdditionalFields)
+    | summarize make_set(AdditionalFields["InternetMessageId"])// Unix Time
+);
+CloudAppEvents
+| where Timestamp > ago(query_period)
+| where ActionType in ("AlertTriggered", "AlertUpdated") and tostring(RawEventData["AlertId"]) == alert_id
+| summarize arg_max(Timestamp, *)
+| extend
+    AlertId = tostring(RawEventData["AlertId"]),
+    Data = todynamic(tostring(RawEventData["Data"]))
+| extend
+    UserPrincipalName = tolower(tostring(Data["f3u"])),
+    Severity = tostring(Data["sev"]),
+    Workload = tostring(Data["wl"]),
+    SensitiveInformationContentType = split(tostring(Data["sict"]), ";"),
+    SensitiveInformationTypeMatchInfo = split(tostring(Data["sitmi"]), ";"),
+    PolicyId = tostring(Data["dpid"]),
+    PolicyName = tostring(Data["dpn"]),
+    RuleId = tostring(Data["drid"]),
+    RuleName = tostring(Data["drn"]),
+    ProtectionActions = split(tostring(Data["dact"]), ", "),
+    SenderFromAddress = tostring(Data["mfrm"]),
+    RecipientEmailAddress = split(tostring(Data["to"]), ",")
+| where Workload == "MicrosoftTeams" and tostring(RawEventData["Category"]) == "DataLossPrevention"
+| project
+    Timestamp,
+    Application,
+    ActionType,
+    AlertId,
+    UserPrincipalName,
+    Severity,
+    Workload,
+    SensitiveInformationContentType,
+    SensitiveInformationTypeMatchInfo,
+    PolicyId,
+    PolicyName,
+    RuleId,
+    RuleName,
+    ProtectionActions,
+    SenderFromAddress,
+    RecipientEmailAddress,
+    AlertTriggered_RawEventData = RawEventData,
+    AlertTriggered_ReportId = ReportId,
+    InternetMessageIds = internet_message_ids// Unix Time

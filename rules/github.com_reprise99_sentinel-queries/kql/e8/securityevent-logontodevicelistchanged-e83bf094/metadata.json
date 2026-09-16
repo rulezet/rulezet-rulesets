@@ -1,0 +1,21 @@
+{
+  "uuid": "e83bf094-3123-40e1-8cee-a4b22d926df0",
+  "title": "Securityevent Logontodevicelistchanged",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Alert when the 'Log on to' device list is changed for a user",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346379"
+}

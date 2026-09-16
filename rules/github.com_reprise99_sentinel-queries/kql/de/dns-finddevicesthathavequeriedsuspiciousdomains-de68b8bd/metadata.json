@@ -1,0 +1,19 @@
+{
+  "uuid": "de68b8bd-e464-45a8-a742-71f561e5fab8",
+  "title": "Dns Finddevicesthathavequeriedsuspiciousdomains",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "When a domain is flagged by Defender for Cloud (Azure Security Center) as suspicious then find any other clients that have queried that domain in DNS events",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346374"
+}

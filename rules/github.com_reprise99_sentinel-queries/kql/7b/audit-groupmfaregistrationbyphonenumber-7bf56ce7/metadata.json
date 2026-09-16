@@ -1,0 +1,19 @@
+{
+  "uuid": "7bf56ce7-d1b9-42ea-9b72-19ed1bef00b4",
+  "title": "Audit Groupmfaregistrationbyphonenumber",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Groups MFA phone registration events into the number that was registered, can be useful to detect threat actors registering multiple accounts to the same numbers for persistence",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346137"
+}

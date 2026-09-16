@@ -1,0 +1,19 @@
+{
+  "uuid": "bb77444d-9c0f-4c86-978c-21e9e51e533c",
+  "title": "Analytics Isworkingtime",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "This query can help you to compute if a date (or the current time) happens during a predefined working schedule, it returns true or false. This should be adapted for each working schedule and time zone (https://docs.microsoft.com/azure/data-explorer/kusto/query/timezone) This is currently configured for Central European Time and European Daylight Saving Times (Madrid, Spain time) Click \"Save as function\", in Parameters write in the fields: \"datetime\" \"date_time\" \"datetime(null)\" If you name the function \"IsWorkingTime\", you can check the function with queries like the following: print IsWorkingTime() SigninLogs | extend SecondTime = TimeGenerated | summarize take_any(TimeGenerated) by bin(SecondTime, 1h) | project TimeGenerated, IsWorkingTime(TimeGenerated) let Function = (date_time:datetime = datetime(null)){ Pick your timezone string from https://docs.microsoft.com/azure/data-explorer/kusto/query/timezone",
+  "source": "https://github.com/ep3p/Sentinel_KQL",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345926"
+}

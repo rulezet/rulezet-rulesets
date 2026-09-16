@@ -1,0 +1,19 @@
+{
+  "uuid": "6b237304-581d-4f2d-9808-b2152a1d20c1",
+  "title": "Securityalert Potentialphishingdomaincommunication",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "When Defender for Cloud detects communication with a possible phishing domain, use Defedner logs to find any network connections to that same domain",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346217"
+}

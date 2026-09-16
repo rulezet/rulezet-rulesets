@@ -1,0 +1,19 @@
+{
+  "uuid": "ae03190a-3b2b-4d31-82b2-23e570c76649",
+  "title": "Function Ciscoasaparser",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Save as a function in your workspace then invoke via its name, i.e if you save as ASALogs ASALogs | where TimeGenerated > ago(30d) | where Action == \"A real IP packet was denied by the ACL\" ASALogs | where TimeGenerated > ago(30d) | where DstIP == \"1.1.1.1\" This will parse the Syslog messages from a Cisco ASA appliance to separate columns",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346251"
+}

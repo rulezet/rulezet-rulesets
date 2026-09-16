@@ -1,0 +1,19 @@
+{
+  "uuid": "6a8c47ef-36ec-4461-9f15-1633a9034ed7",
+  "title": "Officeactivity Exchangescopingpolicyapplied",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detect when a new scoping policy is applied, scoping policies are used to limit permissions to Exchange mailboxes being accessed via OAuth. They should be configured with least privilege",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346193"
+}

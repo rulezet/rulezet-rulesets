@@ -1,0 +1,21 @@
+{
+  "uuid": "de5df7a6-0385-48f5-8983-382f2d60a8ff",
+  "title": "Audit Findusersfailingnewpasswordsspr",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Find users who have failed 3 or more times to set a new password during a SSPR flow. Worth reaching out to them to give them a hand or see if you can onboard them to something like Windows Hello for Business",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346069"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "5acdca97-b442-4c9b-aeb9-49c6fa5e4b30",
+  "title": "Device Windows11Devicesandusers",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Finds Windows 11 devices enrolled in Defender for Endpoint and the last user who logged on interactively",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346288"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "dcf2db24-9e2e-457c-bdc5-56a25fde82f6",
+  "title": "Identity Alertguestdeniedaccesstomultipleapps",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Alert when Azure AD guest accounts are denied access (either by Conditional Access or because they aren't granted specific access) to multiple applications in a short time period This query uses 3 or more applications within an hour",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346097"
+}

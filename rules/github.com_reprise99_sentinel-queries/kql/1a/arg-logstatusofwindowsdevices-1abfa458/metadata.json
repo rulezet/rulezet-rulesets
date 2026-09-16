@@ -1,0 +1,21 @@
+{
+  "uuid": "1abfa458-0046-43c8-a48d-c3acce178e96",
+  "title": "Arg Logstatusofwindowsdevices",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Combined Azure Resource Graph and Log Analytics query - https://learn.microsoft.com/en-us/azure/azure-monitor/logs/azure-monitor-data-explorer-proxy#combine-azure-resource-graph-tables-with-a-log-analytics-workspace This looks for all Windows devices in Resource Graph and attempts to determine current log status",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346264"
+}

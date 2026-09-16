@@ -1,0 +1,21 @@
+{
+  "uuid": "6b96e8b8-7ed7-452f-a1ae-a501b17426e5",
+  "title": "Securityevent Summarizerdpactivity",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Creates a list of computers that your users have connected to via RDP and the total count of distinct computers each user has connected to",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346387"
+}

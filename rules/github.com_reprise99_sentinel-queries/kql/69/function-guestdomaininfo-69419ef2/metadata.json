@@ -1,0 +1,19 @@
+{
+  "uuid": "69419ef2-c41b-489c-a2a8-3b16afaea685",
+  "title": "Function Guestdomaininfo",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Single function to summarize a single guest domain. It will retrieve the following information about a specific domain. Azure AD Sign in Logs - total sign in count, distinct sign in count, list of applications, count of applications, list of users Azure AD Audit Logs - invites sent and redeemed from this domain Office 365 - total files downloaded, distinct filese downloaded from this domain Office 365 - count of users added to Teams, distinct count of users added to Teams and the list of Teams",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346262"
+}

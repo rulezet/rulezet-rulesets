@@ -1,0 +1,19 @@
+{
+  "uuid": "22f2a041-37d3-42a5-a280-955a15b5bdd7",
+  "title": "Identity Muiltipleconditionalaccessfailures",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Alert when a user fails Azure AD Conditional Access policies to 5 or more unique applications within a short time period, this example uses 1 hour.",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345971"
+}

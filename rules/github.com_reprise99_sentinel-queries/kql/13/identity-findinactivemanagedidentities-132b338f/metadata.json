@@ -1,0 +1,19 @@
+{
+  "uuid": "132b338f-fca9-43c9-906c-394023024883",
+  "title": "Identity Findinactivemanagedidentities",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Find Managed Identity service principals that have not successfully signed in in the last 30 days, for each Managed Identity list the Azure resources it has accessed Hopefully it means the resource has already been decommissioned, if not, check to see if it still requires the access it has been granted",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346105"
+}

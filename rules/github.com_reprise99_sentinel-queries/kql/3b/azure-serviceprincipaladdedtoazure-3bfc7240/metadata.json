@@ -1,0 +1,19 @@
+{
+  "uuid": "3bfc7240-6951-400f-9f81-cc8bf05c4622",
+  "title": "Azure Serviceprincipaladdedtoazure",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detect when an Azure AD service principal is given access to an Azure RBAC scope, i.e contributor to a subscription or resource group",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346272"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "a17f60e4-405a-45dd-b7bb-65317a1a33a3",
+  "title": "Function Teamsaccess",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Save as a function in your workspace then invoke via its name, i.e if you save as TeamsAccess TeamsAccess | where TeamName == \"Secret Project\"  // will all events, user adds, removes and access changes for the \"Secret Project\" team TeamsAccess | where Actor == \"user1@domain.com\" // will find all events, user adds, removes and changes performed by user1@domain.com TeamsAccess | where TimeGenerated > ago(1d) and Activity == \"User added as guest\" // will find all guests being added in the last day This function makes the data structure for the different events consistent so you can query them quickly",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346267"
+}

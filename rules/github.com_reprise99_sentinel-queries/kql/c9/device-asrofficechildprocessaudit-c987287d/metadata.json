@@ -1,0 +1,21 @@
+{
+  "uuid": "c987287d-6935-417e-b011-7ff1a331882a",
+  "title": "Device Asrofficechildprocessaudit",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects when you have audit hits on the \"Block all Office applications from creating child processes\" ASR rule. For instance if you want to audit the impact for the MSDT vulnerability - https://msrc-blog.microsoft.com/2022/05/30/guidance-for-cve-2022-30190-microsoft-support-diagnostic-tool-vulnerability/",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [
+    "CVE-2022-30190"
+  ],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346329"
+}

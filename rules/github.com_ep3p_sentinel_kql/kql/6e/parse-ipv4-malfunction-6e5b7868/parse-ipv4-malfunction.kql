@@ -1,0 +1,13 @@
+// issue when QueriedIPAddress has this format 010.001.010.001
+DnsEvents
+| extend QueriedIPAddress = extract(strcat(@"((?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?))$"), 1, Name)
+| where not(isempty(QueriedIPAddress) or QueriedIPAddress == "127.0.0.1")
+| distinct Name, QueriedIPAddress
+| project
+            Name,
+            QueriedIPAddress,
+ Col1 =     parse_ipv4(QueriedIPAddress),
+ Col2 =     isnotempty(parse_ipv4(QueriedIPAddress)),
+ Col3 =     isempty(parse_ipv4(QueriedIPAddress)),
+ Auxiliar = gettype(parse_ipv4(QueriedIPAddress))
+| where isempty(parse_ipv4(QueriedIPAddress))

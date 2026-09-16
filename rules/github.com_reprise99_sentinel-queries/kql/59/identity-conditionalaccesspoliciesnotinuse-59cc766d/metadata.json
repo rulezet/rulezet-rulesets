@@ -1,0 +1,19 @@
+{
+  "uuid": "59cc766d-dc55-4433-9caf-142f0fd48d1b",
+  "title": "Identity Conditionalaccesspoliciesnotinuse",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Find Azure AD conditional access policies that have no hits for 'success' or 'failure' over the last month",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346042"
+}

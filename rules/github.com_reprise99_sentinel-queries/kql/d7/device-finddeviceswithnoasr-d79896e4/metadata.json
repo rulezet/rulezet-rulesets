@@ -1,0 +1,21 @@
+{
+  "uuid": "d79896e4-07a3-46ce-bc06-03176ff43406",
+  "title": "Device Finddeviceswithnoasr",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Find devices in your environment that have never triggered an ASR rule, you can likely turn on ASR for these devices without causing issues for the users.",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346323"
+}

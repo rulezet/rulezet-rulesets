@@ -1,0 +1,19 @@
+{
+  "uuid": "1e23dd28-44ec-434e-b1da-684ff00554a4",
+  "title": "Dca Potentialconsentphishing",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detect when a user flags a risky sign in within 8 hours of installing a service principal, could be a sign of OAuth consent phishing. This example uses 8 hours between events.",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346408"
+}

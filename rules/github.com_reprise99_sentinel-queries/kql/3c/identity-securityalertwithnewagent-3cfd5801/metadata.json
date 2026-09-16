@@ -1,0 +1,19 @@
+{
+  "uuid": "3cfd5801-28ee-4b89-abe8-17ff045ec65a",
+  "title": "Identity Securityalertwithnewagent",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Query to identity Security Alerts where they were triggered by a new user agent not seen for the previous 7 days. Update known IP Addresses from \"1.1.1\" to your corporate IP addresses to exclude",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346082"
+}

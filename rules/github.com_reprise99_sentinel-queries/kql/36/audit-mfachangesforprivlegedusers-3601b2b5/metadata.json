@@ -1,0 +1,19 @@
+{
+  "uuid": "3601b2b5-a4aa-4e0d-a2a8-8a56309a0fba",
+  "title": "Audit Mfachangesforprivlegedusers",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Alert when any users who hold a privileged Azure AD role make MFA configuration changes or an admin changes MFA details on a privileged user",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346101"
+}

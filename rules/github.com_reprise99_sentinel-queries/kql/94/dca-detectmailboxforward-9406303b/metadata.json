@@ -1,0 +1,19 @@
+{
+  "uuid": "9406303b-77f1-45fa-8529-e11d28b72c6d",
+  "title": "Dca Detectmailboxforward",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Use the Defender for Cloud Apps logs to detect when a mail forward is created on a mailbox (not an individual mailbox rule). Retrieve the address the mail was forwarded to and whether is both stored and forwarded",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346393"
+}

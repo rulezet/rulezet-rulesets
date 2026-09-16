@@ -1,0 +1,52 @@
+// This will have to be updated after 13th January 2025 - https://aws.amazon.com/es/blogs/security/modifications-to-aws-cloudtrail-event-data-of-iam-identity-center/
+let _AWSAccounts = _GetWatchlist("AccountId-AuditAWSAccounts");
+T
+| extend
+    RecipientAccountId = column_ifexists("RecipientAccountId", ""),
+    UserIdentityAccountId = column_ifexists("UserIdentityAccountId", ""),
+    UserIdentityType = column_ifexists("UserIdentityType", ""),
+    UserIdentityPrincipalid = column_ifexists("UserIdentityPrincipalid", ""),
+    UserIdentityArn = column_ifexists("UserIdentityArn", ""),
+    SessionIssuerType = column_ifexists("SessionIssuerType", ""),
+    EventName = column_ifexists("EventName", ""),
+    RequestParameters = column_ifexists("RequestParameters", ""),
+    UserIdentityInvokedBy = column_ifexists("UserIdentityInvokedBy", ""),
+    UserIdentityUserName = column_ifexists("UserIdentityUserName", ""),
+    UserIdentityAccessKeyId = column_ifexists("UserIdentityAccessKeyId", ""),
+    SessionIssuerUserName = column_ifexists("SessionIssuerUserName", ""),
+    AdditionalEventData = column_ifexists("AdditionalEventData", ""),
+    ErrorMessage = column_ifexists("ErrorMessage", "")
+| lookup (_AWSAccounts | project RecipientAccountId = AccountId, RecipientAccountName = AccountName) on RecipientAccountId
+| lookup (_AWSAccounts | project UserIdentityAccountId = AccountId, UserIdentityAccountName = AccountName) on UserIdentityAccountId
+| extend
+    Identity = case(
+        UserIdentityType == "Root", strcat(coalesce(UserIdentityAccountName, UserIdentityAccountId), ":", extract(@"\:([^\:]+$)", 1, UserIdentityArn)),
+        UserIdentityType == "IAMUser", strcat(coalesce(UserIdentityAccountName, UserIdentityAccountId), ":", coalesce(extract(@"\:([^\:]+$)", 1, UserIdentityArn), strcat("user/", UserIdentityUserName))),
+        UserIdentityType == "AssumedRole" and SessionIssuerType in ("", "Role"), strcat(coalesce(UserIdentityAccountName, UserIdentityAccountId), ":", "roleSessionName/", extract(@"\:([^\:]+$)", 1, UserIdentityPrincipalid)),
+        UserIdentityType == "AWSAccount" and isempty(UserIdentityPrincipalid), strcat(coalesce(UserIdentityAccountName, UserIdentityAccountId), ":"),
+        UserIdentityType == "AWSAccount" and UserIdentityPrincipalid matches regex @"^[A-Z0-9]{21}$", strcat(coalesce(UserIdentityAccountName, UserIdentityAccountId), ":", UserIdentityPrincipalid),
+        UserIdentityType == "AWSAccount" and UserIdentityPrincipalid matches regex @"^[A-Z0-9]{21}\:[^\:]+$", strcat(coalesce(UserIdentityAccountName, UserIdentityAccountId), ":", "roleSessionName/", extract(@"\:([^\:]+$)", 1, UserIdentityPrincipalid)),
+        UserIdentityType == "AWSService", UserIdentityInvokedBy,
+        UserIdentityType == "SAMLUser" and EventName == "AssumeRoleWithSAML", UserIdentityUserName,
+        UserIdentityType == "WebIdentityUser" and EventName == "AssumeRoleWithWebIdentity", UserIdentityUserName,
+        UserIdentityType == "Unknown" and isnotempty(UserIdentityAccountId) and UserIdentityAccountId == UserIdentityPrincipalid, coalesce(UserIdentityAccountName, UserIdentityAccountId),
+        UserIdentityType == "Unknown" and isnotempty(UserIdentityAccountId) and not(UserIdentityAccountId == UserIdentityPrincipalid), coalesce(UserIdentityUserName, UserIdentityPrincipalid, UserIdentityAccessKeyId),
+        UserIdentityType == "", coalesce(UserIdentityInvokedBy, extract(@"(.+)\-[a-f0-9]{17}$", 1, tostring(todynamic(RequestParameters)["sessionId"]))),
+        strcat("UnexpectedUserIdentityType", ":", extract(@"\:([^\:]+$)", 1, UserIdentityPrincipalid))
+    ),
+    ActorRole = case(
+        UserIdentityType == "AssumedRole", coalesce(SessionIssuerUserName, extract(@"\:assumed-role\/([^\/]+)\/", 1, UserIdentityArn)),
+        ""
+    )
+| extend
+    TargetRole = case(
+        EventName in ("SwitchRole", "ExitRole", "RenewRole") and UserIdentityType == "AssumedRole", ActorRole,
+        EventName in ("SwitchRole", "ExitRole") and not(UserIdentityType == "AssumedRole"), coalesce(extract(@"\:assumed-role\/([^\/]+)\/", 1, tostring(todynamic(AdditionalEventData)["SwitchFrom"])), extract(@"\/([^\/]+)$", 1, tostring(todynamic(AdditionalEventData)["SwitchTo"]))),
+        EventName matches regex "^AssumeRole", coalesce(tostring(split(todynamic(RequestParameters)["roleArn"], "/")[-1]), extract(@"AssumeRole\w* on resource\: \S+\/([^\/]+)$", 1, ErrorMessage)),
+        UserIdentityType == "Unknown" and EventName in ("Federate", "GetRoleCredentials"), tostring(todynamic(ServiceEventDetails)["role_name"]),
+        ""
+    ),
+    TargetRoleSessionName = case(
+        EventName matches regex "^AssumeRole", tostring(todynamic(RequestParameters)["roleSessionName"]),
+        ""
+    )

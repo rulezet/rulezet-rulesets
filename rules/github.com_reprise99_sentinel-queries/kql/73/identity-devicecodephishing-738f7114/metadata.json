@@ -1,0 +1,19 @@
+{
+  "uuid": "738f7114-4133-4c6c-abda-fb5f2da3c04e",
+  "title": "Identity Devicecodephishing",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detect potential device code phishing by finding sign ins with both a error 50199 (additional approval required) and error code 0 (success)",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345987"
+}

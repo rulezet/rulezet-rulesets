@@ -1,0 +1,19 @@
+{
+  "uuid": "6a2452f3-e1be-4694-bdbb-a28336c30aa6",
+  "title": "Audit Findusersfailingsspr",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detect users who are trying to use self service password reset but failing as they don't have any authentication methods listed",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346066"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "b76aca04-0ce2-4f81-bd6e-4b1cea5b072f",
+  "title": "Officeactivity Detectemailsreadbyadmins",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects users with global or exchange administrator roles who have accessed email items from mailboxes other than their own",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346210"
+}

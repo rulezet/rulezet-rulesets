@@ -1,0 +1,19 @@
+{
+  "uuid": "6020fa8b-8464-4405-aaaa-70997a0937df",
+  "title": "Malfunction Hunting Query Not Working In Graph Api",
+  "format": "kql",
+  "author": "ep3p",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "This query in https://graph.microsoft.com/v1.0/security/runHuntingQuery does NOT work when Application == \"Microsoft OneDrive for Business\" or \"Microsoft SharePoint Online\", with other workloads it works",
+  "source": "https://github.com/ep3p/Sentinel_KQL",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/345948"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "71af8bd5-e0b5-4f40-8d6b-33cf02cc5d69",
+  "title": "Officeactivity Calculatepercentageofdownloadsuntrusteddevices",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Find the top 20 users who are downloading files from your tenant from untrusted devices and calculate the percentage of downloads from those users vs all untrusted downloads. Useful to see if you have a few users responsible for most of the downloads in your tenant.",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346195"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "18c9f384-7dc0-4a2d-8711-507120f94f4a",
+  "title": "Device Filedownloadedfromo365Thencopiedtousb",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects a user that downloaded a file from O365 and then wrote the same file to USB, matches on both filename and the user",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346356"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "26f3d341-9b16-4938-80c4-6a7f465e81c7",
+  "title": "Identity Summarizeguestdomainbytype",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Summarize guest activity by external Azure AD guests (those that belong to another Azure AD tenant) vs External Guests (such as Gmail) to your tenant For each domain list the total number of signins and distinct user",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346060"
+}

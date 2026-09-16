@@ -1,0 +1,19 @@
+{
+  "uuid": "7bdc5ae5-e575-4c44-b57c-a7fa14506d94",
+  "title": "Audit Newoperations",
+  "format": "kql",
+  "author": "reprise99",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Find any new operations generated in the Azure AD audit table in the last two weeks compared to the last 180 days, you can adjust the time periods e.g. change 180d to 90d and 14d to 7d would find new events in the last week not seen in the 90 prior to that",
+  "source": "https://github.com/reprise99/Sentinel-Queries",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-08-06",
+  "last_modified": "2026-08-06",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/346108"
+}
