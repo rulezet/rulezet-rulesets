@@ -1,0 +1,33 @@
+rule blake2b_hashed_default_creds_wonderware_historian_mssql
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for wonderware_historian_mssql."
+        category = "INFO"
+        info = "BLAKE2B"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="d1c1e05ffd45f3a281d9372947745ff9999f8340ff38414aa138487df84973ffba50e47d8d06f735526be7749ed51715d11c01123971f508954056dbbc3c62d5"
+    $a1="932abfe220cd831fa3b7b4cdc5f7fd9198471522c654309d80e7c24c39ae2969a903555f163969742049d32f5d7cb9546447cd17743d4771b124bcb54495d97d"
+    $a2="96647166937dad004f1e51893f349cd0ccac1153a4798dc052c590d5e7cfca6660b2e26fc3c0cd669d61abde4f564acdb9ca5204844e0ca838ca41322509e1b4"
+    $a3="25d92b87b7b2f81e3f7a2e6e80680ee7f33b7dd02904c88003633fd723d78265f8ad6ed610812fd4e3916532e6eaf9b353a574c2ad95b05918e452c6aadf426b"
+    $a4="6b29c448b603c985e7869e30778bb14421b9c661fefb3ba8894c4482ea0ce6996f1ed2c7bd9209f74175b8f06ac19ab433e9888930064312b1f22d888751faf8"
+    $a5="0fcc0b0bee7ea1924c4a33360a891a623488306b0bf0d506c708b6cc2f3723c317112326218da096b1b0e676fde0677738704a0746871e13d54886c41501d717"
+    $a6="0c3ca0b20dd53e2821df49de05c8e747d1388db0364f0329531529aff4466c4397dedb39c2bff1e2223e684b4b56f920ce8b9b16c94861009ef225c6c818c1e2"
+    $a7="2aa39980656c770455ace9d06d82799dd08877ba46dec1e31b6bf303ae95316d12a1e0f394a6c92f4566ef223ba18e004d41aecf32f1475d0ecbe32488415440"
+    $a8="cf60598f6e5ec91e21e55d976a490de13eea658b88372219bcfbef5eaac003f908203478b2923aee5abe9a7f872a38ffdb52d9784d3ec588448b2dd1b917b100"
+    $a9="cf60598f6e5ec91e21e55d976a490de13eea658b88372219bcfbef5eaac003f908203478b2923aee5abe9a7f872a38ffdb52d9784d3ec588448b2dd1b917b100"
+    $a10="353ad966ee863d7168ae6ba7c61bc7d0376fe7186b606e0940419c8fdace080860f3368cdda4a4496b8f26bdfb53fccd35eb678831d65404fcaa6ef5570be78f"
+    $a11="353ad966ee863d7168ae6ba7c61bc7d0376fe7186b606e0940419c8fdace080860f3368cdda4a4496b8f26bdfb53fccd35eb678831d65404fcaa6ef5570be78f"
+    $a12="7e5ede737cc0d9f5a9855cc8af91d8e06aafaed45f9dde67376d95e0ef8c340a618ace1748453d816f6c3154339f8ab687f241a751db0db4df8b37d57a0732e9"
+    $a13="7e5ede737cc0d9f5a9855cc8af91d8e06aafaed45f9dde67376d95e0ef8c340a618ace1748453d816f6c3154339f8ab687f241a751db0db4df8b37d57a0732e9"
+    $a14="96c6dce3c943eb168d5ecef050b1203b6d35786b9207b7dfb0941d6de7fd84bba97265a080c8939b2d9fd4b91e24f07f5806c1e222fa4dc93c7fd6315f500643"
+    $a15="96c6dce3c943eb168d5ecef050b1203b6d35786b9207b7dfb0941d6de7fd84bba97265a080c8939b2d9fd4b91e24f07f5806c1e222fa4dc93c7fd6315f500643"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15)
+}
