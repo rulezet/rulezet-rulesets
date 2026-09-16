@@ -1,0 +1,22 @@
+{
+  "uuid": "d322bf42-369a-4288-807f-c9b08ccfa920",
+  "title": "Trojan_Win32_LummaStealerClick_W_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/LummaStealerClick.W!MTB,SIGNATURE_TYPE_CMDHSTR_EXT,16 00 16 00 06 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/265418"
+}
