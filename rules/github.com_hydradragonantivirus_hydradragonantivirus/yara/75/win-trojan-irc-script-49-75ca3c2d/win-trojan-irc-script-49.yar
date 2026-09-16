@@ -1,0 +1,11 @@
+rule Win_Trojan_IRC_Script_49
+{
+strings:
+	$a0 = { 3d6f6e20544558543a5370793a233a2f69676e6f7265202320246e6963 }
+
+	$a1 = { 3d6f6e20544558543a54726f6a616e3a233a2f69676e6f7265202320246e69636b }
+
+
+condition:
+	$a0 and $a1
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Skintrim_24
+{
+strings:
+	$a0 = { 1ed5eabe4c698cfff2b6c7e67b3bd37bf6974426523cebed5c303ebb8485db4b95a2b58abce9d6b91d767995465b55a1fc8adebdb205c293dc879aaa805a3a0a8ad8d4f1c3810e441040684c9a6e65cbef154ba1964b7379a27c7d7df7f0147dadd080b191e50b43da78a3993f13fa3286837b8f4e6e9d2c4537afb2c08abfe809c8c0fbd0ce88e7ff0fdfc7 }
+
+
+condition:
+	$a0
+}

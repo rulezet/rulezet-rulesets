@@ -1,0 +1,9 @@
+rule Win_Trojan_Iroffer_26
+{
+strings:
+	$a0 = { e6349254767b5949dacd5b5656a6a8a5a0a664d6f555819a59d9bd336145e5f5adfcd7639fc70c0376eff77dbfdfbf7b71ced967efb55f6bafbdf6daeb91e2f8a9e46c4085d4102bd9abacba83758baf1bb69aaff7ae6a686ccc7498e9a5fd7dad24095fea72afefd7f72aff3d5a720dfed44f729c9db927c5f1d34cf7133bfda472fe6fb4795c92949c95bfc0621a9d }
+
+
+condition:
+	$a0
+}

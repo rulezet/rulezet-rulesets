@@ -1,0 +1,9 @@
+rule Win_Trojan_Saburex_1
+{
+strings:
+	$a0 = { 8d95ecfcffff528b85f4fcffff508b8df8fcffff518b95e8fcffff52ff15201040008b85e8fcffff50ff1524104000bf541040008d95fcfcffff83c9ff33c0f2aef7d12bf98bf78bd98bfa83c9ff33c0f2ae83c7ff8bcbc1e902f3a58bcb83e103f3a48dbdfcfdffff8d95fcfcffff83c9ff33c0f2aef7d12bf98bf78bd98bfa83c9ff33c0f2ae83c7ff8bcbc1e902f3a58bcb83e103f3a46a006a008d85fcfcffff506848104000 }
+
+
+condition:
+	$a0
+}

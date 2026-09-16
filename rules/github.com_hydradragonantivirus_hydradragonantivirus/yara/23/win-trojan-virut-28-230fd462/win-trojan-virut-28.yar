@@ -1,0 +1,9 @@
+rule Win_Trojan_Virut_28
+{
+strings:
+	$a0 = { 6ebb21252eaf95a90c33267d8c7c16384f71806340282625335d3d95d2f71c41330c9df1e84144a713becd1f22476bfe20a522258b47b3c50add26d807c9f60306d4fc6978accea7af5917b297ca99c6 }
+
+
+condition:
+	$a0
+}

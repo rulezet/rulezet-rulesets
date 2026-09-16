@@ -1,0 +1,9 @@
+rule Win_Trojan_Wicket_1
+{
+strings:
+	$a0 = { 6a00e824000000417274776f726b206279205365636f6e64205061727420546f2048656c6c2f72526c }
+
+
+condition:
+	$a0
+}
