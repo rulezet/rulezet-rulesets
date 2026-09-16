@@ -1,0 +1,9 @@
+rule Win_Trojan_VGEN_578
+{
+strings:
+	$a0 = { 8cd80510002e010610002e01061200e87bff071f582e8e1612002e8b2614002eff2e0e00000000000000000000 }
+
+
+condition:
+	$a0
+}

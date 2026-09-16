@@ -1,0 +1,9 @@
+rule Win_Trojan_VirogenSim_1
+{
+strings:
+	$a0 = { e800005d81ed03001e06b8450bcd210bc074498cd8488ed8803e00005a753d832e03004090832e120040908e0612000e1f8bf5b90a0133fff3a533c08ed81ec5 }
+
+
+condition:
+	$a0
+}
