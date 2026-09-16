@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2020-62422: Seeyon - Local File Inclusion"; content:"GET"; http_method; content:"/seeyon/webmail.do"; http_uri; content:"method=doDownloadAtt&filename="; http_uri; content:"filePath="; http_uri; classtype:web-application-attack; sid:12020004; rev:1;)

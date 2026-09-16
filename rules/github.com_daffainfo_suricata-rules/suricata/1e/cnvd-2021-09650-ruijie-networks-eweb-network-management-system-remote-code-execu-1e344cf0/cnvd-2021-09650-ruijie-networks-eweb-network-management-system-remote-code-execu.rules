@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2021-09650: Ruijie Networks-EWEB Network Management System - Remote Code Execution"; content:"POST"; http_method; content:"/guest_auth/guestIsUp.php"; http_uri; content:"mac="; http_client_body; content:"ip="; http_client_body; classtype:web-application-attack; sid:12021002; rev:1;)

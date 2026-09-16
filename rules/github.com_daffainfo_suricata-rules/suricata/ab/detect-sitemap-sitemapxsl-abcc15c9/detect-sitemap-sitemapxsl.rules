@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Detect sitemap - sitemap.xsl"; content:"/sitemap.xsl"; http_uri; classtype:attempted-recon; sid:40000003; rev:1;)

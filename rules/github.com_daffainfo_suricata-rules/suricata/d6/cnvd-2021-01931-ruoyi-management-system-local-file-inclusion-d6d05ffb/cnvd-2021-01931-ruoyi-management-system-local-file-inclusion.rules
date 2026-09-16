@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2021-01931: Ruoyi Management System - Local File Inclusion"; content:"GET"; http_method; content:"/common/download/resource"; http_uri; content:"resource=/profile"; http_uri; classtype:web-application-attack; sid:12021001; rev:1;)

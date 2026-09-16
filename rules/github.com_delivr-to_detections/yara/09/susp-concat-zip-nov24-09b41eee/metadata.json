@@ -1,0 +1,22 @@
+{
+  "uuid": "09b41eee-f031-4aa9-8202-14812f7c7835",
+  "title": "SUSP_CONCAT_ZIP_Nov24",
+  "format": "yara",
+  "author": "delivr.to",
+  "license": "",
+  "license_verified": false,
+  "description": "Zip archives concatenated together, based on the presence of more than one End of Central Directory record signature",
+  "source": "https://github.com/delivr-to/detections",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208878"
+}

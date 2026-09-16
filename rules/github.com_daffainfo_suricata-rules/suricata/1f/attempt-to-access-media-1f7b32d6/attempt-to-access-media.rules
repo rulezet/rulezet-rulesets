@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Attempt to access /media*"; content:"media"; nocase; pcre:"/(\/|%2F)media/i"; classtype:attempted-recon; sid:50200014; rev:1;)

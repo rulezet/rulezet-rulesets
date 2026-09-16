@@ -1,0 +1,19 @@
+{
+  "uuid": "3637f79f-d3dc-47b7-bc5f-a03731e8d0be",
+  "title": "SUSP_ZIP_Smuggling_Egg_Jun01",
+  "format": "yara",
+  "author": "delivr.to",
+  "license": "",
+  "license_verified": false,
+  "description": "ZIP archives with known egghunter byte sequence from Octoberfest7 zip_smuggling tool between end of file content and central directory.",
+  "source": "https://github.com/delivr-to/detections",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208886"
+}

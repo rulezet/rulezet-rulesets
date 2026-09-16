@@ -1,0 +1,20 @@
+{
+  "uuid": "89df533d-246c-4a0c-b081-a66aa6b21028",
+  "title": "hacktool_windows_cobaltstrike_beacon",
+  "format": "yara",
+  "author": "@javutin, @joseselvi",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Detection of the Beacon payload from Cobalt Strike",
+  "source": "https://github.com/airbnb/binaryalert",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Cobalt Strike\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208568"
+}

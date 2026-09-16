@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2021-15824: EmpireCMS - DOM Cross Site-Scripting"; content:"GET"; http_method; content:"/e/ViewImg/index.html"; http_uri; content:"url="; http_uri; content:"javascript:"; nocase; http_uri; classtype:web-application-attack; sid:12021006; rev:1;)

@@ -1,0 +1,20 @@
+{
+  "uuid": "8b3de7b3-a2cf-4c44-84ac-6e892c6d27cf",
+  "title": "ransomware_windows_HDDCryptorA",
+  "format": "yara",
+  "author": "@fusionrace",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The HDDCryptor ransomware encrypts local harddisks as well as resources in network shares via Server Message Block (SMB)",
+  "source": "https://github.com/airbnb/binaryalert",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208548"
+}

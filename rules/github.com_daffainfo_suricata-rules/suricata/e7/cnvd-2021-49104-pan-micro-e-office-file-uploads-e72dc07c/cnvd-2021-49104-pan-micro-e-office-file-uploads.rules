@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2021-49104: Pan Micro E-office - File Uploads"; content:"POST"; http_method; content:"/general/index/UploadFile.php"; http_uri; content:"uploadPicture&uploadType=eoffice_logo&userId="; http_uri; classtype:web-application-attack; sid:12021010; rev:1;)

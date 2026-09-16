@@ -1,0 +1,20 @@
+{
+  "uuid": "e33731b6-b765-4a8e-b7e7-e03448ed5170",
+  "title": "CobaltStrike_Resources_Artifact64_v3_14_to_v4_x",
+  "format": "yara",
+  "author": "gssincla@google.com",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Cobalt Strike's resources/artifact64{.exe,.dll,svc.exe,svcbig.exe,big.exe,big.dll,.x64.dll,big.x64.dll} and resource/artifactuac(alt)64.exe signature for versions v3.14 through v4.x",
+  "source": "https://github.com/chronicle/GCTI",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:tool=\"Cobalt Strike\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208673"
+}

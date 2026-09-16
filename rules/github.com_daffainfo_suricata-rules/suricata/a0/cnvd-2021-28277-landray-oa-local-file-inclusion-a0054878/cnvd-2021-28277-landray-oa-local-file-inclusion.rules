@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2021-28277: Landray-OA - Local File Inclusion"; content:"POST"; http_method; content:"/sys/ui/extend/varkind/custom.jsp"; http_uri; content:"var="; http_client_body; content:"file|3A|///"; http_client_body; classtype:web-application-attack; sid:12021008; rev:1;)

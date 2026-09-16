@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2020-23735: Xxunchi CMS - Local File Inclusion"; content:"GET"; http_method; content:"/backup/auto.php"; http_uri; content:"NzbwpQSdbY06Dngnoteo2wdgiekm7j4N"; http_uri; classtype:web-application-attack; sid:12020001; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2020-46552: Sangfor EDR - Remote Code Execution"; content:"GET"; http_method; content:"/tool/log/c.php"; http_uri; content:"strip_slashes="; http_uri; classtype:web-application-attack; sid:12020003; rev:1;)

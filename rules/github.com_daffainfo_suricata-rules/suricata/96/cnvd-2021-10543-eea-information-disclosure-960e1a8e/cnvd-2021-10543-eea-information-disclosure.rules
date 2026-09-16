@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2021-10543: EEA - Information Disclosure"; content:"GET"; http_method; content:"/authenticationserverservlet"; http_uri; classtype:web-application-attack; sid:12021003; rev:1;)

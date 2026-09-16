@@ -1,0 +1,21 @@
+{
+  "uuid": "37f1d42b-76ad-4440-ae85-b533f8b024ec",
+  "title": "Suspicious_OneNote",
+  "format": "yara",
+  "author": "marcin@ulikowski.pl",
+  "license": "MIT",
+  "license_verified": true,
+  "description": "Detects OneNote documents with FileDataStoreObject structure containing: PE32, shortcut files (*.lnk), encoded JS, Windows Help File (*.chm), or batch script",
+  "source": "https://github.com/elceef/yara-rulz",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208900"
+}

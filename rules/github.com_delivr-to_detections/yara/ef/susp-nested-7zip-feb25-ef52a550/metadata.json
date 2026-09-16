@@ -1,0 +1,19 @@
+{
+  "uuid": "ef52a550-b334-44d8-af6b-4d82b902544b",
+  "title": "SUSP_NESTED_7ZIP_Feb25",
+  "format": "yara",
+  "author": "delivr.to",
+  "license": "",
+  "license_verified": false,
+  "description": "Detects a 7-Zip archive containing a 7-Zip archive",
+  "source": "https://github.com/delivr-to/detections",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208875"
+}

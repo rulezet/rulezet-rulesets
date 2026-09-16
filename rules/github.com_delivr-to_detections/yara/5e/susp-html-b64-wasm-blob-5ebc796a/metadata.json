@@ -1,0 +1,20 @@
+{
+  "uuid": "5ebc796a-92e1-4463-91b3-1e9e3ba48bf4",
+  "title": "SUSP_HTML_B64_WASM_Blob",
+  "format": "yara",
+  "author": "delivr.to",
+  "license": "",
+  "license_verified": false,
+  "description": "Presence of WASM blob based on raw or encoded magic bytes",
+  "source": "https://github.com/delivr-to/detections",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "false-positive:risk=\"low\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208884"
+}

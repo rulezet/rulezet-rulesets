@@ -1,0 +1,20 @@
+{
+  "uuid": "420e3fa4-e762-4357-bbac-410e82c5c2da",
+  "title": "SUSP_OneNote_Repeated_FileDataReference_Feb23",
+  "format": "yara",
+  "author": "delivr.to",
+  "license": "",
+  "license_verified": false,
+  "description": "Repeated references to files embedded in OneNote file. May indicate multiple copies of file hidden under image, as leveraged by Qakbot et al.",
+  "source": "https://github.com/delivr-to/detections",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "misp-galaxy:banker=\"Qakbot\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208882"
+}

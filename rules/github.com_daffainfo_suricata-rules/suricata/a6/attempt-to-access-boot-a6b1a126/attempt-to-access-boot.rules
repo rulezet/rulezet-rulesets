@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Attempt to access /boot*"; content:"boot"; nocase; pcre:"/(\/|%2F)boot/i"; classtype:attempted-recon; sid:50200010; rev:1;)

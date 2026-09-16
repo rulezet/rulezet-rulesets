@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2020-26585: Showdoc < 2.8.6 - File Uploads"; content:"POST"; http_method; content:"/index.php?s=/home/page/uploadImg"; http_uri; classtype:web-application-attack; sid:12020002; rev:1;)

@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Detect robots.txt"; content:"/robots.txt"; http_uri; classtype:attempted-recon; sid:40000001; rev:1;)

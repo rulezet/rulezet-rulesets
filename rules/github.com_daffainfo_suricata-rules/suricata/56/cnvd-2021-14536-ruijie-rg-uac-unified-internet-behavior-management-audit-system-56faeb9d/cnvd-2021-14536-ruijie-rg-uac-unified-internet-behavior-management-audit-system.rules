@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2021-14536: Ruijie RG-UAC Unified Internet Behavior Management Audit System - Information Disclosure"; content:"GET"; http_method; content:"/get_dkey.php"; http_uri; content:"user=admin"; http_uri; classtype:web-application-attack; sid:12021004; rev:1;)

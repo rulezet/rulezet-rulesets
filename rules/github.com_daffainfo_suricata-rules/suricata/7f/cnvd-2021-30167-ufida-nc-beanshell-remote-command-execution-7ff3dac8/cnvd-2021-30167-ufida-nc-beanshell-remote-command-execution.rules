@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2021-30167: UFIDA NC BeanShell - Remote Command Execution"; content:"POST"; http_method; content:"/servlet/~ic/bsh.servlet.BshServlet"; http_uri; content:"bsh.script=exec"; http_client_body; classtype:web-application-attack; sid:12021009; rev:1;)

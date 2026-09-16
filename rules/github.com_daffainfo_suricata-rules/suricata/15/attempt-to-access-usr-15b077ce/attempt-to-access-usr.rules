@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"Attempt to access /usr*"; content:"usr"; nocase; pcre:"/(\/|%2F)usr/i"; classtype:attempted-recon; sid:50200008; rev:1;)

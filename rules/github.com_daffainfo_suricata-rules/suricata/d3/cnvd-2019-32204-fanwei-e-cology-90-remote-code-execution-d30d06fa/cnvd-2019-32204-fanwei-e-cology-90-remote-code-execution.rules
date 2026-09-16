@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"CNVD-2019-32204: Fanwei e-cology <=9.0 - Remote Code Execution"; content:"POST"; http_method; content:"/bsh.servlet.BshServlet"; http_uri; content:"bsh.script="; nocase; http_client_body; content:"bsh.servlet.output="; nocase; http_client_body; classtype:web-application-attack; sid:12019002; rev:1;)

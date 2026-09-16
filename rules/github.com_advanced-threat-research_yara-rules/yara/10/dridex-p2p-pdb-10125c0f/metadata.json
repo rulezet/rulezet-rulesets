@@ -1,0 +1,21 @@
+{
+  "uuid": "10125c0f-1d77-4c5c-b112-6cc2bb425921",
+  "title": "Dridex_P2P_pdb",
+  "format": "yara",
+  "author": "Marc Rivero | McAfee ATR Team",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "Rule to detect Dridex P2P based on the PDB",
+  "source": "https://github.com/advanced-threat-research/Yara-Rules",
+  "tags": [
+    "PAP:CLEAR",
+    "tlp:clear",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:banker=\"Dridex\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-03-24",
+  "last_modified": "2026-03-24",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/208435"
+}
