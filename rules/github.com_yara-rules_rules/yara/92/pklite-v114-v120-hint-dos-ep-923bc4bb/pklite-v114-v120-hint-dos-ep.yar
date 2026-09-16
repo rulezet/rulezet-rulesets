@@ -1,0 +1,9 @@
+import "pe"
+rule PKLITE_v114_v120_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? BA ?? ?? 05 ?? ?? 3B 06 ?? ?? 72 ?? B4 09 BA ?? ?? CD 21 CD 20 }
+    condition:
+        $a at pe.entry_point
+
+}

@@ -1,0 +1,9 @@
+import "pe"
+rule _PseudoSigner_01_XCR_011: PEiD
+{
+    strings:
+        $a = { 60 8B F0 33 DB 83 C3 01 83 C0 01 E9 }
+    condition:
+        $a at pe.entry_point
+
+}

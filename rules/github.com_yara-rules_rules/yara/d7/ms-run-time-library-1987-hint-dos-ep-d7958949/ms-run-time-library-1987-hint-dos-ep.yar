@@ -1,0 +1,9 @@
+import "pe"
+rule MS_Run_Time_Library_1987_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { B4 30 CD 21 3C 02 73 ?? 9A ?? ?? ?? ?? B8 ?? ?? 50 9A ?? ?? ?? ?? 92 }
+    condition:
+        $a at pe.entry_point
+
+}
