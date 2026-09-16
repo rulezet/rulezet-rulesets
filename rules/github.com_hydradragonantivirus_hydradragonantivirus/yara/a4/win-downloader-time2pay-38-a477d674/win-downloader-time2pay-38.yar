@@ -1,0 +1,9 @@
+rule Win_Downloader_Time2Pay_38
+{
+strings:
+	$a0 = { acbc63fe5801cc648d5efd74a86bed68bb52f364a85ec9b130c4608abd1f975644c51cc830085f321fc931f61e72eb14b13fada8dc4c607ea5798d3a1e49745e93f8ca8a25ba73b9ca75c98c8a8843b730ebc832146b165c35fd96beccea54d3a2ad54641cfc4b901abd49d61eac54647c2447d80de126da07e725 }
+
+
+condition:
+	$a0
+}
