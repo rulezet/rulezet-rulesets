@@ -1,0 +1,18 @@
+rule StealC_cystack_a52d3ec9
+{
+    meta:
+        family = "StealC"
+        fingerprint_id = "cystack_a52d3ec9"
+
+    strings:
+        $key_0 = "All Users:" ascii
+        $key_1 = "Channel with contacts:" ascii
+        $key_2 = "Commission split:" ascii
+        $key_3 = "Installed Apps:" ascii
+        $key_4 = "Network Info:" ascii
+        $key_5 = "System Summary:" ascii
+        $key_6 = "Telegram:" ascii
+
+    condition:
+        all of ($key_*)
+}
