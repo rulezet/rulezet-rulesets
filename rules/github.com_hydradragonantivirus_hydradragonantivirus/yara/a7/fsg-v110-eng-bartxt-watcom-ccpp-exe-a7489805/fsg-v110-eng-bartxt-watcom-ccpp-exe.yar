@@ -1,0 +1,10 @@
+import "pe"
+rule _FSG_v110_Eng__bartxt__Watcom_CCpp_EXE_
+{
+	meta:
+		description = "FSG v1.10 (Eng) -> bart/xt -> (Watcom C/C++ EXE)"
+	strings:
+		$0 = {EB 02 CD 20 03 ?? 8D ?? 80 ?? ?? 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? EB 02}
+	condition:
+		$0 at pe.entry_point
+}

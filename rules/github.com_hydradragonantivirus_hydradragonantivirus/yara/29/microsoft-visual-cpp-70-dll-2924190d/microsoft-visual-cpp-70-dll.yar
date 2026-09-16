@@ -1,0 +1,10 @@
+import "pe"
+rule _Microsoft_Visual_Cpp_70_DLL_
+{
+	meta:
+		description = "Microsoft Visual C++ 7.0 DLL"
+	strings:
+		$0 = {55 8B EC 53 8B 5D 08 56 8B 75 0C 85 F6 57 8B 7D 10 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 01}
+	condition:
+		$0 at pe.entry_point
+}

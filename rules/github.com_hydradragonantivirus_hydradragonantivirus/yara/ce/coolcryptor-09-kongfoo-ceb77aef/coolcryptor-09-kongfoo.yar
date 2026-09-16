@@ -1,0 +1,10 @@
+import "pe"
+rule _COOLcryptor_09__kongfoo_
+{
+	meta:
+		description = "COOLcryptor 0.9 -> kongfoo"
+	strings:
+		$0 = {E8 03 00 00 00 E9 EB 07 FF 04 24 EB 01 FF C3 E8 03 00 00 00 EB 02 EA C3 EB 08 8D 8D 72 08}
+	condition:
+		$0 at pe.entry_point
+}

@@ -1,0 +1,11 @@
+import "pe"
+rule _Phoenix_Protector_v10v11__NTCorecom_
+{
+	meta:
+		description = "Phoenix Protector v1.0/v1.1 -> NTCore.com"
+	strings:
+		$0 = {02 6F ?? ?? ?? 0A 0A 06 8D ?? ?? ?? 01 0B 16 0C 38 36 00 00 00 02 08 6F ?? ?? ?? 0A 0D 09 06 08 59 61 D2 13 04 09 1E 63 08 61 D2 13 05 07 08 11 05 1E 62 11 04 60 D1 9D 08 17 58 0C 08 07 8E 69 38 0B 00 00 00 28 ?? ?? ?? 0A 2A 38 EC FF FF FF 3F C0 FF FF FF 07 73 ?? ?? ?? 0A 38 E5 FF FF FF}
+		$1 = {02 6F ?? ?? ?? 0A 0A 06 8D ?? ?? ?? 01 0B 16 0C 38 36 00 00 00 02 08 6F ?? ?? ?? 0A 0D 09 06 08 59 61 D2 13 04 09 1E 63 08 61 D2 13 05 07 08 11 05 1E 62 11 04 60 D1 9D 08 17 58 0C 08 07 8E 69 38 0B 00 00 00 28 ?? ?? ?? 0A 2A 38 EC FF FF FF 3F C0 FF FF FF}
+	condition:
+		$0 at pe.entry_point or $1 at pe.entry_point
+}

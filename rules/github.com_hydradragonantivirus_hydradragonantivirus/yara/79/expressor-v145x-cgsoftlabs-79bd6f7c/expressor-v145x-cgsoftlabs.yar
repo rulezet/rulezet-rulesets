@@ -1,0 +1,10 @@
+import "pe"
+rule _eXPressor_V145x__CGSoftLabs_
+{
+	meta:
+		description = "eXPressor V1.4.5.x -> CGSoftLabs"
+	strings:
+		$0 = {55 8B EC 83 EC ?? 53 56 57 83 65 ?? 00 F3 EB 0C 65 58 50 72 2D 76 2E 31 2E 34 2E 00 A1 00 ?? ?? 00 05 00 ?? ?? 00 A3 ?? ?? ?? 00 A1 ?? ?? ?? 00 B9 ?? ?? ?? 00 2B 48 18 89 0D ?? ?? ?? 00 83 3D}
+	condition:
+		$0 at pe.entry_point
+}

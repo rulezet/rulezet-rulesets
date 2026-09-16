@@ -1,0 +1,10 @@
+import "pe"
+rule _XPack_152__164_
+{
+	meta:
+		description = "XPack 1.52 - 1.64"
+	strings:
+		$0 = {8B EC FA 33 C0 8E D0 BC ?? ?? 2E ?? ?? ?? ?? 2E ?? ?? ?? ?? EB}
+	condition:
+		$0 at pe.entry_point
+}

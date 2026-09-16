@@ -1,0 +1,10 @@
+import "pe"
+rule _nSPack_2x3x_NET_North_StarLiu_Xing_Ping_
+{
+	meta:
+		description = "nSPack 2.x/3.x .NET-> North Star/Liu Xing Ping"
+	strings:
+		$0 = {FF 25 A4 ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00}
+	condition:
+		$0 at pe.entry_point
+}

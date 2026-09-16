@@ -1,0 +1,10 @@
+import "pe"
+rule _TurboBAT_v310__50_Patched_
+{
+	meta:
+		description = "TurboBAT v3.10 .. 5.0 (Patched)"
+	strings:
+		$0 = {90 90 90 90 90 90 90 06 B8 ?? ?? 8E C0 B9 ?? ?? 26 ?? ?? ?? ?? 80 ?? ?? 26 ?? ?? ?? 24 ?? 3A C4 90 90}
+	condition:
+		$0 at pe.entry_point
+}

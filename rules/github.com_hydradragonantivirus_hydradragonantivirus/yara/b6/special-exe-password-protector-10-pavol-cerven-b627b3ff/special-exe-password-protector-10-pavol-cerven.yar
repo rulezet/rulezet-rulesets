@@ -1,0 +1,10 @@
+import "pe"
+rule _Special_EXE_Password_Protector_10__Pavol_Cerven_
+{
+	meta:
+		description = "Special EXE Password Protector 1.0 -> Pavol Cerven"
+	strings:
+		$0 = {60 E8 00 00 00 00 5D 81 ED 06 00 00 00 89 AD 8C 01 00 00 8B C5 2B 85 FE 75 00 00 89 85 3E 77}
+	condition:
+		$0 at pe.entry_point
+}
