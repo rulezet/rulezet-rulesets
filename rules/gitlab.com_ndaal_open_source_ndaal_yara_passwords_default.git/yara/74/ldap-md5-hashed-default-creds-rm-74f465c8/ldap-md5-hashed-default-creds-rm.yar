@@ -1,0 +1,47 @@
+rule ldap_md5_hashed_default_creds_rm
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for rm."
+        category = "INFO"
+        info = "LDAP_MD5"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="{MD5}X03MO1qnZdYdgyfeuILPmQ=="
+    $a1="{MD5}Q0aXUUTDTB7+4ei/h+oVWw=="
+    $a2="{MD5}2anpFysz/rjD9ThWN7LOdg=="
+    $a3="{MD5}ISMvKXpXpadDiUoOSoAfww=="
+    $a4="{MD5}TLnIqASP0CKUR3/LGkEZGg=="
+    $a5="{MD5}yEJY6cOQWaiat32Ebdq5CQ=="
+    $a6="{MD5}TLnIqASP0CKUR3/LGkEZGg=="
+    $a7="{MD5}MrqFX5Qr8eFtvlz/JkJ6Ug=="
+    $a8="{MD5}X03MO1qnZdYdgyfeuILPmQ=="
+    $a9="{MD5}iHUQ+2UIu9OZI69tXT48mg=="
+    $a10="{MD5}TLnIqASP0CKUR3/LGkEZGg=="
+    $a11="{MD5}MrA8ktzdcXM2boMkKjX5Tg=="
+    $a12="{MD5}X03MO1qnZdYdgyfeuILPmQ=="
+    $a13="{MD5}HlchIWGhHJme+KnjbFmE/Q=="
+    $a14="{MD5}X03MO1qnZdYdgyfeuILPmQ=="
+    $a15="{MD5}8zNt6/8nDpv3+5E00cNaBA=="
+    $a16="{MD5}S7Pvlee6HnYRCG593qKenQ=="
+    $a17="{MD5}S7Pvlee6HnYRCG593qKenQ=="
+    $a18="{MD5}TLnIqASP0CKUR3/LGkEZGg=="
+    $a19="{MD5}oPhIlCzoY89TwPpsxoQAfQ=="
+    $a20="{MD5}X03MO1qnZdYdgyfeuILPmQ=="
+    $a21="{MD5}jXiDhUMSc9Eei0O7ePOqQQ=="
+    $a22="{MD5}X03MO1qnZdYdgyfeuILPmQ=="
+    $a23="{MD5}eEddcecqPBgcB3y3eUdfHg=="
+    $a24="{MD5}X03MO1qnZdYdgyfeuILPmQ=="
+    $a25="{MD5}jbHUHHiUn7s65YVpTANbrA=="
+    $a26="{MD5}X03MO1qnZdYdgyfeuILPmQ=="
+    $a27="{MD5}XHC9icRyCNyVOFMWrNeQuw=="
+    $a28="{MD5}X03MO1qnZdYdgyfeuILPmQ=="
+    $a29="{MD5}8rJVTsjNEg9epfsK3cWA0g=="
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

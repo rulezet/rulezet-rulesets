@@ -1,0 +1,47 @@
+rule sha384_hashed_default_creds_rm
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for rm."
+        category = "INFO"
+        info = "SHA384"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="a8b64babd0aca91a59bdbb7761b421d4f2bb38280d3a75ba0f21f2bebc45583d446c598660c94ce680c47d19c30783a7"
+    $a1="22c86231acae04cce94ee386b8af4acc853fcc6abf7fa18e6dc1aeb3d8e2a2cc2ecf5439f20da42cc5f79e201aa5ff30"
+    $a2="da7cfe48b4fcf79a7c8899ee68000e35eff35a400b6269db6480e896852ebb293b950f43c3a8e2e855d61fd7850182e1"
+    $a3="9ca694a90285c034432c9550421b7b9dbd5c0f4b6673f05f6dbce58052ba20e4248041956ee8c9a2ec9f10290cdc0782"
+    $a4="7d49d02c105312b2b69de69141b27de1f4f4c202b4afb19d7ff7ab9849e9ce2da165a87eeec971bca66c8eb8a9243f5e"
+    $a5="60cbee716922eb67945d6eac2f2ab33d2916b37c4e4bea4c47410fbe189bcfc74726f483bb0d503f31639d8cb48636bf"
+    $a6="7d49d02c105312b2b69de69141b27de1f4f4c202b4afb19d7ff7ab9849e9ce2da165a87eeec971bca66c8eb8a9243f5e"
+    $a7="a3623b0f5787959a9a59b9070d9e20b1f0d4ed484cd817f3d18760d263397854cdffc776e5017dbf6ee5848060fa999a"
+    $a8="a8b64babd0aca91a59bdbb7761b421d4f2bb38280d3a75ba0f21f2bebc45583d446c598660c94ce680c47d19c30783a7"
+    $a9="5b030cded5be540ada6d4fcfc8db413223a5cb050ad997392b8471c347d3ea59a5f73d6d6fe4ee05b123a4c9cb74a35b"
+    $a10="7d49d02c105312b2b69de69141b27de1f4f4c202b4afb19d7ff7ab9849e9ce2da165a87eeec971bca66c8eb8a9243f5e"
+    $a11="05f06ac1cb75dcaa6b637173df5930588c408d752a8ec6a0ba908a7ca0d1765bae1d01704dda937e08090f5380e0f875"
+    $a12="a8b64babd0aca91a59bdbb7761b421d4f2bb38280d3a75ba0f21f2bebc45583d446c598660c94ce680c47d19c30783a7"
+    $a13="2d7c65268fcf20d0745538eeefd595638a3a07b863fc560d23aef653261d64913d0e77d6966bd1b83674cd91f7cd9f53"
+    $a14="a8b64babd0aca91a59bdbb7761b421d4f2bb38280d3a75ba0f21f2bebc45583d446c598660c94ce680c47d19c30783a7"
+    $a15="b6a82b92327f7f617df207f6dfecfece1d39e52b668cd7d3effa05b25a1625f385d49372cb20d344a8c190a9f654d7ec"
+    $a16="633b9ea6e34829ca4207360ded025b3fe011979f3fffd8a8e7348bfa745aaa4e2b5dacf1cde2e7c9df2db9b8093a3317"
+    $a17="633b9ea6e34829ca4207360ded025b3fe011979f3fffd8a8e7348bfa745aaa4e2b5dacf1cde2e7c9df2db9b8093a3317"
+    $a18="7d49d02c105312b2b69de69141b27de1f4f4c202b4afb19d7ff7ab9849e9ce2da165a87eeec971bca66c8eb8a9243f5e"
+    $a19="daead2f5d798969185c0b94acb330300f835db65a2d91cd4095104d96b469515fce7ab29373dc30cc9ca851059e33e4f"
+    $a20="a8b64babd0aca91a59bdbb7761b421d4f2bb38280d3a75ba0f21f2bebc45583d446c598660c94ce680c47d19c30783a7"
+    $a21="d635c30b0019b44902eeb14d90ed8097f827c07a372d074f74b5b595a28997fe5b982c4f13e73b2f84c50c93b48d3b33"
+    $a22="a8b64babd0aca91a59bdbb7761b421d4f2bb38280d3a75ba0f21f2bebc45583d446c598660c94ce680c47d19c30783a7"
+    $a23="eb9be36ed5a80757b4898228ba727d0bc74f8483ee5bf9cca770a4413148b1315c4943b9d3caf4a4095c4c13c1267b5f"
+    $a24="a8b64babd0aca91a59bdbb7761b421d4f2bb38280d3a75ba0f21f2bebc45583d446c598660c94ce680c47d19c30783a7"
+    $a25="b6956276300c0dc6451f43bc3363836b397cebde28d5f5b10dd91a2be7c05d11291737b2e3667510f2a78cefd36204d1"
+    $a26="a8b64babd0aca91a59bdbb7761b421d4f2bb38280d3a75ba0f21f2bebc45583d446c598660c94ce680c47d19c30783a7"
+    $a27="480c8f041b28487a056d04a904a1381493b1d314ea1beeb834c111726cc9d377e35c413c855377bd4170e92d47fa8efd"
+    $a28="a8b64babd0aca91a59bdbb7761b421d4f2bb38280d3a75ba0f21f2bebc45583d446c598660c94ce680c47d19c30783a7"
+    $a29="89aef1002e7b551d098d7fd6babd1fcee745bb1d19ec172bc96bc072b75c6c74d64a9518964084750cc3a3a759769cc8"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

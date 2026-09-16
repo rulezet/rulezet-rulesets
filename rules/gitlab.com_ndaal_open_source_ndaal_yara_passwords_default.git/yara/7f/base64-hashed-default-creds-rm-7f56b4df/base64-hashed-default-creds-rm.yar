@@ -1,0 +1,47 @@
+rule base64_hashed_default_creds_rm
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for rm."
+        category = "INFO"
+        info = "SHA3_512"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="Uk1Vc2VyMQ=="
+    $a1="cGFzc3dvcmQ="
+    $a2="YWRtaW4="
+    $a3="cm1uZXRsbQ=="
+    $a4="YWRtaW4y"
+    $a5="Y2hhbmdlbWU="
+    $a6="YWRtaW5zdHJhdG9y"
+    $a7="Y2hhbmdlbWU="
+    $a8="ZGVza2FsdA=="
+    $a9="cGFzc3dvcmQ="
+    $a10="ZGVza21hbg=="
+    $a11="Y2hhbmdlbWU="
+    $a12="ZGVza25vcm0="
+    $a13="cGFzc3dvcmQ="
+    $a14="ZGVza3Jlcw=="
+    $a15="cGFzc3dvcmQ="
+    $a16="cmVwbGljYXRvcg=="
+    $a17="cmVwbGljYXRvcg=="
+    $a18="c2V0dXA="
+    $a19="Y2hhbmdlbWU="
+    $a20="dGVhY2hlcg=="
+    $a21="cGFzc3dvcmQ="
+    $a22="dGVtcDE="
+    $a23="cGFzc3dvcmQ="
+    $a24="dG9waWNhbHQ="
+    $a25="cGFzc3dvcmQ="
+    $a26="dG9waWNub3Jt"
+    $a27="cGFzc3dvcmQ="
+    $a28="dG9waWNyZXM="
+    $a29="cGFzc3dvcmQ="
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

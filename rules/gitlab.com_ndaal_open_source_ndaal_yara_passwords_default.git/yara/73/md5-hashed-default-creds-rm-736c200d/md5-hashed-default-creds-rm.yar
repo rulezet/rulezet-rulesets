@@ -1,0 +1,47 @@
+rule md5_hashed_default_creds_rm
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for rm."
+        category = "INFO"
+        info = "MD5"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="5f4dcc3b5aa765d61d8327deb882cf99"
+    $a1="4346975144c34c1efee1e8bf87ea155b"
+    $a2="d9a9e9172b33feb8c3f5385637b2ce76"
+    $a3="21232f297a57a5a743894a0e4a801fc3"
+    $a4="4cb9c8a8048fd02294477fcb1a41191a"
+    $a5="c84258e9c39059a89ab77d846ddab909"
+    $a6="4cb9c8a8048fd02294477fcb1a41191a"
+    $a7="32ba855f942bf1e16dbe5cff26427a52"
+    $a8="5f4dcc3b5aa765d61d8327deb882cf99"
+    $a9="887510fb6508bbd39923af6d5d3e3c9a"
+    $a10="4cb9c8a8048fd02294477fcb1a41191a"
+    $a11="32b03c92dcdd7173366e83242a35f94e"
+    $a12="5f4dcc3b5aa765d61d8327deb882cf99"
+    $a13="1e57212161a11c999ef8a9e36c5984fd"
+    $a14="5f4dcc3b5aa765d61d8327deb882cf99"
+    $a15="f3336debff270e9bf7fb9134d1c35a04"
+    $a16="4bb3ef95e7ba1e7611086e7ddea29e9d"
+    $a17="4bb3ef95e7ba1e7611086e7ddea29e9d"
+    $a18="4cb9c8a8048fd02294477fcb1a41191a"
+    $a19="a0f848942ce863cf53c0fa6cc684007d"
+    $a20="5f4dcc3b5aa765d61d8327deb882cf99"
+    $a21="8d788385431273d11e8b43bb78f3aa41"
+    $a22="5f4dcc3b5aa765d61d8327deb882cf99"
+    $a23="78475d71e72a3c181c077cb779475f1e"
+    $a24="5f4dcc3b5aa765d61d8327deb882cf99"
+    $a25="8db1d41c78949fbb3ae585694c035bac"
+    $a26="5f4dcc3b5aa765d61d8327deb882cf99"
+    $a27="5c70bd89c47208dc95385316acd790bb"
+    $a28="5f4dcc3b5aa765d61d8327deb882cf99"
+    $a29="f2b2554ec8cd120f5ea5fb0addc580d2"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

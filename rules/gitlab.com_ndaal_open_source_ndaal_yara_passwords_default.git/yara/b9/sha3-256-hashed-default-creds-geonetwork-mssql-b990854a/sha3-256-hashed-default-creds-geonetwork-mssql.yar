@@ -1,0 +1,19 @@
+rule sha3_256_hashed_default_creds_geonetwork_mssql
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for geonetwork_mssql."
+        category = "INFO"
+        info = "SHA3_256"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="d6a9a8d76b10747466494c68ff6de4725c927669cb1821da3b10297e16ec861e"
+    $a1="fb001dfcffd1c899f3297871406242f097aecf1a5342ccf3ebcd116146188e4b"
+condition:
+    ($a0 and $a1)
+}

@@ -1,0 +1,47 @@
+rule ldap_sha1_hashed_default_creds_rm
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for rm."
+        category = "INFO"
+        info = "LDAP_SHA1"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="{SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g="
+    $a1="{SHA}0/5VZ0hsyPNh6ElDFko9ObdoP9g="
+    $a2="{SHA}iRjC9U53yAagdM0zBFXk5Pp2ppQ="
+    $a3="{SHA}0DPiKuNIrrVmD8IUCuw1hQxNqZc="
+    $a4="{SHA}+pvrmeQCmtWmYVOZ57uuITVghrM="
+    $a5="{SHA}MV8WbFrKY6FX99QQB2dctEqUizM="
+    $a6="{SHA}+pvrmeQCmtWmYVOZ57uuITVghrM="
+    $a7="{SHA}o5Toinx66i774EplEUBRIOPVfAY="
+    $a8="{SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g="
+    $a9="{SHA}U78teBlkcDMIXMxjJNjFeevau0c="
+    $a10="{SHA}+pvrmeQCmtWmYVOZ57uuITVghrM="
+    $a11="{SHA}Ww/VYwBWYRPOBw2l8s38+MxrXDQ="
+    $a12="{SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g="
+    $a13="{SHA}waMXs9goHVgLvW1YWir8RSEJf/4="
+    $a14="{SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g="
+    $a15="{SHA}oPVzKdIHMmAWWWx+LzNn7jW+S3M="
+    $a16="{SHA}qyH9R8/JnRj3hvKfGLiQNL++fV8="
+    $a17="{SHA}qyH9R8/JnRj3hvKfGLiQNL++fV8="
+    $a18="{SHA}+pvrmeQCmtWmYVOZ57uuITVghrM="
+    $a19="{SHA}gEN6RKZh0UEXQgkRnVQSWlmmSyo="
+    $a20="{SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g="
+    $a21="{SHA}SoLLbbU372xbU9FEhU4UbeeVAug="
+    $a22="{SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g="
+    $a23="{SHA}C0EPvFQN+pDAWzx+9jjarhTOVI0="
+    $a24="{SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g="
+    $a25="{SHA}yA4t8kK355lVz+SxaTTowtSrdiY="
+    $a26="{SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g="
+    $a27="{SHA}Z/TcIUhq9dGCRHF8ZQAIJkbu/BM="
+    $a28="{SHA}W6ph5Mm5Pz8GgiULbPgzG37mj9g="
+    $a29="{SHA}uChzlLz2V0YbGv3fdF33dnaHugY="
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

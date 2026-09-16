@@ -1,0 +1,47 @@
+rule sha3_224_hashed_default_creds_rm
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for rm."
+        category = "INFO"
+        info = "SHA3_224"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="c3f847612c3780385a859a1993dfd9fe7c4e6d7f477148e527e9374c"
+    $a1="ba0453c2e2e64013b9336f3d6e15386da12c617976c8b1ae7112bcbe"
+    $a2="b9292892195bebcc120de603259dcafbe10857e8d8ee0a98bc772163"
+    $a3="a53fff8dd075bed169e164743231ff533d8b9260b0b8073f0a4c1d20"
+    $a4="3580d8fca5a3d7def6d1bbb076d8192b806ba4155c7569c89713d606"
+    $a5="b79f3c2b06d2ccca3d449c4cc9a9f1fba43ef5cd41365789d50df6a2"
+    $a6="3580d8fca5a3d7def6d1bbb076d8192b806ba4155c7569c89713d606"
+    $a7="fc29f1eb6fb5233b99d0c8244c652416955ea28f6f3d90f68b8b7e1d"
+    $a8="c3f847612c3780385a859a1993dfd9fe7c4e6d7f477148e527e9374c"
+    $a9="3a5dc5209e17e058ef666c02e893626a1c87f9b8a08b688105b6e75d"
+    $a10="3580d8fca5a3d7def6d1bbb076d8192b806ba4155c7569c89713d606"
+    $a11="9794c937a5f472502ee48c434b688f5e53d930be30a9c98d0ab80ad6"
+    $a12="c3f847612c3780385a859a1993dfd9fe7c4e6d7f477148e527e9374c"
+    $a13="a26e8db6431d088d0226121e5dc9a0065e80a9abf555a070545002b4"
+    $a14="c3f847612c3780385a859a1993dfd9fe7c4e6d7f477148e527e9374c"
+    $a15="d2af0235d75ee7dfd619486b6e59f6c4e8776052a87b4ac414947e91"
+    $a16="73dfd33eb8dd659c39b5b93cad4f42fac676c27da668e9acacb77b1f"
+    $a17="73dfd33eb8dd659c39b5b93cad4f42fac676c27da668e9acacb77b1f"
+    $a18="3580d8fca5a3d7def6d1bbb076d8192b806ba4155c7569c89713d606"
+    $a19="17b113d0e0afe1192c18bd1d612632793d346184c7daf31bf98f9af0"
+    $a20="c3f847612c3780385a859a1993dfd9fe7c4e6d7f477148e527e9374c"
+    $a21="297f76a9d016cc0f3deb27d928854c6f22bf12cf431fc64e7dd86842"
+    $a22="c3f847612c3780385a859a1993dfd9fe7c4e6d7f477148e527e9374c"
+    $a23="2984778690e48a71c03555200efedc40325063f65b953e22bdf27903"
+    $a24="c3f847612c3780385a859a1993dfd9fe7c4e6d7f477148e527e9374c"
+    $a25="141bca921df0ab1ff48dd38d3917d2e047149ca16b8f45507c64f539"
+    $a26="c3f847612c3780385a859a1993dfd9fe7c4e6d7f477148e527e9374c"
+    $a27="4864b8e1959f22a82ccba7a15036f5b9c6f929214d0006185a8c4f6d"
+    $a28="c3f847612c3780385a859a1993dfd9fe7c4e6d7f477148e527e9374c"
+    $a29="b06f4b889952e223aa5fa558a360058640144d2e6fb4525567490062"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}

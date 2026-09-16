@@ -1,0 +1,47 @@
+rule mysql323_hashed_default_creds_rm
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for rm."
+        category = "INFO"
+        info = "MYSQL323"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="5d2e19393cc5ef67"
+    $a1="2164f9154372d8a3"
+    $a2="070c1ba547cd3477"
+    $a3="43e9a4ab75570f5b"
+    $a4="16d7f906289d77b3"
+    $a5="2a4cbe2d729af488"
+    $a6="16d7f906289d77b3"
+    $a7="11b625b279650aff"
+    $a8="5d2e19393cc5ef67"
+    $a9="3abf134e7aa6b9c8"
+    $a10="16d7f906289d77b3"
+    $a11="044f52055025ea30"
+    $a12="5d2e19393cc5ef67"
+    $a13="732a13d953e1d5dc"
+    $a14="5d2e19393cc5ef67"
+    $a15="19b3a3af0ecdfca8"
+    $a16="755c4ac71c32381e"
+    $a17="755c4ac71c32381e"
+    $a18="16d7f906289d77b3"
+    $a19="3d89770b0d299d60"
+    $a20="5d2e19393cc5ef67"
+    $a21="41400afa207d330b"
+    $a22="5d2e19393cc5ef67"
+    $a23="31c792555e47dfc8"
+    $a24="5d2e19393cc5ef67"
+    $a25="5b757a063c06e815"
+    $a26="5d2e19393cc5ef67"
+    $a27="59d17c7126170ee1"
+    $a28="5d2e19393cc5ef67"
+    $a29="3c50f83746154565"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15) or ($a16 and $a17) or ($a18 and $a19) or ($a20 and $a21) or ($a22 and $a23) or ($a24 and $a25) or ($a26 and $a27) or ($a28 and $a29)
+}
