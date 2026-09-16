@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO Application Crash Report Sent to Microsoft"; flow:established,to_server; http.user_agent; content:"MSDW"; startswith; http.host; content:"watson.microsoft.com"; classtype:policy-violation; sid:2018170; rev:7; metadata:created_at 2014_02_24, confidence High, signature_severity Informational, updated_at 2024_04_12;)

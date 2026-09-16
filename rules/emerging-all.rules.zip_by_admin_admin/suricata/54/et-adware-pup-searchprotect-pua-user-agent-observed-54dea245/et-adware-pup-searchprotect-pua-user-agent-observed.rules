@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP SearchProtect PUA User-Agent Observed"; flow:established,to_server; http.user_agent; content:"SearchProtect|3b|"; startswith; reference:md5,34e2350c2ed6a9a9e9d444102ae4dd87; classtype:pup-activity; sid:2022813; rev:5; metadata:created_at 2016_05_17, confidence High, signature_severity Minor, updated_at 2024_04_13;)

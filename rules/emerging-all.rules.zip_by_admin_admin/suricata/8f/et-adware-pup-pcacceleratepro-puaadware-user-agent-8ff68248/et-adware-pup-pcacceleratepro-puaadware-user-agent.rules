@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP PCAcceleratePro PUA/Adware User-Agent"; flow:established,to_server; http.user_agent; content:"PCAcceleratePro"; startswith; endswith; classtype:pup-activity; sid:2022828; rev:7; metadata:created_at 2016_05_18, confidence High, signature_severity Minor, updated_at 2024_04_13;)

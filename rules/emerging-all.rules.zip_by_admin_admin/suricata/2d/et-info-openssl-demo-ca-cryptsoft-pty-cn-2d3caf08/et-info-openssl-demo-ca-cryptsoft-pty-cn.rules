@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"ET INFO OpenSSL Demo CA - Cryptsoft Pty (CN)"; flow:established,to_client; tls.cert_subject; content:"CN="; content:"Test PCA (1024 bit)"; classtype:misc-activity; sid:2011541; rev:7; metadata:created_at 2010_09_27, confidence High, signature_severity Informational, updated_at 2024_04_12;)

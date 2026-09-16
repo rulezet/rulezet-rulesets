@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET ADWARE_PUP Fake Wget User-Agent (wget 3.0) - Likely Hostile"; flow:established,to_server; http.user_agent; content:"wget 3.0"; startswith; endswith; classtype:pup-activity; sid:2007961; rev:14; metadata:created_at 2010_07_30, confidence Medium, signature_severity Minor, updated_at 2024_04_13;)
