@@ -1,0 +1,22 @@
+{
+  "uuid": "c7067e3b-93d8-47f5-8a57-e16a9a61824d",
+  "title": "MAL_AbyssLocker_Lin_strings",
+  "format": "yara",
+  "author": "@petermstewart",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Matches strings found in SentinelOne analysis of Linux variant of the Abyss Locker ransomware.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/712989"
+}

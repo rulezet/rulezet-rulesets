@@ -1,0 +1,19 @@
+{
+  "uuid": "db1cccb4-e68c-4a40-8306-ce31ecb1dfe7",
+  "title": "SUSP_Obfuscated_Powershell_reverse_xor",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "look for obfsucated powershell strings obfuscated via reverse_xor",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713418"
+}

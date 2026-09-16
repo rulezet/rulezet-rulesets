@@ -1,0 +1,19 @@
+{
+  "uuid": "6188e55b-7f0e-4430-8426-5d2ece696d56",
+  "title": "APT_IR_ShroudedSnooper_XORd_Config_In_Data_Sect",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "track ShroudedSnooper toolset based on repeated XOR encoded .data section ",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713016"
+}

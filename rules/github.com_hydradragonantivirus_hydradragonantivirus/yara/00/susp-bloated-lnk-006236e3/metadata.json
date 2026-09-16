@@ -1,0 +1,19 @@
+{
+  "uuid": "006236e3-be20-4666-8863-87ed95c98cdc",
+  "title": "SUSP_Bloated_LNK",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "check for LNK files with a size over 250KB - examples from Janicab (PDF) and GOLDBACKDOOR (Doc) and MustangPanda (HTML)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713059"
+}

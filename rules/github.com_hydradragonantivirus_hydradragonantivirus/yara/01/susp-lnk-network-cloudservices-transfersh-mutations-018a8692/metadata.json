@@ -1,0 +1,19 @@
+{
+  "uuid": "018a8692-7d00-446c-83ae-1970cb02f5d0",
+  "title": "SUSP_LNK_Network_CloudServices_TransferSH_Mutations",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "check for LNK files referencing a common Cloud Service - this may be used to download additional components",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713127"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "f2aeeca8-9f06-4998-92b8-cf372a245640",
+  "title": "SUSP_Macho_Usr_Ref_include_c",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "check Macho files for the reference to file under /usr/ like include_c ",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713268"
+}

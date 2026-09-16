@@ -1,0 +1,19 @@
+{
+  "uuid": "7de04545-27dd-459a-a7e8-2c192b7bcab9",
+  "title": "SUSP_LoadLibraryA_mutation_xor",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "track string mutations of LoadLibraryA which is commonly used to resolve additional apis",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713129"
+}

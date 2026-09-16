@@ -1,0 +1,19 @@
+{
+  "uuid": "2fd8be6b-2c87-4f09-b112-e3f70a4f37e4",
+  "title": "SUSP_Export_Offset_Undefined",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "check for files that have at least 1 export that has an no defined offset or other fields",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713061"
+}

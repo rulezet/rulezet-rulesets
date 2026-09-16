@@ -1,0 +1,19 @@
+{
+  "uuid": "def512b7-47bf-4f05-a190-3dce7295e6ae",
+  "title": "SUSP_ntdlldll_mutation_reverse",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "track string mutations of ntdll.dll which can be used for syscalls",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713343"
+}

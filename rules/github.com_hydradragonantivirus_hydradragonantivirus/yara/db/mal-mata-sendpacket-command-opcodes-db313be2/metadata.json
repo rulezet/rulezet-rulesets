@@ -1,0 +1,19 @@
+{
+  "uuid": "db313be2-6b0b-4e1d-bfa1-9ec5579c38c5",
+  "title": "MAL_MATA_SendPacket_Command_Opcodes",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "check for Mata framework packet opcodes being moved into EDI before sending",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713052"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "bad0b0cf-ee34-4dc7-8ada-f13745d5ad37",
+  "title": "SUSP_Macho_Usr_Ref_local_lib_libvorbisenc",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "check Macho files for the reference to file under /usr/ like local_lib_libvorbisenc ",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713314"
+}

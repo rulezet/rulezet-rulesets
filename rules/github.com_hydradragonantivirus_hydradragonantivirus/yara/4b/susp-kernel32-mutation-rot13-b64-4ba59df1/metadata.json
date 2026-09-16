@@ -1,0 +1,19 @@
+{
+  "uuid": "4ba59df1-92d0-4d5b-83e7-bf64aae51361",
+  "title": "SUSP_kernel32_mutation_rot13_b64",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "track string mutations of kernel32 which can be used for lots of evil things",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713068"
+}

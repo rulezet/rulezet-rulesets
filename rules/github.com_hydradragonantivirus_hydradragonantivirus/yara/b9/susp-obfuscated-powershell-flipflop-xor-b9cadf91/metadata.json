@@ -1,0 +1,19 @@
+{
+  "uuid": "b9cadf91-16a4-4a64-b6d2-475c67ccd409",
+  "title": "SUSP_Obfuscated_Powershell_flipflop_xor",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "look for obfsucated powershell strings obfuscated via flipflop_xor",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713412"
+}

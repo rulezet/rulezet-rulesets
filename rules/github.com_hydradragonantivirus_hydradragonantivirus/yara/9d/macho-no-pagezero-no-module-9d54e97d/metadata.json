@@ -1,0 +1,19 @@
+{
+  "uuid": "9d54e97d-f47b-4e3b-bb1e-f1514f6250ce",
+  "title": "macho_no_pagezero_no_module",
+  "format": "yara",
+  "author": "@shellcromancer",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Identify macho executable without a __PAGEZERO segment without the module module.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/712925"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "2a9757e7-ca06-405e-af6d-724d24d300d7",
+  "title": "PUP_RMM_AnyDesk_exe",
+  "format": "yara",
+  "author": "@petermstewart",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Matches AnyDesk remote management tool, often abused for unauthorised access.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713009"
+}

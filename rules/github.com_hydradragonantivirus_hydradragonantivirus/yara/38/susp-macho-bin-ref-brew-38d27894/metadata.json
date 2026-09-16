@@ -1,0 +1,19 @@
+{
+  "uuid": "38d27894-2c93-443c-8a74-a8a71ae9da63",
+  "title": "SUSP_Macho_Bin_Ref_brew",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "check Macho files for the reference to file under /bin/ like brew",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713172"
+}

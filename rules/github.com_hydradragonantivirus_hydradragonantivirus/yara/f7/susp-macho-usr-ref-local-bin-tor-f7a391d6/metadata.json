@@ -1,0 +1,19 @@
+{
+  "uuid": "f7a391d6-7c26-41d5-8c42-b2e0ed15c69e",
+  "title": "SUSP_Macho_Usr_Ref_local_bin_tor",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "check Macho files for the reference to file under /usr/ like local_bin_tor ",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713308"
+}

@@ -1,0 +1,19 @@
+{
+  "uuid": "e83c3789-af58-43b2-a91e-ee8418f8c83e",
+  "title": "TTP_delete_volume_shadow",
+  "format": "yara",
+  "author": "@petermstewart",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Matches references to 'vssadmin delete' commands - used to remove Volume Shadow Copies.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713012"
+}

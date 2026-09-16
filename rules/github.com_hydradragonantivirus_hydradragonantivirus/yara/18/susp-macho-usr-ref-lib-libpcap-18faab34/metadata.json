@@ -1,0 +1,19 @@
+{
+  "uuid": "18faab34-f6d5-4c24-986f-2764942d7e65",
+  "title": "SUSP_Macho_Usr_Ref_lib_libpcap",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "check Macho files for the reference to file under /usr/ like lib_libpcap ",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713290"
+}

@@ -1,0 +1,20 @@
+{
+  "uuid": "4523c9a4-7335-490c-931f-976e8b3895f0",
+  "title": "SUSP_Macho_ConventionEngine_Dropper",
+  "format": "yara",
+  "author": "Greg Lesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "using ConventionEngine Style Rules Checking for Macho Files that share some potential functionality via the string Dropper",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/713221"
+}

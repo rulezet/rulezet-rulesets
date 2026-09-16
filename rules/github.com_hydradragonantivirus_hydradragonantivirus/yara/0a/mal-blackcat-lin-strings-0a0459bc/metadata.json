@@ -1,0 +1,23 @@
+{
+  "uuid": "0a0459bc-b8dc-4d25-b6f7-efbfeca28619",
+  "title": "MAL_BlackCat_Lin_strings",
+  "format": "yara",
+  "author": "@petermstewart",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Matches strings found in BlackCat ransomware Linux samples operated by ALPHV",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"BlackCat\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/712992"
+}
