@@ -1,0 +1,11 @@
+rule Contains_PE_File
+{
+    meta:
+        author = "Didier Stevens (https://DidierStevens.com)"
+        description = "Detect a PE file inside a byte sequence"
+        method = "Find string MZ followed by string PE at the correct offset (AddressOfNewExeHeader)"
+    strings:
+        $a = "MZ"
+    condition:
+        for any i in (1..#a): (uint32(@a[i] + uint32(@a[i] + 0x3C)) == 0x00004550)
+}

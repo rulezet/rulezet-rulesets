@@ -1,0 +1,20 @@
+{
+  "uuid": "2d7dc51f-5027-41ed-99cd-911b2c8dde9b",
+  "title": "INFO_MPRESS_PACKER",
+  "format": "yara",
+  "author": "@x0rc1sm",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detection of MPRESS Packer renamed section names",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "runtime-packer:pe=\"mpress\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/371174"
+}

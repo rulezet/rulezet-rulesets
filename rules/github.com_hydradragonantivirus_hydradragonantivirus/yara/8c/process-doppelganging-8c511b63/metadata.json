@@ -1,0 +1,21 @@
+{
+  "uuid": "8c511b63-0b24-497f-8e9b-b95f175557c4",
+  "title": "Process_Doppelganging",
+  "format": "yara",
+  "author": "McAfee ATR - Thomas Roccia - @fr0gger_",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Detect Process Doppelganging",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1186"
+  ],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/371135"
+}

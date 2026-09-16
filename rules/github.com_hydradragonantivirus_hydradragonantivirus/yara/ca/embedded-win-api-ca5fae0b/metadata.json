@@ -1,0 +1,21 @@
+{
+  "uuid": "ca5fae0b-0404-4889-a7ee-ab2d0e2587de",
+  "title": "embedded_win_api",
+  "format": "yara",
+  "author": "nex",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "A non-Windows executable contains win32 API functions names",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/371052"
+}

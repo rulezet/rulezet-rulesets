@@ -1,0 +1,21 @@
+{
+  "uuid": "a5c8ab73-fbf4-4151-af88-568f6fabd916",
+  "title": "TEST_false_positive_plain_fnv1a_in_x64",
+  "format": "yara",
+  "author": "Arnim Rupp",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": false,
+  "description": "This rule detects x64 implementations of standard fnv1a just by looking for the standard fnv64a_offset and fnv64a_prime (unless bitshifting is used instead of multiplication). This rule would have found the SUNBURST backdoor at Solarwinds but will also find any other programm which implements fnv1a. Just useful for developers, pls check if that fnv1a was put there by you ;)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:backdoor=\"SUNBURST\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/371129"
+}
