@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO HTTP Request to a *.co.tv domain"; flow:established,to_server; http.host; content:".co.tv"; endswith; classtype:bad-unknown; sid:2012955; rev:6; metadata:created_at 2011_06_08, confidence High, signature_severity Informational, updated_at 2024_03_06;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HTTP_SERVERS any (msg:"ET WEB_SERVER SQL sp_delete_alert attempt"; flow:established,to_server; content:"sp_delete_alert"; nocase; classtype:attempted-user; sid:2000106; rev:7; metadata:created_at 2010_07_30, signature_severity Minor, updated_at 2024_03_06;)

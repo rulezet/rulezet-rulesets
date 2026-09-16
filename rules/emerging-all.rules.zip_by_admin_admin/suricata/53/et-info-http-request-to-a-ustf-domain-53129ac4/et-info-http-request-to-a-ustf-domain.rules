@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO HTTP Request to a *.us.tf domain"; flow:established,to_server; http.host; content:".us.tf"; endswith; classtype:bad-unknown; sid:2013831; rev:6; metadata:created_at 2011_11_05, confidence High, signature_severity Informational, updated_at 2024_03_06;)

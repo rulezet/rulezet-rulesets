@@ -1,0 +1,1 @@
+alert http $HTTP_SERVERS any -> $EXTERNAL_NET any (msg:"ET WEB_SERVER SQL Errors in HTTP 200 Response (ERROR syntax error at or near)"; flow:established,to_client; http.stat_code; content:"200"; file.data; content:"ERROR|3a|  syntax error at or near"; classtype:bad-unknown; sid:2016674; rev:5; metadata:created_at 2013_03_27, signature_severity Minor, updated_at 2024_03_06;)

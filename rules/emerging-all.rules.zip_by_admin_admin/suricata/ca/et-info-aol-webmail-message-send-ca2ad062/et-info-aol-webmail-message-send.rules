@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO AOL Webmail Message Send"; flow:established,to_server; http.method; content:"POST"; nocase; http.uri; content:"/compose_frame.adp"; classtype:policy-violation; sid:2000571; rev:11; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2024_03_06;)

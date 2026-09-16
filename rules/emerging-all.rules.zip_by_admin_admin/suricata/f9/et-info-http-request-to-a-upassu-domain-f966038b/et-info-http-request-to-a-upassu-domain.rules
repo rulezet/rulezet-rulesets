@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO HTTP Request to a *.upas.su domain"; flow:established,to_server; http.host; content:".upas.su"; fast_pattern; endswith; classtype:bad-unknown; sid:2015551; rev:6; metadata:created_at 2012_07_31, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_06;)
