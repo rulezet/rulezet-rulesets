@@ -1,0 +1,9 @@
+rule Win_Trojan_Ircbot_11
+{
+strings:
+	$a0 = { 7e89f79c74e096ba50dba82516c8d5dfc2cd32cc10ee21ed8ee89d9e6450dca63e9ab116268ca236feadfd5c2317768e0647dcc719d260fc323a7dde328ff0942aa56473db85e145faf6ecdcd84b7040c3ebab9f391ae635aff1ba2c50ddc40b7c791bb7aa2f316e51656d580f5ea62d7fbcdcb6bbd1c15eb7b666921f9d9c640415866fadd323108b6bd4c7a0f70f55ca1a63d4d5f0 }
+
+
+condition:
+	$a0
+}
