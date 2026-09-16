@@ -1,0 +1,9 @@
+rule Win_Downloader_Small_2865
+{
+strings:
+	$a0 = { 9a3fe548cce14d3667d4e1cb1c3fb0d0b962f844df56e17c963f4f251ca85610baeb099947cf7d8f56088aaed6f60991f134104f69e1600aef79fbbabad2418c8829d7f386d5e9155a08bc9aecdf1c45973555bf56934add81b8398b6bd18852d08c17ccbfb50442b75c11cb0b6dc9aecce8 }
+
+
+condition:
+	$a0
+}
