@@ -1,0 +1,26 @@
+{
+  "uuid": "f3a7df43-dfab-4d75-9f72-f172611e055e",
+  "title": "ET WEB_SPECIFIC_APPS Belkin formWanTcpipSetup pppUserName Parameter Buffer Overflow Attempt (CVE-2025-7089, CVE-2025-11299)",
+  "format": "suricata",
+  "author": "HydraDragonAntivirus",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Dynamic and static analysis with Real Time Malware Analysis with Antivirus for Windows, including open-source XDR (3 EDR projects), ClamAV, YARA-X, machine learning AI, behavioral analysis, Unpacker, Deobfuscator, Decompiler, website signatures, Ghidra, Suricata, Sigma, Kernel, Hypervisior based protection and much more than you can imagine.",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-11299",
+    "CVE-2025-7089"
+  ],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/485064"
+}
