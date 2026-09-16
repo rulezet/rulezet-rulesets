@@ -1,0 +1,9 @@
+rule Win_Trojan_W_86
+{
+strings:
+	$a0 = { d600008db709254000cd2032004000b800d70000cd203200400061c68708254000008b451c50 }
+
+
+condition:
+	$a0
+}

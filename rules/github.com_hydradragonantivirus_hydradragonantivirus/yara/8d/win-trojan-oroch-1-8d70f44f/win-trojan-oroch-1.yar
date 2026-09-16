@@ -1,0 +1,9 @@
+rule Win_Trojan_Oroch_1
+{
+strings:
+	$a0 = { 656e4b799c60e8310000008b64240833d2648f025ae8000000005db9d003000083ed1b55df4547df4549dec1df5530cd018a0f000083ed04e2f5eb4433d264ff32648922fe0af795000090b1cfa8dfb6abd8acdfab97badfab9692bad1d1d1b6abd8acdfab97badfab9692badfabcfdfaf9ea6d1d1d132fe6f05170500 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Santana_1
+{
+strings:
+	$a0 = { 508b85390442008dbd05004200b902010000ba310783c70405ebf80507e2f358c35d6800104000605581ed05004200ebcf }
+
+
+condition:
+	$a0
+}

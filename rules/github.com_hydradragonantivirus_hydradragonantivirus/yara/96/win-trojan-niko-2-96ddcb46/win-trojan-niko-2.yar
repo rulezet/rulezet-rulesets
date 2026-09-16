@@ -1,0 +1,9 @@
+rule Win_Trojan_Niko_2
+{
+strings:
+	$a0 = { b897334100c3b8c1354100c3e93831ffffb808000000c3e9bf100000e9d50e0000e8ebffffff50e8d4ffffff8bd02d3d11000081c2a30200008bd88b03595103c18bc88bc3890843434343 }
+
+
+condition:
+	$a0
+}

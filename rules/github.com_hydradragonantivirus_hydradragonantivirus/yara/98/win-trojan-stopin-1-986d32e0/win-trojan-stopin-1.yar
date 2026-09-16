@@ -1,0 +1,9 @@
+rule Win_Trojan_Stopin_1
+{
+strings:
+	$a0 = { 484f5720544f2053035007bdf66f8df68b494f4c454e43456227a325ecd6697003425249808ca5b75c5847332d3c05d86cd8f65241454c }
+
+
+condition:
+	$a0
+}
