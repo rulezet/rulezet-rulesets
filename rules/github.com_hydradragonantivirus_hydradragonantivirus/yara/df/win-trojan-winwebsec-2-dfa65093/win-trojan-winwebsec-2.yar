@@ -1,0 +1,9 @@
+rule Win_Trojan_Winwebsec_2
+{
+strings:
+	$a0 = { 8d0500b006015033c981c9??30000166832100ff31588bd06a3c0104245933c013018b54101cc1ca0833c00c503ac259770990909090e9????ffff6a005cfb2a }
+
+
+condition:
+	$a0
+}

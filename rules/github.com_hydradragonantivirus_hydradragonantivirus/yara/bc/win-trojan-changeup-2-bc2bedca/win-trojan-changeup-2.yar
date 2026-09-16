@@ -1,0 +1,9 @@
+rule Win_Trojan_Changeup_2
+{
+strings:
+	$a0 = { 62726174612043756c7469766174696f6e004f4c4520000000005000000060b2e091dc62f14d8cfb59b85e764d0000 }
+
+
+condition:
+	$a0
+}

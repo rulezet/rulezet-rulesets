@@ -1,0 +1,11 @@
+rule Win_Trojan_BlackHole_1
+{
+strings:
+	$a0 = { 440001c3ffffffff2000000037653362326330393939 }
+
+	$a1 = { ff010000002e000000ffffffff010000003a000000ffffffff090000002e796561682e6e6574000000558bec83c4f053565733 }
+
+
+condition:
+	$a0 and $a1
+}

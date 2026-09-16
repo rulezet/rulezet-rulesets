@@ -1,0 +1,9 @@
+rule Win_Trojan_Zbot_1319
+{
+strings:
+	$a0 = { 89d2558bec6aff687c60400068f911400064a100000000506489250000000083ec685356578965e833db895dfc6a02ff }
+
+
+condition:
+	$a0
+}

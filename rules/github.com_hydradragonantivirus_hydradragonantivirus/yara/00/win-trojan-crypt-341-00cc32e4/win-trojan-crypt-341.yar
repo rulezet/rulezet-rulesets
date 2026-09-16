@@ -1,0 +1,9 @@
+rule Win_Trojan_Crypt_341
+{
+strings:
+	$a0 = { 558bec83ec105356be04f040005633db53ff1570b44000391d04f04000740833c040e984000000575633ff6aff475389 }
+
+
+condition:
+	$a0
+}

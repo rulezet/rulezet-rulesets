@@ -1,0 +1,9 @@
+rule Win_Trojan_Nucleroot_2
+{
+strings:
+	$a0 = { 640061007400650072000000b0040200ffffffff0f00000055004d004200520041004c004f0041004400450052 }
+
+
+condition:
+	$a0
+}

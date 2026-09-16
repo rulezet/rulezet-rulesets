@@ -1,0 +1,9 @@
+rule Win_Trojan_Spy_21
+{
+strings:
+	$a0 = { 687474703a2f2f7777772e757061706169636865676f752e636f6d2f6d61696c2f312e7068700000 }
+
+
+condition:
+	$a0
+}
