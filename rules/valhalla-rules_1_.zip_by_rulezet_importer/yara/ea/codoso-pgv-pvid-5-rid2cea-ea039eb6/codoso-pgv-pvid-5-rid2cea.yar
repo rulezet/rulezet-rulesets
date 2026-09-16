@@ -1,0 +1,20 @@
+rule Codoso_PGV_PVID_5_RID2CEA : DEMO EXE FILE G0073 MAL {
+   meta:
+      description = "Detects Codoso APT PGV PVID Malware"
+      author = "Florian Roth"
+      reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+      date = "2016-01-30 10:09:31"
+      score = 75
+      customer = "demo"
+      license = "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/"
+      hash1 = "13bce64b3b5bdfd24dc6f786b5bee08082ea736be6536ef54f9c908fd1d00f75"
+      hash2 = "bc0b885cddf80755c67072c8b5961f7f0adcaeb67a1a5c6b3475614fd51696fe"
+      tags = "DEMO, EXE, FILE, G0073, MAL"
+      minimum_yara = "3.5.0"
+      
+   strings:
+      $s1 = "/c del %s >> NUL" fullword ascii
+      $s2 = "%s%s.manifest" fullword ascii
+   condition: 
+      uint16 ( 0 ) == 0x5a4d and filesize < 500KB and all of them
+}

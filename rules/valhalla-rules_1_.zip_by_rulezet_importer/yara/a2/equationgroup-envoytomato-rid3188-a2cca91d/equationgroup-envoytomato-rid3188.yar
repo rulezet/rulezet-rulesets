@@ -1,0 +1,19 @@
+rule EquationGroup_envoytomato_RID3188 : APT DEMO G0020 {
+   meta:
+      description = "Equation Group hack tool leaked by ShadowBrokers- file envoytomato"
+      author = "Florian Roth"
+      reference = "https://medium.com/@shadowbrokerss/dont-forget-your-base-867d304a94b1"
+      date = "2017-04-08 13:26:31"
+      score = 75
+      customer = "demo"
+      license = "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/"
+      hash1 = "9bd001057cc97b81fdf2450be7bf3b34f1941379e588a7173ab7fffca41d4ad5"
+      tags = "APT, DEMO, G0020"
+      minimum_yara = "3.5.0"
+      
+   strings:
+      $s1 = "[-] kernel not vulnerable" fullword ascii
+      $s2 = "[-] failed to spawn shell" fullword ascii
+   condition: 
+      filesize < 250KB and 1 of them
+}

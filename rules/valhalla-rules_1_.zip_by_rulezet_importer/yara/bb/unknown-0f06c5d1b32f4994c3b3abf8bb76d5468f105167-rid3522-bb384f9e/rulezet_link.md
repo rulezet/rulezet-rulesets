@@ -1,0 +1,5 @@
+# Unknown_0f06c5d1b32f4994c3b3abf8bb76d5468f105167_RID3522
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/230676)
+
+Rulezet UUID: `bb384f9e-ef8a-4412-8d7c-a6fc7c0d8864`

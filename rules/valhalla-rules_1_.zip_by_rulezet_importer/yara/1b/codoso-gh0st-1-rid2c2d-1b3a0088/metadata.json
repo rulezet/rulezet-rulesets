@@ -1,0 +1,22 @@
+{
+  "uuid": "1b3a0088-bedc-4474-95c1-92e38deb631f",
+  "title": "Codoso_Gh0st_1_RID2C2D",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects Codoso APT Gh0st Malware",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1218.011",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230855"
+}

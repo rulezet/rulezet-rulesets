@@ -1,0 +1,23 @@
+{
+  "uuid": "042f8222-9e3d-45cb-b8ca-06efc1550bb3",
+  "title": "Empire_Get_SecurityPackages_RID31C8",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects Empire component - file Get-SecurityPackages.ps1",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Empire\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230621"
+}

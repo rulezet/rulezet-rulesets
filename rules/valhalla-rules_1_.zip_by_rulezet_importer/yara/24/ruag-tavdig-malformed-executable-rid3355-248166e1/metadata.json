@@ -1,0 +1,19 @@
+{
+  "uuid": "248166e1-0ef4-48d8-8e5a-671cfc08c20f",
+  "title": "RUAG_Tavdig_Malformed_Executable_RID3355",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects an embedded executable with a malformed header - known from Tavdig malware",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230804"
+}

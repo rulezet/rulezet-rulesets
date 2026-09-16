@@ -1,0 +1,20 @@
+{
+  "uuid": "8f6ea385-f7c1-424b-80f1-63d051f69542",
+  "title": "Derusbi_Code_Signing_Cert_RID30D4",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects an executable signed with a certificate also used for Derusbi Trojan - suspicious",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230883"
+}

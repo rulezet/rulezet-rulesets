@@ -1,0 +1,19 @@
+{
+  "uuid": "7d1c134e-e429-4d62-a02c-3de6e8abd45c",
+  "title": "Win_PrivEsc_folderperm_RID2FE9",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects a tool that can be used for privilege escalation - file folderperm.ps1",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230800"
+}

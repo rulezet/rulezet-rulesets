@@ -1,0 +1,19 @@
+{
+  "uuid": "4ce37e95-80d8-4935-b3a7-b6b3bc63e798",
+  "title": "LM_hash_empty_String_RID2F11",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects the empty LM hash on disk/in memory/as output from hacking tools",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230798"
+}

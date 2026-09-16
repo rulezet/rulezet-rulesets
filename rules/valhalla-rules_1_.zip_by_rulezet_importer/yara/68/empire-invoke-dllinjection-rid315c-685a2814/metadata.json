@@ -1,0 +1,24 @@
+{
+  "uuid": "685a2814-4b48-43a3-8446-0731667b3b9c",
+  "title": "Empire_Invoke_DllInjection_RID315C",
+  "format": "yara",
+  "author": "Florian Roth",
+  "license": "CC-BY-NC https://creativecommons.org/licenses/by-nc/4.0/",
+  "license_verified": true,
+  "description": "Detects Empire component - file Invoke-DllInjection.ps1",
+  "source": "valhalla-rules(1).zip by Rulezet Importer",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Empire\""
+  ],
+  "attack_techniques": [
+    "T1055.001",
+    "T1059",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-06-12",
+  "last_modified": "2026-06-12",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/230637"
+}
