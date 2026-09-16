@@ -1,0 +1,9 @@
+rule Win_Trojan_AnaFtp_9
+{
+strings:
+	$a0 = { 11110c5222908bb08a452618a645622f7211745322ec5209b12298ae29b1863317ac1148bde9148a422d062d18645f0ea5f7a13ee4fb937c9ef26f93eeffeffec8fbcf3a3f5ad7effad69d065fef478727b2f5bfb4e7254f9a849fc194fa25fdbf2f75fc20b0fd5beaf6ebcda674ebf9f296594ced8d51a01091eb2bd8 }
+
+
+condition:
+	$a0
+}

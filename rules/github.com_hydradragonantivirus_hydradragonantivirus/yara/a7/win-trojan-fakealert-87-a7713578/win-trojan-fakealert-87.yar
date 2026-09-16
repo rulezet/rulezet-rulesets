@@ -1,0 +1,9 @@
+rule Win_Trojan_Fakealert_87
+{
+strings:
+	$a0 = { 9ad0fe480544447a7d2760ca31e89b901c475e4ebcd735d60a3ed4ccb5df0e761ab0c8b323070d6028cf27d22e8a5c70e3d907fc0647bd6c899f9ef9b9a6cad621cd136626c40559bcd61a50c5f32f831a2b54d42ab8629aa1441bf92b5515040a3afa02 }
+
+
+condition:
+	$a0
+}

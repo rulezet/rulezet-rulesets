@@ -1,0 +1,9 @@
+rule Win_Trojan_Spamtool_4
+{
+strings:
+	$a0 = { 9250dbddddb767eec91fae4fd60a8ce884bd22ffceadccb93c8c1cf959b089f79b1f59356b110d48bbe13a654b7e5cb4bbccf392cae77bf05efbec450c571184cd53464294efdc0bdfbb097490350e59ea709dc68e33e3d8c011462e9a0e847b4141f7dc316e3e5ae50f1e05a136715c5755d1a4d10e5b6f4c0064d4eab12c40394aca386861caddee1cd0b7fc3ed987d179898ff14e }
+
+
+condition:
+	$a0
+}

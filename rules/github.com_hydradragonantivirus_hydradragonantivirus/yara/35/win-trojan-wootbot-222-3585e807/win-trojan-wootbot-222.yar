@@ -1,0 +1,9 @@
+rule Win_Trojan_Wootbot_222
+{
+strings:
+	$a0 = { 0242cc1810ac4ac2f709051085528c8025d4b84202a52080c1114b9085c528971110685512e9780825d53e46a592aa946808a9dee6ae66ccd7de6bcf04e77babb9afbb39b3ecd7f6cfb9dd5f666bccf0bcd9dd99b39e0b9effeffbb3f7ef0fff7ff66ec98d0008bd702c00fe6f525c4ff455aea48dc8b130f3f9b02eef }
+
+
+condition:
+	$a0
+}

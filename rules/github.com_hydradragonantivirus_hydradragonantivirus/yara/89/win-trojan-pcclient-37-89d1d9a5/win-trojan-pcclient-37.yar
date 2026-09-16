@@ -1,0 +1,9 @@
+rule Win_Trojan_Pcclient_37
+{
+strings:
+	$a0 = { 62aed2fad7a88ed12eb59afa68b508eaebdc1abec6b4c6a70c0a5174db8893d5a5f6ea781fa09d8e459970c96b9e9d570c6eed5bf554b8f76c201add7bd1d30ce802878908de4d5d40dad7570f228c2e821975260ffd385dd9070ea72f579312c145a6f95e0f254bdd985d5c608abe45bab483bf8e3774aaade7add7fb255ece49555eb784aabcaf5464280528d6 }
+
+
+condition:
+	$a0
+}
