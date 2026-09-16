@@ -1,0 +1,9 @@
+rule Win_Adware_MediaPass_2
+{
+strings:
+	$a0 = { 657865004d6564696150617373000000484b45595f4c4f43414c5f4d414348494e455c536f6674776172655c }
+
+
+condition:
+	$a0
+}

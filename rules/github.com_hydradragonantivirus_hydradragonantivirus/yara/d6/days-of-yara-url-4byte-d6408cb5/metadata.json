@@ -1,0 +1,19 @@
+{
+  "uuid": "d6408cb5-373e-4d49-adfd-148cc5209ba2",
+  "title": "days_of_yara_url_4byte",
+  "format": "yara",
+  "author": "malvidin",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Look for four byte xor of target string. Creating ~4G separate rules would probably be faster (~860 GB rule file)",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/381666"
+}

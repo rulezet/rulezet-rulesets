@@ -1,0 +1,21 @@
+{
+  "uuid": "919fd7e4-ddf6-4c36-b9f1-d498f0ef7b93",
+  "title": "TTP_RegOpenKeyExA_HKEY_PERFORMANCE_TEXT_tight",
+  "format": "yara",
+  "author": "@captainGeech42,@stvemillertime,@greglesnewich",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "Look for PE files that try to open HKEY_PERFORMANCE_TEXT keys (const 0x80000050) with RegOpenKeyExA",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/381699"
+}
