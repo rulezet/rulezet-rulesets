@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO Googlebot User-Agent Outbound (likely malicious)"; flow:established,to_server; http.user_agent; content:"Googlebot"; nocase; classtype:bad-unknown; sid:2015529; rev:5; metadata:created_at 2012_07_27, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_02_22;)

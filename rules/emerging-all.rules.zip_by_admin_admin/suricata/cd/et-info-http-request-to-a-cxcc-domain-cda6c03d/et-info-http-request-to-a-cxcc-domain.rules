@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET INFO HTTP Request to a *.cx.cc domain"; flow:established,to_server; http.host; content:".cx.cc"; fast_pattern; endswith; classtype:bad-unknown; sid:2012321; rev:4; metadata:created_at 2011_02_18, confidence High, signature_severity Informational, updated_at 2024_02_22;)
