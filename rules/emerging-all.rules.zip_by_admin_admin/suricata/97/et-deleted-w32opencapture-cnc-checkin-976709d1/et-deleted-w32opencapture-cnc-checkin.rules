@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED W32/OpenCapture CnC Checkin"; flow:established,to_server; content:"/check_counter.php?pi="; http_uri; content:"&gu="; http_uri; content:"&ac="; http_uri; classtype:command-and-control; sid:2013722; rev:2; metadata:created_at 2011_10_01, signature_severity Unknown, updated_at 2019_07_26;)

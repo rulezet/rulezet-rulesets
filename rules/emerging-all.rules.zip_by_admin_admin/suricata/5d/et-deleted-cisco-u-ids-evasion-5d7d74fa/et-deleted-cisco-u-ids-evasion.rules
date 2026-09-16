@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET DELETED Cisco %u IDS evasion"; flow:to_server,established; content:"%u002F"; http_uri; classtype:attempted-dos; sid:2000012; rev:11; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

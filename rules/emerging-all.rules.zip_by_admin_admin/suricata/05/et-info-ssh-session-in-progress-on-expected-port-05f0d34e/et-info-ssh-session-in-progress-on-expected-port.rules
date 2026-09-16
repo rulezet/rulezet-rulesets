@@ -1,0 +1,1 @@
+alert ssh any any -> any $SSH_PORTS (msg:"ET INFO SSH session in progress on Expected Port"; flow:established,to_server; threshold: type both, track by_src, count 2, seconds 300; classtype:misc-activity; sid:2001978; rev:8; metadata:created_at 2010_07_30, confidence High, signature_severity Informational, updated_at 2019_07_26;)

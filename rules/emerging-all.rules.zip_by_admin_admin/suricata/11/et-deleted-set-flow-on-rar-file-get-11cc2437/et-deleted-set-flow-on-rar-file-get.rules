@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Set flow on rar file get"; flow:established,to_server; content:"GET"; http_method; content:".rar"; http_uri; content:".rar HTTP/1."; flowbits:set,ET.rar_seen; flowbits:noalert; classtype:trojan-activity; sid:2008781; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert ip $EXTERNAL_NET any -> $HOME_NET any (msg:"GPL INFO TRAFFIC Non-Standard IP protocol"; ip_proto:!1; ip_proto:!2; ip_proto:!47; ip_proto:!50; ip_proto:!51; ip_proto:!6; ip_proto:!89; ip_proto:!17; classtype:non-standard-protocol; sid:2101620; rev:7; metadata:created_at 2010_09_23, confidence Medium, signature_severity Informational, updated_at 2019_07_26;)

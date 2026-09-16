@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED SpyeEye Trojan Request file=grabbers"; flow:established,to_server; content:".php?file="; nocase; http_uri; content:"grabber"; distance: 0; http_uri; classtype:trojan-activity; sid:2012613; rev:5; metadata:created_at 2011_03_31, signature_severity Unknown, updated_at 2019_07_26;)

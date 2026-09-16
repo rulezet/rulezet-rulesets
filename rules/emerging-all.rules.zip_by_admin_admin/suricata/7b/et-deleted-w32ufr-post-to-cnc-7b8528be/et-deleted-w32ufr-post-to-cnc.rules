@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED W32/UFR POST to CnC"; flow:established,to_server; content:"POST"; nocase; http_method; content:"/ufr/ufr.php"; http_uri; content:"UFR"; http_client_body; classtype:command-and-control; sid:2013424; rev:3; metadata:created_at 2011_08_18, signature_severity Unknown, updated_at 2019_07_26;)

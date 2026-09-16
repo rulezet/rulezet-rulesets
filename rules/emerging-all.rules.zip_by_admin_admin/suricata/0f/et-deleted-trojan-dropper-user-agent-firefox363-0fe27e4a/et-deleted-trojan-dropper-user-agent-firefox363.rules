@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Trojan Dropper User-Agent Firefox/3.6.3"; flow:established,to_server; content:"User-Agent|3A| Firefox/3.6.3"; http_header; classtype:trojan-activity; sid:2013341; rev:3; metadata:created_at 2011_08_02, signature_severity Unknown, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET DELETED Cisco IOS HTTP server DoS"; flow: to_server,established; content:"/TEST?/"; http_uri; nocase; classtype:attempted-dos; sid:2000013; rev:12; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

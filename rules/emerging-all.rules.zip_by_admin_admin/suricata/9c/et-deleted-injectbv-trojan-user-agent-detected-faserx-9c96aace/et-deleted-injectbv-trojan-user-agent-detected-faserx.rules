@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Inject.BV Trojan User Agent Detected (faserx)"; flow:established,to_server; content:"User-Agent|3a| faser"; http_header; nocase; classtype:trojan-activity; sid:2003637; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

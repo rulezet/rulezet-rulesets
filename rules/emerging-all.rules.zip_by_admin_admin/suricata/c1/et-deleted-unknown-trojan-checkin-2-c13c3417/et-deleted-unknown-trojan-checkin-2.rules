@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Unknown Trojan Checkin 2"; flow:established,to_server; content:"/link32.asp?SID="; http_uri; content:"&UID="; http_uri; content:"&MID="; http_uri; classtype:trojan-activity; sid:2013371; rev:3; metadata:created_at 2011_08_05, signature_severity Unknown, updated_at 2019_07_26;)

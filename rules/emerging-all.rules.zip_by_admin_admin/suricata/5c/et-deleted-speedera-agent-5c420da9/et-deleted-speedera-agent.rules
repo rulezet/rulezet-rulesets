@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Speedera Agent"; flow: to_server,established; content:"/io/downloads"; nocase; http_uri; classtype:trojan-activity; sid:2001320; rev:7; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

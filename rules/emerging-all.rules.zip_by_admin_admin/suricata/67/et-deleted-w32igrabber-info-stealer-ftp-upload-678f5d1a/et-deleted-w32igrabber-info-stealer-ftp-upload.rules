@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 21 (msg:"ET DELETED W32/iGrabber Info Stealer FTP Upload"; flow:established,to_server; content:"iGrabber Logs"; offset:4; depth:13; classtype:trojan-activity; sid:2013727; rev:1; metadata:created_at 2011_10_01, signature_severity Unknown, updated_at 2019_07_26;)

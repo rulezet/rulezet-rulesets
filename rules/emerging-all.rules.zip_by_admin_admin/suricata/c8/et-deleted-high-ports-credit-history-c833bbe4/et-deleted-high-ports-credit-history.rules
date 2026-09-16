@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 1024: -> $EXTERNAL_NET 1024: (msg:"ET DELETED High Ports - Credit History"; flow:to_server,established; pcre:"/\Wcredit\shistor(y|ies)\W/ism"; classtype:policy-violation; sid:2002653; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

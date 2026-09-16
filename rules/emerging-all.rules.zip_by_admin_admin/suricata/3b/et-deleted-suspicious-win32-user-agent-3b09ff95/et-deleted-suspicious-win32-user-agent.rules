@@ -1,0 +1,1 @@
+alert http $HOME_NET 1024: -> $EXTERNAL_NET $HTTP_PORTS (msg:"ET DELETED Suspicious Win32 User Agent"; flow:to_server,established; content:"User-Agent|3a| Win32"; http_header; classtype:trojan-activity; sid:2012316; rev:3; metadata:created_at 2011_02_18, signature_severity Unknown, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert ip any any -> any any (msg:"GPL MISC IP Proto 77 Sun ND"; ip_proto:77; reference:bugtraq,8211; reference:cve,2003-0567; classtype:non-standard-protocol; sid:2102188; rev:4; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2019_07_26;)

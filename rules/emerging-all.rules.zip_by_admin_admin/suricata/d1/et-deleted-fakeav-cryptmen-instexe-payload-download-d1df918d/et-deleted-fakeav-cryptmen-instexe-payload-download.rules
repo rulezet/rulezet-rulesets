@@ -1,0 +1,1 @@
+alert http $EXTERNAL_NET any -> $HOME_NET any (msg:"ET DELETED FAKEAV CryptMEN inst.exe Payload Download"; flow:established,from_server; content:"Content-Disposition|3a| attachment|3b| filename="; content:"inst.exe"; distance:0; fast_pattern; classtype:trojan-activity; sid:2011923; rev:6; metadata:created_at 2010_11_11, signature_severity Unknown, updated_at 2019_07_26;)

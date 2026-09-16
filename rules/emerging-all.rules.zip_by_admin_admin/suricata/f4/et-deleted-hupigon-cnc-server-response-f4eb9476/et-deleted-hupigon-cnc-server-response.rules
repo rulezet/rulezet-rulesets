@@ -1,0 +1,1 @@
+alert tcp $HOME_NET any -> $EXTERNAL_NET 3128:9000 (msg:"ET DELETED Hupigon CnC Server Response"; flow:established,from_server; flowbits:isset,ET.Hupinit2; dsize:3; content:"|0d 0a|"; classtype:command-and-control; sid:2009292; rev:2; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

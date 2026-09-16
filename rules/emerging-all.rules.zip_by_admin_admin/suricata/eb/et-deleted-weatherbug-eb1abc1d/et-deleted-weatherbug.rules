@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Weatherbug"; flow: to_server,established; content:"WxAlertIsapi"; nocase; http_uri; threshold: type limit, track by_src, count 1, seconds 3600; classtype:misc-activity; sid:2001235; rev:13; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

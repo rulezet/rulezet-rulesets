@@ -1,0 +1,1 @@
+alert udp $DNS_SERVERS 53 -> any any (msg:"ET DNS Standard query response, Not Implemented"; pcre:"/^..[\x81\x82\x83\x84\x85\x86\x87]\x84/"; classtype:not-suspicious; sid:2001118; rev:6; metadata:created_at 2010_07_30, signature_severity Informational, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert icmp $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Win32 Jadtre/Wapomi/Nimnul/Viking.AY ICMP ping"; icode:0; itype:8; dsize:36; content:"EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"; classtype:trojan-activity; sid:2014595; rev:4; metadata:created_at 2012_04_16, signature_severity Unknown, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED W32/Rbot User-Agent (tiehttp)"; flow:established,to_server; content:"User-Agent|3A 20|tiehttp"; http_header; classtype:trojan-activity; sid:2013449; rev:3; metadata:created_at 2011_08_22, signature_severity Unknown, updated_at 2019_07_26;)

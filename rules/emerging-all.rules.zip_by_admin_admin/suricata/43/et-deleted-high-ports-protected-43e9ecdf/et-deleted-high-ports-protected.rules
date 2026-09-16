@@ -1,0 +1,1 @@
+alert tcp $HOME_NET 1024: -> $EXTERNAL_NET 1024: (msg:"ET DELETED High Ports - Protected"; flow:to_server,established; pcre:"/\Wprotected\W(?!/(25)?X[1-9])/ism"; classtype:policy-violation; sid:2002631; rev:6; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)

@@ -1,0 +1,1 @@
+alert ip any any -> any any (msg:"GPL SCAN same SRC/DST"; sameip; reference:bugtraq,2666; reference:cve,1999-0016; reference:url,www.cert.org/advisories/CA-1997-28.html; classtype:bad-unknown; sid:2100527; rev:9; metadata:created_at 2010_09_23, signature_severity Informational, updated_at 2019_07_26;)

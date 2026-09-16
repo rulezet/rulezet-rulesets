@@ -1,0 +1,1 @@
+alert http $HOME_NET any -> $EXTERNAL_NET any (msg:"ET DELETED Wild Tangent Agent User-Agent (WildTangent)"; flow: to_server,established; content:"WildTangent"; fast_pattern:only; pcre:"/User-Agent\:[^\n]+Wildtangent/iH"; classtype:trojan-activity; sid:2001639; rev:30; metadata:created_at 2010_07_30, signature_severity Unknown, updated_at 2019_07_26;)
