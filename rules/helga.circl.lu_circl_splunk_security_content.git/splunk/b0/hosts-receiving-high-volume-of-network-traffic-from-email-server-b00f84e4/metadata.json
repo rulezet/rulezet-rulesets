@@ -1,0 +1,21 @@
+{
+  "uuid": "b00f84e4-e709-4137-adea-412eb6009977",
+  "title": "Hosts receiving high volume of network traffic from email server",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies hosts receiving an unusually high volume of network traffic from an email server. It leverages the Network_Traffic data model to sum incoming bytes to clients from email servers, comparing current traffic against historical averages and standard deviations. This activity is significant as it may indicate data exfiltration by a malicious actor using the email server. If confirmed malicious, this could lead to unauthorized data access and potential data breaches, compromising sensitive information and impacting organizational security.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1114.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349860"
+}

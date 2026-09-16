@@ -1,0 +1,24 @@
+{
+  "uuid": "cae9bdd3-4fc9-4847-a427-f1b8bd117639",
+  "title": "Potential Privacy Control Bypass via Localhost Secure Copy",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies use of the Secure Copy Protocol (SCP) to copy files locally by abusing the auto addition of the Secure Shell\nDaemon (sshd) to the authorized application list for Full Disk Access. This may indicate attempts to bypass macOS\nprivacy controls to access sensitive files.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1548"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349723"
+}

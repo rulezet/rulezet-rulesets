@@ -1,0 +1,32 @@
+{
+  "uuid": "c89ba1a5-936e-44a8-8110-4b3d9687f1a9",
+  "title": "Execution with Explicit Credentials via Scripting",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies execution of the security_authtrampoline process via a scripting interpreter. This occurs when programs use\nAuthorizationExecute-WithPrivileges from the Security.framework to run another program with root privileges. It should\nnot be run by itself, as this is a sign of execution with explicit logon credentials.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001",
+    "T1059.002",
+    "T1059.004",
+    "T1059.006",
+    "T1078",
+    "T1548",
+    "T1548.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349720"
+}

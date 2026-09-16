@@ -1,0 +1,24 @@
+{
+  "uuid": "31024c7a-159d-4590-b133-f436f6f496a7",
+  "title": "Message-of-the-Day (MOTD) File Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation of potentially malicious files within the default MOTD file directories. Message of the\nday (MOTD) is the message that is presented to the user when a user connects to a Linux server via SSH or a serial\nconnection. Linux systems contain several default MOTD files located in the \"/etc/update-motd.d/\" directory. These\nscripts run as the root user every time a user connects over SSH or a serial connection. Adversaries may create\nmalicious MOTD files that grant them persistence onto the target every time a user connects to the system by executing a\nbackdoor script or command.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1037"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349574"
+}

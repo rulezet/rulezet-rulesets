@@ -1,0 +1,24 @@
+{
+  "uuid": "50411fe9-b8b3-4b52-91ef-837c19e735c0",
+  "title": "Detect Remote Access Software Usage DNS",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects DNS queries to domains associated with known remote access software such as AnyDesk, GoToMyPC, LogMeIn, and TeamViewer. This detection is crucial as adversaries often use these tools to maintain access and control over compromised environments. Identifying such behavior is vital for a Security Operations Center (SOC) because unauthorized remote access can lead to data breaches, ransomware attacks, and other severe impacts if these threats are not mitigated promptly.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349910"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "3f3aca6b-8da6-42e5-bf1f-411a944a4982",
+  "title": "Sensitive Identity File Open by Suspicious Process via Auditd",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects Auditd opened-file reads on sensitive root and cluster paths (Kubernetes token mounts, kubelet and admin\nkubeconfig, PKI material, shadow, root SSH keys, root cloud CLI and Docker config) when the process looks like common\ncopy or scripting utilities or the binary runs from temp or run staging. User home paths are excluded so file watches\nstay explicit and aligned with auditd.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1552",
+    "T1552.001",
+    "T1552.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349547"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "51ff47c1-f51c-4c19-b61d-88236bd202e9",
+  "title": "Curl or Wget Execution from Container Context",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects execution of curl or wget from processes whose title aligns with **`runc init`**, a common fingerprint \nfor workloads running inside **OCI/runc-backed containers** on Linux hosts instrumented with Auditd Manager. \nAfter breaking out of an application container or abusing a privileged workload, attackers often pull ingress tooling\n(stagers, scripts, implants) or stage exfiltration with minimal HTTP clients. Those utilities are also used\nbenignly in images, so context matters; the `runc init` anchor narrows the signal to the container runtime boundary\nwhere unexpected download clients are more worthy of review than the same binaries on a bare-metal admin shell.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349576"
+}

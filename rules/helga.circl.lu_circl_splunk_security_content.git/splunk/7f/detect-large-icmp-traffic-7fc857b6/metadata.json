@@ -1,0 +1,22 @@
+{
+  "uuid": "7fc857b6-e0d6-45c0-8e0d-4cf6ceb3f64a",
+  "title": "Detect Large ICMP Traffic",
+  "format": "splunk",
+  "author": "Rico Valdez, Dean Luxton, Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies ICMP traffic to external IP addresses with total bytes (sum of bytes in and bytes out) greater than 1,000 bytes.\nIt leverages the Network_Traffic data model to detect large ICMP packet that aren't blocked and are directed toward external networks. We use All_Traffic.bytes in the detection to capture variations in inbound versus outbound traffic sizes, as significant discrepancies or unusually large ICMP exchanges can indicate information smuggling, covert communication, or command-and-control (C2) activities.\nIf validated as malicious, this could signal ICMP tunneling, unauthorized data transfer, or compromised endpoints requiring immediate investigation.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1095"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349842"
+}

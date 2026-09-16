@@ -1,0 +1,22 @@
+{
+  "uuid": "1da3843a-7cad-4f5b-977c-b05ea5a14886",
+  "title": "Cisco Secure Firewall - Binary File Type Download",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects file downloads involving executable, archive, or scripting-related file types that are commonly used in malware delivery.\nThese file types include formats like PE executables, shell scripts, autorun files, installers, and known testing samples such as EICAR.\nThis detection leverages Cisco Secure Firewall Threat Defense logs and enriches the results using a filetype lookup to provide context.\nIf confirmed malicious, these downloads could indicate the initial infection vector, malware staging, or scripting abuse.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1203"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349875"
+}

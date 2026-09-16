@@ -1,0 +1,24 @@
+{
+  "uuid": "cbda2946-5d5f-4feb-81c1-d1acc9c0a875",
+  "title": "Suspicious StartupItem Plist Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the creation or modification of a StartupParameters.plist file, indicating the presence of a \nStartupItem on the system. StartupItems have been deprecated on modern macOS systems (post Mavericks) \nin favor of Launch Daemons but still function. Creation of a StartupItem should be highly suspicious \nas legitimate applications no longer use this method for persistence.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1037.005"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349781"
+}

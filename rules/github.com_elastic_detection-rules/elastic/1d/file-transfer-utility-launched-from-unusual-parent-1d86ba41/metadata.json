@@ -1,0 +1,27 @@
+{
+  "uuid": "1d86ba41-4f04-4459-b35f-94d58dd6f930",
+  "title": "File Transfer Utility Launched from Unusual Parent",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule leverages ESQL to detect the execution of unusual file transfer utilities on Linux systems. Attackers may use\nthese utilities to exfiltrate data from a compromised system. ESQL rules have limited fields available in its alert\ndocuments. Make sure to review the original documents to aid in the investigation of this alert.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1048",
+    "T1059",
+    "T1059.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349524"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "a020b02b-a61b-47ff-a016-9a27e6f2e098",
+  "title": "Network Activity Detected via Kworker",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for network connections from a kworker process. kworker, or kernel worker, processes are part of the\nkernel's workqueue mechanism. They are responsible for executing work that has been scheduled to be done in kernel\nspace, which might include tasks like handling interrupts, background activities, and other kernel-related tasks.\nAttackers may attempt to evade detection by masquerading as a kernel worker process.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1014",
+    "T1036",
+    "T1036.004",
+    "T1041"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349614"
+}

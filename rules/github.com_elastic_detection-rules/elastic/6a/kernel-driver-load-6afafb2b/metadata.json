@@ -1,0 +1,25 @@
+{
+  "uuid": "6afafb2b-af60-42e4-84a0-5c202583a577",
+  "title": "Kernel Driver Load",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the loading of a Linux kernel module through system calls. Threat actors may leverage Linux kernel modules to\nload a rootkit on a system providing them with complete control and the ability to hide from security products. As other\nrules monitor for the addition of Linux kernel modules through system utilities or .ko files, this rule covers the gap\nthat evasive rootkits leverage by monitoring for kernel module additions on the lowest level through auditd_manager.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1014",
+    "T1547",
+    "T1547.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349634"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "fdbfa29e-3703-4d6b-a8eb-d6c6a7868876",
+  "title": "SSFileCopySender Executed as Root",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies execution of the macOS Screen Sharing file-copy helper SSFileCopySender with root UID/GID attributes\n(0 80). Under the native Apple authentication path this helper runs in the connecting user's context; execution as\nroot is anomalous and consistent with pre-authentication exploitation of the Screen Sharing service (CVE-2026-65400),\nwhere a flawed SRP validation path lets an unauthenticated attacker reach privileged file operations. Note that the\n0/80 UID/GID pair reflects only initial exploitation attempts and can be evaded once an attacker enumerates another\nlocal account. It is advisable to treat this as a tripwire and pair it with \nthe SSFileCopyReceiver Writing to Common Persistence Locations rule coverage.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-65400"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349771"
+}

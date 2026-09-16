@@ -1,0 +1,24 @@
+{
+  "uuid": "702c8f9e-3d56-4920-bb65-dda588545e9e",
+  "title": "Detect Outbound LDAP Traffic",
+  "format": "splunk",
+  "author": "Bhavin Patel, Johan Bjerke, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies outbound LDAP traffic to external IP addresses. It leverages the Network_Traffic data model to detect connections on ports 389 or 636 that are not directed to private IP ranges (RFC1918). This activity is significant because outbound LDAP traffic can indicate potential data exfiltration or unauthorized access attempts. If confirmed malicious, attackers could exploit this to access sensitive directory information, leading to data breaches or further network compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2021-44228"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349835"
+}

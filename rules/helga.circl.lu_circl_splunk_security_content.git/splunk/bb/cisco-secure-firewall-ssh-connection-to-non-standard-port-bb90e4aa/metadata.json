@@ -1,0 +1,22 @@
+{
+  "uuid": "bb90e4aa-80c9-4b2e-98ed-032b2dcb806f",
+  "title": "Cisco Secure Firewall - SSH Connection to Non-Standard Port",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects inbound SSH connections to non-standard ports on network devices using Cisco Secure Firewall Intrusion Events. APT actors have been observed enabling SSH servers on high, non-default TCP ports to maintain encrypted remote access to compromised network infrastructure.\nThis detection leverages Snort signature 65369 to identify SSH protocol traffic on unusual ports, which may indicate persistence mechanisms or backdoor access established by threat actors.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1021.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349887"
+}

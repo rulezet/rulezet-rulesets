@@ -1,0 +1,25 @@
+{
+  "uuid": "43cbcc6e-271d-4440-a05b-b33ef0fc0ed6",
+  "title": "Cisco SD-WAN - Low Frequency Rogue Peer",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic identifies low-frequency Cisco SD-WAN control peering activity from control-connection-state-change events where \"new-state:up\".\n\nIt extracts \"peer-type\" and \"peer-system-ip\", groups events by these two fields, and counts how often each combination appears within the selected time window.\n\nCombinations whose count is less than or equal to the defined threshold (currently <=3 occurrences in the search window) are flagged as rare.\n\nAnalysts should prioritize peer identities that are rarely observed in the environment, particularly those involving unexpected peer-type roles or unfamiliar peer-system-ip values.\nRare control-plane peers may indicate misconfiguration, unauthorized SD-WAN components, infrastructure drift, or potentially malicious control-plane connection attempts.\n\nFindings might indicate the potential exploitation of CVE-2026-20127.\n\nNote that the threshold setting is set to \"3\", but its highly recommended that this should be adapted to the environment before deploying this search.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-20127"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349890"
+}

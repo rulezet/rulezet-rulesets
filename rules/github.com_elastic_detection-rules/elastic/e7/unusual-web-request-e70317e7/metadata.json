@@ -1,0 +1,24 @@
+{
+  "uuid": "e70317e7-9532-48a0-a3d6-0030f9091cff",
+  "title": "Unusual Web Request",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected a rare and unusual URL that indicates unusual web browsing activity. This can be due to\ninitial access, persistence, command-and-control, or exfiltration activity. For example, in a strategic web compromise\nor watering hole attack, when a trusted website is compromised to target a particular sector or organization, targeted\nusers may receive emails with uncommon URLs for trusted websites. These URLs can be used to download and run a payload.\nWhen malware is already running, it may send requests to uncommon URLs on trusted websites the malware uses for\ncommand-and-control communication. When rare URLs are observed being requested for a local web server by a remote\nsource, these can be due to web scanning, enumeration or attack traffic, or they can be due to bots and web scrapers\nwhich are part of common Internet background traffic.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1071.001",
+    "T1102",
+    "T1189"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349670"
+}

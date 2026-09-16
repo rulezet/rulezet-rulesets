@@ -1,0 +1,28 @@
+{
+  "uuid": "06d792ec-602a-44c2-aca0-257a615b02e3",
+  "title": "Suspicious Network Activity to the Internet by Previously Unknown Executable",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for network connectivity to the internet from a previously unknown executable located in a suspicious\ndirectory. An alert from this rule can indicate the presence of potentially malicious activity, such as the execution of\nunauthorized or suspicious processes attempting to establish connections to unknown or suspicious destinations such as a\ncommand and control server. Detecting and investigating such behavior can help identify and mitigate potential security\nthreats, protecting the system and its data from potential compromise.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1037.004",
+    "T1053",
+    "T1053.003",
+    "T1071"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349458"
+}

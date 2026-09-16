@@ -1,0 +1,24 @@
+{
+  "uuid": "8a0e86da-cf11-453b-8210-d9a31bc5cab4",
+  "title": "Potential Privilege Escalation via Container Misconfiguration",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the execution of processes that interact with Linux containers through an interactive shell\nwithout root permissions. Utilities such as runc and ctr are universal command-line utilities leveraged to interact with\ncontainers via root permissions. On systems where the access to these utilities are misconfigured, attackers might be\nable to create and run a container that mounts the root folder or spawn a privileged container vulnerable to a container\nescape attack, which might allow them to escalate privileges and gain further access onto the host file system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1610",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349597"
+}

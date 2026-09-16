@@ -1,0 +1,24 @@
+{
+  "uuid": "35470adc-5053-4e0f-817e-2ef3368614d7",
+  "title": "TCC Bypass via Mounted APFS Snapshot Access",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the use of the mount_apfs command to mount the entire file system through Apple File System (APFS) snapshots\nas read-only and with the noowners flag set. This action enables the adversary to access almost any file in the file\nsystem, including all user data and files protected by Apple’s privacy framework (TCC).\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349802"
+}

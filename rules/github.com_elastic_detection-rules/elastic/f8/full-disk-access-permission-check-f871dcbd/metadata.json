@@ -1,0 +1,25 @@
+{
+  "uuid": "f871dcbd-5f9d-4425-acb1-400f933b1afc",
+  "title": "Full Disk Access Permission Check",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects suspicious access to the /Library/Preferences/com.apple.TimeMachine.plist file, indicating a potential \nattempt to verify or exploit Full Disk Access (FDA) permissions. This file is often checked by malware to \nconfirm FDA privileges, which allow unrestricted access to sensitive user data.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1083",
+    "T1548",
+    "T1548.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349803"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "4d660e04-a0b0-4c51-8b88-f6edf4008238",
+  "title": "Suspicious Hidden Child Process of Launchd",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of a launchd child process with a hidden file. An adversary can establish persistence by\ninstalling a new logon item, launch agent, or daemon that executes upon login.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1543",
+    "T1543.001",
+    "T1543.004",
+    "T1564",
+    "T1564.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349742"
+}

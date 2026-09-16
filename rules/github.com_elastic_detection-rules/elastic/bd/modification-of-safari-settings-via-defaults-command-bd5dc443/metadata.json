@@ -1,0 +1,25 @@
+{
+  "uuid": "bd5dc443-2c15-41f2-b0d0-3d743dfe55fd",
+  "title": "Modification of Safari Settings via Defaults Command",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies changes to the Safari configuration using the built-in defaults command. Adversaries may attempt to enable or\ndisable certain Safari settings, such as enabling JavaScript from Apple Events to ease in the hijacking of the users\nbrowser.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001",
+    "T1647"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349792"
+}

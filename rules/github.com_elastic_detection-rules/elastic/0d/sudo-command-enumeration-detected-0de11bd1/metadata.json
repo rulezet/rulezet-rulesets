@@ -1,0 +1,27 @@
+{
+  "uuid": "0de11bd1-4004-4c80-b9b7-9dc5ee1e82a8",
+  "title": "Sudo Command Enumeration Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the usage of the sudo -l command, which is used to list the allowed and forbidden commands for\nthe invoking user. Attackers may execute this command to enumerate commands allowed to be executed with sudo\npermissions, potentially allowing to escalate privileges to root.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1033",
+    "T1069",
+    "T1069.001",
+    "T1548",
+    "T1548.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349517"
+}

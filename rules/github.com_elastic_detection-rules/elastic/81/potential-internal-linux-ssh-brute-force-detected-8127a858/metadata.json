@@ -1,0 +1,29 @@
+{
+  "uuid": "8127a858-3a91-48de-bc5f-fc21dacc6952",
+  "title": "Potential Internal Linux SSH Brute Force Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies multiple internal consecutive login failures targeting a user account from the same source address within a\nshort time interval. Adversaries will often brute force login attempts across multiple users with a common or known\npassword, in an attempt to gain access to these accounts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.004",
+    "T1110",
+    "T1110.001",
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349622"
+}

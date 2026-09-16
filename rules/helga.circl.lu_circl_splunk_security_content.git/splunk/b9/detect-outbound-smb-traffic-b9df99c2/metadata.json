@@ -1,0 +1,21 @@
+{
+  "uuid": "b9df99c2-8b75-459f-a860-a75a0f699f45",
+  "title": "Detect Outbound SMB Traffic",
+  "format": "splunk",
+  "author": "Bhavin Patel, Stuart Hopkins, Patrick Bareiss",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects outbound SMB (Server Message Block) connections from internal hosts to external servers. It identifies this activity by monitoring network traffic for SMB requests directed towards the Internet, which are unusual for standard operations. This detection is significant for a SOC as it can indicate an attacker's attempt to retrieve credential hashes through compromised servers, a key step in lateral movement and privilege escalation. If confirmed malicious, this activity could lead to unauthorized access to sensitive data and potential full system compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1071.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349901"
+}

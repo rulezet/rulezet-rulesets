@@ -1,0 +1,22 @@
+{
+  "uuid": "cbd002de-6617-4d65-bb7e-7c984c287831",
+  "title": "Cisco Secure Firewall - Intrusion Events by Threat Activity",
+  "format": "splunk",
+  "author": "Bhavin Patel, Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects intrusion events from known threat activity using Cisco Secure Firewall Intrusion Events.\nIt leverages Cisco Secure Firewall Threat Defense IntrusionEvent logs to identify cases where one or multiple Snort signatures\nassociated with a known threat or threat actor activity have been triggered within a one-hour time window. The detection uses a\nlookup table (cisco_snort_ids_to_threat_mapping) to map Snort signature IDs to known threat actors and their techniques.\nWhen multiple signatures associated with the same threat actor are triggered within the time window, and the count of\nunique signatures matches or exceeds the expected number of signatures for that threat technique, an alert is generated.\nThis helps identify potential coordinated threat activity in your network environment by correlating related intrusion\nevents that occur in close temporal proximity.\n\nCurrently, this detection will alert on the following threat actors or malware families as defined in the cisco_snort_ids_to_threat_mapping lookup:\n\n* AgentTesla\n* Amadey\n* ArcaneDoor\n* AsyncRAT\n* CastleRAT\n* Chafer\n* DCRAT\n* LokiBot\n* Lumma Stealer\n* Nobelium\n* Quasar\n* Remcos\n* Snake\n* Static Tundra\n* Xworm\n\nTo add or update threat actors, update the cisco_snort_ids_to_threat_mapping.csv lookup file with new or modified threat names and associated Snort signature IDs.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1573.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349877"
+}

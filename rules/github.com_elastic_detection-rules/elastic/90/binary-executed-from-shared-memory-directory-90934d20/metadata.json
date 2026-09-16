@@ -1,0 +1,26 @@
+{
+  "uuid": "90934d20-8877-417a-8c05-6fb999773f1d",
+  "title": "Binary Executed from Shared Memory Directory",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of a binary by root in Linux shared memory directories: (/dev/shm/, /run/shm/, /var/run/,\n/var/lock/). This activity is to be considered highly abnormal and should be investigated. Threat actors have placed\nexecutables used for persistence on high-uptime servers in these directories as system backdoors.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:backdoor=\"BPFDoor\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1059"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349447"
+}

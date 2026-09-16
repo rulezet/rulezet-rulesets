@@ -1,0 +1,24 @@
+{
+  "uuid": "3939681f-e6fb-4306-9c02-10bb12e183dd",
+  "title": "Container Management Utility Run Inside A Container",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when a container management binary is run from inside a container. These binaries are critical\ncomponents of many containerized environments, and their presence and execution in unauthorized containers could\nindicate compromise or a misconfiguration.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1609",
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349573"
+}

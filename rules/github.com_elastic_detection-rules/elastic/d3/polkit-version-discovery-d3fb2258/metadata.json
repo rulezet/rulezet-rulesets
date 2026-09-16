@@ -1,0 +1,24 @@
+{
+  "uuid": "d3fb2258-234e-49db-837d-d39b1f2cd83c",
+  "title": "Polkit Version Discovery",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects Polkit version discovery activity on Linux systems. Polkit version discovery can be an indication of\nan attacker attempting to exploit misconfigurations or vulnerabilities in the Polkit service.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1082",
+    "T1518"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349465"
+}

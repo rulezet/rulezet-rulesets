@@ -1,0 +1,26 @@
+{
+  "uuid": "dc3dd1a6-01e1-4e61-8eb3-0d69b7a6ce34",
+  "title": "Anomalous Linux Compiler Activity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Looks for compiler activity by a user context which does not normally run compilers. This can be the result of ad-hoc\nsoftware changes or unauthorized software deployment. This can also be due to local privilege elevation via locally run\nexploits or malware activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1127",
+    "T1588",
+    "T1588.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349708"
+}

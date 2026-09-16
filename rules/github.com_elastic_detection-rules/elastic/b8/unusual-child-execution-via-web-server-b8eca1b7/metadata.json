@@ -1,0 +1,35 @@
+{
+  "uuid": "b8eca1b7-8a62-4831-ab3a-7b5823e93c36",
+  "title": "Unusual Child Execution via Web Server",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule leverages the \"new_terms\" rule type to detect unusual child process executions originating\nfrom web server processes on Linux systems. Attackers may exploit web servers to maintain persistence\non a compromised system, often resulting in atypical child process executions. As child process spawns\nfrom web server parent processes are common, the \"new_terms\" rule type approach helps identify deviations\nfrom normal behavior.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDownloader\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1071",
+    "T1190",
+    "T1505",
+    "T1505.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349507"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "db3f1e18-710d-4ca5-8ac1-b0d9a248a0f8",
+  "title": "Potential Privilege Escalation via a Parent Process Sequence",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects a potential privilege escalation sequence via a parent process relationship. This rule checks for\nnon-root execution of a process executable in a user or world-writable directory followed by a UID change\nevent to 0 (root). This sequence is indicative of a potential local privilege escalation exploit.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1548",
+    "T1548.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349460"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "8f56f1fb-8ca2-47a5-8e9c-7d3f3055ad87",
+  "title": "Memory Swap Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects memory swap modification events on Linux systems. Memory swap modification can be used to manipulate\nthe system's memory and potentially impact the system's performance. This behavior is commonly observed in malware that\ndeploys miner software such as XMRig.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1496",
+    "T1496.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349551"
+}

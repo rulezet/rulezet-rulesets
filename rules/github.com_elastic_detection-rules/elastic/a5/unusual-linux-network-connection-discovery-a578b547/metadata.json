@@ -1,0 +1,23 @@
+{
+  "uuid": "a578b547-e380-4230-9823-6014ac8673b7",
+  "title": "Unusual Linux Network Connection Discovery",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Looks for commands related to system network connection discovery from an unusual user context. This can be due to\nuncommon troubleshooting activity or due to a compromised account. A compromised account may be used by a threat actor\nto engage in system network connection discovery in order to increase their understanding of connected services and\nsystems. This information may be used to shape follow-up behaviors such as lateral movement or additional discovery.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1049"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349683"
+}

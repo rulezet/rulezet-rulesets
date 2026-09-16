@@ -1,0 +1,23 @@
+{
+  "uuid": "b73775b8-65e4-40b7-b85f-3eff42455d60",
+  "title": "Detect ARP Poisoning",
+  "format": "splunk",
+  "author": "Mikael Bjerkeland, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects ARP Poisoning attacks by monitoring for Dynamic ARP Inspection (DAI) errors on Cisco network devices. It leverages logs from Cisco devices, specifically looking for events where the ARP inspection feature has disabled an interface due to suspicious activity. This activity is significant because ARP Poisoning can allow attackers to intercept, modify, or disrupt network traffic, leading to potential data breaches or denial of service. If confirmed malicious, this could enable attackers to perform man-in-the-middle attacks, compromising the integrity and confidentiality of network communications.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1200",
+    "T1498",
+    "T1557.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349824"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "5ad05b9d-0d69-4728-a78b-8d1b74d1e6ac",
+  "title": "Rare User Logon",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job found an unusual user name in the authentication logs. An unusual user name is one way of\ndetecting credentialed access by means of a new or dormant user account. An inactive user account (because the user has\nleft the organization) that becomes active may be due to credentialed access using a compromised account password.\nThreat actors will sometimes also create new users as a means of persisting in a compromised web application.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.002",
+    "T1078.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349689"
+}

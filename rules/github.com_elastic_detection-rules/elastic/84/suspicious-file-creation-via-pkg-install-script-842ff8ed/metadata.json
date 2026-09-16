@@ -1,0 +1,28 @@
+{
+  "uuid": "842ff8ed-8de2-4343-9f56-a15ceb201819",
+  "title": "Suspicious File Creation via Pkg Install Script",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when an installer package executes a pre or post install script that immediately copies a file \nto suspicious locations on the filesystem. This activity is not common and usually indicates a malicious \npackage attempting to install persistence or establish a working directory for malware.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1546",
+    "T1546.016"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349722"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "dcb18d20-80ef-433a-a1b6-133a448eb5fd",
+  "title": "Spike in Failed Logon Events",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job found an unusually large spike in authentication failure events. This can be due to password\nspraying, user enumeration or brute force activity and may be a precursor to account takeover or credentialed access.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1110",
+    "T1110.001",
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349668"
+}

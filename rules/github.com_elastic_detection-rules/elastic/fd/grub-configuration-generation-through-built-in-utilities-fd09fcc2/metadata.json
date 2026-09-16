@@ -1,0 +1,25 @@
+{
+  "uuid": "fd09fcc2-caba-4000-8954-cf868855bd42",
+  "title": "GRUB Configuration Generation through Built-in Utilities",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the generation of a new GRUB configuration file using built-in Linux commands. The GRUB configuration\nfile is used to configure the GRUB bootloader, which is responsible for loading the Linux kernel and initramfs image\nduring the boot process. Attackers may use these built-in utilities to generate a new GRUB configuration file that\nincludes malicious kernel parameters or boot options, which can be leveraged to maintain persistence on the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1542",
+    "T1543",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349550"
+}

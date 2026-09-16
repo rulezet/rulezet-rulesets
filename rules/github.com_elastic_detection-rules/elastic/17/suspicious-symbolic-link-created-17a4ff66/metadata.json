@@ -1,0 +1,26 @@
+{
+  "uuid": "17a4ff66-0d37-4258-9021-2213d6803e9f",
+  "title": "Suspicious Symbolic Link Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation of a symbolic link to a suspicious file or location. A symbolic link is a reference to a file or\ndirectory that acts as a pointer or shortcut, allowing users to access the target file or directory from a different\nlocation in the file system. An attacker can potentially leverage symbolic links for privilege escalation by tricking a\nprivileged process into following the symbolic link to a sensitive file, giving the attacker access to data or\ncapabilities they would not normally have.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1003.008",
+    "T1548",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349548"
+}

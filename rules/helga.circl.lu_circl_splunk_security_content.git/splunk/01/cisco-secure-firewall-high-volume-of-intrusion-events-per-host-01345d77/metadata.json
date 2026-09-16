@@ -1,0 +1,23 @@
+{
+  "uuid": "01345d77-dd33-4e08-8fcf-a0522bb69ab3",
+  "title": "Cisco Secure Firewall - High Volume of Intrusion Events Per Host",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects internal systems that generate an unusually high volume of intrusion detections within a 30-minute window. It leverages Cisco Secure Firewall Threat Defense logs, specifically focusing on the IntrusionEvent event type, to identify hosts that trigger more than 15 Snort-based signatures during that time. A sudden spike in intrusion alerts originating from a single host may indicate suspicious or malicious activity such as malware execution, command-and-control communication, vulnerability scanning, or lateral movement. In some cases, this behavior may also be caused by misconfigured or outdated software repeatedly tripping detection rules. Systems exhibiting this pattern should be triaged promptly, as repeated Snort rule matches from a single source are often early indicators of compromise, persistence, or active exploitation attempts.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1071",
+    "T1595.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349859"
+}

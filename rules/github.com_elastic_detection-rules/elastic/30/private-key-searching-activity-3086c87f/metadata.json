@@ -1,0 +1,26 @@
+{
+  "uuid": "3086c87f-3b35-4b35-8114-d048b5499bff",
+  "title": "Private Key Searching Activity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects private key searching activity on Linux systems. Searching for private keys can be an indication of an\nattacker attempting to escalate privileges or exfiltrate sensitive information.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1083",
+    "T1552",
+    "T1552.001",
+    "T1552.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349608"
+}

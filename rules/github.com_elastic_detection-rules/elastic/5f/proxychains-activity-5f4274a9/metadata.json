@@ -1,0 +1,28 @@
+{
+  "uuid": "5f4274a9-56b6-4b04-9756-b994bb253fa1",
+  "title": "ProxyChains Activity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the execution of the ProxyChains utility. ProxyChains is a command-line tool that enables the\nrouting of network connections through intermediary proxies, enhancing anonymity and enabling access to restricted\nresources. Attackers can exploit the ProxyChains utility to hide their true source IP address, evade detection, and\nperform malicious activities through a chain of proxy servers, potentially masking their identity and intentions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1090",
+    "T1090.003",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349587"
+}

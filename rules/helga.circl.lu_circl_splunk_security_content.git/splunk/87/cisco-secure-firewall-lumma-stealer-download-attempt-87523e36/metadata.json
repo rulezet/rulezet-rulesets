@@ -1,0 +1,22 @@
+{
+  "uuid": "87523e36-aa4c-482d-b143-e50a01007b21",
+  "title": "Cisco Secure Firewall - Lumma Stealer Download Attempt",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk, Talos NTDR",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects Lumma Stealer download attempts using Cisco Secure Firewall Intrusion Events.\nIt leverages Cisco Secure Firewall Threat Defense IntrusionEvent logs to identify cases where Snort signatures with IDs 64797, 64798, 64799, 64800, 64801, 64167, 64168, 64169 have been triggered. If confirmed malicious, this behavior could indicate an active infection of Lumma Stealer.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1573.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349869"
+}

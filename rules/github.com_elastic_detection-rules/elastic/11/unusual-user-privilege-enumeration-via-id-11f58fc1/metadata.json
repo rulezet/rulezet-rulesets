@@ -1,0 +1,27 @@
+{
+  "uuid": "11f58fc1-172d-4193-afef-dc8fe4a7bfef",
+  "title": "Unusual User Privilege Enumeration via id",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for a sequence of 20 \"id\" command executions within 1 second by the same parent process. This\nbehavior is unusual, and may be indicative of the execution of an enumeration script such as LinPEAS or LinEnum. These\nscripts leverage the \"id\" command to enumerate the privileges of all users present on the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1033",
+    "T1069",
+    "T1069.001",
+    "T1087",
+    "T1087.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349487"
+}

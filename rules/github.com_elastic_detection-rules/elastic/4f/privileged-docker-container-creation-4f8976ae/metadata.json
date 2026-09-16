@@ -1,0 +1,29 @@
+{
+  "uuid": "4f8976ae-fed6-4141-9c06-c096fa2c9df6",
+  "title": "Privileged Docker Container Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule leverages the new_terms rule type to identify the creation of a potentially unsafe docker container from an\nunusual parent process. Attackers can use the \"--privileged\" flag to create containers with escalated privileges, which\ncan lead to trivial privilege escalation, docker escaping and persistence. access.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1609",
+    "T1610",
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349453"
+}

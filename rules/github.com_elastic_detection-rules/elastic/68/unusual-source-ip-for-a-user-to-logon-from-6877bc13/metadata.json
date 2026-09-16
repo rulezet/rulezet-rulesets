@@ -1,0 +1,26 @@
+{
+  "uuid": "6877bc13-35d4-4ea6-8b97-be854fffa9d5",
+  "title": "Unusual Source IP for a User to Logon from",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected a user logging in from an IP address that is unusual for the user. This can be due to\ncredentialed access via a compromised account when the user and the threat actor are in different locations. An unusual\nsource IP address for a username could also be due to lateral movement when a compromised account is used to pivot\nbetween hosts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349679"
+}

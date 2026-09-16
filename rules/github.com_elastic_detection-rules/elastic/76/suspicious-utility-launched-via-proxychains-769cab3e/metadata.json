@@ -1,0 +1,29 @@
+{
+  "uuid": "769cab3e-2cdc-42f0-b28d-615a4dc6d48b",
+  "title": "Suspicious Utility Launched via ProxyChains",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the execution of suspicious linux tools through ProxyChains. ProxyChains is a command-line tool\nthat enables the routing of network connections through intermediary proxies, enhancing anonymity and enabling access to\nrestricted resources. Attackers can exploit the ProxyChains utility to hide their true source IP address, evade\ndetection, and perform malicious activities through a chain of proxy servers, potentially masking their identity and\nintentions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1090",
+    "T1090.003",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349640"
+}

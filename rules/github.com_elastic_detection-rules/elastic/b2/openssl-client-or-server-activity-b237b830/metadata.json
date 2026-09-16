@@ -1,0 +1,29 @@
+{
+  "uuid": "b237b830-2c96-436c-8c97-e3b0fb2d42a7",
+  "title": "Openssl Client or Server Activity",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies when the openssl client or server is used to establish a connection. Attackers may use openssl to\nestablish a secure connection to a remote server or to create a secure server to receive connections. This activity may\nbe used to exfiltrate data or establish a command and control channel.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1071",
+    "T1573",
+    "T1573.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349562"
+}

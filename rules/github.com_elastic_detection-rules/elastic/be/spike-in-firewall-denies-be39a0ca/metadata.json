@@ -1,0 +1,28 @@
+{
+  "uuid": "be39a0ca-dd89-4335-86f9-dd15e33a15b3",
+  "title": "Spike in Firewall Denies",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected an unusually large spike in network traffic that was denied by network access control\nlists (ACLs) or firewall rules. Such a burst of denied traffic is usually caused by either 1) a mis-configured\napplication or firewall or 2) suspicious or malicious activity. Unsuccessful attempts at network transit, in order to\nconnect to command-and-control (C2), or engage in data exfiltration, may produce a burst of failed connections. This\ncould also be due to unusually large amounts of reconnaissance or enumeration traffic. Denial-of-service attacks or\ntraffic floods may also produce such a surge in traffic.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1018",
+    "T1041",
+    "T1046",
+    "T1071",
+    "T1498",
+    "T1499",
+    "T1590",
+    "T1595"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349703"
+}

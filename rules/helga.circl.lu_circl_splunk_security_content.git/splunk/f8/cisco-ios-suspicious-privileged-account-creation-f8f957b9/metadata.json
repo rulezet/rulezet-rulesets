@@ -1,0 +1,27 @@
+{
+  "uuid": "f8f957b9-0a2d-4f1d-89b4-85e0b8e035f3",
+  "title": "Cisco IOS Suspicious Privileged Account Creation",
+  "format": "splunk",
+  "author": "Bhavin Patel, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects the creation of privileged user accounts on Cisco IOS devices, which could indicate an attacker establishing backdoor access. The detection focuses on identifying when user accounts are created with privilege level 15 (the highest administrative privilege level in Cisco IOS) or when existing accounts have their privileges elevated. This type of activity is particularly concerning when performed by unauthorized users or during unusual hours, as it may represent a key step in establishing persistence following the exploitation of vulnerabilities like CVE-2018-0171 in Cisco Smart Install. Threat actors like Static Tundra have been observed creating privileged accounts as part of their attack chain after gaining initial access to network devices.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1136"
+  ],
+  "cve": [
+    "CVE-2018-0171"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349830"
+}

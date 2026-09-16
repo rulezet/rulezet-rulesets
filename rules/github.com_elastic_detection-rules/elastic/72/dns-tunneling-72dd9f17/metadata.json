@@ -1,0 +1,24 @@
+{
+  "uuid": "72dd9f17-caa8-41e6-9270-7fef1bfb09fa",
+  "title": "DNS Tunneling",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected unusually large numbers of DNS queries for a single top-level DNS domain, which is often\nused for DNS tunneling. DNS tunneling can be used for command-and-control, persistence, or data exfiltration activity.\nFor example, dnscat tends to generate many DNS questions for a top-level domain as it uses the DNS protocol to tunnel\ndata.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1071",
+    "T1071.004",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349684"
+}

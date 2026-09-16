@@ -1,0 +1,27 @@
+{
+  "uuid": "f4e0a602-7326-463f-a03d-4607c5e963ee",
+  "title": "DNF Package Manager Plugin File Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects file creation events in the plugin directories for the Yum package manager. In Linux, DNF (Dandified YUM) is a\ncommand-line utility used for handling packages on Fedora-based systems, providing functions for installing, updating,\nupgrading, and removing software along with managing package repositories. Attackers can backdoor DNF to gain\npersistence by injecting malicious code into plugins that DNF runs, thereby ensuring continued unauthorized access or\ncontrol each time DNF is used for package management.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1543",
+    "T1546",
+    "T1546.016",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349648"
+}

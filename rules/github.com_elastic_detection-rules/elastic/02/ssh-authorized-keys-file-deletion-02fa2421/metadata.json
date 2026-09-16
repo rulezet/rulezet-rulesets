@@ -1,0 +1,25 @@
+{
+  "uuid": "02fa2421-537c-4de0-b015-98c7883795e6",
+  "title": "SSH Authorized Keys File Deletion",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the deletion of the authorized_keys or authorized_keys2 files on Linux systems. These files\nare used to store public keys for SSH authentication. Unauthorized deletion of these files can be an indicator\nof an attacker removing access to the system, and may be a precursor to further malicious activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1070.004",
+    "T1531"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349426"
+}

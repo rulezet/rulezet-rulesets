@@ -1,0 +1,27 @@
+{
+  "uuid": "ca3af6f9-5ef9-4cbb-b854-6c1f0462b250",
+  "title": "Unusual Windows Username",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected activity for a username that is not normally active, which can indicate unauthorized\nchanges, activity by unauthorized users, lateral movement, or compromised credentials. In many organizations, new\nusernames are not often created apart from specific types of system activities, such as creating new accounts for new\nemployees. These user accounts quickly become active and routine. Events from rarely used usernames can point to\nsuspicious activity. Additionally, automated Linux fleets tend to see activity from rarely used usernames only when\npersonnel log in to make authorized or unauthorized changes, or threat actors have acquired credentials and log in for\nmalicious purposes. Unusual usernames can also indicate pivoting, where compromised credentials are used to try and move\nlaterally from one host to another.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.002",
+    "T1078.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349667"
+}

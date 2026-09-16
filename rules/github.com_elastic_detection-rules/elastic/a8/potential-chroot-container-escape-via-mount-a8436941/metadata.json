@@ -1,0 +1,23 @@
+{
+  "uuid": "a8436941-b7f4-4e27-8f55-9430444cbe3b",
+  "title": "Potential Chroot Container Escape via Mount",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Monitors for the execution of a file system mount followed by a chroot execution. Given enough permissions, a user\nwithin a container is capable of mounting the root file system of the host, and leveraging chroot to escape its\ncontainarized environment. This behavior pattern is very uncommon and should be investigated.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349553"
+}

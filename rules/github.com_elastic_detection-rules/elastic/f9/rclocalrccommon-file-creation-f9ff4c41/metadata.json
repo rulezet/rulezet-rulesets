@@ -1,0 +1,27 @@
+{
+  "uuid": "f9ff4c41-3193-4c72-bfd5-83e189e07e14",
+  "title": "rc.local/rc.common File Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors the creation of the rc.local/rc.common files. The \"/etc/rc.local\" file is used to start\ncustom applications, services, scripts or commands during start-up. The rc.local file has mostly been replaced by\nSystemd. However, through the \"systemd-rc-local-generator\", rc.local files can be converted to services that run at\nboot. Adversaries may alter rc.local/rc.common to execute malicious code at start-up, and gain persistence onto the\nsystem.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1037.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349432"
+}

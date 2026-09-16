@@ -1,0 +1,28 @@
+{
+  "uuid": "c85d3737-6878-4ba9-9d76-7f52f96cd7b1",
+  "title": "Windows SharePoint Spinstall0 GET Request",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects potential post-exploitation activity related to the Microsoft SharePoint CVE-2025-53770 vulnerability. After successful exploitation via the ToolPane.aspx endpoint, attackers typically deploy a webshell named \"spinstall0.aspx\" in the SharePoint layouts directory. This detection identifies GET requests to this webshell, which indicates active use of the backdoor for command execution, data exfiltration, or credential/key extraction. Attackers commonly use these webshells to extract encryption keys, authentication tokens, and other sensitive information from the compromised SharePoint server.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003",
+    "T1552"
+  ],
+  "cve": [
+    "CVE-2025-53770"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349916"
+}

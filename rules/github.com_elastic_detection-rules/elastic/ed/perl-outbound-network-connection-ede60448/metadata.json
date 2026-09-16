@@ -1,0 +1,26 @@
+{
+  "uuid": "ede60448-44dc-4279-80ae-d95de25c8ff5",
+  "title": "Perl Outbound Network Connection",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when Perl makes an outbound network connection to a non-private IP address. Perl is a scripting \nlanguage that comes pre-installed on macOS and offers extensive capabilities for adversaries. Its use for \nnetwork connections on macOS systems is uncommon and potentially suspicious.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.006",
+    "T1071",
+    "T1071.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349747"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "6058871e-ebd7-4687-ab7a-5463d99082cb",
+  "title": "Kubernetes Service Account Secret Access",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when a process accesses Kubernetes service account secrets. Kubernetes service\naccount secrets are files that contain sensitive information used by applications running in Kubernetes\nclusters to authenticate and authorize access to the cluster. These secrets are typically mounted into\npods at runtime, allowing applications to access them securely. Unauthorized access to these secrets\ncan lead to privilege escalation, lateral movement and unauthorized actions within the cluster.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1528",
+    "T1552",
+    "T1552.001",
+    "T1613"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349454"
+}

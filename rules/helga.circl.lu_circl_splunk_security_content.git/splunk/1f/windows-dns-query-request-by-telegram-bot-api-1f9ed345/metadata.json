@@ -1,0 +1,24 @@
+{
+  "uuid": "1f9ed345-fc47-4d16-81a1-1a936f61e28a",
+  "title": "Windows DNS Query Request by Telegram Bot API",
+  "format": "splunk",
+  "author": "Teoderick Contreras, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the execution of a DNS query by a process to the associated Telegram API domain, which could indicate access via a Telegram bot commonly used by malware for command and control (C2) communications. By monitoring DNS queries related to Telegram's infrastructure, the detection identifies potential attempts to establish covert communication channels between a compromised system and external malicious actors. This behavior is often observed in cyberattacks where Telegram bots are used to receive commands or exfiltrate data, making it a key indicator of suspicious or malicious activity within a network.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1071.004",
+    "T1102.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349828"
+}

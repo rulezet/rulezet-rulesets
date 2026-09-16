@@ -1,0 +1,28 @@
+{
+  "uuid": "8f9f2a06-e7b4-4dd5-a601-9125ac5c0196",
+  "title": "Potential Upgrade of Non-interactive Shell",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a non-interactive terminal (tty) is being upgraded to a fully interactive shell. Attackers may upgrade a\nsimple reverse shell to a fully interactive tty after obtaining initial access to a host, in order to obtain a more\nstable connection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349599"
+}

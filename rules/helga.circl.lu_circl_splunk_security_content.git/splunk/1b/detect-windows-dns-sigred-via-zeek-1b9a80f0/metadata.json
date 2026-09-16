@@ -1,0 +1,25 @@
+{
+  "uuid": "1b9a80f0-57ab-4b8f-acca-459c466d2117",
+  "title": "Detect Windows DNS SIGRed via Zeek",
+  "format": "splunk",
+  "author": "Shannon Davis, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the presence of SIGRed, a critical DNS vulnerability, using Zeek DNS and Zeek Conn data. It identifies specific DNS query types (SIG and KEY) and checks for high data transfer within a flow. This detection is significant because SIGRed allows attackers to execute remote code on Windows DNS servers, potentially leading to unauthorized access and control. If confirmed malicious, this activity could result in data exfiltration, service disruption, or further network compromise. Immediate investigation and mitigation, such as patching or isolating the affected server, are crucial.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1203"
+  ],
+  "cve": [
+    "CVE-2020-1350"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349856"
+}

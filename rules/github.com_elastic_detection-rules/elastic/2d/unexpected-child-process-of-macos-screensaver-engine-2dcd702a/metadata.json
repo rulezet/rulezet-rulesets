@@ -1,0 +1,24 @@
+{
+  "uuid": "2dcd702a-014f-414a-81b2-0168e5d9044e",
+  "title": "Unexpected Child Process of macOS Screensaver Engine",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when a child process is spawned by the screensaver engine process, which is consistent with an attacker's\nmalicious payload being executed after the screensaver activated on the endpoint. An adversary can maintain persistence\non a macOS endpoint by creating a malicious screensaver (.saver) file and configuring the screensaver plist file to\nexecute code each time the screensaver is activated.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1546",
+    "T1546.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349730"
+}

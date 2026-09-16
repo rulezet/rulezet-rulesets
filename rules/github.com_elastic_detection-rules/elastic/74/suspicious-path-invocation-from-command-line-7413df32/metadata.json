@@ -1,0 +1,29 @@
+{
+  "uuid": "7413df32-c441-4dfc-ad75-c41ea74c9b27",
+  "title": "Suspicious Path Invocation from Command Line",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the execution of a PATH variable in a command line invocation by a shell process. This behavior\nis unusual and may indicate an attempt to execute a command from a non-standard location. This technique may be\nused to evade detection or perform unauthorized actions on the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1564",
+    "T1574",
+    "T1574.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349427"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "86ba9e99-e00d-457b-84cd-64f520daf974",
+  "title": "Potential Sudo Hijacking",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation of a sudo binary located at /usr/bin/sudo. Attackers may hijack the default sudo binary and\nreplace it with a custom binary or script that can read the user's password in clear text to escalate privileges or\nenable persistence onto the system every time the sudo binary is executed.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1056",
+    "T1548",
+    "T1548.003",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349471"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "0eef023e-2525-49f1-8192-fb78f8b540a1",
+  "title": "Java Class File download by Java User Agent",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a Java user agent performing a GET request for a .class file from a remote site. It leverages web or proxy logs within the Web Datamodel to detect this activity. This behavior is significant as it may indicate exploitation attempts, such as those related to CVE-2021-44228 (Log4Shell). If confirmed malicious, an attacker could exploit vulnerabilities in the Java application, potentially leading to remote code execution and further compromise of the affected system.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2021-44228"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349914"
+}

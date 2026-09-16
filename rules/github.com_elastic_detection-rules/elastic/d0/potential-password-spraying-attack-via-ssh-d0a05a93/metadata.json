@@ -1,0 +1,27 @@
+{
+  "uuid": "d0a05a93-3892-4e28-8f78-d5754b001cfc",
+  "title": "Potential Password Spraying Attack via SSH",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects potential password spraying attacks via SSH by identifying multiple failed login\nattempts from a single source IP address targeting various user accounts within a short time frame.\nPassword spraying is a technique where an attacker attempts to gain unauthorized access by trying a\nfew commonly used passwords against many different accounts, rather than targeting a single account\nwith multiple password attempts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1110",
+    "T1110.001",
+    "T1110.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349620"
+}

@@ -1,0 +1,29 @@
+{
+  "uuid": "6345c91b-6409-420b-8662-b367908633a8",
+  "title": "Suspicious Kworker UID Elevation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Monitors for the elevation of regular user permissions to root permissions through the kworker process. kworker, or\nkernel worker, processes are part of the kernel's workqueue mechanism. They are responsible for executing work that has\nbeen scheduled to be done in kernel space, which might include tasks like handling interrupts, background activities,\nand other kernel-related tasks. Attackers may attempt to evade detection by masquerading as a kernel worker process, and\nhijack the execution flow by hooking certain functions/syscalls through a rootkit in order to provide easy access to\nroot via a special modified command.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1014",
+    "T1036",
+    "T1036.004",
+    "T1574",
+    "T1574.013"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349626"
+}

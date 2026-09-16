@@ -1,0 +1,24 @@
+{
+  "uuid": "eea0c37a-daba-4ec8-b4ee-08eaa43388f4",
+  "title": "Suspicious Write Attempt to AppArmor Policy Management Files",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects processes attempting to write to AppArmor policy management pseudo-files located\nunder \"/sys/kernel/security/apparmor/\". These special kernel interfaces are used to load,\nreplace, or remove AppArmor profiles (\".load\", \".replace\", \".remove\"). In normal environments,\nAppArmor policy management is typically performed by administrative tools such as \"apparmor_parser\"\nduring system initialization or package installation. Direct interaction with these pseudo-files\nfrom shell utilities, interpreters, or scripting environments is uncommon and may indicate attempts\nto modify security policy at runtime. Adversaries may abuse these interfaces to weaken or disable\nAppArmor protections, introduce malicious profiles, or exploit vulnerabilities in the AppArmor policy\nparser as part of local privilege escalation chains.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349564"
+}

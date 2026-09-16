@@ -1,0 +1,25 @@
+{
+  "uuid": "d61c886a-4f7b-4b63-a39c-6afed5149f52",
+  "title": "Systemd-udevd Rule File Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Monitors for the creation of rule files that are used by systemd-udevd to manage device nodes and handle kernel device\nevents in the Linux operating system. Systemd-udevd can be exploited for persistence by adversaries by creating\nmalicious udev rules that trigger on specific events, executing arbitrary commands or payloads whenever a certain device\nis plugged in or recognized by the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1546",
+    "T1546.017"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349558"
+}

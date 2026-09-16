@@ -1,0 +1,24 @@
+{
+  "uuid": "9c805fdf-738e-4b07-871f-a3af0e0a4b2a",
+  "title": "Cisco Secure Firewall - Blacklisted SSL Certificate Fingerprint",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects the use of known suspicious SSL certificates in any observed event where the SSL_CertFingerprint field is present. It leverages Cisco Secure Firewall logs and compares the SSL certificate SHA1 fingerprint against a blacklist of certificates associated with malware distribution, command and control (C2) infrastructure, or phishing campaigns. This activity is significant as adversaries often reuse or self-sign certificates across malicious infrastructure, allowing defenders to track and detect encrypted sessions even when domains or IPs change. If confirmed malicious, this may indicate beaconing, malware download, or data exfiltration over TLS/SSL.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1071.001",
+    "T1573.002",
+    "T1587.002",
+    "T1588.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349825"
+}

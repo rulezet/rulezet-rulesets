@@ -1,0 +1,22 @@
+{
+  "uuid": "a2842b4d-8d4f-4e16-9528-7227efc1c457",
+  "title": "TOR Traffic",
+  "format": "splunk",
+  "author": "David Dorsey, Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies allowed network traffic to The Onion Router (TOR), an anonymity network often exploited for malicious activities.\nIt leverages data from Next Generation Firewalls, using the Network_Traffic data model to detect traffic where the application is TOR and the action is allowed.\nThis activity is significant as TOR can be used to bypass conventional monitoring, facilitating hacking, data breaches, and illicit content dissemination.\nIf confirmed malicious, this could lead to unauthorized access, data exfiltration, and severe compliance violations, compromising the integrity and security of the network.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1090.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349896"
+}

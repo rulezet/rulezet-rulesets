@@ -1,0 +1,24 @@
+{
+  "uuid": "054cd17a-09f3-4aff-b900-a4fce8ee3af4",
+  "title": "WebProxy Settings Modification",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the use of the built-in networksetup command to configure webproxy settings. This may indicate an attempt to\nhijack web browser traffic for credential access via traffic sniffing or redirection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1539",
+    "T1557"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349710"
+}

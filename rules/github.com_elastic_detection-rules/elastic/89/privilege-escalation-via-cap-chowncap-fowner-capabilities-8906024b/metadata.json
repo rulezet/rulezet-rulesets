@@ -1,0 +1,26 @@
+{
+  "uuid": "8906024b-7193-4a4d-95d8-87f7878d0b01",
+  "title": "Privilege Escalation via CAP_CHOWN/CAP_FOWNER Capabilities",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies instances where a processes (granted CAP_CHOWN and/or CAP_FOWNER capabilities) is executed, after which the\nownership of a suspicious file or binary is changed. In Linux, the CAP_CHOWN capability allows a process to change the\nowner of a file, while CAP_FOWNER permits it to bypass permission checks on operations that require file ownership (like\nreading, writing, and executing). Attackers may abuse these capabilities to obtain unauthorized access to files.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1222",
+    "T1222.002",
+    "T1548"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349647"
+}

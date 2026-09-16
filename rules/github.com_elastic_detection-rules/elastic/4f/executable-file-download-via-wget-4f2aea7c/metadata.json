@@ -1,0 +1,25 @@
+{
+  "uuid": "4f2aea7c-24da-4cad-9136-cd66e4bcd83d",
+  "title": "Executable File Download via Wget",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects executable file downloads via wget to suspicious locations such as /tmp or /Users/Shared. Threat \nactors commonly use wget to download malicious payloads and additional tools for post-exploitation.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1204",
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349775"
+}

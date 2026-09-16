@@ -1,0 +1,23 @@
+{
+  "uuid": "627a0a25-d58d-4f75-a087-0444491a2f7f",
+  "title": "Potential Data Splitting Detected",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule looks for the usage of common data splitting utilities with specific arguments that indicate data splitting\nfor exfiltration on Linux systems. Data splitting is a technique used by adversaries to split data into smaller parts to\navoid detection and exfiltrate data.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1030"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349498"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "8e7a083c-3431-405f-bc54-09369bed2a0e",
+  "title": "Linux SSH X11 Forwarding",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for X11 forwarding via SSH. X11 forwarding is a feature that allows users to run graphical\napplications on a remote server and display the application's graphical user interface on their local machine. Attackers\ncan abuse X11 forwarding for tunneling their GUI-based tools, pivot through compromised systems, and create covert\ncommunication channels, enabling lateral movement and facilitating remote control of systems within a network.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.004",
+    "T1572"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349449"
+}

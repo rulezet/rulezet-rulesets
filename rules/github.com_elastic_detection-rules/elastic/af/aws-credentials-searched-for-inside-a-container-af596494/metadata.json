@@ -1,0 +1,28 @@
+{
+  "uuid": "af596494-d390-49dd-bdae-39237d4b2621",
+  "title": "AWS Credentials Searched For Inside A Container",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the use of system search utilities like grep and find to search for AWS credentials inside a\ncontainer. Unauthorized access to these sensitive files could lead to further compromise of the container environment or\nfacilitate a container breakout to the underlying cloud environment.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1083",
+    "T1552",
+    "T1552.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349438"
+}

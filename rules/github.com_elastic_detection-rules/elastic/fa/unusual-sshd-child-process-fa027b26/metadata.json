@@ -1,0 +1,32 @@
+{
+  "uuid": "fa027b26-50ed-4026-b7bb-689cab804e7e",
+  "title": "Unusual SSHD Child Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation of an unusual SSHD child process through the usage of the \"new_terms\" rule type.\nAttackers may abuse SSH to maintain persistence on a compromised system, or to establish a backdoor for remote access,\npotentially resulting in an unusual SSHD child process being created.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.004",
+    "T1133",
+    "T1546",
+    "T1546.004",
+    "T1563",
+    "T1563.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349516"
+}

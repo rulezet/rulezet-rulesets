@@ -1,0 +1,28 @@
+{
+  "uuid": "a075b4d9-d250-481c-9695-54dbb577194b",
+  "title": "Cisco Configuration Archive Logging Analysis",
+  "format": "splunk",
+  "author": "Bhavin Patel, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic provides comprehensive monitoring of configuration changes on Cisco devices by analyzing archive logs. Configuration archive logging captures all changes made to a device's configuration, providing a detailed audit trail that can be used to identify suspicious or malicious activities. This detection is particularly valuable for identifying patterns of malicious configuration changes that might indicate an attacker's presence, such as the creation of backdoor accounts, SNMP community string modifications, and TFTP server configurations for data exfiltration. By analyzing these logs, security teams can gain a holistic view of configuration changes across sessions and users, helping to detect sophisticated attack campaigns like those conducted by threat actors such as Static Tundra.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1098",
+    "T1505.003",
+    "T1685"
+  ],
+  "cve": [
+    "CVE-2018-0171"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349837"
+}

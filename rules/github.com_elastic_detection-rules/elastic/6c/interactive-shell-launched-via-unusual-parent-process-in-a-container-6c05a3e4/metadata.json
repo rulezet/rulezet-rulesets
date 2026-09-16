@@ -1,0 +1,26 @@
+{
+  "uuid": "6c05a3e4-a75b-45d3-8ddd-e115bdb143f9",
+  "title": "Interactive Shell Launched via Unusual Parent Process in a Container",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects when an interactive shell process is launched via an unusual parent processes inside a container.\nInteractive processes are typically run in the foreground and require user input, which is unusual behavior for a\ncontainerized environment. This activity could indicate an attacker attempting to gain access to the container\nenvironment or perform malicious actions.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349495"
+}

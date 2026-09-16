@@ -1,0 +1,28 @@
+{
+  "uuid": "7f76d0e8-8a5a-48e1-b592-ad9bf439bd1b",
+  "title": "Netcat Listener Established via rlwrap",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Monitors for the execution of a netcat listener via rlwrap. rlwrap is a 'readline wrapper', a small utility that uses\nthe GNU Readline library to allow the editing of keyboard input for any command. This utility can be used in conjunction\nwith netcat to gain a more stable reverse shell.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1095"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349627"
+}

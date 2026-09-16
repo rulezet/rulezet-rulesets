@@ -1,0 +1,29 @@
+{
+  "uuid": "cb173d15-72a9-4f1c-851f-90ecf976d772",
+  "title": "Anomalous Windows Process Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies unusual parent-child process relationships that can indicate malware execution or persistence mechanisms.\nMalicious scripts often call on other applications and processes as part of their exploit payload. For example, when a\nmalicious Office document runs scripts as part of an exploit payload, Excel or Word may start a script interpreter\nprocess, which, in turn, runs a script that downloads and executes malware. Another common scenario is Outlook running\nan unusual process when malware is downloaded in an email. Monitoring and identifying anomalous process relationships is\na method of detecting new and emerging malware that is not yet recognized by anti-virus scanners.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1203",
+    "T1204",
+    "T1204.002",
+    "T1543"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349673"
+}

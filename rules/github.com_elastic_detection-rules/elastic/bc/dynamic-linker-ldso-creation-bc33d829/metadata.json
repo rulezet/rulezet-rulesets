@@ -1,0 +1,29 @@
+{
+  "uuid": "bc33d829-8b59-4674-9d26-7c47255aa199",
+  "title": "Dynamic Linker (ld.so) Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation of the dynamic linker (ld.so). The dynamic linker is used to load shared libraries\nneeded by an executable. Attackers may attempt to replace the dynamic linker with a malicious version to execute\narbitrary code.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1218",
+    "T1574",
+    "T1574.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349511"
+}

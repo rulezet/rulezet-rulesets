@@ -1,0 +1,26 @@
+{
+  "uuid": "fe04277b-89a2-49a2-8351-a562eb5bbac1",
+  "title": "Cisco TFTP Server Configuration for Data Exfiltration",
+  "format": "splunk",
+  "author": "Bhavin Patel, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects the configuration of TFTP services on Cisco IOS devices that could be used to exfiltrate sensitive configuration files. Threat actors like Static Tundra have been observed configuring TFTP servers to make device configuration files accessible for exfiltration after gaining initial access. The detection specifically looks for commands that expose critical configuration files such as startup-config, running-config, and other sensitive system information through TFTP. This activity is particularly concerning as it may represent an attempt to steal credentials, network topology information, and other sensitive data stored in device configurations.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1005",
+    "T1567"
+  ],
+  "cve": [
+    "CVE-2018-0171"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349840"
+}

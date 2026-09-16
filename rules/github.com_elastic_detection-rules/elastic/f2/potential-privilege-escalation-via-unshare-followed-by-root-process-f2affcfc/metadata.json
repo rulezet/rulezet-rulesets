@@ -1,0 +1,23 @@
+{
+  "uuid": "f2affcfc-3d7b-4d63-a78f-145a087b2b83",
+  "title": "Potential Privilege Escalation via unshare Followed by Root Process",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects a short sequence where a non-root user performs unshare-related namespace activity (often associated with user\nnamespace privilege escalation primitives) and then a root process is executed shortly after. This can indicate a\nsuccessful local privilege escalation attempt or suspicious namespace manipulation captured in Auditd Manager telemetry.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1068"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349603"
+}

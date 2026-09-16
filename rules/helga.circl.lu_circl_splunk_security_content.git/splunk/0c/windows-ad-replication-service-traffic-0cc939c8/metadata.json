@@ -1,0 +1,24 @@
+{
+  "uuid": "0cc939c8-7ea8-4c9a-a479-2d1feacacf9e",
+  "title": "Windows AD Replication Service Traffic",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies unexpected Active Directory replication traffic from non-domain controller sources. It leverages data from the Network Traffic datamodel, specifically looking for applications related to AD replication. This activity is significant because AD replication traffic should typically only occur between domain controllers. Detection of such traffic from other sources may indicate malicious activities like DCSync or DCShadow, which are used for credential dumping. If confirmed malicious, this could allow attackers to exfiltrate sensitive credentials, leading to unauthorized access and potential domain-wide compromise.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1003.006",
+    "T1207"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349885"
+}

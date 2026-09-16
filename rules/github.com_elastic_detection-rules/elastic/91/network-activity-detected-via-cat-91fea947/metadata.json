@@ -1,0 +1,25 @@
+{
+  "uuid": "91fea947-c09d-4a69-a048-9b0ac0f21645",
+  "title": "Network Activity Detected via cat",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the execution of the cat command, followed by a connection attempt by the same process. Cat is\ncapable of transfering data via tcp/udp channels by redirecting its read output to a /dev/tcp or /dev/udp channel. This\nactivity is highly suspicious, and should be investigated. Attackers may leverage this capability to transfer tools or\nfiles to another host in the network or exfiltrate data while attempting to evade detection in the process.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1048",
+    "T1095"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349606"
+}

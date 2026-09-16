@@ -1,0 +1,28 @@
+{
+  "uuid": "373414a2-d0ee-4614-84bc-f22723f986fa",
+  "title": "LOLBAS With Network Traffic",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies the use of Living Off the Land Binaries and Scripts (LOLBAS) with network traffic. It leverages data from the Network Traffic data model to detect when native Windows binaries, often abused by adversaries, initiate network connections. This activity is significant as LOLBAS are frequently used to download malicious payloads, enabling lateral movement, command-and-control, or data exfiltration. If confirmed malicious, this behavior could allow attackers to execute arbitrary code, escalate privileges, or maintain persistence within the environment, posing a severe threat to organizational security.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"APT37 - G0067\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1218",
+    "T1567"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349908"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "e5577441-df74-4899-80d5-c8aa4fff2fc4",
+  "title": "Suspicious /proc/maps Discovery",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Monitors for /proc/*/maps file reads. The /proc/*/maps file in Linux provides a memory map for a specific process,\ndetailing the memory segments, permissions, and what files are mapped to these segments. Attackers may read a process's\nmemory map to identify memory addresses for code injection or process hijacking.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1003.007",
+    "T1057"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349557"
+}

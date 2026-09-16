@@ -1,0 +1,21 @@
+{
+  "uuid": "431b62c7-15e4-4a23-b2fc-d7c81540002b",
+  "title": "Cisco SD-WAN - Uncommon User-Agent Multi-URI Activity",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This hunting search is designed to surface source IP activity using uncommon HTTP user-agents across multiple URI paths in Cisco SD-WAN Manager serviceproxy access logs.\nIt looks for source and user-agent combinations that access more than one distinct URI, then keeps only low-volume behavior (`requests<=50`) to reduce noise from normal high-volume traffic.\nUse this hunt to pivot on `http_user_agent` and `src` and identify possible automation, scripted reconnaissance, or exploitation attempts.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1595"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349880"
+}

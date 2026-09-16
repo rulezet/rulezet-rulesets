@@ -1,0 +1,21 @@
+{
+  "uuid": "b6e00dd1-a499-4ba3-b546-f4b03b4a2563",
+  "title": "Internal Vertical Port Scan",
+  "format": "splunk",
+  "author": "Dean Luxton, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects instances where an internal host attempts to communicate with over 500 ports on a single destination IP address. It includes filtering criteria to exclude applications performing scans over ephemeral port ranges, focusing on potential reconnaissance or scanning activities. Monitoring network traffic logs allows for timely detection and response to such behavior, enhancing network security by identifying and mitigating potential threats promptly.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1046"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349812"
+}

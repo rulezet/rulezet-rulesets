@@ -1,0 +1,22 @@
+{
+  "uuid": "a178711b-3fb2-448f-903a-dc6b261f53c9",
+  "title": "Detect Remote Access Software Usage Traffic",
+  "format": "splunk",
+  "author": "Steven Dick",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects network traffic associated with known remote access software applications, such as AnyDesk, GoToMyPC, LogMeIn, and TeamViewer.\nIt leverages Palo Alto traffic logs mapped to the Network_Traffic data model in Splunk. This activity is significant because adversaries often use remote access tools to maintain unauthorized access to compromised environments.\nIf confirmed malicious, this activity could allow attackers to control systems remotely, exfiltrate data, or deploy additional malware, posing a severe threat to the organization's security.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Ransom\""
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349833"
+}

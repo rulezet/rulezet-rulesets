@@ -1,0 +1,28 @@
+{
+  "uuid": "2689924d-51a0-4f43-b4dc-1e9da584ff5a",
+  "title": "Potential Privilege Escalation via PKEXEC",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies an attempt to exploit a local privilege escalation in polkit pkexec (CVE-2021-4034) via unsecure environment\nvariable injection. Successful exploitation allows an unprivileged user to escalate to the root user.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1068",
+    "T1574",
+    "T1574.006",
+    "T1574.007"
+  ],
+  "cve": [
+    "CVE-2021-4034"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349540"
+}

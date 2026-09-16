@@ -1,0 +1,25 @@
+{
+  "uuid": "c3cf9df8-b1fc-4c6a-896d-9c8d9dd3f81d",
+  "title": "Systemd Service Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation or renaming of a new Systemd file in all of the common Systemd service locations for both\nroot and regular users. Systemd service files are configuration files in Linux systems used to define and manage system\nservices. Malicious actors can leverage systemd service files to achieve persistence by creating or modifying services\nto execute malicious commands or payloads during system startup or at a predefined interval by adding a systemd timer.\nThis allows them to maintain unauthorized access, execute additional malicious activities, or evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1543",
+    "T1543.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349534"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "faad95f2-ee19-4494-a70b-fffd6f9fb306",
+  "title": "Remote Desktop Network Traffic",
+  "format": "splunk",
+  "author": "David Dorsey, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects unusual Remote Desktop Protocol (RDP) traffic on TCP/3389 by filtering out known RDP sources and destinations, focusing on atypical connections within the network. This detection leverages network traffic data to identify potentially unauthorized RDP access. Monitoring this activity is crucial for a SOC as unauthorized RDP access can indicate an attacker's attempt to control networked systems, leading to data theft, ransomware deployment, or further network compromise. If confirmed malicious, this activity could result in significant data breaches or complete system and network control loss.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Ryuk ransomware\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349827"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "6872173f-c892-4366-9e85-fcb3508d109c",
+  "title": "Suspicious Path Mounted",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects suspicious paths mounted on Linux systems. The mount command is used to attach filesystems to\nthe system, and attackers may use it to mount malicious filesystems or directories for data exfiltration or\npersistence.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1564"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349577"
+}

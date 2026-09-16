@@ -1,0 +1,23 @@
+{
+  "uuid": "bc972b34-b3ef-4bd7-b92a-ff8681013323",
+  "title": "Cisco Secure Firewall - React Server Components RCE Attempt",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk, Talos NTDR",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects exploitation activity of CVE-2025-55182 using Cisco Secure Firewall Intrusion Events.\nIt leverages Cisco Secure Firewall Threat Defense IntrusionEvent logs to identify cases where Snort signature 65554 (React Server Components remote code execution attempt) is triggered\nIf confirmed malicious, this behavior could be indicative of a potential exploitation of CVE-2025-55182.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-55182"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349870"
+}

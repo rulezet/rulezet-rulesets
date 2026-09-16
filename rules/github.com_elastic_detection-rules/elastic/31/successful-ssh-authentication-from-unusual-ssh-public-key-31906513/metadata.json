@@ -1,0 +1,28 @@
+{
+  "uuid": "31906513-fedd-4434-80dd-4ca43c0b8c14",
+  "title": "Successful SSH Authentication from Unusual SSH Public Key",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule leverages the new_terms rule type to detect successful SSH authentications via a public\nkey that has not been seen in the last 5 days. Public key authentication is a secure method for\nauthenticating users to a server. Monitoring unusual public key authentication events can help\ndetect unauthorized access attempts or suspicious activity on the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1021.004",
+    "T1078",
+    "T1133"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349561"
+}

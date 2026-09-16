@@ -1,0 +1,26 @@
+{
+  "uuid": "e17f2aa9-f3fe-4dae-ba78-a8d251313c76",
+  "title": "Cisco Secure Firewall - High Priority Intrusion Classification",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic identifies high-severity intrusion events based on the classification assigned to Snort rules within Cisco Secure Firewall logs.\nIt leverages Cisco Secure Firewall Threat Defense logs and focuses on events classified as:\n\n- A Network Trojan was Detected\n- Successful Administrator Privilege Gain\n- Successful User Privilege Gain\n- Attempt to Login By a Default Username and Password\n- Known malware command and control traffic\n- Known malicious file or file based exploit\n- Known client side exploit attempt\n- Large Scale Information Leak\"\n\nThese classifications typically represent significant threats such as remote code execution, credential theft, lateral movement, or malware communication. Detection of these classifications should be prioritized for immediate investigation.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\""
+  ],
+  "attack_techniques": [
+    "T1003",
+    "T1071",
+    "T1078",
+    "T1190",
+    "T1203"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349823"
+}

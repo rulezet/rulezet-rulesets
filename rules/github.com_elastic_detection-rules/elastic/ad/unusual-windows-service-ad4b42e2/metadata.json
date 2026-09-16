@@ -1,0 +1,26 @@
+{
+  "uuid": "ad4b42e2-c271-409c-8100-085dfd07cd55",
+  "title": "Unusual Windows Service",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected an unusual Windows service, This can indicate execution of unauthorized services,\nmalware, or persistence mechanisms. In corporate Windows environments, hosts do not generally run many rare or unique\nservices. This job helps detect malware and persistence mechanisms that have been installed and run as a service.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1543",
+    "T1543.003",
+    "T1569",
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349674"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "b4d1bd8e-6be1-40d7-be3e-63eda456179c",
+  "title": "Anomalous Process For a Linux Population",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Searches for rare processes running on multiple Linux hosts in an entire fleet or network. This reduces the detection of\nfalse positives since automated maintenance processes usually only run occasionally on a single machine but are common\nto all or many hosts in a fleet.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1543",
+    "T1543.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349699"
+}

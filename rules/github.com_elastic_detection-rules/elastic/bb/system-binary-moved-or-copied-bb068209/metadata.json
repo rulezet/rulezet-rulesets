@@ -1,0 +1,25 @@
+{
+  "uuid": "bb068209-a602-4fe6-9908-aabe2c6db658",
+  "title": "System Binary Moved or Copied",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the copying or moving of a system binary. Adversaries may copy/move and rename system binaries to\nevade detection. Copying a system binary to a different location should not occur often, so if it does, the activity\nshould be investigated.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.003",
+    "T1564"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349660"
+}

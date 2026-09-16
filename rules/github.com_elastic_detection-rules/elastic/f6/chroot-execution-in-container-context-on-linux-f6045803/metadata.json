@@ -1,0 +1,23 @@
+{
+  "uuid": "f6045803-ad55-4b56-a439-ae1ca69e7586",
+  "title": "Chroot Execution in Container Context on Linux",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects chroot execution on Linux when the process appears to run in a container-oriented context: the process title\nmatches runc init, the entry leader is a container workload, or the parent process is runc. Chroot from inside a\ncontainer can pivot to an alternate root filesystem and is a common step in container breakout attempts when combined\nwith sensitive host mounts.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1611"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349644"
+}

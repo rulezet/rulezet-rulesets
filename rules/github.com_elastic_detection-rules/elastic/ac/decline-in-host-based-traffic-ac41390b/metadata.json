@@ -1,0 +1,27 @@
+{
+  "uuid": "ac41390b-2472-4971-b53e-0ea41c161c45",
+  "title": "Decline in host-based traffic",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job has detected a sudden drop in host based traffic. This can be due to a range of security issues, such as a compromised system,\na failed service, or a network misconfiguration.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1489",
+    "T1499",
+    "T1562"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349677"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "e232cbc8-9577-4140-857c-5a03f3de72bd",
+  "title": "Cron Job Created or Modified",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for (ana)cron jobs being created or renamed. Linux cron jobs are scheduled tasks that can be\nleveraged by system administrators to set up scheduled tasks, but may be abused by malicious actors for persistence,\nprivilege escalation and command execution. By creating or modifying cron job configurations, attackers can execute\nmalicious commands or scripts at predefined intervals, ensuring their continued presence and enabling unauthorized\nactivities.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1053",
+    "T1053.003"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349435"
+}

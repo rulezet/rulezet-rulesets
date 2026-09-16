@@ -1,0 +1,27 @@
+{
+  "uuid": "bcc0e9d7-419c-4208-b8a8-079f91f04e9f",
+  "title": "Creation of Hidden Login Item via Apple Script",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the execution of osascript to create a hidden login item. This may indicate an attempt to persist a malicious\nprogram while concealing its presence.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.002",
+    "T1547",
+    "T1547.015",
+    "T1647"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349780"
+}

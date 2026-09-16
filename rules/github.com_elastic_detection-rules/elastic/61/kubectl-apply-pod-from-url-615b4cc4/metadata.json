@@ -1,0 +1,24 @@
+{
+  "uuid": "615b4cc4-3e0b-4775-9d6d-a8ba29a50ac0",
+  "title": "Kubectl Apply Pod from URL",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the execution of the \"kubectl apply\" command with a URL argument. This command is often used to\napply configurations or deploy resources in a Kubernetes cluster. Attackers may use this command to deploy malicious\npods or modify existing ones, potentially leading to unauthorized access or data exfiltration.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1609",
+    "T1610"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349525"
+}

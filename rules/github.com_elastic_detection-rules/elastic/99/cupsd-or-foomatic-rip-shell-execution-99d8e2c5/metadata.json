@@ -1,0 +1,33 @@
+{
+  "uuid": "99d8e2c5-6fef-4306-9aa2-c6991f5fe9d2",
+  "title": "Cupsd or Foomatic-rip Shell Execution",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This detection rule addresses multiple vulnerabilities in the CUPS printing system, including CVE-2024-47176,\nCVE-2024-47076, CVE-2024-47175, and CVE-2024-47177. Specifically, this rule detects shell executions from the\nfoomatic-rip parent process. These flaws impact components like cups-browsed, libcupsfilters, libppd, and foomatic-rip,\nallowing remote unauthenticated attackers to manipulate IPP URLs or inject malicious data through crafted UDP packets or\nnetwork spoofing. This can result in arbitrary command execution when a print job is initiated.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1203"
+  ],
+  "cve": [
+    "CVE-2024-47076",
+    "CVE-2024-47175",
+    "CVE-2024-47176",
+    "CVE-2024-47177"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349642"
+}

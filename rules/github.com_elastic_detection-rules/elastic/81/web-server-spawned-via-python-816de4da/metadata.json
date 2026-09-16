@@ -1,0 +1,25 @@
+{
+  "uuid": "816de4da-0256-4e2e-95fe-768282879e3d",
+  "title": "Web Server Spawned via Python",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule identifies when a web server is spawned via Python. Attackers may use Python to spawn a web server to\nexfiltrate/infiltrate data or to move laterally within a network.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.006",
+    "T1570"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349568"
+}

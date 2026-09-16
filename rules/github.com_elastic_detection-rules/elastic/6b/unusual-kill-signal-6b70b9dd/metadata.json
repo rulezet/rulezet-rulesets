@@ -1,0 +1,23 @@
+{
+  "uuid": "6b70b9dd-7378-4939-906e-954633e64184",
+  "title": "Unusual Kill Signal",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the use of unusual kill signals, specifically kill signals in the range of 32-64, which\nare not commonly used in standard operations. Rootkits may leverage these signals to conduct certain actions,\nsuch as manipulating processes in unexpected ways, potentially escalating privileges or evading detection. \n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1014"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349658"
+}

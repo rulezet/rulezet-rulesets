@@ -1,0 +1,21 @@
+{
+  "uuid": "fe9b5ade-71d6-4e79-9756-6184ea4df9b7",
+  "title": "Large Volume of DNS ANY Queries",
+  "format": "splunk",
+  "author": "Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies a large volume of DNS ANY queries, which may indicate a DNS amplification attack. It leverages the Network_Resolution data model to count DNS queries of type \"ANY\" directed to specific destinations. This activity is significant because DNS amplification attacks can overwhelm network resources, leading to Denial of Service (DoS) conditions. If confirmed malicious, this activity could disrupt services, degrade network performance, and potentially be part of a larger Distributed Denial of Service (DDoS) attack, impacting the availability of critical infrastructure.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1498.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349838"
+}

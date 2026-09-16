@@ -1,0 +1,26 @@
+{
+  "uuid": "7e7c97aa-fbb6-452a-8c84-ae86dcb990a1",
+  "title": "Suspicious rc.local Error Message",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors the syslog log file for error messages related to the rc.local process. The rc.local file is a script\nthat is executed during the boot process on Linux systems. Attackers may attempt to modify the rc.local file to execute\nmalicious commands or scripts during system startup. This rule detects error messages such as \"Connection refused,\" \"No\nsuch file or directory,\" or \"command not found\" in the syslog log file, which may indicate that the rc.local file has\nbeen tampered with.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1037.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349589"
+}

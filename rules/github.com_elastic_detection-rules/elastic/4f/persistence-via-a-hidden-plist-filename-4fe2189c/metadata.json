@@ -1,0 +1,29 @@
+{
+  "uuid": "4fe2189c-0d75-4953-8ede-b8112e9ed95b",
+  "title": "Persistence via a Hidden Plist Filename",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation of a hidden launch agent or daemon property list file. An adversary may establish \npersistence by installing a new launch agent or daemon which executes at login. Hidden plist files with \nfilenames starting with a dot are particularly suspicious.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Spyware\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1543",
+    "T1543.001",
+    "T1547",
+    "T1547.011",
+    "T1564",
+    "T1564.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349738"
+}

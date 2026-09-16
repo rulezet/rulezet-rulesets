@@ -1,0 +1,24 @@
+{
+  "uuid": "95020bce-dfe3-4969-b5be-da2efbe2f308",
+  "title": "DNS Request for IP Lookup Service via Unsigned Binary",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a DNS request is made for an IP lookup service to determine the external IP address of the \nsystem via an unsigned or untrusted binary. This is commonly used by malware for reconnaissance before \nestablishing C2 connections.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1016",
+    "T1016.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349726"
+}

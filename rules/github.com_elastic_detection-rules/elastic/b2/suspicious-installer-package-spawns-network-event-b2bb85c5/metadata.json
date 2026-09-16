@@ -1,0 +1,32 @@
+{
+  "uuid": "b2bb85c5-78b0-4090-8c6e-05fcbe8112c5",
+  "title": "Suspicious Installer Package Spawns Network Event",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the execution of a MacOS installer package with an abnormal child process (e.g bash) followed immediately by a\nnetwork connection via a suspicious process (e.g curl). Threat actors will build and distribute malicious MacOS\ninstaller packages, which have a .pkg extension, many times imitating valid software in order to persuade and infect\ntheir victims often using the package files (e.g pre/post install scripts etc.) to download additional tools or\nmalicious software. If this rule fires it should indicate the installation of a malicious or suspicious package.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.002",
+    "T1059.004",
+    "T1059.006",
+    "T1059.007",
+    "T1071",
+    "T1071.001",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349760"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "aab59147-5456-4be3-8a00-aa01d3ce0bcf",
+  "title": "3CX Supply Chain Attack Network Indicators",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies DNS queries to domains associated with the 3CX supply chain attack. It leverages the Network_Resolution datamodel to detect these suspicious domain indicators. This activity is significant because it can indicate a potential compromise stemming from the 3CX supply chain attack, which is known for distributing malicious software through trusted updates. If confirmed malicious, this activity could allow attackers to establish a foothold in the network, exfiltrate sensitive data, or further propagate malware, leading to extensive damage and data breaches.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1195.002"
+  ],
+  "cve": [
+    "CVE-2023-29059"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349810"
+}

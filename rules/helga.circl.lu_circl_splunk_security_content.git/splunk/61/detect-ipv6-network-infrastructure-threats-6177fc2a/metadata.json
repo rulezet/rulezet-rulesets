@@ -1,0 +1,23 @@
+{
+  "uuid": "6177fc2a-1cfe-45f6-9dc2-6c60f9ca6a28",
+  "title": "Detect IPv6 Network Infrastructure Threats",
+  "format": "splunk",
+  "author": "Mikael Bjerkeland, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects IPv6 network infrastructure threats by identifying suspicious activities such as IP and MAC address theft or packet drops. It leverages logs from Cisco network devices configured with First Hop Security measures like RA Guard and DHCP Guard. This activity is significant as it can indicate attempts to compromise network integrity and security. If confirmed malicious, attackers could manipulate network traffic, leading to potential data interception, unauthorized access, or network disruption.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1200",
+    "T1498",
+    "T1557.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349876"
+}

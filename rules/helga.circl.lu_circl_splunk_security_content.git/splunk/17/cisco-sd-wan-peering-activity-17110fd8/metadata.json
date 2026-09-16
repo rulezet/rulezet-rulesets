@@ -1,0 +1,25 @@
+{
+  "uuid": "17110fd8-1527-4978-8009-ae9f4eb4c1c7",
+  "title": "Cisco SD-WAN - Peering Activity",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects Cisco SD-WAN `control-connection-state-change` events where a control connection transitions.\nIt extracts and highlights key triage fields including `peer-type`, `peer-system-ip`, `public-ip`, and `public-port`.\nAnalysts should manually validate whether the `peer-system-ip` matches the expected SD-WAN addressing schema and\ndevice inventory, whether the event timing aligns with known operational activity (maintenance, failover, or\nplanned changes), and whether the `public-ip` is an expected source for control peering in the environment.\nTreat `peer-type:vmanage` events with higher scrutiny, especially when peer or source IP values are previously\nunseen.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2026-20127"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349846"
+}

@@ -1,0 +1,29 @@
+{
+  "uuid": "5aafc1f5-5937-4141-8f4f-dd6866299f23",
+  "title": "Suspicious Curl to Jamf Endpoint",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects curl requests to JAMF Pro endpoints from suspicious processes like unsigned binaries or scripting \ninterpreters. This indicates potential abuse of stolen JAMF credentials for lateral movement in enterprise \nmacOS environments.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.002",
+    "T1059.006",
+    "T1059.007",
+    "T1072"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349778"
+}

@@ -1,0 +1,28 @@
+{
+  "uuid": "41965798-69fa-4774-a454-5a8393baacff",
+  "title": "Manual Dracut Execution",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects manual execution of the \"dracut\" command on Linux systems. Dracut is a tool used to generate an\ninitramfs image that is used to boot the system. Attackers may use \"dracut\" to create a custom initramfs image that\nincludes malicious code or backdoors, allowing them to maintain persistence on the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1542"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349624"
+}

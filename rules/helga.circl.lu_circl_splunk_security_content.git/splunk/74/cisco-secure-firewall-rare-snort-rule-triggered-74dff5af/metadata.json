@@ -1,0 +1,22 @@
+{
+  "uuid": "74dff5af-aacd-417e-b1fc-8f91cced232c",
+  "title": "Cisco Secure Firewall - Rare Snort Rule Triggered",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic identifies Snort signatures that have triggered only once in the past 7 days across all Cisco Secure Firewall IntrusionEvent logs. While these rules typically do not trigger in day-to-day network activity, their sudden appearance may indicate early-stage compromise, previously unseen malware, or reconnaissance activity against less commonly exposed services. Investigating these outliers can provide valuable insight into new or low-noise adversary behaviors.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1583.006",
+    "T1598"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349862"
+}

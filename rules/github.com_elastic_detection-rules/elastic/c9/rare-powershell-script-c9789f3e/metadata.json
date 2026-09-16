@@ -1,0 +1,25 @@
+{
+  "uuid": "c9789f3e-4053-482d-b458-94b68d88e1f7",
+  "title": "Rare Powershell Script",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected a rare PowerShell script, identified by its script block hash, that may indicate\nexecution of malware, or persistence mechanisms. Unlike anomaly detection based on content entropy, this rule\nidentifies scripts that have rarely or never been seen in the environment.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349697"
+}

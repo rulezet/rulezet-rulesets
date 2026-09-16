@@ -1,0 +1,23 @@
+{
+  "uuid": "0ea1de26-873b-4a82-8796-c55830a10af9",
+  "title": "Cisco Smart Install Oversized Packet Detection",
+  "format": "splunk",
+  "author": "Bhavin Patel, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects oversized Cisco Smart Install (SMI) protocol messages by inspecting traffic to TCP port 4786\nwithin the Network_Traffic data model. Abnormally large SMI payloads have been associated with exploitation and\nprotocol abuse (e.g., CVE-2018-0171; activity reported by the \"Static Tundra\" threat actor). Monitoring message\nsizes over time can help identify possible attempts at remote code execution, denial of service, or reconnaissance\nagainst Cisco devices exposing Smart Install.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2018-0171"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349891"
+}

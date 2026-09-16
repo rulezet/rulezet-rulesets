@@ -1,0 +1,21 @@
+{
+  "uuid": "e871649b-e8a8-4519-a7ec-977a597cabcc",
+  "title": "Excessive DNS Failures",
+  "format": "splunk",
+  "author": "bowesmana, Bhavin Patel, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic identifies excessive DNS query failures by counting DNS responses that do not indicate success, triggering when there are more than 50 occurrences. It leverages the Network_Resolution data model, focusing on DNS reply codes that signify errors. This activity is significant because a high number of DNS failures can indicate potential network misconfigurations, DNS poisoning attempts, or malware communication issues. If confirmed malicious, this activity could lead to disrupted network services, hindered communication, or data exfiltration attempts by attackers.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1071.004"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349834"
+}

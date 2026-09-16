@@ -1,0 +1,26 @@
+{
+  "uuid": "d8143cb4-7d10-4464-be23-dbccee9bd443",
+  "title": "User Added to the Admin Group",
+  "format": "elastic",
+  "author": "Thijs Xhaflaire",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies users being added to the admin group. This could be an indication of privilege\nescalation activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1078",
+    "T1078.003",
+    "T1098",
+    "T1098.007"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349740"
+}

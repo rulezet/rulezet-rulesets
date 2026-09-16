@@ -1,0 +1,25 @@
+{
+  "uuid": "de04ae82-c1b8-43cd-ba49-6359d8b1ec8b",
+  "title": "Cisco Secure Firewall - Oracle E-Business Suite Correlation",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk, Talos NTDR",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This correlation rule identifies potential exploitation attempts of Oracle E-Business Suite vulnerabilities (CVE-2025-61882 and CVE-2025-61884) by correlating multiple intrusion signatures from Cisco Secure Firewall Threat Defense logs.\nThe detection looks for specific signatures that indicate attempts to exploit the TemplatePreview functionality and vulnerable SyncServlet endpoints as well as post compromise activity involving Cl0p.\nBy correlating these signatures, the analytic aims to identify coordinated exploitation attempts that may indicate an attacker is targeting Oracle E-Business Suite installations.\nSecurity teams should investigate any instances of these correlated signatures, especially if they are found in conjunction with other suspicious network activity or on systems that should not be exposed to such threats.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Clop\""
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2025-61882",
+    "CVE-2025-61884"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349851"
+}

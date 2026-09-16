@@ -1,0 +1,27 @@
+{
+  "uuid": "ce1857a1-31c0-4ffb-a950-ac27e68baac8",
+  "title": "Cisco Network Interface Modifications",
+  "format": "splunk",
+  "author": "Bhavin Patel, Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic detects the creation or modification of network interfaces on Cisco devices, which could indicate an attacker establishing persistence or preparing for lateral movement. After gaining initial access to network devices, threat actors like Static Tundra often create new interfaces (particularly loopback interfaces) to establish covert communication channels or maintain persistence. This detection specifically looks for the configuration of new interfaces, interface state changes, and the assignment of IP addresses to interfaces. These activities are particularly concerning when they involve unusual interface names or descriptions containing suspicious terms.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1021",
+    "T1133",
+    "T1556"
+  ],
+  "cve": [
+    "CVE-2018-0171"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349895"
+}

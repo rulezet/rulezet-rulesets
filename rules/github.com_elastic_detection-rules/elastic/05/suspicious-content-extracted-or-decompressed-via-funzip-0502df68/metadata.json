@@ -1,0 +1,29 @@
+{
+  "uuid": "0502df68-11e9-4f70-b0d3-eda67d5c7f03",
+  "title": "Suspicious Content Extracted or Decompressed via Funzip",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies when suspicious content is extracted from a file and subsequently decompressed using the funzip utility.\nMalware may execute the tail utility using the \"-c\" option to read a sequence of bytes from the end of a file. The\noutput from tail can be piped to funzip in order to decompress malicious code before it is executed. This behavior is\nconsistent with malware families such as Bundlore.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1027.015",
+    "T1059",
+    "T1059.004",
+    "T1140"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349433"
+}

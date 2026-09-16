@@ -1,0 +1,24 @@
+{
+  "uuid": "c22617be-00d8-484a-ba1b-114caed9f6cd",
+  "title": "File made Immutable by Chattr",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects a file being made immutable using the chattr binary. Making a file immutable means it cannot be deleted or\nrenamed, no link can be created to this file, most of the file's metadata can not be modified, and the file can not be\nopened in write mode. Threat actors will commonly utilize this to prevent tampering or modification of their malicious\nfiles or any system files they have modified for purposes of persistence (e.g .ssh, /etc/passwd, etc.).\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1222",
+    "T1222.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349518"
+}

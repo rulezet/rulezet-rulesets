@@ -1,0 +1,26 @@
+{
+  "uuid": "db09f946-35bd-4af8-bde6-309f8584857d",
+  "title": "KDE AutoStart Script or Desktop File Creation",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Identifies the creation or modification of a K Desktop Environment (KDE) AutoStart script or desktop file that will\nexecute upon each user logon. Adversaries may abuse this method for persistence.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Spyware\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1547",
+    "T1547.013"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349510"
+}

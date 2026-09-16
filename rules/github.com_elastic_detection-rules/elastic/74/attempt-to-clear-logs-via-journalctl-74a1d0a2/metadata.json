@@ -1,0 +1,26 @@
+{
+  "uuid": "74a1d0a2-dc2f-4f62-adc9-b881ec2b044b",
+  "title": "Attempt to Clear Logs via Journalctl",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for attempts to clear logs using the \"journalctl\" command on Linux systems. Adversaries may use this\ntechnique to cover their tracks by deleting or truncating log files, making it harder for defenders to investigate their\nactivities. The rule looks for the execution of \"journalctl\" with arguments that indicate log clearing actions, such as\n\"--vacuum-time\", \"--vacuum-size\", or \"--vacuum-files\".\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1070.002",
+    "T1562",
+    "T1562.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349566"
+}

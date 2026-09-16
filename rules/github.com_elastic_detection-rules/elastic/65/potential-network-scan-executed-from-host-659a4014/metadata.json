@@ -1,0 +1,27 @@
+{
+  "uuid": "659a4014-2b78-43d1-923f-6bb372bc9744",
+  "title": "Potential Network Scan Executed From Host",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This threshold rule monitors for the rapid execution of unix utilities that are capable of conducting network scans.\nAdversaries may leverage built-in tools such as ping, netcat or socat to execute ping sweeps across the network while\nattempting to evade detection or due to the lack of network mapping tools available on the compromised host.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:tool=\"Netcat\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1018",
+    "T1046"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349519"
+}

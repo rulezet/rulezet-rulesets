@@ -1,0 +1,32 @@
+{
+  "uuid": "f5bbe6c4-c488-45d1-88c7-ba7d1ccef21f",
+  "title": "Executable Bit Set for Potential Persistence Script",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors for the addition of an executable bit for scripts that are located in directories which are commonly\nabused for persistence. An alert of this rule is an indicator that a persistence mechanism is being set up within your\nenvironment. Adversaries may create these scripts to execute malicious code at start-up, or at a set interval to gain\npersistence onto the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1037",
+    "T1037.004",
+    "T1053",
+    "T1053.003",
+    "T1222",
+    "T1222.002",
+    "T1546",
+    "T1546.017",
+    "T1547",
+    "T1547.013"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349469"
+}

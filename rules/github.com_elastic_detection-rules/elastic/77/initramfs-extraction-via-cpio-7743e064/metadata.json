@@ -1,0 +1,25 @@
+{
+  "uuid": "7743e064-0c4a-4dc4-9c3e-665547164fbc",
+  "title": "Initramfs Extraction via CPIO",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the extraction of an initramfs image using the \"cpio\" command on Linux systems. The \"cpio\" command is\nused to create or extract cpio archives. Attackers may extract the initramfs image to modify the contents or add\nmalicious files, which can be leveraged to maintain persistence on the system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1542",
+    "T1543",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349475"
+}

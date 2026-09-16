@@ -1,0 +1,100 @@
+[metadata]
+creation_date = "2020/03/25"
+integration = ["windows"]
+maturity = "production"
+min_stack_version = "9.4.0"
+min_stack_comments = "Use EA (Entity Analytics) fields"
+updated_date = "2026/07/27"
+
+[rule]
+anomaly_threshold = 50
+author = ["Elastic"]
+description = """
+A machine learning job detected an unusual remote desktop protocol (RDP) username, which can indicate account takeover
+or credentialed persistence using compromised accounts. RDP attacks, such as BlueKeep, also tend to use unusual
+usernames.
+"""
+false_positives = [
+    """
+    Uncommon username activity can be due to an engineer logging onto a server instance in order to perform manual
+    troubleshooting or reconfiguration.
+    """,
+]
+from = "now-45m"
+interval = "15m"
+license = "Elastic License v2"
+machine_learning_job_id = ["v3_windows_rare_user_type10_remote_login_ea"]
+name = "Unusual Windows Remote User"
+note = """## Triage and analysis
+
+### Investigating Unusual Windows Remote User
+Detection alerts from this rule indicate activity for a rare and unusual Windows RDP (remote desktop) user. Here are some possible avenues of investigation:
+- Consider the user as identified by the username field. Is the user part of a group who normally logs into Windows hosts using RDP (remote desktop protocol)? Is this logon activity part of an expected workflow for the user?
+- Consider the source of the login. If the source is remote, could this be related to occasional troubleshooting or support activity by a vendor or an employee working remotely?"""
+references = ["https://www.elastic.co/guide/en/security/current/prebuilt-ml-jobs.html"]
+risk_score = 21
+rule_id = "1781d055-5c66-4adf-9e93-fc0fa69550c9"
+setup = """## Setup
+
+This rule requires the installation of associated Machine Learning jobs, as well as data coming in from one of the following integrations:
+- Windows
+
+### Anomaly Detection Setup
+
+Once the rule is enabled, the associated Machine Learning job will start automatically. You can view the Machine Learning job linked under the "Definition" panel of the detection rule. If the job does not start due to an error, the issue must be resolved for the job to commence successfully. For more details on setting up anomaly detection jobs, refer to the [helper guide](https://www.elastic.co/guide/en/kibana/current/xpack-ml-anomalies.html).
+
+### Windows Integration Setup
+The Windows integration allows you to monitor the Windows OS, services, applications, and more.
+
+#### The following steps should be executed in order to add the Elastic Agent System integration "windows" to your system:
+- Go to the Kibana home page and click “Add integrations”.
+- In the query bar, search for “Windows” and select the integration to see more details about it.
+- Click “Add Windows”.
+- Configure the integration name and optionally add a description.
+- Review optional and advanced settings accordingly.
+- Add the newly installed “windows” to an existing or a new agent policy, and deploy the agent on your system from which windows log files are desirable.
+- Click “Save and Continue”.
+- For more details on the integration refer to the [helper guide](https://docs.elastic.co/integrations/windows).
+"""
+severity = "low"
+tags = [
+    "Domain: Endpoint",
+    "OS: Windows",
+    "Data Source: Windows Security Event Logs",
+    "Use Case: Threat Detection",
+    "Rule Type: ML",
+    "Rule Type: Machine Learning",
+    "Tactic: Initial Access",
+    "Resources: Investigation Guide",
+]
+type = "machine_learning"
+[[rule.threat]]
+framework = "MITRE ATT&CK"
+
+[[rule.threat.technique]]
+id = "T1078"
+name = "Valid Accounts"
+reference = "https://attack.mitre.org/techniques/T1078/"
+
+[rule.threat.tactic]
+id = "TA0001"
+name = "Initial Access"
+reference = "https://attack.mitre.org/tactics/TA0001/"
+
+[[rule.threat]]
+framework = "MITRE ATT&CK"
+
+[[rule.threat.technique]]
+id = "T1021"
+name = "Remote Services"
+reference = "https://attack.mitre.org/techniques/T1021/"
+
+[[rule.threat.technique.subtechnique]]
+id = "T1021.001"
+name = "Remote Desktop Protocol"
+reference = "https://attack.mitre.org/techniques/T1021/001/"
+
+[rule.threat.tactic]
+id = "TA0008"
+name = "Lateral Movement"
+reference = "https://attack.mitre.org/tactics/TA0008/"

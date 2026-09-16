@@ -1,0 +1,24 @@
+{
+  "uuid": "fb26e53d-0f2b-4b08-9dd4-771cfb5846ab",
+  "title": "ConnectWise ScreenConnect Authentication Bypass",
+  "format": "splunk",
+  "author": "Michael Haag, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "The following analytic detects attempts to exploit the ConnectWise ScreenConnect CVE-2024-1709 vulnerability, which allows attackers to bypass authentication via an alternate path or channel. It leverages web request logs to identify access to the SetupWizard.aspx page, indicating potential exploitation. This activity is significant as it can lead to unauthorized administrative access and remote code execution. If confirmed malicious, attackers could create administrative users and gain full control over the affected system, posing severe security risks. Immediate remediation by updating to version 23.9.8 or above is recommended.",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190"
+  ],
+  "cve": [
+    "CVE-2024-1708",
+    "CVE-2024-1709"
+  ],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349915"
+}

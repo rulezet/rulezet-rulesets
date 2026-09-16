@@ -1,0 +1,29 @@
+{
+  "uuid": "ee57a768-cb95-499a-9cbc-80ff10e3a23f",
+  "title": "Network Connection to OAST Domain via Script Interpreter",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects when a package service such as npm, gems, or a script interpreter makes an outbound network connection \nto an OAST (Out-of-band Application Security Testing) domain. Threat actors have been using OAST domains to \nexfiltrate sensitive data from compromised systems via malicious packages.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1102",
+    "T1195",
+    "T1195.001",
+    "T1567"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349768"
+}

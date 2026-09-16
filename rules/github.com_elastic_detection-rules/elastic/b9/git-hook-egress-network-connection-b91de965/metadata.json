@@ -1,0 +1,30 @@
+{
+  "uuid": "b91de965-02a5-4f95-80f2-099caae358a1",
+  "title": "Git Hook Egress Network Connection",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects a suspicious egress network connection attempt from a Git hook script. Git hooks are scripts that Git\nexecutes before or after events such as: commit, push, and receive. An attacker can abuse these features to execute\narbitrary commands on the system, establish persistence or to initialize a network connection to a remote server and\nexfiltrate data or download additional payloads.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1059",
+    "T1059.004",
+    "T1071",
+    "T1543",
+    "T1546",
+    "T1574"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349442"
+}

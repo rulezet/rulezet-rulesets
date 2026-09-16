@@ -1,0 +1,23 @@
+{
+  "uuid": "a32f4502-78b6-4908-a2fd-907faf60c1c1",
+  "title": "Suspicious Reading of procfs Syscall File",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects command lines that reference another process or thread's procfs syscall file. The\n\"/proc/<pid>/syscall\" interface exposes the current syscall arguments, stack pointer, and instruction\npointer, which can support process discovery and preparation for process injection. Self and thread-self\naliases are excluded.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1057"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349464"
+}

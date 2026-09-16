@@ -1,0 +1,25 @@
+{
+  "uuid": "6d603fb7-f6ba-4dec-a773-f33a2538b8ba",
+  "title": "Systemd Service Override Configuration File Created",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects the creation or renaming of a new Systemd override configuration file in any\nof the Systemd service locations for both root and regular users. Systemd override configuration\nfiles are configuration files in Linux systems used to override the default Systemd service\nconfiguration for a specific service. Malicious actors can leverage systemd override configuration\nfiles to achieve persistence by creating or modifying services to execute malicious commands or\npayloads during system startup or at a predefined interval by adding a systemd timer. This allows\nthem to maintain unauthorized access, execute additional malicious activities, or evade detection.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1543",
+    "T1543.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349625"
+}

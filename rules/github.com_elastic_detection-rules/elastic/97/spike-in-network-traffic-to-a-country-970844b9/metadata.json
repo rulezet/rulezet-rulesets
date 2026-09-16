@@ -1,0 +1,27 @@
+{
+  "uuid": "970844b9-3978-4501-984a-87211da7c2c7",
+  "title": "Spike in Network Traffic To a Country",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected an unusually large spike in network activity to one destination country in the network\nlogs. This could be due to unusually large amounts of reconnaissance or enumeration traffic. Data exfiltration activity\nmay also produce such a surge in traffic to a destination country that does not normally appear in network traffic or\nbusiness workflows. Malware instances and persistence mechanisms may communicate with command-and-control (C2)\ninfrastructure in their country of origin, which may be an unusual destination country for the source network.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Backdoor\""
+  ],
+  "attack_techniques": [
+    "T1041",
+    "T1046",
+    "T1048",
+    "T1071",
+    "T1595",
+    "T1595.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349701"
+}

@@ -1,0 +1,26 @@
+{
+  "uuid": "cdd11d1d-0836-4bed-b88b-aa926119614c",
+  "title": "Suspicious Powershell Script",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "A machine learning job detected a PowerShell script with unusual data characteristics, such as obfuscation, that may be\na characteristic of malicious PowerShell script text blocks.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1027.010",
+    "T1059",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349669"
+}

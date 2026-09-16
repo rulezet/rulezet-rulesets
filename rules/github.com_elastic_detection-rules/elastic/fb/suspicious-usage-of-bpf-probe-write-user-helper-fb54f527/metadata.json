@@ -1,0 +1,27 @@
+{
+  "uuid": "fb54f527-24c9-4114-be18-2a2c752b3e8f",
+  "title": "Suspicious Usage of bpf_probe_write_user Helper",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule monitors the syslog log file for messages related to instances of a program using the \"bpf_probe_write_user\" helper.\nThe \"bpf_probe_write_user\" helper is used to write data to user space from a BPF program. Unauthorized use of this helper can\nbe indicative of an eBPF rootkit or other malicious activity.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "misp-galaxy:operating-system=\"UNIX\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Unix\""
+  ],
+  "attack_techniques": [
+    "T1014",
+    "T1547",
+    "T1547.006"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349491"
+}

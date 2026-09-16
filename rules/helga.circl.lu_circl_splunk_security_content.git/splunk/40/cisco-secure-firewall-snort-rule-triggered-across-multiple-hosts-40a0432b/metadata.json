@@ -1,0 +1,23 @@
+{
+  "uuid": "40a0432b-7402-44dd-b004-69795474e8b9",
+  "title": "Cisco Secure Firewall - Snort Rule Triggered Across Multiple Hosts",
+  "format": "splunk",
+  "author": "Nasreddine Bencherchali, Splunk",
+  "license": "Apache-2.0",
+  "license_verified": true,
+  "description": "This analytic identifies Snort intrusion signatures that have been triggered by ten or more distinct internal IP addresses within a one-hour window. It leverages Cisco Secure Firewall Threat Defense logs and focuses on the IntrusionEvent event type to detect activity that may indicate broad targeting or mass exploitation attempts. This behavior is often associated with opportunistic scanning, worm propagation, or automated exploitation of known vulnerabilities across multiple systems. If confirmed malicious, this could represent the early phase of a coordinated attack aiming to gain a foothold on several hosts or move laterally across the environment.\n",
+  "source": "https://helga.circl.lu/CIRCL/splunk_security_content.git",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Worm\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349866"
+}

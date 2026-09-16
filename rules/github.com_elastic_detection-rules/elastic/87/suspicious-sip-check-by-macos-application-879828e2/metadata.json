@@ -1,0 +1,25 @@
+{
+  "uuid": "879828e2-8dab-43cf-b7ce-868e5c8a2b4b",
+  "title": "Suspicious SIP Check by macOS Application",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the unusual use of csrutil by a macOS application to check System Integrity Protection (SIP) status. \nWhile not malicious in itself, this activity is highly indicative of malware verifying it is not running \nin a virtual machine or protected environment prior to executing its payload.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1082",
+    "T1497",
+    "T1497.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349801"
+}

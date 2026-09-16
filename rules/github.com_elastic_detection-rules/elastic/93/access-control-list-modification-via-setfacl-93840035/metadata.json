@@ -1,0 +1,24 @@
+{
+  "uuid": "93840035-6642-45d8-bd91-d64dd4003748",
+  "title": "Access Control List Modification via setfacl",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "This rule detects Linux Access Control List (ACL) modification via the setfacl command. Attackers may\nuse the setfacl utility to modify file and directory permissions in order to evade detection and maintain\npersistence on a compromised system.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:operating-system=\"Linux\"",
+    "ms-caro-malware-full:malware-platform=\"Linux\""
+  ],
+  "attack_techniques": [
+    "T1222",
+    "T1222.002"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349571"
+}

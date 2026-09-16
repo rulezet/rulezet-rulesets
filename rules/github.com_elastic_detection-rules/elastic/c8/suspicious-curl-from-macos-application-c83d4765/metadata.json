@@ -1,0 +1,29 @@
+{
+  "uuid": "c83d4765-9baf-4b9a-9c94-c22e8ec2c9f2",
+  "title": "Suspicious Curl from macOS Application",
+  "format": "elastic",
+  "author": "Elastic",
+  "license": "Elastic License v2",
+  "license_verified": false,
+  "description": "Detects the use of curl by a macOS application binary to connect to a raw IP URI and download a second \nstage payload. Threat actors often utilize a benign looking or legitimate application as a first stage \ndropper. Curl is commonly used as it doesn't enforce Gatekeeper checks.\n",
+  "source": "https://github.com/elastic/detection-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"macOS\"",
+    "ms-caro-malware-full:malware-platform=\"MacOS_X\""
+  ],
+  "attack_techniques": [
+    "T1071",
+    "T1071.001",
+    "T1105",
+    "T1553",
+    "T1553.001"
+  ],
+  "cve": [],
+  "created_at": "2026-09-09",
+  "last_modified": "2026-09-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/349756"
+}
