@@ -1,0 +1,9 @@
+rule Win_Downloader_Bredolab_18
+{
+strings:
+	$a0 = { 558bec4303fb2bf32bca03f9472bfe0f80fffdffff7000535b0f81f5fdffff015a3cd11403ce03d902ea32fc32ea4f4e780a6687ff79059db597a6e1f6db02ce32c802cd468ad70bf803d633d10f8081fefffff30f817afeffffa7cb7ed947629a4203d633d94a33cf0bd00f82e1feffff86f60f83d9feffff2b1c24b00a384b }
+
+
+condition:
+	$a0
+}

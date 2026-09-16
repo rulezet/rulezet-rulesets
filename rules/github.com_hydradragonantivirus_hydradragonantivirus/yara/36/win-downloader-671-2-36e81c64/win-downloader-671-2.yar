@@ -1,0 +1,11 @@
+rule Win_Downloader_671_2
+{
+strings:
+	$a0 = { 686c4040008d853cfbffff50ffd6395dcc8d853cffffff74068d852cffffff508d853cfbffff50ffd768644040008d853cfbffff50ffd78d4594508d853cfbffff50ffd768604040008d853cfbffff50ffd7685c4040008d85ccfdffff50ffd68d85ccfeffff508d85ccfdffff }
+
+	$a1 = { 25750000633a0000633a5c002f0000002f70726f67732f0068747470 }
+
+
+condition:
+	$a0 and $a1
+}

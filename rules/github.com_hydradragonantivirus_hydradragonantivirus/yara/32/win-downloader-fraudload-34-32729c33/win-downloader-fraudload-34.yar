@@ -1,0 +1,9 @@
+rule Win_Downloader_FraudLoad_34
+{
+strings:
+	$a0 = { 558bec81ecd0020000c685d3fdffff8568009805006a006a0e680038000068201b00006800e000006a00ff1510c142000599010480898540fdffff8985c4fdffff89f2c685d0fdffffd1c685d1fdffff89c685d4fdffffa18185c4fdffff10553e808b8dc4fdffff8b3989bdc8fdffff8d8dd0fdffff516a008d5df4536a048d }
+
+
+condition:
+	$a0
+}

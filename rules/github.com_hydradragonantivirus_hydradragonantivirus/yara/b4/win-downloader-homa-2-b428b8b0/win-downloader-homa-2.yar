@@ -1,0 +1,9 @@
+rule Win_Downloader_Homa_2
+{
+strings:
+	$a0 = { 433a5c50524f204e4f564f5c4b6170612047204e4f564f5c646f776e2064696173735c436c61737365732e706173 }
+
+
+condition:
+	$a0
+}
