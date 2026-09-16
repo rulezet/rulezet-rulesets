@@ -1,0 +1,9 @@
+rule Trojan_BAT_AsyncRAT_ARR_MTB_2{
+	meta:
+		description = "Trojan:BAT/AsyncRAT.ARR!MTB,SIGNATURE_TYPE_PEHSTR_EXT,1e 00 1e 00 01 00 00 "
+		
+	strings :
+		$a_01_0 = {95 0a 20 00 15 12 80 99 01 12 80 9d 0a 20 00 15 12 80 99 01 12 80 a5 0d 20 01 15 12 80 a9 01 12 80 85 12 80 b1 05 20 00 11 80 b5 05 20 00 12 80 bd 08 20 00 15 12 80 a9 01 0e 05 20 00 12 80 c5 05 20 00 12 80 c9 09 20 02 01 12 80 c9 12 80 c9 0e 07 08 08 1d 0e 0e 0e 11 71 12 5d 12 5d 09 06 00 01 11 80 dd 0d 06 0a 02 11 71 11 64 03 12 82 d9 06 20 01 01 11 } 	condition:
+		((#a_01_0  & 1)*30) >=30
+ 
+}
