@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] NoOp Sled On HTTPS Port"; content: "SID: 5663 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: tcp; default_dst_port: $HTTPS_PORT; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6105663; sid: 6105663; rev: 5;)

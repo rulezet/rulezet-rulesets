@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] ICQ Client DNS Request"; content: "SID: 5537 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: udp; default_dst_port: $DNS_PORT; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6105537; sid: 6105537; rev: 5;)
