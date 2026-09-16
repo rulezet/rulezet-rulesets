@@ -1,0 +1,9 @@
+import "pe"
+rule PECompact_v090_v092: PEiD
+{
+    strings:
+        $a = { EB 06 68 C3 9C 60 E8 5D 55 58 81 ED 2B 85 01 85 50 B9 }
+    condition:
+        $a at pe.entry_point
+
+}

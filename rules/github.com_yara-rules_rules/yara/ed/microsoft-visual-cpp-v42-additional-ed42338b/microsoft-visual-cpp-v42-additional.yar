@@ -1,0 +1,9 @@
+import "pe"
+rule Microsoft_Visual_Cpp_v42_additional: PEiD
+{
+    strings:
+        $a = { 64 A1 00 00 00 00 55 8B EC 6A FF 68 ?? ?? ?? ?? 68 ?? ?? ?? ?? 50 64 89 25 00 00 00 00 83 EC ?? 53 56 57 }
+    condition:
+        $a at pe.entry_point
+
+}

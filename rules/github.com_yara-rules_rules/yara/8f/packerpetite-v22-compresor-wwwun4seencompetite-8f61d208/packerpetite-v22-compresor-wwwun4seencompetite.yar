@@ -1,0 +1,9 @@
+import "pe"
+rule PackerPetite_v22_Compresor_wwwun4seencompetite: PEiD
+{
+    strings:
+        $a = { B8 00 ?0 ?? 00 6? 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}

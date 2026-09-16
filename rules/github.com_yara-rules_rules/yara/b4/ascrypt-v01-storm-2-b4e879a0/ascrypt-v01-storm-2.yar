@@ -1,0 +1,9 @@
+import "pe"
+rule AsCrypt_v01_SToRM_2: PEiD
+{
+    strings:
+        $a = { 80 ?? ?? ?? 83 ?? ?? ?? ?? 90 90 90 83 ?? ?? E2 }
+    condition:
+        $a at pe.entry_point
+
+}

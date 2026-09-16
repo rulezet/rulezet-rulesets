@@ -1,0 +1,9 @@
+import "pe"
+rule EXECryptor_v151x_additional: PEiD
+{
+    strings:
+        $a = { E8 24 ?? ?? ?? 8B 4C 24 0C C7 01 17 ?? 01 ?? C7 81 B8 ?? ?? ?? ?? ?? ?? ?? 31 C0 89 41 }
+    condition:
+        $a at pe.entry_point
+
+}

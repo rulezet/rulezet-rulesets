@@ -1,0 +1,9 @@
+import "pe"
+rule EXE_Packer_v70_by_TurboPower_Software_Hint_DOS_EP_additional: PEiD
+{
+    strings:
+        $a = { EB ?? 1E 06 8C C3 83 ?? ?? 0E 1F 01 ?? ?? ?? 01 ?? ?? ?? BE ?? ?? B9 ?? ?? FC AD 3B C1 74 }
+    condition:
+        $a at pe.entry_point
+
+}

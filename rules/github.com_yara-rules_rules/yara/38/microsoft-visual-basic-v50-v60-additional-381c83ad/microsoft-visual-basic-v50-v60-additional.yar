@@ -1,0 +1,9 @@
+import "pe"
+rule Microsoft_Visual_Basic_v50_v60_additional: PEiD
+{
+    strings:
+        $a = { FF 25 ?? ?? ?? ?? ?? ?? 68 ?? ?? ?? ?? E8 ?? FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}

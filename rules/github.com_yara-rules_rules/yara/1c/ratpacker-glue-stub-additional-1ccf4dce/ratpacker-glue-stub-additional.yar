@@ -1,0 +1,9 @@
+import "pe"
+rule RatPacker_Glue_stub_additional: PEiD
+{
+    strings:
+        $a = { 40 20 FF ?? ?? ?? ?? ?? ?? ?? ?? BE ?? 60 40 ?? 8D BE ?? B0 FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
