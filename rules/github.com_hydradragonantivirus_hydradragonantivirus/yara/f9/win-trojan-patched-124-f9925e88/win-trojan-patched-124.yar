@@ -1,0 +1,11 @@
+rule Win_Trojan_Patched_124
+{
+strings:
+	$a0 = { 63726970742e706462 }
+
+	$a1 = { 9060909ce8000000005bbf??1d807c8d735b8a0e84c9740b8d460550ffd783c610ebef8d73438b7b3f03fb83c7436a00546a406a2057b8??1a807cffd0b916000000f3a4589d61e9??????ff8bff558bec[0-60]4c5a47[0-26]746d70 }
+
+
+condition:
+	$a0 and $a1
+}

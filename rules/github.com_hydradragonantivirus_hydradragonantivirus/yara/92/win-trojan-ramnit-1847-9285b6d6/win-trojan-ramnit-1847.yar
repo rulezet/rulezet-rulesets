@@ -1,0 +1,9 @@
+rule Win_Trojan_Ramnit_1847
+{
+strings:
+	$a0 = { 60e8000000005d8bc581ed????01202b85????01208985????0120b0008685????01203c01 }
+
+
+condition:
+	$a0
+}
