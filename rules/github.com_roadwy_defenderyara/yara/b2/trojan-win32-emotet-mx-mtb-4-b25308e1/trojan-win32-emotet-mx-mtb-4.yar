@@ -1,0 +1,9 @@
+rule Trojan_Win32_Emotet_MX_MTB_4{
+	meta:
+		description = "Trojan:Win32/Emotet.MX!MTB,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 01 00 00 "
+		
+	strings :
+		$a_02_0 = {03 c1 99 f7 bd ?? ?? ?? ?? 0f b6 94 15 ?? ?? ?? ?? 8b 45 10 03 85 ?? ?? ?? ?? 0f b6 08 33 ca 8b 55 ?? 03 95 ?? ?? ?? ?? 88 0a } 	condition:
+		((#a_02_0  & 1)*1) >=1
+ 
+}

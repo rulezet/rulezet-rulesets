@@ -1,0 +1,9 @@
+rule Trojan_Win32_Emotet_EI_2{
+	meta:
+		description = "Trojan:Win32/Emotet.EI,SIGNATURE_TYPE_PEHSTR_EXT,01 00 01 00 02 00 00 "
+		
+	strings :
+		$a_01_0 = {57 48 45 40 23 68 6a 65 72 68 45 57 48 5c 5c 65 68 72 65 5c 5c 65 68 23 48 45 4e 72 2e 70 64 62 } 		$a_01_1 = {6f 35 36 33 70 34 35 6d 36 70 33 35 76 38 34 30 36 38 33 34 35 76 36 33 38 34 35 36 76 38 33 30 34 35 70 36 2e 70 64 62 } 	condition:
+		((#a_01_0  & 1)*1+(#a_01_1  & 1)*1) >=1
+ 
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "ee4dd02d-2819-422c-9b9f-b4d10e6d45aa",
+  "title": "Trojan_Win32_Lufoure_gen_A",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Lufoure.gen!A,SIGNATURE_TYPE_PEHSTR_EXT,12 00 0f 00 11 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/271685"
+}
