@@ -1,0 +1,9 @@
+rule Win_Trojan_Burma_3
+{
+strings:
+	$a0 = { e82d00e83300e8f100e80d01e83d01e8e800e84301e80101e8d700e8dc00e8f800e82801e8d300e82e01e8ec00e91501b801faba4559cd16c350535152565716 }
+
+
+condition:
+	$a0
+}

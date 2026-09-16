@@ -1,0 +1,9 @@
+rule Win_Trojan_Zox_1
+{
+strings:
+	$a0 = { 6563686f206f66660d0a636f7079205a6f782e626174207a30782e636f6d3e4e554c0d0a7a30782e636f6d0d0a64656c207a30782e636f6d0d }
+
+
+condition:
+	$a0
+}

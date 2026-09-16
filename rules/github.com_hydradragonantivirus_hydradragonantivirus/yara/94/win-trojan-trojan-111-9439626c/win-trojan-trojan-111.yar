@@ -1,0 +1,9 @@
+rule Win_Trojan_Trojan_111
+{
+strings:
+	$a0 = { b8000026a3ba0226a3bc0226a2be02b419cd21b447b6002ea2110304018ad0908d361303cd21b40eb200cd21b2013c017502b006b4008d1eb20203d883c3012e }
+
+
+condition:
+	$a0
+}

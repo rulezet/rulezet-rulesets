@@ -1,0 +1,9 @@
+rule Win_Trojan_Burger_7
+{
+strings:
+	$a0 = { 9090bc00fe505351525556571e06169cbe80008d3ebf03b92000f3a4b8000026a38f03268a1e220480fb399090fec326881e2204b419cd212ea2e103b600b4 }
+
+
+condition:
+	$a0
+}
