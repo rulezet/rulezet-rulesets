@@ -1,0 +1,9 @@
+rule Win_Downloader_Zlob_2274
+{
+strings:
+	$a0 = { c508db191308de0925c498638a348667b4dbefebfff53448f10c53302dc0f6ca97a0e65ff6e96c439f189dd75913c5c7f1b24f342223f4c2a7d361feb70d0663cd51ef8865e7c8b7e34846e375957012d3cc523a20c7da1ef1ca }
+
+
+condition:
+	$a0
+}
