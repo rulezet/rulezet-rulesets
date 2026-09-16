@@ -1,0 +1,10 @@
+import "pe"
+rule _RLPack_V112_aPlib_043__ap0x_
+{
+	meta:
+		description = "RLPack V1.12 (aPlib 0.43) -> ap0x"
+	strings:
+		$0 = {60 E8 00 00 00 00 8B 2C 24 83 C4 04 8D B5 ?? ?? ?? ?? 8D 9D ?? ?? ?? ?? 33 FF EB 0F FF ?? ?? ?? FF ?? ?? ?? D3 83 C4 ?? 83 C7 ?? 83 3C 37 00 75 EB}
+	condition:
+		$0 at pe.entry_point
+}

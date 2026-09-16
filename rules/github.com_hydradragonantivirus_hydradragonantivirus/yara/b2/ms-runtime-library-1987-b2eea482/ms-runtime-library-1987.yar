@@ -1,0 +1,10 @@
+import "pe"
+rule _MS_RunTime_Library_1987_
+{
+	meta:
+		description = "MS Run-Time Library 1987"
+	strings:
+		$0 = {B4 30 CD 21 3C 02 73 ?? 9A ?? ?? ?? ?? B8 ?? ?? 50 9A ?? ?? ?? ?? 92}
+	condition:
+		$0 at pe.entry_point
+}

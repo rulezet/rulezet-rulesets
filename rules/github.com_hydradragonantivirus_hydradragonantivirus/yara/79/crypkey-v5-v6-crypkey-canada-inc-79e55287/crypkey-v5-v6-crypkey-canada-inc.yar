@@ -1,0 +1,10 @@
+import "pe"
+rule _CrypKey_v5__v6__CrypKey_Canada_Inc_
+{
+	meta:
+		description = "CrypKey v5 - v6 -> CrypKey (Canada) Inc"
+	strings:
+		$0 = {E8 ?? ?? ?? ?? 58 83 E8 05 50 5F 57 8B F7 81 EF ?? ?? ?? ?? 83 C6 39 BA ?? ?? ?? ?? 8B DF B9 0B ?? ?? ?? 8B 06}
+	condition:
+		$0 at pe.entry_point
+}
