@@ -1,0 +1,31 @@
+rule ldap_md5_hashed_default_creds_juniper_ssh
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for juniper_ssh."
+        category = "INFO"
+        info = "LDAP_MD5"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="{MD5}6ZoYxCjLONXyYIU2eJIuAw=="
+    $a1="{MD5}ISMvKXpXpadDiUoOSoAfww=="
+    $a2="{MD5}8iK57IRp0nIw70IB+V49Rg=="
+    $a3="{MD5}ISMvKXpXpadDiUoOSoAfww=="
+    $a4="{MD5}CuJBWwo9ilircdnmCK81Gw=="
+    $a5="{MD5}ISMvKXpXpadDiUoOSoAfww=="
+    $a6="{MD5}8iK57IRp0nIw70IB+V49Rg=="
+    $a7="{MD5}8iK57IRp0nIw70IB+V49Rg=="
+    $a8="{MD5}KfWO1Kme4y/GTCX5Zw4PTg=="
+    $a9="{MD5}KfWO1Kme4y/GTCX5Zw4PTg=="
+    $a10="{MD5}u6A0iR49O45N3TT1wCi33A=="
+    $a11="{MD5}u6A0iR49O45N3TT1wCi33A=="
+    $a12="{MD5}ok89Nva6qHxytSHsP8AeLg=="
+    $a13="{MD5}GzIxZVzrt6H3g+3fJ9JUyg=="
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13)
+}
