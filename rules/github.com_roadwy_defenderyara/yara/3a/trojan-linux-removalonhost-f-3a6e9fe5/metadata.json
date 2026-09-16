@@ -1,0 +1,22 @@
+{
+  "uuid": "3a6e9fe5-c143-47c9-ab51-d1ff66b914ed",
+  "title": "Trojan_Linux_RemovalOnHost_F",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Linux/RemovalOnHost.F,SIGNATURE_TYPE_CMDHSTR_EXT,10 00 10 00 06 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/252987"
+}

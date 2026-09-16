@@ -1,0 +1,22 @@
+{
+  "uuid": "c2f1680d-0407-4dfd-b8d5-c49d3db4825d",
+  "title": "Trojan_Linux_SuspiciousCron_C",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Linux/SuspiciousCron.C,SIGNATURE_TYPE_CMDHSTR_EXT,16 00 16 00 05 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Linux\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Linux\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/253008"
+}
