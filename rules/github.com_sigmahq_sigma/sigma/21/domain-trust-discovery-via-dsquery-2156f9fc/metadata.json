@@ -1,0 +1,23 @@
+{
+  "uuid": "2156f9fc-a330-4ec2-a342-ee30c89c6cdb",
+  "title": "Domain Trust Discovery Via Dsquery",
+  "format": "sigma",
+  "author": "E.M. Anhaus, Tony Lambert, oscd.community, omkar72",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of \"dsquery.exe\" for domain trust discovery",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1482"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343240"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "2bfeb061-db6e-4ec8-95ab-145816a54a07",
+  "title": "System Language Discovery via Reg.Exe",
+  "format": "sigma",
+  "author": "Marco Pedrinazzi (@pedrinazziM) (InTheCyber)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the usage of Reg.Exe to query system language settings.\nAttackers may discover the system language to determine the geographic location of victims, customize payloads for specific regions,\nor avoid targeting certain locales to evade detection.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"Darkside\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1614.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342996"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "6b46bdcc-1ccc-499b-bf9e-f9b268140856",
+  "title": "Windows Recovery Environment Disabled Via Reagentc",
+  "format": "sigma",
+  "author": "Daniel Koifman (KoifSec), Michael Vilshin",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects attempts to disable windows recovery environment using Reagentc.\nReAgentc.exe is a command-line tool in Windows used to manage the Windows Recovery Environment (WinRE).\nIt allows users to enable, disable, and configure WinRE, which is used for troubleshooting and repairing common boot issues.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1490"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343115"
+}

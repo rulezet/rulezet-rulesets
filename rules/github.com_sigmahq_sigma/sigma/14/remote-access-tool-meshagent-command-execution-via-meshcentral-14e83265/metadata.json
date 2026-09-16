@@ -1,0 +1,23 @@
+{
+  "uuid": "14e83265-e2fe-4be6-ad3a-6b2996b5a2d5",
+  "title": "Remote Access Tool - MeshAgent Command Execution via MeshCentral",
+  "format": "sigma",
+  "author": "@Kostastsale",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of MeshAgent to execute commands on the target host, particularly when threat actors might abuse it to execute commands directly.\nMeshAgent can execute commands on the target host by leveraging win-console to obscure their activities and win-dispatcher to run malicious code through IPC with child processes.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1219.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342983"
+}

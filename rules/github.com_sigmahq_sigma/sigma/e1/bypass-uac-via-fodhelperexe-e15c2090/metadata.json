@@ -1,0 +1,23 @@
+{
+  "uuid": "e15c2090-2120-4666-924b-99396892503f",
+  "title": "Bypass UAC via Fodhelper.exe",
+  "format": "sigma",
+  "author": "E.M. Anhaus (originally from Atomic Blue Detections, Tony Lambert), oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies use of Fodhelper.exe to bypass User Account Control. Adversaries use this technique to execute privileged processes.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1548.002"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343392"
+}

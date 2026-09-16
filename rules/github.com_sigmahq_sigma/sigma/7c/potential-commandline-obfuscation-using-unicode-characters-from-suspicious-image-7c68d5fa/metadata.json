@@ -1,0 +1,23 @@
+{
+  "uuid": "7c68d5fa-2b34-4373-80a9-a0f70d2f8184",
+  "title": "Potential CommandLine Obfuscation Using Unicode Characters From Suspicious Image",
+  "format": "sigma",
+  "author": "frack113, Florian Roth (Nextron Systems), Josh Nickels",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential commandline obfuscation using unicode characters.\nAdversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343329"
+}

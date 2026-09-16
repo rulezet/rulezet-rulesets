@@ -1,0 +1,24 @@
+{
+  "uuid": "381d7113-3dab-4d74-973f-5dffcfe51b8f",
+  "title": "Potentially Suspicious WebDAV LNK Execution",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects possible execution via LNK file accessed on a WebDAV server.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1204"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343134"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "7d59a057-dc12-4d4f-883a-e80e7a623772",
+  "title": "Uncommon Child Process Of Conhost.EXE",
+  "format": "sigma",
+  "author": "omkar72",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects uncommon \"conhost\" child processes. This could be a sign of \"conhost\" usage as a LOLBIN or potential process injection activity.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343371"
+}

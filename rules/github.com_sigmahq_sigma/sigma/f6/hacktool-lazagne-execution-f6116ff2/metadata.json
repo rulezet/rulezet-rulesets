@@ -1,0 +1,25 @@
+{
+  "uuid": "f6116ff2-c10c-4dee-a26f-0cc5f0d1917d",
+  "title": "HackTool - LaZagne Execution",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali, Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of the LaZagne. A utility used to retrieve multiple types of passwords stored on a local computer.\nLaZagne has been leveraged multiple times by threat actors in order to dump credentials.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:tool=\"Lazagne\"",
+    "misp-galaxy:ransomware=\"BlackCat\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343291"
+}

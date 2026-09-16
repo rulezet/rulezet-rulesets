@@ -1,0 +1,24 @@
+{
+  "uuid": "2a11e603-b20f-4f0f-a1d4-51604ed7276a",
+  "title": "Suspicious Speech Runtime Binary Child Process",
+  "format": "sigma",
+  "author": "andrewdanis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects suspicious Speech Runtime Binary Execution by monitoring its child processes.\nChild processes spawned by SpeechRuntime.exe could indicate an attempt for lateral movement via COM & DCOM hijacking.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1021.003",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343087"
+}

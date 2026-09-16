@@ -1,0 +1,25 @@
+{
+  "uuid": "a9ac7871-7efe-471a-bf8d-5557ae1eec08",
+  "title": "PowerShell Base64 Encoded Invoke Keyword",
+  "format": "sigma",
+  "author": "pH-T (Nextron Systems), Harjot Singh, @cyb3rjy0t",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects UTF-8 and UTF-16 Base64 encoded powershell 'Invoke-' calls",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1047",
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343171"
+}

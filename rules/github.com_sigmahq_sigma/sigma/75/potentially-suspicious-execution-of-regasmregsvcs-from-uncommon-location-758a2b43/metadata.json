@@ -1,0 +1,23 @@
+{
+  "uuid": "758a2b43-1ba3-410d-884d-e74e1548d74b",
+  "title": "Potentially Suspicious Execution Of Regasm/Regsvcs From Uncommon Location",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potentially suspicious execution of the Regasm/Regsvcs utilities from a potentially suspicious location",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218.009"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343094"
+}

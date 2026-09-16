@@ -1,0 +1,24 @@
+{
+  "uuid": "875bce15-4e6a-4805-8c52-d223cecb2cfe",
+  "title": "Potential Configuration And Service Reconnaissance Via Reg.EXE",
+  "format": "sigma",
+  "author": "Timur Zinniatullin, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the usage of \"reg.exe\" in order to query reconnaissance information from the registry. Adversaries may interact with the Windows registry to gather information about credentials, the system, configuration, and installed software.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1007",
+    "T1012"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343157"
+}

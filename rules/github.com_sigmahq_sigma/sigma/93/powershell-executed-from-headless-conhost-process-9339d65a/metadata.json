@@ -1,0 +1,25 @@
+{
+  "uuid": "9339d65a-f739-43e7-84b1-374b087f1198",
+  "title": "Powershell Executed From Headless ConHost Process",
+  "format": "sigma",
+  "author": "Matt Anderson (Huntress)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of powershell commands from headless ConHost window.\nThe \"--headless\" flag hides the windows from the user upon execution.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1059.003",
+    "T1564.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343322"
+}

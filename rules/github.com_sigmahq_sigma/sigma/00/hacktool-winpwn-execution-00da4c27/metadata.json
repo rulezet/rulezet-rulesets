@@ -1,0 +1,31 @@
+{
+  "uuid": "00da4c27-f2fc-492d-9f70-e1b2d432ba16",
+  "title": "HackTool - WinPwn Execution",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects commandline keywords indicative of potential usge of the tool WinPwn. A tool for Windows and Active Directory reconnaissance and exploitation.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"HackTool\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1046",
+    "T1082",
+    "T1106",
+    "T1518",
+    "T1548.002",
+    "T1552.001",
+    "T1555",
+    "T1555.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343067"
+}

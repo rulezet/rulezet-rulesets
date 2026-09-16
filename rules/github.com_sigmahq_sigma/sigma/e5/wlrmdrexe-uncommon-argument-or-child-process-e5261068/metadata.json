@@ -1,0 +1,23 @@
+{
+  "uuid": "e5261068-289b-4b1c-bc26-d1416064f0fd",
+  "title": "Wlrmdr.EXE Uncommon Argument Or Child Process",
+  "format": "sigma",
+  "author": "frack113, manasmbellani",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of \"Wlrmdr.exe\" with the \"-u\" command line flag which allows anything passed to it to be an argument of the ShellExecute API, which would allow an attacker to execute arbitrary binaries.\nThis detection also focuses on any uncommon child processes spawned from \"Wlrmdr.exe\" as a supplement for those that posses \"ParentImage\" telemetry.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343069"
+}

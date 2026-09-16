@@ -1,0 +1,25 @@
+{
+  "uuid": "bef1c5ad-2da1-426a-bd95-19310bd7c8fe",
+  "title": "Sysmon Driver Unloaded Via Fltmc.EXE",
+  "format": "sigma",
+  "author": "Kirill Kiryanov, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects possible Sysmon filter driver unloaded via fltmc.exe",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1070",
+    "T1685",
+    "T1685.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343317"
+}

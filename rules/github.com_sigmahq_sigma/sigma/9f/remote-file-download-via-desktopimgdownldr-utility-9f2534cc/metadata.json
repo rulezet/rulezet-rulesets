@@ -1,0 +1,23 @@
+{
+  "uuid": "9f2534cc-e678-4fd0-862b-7a83079fd91f",
+  "title": "Remote File Download Via Desktopimgdownldr Utility",
+  "format": "sigma",
+  "author": "Tim Rauch, Elastic (idea)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the desktopimgdownldr utility being used to download a remote file. An adversary may use desktopimgdownldr to download arbitrary files as an alternative to certutil.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343305"
+}

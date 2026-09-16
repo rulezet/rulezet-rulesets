@@ -1,0 +1,23 @@
+{
+  "uuid": "24efd747-8510-46e8-be9f-af514189e6fd",
+  "title": "Potential File Download Via MS-AppInstaller Protocol Handler",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Swachchhanda Shrawan Poudel",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of the \"ms-appinstaller\" protocol handler via command line to potentially download arbitrary files via AppInstaller.EXE\nThe downloaded files are temporarly stored in \":\\Users\\%username%\\AppData\\Local\\Packages\\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\\AC\\INetCache\\<RANDOM-8-CHAR-DIRECTORY>\"\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343162"
+}

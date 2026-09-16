@@ -1,0 +1,24 @@
+{
+  "uuid": "6e9e10e9-509f-4bb1-8894-afed8e4b3a72",
+  "title": "Suspicious Windows Trace ETW Session Tamper Via Logman.EXE",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of \"logman\" utility in order to disable or delete Windows trace sessions",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685",
+    "T1685.005"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343181"
+}

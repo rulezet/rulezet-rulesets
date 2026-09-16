@@ -1,0 +1,27 @@
+{
+  "uuid": "e087b095-56ba-45cd-9491-75ad90a0b10e",
+  "title": "PUA - SoftPerfect Netscan Execution",
+  "format": "sigma",
+  "author": "@d4ns4n_ (Wuerth-Phoenix)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of SoftPerfect's \"netscan.exe\". An application for scanning networks.\nIt is actively used in-the-wild by threat actors to inspect and understand the network architecture of a victim.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:ransomware=\"Hive\"",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"FIN7 - G0046\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1046"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343370"
+}

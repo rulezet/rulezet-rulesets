@@ -1,0 +1,23 @@
+{
+  "uuid": "158a7584-6599-4f99-841c-28d4b2e4e701",
+  "title": "Dumping Process via Sqldumper.exe",
+  "format": "sigma",
+  "author": "Kirill Kiryanov, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects process dump via legitimate sqldumper.exe binary",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343372"
+}

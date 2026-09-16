@@ -1,0 +1,25 @@
+{
+  "uuid": "52d1042b-ed7f-47cd-b414-b968310e3a6a",
+  "title": "Suspicious WebDav Client Execution Via Rundll32.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), Florian Roth (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects \"svchost.exe\" spawning \"rundll32.exe\" with command arguments like C:\\windows\\system32\\davclnt.dll,DavSetCookie. This could be an indicator of exfiltration or use of WebDav to launch code (hosted on WebDav Server) or potentially a sign of exploitation of CVE-2023-23397\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1048.003"
+  ],
+  "cve": [
+    "CVE-2023-23397"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343205"
+}

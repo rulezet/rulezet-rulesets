@@ -1,0 +1,23 @@
+{
+  "uuid": "63ae71e5-45fb-464b-89e8-fcef86a8109b",
+  "title": "Chromium Browser Instance Executed With Custom Extension",
+  "format": "sigma",
+  "author": "Aedan Russell, frack113, X__Junior (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a Chromium based browser process with the 'load-extension' flag to start a instance with a custom extension",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1176.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343253"
+}

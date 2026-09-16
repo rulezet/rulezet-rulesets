@@ -1,0 +1,24 @@
+{
+  "uuid": "5a0d1529-dac5-4eba-9e48-87079293b7e2",
+  "title": "Suspicious File Characteristics Due to Missing Fields",
+  "format": "sigma",
+  "author": "Markus Neis, Sander Wiebing",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Executables in the Downloads folder without FileVersion,Description,Product,Company likely created with py2exe",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:mitre-enterprise-attack-intrusion-set=\"MuddyWater - G0069\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.006"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343289"
+}

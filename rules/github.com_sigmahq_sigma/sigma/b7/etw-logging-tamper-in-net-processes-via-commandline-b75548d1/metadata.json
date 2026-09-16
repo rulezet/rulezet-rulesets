@@ -1,0 +1,23 @@
+{
+  "uuid": "b75548d1-11a4-46dc-bf84-642e919f1589",
+  "title": "ETW Logging Tamper In .NET Processes Via CommandLine",
+  "format": "sigma",
+  "author": "Roberto Rodriguez (Cyb3rWard0g), OTR (Open Threat Research)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects changes to environment variables related to ETW logging via the CommandLine.\nThis could indicate potential adversaries stopping ETW providers recording loaded .NET assemblies.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343390"
+}

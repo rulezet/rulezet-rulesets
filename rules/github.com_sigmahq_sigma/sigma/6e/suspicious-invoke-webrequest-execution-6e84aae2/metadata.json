@@ -1,0 +1,26 @@
+{
+  "uuid": "6e84aae2-e8a4-4040-927b-7f41ceda2e1a",
+  "title": "Suspicious Invoke-WebRequest Execution",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a suspicious call to Invoke-WebRequest cmdlet where the and output is located in a suspicious location",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:tool=\"Cobalt Strike\"",
+    "misp-galaxy:ransomware=\"LockBit\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1105"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343323"
+}

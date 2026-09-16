@@ -1,0 +1,23 @@
+{
+  "uuid": "016404f7-65f5-4def-af6f-e856f930d2e0",
+  "title": "Potential LethalHTA Technique Execution",
+  "format": "sigma",
+  "author": "Markus Neis",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential LethalHTA technique where the \"mshta.exe\" is spawned by an \"svchost.exe\" process",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218.005"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343097"
+}

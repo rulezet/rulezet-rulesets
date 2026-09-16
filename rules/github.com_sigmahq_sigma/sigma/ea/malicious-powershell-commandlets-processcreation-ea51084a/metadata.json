@@ -1,0 +1,35 @@
+{
+  "uuid": "ea51084a-0e9a-4ae7-9ef9-dc74f492bc6b",
+  "title": "Malicious PowerShell Commandlets - ProcessCreation",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects Commandlet names from well-known PowerShell exploitation frameworks",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "misp-galaxy:tool=\"Mimikatz\"",
+    "misp-galaxy:tool=\"PsExec\"",
+    "misp-galaxy:ransomware=\"BlackBasta\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001",
+    "T1069",
+    "T1069.001",
+    "T1069.002",
+    "T1087",
+    "T1087.001",
+    "T1087.002",
+    "T1482"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343270"
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "b692cd07-b572-4f81-8463-9c846b18f61b",
+  "title": "Loaded Module Enumeration Via Tasklist.EXE",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the enumeration of a specific DLL or EXE being used by a binary via \"tasklist.exe\".\nThis is often used by attackers in order to find the specific process identifier (PID) that is using the DLL in question.\nIn order to dump the process memory or perform other nefarious actions.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343298"
+}

@@ -1,0 +1,25 @@
+{
+  "uuid": "7c4acf08-c709-490d-81c7-d48a03645b0c",
+  "title": "Suspicious Cabinet File Execution Via Msdt.EXE",
+  "format": "sigma",
+  "author": "Nasreddine Bencherchali (Nextron Systems), GossiTheDog, frack113",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of msdt.exe using the \"cab\" flag which could indicates suspicious diagcab files with embedded answer files leveraging CVE-2022-30190",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [
+    "CVE-2022-30190"
+  ],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342953"
+}

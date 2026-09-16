@@ -1,0 +1,25 @@
+{
+  "uuid": "4605b9d4-b2c1-45fa-908a-d4c5d09d47c0",
+  "title": "Findstr Launching .lnk File",
+  "format": "sigma",
+  "author": "Trent Liffick",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects usage of findstr to identify and execute a lnk file as seen within the HHS redirect attack",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027.003",
+    "T1036",
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343194"
+}

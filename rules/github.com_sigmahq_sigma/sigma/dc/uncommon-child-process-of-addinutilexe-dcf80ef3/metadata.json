@@ -1,0 +1,23 @@
+{
+  "uuid": "dcf80ef3-0301-4adf-a4b6-ac865cf0867c",
+  "title": "Uncommon Child Process Of AddinUtil.EXE",
+  "format": "sigma",
+  "author": "Michael McKinley (@McKinleyMike), Tony Latteri (@TheLatteri)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects uncommon child processes of the Add-In deployment cache updating utility (AddInutil.exe) which could be a sign of potential abuse of the binary to proxy execution via a custom Addins.Store payload.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342949"
+}

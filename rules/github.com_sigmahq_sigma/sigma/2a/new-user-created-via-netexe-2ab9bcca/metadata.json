@@ -1,0 +1,23 @@
+{
+  "uuid": "2ab9bcca-e6b7-434d-a2dc-9a7a7d85b7bc",
+  "title": "New User Created Via Net.EXE",
+  "format": "sigma",
+  "author": "Endgame, JHasenbusch (adapted to Sigma for oscd.community)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Identifies the creation of local users via the net.exe command.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1136.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342987"
+}

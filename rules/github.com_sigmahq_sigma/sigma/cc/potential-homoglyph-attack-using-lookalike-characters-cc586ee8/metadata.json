@@ -1,0 +1,24 @@
+{
+  "uuid": "cc586ee8-562c-47ca-9d78-176779bf8f6b",
+  "title": "Potential Homoglyph Attack Using Lookalike Characters",
+  "format": "sigma",
+  "author": "Micah Babinski, @micahbabinski",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the presence of unicode characters which are homoglyphs, or identical in appearance, to ASCII letter characters.\nThis is used as an obfuscation and masquerading techniques. Only \"perfect\" homoglyphs are included; these are characters that\nare indistinguishable from ASCII characters and thus may make excellent candidates for homoglyph attack characters.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1036",
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342973"
+}

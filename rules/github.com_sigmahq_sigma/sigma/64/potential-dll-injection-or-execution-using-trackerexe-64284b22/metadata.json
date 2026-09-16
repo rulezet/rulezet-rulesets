@@ -1,0 +1,23 @@
+{
+  "uuid": "64284b22-e286-41b1-b3a5-b49c740b0eca",
+  "title": "Potential DLL Injection Or Execution Using Tracker.exe",
+  "format": "sigma",
+  "author": "Avneet Singh @v3t0_, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects potential DLL injection and execution using \"Tracker.exe\"",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1055.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343405"
+}

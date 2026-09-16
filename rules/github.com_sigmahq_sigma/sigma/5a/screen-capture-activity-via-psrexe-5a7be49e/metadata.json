@@ -1,0 +1,24 @@
+{
+  "uuid": "5a7be49e-57eb-4337-8a62-aa6789e63b46",
+  "title": "Screen Capture Activity Via Psr.EXE",
+  "format": "sigma",
+  "author": "Beyu Denis, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of Windows Problem Steps Recorder (psr.exe), a utility used to record the user screen and clicks.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1113",
+    "T1560.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343150"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "564216a2-1b9b-4166-9d97-78bf393b6c97",
+  "title": "Security Service Disabled Via Reg.EXE",
+  "format": "sigma",
+  "author": "Florian Roth (Nextron Systems), John Lambert (idea), elhoim",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of \"reg.exe\" to disable security services such as Windows Defender.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342991"
+}

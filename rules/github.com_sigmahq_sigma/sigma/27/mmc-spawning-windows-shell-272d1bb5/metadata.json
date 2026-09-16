@@ -1,0 +1,23 @@
+{
+  "uuid": "272d1bb5-196d-40f2-b0b8-3adc7197e9d1",
+  "title": "MMC Spawning Windows Shell",
+  "format": "sigma",
+  "author": "Karneades, Swisscom CSIRT",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects a Windows command line executable started from MMC",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1021.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343038"
+}

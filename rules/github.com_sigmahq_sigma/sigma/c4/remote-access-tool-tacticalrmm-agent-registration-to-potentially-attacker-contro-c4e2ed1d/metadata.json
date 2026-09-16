@@ -1,0 +1,24 @@
+{
+  "uuid": "c4e2ed1d-9c0f-46ea-a8bb-7c488af2adc3",
+  "title": "Remote Access Tool - TacticalRMM Agent Registration to Potentially Attacker-Controlled Server",
+  "format": "sigma",
+  "author": "Ahmed Nosir (@egycondor)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects TacticalRMM agent installations where the --api, --auth, and related flags are used on the command line.\nThese parameters configure the agent to connect to a specific RMM server with authentication, client ID, and site ID.\nThis technique could indicate a threat actor attempting to register the agent with an attacker-controlled RMM infrastructure silently.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1105",
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343263"
+}

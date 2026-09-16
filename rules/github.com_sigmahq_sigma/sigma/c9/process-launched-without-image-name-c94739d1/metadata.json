@@ -1,0 +1,21 @@
+{
+  "uuid": "c94739d1-2ece-4443-813d-960c2f04e5f2",
+  "title": "Process Launched Without Image Name",
+  "format": "sigma",
+  "author": "Matt Anderson (Huntress)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detect the use of processes with no name (\".exe\"), which can be used to evade Image-based detections.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/342968"
+}

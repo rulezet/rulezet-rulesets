@@ -1,0 +1,26 @@
+{
+  "uuid": "065e93a0-e1ce-4b57-bd90-0ef00bff0e40",
+  "title": "PUA - Potential PE Metadata Tamper Using Rcedit",
+  "format": "sigma",
+  "author": "Micah Babinski",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the use of rcedit to potentially alter executable PE metadata properties, which could conceal efforts to rename system utilities for defense evasion.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027",
+    "T1027.005",
+    "T1036",
+    "T1036.003"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343072"
+}

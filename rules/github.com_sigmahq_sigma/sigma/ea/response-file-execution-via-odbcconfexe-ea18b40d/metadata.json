@@ -1,0 +1,23 @@
+{
+  "uuid": "ea18b40d-047a-4045-8f7e-1b8c85d145fd",
+  "title": "Response File Execution Via Odbcconf.EXE",
+  "format": "sigma",
+  "author": "Kirill Kiryanov, Beyu Denis, Daniil Yugoslavskiy, oscd.community, Nasreddine Bencherchali (Nextron Systems)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects execution of \"odbcconf\" with the \"-f\" flag in order to load a response file which might contain a malicious action.",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1218.008"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343203"
+}

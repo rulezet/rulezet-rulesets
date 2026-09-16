@@ -1,0 +1,23 @@
+{
+  "uuid": "6505251e-8230-4a9b-ac87-a03a9314e789",
+  "title": "Malicious Base64 Encoded PowerShell Keywords in Command Lines",
+  "format": "sigma",
+  "author": "John Lambert (rule)",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects base64 encoded strings used in hidden malicious PowerShell command lines",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1059.001"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343071"
+}

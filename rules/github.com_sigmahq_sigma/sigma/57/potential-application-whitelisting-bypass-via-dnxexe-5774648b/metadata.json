@@ -1,0 +1,24 @@
+{
+  "uuid": "5774648b-5ad0-4b21-8a54-a7b2b2378596",
+  "title": "Potential Application Whitelisting Bypass via Dnx.EXE",
+  "format": "sigma",
+  "author": "Beyu Denis, oscd.community",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects the execution of Dnx.EXE. The Dnx utility allows for the execution of C# code.\nAttackers might abuse this in order to bypass application whitelisting.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [
+    "T1027.004",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-07-31",
+  "last_modified": "2026-07-31",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/343049"
+}
