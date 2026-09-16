@@ -1,0 +1,33 @@
+rule mysql41_hashed_default_creds_dell
+{
+    meta:
+        version = "1.0"
+        status = "RELEASED"
+        sharing = "TLP:WHITE"
+        source = "NDAAL GESELLSCHAFT FÜR SICHERHEIT INDER INFORMATIONSTECHNIK MBH & CO KG"
+        author = "Alaa Jubakhanji@ndaal Gesellschaft fürSicherheit in der Informationstechnik mbH & Co KG"
+        description = "Hashed values of default credentials for dell."
+        category = "INFO"
+        info = "MYSQL41"
+        reference = "https://gitlab.com/ndaal_open_source/ndaal_yara_passwords_default/-/tree/main/yara_rules"
+
+strings:
+    $a0="*AC773F47C609ECB00B99F21950ECD4D11180239A"
+    $a1="*81F5E21E35407D884A6CD4A731AEBFB6AF209E1B"
+    $a2="*2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19"
+    $a3="*4ACFE3202A5FF5CF467898FC58AAB1D615029441"
+    $a4="*DEDBEBE22AFD8AD74A62E48CE081AEF3D50F8459"
+    $a5="*81F5E21E35407D884A6CD4A731AEBFB6AF209E1B"
+    $a6="*4ACFE3202A5FF5CF467898FC58AAB1D615029441"
+    $a7="*4ACFE3202A5FF5CF467898FC58AAB1D615029441"
+    $a8="*444A6CDE78B1D1BD402E60AA547B2BA3D07C5464"
+    $a9="*A306E1FA191E2E149F608FF5E6DB287EC237CB1E"
+    $a10="*6C6FDC5F8A65C193DCAC5E9C55383E33A0166776"
+    $a11="*F3BCFC877EBD13E3D29A07D4F13DC8B3BFB461D5"
+    $a12="*564CD623B2DE65EE668E6AA20C7E92AB904A55DA"
+    $a13="*81F5E21E35407D884A6CD4A731AEBFB6AF209E1B"
+    $a14="*E7E9C7889AC83D022AD5E75BD4EB273581BE15F2"
+    $a15="*0FE12DD55BF55F6C706D5B534BA05A8E88D41429"
+condition:
+    ($a0 and $a1) or ($a2 and $a3) or ($a4 and $a5) or ($a6 and $a7) or ($a8 and $a9) or ($a10 and $a11) or ($a12 and $a13) or ($a14 and $a15)
+}
