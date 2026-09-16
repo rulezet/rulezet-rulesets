@@ -1,0 +1,26 @@
+{
+  "uuid": "ee32d455-1ef4-4411-b625-a64fcd2b1578",
+  "title": "_Virus_Hijack_Gen_Heur_FKP__c__1_5_1_Virus_Hijack_Gen_Heur_FKP___258",
+  "format": "yara",
+  "author": "HydraDragonAntivirus",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "datamaliciousorder - from files Virus.Hijack_Gen.Heur.FKP.!c!.1_5_1.vir, Virus.Hijack_Gen.Heur.FKP.!c!.1_6_1.vir, Virus.Hijack_Gen.Heur.Japik.6_1.vir, Virus.Hijack_Gen.Heur.Kelios.1_1.vir, Virus.Hijack_Gen.Heur.Mint.SP.Dropper.2_1_1.vir, Virus.Hijack_Gen.Heur.Mint.SP.Dropper.2_2.vir, Virus.Hijack_Gen.Variant.Barys.102182.vir, Virus.Hijack_Gen.Variant.Barys.102182_1.vir, Virus.Hijack_Gen.Variant.Barys.102182_2.vir, Virus.Hijack_Gen.Variant.Barys.102182_3.vir, Virus.Hijack_Gen.Variant.Barys.102182_4.vir, Virus.Hijack_Gen.Variant.Barys.102182_5.vir, Virus.Hijack_Gen.Variant.Barys.102182_6.vir, Virus.Hijack_Gen.Variant.Barys.102182_7.vir, Virus.Hijack_Gen.Variant.Barys.102182_8.vir, Virus.Hijack_Gen.Variant.Barys.126777.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_1.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_10.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_11.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_12.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_13.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_14.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_2.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_3.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_4.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_5.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_6.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_7.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_8.vir, Virus.Hijack_Gen.Variant.Ransom.Sodinokibi.66_9.vir, Virus.Hijack_Trojan.PWS.Banker.FMA.vir, Virus.Hijack_Trojan.PWS.Banker.FMA_1.vir, Virus.Hijack_Trojan.Pws.Online.AGC.vir",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:ransomware=\"Sodinokibi\"",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "ms-caro-malware-full:malware-type=\"Ransom\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "ms-caro-malware-full:malware-type=\"PWS\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/479789"
+}

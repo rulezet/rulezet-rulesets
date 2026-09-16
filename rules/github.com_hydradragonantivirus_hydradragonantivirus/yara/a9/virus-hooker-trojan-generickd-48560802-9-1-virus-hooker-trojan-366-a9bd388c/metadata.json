@@ -1,0 +1,26 @@
+{
+  "uuid": "a9bd388c-531c-49ce-ab74-a4f9872faa93",
+  "title": "_Virus_Hooker_Trojan_GenericKD_48560802_9_1_Virus_Hooker_Trojan__366",
+  "format": "yara",
+  "author": "HydraDragonAntivirus",
+  "license": "GPL-2.0",
+  "license_verified": true,
+  "description": "datamaliciousorder - from files Virus.Hooker_Trojan.GenericKD.48560802_9_1.vir, Virus.Hooker_Trojan.GenericKD.48705378_1.vir, Virus.Hooker_Trojan.GenericKD.64030783_1.vir, Virus.Hooker_Trojan.GenericKD.64731121_1.vir, Virus.Hooker_Trojan.GenericKD.67881389_1.vir, Virus.Hooker_Trojan.GenericKD.72461089_1_1.vir, Virus.Hooker_Trojan.GenericKD.72461089_2.vir, Virus.Hooker_Trojan.GenericKD.72483755_1_1.vir, Virus.Hooker_Trojan.GenericKD.72483755_2_1.vir, Virus.Hooker_Trojan.GenericKD.72483755_3_1.vir, Virus.Hooker_Trojan.GenericKD.72483755_4.vir, Virus.Hooker_Trojan.GenericKD.72587580_1_1.vir, Virus.Hooker_Trojan.GenericKD.72587580_2.vir, Virus.Hooker_Trojan.GenericKDZ.94849_1.vir, Virus.Hooker_Trojan.VB.Agent.AWT_1.vir, Virus.Hooker_Win32.Backdoor.Agent.A_1_1.vir, Virus.Hooker_Win32.Backdoor.Agent.A_2.vir, Virus.Hooker_Win32.Ramnit.N_1.vir, Virus.Infector _Win32.Expiro.Gen.7_1.vir, Virus.Infector_Dropped.Trojan.Dropper.Delf.BB_1.vir, Virus.Infector_Dropped.Win32.Elkern.B_1.vir, Virus.Infector_Gen.Heur.Mint.Hiamoe.20_1_1.vir, Virus.Infector_Gen.Heur.Mint.Hiamoe.20_2.vir, Virus.Infector_Gen.Heur.Mint.SP.Sneaky.1_1.vir, Virus.Infector_Gen.Trojan.Heur.ei0frDAUi!mib_1.vir, Virus.Infector_Gen.Trojan.Malware.1q3@aunLb5ni_1.vir, Virus.Infector_Gen.Trojan.Malware.2q3@aunLb5ni_1.vir, Virus.Infector_Gen.Trojan.Malware.5q3@aK8SiHob_1.vir, Virus.Infector_Gen.Trojan.Malware.eS2baCu9Asoi_1.vir, Virus.Infector_Gen.Trojan.Malware.Iq3@aunLb5ni_1_1.vir, Virus.Infector_Gen.Trojan.Malware.Iq3@aunLb5ni_2_1.vir, Virus.Infector_Gen.Trojan.Malware.Iq3@aunLb5ni_3.vir, Virus.Infector_Gen.Trojan.Malware.Kq3@aunLb5ni_1.vir, Virus.Infector_Gen.Trojan.Malware.Lq3@aunLb5ni_1_1.vir, Virus.Infector_Gen.Trojan.Malware.Lq3@aunLb5ni_2_1.vir, Virus.Infector_Gen.Trojan.Malware.Lq3@aunLb5ni_3.vir, Virus.Infector_Gen.Trojan.Malware.lS3@aabLwqji_1.vir, Virus.Infector_Gen.Trojan.Malware.Mq3@aunLb5ni_1_1.vir, Virus.Infector_Gen.Trojan.Malware.Mq3@aunLb5ni_2_1.vir, Virus.Infector_Gen.Trojan.Malware.Mq3@aunLb5ni_3.vir, Virus.Infector_Gen.Trojan.Malware.mS3@aabLwqji_1.vir, Virus.Infector_Gen.Trojan.Malware.nS3@aabLwqji_1.vir, Virus.Infector_Gen.Trojan.Malware.Oq3@aunLb5ni_1.vir, Virus.Infector_Gen.Trojan.Malware.pS3@aabLwqji_1.vir, Virus.Infector_Gen.Trojan.Malware.Qq3@aunLb5ni_1.vir, Virus.Infector_Gen.Trojan.Malware.qS3@aabLwqji_1.vir, VirusShareBATSiggen250_88_1.vir, VirusSharemodificationofWin32Virut56_4_1.vir, VirusSharemodificationofWin32Virut56_8_1.vir, VirusShareTrojanBtcMine155_1.vir, VirusShareTrojanBtcMine1812_1.vir, VirusShareTrojanClick257946_1.vir, VirusShareTrojanClick331128_1_1.vir, VirusShareTrojanClick331128_2_1.vir, VirusShareTrojanClick331128_3_1.vir, VirusShareTrojanClick331128_6_1.vir, VirusShareTrojanClipper50_1.vir, VirusShareTrojanDownLoad234625_2_1.vir, VirusShareTrojanDownLoad38014_1.vir, VirusShareTrojanDownLoader1061384_1.vir, VirusShareTrojanDownLoader1219594_1.vir, VirusShareTrojanDownLoader1350712_1.vir, VirusShareTrojanDownLoader2255152_1.vir, VirusShareTrojanDownLoader2331273_1.vir, VirusShareTrojanDownLoader2352349_1.vir, VirusShareTrojanDownLoader2553612_1.vir, VirusShareTrojanDownLoader2611513_1.vir, VirusShareTrojanDownLoader2632246_1.vir, VirusShareTrojanDownLoader2639910_1.vir, VirusShareTrojanDownLoader3352739_1.vir, VirusShareTrojanDownLoader3951305_1.vir",
+  "source": "https://github.com/HydraDragonAntivirus/HydraDragonAntivirus",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "misp-galaxy:banker=\"Ramnit\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "ms-caro-malware-full:malware-type=\"Virus\"",
+    "ms-caro-malware-full:malware-type=\"Backdoor\"",
+    "ms-caro-malware-full:malware-type=\"TrojanDropper\"",
+    "misp-galaxy:operating-system=\"Windows\"",
+    "ms-caro-malware-full:malware-platform=\"Win32\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/479898"
+}
