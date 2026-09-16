@@ -1,0 +1,11 @@
+import "pe"
+rule _QinYingShieldLicense_V10XV121__Lei_Peng___20080122_
+{
+	meta:
+		description = "QinYingShieldLicense V1.0X-V1.21 -> Lei Peng  * 20080122"
+	strings:
+		$0 = {E8 00 00 00 00 58 05 ?? ?? ?? ?? 9C 50 C2 04 00 55 8B EC 56 57 53 34 99 47 49 34 33 EF 31 CD F5 B0 CB B5 B0 A3 A1 A3 A1 B9 FE B9 FE B9 FE B9 FE BF C9 CF A7 D1 BD A3 AC C4 E3 B2 BB D6 AA B5 C0 D5 E2 C0 EF B5 C4 D6 B8 C1 EE CA C7 CA B2 C3 B4 A3 A1 B9 FE B9 FE B9 FE 00 00 00 00 00 00 00}
+		$1 = {E8 00 00 00 00 58 05 ?? ?? ?? ?? 9C 50 C2 04 00 55 8B EC 56 57 53 34 99 47 49 34 33 EF 31 CD F5 B0 CB B5 B0 A3 A1 A3 A1 B9 FE B9 FE B9 FE B9 FE BF C9 CF A7 D1 BD A3 AC C4 E3 B2 BB D6 AA B5 C0 D5 E2 C0 EF B5 C4 D6 B8 C1 EE CA C7 CA B2 C3 B4 A3 A1 B9 FE B9}
+	condition:
+		$0 at pe.entry_point or $1 at pe.entry_point
+}

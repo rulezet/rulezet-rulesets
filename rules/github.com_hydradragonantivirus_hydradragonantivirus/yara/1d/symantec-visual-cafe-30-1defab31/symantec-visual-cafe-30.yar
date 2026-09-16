@@ -1,0 +1,10 @@
+import "pe"
+rule _Symantec_Visual_Cafe_30_
+{
+	meta:
+		description = "Symantec Visual Cafe 3.0"
+	strings:
+		$0 = {64 8B 05 00 00 00 00 55 8B EC 6A FF 68 00 00 40 00 68 00 00 40 00 50 64 89 25 00 00 00 00 83 EC 08 50 53 56 57 89 65 E8 C7 45 FC 00 00 00 00 E8 00 0D 00 00 E8 00 0C 00 00 6A 00 FF 15 00 00 40 00 A3 00 00 40 00 E8 00 0C 00 00 FF 15 00 00 40}
+	condition:
+		$0 at pe.entry_point
+}

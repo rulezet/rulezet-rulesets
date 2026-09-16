@@ -1,0 +1,10 @@
+import "pe"
+rule _FreeJoiner_Small_build_017__GlOFF_
+{
+	meta:
+		description = "FreeJoiner Small (build 017) -> GlOFF"
+	strings:
+		$0 = {55 8B EC 83 C4 F0 86 FF 86 DB 86 FF 68 00 01 00 00 68 18 20 40 00 6A 00 E8 FF 01 00 00 8A E4 6A 00 68 80 00 00 00 6A 03 6A 00 6A 00 68 00 00 00 80 68 18 20 40 00 E8 D5 01 00 00 A3 00 20 40 00 40 0F 84 97 01 00 00 8A E4 6A 02 6A 00 6A FB FF 35 00 20 40 00 E8 E0 01 00 00 86 FF 86 DB 86 FF 6A 00 8D 45 FC 50 6A 04 8D 45 F8 50 FF 35 00 20 40 00 E8 BD 01 00 00 8A E4 6A 00 8D 45 FC 50 6A 01 8D 45 F3 50}
+	condition:
+		$0 at pe.entry_point
+}

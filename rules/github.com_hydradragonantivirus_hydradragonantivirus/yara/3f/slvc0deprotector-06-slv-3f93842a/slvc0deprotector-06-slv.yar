@@ -1,0 +1,10 @@
+import "pe"
+rule _SLVc0deProtector_06__SLV_
+{
+	meta:
+		description = "SLVc0deProtector 0.6 -> SLV"
+	strings:
+		$0 = {E8 49 00 00 00 69 E8 49 00 00 00 95 E8 4F 00 00 00 68 E8 1F 00 00 00 49 E8 E9 FF FF FF 67 E8 1F 00 00 00 93 E8}
+	condition:
+		$0 at pe.entry_point
+}

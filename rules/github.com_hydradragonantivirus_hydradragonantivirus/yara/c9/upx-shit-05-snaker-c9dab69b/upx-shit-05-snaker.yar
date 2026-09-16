@@ -1,0 +1,10 @@
+import "pe"
+rule _UPX_Shit_05__snaker_
+{
+	meta:
+		description = "UPX Shit 0.5 -> snaker"
+	strings:
+		$0 = {B8 ?? ?? ?? ?? B9 ?? ?? ?? ?? 83 F9 00 7E 06 80 30 ?? 40 E2 F5 E9 ?? ?? ?? FF}
+	condition:
+		$0 at pe.entry_point
+}
