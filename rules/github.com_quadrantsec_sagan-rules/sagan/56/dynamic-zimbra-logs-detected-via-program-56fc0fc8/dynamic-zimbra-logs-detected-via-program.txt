@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] zimbra logs detected via program."; program:audit|mailbox|misc-activity|sync|zimbra; dynamic_load: $RULE_PATH/zimbra.rules; classtype:dynamic-rules; sid:5007672; rev:1;)

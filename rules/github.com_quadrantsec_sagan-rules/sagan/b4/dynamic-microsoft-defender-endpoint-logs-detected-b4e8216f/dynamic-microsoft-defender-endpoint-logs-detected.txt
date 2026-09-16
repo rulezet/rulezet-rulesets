@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Microsoft Defender Endpoint Logs Detected"; program:microsoft-defender-endpoint-alerts_relayer; dynamic_load: $RULE_PATH/microsoft-defender-endpoint.rules; classtype:dynamic-rules; sid:5017345; rev:1;)

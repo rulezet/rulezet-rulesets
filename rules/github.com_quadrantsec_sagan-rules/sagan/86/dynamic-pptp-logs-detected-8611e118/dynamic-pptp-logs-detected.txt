@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] PPTP Logs Detected"; program:pptpd; dynamic_load: $RULE_PATH/pptp.rules; classtype:dynamic-rules; sid:5017353; rev:1;)

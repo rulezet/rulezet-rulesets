@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] GCP Cloud Audit Logs Detected"; content:"cloudaudit.googleapis.com"; dynamic_load: $RULE_PATH/gcp-cloud-audit.rules; classtype:dynamic-rules; sid:5017343; rev:1;)

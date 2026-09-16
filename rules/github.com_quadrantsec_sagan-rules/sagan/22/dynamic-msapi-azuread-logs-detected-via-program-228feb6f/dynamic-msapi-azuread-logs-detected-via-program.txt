@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] MSAPI-AzureAD logs detected via program"; program:AzureActiveDirectory; dynamic_load: $RULE_PATH/msapi-azuread.rules; classtype:dynamic-rules; sid:5010325; rev:2;)

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Cisco Meraki Logs Detected"; program:meraki_dashboard_api_data; dynamic_load: $RULE_PATH/cisco-meraki.rules; classtype:dynamic-rules; sid:5017205; rev:1;)

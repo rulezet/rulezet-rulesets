@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] tcp logs detected via program."; program:TCP; dynamic_load: $RULE_PATH/tcp.rules; classtype:dynamic-rules; sid:5007660; rev:1;)

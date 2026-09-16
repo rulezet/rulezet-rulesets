@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] procurve logs detected via program."; program:00077|00419|auth|FFI|ports|system; dynamic_load: $RULE_PATH/procurve.rules; classtype:dynamic-rules; sid:5007652; rev:1;)

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Azure Eventhub Windows Clipboard Logs Detected"; program:*Clipboard*; content:"RenderedDescription"; dynamic_load: $RULE_PATH/azureEventHub_windows-clipboard.rules; classtype:dynamic-rules; sid:5017334; rev:1;)

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Zscaler ZIA Logs Detected"; program:Zscaler; dynamic_load: $RULE_PATH/zscaler-zia.rules; classtype:dynamic-rules; sid:5017934; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Bitdefender GZ logs detected via program."; program:BitdefenderGZ; dynamic_load: $RULE_PATH/bitdefenderGZ.rules; classtype:dynamic-rules; sid:5014677; rev:1;)

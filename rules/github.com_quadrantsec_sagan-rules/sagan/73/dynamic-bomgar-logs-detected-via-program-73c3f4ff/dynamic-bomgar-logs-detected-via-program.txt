@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Bomgar logs detected via program."; program:bomgar; dynamic_load: $RULE_PATH/bomgar.rules; classtype:dynamic-rules; sid:5014934; rev:2;)

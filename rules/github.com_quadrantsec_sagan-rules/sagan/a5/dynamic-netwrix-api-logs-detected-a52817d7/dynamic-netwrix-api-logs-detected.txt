@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Netwrix API Logs Detected"; program:netwrix_auditor_api_data; dynamic_load: $RULE_PATH/netskope.rules; classtype:dynamic-rules; sid:5017348; rev:1;)

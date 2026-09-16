@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] imapd correlated logs detected via program."; program:imapd*; dynamic_load: $RULE_PATH/imapd-correlated.rules; classtype:dynamic-rules; sid:5007639; rev:1;)

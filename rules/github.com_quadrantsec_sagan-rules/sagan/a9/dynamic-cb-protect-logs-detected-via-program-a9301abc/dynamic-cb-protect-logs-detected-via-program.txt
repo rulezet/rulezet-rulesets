@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] CB Protect logs detected via program."; program:cb_protect|cb_app_control; dynamic_load: $RULE_PATH/carbonblack-app-control.rules; classtype:dynamic-rules; sid:5011440; rev:1;)

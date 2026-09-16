@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Azure Eventhub Windows Security Logs Detected"; program:*Security*; content:"RenderedDescription"; dynamic_load: $RULE_PATH/azureEventHub_windows-security.rules; classtype:dynamic-rules; sid:5017338; rev:1;)

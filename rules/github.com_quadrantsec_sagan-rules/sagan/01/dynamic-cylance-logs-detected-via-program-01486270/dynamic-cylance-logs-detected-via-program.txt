@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Cylance logs detected via program."; content:"CylancePROTECT"; content:"Event Type:"; dynamic_load: $RULE_PATH/cylance.rules; classtype:dynamic-rules; sid:5011419; rev:2;)

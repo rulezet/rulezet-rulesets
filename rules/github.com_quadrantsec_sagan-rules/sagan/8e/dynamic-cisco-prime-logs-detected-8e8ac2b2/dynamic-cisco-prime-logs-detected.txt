@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Cisco Prime Logs Detected"; meta_content:"PI|3a| %sagan%",AUDIT,ALARM; dynamic_load: $RULE_PATH/cisco-prime.rules; classtype:dynamic-rules; sid:5017206; rev:1;)

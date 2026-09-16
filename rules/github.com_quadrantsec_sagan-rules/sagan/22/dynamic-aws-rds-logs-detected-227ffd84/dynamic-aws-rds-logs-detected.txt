@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] AWS RDS Logs Detected"; program:rds.amazonaws.com; dynamic_load: $RULE_PATH/ddr.rules; classtype:dynamic-rules; sid:5017212; rev:1;)

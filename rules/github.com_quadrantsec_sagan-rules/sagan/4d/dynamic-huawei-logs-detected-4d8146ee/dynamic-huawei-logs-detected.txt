@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Huawei Logs Detected"; content:"/ATCKDF"; dynamic_load: $RULE_PATH/huawei.rules; classtype:dynamic-rules; sid:5017344; rev:1;)

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Fortinet Logs Detected"; content:"devname="; content:"devid="; content:"type="; content:"subtype="; dynamic_load: $RULE_PATH/fortinet.rules; classtype:dynamic-rules; sid:5017341; rev:2;)

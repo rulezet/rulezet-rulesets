@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] vsftpd correlated logs detected via program."; program:vsftpd; dynamic_load: $RULE_PATH/vsftpd-correlated.rules; classtype:dynamic-rules; sid:5007662; rev:1;)

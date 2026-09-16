@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Riverbed Aetas logs detected via program."; program:webasd; dynamic_load: $RULE_PATH/riverbed-aetas.rules; classtype:dynamic-rules; sid:5011426; rev:1;)

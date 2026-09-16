@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] barracuda Email GW logs detected"; content:"hdr_from"; content:"reason_extra"; dynamic_load: $RULE_PATH/barracuda-email-gw-defense.rules; classtype:dynamic-rules; sid:5015834; rev:1;)

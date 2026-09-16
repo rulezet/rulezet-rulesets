@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Barracuda Sentinel Logs Detected"; program:Sentinel; content:!"BillingAzureSubscriptionId"; dynamic_load: $RULE_PATH/barracuda-impersonation.rules; classtype:dynamic-rules; sid:5017200; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] MSAPI-SharePoint logs detected via program"; program:SharePoint; content:!"SourceName"; dynamic_load: $RULE_PATH/msapi-sharepoint.rules; classtype:dynamic-rules; sid:5010331; rev:3;)

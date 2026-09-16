@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS_FIREWALL] Firewall Rule Added to Configuration"; program:sophos; content:"message=|22|Configuration change|3a| Firewall rule"; parse_src_ip:1; normalize; reference:url,https://docs.sophos.com/nsg/sophos-firewall/21.5/pdf/sf-syslog-guide-21.5.pdf; classtype:suspicious-activity; sid:5017721; rev:1;)

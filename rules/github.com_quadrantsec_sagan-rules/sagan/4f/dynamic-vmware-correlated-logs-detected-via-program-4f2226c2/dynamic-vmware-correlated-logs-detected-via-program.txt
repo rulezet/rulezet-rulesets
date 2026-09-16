@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] vmware correlated logs detected via program."; program:Hostd|vmware-hostd; dynamic_load: $RULE_PATH/vmware-correlated.rules; classtype:dynamic-rules; sid:5007661; rev:1;)

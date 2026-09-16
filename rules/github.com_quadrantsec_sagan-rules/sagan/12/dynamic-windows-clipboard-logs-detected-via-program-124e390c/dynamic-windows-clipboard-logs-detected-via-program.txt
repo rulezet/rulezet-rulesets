@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] windows clipboard logs detected via program."; program:clipboard; dynamic_load: $RULE_PATH/windows-clipboard.rules; classtype:dynamic-rules; sid:5008384; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[WINDOWS-EMET] Detected Caller mitigation/will close application"; json_map:"event_id",".EventID"; json_map:"message",".RenderedDescription"; event_id: 2; classtype: suspicious-command; program: EMET; sid:5008664; metadata: created_on 2022_11_22, old_sid 5002101; rev:3;)

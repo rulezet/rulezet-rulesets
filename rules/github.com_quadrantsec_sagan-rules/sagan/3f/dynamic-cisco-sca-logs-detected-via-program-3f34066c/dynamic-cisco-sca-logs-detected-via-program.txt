@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] CISCO-SCA logs detected via program."; program:cisco-sca_data; dynamic_load: $RULE_PATH/cisco-sca-alarms.rules; classtype:dynamic-rules; sid:5011417; rev:1;)

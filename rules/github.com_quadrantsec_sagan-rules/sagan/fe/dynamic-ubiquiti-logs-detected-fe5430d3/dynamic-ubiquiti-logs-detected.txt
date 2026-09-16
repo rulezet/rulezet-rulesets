@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Ubiquiti Logs Detected"; content:"|7c|Ubiquiti|7c|"; dynamic_load: $RULE_PATH/ubiquiti.rules; classtype:dynamic-rules; sid:5017329; rev:1;)

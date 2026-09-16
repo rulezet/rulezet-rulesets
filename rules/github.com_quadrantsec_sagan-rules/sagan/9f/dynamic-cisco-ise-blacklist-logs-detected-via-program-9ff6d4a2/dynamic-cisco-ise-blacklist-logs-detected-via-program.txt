@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] CISCO-ISE-BLACKLIST logs detected via program."; program:CISE_Passed_Authentications; dynamic_load: $RULE_PATH/cisco-ise-blacklist.rules; classtype:dynamic-rules; sid:5011416; rev:1;)

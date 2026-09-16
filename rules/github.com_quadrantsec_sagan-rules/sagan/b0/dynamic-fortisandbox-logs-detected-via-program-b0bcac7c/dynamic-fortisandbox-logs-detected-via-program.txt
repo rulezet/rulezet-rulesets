@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] FortiSandbox logs detected via program."; program:*FortiSandbox*; dynamic_load: $RULE_PATH/fortiSandbox.rules; classtype:dynamic-rules; sid:5011420; rev:1;)

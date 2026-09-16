@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Tenable logs detected via program."; program:tenable_io_data; dynamic_load: $RULE_PATH/tenable.rules; classtype:dynamic-rules; sid:5011428; rev:1;)

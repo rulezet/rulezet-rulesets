@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Mimecast V2 Logs Detected"; program:mimecast; dynamic_load: $RULE_PATH/mimecast_v2.rules; classtype:dynamic-rules; sid:5017382; rev:1;)

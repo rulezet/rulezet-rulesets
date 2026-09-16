@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] windows auth logs detected via program."; program:RemoteAccess|Security|System|TermService; dynamic_load: $RULE_PATH/windows-auth.rules; classtype:dynamic-rules; sid:5007665; rev:3;)

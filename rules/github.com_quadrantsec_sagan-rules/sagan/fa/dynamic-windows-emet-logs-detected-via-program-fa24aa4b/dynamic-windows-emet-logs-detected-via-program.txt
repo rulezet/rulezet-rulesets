@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] windows emet logs detected via program."; program:*EMET*; content: !"SecurityComplianceCenter"; content:!"SecurityComplianceRBAC"; dynamic_load: $RULE_PATH/windows-emet.rules; classtype:dynamic-rules; sid:5007668; rev:4;)

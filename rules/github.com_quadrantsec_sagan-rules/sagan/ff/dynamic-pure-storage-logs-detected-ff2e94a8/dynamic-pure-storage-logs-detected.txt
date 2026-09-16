@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Pure Storage Logs Detected"; program:purity.audit|fileaudit; dynamic_load: $RULE_PATH/pure_storage.rules; classtype:dynamic-rules; sid:5017214; rev:1;)

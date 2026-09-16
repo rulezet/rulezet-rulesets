@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Fortinet logs detected via program."; content:"logid="; meta_content:"type=|22|%sagan%|22|",traffic,event; content:"subtype="; dynamic_load: $RULE_PATH/fortinet.rules; classtype:dynamic-rules; sid:5013795; rev:1;)

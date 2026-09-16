@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Cyberark logs detected via program."; program:cyberark; dynamic_load: $RULE_PATH/cyberark.rules; classtype:dynamic-rules; sid:5011418; rev:1;)

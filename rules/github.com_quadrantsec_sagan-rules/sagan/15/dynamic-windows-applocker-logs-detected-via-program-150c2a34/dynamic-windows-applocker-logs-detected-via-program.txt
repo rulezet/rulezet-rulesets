@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] windows applocker logs detected via program."; program:AppLocker; dynamic_load: $RULE_PATH/windows-applocker.rules; classtype:dynamic-rules; sid:5007664; rev:1;)

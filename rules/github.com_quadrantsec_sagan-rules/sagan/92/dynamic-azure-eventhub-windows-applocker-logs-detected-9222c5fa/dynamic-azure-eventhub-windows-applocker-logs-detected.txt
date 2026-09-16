@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Azure Eventhub Windows Applocker Logs Detected"; program:*Applocker*; content:"RenderedDescription"; dynamic_load: $RULE_PATH/azureEventHub_windows-applocker.rules; classtype:dynamic-rules; sid:5017332; rev:1;)

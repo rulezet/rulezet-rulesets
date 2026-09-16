@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] SentinelOne Logs Detected"; program:SentinelOne; dynamic_load: $RULE_PATH/sentinelone.rules; classtype:dynamic-rules; sid:5017356; rev:1;)

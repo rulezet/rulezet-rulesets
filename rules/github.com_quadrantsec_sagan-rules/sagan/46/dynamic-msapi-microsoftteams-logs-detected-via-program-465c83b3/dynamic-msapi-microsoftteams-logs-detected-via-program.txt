@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] MSAPI-MicrosoftTeams logs detected via program"; program:MicrosoftTeams; dynamic_load: $RULE_PATH/msapi-microsoftteams.rules; classtype:dynamic-rules; sid:5017961; rev:1;)

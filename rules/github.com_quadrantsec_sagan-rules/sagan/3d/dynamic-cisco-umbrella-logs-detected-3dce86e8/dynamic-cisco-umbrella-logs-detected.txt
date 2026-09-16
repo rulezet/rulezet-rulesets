@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Cisco Umbrella Logs Detected"; program:UMBRELLA*; dynamic_load: $RULE_PATH/cisco-umbrella.rules; classtype:dynamic-rules; sid:5017208; rev:1;)

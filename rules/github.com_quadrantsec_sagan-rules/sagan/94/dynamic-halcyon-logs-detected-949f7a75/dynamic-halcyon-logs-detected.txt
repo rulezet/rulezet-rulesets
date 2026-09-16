@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Halcyon Logs detected"; program:halcyon_webapi_data; dynamic_load: $RULE_PATH/halcyon.rules; classtype:dynamic-rules; sid:5017199; rev:1;)

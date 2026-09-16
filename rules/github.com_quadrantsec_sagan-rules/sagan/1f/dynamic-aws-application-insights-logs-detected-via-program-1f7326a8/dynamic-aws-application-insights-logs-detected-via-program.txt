@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] AWS Application Insights logs detected via program."; program:application-insights.amazonaws.com; dynamic_load: $RULE_PATH/aws-application-insights.rules; classtype:dynamic-rules; sid:5011812; rev:1;)

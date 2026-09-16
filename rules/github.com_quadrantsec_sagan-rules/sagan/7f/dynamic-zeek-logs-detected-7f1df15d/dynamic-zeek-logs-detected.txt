@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Zeek Logs Detected"; program:bro|zeek; dynamic_load: $RULE_PATH/zeeks.rules; classtype:dynamic-rules; sid:5017359; rev:1;)

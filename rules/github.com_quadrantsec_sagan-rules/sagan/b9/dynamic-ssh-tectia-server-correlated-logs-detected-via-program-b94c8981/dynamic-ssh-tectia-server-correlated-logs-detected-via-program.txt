@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] ssh tectia server correlated logs detected via program."; program:SSH_Tectia_Server; dynamic_load: $RULE_PATH/ssh-tectia-server-correlated.rules; classtype:dynamic-rules; sid:5007658; rev:1;)

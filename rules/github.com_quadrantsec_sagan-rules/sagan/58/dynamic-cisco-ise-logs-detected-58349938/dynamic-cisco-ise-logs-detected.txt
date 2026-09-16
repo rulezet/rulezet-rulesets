@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Cisco ISE Logs Detected"; program:CISE_*; dynamic_load: $RULE_PATH/cisco-ise.rules; classtype:dynamic-rules; sid:5017204; rev:1;)

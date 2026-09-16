@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] cisco amp logs detected via program."; program:CISCO-AMP; dynamic_load: $RULE_PATH/cisco-amp.rules; classtype:dynamic-rules; sid:5007624; rev:1;)

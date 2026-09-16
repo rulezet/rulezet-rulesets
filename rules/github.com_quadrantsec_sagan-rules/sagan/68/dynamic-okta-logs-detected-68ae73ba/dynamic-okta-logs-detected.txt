@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Okta Logs Detected"; program:iokta-system-log*; dynamic_load: $RULE_PATH/okta.rules; classtype:dynamic-rules; sid:5017349; rev:1;)

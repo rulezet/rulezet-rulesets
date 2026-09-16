@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] windows security logs detected via program."; program:Security; dynamic_load: $RULE_PATH/windows-security.rules; classtype:dynamic-rules; sid:5007671; rev:3;)

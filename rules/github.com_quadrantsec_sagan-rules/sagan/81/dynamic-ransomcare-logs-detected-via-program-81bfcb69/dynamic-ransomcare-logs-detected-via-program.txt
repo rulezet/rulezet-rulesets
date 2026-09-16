@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] RansomCare logs detected via program."; program:RansomCare; dynamic_load: $RULE_PATH/ransomcare.rules; classtype:dynamic-rules; sid:5013730; rev:1;)

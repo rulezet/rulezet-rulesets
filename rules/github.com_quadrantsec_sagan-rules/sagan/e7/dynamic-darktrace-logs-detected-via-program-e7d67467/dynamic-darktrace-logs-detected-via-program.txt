@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] Darktrace logs detected via program"; content: "breachUrl"; content: "model"; dynamic_load: $RULE_PATH/darktrace.rules; classtype: dynamic-rules; sid:5005839; rev:1;)

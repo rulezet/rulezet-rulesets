@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Windows OWA Logs Detected"; content:"IISWebLog"; content:"/owa/"; dynamic_load: $RULE_PATH/windows-owa.rules; classtype:dynamic-rules; sid:5017358; rev:1;)

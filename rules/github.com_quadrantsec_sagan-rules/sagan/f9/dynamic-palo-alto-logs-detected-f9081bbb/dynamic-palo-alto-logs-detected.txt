@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Palo Alto Logs Detected"; meta_content:"|2c|THREAT|2c|%sagan%",file,vulnerability,url; dynamic_load: $RULE_PATH/palo-alto.rules; classtype:dynamic-rules; sid:5017350; rev:1;)

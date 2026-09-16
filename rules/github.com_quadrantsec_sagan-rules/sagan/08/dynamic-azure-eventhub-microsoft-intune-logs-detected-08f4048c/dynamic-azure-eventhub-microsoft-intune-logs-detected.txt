@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Azure Eventhub Microsoft Intune Logs Detected"; program:azureEventHub; content:"category|22 3a 22|AuditLogs"; dynamic_load: $RULE_PATH/microsoft_intune.rules; classtype:dynamic-rules; sid:5017346; rev:1;)

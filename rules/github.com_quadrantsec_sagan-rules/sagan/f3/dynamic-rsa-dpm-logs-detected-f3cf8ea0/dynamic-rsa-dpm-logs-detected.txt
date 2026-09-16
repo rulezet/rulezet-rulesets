@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] RSA DPM Logs Detected"; program:RKMA_MONITORING_EVENT; dynamic_load: $RULE_PATH/rsa-dpm.rules; classtype:dynamic-rules; sid:5017355; rev:1;)

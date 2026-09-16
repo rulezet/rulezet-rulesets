@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Box API Logs Detected"; program:box-api_data; dynamic_load: $RULE_PATH/box.rules; classtype:dynamic-rules; sid:5017201; rev:1;)

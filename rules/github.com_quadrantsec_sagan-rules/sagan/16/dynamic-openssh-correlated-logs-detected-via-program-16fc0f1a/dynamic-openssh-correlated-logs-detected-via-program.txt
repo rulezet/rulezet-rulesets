@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] openssh correlated logs detected via program."; program:sshd; dynamic_load: $RULE_PATH/openssh-correlated.rules; classtype:dynamic-rules; sid:5007650; rev:1;)

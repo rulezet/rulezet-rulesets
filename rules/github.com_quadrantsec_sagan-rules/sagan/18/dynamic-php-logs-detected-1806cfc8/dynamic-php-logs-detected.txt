@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] PHP Logs Detected"; program:apache; dynamic_load: $RULE_PATH/php.rules; classtype:dynamic-rules; sid:5017352; rev:1;)

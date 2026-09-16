@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] CrowdStrike Logs Detected"; program:CrowdStrike; dynamic_load: $RULE_PATH/crowdstrike.rules; classtype:dynamic-rules; sid:5017211; rev:1;)

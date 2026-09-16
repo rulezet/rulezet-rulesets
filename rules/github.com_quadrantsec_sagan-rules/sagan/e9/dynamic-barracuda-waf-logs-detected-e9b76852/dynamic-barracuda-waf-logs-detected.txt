@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] barracuda WAF logs detected"; meta_content: "%sagan%", GET,POST; meta_content: "%sagan%", DENIED,LOGGED,ALLOW; meta_nocase; content:"Attack Name"; dynamic_load: $RULE_PATH/barracuda-waf.rules; classtype:dynamic-rules; sid:5015836; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] cloudtrail logs detected via program."; program:*.amazonaws.com; dynamic_load: $RULE_PATH/cloudtrail.rules; classtype:dynamic-rules; sid:5007631; rev:2; metadata: updatedOn 2025_06_04;)

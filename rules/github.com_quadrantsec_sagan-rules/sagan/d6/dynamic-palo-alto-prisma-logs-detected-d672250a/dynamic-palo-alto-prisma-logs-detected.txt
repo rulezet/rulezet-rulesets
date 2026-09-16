@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Palo Alto Prisma Logs detected"; program:prisma; dynamic_load: $RULE_PATH/palo-alto_prisma.rules; classtype:dynamic-rules; sid:5017149; rev:1;)

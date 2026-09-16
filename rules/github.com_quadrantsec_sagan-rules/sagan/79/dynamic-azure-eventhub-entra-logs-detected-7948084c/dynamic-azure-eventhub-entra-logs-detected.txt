@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Azure Eventhub Entra Logs Detected"; program:azureEventHub; content:"category|22 3a 22|RiskyUsers"; dynamic_load: $RULE_PATH/azureEventHub_entra.rules; classtype:dynamic-rules; sid:5017330; rev:1;)

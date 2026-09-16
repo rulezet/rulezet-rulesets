@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] msdns audit logs detected via program."; program:msdns; dynamic_load: $RULE_PATH/msdns-audit.rules; classtype:dynamic-rules; sid:5007643; rev:1;)

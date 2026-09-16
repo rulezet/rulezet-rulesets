@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] auditd logs detected via program."; program:audispd; dynamic_load: $RULE_PATH/auditd.rules; classtype:dynamic-rules; sid:5007617; rev:1;)

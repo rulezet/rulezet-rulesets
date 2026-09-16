@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] AWS Athena logs detected via program."; program:athena.amazonaws.com; dynamic_load: $RULE_PATH/aws-athena.rules; classtype:dynamic-rules; sid:5011940; rev:1;)

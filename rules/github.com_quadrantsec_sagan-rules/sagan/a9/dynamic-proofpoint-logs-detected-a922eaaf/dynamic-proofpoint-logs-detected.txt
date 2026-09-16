@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Proofpoint Logs Detected"; program:proofpoint_od_data; dynamic_load: $RULE_PATH/proofpoint_od.rules; classtype:dynamic-rules; sid:5017354; rev:1;)

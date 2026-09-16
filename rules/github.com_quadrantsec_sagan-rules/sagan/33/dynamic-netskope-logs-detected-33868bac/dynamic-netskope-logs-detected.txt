@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] NetSkope Logs Detected"; program:netskope-api_data; dynamic_load: $RULE_PATH/netskope.rules; classtype:dynamic-rules; sid:5017347; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Key9 logs detected"; program:k9; dynamic_load: $RULE_PATH/key9.rules; classtype:dynamic-rules; sid:5015958; rev:1;)

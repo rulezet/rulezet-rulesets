@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Cisco TACACs Logs Detected"; program:*TACACS*; dynamic_load: $RULE_PATH/cisco-tacacs.rules; classtype:dynamic-rules; sid:5017207; rev:1;)

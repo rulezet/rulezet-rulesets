@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] AWS API Gateway logs detected via program."; program:apigateway.amazonaws.com; dynamic_load: $RULE_PATH/aws-apigateway.rules; classtype:dynamic-rules; sid:5011811; rev:1;)

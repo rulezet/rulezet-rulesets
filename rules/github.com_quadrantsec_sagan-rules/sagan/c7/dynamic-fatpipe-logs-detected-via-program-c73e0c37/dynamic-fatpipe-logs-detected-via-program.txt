@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] fatpipe logs detected via program."; program:xtremed; dynamic_load: $RULE_PATH/fatpipe.rules; classtype:dynamic-rules; sid:5007638; rev:1;)

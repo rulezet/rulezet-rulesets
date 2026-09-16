@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] attack logs detected via program."; program:cachefsd|ftpd|rpc.statd; dynamic_load: $RULE_PATH/attack.rules; classtype:dynamic-rules; sid:5007616; rev:1;)

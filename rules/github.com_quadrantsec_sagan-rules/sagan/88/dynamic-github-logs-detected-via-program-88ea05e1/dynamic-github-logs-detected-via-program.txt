@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Github logs detected via program."; program:github; dynamic_load: $RULE_PATH/github.rules; classtype:dynamic-rules; sid:5011421; rev:1;)

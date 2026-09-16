@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Linux Auth logs detected via program."; content:"pam_unix("; dynamic_load: $RULE_PATH/linux-security.rules; classtype:dynamic-rules; sid:5014643; rev:1;)

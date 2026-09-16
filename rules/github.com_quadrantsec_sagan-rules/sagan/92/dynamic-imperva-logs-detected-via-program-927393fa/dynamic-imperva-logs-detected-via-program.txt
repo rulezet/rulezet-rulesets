@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Imperva logs detected via program."; program:Incapsula; dynamic_load: $RULE_PATH/imperva.rules; classtype:dynamic-rules; sid:5014197; rev:1;)

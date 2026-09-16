@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Azure AD logs detected via program."; program:azureEventHub; dynamic_load: $RULE_PATH/azureEventHub_azureActivity.rules; classtype:dynamic-rules; sid:5011413; rev:2;)

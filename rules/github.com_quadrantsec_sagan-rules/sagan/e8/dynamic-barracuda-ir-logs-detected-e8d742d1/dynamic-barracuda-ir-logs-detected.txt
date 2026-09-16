@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] barracuda IR logs detected"; program:Forensics; dynamic_load: $RULE_PATH/barracuda-ir.rules; classtype:dynamic-rules; sid:5015835; rev:1;)

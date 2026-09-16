@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] mcafee web gateway logs detected via program."; program:mwg; dynamic_load: $RULE_PATH/mcafee-web-gateway.rules; classtype:dynamic-rules; sid:5007642; rev:1;)

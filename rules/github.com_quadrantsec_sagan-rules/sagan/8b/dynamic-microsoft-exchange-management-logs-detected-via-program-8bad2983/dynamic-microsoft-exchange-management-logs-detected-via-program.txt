@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Microsoft Exchange Management logs detected via program."; program:MSExchange_Management; dynamic_load: $RULE_PATH/msexchange-management.rules; classtype:dynamic-rules; sid:5013530; rev:1;)

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Sonicwall Logs Detected"; program:sonicwall; dynamic_load: $RULE_PATH/sonicwall.rules; classtype:dynamic-rules; sid:5017357; rev:1;)

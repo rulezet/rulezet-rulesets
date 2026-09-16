@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] proofpoint logs detected via program."; program:PROOFPOINT; dynamic_load: $RULE_PATH/proofpoint.rules; classtype:dynamic-rules; sid:5007654; rev:1;)

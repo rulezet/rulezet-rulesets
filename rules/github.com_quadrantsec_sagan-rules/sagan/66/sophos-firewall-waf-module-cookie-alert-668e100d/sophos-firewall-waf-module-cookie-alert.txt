@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS_FIREWALL] WAF Module - Cookie Alert"; program:sophos; content:"log_type=|22|WAF|22|"; content:"reason=|22|cookie|22|"; parse_src_ip:1; normalize; reference:url,https://docs.sophos.com/nsg/sophos-firewall/21.5/pdf/sf-syslog-guide-21.5.pdf; classtype:trojan-activity; sid:5017448; rev:1;)

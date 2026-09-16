@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] CheckPoint Logs Detected"; content:"service_id"; content:"ProductName|3a| "; content:"ProductFamily|3a| Network"; dynamic_load: $RULE_PATH/checkpoint.rules; classtype:dynamic-rules; sid:5017202; rev:1;)

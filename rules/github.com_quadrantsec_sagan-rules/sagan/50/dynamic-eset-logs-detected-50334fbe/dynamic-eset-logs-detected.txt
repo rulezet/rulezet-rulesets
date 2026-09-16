@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] ESET Logs Detected"; program:eset; dynamic_load: $RULE_PATH/eset.rules; classtype:dynamic-rules; sid:5017339; rev:1;)

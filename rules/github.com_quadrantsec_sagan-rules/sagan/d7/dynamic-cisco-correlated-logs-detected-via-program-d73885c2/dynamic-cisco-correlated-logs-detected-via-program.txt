@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] cisco correlated logs detected via program."; program:%ASA*|CisACS_01_PassedAuth|%SEC_LOGIN-5-LOGIN_SUCCESS; dynamic_load: $RULE_PATH/cisco-correlated.rules; classtype:dynamic-rules; sid:5007626; rev:1;)

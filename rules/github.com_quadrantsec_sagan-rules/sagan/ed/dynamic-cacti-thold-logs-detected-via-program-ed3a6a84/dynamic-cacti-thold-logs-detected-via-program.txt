@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] cacti thold logs detected via program."; program:CactiTholdLog; dynamic_load: $RULE_PATH/cacti-thold.rules; classtype:dynamic-rules; sid:5007620; rev:1;)

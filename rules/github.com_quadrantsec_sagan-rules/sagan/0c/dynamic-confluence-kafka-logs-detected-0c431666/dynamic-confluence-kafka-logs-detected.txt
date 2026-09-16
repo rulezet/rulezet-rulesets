@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Confluence Kafka Logs Detected"; meta_content:"kafka.%sagan%",Authentication,AlterConfigs,AlterMirrors,CreateACLs,Create; dynamic_load: $RULE_PATH/confluent.rules; classtype:dynamic-rules; sid:5017210; rev:1;)

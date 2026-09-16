@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] pfSense logs detected via program."; program:filterlog; dynamic_load: $RULE_PATH/pfsense.rules; classtype:dynamic-rules; sid:5014576; rev:1;)

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Fortinet JSON Logs Detected"; content:"|22 3a|devid|22 3a|"; content:"|22|type|22 3a|"; content:"|22|subtype|22 3a|"; content:"|22|logid|22 3a|"; dynamic_load: $RULE_PATH/fortinet-json.rules; classtype:dynamic-rules; sid:5017342; rev:2;)

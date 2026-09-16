@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] LibreNMS logs detected via program."; program:librenms; dynamic_load: $RULE_PATH/librenms.rules; classtype:dynamic-rules; sid:5011423; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] duo logs detected via program."; program:duo; dynamic_load: $RULE_PATH/duo.rules; classtype:dynamic-rules; sid:5007635; rev:1;)

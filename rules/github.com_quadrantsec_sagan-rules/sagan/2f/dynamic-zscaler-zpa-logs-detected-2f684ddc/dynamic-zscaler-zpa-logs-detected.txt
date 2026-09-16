@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Zscaler ZPA Logs Detected"; program:Zscaler; dynamic_load: $RULE_PATH/zscaler-zpa.rules; classtype:dynamic-rules; sid:5017935; rev:1;)

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Cisco-IOS Logs Detected"; content:"SYS-5-"; dynamic_load: $RULE_PATH/cisco-ios.rules; classtype:dynamic-rules; sid:5017203; rev:1;)

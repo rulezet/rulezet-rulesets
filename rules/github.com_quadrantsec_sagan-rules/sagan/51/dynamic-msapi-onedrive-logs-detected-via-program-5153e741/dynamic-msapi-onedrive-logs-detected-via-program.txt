@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[DYNAMIC] MSAPI-Onedrive logs detected via program"; program:OneDrive; dynamic_load: $RULE_PATH/msapi-onedrive.rules; classtype:dynamic-rules; sid:5010329; rev:2;)

@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Sophos Firewall Logs Detected"; program:sophos; dynamic_load: $RULE_PATH/sophos_firewall.rules; classtype:dynamic-rules; sid:5017456; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] adtran logs detected via program."; program:FIREWALL; dynamic_load: $RULE_PATH/adtran.rules; classtype:dynamic-rules; sid:5007615; rev:1;)

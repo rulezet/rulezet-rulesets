@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Azure Eventhub Windows MSSQL Logs Detected"; program:*MSSQL*|Application; content:"RenderedDescription"; dynamic_load: $RULE_PATH/azureEventHub_windows-mssql.rules; classtype:dynamic-rules; sid:5017336; rev:1;)

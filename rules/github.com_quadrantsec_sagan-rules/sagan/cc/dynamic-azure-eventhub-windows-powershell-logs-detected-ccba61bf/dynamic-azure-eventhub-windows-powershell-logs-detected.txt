@@ -1,0 +1,1 @@
+alert any any any -> any any (msg:"[DYNAMIC] Azure Eventhub Windows Powershell Logs Detected"; program:*PowerShell*; content:"RenderedDescription"; dynamic_load: $RULE_PATH/azureEventHub_windows-powershell.rules; classtype:dynamic-rules; sid:5017337; rev:1;)

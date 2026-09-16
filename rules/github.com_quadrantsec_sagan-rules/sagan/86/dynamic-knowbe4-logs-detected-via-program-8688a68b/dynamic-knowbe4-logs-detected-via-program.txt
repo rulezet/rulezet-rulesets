@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Knowbe4 logs detected via program."; program:knowbe4; dynamic_load: $RULE_PATH/knowbe4.rules; classtype:dynamic-rules; sid:5011422; rev:1;)

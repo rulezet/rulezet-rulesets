@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Netwrix logs detected via program."; program:Netwrix_Auditor_Integration; dynamic_load: $RULE_PATH/netwrix.rules; classtype:dynamic-rules; sid:5011424; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] JAMF Protect logs detected via program."; program:jamf_protect; dynamic_load: $RULE_PATH/jamf-protect.rules; classtype:dynamic-rules; sid:5014312; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] Oracle OCI Logs detected"; program:oci-kafka-consumer_data; dynamic_load: $RULE_PATH/oracle_oci.rules; classtype:dynamic-rules; sid:5016657; rev:1;)

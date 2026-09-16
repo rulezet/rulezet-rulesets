@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] nxlog logs detected via program."; program:nxlog; dynamic_load: $RULE_PATH/nxlog.rules; classtype:dynamic-rules; sid:5007646; rev:1;)

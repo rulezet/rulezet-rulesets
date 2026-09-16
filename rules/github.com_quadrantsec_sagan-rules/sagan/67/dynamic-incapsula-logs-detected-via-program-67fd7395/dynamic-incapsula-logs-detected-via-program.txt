@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] incapsula logs detected via program."; program:Incapsula*; dynamic_load: $RULE_PATH/incapsula.rules; classtype:dynamic-rules; sid:5007640; rev:1;)

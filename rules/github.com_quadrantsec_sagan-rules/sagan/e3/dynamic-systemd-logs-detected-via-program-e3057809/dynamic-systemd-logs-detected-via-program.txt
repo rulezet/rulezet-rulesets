@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] systemd logs detected via program."; program:audit|systemd; dynamic_load: $RULE_PATH/systemd.rules; classtype:dynamic-rules; sid:5007659; rev:1;)

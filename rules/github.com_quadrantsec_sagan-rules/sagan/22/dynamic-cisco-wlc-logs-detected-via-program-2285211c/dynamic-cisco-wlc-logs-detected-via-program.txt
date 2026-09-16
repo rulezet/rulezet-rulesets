@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] cisco wlc logs detected via program."; program:snmptrapd; dynamic_load: $RULE_PATH/cisco-wlc.rules; classtype:dynamic-rules; sid:5007630; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] solaris logs detected via program."; program:kcfd|rmclomv; dynamic_load: $RULE_PATH/solaris.rules; classtype:dynamic-rules; sid:5007656; rev:1;)

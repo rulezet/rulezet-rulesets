@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg:"[DYNAMIC] aws-iam logs detected via program."; program:iam.amazonaws.com; dynamic_load: $RULE_PATH/aws-iam.rules; classtype:dynamic-rules; sid:5008341; rev:1;)
