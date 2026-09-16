@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] AWS account ID changed"; program:sophos; content:"Event::Iaas::IaasError::ACCOUNT_ID_CHANGED"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007466; rev:1;)

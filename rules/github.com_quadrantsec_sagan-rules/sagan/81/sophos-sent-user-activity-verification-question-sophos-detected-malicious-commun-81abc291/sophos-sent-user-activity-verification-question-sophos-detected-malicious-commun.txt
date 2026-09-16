@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Sent User Activity Verification question Sophos detected malicious communications from your device"; program:sophos; content:"Event::UAV::Requested::QUESTION_MALICIOUS_COMMUNICATIONS"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007603; rev:1;)

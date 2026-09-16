@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Manual blocked item cleanup required"; program:sophos; content:"Event::Endpoint::CoreBlocklistCleanFailed"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007408; rev:1;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] The authentication reset request has been postponed five times by the user for the volume"; program:sophos; content:"Event::Endpoint::Denc::PostponedAuthenticationResetEvent::1"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007555; rev:1;)

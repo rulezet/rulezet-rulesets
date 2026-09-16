@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] WAF Remote File Inclusion in URL"; content:"REMOTE_FILE_INCLUSION_IN_URL"; content:!"DENY"; parse_src_ip: 1; parse_dst_ip: 2; reference:url,https://campus.barracuda.com/product/webapplicationfirewall/doc/29819001/attacks-description-action-policy/; classtype:exploit-attempt; sid:5015717; rev:1;)

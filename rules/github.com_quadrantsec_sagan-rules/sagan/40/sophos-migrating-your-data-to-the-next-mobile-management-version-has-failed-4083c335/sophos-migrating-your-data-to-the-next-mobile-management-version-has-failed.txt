@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Migrating your data to the next mobile management version has failed"; program:sophos; content:"Event::Smc::MigrationPreventedByAdminEmail"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007484; rev:1;)

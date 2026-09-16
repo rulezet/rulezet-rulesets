@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Migration succeeded: Your data was migrated to the next mobile management version."; program:sophos; content:"Event::Smc::MigrationSucceeded"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007486; rev:1;)

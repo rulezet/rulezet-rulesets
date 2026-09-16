@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] A firewall was awaiting management approval for more than 30 days"; program:sophos; content:"Event::Other::ManagementApprovalExpired"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007451; rev:1;)

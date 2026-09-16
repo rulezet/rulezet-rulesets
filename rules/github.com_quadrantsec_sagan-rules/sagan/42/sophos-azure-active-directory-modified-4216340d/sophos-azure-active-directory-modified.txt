@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Azure Active Directory modified"; program:sophos; content:"Event::IaasAzure::AzureLog::AZURE_DIRECTORY_MODIFIED"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007473; rev:1;)

@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Central firewall reporting has been disabled for this device."; program:sophos; content:"Event::Firewall::FirewallUnAuthorizedToSophosCentral"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007438; rev:1;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] WAF Directory Traversal in GraphQL Payload"; content:"DIRECTORY_TRAVERSAL_IN_GRAPHQL"; content:!"DENY"; parse_src_ip: 1; parse_dst_ip: 2; reference:url,https://campus.barracuda.com/product/webapplicationfirewall/doc/29819001/attacks-description-action-policy/; classtype:exploit-attempt; sid:5015810; rev:1;)

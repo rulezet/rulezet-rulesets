@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Man in the middle attack detected in wifi 4"; program:sophos; content:"Event::Smc::MitmAttackEvent::4"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007498; rev:1;)

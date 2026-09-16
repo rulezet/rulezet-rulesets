@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] WAF Attribute MustUnderstand” is neither 1 nor 0"; content:"XML_WSI1301"; content:!"DENY"; parse_src_ip: 1; parse_dst_ip: 2; reference:url,https://campus.barracuda.com/product/webapplicationfirewall/doc/29819001/attacks-description-action-policy/; classtype:exploit-attempt; sid:5015774; rev:1;)

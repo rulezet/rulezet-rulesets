@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Failed to communicate with a Google web service because you have removed Sophos Mobile as an EMM provider from your Android enterprise account."; program:sophos; content:"Event::Smc::AfwNotEnrolled"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007488; rev:1;)

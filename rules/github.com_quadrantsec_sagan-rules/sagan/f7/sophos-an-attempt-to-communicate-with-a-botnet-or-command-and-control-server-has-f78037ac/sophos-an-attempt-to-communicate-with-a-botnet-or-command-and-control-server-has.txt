@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] An attempt to communicate with a botnet or command and control server has been detected."; program:sophos; content:"Event::Firewall::FirewallAdvancedThreatProtection"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007423; rev:1;)

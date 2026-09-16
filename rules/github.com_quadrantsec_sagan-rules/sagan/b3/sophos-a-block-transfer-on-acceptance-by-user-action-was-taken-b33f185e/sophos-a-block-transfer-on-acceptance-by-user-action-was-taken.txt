@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] A block transfer on acceptance by user action was taken."; program:sophos; content:"Event::Endpoint::DataLossPreventionUserBlocked"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007598; rev:1;)

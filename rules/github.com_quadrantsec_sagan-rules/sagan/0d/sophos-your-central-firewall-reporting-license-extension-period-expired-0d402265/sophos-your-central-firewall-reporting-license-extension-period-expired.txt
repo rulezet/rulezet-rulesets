@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[SOPHOS] Your Central Firewall Reporting license extension period expired"; program:sophos; content:"Event::Firewall::ReportingGracePeriodExpired"; classtype:system-event; reference:url,support.sophos.com/support/s/article/KB-000038309?language=en_US; sid:5007443; rev:1;)

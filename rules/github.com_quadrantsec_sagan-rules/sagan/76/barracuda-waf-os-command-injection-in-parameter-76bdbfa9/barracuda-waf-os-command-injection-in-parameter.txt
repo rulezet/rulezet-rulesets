@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[Barracuda] WAF OS Command Injection in Parameter"; content:"OS_CMD_INJECTION_IN_PARAM"; content:!"DENY"; parse_src_ip: 1; parse_dst_ip: 2; reference:url,https://campus.barracuda.com/product/webapplicationfirewall/doc/29819001/attacks-description-action-policy/; classtype:exploit-attempt; sid:5015688; rev:1;)
