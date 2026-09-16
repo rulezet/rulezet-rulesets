@@ -1,0 +1,9 @@
+rule Win_Trojan_Rukap_42
+{
+strings:
+	$a0 = { 784b40f671dc8d740f7d8760accc28f42fbd454cfb166ca4fa1748dec1d3d9175333b03f84f34d473dc03fc413bff9fd5111006cb6b233630772cbfd52de3534cf545a4d3f046e54e365e73003d2c820b3a5578965f7251cfc }
+
+
+condition:
+	$a0
+}
