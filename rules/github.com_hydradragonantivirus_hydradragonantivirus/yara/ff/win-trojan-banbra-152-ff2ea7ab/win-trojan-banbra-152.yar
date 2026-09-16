@@ -1,0 +1,9 @@
+rule Win_Trojan_Banbra_152
+{
+strings:
+	$a0 = { 1c9f6e124714036965da4a26f1d50e02292d5c278af6735d931d6dbfa2584af29660242450bfadbb5cc163f1f98d6cb06582219b4375bb86afbe2d36ca0df60d3ede4b265695fbdc23f0c7489e8b99cc3f3feb13b8e71aa20e4f6d7eea9fb92939cbcf1fc82ab0c86af8e1df9bf94f166a5980ab257b53 }
+
+
+condition:
+	$a0
+}

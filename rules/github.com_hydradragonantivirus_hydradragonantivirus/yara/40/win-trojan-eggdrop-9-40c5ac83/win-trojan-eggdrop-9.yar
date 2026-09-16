@@ -1,0 +1,9 @@
+rule Win_Trojan_Eggdrop_9
+{
+strings:
+	$a0 = { eb767ca9bc616c9d5abe37a25e950addc2d0cb7ed5e784d3cad61da30c5ed637444ad7503c25744940676032fce8106a7c19df9e704ae716326293c15a6aae118f99ef104a9445e499eaeaef6ea30c2e8afc7973815b05fdd0e5818a778af3f5bea2eab5e5c94f92edf1e79a51c0bf46685d449e943bf3 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Bancos_653
+{
+strings:
+	$a0 = { 06368196fc04c9228c7701ba6151663ed836b5341907614758d5138f14896622ad095e6fe12115cbf3017a1fa7a33e45efb251b68817d43af49f60fd7f416d957ebb2b6c }
+
+
+condition:
+	$a0
+}

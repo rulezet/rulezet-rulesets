@@ -1,0 +1,9 @@
+rule Win_Trojan_Haxspy_22
+{
+strings:
+	$a0 = { 7061741e2e6d6361666599806dc040f8e2616413df41a17e73312e6ba80b6b792d6c61e40ab0522c1d321a0d7b03bc073997bc6dd006f570546e6574 }
+
+
+condition:
+	$a0
+}

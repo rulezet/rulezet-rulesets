@@ -1,0 +1,9 @@
+rule Win_Trojan_LdPinch_96
+{
+strings:
+	$a0 = { 31c3fafa9212f9fafa1295cdfafa116339af7116793e5671bff273bf56c93a73bf4a73bf4e73bf2273bf2673bf1a73bf3273bf3673bf2a73bf2e73bf4673bf423dbf3abbfafafa3dbf12fafafafa3dbf0afaf2fafa92d02bbafa058ff2122ffcfafa92faf2fafa12560a050573bf0292fafefafa12650a050573bf3e9c3dfad5fa92fafefafa12770a050573bf1e92faf2fafa127a0a }
+
+
+condition:
+	$a0
+}

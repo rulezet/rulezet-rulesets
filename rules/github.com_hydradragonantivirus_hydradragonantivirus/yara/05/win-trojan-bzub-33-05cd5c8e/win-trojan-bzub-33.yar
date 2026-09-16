@@ -1,0 +1,9 @@
+rule Win_Trojan_Bzub_33
+{
+strings:
+	$a0 = { 6af3e24132a8b67b3520a9a4afeecbcd71455fca488f66c041ad6f49a064e2870858d7fb127d497617afdad1743b6d9240563f33eb8664966b39f5b8fdcb46a3470e21ff952a1c72ab32e45e1db5873f69faf8941b8c0fee5648b9be79b60fab198aa8eb3fcc399211f63eae }
+
+
+condition:
+	$a0
+}
