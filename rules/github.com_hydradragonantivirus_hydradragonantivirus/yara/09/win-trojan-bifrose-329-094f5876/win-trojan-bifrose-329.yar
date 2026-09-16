@@ -1,0 +1,9 @@
+rule Win_Trojan_Bifrose_329
+{
+strings:
+	$a0 = { 9dfee5d99892e84682ceec7681feeb1c23a8b0fbce96193a9075ade2ab9d33f36fe2a7daa92c2722aafe77eb30d469e2948ca9dafbaecb3e920e1df59baf83623febaf5da1f2faf28f5a29f77e1162d65741d718e3841ff637d3d4d91f1cffbe3be7cd767641c2ae8893259f1a35db0fe86abc0583b2eaee87cc230a78e9e2f27bcfc336c0cda0ba6969e21b }
+
+
+condition:
+	$a0
+}

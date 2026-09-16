@@ -1,0 +1,9 @@
+rule Win_Trojan_QQRob_29
+{
+strings:
+	$a0 = { a5587a508a35440460e856049436844dee4868d8dced6adfc97f2e99cefe237f0ee485b79902de72ee0dedb21cb577b1b8301aaee45692456dec916992036e40ad720d797241f4c80fa6483e9901b5cdc2dae40b7b7205bde60af2f302d79996e5cef33bdffffff63bfdf3e7dfbad7df35af3cf37e6bee66ff4f9eff032cba126a5b1896edff82df99b3b7fd }
+
+
+condition:
+	$a0
+}
