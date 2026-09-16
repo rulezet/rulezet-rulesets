@@ -1,0 +1,5 @@
+# INDICATOR_KB_CERT_72f3e4707b94d0eef214384de9b36e
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/363368)
+
+Rulezet UUID: `14e9e7b0-c4e5-4f3d-b8ff-c7269fd90bb4`

@@ -1,0 +1,19 @@
+{
+  "uuid": "b6c43835-5761-4c80-a8b9-ecc9cdcb1660",
+  "title": "INDICATOR_KB_CERT_283518f1940a11caf187646d8063d61d",
+  "format": "yara",
+  "author": "ditekSHen",
+  "license": "NOASSERTION",
+  "license_verified": false,
+  "description": "Detects executables signed with stolen, revoked or invalid certificates",
+  "source": "https://github.com/ditekshen/detection",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-10",
+  "last_modified": "2026-09-10",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/363367"
+}
