@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] MS Index Server File/Path Recon"; content: "SID: 5178 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6105178; sid: 6105178; rev: 4;)

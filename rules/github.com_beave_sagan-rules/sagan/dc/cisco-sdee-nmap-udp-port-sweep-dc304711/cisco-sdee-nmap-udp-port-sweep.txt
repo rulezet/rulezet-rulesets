@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] Nmap UDP Port Sweep"; content: "SID: 4003 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: udp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6104003; sid: 6104003; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] IMail LDAP Service Buffer Overflow"; content: "SID: 3740 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6103740; sid: 6103740; rev: 4;)

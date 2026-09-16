@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] WWW FrontPage MS-DOS Device Attack"; content: "SID: 5097 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6105097; sid: 6105097; rev: 4;)

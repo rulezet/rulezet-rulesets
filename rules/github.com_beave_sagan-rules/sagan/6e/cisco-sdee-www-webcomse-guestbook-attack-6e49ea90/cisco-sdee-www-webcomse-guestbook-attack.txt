@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] WWW Webcom.se Guestbook attack"; content: "SID: 5044 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6105044; sid: 6105044; rev: 4;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] glFtpD LIST DoS"; content: "SID: 3162 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6103162; sid: 6103162; rev: 4;)

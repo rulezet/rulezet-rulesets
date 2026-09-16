@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] HSRP State Change"; content: "%STANDBY-6-STATECHANGE"; content: "state"; classtype: system-event; threshold: type suppress, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001722; sid: 5001722; rev:2;)

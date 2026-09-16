@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] Windows NT SNMP System Info Retrieve"; content: "SID: 4503 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: udp; default_dst_port: $SNMP_PORT; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6104503; sid: 6104503; rev: 5;)

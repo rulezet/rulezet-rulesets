@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] Finger Bomb"; content: "SID: 3450 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: tcp; default_dst_port: 79; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6103450; sid: 6103450; rev: 4;)

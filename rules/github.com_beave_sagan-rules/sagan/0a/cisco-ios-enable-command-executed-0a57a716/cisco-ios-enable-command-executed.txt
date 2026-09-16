@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Enable command executed"; content: "%PARSER-5-CFGLOG_LOGGEDCMD"; content: "exec"; nocase; content: "enable"; nocase; classtype: successful-admin; reference: url,wiki.quadrantsec.com/bin/view/Main/5001872; sid: 5001872; rev:2;)

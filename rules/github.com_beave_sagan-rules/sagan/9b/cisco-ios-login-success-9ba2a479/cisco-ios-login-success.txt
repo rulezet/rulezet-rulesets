@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Login Success"; content: "%PARSER-5-CFGLOG_LOGGEDCMD"; default_proto: tcp; classtype: successful-admin; parse_src_ip: 1; parse_port; reference: url,wiki.quadrantsec.com/bin/view/Main/5001952; sid: 5001952; rev:2;)

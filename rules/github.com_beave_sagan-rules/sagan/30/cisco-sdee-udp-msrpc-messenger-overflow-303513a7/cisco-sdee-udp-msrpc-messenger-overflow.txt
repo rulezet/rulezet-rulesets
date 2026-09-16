@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-SDEE] UDP MSRPC Messenger Overflow"; content: "SID: 3331 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: udp; classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6103331; sid: 6103331; rev: 4;)

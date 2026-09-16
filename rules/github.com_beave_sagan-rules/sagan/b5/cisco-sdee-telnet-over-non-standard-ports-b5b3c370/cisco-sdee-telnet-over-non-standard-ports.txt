@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET $TELNET_PORT (msg: "[CISCO-SDEE] Telnet Over Non-standard Ports"; content: "SID: 3409 ,"; parse_src_ip: 1; parse_dst_ip: 2; parse_port; program: qdee; default_proto: tcp; default_dst_port: $TELNET_PORT: classtype: suspicious-traffic; reference: url,wiki.quadrantsec.com/bin/view/Main/6103409; sid: 6103409; rev: 5;)

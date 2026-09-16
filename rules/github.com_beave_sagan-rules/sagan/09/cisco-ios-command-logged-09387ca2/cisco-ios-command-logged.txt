@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] Command logged"; content: "%PARSER-5-CFGLOG_LOGGEDCMD"; classtype: misc-activity; reference: url,wiki.quadrantsec.com/bin/view/Main/5001871; sid: 5001871; rev:2;)

@@ -1,0 +1,1 @@
+alert any $EXTERNAL_NET any -> $HOME_NET any (msg: "[CISCO-IOS] HSRP Requesting Active State"; content: "Grp"; content: "Coup"; classtype: system-event; threshold: type suppress, track by_src, count 5, seconds 300; reference: url,wiki.quadrantsec.com/bin/view/Main/5001721; sid: 5001721; rev:2;)
