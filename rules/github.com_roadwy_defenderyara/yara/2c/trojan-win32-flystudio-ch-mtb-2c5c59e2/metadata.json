@@ -1,0 +1,22 @@
+{
+  "uuid": "2c5c59e2-446e-4218-a109-c5deea21806e",
+  "title": "Trojan_Win32_FlyStudio_CH_MTB",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/FlyStudio.CH!MTB,SIGNATURE_TYPE_PEHSTR_EXT,09 00 09 00 09 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/274097"
+}
