@@ -1,0 +1,9 @@
+rule Win_Trojan_FakeError_2
+{
+strings:
+	$a0 = { 6a10e80c000000666174616c206572726f7200e81000000046696c6520636f727275707465642100 }
+
+
+condition:
+	$a0
+}
