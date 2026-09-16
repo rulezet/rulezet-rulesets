@@ -1,0 +1,22 @@
+{
+  "uuid": "a1065fc4-7839-4d4d-8ccd-1b173623d138",
+  "title": "Trojan_Win32_Startpage_gen_dll_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Startpage.gen!dll,SIGNATURE_TYPE_PEHSTR_EXT,ffffffbc 02 58 02 07 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/263014"
+}
