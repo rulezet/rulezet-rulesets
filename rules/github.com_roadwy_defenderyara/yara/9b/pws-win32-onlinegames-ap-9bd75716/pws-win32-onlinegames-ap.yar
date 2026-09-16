@@ -1,0 +1,9 @@
+rule PWS_Win32_OnLineGames_AP{
+	meta:
+		description = "PWS:Win32/OnLineGames.AP,SIGNATURE_TYPE_PEHSTR_EXT,03 00 03 00 07 00 00 "
+		
+	strings :
+		$a_01_0 = {44 44 44 2e 64 6c 6c 00 4c 70 6b 44 6c 6c } 		$a_01_1 = {66 61 73 73 64 66 6a 66 73 64 2e 64 61 74 00 } 		$a_01_2 = {4c 6f 61 64 44 4c 4c 2e 64 6c 6c 00 4c 70 6b 44 6c 6c } 		$a_01_3 = {67 61 6d 65 74 65 78 74 2e 64 61 74 00 } 		$a_03_4 = {6a 02 6a 00 68 (4a|44) ff ff ff 53 e8 ?? ?? ff ff 8d 85 7c ff ff ff e8 } 		$a_03_5 = {8a 0c 10 80 c1 ?? 80 f1 ?? 80 e9 ?? 8b 1d ?? ?? ?? ?? 88 0c 13 42 81 fa ?? ?? 00 00 75 e2 } 		$a_01_6 = {c6 04 03 e9 40 8b ca c1 e9 00 80 e1 ff 88 0c 03 40 8b ca c1 e9 08 80 e1 ff } 	condition:
+		((#a_01_0  & 1)*2+(#a_01_1  & 1)*1+(#a_01_2  & 1)*2+(#a_01_3  & 1)*1+(#a_03_4  & 1)*2+(#a_03_5  & 1)*2+(#a_01_6  & 1)*1) >=3
+ 
+}

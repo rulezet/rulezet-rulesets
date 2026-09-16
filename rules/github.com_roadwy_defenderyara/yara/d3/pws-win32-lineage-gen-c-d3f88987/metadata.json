@@ -1,0 +1,22 @@
+{
+  "uuid": "d3f88987-cbc7-4121-8a3d-9d7ca9f8be37",
+  "title": "PWS_Win32_Lineage_gen_C",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "PWS:Win32/Lineage.gen!C,SIGNATURE_TYPE_PEHSTR_EXT,36 00 32 00 12 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"PWS\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/337322"
+}
