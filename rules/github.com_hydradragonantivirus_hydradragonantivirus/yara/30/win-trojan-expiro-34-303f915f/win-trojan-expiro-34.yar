@@ -1,0 +1,9 @@
+rule Win_Trojan_Expiro_34
+{
+strings:
+	$a0 = { 605589e581ec08010000c745f801000000b80d00000031c9418945ecc745f406000000c745cc0c000000b86c000000b90c000000baabaaaa2a }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Foxy_2
+{
+strings:
+	$a0 = { 6269747361646d696e202f7472616e7366657220446f776e6c6f61645f663078792022687474703a2f2f }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Boaxee_1
+{
+strings:
+	$a0 = { 433a5c626f64656e6b756e646c696368656d5c4b6174616c6f676973696572745c426573745c564239385c }
+
+
+condition:
+	$a0
+}

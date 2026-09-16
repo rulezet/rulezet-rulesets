@@ -1,0 +1,9 @@
+rule Win_Trojan_Graftor_886
+{
+strings:
+	$a0 = { a134e041005556be3c92bd7ac78088070000121996528b0d34e0410057c7818c07000050199e528b1534e04100 }
+
+
+condition:
+	$a0
+}

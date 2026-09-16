@@ -1,0 +1,9 @@
+rule Win_Trojan_Nitlove_1
+{
+strings:
+	$a0 = { 68d0314000e8c226000083c404dd0550324000dd5de0dd0548324000dd9d98fdffff83ec08dd8598fdffffdd1c2483ec08dd45e0dd1c24e80624000083c410dd9d70fdffff83ec08dd8570fdffffdd1c2483ec08dd8598fdffffdd1c2483ec08dd45e0dd1c2468f0314000e85c260000 }
+
+
+condition:
+	$a0
+}

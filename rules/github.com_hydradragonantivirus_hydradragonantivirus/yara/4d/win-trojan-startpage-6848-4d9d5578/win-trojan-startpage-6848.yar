@@ -1,0 +1,9 @@
+rule Win_Trojan_Startpage_6848
+{
+strings:
+	$a0 = { 6432392e636f6d2f3f69643d633230303300000000558bec81c4f0fdffff5333c08985f0fdffff8985f4fdffff8985f8fdffff8985fcfdffff8b5d0833c055686841470064ff306489208d8500ffffff33c9ba00010000e819edf8ff8d8500feffff33 }
+
+
+condition:
+	$a0
+}

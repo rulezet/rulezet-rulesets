@@ -1,0 +1,9 @@
+rule Win_Trojan_Bedepshel_1
+{
+strings:
+	$a0 = { 5c77696e646f77735c64726f707065724e65775c44656275675c746573745368656c6c636f64652e706462 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Onlinegames_18843
+{
+strings:
+	$a0 = { 636a71626b475c6565fb6b675f4a5e6d6e5d5e60fe656a61663d5c68635d5f5b66fd6f4d60703b5f70597263655b62fc70706b6b646a602d2d2a6d4e636c3f616b5b7262635c65f8fbfdf9fafbfcf7fbfef8fbfdf9fafbfcf7fbfef8fbfdf9fafbfcf7fbfef8fbfdf9fafbfcf7fbfef8fbfdf9fafbfcf7fbfef8fbfdf9fafbfc }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Ransom_9209
+{
+strings:
+	$a0 = { ff746365f6ffefffff77f6f6fff6ffefffffeffffffff6fff6ffefffffeffff6ffeffffffff6ffefffffeffffff6ffefffff546f0174735a05f6ffefffff4461490072636565656572f6fff6ffefffffefffff6e6f726973f6ffeffff6ffefffffff006f6961746765017269726524626f6df6ffefffff490075744df6ffefffff65656b6a747274f6ffeffff6ffefffffff69655372006c69f6ffefffff65637565616501576d77f6ffefffff76f6ff }
+
+
+condition:
+	$a0
+}

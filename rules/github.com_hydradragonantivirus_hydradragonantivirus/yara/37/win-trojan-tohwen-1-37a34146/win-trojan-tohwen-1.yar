@@ -1,0 +1,11 @@
+rule Win_Trojan_Tohwen_1
+{
+strings:
+	$a0 = { 4d6f7a696c6c612f342e302028636f6d70617469626c653b204d53494520362e303b57696e646f7773204e5420352e3129 }
+
+	$a1 = { 4846524d5f }
+
+
+condition:
+	$a0 and $a1
+}

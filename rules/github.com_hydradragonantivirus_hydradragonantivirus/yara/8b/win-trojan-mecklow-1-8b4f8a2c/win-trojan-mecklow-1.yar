@@ -1,0 +1,9 @@
+rule Win_Trojan_Mecklow_1
+{
+strings:
+	$a0 = { 8b4d??034d??8a1180f2cd8b45??0345??88108b4d??034d??8a510180f21a8b45??0345??885001 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Backoff_6
+{
+strings:
+	$a0 = { 266f703d25642669643d25732675693d25732677763d25642667723d25732662763d2573 }
+
+
+condition:
+	$a0
+}

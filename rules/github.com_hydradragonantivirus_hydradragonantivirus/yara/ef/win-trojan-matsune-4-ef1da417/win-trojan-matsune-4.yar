@@ -1,0 +1,9 @@
+rule Win_Trojan_Matsune_4
+{
+strings:
+	$a0 = { 8b4de8034de08b55d40355e08a0288018b4de8034de00fbe110fb645e733d08855d38b7de8037de08a45d388078b4de083c101894de0817de05e01000072c18b45e88945d8ff65d8 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Feljina_1
+{
+strings:
+	$a0 = { 558bec538b5d08568b750c578b7d1085f67509833de8c4071000eb2683fe01740583fe027522a1c8dd071085c07409575653ffd085c0740c575653e8e7feffff }
+
+
+condition:
+	$a0
+}

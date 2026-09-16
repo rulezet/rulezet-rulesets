@@ -1,0 +1,9 @@
+rule Win_Trojan_Emotet_3
+{
+strings:
+	$a0 = { 558bec83ec3856535733f6e850110000eb0933c05f5b5e8be55dc3833d345b40000174eeeb225e8bfe8b0d305640002bf98d5df8893b8b7df857893598534000 }
+
+
+condition:
+	$a0
+}

@@ -1,0 +1,9 @@
+rule Win_Trojan_Uniemv_1
+{
+strings:
+	$a0 = { 81f293000000895424??8b5c24??0fb74c24??6bdb88668b5424??550fb7ea23d983ed1281e38301000081f58800000081c308370d5781ed484e0000 }
+
+
+condition:
+	$a0
+}

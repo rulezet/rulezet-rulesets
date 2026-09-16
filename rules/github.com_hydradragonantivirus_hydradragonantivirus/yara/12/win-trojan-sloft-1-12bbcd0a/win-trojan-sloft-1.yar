@@ -1,0 +1,9 @@
+rule Win_Trojan_Sloft_1
+{
+strings:
+	$a0 = { 60e803000000e9eb045d4555c3e801000000eb5dbbedffffff03dd81eb00901c0683bd8804000000899d880400000f85cb0300008d859404000050ff95a90f00 }
+
+
+condition:
+	$a0
+}

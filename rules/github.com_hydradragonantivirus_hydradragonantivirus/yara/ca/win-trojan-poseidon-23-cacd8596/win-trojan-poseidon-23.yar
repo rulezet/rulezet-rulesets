@@ -1,0 +1,11 @@
+rule Win_Trojan_Poseidon_23
+{
+strings:
+	$a0 = { 558bec83e4f881ec0c090000a190f1440033c4898424080900008b4508648b0d }
+
+	$a1 = { 6a00506a006a00ff1544e242008b8c24140900005f5e5b33cce8560100008be55dc21000 }
+
+
+condition:
+	$a0 and $a1
+}
