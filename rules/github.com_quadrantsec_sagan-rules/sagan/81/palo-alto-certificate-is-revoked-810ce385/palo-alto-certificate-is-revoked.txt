@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[PALO-ALTO] Certificate is revoked"; content: "Certificate"; content: "is revoked"; content: ",vsys"; classtype: system-event; reference: url,live.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx; sid: 5002600; rev:2;)

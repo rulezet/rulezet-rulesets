@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CISCO-UMBRELLA] Sex Education domain category detected"; program:umbrella*; content:"Allowed"; content:"Sex Education"; parse_src_ip:1; classtype:suspicious-traffic; reference:url,docs.umbrella.com/deployment-umbrella/docs/log-formats-and-versioning; sid:5011528; rev:1;)

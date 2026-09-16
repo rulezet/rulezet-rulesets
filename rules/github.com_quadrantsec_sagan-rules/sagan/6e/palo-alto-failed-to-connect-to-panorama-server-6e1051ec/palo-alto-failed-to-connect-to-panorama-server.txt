@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[PALO-ALTO] Failed to connect to Panorama Server"; content: "Failed to connect to Panorama Server"; content: ",vsys"; classtype: system-event; reference: url,ive.paloaltonetworks.com/twzvq79624/attachments/twzvq79624/learning_tkb/428/1/System_log_PANOS4.1rev3.xlsx; sid: 5002585; rev:4;)

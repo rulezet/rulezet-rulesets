@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CISCO-UMBRELLA] Phishing Attacks Security Category Detected and Allowed"; program:umbrella*; content:"Allowed"; content:"Phishing Attacks"; parse_src_ip:1; classtype:system-event; reference:url,https://docs.umbrella.com/deployment-umbrella/docs/dns-security-categories; sid:5014317; rev:1;)

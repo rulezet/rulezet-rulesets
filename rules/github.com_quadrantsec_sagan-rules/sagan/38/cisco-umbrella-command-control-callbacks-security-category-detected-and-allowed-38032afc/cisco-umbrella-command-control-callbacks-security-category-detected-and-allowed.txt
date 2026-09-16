@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CISCO-UMBRELLA] Command Control Callbacks Security Category Detected and Allowed"; program:umbrella*; content:"Allowed"; content:"Command Control Callbacks"; parse_src_ip:1; classtype:system-event; reference:url,https://docs.umbrella.com/deployment-umbrella/docs/dns-security-categories; sid:5014316; rev:1;)

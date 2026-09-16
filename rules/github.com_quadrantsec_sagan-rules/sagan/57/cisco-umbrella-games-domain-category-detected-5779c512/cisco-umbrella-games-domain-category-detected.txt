@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CISCO-UMBRELLA] Games domain category detected"; program:umbrella*; content:"Allowed"; content:"Games"; parse_src_ip:1; classtype:suspicious-traffic; reference:url,docs.umbrella.com/deployment-umbrella/docs/log-formats-and-versioning; sid:5011476; rev:1;)

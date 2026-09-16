@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CISCO-UMBRELLA] Newly Seen Domains Security Category Detected and Allowed"; program:umbrella*; content:"Allowed"; content:"Newly Seen Domains"; parse_src_ip:1; classtype:system-event; reference:url,https://docs.umbrella.com/deployment-umbrella/docs/dns-security-categories; sid:5014315; rev:1;)

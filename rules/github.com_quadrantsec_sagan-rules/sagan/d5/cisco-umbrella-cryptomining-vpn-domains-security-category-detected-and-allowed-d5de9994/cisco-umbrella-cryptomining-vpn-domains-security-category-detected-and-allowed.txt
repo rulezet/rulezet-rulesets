@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CISCO-UMBRELLA] Cryptomining VPN Domains Security Category Detected and Allowed"; program:umbrella*; content:"Allowed"; content:"Cryptomining"; parse_src_ip:1; classtype:system-event; reference:url,https://docs.umbrella.com/deployment-umbrella/docs/dns-security-categories; sid:5014321; rev:1;)

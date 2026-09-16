@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $EXTERNAL_NET any (msg: "[PALO-ALTO] Virus Detected"; content:"THREAT,virus"; normalize; parse_proto; parse_port; parse_src_ip: 1; parse_dst_ip: 2; default_proto: tcp; content: ",vsys"; classtype: suspicious-traffic; reference: url,threatvault.paloaltonetworks.com; sid: 5002755; rev:2;)

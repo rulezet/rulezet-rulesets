@@ -1,0 +1,1 @@
+alert any $HOME_NET any -> $HOME_NET any (msg:"[CISCO-UMBRELLA] Cloud and Data Centers domain category detected"; program:umbrella*; content:"Allowed"; content:"Cloud and Data Centers"; parse_src_ip:1; classtype:suspicious-traffic; reference:url,docs.umbrella.com/deployment-umbrella/docs/log-formats-and-versioning; sid:5011453; rev:1;)
