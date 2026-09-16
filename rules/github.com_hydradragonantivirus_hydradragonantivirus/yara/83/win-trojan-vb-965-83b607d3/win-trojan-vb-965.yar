@@ -1,0 +1,9 @@
+rule Win_Trojan_VB_965
+{
+strings:
+	$a0 = { ec2c90a45040ececececb828c854ececececc4bc9c78ecececec983008f03a74ecec040811b0103b3b3b3b5884fcf83b3b3b3b70248ca08e0e1d3b740011d81088a343c7ce4404110010ecb3b3b3b36cd4e864ece8d0b11011d0105ca8ecececec2c804814ecececece4103c0cecececec68c09434ecececece07c4c203b3a74ec0c113810b43b3b3b3bac1c }
+
+
+condition:
+	$a0
+}
