@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO Pastebin Style Domain in DNS Lookup (pastetext .net)"; dns.query; bsize:13; content:"pastetext.net"; nocase; classtype:bad-unknown; sid:2036287; rev:2; metadata:created_at 2022_04_21, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_26;)

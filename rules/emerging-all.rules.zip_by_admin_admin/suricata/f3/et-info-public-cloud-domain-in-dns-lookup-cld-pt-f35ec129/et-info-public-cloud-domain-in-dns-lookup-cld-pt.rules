@@ -1,0 +1,1 @@
+alert dns $HOME_NET any -> any any (msg:"ET INFO Public Cloud Domain in DNS Lookup (cld .pt)"; dns.query; bsize:6; content:"cld.pt"; nocase; classtype:bad-unknown; sid:2035515; rev:2; metadata:created_at 2022_03_17, confidence High, signature_severity Informational, tag Description_Generated_By_Proofpoint_Nexus, updated_at 2024_03_26;)
