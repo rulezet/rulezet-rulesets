@@ -1,0 +1,22 @@
+{
+  "uuid": "871250fe-7d73-4aaa-ac3d-4618d57e2551",
+  "title": "Trojan_Win32_Neoreblamy_NMK_MTB_2",
+  "format": "yara",
+  "author": "roadwy",
+  "license": "",
+  "license_verified": false,
+  "description": "Trojan:Win32/Neoreblamy.NMK!MTB,SIGNATURE_TYPE_PEHSTR_EXT,04 00 04 00 03 00 00 ",
+  "source": "https://github.com/roadwy/DefenderYara",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "ms-caro-malware-full:malware-platform=\"Win32\"",
+    "ms-caro-malware-full:malware-type=\"Trojan\"",
+    "misp-galaxy:operating-system=\"Windows\""
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-07-28",
+  "last_modified": "2026-07-28",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/266568"
+}
