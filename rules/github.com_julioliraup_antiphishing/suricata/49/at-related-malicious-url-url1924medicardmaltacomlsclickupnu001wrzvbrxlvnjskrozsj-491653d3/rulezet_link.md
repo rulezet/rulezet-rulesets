@@ -1,0 +1,5 @@
+# AT related malicious URL (url1924.medicardmalta.com/ls/click?upn=u001.wRZvbrXLvnjskRozsJol3kEPP5nBAWk4SHCrLwKF96tDReUPRazq2ZhXUXlMKA2ETWwmce8xwJNMvTN71XzYOZGOXYg24CSX5avcEHnUtAg-3Dku1o_p4A4YQt8epDIK9HlKea9sYxS1RRaeO1uPU4eCr6Zba-2FMHhaAWe2dFZoouVc-2BpKMKvNwtaGuPkA7tW28JsO6ecEJBcmMSjwFc-2FUOVwL7Asize6stR9-2FzxLs0X4mJrQvRpQD90BQSY2pxzarQb5ctiwBDMC3oq4pk-2BsYFhVC4HagsLjtTrP08k6K6RawDOqmYVFFPr80cu-2BREJyB7bbFZeYA-3D-3D)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/761659)
+
+Rulezet UUID: `491653d3-e9d7-4cdc-8c7c-ac1401d1f397`
