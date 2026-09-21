@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"SURICATA TRAFFIC-ID: google-video"; tls_sni; content:"googlevideo.com"; isdataat:!1,relative; flow:to_server,established; flowbits: set,traffic/id/google-video; flowbits:set,traffic/label/video; noalert; sid:300000014; rev:1;)
