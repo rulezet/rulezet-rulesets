@@ -1,0 +1,11 @@
+name: cisco-vpn
+description: Detect Cisco VPN
+uuid: 459ceb48-31fe-5e9c-9e8b-1ef3404ed73e
+query: http_cookiename.bg:webvpnlogin
+tags:
+- proto:http
+- vendor:cisco
+- product:cisco-vpn
+references:
+- https://www.cisco.com/
+version: 20260918T053418Z
