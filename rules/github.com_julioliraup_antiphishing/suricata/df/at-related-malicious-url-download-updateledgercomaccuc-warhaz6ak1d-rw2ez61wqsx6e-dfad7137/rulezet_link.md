@@ -1,0 +1,5 @@
+# AT related malicious URL (download-updateledger.com/?acc=UC-wARhaZ6ak1D_rW2ez61wqsx6eZgm1ZQFON08qw2p7Mq9WgrKSDAZ3sCc-TpSslzZyvJX5kxGLz-NNoKmZb9jBDXLXERzFLK2aUbdN9nAimhjhGqpngkr4gU3m4K4U4lDEwjpxroS0lkwO4A_6LhLXcyq4ghdvVSyUdzcD7ZbLlYgRQCPc8FzZ04M2XsvsnBG2NbBuFbtcyI11wsS9TDhX7iJNQ6oZILynzaT9NGPHQWliwplGQMY7ziLIr39atjulB6aC1hjNTNMGcJyjk_0l6qAD3gOqOl8qvrfq4eSayDsmHgVToKWFhzQTZaWyjDrOdZniZjxqPftr7hLuOg==&view=lg)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/751894)
+
+Rulezet UUID: `dfad7137-d329-4594-a601-ad52bb6a2525`
