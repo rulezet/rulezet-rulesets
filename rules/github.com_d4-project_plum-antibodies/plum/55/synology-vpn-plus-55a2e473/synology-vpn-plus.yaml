@@ -1,0 +1,11 @@
+name: synology-vpn-plus
+description: Detect Synology VPN Plus
+uuid: 5bdebbcf-9867-5dc1-a707-96be4c0da30a
+query: http_favicon_mmhash:1235070469
+tags:
+- proto:http
+- product:synology-vpn-plus
+- vendor:synology
+references:
+- https://www.synology.com/
+version: 20260918T053418Z
