@@ -1,0 +1,10 @@
+name: secure-point-firewall
+description: Detect Securepoint UTM
+uuid: a8950e63-fa4d-5009-b0b8-ea0916b2568c
+query: http_title.bg:"Securepoint UTM v"
+tags:
+- proto:http
+- product:firewall
+- product:securepoint
+- vendor:securepoint
+version: 20260918T053418Z
