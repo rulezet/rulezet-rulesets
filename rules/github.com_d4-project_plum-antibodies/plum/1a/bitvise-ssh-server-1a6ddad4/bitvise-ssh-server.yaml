@@ -1,0 +1,10 @@
+name: bitvise-ssh-server
+description: Detect Bitvise SSH Server
+uuid: 82e28367-d2a6-5bcf-b0e0-0c3a0dc3a264
+query: banner.lk:"bitvise ssh server" OR banner.lk:winsshd OR banner.lk:flowssh
+tags:
+- product:bitvise-ssh-server
+- proto:ssh
+- product:sftp
+- vendor:windows
+version: 20260918T053418Z
