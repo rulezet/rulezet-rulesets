@@ -1,0 +1,5 @@
+# AT related malicious URL (url1402.nycamail.com/ls/click?upn=u001.O6jY7o9q5dogmtnrk4RHNyfiClE-2FdW0u4mVoJzQUWbl43jj-2Bk3VIt5wVfL10yYz8-2F0MlU5h4lHc0-2F527Vfp1Rg9WaAVbnT0lKyMb5-2ByVOkkzmc1loXcjwD00dBsi-2Bpuo1sN1BAVIzP14BCXPZIqxow-3D-3DbI1t_1K0sULVzZmD1Y43wkEC8mz1u4aiMsC3e7cQ11KiXIvDbtqxsJoY2t837YrWb3CJ66Dc0oauTwyQIkYg-2BmDnxee3FedFhlkMt3it9LlURYYXRS8hteDZed4heUotSWyPKKHChxN-2BeFymuOAtm-2FUIDFdN3QTOLkLTMKBpPBzavxdVfhdXPnRLnbLyzx4E3kFOUzPOx7mHrv-2B3MHYivnDmBkkTNRaEWqcBM55iYbdiPd21m0kEcQ8SZ2rj5ALr3hilz)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/754492)
+
+Rulezet UUID: `34291361-db49-4ba8-a894-be4a8018db37`
