@@ -1,0 +1,11 @@
+name: aws-cloudfront
+description: Detect Amazon CloudFront
+uuid: 4846b323-46f4-59c0-bbf4-f39a67c169d8
+query: http_server:cloudfront
+tags:
+- proto:http
+- product:cloudfront
+- vendor:amazon
+references:
+- https://aws.amazon.com/cloudfront/
+version: 20260918T053418Z
