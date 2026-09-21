@@ -1,0 +1,12 @@
+name: netgear-d7800
+description: Detect Netgear D7800 router
+uuid: 811ae254-b52d-5f96-884d-396196d84733
+query: http_headval:www-authenticate.lk:"netgear d7800"
+tags:
+- proto:http
+- product:d7800
+- type:router
+- vendor:netgear
+references:
+- https://www.netgear.com/
+version: 20260918T053418Z
