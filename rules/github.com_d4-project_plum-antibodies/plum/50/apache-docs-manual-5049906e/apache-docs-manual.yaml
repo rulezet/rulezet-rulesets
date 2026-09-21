@@ -1,0 +1,12 @@
+name: apache-docs-manual
+description: Detect apache2 (2.2.9) docs-manual
+uuid: 223df72c-9f14-559e-bca9-7d1b50cd9957
+query: http_favicon_md5:31AA07FE236EE504C890A61D1F7F0A97 or http_favicon_mmhash:-632070065
+tags:
+- product:apache-docs-manual
+- product:apache_httpd
+- vendor:apache
+- proto:http
+references:
+- https://httpd.apache.org/
+version: 20260918T053418Z
