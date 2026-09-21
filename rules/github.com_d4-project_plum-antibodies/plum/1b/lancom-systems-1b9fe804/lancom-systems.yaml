@@ -1,0 +1,13 @@
+name: lancom-systems
+description: Detect LANCOM Systems (router)
+uuid: d1c7f976-7f58-55a2-98f9-d574e80cf71a
+query: http_server:lancom OR http_favicon_mmhash:-325082670 OR http_favicon_md5:240c36cd118aa1ff59986066f21015d4
+  OR http_favicon_sha256:ff55877f0fc7d944a60488509d73e26352a152dcef683af371f6d99e66f0e7e9
+tags:
+- proto:http
+- product:lancom-systems
+- type:router
+- vendor:lancom
+references:
+- https://www.lancom-systems.com/
+version: 20260918T053418Z
