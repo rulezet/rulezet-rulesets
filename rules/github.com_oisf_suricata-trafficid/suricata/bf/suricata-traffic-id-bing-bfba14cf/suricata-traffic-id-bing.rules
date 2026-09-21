@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"SURICATA TRAFFIC-ID: bing"; tls_sni; content:"bing.com"; isdataat:!1,relative; flow:to_server,established; flowbits: set,traffic/id/bing; flowbits:set,traffic/label/search; noalert; sid:300000000; rev:1;)
