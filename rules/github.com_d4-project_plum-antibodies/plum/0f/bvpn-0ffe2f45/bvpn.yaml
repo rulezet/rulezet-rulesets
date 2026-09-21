@@ -1,0 +1,10 @@
+name: bvpn
+description: Detect BVPN
+uuid: c1b8d10b-5c7e-55a8-b84b-375322aa9959
+query: x509_subject.lk:bvpn.com
+tags:
+- proto:tls
+- product:bvpn
+- vendor:bvpn
+- type:vpn
+version: 20260918T053418Z
