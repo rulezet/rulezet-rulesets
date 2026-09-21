@@ -1,0 +1,9 @@
+name: netdata
+description: Detect NetData
+uuid: ac5a6bf6-366e-5415-b6b1-14e2114272d8
+query: http_favicon_mmhash:1302486561
+tags:
+- proto:http
+- product:netdata
+- vendor:netdata
+version: 20260918T053418Z
