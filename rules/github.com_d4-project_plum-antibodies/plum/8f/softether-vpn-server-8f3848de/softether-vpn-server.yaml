@@ -1,0 +1,10 @@
+name: softether-vpn-server
+description: Detect SoftEther VPN Server
+uuid: 45ad3665-6442-5c51-bfb1-9d5f74feb268
+query: http_title.bg:"SoftEther VPN Server"
+tags:
+- proto:http
+- type:vpn
+- product:softether_vpn
+- vendor:softether
+version: 20260918T053418Z
