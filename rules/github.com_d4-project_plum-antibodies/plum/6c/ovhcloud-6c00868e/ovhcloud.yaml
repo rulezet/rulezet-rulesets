@@ -1,0 +1,11 @@
+name: ovhcloud
+description: Detect OVHcloud
+uuid: bd5f8345-cb1e-5e62-a821-0f08abec739b
+query: http_server:ovhcloud
+tags:
+- proto:http
+- product:ovhcloud
+- vendor:ovh
+references:
+- https://www.ovhcloud.com/
+version: 20260918T053418Z
