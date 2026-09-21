@@ -1,0 +1,9 @@
+name: transparent-favicon
+description: Detect Transparent favicon
+uuid: 37fcf598-a128-59db-b36e-05f106f280d7
+query: http_favicon_mmhash:1274734426 OR http_favicon_md5:c6acedaff906029fc5455d9ec52c7f42
+  OR http_favicon_sha256:9deb629637088856fe61dc868bf40a7d21ed942e4117659f3d6c3408f59b906b
+tags:
+- proto:http
+- product:transparent-favicon
+version: 20260918T053418Z
