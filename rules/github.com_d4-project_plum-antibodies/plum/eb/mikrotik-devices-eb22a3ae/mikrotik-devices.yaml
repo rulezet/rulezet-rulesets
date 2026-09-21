@@ -1,0 +1,10 @@
+name: mikrotik-devices
+description: Detect Mikrotik Devices (router)
+uuid: 69269842-ec8e-534f-86db-635ce10a80fa
+query: http_title:routeros or http_favicon_mmhash:1482462538 or banner.lk:"ftp server
+  (mikrotik " or http_favicon_md5:199260FF00D27B811E41A06007CBCD96
+tags:
+- vendor:mikrotik
+- product:mikrotik-devices
+- type:router
+version: 20260918T053418Z
