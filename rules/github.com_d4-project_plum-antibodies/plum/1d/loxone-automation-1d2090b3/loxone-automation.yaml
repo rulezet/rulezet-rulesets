@@ -1,0 +1,14 @@
+name: loxone-automation
+description: Detect Loxone (Automation) (IoT)
+uuid: 81667bc0-cbd8-512c-b2e3-214f846863ca
+query: http_favicon_mmhash:904434662 OR http_favicon_mmhash:-807654563 OR http_favicon_md5:88ca1311f718055a9d912fbc958c3518
+  OR http_favicon_sha256:3367607cd7561c14fb3160bb68b7c33f830adbdf8b0657f065efc0ab98093235
+  OR http_title:Webinterface
+tags:
+- proto:http
+- product:loxone-automation
+- type:iot
+- vendor:loxone
+references:
+- https://www.loxone.com/frfr/
+version: 20260918T053418Z
