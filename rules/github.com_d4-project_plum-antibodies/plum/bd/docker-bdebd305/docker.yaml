@@ -1,0 +1,11 @@
+name: docker
+description: Detect Docker
+uuid: 6f7f018b-6251-5787-866e-d413d1e206ce
+query: http_favicon_mmhash:-1814887000 OR http_favicon_mmhash:1937209448
+tags:
+- proto:http
+- product:docker
+- vendor:docker
+references:
+- https://www.docker.com/
+version: 20260918T053418Z
