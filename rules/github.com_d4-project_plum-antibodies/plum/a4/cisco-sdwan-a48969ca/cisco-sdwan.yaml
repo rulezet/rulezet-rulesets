@@ -1,0 +1,11 @@
+name: cisco-sdwan
+description: Detect Cisco Catalyst SD-WAN
+uuid: 80db9b28-bd3b-5ef2-9e3f-8529cac8f62a
+query: http_favicon_md5:F5A68DB40594839CFC2696197608E2A3 OR http_title:"Cisco Catalyst
+  SD-WAN" OR x509_subject.lk:"Cisco SD-WAN" OR x509_issuer.lk:"Cisco SD-WAN"
+tags:
+- vendor:cisco
+- product:cisco-sd-wan
+references:
+- https://www.cisco.com/
+version: 20260918T053418Z
