@@ -1,0 +1,12 @@
+name: bartec-syscom-mr3000
+description: Detect BARTEC SYSCOM MR3000 (IoT)
+uuid: 35b9bc89-fa1c-5ccb-b75d-1246385f2480
+query: http_headval:www-authenticate.lk:"mr3000 webui"
+tags:
+- proto:http
+- product:mr3000
+- vendor:bartec-syscom
+- type:iot
+references:
+- https://www.syscom.ch/wp-content/uploads/Bartec-Syscom-Product-Line-Brochure.pdf
+version: 20260918T053418Z
