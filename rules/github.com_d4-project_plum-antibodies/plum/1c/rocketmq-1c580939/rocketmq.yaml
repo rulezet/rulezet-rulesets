@@ -1,0 +1,12 @@
+name: rocketmq
+description: Detect Apache RocketMQ (message queue)
+uuid: edcaf9a5-72d0-54a7-8ee8-f2140b570d6b
+query: http_headval:www-authenticate.lk:rocketmq
+tags:
+- proto:http
+- product:rocketmq
+- type:message-queue
+- vendor:apache
+references:
+- https://httpd.apache.org/
+version: 20260918T053418Z
