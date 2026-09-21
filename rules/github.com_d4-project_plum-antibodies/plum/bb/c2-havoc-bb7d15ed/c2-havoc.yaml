@@ -1,0 +1,10 @@
+name: c2-havoc
+description: Detect Havoc C2 certificate
+uuid: a155d358-8f0b-549e-ad8b-8df5730469bf
+query: x509_subject.lk:"postalCode=3540"
+tags:
+- proto:tls
+- product:havoc
+- vendor:havoc
+- type:c2
+version: 20260918T053418Z
