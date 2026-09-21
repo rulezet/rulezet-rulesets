@@ -1,0 +1,10 @@
+name: campbell-cr1000x
+description: Detect Campbell Scientific CR1000X (datalogger)
+uuid: e93ef79e-9baf-5488-83d9-b28355998e8b
+query: http_headval:www-authenticate.lk:cr1000x
+tags:
+- proto:http
+- product:cr1000x
+- type:datalogger
+- vendor:campbell-scientific
+version: 20260918T053418Z
