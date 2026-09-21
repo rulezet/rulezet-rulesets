@@ -1,0 +1,9 @@
+name: keyhelp-keyweb-ag
+description: Detect KeyHelp (Keyweb AG)
+uuid: 49d357c6-8f71-5663-bf45-368f472fec59
+query: http_favicon_mmhash:-1267819858 OR http_favicon_mmhash:726817668
+tags:
+- proto:http
+- product:keyhelp-keyweb-ag
+- vendor:keyhelp
+version: 20260918T053418Z
