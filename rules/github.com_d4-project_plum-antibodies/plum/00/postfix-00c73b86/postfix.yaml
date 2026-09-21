@@ -1,0 +1,10 @@
+name: postfix
+description: Detect Postfix SMTP server
+uuid: 4c2713e3-2d24-59b9-9c16-18554ef01f64
+query: banner.bg:220 AND banner.lk:"esmtp postfix"
+tags:
+- proto:smtp
+- product:postfix
+references:
+- https://www.postfix.org/
+version: 20260918T053418Z
