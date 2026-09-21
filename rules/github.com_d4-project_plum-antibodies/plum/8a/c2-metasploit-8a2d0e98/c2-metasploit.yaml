@@ -1,0 +1,10 @@
+name: c2-metasploit
+description: Detect Metasploit C2 certificate
+uuid: 89174e92-95bf-5fe1-b4bc-1b30c7bd3f0a
+query: x509_issuer_cn:"MetasploitSelfSignedCA"
+tags:
+- proto:tls
+- product:metasploit
+- vendor:rapid7
+- type:c2
+version: 20260918T053418Z
