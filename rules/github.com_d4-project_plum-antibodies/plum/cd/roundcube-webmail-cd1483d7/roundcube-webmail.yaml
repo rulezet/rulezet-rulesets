@@ -1,0 +1,10 @@
+name: roundcube-webmail
+description: Detect Roundcube Webmail
+uuid: 142e5207-410b-57a5-8922-c7a3b25d1839
+query: http_favicon_mmhash:-976235259 OR http_favicon_mmhash:-2140379067 OR http_favicon_mmhash:-1754690812
+  OR http_favicon_md5:924a68d347c80d0e502157e83812bb23 OR http_favicon_sha256:7b30e499996ec4631848d3509d803d9311f5d71999212f2f4c1ca7af8f24eb69
+tags:
+- proto:http
+- product:roundcube-webmail
+- vendor:roundcube
+version: 20260918T053418Z
