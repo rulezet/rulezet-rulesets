@@ -1,0 +1,5 @@
+# AT related malicious URL (url9037.cardpage.com/ls/click?upn=u001.E7aBs1DfxRdvlL707ZpwyD1Fs20TOVWZlVNQ6XqlJAFao8Z5qyNNz49LX0mpG0qG7U4dfWDiqBVV7nRL3Du1QrSPF2mhCnvRgsElLjB7KA9jgYAFTCMQicnyfjIBxw03KzNt_2Tkbd9ccQQ6ZoBssDz3hZ3CqQz35-2F3O0rCoTpBH54EYve5U4PP1q4RMGLJa3JdvsLIP08krbSrOAAnYNUyrQlRT-2Baq-2B25S4MuNrdvhOauOoiCyPX8k6k-2FOralmfoxfY8k2PLyE9QY42Q3GDL1yT9hv01c78c32-2Bnv2EmkrUQL2p2pXOqiUwKqBEeTVpxI9qEHXOZGSxMP55hNTSWW-2F4cDg-3D-3D)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/766569)
+
+Rulezet UUID: `240b7a0a-a930-4d49-9543-2af15b7470a5`
