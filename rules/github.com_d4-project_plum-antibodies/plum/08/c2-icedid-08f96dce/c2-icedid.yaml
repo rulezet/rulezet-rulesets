@@ -1,0 +1,10 @@
+name: c2-icedid
+description: Detect IcedID C2 certificate
+uuid: 3a4a0a51-9ee5-5458-af06-cecae1df3cec
+query: x509_subject.lk:"O=Internet Widgits Pty Ltd, ST=Some-State, C=AU, CN=localhost"
+tags:
+- proto:tls
+- product:icedid
+- vendor:icedid
+- type:c2
+version: 20260918T053418Z
