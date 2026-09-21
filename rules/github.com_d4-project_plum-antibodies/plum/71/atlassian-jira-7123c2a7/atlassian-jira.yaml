@@ -1,0 +1,11 @@
+name: atlassian-jira
+description: Detect Atlassian - JIRA
+uuid: bb226460-8e5c-52ad-a2e0-ddd9de8425f4
+query: http_favicon_mmhash:981867722 OR http_favicon_mmhash:552727997 OR http_favicon_mmhash:-1581907337
+tags:
+- proto:http
+- product:atlassian-jira
+- vendor:atlassian
+references:
+- https://www.atlassian.com/
+version: 20260918T053418Z
