@@ -1,0 +1,10 @@
+name: zyxel-usg20
+description: Detect Zyxel USG20 firewall
+uuid: cec18fea-89c1-57c8-866b-900085e48680
+query: banner.lk:"ftp server (usg20" OR http_title.lk:usg20-vpn
+tags:
+- vendor:firewall
+- vendor:zyxel
+- vendor:usg20w
+- product:zyxel-usg20-firewall
+version: 20260918T053418Z
