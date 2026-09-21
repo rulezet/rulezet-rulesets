@@ -1,0 +1,5 @@
+# AT related malicious URL (yandex.ru/showcaptchafast?d=752144B77E0842C9656E9B7D50A24F917A19B477A051DC31E24AB3B44D6E7E858EAAD74874F8BAC218748AD87F38C7302B58CF5A63&retpath=aHR0cHM6Ly95YW5kZXgucnUvc2VhcmNoP3RleHQ9MjExNjg3MTc%2C_0da48103bf7b41c958987253950084f5&s=3661de7eef7eba49edd9e4bdbfb08bec)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/751472)
+
+Rulezet UUID: `37c2e672-7e4a-4e2c-b88b-0a7e6ef45e39`
