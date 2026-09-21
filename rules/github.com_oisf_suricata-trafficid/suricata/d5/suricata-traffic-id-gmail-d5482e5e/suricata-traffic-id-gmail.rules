@@ -1,0 +1,1 @@
+alert tls any any -> any [993] (msg:"SURICATA TRAFFIC-ID: gmail"; tls_sni; content:"pop.gmail.com"; isdataat:!1,relative; flow:to_server,established; flowbits: set,traffic/id/gmail; flowbits:set,traffic/label/mail; flowbits:set,traffic/label/pop3; noalert; sid:300000007; rev:1;)
