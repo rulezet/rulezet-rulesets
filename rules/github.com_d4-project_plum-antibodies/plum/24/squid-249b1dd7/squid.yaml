@@ -1,0 +1,10 @@
+name: squid
+description: Detect Squid
+uuid: 2c0e5e83-c1ff-54fd-96df-d4bbfdf957b4
+query: http_Server.lk:squid or http_favicon_md5:A967C8BFDE9EA0869637294B679B7251
+tags:
+- proto:http
+- product:squid
+- product:proxy
+- vendor:squid
+version: 20260918T053418Z

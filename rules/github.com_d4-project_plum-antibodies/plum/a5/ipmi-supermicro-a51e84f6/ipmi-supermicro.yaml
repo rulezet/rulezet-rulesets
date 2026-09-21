@@ -1,0 +1,9 @@
+name: ipmi-supermicro
+description: Detect IPMI Supermicro
+uuid: c3505121-a4fe-5cbf-be88-8c14d881fc88
+query: x509_issuer.lk:IPMI
+tags:
+- proto:tls
+- vendor:supervision
+- product:ipmi
+version: 20260918T053418Z

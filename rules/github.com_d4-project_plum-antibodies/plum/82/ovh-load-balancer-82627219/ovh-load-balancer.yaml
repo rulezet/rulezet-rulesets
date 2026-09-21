@@ -1,0 +1,12 @@
+name: ovh-load-balancer
+description: Detect OVH Load Balancer
+uuid: 8768d35c-1833-4cc6-845e-32c3a7acc2c6
+query: http_header:x-iplb-request-id AND http_header:x-iplb-instance
+tags:
+- proto:http
+- product:ovh-load-balancer
+- type:slb
+- vendor:ovh
+references:
+- https://http.dev/x-iplb-request-id
+version: 20260918T061414Z

@@ -1,0 +1,15 @@
+name: owa
+description: Detect Outlook Web Access (webmail)
+uuid: 0d65b2fd-8cfd-56bf-8f56-76b0a047bd2b
+query: http_favicon_mmhash:1768726119 OR http_favicon_mmhash:1356662359 OR http_title.lk:"/owa/auth/"
+  OR http_favicon_mmhash:-330653729 OR http_favicon_md5:A1EADAF7974E7CE9889A5D7A07844590
+  OR http_favicon_mmhash:442749392 OR http_favicon_md5:759fade9033aa298629e4b000dcd6dde
+  OR http_favicon_sha256:cf0808a61ec571e0c4975663903b288009d55502ac0445d9948983b339a5cf6e
+  OR http_header:x-owa-version
+tags:
+- proto:http
+- product:owa
+- type:webmail
+- vendor:windows
+- product:outlook
+version: 20260918T053418Z

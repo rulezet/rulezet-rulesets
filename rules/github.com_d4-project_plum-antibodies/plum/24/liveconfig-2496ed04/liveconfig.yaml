@@ -1,0 +1,14 @@
+name: liveconfig
+description: Detect LiveConfig
+uuid: ebfb49d4-854c-5b21-9387-b166dde1d123
+query: http_title:"LiveConfig - Login" OR http_favicon_mmhash:-50934878 OR http_favicon_md5:219235d8f35c0852ce6d2a3783b9cf10
+  OR http_favicon_sha256:fe36549958231cff9af8f794d7945b48982e1383492d15e60603cd4acca8e6d6
+  OR x509_subject_cn:LiveConfig OR x509_issuer_cn:LiveConfig OR http_favicon_mmhash:1632680057
+  OR http_favicon_md5:2b90fa10169ba91c8ae0c891081ecff8 OR http_favicon_sha256:5e66a662b785ebb55972b2c45f161f8f5878ff166a9c18e9df7776e1e6adc406
+tags:
+- proto:http
+- product:liveconfig
+- vendor:liveconfig
+references:
+- https://www.liveconfig.com/en/
+version: 20260918T053418Z

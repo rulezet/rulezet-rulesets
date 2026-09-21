@@ -1,0 +1,9 @@
+name: tp-link-network-device
+description: Detect TP-LINK (Network Device)
+uuid: b4749386-636b-5c55-bb4b-aea7b0057dc4
+query: http_favicon_mmhash:1842351293 OR http_favicon_mmhash:1274078387
+tags:
+- proto:http
+- product:tp-link-network-device
+- vendor:tp-link
+version: 20260918T053418Z

@@ -1,0 +1,10 @@
+name: fireeye
+description: Detect FireEye
+uuid: 0e058bb9-36f6-54cf-95e5-d19c71949f8c
+query: http_favicon_mmhash:95271369 OR http_favicon_mmhash:1476335317 OR http_favicon_mmhash:-842192932
+  OR http_favicon_mmhash:105083909 OR http_favicon_mmhash:240606739 OR http_favicon_mmhash:2121539357
+tags:
+- proto:http
+- product:fireeye
+- vendor:fireeye
+version: 20260918T053418Z

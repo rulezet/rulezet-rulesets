@@ -1,0 +1,8 @@
+name: rtsp
+description: Detect RTSP protocol
+uuid: a4e37d77-c10f-5fd7-9944-112d70880280
+query: 'banner.bg:"rtsp/1.0" OR banner.lk:"allow: options, describe, setup, teardown,
+  play"'
+tags:
+- proto:rtsp
+version: 20260918T053418Z

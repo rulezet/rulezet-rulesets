@@ -1,0 +1,10 @@
+name: c2-bitrat
+description: Detect BitRAT C2 certificate
+uuid: 8f0e973b-baaa-59ad-9fcd-b7a855cb4244
+query: x509_issuer_cn:"BitRAT"
+tags:
+- proto:tls
+- product:bitrat
+- vendor:bitrat
+- type:c2
+version: 20260918T053418Z

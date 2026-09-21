@@ -1,0 +1,11 @@
+name: qnap-nas-virtualization-s
+description: Detect QNAP NAS Virtualization Station
+uuid: 723c46d4-57f1-57f7-9176-8a6d239ca74d
+query: http_favicon_mmhash:-1041180225
+tags:
+- proto:http
+- product:qnap-nas-virtualization-station
+- vendor:qnap
+references:
+- https://www.qnap.com/
+version: 20260918T053418Z

@@ -1,0 +1,11 @@
+name: ibm-notes
+description: Detect IBM Notes
+uuid: 7a4d37bf-27bb-51fa-b414-e85c1a88dde7
+query: http_favicon_mmhash:728788645
+tags:
+- proto:http
+- product:ibm-notes
+- vendor:ibm
+references:
+- https://www.ibm.com/
+version: 20260918T053418Z

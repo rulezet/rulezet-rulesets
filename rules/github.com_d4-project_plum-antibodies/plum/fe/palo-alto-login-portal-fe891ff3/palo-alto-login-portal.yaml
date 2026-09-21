@@ -1,0 +1,9 @@
+name: palo-alto-login-portal
+description: Detect Palo Alto Login Portal
+uuid: f3df8054-633d-5ccb-9a70-877777c827b3
+query: http_favicon_mmhash:602431586
+tags:
+- proto:http
+- product:palo-alto-login-portal
+- vendor:palo
+version: 20260918T053418Z

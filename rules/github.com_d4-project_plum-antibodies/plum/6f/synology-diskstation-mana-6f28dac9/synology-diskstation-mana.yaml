@@ -1,0 +1,11 @@
+name: synology-diskstation-mana
+description: Detect Synology DiskStation Manager
+uuid: 84353664-8b9d-50c8-abaa-1b457cf92735
+query: http_favicon_md5:C60EA375C39D1AB273C4D1BEE717287A
+tags:
+- proto:http
+- product:synology-diskstation-manager
+- vendor:synology
+references:
+- https://www.synology.com/
+version: 20260918T053418Z

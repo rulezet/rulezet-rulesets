@@ -1,0 +1,11 @@
+name: google-web-server
+description: Detect Google Web Server
+uuid: 97a31923-0572-5682-930b-de4c5b24cfed
+query: http_server:gws OR http_favicon_md5:09B565A51E14B721A323F0BA44B2982A
+tags:
+- proto:http
+- product:google-web-server
+- vendor:google
+references:
+- https://cloud.google.com/
+version: 20260918T053418Z

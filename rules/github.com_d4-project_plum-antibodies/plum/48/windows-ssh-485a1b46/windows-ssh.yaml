@@ -1,0 +1,9 @@
+name: windows-ssh
+description: Detect Windows OpenSSH
+uuid: d7ef4aa3-f026-59af-8d7b-8b7c51e42020
+query: banner.bg:ssh-2.0-openssh_for_windows_
+tags:
+- vendor:windows
+- proto:ssh
+- product:openssh
+version: 20260918T053418Z

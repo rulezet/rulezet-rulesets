@@ -1,0 +1,9 @@
+name: php-info
+description: Detect PHP Info
+uuid: 36b1dd26-35f0-5a90-b495-44f03d06caf9
+query: http_title.lk:phpinfo()
+tags:
+- proto:http
+- vuln:phpinfo
+- lang:php
+version: 20260918T053418Z

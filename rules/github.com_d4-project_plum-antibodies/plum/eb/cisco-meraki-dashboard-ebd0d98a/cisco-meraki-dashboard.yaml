@@ -1,0 +1,11 @@
+name: cisco-meraki-dashboard
+description: Detect Cisco Meraki Dashboard
+uuid: a8451ab2-9465-5794-9fae-db864e971804
+query: http_favicon_mmhash:804949239
+tags:
+- proto:http
+- vendor:cisco
+- product:meraki-dashboard
+references:
+- https://www.cisco.com/
+version: 20260918T053418Z

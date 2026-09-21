@@ -1,0 +1,18 @@
+name: wordpress
+description: Detect Wordpress (CMS)
+uuid: aa556678-187d-508f-82f8-0255355e6758
+query: http_favicon_md5:B231AD66A2A9B0EB06F72C4C88973039 OR http_favicon_md5:D5FE5CBCC31CFF5F8AC010DB72EB000C
+  OR http_favicon_md5:FA54DBF2F61BD2E0188E47F5F578F736 OR http_headval:x-redirect-by.bg:wordpress
+  OR http_headval:x-powered-by.bg:wordpress OR http_favicon_mmhash:530492348 OR http_favicon_md5:dcab89b8e04bf53fcd7f6a44a8cb4fae
+  OR http_favicon_sha256:c965a500f698483526faf92ac286047cecd825608cd1d83276de392b30a13a83
+  OR http_favicon_mmhash:1198047028 OR http_favicon_md5:000bf649cc8f6bf27cfb04d1bcdcd3c7
+  OR http_favicon_sha256:6bdb369337ac2496761c6f063bffea0aa6a91d4662279c399071a468251f51f0
+tags:
+- proto:http
+- lang:php
+- product:wordpress
+- type:cms
+- vendor:wordpress
+references:
+- https://wordpress.org/
+version: 20260918T053418Z

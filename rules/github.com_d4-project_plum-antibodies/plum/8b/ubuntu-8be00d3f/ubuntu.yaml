@@ -1,0 +1,9 @@
+name: ubuntu
+description: Detect Ubuntu
+uuid: 3b2a5074-2d3c-534b-a7b8-7e576d7745a7
+query: banner.bg:ssh-2.0-openssh AND banner.lk:ubuntu OR http_headval:x-powered-by.lk:ubuntu
+  OR banner.lk:esmtp AND banner.lk:"(ubuntu)"
+tags:
+- vendor:ubuntu
+- product:ubuntu
+version: 20260918T053418Z

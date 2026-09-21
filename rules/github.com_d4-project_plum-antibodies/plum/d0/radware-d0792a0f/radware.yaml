@@ -1,0 +1,10 @@
+name: radware
+description: Detect Radware (firewall)
+uuid: 13ba27e2-ce6e-5efa-9096-e298a403db13
+query: http_headval:www-authenticate.lk:radware
+tags:
+- proto:http
+- product:radware
+- type:firewall
+- vendor:radware
+version: 20260918T053418Z

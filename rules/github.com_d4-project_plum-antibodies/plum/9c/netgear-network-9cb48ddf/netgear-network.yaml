@@ -1,0 +1,11 @@
+name: netgear-network
+description: Detect Netgear (Network)
+uuid: 9b104c55-a039-5442-bd5c-ba615aae033d
+query: http_favicon_mmhash:1047213685
+tags:
+- proto:http
+- product:netgear-network
+- vendor:netgear
+references:
+- https://www.netgear.com/
+version: 20260918T053418Z

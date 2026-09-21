@@ -1,0 +1,8 @@
+name: python
+description: Detect Python Language
+uuid: b168cde0-d9cd-5775-9801-44b38a70e5cd
+query: http_server.lk:python/ OR http_server.lk:werkzeug/ OR http_server.bg:wisp-server-python
+tags:
+- proto:http
+- lang:python
+version: 20260918T053418Z

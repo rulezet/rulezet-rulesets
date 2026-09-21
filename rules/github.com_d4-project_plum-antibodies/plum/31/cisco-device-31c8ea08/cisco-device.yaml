@@ -1,0 +1,10 @@
+name: cisco-device
+description: Detect Cisco Device
+uuid: 33166b51-9d23-53b1-8510-dfcdf8df5f8b
+query: banner.lk:-cisco-
+tags:
+- vendor:cisco
+- product:cisco-device
+references:
+- https://www.cisco.com/
+version: 20260918T053418Z

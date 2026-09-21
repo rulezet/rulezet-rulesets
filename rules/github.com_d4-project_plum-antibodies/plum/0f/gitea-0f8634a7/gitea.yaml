@@ -1,0 +1,10 @@
+name: gitea
+description: Detect Gitea
+uuid: 3442982a-8127-543c-9604-ebd53339cfeb
+query: 'http_favicon_mmhash:1969970750 OR http_title.lk:"Gitea: Git with a cup of
+  tea"'
+tags:
+- proto:http
+- product:gitea
+- vendor:gitea
+version: 20260918T053418Z

@@ -1,0 +1,15 @@
+name: cisco-router
+description: Detect Cisco Router
+uuid: bb0cf18e-cb95-5d85-8b8c-93a73de49eda
+query: http_favicon_mmhash:-299287097 OR http_headval:www-authenticate:'Basic realm="level_15_access"'
+  OR http_headval:www-authenticate:'Basic realm="level_15 or view_access"' OR http_server:cisco-IOS
+tags:
+- proto:http
+- vendor:cisco
+- type:router
+- product:cisco-router
+- product:ios
+- cpe:cisco:ios
+references:
+- https://www.cisco.com/
+version: 20260918T053418Z

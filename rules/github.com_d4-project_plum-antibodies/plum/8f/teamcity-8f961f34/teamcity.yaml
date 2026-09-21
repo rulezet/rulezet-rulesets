@@ -1,0 +1,9 @@
+name: teamcity
+description: Detect TeamCity
+uuid: b6718f00-4025-51ca-972f-2737c442c760
+query: http_favicon_mmhash:-1944119648 OR http_header:teamcity-node-id OR http_favicon_md5:cee18e28257988b40028043e65a6c2a3
+tags:
+- proto:http
+- product:teamcity
+- vendor:teamcity
+version: 20260918T053418Z

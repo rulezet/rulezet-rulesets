@@ -1,0 +1,9 @@
+name: hostmonster-web-hosting-4
+description: Detect HostMonster web hosting
+uuid: 30d91199-ae5c-58d7-9d8a-bf19aa1e0a5a
+query: http_favicon_md5:4EE75CA12A52425B9514EE6DE25D23FE OR http_favicon_mmhash:-972810761
+tags:
+- proto:http
+- product:hostmonster-web-hosting
+- vendor:hostmonster
+version: 20260918T053418Z

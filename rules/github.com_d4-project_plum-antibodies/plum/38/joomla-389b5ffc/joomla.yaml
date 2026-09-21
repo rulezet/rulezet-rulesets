@@ -1,0 +1,12 @@
+name: joomla
+description: Detect Joomla (CMS)
+uuid: 67ac1463-0852-5175-81c5-050feb95ff6a
+query: http_favicon_mmhash:1627330242 OR http_favicon_mmhash:-1950415971 OR http_favicon_mmhash:366524387
+  OR http_favicon_md5:63B982EDDD64D44233BAA25066DB6BC1 OR http_headval:x-content-encoded-by.bg:joomla
+tags:
+- proto:http
+- product:joomla
+- type:cms
+- lang:php
+- vendor:joomla
+version: 20260918T053418Z

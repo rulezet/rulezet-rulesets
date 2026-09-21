@@ -1,0 +1,9 @@
+name: openmediavault-nas
+description: Detect openmediavault (NAS)
+uuid: 8c99fd7a-be1a-5184-ae52-14678247ef54
+query: http_favicon_mmhash:-693082538
+tags:
+- proto:http
+- product:openmediavault-nas
+- vendor:openmediavault
+version: 20260918T053418Z

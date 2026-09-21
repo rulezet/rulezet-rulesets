@@ -1,0 +1,11 @@
+name: netskope-borderless-sdwan
+description: Detect Netskope Borderless SD-WAN
+uuid: 834874ec-3673-5146-b7ba-b7cb8177e65f
+query: x509_issuer.bg:"Netskope Borderless SD-WAN Root" OR x509_issuer.bg:"Netskope
+  Inc." OR x509_issuer.bg:"Borderless SD-WAN"
+tags:
+- proto:tls
+- product:netskope
+- product:sd-wan
+- vendor:netskope
+version: 20260918T053418Z

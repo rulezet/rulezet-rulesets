@@ -1,0 +1,11 @@
+name: fritzbox
+description: Detect FRITZ!Box (router)
+uuid: 3e4d3ccd-435d-534c-8e52-1391e30d26dd
+query: 'http_favicon_md5:45210ACE96CE9C893F8C27C5DECAB10D OR http_favicon_mmhash:-219752612
+  OR banner.lk:"user-agent: fritz!os" OR banner.begin:"fritz!boxfonwlan7390 ftp server"
+  OR banner.lk:"user-agent: avm fritz!bo" OR http_title.bg:"fritz!box" OR x509_san.lk:"dns:fritzbox.internal"'
+tags:
+- vendor:avm
+- product:Fritz!Box
+- type:router
+version: 20260918T053418Z

@@ -1,0 +1,11 @@
+name: microsoft-httpapi
+description: Detect Microsoft HTTPAPI
+uuid: 05d1f5a9-62d6-5315-9d00-c1e92f144ce7
+query: http_server.bg:microsoft-httpapi
+tags:
+- proto:http
+- product:microsoft-httpapi
+- vendor:microsoft
+references:
+- https://learn.microsoft.com/en-us/windows/win32/http/http-api-version-2-0
+version: 20260918T053418Z

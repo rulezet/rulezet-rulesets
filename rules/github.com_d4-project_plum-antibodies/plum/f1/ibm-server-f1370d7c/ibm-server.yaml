@@ -1,0 +1,11 @@
+name: ibm-server
+description: Detect IBM Server
+uuid: 727884d3-72ae-5cb7-98b4-2af40c03c52b
+query: http_favicon_mmhash:1726027799
+tags:
+- proto:http
+- product:ibm-server
+- vendor:ibm
+references:
+- https://www.ibm.com/
+version: 20260918T053418Z

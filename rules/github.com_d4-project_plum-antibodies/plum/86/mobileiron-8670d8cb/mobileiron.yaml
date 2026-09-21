@@ -1,0 +1,10 @@
+name: mobileiron
+description: Detect MobileIron
+uuid: 57cec383-e8cd-5d52-be91-0bb9d15470f5
+query: http_favicon_mmhash:545827989 OR http_favicon_mmhash:967636089 OR http_favicon_mmhash:362091310
+  OR http_favicon_mmhash:2086228042
+tags:
+- proto:http
+- product:mobileiron
+- vendor:mobileiron
+version: 20260918T053418Z

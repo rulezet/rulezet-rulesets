@@ -1,0 +1,10 @@
+name: c2-gozi
+description: Detect Gozi C2 certificate
+uuid: 05e2fa29-494b-5a4b-a0ab-1f29fab5489b
+query: x509_issuer.lk:"CN=*, OU=1, O=1, L=1, ST=1, C=XX"
+tags:
+- proto:tls
+- product:gozi
+- vendor:gozi
+- type:c2
+version: 20260918T053418Z

@@ -1,0 +1,8 @@
+name: ftp-welcome
+description: Detect FTP generic welcome banner
+uuid: f690b60f-656e-5a2d-b54e-2927e86b5576
+query: banner.bg:"220 welcome" AND banner.lk:"ftp server" OR banner.bg:"220 welcome"
+  AND banner.lk:"ftp service" OR banner.bg:220 AND banner.lk:"ftp server ready."
+tags:
+- proto:ftp
+version: 20260918T053418Z

@@ -1,0 +1,9 @@
+name: microsoft-smtp-gateway
+description: Detect Microsoft SMTP mail gateway
+uuid: 99d87088-81fc-5f21-90c1-a371834d0692
+query: banner.lk:"microsoft esmtp mail"
+tags:
+- proto:smtp
+- vendor:windows
+- product:smtp
+version: 20260918T053418Z

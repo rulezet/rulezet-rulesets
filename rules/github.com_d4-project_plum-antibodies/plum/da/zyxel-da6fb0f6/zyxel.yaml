@@ -1,0 +1,11 @@
+name: zyxel
+description: Detect ZyXEL
+uuid: bc4a61b6-8b4a-5b40-9ba9-848847ebf5d1
+query: http_favicon_mmhash:943925975
+tags:
+- proto:http
+- vendor:zyxel
+- product:zyxel
+references:
+- https://www.zyxel.com/
+version: 20260918T053418Z

@@ -1,0 +1,10 @@
+name: ubiquiti-airos-6dcab71e
+description: Detect Ubiquiti AirOS
+uuid: 23fa4798-ee60-5ba1-9662-5aba61443a65
+query: http_favicon_md5:6DCAB71E60F0242907940F0FCDA69EA5 OR http_favicon_mmhash:-697231354
+  OR http_favicon_mmhash:1020814938
+tags:
+- proto:http
+- product:ubiquiti-airos
+- vendor:ubiquiti
+version: 20260918T053418Z

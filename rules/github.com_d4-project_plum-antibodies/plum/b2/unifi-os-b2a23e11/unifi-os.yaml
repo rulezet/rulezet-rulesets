@@ -1,0 +1,11 @@
+name: unifi-os
+description: Detect UniFi OS
+uuid: 58fee865-5b11-5b07-90e0-64e433f84a02
+query: http_title:"UniFi OS" OR http_favicon_mmhash:390404864 OR http_favicon_md5:9fe014bbdbd4d12c3312fcbc41b0c436
+  OR http_favicon_sha256:855a496dc686ff415a8f88ae1c56de76c5ee663a7866507c7f10f3f9bf186d6b
+  OR x509_subject_cn:unifi.local OR x509_issuer_cn:unifi.local
+tags:
+- proto:http
+- product:unifi-os
+- vendor:unifi
+version: 20260918T053418Z

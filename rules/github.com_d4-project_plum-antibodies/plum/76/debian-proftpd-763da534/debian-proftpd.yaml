@@ -1,0 +1,9 @@
+name: debian-proftpd
+description: Detect Debian ProFTPD FTP server
+uuid: b1f02122-327c-5081-a451-37b7382c426b
+query: banner.bg:"220 proftpd" AND banner.lk:server AND banner.lk:debian
+tags:
+- vendor:debian
+- proto:ftp
+- product:proftpd
+version: 20260918T053418Z

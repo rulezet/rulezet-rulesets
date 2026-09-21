@@ -1,0 +1,10 @@
+name: c2-sliver
+description: Detect Sliver C2 certificate
+uuid: cef6b11c-8a7d-5af2-9eb3-3168ffc38bee
+query: x509_issuer_cn:"operators" AND x509_subject.lk:"CN=multiplayer"
+tags:
+- proto:tls
+- product:sliver
+- vendor:sliver
+- type:c2
+version: 20260918T053418Z

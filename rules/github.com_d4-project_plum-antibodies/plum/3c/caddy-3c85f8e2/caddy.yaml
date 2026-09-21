@@ -1,0 +1,11 @@
+name: caddy
+description: Detect Caddy
+uuid: 498aff7f-8167-5106-9d79-82ee5c758599
+query: http_server:caddy
+tags:
+- proto:http
+- product:caddy
+- vendor:caddy
+references:
+- https://caddyserver.com/
+version: 20260918T053418Z

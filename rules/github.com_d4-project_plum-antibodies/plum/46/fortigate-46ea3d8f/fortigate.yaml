@@ -1,0 +1,13 @@
+name: fortigate
+description: Detect FortiGate (firewall)
+uuid: f7e104bc-5bb6-5e3d-b4f4-49ef7005c78c
+query: x509_subject.bg:FG OR x509_subject.lk:fortigate OR x509_issuer.bg:fortinet
+  OR http_title.lk:fortigate OR http_etag.bg:"83-6"
+tags:
+- product:fortigate
+- vendor:fortinet
+- type:firewall
+references:
+- https://www.fortinet.com/
+- https://www.fortinet.com/fr/products/next-generation-firewall
+version: 20260918T053418Z

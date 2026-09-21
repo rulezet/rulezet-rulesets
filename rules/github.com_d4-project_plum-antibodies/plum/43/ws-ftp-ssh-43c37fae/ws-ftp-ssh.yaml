@@ -1,0 +1,10 @@
+name: ws-ftp-ssh
+description: Detect WS_FTP SSH
+uuid: cd2779b7-ac64-5cc9-b86c-03efbda57517
+query: banner.bg:ssh-2.0-ws_ftp-ssh_
+tags:
+- product:ws-ftp
+- proto:ssh
+- product:sftp
+- vendor:ipswitch
+version: 20260918T053418Z

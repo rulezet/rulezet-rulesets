@@ -1,0 +1,14 @@
+name: mysql
+description: Detect MySQL
+uuid: e5347d76-dc17-5e57-a0c6-0ae5e4c8bd41
+query: banner.bg:"J\x00\x00\x00\x0A" AND banner.lk:"this MySQL server" OR banner.bg:"G\x00\x00\x00\xFF"
+  AND banner.lk:"this MySQL server" OR banner.bg:"I\x00\x00\x00\x0A" OR banner.lk:"\x00mysql_native_password"
+  OR banner.lk:"is not allowed to connect to this MySQL server"
+tags:
+- proto:sql
+- product:database
+- product:mysql
+- vendor:mysql
+references:
+- https://www.mysql.com/
+version: 20260918T053418Z

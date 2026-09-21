@@ -1,0 +1,12 @@
+name: apache-linux
+description: Detect Apache on Linux
+uuid: bf794508-afa5-5cc2-bf7b-85a00f921bcd
+query: http_favicon_md5:FF2C8612B75B5F9A6175E016FE4AA609
+tags:
+- proto:http
+- product:httpd
+- type:linux
+- vendor:apache
+references:
+- https://httpd.apache.org/
+version: 20260918T053418Z

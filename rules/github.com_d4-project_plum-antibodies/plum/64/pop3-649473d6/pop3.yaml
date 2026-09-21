@@ -1,0 +1,9 @@
+name: pop3
+description: Detect POP3 server
+uuid: bc64e454-0688-4075-917d-25920d67f325
+query: banner:"+OK Hello there."
+tags:
+- proto:pop3
+references:
+- https://www.rfc-editor.org/rfc/rfc1939
+version: 20260918T073118Z

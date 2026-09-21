@@ -1,0 +1,11 @@
+name: zabbix
+description: Detect Zabbix
+uuid: 61b0fb87-a5f8-5656-add5-a5100101d3a0
+query: http_favicon_mmhash:892542951
+tags:
+- proto:http
+- product:zabbix
+- vendor:zabbix
+references:
+- https://www.zabbix.com/
+version: 20260918T053418Z

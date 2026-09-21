@@ -1,0 +1,11 @@
+name: jenkins
+description: Detect Jenkins
+uuid: 59c19b2c-fd82-5d64-ac3c-b0309bff1b3e
+query: http_favicon_mmhash:81586312
+tags:
+- proto:http
+- product:jenkins
+- vendor:jenkins
+references:
+- https://www.jenkins.io/
+version: 20260918T053418Z

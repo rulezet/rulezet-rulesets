@@ -1,0 +1,11 @@
+name: exim
+description: Detect Exim SMTP server
+uuid: f300e011-4ced-51ee-839c-f51de57407b9
+query: banner.bg:220 AND banner.lk:esmtp AND banner.lk:exim
+tags:
+- proto:smtp
+- vendor:exim
+- product:exim
+references:
+- https://www.exim.org/
+version: 20260918T053418Z

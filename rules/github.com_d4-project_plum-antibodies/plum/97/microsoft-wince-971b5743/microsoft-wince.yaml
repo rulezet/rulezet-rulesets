@@ -1,0 +1,11 @@
+name: microsoft-wince
+description: Detect Microsoft Windows CE
+uuid: 46863a26-a7b1-54d8-8c9b-bd12f5f5750e
+query: http_server.bg:microsoft-wince
+tags:
+- proto:http
+- product:windows-ce
+- vendor:microsoft
+references:
+- https://learn.microsoft.com/en-us/lifecycle/products/windows-embedded-ce-60
+version: 20260918T053418Z

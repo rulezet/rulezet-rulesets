@@ -1,0 +1,9 @@
+name: windows-generic
+description: Detect Windows
+uuid: ec9dc89a-450e-505b-9dbc-1cc210138468
+query: http_server.lk:(Win64) or http_server.bg:microsoft-iis
+tags:
+- proto:http
+- vendor:windows
+- product:windows
+version: 20260918T053418Z

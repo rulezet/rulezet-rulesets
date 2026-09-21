@@ -1,0 +1,9 @@
+name: proftpd
+description: Detect ProFTPD FTP server
+uuid: 99e7f9ca-43fc-5de1-81b4-05ac51789b02
+query: banner.bg:"220 proftpd " AND banner.lk:server
+tags:
+- proto:ftp
+- product:proftpd
+- vendor:proftpd
+version: 20260918T053418Z

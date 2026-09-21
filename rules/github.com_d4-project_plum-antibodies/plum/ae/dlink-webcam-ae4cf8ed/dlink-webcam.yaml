@@ -1,0 +1,17 @@
+name: dlink-webcam
+description: Detect Dlink Webcam (camera)
+uuid: fbe831d6-d247-5666-9943-cd3a7ee13801
+query: http_favicon_mmhash:31972968 OR http_favicon_mmhash:-1354933624 OR http_favicon_mmhash:1221759509
+  OR http_favicon_mmhash:1144925962 OR http_headval:www-authenticate.lk:dcs-2332l
+  OR http_headval:www-authenticate.lk:dcs-2670l OR http_headval:www-authenticate.lk:dcs-5000l_67
+  OR http_headval:www-authenticate.lk:dcs-5000l_6c OR http_headval:www-authenticate.lk:dcs-5009l_b5
+  OR http_headval:www-authenticate.lk:dcs-5009l_e6 OR http_headval:www-authenticate.lk:dcs-5010l_3b
+  OR http_headval:www-authenticate.lk:dcs-5020l_7a OR http_headval:www-authenticate.lk:dcs-5020l_be
+  OR http_headval:www-authenticate.lk:dcs-5030l_54 OR http_headval:www-authenticate.lk:dcs-5222lb1
+  OR http_headval:www-authenticate.lk:dcs-6010l OR http_headval:www-authenticate.lk:dcs-932lb1_b1
+tags:
+- proto:http
+- product:dlink-webcam
+- type:camera
+- vendor:dlink
+version: 20260918T053418Z

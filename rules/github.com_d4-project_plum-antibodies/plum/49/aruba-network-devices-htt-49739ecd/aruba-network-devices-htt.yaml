@@ -1,0 +1,11 @@
+name: aruba-network-devices-htt
+description: Detect Aruba Network Devices (HTTP(S) login page)
+uuid: 5ddd6a47-c6b4-53a2-ae0c-263df51ee651
+query: http_favicon_md5:DC0816F371699823E1E03E0078622D75
+tags:
+- proto:http
+- product:aruba-network-devices-http-s-login-page
+- vendor:aruba
+references:
+- https://www.arubanetworks.com/
+version: 20260918T053418Z

@@ -1,0 +1,9 @@
+name: wdcp-cloud-host-managemen
+description: Detect wdCP cloud host management system
+uuid: 620a6e72-4e21-580c-86cb-89b1bc74dc08
+query: http_favicon_mmhash:1786752597 OR http_favicon_mmhash:255892555
+tags:
+- proto:http
+- product:wdcp-cloud-host-management-system
+- vendor:wdcp
+version: 20260918T053418Z

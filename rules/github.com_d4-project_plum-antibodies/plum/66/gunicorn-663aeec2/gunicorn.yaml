@@ -1,0 +1,11 @@
+name: gunicorn
+description: Detect Gunicorn
+uuid: c481be64-bbf3-54a3-9e72-14d563c26251
+query: http_server:gunicorn
+tags:
+- proto:http
+- product:gunicorn
+- vendor:gunicorn
+references:
+- https://gunicorn.org/
+version: 20260918T053418Z

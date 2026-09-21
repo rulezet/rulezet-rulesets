@@ -1,0 +1,9 @@
+name: php
+description: Detect Php Language
+uuid: ee972394-24ce-54ef-9adb-3f94d9dd4033
+query: http_cookiename:PHPSESSID or http_cookiename:CAKEPHP or http_server.lk:" php/"
+  or http_headval:x-powered-by.bg:php/
+tags:
+- proto:http
+- lang:php
+version: 20260918T053418Z

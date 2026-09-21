@@ -1,0 +1,11 @@
+name: google-f3418a44
+description: Detect Google
+uuid: 34e5c2dd-4f57-5c96-9477-a1aba626a473
+query: http_favicon_md5:F3418A443E7D841097C714D69EC4BCB8 OR http_favicon_mmhash:708578229
+tags:
+- proto:http
+- product:google
+- vendor:google
+references:
+- https://www.google.com/
+version: 20260918T053418Z

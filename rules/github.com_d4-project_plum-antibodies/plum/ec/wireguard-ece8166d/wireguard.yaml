@@ -1,0 +1,13 @@
+name: wireguard
+description: Detect WireGuard (VPN)
+uuid: caabf78a-5eb6-5905-a49d-ff2dceda1c37
+query: http_favicon_mmhash:595842577 OR http_favicon_md5:4f0cfecac2f1c4418e254f8588f8e1de
+  OR http_favicon_sha256:c615f00aa3a2b3f808b9347975d145399c0dabb814e3cfe22ed769921a5bbfff
+tags:
+- proto:http
+- product:wireguard
+- type:vpn
+- vendor:wireguard
+references:
+- https://www.wireguard.com/
+version: 20260918T053418Z

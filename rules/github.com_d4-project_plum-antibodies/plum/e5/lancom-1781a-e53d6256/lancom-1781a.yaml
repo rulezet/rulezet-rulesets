@@ -1,0 +1,12 @@
+name: lancom-1781a
+description: Detect LANCOM 1781A (router)
+uuid: 8f1b1e44-58f9-5990-8879-f5771d674f1e
+query: http_title.bg:"LANCOM 1781A"
+tags:
+- proto:http
+- product:lancom-1781a
+- type:router
+- vendor:lancom
+references:
+- https://rs-nc.rohde-schwarz.com/fileadmin/produkte/lc_1781A/1781A_EN.pdf
+version: 20260918T053418Z

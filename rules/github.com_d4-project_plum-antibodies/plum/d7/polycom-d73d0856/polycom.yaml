@@ -1,0 +1,12 @@
+name: polycom
+description: Detect Polycom (VoIP)
+uuid: 3f12cc43-f784-5ee4-8d44-e846bc12f659
+query: http_favicon_mmhash:77044418 OR http_favicon_mmhash:-412369920 OR x509_issuer.lk:"polycom
+  equipment issuing ca 2" OR http_title.bg:"Polycom Login" OR http_favicon_md5:861EB7C7E50D176CA2D63F1C667BF956
+  OR http_server:"Polycom VVX Telephone HTTPd" OR http_title:"Poly - Configuration
+  Utility"
+tags:
+- product:polycom
+- type:voip
+- vendor:polycom
+version: 20260918T053418Z
