@@ -1,0 +1,11 @@
+name: apache
+description: Detect Apache HTTPD
+uuid: 977cf105-2447-59c5-8b2e-3af15005c504
+query: http_server:apache OR http_server.bg:"Apache/"
+tags:
+- proto:http
+- product:httpd
+- vendor:apache
+references:
+- https://httpd.apache.org/
+version: 20260918T061104Z
