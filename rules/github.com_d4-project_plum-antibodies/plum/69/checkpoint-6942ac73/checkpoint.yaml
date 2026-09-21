@@ -1,0 +1,12 @@
+name: checkpoint
+description: Detect Checkpoint
+uuid: 22bb5a74-324b-54a6-89ef-8fad47ec8d8f
+query: http_server:CPWS or http_favicon_mmhash:-1822098181 or http_favicon_mmhash:794809961
+  or http_server:Server:"Check Point SVN foundation" or x509_subject:"Checkpoint VPN"
+tags:
+- product:firewall
+- product:checkpoint
+- vendor:checkpoint
+references:
+- https://www.checkpoint.com/
+version: 20260918T053418Z
