@@ -1,0 +1,11 @@
+name: trendmicro-imsva
+description: Detect Trend Micro InterScan Messaging Security Virtual Appliance
+uuid: 56d6857a-bb8f-5faa-a010-7acf0ce5c4e1
+query: banner.bg:"220 ESMTP IMSVA"
+tags:
+- proto:smtp
+- product:imsva
+- vendor:trendmicro
+references:
+- https://docs.trendmicro.com/all/ent/imsva/v9.0/en-us/imsva_9.0_olh/imsva_imsx_abt.html
+version: 20260918T053418Z
