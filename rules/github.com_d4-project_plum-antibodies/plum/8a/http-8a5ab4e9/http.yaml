@@ -1,0 +1,9 @@
+name: http
+description: Detect HTTP
+uuid: 4e361f33-8d21-54b7-aa92-6002bebf579e
+query: "banner.bg:HTTP/1.1 OR banner.bg:HTTP/1.0 OR banner.bg:http/0.9 OR banner.bg:<!doctype\
+  \ OR banner.bg:<html OR banner.bg:\"<meta http-equiv\" OR banner.bg:\"\uFEFF<!doctype\
+  \ html\" OR banner.bg:<title OR http_header:cache-control OR http_header:content-type"
+tags:
+- proto:http
+version: 20260918T053418Z
