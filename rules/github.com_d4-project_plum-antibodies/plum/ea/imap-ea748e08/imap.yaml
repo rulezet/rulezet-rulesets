@@ -1,0 +1,7 @@
+name: imap
+description: Detect IMAP capability greeting
+uuid: 363e1832-0fad-5e57-921c-543f28b304d2
+query: banner.bg:"* OK" AND banner.lk:imap4
+tags:
+- proto:imap
+version: 20260918T053418Z
