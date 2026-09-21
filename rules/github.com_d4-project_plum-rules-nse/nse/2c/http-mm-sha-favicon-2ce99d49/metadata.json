@@ -1,0 +1,19 @@
+{
+  "uuid": "2ce99d49-7048-485d-b191-b0288e03cb53",
+  "title": "http-mm-sha-favicon",
+  "format": "nse",
+  "author": "CIRCL/Paul JUNG (Thanat0s)",
+  "license": "GNU Affero General Public Licence https://www.gnu.org/licenses/agpl-3.0.en.html",
+  "license_verified": true,
+  "description": "Gets the favicon from a web page then hash it using md5, sha256 and the method\n\"http.favicon.hash\" used by shodan.io murmur3_32(base64(favicon))\nThe results is displayed as a signed integer.\n\nIf the script argument <code>favicon.uri</code> is given, that relative URI is\nalways used to find the favicon. Otherwise, first the page at the root of the\nweb server is retrieved and parsed for a <code><link rel=\"icon\"></code>\nelement. If that fails, the icon is looked for in <code>/favicon.ico</code>. If\na <code><link></code> favicon points to a different host or port, it is ignored.",
+  "source": "https://github.com/D4-project/Plum-Rules-NSE",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [],
+  "cve": [],
+  "created_at": "2026-09-18",
+  "last_modified": "2026-09-18",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770913"
+}
