@@ -1,0 +1,17 @@
+name: plesk
+description: Detect Plesk
+uuid: 63af9823-7d2e-5be2-b6ee-3c6a3959b8e7
+query: http_favicon_mmhash:-134375033 OR http_favicon_mmhash:-1050786453 OR http_favicon_mmhash:-981606721
+  OR http_favicon_mmhash:-109759096 OR http_favicon_md5:c1cb392d1e3155fe75bfac4b0a70d122
+  OR http_favicon_sha256:89b6262f363b365285c7ddff664b6f4ad570c8d92fc80dd51c021b2d49e84ac7
+  OR http_favicon_mmhash:-543959912 OR http_favicon_md5:37c3be2657b0bb5fd6304feec6b46dfa
+  OR http_favicon_sha256:cd2556dea000705b2772e7ef5ed561fcb563210f3b80c824403f9278b0d65c51
+  OR http_favicon_md5:650B28C6CF1B473AED15BA26BAD1DA92 OR http_headval:x-powered-by.lk:plesklin
+  OR http_server:sw-cp-server OR http_title:"Webhostingcontrolpanel (WCP)"
+tags:
+- proto:http
+- product:plesk
+- vendor:plesk
+references:
+- https://docs.plesk.com/en-US/onyx/advanced-administration-guide-linux/introduction-to-plesk.68554/
+version: 20260918T053418Z
