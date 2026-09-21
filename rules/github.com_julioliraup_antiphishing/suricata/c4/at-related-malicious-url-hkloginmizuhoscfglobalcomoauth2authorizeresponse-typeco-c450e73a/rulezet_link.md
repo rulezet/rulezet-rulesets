@@ -1,0 +1,5 @@
+# AT related malicious URL (hklogin.mizuhoscfglobal.com/oauth2/authorize?response_type=code&client_id=3dd7d8eb-520a-4617-aaae-ff6bd4f1b21b&scope=openid%20email%20profile&state=q-3G6c2X4wi550VHMG7bNwO0BCVr6ynvvemTqGGPhy0%3D&redirect_uri=https://hk.mizuhoscfglobal.com/scf/login/oauth2/code/fusionauth&nonce=HKnYqogjMF7eIULjPc2U4mXMIhuZm9Ob23E0Gx9gYD8)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/757142)
+
+Rulezet UUID: `c450e73a-5792-4aa3-8bc7-e667345d3971`

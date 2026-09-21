@@ -1,0 +1,5 @@
+# AT related malicious URL (shoutout.wix.com/so/9cP-DFPnz/c?w=NxvNQG2InezB_Ur1TOwn2oVVNuBqsjXHHhskcYGIz44.eyJ1IjoiaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS91cmw_cT1odHRwcyUzQSUyRiUyRnMzLmV1LW5vcnRoLTEuYW1hem9uYXdzLmNvbSUyRmxhbmRpbmctc3dhcmFqZ2FybWVudHMuY29tJTJGaW5kZXguaHRtbCZzYT1EJnNudHo9MSZ1c2c9QU92VmF3MUM0Z0drdUhHbEJ1TzUzYU80M213TCIsInIiOiI4ZjcxODQ1ZS05OGEwLTRmNzUtOGI4Ny1jYTJhZjg0YmFkZjYiLCJtIjoibHAifQ)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/757084)
+
+Rulezet UUID: `753afe73-501e-4323-b19c-f72b1daeb572`
