@@ -1,0 +1,9 @@
+name: openssh
+description: Detect OpenSSH
+uuid: bd404fd7-77b2-5752-a870-8e5cbe2db168
+query: banner.bg:ssh-2.0-openssh
+tags:
+- proto:ssh
+- product:openssh
+- vendor:openssh
+version: 20260918T053418Z
