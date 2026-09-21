@@ -1,0 +1,9 @@
+name: openresty
+description: Detect OpenResty
+uuid: 247252a1-b5a8-535c-9c71-050a73e446a5
+query: http_server.bg:openresty
+tags:
+- proto:http
+- product:openresty
+- vendor:openresty
+version: 20260918T053418Z
