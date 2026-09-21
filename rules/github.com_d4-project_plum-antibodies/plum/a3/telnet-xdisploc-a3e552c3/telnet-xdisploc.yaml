@@ -1,0 +1,10 @@
+name: telnet-xdisploc
+description: Detect Telnet XDISPLOC option
+uuid: ccc9a05d-ce28-55d7-92d2-82824210f6f5
+query: banner.bg:"\xFF\xFB" banner.lk:"\xFF\xFB " OR banner.bg:"\xFF\xFD" banner.lk:"\xFF\xFD
+  " OR banner.bg:"\xFF\xFC" banner.lk:"\xFF\xFC " OR banner.bg:"\xFF\xFE" banner.lk:"\xFF\xFE
+  " OR banner.bg:"\xFF\xFA" banner.lk:"\xFF\xFA "
+tags:
+- proto:x-window
+- proto:telnet
+version: 20260918T053418Z
