@@ -1,0 +1,9 @@
+name: plone-cms
+description: Detect Plone CMS
+uuid: 68c36223-013c-52e3-a29b-537dee5096d8
+query: http_favicon_md5:10BD6AD7B318DF92D9E9BD03104D9B80 OR http_favicon_md5:4EB846F1286AB4E7A399C851D7D84CCA
+tags:
+- proto:http
+- product:plone-cms
+- vendor:plone
+version: 20260918T053418Z
