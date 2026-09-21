@@ -1,0 +1,11 @@
+name: uvicorn
+description: Detect Uvicorn
+uuid: 35c1582a-eb92-5ee4-8a34-cb5a8b8c21f1
+query: http_server:uvicorn
+tags:
+- proto:http
+- product:uvicorn
+- vendor:uvicorn
+references:
+- https://uvicorn.dev/server-behavior/
+version: 20260918T053418Z
