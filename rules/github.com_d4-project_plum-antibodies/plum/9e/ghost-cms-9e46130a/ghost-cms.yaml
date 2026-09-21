@@ -1,0 +1,9 @@
+name: ghost-cms
+description: Detect Ghost (CMS)
+uuid: c182e2d7-11b7-54b3-bd25-d997381acc10
+query: http_favicon_mmhash:-1015932800 OR http_favicon_mmhash:-1231681737
+tags:
+- proto:http
+- product:ghost-cms
+- vendor:ghost
+version: 20260918T053418Z
