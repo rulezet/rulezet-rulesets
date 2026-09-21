@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"SURICATA TRAFFIC-ID: irccloud"; tls_sni; content:"irccloud.com"; isdataat:!1,relative; flow:to_server,established; flowbits: set,traffic/id/irccloud; noalert; sid:300000015; rev:1;)
