@@ -1,0 +1,12 @@
+name: qnap-proftpd
+description: Detect QNAP ProFTPD FTP server (NAS)
+uuid: 5e8eeaf6-e7c4-5172-8d26-c5a158cbfac9
+query: banner.bg:"220 nasftpd turbo station" AND banner.lk:proftpd
+tags:
+- proto:ftp
+- product:proftpd
+- vendor:qnap
+- type:nas
+references:
+- https://www.qnap.com/
+version: 20260918T053418Z
