@@ -1,0 +1,9 @@
+name: dahua-storm-ip-camera
+description: Detect Dahua Storm (IP Camera)
+uuid: fbcff785-257e-548b-96ec-266756b99911
+query: http_favicon_mmhash:2019488876 OR http_favicon_mmhash:833190513
+tags:
+- proto:http
+- product:dahua-storm
+- vendor:camera
+version: 20260918T053418Z
