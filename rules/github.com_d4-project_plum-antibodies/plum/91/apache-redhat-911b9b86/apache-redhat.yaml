@@ -1,0 +1,12 @@
+name: apache-redhat
+description: Detect Apache on Redhat
+uuid: a53fa66a-2119-5520-a743-4524bdc0b60b
+query: http_favicon_md5:71E30C507CA3FA005E2D1322A5AA8FB2 OR http_server.lk:"Red Hat
+  Enterprise Linux" OR http_server.lk:RedHat
+tags:
+- proto:http
+- product:httpd
+- vendor:redhat
+references:
+- https://www.redhat.com/
+version: 20260918T053418Z
