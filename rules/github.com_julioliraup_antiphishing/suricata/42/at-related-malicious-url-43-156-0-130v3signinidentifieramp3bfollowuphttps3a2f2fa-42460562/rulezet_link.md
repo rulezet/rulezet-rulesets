@@ -1,0 +1,5 @@
+# AT related malicious URL (43 .156 .0 .130/v3/signin/identifier?amp%3Bfollowup=https%3A%2F%2Faccounts .google .com%2F&amp%3Bifkv=AaSxoQyQ_ZSuXpSvue0UfKrOXnU6mQAuN0RcLmvWGTqSCzhKlOsPyDT7wQQH6ra2Rhdw1PE87iTB&amp%3Bpassive=1209600&continue=https%3A%2F%2Faccounts .google .com%2F&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWa2PascutWXoup5bw52pd_4EGvh3-Yme6QV5nxP4snN-QobXseYgih9mxtRFDsT25d0hObT3ty-4A&dsh=S1528442115%3A1778382985730338)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/750561)
+
+Rulezet UUID: `42460562-10aa-4f7d-9642-1832a4da3fb9`
