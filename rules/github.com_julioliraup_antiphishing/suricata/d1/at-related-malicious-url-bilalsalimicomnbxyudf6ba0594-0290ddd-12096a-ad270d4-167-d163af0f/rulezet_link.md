@@ -1,0 +1,5 @@
+# AT related malicious URL (bilalsalimi.com/nbxyud/f6ba0594-0290ddd-12096a-ad270d4-167b4d-4f3e39.html?3RKtpF8m4JPcTmouysOMAd2tBuOWZ3K6XT2z6sQjPSb4tV4dizGEytpJIu4pUxUehWwwxmAihEkq3Z6Vbe3CMTTHWCGF3sd9zfrPViYd3j7AIIaCQFzNUh0Ygl7F2hdYorM3J)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/767813)
+
+Rulezet UUID: `d163af0f-408d-4865-95ce-a296e7f4601f`
