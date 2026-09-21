@@ -1,0 +1,13 @@
+name: jmeter
+description: Detect Apache JMeter Dashboard
+uuid: 4eb8ae8f-df0d-51e1-b3b5-bbb5048c964d
+query: http_title.bg:"Apache JMeter Dashboard" OR http_favicon_mmhash:-68185513 OR
+  http_favicon_md5:a56d2f3884131eaf85b94c9b73fbfa21 OR http_favicon_sha256:d29a6a3499632cb6cf7caeeb30746194bd8fd68ba462d0061b384d1583dfd7c0
+tags:
+- proto:http
+- product:jmeter
+- type:dashboard
+- vendor:apache
+references:
+- https://httpd.apache.org/
+version: 20260918T053418Z
