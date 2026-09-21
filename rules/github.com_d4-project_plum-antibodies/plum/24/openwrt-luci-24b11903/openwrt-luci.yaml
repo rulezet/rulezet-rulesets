@@ -1,0 +1,9 @@
+name: openwrt-luci
+description: Detect openWRT Luci
+uuid: 40598df8-37e1-5524-a191-23d7b3831a20
+query: http_favicon_mmhash:-675839242 OR http_favicon_mmhash:1941381095
+tags:
+- proto:http
+- product:openwrt-luci
+- vendor:openwrt
+version: 20260918T053418Z
