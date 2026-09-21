@@ -1,0 +1,11 @@
+name: amazon-s3
+description: Detect Amazon S3
+uuid: 80e449eb-a531-52f8-86f5-00d5e9dbf9e3
+query: http_server:amazons3
+tags:
+- proto:http
+- product:s3
+- vendor:amazon
+references:
+- https://aws.amazon.com/s3/
+version: 20260918T053418Z
