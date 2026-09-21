@@ -1,0 +1,14 @@
+name: sonic-wall
+description: Detect Sonic Wall
+uuid: ae8fb3b1-726b-5a15-bd75-0c32cf23c62c
+query: http_favicon_md5:60FA7ED2309D77DE1F9DC5E7C741AC48 or http_favicon_mmhash:631108382
+  or http_favicon_mmhash:363324987 or http_title:"SonicWall - Authentication" or http_title.lk:"/sonicui/"
+  or http_server.bg:"sma/"
+tags:
+- proto:http
+- product:firewall
+- product:sonicwall
+- product:sonicwall-sma
+- vendor:sonic
+- vendor:sonicwall
+version: 20260918T053418Z
