@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"SURICATA TRAFFIC-ID: lastpass"; tls_sni; content:"lastpass.com"; isdataat:!1,relative; flow:to_server,established; flowbits: set,traffic/id/lastpass; flowbits:set,traffic/label/password-management; noalert; sid:300000016; rev:1;)
