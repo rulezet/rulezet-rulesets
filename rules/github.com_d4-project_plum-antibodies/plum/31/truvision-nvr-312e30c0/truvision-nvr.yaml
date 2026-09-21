@@ -1,0 +1,10 @@
+name: truvision-nvr
+description: Detect truVision (NVR)
+uuid: 8ce0a7f9-a114-569f-b6d3-b8e2a98fa77b
+query: http_favicon_mmhash:-1093172228 OR http_favicon_md5:5a2829c5df0ed3beac8421f749722745
+  OR http_favicon_sha256:a2316a8eb3cb1d3f159b32c4c8c405038ac858cec7c7301ac01e5589a7f604c6
+tags:
+- proto:http
+- product:truvision-nvr
+- vendor:truvision
+version: 20260918T053418Z
