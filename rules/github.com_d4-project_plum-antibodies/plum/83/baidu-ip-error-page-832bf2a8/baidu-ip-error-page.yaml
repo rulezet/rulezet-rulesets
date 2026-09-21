@@ -1,0 +1,11 @@
+name: baidu-ip-error-page
+description: Detect Baidu (IP error page)
+uuid: 327750f2-36c2-5994-8eef-87e55485598d
+query: http_favicon_mmhash:-1507567067
+tags:
+- proto:http
+- product:baidu-ip-error-page
+- vendor:baidu
+references:
+- https://www.baidu.com/
+version: 20260918T053418Z
