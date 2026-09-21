@@ -1,0 +1,5 @@
+# AT related malicious URL (signinattcomdynamicilriaplogin3qmew9k3ju.mailserverupdatealpha.workers.dev/home.php?usrid=vdKFXwV6Pm7lv9HiJMS5JN4tgk4DPaqOyyBSfLWLcGtGjsepHgbJxLrVTOYJHiWvfLJrnUnkrmdxbhsSic8HXBbevXgQIwCCMvGRY9pUJZAu04pRdZMEImvXZV9iZXRocEBiZWxsc291dGgubmV0VOk4jN7oc0QvULq8RSW2kRyVO1GDExgQdHXxHkCHB9MNsnuUgZ)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/766137)
+
+Rulezet UUID: `5298a9a6-f320-4bcb-a753-291e728f3ab3`

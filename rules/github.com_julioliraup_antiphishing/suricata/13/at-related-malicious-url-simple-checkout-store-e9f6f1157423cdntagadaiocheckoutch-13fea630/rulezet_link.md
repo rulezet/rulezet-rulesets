@@ -1,0 +1,5 @@
+# AT related malicious URL (simple-checkout--store_e9f6f1157423.cdn.tagada.io/checkout?checkoutToken=30a55e5c7f0d5f946bbc4b456da40d66&customerFirstName=Philippe&customerLastName=LOUINEAU&customerTags=rsf_code%3APKLF7Q&token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZXNzaW9uSWQiOiJjbXNfc2Vzc2lvbl9hNWZiZWQ4NzljOWYiLCJzdG9yZUlkIjoic3RvcmVfZTlmNmYxMTU3NDIzIiwiYWNjb3VudElkIjoiYWNjXzdlMzc5Y2Q0ZWViMSIsImN1c3RvbWVySWQiOiJjdXNfNGViMmMyODcyYzM4Iiwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJpYXQiOjE3ODgzMjU3NDcsImV4cCI6MTc5MDkxNzc0N30.1GaBSy9QrpkQ0mhq4FDV5slFDZTlxw7VKoNMtdqCwqw&locale=fr-FR&currency=EUR)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/766172)
+
+Rulezet UUID: `13fea630-d31d-4418-b6d2-dd1fb8f118de`
