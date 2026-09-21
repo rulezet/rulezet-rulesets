@@ -1,0 +1,1 @@
+alert tls any any -> any any (msg:"SURICATA TRAFFIC-ID: facebook-messenger"; tls_sni; content:"edge-chat.facebook.com"; isdataat:!1,relative; flow:to_server,established; flowbits: set,traffic/id/facebook-messenger; flowbits:set,traffic/label/im; noalert; sid:300000006; rev:1;)
