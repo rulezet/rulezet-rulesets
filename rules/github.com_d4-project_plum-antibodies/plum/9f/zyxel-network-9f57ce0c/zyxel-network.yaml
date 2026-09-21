@@ -1,0 +1,12 @@
+name: zyxel-network
+description: Detect ZyXEL (Network) (router)
+uuid: 488813d2-c7a8-5040-9380-6dfb3b2227d8
+query: http_favicon_mmhash:-882760066
+tags:
+- proto:http
+- vendor:zyxel
+- type:router
+- product:zyxel
+references:
+- https://www.zyxel.com/
+version: 20260918T053418Z
