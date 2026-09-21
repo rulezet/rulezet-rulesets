@@ -1,0 +1,9 @@
+name: dovecot
+description: Detect Dovecot POP3 server
+uuid: 888da190-f867-5f04-a3e1-c662c27ed951
+query: banner.bg:"+OK Dovecot"
+tags:
+- product:dovecot
+- proto:pop3
+- vendor:dovecot
+version: 20260918T053418Z
