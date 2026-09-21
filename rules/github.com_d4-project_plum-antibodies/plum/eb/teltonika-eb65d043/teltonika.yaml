@@ -1,0 +1,9 @@
+name: teltonika
+description: Detect Teltonika
+uuid: a4e8b6e1-97d4-51ec-9b4b-5271dc4c2e8d
+query: http_favicon_mmhash:119741608 OR http_favicon_mmhash:-1612496354
+tags:
+- proto:http
+- product:teltonika
+- vendor:teltonika
+version: 20260918T053418Z
