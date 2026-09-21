@@ -1,0 +1,9 @@
+name: dropbear
+description: Detect Dropbear SSH server
+uuid: b0e3ad3d-38bb-5ef2-a01a-e90b8bd64bf8
+query: banner.bg:ssh-2.0-dropbear
+tags:
+- product:dropbear
+- proto:ssh
+- vendor:dropbear
+version: 20260918T053418Z
