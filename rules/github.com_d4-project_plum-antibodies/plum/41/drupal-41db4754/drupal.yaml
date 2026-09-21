@@ -1,0 +1,13 @@
+name: drupal
+description: Detect Drupal CMS
+uuid: 85483dc3-fd56-5443-9ca9-e4388dff6152
+query: http_favicon_mmhash:-167656799 OR http_favicon_mmhash:1174841451 OR http_headval:x-generator.bg:drupal
+tags:
+- proto:http
+- lang:php
+- type:cms
+- product:drupal
+- vendor:drupal
+references:
+- https://www.drupal.org/
+version: 20260918T053418Z
