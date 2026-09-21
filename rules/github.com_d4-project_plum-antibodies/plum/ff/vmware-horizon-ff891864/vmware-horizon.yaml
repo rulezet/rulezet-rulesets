@@ -1,0 +1,11 @@
+name: vmware-horizon
+description: Detect VMware Horizon
+uuid: 4edd3a36-02c3-53f4-9e1d-ab612601a709
+query: http_favicon_mmhash:-1255992602 OR http_favicon_mmhash:1895360511 OR http_favicon_mmhash:-991123252
+tags:
+- proto:http
+- product:vmware-horizon
+- vendor:vmware
+references:
+- https://www.vmware.com/
+version: 20260918T053418Z
