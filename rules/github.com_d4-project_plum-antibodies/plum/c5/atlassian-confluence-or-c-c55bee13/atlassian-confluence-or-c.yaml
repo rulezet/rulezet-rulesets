@@ -1,0 +1,11 @@
+name: atlassian-confluence-or-c
+description: Detect Atlassian Confluence or Crowd
+uuid: 1654aa8a-62d5-5c91-b976-1fae4263ebd6
+query: http_favicon_md5:12888A39A499EB041CA42BF456ACA285 OR http_favicon_md5:3341C6D3C67CCDAEB7289180C741A965
+tags:
+- proto:http
+- product:atlassian-confluence-or-crowd
+- vendor:atlassian
+references:
+- https://www.atlassian.com/
+version: 20260918T053418Z
