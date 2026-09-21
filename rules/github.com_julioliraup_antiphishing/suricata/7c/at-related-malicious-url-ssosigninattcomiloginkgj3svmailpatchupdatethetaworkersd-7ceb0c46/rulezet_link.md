@@ -1,0 +1,5 @@
+# AT related malicious URL (ssosigninattcomiloginkgj3sv.mailpatchupdatetheta.workers.dev/home.php?usrid=zAj9cpmmAsAxEmx9yURhb7AQ0x94GBfJ4T8Ms3WarJdtBnDqs5gOGYAhmjr3DljtG7Dm8Wx2vQjnAq08iDm2u22f9mD5QF2NbADXgzYf8QrZJYYixNhUKKThc2FuZGVycy1rZWxseUBzYmNnbG9iYWwubmV0BDVWGBe96zAukBiXOx8MdLFYEmgitxjka7cdAcYKBG2LD96X7D)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/763925)
+
+Rulezet UUID: `7ceb0c46-3826-4bd9-9aca-1f163fb1ffeb`

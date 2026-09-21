@@ -1,0 +1,5 @@
+# AT related malicious URL (sp23ct-marek-biz-vunil-qelor.pages.dev/)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/763534)
+
+Rulezet UUID: `43edb396-cb6f-4c1e-8168-2d15fc421e85`
