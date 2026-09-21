@@ -1,0 +1,13 @@
+name: wordpress-under-construct
+description: Detect Wordpress Under Construction Icon (CMS)
+uuid: 9fdddc77-df08-5a77-8b4e-4aa6ee1238bf
+query: http_favicon_mmhash:191654058
+tags:
+- proto:http
+- product:wordpress-under-construction-icon
+- type:cms
+- product:wordpress
+- vendor:wordpress
+references:
+- https://wordpress.org/
+version: 20260918T053418Z
