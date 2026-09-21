@@ -1,0 +1,8 @@
+name: generic-opendir
+description: Detect Open file listing
+uuid: e0be4d62-c4fe-5913-9a0b-7047afeb11e5
+query: http_title.bg:"index of"
+tags:
+- proto:http
+- vuln:opendir
+version: 20260918T053418Z
