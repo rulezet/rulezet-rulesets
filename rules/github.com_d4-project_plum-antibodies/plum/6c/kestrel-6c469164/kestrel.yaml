@@ -1,0 +1,11 @@
+name: kestrel
+description: Detect ASP.NET Core Kestrel
+uuid: b7815c7d-caa1-5a5c-b22c-6d8ba3223039
+query: http_server:kestrel
+tags:
+- proto:http
+- product:kestrel
+- vendor:microsoft
+references:
+- https://learn.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel
+version: 20260918T053418Z
