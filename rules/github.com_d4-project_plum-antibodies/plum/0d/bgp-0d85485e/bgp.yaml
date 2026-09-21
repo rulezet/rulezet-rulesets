@@ -1,0 +1,7 @@
+name: bgp
+description: Detect BGP
+uuid: cd9b2f29-6cc2-550d-83ac-cc5653e1ce33
+query: banner.bg:"\FF\FF\FF\FF\FF\FF\FF\FF\FF\FF\FF\FF\FF\FF\FF\FF\00\15\03\06\05"
+tags:
+- proto:bgp
+version: 20260918T053418Z

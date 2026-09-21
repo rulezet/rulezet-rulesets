@@ -1,0 +1,11 @@
+name: apache-macos
+description: Detect Apache on Mac OS X
+uuid: c799db53-ac5d-5a5d-9a7f-cf1f8a4e9756
+query: http_favicon_md5:73778A17B0D22FFBB7D6C445A7947B92
+tags:
+- proto:http
+- product:httpd
+- vendor:apache
+references:
+- https://httpd.apache.org/
+version: 20260918T053418Z

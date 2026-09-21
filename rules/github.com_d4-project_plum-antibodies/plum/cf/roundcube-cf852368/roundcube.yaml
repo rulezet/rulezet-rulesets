@@ -1,0 +1,10 @@
+name: roundcube
+description: Detect Roundcube (webmail)
+uuid: 66f32699-c142-54bd-b527-02a63a923478
+query: http_cookiename.bg:roundcube
+tags:
+- proto:http
+- type:webmail
+- product:roundcube
+- vendor:roundcube
+version: 20260918T053418Z

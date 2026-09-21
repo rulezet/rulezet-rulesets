@@ -1,0 +1,7 @@
+name: smtp
+description: Detect SMTP ESMTP greeting
+uuid: f9dad4ae-0312-5855-9358-c6f5b307f370
+query: banner.bg:220 AND banner.lk:esmtp
+tags:
+- proto:smtp
+version: 20260918T053418Z

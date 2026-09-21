@@ -1,0 +1,9 @@
+name: d-link-network
+description: Detect D-Link (Network)
+uuid: 1a78a6dd-ac4f-5473-b271-7a3199e69f05
+query: http_favicon_mmhash:-2031183903 OR http_favicon_mmhash:1081719753
+tags:
+- proto:http
+- product:d-link-network
+- vendor:dlink
+version: 20260918T053418Z

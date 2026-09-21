@@ -1,0 +1,11 @@
+name: cisco-conference-room-log
+description: Detect Cisco (eg:Conference Room Login Page)
+uuid: d3720697-6888-52a0-a7d1-88e8121bc02d
+query: http_favicon_mmhash:-646322113
+tags:
+- proto:http
+- vendor:cisco
+- product:conference-room-login
+references:
+- https://www.cisco.com/
+version: 20260918T053418Z

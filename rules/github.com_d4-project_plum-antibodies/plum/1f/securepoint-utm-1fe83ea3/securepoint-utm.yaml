@@ -1,0 +1,13 @@
+name: securepoint-utm
+description: Detect Securepoint UTM (firewall)
+uuid: e88db22a-966f-5364-b100-7dd1839d6410
+query: http_title:UTM OR http_title.bg:"Securepoint UTM" OR http_favicon_mmhash:279720073
+  OR http_favicon_md5:770300f31a3fe01dec31d25d55249251 OR http_favicon_sha256:3a28a4497753f591baa82688c02f51f90278b6aba54ad500f37c7efc2cfd141a
+tags:
+- proto:http
+- product:securepoint-utm
+- type:firewall
+- vendor:securepoint
+references:
+- https://www.securepoint.de/en/
+version: 20260918T053418Z

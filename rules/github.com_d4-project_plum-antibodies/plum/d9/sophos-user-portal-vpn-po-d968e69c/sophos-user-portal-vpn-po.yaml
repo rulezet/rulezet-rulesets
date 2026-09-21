@@ -1,0 +1,11 @@
+name: sophos-user-portal-vpn-po
+description: Detect Sophos User Portal/VPN Portal
+uuid: d3aac885-3272-5a46-8166-a4ad98ea9bc3
+query: http_favicon_mmhash:1045696447
+tags:
+- proto:http
+- product:sophos-user-portal-vpn-portal
+- vendor:sophos
+references:
+- https://www.sophos.com/
+version: 20260918T053418Z

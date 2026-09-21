@@ -1,0 +1,11 @@
+name: freebsd
+description: Detect FreeBsd
+uuid: 731302f3-f4c8-5337-b7be-eb76668ec0f0
+query: banner.bg:ssh-2.0-openssh AND banner.lk:freebsd-
+tags:
+- proto:ssh
+- vendor:freebsd
+- product:freebsd
+references:
+- https://www.freebsd.org/
+version: 20260918T053418Z

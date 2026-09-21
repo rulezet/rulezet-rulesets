@@ -1,0 +1,10 @@
+name: icecast2-protocols
+description: Detect Icecast2 / ICY streaming protocols
+uuid: d0bf38ee-31d5-5df3-80d4-bf8da355de04
+query: banner.bg:"ICY 200 OK" OR banner.lk:"icy-name:" OR banner.lk:"icy-br:" OR banner.lk:"icy-metaint:"
+  OR banner.lk:"icy-metadata-version:"
+tags:
+- proto:icy
+- proto:icecast2
+- proto:streaming
+version: 20260918T053418Z

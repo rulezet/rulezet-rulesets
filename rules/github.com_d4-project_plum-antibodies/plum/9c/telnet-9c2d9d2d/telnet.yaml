@@ -1,0 +1,14 @@
+name: telnet
+description: Detect Telnet protocol
+uuid: f14285df-0bdc-5631-98aa-f420b28c0275
+query: banner.bg:"\xFF\xFB" banner.lk:"\xFF\xFB\x01" OR banner.bg:"\xFF\xFD" banner.lk:"\xFF\xFB\x01"
+  OR banner.bg:"\xFF\xFB" banner.lk:"\xFF\xFB\x03" OR banner.bg:"\xFF\xFD" banner.lk:"\xFF\xFB\x03"
+  OR banner.bg:"\xFF\xFB" banner.lk:"\xFF\xFD\x03" OR banner.bg:"\xFF\xFD" banner.lk:"\xFF\xFD\x03"
+  OR banner.bg:"\xFF\xFB" banner.lk:"\xFF\xFB\x25" OR banner.bg:"\xFF\xFD" banner.lk:"\xFF\xFB\x25"
+  OR banner.bg:"\xFF\xFB" banner.lk:"\xFF\xFB\x26" OR banner.bg:"\xFF\xFD" banner.lk:"\xFF\xFB\x26"
+  OR banner.bg:"\xFF\xFB" banner.lk:"\xFF\xFD\x01" OR banner.bg:"\xFF\xFD" banner.lk:"\xFF\xFD\x01"
+  OR banner.bg:"\xFF\xFB" banner.lk:"\xFF\xFD\x1F" OR banner.bg:"\xFF\xFD" banner.lk:"\xFF\xFD\x1F"
+  OR banner.bg:"\xFF\xFB" banner.lk:"\xFF\xFD\x18" OR banner.bg:"\xFF\xFD" banner.lk:"\xFF\xFD\x18"
+tags:
+- proto:telnet
+version: 20260918T053418Z

@@ -1,0 +1,9 @@
+name: python-directory
+description: Detect Python Simple HTTP directory listing
+uuid: 58ab7df4-77da-5047-823b-fc05510fe313
+query: http_title.lk:"listing" http_server.bg:"SimpleHTTP"
+tags:
+- proto:http
+- vuln:opendir
+- lang:python
+version: 20260918T053418Z

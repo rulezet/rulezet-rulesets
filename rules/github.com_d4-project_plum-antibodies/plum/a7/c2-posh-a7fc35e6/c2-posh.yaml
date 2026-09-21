@@ -1,0 +1,10 @@
+name: c2-posh
+description: Detect Posh C2 certificate
+uuid: de08870a-fbf5-5abf-bcea-39722f8dc142
+query: x509_issuer_cn:"P18055077"
+tags:
+- proto:tls
+- product:posh-c2
+- vendor:poshc2
+- type:c2
+version: 20260918T053418Z

@@ -1,0 +1,12 @@
+name: cisco-expressway
+description: Detect Cisco Expressway
+uuid: 0d91a3a1-84b7-5955-988a-97143d118ad4
+query: http_server:CE_E OR http_server:CE_C
+tags:
+- proto:http
+- vendor:cisco
+- product:cisco-expressway
+- product:expressway
+references:
+- https://www.cisco.com/
+version: 20260918T053418Z

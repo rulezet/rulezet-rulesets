@@ -1,0 +1,9 @@
+name: elastic-database
+description: Detect Elastic (Database)
+uuid: 6e569407-9ed6-501c-8660-aefee60f2136
+query: http_favicon_mmhash:1611729805 OR http_favicon_mmhash:1552860581
+tags:
+- proto:http
+- product:elastic-database
+- vendor:elastic
+version: 20260918T053418Z

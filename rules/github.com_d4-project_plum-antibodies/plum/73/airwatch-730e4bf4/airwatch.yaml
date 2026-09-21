@@ -1,0 +1,10 @@
+name: airwatch
+description: Detect Airwatch
+uuid: 36fb043d-bf7d-50c2-8b48-38ab6ff8e76c
+query: http_favicon_mmhash:321909464 OR http_favicon_mmhash:-1153873472 OR http_favicon_mmhash:1095915848
+  OR http_favicon_mmhash:788771792 OR http_favicon_mmhash:-1863663974
+tags:
+- proto:http
+- product:airwatch
+- vendor:airwatch
+version: 20260918T053418Z

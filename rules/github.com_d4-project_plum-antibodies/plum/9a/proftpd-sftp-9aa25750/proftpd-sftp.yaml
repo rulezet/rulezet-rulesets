@@ -1,0 +1,11 @@
+name: proftpd-sftp
+description: Detect ProFTPD SFTP server
+uuid: 4260a2e0-7f7f-4d4b-9ece-3ff3e25536ab
+query: banner.bg:ssh-2.0-mod_sftp
+tags:
+- proto:ssh
+- product:proftpd
+- vendor:proftpd
+references:
+- https://www.proftpd.org/docs/contrib/mod_sftp.html
+version: 20260918T073534Z

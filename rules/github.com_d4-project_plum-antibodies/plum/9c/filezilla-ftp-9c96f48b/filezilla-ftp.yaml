@@ -1,0 +1,11 @@
+name: filezilla-ftp
+description: Detect FileZilla FTP Server
+uuid: a31fac67-48ef-522d-815d-186ff5724d41
+query: banner.bg:220-filezilla OR x509_issuer:"filezilla-server self signed certificate"
+tags:
+- proto:ftp
+- product:filezilla
+- vendor:filezilla
+references:
+- https://filezilla-project.org/
+version: 20260918T053418Z

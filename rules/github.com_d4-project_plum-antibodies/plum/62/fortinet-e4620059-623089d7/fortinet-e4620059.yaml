@@ -1,0 +1,11 @@
+name: fortinet-e4620059
+description: Detect Fortinet
+uuid: c0a4da5d-f096-5db8-ad76-3645ecb74443
+query: http_favicon_md5:E462005902F81094AB3DE44E4381DE19
+tags:
+- proto:http
+- product:fortinet
+- vendor:fortinet
+references:
+- https://www.fortinet.com/
+version: 20260918T053418Z

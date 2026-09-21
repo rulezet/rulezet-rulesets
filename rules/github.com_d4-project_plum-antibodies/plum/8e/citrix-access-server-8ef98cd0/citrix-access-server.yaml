@@ -1,0 +1,11 @@
+name: citrix-access-server
+description: Detect Citrix Access Server
+uuid: 1e49419e-022e-5806-8ace-3fba36018bd7
+query: http_favicon_md5:F097F0ADF2B9E95A972D21E5E5AB746D
+tags:
+- proto:http
+- product:citrix-access-server
+- vendor:citrix
+references:
+- https://www.citrix.com/
+version: 20260918T053418Z

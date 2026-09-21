@@ -1,0 +1,9 @@
+name: hp-printer-server
+description: Detect HP Printer / Server
+uuid: 66d5676d-f4cb-5960-81f4-da9f1719611e
+query: http_favicon_mmhash:905744673 OR http_favicon_mmhash:-2144363468
+tags:
+- proto:http
+- product:hp-printer-server
+- vendor:hp
+version: 20260918T053418Z

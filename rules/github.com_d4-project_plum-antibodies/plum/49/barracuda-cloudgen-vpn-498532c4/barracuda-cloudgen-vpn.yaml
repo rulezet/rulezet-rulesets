@@ -1,0 +1,14 @@
+name: barracuda-cloudgen-vpn
+description: Detect Barracuda CloudGen VPN (firewall)
+uuid: dd3b545a-152f-52d8-8048-f235574ab201
+query: http_title.lk:/portal/totp.html OR x509_subject.bg:"ssl vpn on barracuda cloudgen
+  firewall"
+tags:
+- proto:http
+- vendor:barracuda
+- product:barracuda-cloudgen-firewall
+- type:firewall
+- type:vpn
+references:
+- https://www.barracuda.com/
+version: 20260918T053418Z

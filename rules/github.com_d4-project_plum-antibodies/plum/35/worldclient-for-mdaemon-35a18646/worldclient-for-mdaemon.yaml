@@ -1,0 +1,9 @@
+name: worldclient-for-mdaemon
+description: Detect WorldClient for Mdaemon
+uuid: 21e7790d-3c04-587d-ba07-124c80e08f2c
+query: http_favicon_mmhash:1985721423 OR http_favicon_mmhash:-35107086
+tags:
+- proto:http
+- product:worldclient-for-mdaemon
+- vendor:worldclient
+version: 20260918T053418Z

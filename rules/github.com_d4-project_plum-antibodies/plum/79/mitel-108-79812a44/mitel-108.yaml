@@ -1,0 +1,12 @@
+name: mitel-108
+description: Detect Mitel 108 Rack (telephony)
+uuid: 347eb20d-b1a4-529c-8d0d-5fc3ce59b00c
+query: http_title.lk:"mitel 108" OR banner.lk:"mitel108 login" OR x509_subject.lk:"mitel
+  deutschland" OR x509_issuer.lk:"mitel deutschland"
+tags:
+- vendor:mitel
+- product:mitel
+- type:telephony
+references:
+- https://www.mitel.com/fr-fr/produits/business-phones
+version: 20260918T053418Z

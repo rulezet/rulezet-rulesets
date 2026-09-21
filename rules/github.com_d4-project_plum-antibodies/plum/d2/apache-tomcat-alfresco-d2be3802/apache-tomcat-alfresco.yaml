@@ -1,0 +1,15 @@
+name: apache-tomcat-alfresco
+description: Detect Apache Tomcat (6.0.18), Alfresco Enterprise Content Management
+  System (CMS)
+uuid: 0025c529-d805-520b-9876-89b97fc86281
+query: http_favicon_md5:D80E364C0D3138C7ECD75BF9896F2CAD
+tags:
+- proto:http
+- product:tomcat
+- product:alfresco
+- type:cms
+- lang:java
+- vendor:apache
+references:
+- https://httpd.apache.org/
+version: 20260918T053418Z

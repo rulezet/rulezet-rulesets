@@ -1,0 +1,11 @@
+name: openvpn
+description: Detect OpenVPN
+uuid: 08e5bb81-62fc-5ea4-8c6d-1ed5c8cb9140
+query: http_favicon_mmhash:396533629
+tags:
+- proto:http
+- product:openvpn
+- vendor:openvpn
+references:
+- https://openvpn.net/
+version: 20260918T053418Z

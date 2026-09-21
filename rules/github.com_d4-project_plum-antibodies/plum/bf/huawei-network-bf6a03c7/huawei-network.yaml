@@ -1,0 +1,11 @@
+name: huawei-network
+description: Detect Huawei (Network)
+uuid: 4279f237-b528-5d9f-852a-daa1af8a31e3
+query: http_favicon_mmhash:-884776764 OR http_favicon_mmhash:987967490
+tags:
+- proto:http
+- product:huawei-network
+- vendor:huawei
+references:
+- https://www.huawei.com/
+version: 20260918T053418Z

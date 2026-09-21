@@ -1,0 +1,11 @@
+name: atlassian-confluence
+description: Detect Atlassian - Confluence
+uuid: adad8a0d-3efe-52d4-b066-79e8c6412d7c
+query: http_favicon_mmhash:-305179312 OR http_favicon_mmhash:-1642532491
+tags:
+- proto:http
+- product:atlassian-confluence
+- vendor:atlassian
+references:
+- https://www.atlassian.com/
+version: 20260918T053418Z

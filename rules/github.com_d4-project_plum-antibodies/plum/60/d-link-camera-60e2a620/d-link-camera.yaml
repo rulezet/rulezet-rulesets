@@ -1,0 +1,9 @@
+name: d-link-camera
+description: Detect D-Link (camera)
+uuid: 3f3a8329-2bdb-53c7-b077-ce3cedb08ae0
+query: http_favicon_mmhash:-355305208 OR http_favicon_mmhash:-1897829998
+tags:
+- proto:http
+- product:d-link
+- vendor:camera
+version: 20260918T053418Z

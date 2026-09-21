@@ -1,0 +1,11 @@
+name: prometheus
+description: Detect Prometheus Time Series Collection and Processing Server (supervision)
+uuid: d50d7d83-e27f-52a5-81f6-956dc9a699a2
+query: http_favicon_mmhash:-1399433489 OR http_headval:www-authenticate.lk:"prometheus
+  access"
+tags:
+- proto:http
+- product:prometheus
+- type:supervision
+- vendor:prometheus
+version: 20260918T053418Z

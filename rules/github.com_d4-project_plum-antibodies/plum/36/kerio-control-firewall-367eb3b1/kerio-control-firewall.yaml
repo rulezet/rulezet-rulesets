@@ -1,0 +1,9 @@
+name: kerio-control-firewall
+description: Detect Kerio Control Firewall
+uuid: 332cefd8-c961-5473-8986-9657e0a4539b
+query: http_favicon_mmhash:-631002664 OR http_favicon_mmhash:-466504476
+tags:
+- proto:http
+- product:kerio-control-firewall
+- vendor:kerio
+version: 20260918T053418Z

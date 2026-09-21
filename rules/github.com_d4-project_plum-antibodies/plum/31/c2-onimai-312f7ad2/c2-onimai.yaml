@@ -1,0 +1,10 @@
+name: c2-onimai
+description: Detect Onimai RAT C2 certificate
+uuid: b99527e4-3845-54ee-b292-850c82d991f0
+query: x509_issuer_cn:"Onimai Academies CA"
+tags:
+- proto:tls
+- product:onimai-rat
+- vendor:onimai
+- type:c2
+version: 20260918T053418Z

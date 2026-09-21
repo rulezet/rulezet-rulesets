@@ -1,0 +1,11 @@
+name: barracuda-spam-virus-fire
+description: Detect Barracuda Spam/Virus firewall appliance
+uuid: cc190a7f-aff4-58be-bce2-154fb8b9f240
+query: http_favicon_md5:DE2B6EDBF7930F5DD0FFE0528B2BBCF4
+tags:
+- proto:http
+- product:barracuda-spam-virus-firewall-appliance
+- vendor:barracuda
+references:
+- https://www.barracuda.com/
+version: 20260918T053418Z

@@ -1,0 +1,10 @@
+name: c2-asyncrat
+description: Detect AsyncRAT C2 certificate
+uuid: 3e04831e-f867-579c-9188-eba92d3ced02
+query: x509_issuer_cn:"AsyncRAT Server"
+tags:
+- proto:tls
+- product:asyncrat
+- vendor:asyncrat
+- type:c2
+version: 20260918T053418Z

@@ -1,0 +1,10 @@
+name: gitlab
+description: Detect GitLab
+uuid: e8c575ef-1b3b-5f6a-b52b-8729c496230c
+query: http_cookiename.bg:_gitlab_session OR http_title.lk:gitlab OR host.bg:gitlab
+tags:
+- product:gitlab
+- vendor:gitlab
+references:
+- https://about.gitlab.com/
+version: 20260918T053418Z

@@ -1,0 +1,12 @@
+name: zyxel-ssh
+description: Detect Zyxel SSH server (router)
+uuid: ea37e571-138d-52d9-a822-4ab292537c2a
+query: banner.lk:"zyxel ssh server"
+tags:
+- vendor:zyxel
+- type:router
+- proto:ssh
+- product:zyxel-ssh-server
+references:
+- https://www.zyxel.com/
+version: 20260918T053418Z

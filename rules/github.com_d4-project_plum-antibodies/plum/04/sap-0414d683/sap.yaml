@@ -1,0 +1,11 @@
+name: sap
+description: Detect SAP
+uuid: 42124e91-4f41-5645-8f9d-a23ecc9e461b
+query: http_title.bg:"SAP Commerce Cloud" OR x509_subject.lk:"SAP Trust Community"
+  OR x509_subject.lk:"SAP Commerce" OR http_title.lk:"SAP PPM"
+tags:
+- product:sap
+- vendor:sap
+references:
+- https://www.sap.com/
+version: 20260918T053418Z

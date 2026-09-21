@@ -1,0 +1,10 @@
+name: c2-venomrat
+description: Detect VenomRAT C2 certificate
+uuid: e17abf83-0350-58b2-9513-f7200b4187d7
+query: x509_issuer_cn:"VenomRAT Server"
+tags:
+- proto:tls
+- product:venomrat
+- vendor:venomrat
+- type:c2
+version: 20260918T053418Z

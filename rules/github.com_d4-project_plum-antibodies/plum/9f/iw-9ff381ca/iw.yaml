@@ -1,0 +1,11 @@
+name: iw
+description: Detect Atozed IntraWeb
+uuid: 50200a3d-37eb-539f-8098-ffdb0b7cf7aa
+query: http_favicon_mmhash:896412703
+tags:
+- proto:http
+- product:intraweb
+- vendor:atozed
+references:
+- https://www.atozed.com/intraweb/
+version: 20260918T053418Z

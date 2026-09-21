@@ -1,0 +1,7 @@
+name: sip-protocol
+description: Detect SIP protocol
+uuid: 6047fff5-1516-5ca1-a7cf-c6868c061829
+query: banner.bg:"sip/2.0" OR http_headval:www-authenticate.bg:'digest realm="sip_phone"'
+tags:
+- proto:sip
+version: 20260918T053418Z

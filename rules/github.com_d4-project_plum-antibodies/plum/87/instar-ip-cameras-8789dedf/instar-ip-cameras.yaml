@@ -1,0 +1,10 @@
+name: instar-ip-cameras
+description: Detect INSTAR IP Cameras
+uuid: b263ec53-4cdf-593c-9789-504ccf350ae7
+query: http_favicon_mmhash:-1169314298 OR http_favicon_md5:7789dba478319148b1471f115d3f38a1
+  OR http_favicon_sha256:d1c67d70c982a3f682d12ee68d21b7bcce6e0fa3928da99deb332ef2d2b238cb
+tags:
+- proto:http
+- product:instar-ip
+- vendor:camera
+version: 20260918T053418Z

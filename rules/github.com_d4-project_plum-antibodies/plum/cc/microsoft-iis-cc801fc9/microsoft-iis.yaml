@@ -1,0 +1,11 @@
+name: microsoft-iis
+description: Detect Microsoft IIS
+uuid: dc0751ed-c102-5f3e-a135-d59847b9be56
+query: http_favicon_mmhash:-1414475558 OR http_server.bg:microsoft-iis
+tags:
+- proto:http
+- product:microsoft-iis
+- vendor:microsoft
+references:
+- https://www.microsoft.com/
+version: 20260918T053418Z

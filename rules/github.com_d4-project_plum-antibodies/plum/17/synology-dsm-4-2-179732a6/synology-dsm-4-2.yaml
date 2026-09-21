@@ -1,0 +1,11 @@
+name: synology-dsm-4-2
+description: Detect Synology DSM 4.2
+uuid: 100c0738-ae10-5f0e-8930-2a71add5e968
+query: http_favicon_md5:531E652A15BC0AD59B6AF05019B1834A
+tags:
+- proto:http
+- product:synology-dsm-4-2
+- vendor:synology
+references:
+- https://www.synology.com/
+version: 20260918T053418Z

@@ -1,0 +1,15 @@
+name: kong
+description: Detect Kong Gateway (API gateway)
+uuid: 7855c202-069e-5730-aa9b-9d74faa64424
+query: http_server.bg:kong OR http_header:x-kong-proxy-latency OR http_header:x-kong-upstream-latency
+  OR http_header:x-kong-response-latency OR http_header:x-kong-admin-latency OR http_header:x-kong-upstream-status
+  OR http_header:x-kong-request-id OR http_header:x-kong-total-latency OR http_header:x-kong-third-party-latency
+  OR http_header:x-kong-client-latency
+tags:
+- proto:http
+- vendor:kong
+- product:kong-gateway
+- type:api-gateway
+references:
+- https://konghq.com/products/kong-gateway
+version: 20260918T053418Z

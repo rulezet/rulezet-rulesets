@@ -1,0 +1,9 @@
+name: pure-ftpd
+description: Detect Pure-FTPd FTP server
+uuid: df5e9d0a-181d-5a5b-acc5-2f4b1617bbb0
+query: banner.bg:"220----------" AND banner.lk:pure-ftpd
+tags:
+- proto:ftp
+- product:pure-ftpd
+- vendor:pure
+version: 20260918T053418Z

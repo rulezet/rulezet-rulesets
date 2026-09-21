@@ -1,0 +1,11 @@
+name: sucuri
+description: Detect Sucuri Website Firewall
+uuid: fbf1bfb9-04af-5a6d-882e-131c1c3d0df2
+query: http_server.lk:"Sucuri/Cloudproxy" OR http_header:x-sucuri-id OR http_header:x-sucuri-block
+  OR http_title.lk:"Sucuri WebSite Firewall - Access Denied"
+tags:
+- proto:http
+- product:sucuri-firewall
+- vendor:sucuri
+- type:firewall
+version: 20260918T053418Z

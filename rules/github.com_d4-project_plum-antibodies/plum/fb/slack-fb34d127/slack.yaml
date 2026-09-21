@@ -1,0 +1,11 @@
+name: slack
+description: Detect Slack
+uuid: 2041f0cb-8174-55b2-997c-ded75f69031f
+query: http_favicon_mmhash:-43161126
+tags:
+- proto:http
+- product:slack
+- vendor:slack
+references:
+- https://slack.com/
+version: 20260918T053418Z

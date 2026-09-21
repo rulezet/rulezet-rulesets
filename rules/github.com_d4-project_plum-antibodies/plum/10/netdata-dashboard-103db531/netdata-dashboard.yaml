@@ -1,0 +1,9 @@
+name: netdata-dashboard
+description: Detect netdata dashboard
+uuid: 829828a5-35ea-5463-ac93-0de85937533a
+query: http_favicon_mmhash:-182423204 OR http_favicon_mmhash:1585145626
+tags:
+- proto:http
+- product:netdata-dashboard
+- vendor:netdata
+version: 20260918T053418Z

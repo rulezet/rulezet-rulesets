@@ -1,0 +1,8 @@
+name: hp-ilo
+description: Detect HP iLO
+uuid: dd409e57-b6f6-5a5d-8113-1d0ac3d11d6b
+query: http_favicon_mmhash:2059618623 OR x509_issuer:"ilo default issuer (do not trust)"
+tags:
+- product:hp-ilo
+- vendor:hp
+version: 20260918T053418Z

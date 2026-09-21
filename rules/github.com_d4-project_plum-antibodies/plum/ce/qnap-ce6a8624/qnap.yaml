@@ -1,0 +1,12 @@
+name: qnap
+description: Detect Qnap Nas
+uuid: c4d677e0-752c-55cd-8201-6303cc752c3d
+query: x509_subject.lk:"QNAP NAS"
+tags:
+- proto:tls
+- vendor:qnap
+- product:qnap-nas
+- type:nas
+references:
+- https://www.qnap.com/
+version: 20260918T053418Z

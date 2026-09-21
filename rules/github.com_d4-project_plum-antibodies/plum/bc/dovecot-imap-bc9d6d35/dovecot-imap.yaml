@@ -1,0 +1,9 @@
+name: dovecot-imap
+description: Detect Dovecot IMAP server
+uuid: 8ff9d05d-116e-5326-9f2c-03fb107cd903
+query: banner.bg:"* OK" AND banner.lk:imap4 AND banner.lk:dovecot
+tags:
+- product:dovecot
+- proto:imap
+- vendor:dovecot
+version: 20260918T053418Z

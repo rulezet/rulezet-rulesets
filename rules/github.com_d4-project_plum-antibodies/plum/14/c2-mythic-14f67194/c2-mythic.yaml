@@ -1,0 +1,10 @@
+name: c2-mythic
+description: Detect Mythic C2 certificate
+uuid: a9c21480-5d3e-5723-9c59-9d8cf52b896c
+query: x509_issuer.lk:"O=Mythic"
+tags:
+- proto:tls
+- product:mythic
+- vendor:mythic
+- type:c2
+version: 20260918T053418Z

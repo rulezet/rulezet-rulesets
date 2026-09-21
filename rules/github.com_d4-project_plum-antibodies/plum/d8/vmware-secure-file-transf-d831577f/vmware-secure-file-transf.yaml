@@ -1,0 +1,11 @@
+name: vmware-secure-file-transf
+description: Detect Vmware Secure File Transfer
+uuid: 69f53b15-6e5b-58d3-9c62-dd87f6889bec
+query: http_favicon_mmhash:1642701741
+tags:
+- proto:http
+- product:vmware-secure-file-transfer
+- vendor:vmware
+references:
+- https://www.vmware.com/
+version: 20260918T053418Z

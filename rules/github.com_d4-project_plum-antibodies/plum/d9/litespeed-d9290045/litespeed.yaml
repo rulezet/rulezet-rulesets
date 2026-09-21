@@ -1,0 +1,10 @@
+name: litespeed
+description: Detect LiteSpeed
+uuid: 926eef05-87e3-583c-bf0a-725065d8fe19
+query: http_headval:x-turbo-charged-by.bg:litespeed OR http_header:x-litespeed-tag
+  OR http_header:x-litespeed-cache-control OR http_header:x-litespeed-cache OR http_server.bg:litespeed
+tags:
+- proto:http
+- product:litespeed
+- vendor:litespeed
+version: 20260918T053418Z

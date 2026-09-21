@@ -1,0 +1,9 @@
+name: raspberry
+description: Detect Raspberry (Linux)
+uuid: 97bba44c-5f01-5aa1-97d0-4c05e9e4f63b
+query: banner.bg:ssh-2.0-openssh AND banner.lk:raspbian OR http_server.lk:raspbian
+tags:
+- type:linux
+- vendor:debian
+- product:raspberry
+version: 20260918T053418Z

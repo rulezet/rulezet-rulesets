@@ -1,0 +1,9 @@
+name: wampserver
+description: Detect WAMPSERVER
+uuid: bfb09acc-c76b-54f3-892b-e51eeed78fa9
+query: http_favicon_mmhash:929825723 OR http_favicon_mmhash:443944613
+tags:
+- proto:http
+- product:wampserver
+- vendor:wampserver
+version: 20260918T053418Z
