@@ -1,0 +1,11 @@
+name: apple
+description: Detect Apple
+uuid: ad42fc6d-cea0-5a86-a236-8b1a82083650
+query: http_favicon_mmhash:1232159009 OR http_favicon_mmhash:1382324298 OR http_favicon_mmhash:-1498185948
+tags:
+- proto:http
+- product:apple
+- vendor:apple
+references:
+- https://www.apple.com/
+version: 20260918T053418Z
