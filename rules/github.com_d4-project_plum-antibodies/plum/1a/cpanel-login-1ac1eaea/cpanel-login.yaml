@@ -1,0 +1,9 @@
+name: cpanel-login
+description: Detect cPanel Login
+uuid: 98f85ae6-2956-5e85-b952-44a81cb1e976
+query: http_favicon_mmhash:1993518473 OR http_favicon_mmhash:1544230796 OR http_favicon_mmhash:1244636413
+tags:
+- proto:http
+- product:cpanel-login
+- vendor:cpanel
+version: 20260918T053418Z
