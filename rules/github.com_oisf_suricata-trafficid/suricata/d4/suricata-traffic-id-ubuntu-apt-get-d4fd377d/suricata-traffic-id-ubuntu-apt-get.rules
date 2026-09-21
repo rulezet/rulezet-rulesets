@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"SURICATA TRAFFIC-ID: Ubuntu APT-GET"; content:"ubuntu.com"; http_host; content:"Debian APT"; http_user_agent; flow:to_server,established; flowbits:set,traffic/id/ubuntu-apt; flowbits:set,traffic/label/software-update; noalert; sid:300000033;)
