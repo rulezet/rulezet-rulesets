@@ -1,0 +1,5 @@
+# AT related malicious URL (p4xv-w9h1c-t29435-r6t6u-f5ubzc.pages.dev/)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/755913)
+
+Rulezet UUID: `30d75453-778a-46ab-915d-7cdf26ae1fb2`
