@@ -1,0 +1,11 @@
+name: synology-diskstation
+description: Detect Synology DiskStation
+uuid: 2cc7d958-26c8-54b3-bd40-febb7f96050d
+query: http_favicon_mmhash:149371702
+tags:
+- proto:http
+- product:synology-diskstation
+- vendor:synology
+references:
+- https://www.synology.com/
+version: 20260918T053418Z
