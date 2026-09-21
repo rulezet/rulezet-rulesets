@@ -1,0 +1,12 @@
+name: global-protect
+description: Detect GlobalProtect (VPN)
+uuid: b6b17c55-0532-5f97-8aeb-bd64a65a9ac8
+query: http_title.lk:"/global-protect/login.esp"
+tags:
+- proto:http
+- product:globalprotect
+- type:vpn
+- vendor:palo-alto
+references:
+- https://www.paloaltonetworks.com/
+version: 20260918T053418Z
