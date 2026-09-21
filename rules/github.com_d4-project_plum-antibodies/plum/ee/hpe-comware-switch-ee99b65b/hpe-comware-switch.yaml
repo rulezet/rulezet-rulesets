@@ -1,0 +1,9 @@
+name: hpe-comware-switch
+description: Detect HPE Comware Switch
+uuid: 79516597-ab56-5952-874e-deef14c2fffe
+query: banner.lk:"hewlett packard enterprise development lp" OR banner.bg:ssh-2.0-comware
+tags:
+- vendor:hpe
+- product:comware
+- type:switch
+version: 20260918T053418Z
