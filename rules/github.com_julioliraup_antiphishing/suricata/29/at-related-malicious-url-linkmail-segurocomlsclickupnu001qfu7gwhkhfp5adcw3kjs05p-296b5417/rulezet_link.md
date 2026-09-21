@@ -1,0 +1,5 @@
+# AT related malicious URL (link.mail-seguro.com/ls/click?upn=u001.QFu7GWHKHfp5Adcw3kjS05PDwe4n-2BI2b4d7kW2cUj9bTKS1fLrw9DkHladu78P8BdKq1WRhMi9wJAxlQd2oKDA-3D-3D7p4__DwrG4LBWS6KRBSYQshmfWnHMWV7ek7cathQBE-2BCDbUtKYMXp4kqNFV8zTMabi4Zle8Zzr1CaOEZViYUTUWn4ar0Vpc2cmu89af0jy4yBn3HAxi7TcvItQEtbI7karr7-2BDpSrZ8WyOauxfRtiqb6nTttQ-2FnOhPekVuHvOlGbPGZgPCIQJ-2FTWcJxcJX5-2BiPhG2heEuRxLTBhx3mtP62jmtP48kAgGugsq79nWEcxgzzOLYP6lUJibxCM-2BCdQ6SVm-2FchGCePtjDlTXQKwfOuxdhcqURQgbkiEFn-2B6-2FcAYCp-2FWyO453nZRkF28cQf6zfVmEoWcYwfUuUypcxObKJhPEFGPGv06bk1Z-2FKpvkxHzSvMCM-3D)
+
+[View this rule on Rulezet](https://rulezet.org/rule/detail_rule/768842)
+
+Rulezet UUID: `296b5417-4556-46c8-957d-bf5fa552ca79`
