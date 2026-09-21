@@ -1,0 +1,10 @@
+name: c2-covenant
+description: Detect Covenant C2 certificate
+uuid: b5a658e0-b305-5668-98ce-c7d6c4680355
+query: x509_subject.lk:"CN=Covenant"
+tags:
+- proto:tls
+- product:covenant
+- vendor:covenant
+- type:c2
+version: 20260918T053418Z
