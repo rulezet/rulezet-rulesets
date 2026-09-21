@@ -1,0 +1,16 @@
+name: synology
+description: Detect Synology Nas
+uuid: 8ef6a0d3-b2fb-5ac6-ba1d-59f8a274a701
+query: http_title.lk:"-&nbsp;synology&nbsp;" OR http_title:"hello! welcome to synology
+  web station!" OR http_title:"hallo! herzlich willkommen bei synology web station!"
+  OR x509_issuer:"synology inc. ca" OR x509_issuer:"cn=synology inc. ca, o=synology
+  inc., l=taipel, c=tw" OR x509_issuer:"cn=synology inc. ca, o=synology inc., l=taipei,
+  c=tw" OR x509_issuer:"cn=synology inc. ca, ou=certificate authority, o=synology
+  inc., l=taipei, st=taiwan, c=tw, emailaddress=product@synology.com"
+tags:
+- vendor:synology
+- product:synology-nas
+- type:nas
+references:
+- https://www.synology.com/
+version: 20260918T053418Z
