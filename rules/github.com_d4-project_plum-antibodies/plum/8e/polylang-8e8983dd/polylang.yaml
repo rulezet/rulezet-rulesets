@@ -1,0 +1,12 @@
+name: polylang
+description: Detect Polylang (CMS)
+uuid: 15222ef3-6300-54cd-92b0-c5d4e95e8238
+query: http_headval:x-redirect-by.bg:polylang
+tags:
+- proto:http
+- product:polylang
+- product:wordpress
+- type:cms
+- lang:php
+- vendor:polylang
+version: 20260918T053418Z
