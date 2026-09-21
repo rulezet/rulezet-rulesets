@@ -1,0 +1,11 @@
+name: github
+description: Detect GitHub
+uuid: eb341501-1f18-586a-a580-7f7fd0796140
+query: http_server:github.com
+tags:
+- proto:http
+- product:github
+- vendor:github
+references:
+- https://github.com/
+version: 20260918T053418Z
