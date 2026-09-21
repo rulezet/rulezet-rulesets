@@ -1,0 +1,10 @@
+name: wisenet-nvr
+description: Detect Wisenet NVR (camera)
+uuid: d388784f-8705-5a5a-ad5f-16386e427ca5
+query: http_headval:www-authenticate.lk:"wisenet nvr"
+tags:
+- proto:http
+- product:wisenet-nvr
+- type:camera
+- vendor:hanwha
+version: 20260918T053418Z
