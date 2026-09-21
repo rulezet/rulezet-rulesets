@@ -1,0 +1,12 @@
+name: cisco-asa
+description: Detect Cisco ASA (firewall)
+uuid: 7f327ad2-f710-5f80-8136-745e0601afd7
+query: x509_issuer:"cn=asa temporary self signed certificate"
+tags:
+- proto:tls
+- vendor:cisco
+- product:cisco-asa
+- type:firewall
+references:
+- https://www.cisco.com/
+version: 20260918T053418Z

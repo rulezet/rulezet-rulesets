@@ -1,0 +1,11 @@
+name: openclaw-ui
+description: Detect OpenClaw UI
+uuid: 8c6d4a5b-fe70-5a94-a2eb-f726ce12c8dd
+query: http_headval:www-authenticate.lk:"openclaw ui"
+tags:
+- proto:http
+- product:openclaw-ui
+- vendor:openclaw
+references:
+- https://openclaw.ai/
+version: 20260918T053418Z

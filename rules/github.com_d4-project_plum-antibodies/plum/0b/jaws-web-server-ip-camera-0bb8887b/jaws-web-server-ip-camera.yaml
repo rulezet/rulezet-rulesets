@@ -1,0 +1,9 @@
+name: jaws-web-server-ip-camera
+description: Detect JAWS Web Server (IP Camera)
+uuid: c4ac4404-9892-5952-9076-ad897fc4babd
+query: http_favicon_mmhash:90066852 OR http_favicon_mmhash:768231242
+tags:
+- proto:http
+- product:jaws-web-server
+- vendor:camera
+version: 20260918T053418Z

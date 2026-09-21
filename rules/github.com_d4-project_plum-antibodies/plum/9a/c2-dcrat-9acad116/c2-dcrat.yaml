@@ -1,0 +1,10 @@
+name: c2-dcrat
+description: Detect DcRat C2 certificate
+uuid: 659c7525-8095-5337-b30a-fd4780bfcdaa
+query: x509_issuer_cn:"DcRat Server"
+tags:
+- proto:tls
+- product:dcrat
+- vendor:dcrat
+- type:c2
+version: 20260918T053418Z
