@@ -1,0 +1,11 @@
+name: serv-u-ftp-server
+description: Detect Solarwinds Serv-U FTP Server
+uuid: d1f6edd4-6857-5a65-bdd5-7543ebd2dd72
+query: http_favicon_mmhash:812385209
+tags:
+- proto:http
+- proto:ftp
+- product:serv-u-ftp-server
+- product:web
+- vendor:solarwinds
+version: 20260918T053418Z
