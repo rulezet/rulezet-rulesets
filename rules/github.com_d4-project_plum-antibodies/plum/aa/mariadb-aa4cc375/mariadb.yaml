@@ -1,0 +1,11 @@
+name: mariadb
+description: Detect MariaDB (database)
+uuid: 48a5c0d9-cf18-5a6b-9100-526aff7db9a7
+query: "banner.bg:\"I\\x00\\x00\\x00\\xFF\" and banner.lk:\"MariaDB\" OR banner.bg:\"\
+  Z\\x00\\x00\\x00\\x0A\" AND banner.lk:MariaDB OR\r\nbanner.lk:\"this MariaDB server\""
+tags:
+- proto:sql
+- type:database
+- product:mariadb
+- vendor:mariadb
+version: 20260918T053418Z
