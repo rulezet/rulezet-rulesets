@@ -1,0 +1,12 @@
+name: barracuda-cloudgen-firewa
+description: Detect Barracuda CloudGen Firewall
+uuid: cac295fd-2997-5b0c-9bf0-f4dfe34cab61
+query: http_server.bg:"barracuda cloudgen firewall"
+tags:
+- proto:http
+- vendor:barracuda
+- product:barracuda-cloudgen-firewall
+- type:firewall
+references:
+- https://www.barracuda.com/
+version: 20260918T053418Z
