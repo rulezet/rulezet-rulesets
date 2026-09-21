@@ -1,0 +1,10 @@
+name: metasploit
+description: Detect Metasploit
+uuid: 53871e0e-4a00-596a-bf39-78a3ca0d68f8
+query: http_favicon_mmhash:-127886975 OR http_favicon_mmhash:1139788073 OR http_favicon_mmhash:-1235192469
+  OR http_favicon_mmhash:579239725
+tags:
+- proto:http
+- product:metasploit
+- vendor:metasploit
+version: 20260918T053418Z
