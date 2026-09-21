@@ -1,0 +1,11 @@
+name: hostinger-cdn
+description: Detect Hostinger CDN
+uuid: 4a98c64c-df5f-5336-8890-a1eaf5eaee1d
+query: http_server:hcdn
+tags:
+- proto:http
+- product:hostinger-cdn
+- vendor:hostinger
+references:
+- https://www.hostinger.com/cdn
+version: 20260918T053418Z
