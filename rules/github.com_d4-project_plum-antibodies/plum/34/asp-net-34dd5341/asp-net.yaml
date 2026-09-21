@@ -1,0 +1,11 @@
+name: asp-net
+description: Detect ASP.NET
+uuid: 0bb123af-e12b-56fe-ad64-67f6bfd8d3f5
+query: http_favicon_mmhash:1772087922 OR http_headval:x-powered-by.bg:asp.net OR http_header:x-aspnet-version
+  OR http_header:x-aspnetmvc-version
+tags:
+- proto:http
+- lang:asp
+- vendor:windows
+- product:asp-net
+version: 20260918T053418Z
