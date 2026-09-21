@@ -1,0 +1,10 @@
+name: phpmyadmin
+description: Detect PhpMyAdmin
+uuid: 45a4fdda-37be-5708-a498-b88393c6b138
+query: http_title.lk:phpmyadmin OR http_cookiename.bg:phpmyadmin_https
+tags:
+- proto:http
+- product:phpmyadmin
+- vendor:phpmyadmin
+- lang:php
+version: 20260918T053418Z
