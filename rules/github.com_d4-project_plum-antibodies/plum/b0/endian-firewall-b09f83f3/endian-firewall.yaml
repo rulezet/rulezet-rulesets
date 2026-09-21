@@ -1,0 +1,9 @@
+name: endian-firewall
+description: Detect Endian Firewall
+uuid: 5226e347-4202-52c2-b757-ea0bb8e989ef
+query: http_favicon_mmhash:-1225484776
+tags:
+- proto:http
+- product:endian-firewall
+- vendor:endian
+version: 20260918T053418Z
