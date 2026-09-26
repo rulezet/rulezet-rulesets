@@ -1,0 +1,21 @@
+{
+  "uuid": "c306654e-e277-4a2e-ae79-774921a5d624",
+  "title": "Potential Lavawall RMM Tool Registry Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects potential registry activity of Lavawall RMM tool\n",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-25",
+  "last_modified": "2026-09-25",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770961"
+}

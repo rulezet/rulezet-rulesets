@@ -1,0 +1,21 @@
+{
+  "uuid": "293b8cbc-dbce-46bc-a2ac-418a69b69046",
+  "title": "Potential RemoteAgentAgent RMM Tool File Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects potential files activity of RemoteAgentAgent RMM tool\n",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-09-25",
+  "last_modified": "2026-09-25",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770952"
+}

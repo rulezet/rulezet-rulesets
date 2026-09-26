@@ -1,0 +1,21 @@
+{
+  "uuid": "98159e72-d3e1-495b-bea0-c192b2ea8ae6",
+  "title": "Dataset-card pretext jailbreak frame in an LLM gateway prompt -- T1027",
+  "format": "sigma",
+  "author": "WRG-11",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects the dataset-card pretext jailbreak framing publicly demonstrated by\nPliny the Liberator (@elder_plinius) against Google Gemini 3.5 Flash in May\n2026. In the published autonomous jailbreaking run, a restricted request\nwas framed as filling in example records for an open-source HuggingFace\ndataset card for a detection benchmark, and the model went on to produce\ncontent beyond the initial request.\n\nThe rule matches the framing, not any restricted payload: an LLM gateway or\nAI-proxy prompt that combines a HuggingFace dataset-card or model-card\nstructure with reviewer or placeholder pretext markers asking the model to\ncomplete canonical example content.\n\nThe escalation observed in the run is behavioural, so pair this per-prompt\nrule with a session-level breadth metric. LLM gateway prompt logging is not\nyet standard SOC telemetry; bind the field names to your AI-proxy log\nschema before deployment.\n",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1027"
+  ],
+  "cve": [],
+  "created_at": "2026-09-25",
+  "last_modified": "2026-09-25",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770916"
+}
