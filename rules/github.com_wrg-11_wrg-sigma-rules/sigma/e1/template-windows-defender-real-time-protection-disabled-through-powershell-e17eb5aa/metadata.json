@@ -1,0 +1,21 @@
+{
+  "uuid": "e17eb5aa-4b3c-4a28-81c2-70073b0cf56b",
+  "title": "Template -- Windows Defender real-time protection disabled through PowerShell",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Canonical Sigma detection template for MITRE ATT&CK T1685 (Disable or Modify Tools). Detects PowerShell setting the Windows Defender DisableRealtimeMonitoring preference to true. The command requires appropriate privileges and is unavailable while Tamper Protection is active, but it is still an important high-signal defense-impairment event. Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770995"
+}

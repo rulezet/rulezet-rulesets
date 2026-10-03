@@ -1,0 +1,21 @@
+{
+  "uuid": "c976712d-00f5-470a-ac34-6b124920e710",
+  "title": "Unsigned Executable Launched from Temp, Downloads or Installers",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Shared detection for 4 actors with an observed T1195 incident: shai_hulud_npm_worm, teampcp_unc6780, unknown_supply_chain_2025_03, xpl0itrs. The logic is a generic pattern, not the documented tradecraft of these actors, so a hit does not say which actor, if any, is responsible. Merged on 2026-09-30 from 4 single-actor rules with identical logic (their ids are listed under related).",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1195"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770984"
+}

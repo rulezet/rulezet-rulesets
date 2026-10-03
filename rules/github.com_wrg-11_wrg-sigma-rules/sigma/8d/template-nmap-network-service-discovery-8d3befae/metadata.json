@@ -1,0 +1,21 @@
+{
+  "uuid": "8d3befae-5436-457a-b202-38b87e10fc06",
+  "title": "Template -- Nmap Network Service Discovery",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Canonical Sigma detection template for MITRE ATT&CK T1046 (Network Service Discovery). Detects Nmap executions using explicit TCP, UDP, version, or port-selection scan modes. Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1046"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/771012"
+}

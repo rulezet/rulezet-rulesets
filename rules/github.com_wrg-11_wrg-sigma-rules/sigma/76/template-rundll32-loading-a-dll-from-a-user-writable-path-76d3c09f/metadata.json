@@ -1,0 +1,21 @@
+{
+  "uuid": "76d3c09f-1b12-4ec3-a92f-9962f47fd5c1",
+  "title": "Template -- Rundll32 loading a DLL from a user-writable path",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Canonical Sigma detection template for MITRE ATT&CK T1218.011 (System Binary Proxy Execution: Rundll32). Detects rundll32 loading a DLL from a common user-writable location, which is unusual for ordinary system DLL execution. The DLL entry-point delimiter narrows the signal to the normal rundll32 invocation shape. Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1218.011"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/771018"
+}

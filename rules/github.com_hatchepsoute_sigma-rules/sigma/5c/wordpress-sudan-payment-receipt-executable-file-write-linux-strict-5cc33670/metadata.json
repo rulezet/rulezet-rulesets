@@ -1,0 +1,24 @@
+{
+  "uuid": "5cc33670-547f-4989-808f-1b7472daed56",
+  "title": "WordPress Sudan Payment Receipt Executable File Write - Linux - STRICT",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a web server or PHP runtime writing a PHP-executable file into the Sudan Payment Gateway receipt directory under WordPress uploads. This is a high-confidence post-upload signal consistent with successful CVE-2024-50494 exploitation, but it does not by itself prove that the file was requested or that commands ran. SOC L1 should preserve the file, verify its content and writer process, identify the matching upload request, and check for later HTTP access or child processes.\nDétecte l’écriture par un serveur web ou un environnement d’exécution PHP d’un fichier exécutable par PHP dans le répertoire des reçus Sudan Payment Gateway sous les uploads WordPress. Il s’agit d’un signal post-upload de haute confiance cohérent avec une exploitation réussie de CVE-2024-50494, mais il ne prouve pas à lui seul que le fichier a été appelé ni que des commandes ont été exécutées. Le SOC L1 doit préserver le fichier, vérifier son contenu et le processus qui l’a écrit, identifier la requête d’upload correspondante et rechercher un accès HTTP ou des processus enfants ultérieurs.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2024-50494"
+  ],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770976"
+}

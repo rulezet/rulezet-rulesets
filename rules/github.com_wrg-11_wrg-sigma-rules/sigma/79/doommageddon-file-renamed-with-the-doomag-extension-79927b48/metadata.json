@@ -1,0 +1,21 @@
+{
+  "uuid": "79927b48-f068-4d63-9ba0-eece61ee641f",
+  "title": "Doommageddon -- File Renamed With the .doomag Extension",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a file written with the .doomag suffix. PCrisk ran a Doommageddon sample found on VirusTotal and reported that it \"encrypted files and appended the '.doomag' extension to their filenames\" (for example 1.jpg became 1.jpg.doomag). CYFIRMA reports the ransomware primarily affects Windows. The extension is specific to this family; the README_DECRYPT.txt ransom note name is not used because many unrelated families share it.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1486"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770989"
+}

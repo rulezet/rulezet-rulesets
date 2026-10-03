@@ -1,0 +1,22 @@
+{
+  "uuid": "2e5bf987-4f56-4f0d-9807-95b90375cbde",
+  "title": "Suspicious WSL Binary Hijack via Proxy Execution",
+  "format": "sigma",
+  "author": "Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects C:\\Windows\\System32\\wsl.exe spawning a child wsl.exe process from outside the legitimate WSL install locations.\nWhen WSL or bash is invoked, the System32 stub (wsl.exe) looks up the InstallLocation registry key and executes the wsl.exe found there.\nAn attacker who modifies InstallLocation to a controlled path causes the stub to transparently proxy execution to a malicious payload,\nwhich then appears as a wsl.exe child of the legitimate System32 stub.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1036.005",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770981"
+}

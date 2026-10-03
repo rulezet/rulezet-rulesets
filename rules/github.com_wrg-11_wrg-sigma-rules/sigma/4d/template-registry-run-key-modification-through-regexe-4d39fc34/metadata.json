@@ -1,0 +1,21 @@
+{
+  "uuid": "4d39fc34-e3d7-4c93-a588-fc84c7b635a9",
+  "title": "Template -- Registry Run key modification through Reg.exe",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Canonical Sigma detection template for MITRE ATT&CK T1112 (Modify Registry). Detects Reg.exe adding a value beneath a user or machine Run/RunOnce key, a common persistence-bearing registry modification. Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1112"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770993"
+}

@@ -1,0 +1,24 @@
+{
+  "uuid": "da00436a-1ba1-4b77-9afb-e6eda367436f",
+  "title": "WordPress Sudan Payment Gateway Executable Receipt Upload Attempt - STRICT",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a POST request to the WordPress AJAX handler where the Sudan Payment Gateway receipt action carries a multipart file with a PHP-executable extension. This high-confidence signal is consistent with an attempt to exploit CVE-2024-50494, but the request alone does not prove that the file was written or executed. SOC L1 should verify the response status, vulnerable plugin version, source IP, full filename, and a related file creation under the Sudan receipt upload directory.\nDétecte une requête POST vers le gestionnaire AJAX de WordPress dans laquelle l’action de reçu de Sudan Payment Gateway transporte un fichier multipart avec une extension exécutable par PHP. Ce signal de haute confiance est cohérent avec une tentative d’exploitation de CVE-2024-50494, mais la requête seule ne prouve pas que le fichier a été écrit ou exécuté. Le SOC L1 doit vérifier le statut de réponse, la version vulnérable du plugin, l’adresse IP source, le nom complet du fichier et une création de fichier associée dans le répertoire d’upload des reçus Sudan.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1190",
+    "T1505.003"
+  ],
+  "cve": [
+    "CVE-2024-50494"
+  ],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770977"
+}

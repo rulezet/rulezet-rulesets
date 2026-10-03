@@ -1,0 +1,21 @@
+{
+  "uuid": "13dc6395-9004-487e-80ae-56084a738c74",
+  "title": "Template -- Windows Service Execution Commands",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects command-line requests to start a Windows service through Service Control or PowerShell. Adversaries can execute a payload registered as a service to gain execution under the service-control manager.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1569.002"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/771003"
+}

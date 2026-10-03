@@ -1,0 +1,21 @@
+{
+  "uuid": "d90e737f-a316-4d96-9902-11b5237662ab",
+  "title": "Template -- Remote Access Software Execution",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects execution of commonly abused remote-access software that can grant an operator interactive control of a host.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/771004"
+}

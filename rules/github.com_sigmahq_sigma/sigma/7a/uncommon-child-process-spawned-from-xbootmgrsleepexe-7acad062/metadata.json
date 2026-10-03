@@ -1,0 +1,21 @@
+{
+  "uuid": "7acad062-8c59-4dc2-bfa5-c0ab59445073",
+  "title": "Uncommon Child Process Spawned From XBootMgrSleep.EXE",
+  "format": "sigma",
+  "author": "Diablo Research",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects a process other than XBootMgr.exe spawned by XBootMgrSleep.exe.\nXBootMgrSleep.exe is a Microsoft-signed Windows Performance Toolkit binary that can execute an arbitrary executable after a delay.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1202"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770982"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "af7bc77a-cf54-4682-9e75-736098eb6f8f",
+  "title": "Template -- Archive collection through command-line tooling",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Canonical Sigma detection template for MITRE ATT&CK T1560 (Archive Collected Data). Detects common archive utilities creating password-protected or high compression archives from the command line, a useful precursor signal before exfiltration. Synthetic exemplar from the WinstonRedGuard threat-intel corpus -- no actor binding; review and bind to your environment before deployment.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1560"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/771008"
+}

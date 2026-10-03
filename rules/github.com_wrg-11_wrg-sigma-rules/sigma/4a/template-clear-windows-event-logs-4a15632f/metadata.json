@@ -1,0 +1,21 @@
+{
+  "uuid": "4a15632f-b80a-4e51-8c4e-a187e5f11c96",
+  "title": "Template -- Clear Windows Event Logs",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects command-line attempts to clear Windows Event Logs through wevtutil or PowerShell. Clearing logs can remove forensic evidence after intrusion.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1685.005"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770994"
+}

@@ -1,0 +1,21 @@
+{
+  "uuid": "4d886f60-bda7-4d18-802e-533a063cbfe2",
+  "title": "Template -- Windows Process Discovery Commands",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin canonical templates",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects common Windows command-line utilities used to enumerate running processes. Process discovery can help an intruder identify security tools, privileged applications, and targets for follow-on actions.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1057"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/771013"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "d8567fe3-7ca4-4568-ac74-d6edcfb338c0",
+  "title": "RDP Logon (Logon Type 10)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Shared detection for 2 actors with an observed T1021.001 incident: akira, anubis_ransomware. The logic is a generic pattern, not the documented tradecraft of these actors, so a hit does not say which actor, if any, is responsible. Merged on 2026-09-30 from 2 single-actor rules with identical logic (their ids are listed under related).",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1021.001",
+    "T1078"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/771000"
+}

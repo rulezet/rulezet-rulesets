@@ -1,0 +1,23 @@
+{
+  "uuid": "7cae71c1-b9c5-4a91-8a20-6d19878976a9",
+  "title": "Adobe Campaign web module suspicious child process on Windows - STRICT",
+  "format": "sigma",
+  "author": "Adama ASSIONGBON (SOC & CTI Consultant), https://linkedin.com/in/adama-assiongbon-9029893a",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects the Adobe Campaign nlserver.exe web module starting a command shell, script interpreter, proxy-execution binary, delayed-execution utility, or an executable from a temporary directory on Windows. This high-confidence behavior may indicate code execution through a Campaign vulnerability or unauthorized server-side activity, but it does not identify a specific CVE by itself. SOC L1 should verify the complete parent and child command lines, the Campaign build, the initiating request, and whether an approved maintenance action explains the process.\nDétecte le module web nlserver.exe d'Adobe Campaign lançant un interpréteur de commandes, un interpréteur de scripts, un binaire d'exécution par proxy, un utilitaire d'exécution différée ou un exécutable depuis un répertoire temporaire sous Windows. Ce comportement à haute confiance peut indiquer une exécution de code via une vulnérabilité de Campaign ou une activité non autorisée côté serveur, mais il n'identifie pas à lui seul une CVE précise. Le SOC L1 doit vérifier les lignes de commande complètes du parent et de l'enfant, le build de Campaign, la requête à l'origine de l'activité et si une opération de maintenance approuvée explique le processus.\n",
+  "source": "https://github.com/Hatchepsoute/sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1053",
+    "T1059",
+    "T1218"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/770975"
+}

@@ -1,0 +1,22 @@
+{
+  "uuid": "4c678c7b-1efd-4a9e-935f-ddcaf892c806",
+  "title": "Keyv/cacheable npm supply chain worm -- Ethereum-smart-contract C2 (2026-08-04)",
+  "format": "sigma",
+  "author": "WinstonRedGuard -- sigma plugin observed rules (derived from breach corpus)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Real, actively-spreading npm supply chain worm (T1195.002), disclosed 2026-08-04, cross-verified across multiple independent outlets (Wiz, The Hacker News, Socket.dev, Snyk, Aikido). Attacker compromised the GitHub account of the maintainer behind keyv (127M weekly npm downloads) and the same maintainer's other packages (cacheable, flat-cache, file-entry-cache) -- pushed malicious commits directly to main and cut new releases with valid GitHub-Actions-signed provenance, so the poisoned versions carry a legitimate-looking supply-chain attestation. Spread to 400+ packages as of disclosure.\n\nMalicious releases add a preinstall hook that downloads the Bun runtime and runs a large obfuscated stealer targeting .npmrc/GitHub-CLI/AWS/Vault/Kubernetes credentials, crypto wallets, and AI tool config files (Claude, OpenAI, Cursor, Gemini); attempts persistence via Claude Code hooks and VS Code tasks.json. Self-propagating: uses stolen credentials to push the same payload to other maintainers/repos (worm behavior).\n\nC2 mechanism: rather than embedding domains directly, the payload resolves its C2 domain via an on-chain lookup (eth_call) against an Ethereum smart contract (StringListStore, 0xE1f2395ee43e45A1556EC6438a88c31B83493103 -- address confirmed independently by the second source, since the first didn't disclose one), currently returning npm-cache.com -- allowing infrastructure rotation without a payload update.\n\nVerification discipline: detects only the cross-source-confirmed C2 domain and npm-family process context. The first source's additional detail (dropped file node_modules/keyv/Math_Symbol.js, a specific 'Bun/1.3.13' user-agent string) was not independently repeated by the second source at the time of writing, so was deliberately left out of this rule's detection logic rather than encoded as confirmed fact.\n\nAggregated from 2 independent-source campaign disclosures, 2026-08-04.",
+  "source": "https://github.com/WRG-11/wrg-sigma-rules",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR"
+  ],
+  "attack_techniques": [
+    "T1071.001",
+    "T1195.002"
+  ],
+  "cve": [],
+  "created_at": "2026-10-02",
+  "last_modified": "2026-10-02",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/771007"
+}
