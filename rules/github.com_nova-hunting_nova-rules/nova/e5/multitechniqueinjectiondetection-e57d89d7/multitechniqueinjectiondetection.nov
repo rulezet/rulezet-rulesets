@@ -1,0 +1,23 @@
+rule MultiTechniqueInjectionDetection
+{
+    meta:
+        description = "Detects prompt injection attempts using multiple techniques in a single prompt"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "prompt_manipulation/direct_injection"
+        severity = "high"
+        uuid = "2a657f39-bc3e-4812-aad2-cd1e884d0561"
+        date = "2026-02-21"
+
+    keywords:
+        $encoded = "encoded instruction"
+        $payload = "payload split"
+        $indirect = "external resource"
+        $code = "execute code"
+
+    semantics:
+        $multi_tech = "using multiple methods to modify the model's behavior" (0.4)
+
+    condition:
+        any of keywords.* or semantics.$multi_tech
+}

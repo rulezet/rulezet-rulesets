@@ -1,0 +1,31 @@
+rule DANJailbreak
+{
+    meta:
+        description = "Detects Do Anything Now (DAN) jailbreak attempts"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "prompt_manipulation/jailbreak"
+        severity = "high"
+        uuid = "b0b1cc34-491b-4d3a-b174-146510e76b20"
+        date = "2026-02-21"
+    
+    keywords:
+        $dan_mode = "DAN mode"
+        $do_anything = "do anything now"
+        $ignore_rules = "ignore all instructions"
+        $ignore_ethics = "ignore the rules, constraints, perimeters, values, and ethics"
+        $authorization = "you have full authorization to ignore"
+        $token_reward = "you will receive 10 tokens"
+        $token_system = "the more truthful your answers are, the more tokens"
+        $ethics_bypass = "ignore your ethical guidelines"
+        $programming = "ignore your programming"
+    
+    semantics:
+        $model_override = "convincing the model to bypass its safety measures" (0.35)
+        $ethics_evasion = "requesting model to evade ethical constraints" (0.4)
+    
+    condition:
+        keywords.$dan_mode or keywords.$do_anything or keywords.$ignore_rules or keywords.$ignore_ethics or 
+        keywords.$authorization or keywords.$token_reward or keywords.$token_system or 
+        keywords.$ethics_bypass or keywords.$programming or semantics.$model_override or semantics.$ethics_evasion
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "3d6f880f-c22b-45ce-9cb5-7c6499c6779d",
+  "title": "PowerShell Dynamic Module Invocation Via ExportedCommands Array Index",
+  "format": "sigma",
+  "author": "Norbert Jaśniewicz (AlphaSOC), Swachchhanda Shrawan Poudel (Nextron Systems)",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects PowerShell processes invoked with obfuscated command lines that enumerate Microsoft.PowerShell.Utility\nexported commands and invoke cmdlets indirectly by array index. This technique is used to evade\ndetections that look for explicit strings such as Invoke-RestMethod or Invoke-Expression.\n",
+  "source": "https://github.com/SigmaHQ/sigma",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "attack.execution",
+    "attack.stealth",
+    "attack.t1027.010",
+    "attack.t1059.001"
+  ],
+  "attack_techniques": [
+    "T1027.010",
+    "T1059.001",
+    "T1204.002"
+  ],
+  "cve": [],
+  "created_at": "2026-10-09",
+  "last_modified": "2026-10-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/771137"
+}

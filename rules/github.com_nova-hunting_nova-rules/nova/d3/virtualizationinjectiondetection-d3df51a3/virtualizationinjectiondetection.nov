@@ -1,0 +1,23 @@
+rule VirtualizationInjectionDetection
+{
+    meta:
+        description = "Detects virtualization-based prompt injection that sets a fictional scenario to bypass rules"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "prompt_manipulation/jailbreak"
+        severity = "medium"
+        uuid = "1fe792f3-c470-417f-a9a2-a59a45f1c820"
+        date = "2026-02-21"
+
+    keywords:
+        $novel = "novel"
+        $fictional = "fictional"
+        $scene = "scene"
+        $character = "character"
+
+    semantics:
+        $virtual_context = "in a fictional setting intended to bypass instructions" (0.4)
+
+    condition:
+        (any of keywords.*) and semantics.$virtual_context
+}

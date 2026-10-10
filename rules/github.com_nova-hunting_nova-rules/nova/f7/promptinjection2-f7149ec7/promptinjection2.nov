@@ -1,0 +1,22 @@
+rule PromptInjection2
+{
+    meta:
+        description = "Detects common prompt injection attempts"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "prompt_manipulation/direct_injection"
+        uuid = "0c40c41b-5613-4967-ab89-e65ab5ff9cdf"
+        date = "2026-02-21"
+        severity = "medium"
+
+    keywords:
+        $bypass1 = "ignore previous instructions"
+        $bypass2 = "system"
+    
+    semantics:
+        $injection1 = "detect attempts to bypass system instructions" (0.3)
+        $injection2 = "detect system hijacking" (0.1)
+    
+    condition:
+        semantics.$injection* or keywords.$bypass*
+}

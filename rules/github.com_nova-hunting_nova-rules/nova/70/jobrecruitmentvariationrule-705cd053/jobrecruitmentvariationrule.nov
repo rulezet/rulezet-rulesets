@@ -1,0 +1,47 @@
+rule JobRecruitmentVariationRule
+{
+    meta:
+        description = "Detects requests for variations of job recruitment messages"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "abusing_functions/social_engineering"
+        severity = "high"
+        uuid = "6f67aa26-de86-4993-8a17-5168efba3ddf"
+        date = "2026-02-21"
+    
+    keywords:
+        $variation = "variation"
+        $variations = "variations"
+        $alternate = "alternate"
+        $alternative = "alternative"
+        $different = "different"
+        $version = "version"
+        $rewrite = "rewrite"
+        $rephrase = "rephrase"
+        $job = "job"
+        $recruitment = "recruitment"
+        $hiring = "hiring"
+        $position = "position"
+        $opportunity = "opportunity"
+        $message = "message"
+        $email = "email"
+        $text = "text"
+        $provide = "provide"
+        $provided = "provided"
+        $my = "my"
+    
+    semantics:
+        $recruitment_variation = "requesting variations of job recruitment messages" (0.4)
+        $potential_phishing = "possibly seeking help creating convincing recruitment phishing messages" (0.4)
+    
+    llm:
+        $variation_check = "Determine if this query is requesting variations of an attacker-provided job recruitment message that could be used for social engineering" (0.8)
+    
+    condition:
+        ($variation or $variations or $alternate or $alternative or $different or 
+         $version or $rewrite or $rephrase) and
+        ($job or $recruitment or $hiring or $position or $opportunity) and
+        ($message or $email or $text) and
+        ($provide or $provided or $my) and
+        (any of semantics.*) and llm.$variation_check
+}

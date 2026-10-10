@@ -1,0 +1,23 @@
+rule UserEventResearch
+{
+    meta:
+        description = "Performing research on how to examine and identify incriminating user events on Windows using scripts"
+        author = "@bees@infosec.exchange"
+        uuid = "a9eb13b3-3c05-4975-9c63-6564ecfd9847"
+        date = "2026-02-21"
+        version = "1.0.0"
+        category = "abusing_functions/attack_enablement"
+        severity = "high"
+        reference = "OpenAI + Microsoft Report 202402 - Emerald Sleet Recon"
+
+    keywords:
+        $event_log_text = /(attempt made to logon|local group membership|authentication failed|scheduled task was created|permissions were changed|replay attack|logging service has shut down|assigned new logon|suspicious behavior)/i
+        $etw = /(logman query|EventLog\-Application|EVENT_ENABLE_PROPERTY_SID|PSEtwLogProvider|EventWriteTransfer|WEVT_TEMPLATE|WMI\\Autologger)/i
+    
+    llm:
+        $investigate = "Is this prompt attempting to learn how to discover incriminating user events in Windows logs?" (0.35)
+
+    condition:
+        (any of keywords.*) and
+        (any of llm.*)
+}

@@ -1,0 +1,23 @@
+{
+  "uuid": "4a39a3d5-37bf-4568-8593-436d00672b18",
+  "title": "Potential Overlord RMM Tool Process Activity",
+  "format": "sigma",
+  "author": "LOLRMM Project",
+  "license": "Unknown",
+  "license_verified": false,
+  "description": "Detects potential processes activity of Overlord RMM tool\n",
+  "source": "https://github.com/magicsword-io/LOLRMM",
+  "tags": [
+    "tlp:clear",
+    "PAP:CLEAR",
+    "attack.command-and-control",
+    "attack.t1219"
+  ],
+  "attack_techniques": [
+    "T1219"
+  ],
+  "cve": [],
+  "created_at": "2026-10-09",
+  "last_modified": "2026-10-09",
+  "rulezet_url": "https://rulezet.org/rule/detail_rule/771145"
+}

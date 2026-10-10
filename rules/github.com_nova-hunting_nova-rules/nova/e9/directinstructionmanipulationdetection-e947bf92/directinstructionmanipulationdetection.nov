@@ -1,0 +1,20 @@
+rule DirectInstructionManipulationDetection
+{
+    meta:
+        description = "Detects direct prompt injection attempts aiming to change model instructions"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "prompt_manipulation/direct_injection"
+        severity = "high"
+        uuid = "3aa029a7-64b7-4882-9adb-6e7debb88fce"
+        date = "2026-02-21"
+
+    keywords:
+        $bypass_filters = "bypass filters"
+        $manipulate_instructions = "manipulate instructions"
+        $ignore_guidelines = "ignore guidelines"
+        $alter_behavior = "change behavior"
+
+    condition:
+        2 of keywords.*
+}

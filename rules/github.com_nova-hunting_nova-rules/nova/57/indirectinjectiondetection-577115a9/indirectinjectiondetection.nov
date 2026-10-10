@@ -1,0 +1,20 @@
+rule IndirectInjectionDetection
+{
+    meta:
+        description = "Detects prompt injection attempts using external sources or third-party data"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "prompt_manipulation/indirect_injection"
+        severity = "medium"
+        uuid = "54db0e01-717d-4354-a423-0565710d03a0"
+        date = "2026-02-21"
+
+    keywords:
+        $external = "external resource"
+        $website = "visit my website"
+        $api = "API call"
+        $link = "follow the link"
+
+    condition:
+        any of keywords.*
+}

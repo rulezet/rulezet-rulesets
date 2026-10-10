@@ -1,0 +1,22 @@
+rule CodeExecutionInjectionDetection
+{
+    meta:
+        description = "Detects attempts to inject code for execution within the prompt"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "prompt_manipulation/hidden_instructions"
+        severity = "high"
+        uuid = "8ad6416c-e6b4-45ba-a2d1-77eee2ef75b9"
+        date = "2026-02-21"
+
+    keywords:
+        $python_code = "Write Python code"
+        $run_code = "execute code"
+        $import_os = "import os"
+        $os_system = "os.system"
+        $subprocess = "subprocess"
+
+
+    condition:
+        keywords.*
+}

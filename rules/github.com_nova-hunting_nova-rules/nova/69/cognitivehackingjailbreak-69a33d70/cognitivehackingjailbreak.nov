@@ -1,0 +1,33 @@
+rule CognitiveHackingJailbreak
+{
+    meta:
+        description = "Detects cognitive hacking jailbreak attempts using all detection methods"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "prompt_manipulation/jailbreak"
+        severity = "high"
+        uuid = "53dd0601-6155-416f-8d2a-c8c6b8f8849c"
+        date = "2026-02-21"
+    
+    keywords:
+        $hypothetical = "hypothetical scenario"
+        $imagine = "imagine you are"
+        $academic_discussion = "purely academic discussion"
+        $safe_space = "safe space"
+        $fictional_setting = "fictional setting"
+        $educational_purpose = "educational purposes only"
+        $thought_experiment = "thought experiment"
+        $creative_writing = "creative writing exercise"
+        $roleplay_scenario = "roleplay scenario"
+    
+    semantics:
+        $cognitive_trick = "tricking the model through psychological manipulation" (0.35)
+        $false_justification = "providing false justification for harmful content" (0.35)
+        $scenario_bypass = "using hypothetical scenarios to bypass restrictions" (0.35)
+    
+    llm:
+        $cognitive_check = "Analyze whether this prompt is attempting to use cognitive hacking techniques, such as hypothetical scenarios, creative writing exercises, or academic discussion pretexts to trick the model into generating harmful content" (0.6)
+    
+    condition:
+        (2 of keywords.* or any of semantics.*) and llm.$cognitive_check
+}

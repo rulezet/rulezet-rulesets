@@ -2,6 +2,7 @@ rule F5_BIGIP_c05d5254_Composite_High_Signal
 {
     meta:
         description = "Higher-signal composite rule requiring multiple independent indicators from the article CVE-2025-53521"
+        cve = "CVE-2025-53521"
         author = "OpenAI"
         reference = "F5 article K000160486"
         date = "2026-03-30"

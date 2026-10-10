@@ -1,0 +1,33 @@
+rule CVEInformationRequestRule
+{
+    meta:
+        description = "Detects queries about specific CVE numbers"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "abusing_functions/reconnaissance"
+        severity = "medium"
+        uuid = "5ad5eeaf-bcc2-4c4e-a5e0-a26348c287de"
+        date = "2026-02-21"
+    
+    keywords:
+        $cve = /CVE-\d{4}-\d{4,}/
+        $exploit = "exploit"
+        $vulnerability = "vulnerability"
+        $details = "details"
+        $information = "information"
+        $how_to = "how to"
+        $poc = "proof of concept"
+        $poc_short = "POC"
+    
+    semantics:
+        $cve_inquiry = "requesting details about specific security vulnerabilities by CVE number" (0.4)
+        $exploit_interest = "seeking information on exploiting known vulnerabilities" (0.4)
+    
+    llm:
+        $cve_check = "Analyze if this query is requesting specific details about a CVE that could be used for malicious purposes" (0.7)
+    
+    condition:
+        $cve and 
+        ($exploit or $vulnerability or $details or $information or $how_to or $poc or $poc_short) and
+        (any of semantics.*) and llm.$cve_check
+}

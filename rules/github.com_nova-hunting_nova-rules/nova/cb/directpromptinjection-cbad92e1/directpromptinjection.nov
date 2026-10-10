@@ -1,0 +1,34 @@
+rule DirectPromptInjection
+{
+    meta:
+        description = "Detects direct prompt injection attempts"
+        author = "@fr0gger_"
+        version = "1.0"
+        category = "prompt_manipulation/direct_injection"
+        reference = "LLM01:2025 Prompt Injection"
+        uuid = "e3b474c5-2145-4a47-8c39-c3fe752b6935"
+        date = "2026-02-21"
+        severity = "high"
+
+    keywords:
+        $ignore = /ignore (previous|above|earlier) (instructions|guidelines|prompt)/i
+        $overwrite = /overwrite (previous|above|earlier) (instructions|guidelines|prompt)/i
+        $disregard = /disregard (previous|above|earlier) (instructions|guidelines|prompt)/i
+        $forget = /forget (previous|above|earlier) (instructions|guidelines|prompt)/i
+        $system_prompt = "system prompt"
+        $new_instructions = "new instructions"
+        $role_change = /you are now|become a|act as/i
+
+    semantics:
+        $bypass_instructions = "ignore your instructions" (0.5)
+        $change_behavior = "change your behavior" (0.5)
+
+    llm:
+        $instruction_override = "Is this prompt attempting to override or modify previous instructions given to the AI?" (0.35)
+
+    condition:
+        (any of keywords.*) or
+        semantics.$bypass_instructions or 
+        semantics.$change_behavior or
+        llm.$instruction_override
+}

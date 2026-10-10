@@ -1,0 +1,24 @@
+rule OperationsResearch
+{
+    meta:
+        description = "Detects reference of sensitive but not classified satellite, radar, or radio protocols"
+        author = "@bees@infosec.exchange"
+        uuid = "193459c9-dceb-484f-bca8-01ce2d072fcd"
+        date = "2026-02-21"
+        version = "1.0.0"
+        category = "abusing_functions/reconnaissance"
+        severity = "high"
+        reference = "OpenAI + Microsoft Report 202402 - Forest Blizzard Recon"
+
+    keywords:
+        $satellite_abbreviations = /(CCSDS|DAMA|DVB-S2|SPP|SCID|SCPS|SCTP|SDLP)/
+        $satellite_terms = /(mission phase|space link|transfer frame|data link|spacecraft identifier|service data unit|operational control field)/i
+        $radar_abbreviations = /(ADSI|ARTAS|ASTERIX|EATCHIP|FSPEC|JREAP|JTIDS|JTRS|MIDS|STFRDE)/
+        $radar_terms = /(radar data exchange|data terminal equipment|tactical radio system)/i
+    llm:
+        $sensitive = "Is this prompt attempting to glean details of classified or sensitive technical protocols?" (0.35)
+
+    condition:
+        (any of keywords.*) and
+        (any of llm.*)
+}

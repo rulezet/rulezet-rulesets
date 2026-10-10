@@ -1,0 +1,32 @@
+rule MultimodalInjection
+{
+    meta:
+        description = "Detects multimodal prompt injection attempts"
+        author = "@fr0gger_"
+        version = "1.0"
+        category = "suspicious_patterns/cross_modal"
+        reference = "LLM01:2025 Prompt Injection"
+        uuid = "520b23d8-54c0-4ade-b8a7-cdc1a90c0def"
+        date = "2026-02-21"
+        severity = "high"
+
+    keywords:
+        $image_process = /process (this|the) image|analyze (this|the) image|look at (this|the) image/i
+        $hidden_content = /hidden (text|content|message|instruction)/i
+        $watermark = /watermark|embedded text|text in image/i
+        $multimodal = /multimodal|cross-modal|multiple formats/i
+
+    semantics:
+        $hidden_in_media = "instructions hidden in the image" (0.4)
+        $cross_modal_attack = "combine text and image instructions" (0.4)
+
+    llm:
+        $image_injection = "Does this prompt involve processing images that might contain hidden instructions or malicious content?" (0.3)
+
+    condition:
+        (keywords.$image_process and (keywords.$hidden_content or keywords.$watermark)) or
+        keywords.$multimodal or
+        semantics.$hidden_in_media or
+        semantics.$cross_modal_attack or
+        llm.$image_injection
+}

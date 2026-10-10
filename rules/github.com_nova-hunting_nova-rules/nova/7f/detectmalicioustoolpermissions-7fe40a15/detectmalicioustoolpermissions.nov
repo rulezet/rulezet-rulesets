@@ -1,0 +1,42 @@
+rule DetectMaliciousToolPermissions {
+    meta:
+        description = "Detects dangerous allowed-tools patterns that grant excessive permissions"
+        uuid = "f9eca781-816b-481a-8975-9ca4d136821f"
+        author = "Thomas Roccia (@fr0gger_)"
+        version = "1.0.0"
+        severity = "high"
+        category = "abusing_functions/agentic_misuse"
+        date = "2026-03-25"
+
+    keywords:
+        // Wildcard permissions
+        $bash_wildcard1 = "Bash(*)"
+        $bash_wildcard2 = "Bash:*"
+        $bash_wildcard3 = "Bash: *"
+        $write_wildcard1 = "Write(*)"
+        $write_wildcard2 = "Write:*"
+        $edit_wildcard1 = "Edit(*)"
+        $edit_wildcard2 = "Edit:*"
+        $read_wildcard1 = "Read(*)"
+        $read_wildcard2 = "Read:*"
+        $execute_wildcard = "Execute(*)"
+
+        // Dangerous specific permissions
+        $rm_rf = "rm -rf"
+        $sudo = "sudo"
+        $chmod_777 = "chmod 777"
+        $curl_bash = "curl | bash"
+        $wget_sh = "wget | sh"
+
+        // Network access patterns
+        $netcat = "netcat"
+        $nc_listen = "nc -l"
+        $reverse_shell = "reverse shell"
+
+    semantics:
+        $unrestricted_access = "unrestricted file system access" (0.4)
+        $arbitrary_execution = "execute arbitrary commands" (0.4)
+
+    condition:
+        any of keywords.* or any of semantics.*
+}

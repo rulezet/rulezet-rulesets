@@ -1,0 +1,21 @@
+rule IndirectTaskDeflectionJailbreak
+{
+    meta:
+        description = "Detects indirect task deflection jailbreak attempts using only semantics"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "prompt_manipulation/jailbreak"
+        severity = "medium"
+        uuid = "bcc6d221-9d30-4505-a0bb-b39ea1aea6a8"
+        date = "2026-02-21"
+    
+    semantics:
+        $task_masking = "disguising malicious tasks as benign requests" (0.6)
+        $indirect_harmful = "indirectly asking for harmful content" (0.5)
+        $veiled_request = "making a veiled request for prohibited information" (0.5)
+        $disguised_intent = "hiding true intent behind seemingly innocent questions" (0.5)
+        $misdirection = "using misdirection to obtain harmful outputs" (0.4)
+    
+    condition:
+        2 of semantics.*
+}

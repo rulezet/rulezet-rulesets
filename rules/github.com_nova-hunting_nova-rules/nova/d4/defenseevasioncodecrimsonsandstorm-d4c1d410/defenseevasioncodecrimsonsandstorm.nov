@@ -1,0 +1,22 @@
+rule DefenseEvasionCodeCrimsonSandstorm
+{
+    meta:
+        description = "Detection of Crimson Sandstorm defense evasion coding prompts, specifically code for evasion or code for cleanup."
+        author = "@tas_kmanager"
+        uuid = "63a921d1-dd1e-4754-be97-ff664dbe713d"
+        date = "2026-02-21"
+        version = "1.0.0"
+        category = "abusing_functions/attack_enablement"
+        severity = "medium"
+        reference = "Microsoft – Staying Ahead of Threat Actors in the Age of AI (Feb 2024)"
+
+    keywords:
+        $evasion = /(obfuscate|bypasses|undetectable|evade|stealth|silently|without detection|no detection)/i
+        $cleanup = /(delete files after program exits | clean up all traces after execution | remove logs after process ends | delete working directory silently | remove batch files after use)/i
+    
+    llm:
+        $defense_evasion = "Analyze if this prompt attempting to generate either code that evade detection or code that perform clean up operation after execution. Return a clear yes/no assessment." (0.35)
+
+    condition:
+        (keywords.$evasion or keywords.$cleanup) and llm.$defense_evasion
+}

@@ -1,0 +1,39 @@
+rule DetectImpersonationAttempts {
+    meta:
+        description = "Detects attempts to impersonate official sources or trusted authors"
+        uuid = "61162ec4-2482-4629-a254-521af6ae0d3a"
+        author = "Thomas Roccia (@fr0gger_)"
+        version = "1.0.0"
+        severity = "medium"
+        category = "abusing_functions/social_engineering"
+        date = "2026-03-25"
+
+    keywords:
+        // Official organization impersonation
+        $anthropic = "Anthropic Official"
+        $openai = "OpenAI Official"
+        $google = "Google Official"
+        $microsoft = "Microsoft Official"
+        $verified = "[VERIFIED]"
+        $official = "[OFFICIAL]"
+        $trusted = "[TRUSTED]"
+
+        // Authority claims
+        $admin = "administrator"
+        $root_access = "root access"
+        $superuser = "superuser"
+        $privileged = "privileged mode"
+
+        // Fake certification
+        $certified = "certified by"
+        $approved = "approved by"
+        $endorsed = "endorsed by"
+        $audited = "security audited"
+
+    semantics:
+        $impersonation = "impersonate an official or trusted source" (0.3)
+        $false_authority = "claim false authority or certification" (0.3)
+
+    condition:
+        any of keywords.* or any of semantics.*
+}

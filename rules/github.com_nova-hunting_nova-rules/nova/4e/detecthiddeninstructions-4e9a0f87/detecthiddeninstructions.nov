@@ -1,0 +1,44 @@
+rule DetectHiddenInstructions {
+    meta:
+        description = "Detects hidden instructions in references or documentation that may be injection attempts"
+        uuid = "1bfaecef-2a06-49fb-ac72-09f28e6be4af"
+        author = "Thomas Roccia (@fr0gger_), Marco Pedrinazzi (@pedrinazziM)"
+        version = "1.0.0"
+        severity = "medium"
+        category = "prompt_manipulation/indirect_injection"
+        date = "2026-03-25"
+
+    keywords:
+        // HTML comments used to hide content
+        $html_comment = "<!--"
+        $html_comment_end = "-->"
+
+        // Markdown hidden content
+        $zero_width = "\u200b"
+        $invisible_char = "\u00AD"
+
+        // Instruction hiding patterns
+        $hidden_text = "[hidden]"
+        $invisible_text = "[invisible]"
+        $ignore_tag = "[ignore]"
+        $secret_tag = "[secret]"
+        $admin_tag = "[admin]"
+
+        // Embedded instructions
+        $assistant_tag = "[ASSISTANT]"
+        $system_tag = "[SYSTEM]"
+        $instruction_tag = "[INSTRUCTION]"
+
+        // Base64 encoded content (potential hidden payloads)
+        $base64_pattern = "data:text/plain;base64"
+
+        //invisible markdown reference link patterns
+        $markdown_reference_link = /\[[^\]]*\]:\s*(?:#|<>)\s*(?:"[^"]*"|\([^)]*\))/
+
+    semantics:
+        $hidden_content = "hidden or invisible content that could contain instructions" (0.3)
+        $embedded_payload = "embedded instructions disguised as documentation" (0.3)
+
+    condition:
+        any of keywords.* or any of semantics.*
+}

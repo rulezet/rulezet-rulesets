@@ -1,0 +1,25 @@
+rule ScriptingSupport
+{
+    meta:
+        description = "Detects references to a range of Python-centric scripting support requirements"
+        author = "@bees@infosec.exchange"
+        uuid = "4572b79f-39a8-4dc3-a981-4fc6b6d8b051"
+        date = "2026-02-21"
+        version = "1.0.0"
+        category = "abusing_functions/crime_automation"
+        severity = "high"
+        reference = "OpenAI + Microsoft Report 202402 - Forest Blizzard Recon"
+
+    keywords:
+        $file_manipulation_py = /(f\.close\(\))/i
+        $data_selection_py = /(df\.query|import pandas)/i
+        $regex_py = /(import re)/i
+        $multiprocessing_py = /(import multiprocessing|import asyncio)/i
+
+    llm:
+        $covert = "Could this prompt be implicitly used by a covert agent for malicious computer network operations?" (0.35)
+
+    condition:
+        (any of keywords.*) and
+        (any of llm.*)
+}

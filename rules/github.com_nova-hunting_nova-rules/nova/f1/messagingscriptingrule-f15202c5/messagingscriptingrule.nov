@@ -1,0 +1,43 @@
+rule MessagingScriptingRule
+{
+    meta:
+        description = "Detects requests for help with scripts that send programmatic messages"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "abusing_functions/crime_automation"
+        severity = "medium"
+        uuid = "86ee3098-c61b-4250-9720-00a8dedfccad"
+        date = "2026-02-21"
+    
+    keywords:
+        $code = "code"
+        $script = "script"
+        $program = "program"
+        $api = "API"
+        $sms = "SMS"
+        $text = "text message"
+        $message = "message"
+        $send = "send"
+        $sending = "sending"
+        $programmatically = "programmatically"
+        $bulk = "bulk"
+        $mass = "mass"
+        $twilio = "Twilio"
+        $numbers = "numbers"
+        $recipients = "recipients"
+    
+    semantics:
+        $messaging_script = "seeking help with scripts for programmatic message sending" (0.4)
+        $automation_request = "requesting assistance with automation of messaging services" (0.4)
+    
+    llm:
+        $script_check = "Determine if this query is requesting help with developing or debugging code that programmatically sends text messages" (0.7)
+    
+    condition:
+        ($code or $script or $program) and
+        ($sms or $text or $message) and
+        ($send or $sending or $programmatically or $bulk or $mass) and
+        ($api or $twilio) and
+        ($numbers or $recipients) and
+        (any of semantics.*) and llm.$script_check
+}

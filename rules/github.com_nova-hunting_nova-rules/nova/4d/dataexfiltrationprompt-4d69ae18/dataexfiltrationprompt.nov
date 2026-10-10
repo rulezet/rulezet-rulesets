@@ -1,0 +1,33 @@
+rule DataExfiltrationPrompt
+{
+    meta:
+        description = "Detects prompt injection attempts for data exfiltration"
+        author = "@fr0gger_"
+        version = "1.0"
+        category = "abusing_functions/data_exfiltration"
+        reference = "LLM01:2025 Prompt Injection"
+        uuid = "816bf7a0-4d57-45ce-8876-7171f8f254c2"
+        date = "2026-02-21"
+        severity = "high"
+
+    keywords:
+        $send_data = /send (the|this) (data|information|content) to/i
+        $exfil = /exfiltrate|leak|steal|extract data/i
+        $sensitive_request = /system prompt|initial instructions|configuration|api key|credentials/i
+        $external_service = /(http|https):\/\/[^\s]+|(send|post) to/i
+
+    semantics:
+        $data_extraction = "extract sensitive information" (0.4)
+        $information_leakage = "reveal confidential data" (0.4)
+
+    llm:
+        $data_theft_intent = "Is this prompt attempting to extract sensitive information or system details?" (0.35)
+
+    condition:
+        (keywords.$send_data and keywords.$external_service) or
+        keywords.$exfil or
+        (keywords.$sensitive_request and keywords.$external_service) or
+        semantics.$data_extraction or
+        semantics.$information_leakage or
+        llm.$data_theft_intent
+}

@@ -1,0 +1,33 @@
+rule IndirectPromptInjection
+{
+    meta:
+        description = "Detects indirect prompt injection through external content"
+        author = "@fr0gger_"
+        version = "1.0"
+        category = "prompt_manipulation/indirect_injection"
+        reference = "LLM01:2025 Prompt Injection"
+        uuid = "22921094-9c2f-4800-be29-d9d756564bc7"
+        date = "2026-02-21"
+        severity = "high"
+
+    keywords:
+        $summarize = /summarize (this|the) (content|text|document|webpage)/i
+        $analyze = /analyze (this|the) (content|text|document|webpage)/i
+        $review = /review (this|the) (content|text|document|webpage)/i
+        $hidden_text = /hidden text|invisible text|steganography/i
+        $external_link = /(http|https):\/\/[^\s]+/
+
+    semantics:
+        $process_external = "process this external content" (0.4)
+        $hidden_instructions = "follow instructions in the document" (0.4)
+
+    llm:
+        $external_content_risk = "Does this prompt ask to process external content that might contain hidden instructions?" (0.35)
+
+    condition:
+        ((keywords.$summarize or keywords.$analyze or keywords.$review) and keywords.$external_link) or
+        keywords.$hidden_text or
+        semantics.$process_external or
+        semantics.$hidden_instructions or
+        llm.$external_content_risk
+}

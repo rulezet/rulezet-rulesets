@@ -1,0 +1,57 @@
+rule DetectSkillPromptInjection {
+    meta:
+        description = "Detects prompt injection attempts in skill definitions"
+        uuid = "7faacd23-457f-4c7b-87c7-38198c4d5e60"
+        author = "Thomas Roccia (@fr0gger_), Marco Pedrinazzi (@pedrinazziM)"
+        version = "1.0.0"
+        severity = "critical"
+        category = "prompt_manipulation/direct_injection"
+        date = "2026-03-25"
+
+    keywords:
+        // Direct instruction override attempts
+        $ignore_previous = "ignore previous"
+        $ignore_above = "ignore above"
+        $ignore_all = "ignore all"
+        $disregard = "disregard your instructions"
+        $disregard_prev = "disregard previous"
+        $forget = "forget everything"
+        $forget_instructions = "forget your instructions"
+        $new_role = "you are now"
+        $new_identity = "your new identity"
+        $pretend = "pretend to be"
+        $act_as = "act as if"
+        $roleplay = "roleplay as"
+
+        // System prompt manipulation
+        $system_prompt = "system prompt"
+        $override_system = "override system"
+        $bypass_safety = "bypass safety"
+        $bypass_restrictions = "bypass restrictions"
+        $ignore_safety = "ignore safety"
+        $ignore_guidelines = "ignore guidelines"
+
+        // Jailbreak patterns
+        $dan_mode = "DAN mode"
+        $developer_mode = "developer mode"
+        $jailbreak = "jailbreak"
+        $unlock = "unlock your"
+        $unrestricted = "unrestricted mode"
+        $no_limits = "no limits"
+        $no_restrictions = "no restrictions"
+
+        // Hidden instruction markers
+        $hidden_instruction = "[HIDDEN]"
+        $secret_instruction = "[SECRET]"
+        $admin_only = "[ADMIN]"
+        $invisible = "<!-- "
+        $markdown_reference_link = /\[[^\]]*\]:\s*(?:#|<>)\s*(?:"[^"]*"|\([^)]*\))/
+
+    semantics:
+        $override_intent = "override or bypass system instructions" (0.4)
+        $manipulation = "manipulate the AI into ignoring its guidelines" (0.4)
+        $jailbreak_attempt = "attempt to remove safety restrictions" (0.4)
+
+    condition:
+        any of keywords.* or any of semantics.*
+}

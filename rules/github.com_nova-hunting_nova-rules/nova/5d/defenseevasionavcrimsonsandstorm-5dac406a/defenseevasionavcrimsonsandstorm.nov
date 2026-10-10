@@ -1,0 +1,22 @@
+rule DefenseEvasionAvCrimsonSandstorm
+{
+    meta:
+        description = "Detection of Crimson Sandstorm defense evasion coding prompts, specifically AV bypass"
+        author = "@tas_kmanager"
+        uuid = "74387f6c-3dbe-4f37-a884-a9d61904cb11"
+        date = "2026-02-21"
+        version = "1.0.0"
+        category = "abusing_functions/attack_enablement"
+        severity = "medium"
+        reference = "Microsoft – Staying Ahead of Threat Actors in the Age of AI (Feb 2024)"
+
+    keywords:
+        $av_bypass = /(disable|turn off|kill|stop|blind|group policy to disable|add to exclusion|modify security policy|impair|minifilter|uninstall|unload driver)/i
+        $av = /(defender|mde|crowdstrike|sentinelone|symantec|edr|av|antivirus|carbon black|cb defense|bitdefender|eset|mcafee|kaspersky|sophos|trend micro|cylance|fireeye|falcon|norton|secureworks|zscaler|fsecure|forti|malwarebytes|sysmon|clamav|security log)/i
+   
+    llm:
+        $defense_evasion = "Analyze if this prompt attempting to generate either antivirus/edr bypass code. Return a clear yes/no assessment." (0.35)
+
+    condition:
+        (keywords.$av_bypass and keywords.$av) and llm.$defense_evasion
+}

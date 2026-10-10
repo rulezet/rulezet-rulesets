@@ -1,0 +1,33 @@
+rule CodeInjectionPrompt
+{
+    meta:
+        description = "Detects code injection through prompt engineering"
+        author = "@fr0gger_"
+        version = "1.0"
+        category = "prompt_manipulation/hidden_instructions"
+        reference = "LLM01:2025 Prompt Injection"
+        uuid = "25040029-10a1-4322-9b0a-520b5890a807"
+        date = "2026-02-21"
+        severity = "high"
+
+    keywords:
+        $execute = /execute (this|the following) code/i
+        $run = /run (this|the following) code/i
+        $evaluate = /eval|evaluate (this|the following) code/i
+        $code_block = /```(python|javascript|bash|sh|ruby|php)/
+        $system_access = /system\(|exec\(|subprocess|os\.system|child_process/i
+
+    semantics:
+        $code_execution = "execute this code" (0.5)
+        $command_run = "run this command" (0.5)
+
+    llm:
+        $code_execution_intent = "Is this prompt trying to get the system to execute code or commands?" (0.3)
+
+    condition:
+        (keywords.$execute or keywords.$run or keywords.$evaluate) or
+        (keywords.$code_block and keywords.$system_access) or
+        semantics.$code_execution or
+        semantics.$command_run or
+        llm.$code_execution_intent
+}

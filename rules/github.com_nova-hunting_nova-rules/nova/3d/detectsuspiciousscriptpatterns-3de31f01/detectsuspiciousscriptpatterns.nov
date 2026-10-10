@@ -1,0 +1,65 @@
+rule DetectSuspiciousScriptPatterns {
+    meta:
+        description = "Detects suspicious patterns in bundled scripts that may indicate malicious intent"
+        uuid = "f22c8dda-3827-458c-aebb-dee2dbb86414"
+        author = "Thomas Roccia (@fr0gger_)"
+        version = "1.0.0"
+        severity = "high"
+        category = "abusing_functions/supply_chain"
+        date = "2026-03-25"
+
+    keywords:
+        // Dynamic code execution
+        $eval = "eval("
+        $exec = "exec("
+        $compile = "compile("
+        $code_object = "__code__"
+
+        // Remote code execution
+        $curl_pipe = "curl | bash"
+        $curl_pipe2 = "curl|bash"
+        $wget_pipe = "wget | sh"
+        $wget_pipe2 = "wget|sh"
+        $remote_exec = "remote_exec"
+
+        // Data exfiltration patterns
+        $env_access = "os.environ"
+        $getenv = "getenv("
+        $env_vars = "process.env"
+        $credentials = "credentials"
+        $api_key = "api_key"
+        $secret_key = "secret_key"
+        $password = "password"
+        $token_access = "access_token"
+
+        // Obfuscation techniques
+        $base64_decode = "base64 -d"
+        $base64_decode2 = "base64.b64decode"
+        $base64_decode3 = "atob("
+        $hex_decode = "bytes.fromhex"
+        $rot13 = "rot13"
+        $encode_decode = ".encode().decode()"
+
+        // Backdoor patterns
+        $reverse_shell = "reverse shell"
+        $bind_shell = "bind shell"
+        $socket_connect = "socket.connect"
+        $paramiko = "paramiko"
+        $fabric = "fabric"
+        $pexpect = "pexpect"
+
+        // Pickle/deserialization (RCE risk)
+        $pickle_load = "pickle.load"
+        $pickle_loads = "pickle.loads"
+        $marshal_load = "marshal.load"
+        $yaml_load = "yaml.load("
+
+    semantics:
+        $exfiltration = "send data to external server or endpoint" (0.4)
+        $backdoor = "establish persistent access or reverse shell" (0.4)
+        $obfuscation = "obfuscate or hide malicious code" (0.3)
+        $rce = "execute arbitrary code from remote source" (0.4)
+
+    condition:
+        any of keywords.* or any of semantics.*
+}

@@ -1,0 +1,52 @@
+rule GovernmentPhishingThemeRule
+{
+    meta:
+        description = "Detects requests for effective government-themed phishing content"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "abusing_functions/social_engineering"
+        severity = "high"
+        uuid = "85c2dddb-d534-4950-a2f7-8f9613eeb35f"
+        date = "2026-02-21"
+    
+    keywords:
+        $theme = "theme"
+        $themes = "themes"
+        $topic = "topic"
+        $subject = "subject"
+        $interesting = "interesting"
+        $engaging = "engaging"
+        $attention = "attention"
+        $employee = "employee"
+        $employees = "employees"
+        $staff = "staff"
+        $government = "government"
+        $department = "department"
+        $agency = "agency"
+        $federal = "federal"
+        $attachment = "attachment"
+        $attachments = "attachments"
+        $name = "name"
+        $file = "file"
+        $files = "files"
+        $avoid = "avoid"
+        $bypass = "bypass"
+        $blocked = "blocked"
+        $filter = "filter"
+    
+    semantics:
+        $phishing_inquiry = "requesting help crafting government-targeted phishing themes" (0.4)
+        $evasion_tactics = "seeking advice on evading security filters with attachment names" (0.4)
+    
+    llm:
+        $phishing_check = "Analyze if this query is requesting themes that government employees would find interesting and names for attachments to avoid being blocked, potentially for phishing purposes" (0.8)
+    
+    condition:
+        ($theme or $themes or $topic or $subject) and
+        ($interesting or $engaging or $attention) and
+        ($employee or $employees or $staff) and
+        ($government or $department or $agency or $federal) and
+        ($attachment or $attachments or $name or $file or $files) and
+        ($avoid or $bypass or $blocked or $filter) and
+        (any of semantics.*) and llm.$phishing_check
+}

@@ -1,0 +1,55 @@
+rule DetectDataExfiltration {
+    meta:
+        description = "Detects patterns that suggest data exfiltration or unauthorized data access"
+        uuid = "cff6521c-6a54-4938-9f04-6e9992bfacb7"
+        author = "Thomas Roccia (@fr0gger_)"
+        version = "1.0.0"
+        severity = "critical"
+        category = "abusing_functions/data_exfiltration"
+        date = "2026-03-25"
+
+    keywords:
+        // File system access patterns
+        $read_ssh = ".ssh/"
+        $read_aws = ".aws/"
+        $read_env = ".env"
+        $read_config = ".config"
+        $read_secrets = "secrets/"
+        $read_credentials = "credentials/"
+
+        // Sensitive file patterns
+        $private_key = "private_key"
+        $id_rsa = "id_rsa"
+        $id_ed25519 = "id_ed25519"
+        $known_hosts = "known_hosts"
+        $htpasswd = ".htpasswd"
+        $shadow = "/etc/shadow"
+        $passwd = "/etc/passwd"
+
+        // Cloud credentials
+        $aws_key = "AWS_ACCESS_KEY"
+        $aws_secret = "AWS_SECRET"
+        $gcp_key = "GOOGLE_APPLICATION_CREDENTIALS"
+        $azure_key = "AZURE_"
+
+        // API keys/tokens
+        $api_key_pattern = "sk-"
+        $bearer_token = "Bearer "
+        $github_token = "ghp_"
+        $gitlab_token = "glpat-"
+
+        // Exfiltration methods
+        $webhook_url = "webhook.site"
+        $requestbin = "requestbin"
+        $ngrok = "ngrok"
+        $pipedream = "pipedream"
+        $pastebin = "pastebin.com"
+
+    semantics:
+        $steal_credentials = "access or exfiltrate credentials or secrets" (0.5)
+        $unauthorized_access = "access sensitive files without authorization" (0.4)
+        $data_leak = "send sensitive data to external endpoint" (0.5)
+
+    condition:
+        any of keywords.* or any of semantics.*
+}

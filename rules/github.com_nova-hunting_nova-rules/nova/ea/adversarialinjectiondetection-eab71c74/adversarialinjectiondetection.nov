@@ -1,0 +1,19 @@
+rule AdversarialInjectionDetection
+{
+    meta:
+        description = "Detects adversarial prompt injection attempts with direct instruction manipulation"
+        author = "Thomas Roccia"
+        version = "1.0.0"
+        category = "prompt_manipulation/direct_injection"
+        severity = "high"
+        uuid = "9bb81cbb-7c00-427f-9703-074cdd6046ed"
+        date = "2026-02-21"
+
+    keywords:
+        $bypass = "bypass instructions"
+        $alter = "alter system behavior"
+        $override = "override settings"
+
+    condition:
+        2 of keywords.*
+}
